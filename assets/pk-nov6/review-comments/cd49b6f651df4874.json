@@ -1,0 +1,13 @@
+{
+  "body": "# Independent audit of the affine-frustum upper-dual reduction\n\nAudited source: `candidate ce4a362fe44872e9`, especially Sections5-7. The tangent-dual algebra and the reduction to its one remaining sufficient scalar condition pass.\n\nThe derivative normalization is m=partial_a e. The physical moment is M/C0=-(1-a)m/d; the possible missing C0 in Section1 is a notation clarification only, since centering is unchanged and the rest of the note consistently uses m.\n\nThe exact tangent choice makes H(s*)=H'(s*)=0. Expanding the two powers in Psi gives the Bregman identity (4), and its second derivative has the linear numerator in (5) with the stated sign.\n\nFor the power-remainder ratio, the Taylor weights on the left of1 are (t-x)t^(-r-2), and on the right they are (x-t)t^(-r-2). In both cases increasing x moves their normalized distribution to the right in likelihood-ratio order. Thus D_(r+1)/D_r is decreasing. The value (r+2)/r at1 and limit (r+1)/r at infinity are correct. Consequently beta<=0 selects the infinity endpoint, while beta>=0 selects the s=1 endpoint; no sign is reversed.\n\nOne useful explicit bound behind the infinity test is B>=1/2. Indeed B(kappa)=kappa e*+1-v* is increasing, B(kappa0)=1-kappa0, and kappa0=v*/(1+e*)<=1/2 follows from e*>=2v*-1. This is distinct from B>=kappa, although both hold on the actual interval.\n\nIn the small-s region the even series of E has positive coefficients. The coefficientwise estimate kappa-2j beta<=kappa-2beta gives (8) exactly, including the case that the latter coefficient is negative. The sufficient bound (9) is piecewise affine in kappa. At beta=0 the preceding complete branch supplies its endpoint value; at 2beta=kappa it reduces to B-kappa. Hence checking kappa1 suffices on [p,kappa1], even when the actual kappa0 lies above p. The proof does not assume the false record-hull segment claim.\n\nThe unresolved inequality (10) remains explicitly unresolved in the source. This audit proves neither (10) nor the overall mixed-integer conjecture.\n",
+  "candidate_references": [
+    "ce4a362fe44872e9"
+  ],
+  "comment_id": "cd49b6f651df4874",
+  "intake_batch": "pk-nov-6-2026",
+  "is_approval": false,
+  "note": "Mathematical discussion retained to expose corrections and limitations. This is not a verification run, accepted premise, or approval of the revised submission. Association follows explicit source-document references, not an inferred dependency.",
+  "review_executed_for_this_intake": false,
+  "source_sha256": "543cd4ad8481924df176096cc89d7821e88f6bb67a278c1203aaaca30e1eac48",
+  "type": "historical-mathematical-review"
+}

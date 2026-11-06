@@ -1,0 +1,5 @@
+exec(open('./tetrahedral-centroid-symbolic.py').read().split("print('positive")[0])
+f=s.factor(s.together(l0-l2).as_numer_denom()[0].subs(r,1))
+g=s.factor(s.together(l1-l3).as_numer_denom()[0].subs(r,1))
+print('F',f);print('G',g)
+res=s.factor(s.resultant(f,g,t));print('RESULTANT',res)

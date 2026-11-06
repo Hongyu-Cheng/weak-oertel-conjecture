@@ -1,0 +1,13 @@
+{
+  "body": "# Independent audit: unequal positive normals in a nested triangle chain\n\nAudited **candidate 15438eaf9a458a13** in full and reran **supporting computation verify_nested_triangle_unequal_positive_normals.py**. Result: **PASS**.\n\nThe convex hull preserves the stated endpoint triangles and its middle triangle: their midpoint scale is \\(5/8<3/2\\). The positive-normal cap formula has the correct area normalization \\(V=1/2\\), both proper branches, and continuous closed-boundary limits at \\(a=1/2,1\\).\n\nFor the coordinate normal, the middle contribution is exactly \\(V\\). On \\([-1/4,0]\\), the two endpoint terms complete the square to \\(33/32+2(\\beta+1/8)^2\\). On either exterior interval at least one endpoint term is at least \\(1/16\\), even after full-volume saturation, so the displayed restricted minimum is global over every real tilt.\n\nFor equal coefficients, the middle term is \\(5V/4\\), and both endpoints vanish simultaneously on the stated nonempty tilt interval. This proves its exact restricted minimum.\n\nAt \\(a=6/7,\\beta=-3/28\\), all three cuts are proper one-vertex cuts. Their positive vertex margins are \\(1/28,11/14,1/28\\), and their denominator is \\(30/49\\). The exact sum is \\(81V/80\\); the gap below the coordinate minimum is \\(3V/160>0\\).\n\nThe source is explicitly safe: its middle fiber has volume \\(9V/4\\), its total is \\(49V/16\\), and the own-centroid Grünbaum contribution \\(V\\) exceeds \\(\\Gamma_2M/2=49V/72\\). Vertical caps retain the whole middle fiber.\n\nThe conclusion correctly rules out only the coordinate/equal-positive-coefficient reductions. It does not assert a globally minimizing positive normal or a depth counterexample. No correction was needed.\n",
+  "candidate_references": [
+    "15438eaf9a458a13"
+  ],
+  "comment_id": "da71bea428702c30",
+  "intake_batch": "pk-nov-6-2026",
+  "is_approval": false,
+  "note": "Mathematical discussion retained to expose corrections and limitations. This is not a verification run, accepted premise, or approval of the revised submission. Association follows explicit source-document references, not an inferred dependency.",
+  "review_executed_for_this_intake": false,
+  "source_sha256": "6865a723f52b017fee6c128a79ea1ebb1bce6b6266abe1379ee9412cfcce8f66",
+  "type": "historical-mathematical-review"
+}

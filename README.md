@@ -12,6 +12,10 @@ The initial snapshot contains 1,235 accepted facts: 712 theorems, 317 lemmas, an
 
 The recorded subgoal statuses are research history, not a freshly reviewed list of available assignments. Some subgoals mention unshared research notes; reconstruct their mathematical target from accepted facts before using them. The README highlights are navigation aids, not an additional verification of the results.
 
+## PK November 6 contribution
+
+See [the short contribution guide](contributions-PK-nov-6-merge.md) for the main additions and [the complete pending-submission index](assets/pk-nov6/INDEX.md) for the wider collection. These mathematical notes, computations, and historical review comments are pending intake; they do not change the accepted facts or the target.
+
 ## Highlights
 
 These curated names come from the existing project overview. Rows give the longest dependency-chain length, starting at zero. An arrow in the picture means that a lower highlighted fact depends on an upper one, possibly through omitted nodes.

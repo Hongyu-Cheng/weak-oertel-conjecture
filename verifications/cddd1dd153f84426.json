@@ -1,0 +1,16 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The three-by-three copositivity argument is essentially the standard criterion, but the candidate makes a false identification of its mixed-area excess with the accepted predecessor's mixed-area excess and consequently asserts an unjustified nonnegativity statement.",
+  "critical_errors": [
+    "Equation (5) is not what accepted fact 2021348e0b2d8c9f proves. That fact defines (E_mix)_{ij}=M_{ij}-sum_z sqrt(area(K_{i,z}) area(K_{j,z})), whereas the candidate defines epsilon_{ij}=M_{ij}-sqrt(mu_i mu_j). In general sum_z sqrt(a_{i,z}a_{j,z}) is strictly smaller than sqrt((sum_z a_{i,z})(sum_z a_{j,z})), so these two excesses are not equal. Fiberwise Brunn--Minkowski only implies M_{ij}>=sum_z sqrt(a_{i,z}a_{j,z}); it does not imply M_{ij}>=sqrt(mu_i mu_j). For example, area profiles (1,t) and (t,1) with fiberwise homothetic sections give M_{ij}=2sqrt(t) but sqrt(mu_i mu_j)=1+t, hence epsilon_{ij}<0 for 0<t<1. Thus the asserted equality and nonnegativity in (5), and the proof sentence claiming that the predecessor gives them, are invalid."
+  ],
+  "gaps": [
+    "No supplied hypothesis or argument establishes the equality case of Cauchy--Schwarz needed to replace the predecessor's Gram entry sum_z sqrt(a_{i,z}a_{j,z}) by sqrt(mu_i mu_j), such as proportionality of the two fiber-area vectors."
+  ],
+  "repair_hints": [
+    "Either retain epsilon_{ij}=M_{ij}-sqrt(mu_i mu_j) and remove the claims epsilon_{ij}=(E_mix)_{ij} and epsilon_{ij}>=0, or define epsilon_{ij} as the predecessor's actual mixed-area excess and rewrite (6) and (11) with the Gram entry sum_z sqrt(a_{i,z}a_{j,z}) rather than sqrt(mu_i mu_j)."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

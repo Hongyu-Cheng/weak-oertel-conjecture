@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The construction and the non-strict antipodal-mass bounds are largely consistent with the supplied predecessor facts, but the proof does not establish the strict bound asserted in (33) for all h.",
+  "critical_errors": [],
+  "gaps": [
+    "The last paragraph says that (19) and (55) imply (33). They only give q_ant/Q <= 2/(3h^2) and q_ant/Q < 1/3200. When h >= 47, the first number is the minimum, so these displayed inequalities do not exclude equality q_ant/Q = 2/(3h^2). Thus the strict inequality in (33) is not proved as written."
+  ],
+  "repair_hints": [
+    "Use the already established existence of 2N distinct displayed positive fibers in the good class to make (40) strict: equality in sum_z a_z^2 <= (max_z a_z)A <= A^2/4 would force all positive masses to equal A/4 and hence only four positive fibers, impossible because 2N >= 18. This yields Q_zeta_* > 3A_zeta_*/32 and hence q_ant/Q < 2/(3N), which supplies the missing strictness in (33)."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

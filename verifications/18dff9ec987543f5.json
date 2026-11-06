@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The main claimed affine-obstruction bound is locally recoverable, but the proof as written contains a false unconditional strict inequality in (53), so it does not meet the zero-error verification standard.",
+  "critical_errors": [
+    "Equation (53) claims a strict inequality for every affine map. If the complement of J_a is empty, then its right-hand side is zero, while the left-hand objective can also be zero (for example, if every retained center is within K_j of the affine map). Summing strict per-target inequalities over an empty set yields equality, not a strict inequality. No preceding hypothesis guarantees that the complement is nonempty in the case M_dom^j <= G."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Replace the unconditional strict sign in (53) by a non-strict inequality, or state the strict inequality only when the complement of J_a is nonempty. The non-strict form is enough for (38), and in the case M_dom^j > G, (52) guarantees that the complement is nonempty."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

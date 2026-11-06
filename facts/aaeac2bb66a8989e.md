@@ -1,0 +1,508 @@
+---
+fact_id: aaeac2bb66a8989e
+kind: lemma
+author: "research-agent"
+assurance: LLM-verified
+subgoal_id: canonical-product-completion-blocker-absorption
+depends_on: ["637b5f7874d8c875","6496cb3b0fd44f9d","695b44a4f0fdcd3a","6b09aae189415c70","be359f8a6c628483","c81f02314cb34f8b","f6188983e8850f01","fd621e3189426c0d"]
+verifier_run: d920ece9919f421c
+target_match: null
+---
+
+## Statement
+
+Fix \(h\geq3\), put \(N:=h^2\), \(n:=2\), and \(d:=2N\). Write \(\mathbb R^d=H_1\oplus H_2\), with \(H_1=H_2=\mathbb R^N\). If \(\xi_1,\ldots,\xi_N\) is the standard basis of \(H_1\) and \(\mathbf1:=\sum_i\xi_i\), set
+
+\[
+u_i:=\sqrt{\frac{N}{N-1}}\left(\xi_i-\frac1N\mathbf1\right),
+\qquad
+f_s:=\sqrt{\frac{N(s-1)}{s(N-1)}}.
+\tag{1}
+\]
+
+Choose \(f_h^{-1}<\alpha<f_{h-1}^{-1}\). Let \(\eta_1,\ldots,\eta_N\) be the standard basis of \(H_2\), and put
+
+\[
+S:=\left(N,\frac{N(N+1)}2\right),
+\qquad
+p_i:=-S+2\sum_{j=1}^{i-1}(1,j),
+\tag{2}
+\]
+
+\[
+c_i^+:=-\alpha u_i+\eta_i,
+\qquad
+c_i^-:=-\alpha u_i-\eta_i.
+\tag{3}
+\]
+
+Let \(B_d\) be the Euclidean unit ball. Choose \(R_d>0\) so that the half-mass metronoid of \(R_dB_d\) is \(B_d\). Write
+
+\[
+a:=\operatorname{vol}_d(R_dB_d),
+\tag{4}
+\]
+
+and define
+
+\[
+C:=\operatorname{conv}\bigcup_{i=1}^N
+\left(
+\{p_i\}\times(c_i^++R_dB_d)
+\ \cup\
+\{-p_i\}\times(c_i^-+R_dB_d)
+\right).
+\tag{5}
+\]
+
+For \(z\in\mathbb Z^2\), put
+
+\[
+C_z:=\{x:(z,x)\in C\},
+\qquad
+a_z:=\operatorname{vol}_d(C_z),
+\qquad
+\mathcal K_z:=\mathsf M_{a_z/2}(C_z),
+\tag{6}
+\]
+
+and write \(Z:=\{z:a_z>0\}\), \(W:=\sum_{z\in Z}a_z\), and \(G:=\mathfrak C_{\mathrm{core}}(C)\). Assume \(G<W/4\). Let \(r=(r_e)\), \(Q:=\sum_er_e>0\), \(R\), \(R_{\mathrm{sel}}(C)\), \(M_{\mathrm{off}}(C)\), \(R_{\mathrm{cloud}}(C)\), and
+
+\[
+D:=2^2h_{\max}(C)
+\tag{7}
+\]
+
+have exactly the canonical meanings of accepted facts c81f02314cb34f8b, 6b09aae189415c70, and 637b5f7874d8c875. Thus a good parity class \(\zeta\), of total mass \(A_\zeta:=\sum_{z\equiv\zeta}a_z\), has
+
+\[
+r_{\{u,v\}}=\frac{a_ua_v}{4A_\zeta}
+\quad(u\ne v,\ u\equiv v\equiv\zeta),
+\tag{8}
+\]
+
+and a bad class has zero reservoir.
+
+Let
+
+\[
+\mathcal E_{\mathrm{ant}}:=\{e_i:=\{p_i,-p_i\}:1\leq i\leq N\},
+\qquad
+q_{\mathrm{ant}}:=\sum_{e\in\mathcal E_{\mathrm{ant}}}r_e.
+\tag{9}
+\]
+
+Choose the actual load-minimal optimizer of accepted fact 6496cb3b0fd44f9d for the full canonical reservoir and write
+
+\[
+\omega_e:=h_{D_e}(v_e),
+\quad
+\Omega:=\sum_e\omega_e,
+\quad
+\Omega_{\mathrm{ant}}:=\sum_{e\in\mathcal E_{\mathrm{ant}}}\omega_e,
+\quad
+\Omega_{\mathrm{comp}}:=\Omega-\Omega_{\mathrm{ant}}.
+\tag{10}
+\]
+
+At target zero, use the congestion normalization of accepted fact f6188983e8850f01:
+
+\[
+\vartheta_e:=2^{-(d+1)}(a_u^{1/d}+a_v^{1/d})^d,
+\quad
+\kappa_0:=\sum_{e:m_e=0}\frac{\omega_e}{\vartheta_e},
+\quad
+\chi_0:=\frac1{\max\{1,\kappa_0\}},
+\tag{11}
+\]
+
+\[
+\kappa_{\mathrm{ant}}
+:=\sum_{e\in\mathcal E_{\mathrm{ant}}}\frac{\omega_e}{\vartheta_e},
+\quad
+\kappa_{\mathrm{comp},0}:=\kappa_0-\kappa_{\mathrm{ant}},
+\quad
+B_{\mathrm{ant}}:=(1-\chi_0)\Omega_{\mathrm{ant}}.
+\tag{12}
+\]
+
+Then:
+
+1. With \(P:=\operatorname{conv}\{p_i,-p_i:1\leq i\leq N\}\), every convexity-forced fiber is included exactly:
+
+\[
+Z=P\cap\mathbb Z^2,
+\quad
+a_{p_i}=a_{-p_i}=a,
+\quad
+\mathcal K_{p_i}=c_i^++B_d,
+\quad
+\mathcal K_{-p_i}=c_i^-+B_d.
+\tag{13}
+\]
+
+All \(2N\) displayed vertices lie in one parity class \(\zeta_*\). The totals \(A_{\zeta_*}\) and \(Q\) retain every other fiber in \(P\cap\mathbb Z^2\), with its actual volume.
+
+2. If \(\zeta_*\) is bad, then
+
+\[
+q_{\mathrm{ant}}=\Omega_{\mathrm{ant}}
+=\kappa_{\mathrm{ant}}=B_{\mathrm{ant}}=0.
+\tag{14}
+\]
+
+If \(\zeta_*\) is good, then
+
+\[
+r_{e_i}=\frac{a^2}{4A_{\zeta_*}},
+\qquad
+q_{\mathrm{ant}}=\frac{Na^2}{4A_{\zeta_*}}\leq\frac a8,
+\tag{15}
+\]
+
+and its exact class contribution satisfies
+
+\[
+Q\geq Q_{\zeta_*}
+:=\frac{A_{\zeta_*}^2-\sum_{z\equiv\zeta_*}a_z^2}
+{8A_{\zeta_*}}
+>\frac{3A_{\zeta_*}}{32}
+\geq\frac{3Na}{16}.
+\tag{16}
+\]
+
+Consequently, in both cases,
+
+\[
+\boxed{\frac{q_{\mathrm{ant}}}{Q}<\frac{2}{3N}=\frac{2}{3h^2}.}
+\tag{17}
+\]
+
+3. All six hard-ledger capacities have the rigorous bounds
+
+\[
+\boxed{R\geq Q-\Omega,}
+\qquad
+\boxed{G\geq4a,}
+\qquad
+\boxed{R_{\mathrm{sel}}(C)\geq4\gamma_da,}
+\tag{18}
+\]
+
+where \(\gamma_d=(d/(d+1))^d\). If \(q_{\mathrm{ant}}>0\), then
+
+\[
+\boxed{M_{\mathrm{off}}(C)\geq\frac{4q_{\mathrm{ant}}}{N},}
+\qquad
+\boxed{R_{\mathrm{cloud}}(C)\geq
+\frac{16\gamma_{2d}q_{\mathrm{ant}}}{N},}
+\tag{19}
+\]
+
+and, in every case,
+
+\[
+\boxed{D\geq
+\max\{4\gamma_da,M_{\mathrm{off}}(C),R_{\mathrm{cloud}}(C)\}.}
+\tag{20}
+\]
+
+For \(q_{\mathrm{ant}}=0\), the two bounds in (19) are interpreted as zero lower bounds.
+
+4. Every antipodal edge satisfies
+
+\[
+m_{e_i}=0,
+\qquad
+L_{e_i}=-\alpha u_i+B_d,
+\qquad
+\vartheta_{e_i}=\frac a2.
+\tag{21}
+\]
+
+The actual full-reservoir optimizer and multiplier obey
+
+\[
+\boxed{0\leq\Omega_{\mathrm{ant}}\leq q_{\mathrm{ant}}
+<\frac{2Q}{3h^2},}
+\qquad
+\boxed{0\leq\kappa_{\mathrm{ant}}\leq\frac14,}
+\tag{22}
+\]
+
+\[
+\boxed{0\leq B_{\mathrm{ant}}\leq\Omega_{\mathrm{ant}}
+<\frac{2Q}{3h^2}.}
+\tag{23}
+\]
+
+If \(\chi_0<1\), then \(\kappa_{\mathrm{comp},0}>3/4\). If \(\chi_0=1\), then \(B_{\mathrm{ant}}=0\). Thus the antipodal family cannot by itself create positive-fresh target congestion.
+
+5. The subfamilies of \((L_{e_i})_{i=1}^N\) having no common point are exactly those of cardinality at least \(h\); their inclusion-minimal non-hit families are exactly the \(h\)-subsets. For the canonical positive-fresh capacities
+
+\[
+\beta_e:=(1-\chi_{m_e})\omega_e
+\tag{24}
+\]
+
+of accepted facts 637b5f7874d8c875 and fd621e3189426c0d, put
+
+\[
+C_{\mathrm{ant}}:=\max_{x\in\mathbb R^d}
+\sum_{i:x\in-\alpha u_i+B_d}\beta_{e_i},
+\tag{25}
+\]
+
+and let \(\mathsf P_{\mathrm{ant}}\) be the fractional packing of all \(h\)-subsets under the edge capacities \(\beta_e\). Then
+
+\[
+\boxed{0\leq B_{\mathrm{ant}}-C_{\mathrm{ant}}
+\leq B_{\mathrm{ant}}<\frac{2Q}{3h^2},}
+\tag{26}
+\]
+
+\[
+\boxed{\mathsf P_{\mathrm{ant}}\leq\frac{B_{\mathrm{ant}}}{h}
+<\frac{2Q}{3h^3}.}
+\tag{27}
+\]
+
+Every other nonnegative no-reuse charge supported on \(\mathcal E_{\mathrm{ant}}\) and dominated edgewise by \(\beta\), including the antipodal part of a fresh load, is at most \(B_{\mathrm{ant}}\). Hence this complete-\(h\)-uniform blocker defect and its packing are \(o(Q)\).
+
+6. If the six-capacity ledger is hard,
+
+\[
+R+G+R_{\mathrm{sel}}(C)+M_{\mathrm{off}}(C)
++R_{\mathrm{cloud}}(C)+D<\frac Q{100},
+\tag{28}
+\]
+
+then
+
+\[
+\boxed{q_{\mathrm{ant}}<
+\min\left\{\frac{2}{3h^2},\frac1{3200}\right\}Q,}
+\tag{29}
+\]
+
+and
+
+\[
+\boxed{\Omega_{\mathrm{comp}}>
+\left(\frac{99}{100}-
+\min\left\{\frac{2}{3h^2},\frac1{3200}\right\}\right)Q.}
+\tag{30}
+\]
+
+Thus essentially all hard-branch load has certified provenance on the cross-pair/interior-fiber completion. This does not assert that the completed load has already been absorbed into a terminal capacity.
+
+## Proof
+
+The consecutive directions in the first half of the base list are
+
+\[
+p_{i+1}-p_i=2(1,i)\quad(1\leq i<N),
+\qquad
+-p_1-p_N=2(1,N).
+\tag{31}
+\]
+
+The negatives supply the opposite directions in the same strict angular order. Hence \(p_1,\ldots,p_N,-p_1,\ldots,-p_N\) is the vertex list of a strictly convex polygon and every displayed point is exposed. Its fiber in (5) is therefore precisely the corresponding translated ball, proving the last three identities in (13).
+
+For \(i<j\),
+
+\[
+p_j-p_i=(2(j-i),(j-i)(i+j-1)).
+\tag{32}
+\]
+
+The factors in the second coordinate have opposite parity because their sum is \(2j-1\). Thus (32) has two even coordinates, and \(-p_i\equiv p_i\pmod2\). This proves the common parity claim.
+
+Let
+
+\[
+\widetilde C:=\operatorname{conv}
+\{(p_i,c_i^+),(-p_i,c_i^-):1\leq i\leq N\}.
+\]
+
+Then
+
+\[
+C=\widetilde C+(\{0\}\times R_dB_d).
+\tag{33}
+\]
+
+Its base projection is \(P\). Every \(z\in P\) has a nonempty \(\widetilde C\)-fiber, so (33) puts a translate of \(R_dB_d\) in \(C_z\); outside \(P\), the fiber is empty. Thus \(Z=P\cap\mathbb Z^2\), including every interior and boundary lattice fiber forced by convexity. This proves assertion 1.
+
+If \(\zeta_*\) is bad, accepted fact c81f02314cb34f8b makes its reservoir zero. The optimizer and fresh charge are edgewise dominated by the reservoir, giving (14).
+
+Suppose \(\zeta_*\) is good. Since \(A_{\zeta_*}\geq2Na\), (8) gives (15). Put
+
+\[
+M_*:=\max_{z\equiv\zeta_*}a_z.
+\]
+
+Goodness gives
+
+\[
+\sum_{z\equiv\zeta_*}a_z^2
+\leq M_*A_{\zeta_*}
+\leq\frac{A_{\zeta_*}^2}{4}.
+\tag{34}
+\]
+
+Both inequalities cannot be equalities simultaneously. Equality in the first forces every positive \(a_z\) in the class to equal \(M_*\), because
+
+\[
+M_*A_{\zeta_*}-\sum_{z\equiv\zeta_*}a_z^2
+=\sum_{z\equiv\zeta_*}a_z(M_*-a_z),
+\tag{35}
+\]
+
+and every summand is nonnegative. Equality in the second then gives \(M_*=A_{\zeta_*}/4\), so the class would have exactly four positive fibers. But it contains the \(2N=2h^2\geq18\) distinct displayed positive fibers in (13). Therefore
+
+\[
+\sum_{z\equiv\zeta_*}a_z^2<\frac{A_{\zeta_*}^2}{4}.
+\tag{36}
+\]
+
+Substitution in the exact class formula gives
+
+\[
+Q_{\zeta_*}>
+\frac{A_{\zeta_*}^2-A_{\zeta_*}^2/4}{8A_{\zeta_*}}
+=\frac{3A_{\zeta_*}}{32}
+\geq\frac{3Na}{16}.
+\tag{37}
+\]
+
+Together with \(q_{\mathrm{ant}}\leq a/8\) and \(Q\geq Q_{\zeta_*}\), this proves (17) strictly. In the bad case it follows from (14). All actual interior-fiber masses occur in (34)--(37); none was replaced by the selected matching.
+
+Accepted fact 695b44a4f0fdcd3a, applied to the full reservoir and the optimizer of accepted fact 6496cb3b0fd44f9d, gives \(R\geq Q-\Omega\). Since \(G<W/4<W/2\), accepted fact c81f02314cb34f8b gives \(a_z\leq G/4\) for every positive fiber; a displayed vertex gives \(G\geq4a\).
+
+For the selector capacity, take \(E=\{p_1\}\), the centroid \(c_1^+\), and weight \(\gamma_da\). The centroid has absolute fiber depth at least \(\gamma_da\), as in accepted fact be359f8a6c628483. The singleton has base and residual ranks zero, so that accepted definition gives \(R_{\mathrm{sel}}(C)\geq2^2\gamma_da\), and it also gives \(D\geq R_{\mathrm{sel}}(C)\).
+
+When \(q_{\mathrm{ant}}>0\), the antipodal centroid measure
+
+\[
+\sigma_{\mathrm{ant}}:=
+\sum_{i=1}^Nr_{e_i}\delta_{(0,-\alpha u_i)}
+\tag{38}
+\]
+
+is a positive submeasure of an allowed exact minimum-unmatched host by part (a) of accepted fact 6b09aae189415c70. Its base rank is zero and its continuous affine rank is \(N-1\), because the \(u_i\) are regular-simplex vertices. Thus
+
+\[
+M_{\mathrm{off}}(C)\geq2^2\frac{q_{\mathrm{ant}}}{N}.
+\tag{39}
+\]
+
+The same edges are distinct reflected pairs about the positive integer fiber zero; (33) places \(-\alpha u_i+R_dB_d\) in \(C_0\). Part (b) of accepted fact 6b09aae189415c70 gives
+
+\[
+R_{\mathrm{cloud}}(C)\geq4\gamma_{2d}2^2
+\frac{q_{\mathrm{ant}}}{N}.
+\tag{40}
+\]
+
+That fact also gives \(D\geq M_{\mathrm{off}}(C)\) and \(D\geq R_{\mathrm{cloud}}(C)\). This proves (18)--(20).
+
+The vertex identities in (13) give
+
+\[
+L_{e_i}=\frac12(\mathcal K_{p_i}+\mathcal K_{-p_i})
+=-\alpha u_i+B_d,
+\qquad
+\vartheta_{e_i}=2^{-(d+1)}(2a^{1/d})^d=\frac a2.
+\tag{41}
+\]
+
+The actual optimizer satisfies \(0\leq\omega_e\leq r_e\), so (17) implies
+
+\[
+\Omega_{\mathrm{ant}}\leq q_{\mathrm{ant}}<\frac{2Q}{3h^2},
+\qquad
+\kappa_{\mathrm{ant}}=\frac{2\Omega_{\mathrm{ant}}}{a}
+\leq\frac{2q_{\mathrm{ant}}}{a}\leq\frac14.
+\tag{42}
+\]
+
+Since \(0<\chi_0\leq1\), (23) follows. If \(\chi_0<1\), then \(\kappa_0>1\), whence
+
+\[
+\kappa_{\mathrm{comp},0}
+=\kappa_0-\kappa_{\mathrm{ant}}
+>1-\frac14=\frac34.
+\tag{43}
+\]
+
+If \(\chi_0=1\), (12) gives \(B_{\mathrm{ant}}=0\). This proves assertion 4 using the actual full target multiplier.
+
+The regular-simplex identities are
+
+\[
+\lVert u_i\rVert_2=1,
+\qquad
+\langle u_i,u_j\rangle=-\frac1{N-1}\quad(i\ne j),
+\qquad
+\sum_i u_i=0.
+\tag{44}
+\]
+
+For \(J\subseteq\{1,\ldots,N\}\), \(|J|=s\), and \(\bar u_J:=s^{-1}\sum_{i\in J}u_i\), expansion of (44) gives
+
+\[
+\lVert u_i-\bar u_J\rVert_2=f_s,
+\tag{45}
+\]
+
+\[
+\frac1s\sum_{i\in J}\lVert x+\alpha u_i\rVert_2^2
+=\lVert x+\alpha\bar u_J\rVert_2^2+\alpha^2f_s^2.
+\tag{46}
+\]
+
+Thus the minimum of \(\max_{i\in J}\lVert x+\alpha u_i\rVert_2\) is \(\alpha f_s\), attained at \(x=-\alpha\bar u_J\). Since \(f_s\) increases with \(s\) and \(f_h^{-1}<\alpha<f_{h-1}^{-1}\),
+
+\[
+\bigcap_{i\in J}L_{e_i}\ne\varnothing
+\quad\Longleftrightarrow\quad |J|\leq h-1.
+\tag{47}
+\]
+
+All these edges have target zero, so (47) proves the non-hit assertion. The total positive-fresh capacity on them is \(B_{\mathrm{ant}}\), proving (26). If \((\zeta_I)_{|I|=h}\) is a feasible blocker packing, summing its edge-capacity inequalities gives
+
+\[
+h\sum_{|I|=h}\zeta_I
+\leq\sum_{e\in\mathcal E_{\mathrm{ant}}}\beta_e
+=B_{\mathrm{ant}}.
+\tag{48}
+\]
+
+Together with (23), this proves (27). The no-reuse interpretation is exactly the edgewise convention of accepted fact fd621e3189426c0d; every antipodal subcharge dominated by \(\beta\) is bounded by \(B_{\mathrm{ant}}\).
+
+Finally assume (28). Its nonnegative summands give \(R<Q/100\) and \(G<Q/100\). Equation (18) then gives
+
+\[
+\Omega>\frac{99Q}{100},
+\qquad
+4a\leq G<\frac Q{100}.
+\tag{49}
+\]
+
+In either parity case, (14)--(15) give \(q_{\mathrm{ant}}\leq a/8<Q/3200\). Independently, the repaired strict estimate (17) gives \(q_{\mathrm{ant}}<2Q/(3h^2)\). Hence (29) holds strictly for every \(h\geq3\), including when the first entry in the minimum is the smaller one. Finally,
+
+\[
+\Omega_{\mathrm{comp}}
+=\Omega-\Omega_{\mathrm{ant}}
+>\frac{99Q}{100}-q_{\mathrm{ant}}
+>\left(\frac{99}{100}-
+\min\left\{\frac{2}{3h^2},\frac1{3200}\right\}\right)Q,
+\tag{50}
+\]
+
+which proves (30) and completes the proof.
+
+## External sources
+
+none

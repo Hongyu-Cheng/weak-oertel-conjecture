@@ -1,0 +1,13 @@
+{
+  "advances": "Proves CELL-LIFT with coefficient one for thin roofs under symmetry of the aggregate cell density alone, without coordinatewise roof symmetry.\n",
+  "author": "research-agent",
+  "candidate_id": "643c6114511e1370",
+  "candidate_schema": 2,
+  "created_at": "2026-09-19T16:31:05.648896+00:00",
+  "depends_on": [],
+  "external_sources": "None.\n",
+  "kind": "theorem",
+  "proof": "Write \\(\\mathbf y'=2\\mathbf y_0-\\mathbf y\\), and let\n\\[\nR_{\\mathbf J}(\\mathbf y)\n=\\#\\{\\mathbf k\\in S_{\\mathbf y}:2\\mathbf J-\\mathbf k\\in S_{\\mathbf y'}\\}.\n\\]\nFor a single coordinate, average the overlap count over \\(J_i=0,1\\). The possible pairs with sum zero or two are\n\\[\n(-1,1),(0,0),(1,-1),(0,2),(1,1),(2,0).\n\\]\nTheir availability gives the exact average\n\\[\n\\frac{2+a_i+b_i+a_i'+b_i'}2\n=\\frac{(a_i+b_i+1)+(a_i'+b_i'+1)}2.\n\\]\nAverage independently over all core coordinates and use arithmetic-geometric mean:\n\\[\n\\mathbb E_{\\mathbf J}R_{\\mathbf J}(\\mathbf y)\n\\ge\\sqrt{B(\\mathbf y)B(\\mathbf y')}=B(\\mathbf y).\n\\]\nSome \\(\\mathbf J\\) therefore has total reflected mass at least \\(M\\).\n\nThe corresponding submeasure is invariant under\n\\((\\mathbf k,\\mathbf y)\\mapsto(2\\mathbf J-\\mathbf k,2\\mathbf y_0-\\mathbf y)\\).\nIt is a centrally symmetric submeasure of the original mixed measure, centered at a feasible core point. Every containing halfspace has at least half its mass. This proves the actual-depth bound.\n\nThe \\(B\\)-measure is centrally symmetric and has a Lebesgue density. Every halfspace through \\(\\mathbf y_0\\) has mass \\(M/2\\), and opposite halfspaces show that no point has depth exceeding \\(M/2\\). Thus \\(\\Delta_B=M/2\\).\n",
+  "statement": "Let \\(T\\subset\\mathbb R^d\\) be a compact convex body, centrally symmetric about \\(\\mathbf y_0\\). Let \\(\\ell_i^\\pm\\) be nonnegative bounded upper-semicontinuous concave roofs and define\n\\[\nC=\\{(\\mathbf x,\\mathbf y):\n\\mathbf y\\in T,\\ -\\ell_i^-(\\mathbf y)\\le x_i\\le1+\\ell_i^+(\\mathbf y)\\},\n\\quad S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d).\n\\]\nPut \\(a_i=\\lfloor\\ell_i^-\\rfloor\\), \\(b_i=\\lfloor\\ell_i^+\\rfloor\\), and\n\\(B=\\prod_i(a_i+b_i+1)\\). Assume \\(a_i,b_i\\in\\{0,1\\}\\) almost everywhere and\n\\(B(\\mathbf y)=B(2\\mathbf y_0-\\mathbf y)\\) almost everywhere.\nThen some core vertex \\(\\mathbf J\\in\\{0,1\\}^n\\) satisfies\n\\[\nh_S((\\mathbf J,\\mathbf y_0))\\ge M/2=\\Delta_B,\n\\qquad M=\\int_TB,\n\\]\nwhere both depths use original unnormalized mass and containing closed halfspaces.\n",
+  "subgoal_id": "intake18-thin-aggregate-symmetry-lifting"
+}

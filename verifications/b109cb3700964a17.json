@@ -1,0 +1,16 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "Parts (a)--(c) are essentially justified, but part (d) changes the ambient dimension without having stated the needed dimension-uniform hypothesis, and its final transfer likewise requires hypotheses in every arithmetic dimension. Thus the equivalence and locked conclusion do not follow as written.",
+  "critical_errors": [
+    "In part (d), N is inherited from the opening of the statement, so the first assertion is stated only for full-dimensional supports in Z^N. The converse proof sends a lower-dimensional support to a full-dimensional support in Z^r and applies the first assertion there. That application is unavailable when r<N. The implication may be repairable by explicitly quantifying the first assertion uniformly over all dimensions, or by a new fixed-N thickening/limit argument, but neither appears in the candidate.",
+    "The claimed locked weak Oertel conclusion does not follow from either assertion as presently quantified for a single ambient dimension N. Accepted fact c5f6533ba1c11991 requires H_{3,n+1}(kappa) for every required arithmetic dimension n+1 (and a uniform positive coefficient). The last sentence merely says to apply that fact at arithmetic dimension n+1 and never supplies the missing all-dimensions quantifier."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Restate part (d) as an equivalence between dimension-uniform assertions explicitly quantified over every N (with the same kappa), then the rank-r reduction and the transfer theorem apply.",
+    "Alternatively, for a fixed N, prove the lower-dimensional case by embedding the support as a face of a full-dimensional complete lattice support in Z^N, approximate the face law by finite exponential tilts, and pass to the limit using continuity; separately state the all-dimensions hypothesis needed for the locked conclusion."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

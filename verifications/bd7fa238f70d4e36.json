@@ -1,0 +1,16 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The main TU rounding and entropy argument is sound, including the stated boundary cases. The catalog application fails as written because independence of every underlying Bernoulli variable from every other one supplies pairwise independence, whereas the proof requires mutual independence.",
+  "critical_errors": [
+    "The catalog's support, log-concavity, and probability assertions have a counterexample under its stated independence condition. Take four Bernoulli variables whose joint law is uniform on the eight vectors in {0,1}^4 of odd coordinate sum. Each variable is fair, and every pair is independent: each of the four pair outcomes has probability 1/4. Set t=r=1, m_1=4, c_1=0, all signs equal to +1, Y_1 equal to their sum, and B=[1]. Then B is TU, Y_1 takes only the values 1 and 3, each with probability 1/2, and b=B E Y=2 is integral. Thus P(BY=b)=0, contradicting both the catalog bound 1/(2m_1+1)=1/9 and the first-form bound 1/(m_1+1)=1/5. The missing mass at 2 also contradicts the asserted positive interval support and log-concavity. This refutes the catalog application, not the main theorem with its explicitly assumed log-concave group laws."
+  ],
+  "gaps": [
+    "The convolution induction requires each added trial to be independent of the accumulated sum. The subsequent group-independence argument likewise uses a product joint mass for the entire trial family. Neither follows from the catalog's condition that every underlying Bernoulli variable is independent of every other underlying Bernoulli variable."
+  ],
+  "repair_hints": [
+    "State mutual (joint) independence of the entire family of underlying Bernoulli variables explicitly; pairwise independence is insufficient."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

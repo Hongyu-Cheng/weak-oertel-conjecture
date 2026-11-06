@@ -1,0 +1,15 @@
+{
+  "advances": "Eliminates the entire range \\(d\\le 99\\) from the canonical hard setting, independently of the labelled \\(I/O\\) alternative and of all target-rank assumptions. In particular, the rank-\\((2,2)\\) case \\(n=3,d=48\\) is impossible.\n",
+  "author": "research-agent",
+  "candidate_id": "abdbc8d0cbc6ea36",
+  "candidate_schema": 2,
+  "created_at": "2026-08-23T11:32:17.920366+00:00",
+  "depends_on": [
+    "6b09aae189415c70"
+  ],
+  "external_sources": "none\n",
+  "kind": "theorem",
+  "proof": "Accepted fact `6b09aae189415c70` defines the reservoir centroid measure\n\\[\n \\bar\\nu_r:=\\sum_e r_e\\,\\delta_{(m_e,\\bar c_e)}\n\\]\nand proves that every nonzero positive submeasure \\(\\sigma\\le\\bar\\nu_r\\) satisfies\n\\[\n M_{\\mathrm{off}}(C)\n \\ge 2^{n-\\rho_\\sigma}\\frac{|\\sigma|}{r_\\sigma+1},\n\\tag{1}\n\\]\nwhere \\(\\rho_\\sigma\\) is the affine dimension of the base support and \\(r_\\sigma\\) is its intrinsic continuous residual rank.\n\nTake \\(\\sigma=\\bar\\nu_r\\). This is an admissible nonzero positive submeasure, and\n\\[\n |\\bar\\nu_r|=\\sum_e r_e=Q.\n\\tag{2}\n\\]\nBecause its base coordinates \\(m_e\\) lie in \\(\\mathbb R^n\\),\n\\[\n \\rho_{\\bar\\nu_r}\\le n.\n\\tag{3}\n\\]\nIn the definition of continuous residual rank, the zero affine map on the affine hull of the base support is admissible. All resulting residual vectors \\(\\bar c_e\\) lie in \\(\\mathbb R^d\\), and therefore\n\\[\n r_{\\bar\\nu_r}\\le d.\n\\tag{4}\n\\]\nApplying (1) to the full reservoir measure and using (2)--(4) gives\n\\[\n M_{\\mathrm{off}}(C)\n \\ge 2^{n-\\rho_{\\bar\\nu_r}}\n       \\frac{Q}{r_{\\bar\\nu_r}+1}\n \\ge \\frac{Q}{d+1}.\n\\tag{5}\n\\]\nSince \\(M_{\\mathrm{off}}(C)\\) is a nonnegative summand of \\(\\mathcal A(C)\\),\n\\[\n \\mathcal A(C)\\ge M_{\\mathrm{off}}(C)\\ge\\frac{Q}{d+1}.\n\\tag{6}\n\\]\nIf \\(d\\le99\\), then (6) yields \\(\\mathcal A(C)\\ge Q/100\\), contradicting the strict hypothesis. Hence \\(d\\ge100\\).\n",
+  "statement": "Let \\(n,d\\in\\mathbb Z_{>0}\\), let \\(C\\subseteq\\mathbb R^n\\times\\mathbb R^d\\) be a convex body, and put\n\\[\n C_z:=\\{x\\in\\mathbb R^d:(z,x)\\in C\\},\n \\qquad\n a_z:=\\operatorname{vol}_d(C_z),\n\\]\n\\[\n Z:=\\{z\\in\\mathbb Z^n:a_z>0\\},\n \\qquad\n W:=\\sum_{z\\in Z}a_z>0,\n \\qquad\n G:=\\mathfrak C_{\\mathrm{core}}(C).\n\\]\nAssume \\(G<W/4\\). Let \\(r=(r_e)\\) be the half-strength canonical product reservoir of accepted fact `6b09aae189415c70`, and put\n\\[\n Q:=|r|=\\sum_e r_e>0,\n\\]\n\\[\n R:=R_C(r),\n\\]\nusing the exact normalization of that accepted fact. Use also its nonnegative capacities \\(R_{\\mathrm{sel}}(C)\\), \\(M_{\\mathrm{off}}(C)\\), and \\(R_{\\mathrm{cloud}}(C)\\), and put\n\\[\n D:=2^n h_{\\max}(C),\n \\qquad\n \\mathcal A(C):=R+G+R_{\\mathrm{sel}}(C)+M_{\\mathrm{off}}(C)\n +R_{\\mathrm{cloud}}(C)+D.\n\\]\nThen\n\\[\n \\boxed{M_{\\mathrm{off}}(C)\\ge\\frac{Q}{d+1}},\n \\qquad\n \\boxed{\\mathcal A(C)\\ge\\frac{Q}{d+1}}.\n\\]\nConsequently, if\n\\[\n \\mathcal A(C)<\\frac{Q}{100},\n\\]\nthen\n\\[\n \\boxed{d\\ge 100}.\n\\]\n",
+  "subgoal_id": "hard-branch-labelled-defect-closure"
+}

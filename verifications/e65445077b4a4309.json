@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The proof rigorously establishes the halfspace bound (1), including the residual-rank-zero and singleton cases, but the claimed consequence (2) is not justified from the supplied candidate because h_S is never defined.",
+  "critical_errors": [],
+  "gaps": [
+    "The symbol h_S(y) is undefined in the candidate and in both supplied predecessor facts. Therefore the displayed definition h_max(C)=sup_{y in S} h_S(y) gives no relation between h_S(y) and the infimum of the mixed volumes of closed halfspaces containing y. The final assertion that (2) follows from (1) cannot be verified using only the supplied material."
+  ],
+  "repair_hints": [
+    "Explicitly define h_S(y) as the infimum of H_d(S intersect H) over closed halfspaces H containing y before defining h_max(C); then (1) immediately implies (2)."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

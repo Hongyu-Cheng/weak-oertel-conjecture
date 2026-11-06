@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The positive-volume construction, exact preservation of positive fibers and pointwise depths, and the lattice-width-one centrally symmetric lift are justified. The final equivalence cannot be certified from the supplied statement because the locked inequality and its full admissible-instance domain are absent, and the proof's zero-volume step needs a nonemptiness premise that is not supplied.",
+  "critical_errors": [],
+  "gaps": [
+    "The final paragraph attempts to cover original instances with W = 0 by selecting a point of S, but the supplied assumptions do not state that such instances satisfy S != empty. A convex body need not meet the mixed-integer lattice: for n = d = 1, C = [1/4, 3/4] x [0, 1] is a full-dimensional convex body with S empty and W = 0. The initial construction assumes W > 0, so it does not address this case either. The candidate refers to a locked inequality without supplying its exact statement or admissibility hypotheses, and no accepted predecessor fact supplies them. Consequently it is not possible to verify whether the asserted all-instance equivalence excludes empty S or whether the zero-volume argument has the hypothesis it needs."
+  ],
+  "repair_hints": [
+    "Supply the exact locked inequality and its complete admissibility hypotheses as verifier input. The zero-volume part of the equivalence needs a justified nonemptiness premise whenever it claims the existence of a point in S."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

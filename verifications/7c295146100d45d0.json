@@ -1,0 +1,16 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The lower bound (1), its depth consequence (4), the affine-lifting inequalities (6)-(7), and the explicit weight calculations are mathematically consistent. Stateless approval is nevertheless impossible because two conclusions use objects that are not defined by the candidate or the supplied predecessor fact.",
+  "critical_errors": [],
+  "gaps": [
+    "The final affine-certificate conclusion invokes a \"registered anchored affine-certificate capacity,\" its admissibility conditions, its value, and a \"lattice hull\" without supplying their definitions. Consequently the claims that E=vert(P) is admissible and that (6) or (7) gives capacity at least W/64 cannot be checked from the allowed material.",
+    "In the calibration, kappa was defined only from a convex body C and fiber measures mu_r, but profile (8) is explicitly only an abstract weight profile and no discrete full-autocorrelation kappa is defined for it. Thus kappa(Q_+) in (16) is formally undefined. The displayed calculation is correct for the natural additional definition kappa_c=(1/4) sum_r W_r^{-1} sum_{z+z'=2c} w_z w_{z'}, but that definition is not part of the candidate."
+  ],
+  "repair_hints": [
+    "Supply the exact registered capacity and lattice-hull definitions and verify each admissibility requirement directly.",
+    "Define the normalized full discrete same-parity midpoint profile for abstract weights before using kappa in (16), and state explicitly the domain in which the off-diagonal analogue is claimed to fail."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

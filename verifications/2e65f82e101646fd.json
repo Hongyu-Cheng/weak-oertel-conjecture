@@ -1,0 +1,16 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The reduction, compactness, threshold-allocation identity, dual separation, Helly bound, and segment/profile inequalities are otherwise justified, but the unconditional assertion that every maximum in (9) is attained is false when the relevant polytope family is empty.",
+  "critical_errors": [
+    "The statement claims that all maxima in (9) are attained, although it explicitly assigns the value 0 when no feasible P exists. This case can occur: for example, with d=1 and C=[-0.4,0.4]^2 times [-1,1], D_+ consists only of (0,0), so P_1 and P_2 are empty. Thus A_1(C)=A_2(C)=0 only by convention, and there is no polytope P attaining either value."
+  ],
+  "gaps": [
+    "The proof sentence that finiteness of P_q proves attainment in (9) covers only a nonempty family of defined values; it does not cover the permitted empty-family case."
+  ],
+  "repair_hints": [
+    "Qualify the attainment claim to cases in which P_q contains a feasible polytope, while retaining the separate value-0 convention for the empty case."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

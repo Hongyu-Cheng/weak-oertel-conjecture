@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The variance estimates and the predecessor application check out for their actual uses, but the proof asserts a false universally quantified upper-endpoint interpolation inequality: it never requires the interpolation column to lie between the two endpoint columns. This is a mathematical error in the submitted proof, even though all subsequent uses happen to use bracketing columns.",
+  "critical_errors": [
+    "The assertion beginning 'For occupied columns p<q and an occupied interior column i' is false as written unless p<i<q is also required. In the proof, interior columns were defined by 0<i<r. For a counterexample satisfying all candidate hypotheses, take D to be the complete lattice polygon with columns D_0=D_3={0} and D_1=D_2={-10,-9,...,10}. Set beta=0 and lambda=log(t), where t>0 is the unique solution of 21t^2+2t^3=1. Then the original full mean is (1,0), this point belongs to D, the rank is two, and M=21. With p=0, q=1, and the occupied interior column i=2, theta=2 and the claimed inequality reads b_2=10 >= floor((1-2)b_0+2b_1)=20, which is false. Convexity justifies interpolation for theta in [0,1], not the extrapolation allowed by the stated quantifiers."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Explicitly restrict the upper-endpoint and derived mass interpolation inequalities to bracketing occupied columns p<i<q. Every later invocation already satisfies this restriction."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

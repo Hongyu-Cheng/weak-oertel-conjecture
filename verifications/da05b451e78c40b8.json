@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The capacity, KKT-slack, flux, and residual-rank arguments otherwise follow from the supplied predecessor facts, but the proof contains a false pointwise positivity assertion in the amplified-measure step.",
+  "critical_errors": [
+    "After assuming only \\(\\mathfrak A=\\sum_f A_f>0\\), the proof claims that Equation (16) gives \\(0<A_f\\le q_f\\le r_f\\) for every \\(f\\). This is false: positive total mass guarantees only that at least one \\(A_f\\) is positive, while other coefficients may be zero."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Replace the false pointwise claim by \\(0\\le A_f\\le q_f\\le r_f\\) for every \\(f\\), together with the separate observation that \\(\\mathfrak A>0\\) makes at least one coefficient positive. Those two facts are exactly what is needed to make \\(\\sigma_{\\mathrm{amp}}\\) a nonzero positive submeasure."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

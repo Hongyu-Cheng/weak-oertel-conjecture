@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The main integral and depth arguments are compatible with an almost-everywhere reflection identity, but the candidate explicitly asserts an unqualified equality of the functions R_J and B and calls it pointwise. That assertion is false under an assumption imposed only almost everywhere.",
+  "critical_errors": [
+    "The claimed identity 2^{-n} sum_J R_J = B is stated without an almost-everywhere qualifier, although |a_i-b_i| <= 1 is assumed only almost everywhere. For a valid counterexample, take n=d=1, T=[0,1], ell^-(y)=2-y, and ell^+(y)=0. These roofs are nonnegative, bounded, upper-semicontinuous, and concave. One has |a-b|=1 for every y in (0,1] and |a-b|=2 only at y=0, so the hypothesis holds almost everywhere. At y=0, however, a=2 and b=0, hence B=3, while r_0=3 and r_1=1, so (R_0+R_1)/2=2 rather than 3. Thus the displayed identity, and the proof's claim of a pointwise identity, are false as written."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Qualify the reflection-average identity as holding almost everywhere (which is sufficient for all subsequent integral and probability calculations), or strengthen the balance hypothesis to hold everywhere."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

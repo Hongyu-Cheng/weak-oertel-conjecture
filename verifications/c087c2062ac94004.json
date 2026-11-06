@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The proof conflates an optimizer of the affine-retention maximum defining R with the primal optimizer of the weighted-distance KKT problem. The cited complementary-saturation conclusion applies only to the latter, so the alpha construction and all subsequent conclusions are not established as written.",
+  "critical_errors": [
+    "The map s_* chosen in (11) is an optimizer of the maximum in (4), so it retains exactly R units of r-mass. Accepted fact 6496cb3b0fd44f9d proves omega_e=r_e on edges missed by a primal optimizer of Delta_C(r), using primal-dual equality for the weighted-distance problem; it does not prove this for an arbitrary optimizer of R_C(r). Therefore (48) is not applicable to the stated s_*. Consequently (50)-(52) are unsupported: B_cong, kappa_m^omega, and the original endpoint loads are controlled by omega, while alpha_e uses r_e on edges missed by the unrelated R-optimizer. In particular, T need not have the claimed lower bound, the target capacity bound (14) need not hold, and a positive alpha_e has not been shown to be a positive-original-load edge, so the endpoint construction leading to (19) is also unavailable."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Use the weighted-distance primal optimizer paired with the load-minimal dual optimizer in accepted fact 6496cb3b0fd44f9d, rather than an optimizer of (4). For that map complementary saturation applies, and its missed r-mass is at least Q-R rather than necessarily equal to Q-R; replacing (49) by this inequality would suffice for the subsequent lower bound, but the candidate statement and proof must be changed accordingly."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

@@ -1,0 +1,135 @@
+---
+fact_id: 3db95e3d61a4eedf
+kind: theorem
+author: "research-agent"
+assurance: LLM-verified
+subgoal_id: oct22-ordered-cube-chain-affine-moments
+depends_on: []
+verifier_run: 8a3367ca5abc428d
+target_match: null
+---
+
+## Statement
+
+For every integer \(n\ge1\), define
+\(D_n=\lbrace x\in\lbrace0,1,2\rbrace^n:x_j=2,\ x_i=0\Longrightarrow j<i\rbrace\).
+For every choice \(0<t_1<\cdots<t_n<1\), put
+\(Q=\prod_{i=1}^n[-t_i,2-t_i]\) and \(P=Q+(1,\ldots,1)\). Then
+\(\operatorname{conv}(Q\cup P)\cap\mathbb Z^n=D_n\), and
+\(|D_n|=(n+2)2^{n-1}\).
+
+Choose any \(\ell\in\mathbb R^n\) and retain the original law on this entire census:
+\(Z=\sum_{x\in D_n}e^{\ell\cdot x}\) and \(p_x=e^{\ell\cdot x}/Z\).
+For every supported target \(j\), define
+\(\tau_p(j)=\inf\lbrace p(H):H\subseteq\mathbb R^n\text{ is a closed halfspace containing }j\rbrace\), where
+\(p(H)=\sum_{x\in D_n\cap H}p_x\), and put
+\(M_r(p)=\sum_{j\in D_n}p_j\tau_p(j)^r\).
+Set
+\(\delta=1/16\), \(\rho=1+3\tanh^2(1/32)\), \(d_*=\log\rho\), and \(c_2=d_*^3/3456>0\).
+Then, for every \(n\) and every \(\ell\),
+$$
+M_2(p)\ge c_2\,4^{-n},\qquad
+M_3(p)\ge c_2^{3/2}\,8^{-n}.
+\tag{1}
+$$
+The depths in (1) use all original ambient containing halfspaces. There is no restriction on the magnitudes, signs, or order of the coordinate fields.
+
+## Proof
+
+First prove the complete census. Since \(Q\) is convex and \(P=Q+\mathbf1\),
+\(\operatorname{conv}(Q\cup P)=Q+[0,1]\mathbf1\): a convex combination of one point of \(Q\) and one point of \(Q+\mathbf1\) has this form, and \(q+\lambda\mathbf1=(1-\lambda)q+\lambda(q+\mathbf1)\) gives the reverse inclusion. At a fixed \(\lambda\in[0,1]\), coordinate \(i\) ranges over \([\lambda-t_i,2+\lambda-t_i]\). Its integral census is \(\lbrace0,1\rbrace\) for \(\lambda<t_i\), \(\lbrace0,1,2\rbrace\) for \(\lambda=t_i\), and \(\lbrace1,2\rbrace\) for \(\lambda>t_i\).
+
+Consequently an integral point in this convex hull belongs to \(\lbrace0,1,2\rbrace^n\), and each occurrence of 2 requires \(\lambda\ge t_j\), while each occurrence of 0 requires \(\lambda\le t_i\). The strict ordering of the \(t_i\) therefore implies that every 2 precedes every 0. Conversely, for a point with that ordering, let \(a\) be its last index with value 2, with default 0, and let \(b\) be its first index with value 0, with default \(n+1\). Put \(t_0=0\), \(t_{n+1}=1\). Then \(a<b\), and any \(\lambda\in[t_a,t_b]\) satisfies all its coordinate requirements. This proves the census, including parameter endpoints.
+
+Here is also a disjoint product decomposition used below. Let \(J_0=\lbrace0,1\rbrace^n\). For \(1\le t\le n\), let
+\(J_t=\lbrace1,2\rbrace^{t-1}\times\lbrace2\rbrace\times\lbrace0,1\rbrace^{n-t}\).
+These are precisely the classes according to the rightmost coordinate with value 2, with \(J_0\) denoting the absence of 2. They are nonempty, disjoint, and cover \(D_n\). Their cardinalities are \(2^n\) for \(J_0\) and \(2^{n-1}\) for each other class, proving the cardinality formula. For intermediate calculations define \(D_0\) to be a singleton. The same formula \(|D_m|=(m+2)2^{m-1}\) then holds also at \(m=0\).
+
+We next give a small-field estimate that will be applied only inside an explicitly described conditional stratum. On \(D_m\), let \(h=(h_1,\ldots,h_m)\) satisfy \(|h_i|\le\delta\). Write
+$$
+Z_h=\sum_{z\in D_m}e^{h\cdot z},\qquad
+q_h(z)=\frac{e^{h\cdot z}}{Z_h},\qquad
+T_h=\sum_{u\in\lbrace0,1\rbrace^m}e^{-|h\cdot u|}.
+\tag{2}
+$$
+For \(m=0\), all products and sums here have their singleton meanings, so \(q_h(\mathbf1)=T_h=1\). For every \(m\), the two points \(\mathbf1+u,\mathbf1-u\) lie in \(D_m\), and their midpoint is \(\mathbf1\). For nonzero Boolean \(u\), these pairs are mutually disjoint; their only missing central point is \(\mathbf1\), corresponding to \(u=0\). Thus every ambient closed halfspace containing a target whose middle coordinates are \(\mathbf1\), with all other coordinates fixed, contains at least one endpoint of each such pair and contains the central point. The mass supplied by this row, under the middle law \(q_h\), is at least \(q_h(\mathbf1)T_h\). This is a direct midpoint argument and does not restrict a halfspace normal.
+
+Since \(|h\cdot(z-\mathbf1)|\le\delta m\) and \(|h\cdot u|\le\delta m\), the exact normalization in (2) gives
+$$
+q_h(\mathbf1)\ge\frac{e^{-\delta m}}{|D_m|},\qquad
+T_h\ge2^m e^{-\delta m},\qquad
+4^m q_h(\mathbf1)^3T_h^2
+\ge\frac{8e^{(\log2-5/16)m}}{(m+2)^3}\ge\frac1{16}.
+\tag{3}
+$$
+For the last inequality, \(\log2>2/3\) implies \(\log2-5/16>1/3\). The function \((s+2)^3e^{-s/3}\) on \(s\ge0\) has its maximum at \(s=7\), and that maximum is \(729e^{-7/3}<128\). The final strict numerical comparison follows, for example, from \(e>5/2\), which gives \(e^{7/3}>25/4\) and \(729\cdot4/25<128\). The bound \(\log2>2/3\) also follows directly by applying strict convexity of \(1/x\) to its integral over \([1,2]\). This proves (3), including \(m=0\).
+
+Return to the original \(p,Z\). Split the coordinates into
+\(B=\lbrace i:|\ell_i|>\delta\rbrace\) and \(G=\lbrace1,\ldots,n\rbrace\setminus B\), with \(k=|B|\) and \(g=|G|=n-k\). Let \(\beta\) range over the actually supported assignments on \(B\), and denote their original marginal masses by
+\(\alpha_\beta=\sum_{x\in D_n:x_B=\beta}e^{\ell\cdot x}/Z\).
+They are positive and sum to one.
+
+For a fixed \(\beta\), let \(a\) be the last index in \(B\) whose fixed value is 2, with default 0, and \(b\) the first index in \(B\) whose fixed value is 0, with default \(n+1\). Supportedness implies \(a<b\). Every free coordinate before \(a\) must belong to \(\lbrace1,2\rbrace\), and every free coordinate after \(b\) must belong to \(\lbrace0,1\rbrace\). The free coordinates strictly between \(a\) and \(b\), in their original order, form exactly \(D_m\), where \(m\) is their number. Indeed, a 0 before the fixed 2 at \(a\), or a 2 after the fixed 0 at \(b\), would violate the ordering. In the middle, the only restriction is that its 2s precede its 0s. All fixed middle coordinates have value 1, so they add no restriction. Conversely every combination just described satisfies the full ordering. This proves the exact conditional support, including when one or both defaults are used.
+
+Thus the conditional original law given \(x_B=\beta\) factors into a product law \(q_{\mathrm{out},\beta}\) on its \(g-m\) outside binary coordinates and the law \(q_{h,\beta}\) of (2) on its middle \(D_m\), with the middle field obtained by restricting the original \(\ell\). It satisfies \(|h_i|\le\delta\). This factorization is only conditional: on every point of the stratum the original probability is exactly
+$$
+p_{(\beta,v,z)}
+=\alpha_\beta q_{\mathrm{out},\beta}(v)q_{h,\beta}(z).
+\tag{4}
+$$
+In particular, if \(Z_{\mathrm{out},\beta}\) is the product of the original unnormalized outside binary sums and \(Z_{h,\beta}\) is the middle sum from (2), then
+\(\alpha_\beta=e^{\ell_B\cdot\beta}Z_{\mathrm{out},\beta}Z_{h,\beta}/Z\). Thus (4) retains the original global normalizer \(Z\), with no change of field or support.
+
+For any outside value \(v\), take the supported target \(j=(\beta,v,\mathbf1)\). Apply the reflected-pair argument preceding (3) to every original ambient containing halfspace, with its bad and outside coordinates fixed. Equation (4) gives
+$$
+\tau_p(\beta,v,\mathbf1)
+\ge\alpha_\beta q_{\mathrm{out},\beta}(v)
+ q_{h,\beta}(\mathbf1)T_{h,\beta}.
+\tag{5}
+$$
+This also holds when the middle is empty, because the target atom itself supplies the right side. Every outside binary law has cubic atom sum at least \(1/4\), since \(s^3+(1-s)^3=1/4+3(s-1/2)^2\). Independence of its coordinates therefore gives
+\(\sum_vq_{\mathrm{out},\beta}(v)^3\ge4^{-(g-m)}\), with value 1 for an empty outside set. Sum the contributions to the original moment from the distinct targets \((\beta,v,\mathbf1)\). By (3)--(5),
+$$
+\begin{aligned}
+M_2(p)
+&\ge\sum_\beta\alpha_\beta^3
+ \left(\sum_vq_{\mathrm{out},\beta}(v)^3\right)
+ q_{h,\beta}(\mathbf1)^3T_{h,\beta}^2\\
+&\ge\frac1{16}\,4^{-g}\sum_\beta\alpha_\beta^3.
+\end{aligned}
+\tag{6}
+$$
+This derivation uses one row of actual ambient reflected pairs for each selected target. It does not multiply depth moments for the outside and middle factors. Every source probability in (4)--(6) is still its original value.
+
+It remains to prove a uniform lower bound for the cubic atom sum of the large-field marginal \(\alpha\). List \(B\) in increasing order as \(b_1<\cdots<b_k\). Under the original law conditioned on a class \(J_t\), all nonfixed coordinates are independent and retain their original coordinate fields. If \(t=0\), or if \(t\notin B\), the normalized marginal on \(B\) is a product with support \(\lbrace1,2\rbrace\) on an initial segment of these \(k\) coordinates and \(\lbrace0,1\rbrace\) on the rest. For \(t\notin B\), its initial segment has length \(|\lbrace b_s<t\rbrace|\). For all such \(t\) with that same length the normalized marginal is identical: conditioning on other coordinates changes only the class mass, while each bad binary normalization depends only on its own field. There are at most \(k+1\) such product laws.
+
+If \(t=b_s\), its bad marginal instead fixes that coordinate to 2, uses \(\lbrace1,2\rbrace\) before it and \(\lbrace0,1\rbrace\) after it. There are at most \(k\) such product laws, each with just one fixed coordinate. Since the \(J_t\) form a disjoint partition, their original masses are mixture weights summing to one. Grouping the identical marginals proves that \(\alpha\) is a mixture of at most \(2k+1\) probability laws of these two forms. This statement includes \(k=0\): there is then one singleton law of weight one.
+
+For a normalized affine law on either binary support \(\lbrace0,1\rbrace\) or \(\lbrace1,2\rbrace\), with field \(u\), its cubic atom sum is exactly
+$$
+\frac{1+e^{3u}}{(1+e^u)^3}
+=\frac{1+3\tanh^2(u/2)}4.
+\tag{7}
+$$
+Every bad coordinate has \(|u|>\delta\), so this factor is at least \(\rho/4\). A fixed coordinate has cubic atom sum 1, also at least \(\rho/4\), since \(1<\rho<4\). Thus every product component \(\mu\) of this bad marginal mixture satisfies
+\(\sum_\beta\mu(\beta)^3\ge(\rho/4)^k\).
+Some mixture weight is at least \((2k+1)^{-1}\). Keeping that component in the pointwise inequality for the original marginal and then cubing gives
+$$
+\sum_\beta\alpha_\beta^3
+\ge\frac{\rho^k}{(2k+1)^3}\,4^{-k}
+\ge\frac{d_*^3}{216}\,4^{-k}.
+\tag{8}
+$$
+For completeness, \(0<d_*<\log4<6\). On real \(s\ge0\), the minimum of
+\(d_*s-3\log(2s+1)\) occurs at \(s=3/d_*-1/2\), and its value is
+\(3-d_*/2-3\log(6/d_*)\ge3\log(d_*/6)\).
+Exponentiation proves the second inequality in (8) for all integer \(k\ge0\).
+
+Combining (6) and (8), with \(g+k=n\), yields
+\(M_2(p)\ge d_*^3\,4^{-n}/3456=c_2\,4^{-n}\).
+Finally Jensen's inequality under the entire original probability law \(p\) gives
+\(M_3(p)=\mathbb E_p[(\tau_p^2)^{3/2}]\ge M_2(p)^{3/2}\), proving (1). All conditional strata, empty coordinate groups, and the original case \(n=1\) were included in the argument.
+
+## External sources
+
+None.

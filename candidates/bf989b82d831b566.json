@@ -1,0 +1,16 @@
+{
+  "advances": "Gives a direct CELL-LIFT constant \\(1/2\\) for one-sided roofs of height at most two, and a stronger explicit weak-depth constant for the height-three class. The second conclusion is not asserted as CELL-LIFT.\n",
+  "author": "research-agent",
+  "candidate_id": "bf989b82d831b566",
+  "candidate_schema": 2,
+  "created_at": "2026-09-19T16:30:43.700201+00:00",
+  "depends_on": [
+    "9ee12600178ce4dd",
+    "d279c7ab11895287"
+  ],
+  "external_sources": "None beyond the declared accepted predecessors.\n",
+  "kind": "theorem",
+  "proof": "The number of sites in \\(\\{0,\\ldots,m+1\\}\\) surviving reflection about \\(1\\) is\n\\(r(0)=1\\) and \\(r(m)=3\\) for \\(m=1,2,3\\).\nPut \\(R=\\prod_ir(m_i)\\).\n\nFor every ambient halfspace through \\((\\mathbf1,\\mathbf y_0)\\), restrict to its favorable base halfspace. At least half the reflected sites in each selected section belong to the ambient halfspace. Therefore\n\\[\nh_S((\\mathbf1,\\mathbf y_0))\\ge\\tfrac12\\tau_R(\\mathbf y_0). \\tag{1}\n\\]\nFor \\(m_i\\le2\\), \\(r(m_i)\\ge m_i+1\\), so \\(R\\ge B\\), proving the first assertion.\n\nNow suppose \\(m_i\\le3\\). Put \\(A_0=2^{-n}A\\), let \\(\\mu\\) be uniform probability on \\(T\\), and set \\(d\\nu/d\\mu=A_0/\\mathbb E_\\mu A_0\\). This is the same probability tilt as the full-count tilt in accepted fact d279c7ab11895287.\n\nIts scale-three entropy inequality gives\n\\[\nD(\\nu\\|\\mu)\\le\\mathbb E_\\nu\\sum_ic(m_i),\n\\]\nwhere\n\\[\nc(0)=0,\\quad c(1)=\\log2,\\quad\nc(2)=\\tfrac98\\log3,\\quad c(3)=\\tfrac9{10}\\log3.\n\\]\nFor all four values,\n\\[\nc(m)\\le6\\log\\frac{2r(m)}{m+2}.\n\\]\nThe last case follows from \\((6/5)^{20}>32>27\\); the other three are immediate scalar comparisons. Hence\n\\[\nD(\\nu\\|\\mu)\\le6\\mathbb E_\\nu\\log(R/A_0).\n\\]\n\nSet \\(\\alpha=6/7\\). Jensen under \\(\\nu\\) gives\n\\[\n\\log\\mathbb E_\\mu R^\\alpha\n\\ge\n\\alpha\\log\\mathbb E_\\mu A_0\n+\\alpha\\mathbb E_\\nu\\log(R/A_0)\n-(1-\\alpha)D(\\nu\\|\\mu)\n\\ge\\alpha\\log\\mathbb E_\\mu A_0.\n\\]\nThus \\((\\mathbb E_\\mu R^{6/7})^{7/6}\\ge\\mathbb E_\\mu A_0\\).\nApply accepted fact 9ee12600178ce4dd with density \\(R\\) and uniform reference on \\(T\\), then use (1). This gives\n\\[\nh_S(\\mathbf p_*)\\ge\n(\\kappa_{6/7}/2)\\int_TA_0\n=(\\kappa_{6/7}/2)2^{-n}W.\n\\]\n",
+  "statement": "Let \\(T\\subset\\mathbb R^d\\) be a compact convex body and let\n\\(\\ell_i:T\\to[0,\\infty)\\) be bounded upper-semicontinuous concave functions. Define\n\\[\nC=\\{(\\mathbf x,\\mathbf y):\\mathbf y\\in T,\\ 0\\le x_i\\le1+\\ell_i(\\mathbf y)\\},\n\\quad S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d),\n\\]\n\\[\nm_i=\\lfloor\\ell_i\\rfloor,\\quad A=\\prod_i(m_i+2),\\quad\nB=\\prod_i(m_i+1),\\quad W=\\int_TA.\n\\]\nHere \\(A=A_{\\mathrm{asym}}\\) and \\(B=B_{\\mathrm{asym}}\\).\nUse actual mixed depth \\(h_S\\) and continuous density depth \\(\\tau_B\\), with closed halfspaces.\n\nIf \\(0\\le\\ell_i\\le2\\), then for every \\(\\mathbf y_0\\in T\\),\n\\[\nh_S((\\mathbf1,\\mathbf y_0))\\ge\\tfrac12\\tau_B(\\mathbf y_0).\n\\]\nIf \\(0\\le\\ell_i\\le3\\), there is a point with integer coordinate \\(\\mathbf1\\) satisfying\n\\[\nh_S(\\mathbf p_*)\\ge\n\\frac{\\kappa_{6/7}}2\\,2^{-n}W,\n\\qquad\n\\kappa_\\alpha=(3^{1-\\alpha}-2^{1-\\alpha})^{1/\\alpha}.\n\\]\n",
+  "subgoal_id": "intake18-one-sided-height-calibrations"
+}

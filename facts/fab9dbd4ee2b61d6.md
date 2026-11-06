@@ -1,0 +1,168 @@
+---
+fact_id: fab9dbd4ee2b61d6
+kind: theorem
+author: "research-agent"
+assurance: LLM-verified
+subgoal_id: oct3ds-unconditional-low-rank-fiber-center-depth
+depends_on: ["347548daa8f1f4e7","ecd93b0b05cc8973"]
+verifier_run: 39c1631bf6644e04
+target_match: null
+---
+
+## Statement
+
+Let \(n,d\in\mathbb Z_{>0}\), let \(C\subset\mathbb R^n\times\mathbb R^d\) be a convex body, and set \(S=C\cap(\mathbb Z^n\times\mathbb R^d)\). Suppose \(C\) is invariant under every coordinate sign flip in its first \(n\) coordinates. For each integer \(z\), write
+
+\[
+C_z=\{y\in\mathbb R^d:(z,y)\in C\},\qquad
+w_z=\operatorname{vol}_d(C_z),\qquad
+D_+=\{z\in\mathbb Z^n:w_z>0\}.
+\]
+
+Assume \(W=\sum_{z\in D_+}w_z>0\), and that every \(C_z\) with \(z\in D_+\) is centrally symmetric about its unique center \(c_z\). Put
+
+\[
+p_z=w_z/W,\qquad
+r=\dim\operatorname{aff}\{c_z:z\in D_+\}.
+\]
+
+There is one \(m\in\operatorname{conv}\{c_z:z\in D_+\}\subseteq C_{0_n}\), chosen before any halfspace, such that the actual point \(\mathbf y^\star=(0_n,m)\in S\) satisfies
+
+\[
+h_S(\mathbf y^\star)\ge\frac{W}{4(r+1)}.
+\]
+
+Here \(h_S\) and mixed-integer volume have exactly the meanings in the locked problem; in particular \(W=\mathcal H_d(S)\). If \(r\le n\), this point satisfies
+
+\[
+h_S(\mathbf y^\star)\ge\frac14\,2^{-n}\mathcal H_d(S).
+\]
+
+The following entire homothetic class has \(r\le n\). Let \(K\subset\mathbb R^d\) be any centrally symmetric convex body with \(K=-K\), let \(R>0\), and let \(\psi_i:[0,\infty)\to[0,\infty)\), for \(1\le i\le n\), be finite, convex, nondecreasing functions satisfying \(\psi_i(0)=0\) and \(\psi_i(1)>0\). Let \(B\in\mathbb R^{d\times n}\) have columns \(b_i\in K\). Define
+
+\[
+\begin{aligned}
+V(x)&=(\psi_1(|x_1|),\ldots,\psi_n(|x_n|))^{\mathsf T},
+&E(x)&=\sum_iV_i(x),\\
+a(x)&=R-E(x),&c_B(x)&=BV(x),\\
+C_{B,K}&=\{(x,y):E(x)\le R,\quad y\in c_B(x)+a(x)K\},
+&S_{B,K}&=C_{B,K}\cap(\mathbb Z^n\times\mathbb R^d).
+\end{aligned}
+\]
+
+This is a compact full-dimensional convex body, and its positive fibers and their original volumes are exactly
+
+\[
+D_+=\{z\in\mathbb Z^n:E(z)<R\},\qquad
+C_z=BV(z)+a_zK,\qquad
+a_z=R-E(z),\qquad
+c_z=BV(z),\qquad
+w_z=a_z^d\operatorname{vol}_d(K).
+\]
+
+Its total volume is positive. Every such body has one point \((0_n,m)\in S_{B,K}\) of depth at least \(W/[4(r+1)]\), where \(r\le\operatorname{rank}B\le n\), and hence satisfies the locked bound with \(c_0=1/4\).
+
+For \(K=[-1,1]^d\), the condition \(b_i\in K\) is exactly \(|B_{li}|\le1\). These definitions then agree exactly with the anisotropic cube objects in accepted fact \(\texttt{ecd93b0b05cc8973}\), and, when all \(\psi_i\) coincide, with those in accepted fact \(\texttt{347548daa8f1f4e7}\). In those normalizations \(w_z=(2a_z)^d\) and \(C_z=BV(z)+(2a_zI_d)[-1/2,1/2]^d\). Thus the same conclusion applies to both accepted cube classes, with the original actual-volume law \(p_z=w_z/W\).
+
+## Proof
+
+Because \(C\) is compact, only finitely many integer fibers are nonempty, so \(D_+\) is finite and nonempty. Every fiber is compact and convex. Fibers of volume zero contribute zero to the mixed-volume sum, so the locked definition gives \(W=\mathcal H_d(S)\).
+
+Each positive fiber contains its center: for any \(y\in C_z\), central symmetry gives \(2c_z-y\in C_z\), and convexity puts their midpoint \(c_z\) in \(C_z\). Base sign invariance gives \(C_{-z}=C_z\). Consequently \((z,c_z)\) and \((-z,c_z)\) are both in \(C\), so their midpoint \((0_n,c_z)\) is in \(C\). Convexity of the origin fiber therefore gives
+
+\[
+\operatorname{conv}\{c_z:z\in D_+\}\subseteq C_{0_n}.
+\tag{1}
+\]
+
+Push the original probability \(p\) to its centers: let \(\nu=\sum_{z\in D_+}p_z\delta_{c_z}\), combining coincident centers automatically. Its total mass is one. Let \(A=\operatorname{aff}\{c_z:z\in D_+\}\) and \(P=\operatorname{conv}\{c_z:z\in D_+\}\). We next construct an intrinsic centerpoint \(m\in P\) of depth at least \(1/(r+1)\) for \(\nu\), where \(r=\dim A\). This is an atomic centerpoint assertion, so no absolute-continuity hypothesis is imposed.
+
+If \(r=0\), all centers equal one point; take that point for \(m\). Every closed halfspace containing it has \(\nu\)-mass one. Suppose now \(r\ge1\), identify \(A\) affinely with \(\mathbb R^r\), and consider the family consisting of \(P\) and all closed halfspaces in \(A\) of \(\nu\)-mass strictly greater than \(r/(r+1)\). Every subfamily of at most \(r+1\) members has a nonempty intersection. Indeed, \(\nu(P)=1\), and the union of the complements of its halfspace members has mass strictly less than one, since each such complement has mass strictly less than \(1/(r+1)\).
+
+The finite Helly argument proved in accepted fact \(\texttt{347548daa8f1f4e7}\) applies in this \(r\)-dimensional affine space: it is a statement about convex sets and uses no property of their probability measure. It shows that every finite subfamily has a nonempty intersection. Intersecting with the compact set \(P\) and using the finite intersection property gives a point \(m\in P\) belonging to every halfspace in this family.
+
+To verify its depth with atoms included, suppose a closed halfspace \(J=\{u\in A:\ell(u)\ge t\}\) contains \(m\), but \(\nu(J)<1/(r+1)\). Its complement \(\{\ell<t\}\) has mass greater than \(r/(r+1)\). The support of \(\nu\) is finite, so there is \(\varepsilon>0\) such that every support point with \(\ell<t\) also has \(\ell\le t-\varepsilon\). The closed halfspace \(\{\ell\le t-\varepsilon\}\) thus has mass greater than \(r/(r+1)\), but excludes \(m\), contradicting the construction. Restrictions of affine functionals that are constant on \(A\) cause no exception: a containing halfspace with such a functional has mass one. We have proved
+
+\[
+\nu(J)\ge\frac1{r+1}
+\quad\text{for every closed halfspace in \(A\) containing \(m\)}.
+\tag{2}
+\]
+
+Fix this \(m\). Equation (1) makes \(\mathbf y^\star=(0_n,m)\) an actual point of \(S\). Let \(Z\) have exactly the original law \(p\), and, conditional on \(Z=z\), let \(Y\) be uniform on \(C_z\) with respect to its \(d\)-dimensional volume. Positive volume makes this conditional law well-defined. For every measurable ambient set \(F\), the locked mixed-volume formula gives
+
+\[
+\mathbb P((Z,Y)\in F)=\frac{\mathcal H_d(S\cap F)}{W}.
+\tag{3}
+\]
+
+For any \(\beta\in\mathbb R^d\), central symmetry of the conditional uniform law gives
+
+\[
+\mathbb P\bigl(\beta\cdot(Y-c_z)\ge0\mid Z=z\bigr)\ge\frac12.
+\]
+
+Indeed, the real random variable \(\beta\cdot(Y-c_z)\) has the same law as its negative, so its closed nonnegative side has at least half the mass, including any mass at zero. If \(\beta\cdot(c_z-m)\ge0\), this conditional event implies \(\beta\cdot(Y-m)\ge0\). The center halfspace has mass at least \(1/(r+1)\) by (2), unless \(\beta\) is orthogonal to the translation space of \(A\), in which case \(\beta\cdot(c_z-m)=0\) for every center and its mass is one. This also covers \(\beta=0\). Averaging under the original law therefore gives, for every \(\beta\),
+
+\[
+\mathbb P\bigl(\beta\cdot(Y-m)\ge0\bigr)
+\ge\frac1{2(r+1)}.
+\tag{4}
+\]
+
+Base sign invariance gives \(w_{-z}=w_z\) and identical conditional laws of \(Y\) at \(z\) and \(-z\). Thus \((Z,Y)\) and \((-Z,Y)\) have exactly the same original joint law. For every \(\alpha\in\mathbb R^n\) and \(\beta\in\mathbb R^d\), the pointwise inequality
+
+\[
+\begin{aligned}
+&\mathbf1_{\{\alpha\cdot Z+\beta\cdot(Y-m)\ge0\}}
++\mathbf1_{\{-\alpha\cdot Z+\beta\cdot(Y-m)\ge0\}}\\
+&\hspace{20mm}\ge
+\mathbf1_{\{\beta\cdot(Y-m)\ge0\}}
+\end{aligned}
+\tag{5}
+\]
+
+holds, since a nonnegative value of the last scalar forces at least one of the first two scalars to be nonnegative. Taking expectations, using the joint-law symmetry, and then using (4), proves
+
+\[
+\mathbb P\bigl(\alpha\cdot Z+\beta\cdot(Y-m)\ge0\bigr)
+\ge\frac1{4(r+1)}.
+\tag{6}
+\]
+
+Every proper closed ambient halfspace containing \((0_n,m)\) has the form \(H=\{(x,y):\alpha\cdot x+\beta\cdot y\ge t\}\), with \((\alpha,\beta)\ne0\) and \(t\le\beta\cdot m\). It contains the parallel halfspace through that point, whose probability is bounded in (6). The whole-space case has probability one. This verifies all normals, including \(\beta=0\), \(\alpha=0\), and normals orthogonal to the center hull. Equation (3) proves the asserted actual depth. For \(r\le n\), the elementary inequality \(n+1\le2^n\), obtained by induction from \(n=1\), gives
+
+\[
+\frac1{4(r+1)}\ge\frac1{4(n+1)}\ge\frac14\,2^{-n}.
+\tag{7}
+\]
+
+We now verify every hypothesis for the claimed homothetic class. For each \(i\), convexity and \(\psi_i(0)=0\) give \(\psi_i(t)\le t\psi_i(1)\) for \(0\le t\le1\), which implies continuity at zero. A finite convex function is continuous on \((0,\infty)\). For \(t\ge1\), convexity gives \(\psi_i(t)\ge t\psi_i(1)\), so \(\psi_i\) is coercive. Moreover \(x_i\mapsto\psi_i(|x_i|)\) is convex by convexity and monotonicity of \(\psi_i\). Consequently \(E\) and \(V\) are continuous, \(E\) is convex, and \(\{x:E(x)\le R\}\) is compact.
+
+For convexity of \(C_{B,K}\), take its points \((x,y)\), \((x',y')\) and \(t\in[0,1]\), and write \(y=BV(x)+a(x)k\), \(y'=BV(x')+a(x')k'\) with \(k,k'\in K\). Put \(x_t=tx+(1-t)x'\) and
+
+\[
+q_i=tV_i(x)+(1-t)V_i(x')-V_i(x_t)\ge0.
+\]
+
+Then
+
+\[
+\begin{aligned}
+a(x_t)&=t a(x)+(1-t)a(x')+\sum_iq_i,\\
+ty+(1-t)y'-BV(x_t)
+&=t a(x)k+(1-t)a(x')k'+\sum_iq_i b_i.
+\end{aligned}
+\]
+
+All coefficients are nonnegative, all displayed vectors \(k,k',b_i\) lie in \(K\), and the coefficients sum to \(a(x_t)\). By convexity of \(K\), this vector belongs to \(a(x_t)K\). If that sum is zero, every coefficient is zero and the vector is zero, still in \(0K\). Also \(E(x_t)\le R\). This proves convexity.
+
+The body is the continuous image of the compact product \(\{x:E(x)\le R\}\times K\) under \((x,k)\mapsto(x,BV(x)+a(x)k)\); hence it is compact. Since \(K=-K\) is full-dimensional, there is \(\rho>0\) with the closed Euclidean ball of radius \(\rho\) about zero contained in \(K\). Continuity at \(x=0_n\) gives a neighborhood where \(a(x)>R/2\) and \(\|BV(x)\|_2<R\rho/4\). For such \(x\) and \(\|y\|_2<R\rho/4\), one has \(\|y-BV(x)\|_2<R\rho/2<a(x)\rho\), so \((x,y)\in C_{B,K}\). This proves full dimensionality. The equality \(V(x)=V(\epsilon_1x_1,\ldots,\epsilon_nx_n)\) for every sign choice proves the required base invariance.
+
+The defining condition gives exactly the stated fibers. If \(E(z)<R\), then \(a_z>0\) and the fiber has positive volume \(a_z^d\operatorname{vol}_d(K)\), is centrally symmetric about \(BV(z)\), and has that unique center. Uniqueness follows because two distinct centers would, by composing their reflections, make a bounded nonempty set invariant under a nonzero translation, an impossibility. If \(E(z)=R\), the fiber is a singleton and its volume is zero because \(d>0\); if \(E(z)>R\), it is empty. The origin fiber is \(RK\) and has positive volume, so \(W>0\). Every center \(BV(z)\) lies in the linear range of \(B\), which proves \(r\le\operatorname{rank}B\le n\). The generic theorem and (7) now apply.
+
+Finally \(0<1/4<1/e\). All centerpoint weights were the original volumes in (3), all selected points were legal before any halfspace was considered, and no zero-volume fiber or degenerate normal was discarded from the depth statement. The normalization matches to accepted facts \(\texttt{347548daa8f1f4e7}\) and \(\texttt{ecd93b0b05cc8973}\) are exactly those recorded in the statement; their cube hypotheses are included in the verified homothetic hypotheses.
+
+## External sources
+
+none

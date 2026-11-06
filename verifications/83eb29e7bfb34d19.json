@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The signed compensation bound (4), its scalar repair estimate, and the implications (6)-(8) check out. The final application to accepted fact 4bb26a33ac78ee45 nevertheless has a missing normalization map: the stated count and center-ratio aliases do not give the claimed equality of the original normalizer Z.",
+  "critical_errors": [],
+  "gaps": [
+    "The final paragraph asserts that the construction of 4bb26a33ac78ee45 realizes each minimizing table with exactly its original Z, but that predecessor fixes the weight at its coordinate-zero hub to 1. Under the stated aliases, its normalizer is therefore 1/a_0 for q_ov=2 or q_ov=1,h=0, and 1/a_1 for q_ov=1,h=1. The candidate instead allows a_a=w_{c_a}/Z with arbitrary original positive hub weights. No global weight scaling or affine-offset map is specified. This is a real discrepancy even with the original core-zero hub weight equal to 1: take q_ov=1,h=1,m_0=50,m_1=1, original hub weights w_{c_0}=1,w_{c_1}=3, fifty core-zero pairs of weights (10,1/10), the forced core-one pair of weights (1,9), and singleton weight 3. These are already Jensen-minimizing pair totals, Z=518, mu_0=169/34 >= 2mu_1=8/3, and A=2744941264/2779836640<1. The explicitly prescribed interchanged predecessor construction has additional-axis counts (0,50), tau=1/3, and v_j=10, so its Z is 518/3, not 518. Its probabilities agree only after accounting for the absent factor 3 in all weights and in the normalizer. The verification instructions require this normalization map to be explicit; the assertion that Z is unchanged does not supply it."
+  ],
+  "repair_hints": [
+    "State the exact weight and normalizer map to the predecessor, including the anchoring hub weight. If a common affine offset is allowed, explicitly multiply every predecessor weight and its normalizer by that original hub weight and justify this operation before claiming equality with the original Z."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

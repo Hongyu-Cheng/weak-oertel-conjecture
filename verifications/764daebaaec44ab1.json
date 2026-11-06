@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The descendant computation, exact template-depth calculation, shear invariance, normalized comparison, and WO/CD implications are correct in the positive-dimensional setting used later, but the separately stated tensorization theorem quantifies over all finite-dimensional Euclidean spaces and fails in dimension zero.",
+  "critical_errors": [
+    "The statement does not require dim(V_1), dim(V_2) >= 1. Take V_1={0}, mu_1=delta_0, P_1={0}, and take V_2=R, mu_2=delta_0, P_2={0}. There is no proper closed affine halfspace of V_1 containing 0, so the infimum in (1) is over the empty set (hence is +infinity under the standard extended-real convention, or is undefined if that convention is not adopted). Meanwhile the product space is isomorphic to R and the product depth at (0,0) is 1. Thus the lower inequality in (3) is false or not well-defined. The proof's assertion mu_1(V_1) >= h_{mu_1}(0) in the a=0 case also fails in this example."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Require both Euclidean spaces in the tensorization statement to have positive dimension; this is enough for the later application and makes the existence and finiteness assertions used in the epsilon and degenerate-section arguments valid."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

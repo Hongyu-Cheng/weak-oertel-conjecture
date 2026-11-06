@@ -1,0 +1,73 @@
+---
+fact_id: 8b11efe18cbbd21c
+kind: lemma
+author: "research-agent"
+assurance: LLM-verified
+subgoal_id: oct3em-upper-domination-original-mean-cap
+depends_on: ["3c78088dd84bbbdf"]
+verifier_run: 720ef3b54c484575
+target_match: null
+---
+
+## Statement
+
+Let \(M\in[1,\infty)\) be finite. Let \(g:\mathbb R\to[0,\infty)\) be a log-concave probability density with finite second moment and variance \(s^2\in(0,\infty)\). Let \(f:\mathbb R\to[0,\infty)\) be any probability density such that \(f\le Mg\) Lebesgue-almost everywhere. Then f has finite second moment and a finite mean \(m=\int_{\mathbb R}x f(x)\,dx\), and
+\[
+\int_{-\infty}^{m}f(x)\,dx\ge\frac{1}{64M^3},
+\qquad
+\int_{m}^{\infty}f(x)\,dx\ge\frac{1}{64M^3}.
+\]
+The same bounds hold with either endpoint excluded. No log-concavity of f is required.
+
+For an application to the locked mixed-integer setting with \(W=\mathcal H_d(S)>0\), the alias is as follows: the original law of \((Z,Y)\) is the probability satisfying \(\mathbb P((Z,Y)\in B)=\mathcal H_d(S\cap B)/W\) for measurable ambient sets B; f is the density of the chosen scalar marginal T under this original law; g is a reference density on the same scalar coordinate. Thus m is \(\mathbb E T\) under the original law, and the displayed bounds concern \(\mathbb P(T\le\mathbb E T)\) and \(\mathbb P(T\ge\mathbb E T)\). This alias introduces no reweighting of the original law and asserts no admissibility of its mean as a mixed-integer point.
+
+## Proof
+
+Write \(\mu=\int_{\mathbb R}xg(x)\,dx\), so \(s^2=\int_{\mathbb R}(x-\mu)^2g(x)\,dx\). Finite second moment gives \(\int|x|g(x)\,dx\le(\int x^2g(x)\,dx)^{1/2}<\infty\) by Cauchy-Schwarz. Since \(0\le f\le Mg\) almost everywhere, both \(\int|x|f\le M\int|x|g<\infty\) and \(\int x^2f\le M\int x^2g<\infty\). Hence m and the variance \(V=\int(x-m)^2f(x)\,dx\) are finite. Expanding the square and using \(\int(x-m)f(x)\,dx=0\) gives
+\[
+V+(m-\mu)^2
+=\int_{\mathbb R}(x-\mu)^2f(x)\,dx
+\le M\int_{\mathbb R}(x-\mu)^2g(x)\,dx
+=Ms^2.
+\tag{1}
+\]
+In particular, \(V\le Ms^2\).
+
+We use only the general scalar density-height inequality checked in the proof and external-sources section of accepted fact 3c78088dd84bbbdf: a one-dimensional log-concave probability density of variance \(s^2>0\) has essential supremum at most \(1/s\). The present g has exactly these hypotheses. The mixed-body symmetry and covariance hypotheses in that fact's larger theorem are not hypotheses of this scalar input and are not invoked here. Therefore \(f\le A:=M/s\) almost everywhere, where \(0<A<\infty\).
+
+Put \(L=\int_{-\infty}^{m}f(x)\,dx\) and \(R=\int_m^{\infty}f(x)\,dx\). A density assigns zero mass to the singleton \(\{m\}\), so \(L+R=1\). The two nonnegative first moments about m are finite, since \(|x-m|\le|x|+|m|\), and mean balance gives
+\[
+\int_{-\infty}^{m}(m-x)f(x)\,dx
+=\int_m^{\infty}(x-m)f(x)\,dx.
+\tag{2}
+\]
+
+To bound the left side from below, set \(h(u)=f(m-u)\) for \(u\ge0\). Then \(\int_0^\infty h=L\) and \(0\le h\le A\) almost everywhere. For every \(t\ge0\),
+\(\int_t^\infty h(u)\,du=L-\int_0^t h(u)\,du\ge\max\{L-At,0\}\).
+Tonelli's theorem applied to \(u=\int_0^u dt\) now yields
+\[
+\int_{-\infty}^{m}(m-x)f(x)\,dx
+=\int_0^\infty u h(u)\,du
+=\int_0^\infty\int_t^\infty h(u)\,du\,dt
+\ge\int_0^{L/A}(L-At)\,dt
+=\frac{L^2}{2A}
+=\frac{L^2s}{2M}.
+\tag{3}
+\]
+This also covers L=0. Cauchy-Schwarz for the measure \(f(x)\,dx\) on \([m,\infty)\), followed by (1), gives
+\[
+\int_m^{\infty}(x-m)f(x)\,dx
+\le\left(R\int_m^{\infty}(x-m)^2f(x)\,dx\right)^{1/2}
+\le\sqrt{RV}
+\le s\sqrt{RM}.
+\tag{4}
+\]
+Combining (2)--(4), dividing by \(s>0\), and squaring nonnegative quantities gives \(L^4/(4M^2)\le RM\), hence \(R\ge L^4/(4M^3)\).
+
+If \(R\le1/2\), then \(L=1-R\ge1/2\), and therefore \(R\ge(1/2)^4/(4M^3)=1/(64M^3)\). If \(R>1/2\), the same conclusion follows from \(M\ge1\), since \(1/(64M^3)\le1/64<1/2\).
+
+For the left cap, apply this right-cap conclusion to the reflected densities \(\widehat f(x)=f(-x)\) and \(\widehat g(x)=g(-x)\). Reflection preserves total mass, log-concavity of g, variance s squared, finite second moments, and \(\widehat f\le M\widehat g\); the mean of \(\widehat f\) is \(-m\). Its right cap is \(\int_{-m}^\infty f(-x)\,dx=\int_{-\infty}^{m}f(u)\,du=L\), so \(L\ge1/(64M^3)\). The absence of atoms also proves every claimed open-endpoint version.
+
+## External sources
+
+Sergey Bobkov and Michel Ledoux, “One-dimensional empirical measures, order statistics, and Kantorovich transport distances,” [authors' primary monograph PDF, December 19, 2016 version](https://www-users.cse.umn.edu/~bobko001/preprints/2016_BL_Order.statistics_Revised.version.pdf), Proposition B.2, equation (B.7), printed page 114 (PDF page index 113). The required statement, already checked in accepted fact 3c78088dd84bbbdf, is \(\sup_x g(x)^2\le1/\operatorname{Var}(X)\) for a real random variable X with log-concave density g. Applying it to the present g, whose variance is \(s^2\in(0,\infty)\), gives the essential height bound \(1/s\). This is the only external input; all domination, moment, and original-cap inequalities are proved above.

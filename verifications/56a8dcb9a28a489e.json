@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The construction and rank estimate are otherwise coherent, but the proof does not handle the possible case in which there are no bad parity classes, so its asserted strict bad-mass inequality is not established as written.",
+  "critical_errors": [],
+  "gaps": [
+    "Equation (28) is claimed by summing the strict inequalities (27) over the bad classes. If the set of bad classes is empty, that summation yields only 0 = 0, not the asserted strict inequality P_bad < (1/2) sum_{xi bad} M_xi. The proof gives no separate empty-family argument, despite making the unconditional strict claim P_bad < G/2."
+  ],
+  "repair_hints": [
+    "Split into cases. If at least one bad class exists, summing (27) is strict. If none exists, then P_bad = 0, while W > 0 implies sum_xi M_xi > 0 and (4) implies G > 0, hence P_bad = 0 < G/2."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The positive-load derivations are otherwise supported by the supplied predecessor facts, but the candidate states its endpoint-rank conclusions for every nonzero charge even though an allowed nonzero charge can have zero fresh load. In that case the displayed affine-rank quantities are not defined, and the proof does not cover the case.",
+  "critical_errors": [
+    "Equations (19)-(24) are stated without assuming \\(\\widehat\\Omega>0\\), although \\(\\widehat\\rho_\\beta=\\dim\\operatorname{aff}(E_\\beta)\\), \\(\\widehat r_\\beta\\), and hence \\(\\widehat L_\\beta\\) are not defined by the supplied facts when \\(E_\\beta=\\varnothing\\). This is an actual allowed case, not a remote degeneracy: the hard ledger and the original load inequality ensure some original edge has \\(\\omega_e>0\\), one may choose a nonzero \\(\\beta\\) supported only on that edge, and the candidate's own equation (28) then gives \\(\\widehat\\Omega=0\\) and \\(E_\\beta=\\varnothing\\). Thus (22)-(24), especially (23), contain undefined terms for a charge covered by the statement."
+  ],
+  "gaps": [
+    "The proof explicitly begins the endpoint-selector argument with 'Suppose \\(\\widehat\\Omega>0\\)' and derives (16)-(24) only under that supposition, but the corresponding conclusions in the statement are not scoped by it and no separate zero-load argument or convention is supplied. Accepted fact 6e66cd69e25232b7 itself also assumes positive load."
+  ],
+  "repair_hints": [
+    "Add an explicit \\(\\widehat\\Omega>0\\) hypothesis before defining the endpoint affine ranks and scope (22)-(24), including (23), under it. If an unconditional retention-selector conclusion is desired, state the zero-load case separately: \\(\\widehat\\Omega=0\\) and (11) imply \\(R_C(\\beta)=B\\), so (8) gives \\(R\\ge B\\). Alternatively, define and justify explicit empty-support conventions and reprove every affected display under those conventions."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

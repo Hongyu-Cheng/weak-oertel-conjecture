@@ -1,0 +1,16 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The exposed-face strengthening in part 3 is false under its stated hypothesis, and the proof applies part 2 without the stronger face-slice assumptions that part 2 requires.",
+  "critical_errors": [
+    "Equation (21) is false if 'D_A lies on an exposed face' has its ordinary stated meaning of containment. Take n=2, D_0={(0,0),(1,0),(2,0),(0,1)}, p=(1,0), A={p}, widths h_p=4 and h_z=1 otherwise, and centers c_p=1 and c_z=0 otherwise, with ell_z=c_z-h_z/2 and u_z=c_z+h_z/2. This datum is lattice-convex and satisfies (R): the only nontrivial representation constraint is at p along the bottom edge, where the endpoint inequalities hold. Now D_A={p} lies on the exposed bottom edge, q=0, H_A=4, and H=7, so (21), together with the second entry 2^n H_A=16 in (19), asserts Phi_2>=7. But total mass 7 would force all four widths to be selected fully. At p, the Dirac representation has averaged center 1 while the representation p=((0,0)+(2,0))/2 has averaged center 0, so (2) fails. At each of the three vertices, a closed halfspace can isolate that vertex, giving mass 1<7/4, so the balance condition fails. These are all lattice points of conv(D_0), hence no mass-7 tuple exists and Phi_2<7."
+  ],
+  "gaps": [
+    "The proof says only that the exposed-face version gives (21), but part 2 requires A=aff(F) and D_0 intersect aff(F) exactly in D_F. Mere containment of D_A in an exposed face does not establish either condition."
+  ],
+  "repair_hints": [
+    "Replace the exposed-face hypothesis in part 3 by the precise requirement that A=aff(F) for an exposed face F of conv(D_0), so D_A=D_0 intersect F, before invoking (16)."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

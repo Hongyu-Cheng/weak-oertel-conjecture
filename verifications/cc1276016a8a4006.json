@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The reservoir estimates and dyadic contraction are otherwise supported, but the proof contains a false strict summation in an allowed empty-family boundary case, so it is not gap-free as written.",
+  "critical_errors": [],
+  "gaps": [
+    "Equation (30) obtains a strict inequality by summing A_xi < 4 M_xi over xi in B_N. If B_N is empty, both of those sums are zero, so that displayed strict step reads 0 < 0 and is false. The hypotheses do not force B_N to be nonempty."
+  ],
+  "repair_hints": [
+    "Split the argument into cases. If B_N is nonempty, the stated strict summation is valid. If B_N is empty, its load is zero, while Q > 0 and the classwise maximum estimate imply G > 0, so 0 < 4G directly."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

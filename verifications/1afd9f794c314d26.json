@@ -1,0 +1,19 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "Rejected because the statement is not well-defined as written: one symbol is used simultaneously for endpoint data and dual forces, and zero-support boundary cases are not covered.",
+  "critical_errors": [
+    "The symbol v_sigma is fixed in (4)-(7) as the second endpoint occurrence in Z_+, but is rebound in (16) as a dual vector in W^perp. Equations (17) and (20)-(23) require both meanings simultaneously: for example, N_{sigma,y} compares v_sigma with the lattice point y while U_y multiplies by the dual v_sigma, and C_{v_sigma} denotes an endpoint fiber while inner products use v_sigma as a force. Thus these definitions and all ensuing collapse/contact assertions are ill-typed and do not constitute a mathematical statement.",
+    "When Sigma is empty, the hypotheses do not ensure that C intersects Z^n x R^d. For example, with n=d=1, a sufficiently small closed disk centered at base coordinate 1/2 is a convex body with no mixed-integer point and Z_+ empty. Then h_max(C) is a supremum over the empty set, hence is undefined in the stated real-valued definition (or equals minus infinity under the standard extended-real convention), so D and the asserted inequality D >= 0 do not follow. The final claim that every empty-family conclusion is immediate is therefore false without an additional convention or hypothesis."
+  ],
+  "gaps": [
+    "The statement unconditionally asserts a continuous residual rank for the measure in (13), but that measure is zero when the good-label set is empty, in particular when Sigma is empty. Accepted fact be359f8a6c628483 defines its ranks only for a nonzero positive measure, and the proof itself invokes the rank only when the good-label mass is positive. No zero-measure rank convention is supplied, nor is the rank assertion restricted to the nonzero case."
+  ],
+  "repair_hints": [
+    "Rename the dual variables in (16)-(24), for example to theta_sigma, while retaining v_sigma exclusively for the second endpoint, and update every force, balance, support, and contact formula consistently.",
+    "Either assume C intersects Z^n x R^d or explicitly define h_max(C) in the empty-support case and verify (11) under that convention.",
+    "State the residual-rank conclusion only when the good-label mass is positive, or define and justify a zero-measure rank convention."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

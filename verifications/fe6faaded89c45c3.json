@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The packet decomposition, lossless marking, circuit splitting, and defect estimates are otherwise supported, but the strict good-packet and good-good-edge inequalities fail in the allowed boundary case U=0.",
+  "critical_errors": [
+    "Equations (30) and (31) assert strict inequalities that are false when U=0, which the predecessor facts do not exclude. If P'=P, then U=0; because 0<=K_r<=C_r and sum_r(C_r-K_r)=0, every packet has K_r=C_r and is good. Consequently C_g=K_g=P, not >P-2U=P, and all graph weight is good-good, so E_gg=P/2, not >(P-3U)/2=P/2. The proof obtains the false strictness by summing the strict bad-packet inequalities (44), but that summation is not strict when the bad set is empty."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Replace the first comparisons in (30) by C_g>=P-2U and K_g>=P-2U, and replace the first comparison in (31) by E_gg>=(P-3U)/2. The final numerical bounds remain strict because U<4P/97."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The reservoir-mass, low-rank slice, individual metronoid realization, and one-label-per-target packing arguments are sound, but the proof of the whole-label mass bounds uses an occurrence-pair property that is not supplied by the candidate or any accepted predecessor fact.",
+  "critical_errors": [],
+  "gaps": [
+    "Equation (22) assumes that every canonical whole label has a tagged pair u,v with u+v=2t(sigma). Accepted fact 6e6a3b541bc64f05 supplies only four tagged occurrences whose total average is t(sigma), and neither it nor the candidate states that the tags split into opposite pairs. Four points with average t need not contain any pair with midpoint t, so the nonloop/loop case split proving (11) and (12) is not justified from the supplied facts."
+  ],
+  "repair_hints": [
+    "Avoid the unstated opposite-pair property: if the four occurrence tags use at least two distinct physical sources, choose any two distinct sources and apply the rank-one slice argument; if all tags use one source, use multiplicity four and the rank-zero bound. For (12), the stated loop condition must be formally defined to guarantee two tagged occurrences at the same source, after which multiplicity two and the rank-zero bound suffice. Alternatively, explicitly add the opposite-pair structure as a supplied hypothesis."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

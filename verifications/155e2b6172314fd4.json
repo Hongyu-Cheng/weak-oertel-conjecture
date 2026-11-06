@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The projection-section argument, all displayed inequalities, the q=0, q=n, and W=0 cases, and the row-space/Jacobian calculation are correct. The candidate nevertheless has an inaccurate final flag and a source-applicability gap in the zonotope step.",
+  "critical_errors": [
+    "The final sentence that nesting alone gives no uniform upper bound on the ranks of the higher levels is false or at least mathematically undefined as written: for the fixed ambient dimension n, every such rank is uniformly bounded by n, and the phrase higher levels is not defined. A more restricted claim about the absence of a nontrivial bound transferred from a lower level is not what the sentence states."
+  ],
+  "gaps": [
+    "The cited Shephard formula is applied to the row vectors r_i after checking only that they span R^q. In the cited paper the formula occurs under standing zonotope assumptions including nonzero components and distinct signed sums, whereas an orthonormal-column matrix R can have zero rows and can produce repeated signed sums. The volume formula is true in this degenerate generality, but the candidate supplies no deletion, perturbation, continuity, or independent argument extending the cited statement to all E."
+  ],
+  "repair_hints": [],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

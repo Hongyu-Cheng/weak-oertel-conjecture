@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The cap-loss lemma, its half-metronoid normalization, all cap directions, the zero-slack boundary, the nonattained supremum/infimum argument, and the asymptotic and fixed-gap deductions are correct conditional on the exceptional-fiber bound (29). However, (29) is not justified by the supplied predecessor theorem under the candidate's hypotheses, and it is essential to every subsequent nonemptiness and retention conclusion.",
+  "critical_errors": [],
+  "gaps": [
+    "The proof invokes the one-fiber conclusion a_z <= 2^{-n}G from accepted fact f3f94a04a28f5468 using only G<W/2. In the supplied statement of that fact, equations (13)-(14) are conclusions of a theorem that additionally fixes m and a with a halfspace-balance condition, a body B and t with positive descendant surplus, and a finite shallow-halfspace cover satisfying (3)-(4). The candidate establishes none of those hypotheses. The fact's proof attributes the unconditional rank-zero augmentation to accepted fact 3d1f63abf09b2abb, but that fact is not one of the supplied predecessors and its statement is unavailable here. Thus (29) cannot be inferred from the allowed sources. Without (29), the proof does not establish sum_{z in U(p)} a_z <= G, T(p) >= W-G, nonzero maximum matching mass, emptiness of all admissible degree-saturated cores, nonemptiness of the descendant and near-contact index collections, or inequality (20)."
+  ],
+  "repair_hints": [
+    "Supply an accepted predecessor with the unconditional inequality G >= min{(W+a_z)/2, 2^n a_z} for every positive fiber, or prove that inequality from the stated definition of G within this candidate; then the derivation of (29) and the rest of the proof go through."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

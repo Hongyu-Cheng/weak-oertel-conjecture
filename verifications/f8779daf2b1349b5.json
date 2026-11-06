@@ -1,0 +1,16 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The argument depends at its first substantive step on an exact Tukey-depth formula that is neither proved nor supplied by the sole accepted predecessor fact. In addition, the final claims use an undefined quantity M_3(p_N). These gaps prevent verification of the displayed product formula and therefore of all subsequent conclusions.",
+  "critical_errors": [],
+  "gaps": [
+    "The proof attributes the identity tau_p(z)=p_z(T_{I(z)}+1)/2 to accepted fact 089a4139d9314589, but that fact concerns dyadic midpoint probabilities beta_r and contains no Tukey-depth formula. The candidate supplies no independent proof of the identity. Since equation (1), the finite-attainment argument, and all asymptotic bounds depend on actual Tukey depths, this is a central unproved step.",
+    "The statement asks for limits involving M_3(p_N), but M_3 is nowhere defined in the candidate statement or accepted predecessor fact. The proof implicitly treats it as F_{D_N} evaluated at p_N, but that identification is not stated and cannot be inferred as a formal definition under the stateless verification rules."
+  ],
+  "repair_hints": [
+    "Provide and prove, or supply as an applicable accepted predecessor theorem, the exact actual-depth formula for every finite tilt, including the reflection/translation reduction and zero-tilt boundary cases.",
+    "Define M_3(p) explicitly and state its relation to F_{D_N}(theta) before using it in the final limits."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

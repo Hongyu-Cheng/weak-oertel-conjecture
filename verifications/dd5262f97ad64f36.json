@@ -1,0 +1,19 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The algebraic ledger and the arguments for residual-line decomposition, atlas source feasibility, oriented halfspace domination, and the stated rank and label-count constants are internally coherent conditional on the cited predecessor facts. Approval is nevertheless impossible in this stateless audit because the prompt supplies none of those predecessor facts or the definitions of several quantities imported from them, while the proof relies essentially on their exact statements and hypotheses.",
+  "critical_errors": [],
+  "gaps": [
+    "The proof of the two-regime bound |lambda^perp| <= G uses equations (11) and (15) of accepted fact 8aac56c49321466c, including the constants W/4 and min{W_L/4+(W-W_L)/2, 2^{n-3}W_L}, but that fact and its hypotheses are not supplied. The claimed applicability to every affine lattice line carrying a residual component therefore cannot be checked.",
+    "The existence and properties of the load-minimal optimizer, especially 0 <= omega_e <= r_e and Q-R <= Omega, are attributed to accepted fact 6496cb3b0fd44f9d, which is not supplied. Likewise, the definitions and nonnegativity of R, G, R_sel(C), M_off(C), and R_cloud(C), used to derive R+G < Q/100 and D < Q/100, are not available in the prompt.",
+    "The exact interpolation step from the two source metronoid points to X_sigma in M_{theta_sigma}(C_{m_sigma}) relies on the before-closure convexity theorem in accepted fact dfd25e72c1f45a4e, and both fiber-depth applications rely on accepted fact 6769574fc1bd9f8d. Neither theorem is supplied, so their domains, boundary cases, and constants cannot be verified.",
+    "The halfspace-dominated residual theorem and intrinsic-rank identity attributed to accepted fact be359f8a6c628483 are not supplied. Consequently the denominator 2^{rho_perp}(r_perp+1), the applicability after atom collisions, and the identity dim aff(supp nu_perp)=rho_perp+r_perp cannot be independently checked.",
+    "The claim that the constructed atlas has exactly the interface of accepted fact 1c54f5dc74c15059 cannot be checked because that interface is not supplied. The displayed source-density inequality itself is proved, including repeated source fibers and collisions, but exact interface equivalence may contain additional requirements absent from the prompt."
+  ],
+  "repair_hints": [
+    "Supply the complete statements, definitions, and hypotheses of every cited predecessor fact, especially 8aac56c49321466c, 6496cb3b0fd44f9d, dfd25e72c1f45a4e, 6769574fc1bd9f8d, be359f8a6c628483, 1c54f5dc74c15059, and the relevant parts of 6b09aae189415c70, then rerun the stateless audit.",
+    "Once those facts are supplied, check that the core-line theorem applies to lines containing additional physical fibers, that the positive-root interpolation theorem is genuinely before closure at positive mass, and that the residual theorem uses ranks defined on the aggregated support exactly as in (33)-(34)."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

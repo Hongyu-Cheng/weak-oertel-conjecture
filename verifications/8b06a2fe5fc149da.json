@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The proof has a concrete normalization error in the explicit fixed-family constants. Equation (11) requires only a positive linear representation of the face barycenter, but equation (45) treats its coefficients as barycentric coefficients summing to one. The permitted nonnormalized choices can make the resulting eta too large and make (46) false, so the derivation of (10), (15), and (16) does not follow as stated.",
+  "critical_errors": [
+    "Equation (11) does not require sum_v lambda^{A,B}_v=1, yet equation (45) uses this identity when it rewrites sum_v lambda_v(m-ell dot v) as m-ell dot b_B. For a concrete failure, take A={-1,0,1}, M_A=3, and choose every full-face representation with all coefficients at least 1 (for b_B=1/2, lambda_{-1}=T and lambda_1=T+1/2 with T>=1), while singleton-face coefficients equal 1. These choices satisfy (11) and give lambda_A=1 and eta=1/36. With scalar tilt ell=log 12, (44) gives B={0,1}, its minimal face is the whole interval, q=1, and pi_{-1}=1/157<1/36=eta, contradicting (46). Thus the stated admissible constants and the subsequent bound are not proved for all representations allowed by (11)."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Require (11) to be a convex representation by adding sum_v lambda^{A,B}_v=1 (equivalently, call it a strictly positive barycentric representation); then the displayed identity in (45) and the face-conditioning bound (46) become valid."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The decorated-edge marginal assertion following (17) is incompatible with the definition of the incidence weights b: b counts both endpoint slots, whereas either the first-slot or the second-slot marginal of y counts only one endpoint slot per graph edge.",
+  "critical_errors": [
+    "The assertion after (17), and its purported proof in (34), are false. For fixed (r,g,i), the first-slot marginal is (c_i^(r)/C_r) times the weight of good-good edges whose first slot is (r,g); it does not include edges on which (r,g) is the second slot. But b_{i,g}^{(r)}=(c_i^(r)/C_r)d_{r,g}^{gg}, and d_{r,g}^{gg} includes both kinds of endpoint slots. Globally, all first-slot marginals have total E_gg, while the claimed family b has total sum_{r,i,k} b_{i,k}^{(r)}=sum_r D_r^{gg}=2E_gg>0, so the two families cannot be equal. The same total-mass contradiction applies to the separate second-slot assertion."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Formula (16) supports only the combined endpoint-marginal identity: the first-slot contribution at (r,g,i) plus the second-slot contribution at (r,g,i) equals b_{i,g}^{(r)}. The statement and the calculation in (34) would have to assert that combined identity rather than identifying each separate slot marginal with b."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

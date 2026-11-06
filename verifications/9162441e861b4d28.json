@@ -1,0 +1,17 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The water-filling optimization and the tetrahedral counterexample are correctly derived for positive dimension, but the candidate is false as written because it does not exclude the zero-dimensional simplex. The claimed continuous extension also lacks an interior-continuity argument.",
+  "critical_errors": [
+    "No hypothesis excludes d=0. For the full-dimensional 0-simplex Delta_0=conv{v_0} in R^0, its unique point is in relint Delta_0 and J is empty, so the asserted water-filling equation is 0=1 and has no positive solution."
+  ],
+  "gaps": [
+    "The boundary construction proves that min_i V_i tends to zero whenever interior points approach a boundary point, but the proof never establishes that min_i V_i is continuous on relint Delta_d (equivalently, it does not justify continuous dependence of the unique water level and V_i on the positive barycentric coordinates). That additional fact is needed to conclude that setting the boundary value to zero gives a continuous extension on the closed simplex."
+  ],
+  "repair_hints": [
+    "State d>=1 if positive dimension is intended.",
+    "Prove interior continuity, for example by showing continuous dependence of the unique water level on the barycentric coordinates or by giving the finite piecewise formula after fixing the saturated set, and then combine it with the boundary estimate already proved."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

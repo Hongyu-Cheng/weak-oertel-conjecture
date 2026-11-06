@@ -1,0 +1,21 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The collision-excess arithmetic, fractional heavy-edge pairing, incidence count, root-mass inequalities, physical-fiber density scaling, Jensen congestion factors, and separate halfspace-domination arguments are otherwise coherent, but the candidate is not approvable as written. It conflicts with a retained predecessor alias, leaves zero-weight edges inside the heavy set without the contacts required later, contains a boundary-case strictness error, and overstates the exact non-terminal consequence.",
+  "critical_errors": [
+    "The opening says that the exact aliases of accepted fact da867120a5f52797 are retained, but that fact defines beta_e=(1-chi_{m_e})omega_e as the congestion charge, whereas (9) redefines beta_e=((a_u^{1/d}+a_v^{1/d})/2)^d as the Brunn-Minkowski root mass. These cannot be the same retained alias on a positive reservoir edge: the old beta_e is at most omega_e at most r_e, while (57) proves that the new beta_e is at least 16r_e. Thus the statement is internally inconsistent as a specialization of its declared predecessor, and its later beta_e-based memberships and density scalings do not use the retained da867120a5f52797 alias.",
+    "The final non-terminal paragraph is not a consequence of the proved statements. The many-slice conclusion (29) requires the small-slice condition (27) to hold, not its stated failure. The high-rank conclusions (29d) require the additional submatching screens (29c), and they concern the unpooled edge fields (m_e,ell_e) and (m_e,bar c_e), not the physically pooled Jensen fields y_m^ell and y_m^c. Equation (40), even combined with a small hard-ledger value of D, yields only alpha_ell- and alpha_c-scaled quantitative bounds on r_ell and r_c; because these alphas can be exponentially small in n, it does not justify the unqualified claim that both pooled fields have high residual rank. The asserted exact remaining configuration therefore exceeds the established scope."
+  ],
+  "gaps": [
+    "As defined in (10), every zero-weight canonical pair with r_e=omega_e=0 satisfies omega_e at least r_e/2 and hence belongs to H. Accepted fact da867120a5f52797 supplies ell_e only on positive-load edges, yet (30) asks for a density representing ell_e for every heavy edge. Since the canonical reservoir is explicitly extended by zero off good classes, the statement must either restrict H to r_e>0 (equivalently here, its positive support) or provide the missing contacts; the present quantifiers are not well-defined.",
+    "The first strict inequality in (44) is invalid when the nonheavy set is empty. In the allowed boundary case Omega=Q, both sides of that first comparison are zero. The desired conclusion still follows from a non-strict first comparison followed by 2(Q-Omega)<Q/50, but the displayed proof does not cover this case as written."
+  ],
+  "repair_hints": [
+    "Rename the Brunn-Minkowski mass in (9), for example beta_e^BM, and state explicitly which da867120a5f52797 objects and aliases are retained; do not identify it with that predecessor's congestion charge beta_e.",
+    "Define H only on the positive support, for example H={e:r_e>0 and omega_e>=r_e/2}, and quantify the contact and metronoid witnesses only there.",
+    "Replace the first strict comparison in (44) by a non-strict one.",
+    "State the non-terminal alternatives separately and with their exact hypotheses: (27) implies the many-slice bound, (29c) implies high residual ranks for w, and a specified upper bound on D together with (40) gives explicit alpha-scaled bounds for r_ell and r_c. Do not claim high pooled rank or negate (27) without an additional theorem."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

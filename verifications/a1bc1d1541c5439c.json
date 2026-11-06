@@ -1,0 +1,16 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The pair-preserving allocations, collision accounting, Hall criterion, and scaling arguments are otherwise coherent, but the companion J construction depends on an unstated parity premise. Under the supplied stateless hypotheses, the J atoms need not have integral base coordinates, so the claimed lattice support and the conclusions derived from it are not proved.",
+  "critical_errors": [
+    "The proof inserts a(sigma) congruent to b(sigma) modulo 2 in (49), but neither the candidate assumptions nor the supplied statement of accepted fact e6cf877c81ebffb9 asserts that the two label endpoints have the same parity; they are stated only to be distinct physical endpoints. Same-parity of g and h separately gives u congruent to a(sigma) and v congruent to b(sigma), not a(sigma) congruent to b(sigma). For example, the displayed assumptions permit the local pattern n=1, a(sigma)=0, b(sigma)=1, g={0,2}, h={1,3}; then the base coordinates of J_p^0 and J_p^1 are 1/2 and 5/2. Consequently the claim after (17) that these atoms lie in C intersect (Z^n times R^d), the assertion that nu_J is carried by the mixed-integer set, and the residual bound for nu_J in (31) are not established."
+  ],
+  "gaps": [
+    "The undefined phrase 'physical opposite endpoints' in the supplied e6cf877c81ebffb9 statement cannot, in a stateless verification, substitute for an explicit same-parity theorem. Its dependency 27024aed67e77532 is not supplied, so any parity property from that dependency is unavailable here."
+  ],
+  "repair_hints": [
+    "Add the explicit hypothesis a(sigma) congruent to b(sigma) modulo 2 for every positive retained label and cite a supplied accepted predecessor that proves it. Then (49) makes both J base midpoints integral; without such a fact, restrict or replace the J construction rather than claiming the second measure and its bound."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

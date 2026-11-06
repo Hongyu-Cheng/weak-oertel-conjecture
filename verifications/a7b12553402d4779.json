@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The exact fibers and 27-point support, the singleton Lambda cases, the four good parity classes and Q=2a, the complete-core profile at m=0, the gamma estimate, the rank-four centroid calibration, and the first-moment chart contradiction are correct. However, the proof does not establish the claimed global inequality D(C_square)>=gamma_d G(C_square) from either supplied predecessor fact.",
+  "critical_errors": [],
+  "gaps": [
+    "The proof says that accepted fact 3d1f63abf09b2abb gives h_max(C)>=gamma_d 2^{-n} G(C), but that supplied fact does not state this global implication. Its displayed depth conclusions (14), (16), and (19) concern particular profiles supported in a proper affine subspace, while its proof merely cites the unsupplied accepted fact ae0161dd5d4ea672 for a metronoid-core master bound. The candidate neither supplies that source nor proves the master inequality for every profile in the supremum defining G. Thus D(C_square)>=gamma_d G(C_square), an explicit assertion of (9), has a nontrivial unsupported step."
+  ],
+  "repair_hints": [
+    "Supply the exact accepted master theorem h_max(C)>=gamma_d 2^{-n} G(C) as a predecessor, or prove it by applying the requisite complete-core depth theorem to every admissible profile and then passing to the supremum defining G."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

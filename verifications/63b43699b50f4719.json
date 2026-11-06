@@ -1,0 +1,18 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The transverse-weight extraction and most of the subsequent accounting are coherent, but the theorem is not well-defined for a permitted zero contact branch, and the asserted all-corner depth and local-packet energy conclusions are not established by the supplied predecessor facts.",
+  "critical_errors": [
+    "For either B = eq or B = neq it is permitted that P_B = 0, because (19) only forces at least one of the two branch masses to be positive. In that case Sigma_B^{src} is the zero measure and its support is empty, yet (37) unconditionally takes affine dimensions of that empty support and (38) uses the resulting undefined ranks. The explicit P_B > 0 condition preceding (33) governs only the endpoint ranks and (34), not (37)-(38), and no empty-affine-hull convention is supplied. Thus the statement is undefined on a genuine boundary case."
+  ],
+  "gaps": [
+    "Accepted fact 1c54f5dc74c15059 does not, as supplied, give the unconditional 'constant two-by-two factor construction' invoked for (25) and (29). Its packet conclusion requires r+s=n, a full-rank chart, a complete product grid of pairwise distinct atlas labels, and a rank-one minorant. The candidate has one rank-two chart, which is not full rank when n>2, and four corners derived from one paired contribution rather than four distinct atlas labels. No direct definition or construction of the claimed legal local packet is given, so the energy assertions are unsupported.",
+    "The proof also uses the general implication x in M_m(C_z) implies delta_C(z,x) >= gamma_d m for every newly constructed base and side corner and for the selector points in (57). The supplied statement of 1c54f5dc74c15059 establishes that depth only for its particular opposite-corner atlas points; its proof refers to accepted fact 6769574fc1bd9f8d, which is not supplied here. The candidate neither proves the general implication nor cites a supplied predecessor whose statement contains it, leaving the all-corner depth claims and the legality step for (34) unjustified under the verifier's stated source restrictions."
+  ],
+  "repair_hints": [
+    "Condition the source-measure rank definitions and (38) on P_B > 0, or state and justify an explicit convention for the affine dimension of the empty support.",
+    "Supply a directly applicable general metronoid-depth result and a direct rank-two local-packet construction with its energy calculation, including the n>2 rank-deficient case."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

@@ -1,0 +1,208 @@
+---
+fact_id: dd2af64eac8d5b3b
+kind: counterexample
+author: "research-agent"
+assurance: LLM-verified
+subgoal_id: oct3cz-dyadic-flat-guard-discrete-concentration-countertest
+depends_on: ["0ea9778d4ccdcc84","22ad535b30d1d5c4","c34e2143f28d8c83"]
+verifier_run: 358c180ca731497e
+target_match: null
+---
+
+## Statement
+
+All logarithms are natural. The norm inequality being countertested is the same discrete inequality as in accepted facts 22ad535b30d1d5c4 and c34e2143f28d8c83: for an original finite probability law \(p\), whiten its original random vector about its original mean to obtain \(\Xi\), and ask for fixed \(A,c>0\) such that \(\Pr_p(\|\Xi\|\le(1-t)\sqrt n)\le A\exp(-c\sqrt n\,t^3)\). The family below is new; its supports, tilts, layer probabilities, and random variables are not aliases of the objects in those two facts. The notation for actual depth and its third moment is exactly that of accepted fact 0ea9778d4ccdcc84: \(\tau_p(\mathbf a)=\inf_{H\ni\mathbf a}p(H)\), where \(H\) ranges over proper closed halfspaces, and \(\mathcal M_3(p)=\sum_{\mathbf a}p_{\mathbf a}\tau_p(\mathbf a)^3\), with original root weights throughout.
+
+For every integer \(m\ge1\), set \(n=m+1\) and define the original polytope and support by
+\[
+\begin{aligned}
+\mathcal P_m
+&=\operatorname{conv}\bigl(
+(\{-1\}\times[0,2]^m)\cup(\{1\}\times[1,5]^m)
+\bigr),\\
+D_m&=\mathcal P_m\cap\mathbb Z^n\\
+&=(\{-1\}\times\{0,1,2\}^m)
+\cup(\{0\}\times\{1,2,3\}^m)
+\cup(\{1\}\times\{1,2,3,4,5\}^m).
+\end{aligned}
+\]
+Thus \(\mathcal P_m\) is the polytope called \(P\) in the proposed lead; it is not a probability law. Put \(\boldsymbol\theta_m=((m/2)\log(3/5),0,\ldots,0)\), \(Z_m=3^m+2\,15^{m/2}\), and let the original law be \(p_m(\mathbf x)=\exp(\boldsymbol\theta_m\cdot\mathbf x)/Z_m\) on the entire \(D_m\). Write the original random vector as \(\mathbf X=(T,X_1,\ldots,X_m)\sim p_m\), and set
+\[
+\alpha_m=\frac{15^{m/2}}{Z_m}
+=\frac1{2+(3/5)^{m/2}},
+\qquad
+\eta_m=\frac{3^m}{Z_m},
+\qquad
+\sigma_m^2=\frac23+\frac43\alpha_m.
+\]
+Here \(\alpha_m\) is the new endpoint-layer probability, not the triangle parameter \(\alpha\) of c34e2143f28d8c83. One has \(\Pr(T=-1)=\Pr(T=1)=\alpha_m\), \(\Pr(T=0)=\eta_m\), \(2\alpha_m+\eta_m=1\), and \(1/3<\alpha_m<1/2\).
+
+The support is complete, full-dimensional, and saturated: \(\operatorname{conv}(D_m)=\mathcal P_m\), \(D_m=\operatorname{conv}(D_m)\cap\mathbb Z^n\), and \(\operatorname{span}_{\mathbb Z}(D_m-D_m)=\mathbb Z^n\). Its original mean is the supported interior integer point \(\mathbf j_m=(0,2,\ldots,2)\). The original \(p_m\) is strictly positive, globally log-affine, and the unique maximum-entropy law on \(D_m\) with mean \(\mathbf j_m\).
+
+Set \(U_i=X_i-2-T\). The affine vector
+\[
+\Xi_m=\left(
+\frac{T}{\sqrt{2\alpha_m}},
+\frac{U_1}{\sqrt{\sigma_m^2}},\ldots,
+\frac{U_m}{\sqrt{\sigma_m^2}}
+\right)
+\]
+is an invertible covariance-whitening of this same original \(\mathbf X\) about \(\mathbf j_m\). In particular \(\mathbb E\Xi_m=\mathbf0\), \(\operatorname{Cov}(\Xi_m)=I_n\), and for every \(\mathbf w\in\mathbb R^n\),
+\[
+\mathbb E_{p_m}[(\mathbf w\cdot\Xi_m)^4]
+\le4\|\mathbf w\|^4
+\le80\|\mathbf w\|^4.
+\]
+Equivalently, every original direction \(\mathbf w\) satisfies \(\mathbb E_{p_m}[(\mathbf w\cdot(\mathbf X-\mathbf j_m))^4]\le4(\operatorname{Var}_{p_m}[\mathbf w\cdot\mathbf X])^2\).
+
+For every proper nonempty real affine flat \(F\subset\mathbb R^n\), with \(k=\operatorname{codim}F\in\{1,\ldots,n\}\),
+\[
+p_m(F)\le2^{-k}\le2\,2^{-k}.
+\]
+The same bound holds for every proper real affine flat under the transported law of \(\Xi_m\), with its original probabilities unchanged.
+
+With \(t_0=1-\sqrt3/2\in(0,1)\), every integer \(m\ge18\) satisfies
+\[
+\Pr_{p_m}\!\left(\|\Xi_m\|\le(1-t_0)\sqrt n\right)
+\ge\alpha_m\left(1-\frac{50}{9m}\right)
+>\frac14.
+\]
+This lower-tail assertion holds for every covariance-whitening of the original vector about \(\mathbf j_m\), because all such whitenings have the same squared norm.
+
+For the original maximum atom \(p_{m,\max}\), entropy \(H(p_m)\), and \(\rho_m=2^n p_{m,\max}\), one has
+\[
+\begin{aligned}
+p_{m,\max}&=\frac{\alpha_m}{3^m},
+&\rho_m&=2\alpha_m(2/3)^m<(2/3)^m\longrightarrow0,\\
+8^n\sum_{\mathbf x\in D_m}p_m(\mathbf x)^4
+&\le\rho_m^3\longrightarrow0,\\
+H(p_m)-n\log2
+&\ge m\log(\sqrt{15}/2)\longrightarrow+\infty,\\
+\frac{|D_m|}{2^n}
+&=\frac{2\,3^m+5^m}{2^{m+1}}
+\ge\frac12(5/2)^m\longrightarrow+\infty.
+\end{aligned}
+\]
+Precisely, for every \(A,c,L_{\mathrm{threshold}},\varepsilon,K_0>0\), there is an integer \(m_0\ge18\) such that every integer \(m\ge m_0\) has \(n\ge K_0\), \(|D_m|/2^n\ge K_0\), \(H(p_m)-n\log2\ge L_{\mathrm{threshold}}\), \(\rho_m\le\varepsilon\), \(8^n\sum p_m^4\le\varepsilon\), all the flat and fourth-moment guards above, and
+\[
+\Pr_{p_m}\!\left(\|\Xi_m\|\le(1-t_0)\sqrt n\right)
+>A\exp(-c\sqrt n\,t_0^3).
+\]
+Hence no fixed positive \(A,c\) make that discrete lower-tail inequality valid throughout this guarded class, including when \(A,c\) may depend on a fixed directional fourth-moment ceiling of 80 and a fixed flat-guard coefficient of 2. The counterexample already satisfies the stronger ceilings 4 and 1, respectively.
+
+The atomic fourth-power sum displayed above is not \(\mathcal M_3(p_m)\) of 0ea9778d4ccdcc84. No vanishing normalized actual depth moment or mixed-integer body violating the locked problem is asserted.
+
+## Proof
+
+Fix \(m\ge1\). For a real \(t\in[-1,1]\), let \(\lambda=(t+1)/2\). Every point of \(\mathcal P_m\) with first coordinate \(t\) is a convex combination, with endpoint weights \(1-\lambda,\lambda\), of points in the two endpoint boxes. To see that these are the only possibilities, group the terms of any convex combination according to their first coordinate; each group can be replaced by one point of its convex endpoint box. Conversely every such endpoint combination belongs to \(\mathcal P_m\). The box section is therefore
+\[
+\{\mathbf x:(t,\mathbf x)\in\mathcal P_m\}
+=(1-\lambda)[0,2]^m+\lambda[1,5]^m
+=[(t+1)/2,(7+3t)/2]^m.
+\]
+The equality of these Minkowski sums follows coordinate by coordinate from addition of intervals. Thus the only integral first coordinates are \(-1,0,1\), and their integer sections are exactly the three sets in the statement: at \(t=0\), the real interval is \([1/2,7/2]\), whose integer points are \(1,2,3\). This verifies exhaustiveness without replacing the middle real section by its integer convex hull.
+
+Every vertex of each endpoint box is integral and belongs to \(D_m\). The polytope is their convex hull, so \(\operatorname{conv}(D_m)=\mathcal P_m\); completeness follows. The section formula also gives the full-dimensional description \(-1\le t\le1\), \((t+1)/2\le x_i\le(7+3t)/2\) for every \(i\). At \(\mathbf j_m=(0,2,\ldots,2)\), all these inequalities are strict, proving full dimension and interiority, and the middle integer section contains \(\mathbf j_m\). Differences within that section give every standard coordinate vector in the last \(m\) coordinates. Both \((-1,1,\ldots,1)\) and \((0,1,\ldots,1)\) are in \(D_m\), and their difference gives the first standard coordinate vector. Consequently the difference lattice is exactly \(\mathbb Z^n\).
+
+Put \(h_m=(3/5)^{m/2}\in(0,1)\). The total unnormalized weights of the three integer layers are respectively \(3^m h_m^{-1}=15^{m/2}\), \(3^m\), and \(5^m h_m=15^{m/2}\). Their sum is \(Z_m\), proving the exact layer probabilities in the statement. The probability is constant within each layer, so the conditional laws are uniform product laws on the three displayed grids. The identity \(\alpha_m=1/(2+h_m)\) gives \(1/3<\alpha_m<1/2\), and \(\eta_m=h_m/(2+h_m)<\alpha_m\). The two endpoint probabilities are equal, so \(\mathbb ET=0\). The conditional mean of every \(X_i\) is respectively \(1,2,3\), namely \(2+T\). This proves the exact original mean \(\mathbf j_m\).
+
+The original logarithmic probability table is \(\log p_m(\mathbf x)=\boldsymbol\theta_m\cdot\mathbf x-\log Z_m\) on all of \(D_m\), proving positivity and global log-affinity. If \(\mu\) is any probability law on \(D_m\) with mean \(\mathbf j_m\), this affinity gives \(\sum\mu(\mathbf x)\log p_m(\mathbf x)=\sum p_m(\mathbf x)\log p_m(\mathbf x)\). Hence its relative entropy is \(D(\mu\|p_m)=H(p_m)-H(\mu)\). Applying \(z\log z\ge z-1\), with its continuous value at zero, to \(z=\mu(\mathbf x)/p_m(\mathbf x)\) and summing against \(p_m\) proves nonnegativity, with equality only at \(\mu=p_m\). Thus the original \(p_m\) itself is the unique mean-\(\mathbf j_m\) entropy law; there is no further change of source.
+
+Conditional on \(T=-1\) or \(T=0\), the \(U_i\) are independent uniforms on \(\{-1,0,1\}\). Conditional on \(T=1\), they are independent uniforms on \(\{-2,-1,0,1,2\}\). These statements follow by subtracting the exact conditional centers \(2+T\). Every conditional mean and odd moment is zero. The exact finite sums of second and fourth powers are
+\[
+\begin{array}{c|cc}
+T&\mathbb E[U_i^2\mid T]&\mathbb E[U_i^4\mid T]\\ \hline
+-1,0&2/3&2/3\\
+1&2&34/5.
+\end{array}
+\]
+Thus \(\operatorname{Var}T=2\alpha_m\), \(\operatorname{Cov}(T,U_i)=0\), and, for \(i\ne j\), \(\mathbb E[U_iU_j]=0\), the last two identities following from conditional centering and independence. Since \(\alpha_m+\eta_m=1-\alpha_m\),
+\[
+\mathbb E U_i^2=\frac23(\alpha_m+\eta_m)+2\alpha_m
+=\frac23+\frac43\alpha_m=\sigma_m^2.
+\]
+Both \(2\alpha_m\) and \(\sigma_m^2\) are positive. The centered linear map from \(\mathbf X-\mathbf j_m\) to \((T,U_1,\ldots,U_m)\) has first output \(T\) and outputs \(X_i-2-T\) thereafter; its matrix is triangular with diagonal entries one. It is invertible and maps \(\mathbb Z^n\) onto \(\mathbb Z^n\). The transformed covariance is exactly \(\operatorname{diag}(2\alpha_m,\sigma_m^2I_m)\). Dividing by the displayed standard deviations gives the stated whitening \(\Xi_m=B_m(\mathbf X-\mathbf j_m)\).
+
+Here and below this invertible transport preserves each original atom probability. Since \(\mathbf j_m\) is integral, the transported support is complete in \(B_m\mathbb Z^n\), and its difference lattice is exactly \(B_m\mathbb Z^n\). It remains a finite discrete law. Any other covariance-whitening \(C_m\) satisfies \(C_m\operatorname{Cov}_{p_m}(\mathbf X)C_m^{\mathsf T}=I_n\), so \(C_m^{\mathsf T}C_m=\operatorname{Cov}_{p_m}(\mathbf X)^{-1}=B_m^{\mathsf T}B_m\). Therefore every such whitening has the same squared norm, the original Mahalanobis squared norm.
+
+For the directional fourth moments, abbreviate \(\alpha=\alpha_m\) and \(\sigma^2=\sigma_m^2\) only within this calculation. Fix \(a\in\mathbb R\), \(\mathbf b\in\mathbb R^m\), and put \(V=\sum_i b_iU_i\), \(s_2=\sum_i b_i^2\), \(s_4=\sum_i b_i^4\). This abbreviates a projection of the new original law, and does not refer to the triangle variable \(U\) of c34e2143f28d8c83. If \(v_T=\mathbb E[U_i^2\mid T]\) and \(\mu_{4,T}=\mathbb E[U_i^4\mid T]\), conditional independence and symmetry give
+\[
+\begin{aligned}
+\mathbb E[V\mid T]&=\mathbb E[V^3\mid T]=0,\\
+\mathbb E[V^2\mid T]&=v_Ts_2,\\
+\mathbb E[V^4\mid T]
+&=3v_T^2s_2^2+(\mu_{4,T}-3v_T^2)s_4
+\le3v_T^2s_2^2.
+\end{aligned}
+\]
+The two possible final coefficients are exactly \(-2/3\) and \(-26/5\), both negative. In particular \(\mathbb E[T^3V]=0\) and \(\mathbb E[TV^3]=0\); these vanish by conditioning, even though the conditional variance depends on \(T\). The required even mixed moment is not obtained by independence: directly,
+\[
+\mathbb E[T^2V^2]=\alpha(2/3+2)s_2=\frac83\alpha s_2.
+\]
+Also \(\mathbb ET^4=2\alpha\) and \(\mathbb E v_T^2=4(1+8\alpha)/9\). Consequently
+\[
+\begin{aligned}
+\mathbb E[(aT+V)^4]
+&=2\alpha a^4+16\alpha a^2s_2+\mathbb EV^4,\\
+\operatorname{Var}(aT+V)&=2\alpha a^2+\sigma^2s_2.
+\end{aligned}
+\]
+The exact inequality \(3(1+8\alpha)\le4(1+2\alpha)^2\) holds because its right side minus its left side is \((4\alpha-1)^2\). Since \(\sigma^2=2(1+2\alpha)/3\), it implies \(\mathbb EV^4\le3\mathbb E v_T^2s_2^2\le4\sigma^4s_2^2\).
+
+Let \(q_T=2\alpha a^2\) and \(q_U=\sigma^2s_2\), which are nonnegative variance contributions. From \(\alpha>1/3\) and \(\sigma^2>10/9>1\), the last formulas yield
+\[
+\mathbb E[(aT+V)^4]
+\le\frac{q_T^2}{2\alpha}+\frac8{\sigma^2}q_Tq_U+4q_U^2
+\le4(q_T+q_U)^2.
+\]
+This also covers a zero direction, without dividing by its variance. Every original linear projection about \(\mathbf j_m\) has this form: \(\mathbf w\cdot(\mathbf X-\mathbf j_m)=(w_0+\sum_iw_i)T+\sum_iw_iU_i\). Thus the bound applies to every original direction. Applying it to \(B_m^{\mathsf T}\mathbf w\), whose original projection variance is \(\|\mathbf w\|^2\), proves the isotropic fourth-moment ceiling four.
+
+We next prove the flat guard for every real flat, without rationality assumptions. For a uniform law on a product grid of \(q\) possible values per coordinate in \(\mathbb R^m\), an affine flat \(E\) of codimension \(r\), with \(0\le r\le m\), has probability at most \(q^{-r}\). Indeed, choose \(m-r\) coordinate functions whose restrictions to the direction space of \(E\) form a linear basis of its dual. Their joint coordinate projection is injective on \(E\): a difference with all those coordinates zero is zero. There are at most \(q^{m-r}\) possible projected grid points, so \(E\) contains at most this many points of the grid, which has \(q^m\) points in total. The case \(r=m\) uses the empty projection and at most one point, and the case \(r=0\) gives the bound one.
+
+Now fix a proper real affine flat \(F\) of codimension \(k\). If its first coordinate is not constant, then \(\dim F=n-k\ge1\), and every nonempty intersection with a layer \(T=t\) has dimension \(\dim F-1=m-k\). In that layer its intrinsic codimension is \(k\). Each layer is a uniform product grid of size \(q=3\) or \(q=5\) per coordinate. Therefore its conditional probability of \(F\) is at most \(3^{-k}\), and summing against the original layer probabilities gives \(p_m(F)\le3^{-k}\le2^{-k}\).
+
+If instead the first coordinate is constant on \(F\), its probability is zero unless that constant is \(-1,0,1\). In a matching layer its intrinsic dimension is \(n-k\), hence intrinsic codimension \(k-1\). All three layer probabilities are at most \(1/2\), since \(\alpha_m<1/2\) and \(\eta_m<\alpha_m\). The grid bound now gives \(p_m(F)\le(1/2)3^{-(k-1)}\le2^{-k}\). These cases also cover singleton flats. An invertible affine image preserves codimension, and its inverse carries a transported flat to an original flat with exactly the same probability. Thus the flat guard holds under whitening as well.
+
+To prove the lower-tail bound, condition on \(T=-1\). The independent \(U_i^2\) have value one with probability \(2/3\) and zero with probability \(1/3\). Hence the exact conditional moments of the squared whitened norm are
+\[
+\begin{aligned}
+\|\Xi_m\|^2&=\frac1{2\alpha_m}
++\frac1{\sigma_m^2}\sum_{i=1}^m U_i^2,\\
+\mathbb E[\|\Xi_m\|^2\mid T=-1]
+&=\frac1{2\alpha_m}+\frac{m}{1+2\alpha_m},\\
+\operatorname{Var}(\|\Xi_m\|^2\mid T=-1)
+&=\frac{2m}{9\sigma_m^4}.
+\end{aligned}
+\]
+For \(m\ge4\), \(h_m\le(3/5)^2=9/25<1/2\). Therefore \(\alpha_m>2/5\) and \(\sigma_m^2>6/5\). In particular the conditional mean is at most \(5/4+5m/9\), and the conditional variance is at most \(25m/162\). For \(m\ge18\), the threshold \(3(m+1)/4\) exceeds that conditional mean by at least
+\[
+\frac34(m+1)-\left(\frac54+\frac59m\right)
+=\frac7{36}m-\frac12
+\ge\frac16m.
+\]
+Chebyshev's inequality therefore bounds the conditional probability of exceeding the threshold by \((25m/162)/(m/6)^2=50/(9m)\). Multiplying the complementary conditional probability by the original endpoint mass gives
+\[
+\Pr_{p_m}\!\left(\|\Xi_m\|^2\le\frac34(m+1)\right)
+\ge\alpha_m\left(1-\frac{50}{9m}\right)
+>\frac25\left(1-\frac{25}{81}\right)
+=\frac{112}{405}>\frac14.
+\]
+The factor in parentheses is positive for \(m\ge18\), justifying the strict comparison using \(\alpha_m>2/5\). Finally \((1-t_0)^2n=3(m+1)/4\), so this is the stated norm event. This argument uses exact finite moments and Chebyshev, with no asymptotic distribution approximation.
+
+Because the original tilt in the first coordinate is negative, each individual atom is largest in the \(T=-1\) layer. That layer is uniform on \(3^m\) points of total mass \(\alpha_m\), giving \(p_{m,\max}=\alpha_m/3^m\) and \(\rho_m=2\alpha_m(2/3)^m<(2/3)^m\). For every probability table, \(\sum p_m(\mathbf x)^4\le p_{m,\max}^3\sum p_m(\mathbf x)=p_{m,\max}^3\). Multiplication by \(8^n=(2^n)^3\) proves the normalized atomic fourth-power bound.
+
+The logarithmic original table and original mean \(\mathbb ET=0\) give \(H(p_m)=\log Z_m\). Since \(Z_m\ge2\,15^{m/2}\),
+\[
+H(p_m)-n\log2
+\ge\log2+\frac m2\log15-(m+1)\log2
+=m\log(\sqrt{15}/2).
+\]
+The coefficient is positive. Counting the three exhaustive integer layers gives \(|D_m|=2\,3^m+5^m\), proving the stated cardinality estimate.
+
+For the full quantifiers, choose \(m_0\) sufficiently large that every \(m\ge m_0\) satisfies \(m\ge18\), \(m+1\ge K_0\), \((5/2)^m/2\ge K_0\), \(m\log(\sqrt{15}/2)\ge L_{\mathrm{threshold}}\), \((2/3)^m\le\min\{\varepsilon,\varepsilon^{1/3}\}\), and \(c\,t_0^3\sqrt{m+1}>\log(4A)\). Such an integer exists since the relevant powers decrease to zero or increase to infinity, and \(\sqrt{m+1}\) increases to infinity. All guards and restrictions then hold. The last condition gives \(A\exp(-c\sqrt n\,t_0^3)<1/4\), whereas the exact lower-tail estimate is greater than \(1/4\). This proves the strict violation for every prescribed positive pair \(A,c\).
+
+To finish the normalization distinction, the actual \(\tau_{p_m}\) and \(\mathcal M_3(p_m)\) retain exactly the convention of 0ea9778d4ccdcc84. An invertible affine map sends proper closed halfspaces bijectively to proper closed halfspaces and preserves all original probabilities, so \(\tau_{\Xi_m}(B_m(\mathbf a-\mathbf j_m))=\tau_{p_m}(\mathbf a)\) for every original supported root \(\mathbf a\), and the actual third moment is unchanged by transport. A containing cap includes its root atom, giving only \(\mathcal M_3(p_m)\ge\sum_{\mathbf a}p_m(\mathbf a)^4\). The proved decay is an upper bound on this atomic lower bound, not an upper bound on \(\mathcal M_3(p_m)\). The counterexample concerns precisely the guarded discrete norm concentration bridge appearing in 22ad535b30d1d5c4 and c34e2143f28d8c83. It constructs no mixed-integer body or depth witness against the locked Weak Oertel statement.
+
+## External sources
+
+none

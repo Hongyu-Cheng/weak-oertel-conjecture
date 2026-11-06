@@ -1,0 +1,14 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "REJECTED",
+  "summary": "The proof contains a false pointwise bound in the chord-integral error estimate. Its subsequently displayed estimate uses a sufficiently large constant and appears recoverable, but the submitted proof does not satisfy the required zero-mathematical-errors standard. The affine maps, parity convention, row-marginal compactness argument, and final original-root slab application otherwise match the supplied predecessors.",
+  "critical_errors": [
+    "In the direct error estimate, the assertion that the integrand on the symmetric difference is at most exp(|b|/2) times the weight of the corresponding endpoint site is false. For example, an occupied integer row with real chord [-9/5,9/5] has sites -1,0,1 and comparison interval [-3/2,3/2]. Such a chord occurs at first coordinate 1 in the integral triangle conv{(0,0),(5,-9),(5,9)}. For b>0 and x in (3/2,9/5], the ratio of exp(bx) to the upper endpoint site's weight exp(b) is exp(b(x-1))>exp(b/2). The real chord endpoint can be almost one integer unit from its nearest occupied endpoint site, even though it is at most one half unit from the comparison-interval endpoint. Thus the stated pointwise half-unit factor is incorrect."
+  ],
+  "gaps": [],
+  "repair_hints": [
+    "Use exp(|b|), rather than exp(|b|/2), in that pointwise assertion and justify it by the fact that every point in either endpoint discrepancy is within one unit of the corresponding occupied endpoint site. Each discrepancy has length at most one half. This would justify the already displayed, looser bound 2 exp(|b|) L m_i without altering the candidate statement or the remaining argument."
+  ],
+  "target_match": null,
+  "target_match_explanation": "Not applicable."
+}

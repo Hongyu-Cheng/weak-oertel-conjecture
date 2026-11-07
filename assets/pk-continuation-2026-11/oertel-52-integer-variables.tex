@@ -1,0 +1,386 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\MI}{\mu}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\depth}{\operatorname{depth}}
+\title{A smaller counterexample to the mixed-integer \texorpdfstring{\(1/e\)}{1/e} bound\\[3pt]
+\large 52 integer variables and a Boolean family of outer fibers}
+\author{PK research contribution}
+\date{November 7, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a rational convex polytope whose mixed-integer halfspace depth is
+strictly less than $1/(e2^{52})$ at every mixed-integer point. Its continuous
+dimension is $274784+2^{61}$. The improvement comes from adding entire
+Boolean families of outer fibers, while preserving the origin fiber by
+explicit affine inequalities. This is about $2^{32}$ times smaller in
+continuous dimension than the earlier $n=76$, $d=1372131+2^{93}$ example,
+but it remains far above a billion variables. The argument below and its
+exact arithmetic certificate have been independently reviewed; this new
+construction has not been formalized in Lean.
+\end{abstract}
+
+\section{Statement and the two inequalities that drive the proof}
+For a bounded set $S\subset\Z^n\times\R^d$ with measurable fibers, write
+\[
+ \MI(S)=\sum_{z\in\Z^n}\vol_d(S_z),\qquad
+ \depth_S(y)=\inf_{\substack{H\text{ closed ambient halfspace}\\y\in H}}
+                 \frac{\MI(S\cap H)}{\MI(S)}.
+\]
+The depth is defined when $0<\MI(S)<\infty$.
+Halfspaces are proper: their normal is nonzero. In our example every
+nonempty fiber is a full-dimensional convex body, so $\MI$ agrees with
+the standard Euclidean Hausdorff measure $\mathcal H_d$ on $S$.
+
+\begin{theorem}\label{thm:main}
+There is a rational convex polytope $C$ with nonempty interior in
+$\R^{52}\times\R^d$, where
+\[
+ d=274784+2^{61}=2305843009213968736,
+\]
+such that $S=C\cap(\Z^{52}\times\R^d)$ is nonempty and
+\[
+ \sup_{y\in S}\depth_S(y)<\frac1{e2^{52}}.
+\]
+Every nonempty integer fiber has dimension $d$. In particular this
+also violates $2^{-52}(d/(d+1))^d$.
+\end{theorem}
+
+This addresses the specific constant $1/e$. It does not rule out a smaller
+positive absolute constant in the weak conjecture.
+
+Here is the mass bookkeeping before the geometry. We first construct a
+body $C_0\subset\R^{52}\times\R^{3+h}$. Normalize volumes by the volume
+$b$ of its origin fiber. The $2^{52}-1$ positive Boolean fibers all have
+mass $m$. The outer fibers have total mass $E$, split equally among four
+groups. Thus its total mass is $bW$, where
+\begin{equation}\label{eq:W}
+ W=(2^{52}-1)m+1+E=2^{52}m+\Delta,\qquad \Delta=1+E-m.
+\end{equation}
+Four halfspaces cover the origin fiber; each has normalized mass
+$L=27/64+E/4$ and misses all positive Boolean fibers. We arrange
+\begin{equation}\label{eq:twotests}
+ L<\frac m e,\qquad \Delta>0.
+\end{equation}
+These cuts handle every point in the origin fiber. Every other integer
+base is exposed, and its fiber has mass at most $m$. A common simplex
+factor of dimension $\ell$ supplies a small cap at every point of those
+fibers. It suffices to choose
+\begin{equation}\label{eq:paddingtest}
+ \frac{2^{52}m}{2\ell-1}<\Delta.
+\end{equation}
+Section~\ref{sec:caps} explains this last step, including isolation by a
+closed ambient halfspace. No rounding of a center is used.
+
+\section{The fibers and their integer bases}
+Let $B_0\subset\R^3$ be the standard tetrahedron translated so that its
+centroid is zero. Its barycentric coordinates $\lambda_0,\ldots,\lambda_3$
+satisfy $\lambda_j(0)=1/4$. Put $f_j=\lambda_j-1/4$; these are linear
+and $\sum_j f_j=0$. Define
+\[
+ T_a=\{x\in B_0:\lambda_j(x)\le1/4\ (j\ne a)\},\qquad
+ \theta=\frac{\vol(T_a)}{\vol(B_0)}=\frac3{32},\qquad \beta=\frac{27}{64}.
+\]
+Indeed, the three coordinates $\lambda_j$, $j\ne a$, identify $T_a$
+with $[0,1/4]^3$ and $B_0$ with a simplex of volume $1/6$; the Jacobian
+cancels in the ratio. Also $\{f_j\ge0\}\cap B_0$ is a tetrahedron of
+linear scale $3/4$, hence volume fraction $\beta$.
+
+Partition the 52 integer coordinates into four blocks $I_0,\ldots,I_3$
+of size $N=13$. For nonempty $I\subset\{1,\ldots,52\}$, let $a(I)$ be
+the block of its least member. The intended integer support is
+\begin{equation}\label{eq:support}
+ Z=\{0,1\}^{52}\ \cup\
+ \{-\one_J:\varnothing\ne J\subset I_a,\quad a=0,1,2,3\}.
+\end{equation}
+The added bases include all nonempty subsets of a block, rather than only
+the negative unit vectors. There are $4(2^{13}-1)$ of them.
+
+Choose the following rational parameters:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+$N=13$ & $h=274781$ & $\ell=2^{61}$\\
+$s=500000001/10^9$ & $t=999999997/10^9$ & $q=100001/200000$\\
+$\eta=399999999/400000000$ & $\varepsilon=1/10^{12}$ & \\
+\bottomrule
+\end{tabular}
+\end{center}
+Let $c_a$ have barycentric coordinates $1/4+3\varepsilon$ at $a$ and
+$1/4-\varepsilon$ elsewhere. Write
+\[
+ F=[-1,1]^h,\quad B=B_0\times F,\quad
+ \delta_s=2s-1,\quad\delta_t=1-t,\quad\delta_q=2q-1.
+\]
+For $k\ge1$ and $1\le r\le13$, set
+\begin{align*}
+ K(a,k)&=\bigl[2(c_a+s(T_a-c_a))+(k-1)c_a\bigr]\times(2qF),\\
+ G(a,r)&=\bigl[t_r(T_a-c_a)-(r-1)c_a\bigr]\times(u_rF),\\
+ t_r&=1-r\delta_t,\qquad u_r=1-r\delta_q.
+\end{align*}
+\begin{samepage}
+Define $C_0$ to be the convex hull of the following assigned fibers:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Integer base & Assigned fiber & Volume divided by $b=\vol(B)$\\
+\midrule
+$0$ & $B$ & $1$\\
+$\one_I$, $I\ne\varnothing$ & $K(a(I),|I|)$ & $m=\theta(2s)^3(2q)^h$\\
+$-\one_J$, $\varnothing\ne J\subset I_a$ & $G(a,|J|)$ &
+ $\alpha_{|J|}=\theta t_{|J|}^3u_{|J|}^h$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{samepage}
+The proof must check that convexification neither creates extra integer
+bases nor enlarges the assigned origin fiber. We do that explicitly next.
+
+\section{Why these are exactly the actual fibers}
+\begin{lemma}\label{lem:fibers}
+The integer support of $C_0$ is exactly \eqref{eq:support}. All its nonzero
+integer bases are exposed and their actual fibers are the assigned ones.
+Its origin fiber is exactly $B$. The body $C_0$ is a rational polytope with
+nonempty ambient interior, and all its nonempty fibers have dimension $3+h$.
+\end{lemma}
+\begin{proof}
+Every projected coordinate lies in $[-1,1]$. If an integer projection has
+coordinate $-1$ at an index in $I_a$, every generator in a convex
+representation has that coordinate $-1$. Such generators all belong to
+the negative Boolean block $I_a$. Thus the projection is a negative
+Boolean vector in that block. If no coordinate is negative, it is Boolean.
+Every base listed in \eqref{eq:support} was included, proving the census.
+
+For exposure, put $\rho=1/53$. The positive base $\one_I$ uniquely
+maximizes the functional with coefficients $1$ on $I$ and $-\rho$
+elsewhere: its value is $|I|\ge1$, whereas every negative base has value
+at most $13\rho<1$. Similarly $-\one_J$ uniquely maximizes the functional
+with coefficients $-1$ on $J$ and $\rho$ elsewhere. Other negative bases
+have smaller value, and positive bases have value at most
+$\rho(52-|J|)<1\le|J|$. An exposed base can only use generators above
+it in a convex representation. Its fiber is therefore exactly the assigned
+convex fiber.
+
+For the origin, define
+\[
+ v=\delta_s/4+(1-\delta_s)\varepsilon.
+\]
+Every generator $(z,x,w)$ satisfies the affine inequalities
+\begin{equation}\label{eq:envelope}
+ \lambda_j(x)+v\sum_i z_i\ge0\quad(j=0,\ldots,3),\qquad
+ \pm w_l\le1+\delta_q\sum_i z_i\quad(l=1,\ldots,h).
+\end{equation}
+Here are the details. At a positive base of size $k$ and selected type $a$,
+\[
+ \min\lambda_j=
+ \begin{cases}
+ -\delta_s/4-(k-\delta_s)\varepsilon,&j\ne a,\\
+ 1/4+3(k-\delta_s)\varepsilon,&j=a.
+ \end{cases}
+\]
+The first value is at least $-kv$, since the difference is
+$(k-1)\delta_s(1/4-\varepsilon)\ge0$, and the second is positive.
+The box bound follows from $2q=1+\delta_q\le1+k\delta_q$.
+
+At a negative base of size $r$ in block $a$, the corresponding minima are
+\[
+ \min\lambda_j=
+ \begin{cases}
+ r(\delta_t/4+t\varepsilon),&j\ne a,\\
+ 1/4-3rt\varepsilon,&j=a.
+ \end{cases}
+\]
+The first exceeds $rv$ by
+$r(\delta_t-\delta_s)(1/4-\varepsilon)>0$. The second is at least $rv$
+because our parameters satisfy
+\begin{equation}\label{eq:geom}
+ N[\delta_s+4\varepsilon(3t+1-\delta_s)]\le1.
+\end{equation}
+The free-box bound is precisely $u_r=1-r\delta_q$. The origin generators
+also satisfy \eqref{eq:envelope}.
+
+These inequalities persist under convex combinations. At $z=0$, they
+say $x\in B_0$ and $w\in F$, so the origin fiber is contained in $B$.
+The reverse inclusion holds by construction. This argument includes all
+convex combinations of overlapping negative subsets.
+
+All parameters and vertices are rational, and $t_r,u_r>0$, so all assigned
+fibers are full-dimensional rational polytopes. The origin fiber spans
+the vertical directions, while the positive unit bases span all integer
+directions. Consequently $C_0$ has full affine span and nonempty interior.
+\end{proof}
+
+\section{The four cuts at the origin}
+Put $R=159=3(52+1)$. For $j=0,\ldots,3$, define the closed halfspace
+\[
+ H_j=\left\{(z,x,w):f_j(x)-R\sum_{i\in I_j}z_i
+                  +\eta\varepsilon\sum_{i\notin I_j}z_i\ge0\right\}.
+\]
+It ignores the free-box coordinates. These four halfspaces cover the origin
+fiber because $\sum_j f_j=0$.
+
+On a positive fiber of size $k$ that meets $I_j$, the continuous score is
+at most $k+1$ and the integer score at most $-R+k-1$. Their sum is negative.
+If its base avoids $I_j$, its selected type differs from $j$ and the maximum
+total score is
+\[
+ [k\eta-(k-\delta_s)]\varepsilon<0,
+\]
+since $\eta<1-\delta_s$. Thus $H_j$ misses every positive Boolean fiber.
+
+On a negative fiber $G(a,r)$ with $a\ne j$, the maximum score is
+$r(t-\eta)\varepsilon<0$. On $G(j,r)$ the minimum score is
+$rR-3rt\varepsilon>0$, so the whole fiber is included. Exactly one
+negative block is captured. It follows that, with
+\[
+ E=4\sum_{r=1}^{13}\binom{13}{r}\alpha_r,
+\]
+the total volume is $bW$ from \eqref{eq:W}, and
+\begin{equation}\label{eq:originmass}
+ \MI\bigl((C_0\cap(\Z^{52}\times\R^{3+h}))\cap H_j\bigr)
+       =b\left(\frac{27}{64}+\frac E4\right)=bL.
+\end{equation}
+The normals are nonzero. All omitted fibers have strict score gaps, and
+the origin cap boundaries have zero volume, so this equality holds for
+the closed halfspaces as stated.
+
+\section{A small cap at every other point}\label{sec:caps}
+\begin{lemma}\label{lem:padding}
+For every positive integer $\ell$, put
+$\Gamma_\ell=(\ell/(\ell+1))^\ell$. Then
+\[
+ e\Gamma_\ell<1+\frac1{2\ell-1}.
+\]
+Every point of an $\ell$-simplex lies in a closed cap of relative volume
+at most $\Gamma_\ell$.
+\end{lemma}
+\begin{proof}
+The exact identity
+\[
+ \log(e\Gamma_\ell)=\int_0^1\frac{t}{\ell+t}\,dt<\frac1{2\ell}
+\]
+and $e^x<1/(1-x)$ for $0<x<1$ give the first assertion. The latter
+inequality follows by integrating $1/(1-t)>1$ from $0$ to $x$.
+For the second, choose a largest barycentric coordinate $a$ of the point.
+Then $a\ge1/(\ell+1)$. The cap where that coordinate is at least $a$
+has relative volume $(1-a)^\ell\le\Gamma_\ell$, including zero volume
+when $a=1$.
+\end{proof}
+
+Let $J$ be the standard rational $\ell$-simplex and set $C=C_0\times J$.
+Every nonzero fiber of $C_0$ has volume at most $mb$, because
+$\alpha_r\le\theta<m$. For a point of $C$ above a nonzero integer base
+$z$, take the cap $A(v')\ge c$ supplied by Lemma~\ref{lem:padding} in
+the $J$ coordinate. Let $g$ expose $z$ among the finitely many integer
+bases. For sufficiently large finite $Q>0$, the halfspace
+\[
+ A(v')-c+Q\bigl(g(z')-g(z)\bigr)\ge0
+\]
+agrees with the cap above $z$ and misses all other fibers. Indeed, all
+exposure gaps are strictly negative and $A-c$ is bounded on compact $J$.
+Its normal is nonzero because the simplex-cap functional is nonzero.
+Its mass is at most $mb\Gamma_\ell\vol(J)$.
+
+For a point above zero, one of the four cuts from the previous section,
+extended to ignore $J$, has mass $bL\vol(J)$. Thus every point in the
+actual mixed-integer set has a containing closed halfspace of relative
+mass at most
+\begin{equation}\label{eq:uniform}
+ \frac{\max\{L,\Gamma_\ell m\}}{W}.
+\end{equation}
+By \eqref{eq:twotests}, $L/W<m/(eW)<1/(e2^{52})$.
+By \eqref{eq:paddingtest} and Lemma~\ref{lem:padding},
+\[
+ e\Gamma_\ell\,2^{52}m
+ <2^{52}m+\frac{2^{52}m}{2\ell-1}
+ <2^{52}m+\Delta=W.
+\]
+This bounds the second term in \eqref{eq:uniform} strictly below the same
+target. Only the exact parameter checks remain.
+
+\section{Exact inequalities for the displayed parameters}
+All geometric hypotheses used above follow directly from the rational
+parameters. The nontrivial positive margins are
+\begin{align*}
+ \eta-t=2(1-s)-\eta&=\frac1{2\cdot10^9},\\
+ 1-13\delta_t&=\frac{999999961}{10^9},&
+ 1-13\delta_q&=\frac{99987}{100000},\\
+ 1-13[\delta_s+4\varepsilon(3t+1-\delta_s)]
+ &=\frac{249999993448000000143}{250000000000000000000}.
+\end{align*}
+In particular $0<\varepsilon<1/4$, $1/2<s,q<1$, $0<t<\eta<2(1-s)$,
+$t_r,u_r>0$, and \eqref{eq:geom} hold.
+
+The exact rational certificate described below proves
+\begin{equation}\label{eq:intervals}
+ \frac{1463268}{10^6}<m<\frac{1463269}{10^6},\qquad
+ \frac{465669}{10^6}<E<\frac{465670}{10^6}.
+\end{equation}
+Put $U=1359141/500000$. The exponential series gives
+\[
+ e<\sum_{j=0}^8\frac1{j!}+\frac{10}{9\cdot9!}<U,
+\]
+because the tail after $1/9!$ has successive ratios at most $1/10$,
+with later ratios strictly smaller. The margin in the second inequality
+is $1717/10206000000$. Using \eqref{eq:intervals},
+\begin{align*}
+ \frac{1463268/10^6}{U}-\frac{27}{64}-\frac{465670/10^6}{4}
+   &=\frac{40641}{2970800000}>0,\\
+ \Delta&>1+\frac{465669}{10^6}-\frac{1463269}{10^6}
+       =\frac3{1250}>0,\\
+ \frac3{1250}-\frac{2^{52}(1463269/10^6)}{2\ell-1}
+   &=\frac{139939647533841645493}{144115188075855871968750}>0.
+\end{align*}
+These are precisely \eqref{eq:twotests} and \eqref{eq:paddingtest}. They
+complete the proof of Theorem~\ref{thm:main}. The dimension is
+$d=3+h+\ell=274784+2^{61}$. Compactness, full-dimensionality, and the
+fiber census were proved before adjoining $J$ and persist under this
+product. All fibers have finite positive $d$-volume, so the intrinsic
+Hausdorff dimension is $d$ and its measure is their finite volume sum.
+Finally $\log(1+1/d)<1/d$ gives $(d/(d+1))^d>1/e$.
+
+\subsection*{Reproducing the power certificate}
+The companion files, in the same repository directory as this source, are
+\begin{quote}\small\ttfamily
+check\_integer\_dimension\_52.py\\
+integer-dimension-52-certificate.json
+\end{quote}
+The program uses integer arithmetic and
+\texttt{fractions.Fraction}; no floating-point estimates are premises.
+It encloses the fourteen powers $(2q)^h$ and $u_r^h$, $1\le r\le13$,
+at fixed denominator $D=10^{40}$.
+
+For a nonnegative rational number $x$, initialize bounds
+$\lfloor Dx\rfloor/D\le x\le\lceil Dx\rceil/D$. If integer endpoint
+pairs $[L,U]$ and $[L',U']$ enclose two nonnegative quantities after
+division by $D$, their product is enclosed by
+\[
+ \left[\frac{\lfloor LL'/D\rfloor}{D},\,
+       \frac{\lceil UU'/D\rceil}{D}\right].
+\]
+Monotonicity of multiplication proves this assertion. Apply it at every
+multiplication and squaring in binary exponentiation. For the underlying
+exact values, the invariant is
+$\text{accumulator}\cdot\text{base}^{r}=x^h$, where $r$ is the remaining
+exponent; the stored intervals enclose these values. For an odd $r$,
+multiply the accumulator by the base, then
+halve the exponent after subtracting one; for an even $r$, halve it.
+Square the base whenever a further iteration is needed. Induction proves
+that the final accumulator interval encloses the exact power.
+
+The JSON records the exponent and all interval endpoints at every step.
+Multiplication by the positive exact factors $\theta(2s)^3$ and
+$\theta t_r^3$, followed by the positive binomial sum, yields rational
+bounds strictly inside \eqref{eq:intervals}. The program also verifies
+every displayed scalar margin. This is a finite exact arithmetic
+certificate; it is separate from the geometric proof above and from
+Lean verification of the earlier $n=76$ construction.
+\end{document}

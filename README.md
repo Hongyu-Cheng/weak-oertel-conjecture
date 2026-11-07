@@ -18,7 +18,11 @@ See [the short contribution guide](contributions-PK-nov-6-merge.md) for the main
 
 On 6 November 2026 (America/New_York), six atomic claims from the near-parity-core proof were accepted after direct ChatGPT mathematical review, including [the sharp complete-parity-core theorem](facts/3fad02a5aa48ae2a.md). That review brought the accepted graph to **1,241 facts**. All original intake files and their pending statuses are unchanged; the normalized accepted replacements and exact scope are listed in [the review report](reviews/pk-parity-core-issue2.md). Each new node has a fresh review record and a closed accepted dependency chain. The same assistant edited and reviewed the normalization; no second-model, human, or formal review is implied. The other imported claims have not been batch-approved.
 
-The [subsequent continuation](assets/pk-continuation-2026-11/README.md) adds separately reviewed facts. Its latest result is an [explicit counterexample to the specific 1/(e*2^n) bound](facts/a5291bca09ba4b1e.md) with **n=76** and **d=1372131+2^93**. The complete proof, exact rational certificates, and [review report](reviews/pk-one-over-e-counterexample.md) cover every actual mixed-integer point. A [complete Lean proof](lean/README.md) now verifies this construction in the mixed-integer-volume formulation; the [formal audit](lean/ONE_OVER_E_AUDIT.md) records its exact scope. It refutes the particular constant 1/e, not this repository's target of some smaller positive absolute constant. The original pending intake retains its existing status.
+The [subsequent continuation](assets/pk-continuation-2026-11/README.md) adds separately reviewed facts. Its latest result is an [explicit counterexample to the specific 1/(e*2^n) bound](facts/df488edae05a1702.md) with **n=52** and **d=274784+2^61**, about **2.31×10^18**. Two independent mathematical reviews and an exact rational certificate cover the actual fibers and every mixed-integer point; see the [review report](reviews/pk-n52-counterexample.md). This is an intermediate dimension reduction and is **not Lean-formalized**. It remains far above a billion continuous variables. It refutes the particular constant 1/e, not this repository's target of some smaller positive absolute constant. The original pending intake retains its existing status.
+
+A [six-page writeup](output/pdf/oertel-52-integer-variables.pdf) explains the new Boolean family of outer fibers, the affine proof that the origin fiber is exact, and the mass surplus that permits smaller simplex padding. Its [LaTeX source](assets/pk-continuation-2026-11/oertel-52-integer-variables.tex) is included.
+
+The earlier [n=76 counterexample](facts/a5291bca09ba4b1e.md), with **d=1372131+2^93**, has a [complete Lean proof](lean/README.md) in the mixed-integer-volume formulation. The [formal audit](lean/ONE_OVER_E_AUDIT.md) records its exact scope, and the [analytic review report](reviews/pk-one-over-e-counterexample.md) preserves its original review history.
 
 A [six-page LaTeX writeup](output/pdf/oertel-one-over-e-counterexample.pdf) presents the n=76 construction, proof, exact arithmetic, and formal scope. Its [editable source](assets/pk-continuation-2026-11/oertel-one-over-e-counterexample.tex) is included.
 
@@ -55,6 +59,7 @@ These curated names come from the existing project overview. Rows give the longe
 
 Recent additions beyond the curated overview:
 
+- [A 52-integer-variable counterexample to the specific 1/e bound](facts/df488edae05a1702.md)
 - [Sharp complete-parity-core theorem, with six-node verified dependency chain](facts/3fad02a5aa48ae2a.md)
 - [oct29-dominant-clique-lacunary-product](facts/0e1d1c8120a9ffff.md)
 - [oct29-four-atom-core-lacunary-product](facts/d727395b991f2895.md)

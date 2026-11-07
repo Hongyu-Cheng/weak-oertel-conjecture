@@ -1,0 +1,21 @@
+{
+  "advances": "Atomic normalization of the cited PK contribution, with explicit scope and a closed dependency chain. This is an auxiliary result or a restricted sharp theorem, not a proof of the unrestricted weak Oertel conjecture.",
+  "author": "PK-research-agent",
+  "candidate_id": "67ecf7db6692fe65",
+  "candidate_schema": 2,
+  "created_at": "2026-11-07T01:47:15.761016+00:00",
+  "depends_on": [],
+  "external_sources": "None; the proof is elementary or uses only the declared accepted predecessors.",
+  "kind": "lemma",
+  "normalization_editor": "ChatGPT",
+  "normalization_note": "The original byte-hashed research notes are preserved. Mathematical attribution remains with the PK contribution. The same ChatGPT assistant edited this normalization and directly reviewed it against the contributor proofs; no additional reviewing model or human review is implied.",
+  "proof": "Take an $f$-maximizer $\\mathbf c\\in C$. Since $0<r\\le1$, the homothetic copy $\\mathbf c+r(C-\\mathbf c)$ lies in $C$, has volume $r^d|C|=a$, and satisfies $f\\ge h_C(f)-w_C(f)r$. Thus the cap of $C$ at that level has volume at least $a$.\n\nFix $s,\\beta$. If the actual $C$ cap has volume at least $a$, it alone bounds the right-hand side, which is at most $|A|=a$. Otherwise its threshold must satisfy $s-\\beta>h_C(f)-w_C(f)r$. Hence $s+\\beta<2s-h_C(f)+w_C(f)r$, and the actual $A$ cap contains the comparison cap on the right. This proves the assertion for every tilt, without assuming an optimizing tilt exists. The strict inequality in the second branch is a consequence of a strict mass comparison, not the removal of boundary mass.\n",
+  "source_candidate_ids": [
+    "986ab1688d049a3b"
+  ],
+  "source_candidate_sha256": {
+    "986ab1688d049a3b": "cc9183352097c17212a9727c7616a5525f63dabf5138cb6997d348db32136842"
+  },
+  "statement": "Let $d\\ge1$ be an integer and let $A,C\\subset\\mathbb R^d$ be compact full-dimensional convex bodies with $0<a=|A|\\le|C|$, and let $r=(a/|C|)^{1/d}$. For every nonconstant affine functional $f$, write $h_C(f)=\\max_C f$ and $w_C(f)=\\max_C f-\\min_C f$. For every real $s,\\beta$,\n$$|A\\cap\\{f\\ge s+\\beta\\}|+|C\\cap\\{f\\ge s-\\beta\\}|\\ge|A\\cap\\{f\\ge2s-h_C(f)+w_C(f)r\\}|.$$\nThese are actual closed cap volumes, not cap fractions of a midpoint body. No compatibility assumption between $A$ and $C$ is required.\n",
+  "subgoal_id": "pk-actual-endpoint-cap-credit"
+}

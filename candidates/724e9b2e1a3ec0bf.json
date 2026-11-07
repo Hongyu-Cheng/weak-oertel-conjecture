@@ -1,0 +1,21 @@
+{
+  "advances": "Atomic normalization of the cited PK contribution, with explicit scope and a closed dependency chain. This is an auxiliary result or a restricted sharp theorem, not a proof of the unrestricted weak Oertel conjecture.",
+  "author": "PK-research-agent",
+  "candidate_id": "724e9b2e1a3ec0bf",
+  "candidate_schema": 2,
+  "created_at": "2026-11-07T01:47:15.761016+00:00",
+  "depends_on": [],
+  "external_sources": "None; the proof is elementary or uses only the declared accepted predecessors.",
+  "kind": "lemma",
+  "normalization_editor": "ChatGPT",
+  "normalization_note": "The original byte-hashed research notes are preserved. Mathematical attribution remains with the PK contribution. The same ChatGPT assistant edited this normalization and directly reviewed it against the contributor proofs; no additional reviewing model or human review is implied.",
+  "proof": "Permute the rows to arrange their maxima, changing at most the sign of the determinant. Replace the first row by the sum of all rows, which is the all-ones row. This replacement preserves the determinant. From each remaining row $i$, subtract $r_i/2$ times the first row. Every entry then has absolute value at most $r_i/2$, so the row's Euclidean norm is at most $\\sqrt N r_i/2$. Hadamard's inequality gives the first bound. Since entries of a column-stochastic nonnegative matrix are at most one, $r_i\\le1$. The first $J-2$ factors in the product are at most one, and the remaining $q$ are at most $r_J$, proving the second bound. The determinant lower bound yields the assertion about $r_J$ by cancellation and taking a positive $q$-th root. Because $q=\\lfloor N/2\\rfloor+1>N/2$, one has $N^{-N/(2q)}>1/N$, so $\\delta_0>0$. Substituting the stated lower bound on $a$ yields $r_J\\ge b+\\delta$.\n\nFor the simplex assertion, form augmented vertex matrices with a top row of ones. The augmented vertex matrix of $S$ is that of $T$ multiplied by the barycentric matrix. Absolute augmented determinants equal $d!$ times the respective simplex volumes. Their ratio is the claimed determinant. Nonnegativity and unit column sums are exactly the barycentric characterization of points in $T$.\n",
+  "source_candidate_ids": [
+    "986ab1688d049a3b"
+  ],
+  "source_candidate_sha256": {
+    "986ab1688d049a3b": "cc9183352097c17212a9727c7616a5525f63dabf5138cb6997d348db32136842"
+  },
+  "statement": "Let $N\\ge3$, $d=N-1$, $J=\\lceil N/2\\rceil$, $q=N-J+1$, and let $P$ be an $N\\times N$ nonnegative column-stochastic matrix. Write its row maxima in decreasing order as $r_1\\ge\\cdots\\ge r_N$. Then\n$$|\\det P|\\le N^{N/2}2^{-d}\\prod_{i=2}^N r_i\\le N^{N/2}2^{-d}r_J^q.$$\nConsequently, if $|\\det P|\\ge2^{-d}a$ with $a>0$, then $r_J\\ge a^{1/q}N^{-N/(2q)}$. Put $b=1/N$, $\\delta_0=N^{-N/(2q)}-b>0$, and $\\delta=\\delta_0/2$. If $a\\ge((b+\\delta)/(b+\\delta_0))^q$, at least $J$ rows have maximum at least $b+\\delta$.\n\nIf a $d$-simplex $S$ lies inside a $d$-simplex $T$, its vertex matrix in the barycentric coordinates of $T$ is nonnegative column-stochastic and has absolute determinant $|S|/|T|$.\n",
+  "subgoal_id": "pk-stochastic-determinant-margin"
+}

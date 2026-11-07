@@ -29608,6 +29608,20 @@
       "status": "pending",
       "subgoal_id": "pk-nov6-geometry"
     },
+    "df488edae05a1702": {
+      "accepted_run": "9907fabb6176b207",
+      "author": "PK-research-agent",
+      "candidate_schema": 2,
+      "created_at": "2026-11-07T11:57:57.952129+00:00",
+      "depends_on": [],
+      "kind": "counterexample",
+      "runs": [
+        "9907fabb6176b207",
+        "fc9c9c64ab9bffa1"
+      ],
+      "status": "accepted",
+      "subgoal_id": "pk-nov7-exact-one-over-e-counterexample-n52"
+    },
     "df8e13c0a957575f": {
       "accepted_run": "63ed911dd48a4598",
       "author": "research-agent",
@@ -50673,6 +50687,18 @@
       "subgoal_id": "entropy-path-metronoid-depth",
       "target_match": null
     },
+    "df488edae05a1702": {
+      "accepted_at": "2026-11-07T12:00:25.960870+00:00",
+      "accepted_run": "9907fabb6176b207",
+      "assurance": "LLM-verified",
+      "author": "PK-research-agent",
+      "candidate_schema": 2,
+      "depends_on": [],
+      "kind": "counterexample",
+      "status": "accepted",
+      "subgoal_id": "pk-nov7-exact-one-over-e-counterexample-n52",
+      "target_match": null
+    },
     "df8e13c0a957575f": {
       "accepted_at": "2026-10-03T17:28:24.018637+00:00",
       "accepted_run": "63ed911dd48a4598",
@@ -61978,6 +62004,17 @@
       "verdict": "APPROVED",
       "verification_schema": "math-prover-verifier-v2"
     },
+    "9907fabb6176b207": {
+      "candidate_id": "df488edae05a1702",
+      "created_at": "2026-11-07T12:00:25.960870+00:00",
+      "finished_at": "2026-11-07T12:00:25.960870+00:00",
+      "output_file": "verifications/9907fabb6176b207.json",
+      "output_sha256": "c9b893f4d0f3e3c26c7f9725a818f7f72abe698733b6d85f08a6a1ec219cce61",
+      "status": "approved",
+      "target_match": null,
+      "verdict": "APPROVED",
+      "verification_schema": "math-prover-verifier-v2"
+    },
     "9911ae9a8d9d49f9": {
       "candidate_id": "89058bfa767e711e",
       "created_at": "2026-08-20T06:49:29.446413+00:00",
@@ -67605,6 +67642,17 @@
       "finished_at": "2026-08-24T04:06:34.912620+00:00",
       "output_file": "verifications/fc83cdc96ed6465c.json",
       "output_sha256": "d1c6bff20d37e27b332444ead749e6af01af19f3ca684354c2350e135073112a",
+      "status": "approved",
+      "target_match": null,
+      "verdict": "APPROVED",
+      "verification_schema": "math-prover-verifier-v2"
+    },
+    "fc9c9c64ab9bffa1": {
+      "candidate_id": "df488edae05a1702",
+      "created_at": "2026-11-07T12:00:25.960870+00:00",
+      "finished_at": "2026-11-07T12:00:25.960870+00:00",
+      "output_file": "verifications/fc9c9c64ab9bffa1.json",
+      "output_sha256": "ba07f234686ced6fef314db4e9b482cddb1df69d5ec770a4bb69573f4147627f",
       "status": "approved",
       "target_match": null,
       "verdict": "APPROVED",
@@ -79224,6 +79272,15 @@
       "status_reason": "Pending mathematical submissions; historical evidence is not a new approval.",
       "status_updated_at": "2026-11-06T20:30:30.407222+00:00",
       "success_criterion": "Extract precise atomic claims, resolve every mathematical premise to a proved argument or accepted predecessor, compare scope with existing facts, and obtain separate proof review before approval."
+    },
+    "pk-nov7-exact-one-over-e-counterexample-n52": {
+      "created_at": "2026-11-07T11:57:57.952129+00:00",
+      "relation_to_goal": "Scoped reduction of the dimensions of the counterexample to the specific constant 1/e. The locked existence-of-some-constant target is unchanged.",
+      "statement": "There exists a full-dimensional rational polytope C in R^52 x R^d, with d=274784+2^61=2305843009213968736, whose nonempty mixed-integer intersection S has every nonempty integer fiber of dimension d and sup_{y in S} depth_S(y)<1/(e 2^52). Depth uses all containing proper closed ambient halfspaces and normalized d-dimensional Euclidean Hausdorff measure, equivalently the sum of fiber Lebesgue volumes. This also violates Gamma_d/2^52. It improves the previous n=76 counterexample but remains above a billion continuous variables. It refutes the specific constant 1/e, not the locked assertion that some smaller positive absolute constant exists. This result is not Lean-formalized.",
+      "status": "closed",
+      "status_reason": "The complete n=52 construction and exact interval certificate passed two independent mathematical reviews and reproduction. This closes only the scoped intermediate improvement, not the billion-scale objective or locked absolute-constant target. Not Lean-formalized.",
+      "status_updated_at": "2026-11-07T12:00:25.960870+00:00",
+      "success_criterion": "A complete finite rational construction, exact actual fibers, positive finite intrinsic measure, and uniform strict all-point closed-halfspace bound with independently checked constants."
     },
     "pk-nov7-exact-one-over-e-counterexample-n76": {
       "created_at": "2026-11-07T10:04:54.374030+00:00",

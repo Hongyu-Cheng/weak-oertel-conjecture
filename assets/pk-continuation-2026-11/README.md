@@ -2,7 +2,9 @@
 
 This directory records new mathematical work after the November 6 intake. It does not change the locked weak target or upgrade the imported PK submissions. Statements aimed at the sharp constant are explicitly scoped. Pending inputs remain pending even when a downstream calculation has been independently checked.
 
-**Latest result:** the [barycentric box-source construction](barycentric-box-source-counterexample.md) and [parameter refinement](integer-dimension-76-counterexample.md), accepted together as [`a5291bca09ba4b1e`](../../facts/a5291bca09ba4b1e.md), refute the specific **1/(e*2^n)** bound with **n=76**, **d=1372131+2^93**. The construction, all actual fibers, every-point cuts, and exact rational interval certificates passed independent mathematical review. This result is not Lean-formalized and does not refute the locked target of some smaller positive absolute constant. See the [review and reproduction guide](../../reviews/pk-one-over-e-counterexample.md).
+**Latest result:** the [Boolean-code construction](integer-dimension-52-counterexample.md), accepted as [`df488edae05a1702`](../../facts/df488edae05a1702.md), refutes the specific **1/(e*2^n)** bound with **n=52**, **d=274784+2^61**. Its actual fibers, every-point closed cuts, and exact rational certificate passed two independent mathematical reviews. This new result is **not Lean-formalized** and remains above the billion-scale dimension target. See the [six-page writeup](../../output/pdf/oertel-52-integer-variables.pdf) and [review guide](../../reviews/pk-n52-counterexample.md). It does not refute the locked target of some smaller positive absolute constant.
+
+The preceding [barycentric box-source construction](barycentric-box-source-counterexample.md) and [n=76 parameter refinement](integer-dimension-76-counterexample.md), accepted together as [`a5291bca09ba4b1e`](../../facts/a5291bca09ba4b1e.md), now have a [complete Lean verification](../../lean/ONE_OVER_E_AUDIT.md) in the mixed-integer-volume formulation.
 
 The earlier [direct rational construction](direct-rational-sharp-oc-counterexample.md), accepted as [`022a26fa5001480a`](../../facts/022a26fa5001480a.md), refutes the sharp Gamma_d*2^(-n) statement at d=23 and n=3*10^92. Its [Lean formalization](../../lean/README.md) now checks the actual mixed-integer counterexample. That older body does not itself violate the specific 1/e bound.
 
@@ -12,15 +14,17 @@ The earlier general-dimension parity-core result is the reviewed [three-tier the
 
 ## November 7 counterexample developments
 
-The accepted n=76 fact contains the complete main construction and its
-smaller-padding corollary. The intermediate notes below preserve the
+The accepted n=52 fact is self-contained: it includes the full geometric
+lemma and all parameter checks. The intermediate notes below preserve the
 derivation and reusable lemmas; they are not separate accepted graph nodes.
-All new refinements use analytic proofs and exact arithmetic, not Lean.
+The new n=52 refinement uses analytic proofs and exact arithmetic; the
+previous n=76 construction is the one covered by Lean.
 
 | Note | Scope and role |
 | --- | --- |
+| [52 integer variables](integer-dimension-52-counterexample.md) | New actual example at n=52, d=274784+2^61; [exact checker](check_integer_dimension_52.py), [certificate](integer-dimension-52-certificate.json), and [self-contained accepted proof](../../facts/df488edae05a1702.md). |
 | [Four barycentric box sources](barycentric-box-source-counterexample.md) | Complete standalone proof at n=76, d=1372129+2^94; [checker](check_barycentric_box_source_counterexample.py) and [full rounding traces](barycentric-box-source-certificate.json). |
-| [Smaller-padding parameters](integer-dimension-76-counterexample.md) | The strongest dimension pair here: n=76, d=1372131+2^93; [checker](check_integer_dimension_76.py) and [certificate](integer-dimension-76-certificate.json). |
+| [Smaller-padding n=76 parameters](integer-dimension-76-counterexample.md) | Earlier example: n=76, d=1372131+2^93; [checker](check_integer_dimension_76.py) and [certificate](integer-dimension-76-certificate.json). |
 | [Source-shaped outer fibers](dimension-reduction-exploration.md) | Earlier sharp-bound example at d=26 with a smaller but still enormous integer dimension; proves mixed-type origin containment. [Exact checker](check_dimension_reduction_source_shaped_outers.py). |
 | [Continuous simplex padding](continuous-simplex-padding-one-over-e-counterexample.md) | First exact-1/e violation; isolates the reusable padding mechanism. [Exact checker](check_continuous_simplex_padding_one_over_e.py). |
 | [Three-source free-box construction](small-integer-dimension-exploration.md) | Earlier n=675 exact-1/e violation, simplex-source volume barrier, and binary-code projection/Brunn–Minkowski lemmas. [Exact checker](check_small_integer_dimension_675.py). |
@@ -31,7 +35,7 @@ All new refinements use analytic proofs and exact arithmetic, not Lean.
 
 | Family | Concrete mechanism or test | Status and next mathematical obligation |
 | --- | --- | --- |
-| Barycentric boxes and continuous simplex padding | Four source parallelepipeds in a tetrahedron; near-central source anchors; a free box adjusts fiber masses; a common simplex supplies small endpoint caps | Accepted `a5291bca09ba4b1e` disproves the exact 1/e bound at n=76. Exact integer fibers and oblique cuts are proved directly. The continuous dimension remains enormous; the new theorem is not in Lean. |
+| Barycentric boxes and continuous simplex padding | Four source parallelepipeds in a tetrahedron; a free box adjusts fiber masses; a common simplex supplies small endpoint caps; negative Boolean subsets increase surplus | Accepted `df488edae05a1702` gives n=52, d=274784+2^61. The earlier n=76 result is Lean-verified; n=52 is analytically reviewed. Further reduction needs a different mass distribution. |
 | Local continuous repair | Simplex rigidity, barycentric determinant margins, fixed cap credits, displacement of the true centroid | Accepted ordinary normalization `ea91e021ff1f4416` and one-sided local-star theorem `c77c6c94c4f34008` close this input. The latter removes the middle-depth and partner upper-volume hypotheses, while retaining small total outer mass and near-minimal partner depth. The exact star obstruction rules out dropping the latter condition. |
 | Reflected parity graph | Exact midpoint assignments; homothetic clipping pays a target's deficit; aggregate low-target budget | Accepted `b8c4471bc5e549c3` proves the distributed-load theorem and recovers the earlier total-smallness result. Accepted `583b3086fe614511` now repairs actual low-middle stars in a range strictly beyond direct reflection, with less incoming mass than the volume deficit. Accepted `0d089d25e72f4e35` completes the three-tier splice. The intermediate-volume budget is unresolved and is not an automatic arithmetic consequence. |
 | Higher-arity lattice circuits | Several high-volume fibers and one small outer fiber have a common integer convex combination | Shared endpoints and arbitrary shapes are now handled by accepted facts `69e7900bfbf7454b` and `ef6cc6d9e2fd4c8e`. The slab congestion family is repaired. A cube-minus-origin construction has no single-outer circuits to any high core, blocking a universal arithmetic-reservoir inference. |

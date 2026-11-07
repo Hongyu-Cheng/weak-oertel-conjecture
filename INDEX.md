@@ -4,6 +4,7 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 0 | counterexample | pk-nov7-exact-one-over-e-counterexample-n52 | [df488edae05a1702](facts/df488edae05a1702.md) |
 | 0 | counterexample | pk-nov7-exact-one-over-e-counterexample-n76 | [a5291bca09ba4b1e](facts/a5291bca09ba4b1e.md) |
 | 1 | theorem | pk-nov6-high-arity-centroid-repair | [ef6cc6d9e2fd4c8e](facts/ef6cc6d9e2fd4c8e.md) |
 | 0 | lemma | pk-nov6-shared-circuit-credit | [69e7900bfbf7454b](facts/69e7900bfbf7454b.md) |

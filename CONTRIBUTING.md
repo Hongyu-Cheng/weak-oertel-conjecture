@@ -17,3 +17,7 @@ Keep private prompts, chat exports, personal settings, credentials, machine path
 ## Integrity checks
 
 The checker validates the graph's records and links; it does not verify mathematics. Each run's `output_sha256` is the SHA-256 digest of its verification JSON file. `problem_sha256` is the digest of the problem file. Keep these hashes synchronized when adding a record. A new conjecture or a changed target needs an explicit discussion; do not silently edit the problem statement.
+
+## Composite research submissions
+
+A pending `research-note` may collect scoped claims and proposed arguments before atomic normalization. The PK November 6 batch uses this category, with explicit [intake conventions](assets/pk-nov6/README.md). Such a note cannot enter `facts/` as a reviewed theorem: first extract a precise claim, close its dependencies, and follow the review steps above. Historical mathematical comments are context, never approving verifier runs.

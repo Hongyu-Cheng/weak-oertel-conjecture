@@ -1,0 +1,11 @@
+{
+  "body": "# Numerical stationary-section chart audit\n\nThis note corrects a numerical issue. It proves no geometric inequality.\n\nThe numerical routines in `supporting computation general-stationary-section-screen.py` and\n`supporting computation general-scalar-centroid-correction-screen.py` solve for a central plane\nnormal in one of three coordinate charts. They initially fixed one raw\nnormal coordinate to1 and asked that the other two coordinates of the\nsection centroid vanish. Algebraically, at a finite chart point this\nimplies the third coordinate vanishes, because the centroid lies in the\nplane. Numerically, however, the two free normal coordinates can diverge.\nAfter normalization the fixed normal coordinate tends to0, so the third\ncentroid coordinate is not controlled by the two residuals. A numerical\nroot in this limit is not a certified stationary section.\n\nAn apparent scalar-centroid-correction obstruction had normalized normal\napproximately(-.997555,.069889,0) and section centroid approximately\n(0,0,.623176). It is invalid. Its raw output is retained under the explicit\nname `supporting computation invalid-scalar-correction-chart-pole-candidate.json`.\n\nBoth routines now reject a candidate unless the Euclidean norm of the\nFULL three-dimensional section centroid is at most1e-7. This is still\nnumerical screening, not an exact proof or a rigorous existence certificate.\n\nConsequently the old 50-body screen's list of stationary directions must\nnot be cited as verified geometric data. The absence of violations in\nthat larger, partly spurious list is at most computational screening\nhistory. Any future claimed counterexample must independently certify\nall three section-centroid coordinates and the exact inequalities.\n",
+  "candidate_references": [],
+  "comment_id": "b2df6aa4e1e71c13",
+  "intake_batch": "pk-nov-6-2026",
+  "is_approval": false,
+  "note": "Mathematical discussion retained to expose corrections and limitations. This is not a verification run, accepted premise, or approval of the revised submission. Association follows explicit source-document references, not an inferred dependency.",
+  "review_executed_for_this_intake": false,
+  "source_sha256": "2d6b2314112c66b2cb6bf42c7baaba999e8bb1f6d5415469afc8dd62e82c5a47",
+  "type": "historical-mathematical-review"
+}

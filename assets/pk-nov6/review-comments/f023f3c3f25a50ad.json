@@ -1,0 +1,15 @@
+{
+  "body": "# Independent audit of the discrete product and equal-positive cap sources\n\nAudited sources:\n\n* `candidate 5f357f58008cdf1e`;\n* `candidate 4ac6f62135b1565c`.\n\n**Result: both PASS.** No substantive correction is required.\n\nFor the discrete source I independently checked the decreasing hazard\nratios, tail submultiplicativity, the exact ordered-composition identity\nfor binomial moments, and strictness of the finite-support generating\nfunction bound. Terms above the finite support make strictness immediate\nwhen both the mean and t are positive. The zero variable is correctly\nseparate.\n\nThe elementary-symmetric convolution identity has the correct middle\ncoefficient. Its sign follows from consecutive-ratio monotonicity,\nincluding support endpoints. Removing e_0 preserves log-concavity of\nthe remaining contiguous positive sequence. The coefficient comparison\n`E^2>C` is strict for positive odds and handles m=1 as stated.\n\nI independently verified the odds substitution as follows. With\n`rho=1/A`, `E=A-1`, `S=sum x_j`, and `C=A S-E`, set\n`H=E[(1+1/E)^N]`. Direct expansion gives\n\n    product(1+x_j/E)=rho+H,\n    1-z=(1-rho)(1-C/E^2).\n\nThus the desired product inequality is exactly\n`(1-C/E^2)H<=1`. This independently checks the longer cleared-polynomial\nidentity and its signs in the source. The centrality payment in (8)\nhas the correct direction.\n\nFor the equal-positive source, the gamma-two survival calculation gives\n`F=L(1+Z)` exactly. Negative-height differentiation gives\n`P_j=L a_j(Z+t_j)`. Euler's identity and symmetry then give\n`2P_0=L(Z^2+sum t_j^2)`. Summing all derivatives yields `dLZ`, so every\ncentroid factor in (1) has the correct normalization and dimension.\nRepeated negative heights introduce no divided-difference singularity.\n\nThe probability-vector inequality follows from the stated elementary\nsymmetric log-concavity. In particular the tail begins at e_3, its upper\nbound is `e_2^2/(1-e_2)`, and finite support gives strictness whenever\ne_2>0. Substitution into the geometric product gives exactly (3).\nFor d=2 the strictness instead comes from Z<1, as claimed. The equal\ncaptured-coordinate symmetry makes its hypothesis unambiguous.\n\nThe sources correctly keep geometric transfer separate from the scalar\ntheorem. A complete independent unequal-height transfer, including zero\nheights and optional comparison of the two captured products, is saved\nin `candidate f942bc6e02fdf1dd`.\n",
+  "candidate_references": [
+    "4ac6f62135b1565c",
+    "5f357f58008cdf1e",
+    "f942bc6e02fdf1dd"
+  ],
+  "comment_id": "f023f3c3f25a50ad",
+  "intake_batch": "pk-nov-6-2026",
+  "is_approval": false,
+  "note": "Mathematical discussion retained to expose corrections and limitations. This is not a verification run, accepted premise, or approval of the revised submission. Association follows explicit source-document references, not an inferred dependency.",
+  "review_executed_for_this_intake": false,
+  "source_sha256": "6dd5376d2694727dfd45294bbee70d81b12c235f3e28fe43cd73aba3d484b668",
+  "type": "historical-mathematical-review"
+}

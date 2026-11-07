@@ -34,9 +34,10 @@ def vertices_and_bound(P, R):
                     [[P[i][r]] for i in A])] if A else [])
                 denominator = 1 + sum(h)
                 lam = [Q(0)] * n
-                lam[r] = 1 / denominator
+                lam[r] = Q(1) / denominator
                 for j, hj in zip(A, h):
                     lam[j] = hj / denominator
+                assert all(isinstance(x, Q) for x in lam)
                 assert sum(lam) == 1 and all(x >= 0 for x in lam)
                 assert all(lam[j] <= sum(P[j][i] * lam[i] for i in range(n)) for j in J)
                 assert all(lam[j] == sum(P[j][i] * lam[i] for i in range(n)) for j in A)
@@ -46,12 +47,14 @@ def vertices_and_bound(P, R):
                     for ell, r0 in enumerate(R)]
                 assert sum(transformed) == 1
                 norm_squared = sum(x * x for x in transformed)
+                assert isinstance(norm_squared, Q)
                 assert 0 < norm_squared <= 1
                 vertices.append((norm_squared, r, A, lam))
     assert len(vertices) == len(R) * 2 ** len(J)
     assert len({tuple(x[3]) for x in vertices}) == len(vertices)
     vertices.sort(key=lambda x: x[0], reverse=True)
     upper_squared = prod(x[0] for x in vertices[:n]) / determinant ** 2
+    assert isinstance(upper_squared, Q)
     return t, determinant, vertices, upper_squared
 
 

@@ -1,16 +1,40 @@
-# Lean verification of the sharp-bound counterexample
+# Lean verification of two mixed-integer counterexamples
 
-The final theorem is
+## Counterexample to the specific 1/e bound
+
+[`SharpOC.BoxCounterexample.one_over_e_counterexample`](SharpOC/BoxMeasure.lean)
+proves an unconditional counterexample with **n=76** and
+**d=1372131+2^93**. It supplies an actual compact convex body with nonempty
+ambient interior, containing the origin, whose nonempty integer fibers all
+have full continuous dimension. Its actual mixed-integer Lebesgue mass is
+positive and finite.
+
+There is one positive real number `r < 1/(exp(1)*2^76)` such that every actual
+mixed-integer point in the body belongs to a proper closed ambient halfspace
+whose normalized mass is at most `r`. This uniform bound directly gives a
+strict bound on the supremum of all point depths. It refutes the specific
+constant `1/e`, and therefore also the larger sharp `Gamma_d` constant. It
+makes no claim against the existence of a smaller positive universal constant.
+
+The proof verifies the complete lattice census, exact fiber and cut volumes,
+common simplex padding, and strict rational margins. The enormous powers are
+handled by proved outward-rounded interval certificates, not floating-point
+arithmetic or enumeration. [The formal audit](ONE_OVER_E_AUDIT.md) gives the
+proof map, precise measure scope, and reproducibility details. Both final
+theorems are imported by `SharpOC.lean` and checked by `CheckAxioms.lean`.
+
+## Earlier sharp-bound counterexample
+
+The earlier final theorem is
 [`SharpOC.Counterexample.sharp_oc_counterexample`](SharpOC/Counterexample.lean).
 It proves the counterexample in the full-dimensional mixed-integer-volume
 formulation, with continuous dimension **23** and integer dimension
 **3 × 10^92**. The construction is the one in the
 [direct rational counterexample note](../assets/pk-continuation-2026-11/direct-rational-sharp-oc-counterexample.md).
 
-This project formalizes only that counterexample and the lemmas it needs.
-It does not assert a counterexample to the weak absolute-constant conjecture.
+This theorem alone violates the sharp constant, not the specific `1/e` bound.
 
-## What the theorem proves
+## What the earlier theorem proves
 
 There is a compact convex body `C` with nonempty ambient interior, containing
 the origin, whose nonempty integer fibers all have nonempty 23-dimensional
@@ -56,17 +80,18 @@ lake build
 lake env lean CheckAxioms.lean
 ```
 
-The complete build and final axiom checks passed on 7 November 2026.
-The final theorem depends only on the standard axioms `propext`,
+The complete build and both final theorem axiom checks passed on 7 November 2026.
+Both final theorems depend only on the standard axioms `propext`,
 `Classical.choice`, and `Quot.sound`. No admitted proofs, extra axioms, or
 native-evaluation proof shortcuts are used. The build currently reports
 non-fatal style/deprecation warnings from several modules.
 
-See [the audit](AUDIT.md) for the precise statement and measure checks.
+See the [1/e audit](ONE_OVER_E_AUDIT.md) and [earlier sharp-bound audit](AUDIT.md)
+for the precise statements and measure checks.
 The existing fact graph's historical review records have not been relabeled
 or rewritten by this addition.
 
-## Proof map
+## Earlier proof map
 
 | Modules | Checked content |
 |---|---|

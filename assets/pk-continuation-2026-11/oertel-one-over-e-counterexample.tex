@@ -1,0 +1,472 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,booktabs,xcolor,enumitem,fancyhdr}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{listings}
+\definecolor{ink}{HTML}{17324D}
+\definecolor{muted}{HTML}{566474}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\color{muted}Mixed-integer Gr\"unbaum bound}
+\fancyhead[R]{\small\color{muted}7 November 2026}
+\fancyfoot[C]{\small\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlist[itemize]{leftmargin=1.4em,itemsep=3pt,topsep=3pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\R}{\mathbb R}\newcommand{\Z}{\mathbb Z}
+\newcommand{\conv}{\operatorname{conv}}\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\MI}{\mu_{\mathrm{MI}}}\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\eps}{\varepsilon}\newcommand{\Ga}{\Gamma}
+\newcommand{\head}[1]{\vspace{5pt}{\large\bfseries\color{ink}#1}\par}
+\lstset{basicstyle=\ttfamily\footnotesize,columns=fullflexible,keepspaces=true,
+  frame=single,rulecolor=\color{black!20},xleftmargin=5pt,xrightmargin=5pt,
+  aboveskip=7pt,belowskip=5pt,showstringspaces=false}
+\hypersetup{pdftitle={Counterexample to the 1/(e 2^n) mixed-integer Grunbaum bound},
+ pdfsubject={Working note for Phillip Kerger and Hongyu Cheng}}
+\begin{document}
+\thispagestyle{plain}
+{\LARGE\bfseries\color{ink}A counterexample to the $1/(e2^n)$\\[3pt]
+mixed-integer Gr\"unbaum bound\par}
+\vspace{5pt}
+{\color{muted}Working note for Phillip Kerger and Hongyu Cheng\hfill 7 November 2026}
+
+For a bounded Borel set $D\subset\R^n\times\R^d$, write
+\[
+ \MI(D)=\sum_{z\in\Z^n}\vol_d\{x:(z,x)\in D\},\qquad
+ \depth_C(y)=\inf_{\substack{H\text{ closed halfspace}\\y\in H}}
+                    \frac{\MI(C\cap H)}{\MI(C)}.
+\]
+A halfspace is proper: its defining linear functional is nonzero. All volumes
+below are ordinary Lebesgue volumes in the indicated continuous coordinates.
+
+\begin{theorem}\label{thm:main}
+There is a full-dimensional rational polytope
+$C\subset\R^{76}\times\R^d$, where $d=1{,}372{,}131+2^{93}$, such that
+$S=C\cap(\Z^{76}\times\R^d)$ is nonempty, every nonempty integer fiber has
+nonempty $d$-dimensional interior, and
+\[
+                 \sup_{y\in S}\depth_C(y)<\frac{1}{e2^{76}}.
+\]
+Consequently the specific $1/e$ bound and the larger sharp
+$\Ga_d=(d/(d+1))^d$ bound both fail.
+\end{theorem}
+This does not disprove a bound $c\,2^{-n}$ for some smaller positive absolute
+constant $c$. The construction and strict mixed-integer-volume conclusion
+have been verified in Lean; the precise scope is recorded on page~\pageref{sec:formal}.
+
+\head{The idea of the construction}
+There will be just one exceptional integer fiber, over the origin. Every
+other integer base will be exposed: a linear functional on the integer
+coordinates uniquely maximizes there. A sufficiently large multiple of that
+functional allows us to isolate a continuous cap in its fiber. We therefore
+have two separate tasks: make every point over the origin shallow, and
+provide suitable caps at all the exposed bases.
+
+Before a final simplex factor is added, the intended fibers have these volumes:
+\begin{center}
+\begin{tabular}{@{}lrr@{}}\toprule
+Integer bases & Number & Volume of each fiber\\\midrule
+Origin & $1$ & $b$\\
+Nonzero vertices of the unit cube & $2^{76}-1$ & $bm$\\
+Negative coordinate units & $76$ & $b\alpha$\\\bottomrule
+\end{tabular}
+\end{center}
+The cube matches the factor $2^{76}$ in the proposed bound. The additional
+negative-unit fibers create a surplus in the total mass:
+\[
+ \MI(C_0)=bW,\qquad W=2^{76}m+\delta,\qquad\delta=1+76\alpha-m.
+\]
+We shall construct four halfspaces that cover the entire origin fiber. Each
+contains a fraction $27/64$ of that fiber, exactly $19$ outer fibers, and
+no other fibers. Its mass is consequently $bL$, where
+$L=27/64+19\alpha$. The quantitative goals are
+\[
+                 0<\alpha\le m,\qquad\delta>0,\qquad L<m/e.
+\]
+The first two make each exposed fiber smaller than $2^{-76}$ of the total;
+the third deals with the origin. A common $\ell$-simplex factor then supplies
+caps of fraction $\Ga_\ell\to1/e$ at the exposed bases, without changing the
+origin-cut ratios. For sufficiently large finite $\ell$, the uniform bound is
+\[
+              \frac{\max\{L,m\Ga_\ell\}}{2^{76}m+\delta}
+                       <\frac1{e2^{76}}.
+\]
+The proof below realizes this scheme. The main compatibility issue is that
+taking a convex hull must not enlarge the origin fiber. A grouped Minkowski
+containment will resolve exactly this issue. We keep the parameters symbolic
+until their geometric roles are clear, and give exact rational values in
+Section~4.
+
+\newpage
+\head{1. Four source types and the two continuous factors}
+Let $B_0\subset\R^3$ be the standard tetrahedron translated to have centroid
+zero, with barycentric coordinates $\lambda_0,\ldots,\lambda_3$.
+Thus $f_j=\lambda_j-1/4$ is linear and $\sum_j f_j=0$.
+For a small rational $\eps>0$ and $a\in\{0,1,2,3\}$ define
+\[
+ T_a=\{x\in B_0:\lambda_j(x)\le1/4\ (j\ne a)\},\qquad
+ \lambda_j(c_a)=\begin{cases}1/4+3\eps&j=a,\\1/4-\eps&j\ne a.\end{cases}
+\]
+The three coordinates with $j\ne a$ identify $T_a$ with $[0,1/4]^3$ and
+$B_0$ with the standard simplex in those coordinates. Hence
+\[
+ \theta:=\frac{|T_a|}{|B_0|}=\frac{(1/4)^3}{1/6}=\frac3{32},\qquad
+ \frac{|B_0\cap\{f_j\ge0\}|}{|B_0|}=\left(\frac34\right)^3=\frac{27}{64}.
+ \tag{1}
+\]
+The second identity follows by homothety about vertex $j$. The reason for
+these sources is that $T_a$ lies in $\{f_j\le0\}$ for all $j\ne a$:
+a source of type $a$ can be excluded by three of the four cuts. Its anchor
+$c_a$ lies just inside these three planes. Contraction about this anchor
+will give strict separation.
+
+Choose rational parameters and an integer $h\ge1$ satisfying
+\[
+\begin{gathered}
+ 0<\eps<1/4,\quad 1/2<s<1,\quad 1/2<q<1,\quad u=2(1-q),\\
+ 0<t<\eta<2(1-s),\qquad
+ t(1/4+3\eps)\le2(1-s)(1/4-\eps).
+\end{gathered}\tag{2}
+\]
+The box $F=[-1,1]^h$ will tune volumes; its coordinates never enter the four
+origin cuts. Define
+\[
+ \begin{aligned}
+ B&=B_0\times F,& P_a&=[c_a+s(T_a-c_a)]\times qF,\\
+ A_a&=t(T_a-c_a)\times uF,& K(a,k)&=2P_a+(k-1)(c_a,0)\quad(k\ge1).
+ \end{aligned}\tag{3}
+\]
+All these sets are rational polytopes with nonempty interior; $c_a$ is an
+interior point of $T_a$. Writing $b=|B|>0$, scaling and product volumes give
+\[
+ |K(a,k)|=bm,\quad |A_a|=b\alpha,\qquad
+ m=(2s)^3\theta(2q)^h,\quad\alpha=t^3\theta u^h.\tag{4}
+\]
+
+Since $2q>1$ and $u<1$, increasing $h$ increases $m$ and decreases $\alpha$.
+The relation $u=2(1-q)$ keeps these changes compatible with convexification.
+The later simplex factor has a different job: it supplies small containing
+caps at exposed bases, multiplying every existing volume by the same factor.
+
+\head{2. The compatibility needed at the origin}
+\begin{lemma}[Grouped containment]\label{lem:group}
+For $k\ge1$ and arbitrary source types $a,a_1,\ldots,a_k$,
+\[
+                  K(a,k)+\sum_{r=1}^k A_{a_r}\subset (k+1)B.\tag{5}
+\]
+\end{lemma}
+\begin{proof}
+Set $c_-=1/4-\eps$ and $c_+=1/4+3\eps$. The final assumption in (2) is
+\[
+                         tc_+\le2(1-s)c_-.\tag{6}
+\]
+For $p\in c_a+s(T_a-c_a)$ and $v_r\in t(T_{a_r}-c_{a_r})$ we have
+$\lambda_j(p)\ge(1-s)\lambda_j(c_a)$ and
+$f_j(v_r)\ge-t\lambda_j(c_{a_r})$. Therefore, for
+$y=(2p+(k-1)c_a+\sum_r v_r)/(k+1)$,
+\[
+ \begin{aligned}
+ (k+1)\lambda_j(y)
+ &\ge (k+1-2s)c_- -ktc_+\\
+ &\ge \bigl[k+1-2s-2k(1-s)\bigr]c_-
+   =(k-1)(2s-1)c_-\ge0.
+ \end{aligned}
+\]
+Thus $y\in B_0$. The free-coordinate radius is at most $2q+ku\le k+1$,
+since $k+1-2q-ku=(k-1)(2q-1)\ge0$. These two statements prove (5).
+\end{proof}
+
+\newpage
+\head{The convex body and its actual fibers}
+Index the integer coordinates by
+$I=\{0,1,2,3\}\times\{1,\ldots,19\}$; let $\tau(i)$ be the first coordinate.
+For each nonempty $E\subset I$, fix once and for all one member,
+let $a(E)$ be that member's type, and set $z_E=\sum_{i\in E}e_i$.
+The choice $a(E)\in\tau(E)$ ensures that if $E$ has no coordinate of type
+$j$, then $a(E)\ne j$; cut $j$ will therefore exclude its source. The translation $(|E|-1)c_{a(E)}$ in (3) makes
+the corresponding negative continuous score grow with $|E|$.
+Define $C_0\subset\R^{76}\times\R^{3+h}$ to be the convex hull of
+\[
+ \{0\}\times B,\qquad
+ \{z_E\}\times K(a(E),|E|)\quad(\varnothing\ne E\subset I),\qquad
+ \{-e_i\}\times A_{\tau(i)}\quad(i\in I).\tag{7}
+\]
+Why is (5) the relevant condition? The projected generators satisfy
+\[
+                  0=\frac{z_E+\sum_{i\in E}(-e_i)}{|E|+1}.
+\]
+Such groups can contribute to the origin fiber when we take the convex hull.
+Lemma~\ref{lem:group} says their continuous averages remain inside $B$.
+The next argument shows that every contribution to the origin can be
+regrouped in precisely this way.
+
+\begin{lemma}[Exact integer fibers]\label{lem:fibers}
+The only integer bases of $C_0$ are $0$, the nonzero cube vertices $z_E$,
+and the negative units $-e_i$. Their fibers are exactly the sets in (7).
+The polytope $C_0$ has nonempty ambient interior.
+\end{lemma}
+\begin{proof}
+Every coordinate of its projection lies in $[-1,1]$. If an integer projected
+point has a negative coordinate, that coordinate is $-1$, which forces every
+positive-weight generator in a convex representation to be the unique
+negative unit with that coordinate. Otherwise the point is a cube vertex.
+For nonempty $E$, the functional with coefficients $1$ on $E$ and $-1/2$
+outside $E$ uniquely exposes $z_E$ among all bases in (7): its value there
+is $|E|\ge1$, whereas negative units have value at most $1/2$.
+The functional $-z_i$ uniquely exposes $-e_i$. Their fibers are therefore exact.
+
+At the origin, aggregate a convex representation into weights $w_0,w_E,v_i$
+and points $x_0\in B$, $x_E\in K(a(E),|E|)$, $y_i\in A_{\tau(i)}$.
+Convexity of the assigned fibers permits this aggregation. Zero integer
+coordinate and total weight one imply
+\[
+ v_i=\sum_{E\ni i}w_E,\qquad w_0+\sum_E(|E|+1)w_E=1.
+\]
+The continuous point becomes
+\[
+ w_0x_0+\sum_Ew_E\left(x_E+\sum_{i\in E}y_i\right)\in B
+\]
+by Lemma~\ref{lem:group}; unused zero-weight points may be chosen arbitrarily.
+The reverse inclusion follows from (7). Finally the origin fiber spans all
+continuous directions, and the projected bases span all integer directions.
+Thus the affine hull of $C_0$ is the whole ambient space. A full-dimensional
+convex polytope has nonempty interior.
+\end{proof}
+
+\head{3. Four small cuts cover the origin fiber}
+Let $R=231$. For each $j\in\{0,1,2,3\}$ define the proper closed halfspace
+\[
+ H_j=\left\{(z,x,w): f_j(x)+\sum_{i\in I}\beta_i z_i\ge0\right\},\qquad
+ \beta_i=\begin{cases}-R&\tau(i)=j,\\\eta\eps&\tau(i)\ne j.\end{cases}\tag{8}
+\]
+Here $x\in\R^3$ and $w\in\R^h$. Call a coordinate with $\tau(i)=j$
+\emph{paid}: its outer fiber will be included by this cut. The continuous functional $f_j$ is nonzero. Our assumptions give
+\[
+             0<t<\eta<2(1-s)<1,\qquad \eta\eps<1.\tag{9}
+\]
+\newpage
+For $j\ne a$, the definitions give
+\[
+ \begin{split}
+ f_j(P_a)&\le-(1-s)\eps,\qquad f_j(A_a)\le t\eps,\\
+ f_j(K(a,k))&\le-(k+1-2s)\eps.
+ \end{split}\tag{10}
+\]
+These inequalities mean pointwise upper bounds on the indicated sets,
+ignoring their free coordinates. For every $a,j$, also
+$|f_j(A_a)|\le2t$ and $f_j(K(a,k))\le k+1$: the latter follows from
+$P_a\subset B_0\times\R^h$, $c_a\in B_0$, and $|f_j|\le1$ on $B_0$.
+There are two ways to exclude a cube fiber: a paid coordinate contributes
+a large negative integer term, or its source contributes a negative
+continuous term. Using the exact census, the complete accounting is:
+\begin{itemize}
+\item At an unpaid negative unit, the score in (8) is at most
+$(t-\eta)\eps<0$. At a paid negative unit it is at least $R-2t>0$,
+so precisely the $19$ paid outer fibers are included completely.
+\item If $E$ contains a paid coordinate and $k=|E|$, its entire fiber has
+score at most $(k+1)-R+(k-1)\eta\eps\le2k-R<0$, since $k\le76$.
+\item If $E$ contains no paid coordinate, then $a(E)\ne j$, so its score
+is at most $[k\eta-(k+1-2s)]\eps$. By (9) this is strictly less than
+$-(k-1)(2s-1)\eps\le0$, including when $k=1$.
+\end{itemize}
+Thus every nonzero cube fiber is strictly excluded. At the origin, (8)
+reduces to $f_j\ge0$. Consequently (1) and (4) give
+\[
+             \MI(C_0\cap H_j)=bL,\qquad L:=\frac{27}{64}+19\alpha.\tag{11}
+\]
+Since $\sum_jf_j=0$, every point of the origin fiber belongs to at least
+one of these four cuts. All halfspaces are closed; no boundary mass has
+been removed in this calculation.
+
+\head{4. Choosing the parameters to balance the masses}
+We now specify the rational values promised in (2):
+\[
+\begin{gathered}
+ h=1{,}372{,}128,\quad \eps=10^{-10},\quad
+ s=\frac{5000001}{10^7},\quad t=\frac{9999997}{10^7},\\
+ \eta=\frac{3999999}{4000000},\quad q=\frac{500001}{10^6},\quad u=2(1-q).
+\end{gathered}
+\]
+The elementary inequalities in (2) hold. For the less immediate one,
+\[
+                  2(1-s)c_- -tc_+=\frac{2460000011}{10^{17}}>0.
+\]
+Recall the mass surplus and total, now justified by the exact fiber census:
+\[
+ \delta=1+76\alpha-m,\qquad W=2^{76}m+\delta,\qquad \MI(C_0)=bW.\tag{12}
+\]
+The exact power certificates give the following strict rational intervals:
+\[
+ \begin{aligned}
+ m_-:=\frac{1458094201550}{10^{12}}&<m<
+                 \frac{1458094201551}{10^{12}}=:m_+,\\
+ \alpha_-:=\frac{6027739233}{10^{12}}&<\alpha<
+                 \frac{6027739234}{10^{12}}=:\alpha_+.
+ \end{aligned}\tag{13}
+\]
+Page~\pageref{sec:certificate} supplies a short exact-arithmetic reproduction
+and its enclosure invariant. In particular $0<\alpha<m$.
+Put $U=27182819/10^7$. The exponential series gives
+\[
+ e<\sum_{j=0}^{10}\frac1{j!}+\frac{12}{11\cdot11!}<U;
+\]
+the tail starting with $1/11!$ is bounded by a geometric series of ratio $1/12$.
+
+The margins required below are simple rational subtractions:
+\[
+ \begin{aligned}
+ \frac{m_-}{U}-\frac{27}{64}-19\alpha_+
+     &=\frac{11151455803863}{13591409500000000000}>0,\\
+ 1+76\alpha_- -m_+-\frac{m_+}{2^{17}}
+     &=\frac{374312936753}{131072000000000000}>0.
+ \end{aligned}\tag{14}
+\]
+\newpage
+Combining (13)--(14) with $e<U$ proves
+\[
+                       L<\frac me,\qquad \delta>\frac m{2^{17}}>0.\tag{15}
+\]
+
+\head{5. Why a finite simplex factor completes the example}
+The surplus $\delta$ has a specific purpose: it lets us use a simplex cap
+slightly larger than $1/e$. The required comparison is
+$e\Ga_\ell<1+\delta/(2^{76}m)$. The estimate $\delta/m>2^{-17}$ suggests
+$\ell=2^{76+17}$; this explains the large exponent rather than treating it
+as an unexplained parameter.
+Let $J\subset\R^\ell$ be the standard simplex, with $\ell=2^{93}$, and
+set $C=C_0\times J$, grouping all continuous coordinates together. Its actual
+integer fibers are precisely the fibers of Lemma~\ref{lem:fibers} times $J$.
+It is a full-dimensional rational polytope and all its nonempty fibers have
+full dimension. Its mass is $bW|J|>0$.
+
+\begin{lemma}[Isolating a simplex cap]\label{lem:padding}
+At every mixed-integer point of $C$ over a nonzero base, a proper closed ambient
+halfspace contains the point and has mass at most $bm\Ga_\ell|J|$, where
+$\Ga_\ell=(\ell/(\ell+1))^\ell$.
+\end{lemma}
+\begin{proof}
+Let $z_*$ be its base and $v\in J$ its simplex coordinate. Some barycentric
+coordinate $\rho_j(v)$ is at least $a=1/(\ell+1)$. The cap
+$\{v'\in J:\rho_j(v')\ge a\}$ is the homothetic image
+$a v_j+(1-a)J$, where $v_j$ is the corresponding vertex. Its volume is
+$\Ga_\ell|J|$.
+
+By Lemma~\ref{lem:fibers}, a linear functional $g$ on integer coordinates
+strictly exposes $z_*$. There are only finitely many other bases. Thus
+$\Delta=\min_{z\ne z_*}[g(z_*)-g(z)]>0$. Choose $M>1/\Delta$. The halfspace
+\[
+        \rho_j(v')-a+M[g(z')-g(z_*)]\ge0\tag{16}
+\]
+is proper, contains the given point, cuts out exactly that cap at $z_*$, and
+misses every other fiber, since $\rho_j(v')\le1$ on $J$.
+Its affine expression is equivalent to a linear functional with a real
+threshold; the continuous linear part of $\rho_j$ is nonzero.
+The old fiber at $z_*$ has volume either $bm$ or $b\alpha\le bm$.
+Multiplication of product volumes proves the claim.
+\end{proof}
+
+For every positive integer $k$,
+\[
+                  e\left(\frac{k}{k+1}\right)^k<1+\frac1k.\tag{17}
+\]
+Indeed $\log(1+1/k)>1/(k+1)$, obtained by integrating $1/x$ on
+$[1,1+1/k]$. Thus $(k+1)\log(1+1/k)>1$, which is equivalent to (17).
+By (15) and $\ell=2^{76+17}$,
+\[
+       e\Ga_\ell<1+\frac1\ell
+       <1+\frac{\delta}{2^{76}m}=\frac{W}{2^{76}m}.\tag{18}
+\]
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+At every origin-fiber point, extend a containing cut (8) without using the
+$J$ coordinates; (11) gives normalized mass $L/W$. All other points are
+covered by Lemma~\ref{lem:padding}, with normalized mass at most
+$m\Ga_\ell/W$. By (15), $W>2^{76}m$, and (18), their uniform upper bound is
+\[
+       r:=\frac{\max\{L,m\Ga_\ell\}}{W}<\frac1{e2^{76}}.\tag{19}
+\]
+Therefore $\sup_{y\in S}\depth_C(y)\le r$. There is no limiting construction
+or assumption that a deepest point exists. The origin belongs to $S$.
+All fibers have full dimension, so $\dim_H S=d$. Euclidean $\mathcal H_d$,
+normalized to agree with Lebesgue measure on $d$-dimensional affine planes,
+is exactly the mixed-integer measure on this finite union of disjoint fibers. Finally
+$\Ga_d>1/e$, since $d\log(1+1/d)<1$. This also refutes the sharp bound.
+\end{proof}
+
+\newpage
+\head{Appendix A. Reproducing the finite arithmetic}\label{sec:certificate}
+The large powers in (4) require no floating-point computation. Set $Q=10^{30}$.
+For nonnegative rational intervals, multiply their endpoints and round the
+lower endpoint down and the upper endpoint up to multiples of $1/Q$.
+Positivity preserves the enclosure at every multiplication; induction through
+binary exponentiation therefore gives a rigorous enclosure of each power.
+
+The following standalone Python code (standard library only) verifies (13)
+and the two margins. Every assertion is an exact rational comparison. The
+Lean certificate independently proves its individual rational inequalities
+inside the kernel; this Python program is not part of Lean's trusted base.
+\begin{lstlisting}[language=Python]
+from fractions import Fraction as F
+from math import floor, ceil, factorial
+Q = 10**30
+
+def mul(A, B):
+    return (F(floor(Q*A[0]*B[0]), Q),
+            F(ceil(Q*A[1]*B[1]), Q))
+
+def power(x, n):
+    out, base = (F(1), F(1)), (x, x)
+    while n:
+        if n % 2: out = mul(out, base)
+        n //= 2
+        if n: base = mul(base, base)
+    return out
+
+s, t, q = F(5000001,10**7), F(9999997,10**7), F(500001,10**6)
+h, theta = 1372128, F(3,32)
+G, D = power(2*q,h), power(2*(1-q),h)
+M = tuple((2*s)**3*theta*x for x in G)
+A = tuple(t**3*theta*x for x in D)
+ml, mh = F(1458094201550,10**12), F(1458094201551,10**12)
+al, ah = F(6027739233,10**12), F(6027739234,10**12)
+assert ml < M[0] <= M[1] < mh
+assert al < A[0] <= A[1] < ah
+U = F(27182819,10**7)
+assert sum((F(1,factorial(j)) for j in range(11)), F(0)) \
+       + F(12,11*factorial(11)) < U
+assert ml/U - F(27,64) - 19*ah == \
+       F(11151455803863,13591409500000000000)
+assert 1 + 76*al - mh - mh/2**17 == \
+       F(374312936753,131072000000000000)
+\end{lstlisting}
+
+\head{Appendix B. Formal verification and scope}\label{sec:formal}
+The final unconditional Lean theorem is
+\begin{center}\small\ttfamily
+SharpOC.BoxCounterexample.one\_over\_e\_counterexample
+\end{center}
+in \texttt{lean/SharpOC/BoxMeasure.lean}. It proves the stated dimensions,
+an actual compact convex body with nonempty ambient interior, positive finite
+mass summed over \emph{all} integer bases, full-dimensional nonempty fibers,
+and one uniform strict bound below $1/(e2^{76})$ using proper closed ambient
+halfspaces at every actual mixed-integer point.
+
+The pinned project uses Lean 4.34.1 and mathlib commit
+\href{https://github.com/leanprover-community/mathlib4/commit/d13f23b723b8a846827a245b89c10fc7d3f11612}{\texttt{d13f23b723b8}}. Both
+\texttt{lake build} and \texttt{lake env lean CheckAxioms.lean} passed.
+The final theorem depends only on \texttt{propext}, \texttt{Classical.choice},
+and \texttt{Quot.sound}; there are no admitted proofs or extra axioms.
+The formal theorem uses canonical Lebesgue measure in continuous product
+coordinates. Rational polyhedrality and the Euclidean Hausdorff-normalization
+identification are established in the prose proof, rather than asserted as
+additional Lean conclusions.
+
+The formalization is commit \texttt{d27b977},
+\href{https://github.com/Hongyu-Cheng/weak-oertel-conjecture/pull/7}{PR \#7}
+in \href{https://github.com/Hongyu-Cheng/weak-oertel-conjecture}{Hongyu Cheng's repository}.
+The analytic result is recorded as fact \texttt{a5291bca09ba4b1e}; the formal
+proof map is \texttt{lean/ONE\_OVER\_E\_AUDIT.md}.
+\end{document}

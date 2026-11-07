@@ -17,8 +17,9 @@ proof-assistant certification.
   continuous simplex factor replace the earlier enormous integer dimension.
   [Fact a5291bca09ba4b1e](facts/a5291bca09ba4b1e.md) has a complete proof,
   exact rational certificates, and independent mathematical review.
-  This is not yet Lean-formalized and does not refute the existence of a
-  smaller positive universal constant.
+  Its [complete Lean proof](lean/ONE_OVER_E_AUDIT.md) certifies the actual body,
+  all integer fibers, actual mixed-integer measure, and a uniform strict bound.
+  It does not refute the existence of a smaller positive universal constant.
 
 - **An explicit counterexample to the sharp constant.** The
   [self-contained proof](assets/pk-continuation-2026-11/direct-rational-sharp-oc-counterexample.md)

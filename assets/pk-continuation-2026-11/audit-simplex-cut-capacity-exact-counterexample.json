@@ -1,0 +1,37 @@
+{
+  "schema": "independent-mathematical-audit-v1",
+  "verdict": "PASS",
+  "review_method": "Independent LLM mathematical verification, with exact rational arithmetic corroboration",
+  "source": "research-scratch/schema_compatibility/simplex-cut-capacity-exact-counterexample.md",
+  "source_sha256": "ec8af7172a682190c83aee30017d378e711cc738c60fc0632a8f0bad28567d9e",
+  "scope": "The exact capacity and retained-volume formulas in Section1 and both counterexamples in Sections2\u20133.",
+  "checks": [
+    {
+      "claim": "The complete vertex set and extremal reduction are valid.",
+      "reason": "The nontrivial cutting plane intersects a supporting simplex face in dimension support-size minus2, so a new vertex has precisely one coordinate from each group. Maximum simplex volume is attained by compactness and can be maximized over each vertex separately; absolute affine determinants attain their maximum at polytope vertices. Thus the finite barycentric determinant calculation is exhaustive."
+    },
+    {
+      "claim": "The determinant upper bound is exact.",
+      "reason": "Factoring t from each I row,1\u2212t from each J row, and1/t from every pure column leaves a reduced incidence matrix after changing J-row signs. It has N edges on N+1 vertices. A cycle gives a column dependence; an acyclic such graph is connected and hence a tree. Nonroot leaf expansion gives determinant magnitude1. Therefore every simplex ratio is t^(k\u2212p)(1\u2212t)^l times0 or1, and p<=k gives the upper bound(1\u2212t)^l. Taking all k pure vertices and one cut vertex for each J index attains it."
+    },
+    {
+      "claim": "The volume polynomial is correctly normalized.",
+      "reason": "Grouped uniform barycentric coordinates have beta(k,l) density with normalization d!/[(k\u22121)!(l\u22121)!]. Its tail agrees with the displayed binomial polynomial by differentiation and the value at0. The formula includes k=1 and l=1."
+    },
+    {
+      "claim": "The centroid-cut counterexample is exact for all stated odd dimensions.",
+      "reason": "For d=2m\u22121 and k=l=m, threshold1/2 is the true centroid level, the retained fraction is1/2 by symmetry, and maximal simplex fraction is2^-m. The d5 discrepancy is423/32768. For m>=4, Bernoulli and the decreasing sequence(2m\u22121)/2^m give the strict lower bound9/16>1/2 for the equivalent failure inequality."
+    },
+    {
+      "claim": "The d7 larger-retention example is correctly scoped.",
+      "reason": "The exact checker reproduces retained fraction11097/15625, capacity81/625, both displayed positive rational gaps, and threshold2/5 distinct from the centroid level1/2. The note explicitly keeps this numerical-volume example separate from a true centroid cut and excludes only inequality(X), not OC or other capacity thresholds."
+    }
+  ],
+  "critical_errors": [],
+  "gaps": [],
+  "required_corrections": [],
+  "arithmetic_check": {
+    "script": "check-simplex-cut-capacity.py",
+    "result": "PASS; inspected Fraction-based source and executed successfully. The graph determinant proof supplies the general theorem independently of computation."
+  }
+}

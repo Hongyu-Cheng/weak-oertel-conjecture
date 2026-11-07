@@ -1,0 +1,359 @@
+# An explicit rational counterexample to the sharp mixed-integer bound
+
+## Scope and theorem
+
+This note concerns the sharp constant Gamma_d/2^n, where
+Gamma_d=(d/(d+1))^d for d>=1. It does not assert a counterexample to the
+weaker constant 1/(e 2^n), or to the absolute-constant target in the
+collaboration repository. The proof below is independent of the other
+research notes and of any mixed-integer centerpoint or completion theorem.
+
+**Theorem.** Put d=23 and n=3*10^92. There is a full-dimensional rational
+polytope C in R^n x R^23 such that S=C intersect (Z^n x R^23) is nonempty,
+all its nonempty integer fibers have dimension 23, and
+
+    sup_(y in S) inf_(closed halfspaces H containing y)
+        H_23(S intersect H)/H_23(S) < (23/24)^23 / 2^n.
+
+Here H_23 is Hausdorff measure with the normalization agreeing with
+23-dimensional Lebesgue measure on Euclidean 23-planes. The construction
+is finite, despite its very large dimension and number of fibers. All
+coordinates used in its generating polytopes are rational.
+
+The following proof gives, for every point of S, an actual closed ambient
+halfspace of insufficient mass. No limiting body, numerical calculation,
+or choice of a point outside S is involved.
+
+## 1. A centered simplex and three ordered-chain simplices
+
+Work in R^23 with coordinates x_1,...,x_23. Define its 24 affine
+barycentric coordinates by
+
+    lambda_j(x)=x_j+1/24                 (1<=j<=23),
+    lambda_24(x)=1/24-sum_(j=1)^23 x_j.
+
+They sum to 1. Let B={x:lambda_j(x)>=0 for all j}. This is the standard
+23-simplex translated to have its centroid at 0. Its vertices are
+v_j=e_j-(1/24)1 for j<=23 and v_24=-(1/24)1. Write b=|B|=1/23!, where
+vertical bars denote 23-dimensional volume throughout this note.
+
+Indices on the lambda coordinates are cyclic modulo 24. Put
+
+    f_j(x)=lambda_j(x)-lambda_(j+1)(x),       1<=j<=24.
+
+Each f_j is a nonzero linear function and sum_j f_j=0. Its maximum and
+minimum on B are 1 and -1. The set B intersect {f_j>=0} has volume b/2:
+the affine permutation of the two indicated barycentric coordinates
+preserves simplex volume and exchanges the positive and negative sides,
+while the intervening proper hyperplane has zero 23-volume.
+
+For a in {0,1,2}, let R_a consist of the eight indices congruent to a
+modulo 3, and define
+
+    T_a=B intersect {f_j<=0 for every j not in R_a}.
+
+The 24 coordinates partition into eight consecutive chains
+(r-2,r-1,r), one for each r in R_a. On each chain the defining conditions
+are lambda_(r-2)<=lambda_(r-1)<=lambda_r. The vertices of T_a in
+barycentric coordinates are, for each r in R_a,
+
+    e_r,  (e_(r-1)+e_r)/2,  (e_(r-2)+e_(r-1)+e_r)/3.       (1)
+
+Indeed, a nonnegative increasing chain (u,v,w) has the unique expansion
+
+    (u,v,w)=(w-v)e_r
+            +2(v-u)(e_(r-1)+e_r)/2
+            +3u(e_(r-2)+e_(r-1)+e_r)/3.
+
+Its three coefficients are nonnegative and sum to u+v+w. Over all eight
+chains their sum is 1, proving the convex-hull assertion and uniqueness.
+The 24 by 24 vertex matrix has eight blocks of determinant 1/6, up to a
+common ordering of coordinates and columns. Thus T_a is a full
+23-simplex and
+
+    |T_a|=6^(-8)b.                                        (2)
+
+For completeness, a column-stochastic matrix maps the hyperplane
+sum lambda=1 to itself and induces multiplication by 1 on the
+one-dimensional quotient by sum lambda=0. Its determinant consequently
+equals the determinant of its restriction to sum lambda=0. The constant
+Euclidean volume conversion between this hyperplane and our x coordinates
+cancels in the ratio. This proves the determinant-volume identity used
+in (2).
+
+Let c_a be the centroid of T_a. Averaging its 24 vertices in (1), the
+three coordinates of c_a on each ordered chain are
+
+    (1/72, 5/144, 11/144).                                (3)
+
+In particular min_j lambda_j(c_a)=1/72. The corresponding f_j values are
+-1/48 and -1/24 on the two internal chain edges, and 1/16 on the edge
+from a chain root r to the next chain's first coordinate. Therefore
+
+    j not in R_a  => f_j(c_a)<=-1/48 and max_(T_a) f_j=0.   (4)
+
+The maximum is zero because T_a lies on the nonpositive side and its
+point with all barycentric coordinates equal belongs to every T_a.
+
+## 2. Exact parameters and containment margins
+
+Set
+
+    s=103/104,  L=10000,  N=L^23=10^92,  n=3N,
+    P_a=c_a+s(T_a-c_a),  A=B/L,
+    M=2^23 |P_a|=2^23 s^23 6^(-8)b,
+    Gamma=(23/24)^23.
+
+The value M is independent of a. Every P_a is a 23-simplex contained
+strictly inside B. Let m=M/(4b). Since 2^21/6^8=8192/6561,
+
+    m=(8192/6561)(103/104)^23 < 1,
+    Gamma*m > 3/8.                                      (5)
+
+These are exact rational inequalities. Their respective positive integer
+certificates, obtained by clearing positive denominators, are
+
+    6561*104^23-8192*103^23
+      =33779795573668127344976093026519051930525573120 >0,
+
+    8*8192*(23*103)^23-3*6561*(24*104)^23
+      =47199574894061329600561263464623691938213399093856004046633146585892726610395136 >0.
+
+Consequently
+
+    M<4b,                 Gamma*M>3b/2.                   (6)
+
+Write g=(1-s)/48=1/4992 and delta=2/L=1/5000. Then delta<g. For any
+missed row j not in R_a, (4) and linearity imply
+
+    max_(P_a) f_j=(1-s)f_j(c_a)<=-g.                      (7)
+
+For all rows and types, max_(P_a) f_j<=1, and f_j(c_a)<=1, since these
+sets and points lie in B. Also max_A f_j=1/L and min_A f_j=-1/L.
+
+We need two exact containments:
+
+    P_a+A/2 subset B,             c_a+2A subset P_a.       (8)
+
+Here addition and scalar multiplication denote Minkowski operations.
+For any u in A, lambda_j(u)-1/24 >= -1/(24L). Every p in P_a has
+lambda_j(p)>=(1-s)lambda_j(c_a)>=(1-s)/72. Thus
+
+    lambda_j(p+u/2)>=(1-s)/72-1/(48L)>0.
+
+The last inequality is 1/7488>1/480000, proving the first containment.
+
+The description of P_a obtained by applying the affine contraction to
+the inequalities of T_a is
+
+    lambda_j(x)>=(1-s)lambda_j(c_a)             (all j),
+    f_j(x)<=(1-s)f_j(c_a)                      (j not in R_a).
+
+For u in A,
+
+    lambda_j(c_a+2u)>=lambda_j(c_a)-1/(12L),
+    f_j(c_a+2u)<=f_j(c_a)+2/L.
+
+The first is at least the required bound since s/72>1/(12L). The second
+is at most the required bound since -s f_j(c_a)>=s/48>2/L. These two
+rational comparisons follow immediately from s=103/104 and L=10000,
+and prove the second containment in (8).
+
+For every integer k>=2, the fact that 0 belongs to A and A is convex
+gives kA subset 2(k-1)A. Hence (8) also gives
+
+    2P_a+(k-1)c_a+kA subset (k+1)P_a subset (k+1)B.        (9)
+
+Indeed, (k-1)c_a+kA is contained in (k-1)(c_a+2A), hence in
+(k-1)P_a; adding 2P_a proves (9).
+
+## 3. The finite rational polytope and all its integer fibers
+
+Partition {1,...,n} into three sets of size N and assign type tau(i)=a
+on the a-th set. Use e_i for the standard integer-coordinate vectors
+in R^n. For a nonempty subset I of {1,...,n}, put
+
+    k=|I|,  z_I=sum_(i in I)e_i,  a(I)=tau(min I),
+    K_I=2P_(a(I))+(k-1)c_(a(I)).
+
+Each K_I is a translate of twice a source simplex, so is a full
+23-simplex of volume M. Define
+
+    C=conv( ({0} x B)
+       union union_(I nonempty) ({z_I} x K_I)
+       union union_(i=1)^n ({-e_i} x A) ).                 (10)
+
+This is the convex hull of finitely many rational polytopes and hence
+a compact rational polytope. It has nonempty interior in R^(n+23): the
+fiber at 0 supplies the 23 continuous affine directions, and one point
+from each fiber at e_i supplies n additional independent directions
+after projection to R^n. A full-dimensional finite convex polytope has
+nonempty interior, as is also seen by taking the simplex on these
+n+24 affinely independent points.
+
+Its integer projection is exactly the cube vertices together with the
+negative unit vectors:
+
+    proj(C) intersect Z^n = {0,1}^n union {-e_i:1<=i<=n}.  (11)
+
+To prove this, proj(C)=conv({0,1}^n union {-e_i}). Every coordinate of a
+point in it belongs to [-1,1]. If an integer point has coordinate -1
+at index i, every positive-weight generator in a convex representation
+must have coordinate -1 at i, and the sole such generator is -e_i.
+If no coordinate is -1, all coordinates are 0 or 1. All points listed
+in (11) are already generators.
+
+Each nonzero cube vertex z_I is uniquely exposed among the projection
+generators by the functional with coefficients 1 on I and -1/2 outside
+I: its value at z_I is k, strictly above its value at any other cube
+vertex, at 0, or at a negative unit vector (whose value is -1 or 1/2).
+Each -e_i is uniquely exposed by the functional -z_i. Thus the fibers
+of C at these bases are exactly K_I and A, respectively.
+
+The fiber at 0 is exactly B, as follows. In a convex representation
+of a point of C with integer coordinate 0, let lambda_0 be the weight
+of {0} x B, lambda_I the weights of the nonzero cube fibers, and mu_i
+the weights of {-e_i} x A. The integer-coordinate equations say
+
+    mu_i=sum_(I contains i)lambda_I,
+    lambda_0+sum_(I nonempty)(|I|+1)lambda_I=1.             (12)
+
+The continuous coordinate can be grouped as
+
+    lambda_0 x_0
+      +sum_(I nonempty)lambda_I(x_I+sum_(i in I)u_i),
+
+where x_0 belongs to B, x_I to K_I, and u_i to A. Zero coefficients
+cause no difficulty; choose arbitrary corresponding points. If k=1,
+K_I+A=2P_(a(I))+A is contained in 2B by (8). If k>=2, (9) gives
+K_I+kA subset (k+1)B. Thus every grouped summand is (k+1)lambda_I
+times a point of B. Equation (12) shows that their sum belongs to B.
+The reverse inclusion is part of (10).
+
+We have proved the complete fiber description, including the absence
+of any unintended integer fibers:
+
+    S_0=B,  S_(z_I)=K_I (I nonempty),  S_(-e_i)=A.          (13)
+
+All these fibers have dimension 23, so dim_H(S)=23. Each fiber is
+embedded by x -> (z,x), an isometry, and distinct fibers are disjoint
+Borel sets. There are finitely many of them. Countable additivity of
+Hausdorff measure and its normalization therefore give the exact sum
+
+    W=H_23(S)=(2^n-1)M+b+n|A|
+             =(2^n-1)M+4b
+             =2^n M+(4b-M),                              (14)
+
+since |A|=b/N and n=3N. This proves positivity, finiteness, and the
+fiber-sum identity directly for the present body.
+
+## 4. Twenty-four explicit ambient cuts covering the middle fiber
+
+Fix j in {1,...,24}. Call an integer index i paid if j belongs to
+R_(tau(i)); there are exactly N paid indices. Put R=3(n+1) and define
+
+    alpha_i=-R       if i is paid,
+    alpha_i=delta    otherwise,
+    H_j={(z,x): f_j(x)+sum_i alpha_i z_i >=0}.              (15)
+
+This is a proper closed ambient halfspace. On a paid negative-unit
+fiber its defining expression is f_j(x)+R, which is strictly positive
+for all x in A. On an unpaid negative-unit fiber it is f_j(x)-delta,
+whose maximum is 1/L-2/L<0. Thus H_j contains exactly the N paid
+outer fibers and excludes all the other outer fibers.
+
+It excludes every nonzero cube fiber. To see this, let k=|I|. If all
+indices in I are unpaid, a(I) is an unpaid type, so j not in R_(a(I)).
+Equations (4) and (7) imply
+
+    max_(x in K_I)[f_j(x)+sum_(i in I)alpha_i]
+      <=-2g-(k-1)/48+k delta
+      <=-(k+1)g+k delta<0.                               (16)
+
+Here g<=1/48 and delta<g, with strictness already established exactly.
+If I contains at least one paid index, the bound max_(K_I)f_j<=k+1
+from Section 2 gives
+
+    max_(x in K_I)[f_j(x)+sum_(i in I)alpha_i]
+      <=k+1-R+(k-1)delta
+      <=n+1-3(n+1)+(n-1)delta<0,                         (17)
+
+using k<=n and delta<1. This includes all possible mixtures of types.
+
+On the middle fiber the cut is f_j(x)>=0, of volume b/2. Consequently
+every one of these 24 halfspaces has exactly the mass
+
+    H_23(S intersect H_j)=b/2+N|A|=3b/2<Gamma M.           (18)
+
+For every x in B at least one f_j(x) is nonnegative because their sum
+is zero. Therefore every point (0,x) of the middle fiber belongs to
+one of the cuts H_j of mass (18). This assertion includes points at
+which several or all f_j vanish. All excluded fibers in (16)-(17)
+have strictly negative maximum; none contributes boundary mass.
+
+## 5. All remaining points have a cut of mass at most Gamma M
+
+We give the two elementary facts required for the other fibers.
+
+First, for any d-simplex T of volume v and any point x in T, there is a
+closed halfspace through x cutting from T a volume at most Gamma_d v.
+Write theta_1,...,theta_(d+1) for the barycentric coordinates in T.
+Some theta_r(x)>=1/(d+1). The halfspace theta_r>=theta_r(x) cuts a
+simplex homothetic to T by factor 1-theta_r(x), with volume
+(1-theta_r(x))^d v <= (d/(d+1))^d v. At theta_r(x)=1 the cap is a
+single vertex and its d-volume is zero. All theta_r have nonzero
+linear parts.
+
+Second, at an exposed integer base z_*, any closed continuous halfspace
+cap can be realized by a closed ambient halfspace that excludes every
+other integer fiber. To prove this, let ell be an integer-coordinate
+linear functional uniquely maximized at z_* among the finitely many
+bases. Write a prescribed continuous cap as h(x)>=t, with nonzero
+linear h. For a positive number Q consider
+
+    h(x)-t+Q(ell(z)-ell(z_*))>=0.                         (19)
+
+On z_* this is exactly the desired cap. For each other base z, the
+positive gap ell(z_*)-ell(z) is fixed and max_(S_z)(h-t) is finite.
+Choose Q larger than 0 and all the finitely many ratios of that maximum
+to the positive gap. Then (19) is strictly negative on every other
+fiber. This is a finite choice for the fixed finite body; no limit is
+taken. Its ambient normal is nonzero because h is nonzero.
+
+Every nonzero cube base is exposed by Section 3, and its fiber K_I is
+a 23-simplex of volume M. The first fact, followed by the second,
+gives at each of its points a containing closed ambient halfspace of
+mass at most Gamma M. Every outer base is also exposed, and its fiber
+A is a simplex of volume b/N. The identical argument bounds its cut
+mass by Gamma b/N < Gamma M, since (6) implies M>b/N.
+
+Together with (18), this proves for every y in S the existence of a
+closed ambient halfspace containing y and having mass at most Gamma M.
+All normal directions used in (15) and (19) are legal ambient normals;
+in general they couple the integer and continuous coordinates.
+
+## 6. Strict violation and scope of the conclusion
+
+Equation (14) and the strict inequality M<4b show that
+
+    (Gamma/2^n)W = Gamma M + Gamma(4b-M)/2^n > Gamma M.
+
+Section 5 and (18) therefore prove
+
+    sup_(y in S) depth_S(y) <= Gamma M/W < Gamma/2^n.
+
+This is the claimed strict counterexample to the sharp statement.
+There is no need to assume or prove attainment of a maximum depth:
+the uniform upper bound applies to every point separately. The
+construction is full-dimensional, q=d=23, so it already contradicts
+the nondegenerate special case and hence the proposed universal
+intrinsic-measure extension. The cases n=0, d=0, or lower-dimensional
+fibers are not needed to refute a universally quantified assertion;
+no conclusion about their known special behavior is being changed.
+
+The exact loss from the sharp target is positive but extremely small.
+Its size is immaterial to the counterexample. This argument does not
+show a failure of the weaker 1/(e 2^n) guarantee and does not solve or
+refute the repository's weak absolute-constant target. In particular,
+the usual cube-times-simplex sharpness example can retain its stated
+depth while failing to be a universal worst case.

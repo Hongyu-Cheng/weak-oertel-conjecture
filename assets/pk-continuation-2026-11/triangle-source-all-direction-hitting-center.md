@@ -1,0 +1,262 @@
+# One all-direction strict-source center in a triangular middle body
+
+This is an unconditional theorem in the planar source-hitting model. It
+combines the independently verified strict fan cases with a complete
+quantile and compactness argument. The credit attached to a source is
+an assigned nonnegative number, not its area; no actual mixed-integer
+endpoint contribution is inferred without a separate transfer theorem.
+
+## 1. Precise theorem
+
+Let B be a triangle of positive area b, let V>=b, and let P_1,...,P_m be
+triangles contained in B with areas at least V/4. Let a_i>=0 and assume
+sum_i a_i=V-b. An empty source family is allowed when V=b. There exists
+for every fixed number 0<eta<1/18, one deterministic point y_* in int B
+such that every closed planar
+halfspace H containing y_* satisfies
+
+    |B intersect H|+sum_i a_i 1{P_i intersects int H}
+         >=(4/9)V+eta(V-b).                              (1)
+
+Here area is ordinary two-dimensional Lebesgue measure, a triangle means
+the closed convex hull of three noncollinear points, and a proper closed
+halfspace has form H={x:u.x>=t} for a nonzero normal u. A source touching
+only the boundary line contributes zero. For H=R^2 the inequality is
+immediate as well, should one allow that convention.
+
+In particular eta=1/36 gives the explicit surplus (V-b)/36.
+
+The conclusion controls ALL orientations at the SAME point, with no
+restriction on the orientations or weights of the source triangles.
+The selected point belongs to the middle body itself. This remains a
+continuous source-hitting theorem, not the full mixed-integer OC.
+
+## 2. Complete sign classification and the fixed-fan bound
+
+First assume0<b<V and normalize v=b/V, E=1-v, e_i=a_i/V. Set Gamma=4/9. For a unit vector u define
+
+    h_i(u)=max_(x in P_i)u.x,
+    Q(y,u)=|B intersect {u.x>=u.y}|/V
+             +sum_i e_i 1{h_i(u)>u.y}.
+
+Consider any interior point y and three nonzero affine functions through
+y whose gradients span the plane and admit a strictly positive linear
+dependence. Suppose none vanishes at an original vertex of B.
+
+Every row has either one or two positive original vertex values. It
+cannot have all values of one sign because y is an interior convex
+combination of the vertices. At every original vertex, at least one row
+is positive and at least one is negative, since a positive combination
+of the row values is zero.
+
+There are consequently the following exhaustive possibilities:
+
+- All three rows have one positive vertex. Their positive vertices are
+  distinct. Accepted dc15f4248ddf4742 supplies a pair of own-cap fractions
+  summing to at least8/9 that jointly strictly hits every source.
+- All three rows have two positive vertices. Their negative vertices are
+  distinct. Accepted41c932533ed549c7 supplies such a pair with own-cap
+  sum greater than1, hence maximum score greater than1/2.
+- Two rows have one positive vertex and one has two. If the two unique
+  positive vertices coincide, the negative vertex of the other row must
+  be that same vertex, and accepted d20149eea01b4245 gives maximum score
+  greater than1/2. If they are distinct, accepted 58879ca8313c4b41 gives
+  a covering pair of own-cap sum at least8/9.
+- One row has one positive vertex and two have two. If the two unique
+  negative vertices coincide, reverse all signs to obtain the repeated-
+  apex configuration; accepted d20149eea01b4245 proves the required
+  original-orientation bound. If the negative vertices are distinct,
+  accepted d2ae261ff7d54656 gives a covering pair of own-cap sum greater
+  than8/9.
+
+The identifiers above are the precisely scoped fan theorems. They permit
+arbitrary source triangles of area at least V/4 and all the stated
+nonnegative weights; only the112 theorem uses an ordinary planar sector
+inequality, from accepted 2a8c2bc6d7992c5e. No mixed-integer conclusion of
+that predecessor is used.
+
+For any covering pair with own fraction sum at least8/9, the sum of its
+two normalized scores is at least(8/9)v+E. Its maximum is therefore at
+least Gamma+E/18. A bound greater than1/2 also suffices, since E<=1.
+Thus every strict full positive three-fan satisfies
+
+    max row score >=Gamma+E/18.                           (FAN)
+
+All of the original vertex sign possibilities have been enumerated;
+there is no unproved remaining sign class in (FAN).
+
+In the following argument set kappa=1/18; the previously proved bound (FAN)
+is the geometric input in every invocation.
+
+## 3. Boundary centers and zero vertex heights
+
+First the proved fan bound (FAN) implies its same score lower bound for any y in B and every full
+positive three-fan through y, allowing zero original vertex values.
+Suppose a fixed fan contradicted that bound strictly in all three rows.
+For0<delta<1 shrink each P_i toward its own area centroid c_i by factor
+1-delta. Let P_i^delta=c_i+(1-delta)(P_i-c_i). Set
+
+    V_delta=(1-delta)^2 V,
+    v_delta=v/(1-delta)^2,
+    e_i^delta=e_i (1-v_delta)/(1-v).
+
+For sufficiently small delta,0<v_delta<1, the new weights sum1-v_delta,
+and |P_i^delta|>=(1-delta)^2 V/4=V_delta/4. Thus these are permitted data
+for exactly the SAME middle triangle B. No source-volume hypothesis is
+lost by the shrink. All normalizations and weights converge to their
+original values as delta decreases to0.
+
+For a row that an original source misses, its affine function f satisfies
+max_(P_i)f<=0. Because P_i has positive area and f is nonconstant, its
+centroid satisfies f(c_i)<0. Hence
+
+    max_(P_i^delta)f=(1-delta)max_(P_i)f+delta f(c_i)<0.
+
+Thus every missed incidence has a strict negative margin after the
+shrink, even if its original support maximum was zero.
+
+Fix sufficiently small delta so that the strict violation of the desired
+fan bound persists when the normalizations and weights change, even if
+all originally hit incidences are retained. Move y slightly into int B
+and perturb the fan normals slightly while preserving full positive
+balance. Such perturbations with no zero original vertex values exist:
+rescale the initial normals to sum0, perturb the first two independent
+normals arbitrarily and define the third as minus their sum. Independence
+is open; the finitely many equations u_j.(v_a-y)=0 are proper equations
+in this open parameter family, so they can all be avoided. One may first
+choose the interior y and then avoid those finitely many lines in normal
+parameter space. All original misses remain misses by their strict
+margins. Previously hit sources may cease to hit, which only decreases
+the score. Own-cap areas vary continuously by dominated convergence,
+because a nonzero limiting normal has a line boundary of zero area.
+
+For close enough perturbations all three new scores remain strictly
+below Gamma+kappa(1-v_delta), contradicting the proved fan bound (FAN). Therefore the lower
+bound extends to the original degenerate fan and boundary center.
+This argument proves a lower bound by contradiction; it does not presume
+continuity of the strict-support indicators.
+
+For a two-element positive circuit the two normals are opposite. Its two
+own-cap areas sum to |B|, and every positive-area source strictly hits at
+least one of the opposite caps. The sum of its two scores is at least
+v+E=1. Thus its maximum is at least1/2, which is at leastGamma+kappa E.
+
+## 4. Continuous directional thresholds
+
+Put T=Gamma+eta E, where 0<eta<kappa=1/18. For unit u and scalar t define
+
+    G_u(t)=|B intersect {u.x>=t}|/V
+              +sum_i e_i 1{h_i(u)>t},
+    r(u)=sup{t:G_u(t)>=T}.
+
+The function G_u is nonincreasing and right-continuous, equals1 below
+min_B u.x, and equals0 at max_B u.x. Thus r(u) is finite and lies in
+[min_B u.x,max_B u.x]. Moreover
+
+    t<r(u) implies G_u(t)>=T,
+    t>=r(u) implies G_u(t)<=T.                             (TH)
+
+For equality in the second implication, if G_u(r(u))>T,
+right-continuity would give a point t>r(u) with G_u(t)>=T, contrary to
+the definition. A downward jump below T at r(u) is allowed.
+
+Here is a finite formula proving continuity of r on the unit circle.
+For every source subset J put e_J=sum_(i in J)e_i, q_J=T-e_J and
+h_J(u)=min_(i in J)h_i(u), using h_empty=+infinity. Omit subsets with
+q_J>v. For0<q<=v let b_q(u) be the unique cap quantile of normalized
+area q; for q=v take b_v(u)=min_B u.x. For q<=0 put b_q=+infinity.
+Then
+
+    r(u)=max_(J:q_J<=v) min(h_J(u),b_(q_J)(u)).              (3)
+
+Every included term is finite: if q_J<=0 then J is nonempty; the empty
+subset has q_J=T>0. There is at least one term since T<1=v+E.
+A scalar strictly below a displayed minimum has every J-source hit and
+sufficient own cap mass, so lies below or at the supremum defining r.
+Conversely if G_u(t)>=T, use its actual strict-hit set as J; its supports
+are all above t, and the own-cap quantile condition gives t<=b_(q_J)
+when q_J>0. Taking suprema proves(3).
+
+Support functions are continuous. For fixed0<q<v, cap volumes are
+jointly continuous in u,t by dominated convergence and strictly decrease
+between their supports, since B is full dimensional. Compactness and
+uniqueness of the quantile show b_q is continuous. The endpoint q=v is
+also continuous. Formula(3), a finite maximum of finite continuous
+minima, proves continuity including all possible support jumps.
+
+## 5. An attained convex minimax and its active circuit
+
+Define the continuous convex function
+
+    Phi(y)=max_(||u||=1)(u.y-r(u)), y in B.
+
+It attains a minimum on compact B; choose one minimizer y_0 and write
+alpha=Phi(y_0). Suppose alpha>=0. Every active normal u, satisfying
+u.y_0-r(u)=alpha, then has Q(y_0,u)<=T by(TH).
+
+At the constrained minimum, zero belongs to the sum of the convex hull
+of the active normals and the outward normal cone of B at y_0. Here is
+an elementary justification. The active normals form a compact set; their
+convex hull is compact, and adding the finitely generated closed normal
+cone gives a closed convex set. If zero were outside, separation would
+give a direction h with strictly negative scalar product with every
+active normal and nonpositive scalar product with all outward normals.
+Adding a sufficiently small multiple of an interior-point direction
+g_B-y_0 preserves the strict active inequalities and makes all boundary
+facet inequalities point inward. A short step then stays in B and
+reduces Phi: compactness handles near-active normals uniformly, and
+normals with a fixed inactive gap remain below the previous maximum.
+This contradicts minimality.
+
+Normalize every nonzero outward facet normal to unit length. A finite
+positive relation therefore exists among some active unit normals and
+some outward unit facet normals. Each outward normal has score zero at
+y_0: B lies on its nonpositive side and every positive-area source has
+no point strictly on its positive side. Thus all normals in the relation
+have scores at most T.
+
+From this finite relation extract an inclusion-minimal subset whose
+convex hull contains zero. It has two or three members. To see the upper
+bound, any four or more planar vectors are affinely dependent; varying
+convex coefficients along an affine dependence until one becomes zero
+reduces their number. Minimality forces all remaining coefficients to
+be positive. One member is impossible because unit normals are nonzero.
+Two members are opposite. Three members span the plane: if they were
+collinear, an opposite pair would already suffice.
+
+The opposite-pair case contradicts the score lower bound1/2>T from
+Section3. The three-member case is a full positive fan through y_0,
+possibly with boundary center or zero vertex heights. Section3 gives a
+row of score at leastGamma+kappa E>T, another contradiction.
+
+It follows that alpha<0. Hence u.y_0<r(u) for every unit normal, and(TH)
+gives Q(y_0,u)>=T for every unit normal. The point y_0 is interior: if it were on the boundary, an
+outward unit supporting normal u would have G_u(u.y_0)=0 and
+r(u)<=u.y_0, contradicting u.y_0<r(u). The minimizer set is compact and
+convex; successive minimization of its first and second Euclidean
+coordinates chooses one deterministic y_*. Containing halfspaces with
+any smaller threshold have at least the corresponding through-y_* score
+by monotonicity.
+
+
+## 6. Original units, containing halfspaces, and the zero-deficit case
+
+The construction in Section5 gives the same interior point y_* for every
+unit normal, with normalized score at least Gamma+eta E. Multiplication
+by V gives (1) for through-y_* halfspaces. Any containing halfspace with
+that normal has a no-larger threshold and therefore no smaller own area
+or strict-hit credit. Rescaling a nonzero normal to unit length changes
+no halfspace, so all proper containing halfspaces are covered.
+
+If V=b, all nonnegative a_i are zero. Choose the ordinary area centroid
+of the triangle. The ordinary centroid Grunbaum inequality gives at
+least4b/9 in every containing halfspace. This precise ordinary fact is
+the full-mass planar specialization of accepted 6769574fc1bd9f8d. The
+centroid is interior. Equation(1) follows with zero surplus.
+
+All source boundaries and their support jumps were handled in Sections3
+and4, and every selected point and minimizer was constructed inside B.
+The result does not require attainment of the full strict-hitting depth
+maximum. Its surplus is explicit and positive whenever V>b. No claim
+about arbitrary convex middle bodies, higher continuous dimensions, or
+actual mixed-integer endpoint masses is made here.

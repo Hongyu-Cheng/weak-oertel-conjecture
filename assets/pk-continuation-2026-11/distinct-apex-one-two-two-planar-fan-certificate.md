@@ -1,0 +1,164 @@
+# Distinct-apex one-two-two planar fans admit a covering pair
+
+Research theorem, 6 November 2026. This treats the remaining strict mixed planar sign pattern with two distinct negative original vertices on the two-positive rows. It is a fixed-fan theorem, not a global center-selection statement.
+
+## 1. Statement and exact normalization
+
+Let B be a triangle of area vV, with V>0 and0<v<=1. Let three affine functions vanish at an interior point y, have gradients spanning the plane, and have a strictly positive linear dependence. Assume no function vanishes at an original vertex. Suppose two rows each have two positive original vertex values, their negative original vertices are distinct, and the remaining row has exactly one positive original vertex value.
+
+Let finitely many source triangles P_m subset B have area at least V/4 and nonnegative weights e_m of sum E=1-v. A source strictly hits a row when the maximum of its affine function on the source is positive; maximum0 is a miss. The row score is v times its own positive-cap area fraction plus the total weight of its strict hits.
+
+Then some pair of rows jointly strictly hits every qualifying source and has own-cap fractions summing to strictly more than8/9. Consequently
+
+    max row score >4/9+E/18.                                  (1)
+
+Apply an affine map so the triangle vertices are O=(0,0), X=(1,0), Z_0=(0,1). Write the barycentric coordinates of y as(a,b,c), so y=(b,c), a,b,c>0 and a+b+c=1. The two negative original vertices may be labeled O,X. The one-positive row must be positive at one of O,X: otherwise all three rows would be positive at Z_0, contradicting positive dependence. Relabel O,X to make this positive vertex O.
+
+Let A and L denote the complementary corner caps of the two two-positive rows, at O and X respectively, and Q the positive corner cap of the remaining row, at O. Their oriented rows are
+
+    B outside int A,    B outside int L,    Q.
+
+Every strict O-corner cap through y has horizontal edge intercept t in(l,1), where l=b/(1-c), vertical intercept v(t)=ct/(t-b), and area fraction
+
+    p(t)=ct^2/(t-b).                                          (2)
+
+Write A=K(u), Q=K(U). The X-corner cap L has horizontal edge intercept w in(0,l), vertical fraction along edge XZ_0 equal to
+
+    Z=c(1-w)/(b+c-w),                                        (3)
+
+and area fraction
+
+    p_L=(1-w)Z = aZ^2/(Z-c).                                 (4)
+
+Here c<Z<1. Positive dependence expresses the affine function of Q as a positive linear combination of the O-positive function of A and the X-positive function of L. At the A-cut's horizontal intercept u, the L function is positive because w<l<u. Thus Q is positive at this point and
+
+    0<w<l<u<U<1.                                             (5)
+
+This proves the stated ordering from the fan hypotheses; it is not an additional assumption. Put p_A=p(u), p_Q=p(U).
+
+## 2. Exact missed-pair regions and a smaller-lobe bound
+
+The common negative regions of the three possible row pairs are:
+
+    pair (outside A,Q):       A outside int Q,
+    pair (outside A,outside L): A intersect L,
+    pair (outside L,Q):       L outside int Q.
+
+The first two are triangles of area fractions
+
+    r_B=b[v(u)-v(U)],       r_C=c(u-w).                        (6)
+
+The third is a quadrilateral. In barycentric coordinates based at X, toward O and Z_0, its vertices are
+
+    (0,0), (D,0), (a,c), (0,Z),     D=1-U.                   (7)
+
+A maximum-area triangle in a compact polygon may be taken at polygon vertices, by compactness and separate convexity of its absolute determinant. The four ratios in(7) are DZ,Dc,Za,Dc+Za-DZ. Since Z>c, their maximum is exactly
+
+    capacity(L outside int Q)/|B|=Z max(D,a).                 (8)
+
+Thus a missed-pair region with area, or inscribed-triangle capacity, strictly below|B|/4 cannot contain any qualifying source, since its relative area is at least1/(4v)>=1/4. Closed boundaries are included in every containment test; lines have zero area.
+
+We also record the elementary same-apex smaller-lobe bound. If corner triangles K(U_0,v_0),K(u_0,V_0) cross, with u_0<U_0 and v_0<V_0, put r=u_0/U_0,s=v_0/V_0. If the latter triangle has smaller area, then r<=s. Its portion outside the former has fraction
+
+    U_0 V_0 r(1-s)^2/(1-rs)
+      <=r(1-r)/(1+r)<=3-2sqrt(2)<1/4.                       (9)
+
+The first inequality follows because(1-s)^2/(1-rs) decreases in s; the maximum in r occurs at sqrt(2)-1. Exchanging axes treats the other order. If nested, the smaller outside portion is empty.
+
+## 3. The easy cap order and two coordinate-order cases
+
+If p_Q>=p_A, the pair(outside A,Q) has own-cap sum1-p_A+p_Q>=1. Its missed region is the smaller cap A outside Q, whose area is below1/4 by(9). This proves the conclusion in this case.
+
+Henceforth assume p_Q<p_A. Differentiating(2), p'(t)=ct(t-2b)/(t-b)^2. Since U>u and p(U)<p(u), necessarily u<2b. Also l<u<2b, so c<1/2. The function p decreases from l to2b, and p(l)=l. Therefore
+
+    p_A<l=b/(1-c),       u<2b,       c<1/2.                 (10)
+
+For all t>b, AM-GM or direct completion gives p(t)>=4bc.
+
+First suppose a>=c. The cap fraction p_L, as a function of w on[0,l], is convex, with endpoint values c/(b+c) and a/(a+b). The latter is larger when a>=c. Thus
+
+    p_A+p_L< b/(a+b)+a/(a+b)=1.
+
+The two outside rows have own-cap sum greater than1. Their missed triangle satisfies
+
+    r_C<cu<min(c,2bc).
+
+If c<=1/4 this is below1/4. If c>1/4, a>=c gives b<=1-2c and2bc<=2c(1-2c)<1/4. Thus this pair covers all sources.
+
+Next suppose a<c and b<=c. For the pair(outside A,Q), its cap difference satisfies
+
+    p_A-p_Q< b/(1-c)-4bc
+              =b(1-2c)^2/(1-c)
+              <=c(1-2c)^2/(1-c)<1/9.                       (11)
+
+For completeness, the final bound holds for0<c<1/2: if c<=1/3, use1/(1-c)<=3/2 and max_(0<=t<=1)t(1-t)^2=4/27 with t=2c. This gives at most1/9, and equality would require both c=1/3 and c=1/6. If c>=1/3, use c/(1-c)<1 and(1-2c)^2<=1/9.
+
+Also v(U)>v(1)=c/(1-b) and v(u)<1, so
+
+    r_B<ab/(1-b)<=b(1-2b)/(1-b)
+                   <=3-2sqrt(2)<1/4.                       (12)
+
+The last maximum is elementary differentiation on0<b<1/2. The middle inequality uses c>=b. Therefore the matched pair covers every source and its own-cap sum is greater than8/9.
+
+## 4. The remaining coordinate order b>c>a
+
+Only b>c>a remains. In particular b>a and a+2c<1. Continue to use Z from(3).
+
+If Z>=2c, the function aZ^2/(Z-c) is increasing on[2c,1]. Equation(4) gives p_L<=a/(1-c), so(10) implies p_A+p_L<1. The outside pair again has own-cap sum greater than1. Moreover
+
+    r_C<c(1-w)=caZ/(Z-c)<=2ac<1/4,                         (13)
+
+because2ac<a(1-a)<=1/4. This pair covers every source.
+
+Suppose instead Z<2c. The same function in(4) is decreasing below2c, while Z is increasing in w and its value at w=0 is c/(b+c). Hence
+
+    p_L<=c/(b+c).
+
+The pair(outside L,Q) has own-cap sum1-p_L+p_Q. Since p_Q>=4bc,
+
+    p_L-p_Q<=c/(b+c)-4bc<=1/18.                             (14)
+
+To check the last inequality without hidden center restrictions, b>c>a implies b>=max(c,(1-c)/2), and the expression c/(b+c)-4bc decreases in b. If c>=1/3, use b>=c to obtain1/2-4c^2<=1/18. If c<=1/3, use b>=(1-c)/2 to obtain2c^3/(1+c)<=1/18; the last function is increasing on[0,1/3]. Thus this pair has own-cap sum at least17/18.
+
+If its missed-region capacity in(8) is below1/4, it covers all sources and we are done. Otherwise Z max(D,a)>=1/4. But Za<2ac<1/4 by(13), so necessarily
+
+    DZ>=1/4.                                               (15)
+
+As b>a, (5) gives U>l=b/(a+b)>1/2 and hence D<1/2. Combining this with Z<2c and(15) gives c>1/4 and
+
+    U<1-1/(8c)<=2c.                                        (16)
+
+The final inequality is equivalent to(4c-1)^2>=0.
+
+We show that in this last situation the matched pair(outside A,Q) works instead. Put x=b/U. For any x<1, elementary differentiation gives
+
+    x/(1-c)-c/(1-x)
+      <=(1-sqrt(c/(1-c)))^2.                               (17)
+
+The maximum occurs at1-x=sqrt(c(1-c)). By(10), (17), and(16), with t=sqrt(c/(1-c)) in(1/sqrt(3),1),
+
+    p_A-p_Q<l-p_Q
+      <=U(1-t)^2
+      <2t^2(1-t)^2/(1+t^2)
+      <=3/32<1/9.                                         (18)
+
+Here t(1-t)<=1/4 and1+t^2>4/3 give the penultimate bound.
+
+Likewise, v(u)<1 and v(U)=cU/(U-b) give
+
+    r_B<b[1-v(U)]
+       =U x(1-c-x)/(1-x)
+       <=U(1-sqrt(c))^2
+       <2c(1-sqrt(c))^2<=1/8<1/4.                         (19)
+
+The maximum in x occurs at x=1-sqrt(c), and the final bound follows from sqrt(c)(1-sqrt(c))<=1/4. Thus the matched pair covers every source and has own-cap sum greater than8/9 also in this final case.
+
+## 5. Score conclusion and scope
+
+All coordinate-order cases and both cap-area orders have now been covered. In each one, an explicitly chosen pair has own-cap sum greater than8/9 and jointly strictly hits all qualifying sources. Its score sum is therefore greater than(8/9)v+E. At least one row has score greater than
+
+    (4/9)v+E/2=4/9+E/18,
+
+proving(1). Zero source weights, E=0, equal barycentric coordinates, and equality in the source area threshold are permitted. Strict vertex signs and an interior common center remain hypotheses. The proof uses actual source containment in closed missed regions, not an independently assigned pattern relaxation.
+
+This is the distinct-apex122 fixed-fan certificate. It makes no assertion about zero original vertex heights, boundary centers, higher-dimensional fans, or a point controlling every halfspace at once.

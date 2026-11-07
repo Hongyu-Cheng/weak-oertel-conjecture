@@ -1,0 +1,44 @@
+{
+  "schema": "independent-mathematical-audit-v1",
+  "verdict": "PASS_WITH_EDITORIAL_CORRECTION",
+  "review_method": "Independent LLM mathematical verification",
+  "source": "research-scratch/research_inventory/intermediate-target-load-and-dyadic-reservoir-obstruction.md",
+  "source_sha256": "64bdff9fed2b973770aaa8c59ae778621e3d5be908323f76cbf751d77f58810c",
+  "scope": "Sections1\u20135, including cited reservoir scope, actual body realization, load and residue identities, and explicit OC centers.",
+  "checks": [
+    {
+      "claim": "Residue identities and child increment bound",
+      "reason": "Expanding the squared residue masses counts each unordered off-diagonal pair twice, giving coefficient1/(8A_xi). Refinement decreases the sum of squared class masses. For k>=2 quarter children are integer, retain the parity denominator, form an injective map, and have product at least the parent product by Brunn\u2013Minkowski. Bounding their total by P_k and subtracting the full parent total P_(k+1) gives the stated drop control."
+    },
+    {
+      "claim": "The imported hard-system scopes are correctly distinguished",
+      "reason": "I read the exact statements of e84695845cd7c824,320dcb7d85f22889,ca061f9c44376a53,02a75ec03a8733a8. Their original reservoir is restricted to max a_z<=A_xi/4. The strict hard ledger includes D=2^n h_max<Q/100. The unconditional identity extends directly by algebra but these geometric hard-system assumptions do not follow. Q<=W/8 and ordinary largest-fiber depth yield D/Q>=8Gamma/(1+epsilon) in a complete concentrated core."
+    },
+    {
+      "claim": "The body has exactly the claimed integer fibers",
+      "reason": "Every negative integer coordinate of its projected convex hull equals\u22121 and exposes a unique negative unit generator. All other integer projected points are cube vertices. At the zero base the sum-of-coordinates equality forces lambda_plus<=lambda_minus, and the continuous scale is bounded by(1+t)/2<=s. Since all generator sections contain tK, the ambient interior is nonempty. These arguments prove exact fibers, not merely inclusions."
+    },
+    {
+      "claim": "The load concentration is exact and not just asymptotic",
+      "reason": "The only positive outside fibers are\u2212e_i, paired by parity with e_i, all targeting0. For a different cube target the relation2w\u2212v=\u2212e_i is impossible. Hence R_0=n delta V, other incoming rows vanish, and Delta=(1\u2212b)V. Fix any b>2^-d in the requested intermediate band, then take t small and n arbitrarily large to make R_0/Delta exceed any prescribed constant while maintaining any per-parity bound."
+    },
+    {
+      "claim": "All dyadic mass lies at the first level",
+      "reason": "Each nontrivial parity class consists exactly of e_i and\u2212e_i, whose difference has valuation one. Their product weights are delta V/[4(1+delta)], giving P_1=E/[4(1+delta)] and P_k=0 for k>=2. Each such class fails goodness, as do singleton classes."
+    },
+    {
+      "claim": "Every constructed body still has a deterministic OC center",
+      "reason": "All continuous centroids equal0. A halfspace containing the middle centroid contains at least one centroid in every reflected pair, so disjoint pairs contribute at least Gamma delta V each and the middle contributes Gamma bV. If E<=Delta, a largest-core centroid pays the target. If E>=Delta, b+n delta>=1 implies W/V<=2^n(b+n delta), so the middle centroid pays it. All ambient directions, including pure integer, are covered."
+    }
+  ],
+  "critical_errors": [],
+  "gaps": [],
+  "required_corrections": [
+    {
+      "section": "5",
+      "old": "a largest-core centroid has depth Gamma_d V",
+      "new": "a largest-core centroid has depth at least Gamma_d V",
+      "reason": "The ordinary own-fiber lower bound need not be the exact mixed depth. This is an editorial inequality correction and does not change any conclusion."
+    }
+  ]
+}

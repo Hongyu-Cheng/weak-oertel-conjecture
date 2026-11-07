@@ -4,6 +4,8 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 1 | theorem | pk-nov6-high-arity-centroid-repair | [ef6cc6d9e2fd4c8e](facts/ef6cc6d9e2fd4c8e.md) |
+| 0 | lemma | pk-nov6-shared-circuit-credit | [69e7900bfbf7454b](facts/69e7900bfbf7454b.md) |
 | 0 | counterexample | affine-average-all-ternary-convex-supports | [001a95dc6616c6b9](facts/001a95dc6616c6b9.md) |
 | 0 | theorem | oct22-two-generation-max-two-original-moment | [0075852d0f2fd4e8](facts/0075852d0f2fd4e8.md) |
 | 0 | theorem | intake14-depth-erosion | [01a4100542206b94](facts/01a4100542206b94.md) |
@@ -1245,3 +1247,38 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 | 42 | lemma | common-normal-stress-aware-centroid-host-extraction | [2992eea9e109d58a](facts/2992eea9e109d58a.md) |
 | 43 | lemma | common-normal-stress-aware-centroid-host-extraction | [2b09f2b516439517](facts/2b09f2b516439517.md) |
 | 44 | lemma | common-normal-stress-aware-centroid-host-extraction | [4de296489fbe650c](facts/4de296489fbe650c.md) |
+| 1 | theorem | pk-nov6-nonlinear-complementary-cap | [f0399a8f0bae48c6](facts/f0399a8f0bae48c6.md) |
+| 0 | counterexample | pk-nov6-equal-large-partner-obstruction | [5e8a8af95fa24a1d](facts/5e8a8af95fa24a1d.md) |
+| 2 | theorem | pk-nov6-two-cut-three-fiber | [3e766d73edff42b0](facts/3e766d73edff42b0.md) |
+| 0 | theorem | pk-nov6-facet-moment-reflection | [7fd6b5631ad64e4c](facts/7fd6b5631ad64e4c.md) |
+| 0 | theorem | pk-nov6-log-determinant-canonical-fans | [ec5c31b8951c4417](facts/ec5c31b8951c4417.md) |
+| 0 | theorem | pk-nov6-nearby-oblique-hitting-center | [784cde0d72dd4319](facts/784cde0d72dd4319.md) |
+| 0 | counterexample | pk-nov6-all-middle-sharp-target-obstruction | [645f91d128f54e5b](facts/645f91d128f54e5b.md) |
+| 0 | theorem | pk-nov6-ordinary-simplex-rigidity-normalized | [ea91e021ff1f4416](facts/ea91e021ff1f4416.md) |
+| 0 | theorem | pk-nov6-finite-simplex-canonical-star | [0a2cae17f9154570](facts/0a2cae17f9154570.md) |
+| 1 | theorem | pk-nov6-fixed-neighborhood-quadratic-center | [e8b040625fe84794](facts/e8b040625fe84794.md) |
+| 1 | theorem | pk-nov6-centroid-asymmetry-surplus | [6cab253207c34f9d](facts/6cab253207c34f9d.md) |
+| 1 | theorem | pk-nov6-one-sided-star-normalized | [c77c6c94c4f34008](facts/c77c6c94c4f34008.md) |
+| 2 | theorem | pk-nov6-distributed-parity-loads-normalized | [b8c4471bc5e549c3](facts/b8c4471bc5e549c3.md) |
+| 1 | theorem | pk-nov6-capacity-deficit-hitting-range | [c232c07c1cce4b3a](facts/c232c07c1cce4b3a.md) |
+| 1 | theorem | pk-nov6-actual-low-middle-descent | [583b3086fe614511](facts/583b3086fe614511.md) |
+| 0 | theorem | pk-nov6-regular-contact-section-centroids | [1269c554ca9a41b8](facts/1269c554ca9a41b8.md) |
+| 2 | theorem | pk-nov6-three-tier-core-repair | [0d089d25e72f4e35](facts/0d089d25e72f4e35.md) |
+| 0 | theorem | pk-nov6-arbitrary-cut-simplex-capacity | [6fbefd0eb6914aa9](facts/6fbefd0eb6914aa9.md) |
+| 0 | theorem | pk-nov6-arbitrary-simplex-star-completion | [1a16e89734914fc8](facts/1a16e89734914fc8.md) |
+| 1 | theorem | pk-nov6-reflection-overlap-ledger | [a93e9443922f47dc](facts/a93e9443922f47dc.md) |
+| 0 | theorem | pk-nov6-centroid-sign-fan-monotone-reduction | [bc2e100f7f34422f](facts/bc2e100f7f34422f.md) |
+| 0 | theorem | pk-nov6-stochastic-sign-cone-capacity | [2d4e949d29014223](facts/2d4e949d29014223.md) |
+| 1 | theorem | pk-nov6-planar-singleton-vertex-normal-form | [0352fdc455eb4c54](facts/0352fdc455eb4c54.md) |
+| 0 | theorem | pk-nov6-arbitrary-center-planar-vertex-fan | [dc15f4248ddf4742](facts/dc15f4248ddf4742.md) |
+| 0 | theorem | pk-nov6-finite-vertex-stochastic-capacity | [c8fa242cfc3e441b](facts/c8fa242cfc3e441b.md) |
+| 0 | theorem | pk-nov6-arbitrary-center-planar-two-vertex-fan | [41c932533ed549c7](facts/41c932533ed549c7.md) |
+| 0 | theorem | pk-nov6-repeated-apex-planar-mixed-fans | [d20149eea01b4245](facts/d20149eea01b4245.md) |
+| 1 | theorem | pk-nov6-sign-cone-escape-cap-surplus | [e96fd7e3557042b0](facts/e96fd7e3557042b0.md) |
+| 2 | theorem | pk-nov6-distinct-apex-planar-112 | [58879ca8313c4b41](facts/58879ca8313c4b41.md) |
+| 0 | theorem | pk-nov6-distinct-apex-planar-122 | [d2ae261ff7d54656](facts/d2ae261ff7d54656.md) |
+| 3 | theorem | pk-nov6-triangle-source-all-direction-center | [cba04fbe065c480a](facts/cba04fbe065c480a.md) |
+| 0 | counterexample | pk-nov6-direct-rational-sharp-oc-counterexample | [022a26fa5001480a](facts/022a26fa5001480a.md) |
+| 2 | theorem | pk-nov6-shifted-ball-cap-excess | [e9f4abbc5f9a4527](facts/e9f4abbc5f9a4527.md) |
+| 4 | theorem | pk-nov6-actual-triangle-all-ratio-repair | [20a50fadbdf54b5a](facts/20a50fadbdf54b5a.md) |
+| 5 | theorem | pk-nov6-complete-triangle-parity-core-repair | [a4ad1f5074d149c4](facts/a4ad1f5074d149c4.md) |

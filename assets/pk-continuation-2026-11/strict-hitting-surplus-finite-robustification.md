@@ -1,0 +1,78 @@
+# Monotone finite-body robustification of a strict hitting surplus
+
+Research note, 6 November 2026. This gives a proved interface from a strict hitting certificate to actual positive-volume endpoint caps. It does not prove that the required hitting certificate exists.
+
+## Data and the finite cap score
+
+Fix d>=1 and a full-dimensional compact convex middle body B. For i=1,...,k fix a full-dimensional convex partner C_i, a point a_i in R^d, a number e_i>0, and a full-dimensional compact convex K_i containing0 with |K_i|=e_i. Put
+
+    P_i=(a_i+C_i)/2, E=sum_i e_i,
+    A_i,m=a_i+m^(-1/d)K_i for integers m>=1.
+
+Then |A_i,m|=e_i/m. For y in B and a unit vector u define
+
+    b(y,u)=|B intersect {u.x>=u.y}|,
+    s_i,m(y,u)=2u.y-min_(x in A_i,m)u.x,
+    F_m(y,u)=b(y,u)
+       +sum_i min(e_i, m|C_i intersect {u.x>=s_i,m(y,u)}|),
+    D_m(y)=min_(|u|=1) F_m(y,u).
+
+Define the strict limiting score
+
+    F_infinity(y,u)=b(y,u)
+       +sum_i e_i 1{h_Pi(u)>u.y},
+    D_infinity(y)=inf_(|u|=1) F_infinity(y,u).
+
+Then F_m is jointly continuous in y,u, increases pointwise in m, and
+
+    F_m(y,u) increases to F_infinity(y,u).              (1)
+
+For every fixed y,
+
+    D_m(y) increases to D_infinity(y).                 (2)
+
+In particular, if D_infinity(y)>T, some finite m has D_m(y)>T. No uniform positive support gap in all directions is assumed. Also
+
+    sup_m max_(y in B) D_m(y)=sup_(y in B) D_infinity(y). (3)
+
+Each finite maximum exists. The supremum on the right need not be a maximum, and equality of that supremum to T does not imply that any finite m attains T.
+
+## Proof of continuity and monotone convergence
+
+The minimum support value min_Ki u.x is continuous in u and nonpositive because0 belongs to K_i. Thus
+
+    s_i,m(y,u)=2u.y-u.a_i-m^(-1/d)min_Ki u.x
+
+is continuous and decreases to s_i,infinity=2u.y-u.a_i as m increases. Cap volume of a full-dimensional convex body is jointly continuous in its unit normal and threshold: for a convergent parameter sequence, indicators converge pointwise away from the limiting proper hyperplane, a null set, and dominated convergence applies. Consequently each F_m is continuous. Its partner cap volume increases in m, so multiplication by the increasing positive integer m and clipping at e_i preserve monotonicity.
+
+If h_Pi(u)>u.y, then s_i,infinity<h_Ci(u). A cap below the upper support level of a full-dimensional convex body has positive volume. Cap-volume continuity implies that the cap in F_m is bounded below by a positive number for all sufficiently large m; hence its clipped contribution eventually equals e_i.
+
+If h_Pi(u)<=u.y, then s_i,infinity>=h_Ci(u). Every s_i,m is at least s_i,infinity, so all partner caps have volume zero (a supporting face also has zero d-volume). The contribution is therefore identically zero. This proves (1), including equality directions.
+
+For (2), let L=lim_m D_m(y), which exists by monotonicity and boundedness. Pointwise domination immediately gives L<=D_infinity(y). Choose minimizing unit normals u_m; these exist by continuity and compactness. A subsequence converges to u_*. For every fixed j and all subsequence indices m>=j,
+
+    F_j(y,u_m)<=F_m(y,u_m)=D_m(y)<=L.
+
+Continuity of F_j gives F_j(y,u_*)<=L. Taking the supremum over j and using (1) yields F_infinity(y,u_*)<=L. Hence D_infinity(y)<=L, proving equality. This argument also proves that the infimum defining D_infinity(y) is attained, even though a maximum over y need not be.
+
+The minimum of the jointly continuous F_m over the compact unit sphere is continuous in y, so D_m attains a maximum on compact B. Finally, suprema commute without any limit exchange assumption:
+
+    sup_m max_y D_m(y)
+      =sup_y sup_m D_m(y)
+      =sup_y D_infinity(y),
+
+using (2). This proves (3).
+
+## Actual-source cap certificate
+
+Suppose an actual mixed-integer convex source has middle B at base w, and, for each i, m distinct reflected pairs of endpoint fibers A_i,m and C_i at bases p_i,r,z_i,r satisfying p_i,r+z_i,r=2w. Assume all endpoint bases and w are pairwise distinct. This is a hypothesis about actual fibers; no realization is inferred from the listed continuous sets.
+
+For every m large enough that e_i/m<=|C_i| for all i, the actual mixed depth at (w,y) is at least D_m(y).
+
+To prove this, reduce any containing closed ambient halfspace to a parallel through-(w,y) halfspace. If its continuous normal u is nonzero, normalize u. At a reflected pair the two continuous thresholds t_A,t_C sum to2u.y. If t_A<=min_Ai,m u.x, the whole small endpoint is included and contributes e_i/m. Otherwise t_A>min_Ai,m u.x, so t_C<s_i,m(y,u), and the partner contributes at least the cap volume at s_i,m. Thus one pair contributes at least
+
+    min(e_i/m, |C_i intersect {u.x>=s_i,m(y,u)}|).
+
+Summing the m disjoint copies gives the i-th contribution in F_m, and adding the actual middle cap proves the estimate for all oblique directions. If the continuous normal is zero, the whole middle is included and at least one whole endpoint of each reflected pair is included. The displayed volume ordering gives mass at least |B|+E, which is at least D_m(y).
+
+The certificate retains all closed boundaries and counts each physical fiber once. It therefore turns a strict limiting hitting surplus into a finite positive-volume star certificate whenever actual sources with the required replicated pairs are supplied. It closes the analytical robustness obligation, not the geometric selection or source-realization obligation.

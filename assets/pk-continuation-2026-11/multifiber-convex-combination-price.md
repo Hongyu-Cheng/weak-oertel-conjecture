@@ -1,0 +1,94 @@
+# Exact convex-combination price of a low reflected target
+
+Research draft, 6 November 2026. The results in Sections 1-4 are elementary proved statements. They concern original fiber volumes and do not depend on the pending local star lemma. They do not assert a global OC bound.
+
+Let C be a convex body in R^n x R^d, d>=1, let K_z be its fibers, and put s_z=|K_z|^{1/d}. For nonempty fibers the root-volume function satisfies the following finite convex-combination inequality:
+
+    s_{sum_i lambda_i z_i} >= sum_i lambda_i s_{z_i},       (1)
+
+whenever lambda_i>=0 sum to one. The index on the left need not be integral. Indeed, convexity gives sum_i lambda_i K_{z_i} subset K_{sum lambda_i z_i}; iterated Brunn-Minkowski proves (1). Zero coefficients are omitted. Lower-dimensional nonempty fibers cause no issue: approximate them by adding a vanishing ball, apply Brunn-Minkowski to the Minkowski sum, and use continuity of convex-body volume as that ball tends to zero; equivalently the zero-volume version follows directly from the standard Brunn-Minkowski inequality. All uses below can instead drop their zero root-volume terms after the inclusion.
+
+## 1. A computable radial certificate using all high cores
+
+Fix an integer target w, a finite nonempty set G of core bases, and a nonempty set A subset G of partners for which the reflected outer fibers K_{2w-v}, v in A, are nonempty. Suppose every core in G has volume at least T>0. Define
+
+    lambda_*(w;G,A)=max {lambda in [0,1]:
+       w in lambda conv(G)+(1-lambda)conv(2w-A)}.           (2)
+
+The feasible set is nonempty because v and 2w-v have midpoint w for any v in A. It is compact: use coefficients on the two finite convex hulls and maximize a continuous coordinate on a compact polytope. More explicitly set nonnegative variables a_g,b_v with
+
+    sum_g a_g + sum_v b_v=1,
+    sum_g a_g(g-w) - sum_v b_v(v-w)=0,
+
+and maximize lambda=sum_g a_g. This is a finite linear program and its maximum is attained.
+
+Then
+
+    |K_w| >= lambda_*^d T.                                (3)
+
+If every reflected fiber for v in A additionally has volume at least U>=0, then the stronger estimate is
+
+    |K_w|^{1/d} >= lambda_* T^{1/d}
+                         +(1-lambda_*)U^{1/d}.           (4)
+
+Proof. Apply (1) to the maximizing coefficients from (2). Every core root-volume is at least T^{1/d}; every reflected root-volume is at least U^{1/d}. This proves (4), and U=0 gives (3). These are actual target-fiber volume bounds, not simultaneous source allocation claims.
+
+Consequently, in the notation B and G_tau of the clipping note, let G=G_eta and A be any nonempty collection of its partners directed to w. If 0<eta<tau and
+
+    lambda_* >= ((1+eta)/(1+tau))^{1/d},                  (5)
+
+then w lies in G_tau. Thus a core target outside G_tau forces lambda_* strictly below the quantity in (5). The availability of **all** high core bases in conv(G), not only the incident partners A, matters in (2).
+
+## 2. Dual separation certificate for a target that stays low
+
+Translate w to zero, writing G'=G-w and A'=A-w. For any lambda in (lambda_*,1), the two compact convex sets lambda conv(G') and (1-lambda)conv(A') are disjoint. Strict separation supplies a nonzero linear functional u such that
+
+    lambda min_{g in G'}u(g)
+       > (1-lambda) max_{a in A'}u(a).                    (6)
+
+One of the two orientations of a strict separating functional has precisely (6). Since A' subset G', let m_G=min_G' u and M_A=max_A' u. Then M_A>=m_G. Since lambda>lambda_*>=1/2, if m_G<=0 then (1-lambda)M_A>=(1-lambda)m_G>=lambda m_G, contradicting (6). Thus m_G>0, M_A>=m_G>0, and
+
+    M_A/m_G < lambda/(1-lambda).                          (7)
+
+This establishes an exact bounded-ratio slab separating the target from every high core, while controlling the incident partners from above. It is a geometric obstruction certificate, not a lattice-width assertion: u need not be an integer functional.
+
+## 3. The binary-cube example gives the exact n/(n+1) coefficient
+
+Take w=0, G={0,1}^n minus {0}, and A any subset of G containing the all-ones vector 1. Then
+
+    lambda_*(0;G,A)=n/(n+1).                              (8)
+
+For the lower bound, average the n core unit vectors e_i with equal weights to obtain g=1/n. Take a=1 in A. The equation lambda g=(1-lambda)a holds for lambda=n/(n+1). For the upper bound use u(x)=sum_i x_i: every point of conv(G) has u>=1 and every point of conv(A) has u<=n. Any feasible lambda therefore satisfies lambda<=n(1-lambda), proving (8).
+
+If all core fibers indexed by G equal a fixed body K containing zero and all reflected endpoint fibers indexed by A equal tK, then their convex hull has target fiber exactly
+
+    ((n+t)/(n+1))K                                       (9)
+
+provided the only generating fibers are those indexed by G and 2w-A. Indeed every convex representation at w has a core coefficient lambda<=n/(n+1), its continuous part lies in [lambda+(1-lambda)t]K, and the maximal coefficient is attained. Since 0<=t<=1, these homothetic copies are nested. Thus the inclusion is exact, not only a lower bound.
+
+In particular, if |K|=V and the target is declared bad because |K_w|<V/(1+theta), the example is possible only when
+
+    ((n+t)/(n+1))^d < 1/(1+theta).                        (10)
+
+Writing q=(1+theta)^(-1/d), this implies n<(q-t)/(1-q). Therefore for fixed d,theta,t a genuinely bad middle fiber in this binary geometry has bounded n, independently of its exponentially large number of incident partner fibers. This is a rigorous mechanism by which multi-fiber convexity repairs apparent congestion.
+
+## 4. Affine rank by itself cannot replace the radial invariant
+
+For any r>=1 put n=r+1, w=0, and
+
+    A=G={1} x {0,1}^r.
+
+Then G has affine rank r and 2^r distinct parity classes, but lambda_*=1/2. Indeed the first coordinate of every point in conv(G) and conv(A) is one, so lambda g=(1-lambda)a forces lambda=1/2. This is not just abstract base data: let K be a d-body containing zero, 0<t<1, and
+
+    C=conv((({1} x [0,1]^r) x K)
+           union (({-1} x [-1,0]^r) x tK)).               (11)
+
+It is a full-dimensional convex body. At base zero the mixing coefficient is forced to 1/2 by the first coordinate; the remaining coordinates can cancel. Therefore
+
+    K_0=((1+t)/2)K,
+
+even as r tends to infinity. Thus neither the affine rank nor the number of distinct-parity incoming partners alone forces target volume close to V. The example lacks a positive-volume complete parity core: all positive first-coordinate bases occupy only the odd first-coordinate classes, while at first coordinate zero the only integer base in the projection is the origin. Completing all missing parity classes with large fibers is exactly additional geometry that this obstruction does not address.
+
+## 5. What these lemmas add
+
+The LP (2), its exact dual obstruction (7), and the certificate (5) can be inserted directly into the local-deficit clipping theorem. They prove that every allegedly bad congested target either becomes good by an explicit convex combination or admits a strict separating functional whose high-core values are bounded below and whose incident-partner values lie within the ratio in (7). A complete parity argument controlling these bounded-ratio slabs would be new additional work. It is not justified by affine rank, as (11) shows.

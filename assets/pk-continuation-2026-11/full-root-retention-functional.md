@@ -1,0 +1,203 @@
+# Full Brunn--Minkowski root retention and its exact scalar limits
+
+Status: proposed proved finite optimization, remainder-loss theorem and mixed-depth consumer. The pairwise scalar optimization is the accepted nonlinear complementary-cap transfer `f0399a8f0bae48c6`; the new construction enforces all root supports simultaneously for arbitrary n,d and multiple convex cuts. An alternative proof of the already-covered all-d equal-endpoint three-fiber class is included below; its explicit two-cut bound is compared with the existing intake results in `two-cut-balanced-three-fiber-bound.md`. A separate exact d=2 example disproves a universal sharp conclusion from this scalar consumer, even with optimal universal centroid-cut contractions.
+
+## 1. Setting, supports and the full-root feasible set
+
+Let n>=0,d>=1, let C subset R^n x R^d be a convex body of positive mixed d-volume, and let D={i in Z^n:w_i=|C_i|>0}. This is finite. Write W=sum_i w_i. Fix j in D. Let R_j consist of all affinely independent nonempty E subset D with j in relint conv(E). For each E its unique barycentric weights lambda_i^E are strictly positive and sum to one. This family is finite, and {j} is one of its supports. Every other support excludes j: a strictly positive nontrivial representation involving j would give an affine dependence.
+
+For 0<=t<=1 define F_j(t) as the set of vectors rho in [0,1]^D with the following constraint for every E in R_j:
+
+    either some rho_i=0 for i in E,
+    or sum_(i in E) lambda_i^E (w_i rho_i)^(1/d)
+                                     <=(t w_j)^(1/d).   (1)
+
+Define the full-root retention functional
+
+    Psi_j(t)=min_(rho in F_j(t)) sum_i w_i(1-rho_i).      (2)
+
+The zero-volume alternative in (1) is explicit and indispensable. A zero-volume source fiber in an actual remainder may be empty, and Brunn--Minkowski must not be applied to an empty summand. This optimization deliberately allows every such zero case rather than silently discarding it.
+
+The feasible set is nonempty and compact: for each E, (1) is a finite union of closed sets, and the all-zero vector is feasible. Thus the minimum exists. In fact it reduces to finitely many ordinary compact polytopes. Put r_i=rho_i^(1/d). For each support select either a coordinate i in E forced to zero or the linear inequality
+
+    sum_(i in E) lambda_i^E w_i^(1/d) r_i
+                                      <=w_j^(1/d)t^(1/d).
+
+Each selection gives a compact polytope inside [0,1]^D, and the union of these finitely many polytopes is exactly the transformed feasible set. Maximizing the continuous convex function sum_i w_i r_i^d over each nonempty polytope attains its maximum at a vertex: express any point as a convex combination of its vertices and use convexity. This supplies an exact finite optimization description without assuming any numerical solver result.
+
+## 2. Elementary bounds, continuity and comparison with the min-root functional
+
+Let m_j be the minimum total weight of a subset of D meeting every member of R_j. Every such hitting set contains j because {j} is a support, so m_j>=w_j. The new functional satisfies
+
+    Psi_j(0)=m_j,  Psi_j(1)=0,
+    w_j(1-t)<=Psi_j(t)<=m_j-tw_j<=m_j.                  (3)
+
+For the first lower bound use the singleton {j}, which forces rho_j<=t. At t=0, any feasible vector must have a zero coordinate in every support. Its zero coordinates form a hitting set, and its removed mass is at least the weight of that set. Conversely set a minimum hitting set to zero and all other coordinates to one. This proves Psi_j(0)=m_j.
+
+For the upper bound at general t, take such a minimum hitting set, set rho_j=t, set its other coordinates to zero and every remaining coordinate to one. All nontrivial supports are hit outside j, so their zero alternatives apply; the singleton is satisfied. Its removed mass is m_j-tw_j.
+
+At t=1 the all-one vector is feasible. Indeed convexity gives sum_i lambda_i^E C_i subset C_j, and Brunn--Minkowski applied to these positive-volume fibers gives sum_i lambda_i^E w_i^(1/d)<=w_j^(1/d). Thus Psi_j(1)=0.
+
+The function is nonincreasing and continuous. Monotonicity is immediate from nested feasible sets. If 0<t'<t, scale any feasible rho at t by t'/t. Zero alternatives persist and every nonzero root sum scales by (t'/t)^(1/d). Hence
+
+    0<=Psi_j(t')-Psi_j(t)<=W(1-t'/t).                   (4)
+
+This proves continuity on (0,1]. For t_l decreasing to zero, choose minimizing vectors and pass to a convergent subsequence. The defining closed alternatives, or their finite union, imply that the limit is feasible at zero. Its objective is at least Psi_j(0), whereas monotonicity bounds every Psi_j(t_l) above by Psi_j(0). This proves right continuity at zero.
+
+For comparison, the earlier Phi_j imposed only
+
+    min_(i in E) rho_i <= min(1,t exp(L_E)),
+    L_E=log[w_j/(sum_i lambda_i^E w_i^(1/d))^d].
+
+Every vector satisfying (1) satisfies this weaker constraint. If some coordinate is zero there is nothing to prove; otherwise all coordinates strictly above t exp(L_E) would make the root sum strictly exceed (t w_j)^(1/d). Therefore
+
+    Psi_j(t)>=Phi_j(t).                                 (5)
+
+This is a strengthened source constraint, not a claim that it closes the global OC bound.
+
+## 3. Remainder-loss theorem for actual convex subsets
+
+If K is any compact convex subset of C with |K_j|<=t w_j, then
+
+    mu_C(C minus K)>=Psi_j(t),                          (6)
+
+where mu_C is the original sum of d-volumes on integer fibers. To prove it set rho_i=|K_i|/w_i for i in D. If some chosen support fiber has zero volume, the zero alternative applies. Otherwise every K_i in that support is a nonempty full-dimensional compact convex set, and convexity gives sum_i lambda_i^E K_i subset K_j. Ordinary Brunn--Minkowski yields exactly (1). Thus rho is feasible and its removed mass is the objective in (2), proving (6). Original fibers outside D have zero d-volume and affect neither side.
+
+## 4. Actual-center depth consumer, including all ambient halfspaces
+
+Let gamma_d=(d/(d+1))^d and Q_d=1-gamma_d. For every j in D,
+
+    max_(y in C_j) h_S((j,y))
+          >= sup_(k>=1) Psi_j(Q_d^k)/k.                 (7)
+
+Here h_S is unnormalized halfspace depth with respect to the original mixed measure, and the maximum is attained. This is the same nested centroid-cut construction as before, now using (6).
+
+For completeness, depth is upper semicontinuous for every finite Borel measure: a containing closed halfspace of mass below a threshold can be enlarged slightly while retaining mass below that threshold, by continuity from above; it then contains a neighborhood of the given point. Therefore the depth maximum on compact C_j exists.
+
+Fix k and suppose that maximum is below Psi_j(Q_d^k)/k. Choose delta strictly between them. Since Psi_j<=m_j, delta<m_j. Every vertical ambient halfspace through a point of the target has base index set meeting every support in R_j: if all support bases were strictly outside it, their positive barycentric average j would also be strictly outside it. Its mixed mass is therefore at least m_j. Hence no selected bad cap of mass below delta can have zero continuous normal.
+
+At the true centroid of the current target remainder, choose an original containing ambient cap of measure below delta, translate its boundary to that point, and retain the opposite closed halfspace. Its nonzero continuous normal makes the target trace a genuine ordinary centroid cut. Each current target remains full dimensional, with at least gamma_d of its preceding volume; after k steps its volume is at most Q_d^k w_j. The actual remaining body is a compact convex subset of C, so (6) says its removed original mixed mass is at least Psi_j(Q_d^k). But the union of the k chosen original closed caps has mass below k delta, and contains the removed set. This contradicts the choice of delta and proves (7).
+
+The selected maximizer lies in the actual target fiber C_j. The argument handles all oblique ambient normals; vertical halfspaces were paid explicitly rather than dropped. Closed boundary mass was retained in both the depth semicontinuity and the cap-union comparison.
+
+More generally any proved universal k-step centroid-cut contraction sigma_{d,k} may replace Q_d^k in (7). In particular one may use the optimal universal retained fraction; its finite-k attainment is proved in `uniform-two-centroid-cut-gap.md`.
+
+## 5. Exact three-fiber specialization
+
+Suppose the positive fiber bases are -1,0,1 in one integer dimension, with volumes (a,1,c), where 0<a<=c. The central supports are {0} and {-1,1}. The exact scalar optimization in accepted `f0399a8f0bae48c6` gives
+
+    Psi_0(t)=1-t+F_(a,c)(t),
+    F_(a,c)(t)=[a-(2t^(1/d)-c^(1/d))_+^d]_+.          (8)
+
+Indeed the singleton optimizes at rho_0=t. For the endpoint variables, if one is zero the least removal is a. If both are positive their retained roots sum to at most 2t^(1/d). Equivalently, for total removed mass x<a the minimum possible sum of retained roots occurs when all removal is assigned to the smaller endpoint. This is precisely the elementary concave endpoint optimization proved in the cited accepted scalar lemma; its rearrangement gives (8), with every boundary case included by positive parts. Choosing that endpoint allocation, or zeroing the smaller endpoint when necessary, also shows attainment in the finite optimization, so (8) is equality and not only a lower estimate.
+
+At either extreme base there is only its singleton support, so
+
+    Psi_{-1}(t)=a(1-t),  Psi_1(t)=c(1-t).                (9)
+
+For equal endpoints a=c=s<=1, (8) simplifies to
+
+    Psi_0(t)=1-t                        if t>=s,
+    Psi_0(t)=1-t+s-(2t^(1/d)-s^(1/d))_+^d if t<s.      (10)
+
+## 6. An alternative two-cut proof for the equal-endpoint three-fiber class
+
+Coverage note: pending candidate `660db01ed45063dd` already claims a stronger-than-OC guarantee on this whole equal-endpoint class via a different centroid construction. This section does not claim new class coverage. The direct, dependency-separated version and quantitative comparison are in `two-cut-balanced-three-fiber-bound.md`.
+
+**Theorem.** Let d>=1 and let an actual mixed convex body with one integer coordinate have exactly three positive-volume integer fibers at consecutive bases. Suppose its two endpoint fibers have equal volume. Then some actual point in the middle fiber has normalized mixed halfspace depth at least gamma_d/2, for every closed ambient halfspace. The fibers need not have any common shape, centroid alignment, or symmetry.
+
+Translate the three bases to -1,0,1 and divide all volumes by the middle volume. Brunn--Minkowski at the midpoint forces the equal endpoint ratio s to satisfy 0<s<=1. The total relative volume is 1+2s.
+
+If s<=1/2, the middle centroid alone has raw depth at least gamma_d, which is at least gamma_d(1+2s)/2. Assume s>=1/2. Write gamma=gamma_d and Q=1-gamma. We have
+
+    1/2<=Q<1-1/e<7/11,
+    Q^2<(7/11)^2<1/2<=s.                              (11)
+
+The last estimate uses e<11/4, for example from the exponential series: sum_{r=0}^4 1/r!=65/24 and the tail starting at 1/5! is at most (1/120)/(1-1/6)=1/100, whose sum is less than 11/4.
+
+For positive x<=y, (2x-y)_+<=x^2/y because x^2-y(2x-y)=(x-y)^2>=0. Apply this with x=(Q^2)^(1/d), y=s^(1/d), raise to the dth power, and use (10):
+
+    Psi_0(Q^2)>=1-Q^2+s-Q^4/s.                         (12)
+
+Subtract gamma(1+2s). The resulting expression
+
+    gamma Q+(1-2gamma)s-Q^4/s
+
+increases with s>=1/2, since 1-2gamma>=0 and Q^4/s^2>0. At s=1/2 it equals
+
+    1/2-gamma^2-2Q^4.                                  (13)
+
+The polynomial P(Q)=2Q^4+(1-Q)^2 is increasing for Q>=1/2: P'(Q)=8Q^3+2Q-2 is zero at 1/2 and increasing thereafter. By (11),
+
+    P(Q)<P(7/11)=6738/14641<1/2,
+
+with the exact positive gap 1/2-6738/14641=1165/29282. Thus (13) is positive. Combining (12) with the k=2 case of (7) proves
+
+    max_(y in C_0) h_S((0,y))
+       >= Psi_0(Q^2)/2
+        > gamma(1+2s)/2.
+
+After restoring the middle volume and normalizing by total mixed volume, this is the asserted gamma_d/2 guarantee. The actual depth maximizer supplied in Section 4 is one deterministic point of the middle fiber. No statement about its being the original centroid is made in the s>1/2 regime.
+
+When d=0 and there are exactly three consecutive integer points, the middle point has counting depth 2/3, so it satisfies the d=0 constant 1/2 directly. If endpoint d-volumes vanish in the positive-dimensional setting and the middle is the only positive-volume fiber, its ordinary centroid gives an even stronger gamma_d guarantee; the intrinsic lower-dimensional case is outside this positive-d-volume note.
+
+## 7. Exact failure of the universal scalar bridge, even with optimal contractions
+
+The new full-root functional still cannot be combined only with universal retained fractions to prove sharp OC for arbitrary weights. A small exact counterexample to that proposed bridge already occurs at n=1,d=2.
+
+Let T be a triangle of area one containing the origin, let A=(1/sqrt(10))T, and put
+
+    C=conv( {-1} x A, {0} x T, {1} x T ).
+
+Because (A+T)/2 subset T, these are its exact three integer fibers. The actual volume table is (1/10,1,1), total W=21/10, and the sharp raw OC target is
+
+    (gamma_2/2)W=(4/9)(21/20)=7/15.                   (14)
+
+Let sigma_{2,k} be the optimal universal k-centroid-cut retained fraction. For k=1, sigma_{2,1}=5/9. Since sqrt(1/10)<1/3, the zero-price threshold in (8) is
+
+    M=[(sqrt(1/10)+1)/2]^2<4/9<5/9.
+
+Thus Psi_0(sigma_{2,1})=1-5/9=4/9.
+
+For k=2, a rectangle retained through its centroid twice has one fourth of its original area. Hence sigma_{2,2}>=1/4. Monotonicity and (8) give
+
+    Psi_0(sigma_{2,2})/2
+       <=Psi_0(1/4)/2
+        =[3/4+1/10]/2=17/40<4/9.                     (15)
+
+For every k>=3, (3) gives Psi_0(sigma_{2,k})/k<=m_0/k<=11/30<4/9, because m_0=1+min(1/10,1)=11/10. Therefore the central scalar consumer has supremum exactly 4/9, attained at k=1.
+
+At either endpoint, (9) gives the following three bounds. For k=1,
+its value is exactly (4/9)w_j. For k=2, the same rectangle construction
+gives sigma_{2,2}>=1/4, hence the value is at most 3w_j/8<4w_j/9.
+For every k>=3 it is at most w_j/k<=w_j/3<4w_j/9. Thus both endpoint
+suprema equal (4/9)w_j, attained at k=1.
+
+Combining all targets,
+
+    max_j sup_(k>=1) Psi_j(sigma_{2,k})/k
+           =4/9<7/15,                                (16)
+
+with exact gap 1/45. This is a counterexample only to the indicated scalar bridge, not to OC. It also rules out repairing that bridge by better dimension-specific universal contraction constants or arbitrary finite block lengths. The source is an actual full-dimensional convex body; there is no invented volume table or numerical evidence.
+
+The actual endpoint shapes do not enter the scalar optimization. A potentially stronger next step is to combine Psi with the original-target overlap/all-subset LP in `overlap-retaining-centroid-cut-consumers.md`. Bounds (3) imply its needed r_I<=m_j-w_j, so the exact vertical-normal safeguard remains valid after replacing Phi by Psi. Nonemptiness at the OC level has not been asserted for that combined invariant.
+
+## 8. The two-cut original-cap overlap refinement also fails on this asymmetric example
+
+This is a more geometric obstruction to the two-cut consumer alone; no statement about arbitrary cut counts follows. Use the same d=2 triple from Section 7, with middle triangle T. Let lambda_1,lambda_2,lambda_3 be its barycentric coordinates. Remove the first target cap {lambda_1>=1/3}, which has area a_1=4/9. The second coordinate of the centroid of the retained part of the triangle is 19/45: its original first moment is 1/3, its removed first moment is (4/9)(2/9)=8/81, and division of the difference by retained area 5/9 gives 19/45. The second target centroid cap {lambda_2>=19/45} has original area
+
+    a_2=(26/45)^2=676/2025.
+
+The intersection of the two original caps has area (11/45)^2, so their complement in T has area
+
+    r=1-4/9-676/2025+121/2025=38/135.
+
+In the all-subset outside-atom LP of `overlap-retaining-centroid-cut-consumers.md`, now strengthened by replacing Phi with Psi, the singleton outside credits are zero: 1-a_1>4/9>M and 1-a_2>4/9>M. The pair outside credit is F_(1/10,1)(r)<=1/10. The exact two-cut LP formula is therefore
+
+    L=max{a_1,a_2,[a_1+a_2+F_(1/10,1)(r)]/2}.
+
+Since
+
+    a_2+1/10=8785/20250<9000/20250=4/9=a_1,
+
+its value is exactly L=4/9<7/15. This is an actual sequence of centroid cuts of the middle triangle, with exact original-cap intersections; it is not an arbitrary numerical volume table. Hence the infimum over all two-cut directions in the strengthened overlap consumer is at most 4/9, and cannot supply the sharp target for this example. More cuts, a compatible family of active halfspaces at one deepest point, or additional endpoint-shape information remain possible distinct mechanisms; none is established here.

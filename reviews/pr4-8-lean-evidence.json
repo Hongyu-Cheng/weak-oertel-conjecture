@@ -1,0 +1,737 @@
+{
+  "schema": "merge-review-lean-and-capacity-evidence-v1",
+  "review_date_utc": "2026-11-07",
+  "source_refs": {
+    "repository": "Hongyu-Cheng/weak-oertel-conjecture",
+    "reviewed_head": "2ffd469d639402e465de448fb31dd920eaf7f40a",
+    "pr4_head": "e5bbd45e3cb073e1c030bcc9e07726881d2af8f0",
+    "pr5_head": "00c762ccda2baf1b71fbfef0248921ce45c1085d",
+    "pr7_head": "9c8a32f22558087a07335e76e08f7066e8b36dc6",
+    "pr8_head": "2ffd469d639402e465de448fb31dd920eaf7f40a",
+    "reviewed_lean_tree": "b8fa4bdd1df9cc5ba37932db08b23c9939fe05b2",
+    "pr7_lean_tree": "b8fa4bdd1df9cc5ba37932db08b23c9939fe05b2",
+    "pr5_lean_tree": "11e5d9e0e8d62f9d26a7d6fadb689161fc2c3604",
+    "existing_pr5_files_modified_by_reviewed_head": [
+      "lean/CheckAxioms.lean",
+      "lean/README.md",
+      "lean/SharpOC.lean"
+    ],
+    "pr5_theorem_modules_and_dependency_pins_unchanged": true,
+    "pr8_n52_result_is_not_formalized_in_this_lean_tree": true
+  },
+  "environment": {
+    "toolchain_file": "leanprover/lean4:v4.34.1",
+    "lean_version": "Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+    "lake_version": "Lake version 5.0.0-src+5045d00 (Lean version 4.34.1)",
+    "lean_compiler_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
+    "mathlib_required_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "mathlib_actual_head": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "version_commands_exit_code": 0
+  },
+  "fresh_build": {
+    "working_directory": "lean",
+    "started_at_utc": "2026-11-07T15:21:45+00:00",
+    "finished_at_utc": "2026-11-07T15:23:22+00:00",
+    "exit_code": 0,
+    "elapsed_ms": 96199,
+    "commands": [
+      {
+        "argv": [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 0.022
+      },
+      {
+        "argv": [
+          "lake",
+          "clean",
+          "sharpOC"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 4.821
+      },
+      {
+        "argv": [
+          "lake",
+          "build"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 84.751
+      },
+      {
+        "argv": [
+          "lake",
+          "env",
+          "lean",
+          "CheckAxioms.lean"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 6.539
+      }
+    ],
+    "project_outputs_cleaned": true,
+    "pinned_dependency_cache_retained": true,
+    "all_tracked_sharpoc_modules_freshly_compiled": true,
+    "freshly_compiled_project_module_count": 28,
+    "freshly_compiled_project_modules": [
+      "SharpOC.Constants",
+      "SharpOC.SimplexCaps",
+      "SharpOC.Halfspaces",
+      "SharpOC.BoxParameters",
+      "SharpOC.LatticeGeometry",
+      "SharpOC.SourceGeometry",
+      "SharpOC.BoxFamily",
+      "SharpOC.BodyGeometry",
+      "SharpOC.FamilyCombinatorics",
+      "SharpOC.BoxPowerCertificates",
+      "SharpOC.MiddleSimplex",
+      "SharpOC.BoxFree",
+      "SharpOC.BoxArithmetic",
+      "SharpOC.SourceContainment",
+      "SharpOC.AffineSimplex",
+      "SharpOC.BoxPadding",
+      "SharpOC.TetrahedronVolume",
+      "SharpOC.SourceBasis",
+      "SharpOC.ConcreteBody",
+      "SharpOC.MiddleCuts",
+      "SharpOC.BoxSources",
+      "SharpOC.MixedIntegerMeasure",
+      "SharpOC.CounterexampleMass",
+      "SharpOC.BoxBody",
+      "SharpOC.Counterexample",
+      "SharpOC.BoxCuts",
+      "SharpOC.BoxMeasure",
+      "SharpOC"
+    ],
+    "lake_total_jobs": 8952,
+    "warnings": "Only linter and deprecation warnings; no compilation or axiom-audit error.",
+    "stderr_bytes": 0,
+    "logs_truncated": false,
+    "output_withheld": false
+  },
+  "earlier_incremental_run": {
+    "role": "An earlier successful lake build used cached targets and is not the fresh-compilation evidence relied on here.",
+    "lake_build_exit_code": 0,
+    "lake_build_elapsed_seconds": 17.172,
+    "check_axioms_exit_code": 0,
+    "check_axioms_elapsed_seconds": 62.593
+  },
+  "axioms": {
+    "checker": "lean/CheckAxioms.lean",
+    "policy": "The custom command collects transitive axioms and rejects every axiom outside the three-item allowlist.",
+    "allowed": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "checked_theorem_count": 27,
+    "all_results": [
+      {
+        "theorem": "SharpOC.simplex_cap_measure",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.exposed_simplex_fiber_sum_mass",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.MiddleSimplex.positive_cap_volume",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.SourceGeometry.volume_chartSimplex",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.SourceContainment.K_add_scaled_A",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.Counterexample.body_is_convex_body",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.Counterexample.fiber_exact",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.Counterexample.integer_point_mem_body_iff",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.Counterexample.totalMass_eq",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.Counterexample.every_fiber_point_small_cut",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.Counterexample.mixedIntegerMass_body_cut_toReal",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.Counterexample.sharp_oc_strict_violation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.Counterexample.sharp_oc_counterexample",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.TetrahedronVolume.volume_standardSimplex_three",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxSources.T_volume",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxSources.K_add_sum_A",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxSources.cap_volume",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxCounterexample.body_is_convex_body",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxCounterexample.integer_point_mem_body_iff",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxCounterexample.integer_fiber_exact",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxCounterexample.middle_cut_mass",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxCounterexample.mixedIntegerMass_paddedBody_toReal",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxCounterexample.padded_fibers_full_dimensional",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxPadding.exposed_product_simplex_fiber_sum_mass",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxParameters.scalar_depth_bound",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxCounterexample.point_has_small_halfspace",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "theorem": "SharpOC.BoxCounterexample.one_over_e_counterexample",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "nonstandard_axioms_found": [],
+    "project_source_escape_hatch_scan": "No actual sorry, admit, axiom, or native_decide declaration/use; text matches were comments."
+  },
+  "semantics": {
+    "sharp_theorem": "SharpOC.Counterexample.sharp_oc_counterexample",
+    "sharp_integer_dimension": "3 * 10^92",
+    "sharp_continuous_dimension": 23,
+    "sharp_uniform_depth_bound": "r < ((23/24)^23) / 2^(3 * 10^92)",
+    "one_over_e_theorem": "SharpOC.BoxCounterexample.one_over_e_counterexample",
+    "one_over_e_integer_dimension": 76,
+    "one_over_e_continuous_dimension": "1372131 + 2^93",
+    "one_over_e_uniform_depth_bound": "r < 1 / (exp(1) * 2^76)",
+    "mass": "Actual countable sum over integer vectors of the Lebesgue volume of the corresponding continuous fiber.",
+    "properties_checked": [
+      "compact body",
+      "convex body",
+      "nonempty ambient interior",
+      "positive finite actual mixed-integer mass",
+      "every nonempty fiber has interior",
+      "one r chosen before all query points",
+      "every mixed-integer query point in the body",
+      "proper continuous-linear closed halfspace containing that query point",
+      "actual cut-mass/body-mass ratio"
+    ],
+    "limitation": "These statements refute the displayed sharp and fixed 1/e constants. They do not refute the existence of an unspecified positive absolute constant c0.",
+    "additional_limitations": [
+      "The final statements do not separately assert rational vertices or rational polyhedrality.",
+      "PR8's improved n=52 construction needs its separate mathematical/exact-arithmetic review."
+    ]
+  },
+  "seven_fact_identity_checks": [
+    {
+      "id": "2d4e949d29014223",
+      "candidate_sha256": "46e7e1513e6455e1817d725ec2391940c9950550a4e6ba489a760480cf8a1bd5",
+      "fact_sha256": "4435800aeca7644cad2d8f30326a5154587cae753a9c3e8c8ee319edbf39efa4",
+      "identical_to_pr4_head": true,
+      "candidate_proof_and_statement_match_fact": true
+    },
+    {
+      "id": "c8fa242cfc3e441b",
+      "candidate_sha256": "15948958f37f3e786970a5e607accf46dfb62124f0c02441185e0d9c8f18c9ed",
+      "fact_sha256": "7fa73d036eb1d02e27eb9a1b09159c4cf067b9db25465440589d54991d5fc432",
+      "identical_to_pr4_head": true,
+      "candidate_proof_and_statement_match_fact": true
+    },
+    {
+      "id": "e96fd7e3557042b0",
+      "candidate_sha256": "e77e9a004f4da8174cf62a6d6f3bfda708ece717e2b17c009e2db52c0890e9b8",
+      "fact_sha256": "66db9b80b359da455b33c04ff065dd2d6d827570016480a939649b0f3b853697",
+      "identical_to_pr4_head": true,
+      "candidate_proof_and_statement_match_fact": true
+    },
+    {
+      "id": "e9f4abbc5f9a4527",
+      "candidate_sha256": "668c62c41270d3dd4661105497245a14efb60d588c5a7a1024d71a2e7719fb73",
+      "fact_sha256": "228ff988e897e48b8c7c1f780385b08c7cd28fba4a8478f29adfc68f7c3c34e8",
+      "identical_to_pr4_head": true,
+      "candidate_proof_and_statement_match_fact": true
+    },
+    {
+      "id": "784cde0d72dd4319",
+      "candidate_sha256": "6e8a8b1dd6ab6e728a71c931206099e633518d7b61f80ac8642f260f8d881b0b",
+      "fact_sha256": "b020601c4848a84d9c8dad31296de9642576a49f59623a5d7d910473c4d3e45e",
+      "identical_to_pr4_head": true,
+      "candidate_proof_and_statement_match_fact": true
+    },
+    {
+      "id": "e8b040625fe84794",
+      "candidate_sha256": "659fd3e711709421670e91124a9f1cf181f051b0455c32cad52b19a896c59c3b",
+      "fact_sha256": "a035c580533b0c293c5664c38af3c4ca665efc442366cc63d88a61c3fec3f705",
+      "identical_to_pr4_head": true,
+      "candidate_proof_and_statement_match_fact": true
+    },
+    {
+      "id": "ec5c31b8951c4417",
+      "candidate_sha256": "6eddedddd8ec27161b4ae6dd895fdb9749f422be2547407e8b8033aa764e6ab1",
+      "fact_sha256": "7ee4f89569f4b1ceb19fdce9f9a6e2ba47ec59dc9208ff0b68f36525da13d8df",
+      "identical_to_pr4_head": true,
+      "candidate_proof_and_statement_match_fact": true
+    }
+  ],
+  "capacity_checker_correction": {
+    "issue": "For an empty active set, denominator was int 1 and 1 / denominator produced float 1.0. The pure-root norms then contaminated the final product, so exact_capacity_upper_squared was reported as a floating decimal.",
+    "mathematical_impact": "The independent integer table comparisons were exact already and all remain unchanged. No mathematical statement or proof changed.",
+    "fix": "Use Q(1) / denominator and require Fraction types for coordinates, squared norms, and the final squared bound.",
+    "files": [
+      "assets/pk-continuation-2026-11/check_actual_sign_cone_vertex_bounds.py",
+      "assets/pk-continuation-2026-11/audit-actual-sign-cone-vertex-bounds.json"
+    ],
+    "file_sha256": {
+      "assets/pk-continuation-2026-11/check_actual_sign_cone_vertex_bounds.py": "46b043490190a735038b3cf07b8825522fde99efce7f6226f907d25a1aade7e5",
+      "assets/pk-continuation-2026-11/audit-actual-sign-cone-vertex-bounds.json": "8a2787af79fa34780e9bdf9766939899b8c27cea13c2cc47038ab1cc9ca1dbb7"
+    },
+    "report_changed_fields_only": [
+      "top_six_vertex_norms_squared root string normalization",
+      "exact_capacity_upper_squared float to rational"
+    ],
+    "all_15_integer_table_rows_unchanged": true,
+    "regeneration": {
+      "working_directory": ".",
+      "argv": [
+        "python3",
+        "-B",
+        "assets/pk-continuation-2026-11/check_actual_sign_cone_vertex_bounds.py",
+        "--report",
+        "assets/pk-continuation-2026-11/audit-actual-sign-cone-vertex-bounds.json"
+      ],
+      "exit_code": 0,
+      "elapsed_ms": 134,
+      "stdout": "{\n  \"verdict\": \"PASS_ACTUAL_SIMPLEX_CAPACITY_UPPER_BOUNDS\",\n  \"input_sha256\": \"99bb5c36c4b5e1ae2eda699ce0045cb753b968e18f77f98e7d71edab974b66dd\",\n  \"all_two_hit_cones\": 15,\n  \"vertices_examined\": 480,\n  \"uniform_strict_relative_capacity_upper_bound\": \"1/40\",\n  \"scope\": \"All source simplices of relative volume at least 1/32 must hit at least three rows for this particular rational matrix. No assertion is made for arbitrary stochastic matrices or arbitrary fans.\"\n}\n[1, 2] 30061 [862, 829, 816, 736]\n[1, 3] 28245 [854, 812, 783, 749]\n[1, 4] 28777 [856, 838, 802, 797]\n[1, 5] 30021 [863, 844, 794, 746]\n[1, 6] 31900 [874, 839, 781, 753]\n[2, 3] 29317 [859, 802, 783, 742]\n[2, 4] 28477 [882, 846, 786, 772]\n[2, 5] 31895 [857, 856, 832, 724]\n[2, 6] 28940 [852, 794, 786, 720]\n[3, 4] 29942 [851, 841, 812, 804]\n[3, 5] 31633 [856, 846, 788, 745]\n[3, 6] 29635 [838, 802, 800, 759]\n[4, 5] 26492 [856, 849, 782, 746]\n[4, 6] 27858 [852, 839, 761, 755]\n[5, 6] 28728 [856, 840, 760, 749]\n",
+      "stderr": ""
+    },
+    "manifest_reference_search": {
+      "argv": [
+        "rg",
+        "-l",
+        "check_actual_sign_cone_vertex_bounds\\.py|audit-actual-sign-cone-vertex-bounds\\.json",
+        "assets",
+        "--glob",
+        "*.json"
+      ],
+      "exit_code": 1,
+      "interpretation": "No matching asset JSON references, including no manifest entry to update."
+    }
+  },
+  "independent_fraction_only_replay": {
+    "working_directory": ".",
+    "argv": [
+      "python3",
+      "-B",
+      "-c",
+      "\nfrom fractions import Fraction as Q\nfrom itertools import combinations\nfrom math import isqrt, prod\nfrom pathlib import Path\nimport json, sys, hashlib\nbase=Path('assets/pk-continuation-2026-11')\nsys.path.insert(0,str(base))\nfrom check_absorption_relaxation_certificate import solve\ndata=json.loads((base/'absorption-relaxation-rational-certificate.json').read_text())\nP=[[Q(x,data['denominator']) for x in row] for row in data['P_integer_rows']]\nexpected=[\n([1,2],30061,[862,829,816,736]),([1,3],28245,[854,812,783,749]),\n([1,4],28777,[856,838,802,797]),([1,5],30021,[863,844,794,746]),\n([1,6],31900,[874,839,781,753]),([2,3],29317,[859,802,783,742]),\n([2,4],28477,[882,846,786,772]),([2,5],31895,[857,856,832,724]),\n([2,6],28940,[852,794,786,720]),([3,4],29942,[851,841,812,804]),\n([3,5],31633,[856,846,788,745]),([3,6],29635,[838,802,800,759]),\n([4,5],26492,[856,849,782,746]),([4,6],27858,[852,839,761,755]),\n([5,6],28728,[856,840,760,749])]\nrecords=[]\nfor R,table in zip(combinations(range(6),2),expected):\n J=[j for j in range(6) if j not in R]\n H=solve([[Q(i==j)-P[i][j] for j in J] for i in J],[[P[i][r] for r in R] for i in J])\n assert all(sum(row)==1 and all(x>0 for x in row) for row in H)\n maxima=[max(row) for row in H]\n scale=10**8\n t=[Q(scale,isqrt(m.numerator*scale**2//m.denominator)+1) for m in maxima]\n assert all(tj**2*m<1 for tj,m in zip(t,maxima))\n det=prod([1+tj for tj in t],start=Q(1))\n vertices=[]\n for r in R:\n  for k in range(len(J)+1):\n   for A in combinations(J,k):\n    h=[row[0] for row in solve([[Q(i==j)-P[i][j] for j in A] for i in A],[[P[i][r]] for i in A])] if A else []\n    den=Q(1)+sum(h,Q(0))\n    v=[Q(0) for _ in range(6)]\n    v[r]=Q(1)/den\n    for j,hj in zip(A,h):v[j]=hj/den\n    assert all(isinstance(x,Q) for x in v)\n    assert sum(v)==1 and all(x>=0 for x in v)\n    assert all(v[j]<=sum(P[j][i]*v[i] for i in range(6)) for j in J)\n    assert all(v[j]==sum(P[j][i]*v[i] for i in range(6)) for j in A)\n    assert {i for i,x in enumerate(v) if x>0} == set(A)|{r}\n    Tv=[(1+t[k])*v[j] for k,j in enumerate(J)]+[v[r0]-sum(H[k][ell]*t[k]*v[j] for k,j in enumerate(J)) for ell,r0 in enumerate(R)]\n    norm2=sum((x*x for x in Tv),Q(0))\n    assert isinstance(norm2,Q) and sum(Tv)==1 and Q(0)<norm2<=Q(1)\n    vertices.append((norm2,tuple(v)))\n assert len(vertices)==32 and len({v for _,v in vertices})==32\n vertices.sort(reverse=True)\n assert vertices[0][0]==vertices[1][0]==1 and all(x[0]<1 for x in vertices[2:])\n top=[x[0] for x in vertices[:6]]\n bound2=prod(top,start=Q(1))/det**2\n assert isinstance(bound2,Q) and bound2<Q(1,1600)\n a=det.numerator*1000//det.denominator\n q=[-(-n.numerator*1000//n.denominator) for n in top[2:]]\n assert [r+1 for r in R]==table[0] and a==table[1] and q==table[2]\n assert Q(a,1000)<=det and all(n<=Q(qj,1000) for n,qj in zip(top[2:],q))\n gap=10**6*a*a-1600*prod(q)\n assert gap>0\n records.append({'roots':[r+1 for r in R],'vertices':len(vertices),'a':a,'q':q,'integer_gap':gap,'exact_bound_squared':str(bound2)})\nprint(json.dumps({'verdict':'PASS_FRACTION_ONLY_480_VERTEX_REPLAY','all_cones':len(records),'all_vertices':sum(r['vertices'] for r in records),'all_table_entries_match_proof':True,'all_rational_types_asserted':True,'bound':'1/40','minimum_integer_gap':min(r['integer_gap'] for r in records),'records':records},indent=2))\n"
+    ],
+    "exit_code": 0,
+    "elapsed_ms": 116,
+    "reused_component": "The separately inspected exact Gaussian-elimination helper solve(A, B). The vertex enumeration, type checks, cone constraints, norms, proof-table comparison, and bound calculation were independently assembled.",
+    "result": {
+      "verdict": "PASS_FRACTION_ONLY_480_VERTEX_REPLAY",
+      "all_cones": 15,
+      "all_vertices": 480,
+      "all_table_entries_match_proof": true,
+      "all_rational_types_asserted": true,
+      "bound": "1/40",
+      "minimum_integer_gap": 23486702771200,
+      "records": [
+        {
+          "roots": [
+            1,
+            2
+          ],
+          "vertices": 32,
+          "a": 30061,
+          "q": [
+            862,
+            829,
+            816,
+            736
+          ],
+          "integer_gap": 216991067483200,
+          "exact_bound_squared": "19594221348969467960693226482498642844328338455314812570837734074554252650598080649679759290987200219606268178428186279026714741827015040013990337888352909225793913836591079081675905409758421026072286319435345326193206230546105972459906157671389285221096529051060192292851621443334889682998648023015942678140796005261811819832221/41320386167889413812713087584538033806704335626980483257213696445591414077263522536572174719224946273903176848084162618412003970952786777702773682494574544790100404310989546064651825799766825361848927814707562266901130809757246605725709224422736227648493706421938995518440175799984288237035294245950011869470828322060008448405835419"
+        },
+        {
+          "roots": [
+            1,
+            3
+          ],
+          "vertices": 32,
+          "a": 28245,
+          "q": [
+            854,
+            812,
+            783,
+            749
+          ],
+          "integer_gap": 147085035854400,
+          "exact_bound_squared": "16436380512543201317202384148411729756517962700826585645636353321836593077109596835937090506811274052603964248778061696134368971246836936050024570473969830767893440048167336500051202925629941085642272514317541180540132626438651179674619440952735148262925939042694678025073/32354066394919900257705465029934404809196356943327069453558099957176316569129189314182812236887323384779709816574690812596664612462075365805457832454447656395606201508595195306241461033059175317268435663488149136091561646372770076559321509729155017968716988603954434829990889"
+        },
+        {
+          "roots": [
+            1,
+            4
+          ],
+          "vertices": 32,
+          "a": 28777,
+          "q": [
+            856,
+            838,
+            802,
+            797
+          ],
+          "integer_gap": 94496923188800,
+          "exact_bound_squared": "15765483823818324230611691360730566536875723858235861088272208210364274646740535971179730917551135870320650861920854292152071877551846720660785822801255480393868125203962713930890464720369321781219512537067035615724166465711265467/28544668530458063000853248296926660588024327527575087482363535810018327240077113844943958113287351566343776230919852167553313262058745671065379842189426748318042338538202806639462531376778663624127659219832193696172268040872916136200"
+        },
+        {
+          "roots": [
+            1,
+            5
+          ],
+          "vertices": 32,
+          "a": 30021,
+          "q": [
+            863,
+            844,
+            794,
+            746
+          ],
+          "integer_gap": 210968894555200,
+          "exact_bound_squared": "17204510323688572298064758801825691672625835045119500314956210728583688966670194585616600671861353047658740903949017109637990595367232822752692390868908163959580167547336212870582371134535905818004364229931492258306220690129952473393509583216598761961418047910616165516132578753236014593085471747/36043063968356232699037558930739347932917258886192206687913951540695308066559615970425681577883197701446616450218780591934445539039085170244005796570918826305614870600652326273684489313272154475257692806519944907001684157068810824422735813671841096487944464280297912591184944818804249830099440592467"
+        },
+        {
+          "roots": [
+            1,
+            6
+          ],
+          "vertices": 32,
+          "a": 31900,
+          "q": [
+            874,
+            839,
+            781,
+            753
+          ],
+          "integer_gap": 327625418243200,
+          "exact_bound_squared": "6278157313057665679749720820209710479411087008202133692642706960855956493590490483552146873678055243260360166259218143956249945459948795285668197844411312296936126701470411891365784719722385853700542144544848636584947566051916369335102164965952310977267144208928707/14854528581547926041545270763329408889392961561289224856157550773343364450114347561319436291506762639421047488594621561028802380901201325666050754405496628853267311096302470062590431989731804414689737325704260901126315939833093325528642645198139327357215879231319457927"
+        },
+        {
+          "roots": [
+            2,
+            3
+          ],
+          "vertices": 32,
+          "a": 29317,
+          "q": [
+            859,
+            802,
+            783,
+            742
+          ],
+          "integer_gap": 219083747963200,
+          "exact_bound_squared": "192384349744614684197427549117526438769082359073859491199128878502652041399441070902090502519020118290900242851551084724373776881162683603741076898798857123687981722570999393192152687504154987764319964750415872731322093285817109153032938828925183079804405436976097729862557516111/414162998634439391800541332901627899399065267253168546025769899221430545579429665529175516747216191872298664235169857414516596779224777137498874208027393727542073167652737822254160498354127744528826381668549668810649811574003603339603645892786826429822108734008705164302346897850368"
+        },
+        {
+          "roots": [
+            2,
+            4
+          ],
+          "vertices": 32,
+          "a": 28477,
+          "q": [
+            882,
+            846,
+            786,
+            772
+          ],
+          "integer_gap": 86505608641600,
+          "exact_bound_squared": "17405221335866140673370627849112809381705187189780869598502957785064936041482661174915343502295566549147025774698015542432995273208957015305982676834118146303870807289623007757388805652889279082393460364977822034752029889107504967036516686589894250688734748105658159572072676694542182490736185674273/31249162499821912075389092789925970856475474408463583745294241386315324578881019811613007412798964669980126341355496212004158094810302869800975006309113007472462481248755284704727592239286984854089261525533644687858174822526714605531297069100124695192216052313253755074871469456866443930558734904628168"
+        },
+        {
+          "roots": [
+            2,
+            5
+          ],
+          "vertices": 32,
+          "a": 31895,
+          "q": [
+            857,
+            856,
+            832,
+            724
+          ],
+          "integer_gap": 310263271630400,
+          "exact_bound_squared": "196679445817262135924375221495510771355889497569225546272627690789222061840995629106509671298702210575066013889726753871523873245480176162769499464487323682516385665639872062764398511623380689652491150860917179935824106500534992542632461540234008131847934101311622224080374726329007618523603434444874501/453681700099831662096796531725879869833209290090015995628719715017410928500647777353527771257695448727399904264609948344339171694933861416973377591522275027095753224995300530361005761856161519301579130206272145521016590657612558115791629334055445223472131612639331568971376105392127208945007944125395933005"
+        },
+        {
+          "roots": [
+            2,
+            6
+          ],
+          "vertices": 32,
+          "a": 28940,
+          "q": [
+            852,
+            794,
+            786,
+            720
+          ],
+          "integer_gap": 224982657664000,
+          "exact_bound_squared": "24547321257696555201982165847316132826967952061594017780250956460531420838742969177468437859920085087554497406239732533773220340279493044037139390927567522509327835775423955403579638450660028049022698244502115061891228708856085763853204847592400463457062746528110246695500818920446552822038125/53786177563548310623443348463571698282240244194214998884417351330221578394268800606329812162954492444222294801517908710243973571713157242129632993352960454741040638344351852881548527728927586830020349544416821545085751461758493477339400391067761327249114829348444012583970075294491281545245757049"
+        },
+        {
+          "roots": [
+            3,
+            4
+          ],
+          "vertices": 32,
+          "a": 29942,
+          "q": [
+            851,
+            841,
+            812,
+            804
+          ],
+          "integer_gap": 148943463251200,
+          "exact_bound_squared": "174017325411953416160387381444275793903067685371137009940246368032931411467725344298654880347089531496836541454014137684969324791876084680210071491078225224359382511868190850577278023340423010310327488667830508714625613261572819174778617450995932135286490485306500033454182493709/334866351363717010944143103663320074626857120254824668373380724455937602192286605714358414298366978066299582468422186252280480175010022973690521881060688165981503819546022636142967345139604652482187211442328872444637216855292759460832479201116146690555038976993891191348912494881856"
+        },
+        {
+          "roots": [
+            3,
+            5
+          ],
+          "vertices": 32,
+          "a": 31633,
+          "q": [
+            856,
+            846,
+            788,
+            745
+          ],
+          "integer_gap": 320431068904000,
+          "exact_bound_squared": "1540932079552909243247917937410994641241275784780139604221427374360654353135013349869884844479376086643535429338510807198745545133114569402255466236603270361729322649206550954873955287308203031819294083126970786347585555573757087093118811497577779196848800961790688518165690107940157/3634081551372859018447686907942235240933017569663992411892272916193863580468644769104477778372246928252401121504983388034306348943315213250041281620801112527358218934644146906497055477831544862421801118446863272151004048591538641518856921426676230619004169020634263304528704142083590400"
+        },
+        {
+          "roots": [
+            3,
+            6
+          ],
+          "vertices": 32,
+          "a": 29635,
+          "q": [
+            838,
+            802,
+            800,
+            759
+          ],
+          "integer_gap": 225297949480000,
+          "exact_bound_squared": "81245577003769022521078413668324137283568296833627485926265447092608676973983893549302023766845550140142877868661271538945768342340251789480065237341477627377330699457205356491302745158125974167578718864222067157414264595599246778266319664707195188989936395612236122544962/175204565033244385387829869033516735455829411161666852879487746895245274039069571243505238386956653082661150986875123609393615751428654843942550054497091344983385126854706013913523269888112813282656347392353598750623069214321851275476479777164909862629811869953099040269546275"
+        },
+        {
+          "roots": [
+            4,
+            5
+          ],
+          "vertices": 32,
+          "a": 26492,
+          "q": [
+            856,
+            849,
+            782,
+            746
+          ],
+          "integer_gap": 23486702771200,
+          "exact_bound_squared": "739237097252792907394514219526159746392742236437530338491468908633496684187664637140327058730217957461295444522095513052123963277508779607289968768914144149968022107375138332559180673666350579234667430478424868942800454915169/1227580284285846859470000308266999505229606665055347377934488161970335691625524925647447807009915233185926311386187972489655751690920027252531470286299032339814883178557898397912816944937259017754701641264136067420737369433159368"
+        },
+        {
+          "roots": [
+            4,
+            6
+          ],
+          "vertices": 32,
+          "a": 27858,
+          "q": [
+            852,
+            839,
+            761,
+            755
+          ],
+          "integer_gap": 118935361536000,
+          "exact_bound_squared": "1425856917200250470046299933577312848988938957293989715281745798976661995452760965308273083397938681686641996040157764053533886701801626243135417605303318957012500318222437271173302162157423662026125232060783459422909638922913218277/2703220908090996678538624558217666261727374830100148510839296630064360105350457679769567919030750261548194774103041529955604500907940283708563437526132976750824313313454755598612749913272363297219221679070351115608147123133892596640576"
+        },
+        {
+          "roots": [
+            5,
+            6
+          ],
+          "vertices": 32,
+          "a": 28728,
+          "q": [
+            856,
+            840,
+            760,
+            749
+          ],
+          "integer_gap": 170407856640000,
+          "exact_bound_squared": "208539564624316906586776230793984861572038528285893875453999970144687650253063249729579445071824806493758295936660770323591822383412557684147016082603084263340093230838772593043075216000592393453600118477620696406346652561331543174025705263094666480211116483090479127270214709315371345643/421329935226453596887423721684624712572741514051221199217622499272616949501661620735949431391977808765044193183488743738309653825930420418666088417733082403328662709739185997851658795563526204230261124242404735817159589197794788609210190802365142833128147435912456167263536387883172112924552"
+        }
+      ]
+    }
+  }
+}

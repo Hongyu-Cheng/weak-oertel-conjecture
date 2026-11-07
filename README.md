@@ -10,6 +10,8 @@ Start with the highlights below, then follow a fact's `depends_on` IDs. The [com
 
 The initial snapshot contains 1,235 accepted facts: 712 theorems, 317 lemmas, and 206 counterexamples to intermediate claims. Its latest acceptance is dated 29 October 2026. Those initial facts have the recorded assurance label `LLM-verified` and their original model-verification records. Later additions state their review method explicitly in their own records. This label does not assert human review or formal certification. Counterexamples to intermediate mechanisms do not disprove the general conjecture.
 
+On 7 November 2026, the integration review of PRs #4–#8 covered all **39 newly accepted facts**, bringing the graph to **1,280 accepted facts**, 2,571 candidates, and 1,340 verification runs. The lead assistant and three separate AI reviewers checked the proofs, reran the exact counterexample certificates, and freshly compiled the complete Lean project. A supporting sign-cone checker was corrected to keep every arithmetic value rational; its mathematical certificate remains valid. The [integration review and reproducible evidence](reviews/pr4-8-integration-review.md) record the exact revisions, individual proof coverage, fix, checks, and formalization limits. This review does not imply human certification or approval of the remaining pending submissions.
+
 The recorded subgoal statuses are research history, not a freshly reviewed list of available assignments. Some subgoals mention unshared research notes; reconstruct their mathematical target from accepted facts before using them. The README highlights are navigation aids, not an additional verification of the results.
 
 ## PK November 6 contribution

@@ -4,6 +4,9 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 0 | counterexample | nov7-sharp-total-dimension-187 | [ad3e63c52f083457](facts/ad3e63c52f083457.md) |
+| 1 | counterexample | nov7-simplex-factor-one-over-e-n52 | [cbe1f4518f7088a7](facts/cbe1f4518f7088a7.md) |
+| 0 | theorem | nov7-fiber-count-one-over-e-obstruction | [30b899ae9d94a523](facts/30b899ae9d94a523.md) |
 | 0 | counterexample | pk-nov7-exact-one-over-e-counterexample-n52 | [df488edae05a1702](facts/df488edae05a1702.md) |
 | 0 | counterexample | pk-nov7-exact-one-over-e-counterexample-n76 | [a5291bca09ba4b1e](facts/a5291bca09ba4b1e.md) |
 | 1 | theorem | pk-nov6-high-arity-centroid-repair | [ef6cc6d9e2fd4c8e](facts/ef6cc6d9e2fd4c8e.md) |

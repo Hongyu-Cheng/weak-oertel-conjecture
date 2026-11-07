@@ -14,13 +14,19 @@ On 7 November 2026, the integration review of PRs #4–#8 covered all **39 newly
 
 The recorded subgoal statuses are research history, not a freshly reviewed list of available assignments. Some subgoals mention unshared research notes; reconstruct their mathematical target from accepted facts before using them. The README highlights are navigation aids, not an additional verification of the results.
 
+## Counterexamples of total dimension 187
+
+The [dimension-reduction submission](research/dimension-reduction-2026-11-07/README.md) gives rational counterexamples to the sharp bound $\Gamma_d/2^n$, where $\Gamma_d=(d/(d+1))^d$, at **(n,d)=(153,34), (132,82), and (129,104)**. The smallest displayed total dimension is **187**. Their actual fibers and every-point halfspace bounds are proved, and their maximum depths are determined exactly. These examples satisfy the weaker $1/(e2^n)$ bound; **the target n+d<100 remains unresolved**.
+
+The same submission improves the specific $1/e$ counterexample to **n=52, d=1,345,226,000,000,000,003**, using one simplex factor for both amplification and caps. It also proves the support-count obstruction that forces $d\ge68,727,866,368$ for any $1/e$ counterexample on the old n=52 support. The three new records bring the graph to **1,283 accepted facts**, 2,574 candidates, and 1,343 verification runs. Independent mathematical reviews and exact rational checks are recorded with `LLM-verified` assurance; these additions are not Lean-formalized. See the [final publication review](research/dimension-reduction-2026-11-07/publication-review.md).
+
 ## PK November 6 contribution
 
 See [the short contribution guide](contributions-PK-nov-6-merge.md) for the main additions and [the complete pending-submission index](assets/pk-nov6/INDEX.md) for the wider collection. The original mathematical notes, computations, and historical review comments remain preserved pending intake. They did not themselves change the accepted facts or the target.
 
 On 6 November 2026 (America/New_York), six atomic claims from the near-parity-core proof were accepted after direct ChatGPT mathematical review, including [the sharp complete-parity-core theorem](facts/3fad02a5aa48ae2a.md). That review brought the accepted graph to **1,241 facts**. All original intake files and their pending statuses are unchanged; the normalized accepted replacements and exact scope are listed in [the review report](reviews/pk-parity-core-issue2.md). Each new node has a fresh review record and a closed accepted dependency chain. The same assistant edited and reviewed the normalization; no second-model, human, or formal review is implied. The other imported claims have not been batch-approved.
 
-The [subsequent continuation](assets/pk-continuation-2026-11/README.md) adds separately reviewed facts. Its latest result is an [explicit counterexample to the specific 1/(e*2^n) bound](facts/df488edae05a1702.md) with **n=52** and **d=274784+2^61**, about **2.31×10^18**. Two independent mathematical reviews and an exact rational certificate cover the actual fibers and every mixed-integer point; see the [review report](reviews/pk-n52-counterexample.md). This is an intermediate dimension reduction and is **not Lean-formalized**. It remains far above a billion continuous variables. It refutes the particular constant 1/e, not this repository's target of some smaller positive absolute constant. The original pending intake retains its existing status.
+The [subsequent continuation](assets/pk-continuation-2026-11/README.md) adds separately reviewed facts. Its earlier [explicit counterexample to the specific 1/(e*2^n) bound](facts/df488edae05a1702.md) has **n=52** and **d=274784+2^61**, about **2.31×10^18**. Two independent mathematical reviews and an exact rational certificate cover the actual fibers and every mixed-integer point; see the [review report](reviews/pk-n52-counterexample.md). This is an intermediate dimension reduction and is **not Lean-formalized**. It remains far above a billion continuous variables. It refutes the particular constant 1/e, not this repository's target of some smaller positive absolute constant. The original pending intake retains its existing status.
 
 A [six-page writeup](output/pdf/oertel-52-integer-variables.pdf) explains the new Boolean family of outer fibers, the affine proof that the origin fiber is exact, and the mass surplus that permits smaller simplex padding. Its [LaTeX source](assets/pk-continuation-2026-11/oertel-52-integer-variables.tex) is included.
 
@@ -61,6 +67,9 @@ These curated names come from the existing project overview. Rows give the longe
 
 Recent additions beyond the curated overview:
 
+- [Sharp counterexamples with total dimension 187 and further tradeoffs](facts/ad3e63c52f083457.md)
+- [A smaller n=52 counterexample using one simplex factor](facts/cbe1f4518f7088a7.md)
+- [A support-count obstruction for the specific 1/e bound](facts/30b899ae9d94a523.md)
 - [A 52-integer-variable counterexample to the specific 1/e bound](facts/df488edae05a1702.md)
 - [Sharp complete-parity-core theorem, with six-node verified dependency chain](facts/3fad02a5aa48ae2a.md)
 - [oct29-dominant-clique-lacunary-product](facts/0e1d1c8120a9ffff.md)

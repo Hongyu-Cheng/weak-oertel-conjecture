@@ -8,7 +8,19 @@ proof-assistant certification.
 
 ## Latest continuation: read these first
 
-- **The specific 1/(e*2^n) bound now fails with n=76.** The
+- **The latest counterexample has n=52 and d=274784+2^61.** The
+  [complete proof](facts/df488edae05a1702.md) replaces negative unit fibers
+  by all nonempty negative Boolean subsets in four blocks. It proves a
+  uniform depth bound strictly below 1/(e*2^52) for every actual
+  mixed-integer point. The [review guide](reviews/pk-n52-counterexample.md),
+  [exact checker](assets/pk-continuation-2026-11/check_integer_dimension_52.py),
+  and [six-page writeup](output/pdf/oertel-52-integer-variables.pdf) give
+  the geometry, strict arithmetic certificate, and reproduction steps.
+  This result is LLM-reviewed and exact-arithmetic certified; it is not
+  Lean-formalized. It refutes the particular constant 1/e and the sharp
+  bound, while the smaller-positive-constant target remains open.
+
+- **The earlier n=76 counterexample is Lean-formalized.** The
   [four-source construction](assets/pk-continuation-2026-11/barycentric-box-source-counterexample.md)
   and its [smaller-padding parameters](assets/pk-continuation-2026-11/integer-dimension-76-counterexample.md)
   give a full-dimensional rational polytope with d=1372131+2^93.

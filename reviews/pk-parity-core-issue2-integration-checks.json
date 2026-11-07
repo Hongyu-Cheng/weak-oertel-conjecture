@@ -1,0 +1,52 @@
+{
+  "checked_base_commit": "5180912bf56ac6de41c92dd5b2329c3e29b4e1b6",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check_graph.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "11ba3b1623198df9feb16dcbbaee8ac6ebb90da0d95e30a581099d57ba843da2",
+      "stderr": "",
+      "stdout": "OK: 1241 facts, 2514 candidates, 1297 verification runs; maximum depth 44.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check_pk_nov6.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "395b77f00bfe2c16599abc5c4e7a9fd73df1c05963d4a0ca234d9e3afdef7d75",
+      "stderr": "",
+      "stdout": "OK: 1217 pending mathematical submissions; 1058 supporting files; 654 historical mathematical comments.\nPackaging and reference checks only; no mathematical approval.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check_pk_parity_core.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "e80e9ee13b2d214dd63ee3aba3faf0956a7715f77ec58ce9c3b8e6248dec30f9",
+      "stderr": "",
+      "stdout": "OK: six directly reviewed atomic nodes, exact review hashes, closed dependencies, preserved source bytes and complete current fact index.\nOK: 59 exact dimension calibrations, 5334 arbitrary-transversal reflection checks, and five strict averaging calibrations.\nThese checks validate records and finite regressions; mathematical approval is documented in the six direct-review records.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/check_pk_parity_core.py",
+        "--integration-baseline"
+      ],
+      "exit_code": 0,
+      "script_sha256": "e80e9ee13b2d214dd63ee3aba3faf0956a7715f77ec58ce9c3b8e6248dec30f9",
+      "stderr": "",
+      "stdout": "OK: six directly reviewed atomic nodes, exact review hashes, closed dependencies, preserved source bytes and complete current fact index.\nOK: strict integration snapshot preserves every original ledger record and mathematical file.\nOK: 59 exact dimension calibrations, 5334 arbitrary-transversal reflection checks, and five strict averaging calibrations.\nThese checks validate records and finite regressions; mathematical approval is documented in the six direct-review records.\n"
+    }
+  ],
+  "recorded_at": "2026-11-07T01:58:31.698700+00:00",
+  "scope": "Graph integrity, preserved intake, exact normalized chain, finite regressions, and strict one-time preservation comparison. Not an independent model review."
+}

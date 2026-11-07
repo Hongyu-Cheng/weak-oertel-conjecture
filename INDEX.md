@@ -13,6 +13,7 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 | 0 | theorem | one-copy-information-score-depth-no-go | [02a48d28569660b9](facts/02a48d28569660b9.md) |
 | 0 | counterexample | oct22-score-threshold-deficit-charge | [03229943d27787ae](facts/03229943d27787ae.md) |
 | 0 | counterexample | intake-rooted-tree-ternary-obstructions | [032423921efad6c8](facts/032423921efad6c8.md) |
+| 0 | theorem | pk-ordinary-depth-simplex-rigidity | [03bc771bddd39a8a](facts/03bc771bddd39a8a.md) |
 | 0 | theorem | oct3dr-symmetric-center-heteroscedastic-triangle-products | [0565dd19a17b343d](facts/0565dd19a17b343d.md) |
 | 0 | counterexample | oct3eo-onebase-midpoint-profile-majorant | [06699d6f93d8ae5e](facts/06699d6f93d8ae5e.md) |
 | 0 | theorem | intake14-dyadic-obstruction | [089a4139d9314589](facts/089a4139d9314589.md) |
@@ -107,6 +108,7 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 | 0 | theorem | intake18-thin-aggregate-symmetry-lifting | [643c6114511e1370](facts/643c6114511e1370.md) |
 | 0 | lemma | n2-planar-level-simplex | [663b0775a8892a6a](facts/663b0775a8892a6a.md) |
 | 0 | lemma | metronoid-grunbaum-sandwich | [6769574fc1bd9f8d](facts/6769574fc1bd9f8d.md) |
+| 0 | lemma | pk-actual-endpoint-cap-credit | [67ecf7db6692fe65](facts/67ecf7db6692fe65.md) |
 | 0 | theorem | partial-symmetry-compression-certificate | [6a9b0f7ac15a23be](facts/6a9b0f7ac15a23be.md) |
 | 0 | theorem | oct3ej-planar-lattice-triangle-mass | [6af93f68fb881fc3](facts/6af93f68fb881fc3.md) |
 | 0 | counterexample | two-level-simplex-depth | [6b11a4add60bb29d](facts/6b11a4add60bb29d.md) |
@@ -118,6 +120,7 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 | 0 | counterexample | weighted-planar-simplex-depth-quarter | [6eaf0bad5dae21d9](facts/6eaf0bad5dae21d9.md) |
 | 0 | counterexample | one-interior-extra-facet-maxdet-fibers | [6f21a941612aa80e](facts/6f21a941612aa80e.md) |
 | 0 | theorem | affine-average-monotone-ternary-downsets | [707f08829355f38f](facts/707f08829355f38f.md) |
+| 0 | lemma | pk-stochastic-determinant-margin | [724e9b2e1a3ec0bf](facts/724e9b2e1a3ec0bf.md) |
 | 0 | lemma | logconcave-threshold-inequality | [772688f4504b1b5b](facts/772688f4504b1b5b.md) |
 | 0 | counterexample | n2-support-safe-energy | [774e165eb6208497](facts/774e165eb6208497.md) |
 | 0 | lemma | affine-average-tilted-ball-adversarial-test | [7a3ce13723086670](facts/7a3ce13723086670.md) |
@@ -191,6 +194,7 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 | 0 | counterexample | oct21-regularized-composition-coefficients | [d13d991f101ba6a1](facts/d13d991f101ba6a1.md) |
 | 0 | counterexample | intake18-tree-cell-certificate-obstructions | [d17e029e7665f5c3](facts/d17e029e7665f5c3.md) |
 | 0 | theorem | continuous-square-root-depth-single-expansion | [d4a3be98ad8645b7](facts/d4a3be98ad8645b7.md) |
+| 0 | lemma | pk-proper-section-continuity | [d4e455a28be6cde4](facts/d4e455a28be6cde4.md) |
 | 0 | theorem | oct22-fixed-budget-midpoint-cascade | [d5bbb7fdfb6f96b9](facts/d5bbb7fdfb6f96b9.md) |
 | 0 | theorem | rank-one-affine-box-singleton-depth | [d6640c93606a542b](facts/d6640c93606a542b.md) |
 | 0 | lemma | n2-anchored-energy-capacity | [d9049ecf3fa5c7d5](facts/d9049ecf3fa5c7d5.md) |
@@ -252,6 +256,7 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 | 1 | lemma | oct3br-integer-mean-logaffine-row-varentropy-bridge | [1ed6b6d9eb994c90](facts/1ed6b6d9eb994c90.md) |
 | 1 | lemma | oct3cq-planar-support-uniform-capacity-surplus-test | [20b9c918a887c030](facts/20b9c918a887c030.md) |
 | 1 | theorem | un-eroded-partial-symmetry-certificate | [26d12b88ec261e74](facts/26d12b88ec261e74.md) |
+| 1 | theorem | pk-uniform-finite-star-repair | [287cc87c3b427501](facts/287cc87c3b427501.md) |
 | 1 | theorem | intake14-cap-reference-obstruction | [2960d14e7bf97be8](facts/2960d14e7bf97be8.md) |
 | 1 | theorem | intake-three-planar-slices-sharp-depth | [2a8c2bc6d7992c5e](facts/2a8c2bc6d7992c5e.md) |
 | 1 | theorem | oct3bn-dilated-triangle-weighted-entropy-likelihood-price | [2a9ff24df711450b](facts/2a9ff24df711450b.md) |
@@ -371,6 +376,7 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 | 2 | counterexample | n2-root-concave-level-concentration | [25ecc4ac9b2ae01d](facts/25ecc4ac9b2ae01d.md) |
 | 2 | theorem | partial-affine-section-depth-lift | [287974843b6abd69](facts/287974843b6abd69.md) |
 | 2 | theorem | projected-hit-complete-core-transfer | [3f83f851f6547bc6](facts/3f83f851f6547bc6.md) |
+| 2 | theorem | pk-sharp-complete-parity-core | [3fad02a5aa48ae2a](facts/3fad02a5aa48ae2a.md) |
 | 2 | counterexample | intake13-reflection-variance-counterexample | [401c8616a1f33604](facts/401c8616a1f33604.md) |
 | 2 | lemma | oct3ci-four-strip-centered-reflection-submeasure-proof | [4421a9c788c4d9b9](facts/4421a9c788c4d9b9.md) |
 | 2 | theorem | oct3z-growing-activation-inactive-stock-tradeoff | [4573693dd9be62c5](facts/4573693dd9be62c5.md) |

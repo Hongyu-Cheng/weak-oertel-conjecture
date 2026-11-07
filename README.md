@@ -8,13 +8,15 @@ Start with the highlights below, then follow a fact's `depends_on` IDs. The [com
 
 ## Status and verification
 
-The initial snapshot contains 1,235 accepted facts: 712 theorems, 317 lemmas, and 206 counterexamples to intermediate claims. The latest acceptance is dated 29 October 2026. All accepted facts have the recorded assurance label `LLM-verified`: a separate model verification run approved each candidate. This label does not assert human review or formal certification. Counterexamples to intermediate mechanisms do not disprove the general conjecture.
+The initial snapshot contains 1,235 accepted facts: 712 theorems, 317 lemmas, and 206 counterexamples to intermediate claims. Its latest acceptance is dated 29 October 2026. Those initial facts have the recorded assurance label `LLM-verified` and their original model-verification records. Later additions state their review method explicitly in their own records. This label does not assert human review or formal certification. Counterexamples to intermediate mechanisms do not disprove the general conjecture.
 
 The recorded subgoal statuses are research history, not a freshly reviewed list of available assignments. Some subgoals mention unshared research notes; reconstruct their mathematical target from accepted facts before using them. The README highlights are navigation aids, not an additional verification of the results.
 
 ## PK November 6 contribution
 
-See [the short contribution guide](contributions-PK-nov-6-merge.md) for the main additions and [the complete pending-submission index](assets/pk-nov6/INDEX.md) for the wider collection. These mathematical notes, computations, and historical review comments are pending intake; they do not change the accepted facts or the target.
+See [the short contribution guide](contributions-PK-nov-6-merge.md) for the main additions and [the complete pending-submission index](assets/pk-nov6/INDEX.md) for the wider collection. The original mathematical notes, computations, and historical review comments remain preserved pending intake. They did not themselves change the accepted facts or the target.
+
+On 6 November 2026 (America/New_York), six atomic claims from the near-parity-core proof were accepted after direct ChatGPT mathematical review, including [the sharp complete-parity-core theorem](facts/3fad02a5aa48ae2a.md). The accepted graph now has **1,241 facts**. All original intake files and their pending statuses are unchanged; the normalized accepted replacements and exact scope are listed in [the review report](reviews/pk-parity-core-issue2.md). Each new node has a fresh review record and a closed accepted dependency chain. The same assistant edited and reviewed the normalization; no second-model, human, or formal review is implied. The other imported claims have not been batch-approved.
 
 ## Highlights
 
@@ -47,6 +49,7 @@ These curated names come from the existing project overview. Rows give the longe
 
 Recent additions beyond the curated overview:
 
+- [Sharp complete-parity-core theorem, with six-node verified dependency chain](facts/3fad02a5aa48ae2a.md)
 - [oct29-dominant-clique-lacunary-product](facts/0e1d1c8120a9ffff.md)
 - [oct29-four-atom-core-lacunary-product](facts/d727395b991f2895.md)
 - [oct29-four-atom-weighted-core-price](facts/149d1105f63274b9.md)

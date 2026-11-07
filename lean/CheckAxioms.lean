@@ -25,3 +25,19 @@ elab "#assert_standard_axioms " id:ident : command => do
 #assert_standard_axioms SharpOC.Counterexample.mixedIntegerMass_body_cut_toReal
 #assert_standard_axioms SharpOC.Counterexample.sharp_oc_strict_violation
 #assert_standard_axioms SharpOC.Counterexample.sharp_oc_counterexample
+
+-- The n=76 counterexample to the specific 1/e bound.
+#assert_standard_axioms SharpOC.TetrahedronVolume.volume_standardSimplex_three
+#assert_standard_axioms SharpOC.BoxSources.T_volume
+#assert_standard_axioms SharpOC.BoxSources.K_add_sum_A
+#assert_standard_axioms SharpOC.BoxSources.cap_volume
+#assert_standard_axioms SharpOC.BoxCounterexample.body_is_convex_body
+#assert_standard_axioms SharpOC.BoxCounterexample.integer_point_mem_body_iff
+#assert_standard_axioms SharpOC.BoxCounterexample.integer_fiber_exact
+#assert_standard_axioms SharpOC.BoxCounterexample.middle_cut_mass
+#assert_standard_axioms SharpOC.BoxCounterexample.mixedIntegerMass_paddedBody_toReal
+#assert_standard_axioms SharpOC.BoxCounterexample.padded_fibers_full_dimensional
+#assert_standard_axioms SharpOC.BoxPadding.exposed_product_simplex_fiber_sum_mass
+#assert_standard_axioms SharpOC.BoxParameters.scalar_depth_bound
+#assert_standard_axioms SharpOC.BoxCounterexample.point_has_small_halfspace
+#assert_standard_axioms SharpOC.BoxCounterexample.one_over_e_counterexample

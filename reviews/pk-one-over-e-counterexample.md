@@ -62,10 +62,19 @@ The intermediate constructions and amplification barriers are indexed in
 the [continuation registry](../assets/pk-continuation-2026-11/README.md).
 They remain supporting research notes rather than separate accepted facts.
 
-## Lean scope
+## Subsequent Lean verification — 7 November 2026
 
-The [existing Lean development](../lean/README.md) verifies the earlier
-`d=23`, `n=3*10^92` counterexample to the sharp constant. Its build and
-standard-axiom audit passed before this contribution. No Lean source is
-changed here. In particular, **the n=76 counterexample and the refutation
-of the specific 1/e bound are not yet Lean-formalized**.
+The [Lean development](../lean/README.md) now includes the unconditional theorem
+`SharpOC.BoxCounterexample.one_over_e_counterexample` for **n=76** and
+**d=1372131+2^93**, in addition to the earlier sharp-bound counterexample.
+It verifies the actual compact convex body with nonempty interior, the complete
+integer-fiber census, actual mixed-integer Lebesgue mass, full-dimensional
+nonempty fibers, and a uniform strict bound below `1/(e*2^76)` for every actual
+mixed-integer point. All cuts are proper closed ambient halfspaces.
+
+The full pinned build and recursive axiom checks pass; only `propext`,
+`Classical.choice`, and `Quot.sound` occur. See the
+[formal audit](../lean/ONE_OVER_E_AUDIT.md) for the proof map and scope.
+The formal theorem does not separately assert rational polyhedrality or the
+Euclidean Hausdorff normalization identity. The historical fact and model-review
+records above are preserved as records of their original review, not relabeled.

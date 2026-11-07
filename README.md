@@ -20,6 +20,8 @@ On 6 November 2026 (America/New_York), six atomic claims from the near-parity-co
 
 The [subsequent continuation](assets/pk-continuation-2026-11/README.md) adds separately reviewed facts. Its main result is a [direct rational counterexample to the sharp Gamma_d*2^(-n) assertion](facts/022a26fa5001480a.md), with three independent model reviews and exact arithmetic checks. It needs human review and does not refute this repository's weak target. The original pending intake retains its existing status.
 
+The counterexample now also has a [complete Lean proof in the mixed-integer-volume formulation](lean/README.md), including the actual convex body, all integer fibers, and a uniform strict depth bound. The pinned build and standard-axiom audit pass. See the linked scope statement for the distinction between the formal theorem and the additional rationality/Hausdorff-normalization details in the prose note; the historical fact-review metadata is unchanged.
+
 ## Highlights
 
 These curated names come from the existing project overview. Rows give the longest dependency-chain length, starting at zero. An arrow in the picture means that a lower highlighted fact depends on an upper one, possibly through omitted nodes.

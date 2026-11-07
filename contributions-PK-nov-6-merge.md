@@ -8,6 +8,18 @@ proof-assistant certification.
 
 ## Latest continuation: read these first
 
+- **The specific 1/(e*2^n) bound now fails with n=76.** The
+  [four-source construction](assets/pk-continuation-2026-11/barycentric-box-source-counterexample.md)
+  and its [smaller-padding parameters](assets/pk-continuation-2026-11/integer-dimension-76-counterexample.md)
+  give a full-dimensional rational polytope with d=1372131+2^93.
+  Every actual mixed-integer point admits a closed ambient halfspace strictly
+  below 1/(e*2^76) of the total mass. Barycentric box sources and a common
+  continuous simplex factor replace the earlier enormous integer dimension.
+  [Fact a5291bca09ba4b1e](facts/a5291bca09ba4b1e.md) has a complete proof,
+  exact rational certificates, and independent mathematical review.
+  This is not yet Lean-formalized and does not refute the existence of a
+  smaller positive universal constant.
+
 - **An explicit counterexample to the sharp constant.** The
   [self-contained proof](assets/pk-continuation-2026-11/direct-rational-sharp-oc-counterexample.md)
   constructs a full-dimensional rational polytope with d=23 and n=3*10^92.
@@ -15,9 +27,10 @@ proof-assistant certification.
   below Gamma_23*2^(-n) times the total. It specifies all fibers and proves
   that convexification creates no unintended integer fibers. This is
   [fact 022a26fa5001480a](facts/022a26fa5001480a.md), reviewed independently
-  in three separate model runs with exact rational checks. **Human review is the next
-  priority.** It concerns the sharp assertion, not a refutation of the
-  1/(e*2^n) bound or this repository's weak target.
+  in three separate model runs with exact rational checks. Its
+  [Lean formalization](lean/README.md) now certifies the actual body,
+  integer fibers, mixed-integer measure, and uniform sharp-bound violation.
+  This earlier example alone does not violate 1/(e*2^n).
 
 - **A stronger positive theorem for triangular parity cores.** In d=2,
   a complete parity core of triangular fibers satisfies the sharp bound

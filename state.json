@@ -21448,6 +21448,20 @@
       "status": "accepted",
       "subgoal_id": "bounded-coordinate-knapsack-reflection"
     },
+    "a5291bca09ba4b1e": {
+      "accepted_run": "fc2660c15e2e4299",
+      "author": "PK-research-agent",
+      "candidate_schema": 2,
+      "created_at": "2026-11-07T10:04:54.374030+00:00",
+      "depends_on": [],
+      "kind": "counterexample",
+      "runs": [
+        "fc2660c15e2e4299",
+        "a6331a0b149a4528"
+      ],
+      "status": "accepted",
+      "subgoal_id": "pk-nov7-exact-one-over-e-counterexample-n76"
+    },
     "a5428a02cd85fb48": {
       "author": "PK-research-agent",
       "candidate_schema": 2,
@@ -45935,6 +45949,18 @@
       "subgoal_id": "bounded-coordinate-knapsack-reflection",
       "target_match": null
     },
+    "a5291bca09ba4b1e": {
+      "accepted_at": "2026-11-07T10:05:26.597377+00:00",
+      "accepted_run": "fc2660c15e2e4299",
+      "assurance": "LLM-verified",
+      "author": "PK-research-agent",
+      "candidate_schema": 2,
+      "depends_on": [],
+      "kind": "counterexample",
+      "status": "accepted",
+      "subgoal_id": "pk-nov7-exact-one-over-e-counterexample-n76",
+      "target_match": null
+    },
     "a5472481343022a7": {
       "accepted_at": "2026-10-03T13:21:48.244937+00:00",
       "accepted_run": "d2b9b2bddcdd4b05",
@@ -62656,6 +62682,17 @@
       "verdict": "APPROVED",
       "verification_schema": "math-prover-verifier-v2"
     },
+    "a6331a0b149a4528": {
+      "candidate_id": "a5291bca09ba4b1e",
+      "created_at": "2026-11-07T10:05:26.597377+00:00",
+      "finished_at": "2026-11-07T10:05:26.597377+00:00",
+      "output_file": "verifications/a6331a0b149a4528.json",
+      "output_sha256": "0ecfffe9d6c8f05071a0c5f968349a70ba8dfc62ba1d113f36340e2ec5ab1c9b",
+      "status": "approved",
+      "target_match": null,
+      "verdict": "APPROVED",
+      "verification_schema": "math-prover-verifier-v2"
+    },
     "a6f7f2a27b8841cc": {
       "candidate_id": "1c54f5dc74c15059",
       "created_at": "2026-08-23T04:26:27.502590+00:00",
@@ -67535,6 +67572,17 @@
       "finished_at": "2026-09-07T09:47:25.677968+00:00",
       "output_file": "verifications/fb7a962cfdaf4f0b.json",
       "output_sha256": "6161deb20017e66ed2e107d048033907732bd5fde8ff63a4fa03c66495737615",
+      "status": "approved",
+      "target_match": null,
+      "verdict": "APPROVED",
+      "verification_schema": "math-prover-verifier-v2"
+    },
+    "fc2660c15e2e4299": {
+      "candidate_id": "a5291bca09ba4b1e",
+      "created_at": "2026-11-07T10:05:26.597377+00:00",
+      "finished_at": "2026-11-07T10:05:26.597377+00:00",
+      "output_file": "verifications/fc2660c15e2e4299.json",
+      "output_sha256": "aa8938629b7e7390920ad9b3252998db6525daead399138b8c8e8cc76bde116b",
       "status": "approved",
       "target_match": null,
       "verdict": "APPROVED",
@@ -79176,6 +79224,15 @@
       "status_reason": "Pending mathematical submissions; historical evidence is not a new approval.",
       "status_updated_at": "2026-11-06T20:30:30.407222+00:00",
       "success_criterion": "Extract precise atomic claims, resolve every mathematical premise to a proved argument or accepted predecessor, compare scope with existing facts, and obtain separate proof review before approval."
+    },
+    "pk-nov7-exact-one-over-e-counterexample-n76": {
+      "created_at": "2026-11-07T10:04:54.374030+00:00",
+      "relation_to_goal": "The locked target asks for some smaller absolute positive constant. This separate scoped subgoal refutes the particular constant 1/e and therefore the sharp Gamma_d bound without changing the locked target.",
+      "statement": "There exists a full-dimensional rational polytope C in R^76 x R^d, with d=1372131+2^93, such that S=C intersect (Z^76 x R^d) is nonempty, every nonempty integer fiber has dimension d, and sup_{y in S} depth_S(y)<1/(e 2^76). Here depth uses all containing closed ambient halfspaces and normalized d-dimensional Euclidean Hausdorff measure, equivalently the sum of fiber Lebesgue volumes. A second explicit parameter choice gives the same conclusion at d=1372129+2^94. Both also violate Gamma_d/2^76. This refutes the specific constant 1/e, not the existence of some smaller positive absolute constant in the locked problem statement.",
+      "status": "closed",
+      "status_reason": "The self-contained n=76 construction and smaller-padding parameter refinement passed independent full mathematical and arithmetic review plus a source co-developer cross-review. Exact integer certificates were reproduced. This closes only the scoped 1/e counterexample subgoal; the locked absolute-constant target remains unchanged. No Lean certification is asserted for this new result.",
+      "status_updated_at": "2026-11-07T10:05:26.597377+00:00",
+      "success_criterion": "A complete finite construction with exact fibers, positive finite intrinsic measure, uniform strict containing-halfspace bound at every actual point, and independently audited exact constants."
     },
     "pk-ordinary-depth-simplex-rigidity": {
       "created_at": "2026-11-07T01:47:15.761016+00:00",

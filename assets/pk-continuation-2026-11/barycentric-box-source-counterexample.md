@@ -1,0 +1,345 @@
+# Barycentric box sources: a counterexample with 76 integer coordinates
+
+Status: complete analytic construction; independent full mathematical and
+exact rational certificate reviews completed. This refinement is not
+Lean-formalized. It
+concerns the specific constant `1/e`; it does not show that every positive
+absolute constant is impossible.
+
+## Theorem
+
+There is a full-dimensional rational polytope C in
+
+    R^76 x R^(1372129+2^94)
+
+whose mixed-integer intersection S is nonempty, all its nonempty integer
+fibers have full continuous dimension, and
+
+    sup_(y in S) depth_S(y) < 1/(e 2^76).
+
+Here depth is the infimum, over all containing closed ambient halfspaces,
+of their mixed-integer volume divided by the total mixed-integer volume.
+Mixed-integer volume is the sum of the ordinary continuous Lebesgue volumes
+of the integer fibers. It agrees with Euclidean Hausdorff measure of that
+dimension on this finite disjoint union of fibers. In particular the example
+also violates the larger sharp constant Gamma_d/2^76, where
+Gamma_d=(d/(d+1))^d and d=1372129+2^94.
+
+This changes the three-source triangle construction in
+[small-integer-dimension-exploration.md](small-integer-dimension-exploration.md)
+to four cube-shaped sources inside a tetrahedron. The common simplex factor
+used at the end supplies caps on exposed fibers; the sources need not be
+simplices. The full argument is given below.
+
+## 1. Four source cubes in a centered tetrahedron
+
+Let B0 be the centered standard 3-simplex in R^3. Its affine barycentric
+coordinates lambda_0,...,lambda_3 sum to 1 and equal 1/4 at the origin.
+The functions
+
+    f_j=lambda_j-1/4,       j=0,1,2,3,
+
+are nonzero linear functionals with sum zero. The cap lambda_j>=1/4 is the
+image of B0 by the homothety of ratio 3/4 about its j-th vertex. Hence
+
+    |B0 intersect {f_j>=0}|=(27/64)|B0|.                 (1)
+
+For a in {0,1,2,3}, define
+
+    T_a={x in B0: 0<=lambda_j(x)<=1/4 for every j!=a}.
+
+In the three coordinates lambda_j with j!=a, T_a is exactly [0,1/4]^3:
+the remaining coordinate is 1 minus their sum and is at least 1/4.
+The same affine coordinate chart identifies B0 with the standard simplex
+{u>=0: sum u<=1}, of volume 1/6. The common Jacobian cancels, so
+
+    |T_a|=theta |B0|,       theta=3/32.                  (2)
+
+For j!=a, max_(T_a) f_j=0. All f_j values on B0 are in [-1/4,3/4], and
+therefore in [-1,1].
+
+Choose rational parameters satisfying
+
+    0<epsilon<1/4,       1/2<s<1,
+    0<t<eta<2(1-s),      1/2<q<1,
+    kappa=(1/4+3epsilon)/(1/4-epsilon),
+    2 kappa t <= 3-2s.                                  (3)
+
+Choose c_a by lambda_a(c_a)=1/4+3epsilon and
+lambda_j(c_a)=1/4-epsilon for j!=a. This is an interior point of T_a.
+In particular
+
+    f_j(c_a)=-epsilon for j!=a,       f_a(c_a)=3epsilon.
+
+Put P_a^0=c_a+s(T_a-c_a), A_a^0=t(T_a-c_a). For a positive integer h,
+let F=[-1,1]^h and u=2(1-q). In R^(3+h), set
+
+    B=B0 x F,            P_a=P_a^0 x qF,
+    cbar_a=(c_a,0),       A_a=A_a^0 x uF,
+    K(a,k)=2P_a+(k-1)cbar_a       for integers k>=1.
+
+All these bodies are full-dimensional rational polytopes. The point cbar_a
+is interior to P_a, and 0 is interior to A_a. If b=|B|, the volumes
+M=|K(a,k)| and a0=|A_a| do not depend on a or k. Their exact ratios are
+
+    m=M/b=(2s)^3 theta (2q)^h,
+    alpha=a0/b=t^3 theta u^h.                           (4)
+
+## 2. Origin containment for all mixtures of source types
+
+Give finitely many indices arbitrary types tau(i) in {0,1,2,3}. For any
+nonempty set I of k indices, select i(I) in I and put a=tau(i(I)). Then
+
+    K(a,k)+sum_(i in I) A_(tau(i)) subset (k+1)B.         (5)
+
+For k=1, the tetrahedron coordinates of this assertion follow from
+
+    2P_a^0+A_a^0=(2s+t)T_a+(2-2s-t)c_a subset 2B0.
+
+Both coefficients are positive by (3), and sum to 2.
+For k>=2, write cmin=1/4-epsilon and cmax=1/4+3epsilon. Let p in P_a^0
+and v_i in A_(tau(i))^0. If L_j is the linear part of lambda_j, then
+
+    lambda_j(p)>=(1-s)lambda_j(c_a),
+    L_j(v_i)>=-t lambda_j(c_(tau(i))).
+
+For y=[2p+(k-1)c_a+sum_i v_i]/(k+1), the affine constants balance because
+2+(k-1)=k+1. Therefore
+
+    (k+1)lambda_j(y)
+      >=(k+1-2s)cmin-kt cmax
+      >=cmin[(k+1-2s)-k(3-2s)/2]
+      =cmin(k-2)(2s-1)/2 >=0.
+
+All barycentric coordinates of y are nonnegative, so y belongs to B0.
+This includes every mixture of source types. In the free coordinates,
+
+    2qF+kuF=(2q+ku)F subset (k+1)F,
+
+because k+1-2q-ku=(k-1)(2q-1)>=0. This proves (5).
+
+## 3. The convex body and its exact integer fibers
+
+Choose N positive and n=4N, giving N indices to each of the four types.
+For nonempty I subset {1,...,n}, put z_I=sum_(i in I)e_i and
+K_I=K(tau(i(I)),|I|). For definiteness, i(I) can be the least index in I.
+Let C0 be the convex hull of the following finitely many polytopes:
+
+    {0} x B,
+    {z_I} x K_I            for all nonempty I,
+    {-e_i} x A_(tau(i))    for all i.                    (6)
+
+It is compact and rational. The fiber B spans every vertical direction,
+and a point over each e_i supplies n independent projected directions.
+Thus the affine span is the full ambient space and C0 has nonempty interior.
+
+Its only integer projection points are {0,1}^n and the negative unit
+vectors. To see this, every projected coordinate lies in [-1,1]. At an
+integer point with coordinate -1 at i, every generator in any convex
+representation must have that coordinate -1; the only such base is -e_i.
+If no coordinate is negative, every coordinate is 0 or 1.
+
+Each nonzero z_I is uniquely exposed among the generator bases by the
+functional with coefficient 1 on I and -1/2 elsewhere: its value |I|
+strictly exceeds every other value, including those at negative unit
+vectors. Each -e_i is uniquely exposed by -z_i. Thus their actual fibers
+in C0 are exactly K_I and A_(tau(i)).
+
+For a point of the origin fiber, group its convex representation into
+weights lambda_0 on B, lambda_I on K_I, and mu_i on A_(tau(i)). The integer
+coordinates give
+
+    mu_i=sum_(I containing i)lambda_I,
+    lambda_0+sum_I(|I|+1)lambda_I=1.
+
+Writing the continuous point as
+
+    lambda_0 x_0+sum_I lambda_I(x_I+sum_(i in I)v_i),
+
+with x_0 in B, x_I in K_I, v_i in A_(tau(i)), is valid because of the
+first identity. By (5), each parenthesis is |I|+1 times a point of B.
+The second identity makes the displayed point a convex combination in B.
+Zero-weight choices can be made arbitrarily in the nonempty fibers.
+Conversely B is a generator. The origin fiber is therefore exactly B.
+
+All these nonempty fibers have dimension 3+h. Their total volume is
+
+    W=(2^n-1)M+b+n a0=2^n M+Delta,
+    Delta=b(1+n alpha-m).                               (7)
+
+## 4. Four cuts of the origin fiber
+
+For a row j, call i paid if tau(i)=j. Put R=3(n+1), and define the proper
+closed ambient halfspace, with zero coefficients on the free coordinates,
+
+    H_j={(z,x,w): f_j(x)+sum_i beta_i z_i>=0},
+    beta_i=-R if paid,       beta_i=eta epsilon otherwise. (8)
+
+On an unpaid outer fiber, the maximum score is (t-eta)epsilon<0, so that
+entire fiber is strictly excluded. On a paid outer fiber, its f_j value
+is at least -2t, while its integer contribution is R; the fiber is entirely
+included. There are exactly N paid outer fibers.
+
+On a nonzero cube fiber K_I, write k=|I|. If I contains a paid index, the
+continuous part of the score is at most k+1, since P_a^0 and c_a lie in B0.
+The integer part is at most -R+(k-1)eta epsilon<=-R+k-1. Their sum is at most
+2k-R<0 because k<=n. If I has no paid index, its selected type is unpaid. Its
+maximum continuous score is -(k+1-2s)epsilon. Hence its maximum total score
+is
+
+    [k eta-(k+1-2s)]epsilon
+      <-(k-1)(2s-1)epsilon <=0.
+
+Strictness holds also when k=1. All nonzero cube fibers are excluded.
+By (1), the resulting total mass is exactly
+
+    |S0 intersect H_j|=b(27/64+N alpha).                 (9)
+
+The four H_j cover the origin fiber because sum_j f_j=0. Their normal
+vectors are nonzero. Boundaries of their B0 caps have zero volume, and
+every omitted integer fiber was strictly excluded.
+
+## 5. Exact parameters and compact arithmetic certificates
+
+Take
+
+    N=19, n=76, h=1372126,
+    epsilon=1/10000000000,
+    s=q=500001/1000000,
+    t=999997/1000000,       eta=399999/400000.
+
+Conditions (3) hold. In particular
+
+    eta-t=2(1-s)-eta=1/2000000,
+    3-2s-2 kappa t=499600001/124999999950000 >0.
+
+The choice s=q simplifies the two exact volume ratios to
+
+    m=(3/32)(500001/500000)^(h+3),
+    alpha=(3/32)(999997/1000000)^3(499999/500000)^h.
+
+Let U=1359141/500000. The power series for e has a purely rational
+upper bound: its terms through 1/8! have sum S8, and, starting with 1/9!,
+successive ratios are at most 1/10. Consequently
+
+    e <= S8+10/(9*9!) < U,
+    U-[S8+10/(9*9!)]=1717/10206000000 >0.                (10)
+
+The exact expressions (4) have the following strict rational enclosures:
+
+    1458096242880/10^12 < m < 1458096242881/10^12,
+    6027714519577/10^15 < alpha < 6027714519578/10^15.    (11)
+
+Denote these four endpoints by mlo,mhi,alo,ahi. Then
+
+    mlo/U-27/64-19 ahi
+      =457867963085423/226523500000000000000 >0,
+    1+76 alo-mhi-mhi/2^18
+      =147403934966211/32768000000000000000 >0.          (12)
+
+It follows that
+
+    27/64+19 alpha < m/U < m/e,
+    Delta/M=(1+76 alpha-m)/m > 2^(-18).                 (13)
+
+Moreover alpha<m, directly from t<2s and u<2q in (4).
+
+The companion executable
+[check_barycentric_box_source_counterexample.py](check_barycentric_box_source_counterexample.py)
+proves all
+comparisons in (3), (10), (11), and (12) using integer and rational
+arithmetic; the output, including every rounded power-computation step, is
+[barycentric-box-source-certificate.json](barycentric-box-source-certificate.json).
+To avoid printing the millions of digits in the exact powers, it encloses
+each positive power by rational intervals with denominator Q=10^35.
+Here is the full soundness argument for that finite certificate. For a
+nonnegative rational x, the initial endpoints are
+
+    L=floor(Qx),          U=ceil(Qx),
+
+so L/Q<=x<=U/Q. If L/Q<=x<=U/Q and L'/Q<=y<=U'/Q with nonnegative
+endpoints, then
+
+    floor(LL'/Q)/Q <= xy <= ceil(UU'/Q)/Q.               (14)
+
+Indeed the lower left side is at most LL'/Q^2<=xy and the upper
+right side is at least UU'/Q^2>=xy. This proves the enclosure operation
+used for every multiplication and squaring.
+
+For an exponent p, binary exponentiation starts with accumulator 1 and
+base x, both enclosed. At each iteration with remaining exponent r,
+if r is odd it multiplies the accumulator by the current base; it then
+replaces r by floor(r/2) and, when r remains positive, squares the base.
+The exact invariant is
+
+    accumulator * base^r = x^p.
+
+For even r=2j it is preserved by the squaring operation, and for odd
+r=2j+1 it is preserved by multiplying the accumulator first. By (14),
+both interval enclosures are also preserved at every step. The
+nonnegative integer r strictly decreases until zero. The final
+accumulator interval therefore encloses x^p. The JSON certificate
+lists r and all four integer endpoints at every iteration, recording
+the accumulator after the optional multiplication and before r is
+halved. Thus every step can be checked using integer multiplication
+and division.
+
+Multiplying the two final power intervals by the exact positive
+prefactors in (4) gives strictly tighter bounds than (11); direct
+integer comparison proves (11). This is a finite rational-arithmetic
+proof of the displayed strict inequalities, not an approximate power
+evaluation or a numerical optimization claim. The executable uses no
+floating arithmetic.
+
+## 6. Finite simplex padding and all possible centers
+
+Put ell=2^(76+18)=2^94. Let J be the standard ell-dimensional rational
+simplex with volume j0>0, and form C=C0 x J. Its continuous dimension is
+3+h+ell=1372129+2^94. The actual integer fibers are exactly the fibers
+proved above times J, with total mixed volume W j0.
+
+For every integer ell>=1, put Gamma_ell=(ell/(ell+1))^ell. Integrating
+1/(1+t)>1/(1+x) on 0<=t<x proves log(1+x)>x/(1+x) for x>0. Substituting
+x=1/ell and exponentiating gives
+
+    e Gamma_ell < 1+1/ell.                              (15)
+
+By (7) and (13), W/(2^76 M)>1+1/(2^76 2^18)=1+1/ell. Therefore
+
+    Gamma_ell M/W < 1/(e 2^76).                         (16)
+
+Take any y in the actual mixed-integer set. If its integer coordinate is
+0, one of (8), extended to ignore J, contains y. Its normalized mass is
+b(27/64+19 alpha)/W, strictly less than M/(eW) and thus strictly less than
+1/(e 2^76), by (13).
+
+At every other integer base z, its fiber is K x J with |K|<=M, and z is
+uniquely exposed among the finite integer bases. At the J-component v of y,
+some barycentric coordinate has value a>=1/(ell+1). The cap where that
+coordinate is at least a contains v and has volume (1-a)^ell j0, at most
+Gamma_ell j0. At a=1 this cap has zero volume. Its defining affine
+functional can be written L(v')>=t with nonzero linear part L.
+
+Let g expose z. For sufficiently large finite Q>0, the proper closed
+ambient halfspace
+
+    L(v')-t+Q[g(z')-g(z)]>=0
+
+selects precisely K times this cap in the z-fiber and excludes every other
+integer fiber. Indeed the exposure gaps are all strictly negative, there
+are finitely many such bases, and L(v')-t is bounded on compact J. Thus one
+finite Q strictly excludes every other base simultaneously. The nonzero
+L component guarantees a proper halfspace. Its mass is at most
+M Gamma_ell j0, so (16) gives the required strict upper bound.
+
+Both classes of y have uniform upper bounds: respectively
+b(27/64+19 alpha)/W and M Gamma_ell/W. Their maximum is strictly below
+1/(e 2^76), proving the strict supremum inequality. No center is moved
+outside S, no limit of bodies is used, and every halfspace used is a legal
+closed ambient halfspace.
+
+The same construction and proof apply to any rational parameters obeying
+(3) and (4), provided 27/64+N alpha<m/e and 1+4N alpha>m. Any positive
+integer ell satisfying ell>=2^(4N)m/(1+4N alpha-m) then works by (15).
+The separate [alternative parameter certificate](integer-dimension-76-counterexample.md)
+uses this criterion with the same n=76 and a smaller common simplex factor.

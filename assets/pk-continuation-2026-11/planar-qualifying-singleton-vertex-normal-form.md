@@ -1,0 +1,75 @@
+# Qualifying planar singleton sources retain their original vertex
+
+Research draft, 6 November 2026. This gives an exact finite source normal form for arbitrary interior centers of a triangular one-positive-vertex fan. It preserves every hit pattern and its weight. It does not move the fan or establish a global depth bound.
+
+## 1. Setting and determinant reduction
+
+Let B=conv(v_1,v_2,v_3) be a triangle. Let three affine functions f_i vanish at a common interior point y and satisfy a strictly positive linear dependence, with their gradients spanning the plane. Assume f_i(v_i)>0 and f_i(v_j)<0 for j different from i. A source hits row i if max_P f_i>0; equality is a miss.
+
+Write the barycentric coordinates of y as (s_1,s_2,s_3), all strictly positive. The singleton-i region is
+
+    R_i=B intersect {f_j<=0,f_k<=0},       {i,j,k}={1,2,3}.
+
+Positive dependence implies f_i>=0 throughout R_i, with equality only at y. Every full-area triangle in R_i therefore hits exactly row i.
+
+In coordinates X=lambda_j,Y=lambda_k, its vertices are exactly
+
+    (0,0), (A,0), (s_j,s_k), (0,B_0),
+
+where 0<A,B_0<1 are the respective crossings of the two missed-row boundaries with the two edges incident to v_i. Indeed each missed row is negative at v_i and the other missed row's original vertex, so only its own incident edge contributes the indicated intercept. The two boundary lines meet at y. On the opposite original edge f_i is strictly negative; positive dependence prevents f_j,f_k from both being nonpositive there. These facts enumerate all vertices of the intersection.
+
+A largest contained triangle exists and may be chosen at these four vertices: fix two vertices and maximize the absolute affine determinant in the third, then repeat. Relative to the area of B, the four candidate areas are
+
+    A B_0,
+    A s_k,
+    B_0 s_j,
+    A s_k+B_0 s_j-A B_0.                             (1)
+
+The first three triangles all use v_i. Only the last omits v_i.
+
+## 2. A threshold for retaining the original vertex
+
+Set x=s_j and z=s_k. If the last quantity in(1) exceeds both A z and B_0 x, then A<x and B_0<z. Consequently
+
+    A z+B_0 x-A B_0
+       =xz-(x-A)(z-B_0)<xz=s_j s_k.                  (2)
+
+It follows that whenever the capacity of R_i is at least s_j s_k, a maximum-area triangle can be chosen using v_i. To check the equality boundary explicitly, if the fourth quantity were the only largest term, it would strictly exceed the second and third terms and therefore be strictly below s_j s_k by(2), a contradiction. Thus a first-three term is largest in this case.
+
+Since s_i>0 and s_j+s_k=1-s_i,
+
+    s_j s_k <=(1-s_i)^2/4<1/4.                       (3)
+
+Therefore any R_i containing a triangle of area at least |B|/4 has a largest inscribed triangle retaining v_i. More generally the same assertion holds whenever the requested relative area threshold is at least s_j s_k. This is an exact statement at the threshold, with no generic-position exclusion.
+
+## 3. Consequence for qualifying source triangles
+
+Suppose |B|=vV with 0<v<=1 and every source triangle must have area at least V/4. Its required relative area is
+
+    r=1/(4v)>=1/4.
+
+Then a singleton-i source exists if and only if
+
+    max{A B_0,A s_k,B_0 s_j}>=r.                      (4)
+
+Necessity follows from(1)-(3), and sufficiency follows by selecting the indicated triangle. Each such triangle lies in R_i and contains v_i, so it strictly hits row i and misses both other rows in the exact support convention. Thus it preserves the entire singleton hit pattern, including contacts at y or on the missed cutting lines.
+
+In particular an arbitrary family of qualifying singleton-i sources may be replaced by a single chosen maximum from these three explicit triangles, retaining each original weight or combining the weights. The fan, center, reference area and source-volume qualification remain unchanged.
+
+## 4. An exact seven-pattern finite normal form
+
+The other patterns also have explicit maximizing representatives. A source missing only row i is contained in the closed negative cut K_i=B intersect{f_i<=0}. Write a=f_i(v_i)>0 and the other vertex values as -b,-c, with b,c>0. Let m=max(b,c). The exact one-cut capacity theorem gives
+
+    s(K_i)/|B|=m/(a+m).
+
+An attaining triangle retains both v_j,v_k and replaces v_i by the zero-height intersection on the edge from a most-negative vertex to v_i. In particular it strictly hits both other rows. Thus a source with exactly that double-hit pattern is feasible if and only if m/(a+m)>=r, and this representative preserves its pattern exactly. This single-cut formula is the d2 instance of the fully proved arbitrary-cut capacity theorem.
+
+The all-hit pattern is realized by B itself whenever any qualifying source exists, since that entails |B|>=V/4. A positive-area source cannot miss all three rows: the simultaneous closed negative region of a full positive fan is only y.
+
+Consequently every feasible finite weighted source family for this fan can be replaced by at most seven explicit representatives: three possible singleton patterns, three possible double-hit patterns, and the all-hit pattern. Weights of identical patterns may be combined, and all row scores are preserved exactly. No matching of separate incompatible cut optima is assumed: each representative has been proved to realize its whole stated pattern simultaneously.
+
+## 5. Relation to the multiple-cut obstruction
+
+The earlier two-cut example in dimension4 has a qualifying source but no qualifying source retaining its surviving original vertex. There is no contradiction. In the planar proof the only possible advantage of omitting that vertex is strictly below s_j s_k<1/4, while the required planar ratio is at least1/4. The join construction in higher dimensions changes the qualifying ratio to2^-d and permits a smaller ratio to qualify. Thus the planar retained-vertex assertion uses the exact source threshold; it is not a general maximum-simplex theorem for intersections of several cuts.
+
+This normal form supplies a finite geometric description of the possible source patterns at a fixed arbitrary center. It does not yet prove that the resulting pattern-weight constraints force one fan score to reach4/9, nor that an arbitrary hypothetical bad fan can be deformed to the centroid while retaining source qualification.

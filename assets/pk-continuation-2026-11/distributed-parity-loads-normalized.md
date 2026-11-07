@@ -1,0 +1,123 @@
+# Sharp depth from distributed parity loads and a low-target budget
+
+This is an atomic normalization and dependency closure of the distributed-load theorem in pending `11e98d65c1884d56`. Its total-smallness corollary is already present in intake `ff31d56304dd901a`. Neither is presented as a new discovery. The theorem has explicit load hypotheses and does not assert they hold for an arbitrary mixed-integer convex body.
+
+## 1. Ordinary local input and constants
+
+Fix d>=2. Put Gamma=(d/(d+1))^d, N=d+1, J=ceil(N/2), and alpha=(Gamma+J/N)/2>Gamma. Use accepted one-sided local-star theorem `c77c6c94c4f34008`, with a positive constant theta_* small enough that Gamma+alpha theta_*<1. It states the following: if full-dimensional convex bodies A_i,B,C_i satisfy
+
+    (A_i+C_i)/2 subset B,
+    D(C_i)<=Gamma(1+theta_*),
+    |C_i|>=|B|/(1+theta_*),
+    0<sum_i |A_i|<=theta_* |B|,
+
+then one point y in int(B) has, for every nonconstant affine f and every independent real threshold list beta_i,
+
+    |B intersect {f>=f(y)}|
+    +sum_i[|A_i intersect {f>=f(y)+beta_i}|
+                +|C_i intersect {f>=f(y)-beta_i}|]
+       >=Gamma |B|+alpha sum_i |A_i|.               (LS)
+
+Here D is maximal ordinary normalized closed-halfspace depth, whose maximum is attained. The cited theorem proves existence of theta_*; no mixed OC statement is used as an input. In particular, (LS) does not require a separate depth hypothesis on B.
+
+Set
+
+    theta=min(theta_*,1/4),       eta=theta/4,
+    k=(alpha-Gamma)/(4alpha),
+    epsilon=min(theta/4, 2^(-d-1)(1-eta), eta k).    (1)
+
+All these constants are positive and depend only on d. Restricting theta_* to theta preserves (LS).
+
+## 2. The exact actual-source theorem
+
+Let n>=1, C be a convex body in R^n x R^d, and K_z={x:(z,x) in C}. Put V_z=|K_z|, with zero for empty or lower-dimensional fibers. These volumes have a finite positive sum W. Let P subset Z^n consist of exactly one base from each parity class, with all K_w, w in P, full dimensional. Define
+
+    L=2^n,        M=max_(w in P) V_w,
+    E=sum_(z not in P) V_z,
+    Delta=sum_(w in P)(M-V_w),
+    G={w in P: V_w>=(1-eta)M},     B_bad=P\G,
+    F_r=sum_(z not in P, z mod2=r) V_z,
+    R_w=sum_(v in P, 2w-v not in P) V_(2w-v).
+
+Assume
+
+    F_r<=epsilon M for every parity r,
+    sum_(w in B_bad) R_w<=k Delta.                 (2)
+
+Then S=C intersect (Z^n x R^d) contains one deterministic point whose mass in every containing closed ambient halfspace is at least
+
+    (Gamma/L) W.                                  (3)
+
+Measure here is the sum of d-dimensional fiber volumes, equal to H_d on S because the finitely many distinct integer fibers are disjoint parallel Euclidean d-planes. The positive full-dimensional core makes this measure nonzero and dim_H(S)=d. Arbitrary intrinsic lower-dimensional intersections are outside this theorem's scope.
+
+## 3. Midpoint edges and legitimate clipping
+
+For every positive-volume outside base p let v(p) in P be its unique parity representative and w(p)=(p+v(p))/2, an integer base. For every x in K_p, convexity yields
+
+    (x+K_(v(p)))/2 subset K_(w(p)),
+    V_(w(p))>=2^(-d)V_(v(p)).                       (4)
+
+If v(p) is good and w(p) were outside P, (2) would bound its volume by epsilon M, whereas (4) bounds it below by 2^(-d)(1-eta)M>epsilon M. Hence w(p) belongs to P whenever its partner is good.
+
+Keep those outside bases whose partner and target are both good. For a good target w let e_w be their total volume. Its partners are distinct: p=2w-v determines p uniquely from v. No such partner equals w, since that would give p=w in P. The corresponding endpoint fibers and middle fiber are therefore all physically distinct within this star.
+
+For any 0<r<=e_w, choose interior points c_p of these outside fibers and the contained homothetic subbodies
+
+    A'_p=c_p+(r/e_w)^(1/d)(K_p-c_p).
+
+They have total volume r and preserve (A'_p+K_(v(p)))/2 subset K_w. They are witnesses inside the actual source; no source fiber is replaced or enlarged. If the partner depth and volume hypotheses of (LS) hold and r<=theta V_w, (LS) supplies a point with raw cap guarantee Gamma V_w+alpha r.
+
+Indeed an ambient through-point halfspace has the form
+
+    a.(z-w)+u.(x-y)>=0.
+
+For u nonzero use f(x)=u.x and beta_p=-a.(p-w); its partner threshold is the opposite one. Distinct physical fibers justify summation. If u=0 the entire middle fiber lies in the closed halfspace and V_w>Gamma V_w+alpha theta V_w. Containing halfspaces reduce by parallel boundary displacement to through-point halfspaces. Thus this guarantee controls all closed ambient orientations, including pure integer normals and their boundary mass. When r=0 the ordinary centroid gives Gamma V_w.
+
+## 4. Proof of the load theorem
+
+If E=0 the largest core centroid gives Gamma M>=Gamma W/L. Suppose E>0 and assume, for contradiction, that no actual point attains T=Gamma W/L. Write b=W/L. The largest core centroid implies M<b, equivalently Delta<E. Every ordinary deepest core point is actual, so
+
+    D(K_w)V_w<T       for every w in P.             (5)
+
+The outside mass having a bad partner is at most |B_bad| epsilon M. If B_bad is nonempty, each of its vertices contributes more than eta M to Delta, hence this discarded mass is less than (epsilon/eta)Delta<=kDelta. If B_bad is empty the discarded mass is zero. Every remaining outside base has a core midpoint by (4). The mass among these whose target is bad is at most sum_(w in B_bad)R_w<=kDelta. Thus the retained good-to-good mass satisfies
+
+    E_GG=sum_(w in G)e_w >= E-2kDelta >(1-2k)E.     (6)
+
+The non-strict weaker version of (6) suffices below. Also E=sum_r F_r<=L epsilon M, whence b<=(1+epsilon)M. On all good cores, (5) gives
+
+    D(K_w)<Gamma(1+epsilon)/(1-eta)
+             <=Gamma(1+theta).
+
+The last inequality follows from eta=theta/4, epsilon<=theta/4, and theta<=1/4. Every good partner of a good target has volume ratio at least 1-eta>=1/(1+theta). Therefore all depth and ratio hypotheses of (LS) hold on every retained star.
+
+For each good target define its required repair mass
+
+    r_w=(T-Gamma V_w)/alpha>0.
+
+Since b<=(1+epsilon)M and V_w>=(1-eta)M,
+
+    r_w<=(Gamma/alpha)(eta+epsilon)M
+             < (theta/2)M < theta V_w.             (7)
+
+If e_w>=r_w, Section 3 clips witnesses to mass r_w and constructs an actual point attaining T, a contradiction. Consequently e_w<r_w<theta V_w at every good target. Apply (LS) to each complete positive retained star; if e_w=0, use its ordinary centroid. This gives a candidate at each good target with guarantee Gamma V_w+alpha e_w. At every bad core use its ordinary centroid with guarantee Gamma V_w.
+
+These are L separate actual candidate points. Their certified depths have average at least
+
+    [Gamma sum_(w in P)V_w+alpha E_GG]/L
+       >=[Gamma sum_(w in P)V_w
+                +{Gamma+(alpha-Gamma)/2}E]/L
+       >Gamma W/L,
+
+because alpha(1-2k)=Gamma+(alpha-Gamma)/2. At least one candidate therefore attains T, contradicting the assumed failure. For a deterministic selection, at each core base take the lexicographically first point of its nonempty compact set meeting the stated actual depth bound. Compactness follows because closed-halfspace depth of a finite measure is upper semicontinuous: cap enlargement handles a moving point, and continuity from above then removes the enlargement. Equivalently each depth superlevel set is an intersection of closed halfspaces. All selected points remain in their compact actual fibers. Choose the first base in lexicographic order attaining the largest certified bound. This selects a single actual point and proves (3).
+
+## 5. Total-smallness and equal-core corollaries
+
+If all core volumes are at least (1-eta)M, there are no bad targets, and the per-parity bounds in (2) alone imply (3). Total outside mass need not be small relative to any single core fiber; it may be as large as L epsilon M.
+
+For the earlier total-smallness class, put m=min_(w in P)V_w and rho=min(epsilon,eta)>0. Suppose E<=rho m. If the largest core centroid already reaches T, stop. Otherwise Delta<E. It follows that
+
+    M-V_w<=Delta<E<=rho m<=eta M
+
+for every core w, so all are good. Furthermore F_r<=E<=epsilon M. The equal-core corollary proves (3). Thus this normalization recovers the dimension-only small-outside-mass theorem for arbitrary n>=1 and fixed arbitrary d>=2.
+
+The load budget on bad targets remains a substantive hypothesis in the distributed theorem. Neither convexity nor complete parity occupancy alone is asserted to imply it. All uses of continuous affine normalization occur inside the ordinary local input; the mixed lattice and its actual bases remain fixed in this proof.

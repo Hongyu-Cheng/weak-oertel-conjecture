@@ -1,0 +1,15 @@
+{
+  "verdict": "APPROVED_SCOPED_DRAFT",
+  "review_method": "Independent LLM mathematical verification",
+  "source": "circumscribed-simplex-fan-volume-excess.md",
+  "checks": [
+    "The source determinant ratio is relative to Q, so its denominator is q rather than v. Omitting an actual strict hit row yields exactly A(q)=(N/2)log N+log q.",
+    "Subtracting the entire excess volume q-v from each Q cap is valid individually; its logarithmic weighted sum subtracts precisely (q-v)S. Chebyshev/Jensen then produce the stated expression R_d(v,q).",
+    "The replacement S>=N log N has the correct direction because actual source existence forces A(q)>=0. E=0 and Q-boundary cases are separately correct.",
+    "Rewriting R_d as Gamma+E(1/2-Gamma)-(1-Gamma)(q-v)-E log q/(N log N) is exact. The proposed excess condition implies q<1 when v<1, including d=1, so the logarithmic term gives a strict surplus.",
+    "A full-rank positive relation among d+1 gradients has one-dimensional relation space and no zero gradient. The normalized nonnegative affine functions sum to one and map onto the barycentric affine hyperplane, producing a bounded circumscribed simplex with the claimed matching positive cap orientations.",
+    "The final necessary strict lower bound on circumscribed volume excess follows by contrapositive and does not assert an unproved global geometric restriction."
+  ],
+  "gaps": [],
+  "scope": "This is an all-point certificate for a full-rank d+1 positive fan with sufficiently small matching circumscribed simplex volume. It allows arbitrary convex middle bodies but requires actual simplex sources. It does not handle arbitrary fan rank/member count or prove a center satisfying all directions."
+}

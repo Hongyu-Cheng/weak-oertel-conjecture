@@ -1,0 +1,205 @@
+# Logarithmic determinant budgets for a canonical simplex facet fan
+
+Research draft, 6 November 2026. This is a nonperturbative all-center certificate for the canonical facet-oriented fan of a simplex, in every dimension. It does not control an arbitrary positively balanced fan or all halfspaces, and is not a proof of the hitting-selection theorem or OC.
+
+## 1. Statement and normalization
+
+Let d>=1, N=d+1, Gamma=(d/(d+1))^d, and let V>0 be a reference volume. Let B be a d-simplex with |B|=vV, where 0<v<=1. Let P_1,...,P_k be inscribed d-simplices with volumes at least 2^(-d)V. Give them nonnegative weights e_i with
+
+    E=sum_i e_i=1-v.
+
+The weights are normalized by V. Zero-weight simplices may be discarded; an empty family is allowed when v=1. Let lambda_1,...,lambda_N be the barycentric coordinate functions of B. At y in B define the N normalized strict-hitting scores
+
+    S_j(y)=v(1-lambda_j(y))^d
+       +sum_i e_i 1{max_(x in P_i)lambda_j(x)>lambda_j(y)}.
+
+The first term is exactly |B intersect {lambda_j>=lambda_j(y)}|/V. The second term uses strict support hitting, not mere boundary contact.
+
+For an interior y put L_j=log(1/lambda_j(y)), S=sum_j L_j, and
+
+    A_1=2d log 2+2log v,
+    A_2=(N/2)log N+log v,
+    A=min(A_1,A_2).
+
+When E>0, these numbers are nonnegative and
+
+    max_j S_j(y)
+       >=Gamma+E[(1-Gamma)-A/S].                    (1)
+
+In particular, in EVERY integer dimension d>=1,
+
+    max_j S_j(y)
+       >=Gamma+E[1/2-Gamma-log v/(N log N)]
+       >=Gamma.                                    (2)
+
+For v<1 the first right-hand side in (2) is strictly larger than Gamma. The formula (2) also applies when E=0; no source volume assumption is needed then. At a boundary point of B some score equals 1, so max_j S_j(y)>=Gamma holds there directly.
+
+In dimension d=2 the stronger elementary bound is
+
+    max_j S_j(y)>=4/9+(2/9)(1-v).                    (3)
+
+All statements refer to the canonical facet-oriented fan through y. They do not quantify over arbitrary directions.
+
+## 2. Two exact missing-row budgets
+
+Fix one source simplex P_i. Let M be its N by N barycentric vertex matrix relative to B, with one vertex per column. Then M is nonnegative and column-stochastic. Its determinant is the affine volume ratio in absolute value, so
+
+    |det M|=|P_i|/|B|>=2^(-d)/v.                    (4)
+
+Write r_j=max_l M_jl and s_j=sum_l M_jl. Let I be the missed strict-cap indices, so r_j<=lambda_j(y) for j in I. Every row maximum is positive because det M is nonzero; all row maxima are at most 1.
+
+First, Hadamard's inequality, nonnegativity, and arithmetic-geometric mean give
+
+    |det M|^2<=product_j sum_l M_jl^2
+       <=product_j(r_j s_j)
+       <=product_j r_j,
+
+since sum_j s_j=N implies product_j s_j<=1. Discarding factors at most 1 from hit rows yields
+
+    |det M|^2<=product_(j in I)lambda_j(y).
+
+Taking logarithms and using (4) proves
+
+    sum_(j in I)L_j<=A_1.                           (5)
+
+For the second budget, at least one row is hit. Indeed, if r_j<=lambda_j(y) for every j, then each column satisfies M_jl<=lambda_j(y) coordinatewise, while both column sums equal 1. Thus each column equals the vector lambda(y), which makes det M zero. This contradiction proves that a hit row exists.
+
+Choose one HIT row with index h. Replace this row by the sum of all rows, the all-ones row. The determinant is unchanged: multilinearity expands the replacement as the original determinant plus terms with two equal rows. Subtract r_j/2 times this new all-ones row from every other row j. Each entry in the resulting row j is in [-r_j/2,r_j/2]. Hadamard gives
+
+    |det M|<=N^(N/2) 2^(-d) product_(j!=h) r_j.
+
+Combining this with (4) gives
+
+    product_(j!=h) r_j >=1/(v N^(N/2)).
+
+Because h is hit, every missed row is still included in this product. Discarding the other factors, all at most 1, gives
+
+    product_(j in I)lambda_j(y)
+       >=product_(j in I)r_j
+       >=product_(j!=h)r_j
+       >=1/(v N^(N/2)).
+
+Taking logarithms proves the improved second budget
+
+    sum_(j in I)L_j<=(N/2)log N+log v=A_2.           (6)
+
+There is no averaging over deleted rows. Choosing an actual hit row is essential to this improvement.
+
+Each source therefore has hit log-weight at least
+
+    sum_(j hit by P_i)L_j>=S-A.                     (7)
+
+If E>0, some positive-weight source exists. Its missing log-weight is nonnegative, so (5) and (6) imply A_1,A_2>=0, including the case when its missed set is empty.
+
+## 3. The weighted cap inequality
+
+The two sequences L_j=log(1/lambda_j) and b_j=(1-lambda_j)^d have the same order: both decrease as lambda_j increases. The finite Chebyshev sum inequality gives
+
+    sum_j L_j b_j >=(1/N)(sum_j L_j)(sum_j b_j).
+
+For completeness, the difference between the two sides is
+
+    (1/N)sum_(j<l)(L_j-L_l)(b_j-b_l)>=0.
+
+Convexity of t->(1-t)^d on [0,1] and sum_j lambda_j=1 give
+
+    (1/N)sum_j b_j >=(1-1/N)^d=Gamma.
+
+Consequently,
+
+    sum_j L_j(1-lambda_j)^d>=Gamma S.                (8)
+
+Average (7) with the source weights e_i and use (8):
+
+    sum_j L_j S_j(y)
+       >=v Gamma S+E(S-A)
+       =Gamma S+E[(1-Gamma)S-A].                   (9)
+
+All L_j are strictly positive at an interior point. Dividing by S and bounding this weighted mean by the maximum proves (1).
+
+Jensen's inequality for -log gives S>=N log N. Because A_2>=0,
+
+    A/S<=A_2/S<=A_2/(N log N)
+       =1/2+log v/(N log N).
+
+Substitution into (1) gives the first inequality in (2).
+
+## 4. Constants, zero weights, and boundary points
+
+For d=1, Gamma=1/2. The sequence Gamma_d decreases with d, so Gamma_d<1/2 when d>=2. To verify monotonicity directly, the logarithmic derivative of x->(x/(x+1))^x is
+
+    -log(1+1/x)+1/(x+1)<0,
+
+using log(1+t)>t/(1+t) for t>0. This elementary logarithmic inequality follows by integrating 1/(1+s)>1/(1+t) over 0<=s<t.
+
+Since log v<=0, the square bracket in (2) is nonnegative. If v<1, it is strictly positive even in d=1, and E=1-v>0. Thus the interior score bound is strictly larger than Gamma in every dimension when the outside weight is positive.
+
+If E=0 then v=1. Some barycentric coordinate is at most 1/N, so its own cap already has volume at least Gamma V. This also proves (2), since its extra term is zero, without using any determinant budget or source existence.
+
+If y lies on a proper face, choose j with lambda_j(y)=0. Its own closed cap is all of B. Every full-dimensional P_i has positive upper support in the nonconstant nonnegative function lambda_j; otherwise P_i would lie in a facet and have zero d-volume. Hence every source strictly hits this cap, and S_j(y)=v+E=1. This includes equality in all support comparisons and all boundary positions of the source vertices.
+
+In d=1 there is also a direct proof of the unenhanced bound: the two own halfspace lengths sum to vV, and every nondegenerate interval source strictly hits at least one of the two halfspaces through y. Thus the two scores sum to at least 1.
+
+## 5. The stronger two-dimensional bound
+
+Suppose d=2 and first take v<1. Every source P_i strictly hits at least two of the three canonical caps at every y. Otherwise it misses two, say j,l, and lies in
+
+    0<=lambda_j<=lambda_j(y)=a,
+    0<=lambda_l<=lambda_l(y)=b.
+
+Here a+b<=1, so the coordinate rectangle lies inside the ambient standard triangle. A triangle in a rectangle of Euclidean area ab has area at most ab/2. To prove this, maximize its absolute determinant separately in each of the three vertices over the rectangle. A maximum can be achieved at rectangle vertices, and every triangle of three rectangle vertices has area at most ab/2. The ambient standard triangle has area 1/2, so the relative source-to-B area is at most ab. Thus
+
+    |P_i|<=vab V<=vV/4<V/4,
+
+contrary to the required source volume. This argument permits source support equal to the cut threshold; strict hitting is not silently replaced by weak hitting.
+
+It follows that
+
+    sum_(j=1)^3 S_j(y)
+       >=v sum_(j=1)^3(1-lambda_j(y))^2+2E
+       >=(4/3)v+2(1-v)
+       =4/3+(2/3)(1-v).
+
+Division by 3 proves (3). If v=1, its extra term vanishes, and the own-cap argument of Section 4 applies. The same inequality holds on the boundary because a score is 1, which is at least its right-hand side for 0<v<=1.
+
+## 6. Explicit scope and remaining geometric step
+
+The directions are fixed by B's facets. The point y is arbitrary, but the N normals are not. The determinant argument bounds the actual source hitting patterns at the displaced point, so it does not assume that credits proved at the centroid persist after displacement. The quantitative all-dimensional surplus is
+
+    (1-v)[1/2-Gamma_d-log v/((d+1)log(d+1))].
+
+This still does not exclude a bad fan with oblique normals unrelated to B's facets. It therefore does not by itself construct a point satisfying every halfspace, prove a middle-fiber depth theorem, or resolve OC.
+
+## 7. A deterministic center for all canonical directions simultaneously
+
+The all-y maximum statement also gives one point satisfying all N canonical direction inequalities, because these scores are separable in barycentric coordinates. This remains a statement about N directions, not all halfspaces.
+
+If v=1, take the centroid of B. Suppose v<1 and write
+
+    delta=(1-v)[1/2-Gamma-log v/(N log N)]>0,
+    T=Gamma+delta/2.
+
+Every interior point has maximum canonical score at least Gamma+delta by (2), and the same holds at boundary points: their maximum is 1, while Gamma+delta<=1. The latter inequality also follows by applying (2) at any interior point, since every individual score is at most v+E=1. Thus T<1.
+
+Set r_ij=max_(x in P_i)lambda_j(x), and define, for 0<=t<=1,
+
+    f_j(t)=v(1-t)^d+sum_i e_i 1{r_ij>t},
+    a_j=sup{t in [0,1]: f_j(t)>=T}.
+
+The functions f_j are nonincreasing and right-continuous. Their endpoint values are f_j(0)=1 and f_j(1)=0: the former uses full-dimensionality of every positive-weight source. Right continuity at 0 therefore implies a_j>0. A jump at t=1 can occur when some source support values r_ij equal 1, so a_j=1 is possible and is explicitly allowed.
+
+For every a_j<1, right continuity gives f_j(a_j)<=T. Indeed if f_j(a_j)>T, it stays above T immediately to the right, contradicting the supremum definition. If a_j=1, then f_j(a_j)=0<=T. For every t<a_j, monotonicity and the definition of the supremum give f_j(t)>=T: there is some t'>t with f_j(t')>=T. For t>a_j, one has f_j(t)<T by definition.
+
+We claim A=sum_j a_j>1. If A<=1, choose a barycentric vector lambda with lambda_j>=a_j for all j and sum_j lambda_j=1; such a vector exists by distributing the remaining mass 1-A without exceeding coordinate value 1. For instance, choose nonnegative increments summing to 1-A within the capacities 1-a_j, whose total N-A is at least 1-A. Then f_j(lambda_j)<=T for every j, using the preceding paragraph. The point with these barycentric coordinates has maximum canonical score at most T<Gamma+delta, a contradiction.
+
+Define the single deterministic point y_* by
+
+    lambda_j(y_*)=a_j/A,       j=1,...,N.
+
+Because A>1 and every a_j>0, these coordinates are strictly between 0 and a_j and sum to 1. Therefore
+
+    S_j(y_*)=f_j(a_j/A)>=T>Gamma
+
+for every j. Every closed halfspace in the positive canonical direction whose threshold is at or below its value at y_* has at least as large a middle cap and at least as many strict source hits, so the same conclusion holds for every such halfspace containing y_*.
+
+The construction uses actual source support numbers and finite scalar threshold sets, with no selected-point limit or attainment assumption for the full strict-hitting depth. It covers the N positive facet orientations only; opposite orientations and other oblique normals remain outside the conclusion.

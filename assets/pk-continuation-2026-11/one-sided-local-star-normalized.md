@@ -1,0 +1,204 @@
+# One-sided local-star repair with larger partners and an arbitrary target
+
+This atomic normalization closes the dependency of pending `926bac9f38574135` using accepted ordinary rigidity `ea91e021ff1f4416`. It preserves that note's mathematical argument rather than asserting another discovery. Classical centroid Grünbaum and its equality case are ordinary background; no mixed-integer theorem is invoked.
+
+This strengthens the local star in pending `ff31d56304dd901a`: no hypothesis on the target's ordinary depth is needed, and partner volumes have only a lower ratio bound. The implicit upper ratio from midpoint inclusion is sufficient. The total outer mass must still be small relative to the target, with a constant depending on d. No uniform-in-d all-direction repair is claimed.
+
+## 1. Statement
+
+Fix d>=2. Put
+
+    Gamma=(d/(d+1))^d,
+    N=d+1, J=ceil(N/2),
+    alpha=(Gamma+J/N)/2>Gamma.
+
+There is rho_d>0 such that the following holds for every finite nonempty collection of convex d-bodies A_j,B,C_j. Assume
+
+    (A_j+C_j)/2 subset B,
+    D(C_j)<=Gamma(1+rho_d),
+    |C_j|>=|B|/(1+rho_d),
+    0<e=sum_j |A_j|<=rho_d |B|.                   (1)
+
+Here D(K) denotes the maximum ordinary normalized closed-halfspace depth of K. There is one y in int(B) such that for every nonconstant affine functional f and every list of real numbers beta_j,
+
+    |B intersect {f>=f(y)}|
+      +sum_j [|A_j intersect {f>=f(y)+beta_j}|
+              +|C_j intersect {f>=f(y)-beta_j}|]
+      >=Gamma |B|+alpha e.                        (2)
+
+One may additionally choose rho_d so that Gamma+alpha rho_d<1. Then purely integer caps containing a lifted middle-fiber point are paid by the whole middle fiber, whenever this star is used inside an actual mixed source with distinct fibers.
+
+The bodies in the star need only obey the indicated midpoint inclusions; no simultaneous lattice realization of an independently perturbed family is assumed.
+
+## 2. Ordinary inputs and a contradiction sequence
+
+We use the following ordinary result, proved in accepted `ea91e021ff1f4416`: D(K)>=Gamma, with equality precisely for simplices, and D is continuous under Hausdorff convergence to a full-dimensional body. Its proof uses classical Grünbaum including its single-centroid-cap equality characterization. The maximum in D is attained, by joint cap continuity on the compact sphere and compact body. We use no mixed-integer assertion from that note.
+
+Suppose no rho_d exists. For every integer k sufficiently large choose a failing family with
+
+    D(C_(k,j))<=Gamma(1+1/k),
+    |C_(k,j)|>=|B_k|/(1+1/k),
+    0<e_k=sum_j |A_(k,j)|<=|B_k|/k.                (3)
+
+The finite number of partners may depend on k. Failure means that no single point in B_k satisfies (2). If an ordinary deepest point of B_k had own absolute depth at least Gamma|B_k|+alpha e_k, it would satisfy (2), since every endpoint contribution is nonnegative. Therefore
+
+    Gamma<=D(B_k)<Gamma+alpha e_k/|B_k|,
+    D(B_k)->Gamma.                                (4)
+
+Thus target near-minimality follows from failure; it need not be an assumption.
+
+Choose a maximum-volume inscribed simplex of B_k, and apply an ordinary continuous affine map sending it to
+
+    T=conv(0,e_1,...,e_d), v=|T|=1/d!.
+
+The same map is applied to all members of that family, preserving all volume ratios and (2). Maximality gives
+
+    T subset B_k subset [-1,1]^d,
+
+because replacing a simplex vertex by x in B_k bounds the absolute values of its barycentric coordinates by one. Compactness, (4), and ordinary rigidity imply
+
+    B_k -> T, V_k:=|B_k|->v, g_k:=centroid(B_k)->g_T. (5)
+
+For completeness, every subsequential limit is a simplex by rigidity and contains T. Any simplex inscribed in that limit is approximated by simplices in B_k, so its volume is at most v; the limiting simplex therefore has volume v and equals T. This proves full convergence.
+
+## 3. Uniform partner compactness despite the missing upper ratio
+
+For each pair separately choose p_(k,j) in A_(k,j) and replace
+
+    A_(k,j) by A_(k,j)-p_(k,j),
+    C_(k,j) by C_(k,j)+p_(k,j).
+
+The midpoint inclusion is unchanged. In a cut of normal grad f, the old tilt beta_j corresponds to the new tilt beta_j′=beta_j-grad f.p_(k,j): the translated A threshold decreases by grad f.p_(k,j), and the translated C threshold increases by that amount. Because all beta_j are quantified independently, (2) is equivalent before and after these translations. They are not changes to an actual mixed body.
+
+After translation, 0 belongs to A_(k,j), so
+
+    C_(k,j) subset 2B_k,
+    A_(k,j) subset 2(B_k-B_k).
+
+The second inclusion follows by choosing any point of C_(k,j), which belongs to 2B_k. Thus all translated bodies lie in a common ball of radius R=4sqrt(d). In particular the automatic bound |C_(k,j)|<=2^d V_k replaces any missing upper-volume-ratio hypothesis.
+
+Uniformly in j there are simplices S_(k,j) subset C_(k,j) satisfying
+
+    |S_(k,j)|/V_k >= 1-o(1).                     (6)
+
+Here is the required uniform compactness argument. If (6) failed, select one offending partner along a subsequence. Its bodies lie in the fixed ball, and their volumes are at least V_k/(1+1/k)->v>0, so a further Hausdorff limit C_* is full-dimensional with |C_*|>=v. The depth bound in (3), continuity and rigidity make C_* a simplex. Approximating its vertices by points of those partner bodies gives inscribed simplices whose volumes tend to |C_*|>=v, contradicting the chosen failure of (6). This argument is independent of the number of partners.
+
+## 4. Fixed facet credits for every small endpoint
+
+Write lambda_0,...,lambda_d for the barycentric functions of T, n_i=grad lambda_i, b=1/N, q=N-J+1, and
+
+    delta_0=N^(-N/(2q))-1/N>0,
+    delta=delta_0/2.
+
+Choose outer homothetic copies T_k^+=(1+t_k)(T-g_T)+g_T containing B_k, with t_k>=0 and t_k->0. Such copies exist from (5) and an inball of T.
+
+For every p in A_(k,j), the simplex (p+S_(k,j))/2 lies in T_k^+. Its nonnegative column-stochastic barycentric matrix P has determinant 2^(-d)|S_(k,j)|/|T_k^+|. Replacing one row by the all-ones row and centering each other row at half its maximum gives the elementary Hadamard estimate
+
+    |det P|<=N^(N/2)2^(-d) r_J^q,                (7)
+
+where r_J is its J-th largest row maximum. Because (6) gives a uniform limiting determinant ratio at least one, for all sufficiently large k the estimate forces r_J>=b+delta, uniformly in p,j. Explicitly it is enough to have
+
+    |S_(k,j)|/|T_k^+| >= [(b+delta)/(b+delta_0)]^q<1,
+
+which follows from (5)-(6).
+
+The barycentric functions of T_k^+ equal b+(lambda_i-b)/(1+t_k). Consequently at least J indices satisfy
+
+    lambda_i(p)+h_(C_(k,j))(lambda_i)>=2b+2delta.  (8)
+
+Define the fixed measurable sets
+
+    A_(k,j,i)={p in A_(k,j):
+                lambda_i(p)+h_(C_(k,j))(lambda_i)>=2b+delta},
+    c_(k,i)=sum_j |A_(k,j,i)|,
+    cbar_k=(1/N)sum_i c_(k,i).
+
+Pointwise multiplicity in (8) yields
+
+    0<=c_(k,i)<=e_k,          cbar_k>=J e_k/N.    (9)
+
+These sets are chosen before the center is displaced. They need not use the same high-coordinate indices at different endpoint points.
+
+The inclusion (p+C_(k,j))/2 subset B_k subset T_k^+ implies
+
+    width_(C_(k,j))(lambda_i)<=2(1+t_k)<=3
+
+for large k. For f=lambda_i+a.x with |a|<=epsilon and a point y with max_i(lambda_i(y)-b)_+<=sigma, put
+
+    r_(k,j)=(|A_(k,j)|/|C_(k,j)|)^(1/d).
+
+A homothetic partner cap of volume |A_(k,j)| gives, for every real beta_j,
+
+    |A_(k,j) intersect {f>=f(y)+beta_j}|
+     +|C_(k,j) intersect {f>=f(y)-beta_j}|
+    >= |A_(k,j) intersect
+          {f>=2f(y)-h_(C_(k,j))(f)
+                        +width_(C_(k,j))(f)r_(k,j)}|.    (10)
+
+Indeed either the actual C-cap already has at least |A| mass, or its threshold is above the homothetic-cap threshold, forcing the A threshold below the one displayed. This uses closed caps and no minimizing tilt.
+
+For p in A_(k,j,i), its margin above the threshold on the right of (10) is at least
+
+    delta-2sigma-3r_(k,j)-6R epsilon.             (11)
+
+This follows by bounding perturbations of both point evaluations and support extrema by R epsilon, and the width perturbation by 2R epsilon. The partner lower bound and total-mass bound give
+
+    r_(k,j)^d <= (e_k/V_k)(1+1/k)->0
+
+uniformly in j. Choose fixed epsilon<=delta/(24R), require sigma<=delta/8, and then take k large enough that every r_(k,j)<=delta/12. Equation (11) is at least delta/4>0. Thus every corresponding endpoint pair pays the fixed credit |A_(k,j,i)|, for every tilt and these nearby centers/normals.
+
+## 5. One translated true centroid controls all nearby directions
+
+Set kappa=J/N-Gamma>0 and choose an error allowance zeta_0=kappa/4. Define v_k uniquely by
+
+    n_i.v_k=(c_(k,i)-cbar_k)/(N Gamma V_k),
+    y_k=g_k+v_k.                                  (12)
+
+The right sides sum to zero and the gradients n_i have precisely that dependence. In standard simplex coordinates,
+
+    |v_k| <= K_d e_k/V_k,
+    K_d=sqrt(d)/(N Gamma).                         (13)
+
+Hence y_k->g_T, eventually y_k lies in int(T) subset int(B_k), and its sigma in (11) is at most delta/8.
+
+We spell out the coarea-continuity input. If convex d-bodies converge in Hausdorff distance to a full-dimensional body and their section hyperplanes converge to a proper limiting section plane, the sections converge in Hausdorff distance after the small plane identifications. The upper inclusion follows from convergence of the bodies. For the lower inclusion, move every limiting section point slightly toward a limiting section point in the interior of the body, then adjust to the moving plane; the perturbed points belong to the approximating bodies. Convex (d-1)-volume continuity and the continuous nonzero normal norm give convergence of the section coarea density. Compactness of a compact collection of proper limiting planes makes this convergence uniform.
+
+For T, the cap lambda_i>=s has volume v(1-s)^d, so its coarea density at s=b equals N Gamma v. It follows from (5) and the preceding section argument that, for every fixed small error zeta>0, one may first shrink epsilon and choose h>0 so that, for all sufficiently large k,
+
+    |S_(B_k)(lambda_i+a.x,(lambda_i+a.x)(g_k)+t)
+                       -N Gamma V_k|<=zeta V_k
+
+for every i, |a|<=epsilon, |t|<=h. All planes here are proper.
+
+Take epsilon,zeta small enough that
+
+    zeta K_d(sqrt(d)+1)+N Gamma K_d epsilon<=zeta_0,
+
+while retaining epsilon<=min(1,delta/(24R)). For large k, (13) ensures that the translation increments Delta=(n_i+a).v_k lie in [-h,h]. The signed coarea integral therefore differs from N Gamma V_k n_i.v_k by at most zeta_0 e_k. Classical Grünbaum at the TRUE centroid g_k gives
+
+    |B_k intersect {f>=f(y_k)}|
+       >=Gamma V_k-(c_(k,i)-cbar_k)-zeta_0 e_k.    (14)
+
+The approximation error is multiplied by |v_k|=O(e_k/V_k), so no additive error independent of e_k has been used. Summing the pair credits from (10)-(11) gives, for all these oriented facet neighborhoods and every collection of tilts,
+
+    total cap mass >=Gamma V_k+cbar_k-zeta_0 e_k
+       >=Gamma V_k+(J/N-zeta_0)e_k
+       >Gamma V_k+alpha e_k,                      (15)
+
+since J/N-zeta_0=Gamma+3kappa/4>Gamma+kappa/2=alpha.
+
+## 6. Remaining directions and conclusion
+
+The equality directions for centroid Grünbaum on T are exactly its oriented facet-apex directions n_i/|n_i|. This follows from the classical single-cap equality characterization: an equality pyramid apex of a simplex is a vertex, and its opposite vertices determine the base facet. On the compact complement of fixed open neighborhoods of these directions, the centroid cap fraction of T exceeds Gamma by a positive gap G. If that complement is empty, there is nothing to check.
+
+Uniform cap-volume continuity under B_k->T and y_k->g_T gives at least (Gamma+G/2)V_k from B_k alone in every remaining direction. Since e_k/V_k->0, this exceeds Gamma V_k+alpha e_k for all large k. The nearby unit normals really are covered by Section 5: a normal u near n_i/|n_i| can be multiplied by the positive number |n_i| to give n_i+a with |a| small; the arbitrary beta_j are multiplied by the same factor. Affine constants cancel from all thresholds.
+
+Thus the same point y_k satisfies (2) in EVERY nonconstant affine direction and for EVERY tilt list, contradicting the failure defining (3). A positive rho_d therefore exists. Decreasing it preserves the conclusion and all hypotheses, so Gamma+alpha rho_d<1 can also be imposed.
+
+## 7. Scope and novelty assessment
+
+The existing local-star statement requires D(B) near Gamma and two-sided near-equality of every |C_j|/|B|. Both requirements have been removed from this statement: target near-minimality is forced only in a contradiction sequence, and the partner volume upper bound comes from the actual inclusion C_j subset 2B after a permissible paired threshold translation. The compact limiting partner simplex may have volume strictly greater than |T|, which only improves the determinant lower bound.
+
+A text search of the source collection for larger-partner and one-sided local-repair variants, followed by comparison with the full existing local-star proof and its three-fiber precursor, found no existing statement with this exact strengthened scope. This is a limited overlap check, not a claim of literature novelty.
+
+This result still pays only Gamma|B|+alpha e for small total e/|B|. A very low-volume target can have a global deficit much larger than alpha rho_d|B|, so the lemma alone does not exclude all low-target incidence in the parity graph. Its constants have not been made uniform in d.

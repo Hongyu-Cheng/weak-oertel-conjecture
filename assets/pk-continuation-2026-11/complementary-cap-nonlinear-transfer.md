@@ -1,0 +1,101 @@
+# Exact nonlinear complementary-cap transfer for reflected stars
+
+Research draft, 6 November 2026. This strengthens the midpoint-transport BM-deficit bound and has an elementary proof from ordinary Brunn-Minkowski. No transport, centroid alignment, ordinary rigidity, or shape assumptions are needed.
+
+## 1. Scalar complementary-cap lemma
+
+Let d>=1 and 0<a<=c. Define, for s>=0,
+
+    Phi_{a,c}(s)=[a-(2s^{1/d}-c^{1/d})_+^d]_+,          (1)
+
+with x_+=max(x,0). Suppose full-dimensional convex bodies A,C of volumes a,c have their midpoint body contained in another convex body B. Consider any paired continuous cuts
+
+    A^+={x in A:f(x)>=tau+beta},
+    C^+={x in C:f(x)>=tau-beta},
+    B^+={x in B:f(x)>=tau},
+
+where f is a nonconstant affine functional and beta,tau are arbitrary. Put s=|B minus B^+|. Then
+
+    |A^+|+|C^+|>=Phi_{a,c}(s).                            (2)
+
+Proof. Write u=|A^+|, z=|C^+|, and x=u+z. If x>=a, (2) is immediate because Phi lies in [0,a]. Suppose x<a. The complementary strict caps have positive volumes a-u and c-z. Their midpoint set lies in the strict negative middle cap: if f(x_A)<tau+beta and f(x_C)<tau-beta, then f((x_A+x_C)/2)<tau. Ordinary Brunn-Minkowski therefore gives
+
+    2s^{1/d}>=(a-u)^{1/d}+(c-z)^{1/d}.                   (3)
+
+This application is legitimate to the measurable convex strict caps; alternatively use their compact inner exhaustions and continuity from below. All proper hyperplane boundaries have zero d-volume.
+
+For fixed x<a, consider F(u)=(a-u)^{1/d}+(c-x+u)^{1/d}, for0<=u<=x. This is concave, so its minimum is at an endpoint. The endpoint placing all removed mass in the smaller body is the smaller one:
+
+    (a-x)^{1/d}+c^{1/d}
+        <=a^{1/d}+(c-x)^{1/d}.                           (4)
+
+For d=1 both sides agree. For d>1, the function s^{1/d}-(s-x)^{1/d} decreases as s increases on [x,infinity), which proves (4) because a<=c. Hence (3) gives
+
+    2s^{1/d}>= (a-x)^{1/d}+c^{1/d}.
+
+In particular 2s^{1/d}-c^{1/d}>0, and raising to the dth power and rearranging yields x>=a-(2s^{1/d}-c^{1/d})^d. Combining with x>=0 proves (2).
+
+The function Phi is continuous and nonincreasing. It equals a for s<=c/2^d, equals0 for s>=((a^{1/d}+c^{1/d})/2)^d, and interpolates explicitly between those two thresholds.
+
+## 2. Exact pointwise transfer to actual mixed sources
+
+Let a convex body C_total have an actual full-dimensional fiber B at integer base w, with volume v. Let A_i,C_i be positive-volume actual fiber pairs at bases p_i,z_i, where p_i+z_i=2w and 0<a_i=|A_i|<=c_i=|C_i|. Assume the middle and all endpoint bases are pairwise distinct. Let t_B(y) be the ordinary absolute halfspace depth of y in B. Then every y in B satisfies
+
+    h_{C_total}(w,y)
+      >= t_B(y)+sum_i Phi_{a_i,c_i}(v-t_B(y)).            (5)
+
+Proof. Reduce a containing closed ambient halfspace to a parallel through-(w,y) halfspace. If its continuous normal is nonzero, let t be its actual middle-cap volume. Then t>=t_B(y). Since p_i+z_i=2w, its two endpoint thresholds sum to twice the middle threshold, so Lemma1 gives pair mass at least Phi_{a_i,c_i}(v-t). The endpoints are distinct, so their actual cap masses can be summed once. Adding the middle cap t yields at least
+
+    t+sum_i Phi_{a_i,c_i}(v-t).
+
+This is nondecreasing in t, because each Phi is nonincreasing in its argument. Substituting t>=t_B(y) proves (5). If the continuous normal is zero, the whole middle fiber contributes v. For each reflected pair, the two pure-integer signs are opposite, so at least one endpoint fiber is wholly included; it contributes at least min(a_i,c_i)=a_i. Thus the mass is at least v+sum_i a_i, which is at least the right side of (5). Closed boundaries, including the entire middle fiber, have been retained.
+
+The ordinary depth function on compact B attains its maximum, by joint continuity of proper cap volumes in the point and unit normal. Therefore an ordinary deepest point y_* gives the strongest bound furnished by (5), with t_B(y_*)=vD(B). This is a single actual deterministic point, independent of every subsequently tested halfspace.
+
+## 3. Centroid corollary and a full-credit low-middle regime
+
+Let Gamma=(d/(d+1))^d. At the true middle centroid g, ordinary Grünbaum yields
+
+    h_{C_total}(w,g)
+      >=Gamma v+sum_i Phi_{a_i,c_i}((1-Gamma)v).          (6)
+
+In particular, if every partner satisfies
+
+    c_i>=2^d(1-Gamma)v,                                 (7)
+
+then every Phi in (6) equals a_i and
+
+    h_{C_total}(w,g)>=Gamma v+sum_i a_i.                  (8)
+
+This exact coefficient-one gain requires no smallness condition on individual or total a_i beyond a_i<=c_i. The actual midpoint inclusions implicitly restrict which volume data can occur; no independent realizability is asserted.
+
+More generally, at any ordinary point y with depth t_B(y), all tiny fibers pay their full volume whenever c_i>=2^d(v-t_B(y)) for every i. Ordinary middle-shape depth surplus therefore enlarges the full-credit regime.
+
+## 4. This strengthens the linear transport deficit price
+
+Let M=((a^{1/d}+c^{1/d})/2)^d. Then for every s>=0,
+
+    Phi_{a,c}(s)>=a[1-s/M]_+.                            (9)
+
+If s>=M the right side is zero. Otherwise write rho=s/M in [0,1). Then
+
+    2s^{1/d}-c^{1/d}
+      =rho^{1/d}(a^{1/d}+c^{1/d})-c^{1/d}
+      <=rho^{1/d}a^{1/d}.
+
+Taking positive parts and dth powers gives (9). Substituting s=v-t_B(y) in (5) recovers the previous transport transfer, and thus its exact linear BM-excess bound. The nonlinear version can remain positive or give full credit where that coarser linear estimate loses a substantial fraction.
+
+## 5. A sharp one-low-core consequence
+
+Suppose a core consists of L positive-volume fibers including B, all positive-volume outside fibers are precisely the A_i, and each C_i is a distinct core partner. Let M be the largest core volume and E=sum_i a_i. Assume (7) and a_i<=c_i. The largest-core centroid gives Gamma M; (8) gives Gamma v+E. Then one of these two actual points has depth at least Gamma W/L.
+
+Indeed W<= (L-1)M+v+E. If W<=LM, the largest-core point works. Otherwise E>M-v. For the middle point,
+
+    L(Gamma v+E)-Gamma[(L-1)M+v+E]
+      =Gamma(L-1)(v-M)+(L-Gamma)E
+      >[-Gamma(L-1)+(L-Gamma)](M-v)
+      =L(1-Gamma)(M-v)>=0.
+
+Here v<=M. If M=v then W>LM implies E>0 and the same difference is positive directly. Thus (8) reaches the sharp target. For a complete parity core L=2^n this is the exact OC constant on the displayed full-credit star class. No per-parity incoming-load bound, common shapes, or centroid compatibility is assumed.
+
+Condition (7) is a concrete low-middle-volume regime: for equal large partners of volume M, it is v<=M/[2^d(1-Gamma)]. It is not a universal property of all reflected stars. The intermediate middle-volume regime remains a distinct research problem; the exact transfer (5) supplies a quantitative invariant there.

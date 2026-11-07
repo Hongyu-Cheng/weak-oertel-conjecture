@@ -1,0 +1,68 @@
+{
+  "schema": "math-prover-verifier-v2",
+  "verdict": "APPROVED",
+  "summary": "The exact frozen candidate gives a self-contained finite rational counterexample to the sharp Gamma_d/2^n assertion at d=23,n=3*10^92. Independent adversarial re-derivation found no missing geometric or quantifier step: the full integer fiber census is exact, the origin fiber is preserved by explicit containments, every positive binary fiber is suppressed in each appropriate middle cut, and all remaining points have isolated simplex caps. Exact rational arithmetic gives M<4b and Gamma23 M>3b/2. Thus every point has raw depth at most Gamma23 M while total mass W=2^n M+(4b-M), proving the strict upper bound Gamma23 M/W<Gamma23/2^n. Approval is an independent LLM mathematical review with supporting exact arithmetic, not human verification or formal proof-assistant verification.",
+  "critical_errors": [],
+  "gaps": [],
+  "repair_hints": [],
+  "target_match": null,
+  "target_match_explanation": "This is a sharp-only counterexample. The repository locked target is a weak absolute-constant mixed-integer lower bound; this candidate neither resolves nor refutes that target, and does not claim to refute1/(e2^n).",
+  "review_method": "Independent LLM line-by-line adversarial review of the frozen candidate, fresh re-derivation of all construction and halfspace steps, comparison with a separately written direct proof, and exact Python integer/Fraction evaluation of finite arithmetic certificates. Not a human or formal verification claim.",
+  "candidate_id": "022a26fa5001480a",
+  "candidate_sha256": "711b580bea6b9ae13050bd3ed25643e152f97ad0932a617f29f32d78007cd74f",
+  "proof_sha256": "32cadcca609a602082cd77e13c70b702ade3ef86e82e107897ead7ff1aeabc5b",
+  "audit_categories": [
+    {
+      "category": "Measure audit",
+      "verdict": "PASS",
+      "details": "Every nonempty fiber is a full23-dimensional simplex. The exact finite fiber census gives q=23. The fiber embeddings are isometries, and distinct fibers are disjoint Borel sets; normalized H23 therefore equals the finite sum of ordinary23-volumes. This proves0<W<infinity and W=2^n M+(4b-M). No ambient(n+23)-volume is substituted."
+    },
+    {
+      "category": "Center audit",
+      "verdict": "PASS",
+      "details": "The statement is a counterexample, so the relevant quantifier is every y in the actual induced set S. Every origin-fiber point lies in one explicit bad cut because sum_j f_j=0. Every point in every other exact fiber has a barycentric vertex cap lifted to an ambient isolating halfspace. No center in conv(S), a distribution, or a rounded continuous point is substituted."
+    },
+    {
+      "category": "Halfspace audit",
+      "verdict": "PASS",
+      "details": "All displayed halfspaces are closed, have nonzero ambient normals, and generally couple integer and continuous coordinates. For each middle-fiber cut, paid negative fibers are wholly included, unpaid negative fibers and all nonzero binary fibers are strictly excluded. The all-unpaid and at-least-one-paid formulas cover every subset. The middle boundary has23-volume zero. The exposed-base lift uses a finite maximum over compact other fibers, so all unwanted fibers are strictly excluded."
+    },
+    {
+      "category": "Lattice audit",
+      "verdict": "PASS",
+      "details": "The proof fixes explicit rational coordinates in R^23 and leaves the integer R^n coordinates standard throughout. Barycentric matrices are used solely for relative continuous volume, with the affine-hyperplane conversion explicitly cancelling. The projection has precisely{0,1}^n union{-e_i} as integer points. All nonzero bases are uniquely exposed. The origin convex-combination equations and both Minkowski containments establish that its fiber is exactly B."
+    },
+    {
+      "category": "Degeneracy audit",
+      "verdict": "PASS",
+      "details": "The counterexample uses d=23,n=3*10^92 and a finite rational polytope of full ambient dimension, proved using n+24 affinely independent points. S is nonempty and every fiber has full dimension23. Points on simplex faces and vertices are covered by closed vertex caps, including zero-volume caps. The cases n=0,d=0, and q<d need not be settled to refute the universal assertion; the proof makes no contrary claim about those cases."
+    },
+    {
+      "category": "Constant audit",
+      "verdict": "PASS",
+      "details": "The 24-by-24 source vertex determinant is6^-8. The source contraction s=103/104 and L=10000 give N=L^23,n=3N, M=2^23 s^23 6^-8 b, and m=M/(4b)=(8192/6561)s^23. Independently recomputed integer certificates prove m<1 and Gamma23*m>3/8 exactly. The root-specific containment margins and g-delta=1/3120000 are strictly positive exact fractions. Every middle cut has mass3b/2<Gamma23 M; every other point has a cap of mass<=Gamma23 M."
+    },
+    {
+      "category": "Sharpness audit",
+      "verdict": "PASS",
+      "details": "The exact sharp constant at issue is Gamma23/2^n, not the weaker1/(e2^n). Since4b-M>0, Gamma23 M/W<Gamma23/2^n strictly. No claim is made that this construction violates the weaker constant, nor that the usual product example has a different depth. Establishing the product example as a universal extremizer is not required for a counterexample to that proposed universal bound."
+    },
+    {
+      "category": "Circularity audit",
+      "verdict": "PASS",
+      "details": "The frozen proof is self-contained and has no predecessor dependencies. It does not invoke the earlier completion theorem, a hitting-model equivalence, any mixed-integer centerpoint inequality, or ordinary Grunbaum lower depth. The only ordinary depth fact used is the explicit upper bound from a simplex barycentric vertex cap, proved by homothety in Section5."
+    },
+    {
+      "category": "Limit audit",
+      "verdict": "PASS",
+      "details": "No approximation, weak convergence, smoothing, or limiting body is used. n and the number of generating simplices are enormous but finite. Exposed-fiber isolation chooses a finite tilt by a maximum over finitely many bounded quantities. The uniform depth upper bound applies pointwise and hence to the supremum, so no attainment theorem or exchange of infimum and limit is needed."
+    },
+    {
+      "category": "Classical-proof audit",
+      "verdict": "PASS",
+      "details": "The frozen proof presents the source vertices, their unique convex representation, the determinant-volume identity, exact parameters, both origin-preserving containments, all integer fibers, all middle bad cuts, and the exposed-base lifting lemma. I re-derived these steps independently and compared the separate inventory direct proof. The exact arithmetic checker supports finite scalar calculations only; none of the geometric conclusions depends on numerical evidence or a finite computational search."
+    }
+  ],
+  "supporting_audit": "The complete ten-category audit is recorded above. The portable exact arithmetic report is assets/pk-continuation-2026-11/audit-direct-rational-sharp-oc-counterexample-exact.json.",
+  "packaging_note": "A private scratch-file path was replaced by repository-relative supporting material. The mathematical verdict, audit text, and candidate/proof hashes are unchanged."
+}

@@ -1,0 +1,160 @@
+# Reflection overlap: an exact ledger and an actual simplex-star obstruction
+
+Research note, 6 November 2026. The reflection overlap is a measurable
+all-direction repair certificate, but even its maximum together with the
+exact ordinary middle depth does not suffice for intermediate targets.
+The counterexample below is to that certificate, not to OC.
+
+## 1. Exact overlap certificate and first moment
+
+Let B,A_i,C_i be convex d-bodies, d>=1, with (A_i+C_i)/2 subset B. Suppose
+these are actual fibers at one integer middle w and distinct reflected
+endpoint bases, with no endpoint fiber repeated. Write b=|B|, a_i=|A_i|,
+c_i=|C_i|, E=sum a_i, and let D_B(y) be ordinary unnormalized halfspace
+depth in B. Define
+
+    R_i(y)=|A_i intersect (2y-C_i)|,
+    R(y)=sum_i R_i(y).                                         (1)
+
+Then the actual raw mixed depth at (w,y) satisfies
+
+    depth_star(w,y)>=D_B(y)+R(y).                              (2)
+
+Indeed, for a in A_i intersect(2y-C_i), its reflection 2y-a belongs to
+C_i. Their ambient midpoint is (w,y), so every closed halfspace containing
+that point captures at least one of the two reflected points. Integrate
+this indicator inequality over the overlap. Reflection preserves volume,
+so the two resulting integrals are bounded by the actual two endpoint cap
+volumes. Distinct physical endpoint fibers allow these contributions to
+be summed. The middle contributes at least D_B(y), including pure integer
+halfspaces, which capture its entire fiber. Boundaries cause no loss.
+
+One also has the exact moment identity
+
+    integral_B R(y) dy=2^(-d) sum_i a_i c_i.                    (3)
+
+To prove it, use Tonelli on R_i(y)=integral_(a in A_i) 1_Ci(2y-a) da.
+The integrand can be nonzero only when y is a midpoint in B. Integrating
+over all y and substituting x=2y-a gives exactly 2^(-d)a_i c_i.
+
+Both R and D_B are continuous on B. For R_i, dominated convergence under
+translation holds off the translated boundary of C_i, a Lebesgue-null
+set. For D_B, ordinary cap volume is jointly continuous in its unit normal
+and through-point threshold, by the same null-hyperplane argument; taking
+the minimum over the compact unit sphere preserves continuity. Thus the
+certificate in(2) attains a maximum at one actual middle point.
+
+If every actual middle point fails a raw target T, then necessarily
+
+    2^(-d)sum_i a_i c_i
+        <bT-integral_B D_B(y)dy.                               (4)
+
+This follows by integrating the strict pointwise inequality D_B+R<T.
+It is a genuine amortized necessary condition, but (3) is independent of
+partner orientation. Neither (3) nor (4) supplies the missing sharp Mid
+load bound.
+
+## 2. Three exact interior midpoint simplices
+
+Set d=2 and reference partner area M=1. Let B be the right triangle with
+vertices (0,0),(L,0),(0,L), where L=3/sqrt(5). Thus |B|=9/10. Denote its
+vertices by v_1,v_2,v_3, its centroid by g, and its barycentric coordinates
+by lambda_1,lambda_2,lambda_3. Put
+
+    r=sqrt(10)/6, delta=3/200,
+    P_i=(1-r)v_i+rB+delta(g-v_i),       i=1,2,3.                 (5)
+
+Each P_i has area r^2|B|=1/4 and lies strictly inside B. Its barycentric
+coordinates satisfy
+
+    lambda_j>=1/200                   for j!=i,
+    lambda_i>=a:=1-r-1/100.                                   (6)
+
+All these lower bounds are positive. The centroid of P_i has Euclidean
+distance at least 1/6 from every supporting side of P_i: the minimum
+centroid-to-side distance of B is L/(3sqrt(2))=1/sqrt(10), and (5) scales
+this by r. In particular a ball of radius1/6 centered at that centroid
+is contained in P_i.
+
+## 3. Positive-volume endpoints and exact convex-body realization
+
+Fix any integer N>=1000. For each type i make N distinct copies indexed
+(i,l), and let every A_(i,l) be the Euclidean ball centered at zero of
+area1/(24N). Its radius epsilon_N=(24 pi N)^(-1/2) is less than1/200,
+using pi>3. Put C_(i,l)=2P_i, a triangle of area1.
+
+The maximum Euclidean norm of a barycentric gradient of B is
+sqrt(10)/3<4/3. Adding A_(i,l)/2 therefore changes each barycentric
+coordinate by less than1/300. Equations(5)-(6) imply
+
+    (A_(i,l)+C_(i,l))/2=P_i+A_(i,l)/2 subset int B,              (7)
+    P_i+A_(i,l)/2 subset {lambda_i>9/20}.                       (8)
+
+For(7), the non-i lower bounds remain greater than1/200-1/300=1/600.
+For(8), use r<8/15, which follows by squaring, to obtain
+
+    a-1/300=1-r-1/75>34/75>9/20.
+
+There are n=3N reflected pairs. Apply the exact cube-completion theorem
+in arbitrary-simplex-star-cube-completion.md to these pairs, with p=0 and
+r_in=1/6. Its spatial condition holds because epsilon_N<1/200<r_in/2.
+For completeness its higher core fibers are
+
+    K_I=2P_rho(I)+(|I|-1)b_rho(I),       |I|>=2,
+
+where rho(I) is any fixed index belonging to I and b_rho is the centroid
+of that copy's P_i. This is a translate of its area-one partner triangle.
+The actual full-dimensional convex body is the convex hull of B at0,
+all these area-one triangles at nonzero cube vertices, and A_(i,l) at
+negative unit bases. The completion theorem proves its exact integer
+census and fibers, with no extra volume at0.
+
+Consequently every nonzero core is an exact area-one triangle, every
+outside parity load equals1/(24N) or zero, and
+
+    Delta=1-|B|=1/10,
+    E=sum_(i,l)|A_(i,l)|=1/8>Delta,
+    W=2^n+1/40.                                               (9)
+
+Taking N arbitrarily large makes each outside parity load arbitrarily
+small while leaving these total masses unchanged. All outside incoming
+pairs have the same middle target0. The largest-fiber own-depth bound
+4/9 is smaller than the actual sharp target (4/9)W/2^n.
+
+## 4. Exact failure of the entire additive reflection certificate
+
+Use (1) for all n reflected pairs of this actual body. If R_(i,l)(y)>0,
+then y belongs to (A_(i,l)+C_(i,l))/2, so(8) gives lambda_i(y)>9/20.
+Because the three barycentric coordinates sum to1, at most two source
+types can have positive reflection overlap at the same y. Their total
+physical outside mass is at most
+
+    R(y)<=2N/(24N)=1/12.                                      (10)
+
+If R(y)>0, some lambda_i(y)>9/20. The ordinary vertex cap through y in
+that coordinate has area at most
+
+    |B|(1-lambda_i(y))^2
+       <=(9/10)(11/20)^2=1089/4000.
+
+Therefore
+
+    D_B(y)+R(y)<=1089/4000+1/12
+                 =4267/12000<2/5.                            (11)
+
+If R(y)=0, ordinary simplex depth gives D_B(y)<=Gamma_2|B|=2/5.
+At the centroid g all barycentric coordinates are1/3, so R(g)=0 by(8),
+while D_B(g)=2/5. Thus the full optimized reflection certificate is EXACT:
+
+    max_(y in B)[D_B(y)+R(y)]=2/5<4/9.                        (12)
+
+This disproves the proposed sufficient assertion that total incoming mass
+E>=Delta, exact simplex high partners, and arbitrarily small outside
+parity masses force the additive reflection certificate to reach Gamma M.
+The exact first moment still holds, here integral_B R=E/4=1/32.
+
+No upper bound on ACTUAL middle depth is inferred from(12), because(2)
+is a lower certificate. Non-reflected cap contributions can provide more
+mass. In particular this is not a counterexample to OC. It shows that a
+useful sharp invariant must retain capacity or directional information
+beyond the maximum exact reflected overlap plus ordinary middle depth.

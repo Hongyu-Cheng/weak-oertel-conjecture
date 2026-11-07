@@ -1,12 +1,39 @@
 # PK contributions — November 6, 2026
 
-This batch shares our partial work toward the sharp Oertel bound, adapted to this
-repository's **weak-conjecture target**. The accepted fact graph and problem
-statement are unchanged. The additions are **pending mathematical submissions**:
-results, conditional arguments, obstructions, and supporting computations, with
-known qualifications preserved. Historical audits are not new approvals.
+This guide covers the initial intake and its subsequent research continuation.
+The repository's **weak-conjecture target** is unchanged. Initial imported notes
+remain pending; new continuation facts have separate independent model reviews.
+Historical audits are not new approvals, and model review is not human or
+proof-assistant certification.
 
-## Suggested starting points
+## Latest continuation: read these first
+
+- **An explicit counterexample to the sharp constant.** The
+  [self-contained proof](assets/pk-continuation-2026-11/direct-rational-sharp-oc-counterexample.md)
+  constructs a full-dimensional rational polytope with d=23 and n=3*10^92.
+  Every mixed-integer point has a closed ambient halfspace of mass strictly
+  below Gamma_23*2^(-n) times the total. It specifies all fibers and proves
+  that convexification creates no unintended integer fibers. This is
+  [fact 022a26fa5001480a](facts/022a26fa5001480a.md), reviewed independently
+  in three separate model runs with exact rational checks. **Human review is the next
+  priority.** It concerns the sharp assertion, not a refutation of the
+  1/(e*2^n) bound or this repository's weak target.
+
+- **A stronger positive theorem for triangular parity cores.** In d=2,
+  a complete parity core of triangular fibers satisfies the sharp bound
+  when outside mass is sufficiently small in each parity class, uniformly
+  in n. The new [two-scale proof](assets/pk-continuation-2026-11/two-scale-triangle-parity-core-repair.md)
+  removes the earlier intermediate-target incoming-load assumption. It uses
+  a proved all-direction triangle source center and actual reflected-pair
+  payments; the hypotheses on the core are still essential to the theorem.
+
+- **Mechanisms and their exact limits.** The
+  [continuation registry](assets/pk-continuation-2026-11/README.md) records the
+  local-star, parity, source-capacity, and oblique-cut results. Failed scalar
+  bridges are accompanied by exact certificates. The sharp counterexample
+  has a direct proof with no dependency on those auxiliary results.
+
+## Initial pending intake: suggested starting points
 
 - **A fixed-support obstruction, and an explicit escape by creating fibers.**
   [Five interval fibers](candidates/dcd790485c83acdc.json) with widths (13,11,9,7,5)

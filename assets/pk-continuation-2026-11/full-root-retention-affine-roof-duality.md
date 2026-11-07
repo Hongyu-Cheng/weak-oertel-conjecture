@@ -1,0 +1,96 @@
+# Exact affine-roof duality for the full-root retention functional
+
+Research draft, 6 November 2026. This is a finite-dimensional optimization identity. It shows that a proposed supporting-roof refinement is exactly the full-root retention relaxation, not a stronger scalar invariant. It does not prove a sharp mixed-integer depth bound.
+
+Let P be a nonempty finite set in R^n, let j in P, let d>=1, and give each i in P a positive weight w_i. Let R_j be the family of all nonempty affinely independent subsets E of P with j in relint conv(E), with their unique positive barycentric weights lambda_i^E. The singleton {j} belongs to R_j; every other member excludes j.
+
+For 0<=t<=1 put h=(t w_j)^(1/d). A retained profile rho in [0,1]^P is feasible if, for every E in R_j, either some rho_i=0 for i in E or
+
+    sum_(i in E) lambda_i^E (w_i rho_i)^(1/d)<=h.
+
+Define
+
+    Psi_j(t)=min_feasible rho sum_i w_i(1-rho_i),
+    W=sum_i w_i.
+
+The feasible set is compact and nonempty because it is a finite intersection of finite unions of closed sets, and includes the all-zero profile. Hence this minimum exists. No ambient convex realization or compatibility assumption is needed for the identity below.
+
+## Theorem
+
+For every t in [0,1],
+
+    W-Psi_j(t)
+      = max_{ell affine on R^n, ell(j)=h}
+           sum_(i in P) min{w_i, (ell(i)_+)^d}.            (1)
+
+The maximum on the right is attained by a finite affine function, despite the unbounded set of possible slopes. Only restrictions to aff(P) matter; every affine function on that affine hull extends to R^n.
+
+### Every affine roof gives a feasible profile
+
+Fix a roof ell of height ell(j)=h and set
+
+    r_i=min{w_i^(1/d), ell(i)_+},
+    rho_i=r_i^d/w_i.
+
+At j, rho_j=t. If a support E has no zero coordinate, then ell(i)>0 at every i in E and r_i<=ell(i). Therefore
+
+    sum_(i in E) lambda_i^E r_i
+      <=sum_(i in E) lambda_i^E ell(i)=ell(j)=h.
+
+Every other support uses its zero alternative. Thus rho is feasible and its total retained mass is exactly the objective in (1). This proves the right side is at most W-Psi_j(t), including its supremum if attainment is not yet known.
+
+### Every optimal retained profile has a dominating roof when t>0
+
+Take a maximizing feasible retained profile. The singleton support enforces rho_j<=t, and no other minimal support contains j. Raising rho_j to t therefore preserves feasibility and does not decrease retained mass. Hence choose an optimum with rho_j=t. Put
+
+    S={i in P:rho_i>0},     r_i=(w_i rho_i)^(1/d), i in S.
+
+When t>0 we have j in S and r_j=h. Consider the finite linear program
+
+    maximize sum_(i in S) lambda_i r_i,
+    subject to lambda_i>=0, sum_i lambda_i=1,
+               sum_i lambda_i i=j.                     (2)
+
+It has a compact nonempty feasible set. Its vertices have affinely independent positive supports E, with j in their relative interiors. To check this, an affine dependence on a positive support gives a nonzero coefficient perturbation preserving both equality constraints and positivity for sufficiently small positive and negative parameters; that feasible point is not a vertex. Conversely the coefficients on an affinely independent support are uniquely determined by the equality constraints.
+
+Thus every vertex objective in (2) is at most h by the defining feasible-profile constraints. The singleton lambda_j=1 has objective h, so the optimum equals h.
+
+The ordinary finite linear-program dual is
+
+    minimize ell(j),
+    subject to ell affine, ell(i)>=r_i for all i in S.   (3)
+
+The dual is feasible, since a sufficiently large constant function works. The primal is feasible and bounded. Finite LP strong duality and dual attainment give a finite affine ell with ell(j)=h and ell(i)>=r_i on S. This uses only the elementary finite LP theorem; no supporting hyperplane at an interior point of a continuous remainder projection is required.
+
+Its clipped profile from the first part dominates the original retained profile coordinatewise. Indeed at positive coordinates both w_i^(1/d) and ell(i) are at least r_i, while original zero coordinates impose no lower requirement. It consequently attains at least the optimal retained mass. The first part shows it cannot exceed that optimum. This proves equality and attainment for t>0, including boundary points j of conv(S).
+
+### The zero-height endpoint
+
+Take an optimal feasible profile at t=0 and let S be its positive support. Necessarily rho_j=0. Moreover j is not in conv(S): otherwise a convex representation of j by S has a vertex solution with an affinely independent positive support E in R_j. Every term in its root sum is strictly positive, contradicting the zero right-hand side.
+
+If S is nonempty, strict separation of j from the compact convex hull of S gives an affine ell_0 with ell_0(j)=0 and ell_0(i)>0 on S. Scale it by a finite positive constant until ell(i)>=(w_i rho_i)^(1/d) at every i in S. Its clipped profile again dominates the optimum and hence attains it. If S is empty, the zero roof works. This proves (1) and its attainment also at t=0.
+
+## Consequences and scope
+
+1. The boundary-of-projection issue for a supporting roof is eliminated at the level of this finite scalar relaxation. At t>0 finite LP duality supplies an attained roof even when j is an exposed boundary point of the positive retained bases. At t=0 strict separation supplies it.
+
+2. When w_i are actual positive fiber volumes, the full-root remainder theorem applies because every compatible convex remainder supplies a feasible profile. Combining that theorem with (1) yields the exact equivalent roof bound
+
+       remaining mixed volume
+         <=max_{ell(j)=(t w_j)^(1/d)}
+               sum_i min{w_i,(ell(i)_+)^d}.
+
+   The maximizing scalar profile need not be realizable by one actual convex remainder. Identity (1) proves an equivalence between two relaxations, not realization of either optimizer.
+
+3. In the three-base example with weights (a,1,c), 0<a<=c, the exact value is
+
+       W-Psi_0(t)
+          =t+c+min{a,(2t^(1/d)-c^(1/d))_+^d}.
+
+   Thus the affine-roof formula recovers the elementary nonlinear complementary-cap optimization exactly. For a=c=1 it simplifies to
+
+       t+1+(2t^(1/d)-1)_+^d.
+
+4. The actual triangular source with weights (1/10,1,1), d=2, in the full-root note therefore also obstructs the affine-roof scalar consumer. Even allowing optimal universal centroid-cut contractions and every finite cut count, its maximum guaranteed raw depth is 4/9, below the sharp raw target 7/15 by 1/45. Rewriting the same relaxation with optimized affine roofs cannot remove this gap.
+
+5. This MAXIMUM remaining-mass formula should not be confused with minimization of clipped affine budgets used to upper-bound depth in other notes. The optimization directions and the mathematical roles differ.

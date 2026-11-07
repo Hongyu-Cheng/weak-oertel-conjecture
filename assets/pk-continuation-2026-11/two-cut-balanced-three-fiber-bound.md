@@ -1,0 +1,114 @@
+# A direct two-cut depth bound for three fibers, with an equal-endpoint comparison
+
+This note separates the elementary two-cut argument from the pending full-root functional. It uses only ordinary Grünbaum, ordinary Brunn--Minkowski and the scalar concavity optimization already proved in accepted fact `f0399a8f0bae48c6`. It gives an alternative proof for the equal-endpoint class already covered by pending candidate `660db01ed45063dd`, not a new class of instances. Its explicit quantitative bound improves that candidate's stated three-quarter-centroid bound for some volume ratios.
+
+## 1. Actual three fibers and arbitrary convex remainders
+
+Let d>=1. Let A,B,C be d-dimensional convex bodies with (A+C)/2 subset B, and let their volumes be a,b,c, with 0<a<=c. Let
+
+    S=({-1} x A) union ({0} x B) union ({1} x C).
+
+These are the exact integer fibers of their lifted convex hull. Let mu be the sum of d-dimensional fiber volumes, and let h_S denote raw halfspace depth over all closed ambient halfspaces. Set
+
+    Gamma=(d/(d+1))^d, Q=1-Gamma,
+    F_(a,c)(r)=[a-(2r^(1/d)-c^(1/d))_+^d]_+.
+
+Suppose A',B',C' are compact convex subsets of A,B,C and (A'+C')/2 subset B'. If |B'|<=r, then
+
+    (a-|A'|)+(c-|C'|)>=F_(a,c)(r).                 (1)
+
+Proof. If either endpoint remainder has zero volume, the removed total is at least a and the conclusion follows. Otherwise write x=(a-|A'|)+(c-|C'|). If x>=a the conclusion again follows. If x<a, both endpoint volumes are positive. Brunn--Minkowski gives
+
+    2r^(1/d)>=|A'|^(1/d)+|C'|^(1/d).
+
+For fixed total removed x, concavity of the root shows that the right side is minimized by assigning all removal to the smaller endpoint. More explicitly the function
+
+    u -> (a-u)^(1/d)+(c-x+u)^(1/d), 0<=u<=x,
+
+is concave, so its minimum is at an endpoint; the smaller endpoint value is (a-x)^(1/d)+c^(1/d), since t^(1/d)-(t-x)^(1/d) decreases in t>=x. Thus 2r^(1/d)>= (a-x)^(1/d)+c^(1/d), which rearranges to (1). This is the same scalar calculation as accepted `f0399a8f0bae48c6`, here applied to arbitrary compatible convex remainders, with the zero-volume branches stated explicitly.
+
+## 2. The direct two-cut theorem
+
+There exists a deterministic point y in B with
+
+    h_S((0,y)) >= [b(1-Q^2)+F_(a,c)(bQ^2)]/2.      (2)
+
+No premise about a pending root-retention functional is used.
+
+Proof. Denote the right side by T. Since 0<=F<=a and 1-Q^2<1, we have T<(b+a)/2<b+a. Suppose for contradiction that every point of B has raw mixed depth below T.
+
+At the ordinary centroid g_B choose a closed containing ambient halfspace H_1 with original mass mu(H_1)<T. Translate its boundary parallel to pass through (0,g_B); this can only decrease its mass. A purely integer normal would contain B and at least one whole endpoint, with mass at least b+a>T. Thus H_1 has nonzero continuous normal.
+
+Let K_1 be the lifted convex hull intersected with the opposite closed halfspace. Its middle fiber B_1 has volume in [Gamma b,Qb] by ordinary Grünbaum, so it remains full dimensional. Its centroid g_1 belongs to B_1 subset B. Choose in the same way an original ambient cap H_2 through (0,g_1) with mu(H_2)<T. The same vertical-normal argument applies to this original cap, regardless of which parts have previously been retained. Let K_2 be the intersection with both opposite closed halfspaces. Its middle fiber B_2 satisfies |B_2|<=Q^2 b and is full dimensional.
+
+Let A_2,C_2 be its endpoint fibers. Convexity of K_2 gives (A_2+C_2)/2 subset B_2, including the cases where one is empty. Applying (1) yields
+
+    mu(S minus K_2)
+       =b-|B_2|+a-|A_2|+c-|C_2|
+       >=b(1-Q^2)+F_(a,c)(bQ^2)=2T.
+
+On the other hand S minus K_2 is contained in H_1 union H_2, whence its mass is at most mu(H_1)+mu(H_2)<2T. This contradiction proves existence in (2). Both caps can be oblique. Their proper continuous traces have zero d-dimensional boundary measure, while purely integer caps and their entire-fiber boundary masses were paid directly.
+
+For an explicit deterministic selection rule, the set of y in compact B with h_S((0,y))>=T is nonempty and closed. Indeed for any finite Borel measure the depth function is upper semicontinuous: enlarge a closed witnessing cap slightly, and continuity from above keeps its mass below any fixed larger threshold while its interior contains a neighborhood of the point. Minimize the first coordinate on that compact level set, then the second on the resulting compact subset, and so on. The resulting single point lies in B and satisfies (2).
+
+## 3. Equal endpoints: exact curve and the OC consequence
+
+Assume a=c and normalize b=1, a=c=s. Midpoint Brunn--Minkowski forces 0<s<=1; this middle-largest condition is an actual consequence of the equal-endpoint hypothesis and is retained throughout. Formula (2) reads
+
+    max_(y in B) h_S((0,y)) >= B_(d,2)(s),
+    B_(d,2)(s)=[1-Q^2+[s-(2Q^(2/d)-s^(1/d))_+^d]_+]/2.  (3)
+
+The total normalized volume is 1+2s. If s<=1/2, the original middle centroid already gives Gamma>=Gamma(1+2s)/2. For s>=1/2, we show that (3) is strictly larger than Gamma(1+2s)/2.
+
+The elementary bounds 4/11<Gamma<=1/2 imply 1/2<=Q<7/11 and Q^2<1/2<=s. The lower bound follows from Gamma>1/e and e<11/4; for example sum_(r=0)^4 1/r!=65/24 and the remaining tail is at most (1/120)/(1-1/6)=1/100. For 0<x<=y, (2x-y)_+<=x^2/y. Applying this at x=Q^(2/d), y=s^(1/d), and raising to the dth power gives
+
+    2B_(d,2)(s)>=1-Q^2+s-Q^4/s.                    (4)
+
+Subtracting Gamma(1+2s) from the right side yields
+
+    Gamma Q+(1-2Gamma)s-Q^4/s.
+
+It increases in s>=1/2 and at s=1/2 equals 1/2-Gamma^2-2Q^4. The function P(Q)=2Q^4+(1-Q)^2 increases on [1/2,infinity), since P'(Q)=8Q^3+2Q-2 is zero at 1/2 and strictly increases thereafter. Finally
+
+    P(Q)<P(7/11)=6738/14641<1/2,
+    1/2-6738/14641=1165/29282>0.
+
+This proves the strict bound claimed in the s>=1/2 regime, and hence the normalized sharp OC fraction Gamma/2 for this class. For d=0 the three points have middle counting depth 2/3. This note concerns positive d-dimensional fibers; it does not silently claim treatment of arbitrary intrinsic lower-dimensional intersections.
+
+## 4. Exact quantitative gain over the previous stated centroid curve
+
+Pending `660db01ed45063dd` proves at the true mixed centroid a raw guarantee strictly larger than
+
+    C_d(s)=(3/4)Gamma(1+s),                         (5)
+
+and gives an explicit dimension-dependent surplus. The equal-endpoint class is therefore already covered. The different two-cut curve (3), however, is stronger than the displayed bound (5) in some regimes.
+
+Take d=50 and s=3/5. Exact integer comparisons give
+
+    37/100<(50/51)^50<3/8,
+
+namely 100*50^50>37*51^50 and 8*50^50<3*51^50. Thus Q<63/100. From (4),
+
+    B_(50,2)(3/5)
+       >4/5-(63/100)^2/2-(5/6)(63/100)^4
+       =9/20+811013/40000000>9/20.
+
+In contrast C_50(3/5)=(6/5)Gamma<9/20. These are rational certificates, not numerical evidence.
+
+The explicit surplus in `660db01ed45063dd` is also too small to remove this quantitative comparison. With its notation A=1/Gamma<e<11/4, its Delta_50 is less than 2+(51/50)(1+A/3)<4, so epsilon_50<4. Its surplus after b=1 normalization is
+
+    3Gamma^2 epsilon_50/(4*3^50)<3/(4*3^50)<1/1000.
+
+Hence that stated lower bound is less than 451/1000, whereas our bound is greater than 9/20+811013/40000000>47/100. This comparison concerns the two proved numerical guarantees; it does not compare the actual depths of their chosen centers and does not assert either bound is sharp.
+
+The prior additive-midpoint guarantee is 2Gamma s=(6/5)Gamma here, the same comparison value. The ordinary-middle-centroid plus nonlinear endpoint credit from accepted `f0399a8f0bae48c6` yields only Gamma because Q>s in this example (indeed Gamma<3/8<2/5). This explains precisely what extra information the second cut contributes beyond those source bounds.
+
+## 5. Overlap and scope record
+
+- `660db01ed45063dd`: pending all-dimensional mass-dependent centroid inequality plus dominated midpoint coupling, covers the entire same equal-endpoint class and proves (5) with explicit surplus. The current class consequence is an alternative proof, and (3) provides the distinct quantitative bound.
+- `7a51de7a765ebba9`: pending earlier bundle of actual middle points and width/residual curves, explicitly records subsequent coverage by `660db01ed45063dd`; no new class claim should be made against this record.
+- `8407bedf6b42ff39`: pending earlier all-dimensional equal-endpoint surplus window, assumes |(A+C)/2|/a<=11/8. The unrestricted equal-endpoint class is broader, but was already subsequently covered by `660db01ed45063dd`.
+- `f968b5a47e83bb95`: pending planar equal-area endpoints with the middle exactly their Minkowski midpoint; quantitatively different planar result.
+- `59cc2a7b6dcd2dbc`: pending planar equal/near-equal endpoint comparison with arbitrary compatible middle; dimension two only.
+- Accepted `2a8c2bc6d7992c5e`: full three-fiber theorem in d=2 with arbitrary endpoint volumes; the present argument does not extend that entire unequal-endpoint theorem to all d.
+- Accepted `f0399a8f0bae48c6`: supplies exactly the scalar concavity optimization used in (1); its pointwise single-cap theorem does not itself state the two-cut convex-remainder argument.

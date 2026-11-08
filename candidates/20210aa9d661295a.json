@@ -1,0 +1,30 @@
+{
+  "advances": "An own-section threshold inverse for buffered caps with strict atomic gap. Other fibers may have supporting facets.",
+  "author": "PK-research-agent",
+  "candidate_id": "20210aa9d661295a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:56:21.719263+00:00",
+  "depends_on": [
+    "3dd858960f824a5d",
+    "155691fc3768c06f",
+    "d4e455a28be6cde4"
+  ],
+  "draft_key": "strict-atomic-gap-compact-buffered-cap-inverse",
+  "kind": "lemma",
+  "proof": "For fixed $p$ and unit normal $u$, write the continuous threshold at base $z$ as $\\tau_z=u\\cdot y-\\delta-a\\cdot(z-p)$ and the extreme support values as $m_z(u)=\\min_{K_z}u\\cdot X$ and $M_z(u)=\\max_{K_z}u\\cdot X$. If $\\tau_z$ is strictly between the extremes, constrain the new tilt to preserve $\\tau_z$ exactly. If it is at or below $m_z(u)$, constrain the new threshold to be at most $m_z(u)$. If it is at or above $M_z(u)$, constrain the new threshold to be at least $M_z(u)$. The last constraint preserves zero captured volume, including at a supporting threshold. This finite system is feasible by the old tilt. The row vectors belong to the fixed list $\\pm(z-p)$, and all right hand sides are uniformly bounded, since $u$ lies on the compact $\\Gamma$-unit sphere, the fibers are bounded, and every prescribed proper threshold lies between its extremes.\n\nTake the least Euclidean norm feasible tilt. Treat equalities as pairs of inequalities. As in the fixed-matrix projection proof of fact 155691fc3768c06f, it lies in the cone of the active inward row normals, by first-order minimality and finite cone duality. A representation with minimal support uses independent rows: a linear dependence can be subtracted until one positive coefficient becomes zero. For a nonempty independent active row matrix $V_I$ and the corresponding right hand sides $c_I$, the tilt is $V_I^{\\mathsf T}(V_I V_I^{\\mathsf T})^{-1}c_I$. The empty support gives the zero tilt. The finitely many matrices give a uniform bound. The bound is uniform over $p$ and a compact range of $(y,\\delta)$ as well. Each replacement preserves every fiber mass by construction.\n\nMass is continuous in all finite parameters used here because a nonvertical plane is $d$-volume-null in every fiber. Minimizing over the common closed ball and the $\\Gamma$-unit sphere therefore gives an attained nonvertical minimum and a compact minimizing set. Under the strict atomic gap this is the buffered infimum, and the atomic-gap lemma makes every own section in that set proper. The coarea is positive and continuous there by fact d4e455a28be6cde4, including $d=1$. Properness is open by the strict support inequalities and the continuity of the support values. Consequently, compactness gives a uniform positive coarea bound throughout a neighborhood and a uniform interval of nearby thresholds. By integrating the own coarea, increasing the level by $h>0$ in that interval removes at least a fixed positive multiple of $h$ from the own fiber. Other fiber masses are nonincreasing in the level. Continuity and this strict slope bound give the inverse on its local range, including a uniform neighborhood of the central mass, with inverse Lipschitz constant bounded by the reciprocal of the slope bound.\n\nFor the last assertion, the same compact parameter domains give continuous nonvertical minimum mass at each fixed base as $y$ varies and hence continuous buffered depth after taking the minimum with the base value. An interior own ball gives positive depth, since every buffered cap contains at least the unbuffered half of that ball and every pure-base cap contains it all. At a boundary mark choose an outward supporting unit direction $u$. The supporting slope in fact 155691fc3768c06f extends its own supporting plane to the family, since the anchored inclusions hold at that base. The corresponding outward cap, with $\\delta=0$, meets each fiber only on a $d$-volume-null plane or is disjoint, so the boundary mark has zero depth. The maximizing set is therefore a compact set of interior marks on finitely many fibers. The common tilt bound applies, and the joint set of compact minimizing representatives over those marks is closed by continuity. It is compact, and every own trace in it is proper by the strict gap. The same neighborhood and coarea argument now gives uniform constants.\n",
+  "source_candidate_ids": [
+    "5f79e6103cd27dac"
+  ],
+  "source_candidate_sha256": {
+    "5f79e6103cd27dac": "f0efb5c4b7c9f08a0da2a7783d4b3248b2487c20b2250ce85eea89948af3f4bf"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5f79e6103cd27dac",
+      "locator": "5f79e6103cd27dac:03 §3, compact active set and local strict threshold inversion"
+    }
+  ],
+  "statement": "Use the finite compatible positive-fiber setting, the $\\Gamma$-unit normals and the buffered depth of the whole-fiber capture and atomic-gap lemma. At any interior mark $Y=(p,y)$ with $\\delta>0$ and $b_\\delta(Y)<b_{\\rm base}(p)$, the buffered infimum is attained by a nonvertical cap. There is a bounded set of base tilts containing a representative of every $\\Gamma$-unit nonvertical cap with its mass on each fiber preserved. Among the representatives in a common closed ball, the minimizing caps form a compact set. Their own-section coarea $\\mathcal H^{d-1}(K_p\\cap\\{u\\cdot(X-y)=-\\delta\\})/\\lVert u\\rVert$ is bounded below by a positive constant. This lower bound, after decreasing it, persists for nearby parameters and small parallel changes of threshold. In particular cap mass has a local strict inverse in the threshold, with inverse Lipschitz constant bounded uniformly near the compact minimizing set.\n\nFor a fixed family and $\\Sigma$, allow $\\delta$ to be continuous on each fiber, positive in its interior and zero on its boundary. If every global maximizing mark has a strict atomic gap, the compact representative and coarea conclusions hold uniformly over those marks.",
+  "subgoal_id": "pk-intake-strict-atomic-gap-compact-buffered-cap-inverse",
+  "title": "Compact representatives and proper threshold inverses under a strict atomic gap"
+}

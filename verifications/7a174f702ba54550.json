@@ -1,0 +1,60 @@
+{
+  "candidate_id": "c7e97600d54831a4",
+  "candidate_sha256": "2a720c7aed2d96c6ee208e1f296642a9fe10caa9ccb67351f45fbd25d0bd39f9",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "8e9b337a315aca70": "30c70c8bdf6dab2aaa65dae8b2dda8edc2dc4091be87c006e9a7227f72866f64"
+  },
+  "checks": [
+    "The original digest matches. Sections 1, 3–4 and equations (1)–(5), (14) of 159eef4ea58ca5da verify the construction, all integer fibers, and quantification over every jointly chosen family. The affine-cut interpretation in the frozen proof follows directly from the original inequalities.",
+    "P is the compact triangle on the three displayed vertices. For each Minkowski sum point the two upper coordinate bounds are 1+ε² and the lower sum bound is ε. The projection [0,2] has exactly the integer bases 0,1,2. At base 1, write the endpoint weights as λ each; their term is weight 2λ times a point of (A+B)/2, and the remaining term lies in P/2. Hence the fiber is exactly P/2, including λ=0 and λ=1/2. At either endpoint extremality preserves its original fiber. The positive-area endpoint fibers at distinct bases give ambient interior.",
+    "Independent shoelace evaluation gives (1−ε²)/2, (2a−ε)²/8, and ε⁴/2. The functional x+y+εj/2 has minimum ε on each lift, so it supports the whole source, with equality at j=1 precisely along the lower edge. The midpoint of a below-cut q₀ at j=0 with (2,0) is below the same support inequality at j=1.",
+    "The four edges of A have positive lengths for the full ε range. By ordinary depth rigidity only A contributes and δ(A)>0. For every candidate in A, a barycentric coordinate in T is at least 1/3, giving a closed apex cap with area at most 4|T|/9. Intersecting with A and taking the maximum yields the asserted upper bound 2ε²/9.",
+    "The new projection is still [0,2] and its endpoints are R₀,R₂. Its middle fiber contains R₁⊇P/2 and (R₀+R₂)/2. Since 0∈R₂, L=2K′₁ is compact convex and contains both P and R₀. The lemma contribution is precisely the endpoint excess plus the middle excess, using the area dilation factor four. The other endpoint's excess is nonnegative.",
+    "Every padded integer coordinate is 0 or 1. An average at a binary coordinate extreme uses only that value, so each binary layer remains independent for arbitrary triangle choices. Both bounds multiply by 2^(n−1), also when n=1. With a strictly positive denominator their ratio is at least (ε/16)/(2ε²/9)=9/(32ε). A compatible choice leaves its assigned fibers unchanged under the hull, so the same quantified estimate applies."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "mapping": "Apply with d=2 to the compact convex planar bodies A, P/2 and B, all with interior. The normalized depth convention agrees since a containing halfspace can be shifted parallel to the point to minimize its trace. Γ₂=4/9; equality holds for P/2 and B and fails for the quadrilateral A.",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb"
+    },
+    {
+      "candidate_id": "8e9b337a315aca70",
+      "candidate_sha256": "30c70c8bdf6dab2aaa65dae8b2dda8edc2dc4091be87c006e9a7227f72866f64",
+      "mapping": "Take its identical ε, a, A and P, R=R₀ and L=2K′₁. R contains A and L is compact convex containing R₀ and P. Dividing |L|−|P| by four yields exactly |K′₁|−|P/2|.",
+      "reviewed_proof_sha256": "e9688c19a361a6af0c743ab4223ccd586d46237904d05ea98b49f0d6d8f6c955",
+      "reviewed_statement_sha256": "a8e9d20309e2c733d847a94d9b03646a601c0dc565a94aa7e0709c5fe2d8b5b4",
+      "status": "pending_same_batch_admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:04:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Exactly supplies the ordinary planar depth floor and triangle equality, and implies the positivity/zero assignments here. It contains no integer lifts or bound on the area cost of their hull.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Controls the relative excess of an individual minimum-volume enclosing simplex by paired deficit for d≥3. The present assertion concerns arbitrary planar enclosing triangles, ordinary deficits, and actual cross-base hull area.",
+      "fact_id": "8d5061c778ea7d72"
+    }
+  ],
+  "readability": "The endpoint weights agree in total after grouping by base. Pending a585520b0a2a14db uses this same planar source but yields ε/128. Pending fb9f38f6d568ee74 uses a different triangle and small square, with their Minkowski midpoint as the middle fiber, and quantifies only over minimum-area containers.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "609fc6b00759fd3a7dd191a01340b405ef6a1a6f0859cae7a22359b94e512d22",
+  "reviewed_statement_sha256": "15404ef17a6ed372b7cc6142eec469fa763e2c6168abe271d75a1aa298e340a4",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:01:10Z",
+  "summary": "The source and its replacements have exactly the stated integer bases. The affine lower support cut and nested area inequality force ε/16 added area per binary layer, while only the truncated endpoint contributes a positive ordinary deficit.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

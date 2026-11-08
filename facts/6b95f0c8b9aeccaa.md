@@ -1,0 +1,42 @@
+---
+fact_id: 6b95f0c8b9aeccaa
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-linear-one-copy-source-cap-budget
+depends_on: ["ec4f7e236aeff668"]
+verifier_run: 59c40e4c087485c7
+target_match: null
+---
+
+## Source
+
+- [61e9db32fbeb3f83](../candidates/61e9db32fbeb3f83.json), 61e9db32fbeb3f83:04 §5, (13)–(16), and cap-budget implication.
+
+## Statement
+
+Let $d\ge1$ be an integer, $B\subset\mathbb R^d$ a compact convex body of positive $d$-volume, $0\le\eta\le\mathbf 1_B\,dx$, and $\alpha=\eta(B)/|B|$. Let $g$ be the centroid of $\mathbf 1_B\,dx+k\eta$. For a closed halfspace $H$ containing $g$, write $v=(|B\cap H|+\eta(H))/|B|$, $q=1+1/d$, and $\gamma_d=q^{-d}$. For every real $k\ge2$,
+$$
+v\ge\gamma_d(1/k+\alpha),\qquad
+v\ge\max\{L,2L+\alpha-1\},\qquad
+L=\gamma_d\left(\frac{1+k\alpha^q}{1+k\alpha}\right)^d.
+$$
+In the ambient mixed-integer application let $k\ge2$ be an integer and embed $B$ at one fixed integer base $j$. Suppose $k$ source submeasures of common mass $a$ are coupled by a measure of mass $a$ whose average map has image measure $\eta$ on that copy of $B$. Assume the sum of the $k$ source submeasures and the $B$-volume measure is dominated by the original ambient measure. Every closed ambient halfspace containing $(j,g)$ then has original mass at least $\gamma_d(|B|+ka)/k$.
+
+## Proof
+
+By tightening and scaling the measure by $1/|B|$, the fixed-mass program supplies feasible actual cap masses $s>0,r$ with cost $s+r$; the original cap costs at least this. Put $G=1/\gamma_d$, $c_0=1/(d+1)$, $U=1/s$, $E=r/s$, and $Q=(s+\alpha-r)/s$. Write $\phi(x)=x-x^q/q$. Divide the scalar inequality by $q s^q$ and use $(1+k\alpha)/s=U+kQ+kE-k$ to get
+$$
+\phi(U)+k\phi(Q)+k\phi(E)\ge kc_0.
+$$
+For $x\ge0$ and real $h$, maximizing the concave function $\phi(x)+hx$ gives $\phi(x)+hx\le c_0(1+h)_+^{d+1}$. Use $h=1/d$ at $U,Q$ and $h=-(G-1)/d$ at $E$. Since $q^{d+1}=qG$, the inequalities imply
+$$
+U+kQ-k(G-1)E\le \frac1q\bigl[(k+1)qG+kB_d-k\bigr],
+\qquad
+B_d=[1-(G-1)/d]_+^{d+1}.
+$$
+This right side is at most $k(G+1)$ if $B_d\le1+q-qG/k$. It suffices to check $k=2$, equivalently $2dB_d\le4d+2-(d+1)G$. For $d=1$ the two sides are $0,2$; for $d=2$ they are $27/128,13/4$. For $d\ge3$ the binomial theorem gives $G\ge2$ and $\log(1+1/d)<1/d$ gives $G<e<11/4$ (the series for $e$ is at most $8/3+(1/24)/(1-1/5)=87/32$). The right side is greater than $(5d-3)/4\ge d$. Also $B_d\le(1-1/d)^{d+1}<1/2$ because $(1+1/(d-1))^{d-1}\ge2$ by the binomial theorem. This proves the required estimate. Rearranging gives $(1+k\alpha)/s=U+kQ+kE-k\le kG(1+E)$, so $s+r\ge\gamma_d(1/k+\alpha)$.
+
+For the other bounds, the quantile moment estimate in the proof of the fixed-mass program can minimize over the single whole interval $[0,1]$, keeping only total added mass $\alpha$. Filling $[0,\alpha]$ gives $q(1+k\alpha)s^{q-1}\ge1+k\alpha^q$, hence $s\ge L$. Since $r\ge0$ and $r\ge s+\alpha-1$, the two bounds follow.
+
+Finally, if the mean of a tuple belongs to a closed halfspace, at least one tuple member belongs to it: otherwise the average of the strictly negative margins is strictly negative. Integrating this indicator inequality over the coupling charges at least $\eta(H_j)$ to the sum of source measures, where $H_j$ is the trace at $j$. By measure domination the $B$-volume of the trace can be added. A proper trace contains $g$, so the first inequality applied with $\alpha=a/|B|$ gives the result. If the trace is all of $\mathbb R^d$, the charge is $|B|+a$, which also satisfies the bound since $\gamma_d\le1$ and $k\ge1$.

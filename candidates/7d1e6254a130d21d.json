@@ -1,0 +1,29 @@
+{
+  "advances": "An explicit fixed-core small-mass bound and a uniform directional pair estimate for all opposite shifts.",
+  "author": "PK-research-agent",
+  "candidate_id": "7d1e6254a130d21d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.112612+00:00",
+  "depends_on": [
+    "a34f9c49a76ec591",
+    "53fe12b742a7608d"
+  ],
+  "draft_key": "fixed-simplex-core-uniform-near-normal-shell-credit",
+  "kind": "theorem",
+  "proof": "A common invertible affine map of the continuous coordinates changes all masses by one factor and preserves the halfspace problem. Work in the standard simplex. By the fixed-core census, every outside fiber is contained in $T$.\n\nFor a unit $u$ with $\\lVert u-\\theta_i\\rVert\\le\\eta$, rescale its functional by $\\lVert\\nabla\\lambda_i\\rVert$ and add the constant term of $\\lambda_i$. This gives $f(x)=\\lambda_i(x)+v\\cdot x$, with $\\lVert v\\rVert\\le\\sqrt d\\,\\eta=\\tau/16=:\\epsilon$. All points of $T$ have Euclidean norm at most one. Thus if $m=\\min_A f$, $h=\\max_T f$, and $W=\\max_Tf-\\min_Tf$, then $m+h-2f(g)\\ge\\tau-4\\epsilon$ and $W\\le1+2\\epsilon$. Put $r=(|A|/V)^{1/d}\\le\\tau/4$. We obtain\n$$\nm+h-2f(g)-Wr\n\\ \\ge\\ \\frac{3\\tau}{4}-(1+\\tau/8)\\frac{\\tau}{4}\n\\ \\ge\\ \\frac{15\\tau}{32}>0.\n$$\nThe $T$-cap at threshold $h-Wr$ contains a copy of $T$ scaled by $r$ about a maximizing point of $f$, so it has mass at least $|A|$. If the actual $T$-cap has smaller mass, its threshold is above $h-Wr$. The $A$ threshold is then below $2f(g)-h+Wr<m$, so that cap captures all of $A$. The affine rescaling preserves the condition that the two thresholds are opposite about the value at $g$. This proves the first claim for all shifts.\n\nFor the depth claim, $F$ is continuous by hyperplane nullity and fact 53fe12b742a7608d gives the lower bound $\\Gamma$ with equality exactly at the canonical normals. The closed set in the definition of $G_d$ excludes these normals and is nonempty, for instance it contains $-e_1$. Thus its minimum is positive. The fixed-core census applies since $E/V\\le 2^{-d-1}<2^{-d}$. Choose an anchor $q$ whose group mass is at least $E/2^n$. The groups include empty groups, so this choice also applies when there are no outside fibers. Its outside bases and their distinct binary partners are opposite about $q$ and none of the partners equals $q$.\n\nConsider a closed through-cap at $(q,g)$ with unit continuous normal $u$. Near any canonical normal, its two thresholds on each paired group of bases have sum $2u\\cdot g$. They pay at least the group mass by the first claim and the distinct partners. The own trace pays at least $\\Gamma V$, so the cap pays at least $\\Gamma V+E/2^n\\ge\\Gamma V+\\Gamma E/2^n$. Away from the neighborhoods the own trace alone has mass at least $(\\Gamma+G_d)V\\ge\\Gamma V+\\Gamma E/2^n$ by the displayed threshold. A pure-base through-cap contains the entire own fiber, of mass $V>\\Gamma V+\\Gamma E/2^n$ because $\\Gamma<1/2$, $n\\ge1$, and $E/V<1$. Here $\\Gamma<1/2$ follows from $(1+1/d)^d>2$ by the binomial expansion for $d\\ge2$. Every containing cap contains its parallel through-cap. The total mixed volume is $2^nV+E$, proving the result.\n",
+  "source_candidate_ids": [
+    "8a123edc8f6439bd"
+  ],
+  "source_candidate_sha256": {
+    "8a123edc8f6439bd": "b79f04ce701229bc0547beb98addec11c60fdcb30f08f12618a4d7b03150499e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8a123edc8f6439bd",
+      "locator": "8a123edc8f6439bd:03, §4, (6)–(8); §5, (9)–(11)"
+    }
+  ],
+  "statement": "Let $n\\ge1$ and $d\\ge2$. A compact convex body has the same full-dimensional simplex $T$ of volume $V$ at every binary base, and outside integer fibers of total $d$-volume $E$. In standard simplex coordinates put $b=1/(d+1)$, $\\Gamma=(1-b)^d$, $\\tau=1-2b$, and $\\eta=\\tau/(16\\sqrt d)$. Let $g$ be the centroid, $\\theta_i$ the unit normals in the directions of the barycentric gradients, and $F(u)=|T\\cap\\{u\\cdot(x-g)\\ge0\\}|/V$ on the unit sphere. Define $G_d=\\min_{\\min_i\\lVert u-\\theta_i\\rVert\\ge\\eta}(F(u)-\\Gamma)>0$ on that sphere.\n\nIf $(E/V)^{1/d}\\le\\tau/4$, then for every outside positive fiber $A\\subseteq T$, every unit $u$ within $\\eta$ of a canonical $\\theta_i$, and every pair of thresholds with sum $2u\\cdot g$, the two upper caps in $A$ and $T$ have combined mass at least $|A|$. If moreover\n$$\nE/V\\le\\min\\{2^{-d-1},(\\tau/4)^d,G_d/\\Gamma\\},\n$$\nthen some binary core centroid has raw closed ambient halfspace depth at least $\\Gamma(2^nV+E)/2^n$. The mass threshold is independent of $n$. For an affine image of the standard simplex the normal neighborhood is interpreted after mapping the continuous coordinates to the standard simplex.",
+  "subgoal_id": "pk-intake-fixed-simplex-core-uniform-near-normal-shell-credit",
+  "title": "Uniform near-normal full credit and the sharp target for small fixed simplex core additions"
+}

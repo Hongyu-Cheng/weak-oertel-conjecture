@@ -1,0 +1,59 @@
+{
+  "candidate_id": "e593f6104402d047",
+  "candidate_sha256": "44ec57b3a249ef87d73ab4fdf7c9078ec9ebd1d20d2a65f7581ff0957ee2d73a",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "c7e97600d54831a4": "2a720c7aed2d96c6ee208e1f296642a9fe10caa9ccb67351f45fbd25d0bd39f9"
+  },
+  "checks": [
+    "The original digest matches. Section 5, equations (15)–(22) of 159eef4ea58ca5da give the identical lower layer, the upper layer of three copies of T, the strict 64/79 margin, and the padding. The frozen positivity of the ordinary deficit uses the independently reviewed lower-layer statement.",
+    "The projection equals the full rectangle because the lifts include its four base corners and no point outside. Both integer k values are exposed, so the k=0 hull is exactly the three-fiber lower source and the k=1 hull is [0,2]×T. All six fibers have positive area. The relative three-dimensional interior in each parallel layer gives four-dimensional ambient interior, and products with cubes preserve full dimension.",
+    "Each area is at most 1/2, since 2+2ε²−ε<2 for 0<ε≤1/16 and the upper copies of T attain 1/2. An independent expansion gives W=5/2−ε/2+5ε²/8−ε³/2+ε⁴. The last three terms equal ε²[(ε−1/4)²+9/16]>0, so W>79/32, also at ε=1/16. Therefore (64/79)W/4>1/2, and 64/79<1.",
+    "The upper triangles have zero ordinary deficit. The exact lower-layer ordinary deficit is positive and at most 2ε²/9. In the replacement hull the projection is the same rectangle and the lower layer remains an exposed section equal to the lower replacement hull, so it forces ≥ε/16 and the upper layer can only add nonnegative area.",
+    "For n≥2 the complete base support is {0,1,2}×{0,1}×{0,1}^(n−2). At every padded binary vertex convex combinations stay in that layer, preserving both actual fiber lists and the replacement cost. Thus there are 6·2^(n−2) fibers, W_n=2^(n−2)W, and W_n/2^n=W/4. The positive deficit bound and cost both scale by 2^(n−2), with ratio at least 9/(32ε)."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c7e97600d54831a4",
+      "candidate_sha256": "2a720c7aed2d96c6ee208e1f296642a9fe10caa9ccb67351f45fbd25d0bd39f9",
+      "mapping": "Use n=1 with identical ε, T, A, B and P on k=0. Exposure gives exactly the original and replacement lower hulls to which the predecessor applies, transferring all three original fibers, strict positive ordinary deficit, its upper bound, and the arbitrary-container cost bound.",
+      "reviewed_proof_sha256": "609fc6b00759fd3a7dd191a01340b405ef6a1a6f0859cae7a22359b94e512d22",
+      "reviewed_statement_sha256": "15404ef17a6ed372b7cc6142eec469fa763e2c6168abe271d75a1aa298e340a4",
+      "status": "pending_same_batch_admission"
+    },
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "mapping": "The three upper copies of T are compact full-dimensional planar triangles. At d=2 the ordinary rigidity statement gives D(T)=4/9 and hence zero deficit on each.",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:04:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives exactly zero ordinary deficit for the upper triangles. No statement there concerns the individual mixed-area threshold or enclosing-triangle hull cost.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Its heavy-fiber sufficient case assumes max p_z≥2^(−n) and proves a product-depth conclusion. The frozen construction lies strictly below that threshold and gives an auxiliary convexification-cost obstruction.",
+      "fact_id": "01c991c9f33e83df"
+    }
+  ],
+  "readability": "The phrase 'fact actual-planar-simplex-container-convexification-cost' in the proof refers to the declared same-batch predecessor by draft key. Pending a585520b0a2a14db chooses the maximum lower-fiber area F for its upper simplices. All three lower-fiber areas are strictly below 1/2 here, so that upper layer is a different source.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2046ad9032afcac53e1a91aa825881862a61eb55d815970a00bff7973afaf80c",
+  "reviewed_statement_sha256": "6ec69f23b1933d3ce4d689bf6bda2a5c508d9b6820f5df03e7d27a8b908448ab",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:01:10Z",
+  "summary": "The six exact integer fibers and binary padding preserve the lower-layer obstruction, with every fiber strictly below the stated uniform mass fraction.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

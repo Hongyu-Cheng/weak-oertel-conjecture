@@ -1,0 +1,28 @@
+{
+  "advances": "Strict arithmetic improvement for finite monotone weights, with sharpness across support lengths. It does not infer reflection of the spatial fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "f1f9ca95c7b5c523",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:57:44.475653+00:00",
+  "depends_on": [
+    "bc1a6747fb75edb6"
+  ],
+  "draft_key": "strict-monotone-median-reflection",
+  "kind": "lemma",
+  "proof": "Write $S_i=\\sum_{h\\ge i}w_h$ and choose the largest $j$ with $S_j\\ge M/2$. If $j=0$, then $S_1<M/2$ and $B_0=w_0>M/2$. For $N\\ge2$, $w_N\\le M/3$ by monotonicity, so $j<N$. For $j\\ge1$ both $S_j,S_{j+1}$ are positive. Monotonicity also gives\n$$\nB_j=w_j+2\\sum_{h=1}^j w_{j+h}=S_j+S_{j+1}-2S_{2j+1}.\n$$\nWith $a=S_j/M$, $b=S_{j+1}/M$, and $c=S_{2j+1}/M$, the strict finite survival bound at indices $j,j+1$ gives $c<ab$. Since $a\\ge1/2>b$, the identity $B_j/M-1/2=(a-1/2)(1-2b)+2(ab-c)$ proves the strict result. For $N=1$, the only occupied centers are $0,1$, whose reflected masses are respectively $w_0,w_1$, while all other centers have zero reflected mass. The maximum equals half the total exactly when they are equal. For $N=0$ the sole occupied center retains the whole mass.\n",
+  "source_candidate_ids": [
+    "8db47b3dd5d8d71d"
+  ],
+  "source_candidate_sha256": {
+    "8db47b3dd5d8d71d": "179b2a562de51c17b52788c83c201764080cef44e2932fa45ee4a01b95ff96c5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8db47b3dd5d8d71d",
+      "locator": "8db47b3dd5d8d71d:03 §3, first two paragraphs, strict median reflection and sharp equality"
+    }
+  ],
+  "statement": "Let $w_0\\ge\\cdots\\ge w_N>0$ be log-concave and zero outside its support. Write $M=\\sum_iw_i$ and $B_j=\\sum_{i\\in\\mathbb Z}\\min(w_i,w_{2j-i})$. Then $\\max_{j\\in\\mathbb Z}B_j>M/2$ when $N\\ge2$. When $N=1$ the maximum equals $M/2$ exactly when $w_0=w_1$, and when $N=0$ it equals $M$. In particular the constant $1/2$ is sharp.",
+  "subgoal_id": "pk-intake-strict-monotone-median-reflection",
+  "title": "Strict monotone median reflection and its equality case"
+}

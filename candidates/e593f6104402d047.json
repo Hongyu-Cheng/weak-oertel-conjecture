@@ -1,0 +1,29 @@
+{
+  "advances": "Extends the planar arbitrary-container obstruction to a class where no fiber meets the individual mass threshold $W_n/2^n$.",
+  "author": "PK-research-agent",
+  "candidate_id": "e593f6104402d047",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:57:44.476753+00:00",
+  "depends_on": [
+    "c7e97600d54831a4",
+    "03bc771bddd39a8a"
+  ],
+  "draft_key": "actual-planar-simplex-container-cost-with-no-heavy-fiber",
+  "kind": "counterexample",
+  "proof": "Before padding, the projection is $[0,2]\\times[0,1]$. Each of the two binary layers is an exposed section, so its convex combinations can use only points in that layer. At $k=0$ the source is the three-fiber hull of fact actual-planar-simplex-container-convexification-cost in the case $n=1$, which checks all three integer fibers. At $k=1$ the hull is $[0,2]\\times T$, so its three integer fibers are $T$. Both layers contain relative interior in their parallel three-dimensional planes, and the hull has interior in $\\mathbb R^4$. These are all six sampled fibers.\n\nEvery fiber area is at most $1/2$: in particular $2a-\\varepsilon=2+2\\varepsilon^2-\\varepsilon\\le2$, so $|P/2|\\le1/2$. The total mixed area before padding is\n$$\nW=\\tfrac32+\\tfrac{1-\\varepsilon^2}{2}+\\tfrac{(2+2\\varepsilon^2-\\varepsilon)^2}{8}+\\tfrac{\\varepsilon^4}{2}\n=\\tfrac52-\\tfrac{\\varepsilon}{2}\n+\\varepsilon^2[(\\varepsilon-\\tfrac14)^2+\\tfrac9{16}]>\\tfrac{79}{32}.\n$$\nThis implies $1/2<(64/79)W/4$. Each copy of $T$ has zero ordinary deficit by 03bc771bddd39a8a in dimension two. The lower layer has positive summed deficit bounded by $2\\varepsilon^2/9$ by the cited three-fiber result.\n\nThe lifted hull of any enclosing triangles at the six bases has the same projection. Its $k=0$ section is precisely the hull of the lower-layer triangles by extremality of $k=0$. The cited three-fiber result yields its added area of at least $\\varepsilon/16$ there, irrespective of choices in the top layer. The top layer contributes nonnegative excess since it contains every original upper fiber. Binary padding repeats these estimates in each of the $2^{n-2}$ exposed extra layers and keeps every individual fiber area at most $1/2$. In particular $W_n=2^{n-2}W$, giving the stated bound on each fraction. The cost divided by the summed deficit is again at least $9/(32\\varepsilon)$.\n",
+  "source_candidate_ids": [
+    "159eef4ea58ca5da"
+  ],
+  "source_candidate_sha256": {
+    "159eef4ea58ca5da": "ad60fba2bec8cd79363179bd4e4ed1c27f17434a3ac657585688e5e0bc84a5a5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "159eef4ea58ca5da",
+      "locator": "159eef4ea58ca5da:03 §5, (15)–(22)"
+    }
+  ],
+  "statement": "For $n\\ge2$ and $0<\\varepsilon\\le1/16$, let $T=\\operatorname{conv}(0,(1,0),(0,1))$, $a=1+\\varepsilon^2$, $A=\\{x,y\\ge0:\\varepsilon\\le x+y\\le1\\}$, $B=\\varepsilon^2 T$, and $P=\\{x,y\\le a:x+y\\ge\\varepsilon\\}$. Form a convex body by lifting $A,P/2,B$ at bases $(j,0)$, $j=0,1,2$, and three copies of $T$ at $(j,1)$, and taking the hull. Pad with $[0,1]^{n-2}$ in extra integer coordinates. These are exactly its $6\\cdot2^{n-2}$ full-dimensional integer fibers.\n\nIf $W_n$ is its total mixed area, every fiber has area strictly below $(64/79)W_n/2^n$. The summed ordinary deficits relative to $4/9$ are positive and at most $2^{n-2}\\cdot 2\\varepsilon^2/9$. Taking any enclosing triangles for these fibers and convexifying at their bases adds at least $2^{n-2}\\varepsilon/16$ in actual mixed area.",
+  "subgoal_id": "pk-intake-actual-planar-simplex-container-cost-with-no-heavy-fiber",
+  "title": "Unbounded triangle convexification cost persists when every fiber is below its mass budget"
+}

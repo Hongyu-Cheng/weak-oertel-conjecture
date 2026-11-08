@@ -1,0 +1,28 @@
+{
+  "advances": "The theorem assumes exact local coverage of each positive intrinsic fiber and returns original caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "0f6ca72852c286b2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.110838+00:00",
+  "depends_on": [
+    "bee3cc8e50a0dcea"
+  ],
+  "draft_key": "actual-positive-fiber-local-to-global-cover",
+  "kind": "theorem",
+  "proof": "There are finitely many nonempty integer fibers, each compact convex. Their maximum affine dimension is $q$ by the finite union property of Hausdorff dimension. If $z,w\\in P$ have the same coordinate parity, the integer midpoint fiber contains $(C_z+C_w)/2$. Fixing one point of $C_w$ shows that this Minkowski sum has dimension at least $q$, and the integer fiber cannot have larger dimension. Therefore the midpoint belongs to $P$.\n\nThe finite-set lemma proved in fact bee3cc8e50a0dcea applies directly to $P$. Every subset $R\\subseteq P$ consisting of vertices of its own hull and with $\\operatorname{conv}R\\cap P=R$ has at most $k$ points: two points of the same parity would have a midpoint in $\\operatorname{conv}R\\cap P$ that is not a vertex. The lemma consequently gives a Helly bound of $k$ for arbitrary convex sets tested on $P$, without requiring closedness.\n\nFor each nonempty list $J$ of at most $t$ original indices form $E_J=\\pi(C\\cap\\bigcap_{i\\in J}H_i^c)$, where $\\pi$ projects onto the base. This set is convex and may be nonclosed. For $z\\in P$, membership $z\\in E_J$ means that a point of the actual fiber misses every cap in $J$. The local premise thus makes the intersection of all $E_J$ disjoint from $P$. The Helly bound selects at most $k$ lists whose residual projections still have intersection disjoint from $P$. At each $z$ some selected list covers its entire fiber. Their union uses at most $kt$ original halfspaces and has the stated simultaneous coverage. This argument includes $q=0$, where each nonempty integer fiber is a singleton.\n",
+  "source_candidate_ids": [
+    "05b459fea3722ebb"
+  ],
+  "source_candidate_sha256": {
+    "05b459fea3722ebb": "86d72a40f3f43450f071121bd74985148cccd4081d61ff5b967e5162b8b0bf9e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "05b459fea3722ebb",
+      "locator": "§4, Lemma 2 and (3), projection of strict residuals"
+    }
+  ],
+  "statement": "Let $n,d\\ge0$, let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, and let $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ be nonempty. Put $q=\\dim_H S$ and let $P$ be the finite set of integer bases whose fibers $C_z$ have affine dimension $q$, equivalently whose fibers have positive $\\mathcal H_q$ measure. Let $k$ be the number of coordinate parity classes occupied by $P$. Fix a finite family of closed ambient halfspaces and an integer $t\\ge1$. If for every $z\\in P$ some at most $t$ of the original halfspaces cover the entire fiber at $z$, then at most $kt$ of the original halfspaces simultaneously cover every fiber over $P$.",
+  "subgoal_id": "pk-intake-actual-positive-fiber-local-to-global-cover",
+  "title": "Occupied-parity bound for exact local-to-global fiber covers"
+}

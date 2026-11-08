@@ -1,0 +1,32 @@
+---
+fact_id: e6ed7f0a4aa574cd
+kind: lemma
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-six-base-opposite-trace-finite-tilt
+depends_on: []
+verifier_run: 0d2299d89790f84e
+target_match: null
+---
+
+## Source
+
+- [1ec867c146e96dba](../candidates/1ec867c146e96dba.json), 1ec867c146e96dba:01, §1, (6)–(7), exact six-base tilt reduction and attainment.
+
+## Statement
+
+Let $T$ be a full $d$-simplex, $d\ge2$, and place $T$ at each binary base in two integer dimensions. Place convex bodies $A_t,C_t\subseteq T$ of volumes $ta,tc$, with $t,a,c>0$, at $p=(-1,1)$ and $p'=(1,-1)$, and form the convex hull. It has exactly the six designated integer fibers. Use the sum of the $d$-volumes on these fibers and let $\nu_t,\omega_t$ be the normalized uniform laws of $A_t,C_t$. For $q=(0,0)$, $y\in T$, and a unit vector $u$, set $F_T(y,u)=|T\cap\{u\cdot x\ge u\cdot y\}|$ and
+$$
+J_t(u,y)=\min_{s\in\mathbb R}
+\bigl[a\nu_t\{u\cdot x\ge u\cdot y+s\}
++c\omega_t\{u\cdot x\ge u\cdot y-s\}\bigr].
+$$
+The raw mixed closed-halfspace depth of $(q,y)$ equals $\min_{\lVert u\rVert=1}[F_T(y,u)+tJ_t(u,y)]$. With $D=\operatorname{diam}T$, $L=D+1$, and $K=D+L/2+1$, the shifts can be restricted to $|s|\le L$. For each such shift the base coefficient $(-K+s/2,-K-s/2)$ realizes the two endpoint shifts and excludes the three unwanted core fibers with margin at least one. The direction and shift minima and the maximum over $y\in T$ are attained.
+
+## Proof
+
+The base hull is the triangle $\{z:z_1\le1,\ z_2\le1,\ z_1+z_2\ge0\}$. Its integer rows at $z_1=-1,0,1$ have respectively one, two and three points, exactly the prescribed bases. The added bases are exposed by minimizing their coordinate equal to $-1$, so their assigned bodies are the actual fibers. All continuous generators are in $T$ and the four core generators are full copies of $T$, proving their census.
+
+A containing cap can be tightened to a through-cap. In a cap through $(q,y)$ with continuous unit normal $u$, write the margin as $u\cdot(x-y)+\beta\cdot z$. The two endpoint thresholds are $u\cdot y\pm s$ with $s=\beta_1-\beta_2$, and the own trace pays $F_T(y,u)$. Other traces have nonnegative mass. Since $|u\cdot(x-y)|\le D$, shifts $s\ge L$ and $s\le-L$ have saturated costs $c$ and $a$, respectively. The corresponding endpoints of the compact interval already realize them. For the given base coefficient $\beta$, the shifts are indeed $s$ at $p$ and $-s$ at $p'$. At each other binary base some coordinate equals one and both coefficients are at most $-D-1$, giving margin at most $-1$ on that fiber. This proves the exact reduction for nonvertical caps.
+
+A pure-base through-cap contains the entire own $T$ and at least one of the two opposite additions, giving mass at least $V+t\min(a,c)$ with $V=|T|$. The displayed minimum is no greater than this since a saturated shift has cost $\min(a,c)$ and the own trace is at most $V$. Thus the formula covers all closed caps. The cap masses of the three convex bodies are jointly continuous in $y,u,s$ on the indicated compact sets by their hyperplane nullity. Compact minimization gives attained minima and continuity in $y$, and compactness of $T$ yields the maximum.

@@ -1,0 +1,51 @@
+{
+  "candidate_id": "f1f9ca95c7b5c523",
+  "candidate_sha256": "d6751becb40da5a2528439b45974102ec301568217df8c0d2be2a9a59b3da89d",
+  "checked_dependency_candidate_sha256": {
+    "bc1a6747fb75edb6": "27ea904b90ab6766aed8dfef70a36ff8b3684340017e1807087d16395e1b1b07"
+  },
+  "checks": [
+    "Matched the strict conclusion to original candidate 8db47b3dd5d8d71d §3, first two paragraphs, and the identity used in the proof to §1, equations (3) and (5). Verified the raw source digest.",
+    "S_0=M ensures the largest median index exists. If j=0, S_1<M/2 and the only contribution at that anchor is w_0>M/2. For N≥2, (N+1)w_N≤M implies w_N≤M/3 and j<N.",
+    "At j≥1, each feasible pair h≥1 contributes twice its right weight, including zeros past the endpoint; h>j has no left weight. Adding the central atom and telescoping gives B_j=S_j+S_(j+1)−2S_(2j+1) with no missing terminal term.",
+    "With a≥1/2>b and c<ab by the separately reviewed strict survival bound, direct expansion gives (a−1/2)(1−2b)+2(ab−c)=a+b−2c−1/2>0. This includes the boundary a=1/2.",
+    "An integer center outside the support interval cannot have two supported reflected indices because their average would be inside that interval. For N=1 the only occupied integer centers retain their own single atoms, so the larger equals half the mass exactly when the weights agree. For N=0 the single atom gives all mass. Equal weights at the two sites attain the sharp constant.",
+    "Cross-checked the reflected-mass identity, strict bound at the specified center, and both small-support cases on 84 nonincreasing positive rational log-concave profiles."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bc1a6747fb75edb6",
+      "candidate_sha256": "27ea904b90ab6766aed8dfef70a36ff8b3684340017e1807087d16395e1b1b07",
+      "mapping": "Pending same-batch prerequisite. Apply the exact strict survival statement to the positive finite log-concave profile with indices i=j and k=j+1. Here j≥1 and j<N, so both tails are positive. After division by M this gives c=S_(2j+1)/M < (S_j/M)(S_(j+1)/M)=ab, even when 2j+1>N.",
+      "reviewed_proof_sha256": "cf1e26caaa912299d1f18a99756d595f198d9d552ca2946534c1c9315e2c62fb",
+      "reviewed_statement_sha256": "03630509a57a50e69db4d821bb41948a214655af792028fa7a00f98e4d1d81f8"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:04:58Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Piecewise-linear interpolation of log weights on [0,N] with zero extension meets its real log-concavity hypothesis. The accepted result gives B_j≥M/2 at every integer median and the same sharpness example. Its tail-shell inequality also gives the weak c≤ab in the monotone case, but the accepted statement does not give strictness for N≥2 or the equality classification for maximum minimum-weight reflection.",
+      "fact_id": "97622625586363a7"
+    },
+    {
+      "comparison": "Classifies equality at half mass for geometric-mean reflection. Its kernel is at least the minimum kernel and can be strictly larger, so its strict bound does not imply the candidate's strict bound.",
+      "fact_id": "b85cce72a986b40e"
+    }
+  ],
+  "readability": "Selecting the largest median makes the post-median tail strictly below half. The strict product term supplies the gain even when the median survival equals half exactly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3a12628af710a8378b62be7ec257b2027f2a79b157ca328706b4c6ae473d12b0",
+  "reviewed_statement_sha256": "28218b705d7d0c3fd338ce83d444a53eaf766fcb7da53dedc79e0a2ef4c5199f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:00:56Z",
+  "summary": "The largest survival median has strictly more than half the reflected mass on support of length at least three. The singleton and two-site cases give the exact equality classification.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

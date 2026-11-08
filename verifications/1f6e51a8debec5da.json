@@ -1,0 +1,40 @@
+{
+  "candidate_id": "e393566c05c6840e",
+  "candidate_sha256": "7c8cb92ede82831fd36c5becf45e91028f42cf087a9946393f191c7299f5c504",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Verified the byte digest for b0296f8a3b0d3d48 and checked §2 equations (3)–(5). The frozen proof establishes the source's surface and cone relations using only positivity at the face and apex.",
+    "Affine positivity at the apex and face gives positivity on their entire compact convex hull. The equation N·v=HL(v)>0 on the face proves N is nonzero and puts the image plane at distance H/|N| from the transformed apex. No positivity of the scalar s alone is needed.",
+    "Differentiating along an orthonormal tangent frame gives the stated columns. Appending v'=v/L removes all derivative terms proportional to v'. The remaining determinant is H L^(−d). Since the normal component of the last column is H/|N|, the tangential Jacobian is |N|L^(−d). In dimension one the determinant of the one radial column gives the counting-measure Jacobian one.",
+    "The explicit inverse is well-defined on the image since its denominator is L(0)/L(v)>0. Reweighting the segment coefficients by L maps each segment onto the segment of the images, so the image is precisely the compact convex pyramid over the transformed face.",
+    "Area change cancels the factor |N|L^(−d) to give the constant H/|N| times transformed intrinsic area. On a measurable image patch, a non-apex point has a unique radial coordinate because N·v'=H. The radial determinant contributes t^(d−1)H/|N|, whose integral in t is H/(d|N|). The apex has zero d-volume, so this works for arbitrary measurable patches."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:07:33Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof gives the full-dimensional projective volume determinant for a normalized denominator. Combining that calculation with radial integration can recover the cone-volume factor, but its statement concerns an own-interior energy minimizer and gives no transformed face normal or surface Jacobian.",
+      "fact_id": "d90ba05577427854"
+    },
+    {
+      "comparison": "Computes surface Jacobians for parameterized support faces with varying normals. The fixed-normal unweighted case uses Euclidean face measure, without an affine projective chart or the present area and cone factors.",
+      "fact_id": "12beddcf16788fff"
+    }
+  ],
+  "readability": "No unresolved readability issue.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a2f6f238b85cef457caf367f6aabf4e2087a2adf3b6deb016e82fd5a65a49e4f",
+  "reviewed_statement_sha256": "3a3c4bd485420b0769330673423be9074abaf98baa27f561e7e70187d79a86ab",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:04:16Z",
+  "summary": "The transformed plane normal, tangential Jacobian, and patchwise cone-volume identity follow for the stated affine chart, including dimension one.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

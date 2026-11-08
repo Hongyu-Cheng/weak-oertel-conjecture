@@ -1,0 +1,34 @@
+{
+  "advances": "Explicit geometry for all strict 2–2 cuts of an ordinary tetrahedron.",
+  "author": "PK-research-agent",
+  "candidate_id": "1462fa9ce6ced54e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:01:39.477524+00:00",
+  "depends_on": [
+    "3e6e1eb15d927db8"
+  ],
+  "draft_key": "tetrahedral-quadrilateral-section-calculus",
+  "kind": "lemma",
+  "proof": "The four edge intersections of $m=0$ are the listed points. Both diagonals contain $e$, since $e=(x+z)A+(y+w)C=(x+w)B+(y+z)D$. For a strict quadrilateral cut, the geometric diagonal intersection has a positive coordinate at each tetrahedral vertex, because it is interior to a segment joining edge-interior points of two disjoint tetrahedral edges. Its two representations on those pairs of edges recover the four endpoints uniquely by grouping its barycentric coordinates. They determine the plane. Conversely the displayed affine function has those endpoints and the prescribed strict signs, proving bijectivity. Raw heights $(p,q,-r,-s)$ have normalized reciprocal coordinates $(1/p,1/q,1/r,1/s)/(1/p+1/q+1/r+1/s)$.\n\nTriangulate along $AC$ and let $\\tau$ be the relative area of $ABC$ in the section. The areas of $ABC$ and $ACD$ are proportional to the distances from $B$ and $D$ to the line $AC$, so $e=(1-\\tau)B+\\tau D$. Their area-weighted centroids give $3\\lambda=A+C+\\tau B+(1-\\tau)D=A+B+C+D-e$.\n\nFor the standard tetrahedron with vertices $0,e_1,e_2,e_3$, the edge intersections in raw heights have barycentric coordinates $(r,0,p,0)/(p+r)$, $(s,0,0,p)/(p+s)$, $(0,s,0,q)/(q+s)$, $(0,r,0,q)/(q+r)$. Insert their last three coordinates into $(B-A)\\times(C-A)$ and $(C-A)\\times(D-A)$. Both are parallel to $\\nabla m=(q-p,-r-p,-s-p)$ and their third components are respectively $ps/( (p+r)(q+s))$ and $qr(p+s)/[(p+r)(q+s)(q+r)]$. Since the third component of $\\nabla m$ is $-p-s$, the cross products are $-\\alpha\\nabla m$ and $-\\delta\\nabla m$. Dividing half their norms by $|T|\\lVert\\nabla m\\rVert$ yields $3\\alpha$ and $3\\delta$. This ratio of area to volume and normal length is invariant under affine equivalence, because the area vector and gradient transform under an invertible linear map $L$ by $|\\det L|L^{-\\mathsf T}$ and $L^{-\\mathsf T}$ respectively.\n\nThe cap is the union, up to shared faces, of the three pyramids from $v_0$ over $ABC$, $ACD$, and $v_1CD$, which partition the cap faces away from $v_0$. The first two have normalized volumes $p\\alpha,p\\delta$ by the height $p/\\lVert\\nabla m\\rVert$. The last has volume fraction $q^2/[(q+r)(q+s)]$ by its edge determinant: from $v_1$ its three edges to $v_0,C,D$ have scaling factors $1,q/(q+s),q/(q+r)$ on the corresponding tetrahedral edges. This gives the raw formula. With $p=1/x,q=1/y,r=1/z,s=1/w$, one obtains\n$$\n\\alpha=\\frac{xyzw}{(x+z)(x+w)(y+w)},\\qquad\n\\delta=\\frac{xyzw}{(x+z)(y+w)(y+z)}.\n$$\nThe numerators of their sum combine by $(y+z)+(x+w)=1$, giving $S=3xyzw/\\Delta$. In the cap fraction the two terms are $yb/\\Delta$ and $b/[(y+z)(y+w)]$, hence their numerator is $b[y+(x+z)(x+w)]=b(P-a+b)$, using $x+y+z+w=1$. Exchange the two pairs for the complementary fraction and add the two fractions to obtain the stated expression for $\\Delta$. The moment is $S(m(g)-m(\\lambda))=S(p+q-r-s)/4$.\n\nFor the derivative, use accepted fact 3e6e1eb15d927db8 with $d=3$ and these raw coefficients, which have two positive and two negative entries. Its normalized uniform-simplex cap probability is $F$, and its proof identifies $3f_V(0)$ with the projection density at zero. Coarea identifies that density with $S$. Therefore $\\partial_iF=S\\lambda_i$. Finally, for distinct $t_i$, bringing $p^3/[(p-q)(p+r)(p+s)]$ and $q^3/[(q-p)(q+r)(q+s)]$ to a common denominator gives the raw cap formula above.\n",
+  "source_candidate_ids": [
+    "5c1f3bb21840ea60",
+    "d9c0dfe42c7f1e42"
+  ],
+  "source_candidate_sha256": {
+    "5c1f3bb21840ea60": "5ac5069fd592406ab78c1381c7a8f63f15df19ecd72200ae75cc4e59ca743c62",
+    "d9c0dfe42c7f1e42": "e93e690848fd6165c3be13eb15be0455e1e0cdddd137154c0529ca90776d87f7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5c1f3bb21840ea60",
+      "locator": "§§1–3, (1)–(8)"
+    },
+    {
+      "candidate_id": "d9c0dfe42c7f1e42",
+      "locator": "§1, (1)–(4) and concluding height derivatives"
+    }
+  ],
+  "statement": "Let $T$ be a nondegenerate tetrahedron with barycentric coordinates $\\xi_0,\\ldots,\\xi_3$. For the strict split $\\{0,1\\}\\mid\\{2,3\\}$, the section planes are in bijection with their interior diagonal intersection $e=(x,y,z,w)$, where $x,y,z,w>0$ and $x+y+z+w=1$. The corresponding oriented affine vertex values are $t=(1/x,1/y,-1/z,-1/w)$, with the first pair on the cap side. The cyclic section vertices are\n$$\nA=(x,0,z,0)/(x+z),\\quad B=(x,0,0,w)/(x+w),\\quad\nC=(0,y,0,w)/(y+w),\\quad D=(0,y,z,0)/(y+z).\n$$\nThe barycentric section centroid is $\\lambda=(A+B+C+D-e)/3$. Put $P=x+y$, $R=z+w$, $a=xy$, $b=zw$ and $\\Delta=(x+z)(x+w)(y+z)(y+w)=(a-b)^2+aR+bP$. If $m=\\sum_i t_i\\xi_i$, the cap fraction $F=|T\\cap\\{m\\ge0\\}|/|T|$, normalized coarea $S=\\mathcal H^2(T\\cap\\{m=0\\})/(|T|\\lVert\\nabla m\\rVert)$, effective section-normal vector and normalized scalar moment to the ordinary tetrahedral centroid $g$ are\n$$\nF=\\frac{b(P-a+b)}{\\Delta},\\qquad\n1-F=\\frac{a(R+a-b)}{\\Delta},\\qquad\nS=\\frac{3xyzw}{\\Delta},\\qquad\nS\\nabla m,\\qquad S\\nabla m\\cdot(g-\\lambda)=\\frac{3(bP-aR)}{4\\Delta}.\n$$\nHere $\\lambda$ denotes the physical point when it appears in a displacement.\n\nEquivalently, allow arbitrary positive raw heights $t=(p,q,-r,-s)$. Define $\\alpha=ps/[(p+r)(p+s)(q+s)]$ and $\\delta=qr/[(p+r)(q+s)(q+r)]$. Then $F=p(\\alpha+\\delta)+q^2/[(q+r)(q+s)]$ and $S=3(\\alpha+\\delta)$. In the standard tetrahedron, the oriented cross products for $ABC$ and $ACD$ are $-\\alpha\\nabla m$ and $-\\delta\\nabla m$. In any tetrahedron, with $\\tau=\\alpha/(\\alpha+\\delta)$, the centroid is $\\lambda=(A+C+\\tau B+(1-\\tau)D)/3$. The formulas allow repeated heights within either pair. Regarding $F$ as a function of all four signed heights, $\\partial F/\\partial t_i=S\\lambda_i$. When the four heights are distinct, $F=\\sum_{t_i>0}t_i^3/\\prod_{j\\ne i}(t_i-t_j)$.",
+  "subgoal_id": "pk-intake-tetrahedral-quadrilateral-section-calculus",
+  "title": "Diagonal parametrization and exact data for tetrahedral quadrilateral sections"
+}

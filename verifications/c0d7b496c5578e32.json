@@ -1,0 +1,57 @@
+{
+  "candidate_id": "ac2e657b19753c17",
+  "candidate_sha256": "6a9a5653aeb378c5f5563ed78a2e722c04d77cdd229d842e064e46ff0bf6d42a",
+  "checked_dependency_candidate_sha256": {
+    "c680a307d3f26cec": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0"
+  },
+  "checks": [
+    "Verified source 5939c45de14c2bb5 against its declared digest, §§2–4, (1)–(10), and §5, (11)–(14). The source uses a normalized depth in (13); multiplying by M gives the frozen raw formula.",
+    "The endpoints have lengths 1/10 and 21/20, both centered at −17/80. Their Minkowski midpoint is [−1/2,3/40] inside the middle interval. Equal endpoint coefficients preserve exactly K_0, and extreme bases preserve K_− and K_+. There are no other integer bases, and the polygon has interior, with intrinsic measure summed length. Closed marginal ray minima give 1/10, 11/10, 21/20 and zero elsewhere; only 11/10 exceeds 43/40.",
+    "Base balance forces the endpoint masses equal. The middle and small endpoint capacities give precisely I_t, nonempty exactly for 0<t≤6/5; the larger endpoint is never the binding constraint. Exact top and bottom fills realize both moment extrema, including empty and full fills. Convexity of the feasible dominated measures fills the interval between them. Each listed positive-length argument uses a proper fill on at least one interval, including the maximum feasible total mass.",
+    "Summing fill moments gives center −17ℓ/40 and the stated radius; their sum and negative difference give the two maximization quadratics. Clipping the stationary points gives breaks at 3/10, 17/40 and 29/40, with the positive lower constraint at t>1 inactive for both. Substitution gives all four branches with agreement at the seams, and the slope difference of the two objectives gives y(t)∈[−17/80,0].",
+    "After translating the continuous coordinate, the compatibility condition in c680a307d3f26cec holds with equality and the two clipped terms both equal 1/10, since (a+b)/2∓2x′≥3/20. Thus the two orientation minima are 3/5−y and 3/5+y; the latter is smaller for the whole stated range. The pure-base cuts have masses 11/10 and 41/20.",
+    "The budget condition is y(t)≥−1/16. Exact rational checks give the second branch crossing at 2/5, third-branch polynomial 1600t²−1720t+433 with values −9 and 27 at its left and right ends, and discriminant 120²·13. Thus only its upper root occurs within the third branch. The first branch is at least −1/20 and the fourth at least −17/290. Both boundary masses meet the budget exactly.",
+    "At 11/20 exact rational maximization gives ℓ_+=1/24, ℓ_−=1/10 and interval [−163/440,619/2640], with midpoint −359/5280. The explicit cap thresholds are 397/660, −359/5280 and −59/80. The left trace is full, the right trace is a singleton of length zero, and the middle trace has length 1/2−359/5280. This attains 2809/5280, exactly 29/5280 below the budget; at t=1/10 the centroid has raw depth 7/12."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c680a307d3f26cec",
+      "candidate_sha256": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0",
+      "mapping": "Exact three consecutive positive interval fibers; translate x by 17/80 so a=1/10≤b=21/20, U=1, and s′=17/80=U/2−(a+b)/4. The two formula terms both use g=1/10 on x′∈[0,17/80], giving the claimed raw depth.",
+      "reviewed_proof_sha256": "fbd43a05d11b238754907f092d0f8e020febd4bd8e9ffd7e46960a59ae92b7c0",
+      "reviewed_statement_sha256": "b80774a2792eb75e78f6de3ec9e17c99d1724c565943d7ccacdfc5f9c6bdab93",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:06:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted shifted-middle interval theorem gives the depth formula for this geometry. It does not optimize the dominated submeasure moments or identify the prescribed selector, its depth deficit, or its full mass-dependent success and failure range.",
+      "fact_id": "c680a307d3f26cec"
+    },
+    {
+      "comparison": "The accepted balanced-box criterion gives the maximum balanced mass for general bodies; in this example it yields 6/5. It does not compute the balanced continuous moment interval or the depth of its centroid.",
+      "fact_id": "b1274a369dfa9af7"
+    },
+    {
+      "comparison": "Its weights (a,1,1) make the middle base uniquely eligible at the half-mass marginal threshold, with prescribed mass (1+a)/2<1 feasible using the middle fiber alone. The balanced moment body is contained in the middle fiber by convexity and has interior because translations of a proper homothetic middle trim give an open set of centroids. Since every middle point fails in that example, the prior fact already implies qualitative selector failure in d=15. It does not provide this d=1 witness or its exact all-mass calibration.",
+      "fact_id": "645f91d128f54e5b"
+    }
+  ],
+  "readability": "The ambient cap and marginal caps are distinct calculations. The singleton right trace is included because the cap is closed, and has zero length.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0c38f86ac3f164f369525a5a0430ab55ea4a86e2c242f948e65f1bfcb538aa4f",
+  "reviewed_statement_sha256": "e15a699ec2a68143d6fdc99bafb72c34fcfbcba4cb4490d7ba8b51a2bfcd000b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:00:57Z",
+  "summary": "The exact three-interval body has a unique eligible marginal base. Its balanced centroid misses M/4 at the prescribed mass, and the stated strict failure interval describes all feasible masses.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,48 @@
+{
+  "candidate_id": "828211a20fa24681",
+  "candidate_sha256": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Source digest matches the original note. Section 3, (6)–(8), proves the same coverage, minimax and sparsity assertions. Its contact argument applies to an arbitrary primal minimizer and arbitrary dual maximizer, as the draft explicitly quantifies.",
+    "The affine image of K is compact convex. Adding the closed nonnegative orthant gives a closed convex upper set, disjoint from the open box with every coordinate below F by the definition of F.",
+    "Orient the nonzero separating vector so the upper set has larger pairing. Upward rays force all its entries to be nonnegative. After their sum is set to one, the supremum over the open lower box is F. At a primal minimizer any convex average is at most F, giving equality and an attained dual maximum.",
+    "The minimum weighted margin is its weighted constant minus the support function at the negative weighted normal. At an optimal pair, the weighted margin at x_* equals F; therefore all positively weighted margins equal F, and x_* minimizes the weighted linear functional. The stated normal-cone sign follows from this minimum.",
+    "Carathéodory in R^d preserves the weighted normal using active indices only. For each such index v_i=F-u_i·x_*, so preserving the normal also preserves the constant and the dual value. This argument works at any F and also when K is a singleton or some u_i vanish."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:04:57Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The rank-equals-count case uses the same separation mechanism for a whole-body cover by independent normals at level zero. The accepted profile does not state the arbitrary-family optimum, every optimal pair, or dual sparsification.",
+      "fact_id": "23a563a735c07c25"
+    },
+    {
+      "comparison": "The independent-normal cover proof derives a positive weighted certificate in its minimal full-rank setting. Independence and minimality are unnecessary here; the new result includes exact optimizer and contact descriptions.",
+      "fact_id": "f497d1290c37f335"
+    },
+    {
+      "comparison": "Selects actual equal-depth caps through an interior deepest mark, with a zero continuous resultant and a d+1 bound for a whole-plane cover. Arbitrary preassigned affine margins on a compact fiber can have a nonzero supporting resultant and are not covered by that selection theorem.",
+      "fact_id": "755cb08c379113cc"
+    },
+    {
+      "comparison": "Separates a covered fiber from the open uncovered region to get a single supporting halfspace, within a depth-minimizing compatible family. It does not optimize a probability-weighted certificate or give the stated sparse optimal weights for arbitrary margins.",
+      "fact_id": "052e61fcdb0be10f"
+    }
+  ],
+  "readability": "The opening compactness refers to the affine image before adding the orthant. The resulting upper image is closed and convex and may be unbounded.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "93725456fe067e71e1b890b2febcade19ef334360d13d743a01dd5dbb9ef0a0c",
+  "reviewed_statement_sha256": "be2e0225a338b79b0ce1cbc618a06460b3076262265172b1970e4f053bd2b70b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:01:26Z",
+  "summary": "The attained dual formula is valid for any nonempty compact convex fiber and finite affine family. Zero-level contacts hold for every optimal pair, and an optimizer can be chosen with at most d+1 positive weights.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

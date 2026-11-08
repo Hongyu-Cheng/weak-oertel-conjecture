@@ -1,0 +1,53 @@
+{
+  "candidate_id": "1432c8a1287f4e76",
+  "candidate_sha256": "14d36998f230de056221703da29ace09e3b8fdc017c08092730a9d7affb73bbd",
+  "checked_dependency_candidate_sha256": {
+    "53fe12b742a7608d": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7"
+  },
+  "checks": [
+    "Matched the original 31c5f4602b138303 §§1–2 equations (1)–(4) and §3 equation (5). The source digest matches. The separate actual-depth calibration and common-normal formula in §3 are outside the frozen claim.",
+    "The projection is [-1,1]. Exposedness fixes both endpoint fibers; convexity of T and the full middle generator fix the middle fiber. The masses aV,V,V sum to (2+a)V and are strictly below M/2 since 0<a<1. Any containing cap restricts to either a containing halfspace or a full middle trace, so each summand separately dominates its infimum.",
+    "The pure base cap z≤0 supplies the endpoint-only upper bound aV with no endpoint ambiguity. Outside rT, the strict support-function inequality allows two thresholds strictly above the two support values with sum 2u·y; on the boundary the support thresholds give null faces. The ambient tilt realizes both thresholds in either case.",
+    "For y in rT, simplex scaling gives the own cap fraction (sum y_i)^d≤r^d. Independent exact arithmetic gives (11/20)^2+(1/10)^2=5/16<1/3. The binomial coefficient term is at most 1/j!, and the factorial tail from j=2 is strictly below the corresponding geometric sum 1, so Gamma_d>1/3.",
+    "Canonical upper caps bound ordinary depth by Gamma_d V and give a strict bound away from the centroid because some barycentric coordinate is then strictly above 1/(d+1). The centroid has sum d/(d+1)>r and therefore attains Gamma_d V with endpoint contribution zero. The target exceeds that by Gamma_d aV/2.",
+    "At either endpoint e=±1, extend a through-point cap u·(x−y)≥0 by adding B e(z−e) to its margin. On the other integer bases e(z−e)≤−1, so a finite B strictly excludes them. Restriction gives the reverse depth inequality. The centroid bound and canonical caps give both endpoint maxima.",
+    "Exact fraction arithmetic at d=2 gives V=1/2, a=1/100, Gamma_2=4/9, the separated maximum 2/9, target 67/300 and gap 1/900."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "53fe12b742a7608d",
+      "candidate_sha256": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7",
+      "fact_sha256": "17ab511a4692218e7e43724b35ffc6d2e01334fcd30453922acfa030abab0c57",
+      "mapping": "The full-dimensional simplices T and A=epsilon T meet the hypotheses in dimension d. The centroid cap inequality and canonical equality normals give ordinary centroid depth Gamma_d times the corresponding volume. The reflected-profile constant is unused.",
+      "reviewed_proof_sha256": "1e85b289572563955be7b80c21339b8b799e57fa624f2527f26097c14e949b49",
+      "reviewed_statement_sha256": "e366513ae78549652332a52118bb60792388769ee765b4cc01dd53819fd3f98c"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:04:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The same A,T,T layout under an additional small-mass hypothesis has exact actual mixed depth. That fact does not compute the sum of separate infima; a bound on the minimum of the joint cap mass does not provide this split optimization.",
+      "fact_id": "98603e266680b22d"
+    },
+    {
+      "comparison": "An actual planar star defeats the additive reflection-overlap certificate. The overlap measure lower-bounds exact endpoint depth, so failure of the smaller certificate does not imply failure after optimizing exact endpoint depth. The geometries and budgets also differ.",
+      "fact_id": "a93e9443922f47dc"
+    }
+  ],
+  "readability": "The endpoint thresholds are u·y+B on base −1 and u·y−B on base +1 for a tilt B. Making this explicit would clarify the closed-cap construction, which already follows from the stated sum constraint.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "cd7c8ab0a11d286fa1527e0b22dd82b6a5494c391a8d5d22cfea86e79b41f7c9",
+  "reviewed_statement_sha256": "cf9f1fc1302a7f8bed205553e5c9566c207a5e44b74abde15b4c780446b67c06",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:01:15Z",
+  "summary": "The exact optimized split bound is Gamma_d V, strictly below the target, with the asserted endpoint maxima and planar gap.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

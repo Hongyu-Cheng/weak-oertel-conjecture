@@ -1,0 +1,76 @@
+{
+  "candidate_id": "aac16ce53722f3a6",
+  "candidate_sha256": "2224e6a66dfa95b9b789fdb875c59c704cd506d01f1defa5b1fea118441a9b49",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The ordered vertices are counterclockwise and noncollinear. Integer orientation tests over the coordinate bounding box give exactly the ten stated lattice points. The four displayed inequalities are their hull's four edge inequalities.",
+    "Reducing the ten coordinate pairs modulo two gives classes 00={1,5}, 01={4,8}, 10={3,6}, and 11={0,2,7,9}. The largest size is exactly four.",
+    "Independent integer substitution reproduces every stated closed cut trace: {0}, {0,1}, {0,1,2}, {3}, {4,9}, {3,5,7}, {6,8,9}, {7}, {8,9}, and {9}, in order. Each trace contains its target, and each count is at most three.",
+    "The equalities 2s_2=s_0+s_7=s_1+s_5 provide two disjoint pairs avoiding s_2. A closed halfspace through or containing s_2 meets each pair, because its open complement is convex. This gives depth at least three and the cut at s_2 gives equality.",
+    "An independent through-site direction census using exact integer signs gives raw depths (1,2,3,1,2,3,3,1,2,1). The census includes both normal rays perpendicular to each target-to-site difference and one perturbation in each adjacent sector.",
+    "Checked both source JSON digests. The standalone d39df975a8a78959 note has the hull, census, odd/odd class, and all ten cuts. The opening and §A of 6e1991cd32bd2796 use that baseline and supply the reflected pair s_0,s_7. The second pair and matching lower bound are independently verified refinements.",
+    "The target set for the depth maximum is the lattice support. The example concerns pure-lattice counting, while the locked conjecture requires positive continuous dimension.",
+    "Rechecked the revised candidate byte for byte. The only change is the second source locator prefix, now matching 6e1991cd32bd2796 and its opening and §A. Its candidate ID, decoded statement and proof digests, and original source digests are unchanged."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:10:02Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "aac16ce53722f3a6",
+    "candidate_sha256": "6000ff6b62503add673f43638f75bf271891b33fc9331e2061a4b4e10e7669ff",
+    "checks": [
+      "The ordered vertices are counterclockwise and noncollinear. Integer orientation tests over the coordinate bounding box give exactly the ten stated lattice points. The four displayed inequalities are their hull's four edge inequalities.",
+      "Reducing the ten coordinate pairs modulo two gives classes 00={1,5}, 01={4,8}, 10={3,6}, and 11={0,2,7,9}. The largest size is exactly four.",
+      "Independent integer substitution reproduces every stated closed cut trace: {0}, {0,1}, {0,1,2}, {3}, {4,9}, {3,5,7}, {6,8,9}, {7}, {8,9}, and {9}, in order. Each trace contains its target, and each count is at most three.",
+      "The equalities 2s_2=s_0+s_7=s_1+s_5 provide two disjoint pairs avoiding s_2. A closed halfspace through or containing s_2 meets each pair, because its open complement is convex. This gives depth at least three and the cut at s_2 gives equality.",
+      "An independent through-site direction census using exact integer signs gives raw depths (1,2,3,1,2,3,3,1,2,1). The census includes both normal rays perpendicular to each target-to-site difference and one perturbation in each adjacent sector.",
+      "Checked both source JSON digests. The standalone d39df975a8a78959 note has the hull, census, odd/odd class, and all ten cuts. The opening and §A of 6e1991cd32bd2796 use that baseline and supply the reflected pair s_0,s_7. The second pair and matching lower bound are independently verified refinements.",
+      "The target set for the depth maximum is the lattice support. The example concerns pure-lattice counting, while the locked conjecture requires positive continuous dimension."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T14:09:16Z",
+    "issues": [
+      {
+        "exact_defect": "The locator begins with d39df975a8a78959:01 while the linked candidate and the opening/§A passage belong to 6e1991cd32bd2796.",
+        "proof_locator": "source_sections[1].locator",
+        "severity": "minor",
+        "smallest_repair": "Replace just that prefix with 6e1991cd32bd2796:01, retaining the linked candidate, passage description, statement, and proof."
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Equation (5) applies to this finite lattice support. The two antipodal pairs at s_2 give reflection count five and hence counting depth at least three. The accepted bound does not supply this polygon, its cut certificates, or a parity class of size four with a smaller maximum depth.",
+        "fact_id": "d52c89d30b11ee18"
+      }
+    ],
+    "readability": "The two independent midpoint witnesses make the lower bound immediate. The second source link resolves to the right note, but its conflicting ID prefix needs correction.",
+    "reviewed_proof_sha256": "1d5d48998c8db22f6bcaf8b564325cc12430b65a9201724e484094a34e40f765",
+    "reviewed_statement_sha256": "821c51f27ff018dcdf58b0a4afccc0014875dfad5e780c186ff8e5ad6b65b243",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T14:04:56Z",
+    "summary": "The proof establishes a four-site parity class and an exact maximum raw depth of three for the ten-site polygon. The second source locator has the wrong source ID prefix.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Equation (5) applies to this finite lattice support. The two antipodal pairs at s_2 give reflection count five and hence counting depth at least three. The accepted bound does not supply this polygon, its cut certificates, or a parity class of size four with a smaller maximum depth.",
+      "fact_id": "d52c89d30b11ee18"
+    }
+  ],
+  "readability": "The two independent midpoint witnesses give the lower bound directly, and both source locators agree with their linked notes.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1d5d48998c8db22f6bcaf8b564325cc12430b65a9201724e484094a34e40f765",
+  "reviewed_statement_sha256": "821c51f27ff018dcdf58b0a4afccc0014875dfad5e780c186ff8e5ad6b65b243",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "6000ff6b62503add673f43638f75bf271891b33fc9331e2061a4b4e10e7669ff",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:09:24Z",
+  "summary": "The proof establishes a four-site parity class and an exact maximum raw depth of three. The revised locator correctly names the secondary source note.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

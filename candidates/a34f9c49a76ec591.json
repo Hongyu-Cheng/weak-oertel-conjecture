@@ -1,0 +1,30 @@
+{
+  "advances": "Exact integer geometry and a volume barrier for a common binary core with arbitrary convex continuous fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "a34f9c49a76ec591",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.112454+00:00",
+  "depends_on": [],
+  "draft_key": "fixed-binary-core-sharp-shell-census",
+  "kind": "lemma",
+  "proof": "Convexity of the fixed-core body implies it contains the product $[0,1]^n\\times K$. Let $p$ be an outside integer base with nonempty fiber $A$. Set $q_i=0$ if $p_i\\le0$ and $q_i=1$ if $p_i\\ge1$. These exhaust the possibilities. For sufficiently small $\\alpha>0$, $(q-\\alpha p)/(1-\\alpha)\\in[0,1]^n$, as seen in each coordinate. Convexity gives $\\alpha A+(1-\\alpha)K\\subseteq K$ at base $q$. For every support direction, this implies $\\alpha h_A+(1-\\alpha)h_K\\le h_K$ and hence $h_A\\le h_K$. Therefore $A\\subseteq K$. Conversely, if $A\\subseteq K$ every generator of the single-addition hull has continuous coordinates in $K$ and all core fibers remain $K$.\n\nIf $p\\in[-1,2]^n$, any outside integer point of the projection of the single-addition hull has some coordinate $-1$ or $2$. Attaining that coordinate forces all convex weight onto the single generator $p$, so this point is $p$ itself and its fiber is $A$. Shrinking a positive homothet of $K$ inside $K$ realizes all sufficiently small positive masses at $p$.\n\nFor arbitrary outside $p$, let $v\\in Q$ have the same coordinatewise parity as $p$. Then $w=(p+v)/2$ is integral. If some $p_i\\le-2$ or $p_i\\ge3$, then $w$ is outside $Q$ and differs from $p$. In the single-addition hull it is a second outside base. In any body with a point $x$ in the fiber at $p$, the fiber at $w$ contains $(x+K)/2$. Its volume is at least $2^{-d}V$, even if the fiber at $p$ itself has zero volume. This proves both the necessity in the census and the mass barrier.\n\nFor the sharpness family at $-2e_1$, let $\\alpha$ be the weight of the added generator at an outside base in a convex combination. A negative first coordinate forces $\\alpha>0$, and the other coordinates are in $[0,1-\\alpha]$ and thus vanish when integral. Only the first-coordinate levels $-2$ and $-1$ are possible. The first forces weight one, giving $tK$. At $-1$ all weights satisfy $\\alpha\\ge1/2$, with $\\alpha=1/2$ possible at the core point of base zero. The continuous set for each feasible weight is $(\\alpha t+1-\\alpha)K$, and these are nested because $0\\in K$ and $t<1$. The largest is $((1+t)/2)K$. This proves the formula and the limit.\n\nOn the shell the same parity representative obeys $q(p)=(p+v)/2$, which follows by checking $p_i=-1,0,1,2$. Hence $v=2q(p)-p$ is binary and differs from $q(p)$ because $p$ is outside. The map is injective in each fixed group. The $2^n$ groups, including empty ones of mass zero, partition the outside mass. Their maximum mass is at least $E/2^n$.\n",
+  "source_candidate_ids": [
+    "8a123edc8f6439bd"
+  ],
+  "source_candidate_sha256": {
+    "8a123edc8f6439bd": "b79f04ce701229bc0547beb98addec11c60fdcb30f08f12618a4d7b03150499e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8a123edc8f6439bd",
+      "locator": "8a123edc8f6439bd:01, §1, (1); §2, all-fiber containment"
+    },
+    {
+      "candidate_id": "8a123edc8f6439bd",
+      "locator": "8a123edc8f6439bd:02, §2, (2)–(4); §3, (5)"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$, let $Q=\\{0,1\\}^n$, and let $K\\subset\\mathbb R^d$ be a convex body of volume $V>0$. Every nonempty integer fiber of a compact convex body whose fibers at $Q$ all equal $K$ is contained in $K$. In particular, adding a nonempty compact convex fiber $A$ at $p\\in\\mathbb Z^n\\setminus Q$ to $[0,1]^n\\times K$ and taking the convex hull preserves the core fibers if and only if $A\\subseteq K$. The new projection has just one outside integer base $p$ if and only if $p\\in[-1,2]^n$. At each such $p$ one can realize arbitrarily small positive added volume.\n\nFor any body with this fixed core, let $E$ be the sum of the $d$-volumes of its outside integer fibers. If $E<2^{-d}V$, every nonempty integer fiber, including any of zero volume, has base in $[-1,2]^n$. The constant $2^{-d}$ is the sharp infimum of $E/V$ in the presence of a farther nonempty base. For $0\\in K$, adding $tK$ at $-2e_1$ for $0<t<1$ gives just the two extra fibers $tK$ and $((1+t)/2)K$ and has $E/V=t^d+((1+t)/2)^d$.\n\nFor an outside shell base $p$, let $q(p)$ be its coordinatewise clamp to $[0,1]$. Its opposite partner $2q(p)-p$ is in $Q$ and differs from $q(p)$. Define a group for each anchor $q\\in Q$ by collecting the outside shell bases with $q(p)=q$, allowing empty groups. Within each group the partners are distinct. Under $E<2^{-d}V$, some group has total mass at least $E/2^n$.",
+  "subgoal_id": "pk-intake-fixed-binary-core-sharp-shell-census",
+  "title": "Shell census and sharp far-base mass barrier for a fixed binary core"
+}

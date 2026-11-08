@@ -1,0 +1,53 @@
+{
+  "candidate_id": "9d7854b7c218cc46",
+  "candidate_sha256": "51d97e4955183433784817780e6def1b296278fb64ef20ab0c8d3df611c51ae4",
+  "checked_dependency_candidate_sha256": {
+    "ec4f7e236aeff668": "eab1d5e32565e0a6d1830d849cff81822c3127a9ebc34422403ee8c5a308e3ca"
+  },
+  "checks": [
+    "Verified the original 04fb8b3cc0275a7f digest and read :02 §1 (1)–(2), §3 (6)–(11), and :03 §4 (12). The d=1 predecessor has q=2, and its real k range contains every positive integer in the draft.",
+    "Expanding the nonlinear constraint yields s≥S(r) and the upper bound on S(r) cancels the quadratic r terms to give 2(k+1)r≥k alpha²+2 alpha−1. Checked r_0≤alpha on [0,1]. The objective F(r)=S(r)+r has the stated strictly increasing derivative, so its minimum on the necessary interval is the projection of r_*.",
+    "For k≥2, the two comparisons with r_* reduce to D≤4(1+k alpha)² and D≤(k+1)², respectively. They give exactly L_k and U_k. The zero of r_0 lies between them, and k=2 gives L_2=0. Verified S≥r at r=alpha by alpha≤A_k, at r_* by D>A², and at r_0 by S=1−alpha+r_0.",
+    "For k=1, the signs of r_0 and r_* change at sqrt(2)−1. The projected minimizer is zero below this point and r_0 above it. Substitution in both branches gives (1+alpha²)/2, including their common boundary. The k≥2 branches agree because their optimizing r values agree at each junction.",
+    "Exact rational substitutions into the original constraint reproduced costs 17/32 and 25/32 for k=1 at alpha=1/4 and 3/4, and 13/32, 13/32, 271/288 in the three k=8 branches at alpha=1/16, 5/32, 15/16. Each pair meets all linear constraints and saturates the nonlinear constraint.",
+    "The first branch derivative has sign 3(1+k alpha)²−(k+1), the middle is positive beyond L_k, and the last is positive from U_k. This proves uniqueness even when the first branch is a singleton. At L_k the cost is (3m−2)/k for m²=(k+1)/3 and the first band is the whole added mass.",
+    "The contextual ledger row 04fb8b3cc0275a7f:04 follows by taking integer m≥2 and k=3m²−1 in the minimizing upper-end band. The original ratio 2(3m−2)/(3m²+m−2) is at most 2/m by 3m−2≥0, so the rational obstruction is retained as a specialization. Optional k=0 and zero-dimensional conventions in §6 are outside the assigned positive-multiplicity interval claim."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ec4f7e236aeff668",
+      "candidate_sha256": "eab1d5e32565e0a6d1830d849cff81822c3127a9ebc34422403ee8c5a308e3ca",
+      "mapping": "Take d=1 and q=2 with the same one-copy objective and positive-length convex body. Its attained compact-program minimum and equality-band realization apply for all k in this interval statement, including k=1.",
+      "reviewed_proof_sha256": "92c6879a34b56e0fe2d32f1920bcac16faec2584b760834a6f5c62f091e4f255",
+      "reviewed_statement_sha256": "3cbfb5634f09c6c9ba07fc57095bd234a9dbc092e0a4dba939f236f5b8be8ad4",
+      "status": "same wave; independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:02:40Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "At the uniform interval centroid the accepted ordinary bound is 1/2, which covers the lower bound when alpha is zero and, after multiplying by two, when alpha is one. The exact fixed-alpha branches and the k=1 perturbed-centroid formula do not follow from this endpoint result.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "The accepted weighted three-tail inequality uses the centroid of uniform volume and shifted tails on the same body. Here the added measure changes the tested centroid, and the objective charges ordinary volume plus one copy of the added mass in a single cap.",
+      "fact_id": "7ad3d72ee6061cf3"
+    }
+  ],
+  "readability": "The first minimization drops s≥r only to give a lower bound. The subsequent feasibility checks at each projected minimizer recover the original problem.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7898fe966b855ffc1e580371a5ce6ab1c3ad7c3600c4e40d70f7d7bca0dd0e3e",
+  "reviewed_statement_sha256": "923979acb830a877434a6b2771ba7d1b07f5d4eb235ba7e4c797dba63c0d2caf",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:58:16Z",
+  "summary": "The clamped optimizer is feasible in each branch and gives the stated formula, including the separate k=1 case and the unique optimizing added mass.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

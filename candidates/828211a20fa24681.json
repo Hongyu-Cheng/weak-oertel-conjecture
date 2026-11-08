@@ -1,0 +1,26 @@
+{
+  "advances": "This tests actual pointwise coverage of one compact fiber and retains its own boundary normal.",
+  "author": "PK-research-agent",
+  "candidate_id": "828211a20fa24681",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.109671+00:00",
+  "depends_on": [],
+  "draft_key": "whole-fiber-sparse-minimax-certificate",
+  "kind": "lemma",
+  "proof": "The compact convex image of $K$ under the vector of margins plus $\\mathbb R^N_{\\ge0}$ is closed and convex. It is disjoint from the open box $\\{y:y_i<F\\ \\text{for every }i\\}$. Weak separation gives a nonzero separating vector with nonnegative entries, since the upper image is unbounded in each positive coordinate direction. Normalize the entries to sum to one. The supremum of its pairing on the lower box is $F$, hence its weighted margin has minimum at least $F$ on $K$. Conversely, at a minimizer of $\\max_i L_i$ any weighted average is at most $F$. This proves the equality and attainment, since minimizing the weighted margin gives the displayed support-function expression. The cover criterion follows from the pointwise sign of $\\max_i L_i$.\n\nFor any optimal pair $(x_*,\\lambda)$ the weighted margin at $x_*$ is both at least and at most $F$. Thus every margin of positive weight has value $F$ there, and $x_*$ minimizes the linear form with normal $\\sum_i\\lambda_i u_i$ on $K$. This gives the stated zero-level conditions. By Carathéodory in $\\mathbb R^d$, the weighted continuous normal is a convex combination of at most $d+1$ of the normals whose margins are active at $x_*$. For these indices $v_i=F-u_i\\cdot x_*$, so replacing the weights preserves the weighted affine constant as well as the normal. The resulting certificate is still optimal.\n",
+  "source_candidate_ids": [
+    "de8d1a3251731edd"
+  ],
+  "source_candidate_sha256": {
+    "de8d1a3251731edd": "861056899430501feac3370c589faa86972a6cbfb70047ebfc6d36d8e8eec030"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "de8d1a3251731edd",
+      "locator": "§3, (6)–(8), saddle-point contact and sparse certificate"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be nonempty compact convex and $L_i(x)=u_i\\cdot x+v_i$ be a nonempty finite family of affine margins. For the support function $h_K(w)=\\max_{x\\in K}w\\cdot x$ and the probability simplex $\\Delta_N$, one has the attained identity\n$$\nF=\\min_{x\\in K}\\max_i L_i(x)\n=\\max_{\\lambda\\in\\Delta_N}\\left(\\sum_i\\lambda_i v_i-h_K\\left(-\\sum_i\\lambda_i u_i\\right)\\right).\n$$\nClosed coverage of $K$ by $\\{L_i\\ge0\\}$ is equivalent to $F\\ge0$. If $F=0$, every primal minimizer $x_*$ and dual maximizer $\\lambda$ satisfy $L_i(x_*)\\le0$, $\\lambda_i L_i(x_*)=0$, and $-\\sum_i\\lambda_i u_i\\in N_K(x_*)$, where $N_K(x)=\\{v:v\\cdot(y-x)\\le0\\ \\text{for all }y\\in K\\}$. There is a dual maximizer with at most $d+1$ positive entries.",
+  "subgoal_id": "pk-intake-whole-fiber-sparse-minimax-certificate",
+  "title": "Sparse minimax certificates for closed coverage of a convex fiber"
+}

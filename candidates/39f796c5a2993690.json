@@ -1,0 +1,34 @@
+{
+  "advances": "An upper bound on intrinsic raw depth on every maximal-dimensional fiber; applies even when the affine directions of measured fibers vary.",
+  "author": "PK-research-agent",
+  "candidate_id": "39f796c5a2993690",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:57:44.476986+00:00",
+  "depends_on": [
+    "155691fc3768c06f"
+  ],
+  "draft_key": "intrinsic-finite-fiber-own-depth-upper-bound",
+  "kind": "theorem",
+  "proof": "There are finitely many nonempty fibers. A nonempty convex set has Hausdorff dimension equal to its affine dimension, so $q=\\dim_{\\rm H}S$ and $\\mathcal H_q$ on $S$ is the sum of the embedded fiber measures on $P$. Each such fiber has positive finite mass, and the other fibers have zero mass. For $q=0$ the total mass is $N$, giving the bound directly. Assume $q\\ge1$.\n\nFix the source base $p\\in P$. For each $z\\in P$ let $E_z$ be the direction space of $\\operatorname{aff}K_z$. Choose $u\\in\\mathbb R^d$ outside the finite union of the proper linear subspaces $E_z^\\perp$. Every level of $u\\cdot x$ has zero $\\mathcal H_q$ measure on every measured fiber, and each fiber tail is continuous and strictly decreasing between its two support levels. Strict decrease follows because any open slab between those levels intersects the relative interior in positive $q$-volume.\n\nSuppose $s$ is a proper source threshold with tail mass $t\\in(0,\\mathcal H_q(K_p))$. On the finite set of constrained bases $P_t=\\{z\\in P:\\mathcal H_q(K_z)>t\\}$ choose the unique proper threshold $h_z$ with tail mass $t$. In particular $p\\in P_t$ and $h_p=s$. Put $Q_z=K_z\\cap\\{u\\cdot x\\ge h_z\\}$. For any weights $\\lambda_z\\ge0$ summing to one with $\\sum_{z\\in P_t}\\lambda_z z=p$, convexity gives\n$$\n\\sum_{z\\in P_t}\\lambda_z Q_z\n\\subseteq K_p\\cap\\Bigl\\{u\\cdot x\\ge\\sum_{z\\in P_t}\\lambda_z h_z\\Bigr\\}.\n$$\nFor each positive-weight summand $Q_z$, fixing one point in every other summand gives a translated positive multiple of $Q_z$ inside $K_p$. Since $Q_z$ has positive $q$-volume and spans a translate of $E_z$, this forces $E_z=E_p$. Thus the summands in this combination have parallel affine hulls. Translating them into $E_p$ preserves their measures and translates the sum by the corresponding weighted translation. The $q$-dimensional Brunn–Minkowski inequality gives the sum measure at least $(\\sum_z\\lambda_z t^{1/q})^q=t$. The strictly decreasing proper tail at $p$ implies $\\sum_z\\lambda_z h_z\\le s$.\n\nChoose a real number $L<\\min_{z\\in P_t}h_z$ and set $J_z=[L,h_z]\\subset\\mathbb R$. For the same anchored weights, their Minkowski combination is $[L,\\sum_z\\lambda_z h_z]\\subseteq J_p$. Apply the anchored support-slope lemma 155691fc3768c06f to these compact intervals on $P_t$, with anchor $p$, auxiliary continuous dimension one and positive unit normal $1$. Its support values are $h_z$, so it gives a finite $b\\in\\mathbb R^n$ with $h_z\\le s+b\\cdot(z-p)$ for every $z\\in P_t$. Consequently the actual ambient halfspace\n$$\n\\{(z,x):u\\cdot x\\ge s+b\\cdot(z-p)\\}\n$$\ncaptures at most $t$ on each constrained fiber, at most $t$ on each omitted measured fiber by its total mass, and zero on all lower-dimensional fibers. Its total mass is at most $Nt$.\n\nNow take any $y\\in K_p$. A containing intrinsic halfspace can be shifted inward to pass through $y$. The resulting cap volume is continuous in its unit normal on the sphere of $E_p$ because its boundary is $\\mathcal H_q$-null. A minimizing unit normal $u_0\\in E_p$ therefore exists. Opposite through-point caps sum to the source volume, so $f_p(y)\\le\\mathcal H_q(K_p)/2$. Choose generic ambient normals $u_i\\to u_0$ outside the finite union above. If $f_p(y)>0$, use levels $s_i=u_i\\cdot y$; by dominated convergence their source masses tend to $f_p(y)$ and are eventually proper. If $f_p(y)=0$, choose $s_i=u_i\\cdot y-\\varepsilon_i$ with $\\varepsilon_i>0$ tending to zero. These levels are strictly below the maximum of $u_i\\cdot x$ on $K_p$, so their source masses are positive. They tend to zero by dominated convergence because the limiting through-$y$ hyperplane has zero source measure, and they are eventually strictly below the full source mass.\n\nEach proper source cap in the sequence yields an ambient halfspace as above, containing the same point $(p,y)$ and of mass at most $N$ times its source mass. Taking the depth infimum and then the numerical limit proves the bound. At a relative boundary point a supporting intrinsic halfspace through the point has zero source mass. The bound therefore gives zero ambient depth there.\n",
+  "source_candidate_ids": [
+    "04819028a2421217",
+    "4e07416b95553009"
+  ],
+  "source_candidate_sha256": {
+    "04819028a2421217": "be939aa1825a682e158a0ba00e004f0e0f08298da6084cc3ec770a6f9a38d16b",
+    "4e07416b95553009": "6b7a457f24b53076a14fae1dea956565392444cea1e50f00c37fd48eb7ad3474"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "04819028a2421217",
+      "locator": "04819028a2421217:01 §§1, 3–4, (1), intrinsic finite-base upper bound"
+    },
+    {
+      "candidate_id": "4e07416b95553009",
+      "locator": "§2, (3)–(6), full-dimensional equal-volume cap quantile construction"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact and convex, with $n\\ge0,d\\ge1$, and let $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ be nonempty. Write $K_z$ for its nonempty fibers, $q=\\max_z\\dim\\operatorname{aff}K_z$, $P=\\{z:\\dim\\operatorname{aff}K_z=q\\}$, and $N=|P|$. Use raw ambient depth $D_S$ with the intrinsic measure $\\mathcal H_q$ on $S$. For $q\\ge1$ and $z\\in P$, let $f_z$ be ordinary raw $\\mathcal H_q$ halfspace depth in $\\operatorname{aff}K_z$. Then\n$$\nD_S((z,y))\\le N f_z(y)\\qquad(z\\in P,\\ y\\in K_z).\n$$\nIn particular the relative boundary of each measured fiber has ambient depth zero. For $q=0$ all nonempty fibers are singletons, and the same inequality holds with $f_z=1$ and counting measure.",
+  "subgoal_id": "pk-intake-intrinsic-finite-fiber-own-depth-upper-bound",
+  "title": "Intrinsic mixed depth is at most the number of measured fibers times own depth"
+}

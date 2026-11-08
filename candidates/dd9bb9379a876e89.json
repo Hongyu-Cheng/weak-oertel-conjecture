@@ -1,0 +1,28 @@
+{
+  "advances": "The result concerns a feasible fixed-count, fixed-budget class on positive full-dimensional fibers and makes no assumption of convex compatibility or bound on the needed budget.",
+  "author": "PK-research-agent",
+  "candidate_id": "dd9bb9379a876e89",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.109262+00:00",
+  "depends_on": [
+    "0a73ba4a9c7b24d1"
+  ],
+  "draft_key": "actual-fiber-hinge-attainment",
+  "kind": "theorem",
+  "proof": "Choose a minimizing sequence with total hinge bounded by $B$, and fix $R>0$ with every $K_z\\subset RB_d$. At each cap index and base, the threshold $t_{iz}=b_i-a_i\\cdot z$ satisfies $B\\ge |K_z|(-R-t_{iz})_+$, hence $t_{iz}\\ge -R-B/|K_z|$. Apply the finite affine-threshold compactification lemma successively to the finitely many cap indices on this common ball. Every limiting threshold is finite or $+\\infty$ by the lower bound. The realizing cap retains each finite threshold exactly and has threshold above $R$ at positive divergence. The lemma gives convergence of the cap masses and preserves membership of each fixed point occurring infinitely often in an indexed cap. Every fixed point of $S$ occurs infinitely often in at least one indexed cap, so the realized family still covers $S$ pointwise and satisfies the same mass budgets.\n\nOn a finite-threshold fiber, convergence of the continuous normals and thresholds implies uniform convergence of the hinge integrands. At positive divergence the sequence's hinge is eventually identically zero and the realized hinge is zero. Thus the total potential converges to that of the realizing feasible family, proving attainment.\n\nFor each $z$, some covering cap contains the center of an inball of radius $r_z$. Its affine margin on that ball dominates the unit linear form centered at the center. Its hinge integral is therefore at least\n$$\n\\int_0^{r_z} t\\kappa_{d-1}(r_z^2-t^2)^{(d-1)/2}\\,dt\n=\\frac{\\kappa_{d-1}r_z^{d+1}}{d+1}.\n$$\nEach such contribution is from its own fiber and is included in $\\Psi$. Summing proves the lower bound.\n",
+  "source_candidate_ids": [
+    "de8d1a3251731edd"
+  ],
+  "source_candidate_sha256": {
+    "de8d1a3251731edd": "861056899430501feac3370c589faa86972a6cbfb70047ebfc6d36d8e8eec030"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "de8d1a3251731edd",
+      "locator": "§1, attainment and (3)–(4)"
+    }
+  ],
+  "statement": "Let $n,d,N\\ge1$, let $P\\subset\\mathbb Z^n$ be finite and nonempty, and let each $K_z\\subset\\mathbb R^d$ be a full-dimensional compact convex body. Write $S=\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$, $\\mu=\\sum_{z\\in P}\\delta_z\\otimes(\\mathcal L^d|_{K_z})$, and $M=\\mu(S)$. Fix $0<\\tau<1$. Suppose the class of $N$ closed caps with affine margins $L_i(z,x)=a_i\\cdot z+u_i\\cdot x-b_i$, $\\lVert u_i\\rVert=1$, whose union contains $S$ and whose individual masses are at most $\\tau M$, is nonempty. The potential $\\Psi=\\sum_i\\int_S (L_i)_+\\,d\\mu$ attains its finite minimum over this class. For any inball radii $r_z>0$ of the respective fibers, every feasible family satisfies $\\Psi\\ge\\frac{\\kappa_{d-1}}{d+1}\\sum_z r_z^{d+1}>0$, where $\\kappa_j$ is the volume of the Euclidean unit $j$-ball and $\\kappa_0=1$.",
+  "subgoal_id": "pk-intake-actual-fiber-hinge-attainment",
+  "title": "Attainment of the continuously normalized actual-fiber hinge potential"
+}

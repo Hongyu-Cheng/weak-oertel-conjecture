@@ -1,0 +1,77 @@
+{
+  "candidate_id": "815e4fda86b48bfb",
+  "candidate_sha256": "ff927c839cdd8aa55e8ea8ec30b688b58a142dc662f2c03991a3058757e986b0",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Compared exact original and revised bytes. The only edit inserts the positive-dimension condition at the start of the statement. The proof, provenance, identifier and dependency list are byte-identical.",
+    "Rechecked original candidate 6ebae89f6484418b §1 and its digest. The original argument uses an inball to bound the scales. The revised hypothesis makes this argument valid, because the full-dimensional template in positive dimension contains a nonzero vector u.",
+    "For every feasible scale t, the points a(z) and a(z)+tu lie in the compact fiber, so t times the norm of u is bounded by the fiber diameter. The feasible set contains zero, and passing to the limit pointwise on J gives closedness. The maximum exists even when the fiber is lower-dimensional and only scale zero works.",
+    "Convexity of C gives the Minkowski inclusion for every two bases and interpolation parameter. Convexity of J identifies the Minkowski sum of its nonnegative multiples with the multiple by the sum, also at zero. Affineness gives the required interpolated mark, establishing concavity."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:08:09Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "815e4fda86b48bfb",
+    "candidate_sha256": "8e59321bc6c08ab29fd045c3c89c0512a1a48d0b7bcd0f1aa0f39b40a3325c8e",
+    "checks": [
+      "Matched the statement and Minkowski argument to original candidate 6ebae89f6484418b §1 and verified the raw source digest.",
+      "For a given z, zero is feasible because the affine mark belongs to the fiber. If t_m are feasible and tend to t, then for every u in J the points a(z)+t_m u converge inside the closed fiber to a(z)+tu. Thus feasibility is closed even in lower-dimensional fibers.",
+      "For d≥1 choose a nonzero u in J, possible by the interior assumption. Then t·|u|≤diam(C) for all feasible t, establishing the bound, attainment, and the zero-radius case. At d=0 there is no such nonzero u.",
+      "For two bases and a convex interpolation, the Minkowski combination is contained in the target fiber by convexity of C. Nonnegative multiples of the same convex J add to the multiple with the summed coefficient, using the same template point for the reverse inclusion. This works also if one or both coefficients vanish. Affineness gives the target center and the claimed concavity."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T14:04:58Z",
+    "issues": [
+      {
+        "defect": "Without d≥1, take C=[0,1]×{0} in R×R^0, J={0}, and a(z)=0 on [0,1]. The template is compact, convex, full-dimensional in R^0 and contains zero in its interior. Every t≥0 is feasible and the maximum does not exist.",
+        "proof_locator": "Statement, first sentence and existence conclusion; proof, first paragraph",
+        "severity": "major",
+        "smallest_repair": "Specify that d is a positive integer. The current boundedness argument then applies."
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Uses an analogous Minkowski inclusion for actual homothetic fibers at sampled lattice bases with anchored compatibility. It concerns roof patches and affine centroids on faces, whereas the candidate concerns maximum inscribed template scales in arbitrary fibers along an affine mark.",
+        "fact_id": "246779e89a718f7b"
+      },
+      {
+        "comparison": "Concavity of the d-th root of optimal retained density mass uses moment-constrained densities and canonical finite families. It does not determine the maximal scale of an arbitrary fixed template.",
+        "fact_id": "669858b8fc253d7c"
+      }
+    ],
+    "readability": "The proof is direct. Specifying positive continuous dimension makes explicit the hypothesis used by the inball bound.",
+    "reviewed_proof_sha256": "ed8ded45a518165d350ba5717a344df9aa7d5700305e6d089833fb77ee7c0ca2",
+    "reviewed_statement_sha256": "4b18bc049c7e3ee4cbc331ac28bdd0ecbaec3ec74894636bb91b0ba02df504f5",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T14:00:56Z",
+    "summary": "Concavity and attainment are proved for positive continuous dimension. The statement needs this hypothesis for the existence assertion.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses an analogous Minkowski inclusion for actual homothetic fibers at sampled lattice bases with anchored compatibility. It concerns roof patches and affine centroids on faces, whereas the candidate concerns maximum inscribed template scales in arbitrary fibers along an affine mark.",
+      "fact_id": "246779e89a718f7b"
+    },
+    {
+      "comparison": "Concavity of the d-th root of optimal retained density mass uses moment-constrained densities and canonical finite families. It does not determine the maximal scale of an arbitrary fixed template.",
+      "fact_id": "669858b8fc253d7c"
+    }
+  ],
+  "readability": "The added dimension assumption makes the inball bound valid in all admitted dimensions.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ed8ded45a518165d350ba5717a344df9aa7d5700305e6d089833fb77ee7c0ca2",
+  "reviewed_statement_sha256": "6f41f2ecde600278ad6d68c925624b218051264a2188e125d274745a0b4971a8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "8e59321bc6c08ab29fd045c3c89c0512a1a48d0b7bcd0f1aa0f39b40a3325c8e",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:07:40Z",
+  "summary": "The sole change specifies d≥1. It makes the feasible scales bounded and resolves the zero-dimensional counterexample.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

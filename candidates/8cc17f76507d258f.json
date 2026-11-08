@@ -1,0 +1,29 @@
+{
+  "advances": "An obstruction to deducing proper traces from a small scalar buffer, strict quotas and geometric normalization alone.",
+  "author": "PK-research-agent",
+  "candidate_id": "8cc17f76507d258f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:56:21.718908+00:00",
+  "depends_on": [
+    "d90ba05577427854",
+    "3dd858960f824a5d"
+  ],
+  "draft_key": "small-invariant-buffer-can-bind-the-atomic-cap",
+  "kind": "counterexample",
+  "proof": "The singleton closed minors have mass $2<3$, and the two adjacent pairs have mass $4<6$. These are the only nonempty proper closed minors. Positivity of $\\ell$ follows from $q>0$ and $2-q>0$. The identity $\\ell(-1)\\ell(0)\\ell(1)=c^3q(2-q)=1$ proves the required normalization. The fiber centroid is $0$, so fact d90ba05577427854 gives $E_{[-1,1]}(0)=2$. The within-fiber variance is $\\frac12\\int_{-1}^1X^2\\,dX=1/3$, giving the stated formula for $b$. Since $q(2-q)<\\varepsilon^6/1000$, we have $c>10\\varepsilon^{-2}$ and $b>\\sqrt{10}/3>1$.\n\nAt $(0,0)$ a pure-base cap has minimum mass $4$. For a nonvertical cap normalize its continuous coefficient to $1$ after reflecting $X$ if needed. The middle fiber and the endpoint fiber with $az\\ge0$ are full, because $b>1$. The remaining endpoint has threshold $|a|-b$ in its continuous coordinate. It contributes zero length precisely when $|a|-b\\ge1$. At equality its closed trace is a supporting endpoint, and above equality it is empty. This gives every minimizing tilt and proves the raw depth $4$. At any mark, the pure-base cap minimum is at most $4$ over $z=0$ and at most $2$ over the two endpoints. Thus $4$ is the global maximum.\n\nTo count all maximizing marks, compute the projective energy at any $-1<y<1$. In the definition of fact d90ba05577427854, the image under $X-y\\mapsto (X-y)/(1+a(X-y))$ has interval length\n$$\n\\frac{1-y}{1+a(1-y)}+\\frac{1+y}{1-a(1+y)}\n=\\frac{2}{1-2ay-a^2(1-y^2)}.\n$$\nThe denominator is maximized at $a=-y/(1-y^2)$, where both admissibility factors are positive, giving $E_{[-1,1]}(y)=2(1-y^2)$. The physical shift at $(0,y)$ is therefore $b\\sqrt{1-y^2}$. By the whole-fiber capture and atomic-gap lemma it reaches the atomic depth exactly when $b\\sqrt{1-y^2}\\ge1+|y|$, equivalent to the stated interval. The boundary marks at $y=\\pm1$ have zero buffer and an outward continuous cap of zero length, and the two endpoint bases have atomic upper bound $2$.\n\nIf $\\ell=1$, the physical shift at every mark is at most $\\varepsilon/3\\le1/3$ because $E\\le2$. At each mark over $z=0$, select a continuous direction pointing toward its nearer own endpoint and use a sufficiently large base tilt to capture exactly one endpoint fiber. The own contribution has length at most $1+1/3$, so the raw maximum is at most $2+4/3<4$, using the atomic bound at the endpoint bases.\n",
+  "source_candidate_ids": [
+    "5f79e6103cd27dac"
+  ],
+  "source_candidate_sha256": {
+    "5f79e6103cd27dac": "f0efb5c4b7c9f08a0da2a7783d4b3248b2487c20b2250ce85eea89948af3f4bf"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5f79e6103cd27dac",
+      "locator": "5f79e6103cd27dac:02 §2, (4)–(6), and §4 scope"
+    }
+  ],
+  "statement": "For every $0<\\varepsilon\\le1$ take the actual body $[-1,1]\\times[-1,1]$, with integer base $z=-1,0,1$ and continuous coordinate $X$. All three fibers have volume two, the total mass is $M=6$, there are $k=2$ occupied parities, and the within-fiber variance is $\\Sigma=1/3$. Put\n$$\nq=\\varepsilon^6/2000,\\qquad c=[q(2-q)]^{-1/3},\\qquad\n\\ell(z)=c[1+(1-q)z].\n$$\nThe affine multiplier is positive, its volume-weighted geometric mean is one, and every nonempty proper closed minor $T=P\\cap\\operatorname{conv}(T)$ has $V(T)/M<k(T)/k$, where $k(T)$ counts its occupied parities. Use the invariant buffer $f(z,X)=(\\ell(z)E_{K_z}(X)/M)^{1/2}$ with the projective energy of fact d90ba05577427854, extended by zero to the fiber boundary. The buffered cap convention adds $\\varepsilon f(z,X)\\sqrt{u^{\\mathsf T}\\Sigma u}$ to the through-mark margin, including the unshifted pure-base caps.\n\nThe mark $(0,0)$ has buffered depth equal to the atomic depth and to the global raw buffered maximum, all equal to $4$. After normalizing the continuous coefficient to $1$ by scaling and reflection, every minimizing nonvertical cap there has margin $X+a z+b\\ge0$ with $b=\\varepsilon\\sqrt c/3>1$ and $|a|\\ge b+1$. None has a proper section in any fiber. At $|a|=b+1$ the excluded fiber has a single supporting point.\n\nMore precisely, the full maximizing set consists of $(0,y)$ with\n$$\n|y|\\le\\frac{b^2-1}{b^2+1}.\n$$\nAt the same $\\varepsilon$, the constant multiplier $\\ell=1$ gives a smaller normalized maximum.",
+  "subgoal_id": "pk-intake-small-invariant-buffer-can-bind-the-atomic-cap",
+  "title": "Small invariant buffers can bind the atomic cap under strict closed-minor quotas"
+}

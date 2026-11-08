@@ -1,0 +1,36 @@
+{
+  "advances": "A fixed-cap descent criterion for three actual consecutive fibers with an assigned centroid source and whole-fiber covers. The normal cost estimate depends on the contact cone-volume weight.",
+  "author": "PK-research-agent",
+  "candidate_id": "9e9892a792bf6619",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:43:58.556746+00:00",
+  "depends_on": [
+    "84cd8a85417b0d7a",
+    "6769574fc1bd9f8d",
+    "4acde2a9cdc1b7ea"
+  ],
+  "draft_key": "centroid-source-contact-band-cost",
+  "kind": "lemma",
+  "proof": "Write $v_A=2H\\chi_\\delta t$ and $v_B=2H\\chi_\\delta(1-t)$. The endpoint erosions are convex, nested and positive for all sufficiently small $\\varepsilon$. This also follows from the single-fiber case $n=0$, $P=\\{0\\}$ of the finite global-cut radial loss lemma, with support baseline $h_L$ and nonnegative continuous field $v_L$ constant in the physical coordinate for each $L=A,B$. Its total-loss formula gives first endpoint losses $\\int v_A\\,dS_A$ and $\\int v_B\\,dS_B$. For $\\Delta\\le\\delta$ the average of the displaced support bounds is $h_{M_0}-\\varepsilon H\\le h_K-\\varepsilon H$. For $\\Delta>\\delta$ the uneroded bound $h_{M_0}=h_K-\\Delta$ already lies below $h_K-\\varepsilon H$ when $\\varepsilon\\max H\\le\\delta$. The latter bound is exactly $h_{K_\\varepsilon}$, proving compatibility in every direction for each fixed choice of $\\delta,t$.\n\nThe homothety gives $|K_\\varepsilon|=(1-\\varepsilon)^d|K|$. The same radial lemma applied to the direction field $H$ on the middle gives $D=\\int H\\,dS_K$. A halfspace through $y$ cuts a homothetic portion with volume scaled by $(1-\\varepsilon)^d$. The centroid depth bound follows from the metronoid Grünbaum lemma at $m=|K|$, since the only admissible density of that mass is one and its barycenter is $y$. Any proper containing halfspace contains the parallel halfspace through $y$, and the removed layer $K\\setminus K_\\varepsilon$ is nested under that inclusion of traces. The whole-space trace loses $D$. This proves the stated lower bound on the first loss in every such fixed cap.\n\nThe endpoint cost is\n$$\nC_\\delta(t)=2\\int H\\chi_\\delta t\\,dS_A+2\\int H\\chi_\\delta(1-t)\\,dS_B.\n$$\nWith reference measure $S_A+S_B$, pointwise minimization over measurable $0\\le t\\le1$ chooses the endpoint of smaller density and gives $2\\int H\\chi_\\delta\\,d(S_A\\wedge S_B)$. Continuous $[0,1]$-valued allocations have the same infimum by $L^1$ approximation for this finite Borel reference measure, truncating approximants to $[0,1]$. Each cutoff equals one on $Z$, and the cutoffs converge boundedly to its indicator as $\\delta\\downarrow0$. Taking the infimum in $\\delta$ gives $\\omega$. The exact midpoint contact inequality for $A,B,K$ bounds $\\omega$ by $2\\int_Z H\\,dS_K=2R$, and $R\\le D$ since $H>0$.\n\nThe strict inequality in the statement allows one to fix $\\delta,t$ with actual first endpoint cost $C<(\\Gamma_d-\\beta)D/\\beta$. For the same fixed ambient caps the endpoint losses are nonnegative by nestedness, and the middle first loss is at least $\\Gamma_dD$ in every critical cap. These statements use their actual traces, including an inside supporting trace with full retained body and an outside supporting trace with zero volume. The new total mass is $T-\\varepsilon(D+C)+o(\\varepsilon)$. Thus for each critical row its new mass minus $\\beta$ times the new total is at most $-\\varepsilon[\\Gamma_dD-\\beta(D+C)]+o(\\varepsilon)$, strictly negative for sufficiently small $\\varepsilon>0$ on the finite list. The original slack caps still have mass below $\\beta$ times the new total by nestedness, continuity of total mass and finiteness. All fixed covers still cover the corresponding eroded fibers. The convex hull of the three eroded fibers has exactly those measured fibers at $-1,0,1$, since its middle section is the convex hull of the eroded middle and the eroded endpoint midpoint sum, which is contained in that middle. Every point is therefore covered by a cap of normalized mass below $\\beta$. The finite list gives a strict upper bound for the maximum normalized depth. Substituting $R\\le D/2$ or $R\\le D$ gives the two numerical criteria.\n",
+  "source_candidate_ids": [
+    "0c3c4405d9ae2dd3",
+    "72bbac9873894c0b"
+  ],
+  "source_candidate_sha256": {
+    "0c3c4405d9ae2dd3": "8862899e3609d4772623dd01a21b0b3ebcd58b4c171eb3b905aef5030b9b8e4b",
+    "72bbac9873894c0b": "835ea8d3d9bc388bbfd47aa830e9beb0c47ff25787c271447f72f6a3e1b15550"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0c3c4405d9ae2dd3",
+      "locator": "§2, (3)–(5)"
+    },
+    {
+      "candidate_id": "72bbac9873894c0b",
+      "locator": "§§1 and 5, (1)–(3), (9)–(12), specialized to the centroid"
+    }
+  ],
+  "statement": "Let $A,K,B$ be full-dimensional compact convex bodies in $\\mathbb R^d$, $d\\ge1$, on bases $-1,0,1$, with $M_0=(A+B)/2\\subseteq K$. Let $y=g_K$ be the centroid, $H(u)=h_{K-y}(u)>0$, $\\Delta(u)=h_K(u)-h_{M_0}(u)$, and $Z=\\{\\Delta=0\\}$. Put $D=d|K|$, $R=\\int_Z H\\,dS_K$, and $\\Gamma_d=(d/(d+1))^d$. For each $\\delta>0$ let $\\chi_\\delta$ be any continuous cutoff taking values in $[0,1]$, equal to one when $\\Delta\\le\\delta$ and to zero when $\\Delta\\ge2\\delta$. For a continuous $t:\\mathbb S^{d-1}\\to[0,1]$, erode the endpoints by intersecting their support halfspaces moved inward by $\\varepsilon\\,2H\\chi_\\delta t$ for $A$ and $\\varepsilon\\,2H\\chi_\\delta(1-t)$ for $B$. Erode the middle by the homothety $K_\\varepsilon=y+(1-\\varepsilon)(K-y)$. For each fixed $\\delta,t$ these give nested positive convex bodies, with $(A_\\varepsilon+B_\\varepsilon)/2\\subseteq K_\\varepsilon$ for all sufficiently small $\\varepsilon\\ge0$. The middle first total loss is $D$ and its first loss in any fixed middle cap containing $y$ is at least $\\Gamma_d D$. The infimum of the first total endpoint loss over $\\delta>0$ and continuous $t$ is\n$$\n\\omega=2\\int_Z H\\,d(S_A\\wedge S_B)\\le 2R,\\qquad 0\\le R\\le D.\n$$\n\nLet $T=|A|+|K|+|B|$ and let the original maximum raw depth be $Q=\\beta T$, $0<\\beta<1$. For each base attaining $Q$, assume its whole original fiber is covered by traces of finitely many fixed ambient halfspaces, each of original mixed volume $Q$ and with middle trace containing $y$. Assume every other original fiber is covered by finitely many fixed ambient halfspaces of original mixed volume strictly below $Q$. If\n$$\n(\\Gamma_d-\\beta)D>2\\beta R,\n$$\nsome such compatible nested erosion strictly lowers the maximum normalized depth. In particular $\\beta<\\Gamma_d/2$ and $R\\le D/2$ suffice, as does $\\beta<\\Gamma_d/3$ alone. A local minimum satisfying these cover hypotheses with $\\beta<\\Gamma_d/2$ therefore has $R>D/2$.",
+  "subgoal_id": "pk-intake-centroid-source-contact-band-cost",
+  "title": "Centroid contact-band erosion and its fixed-cap descent criterion"
+}

@@ -1,0 +1,41 @@
+{
+  "candidate_id": "a67354a596626de7",
+  "candidate_sha256": "a969bc22c52ca2fa25afb0bb7c9e17a9d439c2215eaea3cb042bd4f4888e7635",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Solving the two line intercepts gives A=Br/(B+r) and a=bt/(b+t). The four core areas are AB/2, at/2, ab/2, Ar/2. The three caps sum sectors (4,5,0), (0,1,2), and (2,3,4) respectively. Their boundary rays have zero area.",
+    "Core inclusion on the remaining two sectors yields x>=P and y>=Q, including equality. Multiplication gives UV=PQ. The fraction bound is immediate at or above 1/2. Below 1/2 the two bounds on x-y give Z<R. Swapping U and V while replacing xi by p/xi leaves Z unchanged. With U>=V, the inequality (U-V)xi<V-Up yields U<Q and then 0<P<R<=T<Q.",
+    "Independently cleared the positive denominator in Z-Z_0. Its coefficients in xi are P^2(Q-U)^2, 2PQ(Q-U)(P-U), and Q^2(P-U)^2, giving the stated square. S<P+Q follows by expanding (Q-U)(Q-V)>0. These facts give 0<Z_0<=Z<R.",
+    "The largest cap ratio decreases in x before the crossing and increases after it, where the derivative has numerator y+S-Z>0. The crossing y+T-Z is positive. At the crossing the derivative in y has numerator R-Z>0. Replacing y by Q and then Z by Z_0 gives the displayed lower bound in the correct directions.",
+    "At Q=1 the denominator is obtained by multiplying the prior positive denominator by (1-P)T. Differentiating gives the factor P(1-P)(1-T)(3T+1). At T=s and P=s^2 the common factor s(1-s) cancels. The difference from 8/17 is (3s-1)^2/[17(s^2+5s+2)]. Exact rational subtraction gives 56/4743>0 above 128/279.",
+    "Checked original note 10ff75afdda8a25f, sections 1–5, formulas (1)–(11), and matched its raw SHA-256. The proof uses its relaxation of the actual area region, so no upper feasibility bounds or strict positive excess assumptions are needed."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T12:48:08Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same four cores and opposite collinear triples. The accepted fact describes the feasible area region and cap formulas. The new bound requires the scalar minimization even on a relaxation of that region.",
+      "fact_id": "ac92c3b01909dae5"
+    },
+    {
+      "comparison": "An example with the same four cores and opposite collinearities has all caps below 1/2 and above 128/279. Its existence is compatible with the universal 8/17 bound.",
+      "fact_id": "5824b669b559ced2"
+    }
+  ],
+  "readability": "The proof covers equality in the two unused core inequalities and handles a cap at 1/2 in the first case. The 8/17 computation is a lower bound from a relaxation, and the statement makes no attainment claim.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4079191e681d7ba5afb865e3d6509910cfb7e14624a74b0b9b01f6422425ad69",
+  "reviewed_statement_sha256": "423c928a12f9d6ab56f3927a8981d436cdc27a5d6d1482537be57fa4446cba14",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:44:53Z",
+  "summary": "The four core areas and two collinearities imply the universal 8/17 cap bound. The exact inequalities also allow the other two sectors to be cores.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

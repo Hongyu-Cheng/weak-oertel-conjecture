@@ -1,0 +1,26 @@
+{
+  "advances": "Pointwise actual cap geometry at an interior mark, including pure-base competitors. The bound gives a strict gain for a positive fixed displacement at that mark.",
+  "author": "PK-research-agent",
+  "candidate_id": "9583fbdf100e75ef",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:46:15.180467+00:00",
+  "depends_on": [],
+  "draft_key": "strict-own-interior-physical-buffer",
+  "kind": "lemma",
+  "proof": "A minimum-weight base trace exists because there are finitely many traces. Tighten its halfspace to pass through $p$, writing it as $\\{a\\cdot(z-p)\\ge0\\}$. Take $a=0$ for the whole-base trace, including the formal rank-zero convention. Fix a Euclidean unit continuous covector $u$. The two actual caps with margins $T a\\cdot(z-p)\\pm u\\cdot(X-y)$ capture every fiber with strictly positive drift and omit every fiber with strictly negative drift when $T$ is sufficiently large. On every zero-drift fiber they capture complementary pieces up to a hyperplane of zero $d$-volume. Their masses therefore sum to $2b_{\\rm base}(p)-\\sum_{z:a\\cdot(z-p)=0}V_z$. The latter sum includes $V_p$, and both caps have nonzero continuous normal even when $a=0$. Taking the smaller mass proves the ordinary bound.\n\nFor a nonvertical buffered cap normalize $\\Gamma(u)=1$. Relative to its ordinary through-mark cap, it gains the part of the own ball with $-\\delta\\le u\\cdot(X-y)<0$. In the Euclidean unit direction $u/\\|u\\|$, this includes a strip of thickness $\\min(r/2,\\delta/C)$ adjacent to the central section. Each of those ball sections has $(d-1)$-volume at least $\\kappa_{d-1}(\\sqrt3r/2)^{d-1}$. Its gain is therefore at least the second term in the stated minimum, uniformly in the base tilt. Every pure-base cap has mass at least $b_{\\rm base}(p)$, hence at least $D_0(Y)+V_p/2$. Infimizing the two bounds gives the claim.\n",
+  "source_candidate_ids": [
+    "cebc39c4f5ccbc96"
+  ],
+  "source_candidate_sha256": {
+    "cebc39c4f5ccbc96": "2bc9f1fbc5f1ca28682ac55e7a202382c3916b49ed2b61aef834c7c630f389f9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cebc39c4f5ccbc96",
+      "locator": "§4, (11)–(13)"
+    }
+  ],
+  "statement": "Let $P$ be a finite nonempty real base with positive-volume compact convex fibers $K_z\\subset\\mathbb R^d$, $d\\ge1$. Use their summed volume measure. For a mark $Y=(p,y)$ with $y\\in K_p$, let $D_0(Y)$ be ordinary raw closed-halfspace depth and $b_{\\rm base}(p)$ be closed atomic base depth for weights $V_z=|K_z|$. Include the whole-base trace, the sole trace in rank zero. Then $D_0(Y)\\le b_{\\rm base}(p)-V_p/2$.\n\nIf $B(y,r)\\subseteq K_p$ with $r>0$ and $\\Gamma$ is a norm on continuous covectors with $\\|u\\|\\le C$ whenever $\\Gamma(u)=1$, let $D_\\delta(Y)$ use a displacement $\\delta\\Gamma(u)$ added to each nonvertical through-mark margin, leaving pure-base caps unchanged, where $\\delta>0$. Then\n$$\nD_\\delta(Y)\\ \\ge\\ D_0(Y)+\\min\\!\\left\\{\\frac{V_p}{2},\n\\kappa_{d-1}\\left(\\frac{\\sqrt3r}{2}\\right)^{d-1}\n\\min\\!\\left(\\frac r2,\\frac{\\delta}{C}\\right)\\right\\}>D_0(Y),\n$$\nwhere $\\kappa_{d-1}$ denotes the unit $(d-1)$-ball volume and $\\kappa_0=1$.",
+  "subgoal_id": "pk-intake-strict-own-interior-physical-buffer",
+  "title": "A positive physical buffer gives a quantitative strict depth gain"
+}

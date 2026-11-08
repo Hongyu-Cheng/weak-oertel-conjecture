@@ -1,0 +1,30 @@
+{
+  "advances": "A comparison of actual conditional surface capacities at one tight midpoint of two bodies. It supplies no joint capacity sum over different triples.",
+  "author": "PK-research-agent",
+  "candidate_id": "26be931a283d8eb3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:43:58.557446+00:00",
+  "depends_on": [
+    "aa6b801f6bd23a9a",
+    "82413ddca5bdb268",
+    "4acde2a9cdc1b7ea"
+  ],
+  "draft_key": "normal-conditional-surface-ball-bound",
+  "kind": "theorem",
+  "proof": "Write $P_r(a,b)=[(a^{1/r}+b^{1/r})/2]^r$, where $r=d-1$. By disintegration of the marked regular surface measures, outside one Borel $\\lambda$-null set each $\\mu_{L,u}$ is supported on the actual exposed face at $u$. Indeed the marked support relation $u\\cdot x=h_L(u)$ is closed and holds for the integrated measure. This uses support of the disintegration alone.\n\nFirst fix an ordered pair of balls with rational centers and positive rational radii. Denote the endpoint balls by $D_-,D_+$ and the ball with averaged center and radius by $D_0$. Set $A'=A\\cap\\overline D_-$, $B'=B\\cap\\overline D_+$ and $K'=K\\cap\\overline D_0$. At any tight normal where both endpoint ball masses are positive, each endpoint face meets its open ball. The endpoint cut bodies are full dimensional and keep their original support values at that normal. The average of the two points so obtained lies in $D_0$ and in the exposed face of $K$ at the tight normal. Thus $K'$ too is full dimensional and keeps its support value there. If any of the cuts is empty or lacks interior, no such normal occurs for this ball pair. Otherwise, $(A'+B')/2\\subset K'$ by containment of the uncut midpoint body and the triangle inequality for the averaged ball. The tight positive-mass normal set for this pair is Borel, and on it $(A'+B')/2$ and $K'$ have equal support values.\n\nOn the intersection of the three strict normal regions of the ball-cut lemma, the area measures $S_{A'},S_{B'},S_{K'}$ have densities relative to $\\lambda$ equal to the three conditional open-ball masses almost everywhere. The tight positive-mass set lies in this intersection. The surface-area root inequality under Minkowski averaging supplies the lower bound for $S_{(A'+B')/2}$ with density $P_r$ of the two endpoint densities on this set. To use that inequality with a possibly different normal reference in its statement, restrict both endpoint area measures to this set. The density of the power-mean measure is invariant under changing the dominating measure by degree-one homogeneity and the Radon–Nikodym chain rule, and the power mean vanishes when both inputs vanish. The support-contact domination for $(A'+B')/2\\subset K'$ bounds its area measure above by $S_{K'}$ on the same set. Comparison of $\\lambda$-densities now gives the claimed ball inequality outside a $\\lambda$-null set for this pair.\n\nThere are countably many rational pairs, so all of their inequalities hold on one Borel $\\lambda$-full normal set. For arbitrary endpoint balls with centers $c_\\pm$ and radii $a_\\pm$, choose rational centers $c_{\\pm,j}$ and positive rational radii $a_{\\pm,j}$ tending to these values with $|c_{\\pm,j}-c_\\pm|+a_{\\pm,j}<a_\\pm$. These open balls lie inside the originals and eventually contain every point of the originals. Their averaged balls lie inside the original averaged open ball. Dominated convergence gives convergence of the endpoint conditional masses for each fixed normal on the full set. If both limiting masses are positive, both approximating masses are positive eventually. Bound the approximating middle masses by the desired middle mass and pass to the limit by continuity of $P_r$. This proves the assertion for all balls on the same full set.\n",
+  "source_candidate_ids": [
+    "d7f1891e34b3ec5a"
+  ],
+  "source_candidate_sha256": {
+    "d7f1891e34b3ec5a": "a37cea368e35fda07de28f3fff62ab8e331e050cd8a656a0ff677b51cc9081f5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d7f1891e34b3ec5a",
+      "locator": "§§1, 3–4, (1)–(4)"
+    }
+  ],
+  "statement": "Let $A,B,K\\subset\\mathbb R^d$, $d\\ge2$, be convex bodies with $(A+B)/2\\subset K$, and let $Z=\\{u\\in\\mathbb S^{d-1}:h_K(u)=(h_A(u)+h_B(u))/2\\}$. For $L=A,B,K$, let $\\eta_L$ be ordinary surface measure marked by its almost everywhere unique outer unit normal and let $S_L$ be the normal marginal. Put $\\lambda=S_A+S_B+S_K$ and disintegrate $\\eta_L(du,dx)=\\lambda(du)\\mu_{L,u}(dx)$ using finite kernels, with total mass $dS_L/d\\lambda$. On one Borel $\\lambda$-full normal set, for every $u\\in Z$ there and every pair of open balls $B(c_-,a_-),B(c_+,a_+)$ with both endpoint conditional masses positive,\n$$\n \\mu_{K,u}\\bigl(B((c_-+c_+)/2,(a_-+a_+)/2)\\bigr)\n \\ \\ge\\\n \\left[\\frac{\\mu_{A,u}(B(c_-,a_-))^{1/(d-1)}\n             +\\mu_{B,u}(B(c_+,a_+))^{1/(d-1)}}{2}\\right]^{d-1}.\n$$",
+  "subgoal_id": "pk-intake-normal-conditional-surface-ball-bound",
+  "title": "Conditional surface-area inequality for all ball pairs on tight normals"
+}

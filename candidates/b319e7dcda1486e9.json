@@ -1,0 +1,32 @@
+{
+  "advances": "A necessary inequality for an actual cap minimizing at two marks. The inequality gives an empty-side exterior incidence condition and a full-side cost.",
+  "author": "PK-research-agent",
+  "candidate_id": "b319e7dcda1486e9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:43:58.559538+00:00",
+  "depends_on": [],
+  "draft_key": "oriented-supporting-facet-flux-for-common-minimizing-caps",
+  "kind": "lemma",
+  "proof": "For $e=0,1$ set $g_e=h-h(y_e)$ and consider the cap with margin $L+t g_e$. It still passes through $y_e$ and has nonzero continuous normal for small $|t|$. Its mass has a local minimum at $0$, so its left and right derivatives satisfy $D_e^-\\le0\\le D_e^+$.\n\nAt a fixed fiber choose orthonormal continuous coordinates $(\\xi,s)$ with $s=L(z,x)$, and write $g_e(z,x)=g_{e,0}(\\xi)+bs$. The perturbed threshold is $s\\ge -t g_{e,0}(\\xi)/(1+tb)$ for small $|t|$. On a line with $\\xi$ in the relative interior of a proper section, the fiber contains an interval on both sides of $s=0$. In fact a point in the relative interior of the proper section must lie in the fiber interior, since otherwise a supporting plane there would contain the section plane. On a positive-measure supporting section, the line through each relative-interior point contains an interval on the permitted side of $s=0$. To see this, choose an interior point of the fiber with coordinates $(\\xi_*,s_*)$. For sufficiently small $\\theta>0$, $(\\xi-\\theta\\xi_*)/(1-\\theta)$ still lies in the section face, so convex interpolation with that interior point gives $(\\xi,\\theta s_*)$ in the fiber. Relative boundaries of full-dimensional sections in their cutting planes are null. For $\\xi$ outside the section, the compact line intersection has positive distance from $s=0$ if nonempty, so the pointwise derivative is zero. A zero-measure section contributes zero by the same almost-everywhere argument.\n\nOn a proper line the derivative of the captured length is $g_{e,0}$ from both sides. On an empty-side supporting line the right and left derivatives are $(g_{e,0})_+$ and $\\min(g_{e,0},0)$, respectively. On a full-side supporting line the right and left derivatives are $\\min(g_{e,0},0)$ and $(g_{e,0})_+$, respectively. Indeed the threshold shift clips an interval extending to only one side of zero in the supporting cases. For all these limits the length difference divided by $|t|$ is bounded by $2|g_{e,0}(\\xi)|$ for sufficiently small $|t|$. This is bounded on the compact fiber projection, so dominated convergence integrates the line derivatives. For $d=1$ the tangential space is a single point with measure one and the same calculation is the interval clipping rule. A fiber with empty boundary section has zero derivative.\n\nWith $m=\\int_P h\\,d\\sigma$, the two derivatives required are\n$$\n\\begin{aligned}\nD_0^-&=m+\\int_E\\min(h,0)\\,d\\sigma+\\int_F h_+\\,d\\sigma,\\\\\nD_1^+&=m-A+\\int_E(h-1)_+\\,d\\sigma+\\int_F\\min(h-1,0)\\,d\\sigma .\n\\end{aligned}\n$$\nPointwise, $(h-1)_+-\\min(h,0)=\\delta$ and $\\min(h-1,0)-h_+=-1-\\delta$. Thus $0\\le D_1^+-D_0^-=-A+\\int_E\\delta\\,d\\sigma-\\int_F(1+\\delta)\\,d\\sigma$. The section through either interior endpoint is proper and has positive section measure, so $A>0$.\n",
+  "source_candidate_ids": [
+    "e81d0f726880ea4a",
+    "f2d1fbdd5a877f5b"
+  ],
+  "source_candidate_sha256": {
+    "e81d0f726880ea4a": "bd9abab86477ed6cf54e6275dabef3eca81ab926a0f346c2479d6139b76d3a4e",
+    "f2d1fbdd5a877f5b": "4f0286a5d698c715b3b1356c29b7bfb1622a378038b4565bcf904fdb8cce4b1d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e81d0f726880ea4a",
+      "locator": "§1, (1)–(3)"
+    },
+    {
+      "candidate_id": "f2d1fbdd5a877f5b",
+      "locator": "§§2–2.1, unoriented ambient pivot and (1a)"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$. Let $\\mu$ sum $d$-volume on a finite family of positive-volume compact convex fibers $K_z\\subset\\mathbb R^d$ at bases $z\\in\\mathbb R^n$. Suppose the nonvertical closed cap $H=\\{L\\ge0\\}$ minimizes $\\mu(H)$ among all closed halfspaces containing $y_e$ for each of two distinct points $y_0,y_1$ in their own fiber interiors. Assume $L(y_0)=L(y_1)=0$, and normalize the continuous component of the affine margin $L$ to norm one. The bases may coincide.\n\nOn the boundary sections $K_z\\cap\\{L(z,\\cdot)=0\\}$ use the summed $\\mathcal H^{d-1}$ measure $\\sigma$, with counting measure for $d=1$. Label nonempty sections by $P$ if the plane cuts the fiber interior, by $E$ if the fiber lies in $\\{L\\le0\\}$, and by $F$ if the fiber lies in $\\{L\\ge0\\}$. For every ambient affine $h$ with $h(y_0)=0$ and $h(y_1)=1$, put $\\delta=\\operatorname{dist}(h,[0,1])$ and $A=\\sigma(P)$. Then\n$$\n0<A,\\qquad A+\\int_F(1+\\delta)\\,d\\sigma\\le\\int_E\\delta\\,d\\sigma.\n$$\nIf $h$ depends only on the base, each integral is a sum of its integrand at the base times the corresponding section measure.",
+  "subgoal_id": "pk-intake-oriented-supporting-facet-flux-for-common-minimizing-caps",
+  "title": "Orientation-resolved supporting-facet flux for a common minimizing cap"
+}

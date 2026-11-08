@@ -4,6 +4,33 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 8 | theorem | pk-intake-uniform-physical-buffer-vanishing-at-joint-minima | [352454c77cb6558d](facts/352454c77cb6558d.md) |
+| 3 | theorem | pk-intake-actual-three-fiber-surface-midpoint-repair | [22281f116bac80d4](facts/22281f116bac80d4.md) |
+| 2 | theorem | pk-intake-zero-buffer-rigidity-at-ordinary-minimum | [c3e7dafea37c54bd](facts/c3e7dafea37c54bd.md) |
+| 2 | theorem | pk-intake-three-fiber-critical-middle-cover-deficit-margin | [dfffa3e70be598b6](facts/dfffa3e70be598b6.md) |
+| 2 | theorem | pk-intake-normal-conditional-surface-ball-bound | [26be931a283d8eb3](facts/26be931a283d8eb3.md) |
+| 2 | lemma | pk-intake-centroid-source-contact-band-cost | [9e9892a792bf6619](facts/9e9892a792bf6619.md) |
+| 8 | theorem | pk-intake-fixed-epsilon-concave-array-attainment | [8b94712079a5d8f5](facts/8b94712079a5d8f5.md) |
+| 1 | theorem | pk-intake-ordinary-deepest-face-exhaustion | [b22db3535d2a902a](facts/b22db3535d2a902a.md) |
+| 3 | theorem | pk-intake-strict-depth-interpolation-across-positive-base-slab | [934061acb75073ac](facts/934061acb75073ac.md) |
+| 3 | theorem | pk-intake-orientation-resolved-common-critical-cap-circuit | [c4532e797cea64f9](facts/c4532e797cea64f9.md) |
+| 1 | theorem | pk-intake-three-fiber-critical-cap-deficit-margin | [3feef7505711fd58](facts/3feef7505711fd58.md) |
+| 1 | lemma | pk-intake-three-fiber-critical-bm-cap-translations | [2965bef6996cdba5](facts/2965bef6996cdba5.md) |
+| 1 | lemma | pk-intake-surface-area-domination-on-contact | [4acde2a9cdc1b7ea](facts/4acde2a9cdc1b7ea.md) |
+| 0 | lemma | pk-intake-strict-own-interior-physical-buffer | [9583fbdf100e75ef](facts/9583fbdf100e75ef.md) |
+| 0 | lemma | pk-intake-exact-raw-depth-on-base-faces | [dec855d1498a4e64](facts/dec855d1498a4e64.md) |
+| 0 | lemma | pk-intake-positive-set-parity-center | [dba5cdade881e9ee](facts/dba5cdade881e9ee.md) |
+| 4 | theorem | pk-intake-fixed-sector-spectral-cubic-quadrilateral-reduction | [069c12e409c756c3](facts/069c12e409c756c3.md) |
+| 0 | theorem | pk-intake-opposite-singular-core-cap-lower-bound | [a67354a596626de7](facts/a67354a596626de7.md) |
+| 3 | theorem | pk-intake-null-supporting-sections-strict-interpolation-and-maximizing-hull | [286b2220d4bcff4f](facts/286b2220d4bcff4f.md) |
+| 2 | lemma | pk-intake-common-minimizing-cap-at-interpolation-equality | [06476fb81821acf7](facts/06476fb81821acf7.md) |
+| 0 | lemma | pk-intake-oriented-supporting-facet-flux-for-common-minimizing-caps | [b319e7dcda1486e9](facts/b319e7dcda1486e9.md) |
+| 0 | lemma | pk-intake-three-fiber-finite-tilt-equalization | [03c59c70402b66a2](facts/03c59c70402b66a2.md) |
+| 0 | lemma | pk-intake-aligned-conditional-surface-face-densities | [becb3bcb15c98b77](facts/becb3bcb15c98b77.md) |
+| 0 | lemma | pk-intake-surface-area-ball-cut-localization | [aa6b801f6bd23a9a](facts/aa6b801f6bd23a9a.md) |
+| 2 | theorem | pk-intake-variable-barycentric-density-ceiling | [bbbf8fc4a00f02d8](facts/bbbf8fc4a00f02d8.md) |
+| 0 | theorem | pk-intake-convex-surface-normal-disintegration | [ed831700ef36ac67](facts/ed831700ef36ac67.md) |
+| 0 | theorem | pk-intake-common-surface-area-root-bound | [82413ddca5bdb268](facts/82413ddca5bdb268.md) |
 | 2 | theorem | pk-intake-prescribed-mixed-barycentric-convex-order | [b4efc0a0a7fcfb69](facts/b4efc0a0a7fcfb69.md) |
 | 5 | theorem | pk-intake-least-active-tetrahedral-four-row-exclusion | [446929d370c73df3](facts/446929d370c73df3.md) |
 | 5 | theorem | pk-intake-least-active-tetrahedral-one-hole-incidence | [cd8f8e2a7b4c9d2b](facts/cd8f8e2a7b4c9d2b.md) |

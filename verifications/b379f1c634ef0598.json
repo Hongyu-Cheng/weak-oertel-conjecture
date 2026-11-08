@@ -1,0 +1,104 @@
+{
+  "candidate_id": "069c12e409c756c3",
+  "candidate_sha256": "619557d151c8e87e16cba602addb586122d40ce34d723dfcedf158d844590f84",
+  "checked_dependency_candidate_sha256": {
+    "33488d4938a6ee4a": "4cf5340cd24a87299f2b841763b116fe73283de907888c2f936ace54c818ba6a",
+    "7d1ee06fa4119930": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+    "82a8acc237f57498": "dd40963d7c18a0f8c7397b3f5a904737f3274c95df966b743adfd5d0c3d68e5d",
+    "b08bdaf82b84ef41": "11473e30cd227dcda6ef47ed864031f6a9be4d5b713204d84605a11f3481e807",
+    "cc5768d4e9bc27ab": "a5952a04a9c40b4670e9cf7d86e09daa193af40ef467419626cb402b7810bcf3"
+  },
+  "checks": [
+    "Any two of the balanced spanning normals are independent. The affine map whose rows are those normals scales each sector and cap area by the absolute determinant. The central coarea length scales by that same factor, since it is the area derivative at the unchanged raw normal threshold. Hence M and f are preserved. In the canonical coordinates the cap sums use sectors (4,5,0), (0,1,2), and (2,3,4), with coarea lengths B+b, A+a, and t+r.",
+    "Canonical consecutive and next-neighbor direction determinants are one. Substitution into the exact feasible matrix gives its displayed diagonal and off-diagonal formulas. A core gives a zero edge. Positive sector areas are witnessed by the original body, and the positive compact feasible radius set supports continuous attainment of J.",
+    "Strict positivity of the three edge weights proves simplicity by absolute values in the Rayleigh quotient and the eigenvector equation at a zero coordinate. In the monotone inverse-chord projective coordinate all three edge slopes are nonzero, and det(D) is twice their product. At stationarity z=Dw is nonzero and orthogonal to w. Expanding the test Rayleigh quotient cancels its constant and linear terms and gives the stated positive quadratic coefficient for small c. The remainder is cubic and both sufficiently small signs improve. Degree-zero homogeneity gives the weighted derivative identity.",
+    "Increasing a radius with both products strict keeps the off-diagonals nonpositive and increases entries, preserving PSD by comparison on absolute values. Thus positive-derivative opposite endpoints need two different incident cores, and three cores are necessary when all derivatives vanish. With the full matrix PD any radius could decrease slightly. A negative derivative exists by homogeneity unless all derivatives vanish, and in that case the stationary gain applies. Neither possibility permits an all-PD maximum.",
+    "A PD block with at least three nodes has a free internal radius whose two incident products are strict. Two-sided variation stays within the block, so a nonzero derivative or the strict stationary gain contradicts maximality. With exactly two cores the four eligible pairs give block sizes 3+3 for (0,3) and (1,4), or 2+4 for (0,4) and (1,3). For the latter pairs the checked short blocks are (5,0) and (2,3), respectively.",
+    "Each short-block transfer keeps the intervening core product fixed and leaves the other separating core unchanged. The short-block internal product decreases and its PD persists by openness. The other block sees entrywise increases with its internal products still strict. The paired first variations force both other chord derivatives positive, which together with the selected positive derivative contradicts homogeneity. Checked all four explicit exchanges.",
+    "With at least three cores, a unique singular block has size at most four and its full principal complement is PD. For size one the three proposed decreases miss its adjacent edges and affect distinct chords. For size two, decreases at 4 and 5 keep both separating edges fixed, then the A-down/B-up exchange keeps the separating core at 0 and the one at 2. For size three, B can increase within the singular block while b can decrease wholly within the complement. For size four, increases at B and t fix the derivative signs, and the simultaneous A,a-up and r,b-down exchange fixes Ar and ab while relaxing br. Openness on the whole PD complement covers any newly nonzero internal edge.",
+    "Two singular blocks contribute independent kernel vectors, giving rank at most four. Sparse reconstruction needs at least one core, preserves all maximizing endpoints and areas, and yields a full-dimensional polygon with exactly rank(L) vertices. Thus it is a triangle or quadrilateral.",
+    "For positive f, det(B)=f_1 f_2 f_3/4>0 and trace zero force precisely one positive and two negative eigenvalues. The sign of det(I-B) is the sign of 1-J. Expansion gives det(I-B)=1-(sum f_i^2+f_1 f_2 f_3)/4, so the strict witness equivalence holds at the threshold as well. The ceiling is preserved by fixed areas, and 128/279<2sqrt(3)-3 since 12*279^2-965^2=2867. The accepted incidence and strict triangle cubic facts force J<=1 for a triangle under the ceiling, so a strict maximum witness there is a quadrilateral.",
+    "Checked original notes e32081eac0270dbc sections 1–4 and 1a5bfc0fdb9108c3 sections 3–5, 8, 9 and 12, and matched both raw SHA-256 digests. The spectral stationary gain supplies the objective-specific input for the geometric variations. The final triangle exclusion uses the accepted facts with their strict incidence hypotheses."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7d1ee06fa4119930",
+      "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+      "hypotheses_mapping": "The six nonzero canonical rays are cyclic with angular gaps below pi, and all W are finite. Determinants specialize to D_s=R_s R_(s+1) and E_s=R_(s-1)R_(s+1). Its exact realization criterion applies to every perturbed radius vector satisfying the product and PSD conditions.",
+      "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+      "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043",
+      "status_at_review": "accepted at repository snapshot"
+    },
+    {
+      "candidate_id": "82a8acc237f57498",
+      "candidate_sha256": "dd40963d7c18a0f8c7397b3f5a904737f3274c95df966b743adfd5d0c3d68e5d",
+      "hypotheses_mapping": "The canonical sector areas are positive and realized by the transformed original body. Use the stated nonempty compact feasible radius set, independently of the inverse chord objective considered in that fact.",
+      "reviewed_proof_sha256": "680eb5dc2c6c1159cab077051441757e15946bab54b333d7b49c68030668dc74",
+      "reviewed_statement_sha256": "5cedaf1336b84057302c18b3e79a6c87d5b2be7e37b987dd2c4da098aceeae91",
+      "status_at_review": "accepted at repository snapshot"
+    },
+    {
+      "candidate_id": "cc5768d4e9bc27ab",
+      "candidate_sha256": "a5952a04a9c40b4670e9cf7d86e09daa193af40ef467419626cb402b7810bcf3",
+      "hypotheses_mapping": "Use m=6, feasible maximizing data, canonical angular gaps below pi and at least one core. The reconstruction preserves the six endpoints and six areas and has exactly rank(L) vertices.",
+      "reviewed_proof_sha256": "25a6e65a34e1253d1b614982351e555e6118c23d1139a46eaa1000f4d9ce337e",
+      "reviewed_statement_sha256": "83f9e6e2180412ce39e90fee31dc688ccace0ee5f268dec7eff5e8a7ea96d0e0",
+      "status_at_review": "accepted at repository snapshot"
+    },
+    {
+      "candidate_id": "b08bdaf82b84ef41",
+      "candidate_sha256": "11473e30cd227dcda6ef47ed864031f6a9be4d5b713204d84605a11f3481e807",
+      "hypotheses_mapping": "If the maximizing polygon is a triangle, it is nondegenerate with the mark interior, the same normals form the positive circuit with weights one, and the unchanged cap ratios meet the rational ceiling. The three strict captured vertices are distinct.",
+      "reviewed_proof_sha256": "dd6b697b2b85907d412eed0ca698054f45459f7528ed5c7c2706b9427fef5fe1",
+      "reviewed_statement_sha256": "ca8e1cc01156a369b07949d5839e969ba0ad192dcc792b8887e2c2d639c4056a",
+      "status_at_review": "accepted at repository snapshot"
+    },
+    {
+      "candidate_id": "33488d4938a6ee4a",
+      "candidate_sha256": "4cf5340cd24a87299f2b841763b116fe73283de907888c2f936ace54c818ba6a",
+      "hypotheses_mapping": "With the strict distinct-vertex incidence from b08bdaf82b84ef41 and the spanning normals summing to zero, its Q and sigma are exactly the maximizing polygon's q and coarea lengths. The cubic deficit is nonnegative, implying J<=1.",
+      "reviewed_proof_sha256": "97c560ebf4ac7a967d9c6749e620fd6fcf49bb7ff5f2604b3dc582c3c35b3d02",
+      "reviewed_statement_sha256": "2627a0768145e660338b8f307735ca8df6e5e86b2d1dad065733f3adc9dcc79e",
+      "status_at_review": "accepted at repository snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:48:08Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same canonical feasible set and singular-block mechanism for a selected Lorentz row. The spectral objective requires its own stationary gain and its maximizing data are not supplied by the selected-row theorem.",
+      "fact_id": "7cc865b9f263a067"
+    },
+    {
+      "comparison": "Same fixed-sector polygon size and preservation, but optimizes a selected Lorentz row rather than the spectral objective.",
+      "fact_id": "f56c82f24e66e60b"
+    },
+    {
+      "comparison": "Supplies the rank-controlled reconstruction for feasible fixed data with a core. The spectral theorem establishes the new optimizer rank bound needed to apply it.",
+      "fact_id": "cc5768d4e9bc27ab"
+    },
+    {
+      "comparison": "Its PSD equivalence already gives the cubic threshold for all nonnegative f, hence the positive strict witness equivalence as a subclaim. The downward-hull result does not optimize over fixed actual sector areas.",
+      "fact_id": "e85ab5a80f874e71"
+    },
+    {
+      "comparison": "Supplies the cubic inequality on triangles with strict distinct-vertex incidence, used to exclude triangles only under the preserved cap ceiling.",
+      "fact_id": "33488d4938a6ee4a"
+    }
+  ],
+  "readability": "The complement in the extra-core cases is the full principal complement, so it remains PD even if a former internal core acquires slack. For more precise attribution the second source locator could add section 8, which states the general internal-node argument in the Lorentz-row note. The spectral proof already supplies that argument.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "8cab9fc1f94fe52726493620754236eaad59c28d1b51b8f4a957df7e28c8675e",
+  "reviewed_statement_sha256": "7ee88318b2d97447520282dfe7c63d92c9ede66ea872eb55779ef099aefc6061",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:44:53Z",
+  "summary": "The strict stationary coordinate gain for the spectral objective supports the complete six-node feasibility argument. An attained maximum has at least two singular blocks and admits an exact triangle or quadrilateral realization. The cap ceiling excludes triangles as strict cubic witnesses.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

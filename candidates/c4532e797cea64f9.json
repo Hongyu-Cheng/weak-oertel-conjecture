@@ -1,0 +1,37 @@
+{
+  "advances": "A necessary condition at a genuine plateau of global maximizers. The terms on different supporting sections remain separate.",
+  "author": "PK-research-agent",
+  "candidate_id": "c4532e797cea64f9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:43:58.560008+00:00",
+  "depends_on": [
+    "55a57b1cf55d0c87",
+    "755cb08c379113cc",
+    "06476fb81821acf7",
+    "b319e7dcda1486e9"
+  ],
+  "draft_key": "orientation-resolved-common-critical-cap-circuit",
+  "kind": "theorem",
+  "proof": "The nonempty sampled fibers are a finite compatible lattice family: their lifted convex hull is contained in $C$ and agrees with each original fiber at its base, and their base set consists of all integer points of its convex hull. By fact 55a57b1cf55d0c87, an interior point of a positive-volume fiber has positive depth, so $Q>0$. Every halfspace containing the chosen intermediate point $y$ contains at least one endpoint. Hence $D(y)\\ge Q$, and equality follows from global maximality. In particular $y$ lies in the interior of its positive-volume fiber by the same fact and maximizes depth on that fiber.\n\nApply fact 755cb08c379113cc at $y$ to obtain the finite positive circuit of actual nonvertical caps through $y$, each of mass $Q$. A minimal convex representation of zero uses an affinely independent subset, and its affine span contains zero. Its linear span therefore has dimension $s-1$. The interpolation-equality lemma puts both endpoints on each cap boundary and makes each cap a common minimizer. Each endpoint is in its positive fiber interior by fact 55a57b1cf55d0c87. Apply the orientation-resolved common-cap lemma to each cap with the same $h$. Multiplication by the positive $\\lambda_i$ and summation give the asserted inequality. Since $A_i>0$, the empty-side exterior integral for each $i$ is strictly positive. The sum is over finitely many fibers, so at least one actual empty-side supporting section has positive weighted measure. A positive $(d-1)$-measure supporting face of a full-dimensional polytope is a facet, including interval endpoints for $d=1$.\n\nFor distinct bases, the displayed affine change fixes the bases, preserves each fiber's volume and sends both endpoints to continuous coordinate zero. It preserves ambient halfspaces and the unit continuous normals. Subtract the two zero endpoint margins in the new coordinates to obtain $a'_i\\cdot(p_1-p_0)=0$ for each cap.\n",
+  "source_candidate_ids": [
+    "e81d0f726880ea4a",
+    "f2d1fbdd5a877f5b"
+  ],
+  "source_candidate_sha256": {
+    "e81d0f726880ea4a": "bd9abab86477ed6cf54e6275dabef3eca81ab926a0f346c2479d6139b76d3a4e",
+    "f2d1fbdd5a877f5b": "4f0286a5d698c715b3b1356c29b7bfb1622a378038b4565bcf904fdb8cce4b1d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e81d0f726880ea4a",
+      "locator": "§2, simultaneous oriented flux (4)"
+    },
+    {
+      "candidate_id": "f2d1fbdd5a877f5b",
+      "locator": "§4, balanced circuit and distinct-base shear (4)"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$ and let $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ for compact convex $C\\subset\\mathbb R^{n+d}$. Let $\\mu$ be its summed fiber $d$-volume, $M=\\mu(S)>0$, and $D$ its raw closed ambient halfspace depth. Suppose distinct global maximizers $y_0=(p_0,x_0)$ and $y_1=(p_1,x_1)$ have an intermediate segment point in $S$. Put $Q=\\max_S D$.\n\nThere are $2\\le s\\le d+1$ nonvertical closed caps of mass $Q$, each with both endpoints on its boundary, whose unit continuous normals $u_i$ have a minimal positive dependence of rank $s-1$. Write $\\lambda_i>0$ for the coefficients, normalized by $\\sum_i\\lambda_i=1$ and $\\sum_i\\lambda_i u_i=0$. For every ambient affine $h$ with $h(y_0)=0,h(y_1)=1$, put $\\delta=\\operatorname{dist}(h,[0,1])$. Use only the positive-volume fibers to label each cap's proper, empty-side and full-side supporting boundary sections as in the common-cap flux lemma, with measures $\\sigma_i$, proper area $A_i$, and supporting labels $E_i,F_i$. Each cap satisfies the oriented inequality individually and\n$$\n\\sum_i\\lambda_i A_i+\\sum_i\\lambda_i\\int_{F_i}(1+\\delta)\\,d\\sigma_i\n\\le \\sum_i\\lambda_i\\int_{E_i}\\delta\\,d\\sigma_i .\n$$\nIn particular every cap has an empty-side supporting section with positive weighted measure outside the slab $0\\le h\\le1$. For polytopal positive fibers this section is a facet.\n\nIf $p_0\\ne p_1$, take any affine base functional $h$ with $h(p_0)=0,h(p_1)=1$. In the affine fiber translation $x'=x-x_0-h(z)(x_1-x_0)$, every resulting base coefficient $a'_i$ satisfies $a'_i\\cdot(p_1-p_0)=0$.",
+  "subgoal_id": "pk-intake-orientation-resolved-common-critical-cap-circuit",
+  "title": "A common critical cap circuit with orientation-resolved flux"
+}

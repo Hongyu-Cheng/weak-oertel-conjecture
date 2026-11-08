@@ -1,0 +1,50 @@
+{
+  "candidate_id": "184b1ec0b1112786",
+  "candidate_sha256": "db9d3b3540f10cc03733be7f4d5177829639218e3c1831c2f27a3aa1bf9a2e68",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "S is the disjoint union of the 5^n measurable fibers, each of original mass a. Domination makes each selected fiber mass at most a regardless of the conditional density. Summing gives at least ceil(m/a)=ceil((5/2)^n)>2^n positive masses for every n>=1, without assuming any centroid condition.",
+    "The cutoff exists since 0<m<=W. The mass below its shell is strictly below m by minimality, and the mass through it is at least m. Thus the equal shell mass is positive and at most a. The constructed uniform within-fiber densities are dominated and invariant under (z,x) to (-z,-x), which gives the full ambient zero first moment.",
+    "Subtracting r times the zero difference of the total masses gives the displayed cost difference. Each strict-shell term is nonnegative and vanishes exactly when its lower-shell mass is a or its upper-shell mass is zero. All equal-shell terms vanish. The comparison is valid even on the mass-only box, so it characterizes the optimum among the centroid-feasible measures irrespective of within-fiber densities.",
+    "Domination gives the upper cap bound. For a containing closed halfspace, writing its threshold with zero on the included side shows H and -H cover the ambient space. By symmetry they have equal selected mass, so each has at least m/2 even with mass on their overlap. With a nonzero continuous normal and zero threshold the overlap has d-volume zero in each fiber, which proves equality for that cap.",
+    "Independently computed n=1 with capacities divided by a. Radii 0,1,4 have multiplicities 1,2,2 and target mass 5/2, hence cutoff radius squared 1 and leftover 3/2. The base moment forces the two cutoff masses to equal 3/4. The objective is 3/2 in these units, or 3a/2. Exact shell enumeration through n=6 also checked the cutoff mass and capacity arithmetic.",
+    "For this product the whole C is a single closed winner cell with centroid zero and mass W. The hull of its single centroid base is the singleton {0}, and this cell charges every source fiber. This directly separates the two counts.",
+    "Verified archived source candidate 773c78a48aafd464 against SHA-256 519e5f501939d38986eaaa79cccfa2f191c8043c5d43696086c442eec9ea23fd at base 694b9a0. The opening scope and sections 1–2 contain the asserted obstruction, formulas (1)–(2), and the shell and symmetry arguments. The equality characterization and optional attainment of the cap lower bound follow from the frozen proof itself."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T06:36:49.377563+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Counts centroid bases of an exhaustive convex partition of the full original mass. Its allocation objective is the second moment of row centroid bases. Here the within-selection variance is minimized for one row of mass m, and its positive source fibers are counted. For this product a single exhaustive row at zero has objective zero and uses all 5^n original fibers.",
+      "fact_id": "e4ec84652a3059bf"
+    },
+    {
+      "comparison": "Realizes feasible prescribed label masses and base moments as an exhaustive affine-score partition. The proportional two-label split with masses m and W-m and base moments zero is feasible in this product, with distinct continuous slopes available. Every cell of mass m still obeys the source-fiber lower bound. The accepted statement gives no general prescribed continuous moment, and is not invoked here.",
+      "fact_id": "bf1ea1ab1ca2de45"
+    },
+    {
+      "comparison": "Its cone-over-slab family also excludes one source fiber since the largest capacity T_j+1 is less than M_j. The accepted conclusion concerns small original-measure depth at all global variance-minimizer selectors. It does not give this all-dimensions product obstruction to 2^n fibers or a symmetric selected measure of depth m/2.",
+      "fact_id": "8f1c5cb0718dd037"
+    },
+    {
+      "comparison": "Equations (20)–(26) use a related reduced-cost threshold for target-mass fixed-base allocation. The Euclidean objective on this product can be nongeneric. At n=2 the cutoff is squared radius 2 and the four shell sites can all have partial mass 5a/16 in the symmetric minimizer. The accepted circuit-generic boundary conclusion cannot be applied to that optimizer.",
+      "fact_id": "00da31d22f77fad2"
+    }
+  ],
+  "readability": "The final proof paragraph's phrase 'its own convex hull' refers to the hull of the singleton set of centroid bases. Naming that set explicitly would remove the brief ambiguity.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e6d8dff2a716e3ce0f88d733cf10139d48ec11994c5bf71032266aa6d1734b3e",
+  "reviewed_statement_sha256": "2da4e2a67033ead22740de983380789b62e56f03dddb6270ffc469e1115b2e5c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:34:04+00:00",
+  "summary": "The capacity lower bound holds for every dominated target-mass measure. The exact variance cutoff admits a centrally symmetric full-centroid-zero optimizer of selected halfspace depth m/2, and the n=1 value and forced base masses are correct.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

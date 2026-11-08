@@ -1,0 +1,26 @@
+{
+  "advances": "A counterexample to the bound of $2^n$ on the number of source fibers used by a dominated fixed-mass selection with prescribed centroid.",
+  "author": "PK-research-agent",
+  "candidate_id": "184b1ec0b1112786",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:33:30.159169+00:00",
+  "depends_on": [],
+  "draft_key": "target-mass-source-fiber-obstruction",
+  "kind": "counterexample",
+  "proof": "Each original fiber has mass $a$, so a dominated measure of mass $m$ charges at least $\\lceil m/a\\rceil=\\lceil(5/2)^n\\rceil$ fibers. This exceeds $2^n$ since $5/2>2$ and $n\\ge1$.\n\nWrite $b_z=\\nu(\\{z\\}\\times K)$ for any feasible measure. Define $b^*_z=a$ below the cutoff $r$ and $b^*_z=0$ above it. At equality use the common mass\n$$\nb^*_z=\\frac{m-a\\,\\#\\{y\\in P:\\|y\\|_2^2<r\\}}{\\#\\{y\\in P:\\|y\\|_2^2=r\\}}.\n$$\nThe choice of $r$ puts this number in $(0,a]$. The measure with constant density $b_z^*/a$ on each original fiber is centrally symmetric: $b_{-z}^*=b_z^*$ and $K=-K$. Its full centroid is zero. For any capacity vector $b$ of mass $m$, even without any moment constraint, the difference of unnormalized costs equals\n$$\n\\sum_{z\\in P}(\\|z\\|_2^2-r)(b_z-b_z^*)\\ge0.\n$$\nBelow $r$ both factors are nonpositive, above $r$ both are nonnegative, and at $r$ the first factor is zero. Equality holds exactly under the two strict-shell conditions in the statement. This proves the minimum and the characterization for feasible measures with full centroid zero.\n\nDomination gives the upper cap inequality, where measures of ambient halfspaces are evaluated on their intersection with $S$. If $0\\in H$, then $H\\cup(-H)$ covers the ambient space. Symmetry gives $\\nu_*(H)=\\nu_*(-H)$, so $2\\nu_*(H)\\ge m$, including when the boundary carries positive mass. Equality is attained for a through-origin halfspace with nonzero normal in the continuous coordinates, since its boundary meets each fiber in a volume-null set.\n\nFor $n=1$, $m=5a/2$ and $r=1$. Every minimizer has $b_0=a$ and $b_{\\pm2}=0$. Its remaining mass is $3a/2$, and the zero base moment forces $b_{-1}=b_1=3a/4$. Both remaining sites have squared radius one, giving the claimed minimum.\n\nThe whole body $C$ is itself one closed winner cell with actual mixed centroid zero, because $\\mu$ is centrally symmetric. It exhausts mass $W$, and its single centroid base is the only vertex and lattice point of its own convex hull. It still uses every original source fiber. The count of such cells and the count of positive source fibers of one dominated mass-$m$ selection are therefore different even in the same example.\n",
+  "source_candidate_ids": [
+    "773c78a48aafd464"
+  ],
+  "source_candidate_sha256": {
+    "773c78a48aafd464": "519e5f501939d38986eaaa79cccfa2f191c8043c5d43696086c442eec9ea23fd"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "773c78a48aafd464",
+      "locator": "Opening scope and §§1–2, (1)–(2) and shell construction"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$ be integers, let $K\\subseteq\\mathbb R^d$ be a convex body symmetric about zero, and write $a=\\operatorname{vol}_d(K)>0$. Set $P=\\{-2,-1,0,1,2\\}^n$, $C=[-2,2]^n\\times K$, and let $\\mu$ be the original mixed measure on $S=P\\times K$, namely $\\sum_{z\\in P}\\delta_z\\otimes(\\mathbf 1_K\\,dx)$. Its mass is $W=5^n a$. Every $0\\le\\nu\\le\\mu$ of mass $m=2^{-n}W$ has at least $\\lceil(5/2)^n\\rceil>2^n$ bases $z$ with $\\nu(\\{z\\}\\times K)>0$.\n\nAmong these measures with full centroid zero, $\\int\\|z\\|_2^2\\,d\\nu(z,x)$ attains its minimum. Let $r$ be the smallest squared radius occurring on $P$ such that $a\\,\\#\\{z\\in P:\\|z\\|_2^2\\le r\\}\\ge m$. A feasible measure minimizes precisely when it fills every fiber with $\\|z\\|_2^2<r$ to capacity and gives zero mass to every fiber with $\\|z\\|_2^2>r$. In particular there is a minimizer $\\nu_*$ with the same constant density relative to $\\mu$ on all cutoff-shell fibers. It satisfies $\\nu_*(H)\\le\\mu(H)$ for every closed ambient halfspace $H$, and $\\nu_*(H)\\ge m/2$ for every such $H$ containing zero.\n\nFor $n=1$ the minimum unnormalized variance is $3a/2$, and every minimizing measure has fiber masses $3a/4,a,3a/4$ at $-1,0,1$, respectively, with zero mass at $-2,2$.",
+  "subgoal_id": "pk-intake-target-mass-source-fiber-obstruction",
+  "title": "A dominated target-mass selection can require more than $2^n$ source fibers"
+}

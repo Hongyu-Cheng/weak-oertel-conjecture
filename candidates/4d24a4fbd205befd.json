@@ -1,0 +1,34 @@
+{
+  "advances": "The scalar result assumes an exactly integral mean. The mixed-geometric consequence concerns vertical caps with one integer coordinate and integer continuous dimension.",
+  "author": "PK-research-agent",
+  "candidate_id": "4d24a4fbd205befd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:33:30.159005+00:00",
+  "depends_on": [
+    "108bf10461a9c6ff"
+  ],
+  "draft_key": "integer-mean-closed-tail",
+  "kind": "theorem",
+  "proof": "Put $p=1/(d+1)$ and $F_i=\\sum_{j=i}^r a_j$. For a singleton both tails are one. Otherwise $\\ell<\\mu<r$ because all masses are positive. The piecewise linear interpolation of $(F_i^p)_{\\ell\\le i\\le r}$ is concave by concave-root-tail-concavity with the given $d$ and masses. Jensen's inequality on $[\\ell,r]$ gives\n$$\nF_\\mu^p\\ge\\sum_{i=\\ell}^r a_i F_i^p\n=\\sum_{i=\\ell}^r(F_i-F_{i+1})F_i^p\n>\\int_0^1 t^p\\,dt\n=\\frac{1}{p+1}.\n$$\nThe strict inequality is the upper-endpoint sum for a strictly increasing function on the partition $1=F_\\ell>\\cdots>F_r>F_{r+1}=0$. The terminal zero is used only in this partition. Raising to $1/p$ gives the upper-tail bound. The probability law with masses $a_{-i}$ on $[-r,-\\ell]\\cap\\mathbb Z$ has the same root concavity and mean $-\\mu$, so its upper tail gives the lower-tail bound for the original law.\n\nFor exact integer centering in the limiting example, use weights $w_j(L)=(L-j)_+^d$ for integers $j\\ge0$ and real $L>1$. Their roots are affine on the positive support $0\\le j<L$. Write $\\mu(L)=\\sum_j j w_j(L)/\\sum_j w_j(L)$. This is continuous because the sums are locally finite with continuous summands and $w_0(L)>0$. On each interval between consecutive integers let $P_j=w_j(L)/\\sum_i w_i(L)$ for the positive terms. Differentiation on that interval gives\n$$\n\\mu'(L)=d\\sum_{i<j<L}P_iP_j(j-i)\\left(\\frac1{L-j}-\\frac1{L-i}\\right)>0,\n$$\nwhere $0\\le i<j$ are integers. The formula follows by differentiating the quotient and pairing the two terms for each pair of indices. Strictness follows from the positive terms at $0,1$. Continuity then gives strict increase on all of $(1,\\infty)$, and $\\mu(L)\\to0$ as $L\\downarrow1$. The Riemann sums with mesh $1/L$ give\n$$\n\\frac{\\mu(L)}{L}\n=\\frac{L^{-1}\\sum_{0\\le j<L}(j/L)(1-j/L)^d}\n       {L^{-1}\\sum_{0\\le j<L}(1-j/L)^d}\n\\longrightarrow\\frac{\\int_0^1 t(1-t)^d\\,dt}{\\int_0^1(1-t)^d\\,dt}\n=\\frac1{d+2}.\n$$\nIn particular $\\mu(L)\\to\\infty$, so for every integer $k\\ge1$ there is a unique $L_k>1$ with $\\mu(L_k)=k$. The support gives $L_k>k$, hence $L_k\\to\\infty$ and $k/L_k\\to1/(d+2)$. In the following tail Riemann sum the moving lower cutoff can be replaced by the limiting cutoff $1/(d+2)$ with error at most $|k/L_k-1/(d+2)|+2/L_k$ after multiplication by the mesh, since the summands $(1-j/L_k)^d$ are in $[0,1]$. Therefore\n$$\n\\frac{\\sum_{j\\ge k}w_j(L_k)}{\\sum_{j\\ge0}w_j(L_k)}\n\\longrightarrow\n\\frac{\\int_{1/(d+2)}^1(1-t)^d\\,dt}{\\int_0^1(1-t)^d\\,dt}\n=\\left(\\frac{d+1}{d+2}\\right)^{d+1}.\n$$\nReflection gives the corresponding infimum for the lower tail. At $d=1$ the exact choice $L_k=3k+1$ follows from $\\sum_{j=0}^{L-1}j(L-j)/\\sum_{j=0}^{L-1}(L-j)=(L-1)/3$ for integral $L$. The upper-tail fraction is then $(2k+1)(2k+2)/((3k+1)(3k+2))$, as in the separate square-root note.\n\nFor the geometric statement write $C_x=\\{y:(x,y)\\in C\\}$ for real $x$ and put $v_i=\\operatorname{vol}_d(C_i)$ at integer $i$. If two real fibers have positive volume, their Minkowski convex combination is contained in the fiber at the interpolated base. The Brunn–Minkowski inequality gives positivity there and concavity of the $d$th root of the fiber volume between the two bases. Thus the positive integer fibers have finite consecutive support and their normalized volumes $a_i=v_i/W$ satisfy the scalar hypotheses. Their mean is the base coordinate of the mixed centroid. A closed vertical halfspace containing that centroid contains either all fibers with $i\\ge\\mu$ or all fibers with $i\\le\\mu$, including the entire fiber at $\\mu$. Zero-volume fibers contribute zero. This proves the bound, which exceeds $W/e$ since $\\log(1+1/(d+1))<1/(d+1)$. For each $L=L_k$, the convex body given by $0\\le x\\le L$ and $\\lVert y\\rVert_2\\le L-x$ has fiber volumes $\\operatorname{vol}_d(B_2^d) w_j(L)$ exactly on its positive integer support $0\\le j<L$. Its base mean is exactly $k$, so the same limiting example gives sharpness for the closed vertical caps.\n",
+  "source_candidate_ids": [
+    "821242aee5d2f3e1",
+    "b1b0de9a36eb803f"
+  ],
+  "source_candidate_sha256": {
+    "821242aee5d2f3e1": "5ead3b8be5c75043b6d82f1329efd279e4d32ac3d3bd6c9a4d4f95f0c6db55f1",
+    "b1b0de9a36eb803f": "6e7c14761eeb86c18abf3502d5be5bdacb85659c2c7d175761844bc494fe7f2c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "821242aee5d2f3e1",
+      "locator": "§§7–8"
+    },
+    {
+      "candidate_id": "b1b0de9a36eb803f",
+      "locator": "Closed tails at an integer mean, exact d=1 example"
+    }
+  ],
+  "statement": "Let $d\\ge1$ be real and let $(a_i)_{i=\\ell}^r$ be positive probability masses on consecutive integers with concave $d$th roots. Suppose $\\mu=\\sum_{i=\\ell}^r i a_i$ is an integer. Both closed tails satisfy\n$$\n\\sum_{i\\ge\\mu}a_i>\\left(\\frac{d+1}{d+2}\\right)^{d+1},\n\\qquad\n\\sum_{i\\le\\mu}a_i>\\left(\\frac{d+1}{d+2}\\right)^{d+1}.\n$$\nAt every fixed $d$ this constant is the infimum of either tail among profiles with exactly integer mean.\n\nFor the geometric consequence, let $d$ be a positive integer and $C\\subseteq\\mathbb R\\times\\mathbb R^d$ a convex body with positive mixed $d$-volume $W$. If the base coordinate of its mixed-volume centroid is an integer, every closed vertical halfspace containing the centroid has mixed $d$-volume strictly greater than $W((d+1)/(d+2))^{d+1}$. This normalized bound is also sharp as an infimum.",
+  "subgoal_id": "pk-intake-integer-mean-closed-tail",
+  "title": "Sharp closed-tail bounds at an integer mean"
+}

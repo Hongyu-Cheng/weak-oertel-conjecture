@@ -4,6 +4,18 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 1 | theorem | pk-intake-three-interval-sharp-fixed-endpoint-ratio | [eec4218faa0ffa76](facts/eec4218faa0ffa76.md) |
+| 0 | theorem | pk-intake-three-interval-shifted-middle-depth | [c680a307d3f26cec](facts/c680a307d3f26cec.md) |
+| 1 | theorem | pk-intake-finite-global-cut-speed-addition | [82392d83cf301465](facts/82392d83cf301465.md) |
+| 1 | theorem | pk-intake-equal-endpoint-actual-mixed-centroid | [da544e8fcada039b](facts/da544e8fcada039b.md) |
+| 0 | theorem | pk-intake-weight-two-mass-dependent-centroid | [607dca34de472b94](facts/607dca34de472b94.md) |
+| 0 | lemma | pk-intake-finite-global-cut-radial-loss | [84cd8a85417b0d7a](facts/84cd8a85417b0d7a.md) |
+| 0 | lemma | pk-intake-finite-capacity-allocation-extremes-and-dual | [81238d80ed62466f](facts/81238d80ed62466f.md) |
+| 0 | counterexample | pk-intake-target-mass-source-fiber-obstruction | [184b1ec0b1112786](facts/184b1ec0b1112786.md) |
+| 2 | theorem | pk-intake-integer-mean-closed-tail | [4d24a4fbd205befd](facts/4d24a4fbd205befd.md) |
+| 1 | theorem | pk-intake-concave-root-tail-concavity | [108bf10461a9c6ff](facts/108bf10461a9c6ff.md) |
+| 0 | theorem | pk-intake-arithmetic-power-sum-concavity | [a0756c6751636340](facts/a0756c6751636340.md) |
+| 0 | lemma | pk-intake-continuous-anchored-support-slopes | [155691fc3768c06f](facts/155691fc3768c06f.md) |
 | 0 | lemma | pk-intake-sharp-scalar-trimming | [c491d0092a879187](facts/c491d0092a879187.md) |
 | 2 | theorem | pk-intake-homothetic-middle-centroid-surplus | [a2427fccbd085fb5](facts/a2427fccbd085fb5.md) |
 | 3 | theorem | pk-intake-three-homothetic-fibers-centroid-selection | [1a7377b8dcb5b16b](facts/1a7377b8dcb5b16b.md) |

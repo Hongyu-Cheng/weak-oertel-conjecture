@@ -1,0 +1,49 @@
+{
+  "candidate_id": "155691fc3768c06f",
+  "candidate_sha256": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Recorded UTC before reading the exact frozen statement and proof independently. Checked both archived source bytes at base 694b9a0de73277fdbad5b07dcf61a1b628cfe81d against their recorded hashes. In 6748c967393345b9, §1, (1)–(2) gives feasibility and the active-row minimum-norm argument. In 85a041ec649c5375, §2, (5) states the same slopes and (6) uses them in the zero-field augmentation. Both originals assume lattice completeness, positive/full-dimensional fibers, and all anchors. None of those extra hypotheses is used for this single-anchor argument.",
+    "For the free unknown A in VA≥c(u), the alternative has η≥0, Vᵀη=0, and η·c(u)>0, with the indicated signs. Its positive total allows normalization; Vᵀη=0 then says the weighted barycenter is p. By support addition for nonnegative Minkowski weights, including zero weights, (1) forces η·c(u)≤0. The row at p is zero with c_p(u)=0; it causes no issue. An extreme anchor, where only the singleton anchored combination exists, is included.",
+    "A nonempty feasible polyhedron is closed and convex; coercivity gives attainment and strict convexity gives uniqueness. In a fixed direction with all active row products nonnegative, a sufficiently small step remains feasible by the finitely many inactive positive slacks. Differentiating the squared norm gives A·w≥0. The dual of these direction inequalities is precisely the nonnegative cone of active rows. Conversely for A=V_Iᵀμ with μ≥0 and active I, A·(B−A)=μᵀ(V_IB−c_I)≥0 for all feasible B; expansion of the squared norm proves optimality.",
+    "A minimal positive conic support is independent: after orienting a nonzero dependence to have a positive coefficient, subtract the minimum of the ratios of the positive representation coefficients to the positive dependence coefficients. This keeps all weights nonnegative, cancels at least one, and preserves the vector. Independence makes V_IV_Iᵀ invertible, and V_IA=c_I gives (3) including the sign of its multiplier. At rank zero the only possible independent set is empty and the minimizer is zero. In the actual support data rank zero gives P={p}; this includes n=0. More generally the formula lies in the given row span, with no change of base coordinates.",
+    "The finite list of fixed linear formulas, including zero, gives bounded minimizers along any feasible c_j→c with c feasible. On a fixed-index refinement of any convergent subsequence, feasibility and active equalities pass to the limit and the multipliers remain nonnegative, even if some vanish or extra rows become active. The converse cone criterion identifies the limit with A(c), so boundedness yields convergence of the whole sequence. No interior condition on c or strict complementarity is required. An exact check with rows 0, e₁, −e₁, e₂, 2e₂ in R³ and c(t)=(0,t,−t,t,2t) gives A(c(t))=(t,max(t,0),0) for all real t: the feasible RHS stays on the boundary, the two active e₂ multiples are dependent for t>0, and the minimizing conic support changes from {−e₁} to empty to {e₁,e₂}.",
+    "The support functions are continuous even for lower-dimensional compact fibers: each is Lipschitz with constant max_{x∈K_z}||x||. Their finite difference vector lies in the feasible domain by the first step. Its composition with the minimum-norm selection is continuous and bounded by compactness of the sphere, including S⁰ for d=1. The affine inequality holds on the labeled union, so it holds on its convex hull. At p its right-hand side is exactly h_p(u), and equality holds at every point maximizing u·x in K_p. This does not require the supported hull to be full-dimensional or the exposed face to be proper."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T06:35:18Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof of (24)–(25) gives pointwise exact affine bounds for finite barycentric data by LP duality. Take E=P, m=p and replace the scalar objective coefficients by −h_z(u). By (1) every feasible weighted objective is at least −h_p(u), and the singleton at p attains it. The negative of the optimal affine minorant gives the touching majorant and hence the hull inequality for this fixed u. The displayed affine-minorant theorem uses the empty-core hypothesis to select circuit normals; the LP step itself does not require it. It provides no minimum-norm continuity as u varies.",
+      "fact_id": "ebc478d91566cb69"
+    },
+    {
+      "comparison": "Its proof at (17) expresses the finite lower roof as a maximum of affine functions. With scalar data −h_z(u), the roof is exact at p by (1) and the singleton representation; the negative of an affine branch active at p gives the pointwise touching majorant. That proof step works for real sites, even though the accepted main statement concerns complete lattice tables. The continuity there is in the base variable for fixed data, not continuity of a chosen affine slope as the data vary.",
+      "fact_id": "488f0a583886b5fc"
+    },
+    {
+      "comparison": "Its proof of (3), after (17), applies the finite concave sequence of planar fiber support values to choose η with b_i≤b_j+η(i−j), including an endpoint j. This is pointwise touching on the actual positive-area integer interval in base rank one, with d=2. It does not assert a canonical continuous selection or treat arbitrary real bases.",
+      "fact_id": "4d628efe7673ce2d"
+    },
+    {
+      "comparison": "Its proof after (6) chooses a touching support of the three planar fibers at the middle site from the interval b₀−b₁≤λ≤b₁−b₂. In that rank-one three-site case the minimum-norm slope is minus the projection of zero onto this interval, which is continuous by the support data. The accepted statement and proof do not give the arbitrary-rank selection.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    }
+  ],
+  "readability": "The proof is readable as written. The limiting argument concerns c_j and its limit within the feasible domain for the same matrix V. The archived notes supply provenance and an application; the proof does not invoke them as premises.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2c027df5280f826f67575a9caf2fc48f86961afb4378d9b6cc9503c2e1aed953",
+  "reviewed_statement_sha256": "ae620bc47a6c7c8bd2eac230a3afeee4e3a8ca76a0eb43dcfa9603f6609fa787",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:32:34Z",
+  "summary": "The proof establishes the continuous, bounded, minimum-Euclidean-norm choice of touching slopes at one prescribed anchor, for any fixed finite real base and any affine rank. Accepted arguments already give pointwise touching supports. The canonical continuous selection for varying support data is the distinct content.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

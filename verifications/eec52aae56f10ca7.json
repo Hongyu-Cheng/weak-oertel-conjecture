@@ -1,0 +1,62 @@
+{
+  "candidate_id": "eec4218faa0ffa76",
+  "candidate_sha256": "9bfeed83b4dfec790a3711d04711dfeca073d8b6ed9f0005820d4761093f04fe",
+  "checked_dependency_candidate_sha256": {
+    "c680a307d3f26cec": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0"
+  },
+  "checks": [
+    "Verified the archived parent 5048c7e97ca98aef at base 694b9a0de73277fdbad5b07dcf61a1b628cfe81d against its stated file SHA-256. The ratio values and positivity are in §1 (5), the contact values and optimization in §4 (8) and following, and the positive-length scope and scaling in §5. The normalized theorem extracts the full minimizer set by applying the parent’s exact placement formulas to the archived optimizing lengths. It concerns bodies with exactly three nonempty consecutive positive-length integer fibers, as in the normalized predecessor.",
+    "At any fixed middle length, taking a contact shift minimizes the normalized depth by the predecessor’s monotonicity and feasibility. Since the mixed measure is summed length, multiplying heights by 1/b divides all three lengths and each cap mass by b, so the normalized objective is unchanged. All finite U≥(1+r)/2 admit contact placements in the stated model.",
+    "With b=1 and T=1+r+U, the first interval is [(1+r)/2,1]. Equality of numerator terms occurs at U=1−2r, no greater than 1 for r>0 and at least the left endpoint iff r≤1/5. With numerator 1/2 the derivative is −1/(2T²). With numerator U/2+r the derivative is (1−r)/(2T²), positive unless r=1, when the interval is a singleton. The only minimizing length in the first interval is therefore the crossing for r≤1/5 and the left endpoint for r≥1/5, identical at the seam. Substitution gives 1/(4−2r) and (1+5r)/(6(1+r)), respectively.",
+    "The second and third numerators are strictly above 1/2, since at their left endpoints they are respectively 1/2+r and (1+3r)/2 and each increases. Quotient differentiation gives −3r/(4T²) on [1,1+2r] and 1/(2T²) on [1+2r,∞). Their common value at the unique minimizer 1+2r is (1+3r)/(4+6r). No other length achieves that value across these two intervals.",
+    "After bringing the candidate comparisons over the products of positive denominators, the differences are 4r−6r² and 2−2r−12r², respectively. The first is positive throughout 0<r≤1/5. The second factors as 2(1−3r)(1+2r); it changes sign exactly at 1/3. Thus both distinct lengths attain the minimum there, while the length at r=1/5 remains unique. The ratios at the seams are 5/18 and 1/3.",
+    "Any globally minimizing pair must have a length minimizing the contact envelope, since its objective is at least the contact value at that same length. At U=b−2a with r<1/5, compatible shifts satisfy |s|≤(b−5a)/4≤α and therefore all attain the minimum. At U=(a+b)/2 the only compatible shift is zero. At U=b+2a the maximum compatible |s| is β. From α to β the parent’s F decreases strictly, while for |s|≤α its constant value is larger than F at β by a/2>0. Since F at β is (b+3a)/2>b/2, the global maximum cannot flatten this strict gap. Thus exactly the two signed contact shifts attain the minimum at this length, including r=1 and the tie at r=1/3. The lifted convex hull realizes each listed choice.",
+    "The derivatives of the three branches of B are 2/(4−2r)², 2/(3(1+r)²), and 6/(4+6r)². The seams agree, so B is continuous and strictly increasing. Subtracting 1/4 gives exactly the three stated excesses; in the middle branch 7r−1≥2/5. The endpoint value B(1)=2/5 and the limit at zero is 1/4. For instance b=1, a=1/k, U=1−2/k, s=0 for integers k≥5 realizes the limit with strictly positive compatible intervals. No zero-length fiber or changed measure is needed.",
+    "A Fraction-only grid diagnostic used the parent middle maximum in clipped form U/2+r−clamp(|s|−α,0,β−α)/2. For 308 rational ratios and 128,099 compatible pairs of length and shift, including all claimed minimizing lengths and both ratio seams, the smallest sampled values and every sampled minimizer matched the statement. The continuum comparison follows from the strict derivative and shift arguments above."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c680a307d3f26cec",
+      "candidate_sha256": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0",
+      "mapping": "The child’s three positive intervals, normalization, compatibility, U, s, a, b and total mass are exactly those of the frozen parent. It invokes the parent’s Q=max{b/2,F}, F’s three shift branches and monotonicity, F_contact’s three length branches, and the compatible convex-hull realization. It adds only the scalar global optimization and its equality classification.",
+      "reviewed_proof_sha256": "fbd43a05d11b238754907f092d0f8e020febd4bd8e9ffd7e46960a59ae92b7c0",
+      "reviewed_statement_sha256": "b80774a2792eb75e78f6de3ec9e17c99d1724c565943d7ccacdfc5f9c6bdab93",
+      "status": "Independent APPROVED review recorded in this wave; admit before this child."
+    }
+  ],
+  "finished_utc": "2026-11-08T06:41:55Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its full-credit result at d=1 applies to the middle centroid when U≤b and gives raw depth at least U/2+a. Together with the exposed larger endpoint this supplies the first-range lower bound before optimization. It gives neither the full contact objective for U>b nor the global minimum and all equality conditions at fixed ratio.",
+      "fact_id": "f0399a8f0bae48c6"
+    },
+    {
+      "comparison": "The exposed-fiber equality supplies raw depth b/2 at the larger endpoint midpoint for every compatible triple. It does not compare that depth with the optimized middle depth, or minimize over U and s.",
+      "fact_id": "2acc8bc803acf1c0"
+    },
+    {
+      "comparison": "At d=1 it gives a normalized 1/4 lower bound under its nesting hypotheses, including equal centered endpoints. The present minimum is strictly greater than 1/4 for every positive endpoint ratio, including 2/5 at equality of endpoint lengths, and concerns the entire compatible placement class.",
+      "fact_id": "8812feca6c8a1e97"
+    },
+    {
+      "comparison": "Its lower bound applies to the same compatible triples at d=1 and includes a normalized 1/4 existence guarantee at equal endpoint volumes. It does not optimize the exact largest depth or characterize equality at fixed endpoint ratio.",
+      "fact_id": "3e766d73edff42b0"
+    }
+  ],
+  "readability": "The dependency identifies the exact preceding depth formula. Inside the calculation b=1, and the original units are restored in the stated list of minimizers. No mathematical clarification is needed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c8453dee5d22438de6431b0aca19cf0306a6ef5e8eb30ce61692dbded492e6f9",
+  "reviewed_statement_sha256": "a45d8eec59031fadd1600752e63aa9f688d924b9ca4cebe7a00fe7d623dfaa8b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:39:39Z",
+  "summary": "The fixed-ratio optimum and every minimizing middle length and shift follow from the exact parent depth formula. Both ratio seams, the tied lengths at r=1/3, strictness above 1/4, and the unattained infimum over positive lengths check exactly.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

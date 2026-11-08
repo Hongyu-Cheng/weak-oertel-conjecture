@@ -1,0 +1,38 @@
+{
+  "candidate_id": "a0756c6751636340",
+  "candidate_sha256": "fee4e911da7d3bf05161e1e5251bc568347e1224896e7bf55cc63f3d4342b3e0",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For D=d+1≥2 the derivative of x_+^D is D x_+^d also at zero. Integration gives the displayed L^d norm representation for all real x. Positive-part convexity, monotonicity on nonnegative functions and Minkowski give convexity including d=1. Dropping (x−1)_+^D gives the bound for g(x−1), also for 0≤x<1.",
+    "For q>1, 0<p=1/(d+1)<1 and the first term of h is strictly concave on the closed interval; the second is concave and continuous up to its zero argument. The initial derivative is positive. At the other endpoint, 1+((q+1)/q)^d<1+2^d<2^(d+1). Strict concavity gives strict decrease of h(s)/s for s>0 and continuity gives one interior zero. Reciprocation reverses the sign regions, giving E_q(F)≤0 exactly on [q^d,B(q)].",
+    "At the barrier the root triple is U−δ,U,U+δ with U−δ>0. Raising successive positive D-power differences to 1/d gives q and q+1 after scaling by δ^(D/d). Convexity bounds the next increment below by q+2 in this scale. Hence E_(q+1)(G)≤0 at G=B(q)+(q+1)^d, in its valid domain, and the next barrier lies at or above G.",
+    "At the first triple the left increment comparison uses δ^(D/d)g(t−1)≤δ^(D/d)t^(D/d)=ρ, without assuming t≥1. This gives A_2^p+A_0^p≤2A_1^p and A_1≤B(ρ+1). The inductive addition of the next power is exact, with A_m≥(ρ+m)^d at every tested index.",
+    "For noninteger q>1, ρ is the fractional part and m=floor(q)≥1. For integer q≥2, ρ=1 and m=q−1≥1. In each case the same ρ and m+j identify the sums at q+j for j=−1,0,1, including the smallest q and zero endpoint terms.",
+    "At ρ=1 the upper Riemann sum of t^d on unit intervals dominates its integral, giving A_m≥(m+1)^(d+1)/(d+1). If α>1/(d+1), A_m^α/(m+1) is unbounded, contradicting the affine upper bound from nonincreasing first differences. The integer q=m+1 identification transfers this failure.",
+    "The pinned source 821242aee5d2f3e1 has SHA-256 5ead3b8be5c75043b6d82f1329efd279e4d32ac3d3bd6c9a4d4f95f0c6db55f1. Sections 1–5 and equations (1)–(7) match the barrier, induction and unit-step proof. Exponent optimality is an additional self-contained consequence in the frozen text."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T06:35:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "candidate_id": "5dfdef886fd3ea86",
+      "comparison": "Pending source §2 gives the arithmetic midpoint inequality for d=1,2,3 by polynomial certificates. The frozen claim covers every real d≥1, all positive starts, and exponent optimality. No accepted duplicate found in the pinned facts."
+    }
+  ],
+  "readability": "The base case uses the one-sided bound on g(t−1); the barrier propagation uses a true adjacent power difference with positive lower root. The proof states the two arguments separately.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "dd132935dffb76fb1593bce15c22a7fd07ddb3e815125e26625715600b5ec48a",
+  "reviewed_statement_sha256": "c0556ca7025333d128db93e8ef428c385967d8812a0ac97678aded7ef67b056b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:34:00Z",
+  "summary": "The barrier proof establishes the integer midpoint inequality for all real d ≥ 1 and all positive starts. Reversing the summands gives the asserted unit-step version. The exponent is optimal.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

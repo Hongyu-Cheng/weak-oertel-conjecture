@@ -1,0 +1,32 @@
+{
+  "advances": "A continuous estimate at the centroid of a density with a dominating uniform body, with factor Gamma_d/L. It does not represent arbitrary mixed volume by such a density.",
+  "author": "PK-research-agent",
+  "candidate_id": "72112dc91e4ab8bd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:02.042159+00:00",
+  "depends_on": [],
+  "draft_key": "w32-real-weight-dominated-centroid",
+  "kind": "theorem",
+  "proof": "Divide both measures by $|B|$, write $\\kappa$ for normalized uniform volume and $\\nu=\\eta/|B|$, and let $a=\\nu(B)$. The centroid belongs to $\\operatorname{int}B$: any nonconstant supporting functional is strictly below its maximum on a positive-volume subset of $B$, which has positive weighted mass. It suffices to prove the inequality for a halfspace through $g$, since moving a containing halfspace's boundary to $g$ only reduces both masses. Write it as $H=\\{x:u\\cdot x\\ge u\\cdot g\\}$ with $u\\ne0$, $p=\\kappa(H)\\in(0,1)$, and $e=\\nu(H)$.\n\nThe upper tail $U_0(t)=\\kappa\\{x:u\\cdot x\\ge t\\}$ has concave $d$th root on the projection interval by cap inclusion and Brunn–Minkowski. The tail is continuous and strictly decreasing across that interval because all hyperplanes are null and every open interior projection slab has positive volume. Thus $U_0(u\\cdot x)$ under $\\kappa$ is uniform on $[0,1]$; under $\\nu$ its law has a density $h\\in[0,1]$, with mass $a$ on $[0,1]$ and $e$ on $[0,p]$. Jensen at the weighted centroid for the concave root gives\n$$\n(1+La)p^{1/d}\\ge\\frac{d}{d+1}+L\\int_0^1 v^{1/d}h(v)\\,dv.\n$$\nFor an increasing integrand and fixed mass of a density bounded by one, filling the leftmost subinterval minimizes the integral: after subtracting the filled interval indicator, subtract the integrand's cutoff value and the product is nonnegative on each side. Apply this to $[0,p]$ and $[p,1]$, filling lengths $e$ and $a-e$. With $q=1+1/d$ this gives\n$$\nq(1+La)p^{q-1}\\ge1+L e^q+L(p+a-e)^q-Lp^q .\n$$\n\nPut $U=1/p$, $E=e/p$, $Q=(p+a-e)/p$, $\\phi(t)=t-t^q/q$ for $t\\ge0$, $c=1/(d+1)$, and $k=1/\\Gamma_d$. Using $a=p(Q+E-1)$ and dividing by $qp^q$ gives\n$$\n\\phi(U)+L\\phi(Q)+L\\phi(E)\\ge Lc.\n$$\nThe desired normalized cap inequality $p+e\\ge(1+La)/(Lk)$ is equivalent to $D=U+LQ-L(k-1)E\\le L(1+k)$. For every real $w$ and $t\\ge0$, direct maximization gives $\\phi(t)+wt\\le c(1+w)_+^{d+1}$, by the derivative $1+w-t^{1/d}$ if $w>-1$ and by monotonicity otherwise. Apply it with $w=1/d$ to $U,Q$ and with $w=-(k-1)/d$ to $E$, keeping multiplicities $1,L,L$. The resulting upper bound on $\\phi(U)+L\\phi(Q)+L\\phi(E)+D/d$, together with the lower bound $Lc$, shows that it suffices to check\n$$\nLd[1-(k-1)/d]_+^{d+1}\\le L(2d+1)-(d+1)k .\n$$\nIndeed multiplying the comparison by $d(d+1)$ uses $(1+1/d)^d=k$. After division by $L$ the right side increases in $L$, so check $L=2$. For $d=1$ its two sides before division are $0,2$; for $d=2$ they are $27/128,13/4$. For $d\\ge3$, binomial expansion gives $k\\ge2$ and $\\log(1+1/d)<1/d$ gives $k<\\exp(1)\\le8/3+(1/24)\\sum_{j\\ge0}5^{-j}=87/32<11/4$. Hence the right side at $L=2$ exceeds $(5d-3)/4\\ge d$. Meanwhile $(1-1/d)^{d-1}\\le1/2$ by expanding $(1+1/(d-1))^{d-1}\\ge2$; thus the left side is at most $2d(1-1/d)^{d+1}<d$. This proves the needed scalar bound, and multiplying $p+e\\ge(1+La)/(Lk)$ by $|B|$ gives the result.\n",
+  "source_candidate_ids": [
+    "81d698898b296675",
+    "d4ddcd5e9c4567f8"
+  ],
+  "source_candidate_sha256": {
+    "81d698898b296675": "c0145efb2498774214e7265c307c609aa8bca78621ab8881c2e678c907d5b417",
+    "d4ddcd5e9c4567f8": "03df34dfcb2e5652274b8b1d22a90ac5caf39b54630d60a402e20a739573ef24"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "81d698898b296675",
+      "locator": "81d698898b296675:01 Main theorem, (1)–(4)"
+    },
+    {
+      "candidate_id": "d4ddcd5e9c4567f8",
+      "locator": "d4ddcd5e9c4567f8:02 §§1–3, (3)–(10), cap-root Jensen, two-interval filling, and base scalar inequality"
+    }
+  ],
+  "statement": "Let $d\\ge1$ be an integer, $B\\subset\\mathbb R^d$ a convex body, $0\\le\\eta\\le\\mathbf1_B\\,dx$, and $L\\ge2$ real. If $g$ is the centroid of $\\mathbf1_B\\,dx+L\\eta$, then for every closed halfspace $H$ containing $g$,\n$$\n|B\\cap H|+\\eta(H)\\ \\ge\\ \\frac{\\Gamma_d}{L}\\bigl(|B|+L\\eta(B)\\bigr),\n\\qquad \\Gamma_d=(d/(d+1))^d.\n$$",
+  "subgoal_id": "pk-intake-w32-real-weight-dominated-centroid",
+  "title": "A dominated-density centroid bound for all weights at least two"
+}

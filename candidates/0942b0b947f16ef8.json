@@ -1,0 +1,29 @@
+{
+  "advances": "Local nonmaximality with positive depth slack. The conclusion uses the true mixed centroid and the original ambient body.",
+  "author": "PK-research-agent",
+  "candidate_id": "0942b0b947f16ef8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:58.129308+00:00",
+  "depends_on": [
+    "3854d6bf04756177",
+    "22a9cb5298a854de"
+  ],
+  "draft_key": "pk-w32-interior-base-point-bulge-with-depth-slack",
+  "kind": "theorem",
+  "proof": "Choose an unused point of $C_{z_0}$ outside $A_{z_0}$. Join it to a generic point in the interior of $A_{z_0}$. The segment exits at a relative facet interior: the union of rays from the fixed exterior point through the faces of codimension at least two has empty interior. In dimension one the exit is an endpoint. Write the exit as $x_0$ and let $w$ point from it along the segment toward the unused point. For small $t>0$ use $E_t=\\operatorname{conv}(D\\cup\\{(z_0,x_0+tw)\\})\\subseteq C$. Its base projection stays $\\operatorname{conv}P$. The fiber at $z_0$ gains a pyramid over the exit facet with fixed positive base area and height proportional to $t$, giving gain at least $c_0t$ with $c_0>0$, also in dimension one.\n\nA finite inequality representation of $D$ in its relative ambient base span is violated at the new point by at most $O(t)$ in each inequality. At any $z\\in P$ keep the pure-base inequalities unchanged and fix an interior point of $A_z$, with strict slack in every nonzero fiber inequality. If their original slacks at that point are at least $\\eta_z>0$ and the relaxations at most $Ct$, the relaxed fiber is contained in the homothet of $A_z$ about that point of ratio $1+Ct/\\eta_z$. Indeed scaling a point of the relaxed fiber inward by the reciprocal ratio restores all inequalities. The finite fiber volumes therefore gain at most $O(t)$ in total and the fibers converge in Hausdorff distance. Because the gain at $z_0$ is at least $c_0t$, a fixed fraction $\\theta>0$ of total added mass is at that base. If a relative ball of radius $\\varepsilon>0$ about $z_0$ lies in $\\operatorname{conv}P$, the added centroid $r_t$ has a relative ball of radius $\\theta\\varepsilon$ in $\\operatorname{conv}P$, by taking the corresponding convex combination of that ball and the other added bases. Choose one fixed $\\kappa<1$ close enough to one that $j+(r_t-j)/\\kappa$ stays in a compact relative-interior subset. The uniform exact moment theorem now gives positive retained fibers, true base centroid $j$ and a strict mass gain.\n\nThe old source, additions and removals are all in bounded $C$ and have finitely many positive fibers. The signed cap identity and uniform bound give an absolute cost $O(\\delta_t)$ with constants independent of the cap, including pure-base cuts. A fixed strict old slack pays this cost for sufficiently small $t$.\n\nFinally take the positive-fiber hull of the correction, inside $C$. If $\\operatorname{aff}P=\\mathbb R^n$ it is full dimensional since it has a full fiber and its base projects onto a full-dimensional set. Otherwise put $A=\\operatorname{aff}P$ and take a base hyperplane containing $A$. Choose a small closed ambient ball inside $C$ whose projection is strictly on one side of that hyperplane and within distance $\\eta$ of $A$, with $\\eta$ smaller than the positive minimum distance to any integer base in $\\pi(C)\\setminus A$ (use any positive $\\eta$ if there are none). Such a ball exists by approaching a point of the hull from ambient interior points of $C$ off the hyperplane. The convex hull with this ball remains inside $C$, has no new integer bases outside $A$ by convexity of distance to $A$, and intersects the cylinder over $A$ in exactly the original hull because any positive ball weight lies strictly to one side. This is the one-sided thickening argument of c9ffc20c057b7fbc, here proved for the nonsymmetric correction. Its trace, mixed centroid and depth agree exactly.\n",
+  "source_candidate_ids": [
+    "1357de39d4196ea9"
+  ],
+  "source_candidate_sha256": {
+    "1357de39d4196ea9": "fccd4908fd585337c015277a3ff503aacaad331c73ab3d11082d9149b24f7267"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1357de39d4196ea9",
+      "locator": "1357de39d4196ea9:03 §3 and §4 after (13)"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be an ambient convex body. Let $D\\subseteq C$ be the canonical convex hull of its positive polytopal integer fibers $A_z$, $z\\in P$, each of full dimension $d$, with finite lattice-convex $P$ and integer true mixed centroid base $j$. Suppose $z_0\\in\\operatorname{ri}(\\operatorname{conv}P)\\cap\\mathbb Z^n$ has $A_{z_0}\\subsetneq C_{z_0}$. Then arbitrarily small compatible point bulges inside $C$ followed by exponential inner erosion give actual convex sources with the same positive bases, base centroid $j$ and strictly increased mixed mass. A fixed positive fraction of the mass added before erosion lies at $z_0$. If the old mixed centroid has strictly positive absolute depth slack over $\\beta\\sum_{z\\in P}|A_z|$ in mixed-volume units at a fixed target $0\\le\\beta\\le1$, the improved sources still have normalized depth at least $\\beta$ at their true mixed centroids for small bulges. The improved sources admit ambient convex body representatives inside $C$ with exactly their positive-fiber hull's integer trace.",
+  "subgoal_id": "pk-intake-pk-w32-interior-base-point-bulge-with-depth-slack",
+  "title": "An unused interior integer fiber allows a strict-slack mass improvement"
+}

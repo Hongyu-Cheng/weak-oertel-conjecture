@@ -1,0 +1,61 @@
+{
+  "candidate_id": "b41cc81d492d23d7",
+  "candidate_sha256": "fcba3685a58c28b02ff7924e664f3ba88597837d4e9e837ec2a4d247e3cd2974",
+  "checked_dependency_candidate_sha256": {
+    "431423848c9bacf8": "6cbf568e44e07dca0a04f239708586b36f5ce3267a8bb1a29df444d4a7e996d2",
+    "f0399a8f0bae48c6": "cb51fece59b1702dca7fa45aa51b20aba59c666d24e67916e4f612b1af1bc3f4"
+  },
+  "checks": [
+    "Equal endpoint weights in the layered hull give midpoint homothety (1+λ)/2 inside the middle triangle. The exact ordinary triangle maximum is 4/9 times area because its two smallest barycentric coordinates have sum at most 2/3.",
+    "At λ=1/10 the missed budget at the ordinary maximum is 5/9, the residual is zero, and the endpoints have no reflected pairs. Independent rational arithmetic gives the gap 1/450.",
+    "The inclusion −T⊂2T follows by reflecting the three vertices of a centroided triangle. Hence −A⊂B and the original pair pays the entire smaller area, yielding 4/9+1/100 and surplus 7/900.",
+    "At λ=1/2 the missed budget lies between 1/4 and 9/16 and produces the positive residual in the statement. The upper comparison is equivalent to 11520<11881, and the positive branch is consistent with 11449<11520. Any through-center cap contains at least one endpoint centroid and pays at least 1/9 there.",
+    "Original 2b6032fa13533288 §4 and b13e43ee6ee1d8af §7 use the same witnesses and the same certificate, not a proposed upper bound on actual mixed depth.",
+    "Verified pinned source locators and source digests. The decoded statement and proof render under strict KaTeX parsing."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f0399a8f0bae48c6",
+      "candidate_sha256": "cb51fece59b1702dca7fa45aa51b20aba59c666d24e67916e4f612b1af1bc3f4",
+      "fact_sha256": "9fc20803da8b1ee77204d0d7f8758f89625f323d912e1920a0e2272e155025ba",
+      "hypotheses": "Use §2 at the middle of the actual three-base source with single pair (λT,T). At the extreme bases the pair list is empty. Monotonicity gives the maximal certificate at maximal own depth.",
+      "reviewed_proof_sha256": "ed8e7f58c39a14ba9801fe9684fe5438bd920dac40798ae8378ce0909c46614c",
+      "reviewed_statement_sha256": "c455616ec57bafd2451adcc80045a6456e07b4088ae4f217d71f3028c18dbef3"
+    },
+    {
+      "candidate_id": "431423848c9bacf8",
+      "candidate_sha256": "6cbf568e44e07dca0a04f239708586b36f5ce3267a8bb1a29df444d4a7e996d2",
+      "fact_sha256": "9caee16f27c84df6b1ace198279b7fc7ae6c58518a11f799d5786080ddab78e0",
+      "hypotheses": "Part 1 applies to any nondegenerate planar triangle, after translation of the mark to zero. Its two-smallest-coordinate depth formula gives both the ordinary maximum and the endpoint centroid payments in the example.",
+      "reviewed_proof_sha256": "edb246adf65cabb9fd2eb7e58e329f15ec74ad845b056d15b7c1c2d15842a2c5",
+      "reviewed_statement_sha256": "459b39192a5c31984eb3f4a435fdccda069921fe4cee6e72ccebf4ebac475001"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:30:14Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the lower certificate and its monotonicity; the examples calculate when it cannot reach the target.",
+      "fact_id": "f0399a8f0bae48c6"
+    },
+    {
+      "comparison": "Uses the same compatible triangle family for an upper asymptotic sharpness bound on actual depth. It does not show the separate two certificate values or the claimed failure of their maximum.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    }
+  ],
+  "readability": "The proof and its scope are clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d67283917d47d186ece4c1a2a149cb38710ed0f1012829f5d2b42bf93161fc0b",
+  "reviewed_statement_sha256": "f77cfa72e50918c955ac39c6c3cff2dd7e78d085af037a8493963981548a2f05",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:24:12Z",
+  "summary": "The two actual triangle examples defeat the reflected-star certificate at its ordinary-depth optimum while retaining enough original mixed depth at the middle centroid.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

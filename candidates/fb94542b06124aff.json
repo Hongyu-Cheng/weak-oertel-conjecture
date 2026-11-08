@@ -1,0 +1,28 @@
+{
+  "advances": "An atomic contraction for an arbitrary source probability, with no halfspace-depth guarantee.",
+  "author": "PK-research-agent",
+  "candidate_id": "fb94542b06124aff",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:21.031507+00:00",
+  "depends_on": [
+    "ac53fe19fef9ec25"
+  ],
+  "draft_key": "physical-quadratic-parity-contraction",
+  "kind": "theorem",
+  "proof": "The feasible set is nonempty because it contains $\\mu$. It is weakly compact because the space of probabilities on $S$ is compact and each finite convex test is continuous on the ambient Euclidean space, so each inequality defines a closed set. The continuous objective attains a minimum.\n\nIf distinct support points have same-parity bases, choose separated neighborhoods in $S$ with those respective bases fixed. Their restrictions under an optimal law have positive mass. Scale the two restrictions to equal mass $m>0$ and couple them by their product divided by $m$. Replace the two restrictions by twice the midpoint law of this coupling. Midpoints lie in $S$ by convexity and parity, even when the two bases coincide. Jensen shows that the new law lies below the old law in convex order. The objective drops by the integral of $Q(x-y)/2$ under the coupling, strictly positive because the two neighborhoods are separated and $Q$ is positive definite. This contradiction gives at most $2^n$ support points, each a positive atom.\n\nIf distinct positive-atom bases admit a convex combination with positive coefficients $\\lambda_i$, at least two terms, and integral mean $p$, take the same combination $y=\\sum_i\\lambda_i y_i$ of the physical atoms. Then $y\\in S$. For sufficiently small $s>0$ remove masses $s\\lambda_i$ at $y_i$ and put their sum at $y$. The replacement again decreases every convex test and strictly decreases the quadratic test. Such an integer combination cannot occur. Every nonvertex in $P_*$ or extra integer point of its hull would have such a representation. The count gives an atom of mass $m_*\\ge 2^{-n}$. Apply ac53fe19fef9ec25 to the optimal law and $\\mu$, which are compactly supported equal-mass laws in full physical convex order. Restrict the coupling to this source atom. Its second marginal is dominated by $\\mu$, has mass $m_*$, and has barycenter at the atom.\n",
+  "source_candidate_ids": [
+    "0915985a8bcdfd44"
+  ],
+  "source_candidate_sha256": {
+    "0915985a8bcdfd44": "68d8f0ab9f88e9be62c27ef2fc46a0124589f89cd3e73d5e321cfbe511bbed42"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0915985a8bcdfd44",
+      "locator": "0915985a8bcdfd44:02 §2, lemma, (1) and martingale consequence"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^{n+d}$ be convex and $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ nonempty and compact. Let $\\mu$ be any probability on $S$ and $Q$ any positive definite ambient quadratic form. Write $\\nu\\preceq_{\\mathrm{cx}}\\mu$ when $\\int f\\,d\\nu\\le\\int f\\,d\\mu$ for every finite convex $f$ on the ambient space. The minimum of $\\int Q\\,d\\nu$ over such probabilities on $S$ is attained. Each minimizer has at most one physical point per base parity. The base set $P_*$ of its positive atoms is precisely both the vertex set and the integer point set of $\\operatorname{conv}P_*$. An atom of mass at least $2^{-n}$ is the barycenter of a submeasure of $\\mu$ of that same mass.",
+  "subgoal_id": "pk-intake-physical-quadratic-parity-contraction",
+  "title": "Physical quadratic contraction on a mixed lattice"
+}

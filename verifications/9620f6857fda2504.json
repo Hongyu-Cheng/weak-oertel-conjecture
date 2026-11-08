@@ -1,0 +1,44 @@
+{
+  "candidate_id": "72112dc91e4ab8bd",
+  "candidate_sha256": "2f4fa8195dcbbe1f33677286dd1f1cf521edf69a8ede6e9db8f39ad91772124b",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The weighted centroid is interior because the uniform component has positive volume on interior slabs. A closed containing cap can be tightened to pass through the centroid. The uniform cap tail decreases continuously and strictly across its projection interval, and its dth root is concave by Brunn–Minkowski applied to parallel caps. Under uniform volume the tail rank is uniform; the additional dominated measure pushes forward to a subdensity h in [0,1].",
+    "Jensen for the cap root under the normalized weighted measure gives the first inequality with uniform contribution d/(d+1). The nondecreasing rank test is minimized by filling the leftmost portions on [0,p] and [p,1] separately, using lengths e and a−e. Domination ensures those lengths are feasible even when either is zero or fills its interval.",
+    "Dividing by qp^q gives φ(U)+Lφ(Q)+Lφ(E)≥L/(d+1). The desired inequality is exactly D=U+LQ−L(k−1)E≤L(1+k). The three scalar Fenchel choices are 1/d, 1/d and −(k−1)/d with weights 1,L,L, so their affine terms sum to D/d. Rearrangement gives the stated sufficient inequality after multiplying by d(d+1).",
+    "After dividing by L, only the subtracted term (d+1)k/L changes on the right and the right side increases with L. At L=2, the exact left and right values are 0 and 2 in d=1 and 27/128 and 13/4 in d=2. For d≥3 use 2≤k<87/32<11/4 and (1−1/d)^(d−1)≤1/2; the two sides are strictly below and at least d, respectively.",
+    "Checked 81d698898b296675 main theorem (1)–(4) and d4ddcd5e9c4567f8 §§1–3 (3)–(10). The frozen proof includes the predecessor scalar calculation as part of its proof. Both the weighted centroid and the differently weighted cap cost match the source."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T20:32:25Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "For L=2 with the same centroid, the accepted stronger bound (3Γ_d/4)(|B|+η(B)) plus its surplus dominates the frozen bound, since |B|−η(B)≥0. That fact fixes the centroid weight at two and does not cover the frozen real-L range.",
+      "fact_id": "607dca34de472b94"
+    },
+    {
+      "comparison": "Gives an exact scalar minimum for the weighted measure with weight two in both centroid and cap cost. It uses the related rank domain, but its hypotheses and cap objective do not state the new arbitrary-L comparison.",
+      "fact_id": "72c591b20bb1ed8c"
+    },
+    {
+      "comparison": "Its anchored box example with a higher centroid weight refutes a stronger half-total target. It does not conflict with the coefficient Γ_d/L proved here.",
+      "fact_id": "750432756479bf6a"
+    }
+  ],
+  "readability": "The scalar symbol E=e/p is unrelated to projective energy, and the letter Q is a scalar rank ratio in this proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a26616963094d95578daa7e77a3120e846db6f0565abcc386bdcfd3c34d8ff81",
+  "reviewed_statement_sha256": "3526851b6ff0aba4713a0c9847834908f8d19468eedf98adc22a6f11727c3dec",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:27:21Z",
+  "summary": "The Jensen and rank-filling reduction yields the stated cap bound for every real L≥2, with the correct scalar signs and dimension endpoints.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

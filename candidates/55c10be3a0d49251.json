@@ -1,0 +1,28 @@
+{
+  "advances": "An auxiliary paired original cap-cost obstruction for unequal homothetic triangles. The upper certificates do not identify the exact paired minimum or the mixed depth of a three-fiber source.",
+  "author": "PK-research-agent",
+  "candidate_id": "55c10be3a0d49251",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:44.511904+00:00",
+  "depends_on": [
+    "431423848c9bacf8"
+  ],
+  "draft_key": "w32-unequal-triangle-pairs-below-ordinary-depth-sum",
+  "kind": "counterexample",
+  "proof": "The point is interior to both triangles. In the scale-$r$ triangle the barycentric coordinates, multiplied by $r$, are $r-L,L/2,L/2$; the scale-$s$ triangle has the analogous list. Since $L\\ge2s/3>2r/3$, the two smallest entries are $r-L,L/2$ and $s-L,L/2$, respectively, with ties harmless. Applying 431423848c9bacf8 Part 1 and using areas $r^2V,s^2V$ gives depths $2VL(r-L)$ and $2VL(s-L)$.\n\nUse $u=(1,1)$ and $t=L-s$. The thresholds are $2L-s$ and $s$. The first satisfies $0<2L-s<r$, and the second is the zero-area supporting edge of the larger triangle. A cap of the triangle $R T$ cut at diagonal threshold $q\\in[0,R]$ has area $V(R^2-q^2)$, by subtracting the lower homothetic triangle. Thus the exhibited sum is $V[r^2-(2L-s)^2]$, whose difference from the ordinary-depth sum is $V\\Delta$. Move the first threshold up by $\\varepsilon=\\Delta/(8s)$ and the second down by $\\varepsilon$. They still sum to $2L$ and are both strictly interior to their respective support intervals, since $\\varepsilon<r+s-2L$ and $\\varepsilon<s$. The cost increase is\n$$\nV\\big(4(s-L)\\varepsilon-2\\varepsilon^2\\big)\\le4Vs\\varepsilon=V\\Delta/2.\n$$\nAt $L=2s/3$ the ratio reduces to $(3r+s)/(4s)$ and tends to $3/4$ along the allowed scales. Since the infimum is no larger than the exhibited value at each such scale, the upper restriction on a universal lower factor follows.\n\nIn the stated rational case the supporting thresholds are $4/9,4/3$, yielding $65V/81$. Taking $t=-1/3$ instead gives $5/9,11/9$, both strictly proper, with respective areas $56V/81,23V/81$. The ordinary depths are $16V/81,64V/81$ by the same identity. All boundary lines are null for planar area.\n",
+  "source_candidate_ids": [
+    "61737978508b9a80"
+  ],
+  "source_candidate_sha256": {
+    "61737978508b9a80": "5d9f02833dd46619ed88d5f7febab3dc144aaf695aeb7d0ac7d879fc9b01fa0f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "61737978508b9a80",
+      "locator": "61737978508b9a80:02 §§1 and 3–4, (1)–(2), (4)–(5), using §2 (3)"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}\\{(0,0),(1,0),(0,1)\\}$ have area $V=1/2$. Take $0<r<s<3r/2$, $2s/3\\le L<r$, and let $A=rT$, $B=sT$, $y=(L/2,L/2)$. For $u\\ne0$ and $t\\in\\mathbb R$ use the two actual closed caps with common normal $u$ and thresholds $u\\cdot y+t$ on $A$, $u\\cdot y-t$ on $B$. Write $p_{A,B}(y)$ for the infimum of the sum of their areas and $f_A(y),f_B(y)$ for the ordinary raw depths. Then $f_A(y)+f_B(y)=2VL(r+s-2L)$. Put $\\Delta=(s-r)(r+s-2L)>0$. One such cap pair costs $f_A(y)+f_B(y)-V\\Delta$, and one with both traces proper costs at most $f_A(y)+f_B(y)-V\\Delta/2$. For $L=2s/3$ the point is the larger centroid, and the first exhibited cost divided by $f_A(y)+f_B(y)$ is $(3r+s)/(4s)\\to3/4$ as $s/r\\uparrow3/2$. Hence every universal lower factor for this class is at most $3/4$. For $r=1,s=4/3,L=8/9$ the ordinary sum is $80V/81$ and explicit supporting and proper pairs cost $65V/81$ and $79V/81$.",
+  "subgoal_id": "pk-intake-w32-unequal-triangle-pairs-below-ordinary-depth-sum",
+  "title": "Unequal homothetic triangles can fall below the sum of their ordinary depths"
+}

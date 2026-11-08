@@ -1,0 +1,28 @@
+{
+  "advances": "All-fiber constant neutrality under one regular circuit, canonical directions, and proper traces on every fiber. The conclusion controls the centroid graph and budget.",
+  "author": "PK-research-agent",
+  "candidate_id": "46941036f5412dce",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:02.040121+00:00",
+  "depends_on": [
+    "c04440cc0fc6a36a"
+  ],
+  "draft_key": "canonical-all-facet-neutrality-forces-affine-centers",
+  "kind": "theorem",
+  "proof": "Put $u_j=\\nabla\\lambda_j$, with $\\sum_j u_j=0$. Coarea in the scalar $\\lambda_j$ coordinate is total section measure divided by $\\lVert u_j\\rVert$, denoted by $S_j>0$. In the equal-budget inverse the weights are $(1/S_j)/\\sum_h(1/S_h)$, since the unscaled normals balance with coefficients one. Equivalently, normalizing the continuous normals to unit length replaces these balance coefficients by $\\lVert u_j\\rVert$, yielding the same weights. For each individual signed offset motion use the regular response formula of single-free-simplex-facet-menu-response, or its inverse calculation for the given two-sided facet motion. The weighted boundary trace on that facet must have mean $\\beta$.\n\nWrite $q_j(z)=(L_j(z)-b_j(z))/r_z\\in(0,1)$ and denote the vertices of $K_z$ by $v_j(z)$, with relative barycentric coordinate $j$ equal to one. On facet $i$ cap $i$ is absent. For $j\\ne i$ the cap's trace is $q_j(z)v_j(z)+(1-q_j(z))F_i(z)$, of relative $(d-1)$-area $(1-q_j(z))^{d-1}$. Its whole-fiber fraction is similarly $(1-q_j(z))^d$. The facet equalities give\n$$\n\\sum_{j\\ne i}\\theta_j(1-q_j(z))^{d-1}=\\beta\n\\quad\\text{for every }i,z.\n$$\nFor each $z$, subtract the equations for two choices of $i$ and substitute back to get $\\theta_i(1-q_i(z))^{d-1}=\\beta/d$. As $d\\ge2$ and each $\\theta_i>0$, $q_i(z)$ is independent of $z$. The common global cap budget is now exactly $(1-q_i)^d M$ for each $i$, so all $q_i$ coincide. At $p$, $\\sum_i q_i(p)=(\\sum_i\\lambda_i(y)-\\sum_i b_i(p))/r_p=1$. This gives the displayed threshold, cap fraction, and weights. The ordinary simplex centroid has barycentric coordinates $b_i(z)+r_z/(d+1)=L_i(z)$. The first $d$ independent barycentric coordinates determine a point by an affine inverse, so their affine dependence on $z$ gives an affine centroid graph.\n",
+  "source_candidate_ids": [
+    "06820524b3e6d141"
+  ],
+  "source_candidate_sha256": {
+    "06820524b3e6d141": "1c8ee9c3f3c341010cae8f1324034c710c735a0e62152d2709725efcdcbc1cd6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "06820524b3e6d141",
+      "locator": "06820524b3e6d141:04 §4, (10)–(13), all-facet constant neutrality in one canonical regular circuit"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let an actual finite positive family have common-normal simplex fibers $K_z=\\{x:\\lambda_j(x)\\ge b_j(z)\\ \\forall j\\}$ with $r_z=1-\\sum_j b_j(z)>0$, in fixed barycentric affine coordinates. Suppose one regular canonical circuit through $(p,y)$ consists of the $d+1$ caps $\\lambda_j(x)\\ge L_j(z)$, where $L_j$ are affine in the base and $L_j(p)=\\lambda_j(y)$. Every trace is proper and every cap has the same raw mass $Q=\\beta M$, with $M$ the original total mixed volume. Use the circuit's positive coarea response weights $\\theta_j$ normalized to sum to one. Suppose every single-facet offset is two-sided feasible and the common circuit's first response relative to $\\beta M$ vanishes on each such offset. Then for every $j,z$,\n$$\n\\frac{L_j(z)-b_j(z)}{r_z}=\\frac1{d+1},\\qquad\n\\theta_j=\\frac1{d+1},\\qquad\n\\beta=\\left(\\frac{d}{d+1}\\right)^d.\n$$\nThe centroid $g_z$ of $K_z$ satisfies $\\lambda_j(g_z)=L_j(z)$, so the actual centroid graph is affine.",
+  "subgoal_id": "pk-intake-canonical-all-facet-neutrality-forces-affine-centers",
+  "title": "Constant facet neutrality for a proper canonical circuit forces affine simplex centroids"
+}

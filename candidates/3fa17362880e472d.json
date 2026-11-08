@@ -1,0 +1,28 @@
+{
+  "advances": "Exact directional cap budget for one common continuous normal. The family of directional threshold cuts need not have a common point at a specified mixed-depth budget.",
+  "author": "PK-research-agent",
+  "candidate_id": "3fa17362880e472d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:22:43.021041+00:00",
+  "depends_on": [
+    "4fc403cf46f23e49"
+  ],
+  "draft_key": "w32-directional-three-fiber-budget-allocation",
+  "kind": "theorem",
+  "proof": "The lifted convex hull has exactly the three specified integer fibers. A convex combination at base zero has equal endpoint weights and therefore its endpoint contribution belongs to $(A+R)/2\\subset K$. At the two extreme bases only their own generators can contribute. Through $(0,g)$ with continuous normal $u$, the base coefficient varies freely over all real $t$. The middle threshold is $s=u\\cdot g$, and the two endpoint thresholds are $s+t$ and $s-t$, proving the directional cost expression. For fixed $s$, the endpoint sum is continuous in $t$ and equals one or the other whole endpoint mass for all sufficiently large positive or negative $t$. Minimizing over the intervening compact interval including those extreme values proves finite attainment. Pure base-normal through-caps include the middle fiber on the closed boundary and one full endpoint.\n\nApply the directional proof of 4fc403cf46f23e49 to the affinely independent endpoints $-1,1$ with weights $1/2,1/2$, keeping the same $u$ and using raw volumes. Its optimized cost is exactly $P$, and its inverse in root mass has a finite strictly decreasing branch between the full and empty plateaus. Specifically, if $\\mathcal Q$ denotes its finite root-quantile, then $P(s)=m$ for $s\\le\\mathcal Q(m^{1/d})$ and $P(s)=0$ for $s\\ge\\mathcal Q(0)$. The first threshold is at least $\\min_{x\\in (A+R)/2}u\\cdot x$ because every endpoint quantile is at least its minimum support and their averaged minimum supports equal that value. The second is $\\max_{x\\in (A+R)/2}u\\cdot x$. By compatibility these are respectively at least $l_K$ and at most $h_K$. The predecessor's inverse gives continuity and monotonicity of $P$ between and across both plateaus. The ordinary profile $F$ is continuous because its boundaries have zero volume and strictly decreasing between its support values because every open slab there meets $\\operatorname{int}K$. This proves the endpoints, strict decrease and continuity of $G$ on $[l_K,h_K]$. Outside that interval the respective constant values are $b+m$ and zero.\n\nFor each allowed allocation, $F(s)\\le k$ holds exactly for $s\\ge q(k)$ and $P(s)\\le p$ exactly for $s\\ge Q(p)$. At full mass the respective condition holds for every real threshold, which explains the $-\\infty$ convention. At zero it starts at the appropriate upper support or endpoint support average. Thus each allocation yields $G(s)\\le B$ above its displayed maximum and its maximum is at least $s_B$. Conversely take $k=F(s_B)$ and $p=P(s_B)$. Since $s_B$ is interior to the support interval of $K$, $q(k)=s_B$ and $Q(p)\\le s_B$. This allocation attains the minimum. When $B<\\min(b,m)$ the two terms of the maximum are continuous and strictly increasing and decreasing, respectively, as functions of $p$. Their difference is strictly increasing, so the maximum is minimized at the crossing or at $p=0$ when $q(B-p)$ dominates throughout and at $p=B$ when $Q(p)$ dominates throughout. On the saturated branch $p=m$ the other threshold alone remains.\n",
+  "source_candidate_ids": [
+    "41110850e150a6a0"
+  ],
+  "source_candidate_sha256": {
+    "41110850e150a6a0": "f859d9a7c519cdea0b502a5c0f1189473c93b12fce5685dff3c87fc0b56ab215"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "41110850e150a6a0",
+      "locator": "41110850e150a6a0:01 §§1–2, (1)–(3), exact threshold and allocation"
+    }
+  ],
+  "statement": "Let $A,K,R$ be full-dimensional compact convex bodies in $\\mathbb R^d$, $d\\ge1$, with $(A+R)/2\\subset K$, at bases $-1,0,1$ respectively, using their disjoint summed volumes. Fix a unit continuous normal $u$, write $b=|K|$, $m=\\min(|A|,|R|)$, and put\n$$\nF(s)=|K\\cap\\{u\\cdot x\\ge s\\}|,\\qquad\nP(s)=\\min_t\\left(|A\\cap\\{u\\cdot x\\ge s+t\\}|+|R\\cap\\{u\\cdot x\\ge s-t\\}|\\right),\\qquad G=F+P .\n$$\nFor $g\\in K$, $G(u\\cdot g)$ is the exact minimum mass of closed caps through $(0,g)$ with continuous normal $u$. Write $l_K,h_K$ for the minimum and maximum of $u\\cdot x$ on $K$. The function $G$ is continuous and strictly decreasing on $[l_K,h_K]$, from $b+m$ to zero. For $0<B<b+m$ let $s_B$ be its unique threshold with $G(s_B)=B$. Then the directional lower budget condition on $g\\in K$ is $u\\cdot g\\le s_B$.\n\nFor $0\\le k<b$ let $q(k)$ be the ordinary cap quantile of $F$ with $q(0)=h_K$, and set $q(b)=-\\infty$. For $0\\le p<m$ let $Q(p)$ be the least threshold with $P(s)\\le p$, and set $Q(m)=-\\infty$. The exact allocation formula is\n$$\ns_B=\\min_{\\substack{k+p=B\\\\0\\le k\\le b,\\ 0\\le p\\le m}}\\max\\{q(k),Q(p)\\}.\n$$\nThis minimum is attained. If $B<\\min(b,m)$, use the crossing of $q(B-p)$ and $Q(p)$ on $[0,B]$ if it exists, or the minimizing endpoint otherwise. When $p=m$ is feasible its candidate value is $q(B-m)$. Pure base-normal through-caps have masses $b+|A|$ and $b+|R|$.",
+  "subgoal_id": "pk-intake-w32-directional-three-fiber-budget-allocation",
+  "title": "Exact directional budget allocation for an actual three-fiber source"
+}

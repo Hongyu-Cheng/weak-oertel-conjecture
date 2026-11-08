@@ -1,0 +1,26 @@
+{
+  "advances": "A one-dimensional comparison for fixed marginal measures, applicable to tangential boundary measures. It does not assert a greatest law on higher-dimensional faces.",
+  "author": "PK-research-agent",
+  "candidate_id": "4898ea19e0011c60",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:11.340489+00:00",
+  "depends_on": [],
+  "draft_key": "line-midpoint-greatest-convex-order-harmonic-ceiling",
+  "kind": "lemma",
+  "proof": "The two quantile maps send $dr$ to the respective endpoint laws, so their joint map is an admissible coupling. For any competing coupling let $\\rho$ be its midpoint law and fix a call threshold $k$. Restrict the coupling to pairs with midpoint above $k$, of mass $r$. Each projected submeasure has mass $r$, and its first moment is at most the integral of the top $r$ mass coordinates of its marginal. Indeed choose the upper-tail cutoff of mass $r$ (possible for these nonatomic measures), subtract its indicator from the submeasure density relative to its marginal, and subtract the cutoff from the coordinate. The product is nonpositive on both sides, and the subtracted densities have the same mass. The cases $r=0,m$ are immediate. Thus\n$$\n\\int (x-k)_+\\,d\\rho(x)\\le\\int_{m-r}^{m}(Q(t)-k)\\,dt\n\\le\\int_0^m(Q(t)-k)_+\\,dt .\n$$\nAll midpoint laws have the same mass and first moment by their marginals. Polygonal interpolation approximates every continuous convex test uniformly on the compact common interval. Each convex polygonal test is affine plus a nonnegative combination of these calls, so the displayed inequalities prove convex order.\n\nFor $0<s<t<m$, continuity of each marginal's cumulative mass implies its cumulative mass at $Q_i(s)$ and $Q_i(t)$ is exactly $s$ and $t$. Therefore $Q_i(t)-Q_i(s)\\ge(t-s)/c_i$. Averaging shows that the inverse image by $Q$ of an interval of length $\\ell$ has length at most $2\\ell/(1/c_-+1/c_+)$. The latter interval bound extends to all Borel sets by covering with countably many open intervals, which proves the claimed domination. For the sharpness choose uniform mass $m$ on intervals of lengths $m/c_-$ and $m/c_+$. Their possible midpoint support has length $(m/c_-+m/c_+)/2$, so mass $m$ requires the stated coefficient under any density ceiling, and the common quantile midpoint law attains it.\n",
+  "source_candidate_ids": [
+    "229cbb48c7fa3080"
+  ],
+  "source_candidate_sha256": {
+    "229cbb48c7fa3080": "8d9af21f442975780400f11f8a3b3974b2aee114c57bf26d0a67a5143a9adc6a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "229cbb48c7fa3080",
+      "locator": "229cbb48c7fa3080:06 §5, (22)–(25), maximal midpoint convex order and sharp density on a line"
+    }
+  ],
+  "statement": "Let $\\gamma_-,\\gamma_+$ be finite measures on a compact real interval, both of mass $m>0$, with Lebesgue densities at most $c_-,c_+>0$, respectively. Write $Q_-,Q_+$ for their increasing quantiles with mass parameter in $(0,m)$. The pushforward $\\rho_{\\max}$ of Lebesgue measure on $(0,m)$ by $Q=(Q_-+Q_+)/2$ dominates the midpoint pushforward of every coupling of $\\gamma_-,\\gamma_+$ in convex order. Moreover\n$$\n\\rho_{\\max}\\le\\frac{2}{1/c_-+1/c_+}\\,dx .\n$$\nThe coefficient is sharp even when arbitrary couplings are allowed.",
+  "subgoal_id": "pk-intake-line-midpoint-greatest-convex-order-harmonic-ceiling",
+  "title": "Greatest midpoint law and sharp density ceiling on a line"
+}

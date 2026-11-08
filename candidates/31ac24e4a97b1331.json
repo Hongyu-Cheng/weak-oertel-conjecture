@@ -1,0 +1,29 @@
+{
+  "advances": "Failure of this ordinary scalar certificate in actual anchored mixing; energy increases and the result does not assert a failure of true ordinary depth or of the locked conjecture.",
+  "author": "PK-research-agent",
+  "candidate_id": "31ac24e4a97b1331",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:02.041428+00:00",
+  "depends_on": [
+    "efa4558174ce60cf",
+    "c6512973765c1029"
+  ],
+  "draft_key": "w32-anchored-inverse-energy-certificate-failure",
+  "kind": "counterexample",
+  "proof": "The new apex and the old apex lie on the ray from $b$, giving containment and the factor $s$ in height and volume. The new barycentric coordinate of $y$ at the apex is $1/((d+1)s)$ and the other $d$ coordinates are equal to $((d+1)s-1)/(d(d+1)s)$, since $y=b+(P-b)/(d+1)$. The simplex formula $E_K(y)=|K|(d+1)^{d+1}\\prod_i\\beta_i$ from accepted fact efa4558174ce60cf gives the two displayed energy values and strictness.\n\nLet $q=s^{-1/d}$ and $A=(d+1-q^d)/d$. On $0<q<1$ the function $G(q)=A^d$ has\n$$\nG''(q)=(d-1)(d+1)q^{d-2}A^{d-2}(q^d-1)<0.\n$$\nSince $G(1)=1$ and $G'(1)=-d$, its tangent gives $G(q)<d+1-dq$. Consequently\n$$\n\\frac{E_{S_s}(y)}{sV}=\\frac{G(q)}s\n<\\frac{d+1-dq}{s}=F_d(\\Gamma_d/s).\n$$\nThe strict monotonicity of $F_d$ now gives the claimed strict decrease of $\\mathcal D$. As $s\\to\\infty$, $E_{S_s}(y)\\to V((d+1)/d)^d$ and $E_{S_s}(y)/(sV)\\to0$. Since $F_d(\\alpha)/\\alpha\\to(d+1)^{d+1}/d^d$ as $\\alpha\\downarrow0$, inversion gives the stated limit. Substituting $d=2,s=4$ gives $121/256$ and $F_2(1/9)=1/2$ exactly. The sharp projective energy and retained mass theorem in this batch identifies this function as a lower certificate for the true raw depth.\n\nThe lifted hull has integer projection $\\{-1,0,1\\}$. At an endpoint its fiber is $S$ by extremality, and at $0$ any convex combination of generators uses equal total weights from the endpoint bases. Their averaged continuous coordinates lie in $(S+S)/2=S\\subset S_s$; mixing with the central generators keeps them in $S_s$. Thus the middle fiber is exactly $S_s$. The midpoint relation $(-1,y)/2+(1,y)/2=(0,y)$ is actual and all three marks are interior to their own fibers. The strict certificate inequality gives the two midpoint violations and loses the common endpoint superlevel. Actual ordinary raw depth is nondecreasing under inclusion because every containing halfspace captures weakly more volume.\n",
+  "source_candidate_ids": [
+    "3208a2842914cf02"
+  ],
+  "source_candidate_sha256": {
+    "3208a2842914cf02": "6ae031638abd4722705d78586eabf72a31e05820d778cc7a5b00929f37b71074"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3208a2842914cf02",
+      "locator": "3208a2842914cf02:02 §§1–2, (1)–(2) and lifted anchor"
+    }
+  ],
+  "statement": "Fix $d\\ge2$, a $d$-simplex $S$ of volume $V$ with centroid $y$, a facet $F$ of centroid $b$, and its opposite vertex $P$. For $s>1$ put $S_s=\\operatorname{conv}(F,b+s(P-b))$. For a compact $d$-body $K$ and interior mark $y$, let $E_K(y)$ be its projective energy and define the sharp inverse-energy ordinary raw-depth certificate $\\mathcal D_K(y)=|K|F_d^{-1}(E_K(y)/|K|)$, where $\\Gamma_d=(d/(d+1))^d$ and $F_d(\\alpha)=((d+1)^{d+1}/d^d)\\alpha(1-\\alpha^{1/d})$ on $[0,\\Gamma_d]$. Then $S\\subset S_s$, $|S_s|=sV$, and\n$$\nE_{S_s}(y)=V\\left(\\frac{(d+1)-1/s}{d}\\right)^d>V=E_S(y),\\qquad\n\\mathcal D_{S_s}(y)<\\Gamma_d V=\\mathcal D_S(y).\n$$\nAs $s\\to\\infty$, $\\mathcal D_{S_s}(y)\\to V/(d+1)$. For $d=2,s=4$ the normalized energy is $121/256<1/2=F_2(1/9)$. The actual lifted hull with integer endpoint fibers $S$ at $-1,1$ and middle fiber $S_s$ at $0$ violates the anchored midpoint inequality for both $\\mathcal D$ and $\\mathcal D^{1/d}$, and their common superlevel implication, at the three equal marks $y$.",
+  "subgoal_id": "pk-intake-w32-anchored-inverse-energy-certificate-failure",
+  "title": "Anchored enlargement can lower the sharp inverse-energy cap certificate"
+}

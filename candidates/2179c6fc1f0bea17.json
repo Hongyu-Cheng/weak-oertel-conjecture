@@ -1,0 +1,28 @@
+{
+  "advances": "The contact identities apply to the stipulated triangle cap groups and compatible affine stress. They do not bound the total contact budget or give the corresponding endpoint factor for arbitrary polygon circuits.",
+  "author": "PK-research-agent",
+  "candidate_id": "2179c6fc1f0bea17",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:58.126650+00:00",
+  "depends_on": [
+    "e8e558a924a764fe"
+  ],
+  "draft_key": "pk-w32-triangle-middle-contact-stress-budget",
+  "kind": "lemma",
+  "proof": "A pair multiplier at a fixed facet charges the affine derivative in the companion stress lemma. Taking its weighted means gives the same derivative at $r_{\\ell0},r_{\\ell2},m_\\ell$, since all terms are linear in those points. At each positive multiplier the endpoint means are in their exposed faces and $m_\\ell$ is on the middle facet.\n\nMove only the middle triangle with velocity $x\\mapsto Bx+v$, keeping the cap parameters fixed. The endpoint caps have strictly empty traces on it. For a middle cap, change variables to the unmoved triangle: the Jacobian contributes $C_j\\operatorname{tr}B$, and its moving margin contributes $\\int_{\\partial H_j\\cap K_1}u_j\\cdot(Bx+v)\\,d\\mathcal H_1$. The chord is proper, so its moving-margin term is the ordinary coarea term with unit $u_j$. The coverage derivatives are zero. The translation test is thus $0=\\sum_{\\mathrm{mid}}\\lambda_j S_j u_j-2\\sum_\\ell\\eta_\\ell n_\\ell$. With $v=0$ the affine test is\n$$\nb\\operatorname{tr}B\n=\\sum_{\\mathrm{mid}}\\lambda_j(C_j\\operatorname{tr}B+u_j\\cdot B X_j)-2\\sum_\\ell\\eta_\\ell n_\\ell\\cdot B m_\\ell.\n$$\nAt $B=I$, each $u_j\\cdot X_j=0$ because the cap passes through $0$, and $n_\\ell\\cdot m_\\ell=h_\\ell$ at positive weight. The resulting scalar identity gives $\\sum_{\\mathrm{mid}}\\lambda_j C_j=b+T_1$. Substitution and comparison for all $B$ gives the stated tensor equation.\n\nNow expand only endpoint $e$ about its centroid. The volume derivative is $2A_e$, and each of its canonical centroid cuts retains fraction $\\gamma=4/9$ under this expansion: the cut plane goes through the center of expansion, and its triangle vertex cap has the two edge ratios $2/3$. The opposite endpoint group is strictly absent there. Each middle cap covector contributes nonnegatively, since the expansion has nonnegative outward facet speeds and no cap motion, including on coincident facets. The compatibility term in the stress contributes $+\\sum_\\ell\\eta_\\ell n_\\ell\\cdot(r_{\\ell e}-c_e)=T_e$. Consequently $2A_e\\ge 2\\gamma A_e\\sum_{j\\in e}\\lambda_j+T_e$. The support distance to an interior centroid is positive for every facet normal, proving strictness when any weight is positive. On each positively weighted facet $2h_\\ell=h_{K_0}(n_\\ell)+h_{K_2}(n_\\ell)$; summing and expanding the definition of $T_e$ proves the final offset identity.\n",
+  "source_candidate_ids": [
+    "11e10da90bca54a3"
+  ],
+  "source_candidate_sha256": {
+    "11e10da90bca54a3": "8268e04d20131133fbef2a11fe0b5e5d41f3f6742c859ae85a1401d4c9f990ce"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "11e10da90bca54a3",
+      "locator": "11e10da90bca54a3:04 §§3–4, (6)–(11)"
+    }
+  ],
+  "statement": "In the three-fiber affine polygon stress of the companion lemma, suppose the fibers are positive triangles. Use a group of proper nonvertical caps through an interior middle anchor and the canonical centroid cap groups at the endpoints, with each endpoint cap strictly excluding the other two fibers. All continuous normals are unit. Translate the middle anchor to $0$ in the plane, and write $b=|K_1|$, and $C_j,S_j,X_j$ for middle cap area, chord length and chord first moment. Group the positive pair multipliers at each facet into total $\\eta_\\ell$; let $r_{\\ell e}$ be its weighted mean endpoint contacts and $m_\\ell=(r_{\\ell0}+r_{\\ell2})/2$ the middle contact mean. Put $T_1=\\sum_\\ell\\eta_\\ell h_\\ell$, where $h_\\ell=n_\\ell\\cdot m_\\ell$ for positive weight. Then\n$$\n\\begin{aligned}\n\\sum_{\\mathrm{mid}}\\lambda_j S_j u_j&=2\\sum_\\ell\\eta_\\ell n_\\ell,\\\\\n\\sum_{\\mathrm{mid}}\\lambda_j C_j&=b+T_1,\\\\\n\\sum_{\\mathrm{mid}}\\lambda_j X_j u_j^{\\mathsf T}&=-T_1 I+2\\sum_\\ell\\eta_\\ell m_\\ell n_\\ell^{\\mathsf T}.\n\\end{aligned}\n$$\nFor each endpoint $e$, with area $A_e$, centroid $c_e$ and $\\gamma=4/9$, put $T_e=\\sum_\\ell\\eta_\\ell(h_{K_e}(n_\\ell)-n_\\ell\\cdot c_e)$. If the endpoint is deepest, its group satisfies $\\sum_{j\\in e}\\lambda_j\\le 1/\\gamma-T_e/(2\\gamma A_e)$. One has $T_e>0$ if any contact multiplier is positive, and\n$$\n2T_1=T_0+T_2+\\sum_\\ell\\eta_\\ell n_\\ell\\cdot(c_0+c_2).\n$$",
+  "subgoal_id": "pk-intake-pk-w32-triangle-middle-contact-stress-budget",
+  "title": "Active compatibility contributes exact forces and endpoint costs for triangle fibers"
+}

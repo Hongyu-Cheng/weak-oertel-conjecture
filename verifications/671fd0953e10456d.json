@@ -1,0 +1,56 @@
+{
+  "candidate_id": "4d5ca0dfcc7e7bbe",
+  "candidate_sha256": "5b4b7f3096e7dc4a86d5fc66edb3c53aab255144c2ce306321c7855bec97dc00",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "Energy equal to V at an interior mark forces the ordinary centroid. The positive marked evaluation puts that centroid in the endpoint trace, which is either a containing ordinary halfspace or the entire fiber, so it pays at least Γ_d V. The opposite trace has nonnegative volume.",
+    "The simplex normalization of base/apex heights −1 and d puts its centroid at height zero, and one can center in all continuous coordinates and prescribe volume V. A second coordinate exists in d≥2 for each reciprocal scale; the determinants are one and both marked centroids remain zero.",
+    "For x₁+z≥0 the compressed left fiber has maximum x₁=1/2<1 and is missed. The right slice starts at −1 inside its height range [−L,Ld]; its apex cap is the homothet of ratio (d+1/L)/(d+1), whose dth-power volume fraction converges to Γ_d.",
+    "The hull has both prescribed extreme fibers and their exact Minkowski average at zero. The average contains the zero mark in its interior. The signed evaluations remain −1 and +1 for every L, and no fixed middle geometry is used.",
+    "Checked original 3208a2842914cf02 §3 (3), with the same dimensions, offsets, energy values, and endpoint-volume limit."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "fact_id": "d90ba05577427854",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "mapping": "The endpoint bodies are full-dimensional compact convex bodies and the marks are interior, so E≤V with equality precisely at their centroids applies in both directions.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+    },
+    {
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "mapping": "At the positively evaluated endpoint take m=V and density one. This gives the Γ_d V lower credit for a proper containing trace; an entire trace costs V.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:32:25Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The full-mass centroid case directly provides the lower bound for the containing endpoint. The determinant-one sharp sequence with the fixed signed offsets and exact midpoint fiber is additional.",
+      "fact_id": "6769574fc1bd9f8d"
+    }
+  ],
+  "readability": "The conclusion is the sharp infimum of captured endpoint volume. The explicit family uses a finite tilt and a changing compatible middle fiber.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4c7dad1ff262933ad8b2b9f70f471c933570d5c1f7d196c113a11e608584d02c",
+  "reviewed_statement_sha256": "acdfd20c671310cca74de6ae552305bea428f44a3878b68d55d4fc7ca1a7cb69",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:27:21Z",
+  "summary": "The lower credit follows from the containing endpoint alone. Determinant-one simplex compression and stretching keep both energies and the two offsets fixed while approaching the claimed sharp infimum in an actual midpoint family.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

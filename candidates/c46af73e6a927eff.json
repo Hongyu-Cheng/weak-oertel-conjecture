@@ -1,0 +1,28 @@
+{
+  "advances": "An ellipsoid interpolation lemma for arbitrary compact convex graphs over integer bases.",
+  "author": "PK-research-agent",
+  "candidate_id": "c46af73e6a927eff",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:44.512610+00:00",
+  "depends_on": [
+    "636ab2c480ef41f7"
+  ],
+  "draft_key": "integer-maximal-john-ellipsoid-graph",
+  "kind": "theorem",
+  "proof": "The accepted ellipsoid uniqueness argument in 636ab2c480ef41f7 applies to each full-dimensional section, since it proves existence and uniqueness for any compact convex body with interior. Every convex average of points of the source sections belongs to the section at $w$. In particular it contains the ellipsoid with center $\\sum_i\\lambda_i c_{j_i}$ and shape $\\sum_i\\lambda_i A_{j_i}$, by using the same unit-ball argument in all ellipsoids.\n\nFor positive definite $A,D$ and $0<\\theta<1$, conjugate the shape $(1-\\theta)A+\\theta D$ by $A^{-1/2}$ and call the eigenvalues of $A^{-1/2}DA^{-1/2}$ the $s_k$. For each degree $r$, the average of all $r$-fold products of distinct $s_k$ is at least $(\\prod_k s_k)^{r/d}$ by arithmetic-geometric mean. Expanding $\\prod_k((1-\\theta)+\\theta s_k)$ therefore gives the determinant-root inequality\n$$\n\\det((1-\\theta)A+\\theta D)^{1/d}\\ge (1-\\theta)\\det(A)^{1/d}+\\theta\\det(D)^{1/d}.\n$$\nIn dimension at least two the degree-one term gives strictness unless all $s_k$ coincide, and in dimension one all positive shapes are already proportional. Iterating shows the finite-mixture inequality, with equality only when all positive-weight shapes are proportional.\n\nThe averaged ellipsoid gives $J_w^{1/d}\\ge\\sum_i\\lambda_iJ_{j_i}^{1/d}$, since the unit-ball volume factor is common. In the maximizing case the right side is the maximum, so equality holds throughout. Equal source determinants convert proportionality to identical shapes. In the contact case the right side equals $\\sum_i\\lambda_i\\ell(j_i)=\\ell(w)$, which majorizes $J_w^{1/d}$ since $w$ is an integer feasible base. Again equality holds throughout. In both cases the averaged ellipsoid attains the target maximum, and uniqueness gives its center and shape. Every point in the center graph hull at an integer base arises by such an average. Its continuous coordinate must equal the designated center there.\n",
+  "source_candidate_ids": [
+    "e40a05fd5546debc"
+  ],
+  "source_candidate_sha256": {
+    "e40a05fd5546debc": "50dc4cb0460710ff193b20468a7dd126ca7d75c9ea9d00f3af742c210715525a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e40a05fd5546debc",
+      "locator": "e40a05fd5546debc:03 §§3–4, (3)–(4) and global-majorant contacts"
+    }
+  ],
+  "statement": "Let $B\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, $d\\ge1$, with at least one full-dimensional section at an integer base. Write $J_j$ for the volume of the John ellipsoid $c_j+A_jB_d$ of the section at $j$ when full-dimensional, and $J_j=0$ at the other feasible integer bases. If $w=\\sum_i\\lambda_i j_i$ is integer with $\\lambda_i>0$ and $\\sum_i\\lambda_i=1$, and every $j_i$ maximizes $J_j$ over the feasible integer bases, then $w$ is also a maximizer, all $A_{j_i}$ coincide, and $c_w=\\sum_i\\lambda_i c_{j_i}$. Consequently the convex hull of the maximizing centers lifted to their bases has precisely those assigned singleton integer sections.\n\nMore generally let an affine function $\\ell$ majorize $J_j^{1/d}$ on all feasible integer bases. If all the $j_i$ are positive-volume equality contacts, then $w$ is another positive equality contact, the $A_{j_i}$ are positively proportional, and the John ellipsoid at $w$ has center $\\sum_i\\lambda_i c_{j_i}$ and shape $\\sum_i\\lambda_i A_{j_i}$. The same singleton graph assertion holds for this positive contact set.",
+  "subgoal_id": "pk-intake-integer-maximal-john-ellipsoid-graph",
+  "title": "John center hulls at integer maxima and affine contacts"
+}

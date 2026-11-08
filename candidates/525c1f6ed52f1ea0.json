@@ -1,0 +1,32 @@
+{
+  "advances": "A dual value formula and conditional contact geometry, with neither a dual attainment theorem nor a cap estimate.",
+  "author": "PK-research-agent",
+  "candidate_id": "525c1f6ed52f1ea0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:21.031932+00:00",
+  "depends_on": [
+    "ac53fe19fef9ec25"
+  ],
+  "draft_key": "compact-quadratic-concave-obstacle-dual",
+  "kind": "theorem",
+  "proof": "The probabilities on $S$ are weakly compact and the convex-order constraints and objective are continuous in each test, so the minimum exists. For any feasible $\\nu$ and finite convex $\\phi$, integrate $Q+\\phi\\ge\\min_S(Q+\\phi)$ and use $\\int\\phi\\,d\\nu\\le\\int\\phi\\,d\\mu$ to get the first weak-duality inequality.\n\nFix $s<V$. Compactness gives finitely many convex tests $\\phi_i$ such that their convex-order inequalities together with $\\int Q\\,d\\nu\\le s$ are infeasible on the probabilities on $S$. The compact convex set of vectors $(\\int Q\\,d\\nu,(\\int\\phi_i\\,d\\nu-\\int\\phi_i\\,d\\mu)_i)$ is therefore disjoint from the closed lower orthant $(-\\infty,s]\\times(-\\infty,0]^k$. Strict separation, with the compact side above, gives a normal $(a_0,a_1,\\ldots,a_k)$ with all entries nonnegative, since the lower orthant is unbounded in every negative coordinate. Its first entry is positive, since otherwise the test law $\\nu=\\mu$ gives the same separating value as the orthant maximum. Divide by $a_0$ and put $\\phi=\\sum_i(a_i/a_0)\\phi_i$. The infimum of $\\int(Q+\\phi)\\,d\\nu$ over probabilities on $S$ equals its minimum over point masses. Thus the displayed expression is greater than $s$. Let $s\\uparrow V$.\n\nFor each $\\phi$ take $h=\\min_S(Q+\\phi)-\\phi$, which is finite concave and lies below $Q$ on $S$. Conversely for such an $h$, choosing $\\phi=-h$ makes the first expression at least $\\int h\\,d\\mu$. This proves equality of the values.\n\nFor an attaining $h$ and any optimal $\\nu$, one has $V=\\int Q\\,d\\nu\\ge\\int h\\,d\\nu\\ge\\int h\\,d\\mu=V$. The nonnegative continuous $Q-h$ therefore vanishes on the support of $\\nu$. By ac53fe19fef9ec25 there is a martingale to $\\mu$. In any such coupling the conditional concave Jensen defects $h(y)-\\int h\\,dP_y$ are nonnegative and their integral is zero. They vanish in particular at each positive atom. A finite concave function on the full Euclidean space admits a supporting affine majorant at every point. For such an $\\ell$ at $y$, the row integral of $\\ell-h$ is zero because its mean is $y$ and its Jensen defect vanishes. Continuity and nonnegativity give the support conclusion. The contact set is closed and convex because it is the zero set of the continuous nonnegative convex function $\\ell-h$.\n",
+  "source_candidate_ids": [
+    "0915985a8bcdfd44"
+  ],
+  "source_candidate_sha256": {
+    "0915985a8bcdfd44": "68d8f0ab9f88e9be62c27ef2fc46a0124589f89cd3e73d5e321cfbe511bbed42"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0915985a8bcdfd44",
+      "locator": "0915985a8bcdfd44:03 §3, (2) and equivalent concave obstacle dual"
+    },
+    {
+      "candidate_id": "0915985a8bcdfd44",
+      "locator": "0915985a8bcdfd44:04 §4, conditional dual contact, (3)–(4)"
+    }
+  ],
+  "statement": "Let $S\\subset\\mathbb R^N$ be compact nonempty, $\\mu$ a probability on $S$, and $Q$ a positive definite quadratic form. Define $V=\\min\\{\\int Q\\,d\\nu:\\nu\\text{ is a probability on }S,\\ \\nu\\preceq_{\\mathrm{cx}}\\mu\\}$, with convex order on all finite convex functions on $\\mathbb R^N$. Then\n$$\nV=\\sup_{\\phi\\ {\\mathrm{finite}\\ convex}}\\left[\\min_S(Q+\\phi)-\\int\\phi\\,d\\mu\\right]\n=\\sup_{h\\ {\\mathrm{finite}\\ concave},\\ h\\le Q\\ {\\mathrm{on}}\\ S}\\int h\\,d\\mu .\n$$\nIf a finite concave $h$ attains the second value, then $h=Q$ on the support of every primal optimizer. In any martingale from an optimizer to $\\mu$, the conditional row at every positive atom $y$ satisfies $\\int h\\,dP_y=h(y)$ and is supported on the closed convex set $\\{x:h(x)=\\ell(x)\\}$ for any supporting affine majorant $\\ell$ of $h$ at $y$.",
+  "subgoal_id": "pk-intake-compact-quadratic-concave-obstacle-dual",
+  "title": "Value and conditional contact of the compact concave obstacle dual"
+}

@@ -1,0 +1,34 @@
+---
+fact_id: 2bbff8fb57889cfc
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-pk-w32-localized-critical-triangle-stability
+depends_on: ["e42e4ad8eaa4f705", "2acc8bc803acf1c0", "6769574fc1bd9f8d"]
+verifier_run: 65e31d91b4ca1da4
+target_match: null
+---
+
+## Source
+
+- [3ff8967854167565](../candidates/3ff8967854167565.json), 3ff8967854167565:03 §4, (14), critical localized six-cap global maximum and local quadratic loss.
+
+## Statement
+
+Put a copy of $T=\operatorname{conv}\{(0,0),(1,0),(0,1)\}$ at each of $0,1$. Fix the six original ambient caps with margins $f_i(x)-z$ and $f_i(x)+z-1$, where $f_0(x,y)=2/3-x-y$, $f_1(x,y)=x-1/3$, and $f_2(x,y)=y-1/3$. All six reference masses are $2/9$, the actual maximum raw mixed depth. At these same fixed budgets the reference total area $1$ is a global maximum among actual compatible convex fiber families with the fixed integer support $\{0,1\}$. In the nearby physical chart of two labeled triangles there is $c>0$ such that total area satisfies $M\le1-c\lVert(\delta z_0,\delta z_1)\rVert^2$. More precisely, for any feasible one-sided $C^2$ path with $M'(0)=0$, each triangle's velocity lies in the single-triangle critical kernel and $M''(0)$ is bounded above by the sum of the two forms $-\frac18[(p+q+r)^2+2(p-q)^2+3r^2]$, in the kernel coordinates specified in the proof.
+
+## Proof
+
+At base $0$ the first group is the canonical planar cap cover, and at base $1$ so is the second group. At the opposite base each group's margins are $f_i-1$ and strictly negative on $T$ because $\max_T f_i=2/3$. Each reference cap thus has mass $2/9$ by the triangle edge ratios $2/3$ and reference area $1/2$. By the exposed-product case of 2acc8bc803acf1c0 the true raw maximum is $2/9$. On any competing positive convex fiber on the fixed support, some own-group halfplane contains its ordinary centroid because the own group covers the plane. Apply 6769574fc1bd9f8d with $m$ equal to that fiber's full area (its centroid is the only possible full-mass barycenter) to get area at least $4/9$ of the fiber's area in the trace. The trace area is at most the entire mixed cap budget $2/9$, so the fiber area is at most $1/2$. Summing proves the global bound.
+
+In the nearby labeled-triangle chart the opposite traces remain strictly empty, so the budget systems separate. For clarity, in either block the canonical physical vertex gradient is
+$$
+G=\frac19\begin{pmatrix}-4&-4&0&-2&-2&0\\0&-2&4&0&2&2\\-2&0&2&2&0&4\end{pmatrix}.
+$$
+Indeed, in e42e4ad8eaa4f705 set $d=2$, $m=3$, $V=1/2$ and $\xi=(1-x-y,x,y)$, so the column velocities are $B_{\cdot j}=(-\dot x_j-\dot y_j,\dot x_j,\dot y_j)^{\mathsf T}$. Its derivative formula gives $G$ and the stationary multiplier $3/4$ for each cap. Solving $G\delta=0$ gives $\delta=(p/2-q/2+r,-p-r,-p/2-q/2-r,p,q,r)$. Its $B$ has zero full row sums and zero trace. The off-diagonal row and column sums then agree, so substituting this $B$ in the accepted physical Hessian gives
+$$
+D^2(A-\tfrac34\sum_i F_i)[\delta,\delta]=-\tfrac18[(p+q+r)^2+2(p-q)^2+3r^2].
+$$
+The positive multipliers and first-order cap feasibility imply that $M'(0)=0$ forces each of the six first derivatives to vanish. Each cap second derivative is then nonpositive, and the stationary two-block Lagrangian cancels all acceleration terms. This yields the claimed second-derivative bound.
+
+For uniform quadratic loss, suppose a feasible sequence approaches the reference with normalized unit secant directions $d_k$ and area loss $o(s_k^2)$, where $s_k$ is the displacement norm. By cap feasibility all six linearized cap derivatives on $d_k$ are bounded above by $O(s_k)$. By stationarity their sum is bounded below by $-O(s_k)$, so any limiting unit direction lies in the product kernel. On that product kernel the displayed Lagrangian Hessian is strictly negative. Feasibility bounds the area difference above by the stationary Lagrangian difference; Taylor expansion along a convergent subsequence of the secant directions contradicts area loss $o(s_k^2)$.

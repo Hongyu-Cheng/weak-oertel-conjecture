@@ -1,0 +1,33 @@
+{
+  "advances": "Strict descent of the actual normalized smoothed maximum along an explicit compatible path. No general signed-field stationarity or below-target body is assumed.",
+  "author": "PK-research-agent",
+  "candidate_id": "a2f86cce0e4bcd0a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:27:00.326161+00:00",
+  "depends_on": [
+    "0fd6b71b1a31b536",
+    "2f36f768662880ad"
+  ],
+  "draft_key": "thin-edge-signed-endpoint-homothety-descent",
+  "kind": "theorem",
+  "proof": "The endpoint Minkowski average is exactly $D$, since the sum of positive scalar multiples of the same convex set equals its multiple by the summed scalar. Hence it lies in $T$ and the middle fiber of the canonical hull stays exactly $T$; the two endpoint fibers are exposed. The only sampled bases remain $-1,0,1$. The volume and the unnormalized pooled centered covariance numerator are\n$$\nM(t)=|T|+v[(1-t)^4+(1+t)^4],\\qquad\n|T|\\Sigma_T+v[(1-t)^6+(1+t)^6]\\Sigma_D,\n$$\nrespectively. Both are even, so the normalized actual covariance and every continuous width have zero derivative, and $M'(0)=0$. On each regular endpoint boundary the inward speed is $p\\,n\\cdot(X-c)=p\\,h_{D-c}(n)$. Both the total boundary integral and the integral with factor $[u\\cdot(X-c)]^2$ cancel between opposite endpoints for any $u$, and the central speed vanishes. The menu capture on the positive endpoint is $\\theta_J$ and on the negative endpoint zero. Thus its captured integral is $\\theta_J\\int_{\\partial D} h_{D-c}(n)dS=4v\\theta_J$ by the divergence theorem for $X-c$.\n\nFreeze the finite old normals and let $F_j(y,t)$ be their masses through a central mark $y\\in T$ in the actual new body. These functions are jointly continuous, by pulling back endpoint integrals under the displayed homotheties. Near the old source $y_0$ the endpoint statuses persist by the strict margins. The only first-order endpoint change is the loss $4v$ for each high cap. The middle fiber is fixed and its only first-order change is through the mark: differentiating the ramp at fixed positive width gives gradient $-S_j u_j$, since the kink hyperplanes are null and the endpoint coareas vanish. The covariance width changes by $o(t)$. Thus the first jet at $(y_0,0)$ is\n$$\nF_j(y,t)=Q-S_j u_j\\cdot(y-y_0)-4v\\,1_{\\lbrace j\\ {\\rm high}\\rbrace }t+o(\\lVert y-y_0\\rVert +|t|).\n$$\nThe frozen minimum at $t=0$ has unique maximizer $y_0$: every nonzero mark displacement strictly increases the threshold of some selected cap by positive spanning, and a positive old own coarea makes that cap lose strictly for a sufficiently small increase; monotonicity gives strict loss for every larger increase, with no increase on the endpoints. Apply the fixed-instance finite cap envelope with the given balance. This bounds the actual maximum on the middle fiber, because the actual infimum is over at least the frozen menu. Each endpoint maximum is bounded by its volume using a pure-base cap and stays below $Q$ by $v<Q$ and continuity. Divide the resulting global upper bound by $M(t)=M(0)+o(t)$.\n\nFor the stated unconditional application use the thin-edge active-cap theorem. It gives a balanced finite selection of at most five caps and every balance uses all five cones. It also gives the strict representatives, which preserve the active masses and the continuous responses, so both high caps can be sent to the same shrinking endpoint. The four-dimensional response directions in any four distinct cones are independent for the chosen small cones. Therefore the resulting five vectors span and their relation with strictly positive weights places zero in the interior of their convex hull. The actual middle lower bound is $\\gamma V>v$, and all hypotheses hold.\n",
+  "source_candidate_ids": [
+    "4daab9a6dbbd2b50"
+  ],
+  "source_candidate_sha256": {
+    "4daab9a6dbbd2b50": "152488378824795e4d65429628e43503abecb755d95dc2376c4369d0e5433e49"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4daab9a6dbbd2b50",
+      "locator": "4daab9a6dbbd2b50:02 §§2–3, (2)–(4), conditional path and normalized first variation"
+    },
+    {
+      "candidate_id": "4daab9a6dbbd2b50",
+      "locator": "4daab9a6dbbd2b50:03 §§2–3, actual small-parameter thin-edge specialization of (4)"
+    }
+  ],
+  "statement": "Use a regular $4$-simplex $T$ at base zero and $D=D_\\delta=\\{X\\in T:\\lambda_2(X)+\\lambda_3(X)+\\lambda_4(X)\\le\\delta\\}$ at both bases $\\pm1$, where $\\lambda_i$ are the barycentric coordinates of $T$ and $0<\\delta<1$. Use the covariance-scaled positive outward-width model of the thin-edge active-cap theorem. Write $v=|D|$, $M(0)=|T|+2v$, and $c$ for the centroid of $D$. Suppose the deepest source is middle, interior, of raw depth $Q>v$, and a finite actual active menu there has response vectors $S_j u_j$ spanning $\\mathbb R^4$ and positive probability weights $\\theta_j$ with $\\sum_j\\theta_j S_j u_j=0$. In that menu use strictly saturated high caps all capturing the positive endpoint and strictly missing the negative endpoint, and all remaining caps strictly missing both; let $\\theta_J>0$ be the total response weight of the high caps. For small $t$, replace the endpoints by $D_+(t)=c+(1-t)(D-c)$ and $D_-(t)=c+(1+t)(D-c)$ and take the canonical convex hull with $T$ at base zero. Then the actual normalized maximum satisfies\n$$\n\\beta(C_t)\\le\\beta(C_0)-\\frac{4v\\theta_J}{M(0)}t+o(t)\\qquad(t\\downarrow0).\n$$\nThe signed affine physical speed $\\Phi(n,p,X)=p\\,h_{D-c}(n)$ has zero total inward boundary integral and zero centered covariance quadratic boundary integral in each continuous direction, with captured response $4v\\theta_J$. In particular the hypotheses hold for every sufficiently small fixed $\\delta>0$ and then every sufficiently small positive width $h$ in the actual thin-edge family.",
+  "subgoal_id": "pk-intake-thin-edge-signed-endpoint-homothety-descent",
+  "title": "Actual signed endpoint homotheties strictly lower thin-edge depth"
+}

@@ -1,0 +1,50 @@
+{
+  "candidate_id": "15937a98f571ea3d",
+  "candidate_sha256": "c019e3c0f77feaed008c948f971b86d449720843d1897686e71c60f797f13a3a",
+  "checked_dependency_candidate_sha256": {
+    "890c4a5b1a27a090": "b82f819869ab2a866e516ea58a4151f053f0064fe7cf50a003b04ad21c2e7194"
+  },
+  "checks": [
+    "The source §§1–2 chooses the three stated midpoint contacts and uses their actual side lines. The accepted slope estimates hold for every supporting line at a contact, including either incident side when the contact is a vertex. Those slopes separate the three side directions, and the retained contacts are strictly interior to their triangle edges.",
+    "An unused actual side cannot be redundant in the five-side representation. An affine inequality excluding a point of the retained triangle strictly excludes a vertex, and the contacts on the two incident edges force the other vertices strictly inside. The deletion therefore has positive triangular area and each intercept is bounded by the corresponding contact fraction.",
+    "The exact upper bounds are 1/2+44·10⁻⁶<501/1000 and √(81·10⁻⁶)=9/1000<1/100. If deletions have different vertices, the common selected edge has a nondegenerate retained segment, so the two intercepted fractions sum to less than one. At fixed third barycentric coordinate v, the two remaining fractions cannot simultaneously be at most a(1−v), b(1−v), because their sum is 1−v. The third vertex is retained.",
+    "Inclusion–exclusion is valid even for overlapping same-vertex cuts. The exterior closed halfspace of an unused side gives zero Q-area and S-probability t_j, so the cap distance is at least the larger t_j and hence at least τ/2. Both probabilities and the depth comparison are invariant under the affine frame change."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "b82f819869ab2a866e516ea58a4151f053f0064fe7cf50a003b04ad21c2e7194",
+      "fact_id": "890c4a5b1a27a090",
+      "fact_sha256": "c363f2cf7279656d6a95cba308b1ac6ef70c3da32b9161450c73d92176bfcf46",
+      "mapping": "Same normalized infinity Hausdorff radius, same three contacts, arbitrary supporting choice at each, and same containing triangle with the asserted area and depth constants.",
+      "reviewed_proof_sha256": "d4949beb8407c031d3fb4892d45904e39d84dff654f531315a6ce4fde1159c0b",
+      "reviewed_statement_sha256": "4bb1289a371db86641c021fdc9794c1734c939eb8f8834cf4222700bac2691f6"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:32:10Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Already proves τ≤81δ, the depth gap and upper cap-distance bound for arbitrary nearby planar bodies at these contacts. This draft adds the actual two-side pentagon decomposition and the lower cap-distance bound for the same S.",
+      "fact_id": "890c4a5b1a27a090"
+    },
+    {
+      "comparison": "The quadrilateral specialization has a single deleted corner and exact cap distance τ. It does not cover intersecting or separated two-cut pentagon geometry.",
+      "fact_id": "e24d99c6c69dc7f9"
+    }
+  ],
+  "readability": "The edge fraction is the barycentric coordinate of the other vertex on the incident edge, measured from the deleted vertex. The proof uses this convention consistently.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2e39b69f4ba87c8df74a6070c74681fdc06468a1968d467fc77eabc397b70b5d",
+  "reviewed_statement_sha256": "524a033d6eca9a788b4bf6fe827eae999669c5d5cd6c9056b095f9baca702616",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:25:50Z",
+  "summary": "The accepted near-triangle bounds apply to the same three actual supporting sides. The two discarded sides give the stated vertex deletions and the new lower cap-distance bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

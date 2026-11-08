@@ -1,0 +1,26 @@
+{
+  "advances": "A local operation on actual convex fibers preserving total volume. The enlarged middle need not lie in the old body, so this does not compare old and new mixed depths or transfer their centers.",
+  "author": "PK-research-agent",
+  "candidate_id": "2c2782756c3bdda7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:11.340669+00:00",
+  "depends_on": [],
+  "draft_key": "compatible-three-fiber-power-transfer",
+  "kind": "theorem",
+  "proof": "The contracted bodies are subsets of their old endpoints by convexity. The expanded middle contains $K$, by applying the same argument to the inverse contraction. Thus $(A_t+C_t)/2\\subseteq K_t$. Any convex combination of the three lifts giving base zero has equal coefficients at the two endpoints. Grouping those terms, its continuous coordinate belongs to the convex hull of $K_t$ and $(A_t+C_t)/2$, which is $K_t$. The endpoint bases are extreme and there are no other integer bases, so the census is exact. The specified volumes sum to $M$.\n\nBrunn–Minkowski gives $b^{1/d}\\ge(a^{1/d}+c^{1/d})/2$. For $q=p-1\\in(0,1/d]$, raise to $dq$ and use concavity of the power $dq$ to obtain $2b^q\\ge a^q+c^q$. The derivative of the new power sum is\n$$\np[2(b+2t)^q-(a-t)^q-(c-t)^q],\n$$\nwhich is nonnegative at zero and strictly positive for positive admissible $t$. Integration proves the strict increase, and the normalization by $M$ is unchanged. For positively homothetic endpoints of unequal volumes, their exact midpoint volume satisfies the Brunn–Minkowski bound with equality. If $q>1/d$, strict convexity of the power $dq$ gives $2b^q<a^q+c^q$. Thus the derivative at zero is strictly negative and the claimed decrease follows by continuity. For example in dimension two the squares of sides $1,2,3$ at bases $-1,0,1$ give volumes $1,4,9$, and at $p=2$ the change is $-4t+6t^2$, equal to $-5/8$ at $t=1/4$.\n",
+  "source_candidate_ids": [
+    "8b5d53df129b0528"
+  ],
+  "source_candidate_sha256": {
+    "8b5d53df129b0528": "d6347d55d15cdfac2d48fafa5060b214cb140f188f19aa8bd9ad012573c0ebe5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8b5d53df129b0528",
+      "locator": "8b5d53df129b0528:06 §4, (11)–(13), sharpness example"
+    }
+  ],
+  "statement": "Let $A,K,C$ be convex bodies in $\\mathbb R^d$, $d\\ge1$, with volumes $a,b,c>0$ and $(A+C)/2\\subseteq K$. For $0<t<\\min(a,c)$, homothetically contract $A,C$ about any points in them to volumes $a-t,c-t$ and expand $K$ about any point in it to volume $b+2t$. The resulting $A_t,K_t,C_t$ are the exact integer fibers of their lifted hull at bases $-1,0,1$, and have the same total volume $M=a+b+c$. For every $1<p\\le1+1/d$ the sum of the $p$th powers of fiber volumes strictly increases, so in particular $[(a^{1+1/d}+b^{1+1/d}+c^{1+1/d})/M]^d$ increases under this transfer. For every $p>1+1/d$ and positively homothetic endpoint bodies of unequal volumes with $K=(A+C)/2$, that sum instead decreases for all sufficiently small positive $t$.",
+  "subgoal_id": "pk-intake-compatible-three-fiber-power-transfer",
+  "title": "A compatible three-fiber volume transfer and its sharp power range"
+}

@@ -1,0 +1,40 @@
+{
+  "candidate_id": "735d2d24b1387ed8",
+  "candidate_sha256": "8171b0cf6f3de34a4e6e4e0e0969bba58780512a193482beb316a6445957fb36",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Read e16770c76630ebf6 §§1–3. The actual convex body, free-mass raw width, normalized midpoint, all four caps, and the two median bases remain in the frozen statement.",
+    "Decreasing width differences 14,1,−16 give a concave interpolation, and the negative lower graph with constant upper graph yields the actual interval fibers. Their summed length is 36, and the median prefix and suffix values are 18.",
+    "Fixed-mass rearrangement within each fiber gives the upper and lower quadratic moments. Allowing both rows to vary with a common mass and two zero base moments captures the full width optimization. Strict negative definite Hessian and an exact remainder yield uniqueness once the box KKT sign test is verified.",
+    "Direct Fraction replay verified both row pairs, common masses and base moments. Residuals at j=1 are (23/2,0,0,−15/4) and (0,0,0,−87/4); at j=2 they are (−6,0,0,14) and (−21,0,0,0). Their signs occur only at the corresponding bound, giving a nonpositive pairing with any feasible displacement.",
+    "The endpoint optimizers follow by maximizing w_jt−t². Independent Fraction arithmetic at all four bases reproduced the stated widths and midpoints, proved membership in each fiber, and verified the cap masses 1,3347/376,139/16,1/2, all below 9. The unique joint width maximum is at base 1."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T20:29:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses a five-fiber example and the common source-cut boundary as selector. It explicitly separates that boundary from its normalized moment midpoint, which succeeds in that example. It does not imply failure of the midpoint across all bases.",
+      "fact_id": "092bc61124ffc397"
+    },
+    {
+      "comparison": "Gives general fixed-mass midpoint paths and scalar optimization formulas. It contains neither these free-mass optimizers nor the simultaneous bad ambient caps.",
+      "fact_id": "f96beff4bebe6a19"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, exact original-source and predecessor comparison, and exact arithmetic replay for numerical certificates.",
+  "reviewed_proof_sha256": "8ebff51c135fa1352419cb576bf34d38b626e3848d80abc17ef39d1f1ead7c1c",
+  "reviewed_statement_sha256": "230686bfbc0d09fc83d8766041367466de2a3bb57d6bd8cc537bb4130a3a6e71",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:25:49Z",
+  "summary": "The exact four-base example disproves the free-mass raw-width midpoint rule even when every base's optimizer is offered or only marginal median bases are permitted.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

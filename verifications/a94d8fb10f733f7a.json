@@ -1,0 +1,59 @@
+{
+  "candidate_id": "31ac24e4a97b1331",
+  "candidate_sha256": "7d2bec5ae3e3dffb9569e469179b2aa8a3820cc01f4bb38d06e6597b49a1e3a2",
+  "checked_dependency_candidate_sha256": {
+    "c6512973765c1029": "cec355b76951f61689ef800e65193addf35849ebee617a80fe2e8688cf5fed7c",
+    "efa4558174ce60cf": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3"
+  },
+  "checks": [
+    "The original and enlarged apexes are on the same ray from the base centroid. The new height is s times the old height and its volume is sV. The fixed mark is on the axis at one original height fraction 1/(d+1), giving apex weight 1/((d+1)s) and equal positive other weights.",
+    "Substitution into the accepted simplex energy product gives E/V=((d+1−1/s)/d)^d. With q=s^(−1/d), differentiating G(q)=((d+1−q^d)/d)^d twice gives (d−1)(d+1)q^(d−2)A^(d−2)(q^d−1)<0. The tangent at one bounds G(q) strictly by d+1−dq, exactly the inequality against sF_d(Γ_d/s).",
+    "Strict increase of F_d implies the raw certificate decrease. The small-argument ratio of F_d and the positive limiting raw energy give the limit V/(d+1). At d=2 and s=4 the exact values are 121/256 and F_2(1/9)=1/2.",
+    "The only integer bases are −1,0,1. Extremality fixes both endpoint fibers and equal endpoint coefficients at base zero combine to S⊆S_s, so the middle is exactly S_s. The equal marked points give an actual anchored midpoint. The endpoint certificate values agree and are strictly greater than the middle, also after taking a positive dth root. At the common endpoint value the superlevel implication therefore fails.",
+    "Checked source 3208a2842914cf02 §§1–2, (1)–(2) and the lifted anchor. All statements refer to the raw numerical certificate; ordinary raw depth is inclusion-monotone, as the proof states."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3",
+      "fact_id": "efa4558174ce60cf",
+      "fact_sha256": "46fe81dabdb3dce217066cbdf0b03811e5f31600f47ff212687d11ef712b7b0e",
+      "mapping": "Its simplex energy product applies at the interior old and enlarged barycentric marks, with volumes V and sV.",
+      "reviewed_proof_sha256": "3f02b0dc5890813c93ca758645cbc602e93b598f5e7b2d5e6ea6f5f983ecfca5",
+      "reviewed_statement_sha256": "930a2a913d290a108052291c9fbf63e5f9e4b67fcb18c94309504f165bdfa29e"
+    },
+    {
+      "candidate_id": "c6512973765c1029",
+      "candidate_sha256": "cec355b76951f61689ef800e65193addf35849ebee617a80fe2e8688cf5fed7c",
+      "mapping": "The same F_d is strictly increasing on [0,Γ_d] and converts E/|K| to a lower bound on ordinary depth. This dependency gives the certificate interpretation and applies at all three interior simplex marks. Independently reviewed in this package and requires admission before this dependent claim.",
+      "reviewed_proof_sha256": "701a01c5257bc5047a4c7bfe489314d7aa13711e40247024a203ce34f0e4b90b",
+      "reviewed_statement_sha256": "2f5716561811b3c6e886ab6c99fc063b9f486bccbcecbd1a973143e7da0b8cec"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:32:25Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The ordinary marked energy root is jointly concave for actual Minkowski interpolates and can increase under inclusion. The current example agrees with that result and concerns the additional inverse conversion with the changing total volume.",
+      "fact_id": "5aeb5916857f97a9"
+    },
+    {
+      "comparison": "Strict raw energy monotonicity under proper inclusion covers the strict energy increase, without giving the opposite behavior of the volume-dependent inverse certificate.",
+      "fact_id": "d90ba05577427854"
+    }
+  ],
+  "readability": "The strict decrease compares each enlarged body to the original at the same mark. The limit follows separately as the scale tends to infinity.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0eaa971c3763e44d4a2d22ff5b86291ae8cf0d369918e34b1b2794881e1456ec",
+  "reviewed_statement_sha256": "4a655b09669fc45c53e8880697fd76d6352d24af1495fb6fb9794d1ffa48b239",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:27:21Z",
+  "summary": "The marked simplex enlargement strictly increases raw energy and strictly decreases the inverse-energy raw-depth certificate for every dimension and scale in the statement. Its actual three-fiber lift yields the claimed midpoint and superlevel violations.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

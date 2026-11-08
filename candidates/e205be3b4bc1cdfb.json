@@ -1,0 +1,32 @@
+{
+  "advances": "Dimension one with a strictly enlarged middle interval compared with the endpoint Minkowski midpoint. Both assertions about KKT systems concern the two given covers.",
+  "author": "PK-research-agent",
+  "candidate_id": "e205be3b4bc1cdfb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:22:43.020755+00:00",
+  "depends_on": [
+    "c680a307d3f26cec"
+  ],
+  "draft_key": "w32-three-interval-nonaffine-critical-row-obstruction",
+  "kind": "counterexample",
+  "proof": "The centered half-widths $1/2,1,5/4$ have decreasing successive slopes. Their piecewise-linear interpolation is concave, so its strip is convex and contains the hull. Each marked generator is therefore exactly the corresponding section of the hull, which projects onto $[-1,1]$. The three lengths sum to $11/2$ and the largest is $5/2<11/4$. Fact c680a307d3f26cec applies to the whole census with endpoint lengths $a=1,b=5/2$ and middle length $U=2$ and shift $s=0$. It gives the unique deepest point $(0,0)$ with depth $U/2+a=2$, since $U>b-2a$.\n\nA purely base-normal cap through $(0,0)$ retains the middle interval and at least one endpoint interval, hence mass at least $3$. Any nonvertical cap strictly containing $(0,0)$ has strictly greater mass than its parallel through-center cap, because tightening strictly reduces its own interval length. Thus a critical cap must be nonvertical and through-center. Normalize the continuous coefficient to $1$ after reflection if needed and write its inequality as $x+az\\ge0$. The middle mass is $1$. For $T_R(t)=|[-R,R]\\cap[t,\\infty)|$, the endpoint sum is $T_{1/2}(a)+T_{5/4}(-a)=5/2-(T_{5/4}(a)-T_{1/2}(a))$. The difference is the length of the part of $[-5/4,5/4]\\setminus[-1/2,1/2]$ above $a$, at most $3/2$, with equality exactly for $a\\le-5/4$. This proves the full critical family and residual lengths, including a possible right tangent trace of length zero.\n\nThe two $H_\\pm(2)$ cover the left and middle fibers and miss the right fiber. Each original $G_\\pm$ strictly misses the first two fibers and has right trace $x\\ge-1/4$ or $x\\le1/4$. Those traces cover the right fiber with length $3/2$ each, so the minimum residual lengths across the four caps are $0,1,1$. For the alternative $G$ pair the two right halves cover that fiber with length $5/4$ each, and the minimum residual array becomes $(0,1,5/4)$.\n\nThe three-site convexity constraint is $h_-+h_+\\ge2h_0$, so every feasible vector has sum at least $3h_0\\ge3$. The displayed optimizers are feasible and attain this lower bound. At every optimum $h_0=1$ and $h_-+h_+=2$. Since the endpoint obstacles sum to less than $2$ in either program, at least one endpoint multiplier vanishes by complementarity. In any supporting-slope KKT system, the row barycenter condition prevents off-diagonal outgoing flow at either extreme base. The center sends equal off-diagonal flows $t$ to the endpoints. The derivatives are all $1$, including at height zero, so height stationarity gives $\\lambda_-=\\lambda_+=1-t$ and $\\lambda_0=1+2t$. At least one zero endpoint multiplier forces $t=1$ and $\\lambda=(0,3,0)$. These multipliers are feasible at any optimum using the common affine slope, since $h_-+h_+=2h_0$ makes both center edges tight. Self constraints, if included, are tautologies and can be dropped. If their weights are retained as self loops, repeatedly discarding each self visit leaves the same relative probabilities among stopping and the two off-diagonal moves. Therefore the center stops there or moves to either endpoint with probability $1/3$ each, and an endpoint stops there. Every critical cap has center residual $1=e_0=h_0$, but its terminal mean is $(0+1+5/2)/3=7/6$. This is the claimed gap.\n",
+  "source_candidate_ids": [
+    "d51bf499e3dcaeba"
+  ],
+  "source_candidate_sha256": {
+    "d51bf499e3dcaeba": "01c875a69fc63c6d947886e4a96e3980cd16775b8302885263c2afd3cfcce45f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d51bf499e3dcaeba",
+      "locator": "d51bf499e3dcaeba:01 §1, complete actual source, depth and uniqueness, and §3, all critical caps"
+    },
+    {
+      "candidate_id": "d51bf499e3dcaeba",
+      "locator": "d51bf499e3dcaeba:02 §§2–4, the complete cover, convex-majorant optimum, terminal row, and midpoint-cover variant"
+    }
+  ],
+  "statement": "Take the actual convex hull of $[-1/2,1/2],[-1,1],[-5/4,5/4]$ at integer bases $-1,0,1$. These are all its integer fibers, the total length is $11/2$, and the largest fiber length $5/2$ is strictly below half the total. The unique globally deepest point is $(0,0)$, with raw depth $2$ and normalized depth $4/11$. Its complete critical cap family is $H_\\pm(L)=\\{\\pm x-Lz\\ge0\\}$, $L\\ge5/4$, with residual lengths $(0,1,5/2)$.\n\nUse the four actual closed caps $H_\\pm(2)$ and $G_\\pm=\\{\\pm x+4(z-1)\\ge-1/4\\}$. They cover all integer fibers with masses $2,2,3/2,3/2$. The one-cap residual obstacles are $e=(0,1,1)$, and the sampled convex-majorant program minimizing $h_-+h_0+h_+$ above $e$ has minimum $3$, attained at $(1,1,1)$. Every optimum and every supporting-slope KKT system give the same original terminal row from the center, uniform on the three bases. Every critical cap attains the residual obstacle at the center and has residual-root Jensen deficit $1/6$ in this row.\n\nThe same assertions about the program optimum, terminal row and deficit hold for the alternative cover with $G_\\pm=\\{\\pm x+4(z-1)\\ge0\\}$. In that case the right caps have masses $5/4$, the obstacles are $e=(0,1,5/4)$, and an optimum is $(3/4,1,5/4)$.",
+  "subgoal_id": "pk-intake-w32-three-interval-nonaffine-critical-row-obstruction",
+  "title": "Two actual cap covers force the same critical residual-row gap on three nonaffine interval fibers"
+}

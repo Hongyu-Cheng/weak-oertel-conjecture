@@ -1,0 +1,29 @@
+{
+  "advances": "The initial ratio is 2/3 and the calibration concerns contraction of a closed minor. It imposes no obstruction to other compatible paths or to a bad minimum.",
+  "author": "PK-research-agent",
+  "candidate_id": "1834a7fda8f53a43",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:11.343058+00:00",
+  "depends_on": [
+    "8cc17f76507d258f",
+    "d90ba05577427854"
+  ],
+  "draft_key": "w32-closed-minor-homothety-obstruction",
+  "kind": "counterexample",
+  "proof": "For completeness, the multiplier is $\\ell(z)=c[1+(1-q)z]$, with $q=\\varepsilon^6/2000$ and $c=[q(2-q)]^{-1/3}$. The sets, masses, covariance $1/3$, normalized multiplier, fixed buffer and pure-base convention are exactly those of 8cc17f76507d258f. Its proof establishes the raw maximum $4$ at $(0,0)$ and the strict quotas. Every closed base halfspace containing zero contains one of the two stated traces, and those exact traces are attained by the two closed rays starting at zero. They each have mass $4$, whereas a containing test taking all sites has mass $6$. Each trace equals the sampled points in its own convex hull. Neither is a face of the whole base interval.\n\nFor $T_+$ the old left interval keeps length $2$, and the new middle and right intervals each have length $2r$ independently of translations. Exact compatibility requires $(K_{-1}+K'_1)/2\\subseteq K'_0$. The left side has length $1+r$ and the right side has length $2r$. This is impossible for $r<1$. Reflection in the base proves the same for $T_-$. The failure is an anchored representation into the trace that uses a base outside it.\n\nFor the common homothety, map $X$ to $rX+b$ with common translation $b$. Both mixed mass and projective energy multiply by $r$ in dimension one, the latter by d90ba05577427854. Hence the geometric-mean constraint and $\\ell E/M$ are unchanged. The covariance norm and all continuous margins scale by $r$; using base coefficient $ra$ with unchanged continuous coefficient $u$ transports each cap exactly. Pure-base traces are also preserved. All cap masses and the maximum scale by $r$, leaving their normalized ratios unchanged.\n",
+  "source_candidate_ids": [
+    "0946668727a45f68"
+  ],
+  "source_candidate_sha256": {
+    "0946668727a45f68": "359c5b3e12aa2907a7371c5158f520fe2711ee8c555408cca6eb46fecfaf54d9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0946668727a45f68",
+      "locator": "0946668727a45f68:02 §5, exact closed-minor obstruction"
+    }
+  ],
+  "statement": "For each $0<\\varepsilon\\le1$, take the actual product body $[-1,1]\\times[-1,1]$ with integer base $P=\\{-1,0,1\\}$, continuous intervals $K_z=[-1,1]$, and the positive affine geometrically normalized multiplier of 8cc17f76507d258f. The actual raw buffered maximum is $4$ at $(0,0)$ with total mass $6$, and every proper nonempty closed minor has strict quota. The minimizing closed pure-base traces through $0$ are $T_+=\\{0,1\\}$ and $T_-=\\{-1,0\\}$. For either trace, contracting just its two fibers by a common factor $0<r<1$ is incompatible, for every choice of translated centers, when the third fiber stays unchanged. Applying one common continuous homothety to all three fibers instead leaves the normalized invariant buffered maximum unchanged.",
+  "subgoal_id": "pk-intake-w32-closed-minor-homothety-obstruction",
+  "title": "An atomic cap trace can fail the incoming midpoint condition for contraction"
+}

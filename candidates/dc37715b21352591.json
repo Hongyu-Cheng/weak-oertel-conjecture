@@ -1,0 +1,28 @@
+{
+  "advances": "The result gives the cost of a boundary-field continuation at an exposed base. It assumes no cap menu or cap coverage condition.",
+  "author": "PK-research-agent",
+  "candidate_id": "dc37715b21352591",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:11.343837+00:00",
+  "depends_on": [
+    "f2b2f272355448fa"
+  ],
+  "draft_key": "w32-exposed-base-convex-continuation-cost",
+  "kind": "lemma",
+  "proof": "Every admissible continuation already costs at least $D$ on the own boundary and has nonnegative cost elsewhere. For $P=\\{p\\}$ take $\\Psi=\\phi$. Otherwise choose affine $\\ell$ with $\\ell(p)=0$ and $\\ell(z)<0$ at every other sampled base. Let $b=\\min_{z\\ne p}[-\\ell(z)]>0$ and take $A\\ge0$ with $Ab$ at least the assumed bound for $\\phi$ on the other measured boundaries. The function\n$$\n\\Psi(u,z,x)=[\\phi(u,x)+A\\ell(z)]_+\n$$\nis convex in the joint physical variables for every fixed $u$, since it is the maximum of a convex function and zero. It equals $\\phi$ at $p$ and vanishes on every other measured boundary. This proves the exact minimum. For the projective case, the tangent extension constructed in the proof of f2b2f272355448fa is finite and jointly continuous on the unit normal sphere times all continuous space, by continuity of the support factor and of the tangent extension. The finite union of other compact boundaries and the unit sphere therefore give a uniform bound, regardless of the shapes of those other fibers.\n",
+  "source_candidate_ids": [
+    "22d923b6274e7758"
+  ],
+  "source_candidate_sha256": {
+    "22d923b6274e7758": "9a284174d7afe5ef663ee41179f8ebfc26acf4f6cb77bd32ba30cfff61f754ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "22d923b6274e7758",
+      "locator": "22d923b6274e7758:02 §2, exposing hinge"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite and nonempty and $p$ an exposed vertex of $\\operatorname{conv}P$. At each base let $K_z$ be a compact convex $d$-body, $d\\ge1$. Let $\\phi(u,x)$ be globally finite, nonnegative and Borel and convex in $x$ at each unit normal $u$. Assume its measured own boundary cost\n$$\nD=\\int_{\\partial K_p}\\phi(n_{K_p}(x),x)\\,d\\mathcal H^{d-1}(x)\n$$\nis finite and positive, and that $\\phi(n_{K_z}(x),x)$ is uniformly bounded on the measured boundaries at all $z\\ne p$. Use counting measure on the endpoints when $d=1$. Among all globally finite nonnegative Borel continuations convex in $(z,x)$ at each $u$ and majorizing $\\phi$ on the measured boundary at $p$, the minimum summed boundary cost is $D$. The other fibers may be unequal. If the source is a projective tangent-extended weight of an interior point then the required uniform bound holds on any such finite family.",
+  "subgoal_id": "pk-intake-w32-exposed-base-convex-continuation-cost",
+  "title": "Exact cost of localizing a convex source weight at an exposed base"
+}

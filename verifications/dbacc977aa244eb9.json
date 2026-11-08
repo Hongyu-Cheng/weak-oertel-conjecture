@@ -1,0 +1,60 @@
+{
+  "candidate_id": "37ec31645bdbd675",
+  "candidate_sha256": "1f728b9a3c6b6ed9a2fd2479b533c9b2b926f35c6f45ebc125025aa63ac05a44",
+  "checked_dependency_candidate_sha256": {
+    "15649c49010660b8": "feb48e1b3dd10396839dec38078422b8d3ed94a21778c6a2d60a4c3a96df5fa7",
+    "27d3881f8bfc290c": "9a382480eb7fdedbe7306bbed9e353f6e1b0a30b8704de907efb2a4c1afba45e",
+    "f8cc9b4619513ed5": "7eed0ed6696a5422061aaec3ef8863f2fe50cc0f4f88a7635cfed68116327b5d"
+  },
+  "checks": [
+    "Verified original §1 (1)–(6). A proper section crosses the simplex interior, so the centroid coordinates are positive. Gamma/radial factorization gives the raw section density 3 f_i and correct threshold stationarity f_i=P_i/t_i.",
+    "The cap probability gradient is 3 f_i b in raw coordinates, so the normalized full-row objective weights are P_i^(1/3). The central pair is strictly captured in y and in the complement of x. Reversing orientation negates the Hessian, yielding the two strict signs including equality in the centrality bound.",
+    "Normalization to unit threshold multiplies the raw probability Hessian by t_i². Together with the capacity scaling and the normalized weight this gives the exact factor 1/(3 f_i), with distinct shift constants for the two rows allowed.",
+    "The feasible transfers on the positive part of the zero row give z_j=w/b_j. Its weighted geometric-mean Hessian on the face is (bbᵀ/3−diag(b_j²))/w, and the pair direction evaluates to −2b_ℓ² b_m²/w.",
+    "All three stated velocities sum to zero as a vector and preserve the original zero entry. All other original entries remain positive for sufficiently small t of either sign. Degree-one homogeneity kills the radial and radial-mixed Hessian terms. Completing the square in α gives the strict inequality B>AC/(A+C) and its reciprocal equivalent."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "27d3881f8bfc290c",
+      "fact_sha256": "ee06177c37ad5ac35ac0a12a43f5325920a6702ff4e269081ee3f4c232c4fdb8",
+      "mapping": "The positive pair ℓ,m has b_ℓ,b_m≤1/3 and both margins strictly positive in y and −c_x. Coarea gives stationary through-centroid cuts, so its exact pair-variation test applies, and complementation reverses the sign for x."
+    },
+    {
+      "fact_id": "f8cc9b4619513ed5",
+      "fact_sha256": "6e424c1d51f40d32f8c1005b8bbaea9c770d8582ca6383b075c52b1fc677301c",
+      "mapping": "Both full rows are strictly positive with proper optimizing thresholds. Normalize their margin vectors by t_i; b·v=0 makes v tangent to their probability gradients. The accepted shift and Hessian scaling produce κ_i and the weighted raw factor."
+    },
+    {
+      "fact_id": "15649c49010660b8",
+      "fact_sha256": "c916a29aa5f72647c898e63c4702b47b0f26c80980cb4c5c9d8c2761ff6e2678",
+      "mapping": "The exact one-zero capacity equals the geometric mean on the three positive entries; only tangent motions preserving the hole are used."
+    }
+  ],
+  "finished_utc": "2026-11-08T20:32:06Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Corrects one central-pair direction in one positive row after threshold normalization. It does not fund the simultaneous distinct full-row shifts with the one-zero row or include the zero-row curvature cost.",
+      "fact_id": "1cdceac089be44d8"
+    },
+    {
+      "comparison": "Uses a corrected positive direction for excluding a different stochastic configuration by a joint index argument. It does not calculate the present three-row compensated quadratic.",
+      "fact_id": "cd8f8e2a7b4c9d2b"
+    }
+  ],
+  "readability": "The proof uses raw probability Hessians for A and B and threshold-normalized Hessians only inside the accepted Schur formula. The condition is an iff for this particular two-parameter direction family.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3a7e42c7ac5875252692c27c647b56a0b6181d39844bb7185bdb494a19b51fda",
+  "reviewed_statement_sha256": "aa47386c474c9e77774ac1f980e2d73d6c2380a454bebcb4b94a5416fd5cba81",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:26:29Z",
+  "summary": "The two full-row corrections and one-zero row reserve give an exact feasible second variation and the stated strict joint funding criterion.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

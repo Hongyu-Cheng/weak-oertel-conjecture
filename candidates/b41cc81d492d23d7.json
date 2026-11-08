@@ -1,0 +1,35 @@
+{
+  "advances": "Failures of a volume and ordinary-depth lower certificate on two actual planar sources. The actual middle centroids clear the target.",
+  "author": "PK-research-agent",
+  "candidate_id": "b41cc81d492d23d7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:44.509611+00:00",
+  "depends_on": [
+    "f0399a8f0bae48c6",
+    "431423848c9bacf8"
+  ],
+  "draft_key": "w32-asymmetric-middle-residual-certificate-obstructions",
+  "kind": "counterexample",
+  "proof": "At base zero the endpoints contribute only through equal endpoint weights in a convex combination. Their midpoint body $((1+\\lambda)/2)T$ is contained in $T$, so the hull has the claimed fibers. In the accepted triangle identity 431423848c9bacf8, the product of the two smallest barycentric coordinates is at most $1/9$: their sum is at most $2/3$, and the product is at most the square of half that sum. The centroid attains equality, so the maximum ordinary depth is $4/9$ times the area in each triangle. With the accepted pointwise reflected-star bound f0399a8f0bae48c6, the middle certificate is increasing in its ordinary depth because $R$ is nonincreasing. The endpoint certificates have no pairs and have maximum at most $4/9$.\n\nFor $\\lambda=1/10$, the optimal missed middle area is $5/9$ and $2\\sqrt5/3-1>1/10$, so $R_{1/100,1}(5/9)=0$. The certificate maximum and its gap follow by substitution. For actual cap masses, every negative vertex of a centroided triangle is the sum of its other two vertices, so $-T\\subset 2T$, and in particular $-A\\subset B$. At any through-middle-centroid halfspace, each point of the $-1$ fiber either belongs to the cap or its reflected point in the $1$ fiber does. The map preserves area, and pure-base halfspaces also capture at least the smaller endpoint area. The middle centroid pays $4/9$ from its own fiber, giving the claimed larger actual bound.\n\nFor $\\lambda=1/2$, the optimal missed middle area $5/9$ is below $((1+1/2)/2)^2=9/16$ and above $1/4$. Thus the middle certificate at the optimum is $4/9+1/4-(2\\sqrt5/3-1)^2=(48\\sqrt5-91)/36$, which strictly exceeds $4/9$ and is less than $1/2$ since $11520<11881$. Every through-middle-centroid halfspace contains at least one of the two lifted endpoint centroids, whose midpoint is the middle centroid. Its trace on that endpoint includes at least that centroid's own ordinary depth, at least $1/9$ by the same triangle identity, in addition to the middle's $4/9$. In both examples any containing cap contains the corresponding parallel through-mark cap.\n",
+  "source_candidate_ids": [
+    "2b6032fa13533288",
+    "b13e43ee6ee1d8af"
+  ],
+  "source_candidate_sha256": {
+    "2b6032fa13533288": "bc8c3b17433ea4a2b86ba490649461f863127ea5e5a1254d698898df51fa6839",
+    "b13e43ee6ee1d8af": "d9d51095fc9b8d0224b8c85b88c3d6050c152a98b0b2e088018378208cb55c01"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2b6032fa13533288",
+      "locator": "2b6032fa13533288:04 §4, explicit obstruction to the volume-only certificate"
+    },
+    {
+      "candidate_id": "b13e43ee6ee1d8af",
+      "locator": "b13e43ee6ee1d8af:05 §7, deepest ordinary point and actual planar certificate obstruction"
+    }
+  ],
+  "statement": "Let $T$ be an area-one triangle centered at its centroid, with fibers $A=\\lambda T$, $K=B=T$ at bases $-1,0,1$. These are the actual fibers of their layered convex hull and have total mass $M=2+\\lambda^2$. For a point in its own fiber of area $m$ and ordinary raw depth $\\delta$, consider the lower certificate $\\delta+\\sum R_{a,b}(m-\\delta)$ over its disjoint reflected endpoint pairs, where the smaller and larger pair areas are $a,b$ and $R_{a,b}(h)=[a-(2\\sqrt h-\\sqrt b)_+^2]_+$.\n\nFor $\\lambda=1/10$, the maximum of the certificate over all actual anchors and all their own points equals $4/9$, below $2M/9=67/150$ by $1/450$. The actual middle centroid has raw depth at least $4/9+1/100$, which exceeds the target by $7/900$.\n\nFor $\\lambda=1/2$, the maximum ordinary middle depth is $4/9$. At that optimum the middle residual credit is positive and the better of the middle certificate and the larger endpoint centroid bound equals $(48\\sqrt5-91)/36<2M/9=1/2$. At the actual common middle centroid the raw depth is at least $5/9$.",
+  "subgoal_id": "pk-intake-w32-asymmetric-middle-residual-certificate-obstructions",
+  "title": "Ordinary deepest points can leave the reflected-star certificate below target"
+}

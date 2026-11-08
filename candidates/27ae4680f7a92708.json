@@ -1,0 +1,33 @@
+{
+  "advances": "Proves the exact restricted capped-normal ingredient for symmetric simplex chains.",
+  "author": "PK-research-agent",
+  "candidate_id": "27ae4680f7a92708",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:28:54.158004+00:00",
+  "depends_on": [
+    "38821acd2e746146",
+    "18d3a5cf0b729f6d",
+    "ad017d8380c3bf8d",
+    "2eaf96d805cf614f",
+    "19dd15c9bce38f93",
+    "543052ab7fffab6a"
+  ],
+  "draft_key": "finite-capped-signed-exponential-minima",
+  "kind": "theorem",
+  "proof": "The accepted capped minimizer classification 38821acd2e746146 gives an attaining vector and the three possible minimizing strata. First, if all nonzero negative coefficients are units, its probability is at least $1/2$.\n\nIf all positive coefficients are units, let $k$ be their number. There are at most $q=d-k$ negative coefficients besides the fixed unit, with magnitudes of sum $k-1$ and each at most one. In particular $1\\le k\\le\\lfloor(d+1)/2\\rfloor$. Pad the residual list with zeros to length $q$. By accepted fixed-count equalization ad017d8380c3bf8d, the probability is at least\n$$\nB_{d,k}=\\Pr\\left\\{X_k\\ge E+\\frac{k-1}{q}Y_q\\right\\},\n$$\nwhere $X_k,Y_q,E$ are independent unit-rate gamma variables of shapes $k,q,1$. This also holds at $k=1$ with all the residual magnitudes zero.\n\nIn the third stratum, the positive list consists of $k$ units and one $p\\in(0,1)$, and the negative magnitudes are the fixed unit and $m$ copies of $(k+p-1)/m\\in(0,1)$, where $m\\ge k$ and $k+m=d-1$. If the probability is below $1/2$, accepted stationary exclusion 18d3a5cf0b729f6d gives $m>k$. Thus $d\\le9$ forces $k\\le3$. For each $k=1,2,3$ the corresponding reviewed endpoint theorem bounds this probability below by the smaller of its two values at $p=0$ and $p=1$. At $p=0$ there are $k$ positive units and a zero fractional coordinate, so the residual negative magnitudes can be padded to $d-k=m+1$. At $p=1$ there are $k+1$ positive units and $m$ residual magnitudes. Both endpoint lists obey the coefficient bounds because $m\\ge k$. They have probability at least $B_{d,k}$ and $B_{d,k+1}$ respectively by the same equalization. All three strata therefore give a probability at least the smaller of $1/2$ and the minimum of the admissible $B_{d,k}$.\n\nFor the exact arithmetic put $z=(k-1)/(q+k-1)$. The integer-shape gamma survival is $e^{-x}\\sum_{\\ell=0}^{k-1}x^\\ell/\\ell!$ for $x\\ge0$. Tilting the negative sum at rate one gives the Laplace factor $\\tfrac12(q/(q+k-1))^q$, and changes the exponential means to $1/2$ and $z$ repeated $q$ times. The divided moment of order $\\ell$ is the sum of monomials of total degree $\\ell$ in those means, obtained by multiplying the geometric series of the moment-generating functions. Hence\n$$\nB_{d,k}=\\frac12\\left(\\frac{q}{q+k-1}\\right)^q\n\\sum_{\\ell=0}^{k-1}\\sum_{j=0}^{\\ell}\n\\binom{q+j-1}{j}z^j 2^{-(\\ell-j)} .\n$$\nThe degree-zero power is one, including at $z=0$. Substitution in this finite sum gives $\\min_k B_{d,k}=B_{d,2}$ in each listed dimension, with value at most $1/2$ and the exact values in the statement. The margins over $\\tfrac76(d/(d+1))^d$ in increasing $d$ are\n$$\n\\frac1{128},\\quad\n\\frac{61}{16875},\\quad\n\\frac{2147}{373248},\\quad\n\\frac{439904}{52521875},\\quad\n\\frac{32753357}{3057647616},\\quad\n\\frac{1348942633648}{106352477257509},\\quad\n\\frac{939511987337}{65536000000000}.\n$$\nThe [rational verifier](../assets/pk-nov6/computations/verify_capped_angular_low_dimension_constants.py) evaluates every admissible $B_{d,k}$ and these margins. The list with two positive units and equal residual negative magnitudes realizes $B_{d,2}$, which proves sharpness.\n",
+  "source_candidate_ids": [
+    "3f7ae72f2c829951"
+  ],
+  "source_candidate_sha256": {
+    "3f7ae72f2c829951": "1580187607cd85870e7cc1d843203c303d40c08e360ac9ecbefdb3755563ed18"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3f7ae72f2c829951",
+      "locator": "Exact saturated probabilities (3); Exact minimum for every d=3,…,9"
+    }
+  ],
+  "statement": "Let $3\\le d\\le9$, and let $E_0,\\ldots,E_d$ be independent unit exponentials. Over all $a\\in[-1,1]^{d+1}$ with $a_0=-1$ and $\\sum_i a_i=0$, the minimum of $\\Pr(\\sum_i a_iE_i\\ge0)$ for each $d$ is given by\n$$\n\\begin{array}{c|rrrrrrr}\nd&3&4&5&6&7&8&9\\\\ \\hline\n\\text{minimum}&1/2&13/27&243/512&1472/3125&21875/46656&384912/823543&15647317/33554432 .\n\\end{array}\n$$\nIn every listed dimension the minimum is realized by two positive unit coefficients, the fixed negative unit coefficient, and $d-2$ negative coefficients of magnitude $1/(d-2)$. Each minimum is strictly greater than $\\tfrac76(d/(d+1))^d$.",
+  "subgoal_id": "pk-intake-finite-capped-signed-exponential-minima",
+  "title": "Exact low-dimensional minima for capped signed exponentials"
+}

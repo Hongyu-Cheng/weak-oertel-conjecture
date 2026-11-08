@@ -1,0 +1,29 @@
+{
+  "advances": "Exact local circuits on finite compatible families, with one whole-plane cover at each base and a bound depending on the number of bases.",
+  "author": "PK-research-agent",
+  "candidate_id": "755cb08c379113cc",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:31:51.182425+00:00",
+  "depends_on": [
+    "1ec728c26c11b368",
+    "55a57b1cf55d0c87"
+  ],
+  "draft_key": "exact-fiberwise-critical-cap-circuits",
+  "kind": "theorem",
+  "proof": "By the anchored capacity theorem, the depth on a fiber is the minimum of $c_z(u,u\\cdot x)$ over unit $u$, the capacities are continuous, and every directional infimum is attained at finite slope. In particular $U_z$ is nonempty and compact. The compatible-fiber positive-depth lemma puts $x_z$ in the interior of $K_z$. Fix $r>0$ with $x_z+rB_d\\subset K_z$.\n\nIf zero is outside $\\operatorname{conv}U_z$, strict separation gives a unit $v$ and $\\eta>0$ with $u\\cdot v<-\\eta$ on $U_z$. The directions satisfying $u\\cdot v<-\\eta$ form an open neighborhood of $U_z$ on the unit sphere. For such a direction and $0<s\\le r/2$, replacing $x_z$ by $x_z+sv$ lowers the threshold by more than $\\eta s$. For every slope $a$, the cap mass increases by at least\n$$\n\\eta s\\,\\kappa_{d-1}(r/2)^{d-1},\n$$\nwhere $\\kappa_{d-1}$ is the volume of the unit $(d-1)$-ball and $\\kappa_0=1$. Indeed the cap grows on each fiber, and the anchor fiber alone gains the slab in its ball with normal coordinates in $[-\\eta s,0)$ measured from $x_z$. Each of the slab's sections has radius at least $r/2$ (for $d=1$ use the interval length). The added mass is uniform in $a$ because the slope term vanishes at $z$. Taking the infimum over $a$ retains this uniform increase. On the compact complementary set of directions, if nonempty, continuity and absence of active directions give a positive minimum gap above $q_z$ at $x_z$. Uniform continuity keeps a positive gap there for all sufficiently small $s>0$. Therefore the minimum over the sphere strictly increases at $x_z+sv\\in K_z$, a contradiction.\n\nChoose an inclusion-minimal subset of $U_z$ whose convex hull contains zero. By Carathéodory it has at most $d+1$ members. In a convex representation of zero using this subset all coefficients $\\lambda_j$ are positive, and no proper subset has a positive dependence. There are at least two unit normals. Choose one attaining slope for each selected $u_j$, with cap threshold $u_j\\cdot x_z$ at $z$. These caps pass through the mark and have mass $q_z$. On the entire plane over $z$, the weighted sum of their cap margins is $\\sum_j\\lambda_j u_j\\cdot(x-x_z)=0$. Thus at least one margin is nonnegative at every point of that plane.\n\nIf $K_z$ is null, its minimal face in $\\operatorname{conv}(P)$ has only null fibers by the compatible-fiber lemma. Take its affine exposer $g$ as in that lemma and any unit $u$. For sufficiently large finite $T>0$, the two caps with margins $Tg(w)+u\\cdot y$ and $Tg(w)-u\\cdot y$ exclude all original off-face fibers. They have mass zero, and their restrictions over $z$ are opposite closed halfspaces that cover the whole plane. Combining the selections for every site gives the bound because $2\\le d+1$. Since $M>0$ there is a positive fiber and $Q>0$. The selected caps over null sites or other sites with $q_z<Q$ are therefore slack as asserted.\n",
+  "source_candidate_ids": [
+    "b989614dc4f86228"
+  ],
+  "source_candidate_sha256": {
+    "b989614dc4f86228": "894c65b9f729ca59cff24bfa23226e047632ef3d245722c2da9e64fe620690e1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b989614dc4f86228",
+      "locator": "§6, active normals, positive circuit, null-site pair and whole-plane cover"
+    }
+  ],
+  "statement": "Fix $n,d\\ge 1$, a finite nonempty $P\\subset\\mathbb R^n$, and nonempty compact convex sets $K_z\\subset\\mathbb R^d$ for $z\\in P$. Write $S=\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$, $\\mu=\\sum_{z\\in P}\\delta_z\\otimes(\\mathcal L^d|_{K_z})$, and $M=\\mu(S)$. Let $h_\\mu(z,x)$ be the infimum of $\\mu(H)$ over closed ambient halfspaces $H$ containing $(z,x)$.\n\nThe family is compatible if the fiber of $C=\\operatorname{conv}(S)$ at every $z\\in P$ is exactly $K_z$. Equivalently, whenever a convex combination of bases in $P$ equals a base $z\\in P$, the same Minkowski combination of the corresponding fibers lies in $K_z$. For a lattice application require $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$, so $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$.\n\nAssume compatibility and $M>0$. Put $q_z=\\max_{x\\in K_z}h_\\mu(z,x)$ and $Q=\\max_{z\\in P}q_z$. At any maximizing mark $x_z$ of a positive-volume fiber $K_z$, the active unit continuous normals\n$$\nU_z=\\{u\\in\\mathbb S^{d-1}:c_z(u,u\\cdot x_z)=q_z\\}\n$$\nhave zero in their convex hull, where $c_z(u,t)=\\inf_a\\mu\\{(w,y):a\\cdot(w-z)+u\\cdot y\\ge t\\}$. There are $2\\le k\\le d+1$ actual nonvertical closed caps of mass exactly $q_z$ through $(z,x_z)$ whose unit continuous normals form a minimal positive dependence. The caps cover the whole plane $\\{z\\}\\times\\mathbb R^d$. At a null site two actual nonvertical zero-mass caps cover its whole plane. In particular at most $|P|(d+1)$ such caps cover $P\\times\\mathbb R^d$, each of mass at most $Q$. Caps selected at a site with $q_z<Q$ have strict slack at the common budget $Q$.",
+  "subgoal_id": "pk-intake-exact-fiberwise-critical-cap-circuits",
+  "title": "Exact critical cap circuits on whole fiber planes"
+}

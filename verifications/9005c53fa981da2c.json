@@ -1,0 +1,63 @@
+{
+  "candidate_id": "73234f91aeecda16",
+  "candidate_sha256": "c1d4e47afa214bd112e97aba7e9b8aa21d436d2d73ef99bfa07078cf92e941f9",
+  "checked_dependency_candidate_sha256": {
+    "4d628efe7673ce2d": "6d6206eb1f7f68c4c528797f3d1d7512a69f1a964c6dab8e9501bbb4a1ba3cb9"
+  },
+  "checks": [
+    "At a peak, each outward arm is concave and nonincreasing, with peak normalized to 1 and all values in [0,1]. For h≥1 the admissible affine slope domain is η≥−1/h. Its square sum is strictly increasing there and its value at zero slope is h, so the equal-square slope is nonpositive. The h=0 arm contributes exactly 1/3.",
+    "The difference of the original and replacement arms is concave and zero at 0, so its secant quotient at each positive index is nonincreasing. Thus the squared differences have one ordered sign change. Nonzero squared differences have strictly positive denominators r_i+g_i. These denominators decrease weakly with i. Dividing by the denominator at the last positive difference gives an upper bound term by term for both signs. The squares sum to equality, yielding Σr_i≤Σg_i and the claimed direction of the objective comparison. The all-equal-squares case gives termwise equality.",
+    "Using Σi=h(h+1)/2 and Σi²=h(h+1)(2h+1)/6 gives η=−2/(2h+1), last entry 1/(2h+1), and minimum (h+1)/(3(2h+1)). Independently checked the minimum value by exact rational substitution for h=0,…,14. Adding the two minima and subtracting one peak term yields the claimed b²/6 times the sum of reciprocals. The two denominator lengths sum to 2n, giving b²/(3n).",
+    "For p>1 the strict t-superlevel set is one consecutive, nonempty block for t<1, and subtracting t there preserves concavity with peak 1−t. Apply the quadratic inequality before adjoining zero summands. Its correction is at least (1−t)²/N, and the t=1 endpoint is zero on both sides. The factor t^(p−2) is integrable at zero precisely here because p>1.",
+    "Expanded both integrals independently. Writing D=(p−1)p(p+1), the integrated quadratic left side at x equals [6x^(p+1)−2(p+1)x^p+2(p−1)x^(p+1)]/D. Its coefficients reduce to 2(p+2) and −2(p+1); the integrated right side is 2/(DN). Powers at x=0 are well defined. Rescaling by the original m restores m^(p+1), and the N=1 equality follows by direct substitution.",
+    "For fixed p, the triangular profiles are concave including their zero endpoints. Their continuous Riemann integrands give limits 2/(p+1) and 2/(p+2) after division by h, so the positive-denominator ratio has exactly the claimed limit. The limit establishes sharpness of the homogeneous coefficient. The statement does not claim optimality of the finite correction for each p and N.",
+    "Both pinned source hashes match. Source 273393b2aa6803aa §§1–4 supplies the finite real-power claim, positive-block integration, and triangle limit. Source efcef1959b4a9d5f §§1–2 supplies the p=1 peak-position inequality and p=1 sharpness. The frozen proof uses the separately accepted square-sum comparison for the quadratic step, so neither source note is an unaccepted mathematical premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "4d628efe7673ce2d",
+      "candidate_sha256": "6d6206eb1f7f68c4c528797f3d1d7512a69f1a964c6dab8e9501bbb4a1ba3cb9",
+      "fact_id": "4d628efe7673ce2d",
+      "fact_sha256": "3b63f636f57db2e8f1a1dea48947fbd1383561eb95ed6d3bc43b0bdbd752c5a8",
+      "mapping": "Use only its scalar fixed-length assertion (5) and its proof's secant sign-change property, with R=1 and the length parameter m=h. The normalized arm satisfies all hypotheses. No planar cap or geometric hypothesis is invoked.",
+      "reviewed_proof_sha256": "8edcdc6fa21a1496dfec8cde0f21124efaa4602f3e22aa80ff26a7d01541546f",
+      "reviewed_statement_sha256": "9194727b108d8e6a11f9e10a615ae463bdc54662872e7a87586643673adade79",
+      "status": "Accepted at b9df7802ecad0edda8b411a145484010a4b7a695."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:43:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its assertion (5) provides the equal-square affine arm and the sign-change proof. Its comparisons concern square-truncated envelopes, and neither its statement nor its proof gives the adjacent-power ratio, finite correction, or sharpness claimed here.",
+      "fact_id": "4d628efe7673ce2d"
+    },
+    {
+      "comparison": "Proves concavity of roots of cumulative arithmetic power sums, with sharp cumulative-root exponent. It concerns the arithmetic family and cumulative sums, a different conclusion from a finite adjacent-power comparison on arbitrary concave sequences.",
+      "fact_id": "a0756c6751636340"
+    },
+    {
+      "comparison": "Compares a sampled square sum against a continuous square integral for concave interpolation. It gives no adjacent-power ratio against the same discrete first moment, nor the real-p finite correction.",
+      "fact_id": "d2709a081ada73df"
+    }
+  ],
+  "readability": "The square-sum comparison omits the anchor in the cited fact and includes it in the new quadratic objective. Both anchors equal 1, so the missing anchor cancels. The proof's weaker uniform correction follows from its stronger peak-position bound at p=1.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "cee5b2a3b010b77d7b255de92e2f819081c9857532df89029a927c4bc4efcd64",
+  "reviewed_statement_sha256": "4866c4fff4d1b101441438aa82be9772887ba651cd06ba6cc860863509583bcd",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "273393b2aa6803aa": "ec1d8d947be58204ffd68bd05d7ef7739931a981e7ca89d092fc479ca18ef13e",
+    "efcef1959b4a9d5f": "996035fe12af8f382bfefb1a33d7c2c4ed7c6b23480ea48c08feb192ee488d34"
+  },
+  "started_utc": "2026-11-08T09:39:57Z",
+  "summary": "The finite correction holds for every real p≥1, and triangular profiles prove sharpness of the homogeneous ratio over unrestricted finite lengths.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

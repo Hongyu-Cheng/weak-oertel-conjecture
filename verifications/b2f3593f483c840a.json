@@ -1,0 +1,64 @@
+{
+  "candidate_id": "543052ab7fffab6a",
+  "candidate_sha256": "a1977703762f361f4c33772269e55bfabbffbd430fe045f94cb06d54c85ba5d1",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The gamma–beta change of variables has absolute Jacobian t. The joint density factors with the stated normalizations. Independence of the original four variables gives U independent of both (T,W) and Z, and the signed inequality divides by T to give Z+(p+b)U≥b. The beta tail is zero below −p, the displayed power on [−p,b], and one above b.",
+    "Independently computed the two convolution pieces for W, including their common value 1/8 at zero. The conditional change of scale supplies T f_W(Tz). The gamma integral gives the factor m+1 and coefficients 1, 2(m+2), 2(m+2)(m+3) on the positive side. The derivative of the clipped power has numerator m(p+b)−(m+1)(p+z)=2−(m+1)z after writing the derivative as m[(p+b)−(p+z)(1+1/m)]. At the moving limits the upper boundary term cancels the tail derivative and the lower boundary term is zero.",
+    "Recomputed both changes of variable with their Jacobians. The negative integral yields the displayed factor 2(m+1)+(3m+1)p. For the positive integral p<T_*<1, since T_*−p=(p+2)(1−p)/(m+p+2)>0 and 1−T_*=m(1−p)/(m+p+2)>0. Verified both endpoint evaluations of the cubic primitive with m free, as well as the division that gives 1−R as the sign of P_m′.",
+    "Recomputed A=m²F+mG+H from the frozen polynomials. Each curvature lower bound holds on the whole nonnegative axis, including along segments back to its tangent point. The three quadratic minima are exactly 5279/16384, 55/32 and 16/9. Together with the positive coefficients of D and N this proves positivity of every denominator used on 0<p<1.",
+    "Cleared the logarithmic derivative denominator independently and verified all seven coefficients read from the frozen sextic, the factor (p−1)³, K_m(1)=6(m−3)(m+3)²(7m²+18m+9), and the lower bounds 708m², 583m², 235m² for coefficients of degrees 3, 4, 5. Ignoring a possible zero degree-two coefficient leaves one sign change. The negative constant and positive leading coefficient give a positive root by continuity, and Descartes gives uniqueness and simplicity. It is 1 for m=3 and belongs to (0,1) for m>3.",
+    "Checked the exact endpoint factors of A, D and N. The ratio expression has continuous values 0 and 1 at the endpoints. At m=3 it stays strictly below 1 inside. At m>3 it rises strictly from 0 to a value above 1 and then decreases strictly to 1, giving exactly one interior crossing and the asserted derivative signs. Continuity of P_m on [0,1] follows by coupling and conditioning on the variables other than E_0, which excludes a tie. The strict monotonicity on either side of the maximum makes each interior value strictly larger than at least one endpoint, including the maximum itself.",
+    "At p=0 the unused positive phase drops out and the residual negative magnitude is 2/m. At p=1 the positive side is a scale-one shape-four gamma and the residual negative magnitude is 3/m. For m=3 both sides at p=1 are independent scale-one shape-four gammas, giving probability 1/2.",
+    "Ran the archived symbolic verifier successfully and separately reconstructed the convolution, primitive identities, curvature bounds, logarithmic-derivative numerator, coefficient bounds, and endpoint factors by exact symbolic arithmetic. The archived phase-type derivative checks at m=3,4 are finite cross-checks. The symbolic identities and sign argument cover the full quantified range.",
+    "Compared the frozen text with pinned source 5d115e607fe36eb9, Theorem (1) and §§1–3, (2)–(5). The definitions, primitive, and ratio agree. The frozen text derives the derivative directly, factors K_m(1) to distinguish the two cases, and states the strict inequality that follows from the argument. The source’s downstream dimensional discussion is outside this statement."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T09:33:23Z",
+  "gaps": [],
+  "graph_base": "b9df7802ecad0edda8b411a145484010a4b7a695",
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same fractional path at k=3. The accepted theorem assumes stationarity and p≤b for its negative second derivative. The frozen proof compares every interior p to the endpoints, including p>b, and gives strict endpoint minimality.",
+      "fact_id": "18d3a5cf0b729f6d"
+    },
+    {
+      "comparison": "Classifies minimizing coefficient lists and yields the equal-negative pattern in its fractional case. It gives no probability comparison along the k=3 fractional path.",
+      "fact_id": "38821acd2e746146"
+    },
+    {
+      "comparison": "Equalizes residual negative coefficients while the positive coefficients are saturated and fixed. Both endpoints here have the resulting equalized form, while the interior has a fractional positive phase.",
+      "fact_id": "ad017d8380c3bf8d"
+    },
+    {
+      "comparison": "The accepted saturated minima A_{3,m} and A_{4,m} coincide with the two endpoint probabilities. Its hypotheses do not cover a fractional positive phase.",
+      "fact_id": "3f633c7a06ebe428"
+    },
+    {
+      "comparison": "Identifies large-count limits for this class of signed exponentials. It gives no endpoint comparison at fixed finite m.",
+      "fact_id": "f4bc58c878c5d61a"
+    },
+    {
+      "comparison": "Decreases sign probability by moving mass into a largest positive coefficient while keeping the negative vector fixed. Here the positive unit coefficients are capped, and the total positive weight and residual negative scales both vary with p.",
+      "fact_id": "564e798ecec2b61f"
+    }
+  ],
+  "readability": "The sign argument uses two different points when m>3: c maximizes R, and the earlier crossing of 1 maximizes P_m. The order follows directly from R(c)>1. The factor 1−p in the positive change of variables restricts that calculation to the open interval, with the original probability extending to its endpoints by coupling.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bbb2a169eb20a861d085d74bb02b0c3f51901718a7ef3d28e5ce061b56459520",
+  "reviewed_statement_sha256": "10a59abe8f8073daf90f8ab31723b01f25bed0fe5f916996bef5b50f179c20ff",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "5d115e607fe36eb9": "ac5b86e5b2bb4a5e6ce983ef5223d59346b4339c2304297b88bc7f41b5a38eb0"
+  },
+  "started_utc": "2026-11-08T09:29:44Z",
+  "summary": "The frozen proof establishes strict endpoint minimality for every integer m≥3. The probability increases throughout for m=3. For every m>3 it strictly increases to a unique interior maximum and strictly decreases thereafter.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

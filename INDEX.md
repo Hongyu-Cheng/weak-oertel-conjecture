@@ -4,6 +4,23 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 4 | theorem | pk-intake-interval-centroid-cap-with-no-full-fiber | [1d56946d90d684b0](facts/1d56946d90d684b0.md) |
+| 4 | theorem | pk-intake-sharp-integer-mean-powered-fiber-weight | [c46a6b8335f94cab](facts/c46a6b8335f94cab.md) |
+| 3 | theorem | pk-intake-finite-concave-sequence-power-moments | [73234f91aeecda16](facts/73234f91aeecda16.md) |
+| 3 | theorem | pk-intake-fixed-body-projective-orbit-cap-certificate | [6b80e85ff6937910](facts/6b80e85ff6937910.md) |
+| 6 | theorem | pk-intake-central-depth-of-paired-simplex-chains | [fca4c60158080a5f](facts/fca4c60158080a5f.md) |
+| 3 | theorem | pk-intake-fixed-cap-volume-from-fixed-projection-depth | [052e61fcdb0be10f](facts/052e61fcdb0be10f.md) |
+| 5 | theorem | pk-intake-capped-normal-simplex-angular-surplus | [b95f20fd2b1129a9](facts/b95f20fd2b1129a9.md) |
+| 2 | theorem | pk-intake-exact-fiberwise-critical-cap-circuits | [755cb08c379113cc](facts/755cb08c379113cc.md) |
+| 2 | theorem | pk-intake-exact-mixed-helly-closed-cap-cover | [c073357d2abdba9f](facts/c073357d2abdba9f.md) |
+| 4 | theorem | pk-intake-finite-capped-signed-exponential-minima | [27ae4680f7a92708](facts/27ae4680f7a92708.md) |
+| 1 | theorem | pk-intake-finite-fiber-anchored-capacity | [1ec728c26c11b368](facts/1ec728c26c11b368.md) |
+| 0 | lemma | pk-intake-compatible-fiber-positive-depth-support | [55a57b1cf55d0c87](facts/55a57b1cf55d0c87.md) |
+| 0 | lemma | pk-intake-finite-affine-threshold-compactification | [0a73ba4a9c7b24d1](facts/0a73ba4a9c7b24d1.md) |
+| 0 | theorem | pk-intake-intrinsic-real-moment-cap | [b1274a369dfa9af7](facts/b1274a369dfa9af7.md) |
+| 0 | theorem | pk-intake-three-unit-fractional-exponential-endpoint | [543052ab7fffab6a](facts/543052ab7fffab6a.md) |
+| 0 | theorem | pk-intake-two-unit-fractional-exponential-endpoint | [19dd15c9bce38f93](facts/19dd15c9bce38f93.md) |
+| 0 | theorem | pk-intake-one-unit-fractional-exponential-endpoint | [2eaf96d805cf614f](facts/2eaf96d805cf614f.md) |
 | 4 | theorem | pk-intake-capped-signed-exponential-escape-reduction | [65d374efd09b8c3d](facts/65d374efd09b8c3d.md) |
 | 1 | theorem | pk-intake-stationary-fractional-exponential-exclusion | [18d3a5cf0b729f6d](facts/18d3a5cf0b729f6d.md) |
 | 0 | lemma | pk-intake-fractional-signed-exponential-escape-limits | [f4bc58c878c5d61a](facts/f4bc58c878c5d61a.md) |

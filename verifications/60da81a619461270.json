@@ -1,0 +1,78 @@
+{
+  "candidate_id": "b95f20fd2b1129a9",
+  "candidate_sha256": "f69381473704bf243ff1e93fe91619e2d399454f51ff4c0d2f996dd28bc4fd5c",
+  "checked_dependency_candidate_sha256": {
+    "27ae4680f7a92708": "a29116c91ac42fa950df88e76610ccf1dd32bea4499fea4d2f98e51fb9e9671a",
+    "65d374efd09b8c3d": "038c80202c0495b905208105541762eb506b248339b959e4fa0c160174d3ecc3",
+    "870ad0085472647d": "1f0eeb74933c850e48fb827642e996675042605a6a867142092f6dbdccdc2f2e"
+  },
+  "checks": [
+    "The independently reviewed finite predecessor gives a strict surplus in all seven dimensions 3 through 9. For d≥10 the escape theorem’s strict version applies with c=9/20<1/2 and the strict scalar bound for every k≥1 and every p in the entire closed interval, including p=0 and p=1.",
+    "The derivative of x log(x/(x+1)) is −log(1+1/x)+1/(x+1). For t>0 the difference log(1+t)−t/(1+t) vanishes at zero and has derivative t/(1+t)^2>0. Thus Γ_d is decreasing. Independently checked the exact positive d=10 margin 310464227/1556245476060; all larger d follow.",
+    "The transformation E_i=Gλ_i with λ_0=1−Σ_{i≥1}λ_i, G>0, has absolute Jacobian G^d. The product density becomes e^(−G)G^d, independent of the free λ coordinates on T_d, so they are uniform. The vertex coefficient a_0=−1 corresponds to λ_0 at the origin.",
+    "From u to a, the upper and lower bounds give −1≤a_i≤1, and a_0+Σ_{i≥1}a_i=−1+(d+1)−d=0. Conversely, the same sum identity gives Σ_{i≥1}(a_i+1)/(d+1)=1, and the interval gives the exact normal bounds. Multiplication of the cap inequality by (d+1)G gives the sign event with the same direction.",
+    "The cap boundary has d-volume zero because u is nonzero, and the signed sum has no atom at zero because −E_0 is independent and continuous. Neither step changes the closed-halfspace convention.",
+    "Checked the precise statement, all-large-d argument, and geometric equivalence in source 3f7ae72f2c829951 at its declared hash. The source states a weak inequality but its strict numerical margins and the reviewed inputs give the strict assertion in the frozen draft."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "27ae4680f7a92708",
+      "candidate_sha256": "a29116c91ac42fa950df88e76610ccf1dd32bea4499fea4d2f98e51fb9e9671a",
+      "mapping": "The finite minimum is over exactly the required capped coefficient domain and exceeds (7/6)Γ_d in each dimension 3 through 9.",
+      "reviewed_proof_sha256": "0dfbe064b1c40bd7407e34a0326b8a2d59c847d437e8674e04dda83ac9477dde",
+      "reviewed_statement_sha256": "2afce33d36a941db4168e720d137b7788c9b1ee398a6afa2547956849aee6edf",
+      "status": "Same-wave frozen parent has its own independent approval matching all hashes. Admit it before this child."
+    },
+    {
+      "candidate_id": "65d374efd09b8c3d",
+      "candidate_sha256": "038c80202c0495b905208105541762eb506b248339b959e4fa0c160174d3ecc3",
+      "fact_id": "65d374efd09b8c3d",
+      "fact_sha256": "a743a96c3b3a15272f8eaf311cd716ad727bd487cb18954aaaaabb3e0a9f74b7",
+      "mapping": "Its conclusion is for each finite d on the identical bounded coefficient set with fixed negative unit. Use the strict part with c=9/20; its premise concerns independent unit-scale Gamma(k) and two independent unit exponential phases.",
+      "reviewed_proof_sha256": "064a92c179da3b248459f738ffdc0366a0577eb778fe5388da4dedc8e7aae9d0",
+      "reviewed_statement_sha256": "4dc3a3f24944a700ce5ddbbb743b7235958bebd9081c1566b6cace718907d83a",
+      "status": "Accepted at b9df7802ecad0edda8b411a145484010a4b7a695."
+    },
+    {
+      "candidate_id": "870ad0085472647d",
+      "candidate_sha256": "1f0eeb74933c850e48fb827642e996675042605a6a867142092f6dbdccdc2f2e",
+      "fact_id": "870ad0085472647d",
+      "fact_sha256": "bed96384874a824ed350adb9808815b84735d842e79708e777d1d690cfa328d5",
+      "mapping": "Its G_{k,p} is the scalar premise of 65d374efd09b8c3d at c=9/20 with strict inequality, all positive integer k, and p∈[0,1].",
+      "reviewed_proof_sha256": "bb5fa22a8d063ea8a351c064532327c8ab5edc8092e4689fe36bb28dc06afe08",
+      "reviewed_statement_sha256": "fa1e55a4b2f3a470873cfbff759e3b582c0b614f108501eafba2c52cb97c04a0",
+      "status": "Accepted at b9df7802ecad0edda8b411a145484010a4b7a695."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:37:08Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Combined with 870ad0085472647d it implies the strict 9/20 floor on the identical coefficient domain; this suffices for d≥10 by the displayed comparison. For d=3 through 9 the floor is below the target, so it does not imply the full angular theorem.",
+      "fact_id": "65d374efd09b8c3d"
+    },
+    {
+      "comparison": "Gives the Γ_q centroid cap bound for q strictly negative vertex margins without the cap-normal restriction. When all other vertex margins are negative except for two positive ones, q=d−1; its bound in that case falls short of (7/6)Γ_d. Its sign-count result does not supply the required uniform factor.",
+      "fact_id": "baee8ddaa588aef0"
+    },
+    {
+      "comparison": "The exact ordinary depth at the centroid is Γ_d and concerns all directions. It does not quantify the stronger bound on this restricted normal set.",
+      "fact_id": "700febf4b7a92759"
+    }
+  ],
+  "readability": "The two inverse coefficient maps and zero-boundary conventions are explicit. The exact threshold separates d=9 from d=10.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "385507d9ae938b735e497e36a62450e957483bc01f7ae7d7a86b90f25c5f4b2b",
+  "reviewed_statement_sha256": "0b597838ef91187a7abf5c628f87174c00f427a377f23da0cbeabe6aef7621ea",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:32:20Z",
+  "summary": "The exact finite bounds and strict dimension-free floor establish the strict (7/6)Γ_d bound for every integer d≥3. The barycentric map identifies the entire stated coefficient domain with the capped simplex normals.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,58 @@
+{
+  "candidate_id": "052e61fcdb0be10f",
+  "candidate_sha256": "af98c81adb01f3494389e842a343b10694000b5f2f805aa75272564027e4eb66",
+  "checked_dependency_candidate_sha256": {
+    "755cb08c379113cc": "333ebd70029e9411c1ac6f8bcf0d9484ab2fff8b378d4da40e25f8dade420a11",
+    "c073357d2abdba9f": "86e51a1703f03b015e0877bf19bc2fa9234a06522c9a5a4cdad538c1b5495e45"
+  },
+  "checks": [
+    "Compatibility and complete lattice P imply S_* = C_* intersect (Z^n times R^d) for the compact convex lifted hull C_*. Its projection is conv(P), so no lattice sites outside P occur. This verifies the exact mixed Helly hypothesis, even when the hull has smaller ambient dimension or some original fibers are null. The cap bound 2^n(d+1) is exactly the mixed Helly value in the declared predecessor.",
+    "For any finite original cap cover, the uncovered set at a fixed base is the intersection of the open opposite sides of its closed traces. It is open, convex and disjoint from the original compact convex fiber. If nonempty, weak separation gives nonzero b_z with b_z·y>=sup over the fiber for all uncovered y. Each such inequality is strict since an open neighborhood of a point at equality would contain a point with smaller value. Hence the supporting closed sublevel halfspace is entirely covered, including its boundary. This applies to lower-dimensional original fibers and unbounded uncovered sets.",
+    "The whole-plane predecessor supplies at most |P|(d+1) caps at the common budget Q, including planes over null original fibers. Thus it covers every competitor fiber on exactly P without added support constraints. The bounded-cover version instead needs only the indicated one support constraint at each plane with nonempty uncovered set.",
+    "A positive-volume original fiber gives a strictly positive raw depth by its interior ball, hence Q>0. In either formulation S_* is feasible. Each point of a feasible competitor is in some fixed cap whose mass for that competitor is at most Q. Dividing the resulting raw bound by its own total mass yields Q/M(S'), strictly below beta for M(S')>M_*. This contradicts the assumed minimum in exactly the competitor class. Tight inequalities are precisely budget equalities evaluated on S_*.",
+    "For a specified base in P intersect relint conv(P), a representation with positive coefficients at all sites transfers positive volume to that fiber in every compatible positive-mass family. A common positive continuous dilation gives unit volume there. It preserves compatibility and the base projection, bijects ambient halfspaces, and multiplies all masses by the same dth power, so it preserves normalized depth. This normalization is used only for depth comparison, before which the original fixed budgets are interpreted in the volume problem.",
+    "Exact singleton check: with d=1, P={0}, and K_{*,0}=[-1,1], every positive interval has maximal normalized depth 1/2. The two fixed opposite halfspaces through zero have budget one apiece and cover the plane. Since their intersection has length zero on any competitor interval, the budgets imply total length at most two, attained at the original fiber.",
+    "Verified archive b989614dc4f86228 at SHA-256 894c65b9f729ca59cff24bfa23226e047632ef3d245722c2da9e64fe620690e1. Sections 3–4 give the separating support restrictions and exact conditional volume optimum. Section 7 gives the unrestricted whole-plane version. The normalized proof correctly takes the attained depth minimum as a hypothesis and uses no pending existence result."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "admission_status": "Same-wave frozen dependency; independent approval and admission required before this candidate.",
+      "candidate_id": "c073357d2abdba9f",
+      "candidate_sha256": "86e51a1703f03b015e0877bf19bc2fa9234a06522c9a5a4cdad538c1b5495e45",
+      "mapping": "For C_* the convex hull of the compatible lifts, lattice completeness gives precisely S_*=C_* intersect (Z^n times R^d), and M_*>0. The theorem gives a closed nonvertical cover of S_* of size at most 2^n(d+1) at Q=beta M_*. Its cover need not cover the whole base planes, so the support constraints in part 1 remain pertinent.",
+      "reviewed_proof_sha256": "1aad17a3c13962437f778f69701440e6ac1cd5a736b3bcb05a1c845c610c3ad5",
+      "reviewed_statement_sha256": "5b45e870673a2c490165e7fbca73be52e639ebecef4df943fee4e30c1d8b923b"
+    },
+    {
+      "admission_status": "Same-wave frozen dependency; independent approval and admission required before this candidate.",
+      "candidate_id": "755cb08c379113cc",
+      "candidate_sha256": "333ebd70029e9411c1ac6f8bcf0d9484ab2fff8b378d4da40e25f8dade420a11",
+      "mapping": "Apply the compatible-family theorem to S_* with M_*>0. Its Q is the same maximum raw depth beta M_*. Its bound |P|(d+1) and exact coverage of P times R^d give part 2 without support constraints.",
+      "reviewed_proof_sha256": "840f7dc7ddb442a77b5343580bf8eb9a698e7125fc1c509b58ad8b604829b3a2",
+      "reviewed_statement_sha256": "383555f728a9761bed26ebb4bf9fc932dae021fa6a6454e65eac2985318f2488"
+    }
+  ],
+  "finished_utc": "2026-11-08T09:36:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It records the mixed-integer Helly number used in the closed-cover predecessor and deduces a centerpoint lower bound. It does not give a fixed cap-budget volume maximization statement. Searches for accepted fixed cap budgets and fixed-projection minimax formulations found no direct antecedent for either volume formulation.",
+      "fact_id": "6d6fcf377e68c79c"
+    }
+  ],
+  "readability": "In the optional normalization paragraph, a relative-interior fiber means one over a site in the relative interior of conv(P). The title's fixed projection refers to the fixed set of mixed base sites P, whose convex hull is also fixed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0ab2b81347af76338fff2d0ddab6664632bf0addb55d05c95219e390b434775d",
+  "reviewed_statement_sha256": "41fac417d796822f8f23e0cf8211192f7f5d73828b114369cd647519b0d05f00",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:33:34Z",
+  "summary": "At a hypothesized attained fixed-projection depth minimum, fixed cap budgets force a global mixed-volume maximum. A cover of the original mixed set requires at most one separating support halfspace per uncovered plane. An exact whole-plane cover removes those support constraints.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

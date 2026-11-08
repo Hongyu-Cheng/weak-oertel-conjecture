@@ -4,6 +4,7 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 0 | counterexample | nov8-specific-one-over-e-total-dimension-1387 | [a02d398c0677c03a](facts/a02d398c0677c03a.md) |
 | 0 | counterexample | nov7-sharp-total-dimension-19 | [a39d93bee9bf2fe9](facts/a39d93bee9bf2fe9.md) |
 | 0 | counterexample | nov7-sharp-total-dimension-187 | [ad3e63c52f083457](facts/ad3e63c52f083457.md) |
 | 1 | counterexample | nov7-simplex-factor-one-over-e-n52 | [cbe1f4518f7088a7](facts/cbe1f4518f7088a7.md) |

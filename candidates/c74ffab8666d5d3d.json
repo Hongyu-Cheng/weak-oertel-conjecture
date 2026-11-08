@@ -1,0 +1,26 @@
+{
+  "advances": "An unfiltered finite incidence program; no equality with general halfspace depth is asserted.",
+  "author": "PK-research-agent",
+  "candidate_id": "c74ffab8666d5d3d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:52:09.423397+00:00",
+  "depends_on": [],
+  "draft_key": "unrestricted-fractional-hull-packing-dual",
+  "kind": "theorem",
+  "proof": "Each qualifying group contains an inclusion-minimal qualifying subgroup. Transferring its mass to the subgroup preserves objective and can only reduce the vertex charges; combine transfers to identical groups. By Carathéodory's theorem the inclusion-minimal groups have size at most $n+1$. The feasible region is nonempty, closed, and bounded since each group is charged to some vertex and $\\sum_A\\lambda_A\\le\\sum_v w_v$. Thus the primal optimum is attained. Finite linear programming duality gives equality with the minimum over nonnegative $t_v$ and the group inequalities. Replacing any $t_v>1$ by $1$ preserves the inequalities and does not increase objective because $w_v\\ge0$. The resulting dual polytope is nonempty and compact; when no groups exist $t=0$ gives zero.\n\nThe dual value is the minimum of linear functions of $w$ with coefficient vectors in this fixed compact polytope in $[0,1]^P$. This gives concavity, coordinatewise monotonicity, positive homogeneity, and the displayed Lipschitz bound by testing a minimizer for each capacity vector in the other objective. Taking the minimum over the finite list of polytope vertices gives piecewise linearity. Adding two feasible packings at the same $z$ gives superadditivity. The fixed finite target maximum is continuous as a maximum of finitely many functions with that Lipschitz bound. Approximating any nonnegative $w$ by strictly positive vectors proves the last assertion.\n",
+  "source_candidate_ids": [
+    "81d3a9207b6b68f5"
+  ],
+  "source_candidate_sha256": {
+    "81d3a9207b6b68f5": "f67d185ed4a05d80bd738a5ecca9ffac7e81d965bc3c925586493043b00c008f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "81d3a9207b6b68f5",
+      "locator": "81d3a9207b6b68f5:01 §1, support reduction, packing LP, covering dual and weight dependence"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite, $z\\in\\mathbb R^n$, and $w=(w_v)_{v\\in P}\\ge0$. For each nonempty $A\\subset P$ with $z\\in\\operatorname{conv} A$, allow a mass $\\lambda_A\\ge0$ that charges each $v\\in A$ its full value, subject to $\\sum_{A\\ni v}\\lambda_A\\le w_v$. The maximum $f_w(z)$ of $\\sum_A\\lambda_A$ is attained, and restricting to inclusion-minimal qualifying groups does not change it; these have at most $n+1$ points. With those groups, the exact attained dual minimizes $\\sum_v w_v t_v$ subject to $0\\le t_v\\le1$ and $\\sum_{v\\in A}t_v\\ge1$ for every group. If there are no groups both values are zero. At fixed $z$, $f_w(z)$ is nondecreasing, positively homogeneous, concave, piecewise linear and superadditive in $w$, with\n$$\n|f_w(z)-f_{w'}(z)|\\le\\sum_v|w_v-w_v'|.\n$$\nThe maximum over any fixed finite nonempty target set is continuous. Thus any universal bound $\\max_z f_w(z)\\ge c\\sum_v w_v$ over that fixed target set for positive weights extends to nonnegative weights.",
+  "subgoal_id": "pk-intake-unrestricted-fractional-hull-packing-dual",
+  "title": "Exact fractional convex-hull packing duality on arbitrary finite real supports"
+}

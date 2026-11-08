@@ -1,0 +1,100 @@
+{
+  "candidate_id": "1304ae1e2cbf0932",
+  "candidate_sha256": "520cc3740e51329325a1fa84bd855755036d96896112fb280b57106656ceeea8",
+  "checked_dependency_candidate_sha256": {
+    "265eb94234158b2c": "782c8fde390e4e77d1ef7eb06f7ceb76169f1bea34d23664c06f9bb2c4d430cb",
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "Compared the exact original and revision. The only changed JSON field is the statement, and within it the only change is the compact convex body premise. The proof and dependency IDs are byte-identical.",
+    "The middle body is now a compact convex body as required for the old hull to realize the same K on both middle layers and for the exact-depth parent. Each endpoint homothet remains a compact convex body inside its old endpoint, hence inside the reflected core, with equal positive volume a/(1+ε)^d for every finite ε≥0.",
+    "The parent theorem computes raw depth q+a_ε and total mass 2(V+a_ε) for those actual sampled fibers. The fixed support-cut body has exactly those fibers, so canonicalization does not alter its mixed depth. The old cap strict full/empty traces persist on the contracted endpoint subsets.",
+    "The earlier exact checks of the efficiency, support-cut equivalence, normalization derivative and planar fractions still apply because the proof is unchanged. The revised premise rules out the nonconvex example in the original review."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "265eb94234158b2c",
+      "candidate_sha256": "782c8fde390e4e77d1ef7eb06f7ceb76169f1bea34d23664c06f9bb2c4d430cb",
+      "draft_key": "equal-middle-reflected-core-depth",
+      "mapping": "The independently approved parent applies with the revised compact convex K, its ordinary deepest mark g, and both homothetic endpoints inside K∩(2g−K) of equal positive volume. It supplies exact mixed depth and the unchanged isolating menu structure.",
+      "reviewed_proof_sha256": "c4e080735232bbd73fcc61ab80317e656f5f0c4de32b79ea63f434a37eb2c48e",
+      "reviewed_statement_sha256": "288a390bd238b684fdb2d2f12b59412c72cf6661cc43c2c2b4ca0824a56cbd57"
+    },
+    {
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "mapping": "The full-mass metronoid centroid case applies to the compact convex planar calibration triangle, giving ordinary depth at least 2/9 at its centroid. The three canonical centroid caps give the matching upper bound."
+    }
+  ],
+  "finished_utc": "2026-11-08T19:00:34Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "1304ae1e2cbf0932",
+    "candidate_sha256": "1d511d352ac8621f6767d81cbb113c416568b0bbb1e8128ceca9532dc13f3fe1",
+    "checks": [
+      "For a compact convex K the affine positive-part fields vanish on the other old sampled fibers for a uniform finite base penalty. The total paying boundary integral is da at each endpoint by the divergence theorem, including d=1. The selected menu includes exactly its paying endpoint, so both efficiencies are exactly one half.",
+      "On the old hull the new support cuts preserve both middle fibers and produce precisely the two center homothets. The bound is an equivalence because the centered supports are strictly positive. For fixed n the real support roof is a finite concave polyhedral envelope in z, giving a closed convex set when intersected with the convex support constraints.",
+      "With convex K, both contracted endpoints stay in the reflected core. The predecessor computes the actual depth from the identical sampled fibers, and the original cap statuses persist on the contracted subsets. Differentiation uses a'_0=−da and q≤V/2.",
+      "Independent exact arithmetic verifies every endpoint corner and reflection lies strictly inside the triangle, both endpoint areas are 1/100, the first centroid coordinates are 1/4,1/3,1/3,1/2, and Q=209/900, M=51/50, Q/M=209/918=2/9+5/918. The normalized limit is q/(2V)=2/9."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "265eb94234158b2c",
+        "candidate_sha256": "782c8fde390e4e77d1ef7eb06f7ceb76169f1bea34d23664c06f9bb2c4d430cb",
+        "draft_key": "equal-middle-reflected-core-depth",
+        "mapping": "The predecessor is independently approved and would apply to the unchanged compact convex middle body and the two equal positive-volume contracted endpoints inside its reflected core. The frozen standalone statement must explicitly assume that K is a compact convex body.",
+        "reviewed_proof_sha256": "c4e080735232bbd73fcc61ab80317e656f5f0c4de32b79ea63f434a37eb2c48e",
+        "reviewed_statement_sha256": "288a390bd238b684fdb2d2f12b59412c72cf6661cc43c2c2b4ca0824a56cbd57"
+      },
+      {
+        "fact_id": "6769574fc1bd9f8d",
+        "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+        "mapping": "Use its full-mass metronoid at the centroid of the full-dimensional planar triangle to get the ordinary lower bound 2/9. The three canonical caps provide the matching upper bound."
+      }
+    ],
+    "finished_utc": "2026-11-08T18:56:21Z",
+    "issues": [
+      {
+        "defect": "The statement gives K a volume and deepest mark but does not require K to be a compact convex body. The predecessor and the fixed middle hull section both require convexity. For example in d=1 take K=[−2,−1]∪[−1/2,1/2]∪[1,2], g=0, and A=C=[−1/4,1/4]. The ordinary raw maximum on K is 3/2 and the two opposite through-g caps balance, but each middle section of the ambient hull is [−2,2], not K. Its actual normalized maximum at ε=0 is 5/18 rather than the stated 2/7.",
+        "locator": "Statement, opening sentence; proof, paragraph applying the exact depth theorem",
+        "repair": "In the opening sentence say that K is a compact convex body in R^d, with the rest of the statement and proof unchanged.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "The accepted support-cut theorem treats compatible first speeds for small t. The frozen action gives exact endpoint homothets, fixed middle fibers, and exact all-parameter normalized depth with these prescribed menus.",
+        "fact_id": "8820984cf6a6942e"
+      }
+    ],
+    "readability": "The exact all-ε deformation is explicit once the missing middle-body hypothesis is supplied.",
+    "reviewed_proof_sha256": "9cbd52181f25c8d891012c227ca7f223e2036c44522c26d956d1ade650847625",
+    "reviewed_statement_sha256": "5b9438f114d616ca757a2f51d7672e69a3b9f5e2bac23c132dd086e1fb2b71b7",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T18:52:52Z",
+    "summary": "The field, support cuts, and planar exact calculations work for a compact convex middle body, but that essential hypothesis is missing from the standalone statement.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted support-cut theorem treats compatible first speeds for small t. The frozen action gives exact endpoint homothets, fixed middle fibers, and exact all-parameter normalized depth with these prescribed menus.",
+      "fact_id": "8820984cf6a6942e"
+    }
+  ],
+  "readability": "The needed geometric hypothesis now appears in the first sentence.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "9cbd52181f25c8d891012c227ca7f223e2036c44522c26d956d1ade650847625",
+  "reviewed_statement_sha256": "b5783a3ad111142489eda1f36410e01e7b45ecaaf07392c33be5dedee0ffae34",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "1d511d352ac8621f6767d81cbb113c416568b0bbb1e8128ceca9532dc13f3fe1",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:59:57Z",
+  "summary": "The revised opening explicitly requires a compact convex middle body, which repairs the only substantive issue in the original review. The reflected-core theorem now applies to the entire exact endpoint contraction.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

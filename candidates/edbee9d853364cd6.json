@@ -1,0 +1,26 @@
+{
+  "advances": "An obstruction to a proposed support-sum inequality for ordinary planar cap data and section capacities. The separate full triangular endpoint theorem includes actual midpoint containment and facet extrusion.",
+  "author": "PK-research-agent",
+  "candidate_id": "edbee9d853364cd6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:46:44.116992+00:00",
+  "depends_on": [],
+  "draft_key": "ordinary-support-sum-cap-profile-counterexample",
+  "kind": "counterexample",
+  "proof": "Denote the displayed vertices by $P,Q,R$ in order and put $e=1/100000$, $\\tau=1/10000$, $\\eta_0=1/100$, $W=7/2$. The vertical side $PQ$ has length $e$, with horizontal altitude $W$, so $a=|A|=We/2=7/400000$. In each of the coordinates $x$, $y$, and $x+y$, vertex $R$ lies strictly above the respective threshold $-1,-1,1$, and $P,Q$ lie strictly below it. These strict inequalities make each cut proper.\n\nIn the $x$ cut the intersections on $RP,RQ$ lie at common edge fraction $6/7$ from $R$. Thus the section length is $(6/7)e$, and the fraction of area captured is $36/49$. In the other two cuts the value at $R$ exceeds the threshold by $\\tau$. For $y$ the drops from $R$ to $P,Q$ are $s,s+e$ with $s=\\eta_0+\\tau$. For $x+y$ they are $s,s+e$ with $s=35101/10000$. The two edge fractions are therefore $\\tau/s,\\tau/(s+e)$. The horizontal distance between the two section endpoints is $W\\tau e/[s(s+e)]$. On a horizontal line this equals the section length. On the diagonal line $x+y=1$ it equals the section length divided by $\\sqrt2=\\lVert v_3\\rVert$. For the smaller $s=\\eta_0+\\tau>1/100$ the expression is less than $7/200000$, hence all three normalized lengths are below $1/1000$. The vertices of $T$ are $(1,1),(1,-2),(-2,1)$, so its area is $9/2$ and its facet lengths are $3\\lVert v_i\\rVert$.\n\nThe relative area of a triangle at $R$ formed by these edge fractions is their product, by the determinant formula. Hence the caps in the three normal directions have fractions\n$$\n\\frac{U_x}{a}=\\frac{36}{49},\\qquad\n\\frac{U_y}{a}=\\frac{\\tau^2}{(\\eta_0+\\tau)(\\eta_0+\\tau+e)}<\\frac1{10000},\\qquad\n\\frac{U_3}{a}=1-\\frac{\\tau^2}{(35101/10000)(35101/10000+e)}.\n$$\nThe last fraction is greater than $1-1/10000$, so $U_y<U_x<U_3$. In particular $F/a<1/10000+36/49+1/4<1$, and $a<|T|$. Finally the support sum is\n$$\nS=2-\\frac{9999}{10000}+\\frac{251001}{100000}=\\frac{351011}{100000}.\n$$\nUsing $F<a$, $S<3511/1000$, and $a<1/10000$ gives\n$$\nS+(8/3)F-a-9/2\n<S+(5/3)a-9/2\n<3511/1000+1/6000-9/2<0.\n$$\n",
+  "source_candidate_ids": [
+    "a4d1de823a8bc1e7"
+  ],
+  "source_candidate_sha256": {
+    "a4d1de823a8bc1e7": "244af9661b0a317919196d5f507e7675e76fa7acfbd8bddd67b49fb8c3c70853"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a4d1de823a8bc1e7",
+      "locator": "a4d1de823a8bc1e7:01 Proof (1), explicit A triangle, normalized section lengths and cap areas"
+    }
+  ],
+  "statement": "Use $v_1=(1,0)$, $v_2=(0,1)$, $v_3=(-1,-1)$, $T=\\{x:v_i\\cdot x\\le1\\ \\forall i\\}$, and\n$$\nA=\\operatorname{conv}\\{(-3/2,-101/100),\\,(-3/2,-101/100-1/100000),\\,(2,-9999/10000)\\}.\n$$\nAll three lines $v_i\\cdot x=-1$ cut the interior of $A$. Their normalized section lengths $\\mathcal H^1(A\\cap\\{v_i\\cdot x=-1\\})/\\lVert v_i\\rVert$ are below $1/1000$, and the corresponding normalized facet capacities of $T$ are $3$. Let $U_{(1)}\\le U_{(2)}\\le U_{(3)}$ be the sorted areas of $A\\cap\\{v_i\\cdot x\\ge-1\\}$, put $F=U_{(1)}+U_{(2)}+U_{(3)}/4$ and $S=\\sum_i\\max_A v_i\\cdot x$. Then $F<\\min(|A|,|T|)$ but $S+(8/3)F<|A|+|T|$.",
+  "subgoal_id": "pk-intake-ordinary-support-sum-cap-profile-counterexample",
+  "title": "Proper planar cuts and their actual section capacities do not force the support-sum inequality"
+}

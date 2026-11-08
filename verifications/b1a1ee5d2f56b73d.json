@@ -1,0 +1,104 @@
+{
+  "candidate_id": "a08d5d7eb661a955",
+  "candidate_sha256": "b49e22c681c611bcebde63a3b41b316a1af1ad428d1d8b91f3ebb6192a41f502",
+  "checked_dependency_candidate_sha256": {
+    "7822334375482bff": "ec1b09a5e8f055b2e7d7c878c40c46aad3a3d7eec98305b1966ed9fb77f8d87e"
+  },
+  "checks": [
+    "Verified the original frozen file and its decoded statement/proof hashes against the initial CHANGES_REQUESTED review. Only the proof changed. Its first two paragraphs, exact statement, source locator and dependency are unchanged.",
+    "For each part let E be the direction space of its affine base hull. Its compact convex hull has a relative interior in its translate of E, and the radius-1/4 ball has a relative interior in E-perp. Their Minkowski sum is full-dimensional in R^3. Its intersection with the old affine hull is exactly the old hull, since a vector in both E and E-perp must be zero.",
+    "For F, the affine hull is y+z=2. At an integer point off it, |y+z−2| is at least one, so the distance is at least 1/√2. For the line through 0 and 2e₁, a nonzero integer y or z gives distance at least one. For each singleton, a different lattice point has Euclidean distance at least one. Each lower bound exceeds 1/4, so no integer base is added.",
+    "The unit interval product is full-dimensional in R^3×R and gives ordinary auxiliary fiber volume one at each old site. The affine height x/2 on F extends to the whole base, and all other displayed heights are constant and likewise extend. Applying (p,u)↦(p,b_part(p)) gives exactly the required unit atoms while preserving the original bases.",
+    "Recomputed the exact disjoint parts from the predecessor census. Their site counts are 5,3,1,1,1,1, their occupied parities 3,2,1,1,1,1 and their sampled affine ranks 2,1,0,0,0,0, giving cost nine and rank-power sum ten. The unchanged parity-000 affine-basis and forced parity-011 midpoint argument still excludes total cost eight, including fractional allocations and auxiliary dimension zero."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7822334375482bff",
+      "candidate_sha256": "ec1b09a5e8f055b2e7d7c878c40c46aad3a3d7eec98305b1966ed9fb77f8d87e",
+      "reviewed_proof_sha256": "5d9c6a394616128cc2089bf0542a95c14d8daa4de87123eafe1c06b461c4c249",
+      "reviewed_statement_sha256": "622b40e2b2febf7229083a713cbae2cb1af60684788dfaf43876e4e378b3d68f",
+      "verification": "The unchanged same-batch predecessor is independently approved on exactly these bytes. It gives the twelve sites, eight parities, singleton heights, and the F and line census used here. The amended transverse thickening is proved directly."
+    }
+  ],
+  "finished_utc": "2026-11-08T19:01:04Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "a08d5d7eb661a955",
+    "candidate_sha256": "d23a89ec1f2bbbd65aaa7b253972e84bd2ce17c4e9bac21a9a5b19fbf2b9be34",
+    "checks": [
+      "Checked original 64f65a59b216d00b:03 §5 and the exact same-batch census. A positive part has no measure off the unique allowed atom at its base. If its auxiliary dimension is positive and L_i is nonzero, the points mapping to that atom lie on a null hyperplane, contradicting positive ordinary volume. In auxiliary dimension zero no continuous term is present. Each piece has a single affine height over the original base.",
+      "With parity cost at most eight, every one of the eight parities occurs in exactly one part, even with fractional atoms. The four 000 points put an affine basis at height zero in one part. The midpoint of 2e₂ and 2e₃ must carry positive auxiliary volume, since it contains the average of their positive fibers. In dimension zero it is nonempty and has counting mass one. The part then occupies 011, hence must carry the r atom at height one, contradicting its zero affine height.",
+      "Exact census check gives F of five sites, [0,2e₁] of three sites, and the four displayed singleton sites, all disjoint and complete in their hulls. Their parity charges are 3,2,1,1,1,1 and their ranks 2,1,0,0,0,0. Thus the proposed part census gives both 9 and 10 once the permitted full-dimensional realizations are supplied.",
+      "Explicitly verified a uniform repair. For each part's base hull Q, add a radius-1/4 ball in the subspace perpendicular to the direction of aff(Q), then take the product with the unit interval. An integer point off the original affine hull has distance at least 1/√2 for F, or at least one for the line and singleton parts. An integer point in the affine hull is unchanged by that transverse thickening. Thus the actual fibers, height pushforwards and charge calculations remain exact."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "7822334375482bff",
+        "candidate_sha256": "ec1b09a5e8f055b2e7d7c878c40c46aad3a3d7eec98305b1966ed9fb77f8d87e",
+        "reviewed_proof_sha256": "5d9c6a394616128cc2089bf0542a95c14d8daa4de87123eafe1c06b461c4c249",
+        "reviewed_statement_sha256": "622b40e2b2febf7229083a713cbae2cb1af60684788dfaf43876e4e378b3d68f",
+        "verification": "Same-batch theorem supplies exactly P, its eight parities, the singleton heights and the F and line census. Its frozen input has been independently approved here."
+      }
+    ],
+    "finished_utc": "2026-11-08T18:56:46Z",
+    "issues": [
+      {
+        "defect": "The exhibited products have ambient dimension at most three inside the original base R³ times the auxiliary interval, hence are not convex bodies in that ambient space under the usual nonempty-interior convention. The statement does not say that relatively full-dimensional source bodies suffice. The lower bound is unaffected, but these products alone do not prove attainment in the literal full-dimensional class.",
+        "locator": "Proof final paragraph, sentence beginning “Its hull times a unit auxiliary interval”",
+        "repair": "Replace the product construction by its orthogonally thickened version. For each part's base hull Q add the closed radius-1/4 ball in the subspace perpendicular to the direction of aff(Q), and take the product with the unit interval. Off-plane integer sites are at distance at least 1/√2 for F and at least one for the line and singletons. In-plane fibers are unchanged. Use the same displayed height maps. This proves attainment even with full ambient dimension and no additional graph dependency.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its canonical lift can add integer coordinates and change affine rank while preserving occupied parities. The present obstruction fixes the original base coordinates within every positive affine pushforward, a different allocation class.",
+        "fact_id": "04c4009af6a7a76c"
+      },
+      {
+        "comparison": "Its cost-eight versus four example restricts minors to support-roof contact faces of a positive triangular family. The current class permits arbitrary positive affine-graph decompositions, including fractional allocations, and obtains nine versus eight for a hollow atomic law.",
+        "fact_id": "66b49bb5db3f612f"
+      },
+      {
+        "comparison": "Its rank-deficient thickening preserves integer sections and explains the missing construction step, but says nothing about the affine-height obstruction or the exact parity-cost minimum.",
+        "fact_id": "246870f33de53498"
+      }
+    ],
+    "readability": "The obstruction charges the original occupied lattice parities of each positive part. The rank powers are stated only for the exhibited partition.",
+    "reviewed_proof_sha256": "86e6f019ddeff1017f9993edf6c55b203dc3e166a30df91ea6bfc0a5c627edb0",
+    "reviewed_statement_sha256": "e57d6a4af65c0cd8cd505cf293b332ff21f9abf6207e205048fd71ff34557529",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T18:49:57Z",
+    "summary": "The fractional-allocation lower bound and the costs of the partition are correct. The written unit-interval products are only relatively full dimensional and need one explicit thickening step to meet the ordinary full-dimensional convex-body convention over the original ambient base.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its canonical lift can add integer coordinates and change affine rank while preserving occupied parities. The present obstruction fixes the original base coordinates within every positive affine pushforward, a different allocation class.",
+      "fact_id": "04c4009af6a7a76c"
+    },
+    {
+      "comparison": "Its cost-eight versus four example restricts minors to support-roof contact faces of a positive triangular family. The current class permits arbitrary positive affine-graph decompositions, including fractional allocations, and obtains nine versus eight for a hollow atomic law.",
+      "fact_id": "66b49bb5db3f612f"
+    },
+    {
+      "comparison": "That accepted proof uses a section-preserving transverse thickening after lattice coordinates are changed. This revision directly thickens the six hulls without changing their original lattice coordinates and verifies their individual exact distance bounds. The predecessor does not give the cost-nine affine-height obstruction.",
+      "fact_id": "246870f33de53498"
+    }
+  ],
+  "readability": "The charged affine ranks belong to the sampled positive base sets of the parts. Transverse thickening adds real base dimensions and preserves those sampled sets.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ac7c8f2d29331d9c24ff1c2662cd550c7411824647a69c2554dc50e57609e25e",
+  "reviewed_statement_sha256": "e57d6a4af65c0cd8cd505cf293b332ff21f9abf6207e205048fd71ff34557529",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "d23a89ec1f2bbbd65aaa7b253972e84bd2ce17c4e9bac21a9a5b19fbf2b9be34",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:00:13Z",
+  "summary": "The revision supplies full-dimensional attainment over the original ambient lattice while retaining exactly the twelve-site partition and its parity charges.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

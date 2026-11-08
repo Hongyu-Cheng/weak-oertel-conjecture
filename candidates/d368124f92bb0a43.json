@@ -1,0 +1,30 @@
+{
+  "advances": "Ordinary raw mixed depth; universal choice of one positive circuit per fixed parity witness, including coincident supporting sections at other fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "d368124f92bb0a43",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.847482+00:00",
+  "depends_on": [
+    "55a57b1cf55d0c87",
+    "755cb08c379113cc",
+    "347dc8c30a1e79ad"
+  ],
+  "draft_key": "ordinary-fixed-face-critical-circuit-cover",
+  "kind": "lemma",
+  "proof": "The finite nonempty integer base set of $C$ is lattice-complete by convexity. Its lifted actual sections are compatible, since the ambient hull of those sections is contained in $C$ and contains each original section. Fact 55a57b1cf55d0c87 gives positive depth at an interior point of any positive fiber and zero depth at all other marks that lack an own interior. Raw depth is upper semicontinuous: if a containing closed cap has mass below a given threshold, one can enlarge it slightly to contain a neighborhood of the mark while staying below that threshold, by continuity from above of its finite measure. The mixed set is compact, so the maximum is attained, is positive, and all deepest marks are own-interior. Each deepest mark is also a fiber maximizer, so that fact supplies the indicated circuit (with at most $d+1$ caps).\n\nThe convex combination of finitely many deepest marks has ambient depth at least $Q$, since every containing halfspace contains at least one input of positive weight. If its base is integer it is an actual mark of $C$ and has depth exactly $Q$. Consequently $I=\\operatorname{conv}I\\cap\\mathbb Z^n$.\n\nFix any circuit through $Y$. If one critical cap strictly contained another deepest mark, raising its threshold by a sufficiently small positive amount would retain that mark and remove a positive $d$-volume slab of the anchor's own interior ball at $Y$. This contradicts the other mark's depth $Q$. Summing the nonpositive margins with weights $\\rho_j$ cancels the continuous term and yields $A\\cdot z-h\\le0$ on $\\operatorname{conv}I$, with equality at $p$. Its equality face contains $F(p)$, also when the affine functional vanishes on the whole hull. At any $(z,x)$ above $F(p)$ the sum is zero, so one margin is nonnegative and the corresponding closed cap contains $(z,x)$. At deepest marks above the face all margins were already nonpositive, so positivity of the weights forces all of them to vanish. Fact 347dc8c30a1e79ad applies to the complete set $I$. Its maximal occupied minimal faces cover $I$ by maximality in a finite family, with pairwise distinct witness parities, giving the last claim.\n",
+  "source_candidate_ids": [
+    "4a38a3cfd6733dce"
+  ],
+  "source_candidate_sha256": {
+    "4a38a3cfd6733dce": "2fa1b2fcb3f1bbb66563422fe9ae23271f1ebe858ee85ebd240909b0fc891063"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4a38a3cfd6733dce",
+      "locator": "4a38a3cfd6733dce:04 §2 critical contact and §3 Theorem 3, (2)"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact and convex, $n,d\\ge1$, with positive summed $d$-volume on its integer fibers. Use the resulting measure $\\mu$ and raw depth given by the infimum of masses of containing closed ambient halfspaces. Write $Q$ for the maximum over the mixed set and $I$ for the integer bases carrying a point of depth $Q$. At each deepest mark $Y=(p,y)$ a finite positive circuit of critical caps exists: these are nonvertical closed caps $H_j=\\{a_j\\cdot z+u_j\\cdot x\\ge b_j\\}$ through $Y$, with $\\mu(H_j)=Q$, $\\lVert u_j\\rVert=1$, and weights $\\rho_j>0$ with $\\sum_j\\rho_j u_j=0$.\n\nFor every such circuit, each of its margins is nonpositive at every deepest mark. Its weighted margin $A\\cdot z-h$, with $A=\\sum_j\\rho_j a_j$ and $h=\\sum_j\\rho_j b_j$, is nonpositive on $\\operatorname{conv}I$ and vanishes on the minimal face $F(p)$ containing $p$. Thus the caps cover the whole continuous plane over every $z\\in F(p)$, and each cap binds at every deepest mark there. Choose one witness in the relative interior of each inclusion-maximal occupied minimal face, using only $I$. Every choice of one circuit at each of these at most $k(I)\\le2^n$ witnesses covers all the deepest planes, where $k(I)$ counts occupied base parities.",
+  "subgoal_id": "pk-intake-ordinary-fixed-face-critical-circuit-cover",
+  "title": "Every ordinary critical circuit covers its fixed deepest face"
+}

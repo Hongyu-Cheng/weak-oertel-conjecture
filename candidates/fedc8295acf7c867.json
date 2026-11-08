@@ -1,0 +1,29 @@
+{
+  "advances": "A restriction of the whole-fiber decomposition method for one actual compatible three-fiber body and one tested cap through its centroid. The balanced peeling class allowing densities to vary within each fiber has different hypotheses.",
+  "author": "PK-research-agent",
+  "candidate_id": "fedc8295acf7c867",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:46:44.118129+00:00",
+  "depends_on": [
+    "dfd25e72c1f45a4e",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "whole-fiber-centroid-decomposition-proportionality",
+  "kind": "counterexample",
+  "proof": "At each extreme base the hull has exactly the specified extreme fiber. At base $1$, a convex combination has equal weights on the endpoints. Their mean slice is $(K_0+K_2)/2=K_0\\subseteq K_1$, so the section there is exactly $K_1$. The hull projects onto $[0,2]$ and is full-dimensional. The three positive volumes are $1,3/2,1$, and the fiber means in $x_1$ are $1/2,3/4,1/2$. Therefore the total mass is $7/2$, the base mean is $1$, and the mean in $x_1$ is $(1/2+(3/2)(3/4)+1/2)/(7/2)=17/28$. The other continuous coordinates all have mean $1/2$. Every fiber has mass below $M/2$.\n\nLet $(m_0,m_1,m_2)$ be the three masses of a nonzero component. If its base centroid is $0$ or $2$, it is supported on that extreme fiber, whose mean $x_1=1/2$ violates the sign requirement. The integer base centroid must therefore be $1$, so $m_0=m_2=m$. Its unnormalized cap-coordinate moment is $(4m_1-6m)/28$. The moment condition forces $m_1\\ge3m/2$. Across the components the sums of $m$ and $m_1$ are $1$ and $3/2$. All individual excesses $m_1-3m/2$ are nonnegative with sum zero, so each is zero. As the densities are constant on each whole fiber, the mass vector $m(1,3/2,1)$ means the component measure is exactly $m\\mu$. In particular its mass is positive only when $m>0$, and its entire centroid is $g$.\n\nFor a positive submeasure $\\sigma\\le\\mu$ with masses $b_z$, total $m_\\sigma$ and centroid $g=(1,g_x)$, its positive-mass conditional centroids belong to $\\mathsf M_{b_z}(K_z)$. The proof of dfd25e72c1f45a4e establishes convexity of the positive-root lift itself. Averaging with coefficients $b_z/m_\\sigma$ places $g_x$ in the original middle-fiber metronoid of mass $\\bigl(\\sum_z b_z^{1+1/d}/m_\\sigma\\bigr)^d$. The selected trace of $H$ is a closed halfspace containing $g_x$, so 6769574fc1bd9f8d yields a lower bound on the actual middle trace equal to that mass times $\\gamma_d=(d/(d+1))^d$. This mass is $m_\\sigma/N_{\\mathrm{eff}}(\\sigma)$ with $N_{\\mathrm{eff}}(\\sigma)=(\\sum_z (b_z/m_\\sigma)^{1+1/d})^{-d}$. For the proportional components these probabilities are unchanged. The mass budgets scale with $c_j$, and all output traces coincide. The sum of the numerical budgets is the original budget because $\\sum_j c_j=1$.\n\nFor the original masses $a_z\\in\\{1,3/2,1\\}$, the formula for $N_{\\mathrm{eff}}$ follows by substitution. Since $\\sum_z a_z^{1+1/d}\\le (3/2)^{1/d}M$, one has $N_{\\mathrm{eff}}\\ge M/(3/2)=7/3>2$. At $d=1$, $M^2/[2+(3/2)^2]=49/17$.\n",
+  "source_candidate_ids": [
+    "44ef464aee6ac356"
+  ],
+  "source_candidate_sha256": {
+    "44ef464aee6ac356": "9175033b4c05e9af49e88a912217f3e7b819fe51866a7f31ce7695c8c4e2f6dc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "44ef464aee6ac356",
+      "locator": "44ef464aee6ac356:01 §§1–3, three actual fibers, proportionality and effective count"
+    }
+  ],
+  "statement": "For each $d\\ge1$, let $Q=[0,1]^{d-1}$ with the point convention for $d=1$. Take the convex hull of the lifted fibers $K_0=K_2=[0,1]\\times Q$ and $K_1=[0,3/2]\\times Q$ at integer bases $0,1,2$. Their summed $d$-volume $\\mu$ has mass $M=7/2$ and centroid $g=(1,17/28,1/2,\\ldots,1/2)$. Test the closed cap $H=\\{x_1\\ge17/28\\}$. In every finite decomposition $\\mu=\\sum_j\\mu_j$ into nonzero positive measures whose densities are constant on each whole fiber, if each component has integer base centroid and nonnegative mean $x_1-17/28$, then $\\mu_j=c_j\\mu$ for some $c_j>0$. Every such component has the same effective count\n$$\nN_{\\mathrm{eff}}=\\frac{M^{d+1}}{[\\,2+(3/2)^{1+1/d}\\,]^d}\\ge7/3>2,\n$$\nequal to $49/17$ for $d=1$, and the same centroid and output fiber. The componentwise own-fiber root bounds have the original numerical coefficients scaled by $c_j$, so their numerical sum recovers the original bound.",
+  "subgoal_id": "pk-intake-whole-fiber-centroid-decomposition-proportionality",
+  "title": "Whole-fiber reweightings can force every integer-centered component to be proportional"
+}

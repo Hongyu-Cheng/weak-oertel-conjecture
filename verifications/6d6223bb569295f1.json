@@ -1,0 +1,73 @@
+{
+  "candidate_id": "7ca72de8ea9cdc39",
+  "candidate_sha256": "01e271e5a1ffdcbc25e9dc2ca1a6023cd0f47282d91c7fd105cccb179ba46122",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "53fe12b742a7608d": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7",
+    "ac7ba1e1e0ebc955": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df"
+  },
+  "checks": [
+    "The existing ordinary profile inequality applies to the full-dimensional K and this D+1-cap cover for each α>0. For every cap with A_i>α, a finite distal threshold removes exactly A_i−α by continuity and hyperplane nullity.",
+    "The trimmed intersection K′ has mass at least α/γ and each old cap retains at most α. Its covered maximum normalized depth is at most α/|K′|, so ordinary depth rigidity forces equality in volume and makes K′ a simplex. The union bound is then tight and the removed pieces have pairwise zero-volume overlap.",
+    "Every cap containing the centroid of K′ has mass α. If the centroid were strictly inside that cap, a positive-volume interior slab could be removed before reaching its through-centroid cap, whose mass is still at least α. Thus the equality-direction result applies to the original plane and orientation.",
+    "A proper subset of the canonical directions fails to cover any neighborhood of the centroid by barycentric increments of sum zero and negative entries on the selected indices. Hence all D+1 original caps are distinct and canonical, even if empty or repeated caps were permitted initially.",
+    "A positive removed piece contains an interior point strictly below every other retained plane. The segment from the centroid crosses its cutting plane with all other inequalities strict, producing a genuine (D−1)-facet. Its canonical outward normal can expose only one vertex, a contradiction for D≥2.",
+    "The converse and α=a specialization follow from the canonical vertex homothety and from removing the positive part at the minimum. The proof matches 3bb0f1835a5838c5:01 §§1–4 including the positive-level profile extension."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ac7ba1e1e0ebc955",
+      "candidate_sha256": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+      "fact_sha256": "9a7fcf050afaf6a170e1e9c222468d3d36986633f09439295647be2cc1b17fd7",
+      "hypotheses": "Its ordinary-volume clause applies to the stated full-dimensional compact convex body and finite nonzero-normal covering caps at α>0.",
+      "kind": "accepted",
+      "reviewed_proof_sha256": "76922090615d5ce7641a49c1ff447e454326f5634bc45eff19e5aa9daf91279f",
+      "reviewed_statement_sha256": "bc29bec04a379e95f5f6632e6ed13ef21f0726dfed029e01d071527d2787773a"
+    },
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "hypotheses": "The lower volume bound α/γ makes K′ full-dimensional and compact. Its covered maximum depth is at most α/|K′|≤γ, so the accepted ordinary sharp-depth characterization gives simplex rigidity.",
+      "kind": "accepted",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb"
+    },
+    {
+      "candidate_id": "53fe12b742a7608d",
+      "candidate_sha256": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7",
+      "fact_sha256": "17ab511a4692218e7e43724b35ffc6d2e01334fcd30453922acfa030abab0c57",
+      "hypotheses": "After identifying K′ as a full-dimensional simplex, its through-centroid cap lower bound and exact equality directions apply to each of the original caps containing the centroid. Normals can be divided by their positive lengths.",
+      "kind": "accepted",
+      "reviewed_proof_sha256": "1e85b289572563955be7b80c21339b8b799e57fa624f2527f26097c14e949b49",
+      "reviewed_statement_sha256": "e366513ae78549652332a52118bb60792388769ee765b4cc01dd53819fd3f98c"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:56:03Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It proves the inequality and exhibits the canonical equality example for D+1 caps. It leaves open the necessity of that configuration and does not show that equality permits no positive trimming.",
+      "fact_id": "ac7ba1e1e0ebc955"
+    },
+    {
+      "comparison": "Its hypothesis is a concurrent cap cover of all ambient space with every cap budget at most γ|K|, whereas these input caps need only cover K and can initially have unrelated offsets and cap masses. The trimming and equality argument identifies the exact originals.",
+      "fact_id": "a68ba73ab76495b6"
+    }
+  ],
+  "readability": "The facet contradiction uses a supporting plane of the trimmed body K′, with its outward orientation fixed by the discarded distal side.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c92ff78eccfa02852871ff396f8a7f1356f7aa5929f19b1a545db0c05d6eaac4",
+  "reviewed_statement_sha256": "037bf34715558d02b58c41833d647768af4c3b20653c4f4259d517dc3405b527",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:51:16Z",
+  "summary": "The frozen proof establishes the positive-profile equality classification and the minimum-cap overlap specialization.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

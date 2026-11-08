@@ -1,0 +1,29 @@
+{
+  "advances": "The normalized first response of the fixed canonical cap average on an actual three-fiber planar family. The obstruction concerns the common rescaled convex field class.",
+  "author": "PK-research-agent",
+  "candidate_id": "d64140b1c809a139",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:46:44.115934+00:00",
+  "depends_on": [
+    "84cd8a85417b0d7a",
+    "c4ebd085f1b2ab31"
+  ],
+  "draft_key": "homothetic-triangle-common-convex-payment-obstruction",
+  "kind": "counterexample",
+  "proof": "The radii at the integer bases are $a=19/20$, $1$, $b=21/20$. Their midpoint equality gives the stated actual compatible family. In the exact triangle theorem c4ebd085f1b2ab31, $(a+b)^2=4<(9/2)a^2\\le(9/2)b^2$ and the middle raw depth $6$ exceeds both endpoint maxima. The canonical minimizing tilt is $a-b=-1/10$ and the total area is $5409/400$. On the reference triangle in the fiber of base $z$, the cap $H_j$ is the region where the barycentric coordinate of the vertex maximizing $u_j$ is at least\n$$\nq_z=\\frac{r(z)+z/10}{3r(z)}.\n$$\nThese thresholds are $17/57,1/3,23/63$. All three traces are proper in each fiber. Indeed $0<q_z<1/2$, and the vertex margin is $2r(z)-z/10=2$.\n\nFor fixed $n$, the field $r(z)h_T(n)\\psi(n,x/r(z))$ is convex in $(z,x)$ because $r$ is affine and positive and $h_T(n)>0$. In a convex combination the normalized points $x/r(z)$ combine with weights proportional to the corresponding $r(z)$, so convexity of $\\psi(n,\\cdot)$ gives the claimed convexity. The right side is affine in $z$ and equals the old support at every base. The radial loss theorem 84cd8a85417b0d7a therefore applies to this single global-cut action. It preserves positive compatible fibers for small $\\varepsilon$ and gives the first losses by boundary integration of this field, with the proper-cap indicator for $D(H_j)$.\n\nParametrize a reference edge of $T$ by $t\\in[0,1]$ between its endpoints. The cap for the opposite vertex misses that edge. The other two indicators have sum $1+\\mathbf1_{[q_z,1-q_z]}(t)$ off a finite set of endpoints. The average of the three indicators is $W_{q_z}(t)=(1+\\mathbf1_{[q_z,1-q_z]}(t))/3$. Let $S=\\sum_{z=-1}^1 r(z)^2$ and $w(t)=\\sum_z r(z)^2W_{q_z}(t)/S$. Each summand is symmetric about $1/2$ and nonincreasing on $[1/2,1]$. Its integral is $2(1-q_z)/3$. Since $r(z)(1-q_z)=2/3$ and $\\sum_z r(z)=3$, the mean of $w$ is $4/(3S)=6/[(9/2)S]=\\beta$.\n\nFor the edge $v(t)$ with normal $n$, put $g(t)=\\psi(n,v(t))$. It is convex. Its symmetric part is convex and symmetric about $1/2$, hence nondecreasing on the right half interval. Symmetry lets us replace $g$ by that part in the integral against $w-\\beta$. On $[1/2,1]$ the product of the increments of $w$ and of the symmetric part between any two parameters is nonpositive. Integrating this product over the square of the half interval gives twice the interval length times the covariance integral, which is therefore nonpositive. The mean of $w$ on the half interval is still $\\beta$, so $\\int_0^1 (w-\\beta)g\\le0$. On homothetic pullback the field and arclength together contribute $r(z)^2$ times their reference product. Thus the contribution of this edge to the desired difference is $S h_T(n)$ times its length times that nonpositive integral. Sum over the three edges.\n",
+  "source_candidate_ids": [
+    "358e239a9d0e9d92"
+  ],
+  "source_candidate_sha256": {
+    "358e239a9d0e9d92": "a3a0ac1732d0159c58d922f613a2b934a8ed135ba3fc6bf1b501d6f1eb4f2fb7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "358e239a9d0e9d92",
+      "locator": "358e239a9d0e9d92:02 §§1–2, (1)–(6), actual compatible erosion and fixed-cap average"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}\\{(-1,-1),(2,-1),(-1,2)\\}$ and $r(z)=1+z/20$. In the actual body $C=\\{(z,x):-1\\le z\\le1,\\ x\\in r(z)T\\}$ use its three integer fibers and their summed area. Let $u_1=(1,0)$, $u_2=(0,1)$, $u_3=(-1,-1)$, and $H_j=\\{(z,x):u_j\\cdot x-z/10\\ge0\\}$. The three $H_j$ attain the depth at the globally deepest middle centroid, and their common normalized mass is $\\beta=800/1803$.\n\nFor every jointly continuous nonnegative $\\psi:\\mathbb S^1\\times\\mathbb R^2\\to\\mathbb R$ convex in its second argument, simultaneously erode the fibers by imposing\n$$\nn\\cdot x+\\varepsilon r(z)h_T(n)\\psi(n,x/r(z))\\le r(z)h_T(n)\n\\quad (n\\in\\mathbb S^1).\n$$\nFor sufficiently small $\\varepsilon\\ge0$ the resulting body has the same three occupied integer bases and positive compatible fibers. If $D$ is its first total area loss and $D(H_j)$ its first loss in the fixed ambient cap $H_j$, then\n$$\n\\frac13\\sum_{j=1}^3 D(H_j)-\\beta D\\le0.\n$$",
+  "subgoal_id": "pk-intake-homothetic-triangle-common-convex-payment-obstruction",
+  "title": "Nonpositive first cap payment for common convex erosions of a triangle triple"
+}

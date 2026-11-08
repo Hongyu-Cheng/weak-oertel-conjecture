@@ -1,0 +1,30 @@
+{
+  "advances": "Fixed-body inverse for all oblique quantiles; no inverse ordinary energy estimate or support transfer as the buffer vanishes.",
+  "author": "PK-research-agent",
+  "candidate_id": "5df340d8c22d5eeb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:52:09.422442+00:00",
+  "depends_on": [
+    "5aeb5916857f97a9",
+    "7227bbfcd12ad3d2",
+    "b3c0088cf09b2894"
+  ],
+  "draft_key": "convex-inverse-buffer-threshold",
+  "kind": "theorem",
+  "proof": "Every real fiber is a convex body and the fibers vary continuously in Hausdorff distance by 7227bbfcd12ad3d2, applied to the finite positive canonical family. By b3c0088cf09b2894 the energy is continuous on the marked hull, including its zero values on all own boundaries. By 5aeb5916857f97a9 its $d$th root is jointly concave on the interior-fiber marks, and by continuity the inequality extends to the closed marked hull by approximating each boundary mark in its own fiber. Thus $[lE/M]^{1/(d+1)}$ is jointly concave in $(z,y,l)$ by weighted geometric-mean concavity and monotonicity on the nonnegative quadrant.\n\nFor $u\\ne0$ every projected level has $\\mu$-mass zero and the closed upper tail is continuous and nonincreasing. Since the supports are bounded and $Q>0$, the mass-$Q$ condition holds exactly at and below the finite right quantile, including if the tail is flat. For the atomic base, the closed upper tail is left-continuous and its analogous admissible thresholds form a closed lower ray, so $b_{\\rm base}\\ge Q$ is an intersection of closed halfspaces. In rank zero the base condition is automatic. The feasible triples are exactly the points of $C\\times[0,\\infty)$ satisfying that base condition and the closed convex inequalities\n$$\na\\cdot z+u\\cdot y-\\varepsilon\\Gamma(u)[lE_{C_z}(y)/M]^{1/(d+1)}\\le c_Q(a,u)\n$$\nfor arbitrary $a$ and every nonzero $u$. The projection onto $(z,l)$ is convex and closed: from a convergent sequence of projected pairs, take a convergent subsequence of their lifted marks in the fixed compact hull. The projection is upward closed in $l$ and hence is the epigraph of $T_Q$, with every finite endpoint attained.\n\nLet $R$ bound $\\|x\\|$ for all continuous coordinates in $C$, and let $\\gamma_{\\min}=\\min_{\\|u\\|=1}\\Gamma(u)>0$. At any base satisfying $b_{\\rm base}(z)\\ge Q$, take an interior mark $y$, where energy is positive. For $l$ large enough that $\\varepsilon\\gamma_{\\min}[lE/M]^{1/(d+1)}\\ge2R$, each oblique cap wholly captures every fiber at a base with $a\\cdot(p-z)\\ge0$, whose total mass is at least $Q$ by the pure-base condition (or is all of $M$ if $a=0$). This proves sufficiency on the full base superlevel, and necessity follows from the unbuffered pure-base competitors. At an own-boundary mark $y$, choose a supporting unit normal $u$ of $C_z$ there. The support-height linear program and its attained affine dual in 7227bbfcd12ad3d2 provide an affine majorant of $p\\mapsto h_{C_p}(u)$ touching at $z$. The corresponding ambient nonvertical supporting cap has zero volume in every original fiber. Since boundary energy is zero, it rules out any positive feasible depth there. At $l=0$ the shift vanishes, proving the zero-threshold characterization.\n\nFor $z$ in the finite domain, comparison to the atomic $Q$-quantile for $a\\cdot Z$ bounds $r_Q$ by $2R/\\gamma_{\\min}$. Indeed the mixed projection differs pointwise from $a\\cdot Z$ by at most $R\\|u\\|$, so its right quantile lies within that distance of the atomic one by the two tail inequalities, and the atomic quantile is at least $a\\cdot z$. Convexity follows from the supremum of positive parts of affine functions. At a fixed interior mark the displayed cap inequalities are equivalent to $\\varepsilon[lE/M]^{1/(d+1)}\\ge r_Q(z,y)$. Solving for $l$ and minimizing over marks gives the formula, with a minimum because a finite threshold has an interior attaining mark.\n",
+  "source_candidate_ids": [
+    "8fda4210ff6d4aaf"
+  ],
+  "source_candidate_sha256": {
+    "8fda4210ff6d4aaf": "0e96d646d4583aa8b639c23060641371f5f17af5f6db87f199408ebf3a11e805"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8fda4210ff6d4aaf",
+      "locator": "8fda4210ff6d4aaf:01 §§1–3, (1)–(3)"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be finite and nonempty, let $K_p$ be positive $d$-volume convex bodies, $d\\ge1$, and assume their canonical lifted hull $C$ has $C_p=K_p$ for $p\\in P$. Put $B=\\operatorname{conv}P$, and let $\\mu$ be the sum of the original fiber volumes, with total $M$. Fix $\\varepsilon>0$ and any norm $\\Gamma$ on continuous covectors. At $z\\in B,\\ y\\in C_z,\\ l\\ge0$ let $b_l(z,y)$ be the infimum of the masses of the oblique caps\n$$\na\\cdot Z+u\\cdot X\\ge a\\cdot z+u\\cdot y-\\varepsilon\\Gamma(u)[lE_{C_z}(y)/M]^{1/(d+1)},\\qquad u\\ne0,\n$$\nand the unshifted closed pure-base caps containing $z$. Here $E$ is the marked projective energy, the infimum of $\\int_{C_z}(1+A\\cdot(X-y))^{-d-1}\\,dX$ over affine denominators positive on $C_z$, with zero boundary value. Write $b_{\\rm base}$ for the pure-base depth, using $M$ in base rank zero.\n\nFor $0<Q\\le M$ let $T_Q(z)$ be the infimum of $l\\ge0$ for which some $y\\in C_z$ has $b_l(z,y)\\ge Q$, and set it to infinity where no such pair exists or $z\\notin B$. Then $T_Q$ is lower semicontinuous and convex, possibly everywhere infinite. Its finite domain is $\\{z\\in B:b_{\\rm base}(z)\\ge Q\\}$ and on that domain each threshold is attained at an interior mark. In particular $T_Q(z)=0$ exactly when the original unbuffered depth reaches $Q$ in the fiber. Let\n$$\nc_Q(a,u)=\\max\\{c:\\mu(a\\cdot Z+u\\cdot X\\ge c)\\ge Q\\},\\qquad\nr_Q(z,y)=\\sup_{a,u\\ne0}\\left[\\frac{a\\cdot z+u\\cdot y-c_Q(a,u)}{\\Gamma(u)}\\right]_+ .\n$$\nThen $r_Q$ is convex and finite on the fibers over this finite domain, and there\n$$\nT_Q(z)=\\frac{M}{\\varepsilon^{d+1}}\\min_{y\\in\\operatorname{int}C_z}\\frac{r_Q(z,y)^{d+1}}{E_{C_z}(y)}.\n$$",
+  "subgoal_id": "pk-intake-convex-inverse-buffer-threshold",
+  "title": "The attained convex inverse threshold for a fixed mixed buffer"
+}

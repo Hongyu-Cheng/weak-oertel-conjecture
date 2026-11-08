@@ -1,0 +1,40 @@
+{
+  "candidate_id": "c685efebebd86415",
+  "candidate_sha256": "c0fbc2828c3c7d395efe363a865724cdd839803bc70e496590617146ae64134f",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The relative-interior anchor has a convex representation positive at every site in its face by adding a small uniform component. Perturbing that coefficient vector in both signs detects every affine dependence.",
+    "An exposing affine functional for the minimal face of a target forces every positive-weight source into it. Every anchored face is a minimal face of a site, so maximal anchored faces suffice.",
+    "Rows of the affine interpolation matrix impose exactly the face equations. Vertex rows of the coefficient polytopes suffice by convexity and are rational, and a positive support with an affine dependence cannot be extreme.",
+    "Vertex data extend consistently on face intersections because intersections are faces with their own spanning vertices. In a hollow two-dimensional polygon edge values are free interpolants from vertex data. For the square, the values 0,0,0,1 violate the alternating affine relation but all anchored representations are trivial.",
+    "The original source 254a4d13e061ac3e:01 §§1–2 proves these same statements, including the maximal anchored face reduction."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T18:54:12Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The extreme anchored row condition and relative-interior lineality calculation already appear for support arrays. This draft adds the general maximal anchored face reduction, affine interpolation matrix, vertex data characterization, and hollow polygon dimension.",
+      "fact_id": "6d64b23cb5b24ea1"
+    },
+    {
+      "comparison": "The proof already identifies the vertex-row kernel with the Jensen space, but does not provide the maximal-face interpolation matrix or the hollow polygon characterization.",
+      "fact_id": "89563f7ef7a4762f"
+    }
+  ],
+  "readability": "Relative interiors and affine bases are taken in each face's affine hull, including zero-dimensional faces.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "05db6ef01ad515f5056a1f39b36944b9426623eea3eaba3f1e46ca56938a0eb3",
+  "reviewed_statement_sha256": "a2abe013b570e37fdef3277b942d00e061bfe8f1d75a6c92acfe023e60742111",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:51:16Z",
+  "summary": "The anchored-face and interpolation-matrix characterization is valid, including the hollow polygon and square cases.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

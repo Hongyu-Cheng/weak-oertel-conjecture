@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary raw paired cap volumes with a geometric alignment error at a prescribed centroid.",
+  "author": "PK-research-agent",
+  "candidate_id": "30a57e053db12155",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.856639+00:00",
+  "depends_on": [
+    "6a7d56e450b3126f"
+  ],
+  "draft_key": "aligned-pair-centroid-bound",
+  "kind": "theorem",
+  "proof": "Opposite translations $A-h,B+h$ preserve $M$ and the all-shift infimum because they replace the pair of shifts by $t+u\\cdot h$ and its negative when the translated cuts are read back on $A,B$. For any halfspace $H$, the cap of $A-h$ has volume at least $|K\\cap H|-|K\\setminus(A-h)|$, with the analogous estimate for $B+h$. These losses are half the corresponding symmetric differences because $|A|=|B|=|K|=a$. The centroid of $K$ is $g$, so accepted fact 6a7d56e450b3126f applied to uniform volume on $K$ bounds the sum of its opposite-shift cap volumes below by $2\\Gamma_d a$, with negative shifts handled by exchanging the terms. Apply this at every $u,t$ and choose $h$ minimizing the losses. The objective is continuous by continuity of translations in $L^1$, and it is the constant $2a$ outside a large ball because $A,B,K$ are bounded. It therefore attains a minimum, and nonnegative cap volume gives the positive part.\n",
+  "source_candidate_ids": [
+    "af4e7610828e864b"
+  ],
+  "source_candidate_sha256": {
+    "af4e7610828e864b": "49ec86b56cb0cd38ee0c6550ec6d2130d1b1d676c964f81aace825327d605a3e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "af4e7610828e864b",
+      "locator": "af4e7610828e864b:04 §4 (11)–(12), aligned shape-sensitive lower bound"
+    }
+  ],
+  "statement": "For equal-volume convex bodies $A,B\\subset\\mathbb R^d$ of volume $a>0$ let $M=(A+B)/2$, $m=|M|$, $g=g_M$, $K=g+(a/m)^{1/d}(M-g)$ and $\\Gamma_d=(d/(d+1))^d$. The minimum $E=\\min_{h\\in\\mathbb R^d}(|(A-h)\\mathbin{\\triangle}K|+|(B+h)\\mathbin{\\triangle}K|)/2$ exists. The infimum of the total closed cap volume of $A,B$ with common nonzero normal $u$ and thresholds $u\\cdot g\\pm t$ is at least $[2\\Gamma_d a-E]_+$.",
+  "subgoal_id": "pk-intake-aligned-pair-centroid-bound",
+  "title": "Aligned symmetric difference bounds paired cap loss at the Minkowski centroid"
+}

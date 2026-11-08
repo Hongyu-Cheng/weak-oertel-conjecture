@@ -1,0 +1,64 @@
+{
+  "candidate_id": "f7da03f0c1740dd1",
+  "candidate_sha256": "cc87c43afcf45ebf4139ff8bb928e4da3f6e0024dea995cada7f854aef1b9d27",
+  "checked_dependency_candidate_sha256": {
+    "6d128ba3e351a987": "7182762c8e6351a07daf0daa65b66771d1f893b940a3d9291bcff75d1a4e7b5e",
+    "e454f87e89f53aaf": "3bd94cbc97c856e02be0d076ca4b68d358e3143ecc966bee64591d4de972e81c"
+  },
+  "checks": [
+    "Source 9fcca2d086b8f393:01–02 §§1–4 matches both comparisons and their restricted facet directions. The section at x is the three-simplex of volume x³/6 with three conditional centroid coordinates x/4. Integrating gives volume 10/243 and centroid (121/150,121/600,121/600,121/600).",
+    "Exact rational recomputation gives shift −203/1000, small threshold 1811/3000, zero large cap at its upper support, and paired cost 70243430162159/80000000000000. The two untruncated competitors are 87882639/100000000 and 2825761/3125000, so the first is smaller and the gap is 62681037841/80000000000000.",
+    "The positive shift perturbation lowers the small tail and moves the large threshold to 1−ε/s, both proper. The large contribution is bounded by 4s³ε/(1−1/81)=750141/1600000000. Subtracting gives the printed proper gap 25173987841/80000000000000. The affine lift has the actual middle fiber (1+s)K/2 and the evaluated formula charges the endpoint traces only.",
+    "For the general support branch, b(a)→(d−λ)/(d+1)∈(0,1), so b(a) remains strictly above a and below 1 for small a. Expanding the rational mean, the numerator and 1/(1−a^d) gives exactly the stated coefficient with O(a^(d+1)), since 2d≥d+1.",
+    "Independently verified the d=3, λ=21/20 coefficient −13571/64000 and the other untruncated branch's positive gap 50143/2048000. The negative leading term therefore beats the two-orientation minimum for every sufficiently small positive truncation."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "3bd94cbc97c856e02be0d076ca4b68d358e3143ecc966bee64591d4de972e81c",
+      "fact_id": "e454f87e89f53aaf",
+      "fact_sha256": "b6c052867eebba5329db7963e00899c7f238f0b10547d87d83a8bd06c67107ba",
+      "mapping": "Use r=1,s=21/20 and d=4 or d=3 for the competing reflected untruncated facet minima. The branch notation and two orientations agree, and the centered untruncated density is d x^(d−1).",
+      "reviewed_proof_sha256": "df5607b449b782fa58bd8b424810dfcf3e960fa9cb66d67304ca5382b9d62ff9",
+      "reviewed_statement_sha256": "cb558c1ccbd9b047c467f01e8c5fd8dc140f203512ec15067639c2cd05be13af"
+    },
+    {
+      "candidate_sha256": "7182762c8e6351a07daf0daa65b66771d1f893b940a3d9291bcff75d1a4e7b5e",
+      "fact_id": "6d128ba3e351a987",
+      "fact_sha256": "6a0c43e590c1855a366be0a1593ea610726424cab4ba208e1617ec9aa2b93118",
+      "mapping": "Use the accepted increasing density with lower endpoint a=1/3 in dimension 4 and a near zero in general. The centroid and clipped normalized tail agree with the frustum sections, including the null support face.",
+      "reviewed_proof_sha256": "ddd5c9aababd5dc70801af0d16adcd99cb502626a1fd40fa4c855f087423563c",
+      "reviewed_statement_sha256": "fb2f927246c984da0710f9832d52843e1a84fbdf1f07b0aed5012b930506b632"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:57:13Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the exact untruncated two-orientation baseline and does not compare it to truncated data.",
+      "fact_id": "e454f87e89f53aaf"
+    },
+    {
+      "comparison": "Gives the finite-candidate minimum for each fixed truncation; the explicit strict crossing of the untruncated baseline and its signed boundary-branch expansion are additional.",
+      "fact_id": "6d128ba3e351a987"
+    },
+    {
+      "comparison": "Provides a universal homothetic paired lower bound; the frozen counterexample compares against the untruncated axial simplex value and does not contradict the universal bound.",
+      "fact_id": "e561372a5640eef8"
+    }
+  ],
+  "readability": "The factor s^d weights the larger body's normalized tail by its volume relative to the smaller. The comparison is in these dimensionless units.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "9720f0c09b4928173345fb180660715899d62a82bdfcdcdc6fb6ccdbea152c90",
+  "reviewed_statement_sha256": "adf9719d0c1af885c5824d05b511fb234024c2b645f19927e2852111dd0e7d9c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:51:36Z",
+  "summary": "The centered rational frustum beats the complete two-orientation untruncated facet baseline, including with two proper cuts. The local dimension-three expansion also has the asserted strict sign.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

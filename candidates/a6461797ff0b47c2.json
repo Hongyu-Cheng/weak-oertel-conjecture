@@ -1,0 +1,32 @@
+{
+  "advances": "A first-order condition for one actual group at a fixed-normal polyhedral local minimum.",
+  "author": "PK-research-agent",
+  "candidate_id": "a6461797ff0b47c2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.859193+00:00",
+  "depends_on": [
+    "7201ed1cb33db4a0"
+  ],
+  "draft_key": "one-group-inverse-reversal-budget",
+  "kind": "lemma",
+  "proof": "The maximum of finitely many linear inward speeds is convex. Oddness on the subspace makes it concave there too, so each $v_F$ is linear. The total loss and each individual contact response are then odd, since they are linear in the speeds and in $s$. Thus the budget on reversing $(h,s)$ is $-\\max_a A_a=-\\alpha-\\sigma$. Let $L^-$ denote that reversed equalized loss. Absence of a strictly descending direction in the one group gives both $L-\\beta D+M\\tau s\\le0$ and $L^-+\\beta D-M\\tau s\\le0$, with the scale terms omitted at fixed scale. Hence $L+L^-\\le0$.\n\nThe exact loss formula also makes the sign content explicit: the ordinary linear loss terms cancel in $E_j$, adding the two inside maxima gives $\\sum_{\\rm in}|F||v_F-r_j/b_j|$, and adding the two outside minima gives $-\\sum_{\\rm out}|F||v_F+r_j/b_j|$.\n\nThe function $\\ell\\mapsto\\sum_j\\rho_jR_j(-h,\\cdot)^{-1}(\\ell)$ is strictly increasing and has value $-\\alpha-\\sigma$ at $L^-$. At $-L\\ge L^-$ it is at least that value. Add $\\sum_j\\rho_j r_j=\\alpha$ to obtain the asserted bound. At threshold $-r_j$ the reversed loss is $-L+E_j$. The inverse is piecewise affine with positive finite slopes, equal almost everywhere to the reciprocal forward slope at the inverse threshold. Integrating this derivative gives exactly $\\Delta_j$ and its sign. For a single contact $\\sigma=0$, and all $E_j>0$ would give all $\\Delta_j<0$, contradicting the bound. With fixed branch choices the equations for the forward and inverse losses are linear and each threshold slope is a fixed positive constant, which gives the linear inequality on those branches.\n",
+  "source_candidate_ids": [
+    "6714ecb94bcabe5f"
+  ],
+  "source_candidate_sha256": {
+    "6714ecb94bcabe5f": "1ab546eb508c4541737a094003756fc06bb4c9689b89ca6f725351ed85fbc8a7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6714ecb94bcabe5f",
+      "locator": "6714ecb94bcabe5f:06 §6 (7)–(8), one-group inverse-threshold budget and single-contact consequence"
+    },
+    {
+      "candidate_id": "6714ecb94bcabe5f",
+      "locator": "6714ecb94bcabe5f:05 §5 (5)–(6), odd speeds and signed reversal defect"
+    }
+  ],
+  "statement": "In the local-minimum setting of the exact fixed-normal hinge chamber theorem, suppose there is exactly one cover group. Restrict to a linear subspace of directions on which $v_F(-h)=-v_F(h)$ at every sampled facet. For a direction $(h,s)$ let $(L,r_j)$ be its equalization with contact budget $\\alpha=\\min_a A_a(h,s)$, and let $\\sigma=\\max_a A_a(h,s)-\\alpha$. With the exact cap losses as in that theorem, set\n$$\nE_j=R_j(h,r_j)+R_j(-h,-r_j),\\qquad\n\\Delta_j=R_j(-h,\\cdot)^{-1}(-L)+r_j.\n$$\nThen $\\sum_j\\rho_j\\Delta_j\\ge-\\sigma$. Each $\\Delta_j$ is the signed integral of the reciprocal threshold slope (evaluated at the reversed inverse threshold) from loss $-L+E_j$ to loss $-L$. In particular $\\operatorname{sign}\\Delta_j=-\\operatorname{sign}E_j$. With one contact, at least one selected cap has $E_j\\le0$ for every direction. On fixed branches for the equalization and both inverse evaluations the inequality is linear.",
+  "subgoal_id": "pk-intake-one-group-inverse-reversal-budget",
+  "title": "One-group inverse-threshold reversal budget"
+}

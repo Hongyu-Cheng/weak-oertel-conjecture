@@ -1,0 +1,33 @@
+{
+  "advances": "Fixed facet direction of ordinary homothetic two-source convex bodies in dimensions three and four.",
+  "author": "PK-research-agent",
+  "candidate_id": "f7da03f0c1740dd1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.856897+00:00",
+  "depends_on": [
+    "e454f87e89f53aaf",
+    "6d128ba3e351a987"
+  ],
+  "draft_key": "truncation-below-untruncated-profile",
+  "kind": "counterexample",
+  "proof": "The section of $T$ at $x$ is a three-simplex of volume $x^3/6$ and its three centroid coordinates are $x/4$. Thus $|T|=10/243$, and the mean formula in accepted fact 6d128ba3e351a987, with $d=4,a=1/3$, gives $g_T=(121/150,121/600,121/600,121/600)$. That fact gives the normalized tail $[1-\\operatorname{clip}(121/150+q,1/3,1)^4]/(1-1/81)$. At $t=-s(1-121/150)=-203/1000$ the large cap reaches its null supporting facet, and the small threshold in $T$ is $1811/3000$. Its normalized tail gives the stated cost. The positive-orientation and balanced competing values in accepted fact e454f87e89f53aaf at $r=1,s=21/20,d=4$ are $87882639/100000000$ and $2825761/3125000$, with the first smaller. Subtraction gives the stated gap.\n\nAt $\\varepsilon=1/10000$ the two thresholds in $T$ become $1811/3000+\\varepsilon$ and $1-\\varepsilon/s$, both strictly between $1/3$ and $1$. The small cap decreases, and the large scaled cap adds at most $4s^3\\varepsilon/(1-1/81)=750141/1600000000$ by the mean value theorem. This gives the positive proper-cut gap. These are the endpoint contributions of the ambient cap $x_1+t j\\ge0$ through the middle centroid of the lifted hull of $K,sK$ at bases $j=-1,1$, whose middle fiber is $(1+s)K/2$.\n\nFor the general truncation, accepted fact 6d128ba3e351a987 gives $m(a)=d(1-a^{d+1})/[(d+1)(1-a^d)]$. At the supporting shift $-\\lambda(1-m(a))$ the smaller threshold is $b(a)=(1+\\lambda)m(a)-\\lambda$. Its limit $b_0=(d-\\lambda)/(d+1)$ is strictly between zero and one, so the smaller cap stays proper for sufficiently small $a$. Then $E_a=(1-b(a)^d)/(1-a^d)$. Using $m(a)=d(1+a^d)/(d+1)+O(a^{d+1})$ in this expression gives the expansion. At $d=3,\\lambda=21/20$ the bracket is $-13571/64000$. The competing balanced value of accepted fact e454f87e89f53aaf exceeds $E_0$ by $50143/2048000$, and that fact takes the smaller of the two values. The strict negative leading coefficient gives the claimed local comparison.\n",
+  "source_candidate_ids": [
+    "9fcca2d086b8f393"
+  ],
+  "source_candidate_sha256": {
+    "9fcca2d086b8f393": "e257cceb28d76482a1ff2405fed7abb96f168d7f213143f05c1f6badfd8cc1c4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9fcca2d086b8f393",
+      "locator": "9fcca2d086b8f393:01 §§1–3 (1)–(5), exact four-dimensional frustum below the full untruncated value"
+    },
+    {
+      "candidate_id": "9fcca2d086b8f393",
+      "locator": "9fcca2d086b8f393:02 §4 (6), boundary branch expansion and three-dimensional gap"
+    }
+  ],
+  "statement": "For a centroid-zero body $K$, write $F$ for the normalized first-coordinate upper tail and use paired cost $F(t)+s^d F(-t/s)$ at scales $1,s$. At $d=4$, $s=21/20$ and $K=T-g_T$ for $T=\\{(x,y)\\in\\mathbb R^4:1/3\\le x\\le1,\\ y_i\\ge0,\\ \\sum_i y_i\\le x\\}$, the shift $t=-203/1000$ gives cost $70243430162159/80000000000000$. This is below the entire untruncated two-facet minimum at these scales by $62681037841/80000000000000$. At $t+1/10000$ both caps are proper, and the gap is at least $25173987841/80000000000000$.\n\nMore generally, for the increasing centered law with uncentered density proportional to $x^{d-1}$ on $[a,1]$, $d\\ge2$ and $1\\le\\lambda<d$, let $E_a$ be the cost at scales $1,\\lambda$ and the shift where the larger cap vanishes at its upper support. As $a\\downarrow0$,\n$$\nE_a-E_0=a^d\\left[E_0-d(1+\\lambda)\\frac d{d+1}\\left(\\frac{d-\\lambda}{d+1}\\right)^{d-1}\\right]+O(a^{d+1}),\\qquad\nE_0=1-\\left(\\frac{d-\\lambda}{d+1}\\right)^d .\n$$\nAt $d=3,\\lambda=21/20$ the bracket is $-13571/64000$ and $E_0$ is the untruncated two-orientation minimum, so every sufficiently small positive truncation beats it.",
+  "subgoal_id": "pk-intake-truncation-below-untruncated-profile",
+  "title": "Truncated simplex frusta beat the untruncated facet paired-tail minimum"
+}

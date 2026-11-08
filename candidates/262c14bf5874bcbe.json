@@ -1,0 +1,28 @@
+{
+  "advances": "Worst-case coefficient for actual fixed-normal mixed cap tails.",
+  "author": "PK-research-agent",
+  "candidate_id": "262c14bf5874bcbe",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:49:23.771597+00:00",
+  "depends_on": [
+    "0dc087be3e05879c"
+  ],
+  "draft_key": "fixed-normal-sharp-parity-loss",
+  "kind": "theorem",
+  "proof": "The simplex vertices have integral base, and the fiber at a nonnegative integer $z$ with $\\sum_i z_i\\le N$ is the standard $d$-simplex scaled by $(N-\\sum_i z_i)/(2N)$. On the body $0\\le x_1\\le1/2$, so each integral threshold $q$ of the oblique $f$ retains precisely the fibers with $z_1\\ge q$. For $b>0$ put $U_b=(1/d!)\\sum_{z\\in\\mathbb Z_+^n}(b-\\sum_i z_i)_+^d$. On the unit cube $z+[0,1]^n$, $(b-\\sum_i y_i)_+^d\\le(b-\\sum_i z_i)_+^d\\le(b+n-\\sum_i y_i)_+^d$. The integral over the orthant of $(B-\\sum_i y_i)_+^d$ is $d!B^{n+d}/(n+d)!$, by iterated integration. Thus $b^D/D!\\le U_b\\le(b+n)^D/D!$. Translating $z_1$ at each threshold gives\n$$\n(G(0),G(L),G(2L))=(2N)^{-d}(U_N,U_{L+n+1},U_{n+1}).\n$$\nFor each residue $r\\in\\{0,1\\}^n$, the base $2Le_1+r$ has coordinate sum at most $N-1$ and belongs to the $t$-tail, so all classes survive. Because $\\Omega_L\\ge2^{-d}G(0)$, the cube bounds give\n$$\nG(L)/\\Omega_L\\le 2^d\\big((L+2n+1)/(2L+n+1)\\big)^D\n=2^{-n}\\big(1+(3n+1)/(2L+n+1)\\big)^D .\n$$\nThe collision lemma gives $2^{-n}\\Omega_L\\le Q\\le G(L)$, proving both lower bounds and limits. With $x=(3n+1)/(2L+n+1)$ the stated condition on $L$ gives $Dx\\le\\epsilon/2\\le1/2$. The binomial bound $(1+x)^D\\le\\sum_{j\\ge0}(Dx)^j\\le1+2Dx$ proves the finite accuracy bound.\n",
+  "source_candidate_ids": [
+    "6666351f7dbc3b14"
+  ],
+  "source_candidate_sha256": {
+    "6666351f7dbc3b14": "f6ff2008ea5b72db038f06e7536300cc351d6b62cb82deff9ec33782d2ab1fa0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6666351f7dbc3b14",
+      "locator": "6666351f7dbc3b14:02 §2, (3)–(6), optimal surviving-class coefficient and finite estimate"
+    }
+  ],
+  "statement": "For each fixed $n,d\\ge1$, the best universal coefficient in\n$$\nG((s+t)/2)\\ge 2^{-n}\\sum_{r:G_r(t)>0}\\Phi_d(G_r(s),G_r(t))\n$$\nis $2^{-n}$, even for full-dimensional simplices that are the convex hull of their actual mixed sets, with every parity surviving at $t$ and the same oblique functional $f=z_1+x_1$. More precisely, for integers $L\\ge1$ take $N=2L+n+1$ and $C_N=\\{z,x\\ge0:\\sum_i z_i+2N\\sum_j x_j\\le N\\}$, with $s=0,t=2L$. Put $D=n+d$ and $\\Omega_L=\\sum_r\\Phi_d(G_r(0),G_r(2L))$. Then\n$$\n2^{-n}\\le\\frac{G(L)}{\\Omega_L}\\le\n2^{-n}\\left(1+\\frac{3n+1}{2L+n+1}\\right)^D.\n$$\nFor $0<\\epsilon\\le1$ and $L\\ge D(3n+1)/\\epsilon$ the upper bound is at most $2^{-n}(1+\\epsilon)$. Also the targetwise collision quantity $Q$ of the preceding estimate satisfies $Q/\\Omega_L\\longrightarrow2^{-n}$ for any of the permitted lexicographic orders.",
+  "subgoal_id": "pk-intake-fixed-normal-sharp-parity-loss",
+  "title": "The surviving-class factor is sharp for actual oblique caps of lattice simplices"
+}

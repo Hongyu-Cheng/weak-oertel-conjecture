@@ -1,0 +1,32 @@
+{
+  "advances": "Physical simultaneous source cuts with specified genuine charts and a fixed common flat support contact. Other slopes or critical source choices are outside the example.",
+  "author": "PK-research-agent",
+  "candidate_id": "6f4346c96dc9fee7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.851818+00:00",
+  "depends_on": [
+    "84cd8a85417b0d7a"
+  ],
+  "draft_key": "genuine-projective-maximum-field-midpoint-capacity",
+  "kind": "counterexample",
+  "proof": "In dimension two the centered projective-volume objective at an interior source $Y$ is $\\int_K(1+a\\cdot(X-Y))^{-3}\\,dX$, where $K=[-1,1]^2$ and the denominator is positive on $K$. This is the volume of the projective image of $K-Y$ under $v\\mapsto v/(1+a\\cdot v)$ by its Jacobian determinant $(1+a\\cdot v)^{-3}$. The objective is strictly convex on the positive chart domain, because $t^{-3}$ is strictly convex and different parameters give different affine arguments off a null line. For the minus source, $(13/9)(1+x/2)=1+(13/18)(x+8/13)$. Direct integration gives\n$$\n\\int_{-1}^1(1+x/2)^{-4}\\,dx=416/81,\\qquad\n\\int_{-1}^1 x(1+x/2)^{-4}\\,dx=-256/81 .\n$$\nThe ratio is $-8/13$ and the $y$-mean vanishes by symmetry. Differentiating under the integral at this positive denominator gives zero gradient, so strict convexity makes it the unique minimum. Reflect in $x=0$ for the plus source.\n\nTo realize the fields, use fact 84cd8a85417b0d7a with the constant-in-$z$ majorant $(u,z)\\mapsto h_K(u)$ and field $V_i(u,z,X)=h_{K-Y_i}(u)L_i(z,X)^{-2}$ for each source $i$. The source is interior so its support height is positive. On $C$ the denominators are positive affine, so the fields are jointly continuous, nonnegative and convex in $(z,X)$ for each $u$. All majorants are in contact, and the top facet has unique normal $(0,1)$ away from its endpoints with $h_{K-Y_i}(0,1)=1$. Therefore the physical inward speed there is the maximum of the two inverse squares, using arclength as its capacity measure. For zero shifts it is the displayed $W_z$. For the extensions the speed is $\\kappa\\max(\\ell_-^{-2},\\ell_+^{-2})$ on the same facets.\n\nThe endpoint base labels $-1,1$ have the same parity, and the marginal supports force every midpoint to have label zero and $x\\in I$. Reflection preserves their common normal and sends the tangential midpoint to zero. The minus marginal has mass $\\kappa\\int_{-1}^{-3/4}(1+x/2)^{-2}\\,dx=4\\kappa/5$, as does the reflected plus marginal. With zero shifts the middle capacity is $2\\kappa\\int_0^{1/8}(1-x/2)^{-2}\\,dx=4\\kappa/15$. Domination by a factor times the target capacity forces that factor to be at least the ratio of the fixed mass to the target capacity on $I$.\n\nFor positive extensions evaluate $\\ell_-$ at $(z,x)=(1,-1)$ and $\\ell_+$ at $(-1,1)$. This gives $b_->-1/4$ and $b_+<1/4$, so the middle speed is pointwise below $\\kappa/(3/4-|x|/2)^2$. Its integral on $I$ is bounded strictly by $4\\kappa[(3/4-1/16)^{-1}-(3/4)^{-1}]=16\\kappa/33$. The source denominators and their marginal domination are unchanged at their own bases. With the normalized floor $1/3$ one has $\\ell_\\pm\\ge3/13$ at the same outer vertices, yielding $b_-\\ge-7/52$ and $b_+\\le7/52$. The speed is then bounded by $\\kappa/(45/52-|x|/2)^2$, whose integral is $4\\kappa[(45/52-1/16)^{-1}-(45/52)^{-1}]=(2704/7515)\\kappa$. The two mass-to-capacity ratios give the asserted factors.\n",
+  "source_candidate_ids": [
+    "513a098b26545097"
+  ],
+  "source_candidate_sha256": {
+    "513a098b26545097": "5adcf36cc719787de1c789947ba0664e3c33bc89b723c0262516eb038f604ae3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "513a098b26545097",
+      "locator": "513a098b26545097:01 §§1–2, (1)–(5), zero base shifts"
+    },
+    {
+      "candidate_id": "513a098b26545097",
+      "locator": "513a098b26545097:02 §3, (6) and canonical-floor bound, all globally positive affine extensions"
+    }
+  ],
+  "statement": "On the actual body $C=[-1,1]_z\\times[-1,1]_x\\times[-1,1]_y$ with one integer coordinate, take sources $(-1,-8/13,0)$ and $(1,8/13,0)$, both with flat base support slopes. Their unique optimal source-centered projective denominators on their own squares are $L_\\pm^{\\rm own}=(13/9)(1\\mp x/2)$, with the minus source using $1+x/2$. With zero base shifts the joint physical speed on every old top facet is $W_z(x)=\\kappa/(1-|x|/2)^2$, where $\\kappa=81/169$. Take endpoint marginals with their own projective speed densities on $x\\in[-1,-3/4]$ and $x\\in[3/4,1]$, respectively. Each is dominated by the actual endpoint speed and has mass $4\\kappa/5$. Every midpoint coupling is on the old middle top facet with $x\\in I=[-1/8,1/8]$, and reflection gives a normal-preserving coupling. The actual middle capacity on $I$ is $4\\kappa/15$, so every domination factor is at least $3$.\n\nMore generally keep the sources, flat slopes and marginals and extend the two denominators to $(13/9)\\ell_\\pm$ on $C$, with $\\ell_-(z,x)=1+x/2+b_-(z+1)$ and $\\ell_+(z,x)=1-x/2+b_+(z-1)$. For any pair of extensions positive on $C$, the capacity on $I$ is strictly less than $16\\kappa/33$, forcing every domination factor to exceed $33/20$. If both denominators $(13/9)\\ell_\\pm$ are at least $1/3$ on $C$, the capacity on $I$ is at most $(2704/7515)\\kappa$, forcing every domination factor to be at least $1503/676>2$.",
+  "subgoal_id": "pk-intake-genuine-projective-maximum-field-midpoint-capacity",
+  "title": "Two genuine source projective normalizers violate maximum-field midpoint capacity"
+}

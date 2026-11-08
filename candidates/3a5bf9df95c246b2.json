@@ -1,0 +1,26 @@
+{
+  "advances": "An exact ordinary-volume calibration for one planar trapezoid.",
+  "author": "PK-research-agent",
+  "candidate_id": "3a5bf9df95c246b2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.860394+00:00",
+  "depends_on": [],
+  "draft_key": "exact-trapezoid-depth",
+  "kind": "lemma",
+  "proof": "At height $y$ the section is $[-(1-y/2),1-y/2]$ for $0\\le y\\le1$, and the area is $V_0=3/2$. The upper horizontal mass is $3/2-2t+t^2/2=D$ since $3t^2-8t+3=0$. The lower horizontal mass is $D_b=2t-t^2/2$. For a nonhorizontal right cap through $(0,t)$ write its inequality as $x\\ge s(y-t)$ and its area as $A(s)$. Reflection in $x=0$ gives $A(-s)=V_0-A(s)$, so first take $s\\ge0$. Put $k=1/2$ and $s_1=k/(1-t)$. For $0\\le s\\le s_1$ the line crosses top and bottom, and integration of $1-ky-s(y-t)$ gives $A(s)=V_0/2-s(1/2-t)$, decreasing. For $s_1\\le s\\le1/t$, the positive width is the same affine function truncated at zero, from height zero to $(1+st)/(s+k)$. Its integral is $(1+st)^2/[2(s+k)]$. Its derivative has the sign of $st+2kt-1$, so the minimum is attained at $s_*=1/t-1$. Indeed $0<t<1/2$ and $(1-t)^2\\ge t/2$, giving $s_1\\le s_*<1/t$. Substitution gives $A(s_*)=D$.\n\nFor $s\\ge1/t$, the partially captured slices are at heights between $y_0=(st-1)/(s-k)$ and $y_1=(st+1)/(s+k)$. Below them the section is full, and above them empty. At the junctions the respective captured widths agree, so differentiating the integral gives\n$$\nA'(s)=-[(y_1-t)^2-(y_0-t)^2]/2>0,\n$$\nusing $y_1-t=(1-kt)/(s+k)$ and $y_0-t=-(1-kt)/(s-k)$. As $s\\to\\infty$ the cap tends to the lower horizontal cap off the null line $y=t$, hence $A(s)\\to D_b$. Since $t>4/9$, $D_b>64/81>V_0/2$. Thus the infimum and supremum over $s\\ge0$ are $D,D_b$. Reflection and $V_0-D_b=D$ prove the same lower bound $D$ for all slopes and both orientations, including the horizontal caps. Any cap containing the mark can be shifted parallel to pass through it while only decreasing mass.\n\nThe two signed sloping cap normals $(1,-s_*)$, $(-1,-s_*)$ and the upper normal $(0,1)$ have positive dependence with coefficients $1,1,2s_*$. All three caps pass through the mark and have area $D$. Every point of the plane belongs to at least one of these closed caps, since its three margins cannot all be negative. This gives raw depth at most $D$ everywhere.\n",
+  "source_candidate_ids": [
+    "3121a9d11f167d7d"
+  ],
+  "source_candidate_sha256": {
+    "3121a9d11f167d7d": "49317bf8cabc05498880ff555406dd8f64e40aba31974df226ed2216eb05267a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3121a9d11f167d7d",
+      "locator": "3121a9d11f167d7d:05 §4 (11), exact ordinary trapezoid center"
+    }
+  ],
+  "statement": "Let $K_0=\\operatorname{conv}\\{(-1,0),(1,0),(1/2,1),(-1/2,1)\\}$ in $(x,y)$ coordinates. Put $t=(4-\\sqrt7)/3$, $s_*=1/t-1$, and $D=2t-t^2=(1+2\\sqrt7)/9$. The maximal raw closed-halfspace depth of $K_0$ is $D$, attained at $(0,t)$. The caps $y\\ge t$ and $\\pm x\\ge s_*(y-t)$ all attain it.",
+  "subgoal_id": "pk-intake-exact-trapezoid-depth",
+  "title": "Exact ordinary halfspace depth of a specified trapezoid"
+}

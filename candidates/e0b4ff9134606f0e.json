@@ -1,0 +1,28 @@
+{
+  "advances": "This compares two normalized measures, mixed Lebesgue mass before contraction and weighted counting mass afterward. The original example is at the sharp cube-simplex value.",
+  "author": "PK-research-agent",
+  "candidate_id": "e0b4ff9134606f0e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.850679+00:00",
+  "depends_on": [
+    "2acc8bc803acf1c0"
+  ],
+  "draft_key": "binary-recession-collapse-depth-jump",
+  "kind": "counterexample",
+  "proof": "Every $z$ is a vertex of $[0,1]^2$ and hence an exposed base. A representation of a vertex uses only that vertex, proving the exact sections. The hull has full dimension since it projects onto a two-dimensional square and contains a positive $d$-volume fiber. By fact 2acc8bc803acf1c0 each fiber point has mixed raw depth equal to its own simplex depth, whose maximum is $\\gamma_d|K|$. The total mixed volume is $4|K|$.\n\nOn the four-site array the function $f(z)=(z_1-1/2)(z_2-1/2)$ is orthogonal to $1,z_1,z_2$, and $z_1z_2-f(z)$ is affine. Thus the residual array is $jf(z)e_1$ and its Frobenius norm is $j/2$. The transformed fiber is $2f(z)e_1+(2/j)(K-x_0)$, which shrinks to the singleton $2f(z)e_1$. The mass of each fiber remains $1/4$, so the pushforwards converge weakly to the four equal atoms. Every halfspace containing a graph point contains its atom, and an exposing base halfspace isolates that point, so its atomic depth is exactly $1/4$.\n",
+  "source_candidate_ids": [
+    "254a4d13e061ac3e"
+  ],
+  "source_candidate_sha256": {
+    "254a4d13e061ac3e": "88aa9e3bd60ceeba4b8936457d05363c5305b6ed95ee6e2e79bdbba25a09758c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "254a4d13e061ac3e",
+      "locator": "254a4d13e061ac3e:08 §7, binary square collapse example after (19)"
+    }
+  ],
+  "statement": "For $P=\\{0,1\\}^2$, $d\\ge1$, and a full-dimensional $d$-simplex $K$, the hull of the placed fibers $K_{j,z}=jz_1z_2e_1+K$ has exactly those integer fibers and maximum normalized closed-halfspace depth $\\gamma_d/4$ for every $j\\ge1$, where $\\gamma_d=(d/(d+1))^d$. Subtracting the best ordinary affine fit of the representatives $jz_1z_2e_1+x_0$ for any fixed $x_0\\in K$ and contracting by the residual array norm yields four limiting graph atoms of equal weight, with maximum normalized atomic depth $1/4$.",
+  "subgoal_id": "pk-intake-binary-recession-collapse-depth-jump",
+  "title": "A nonaffine recession collapse raises binary simplex depth to atomic depth"
+}

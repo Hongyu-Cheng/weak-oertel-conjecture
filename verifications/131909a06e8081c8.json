@@ -1,0 +1,77 @@
+{
+  "candidate_id": "5564db476834c7e2",
+  "candidate_sha256": "aece5f68d2e32a170d2106bfd8a7fa0337b3467d7dd0313f46943fb56f6fff34",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Compared the exact frozen revision with the original. The only mathematical edits replace the ambient-body wording by a relative-interior conclusion and add the proof of full affine dimension in that space.",
+    "The same affine inequalities define a closed convex set and the uniform radius bound gives compactness. Pick d+1 affinely independent points in one positive sampled fiber. One point above each remaining base of an affine basis of B supplies the independent base directions. The new set therefore contains a simplex of full dimension in aff(B) times R^d and has nonempty interior there. This also handles a singleton base and resolves the earlier counterexample.",
+    "The original inball comparison, exact lattice census, tight-cut upper and lower derivative bounds and compact zero-slack penalty limit are unchanged. Their conclusions are all fiberwise or relative and do not require ambient base rank.",
+    "Checked the exact decoded fields, source-byte digest and link to the original review. No graph predecessors are invoked."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T19:00:35Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "5564db476834c7e2",
+    "candidate_sha256": "c12ab5a4be9fce81b6f5c0c251a5bee7c77e98c98cb90f4e42660b57870591e6",
+    "checks": [
+      "Checked 0461931dd06b8049 §4, (8), in the source's stated affine span of the base. The outward radial test gives a uniform bound, and completeness and the old inballs yield outer-parallel and inner-homothetic bounds. For example K_z+tD B_d lies in the homothet about o_z of ratio 1+tD/r_z. Thus both radial estimates are uniform over the finite sampled set.",
+      "Compactness of the joint constraint triples gives a tight cut at each new radial endpoint and a convergent subsequence realizing the upper limit of the scaled displacement. Its old slack is nonnegative and tends to zero. At a regular old point this forces the limiting normal to be n, with radial denominator at least the inball radius. Dropping this slack gives the upper bound, and old active constraints give the matching lower bound, for either sign.",
+      "The penalized maxima are jointly continuous by compactness and continuity and convex in the physical point as maxima of affine functions. On the fixed old regular marked boundary a zero-slack index gives a uniform lower bound and nonnegative slacks give a uniform upper bound. Maximizing sequences have slack tending to zero, with a compact limit active. The limit holds at every regular marked point, so dominated convergence works for every finite measure carried there, not only surface-absolutely-continuous stresses.",
+      "The proof gives nonempty relative interior: the sampled fibers retain full continuous dimension and the sampled bases span aff(B). It cannot give interior in the larger original integer-coordinate space if B has smaller affine dimension."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T18:56:01Z",
+    "issues": [
+      {
+        "defect": "P is not required to span R^n. For n=d=1, P={0}, K_0=[-1,1], one roof q=1 at each normal, and affine ℓ=0, the set is always {0}×[-1,1], which has empty ambient interior.",
+        "locator": "Statement, first paragraph, 'bounded convex bodies with projection B'",
+        "repair": "Say 'compact convex sets with projection B and nonempty interior relative to aff(B)×R^d', or state the affine-span convention used in the source.",
+        "severity": "minor"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its finite complete-menu path gives the same radial speed formula for finite indices, with compact convex-set phrasing. The frozen proof extends the support-closure method to a compact index family and permits both affine perturbation signs.",
+        "fact_id": "5d743dac7de8813b"
+      },
+      {
+        "comparison": "Gives signed penalty approximation and fixed-boundary pairings for finite ambient polytope facets. The compact continuous complete menu here need not be polytopal and has no finite normal list.",
+        "fact_id": "3684b58f28a5c4e6"
+      }
+    ],
+    "readability": "",
+    "reviewed_proof_sha256": "d9304145c9eb7410383c81886f8d7d222ed76bd1e0f0dd96dd29bd12cfc17c5e",
+    "reviewed_statement_sha256": "45a0485f91896f0dc3718b4ee7c58ac4ed31cdf4e0e459046bc7ab2f48ad9f98",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T18:53:59Z",
+    "summary": "The compact-menu radial limit and penalty-field closure are correct, but the stated ambient-body conclusion needs the source's relative affine-space convention.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its finite complete-menu path gives the same radial speed formula for finite indices, with compact convex-set phrasing. The frozen proof extends the support-closure method to a compact index family and permits both affine perturbation signs.",
+      "fact_id": "5d743dac7de8813b"
+    },
+    {
+      "comparison": "Gives signed penalty approximation and fixed-boundary pairings for finite ambient polytope facets. The compact continuous complete menu here need not be polytopal and has no finite normal list.",
+      "fact_id": "3684b58f28a5c4e6"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e4754166e15e2365902cabc4ef43c4f8aac1ade4b7f0b4c0acbc6c2878b0b2b8",
+  "reviewed_statement_sha256": "60ddb0a4947a6e3009e30b4129ed2b493c6511076a74f035b2d3a1bc852784f9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "c12ab5a4be9fce81b6f5c0c251a5bee7c77e98c98cb90f4e42660b57870591e6",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:00:07Z",
+  "summary": "The revised conclusion states nonempty interior in the correct relative ambient space and its added dimension argument proves it. The compact support-limit and penalty-field arguments are unchanged.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

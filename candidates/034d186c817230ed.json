@@ -1,0 +1,26 @@
+{
+  "advances": "An axial fixed direction of a restricted equal-volume ordinary cone family, at the mean of the endpoint centroids.",
+  "author": "PK-research-agent",
+  "candidate_id": "034d186c817230ed",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.857128+00:00",
+  "depends_on": [],
+  "draft_key": "axial-volume-preserving-cone-calibration",
+  "kind": "theorem",
+  "proof": "The cone section volume is $|Q|(1-x)^{d-1}$ on $[0,1]$. Integrating gives $|A|=V$ and centroid $(1/(d+1),0)$. The map has determinant one and the centroid of $D$ is $(k/(d+1),0)$. Write $a=d/(d+1)$. The two normalized upper tails are $(a-s)^d,(a+s/k)^d$ with the bases of the powers clipped to $[0,1]$. On the simultaneous proper interval $(-1/(d+1),\\min(a,k/(d+1)))$, the sum is strictly convex, with stationary shift $s_*=ak(t-1)/(1+t^d)$. The first base at this shift is $a(1+k)/(1+t^d)>0$ and the second is $t$ times the first. The second base is strictly below one because $t^d-dt+d+1\\ge2$ for $t\\ge1$, by differentiation. Thus $s_*$ is proper. On the negative side outside this interval the first cap is full. On the positive side, either the second is full or the first is empty and the second is nondecreasing. Full caps cost at least one and the proper minimum is at most the zero-shift cost $2\\Gamma_d\\le1$. This proves the all-shift minimum and substitution gives $P(t)$.\n\nLet $\\rho=1/t$. In the sum at coordinate $x$, the radius of the $Q$-section is maximized by allocating $x$ first to $D$, whose radius decreases at rate $\\rho/k\\le1$. Since $0\\in Q$, all admissible homothetic sections are nested and the maximum radius describes the actual section. The radius is $1+\\rho-\\rho x/k$ on $[0,k]$ and $1+k-x$ on $[k,k+1]$. Integrating its $(d-1)$st power multiplied by $|Q|$ gives the unscaled sum volume $V[1+(1+t)^d-t^d]$, since $k/\\rho=t^d$. Scaling the sum by $1/2$ gives the asserted midpoint volume.\n\nFor $t>1$ the denominator of the coefficient ratio is positive and strictly increasing. Its right derivative at one is $d(2^{d-1}-1)/2^d>0$. The numerator vanishes to second order at one by differentiating $P(t)$. It is strictly positive for $t>1$ because the proper stationary point differs from zero. The numerator is bounded and the denominator tends to infinity, so the ratio tends to zero at both ends and attains its positive maximum. At $d=2$ it simplifies to $(8/9)(k-1)/(k^2+1)$, with derivative of the sign of $2-(k-1)^2$. Substitution at $1+\\sqrt2$ and at $2$ gives the constants.\n",
+  "source_candidate_ids": [
+    "68d3d3976d28a947"
+  ],
+  "source_candidate_sha256": {
+    "68d3d3976d28a947": "a083d3cf7e8b308ed063c192311926c21401f3188c4876d29b7b2ed5baab9fe6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "68d3d3976d28a947",
+      "locator": "68d3d3976d28a947:03 §1 (2)–(5) and §2 (6), exact axial cone compensation"
+    }
+  ],
+  "statement": "Fix $d\\ge2$, a convex body $Q\\subset\\mathbb R^{d-1}$ with centroid zero, and $k\\ge1$. Set $A=\\{(x,y):0\\le x\\le1,\\ y\\in(1-x)Q\\}$, $D=\\operatorname{diag}(k,k^{-1/(d-1)}I)A$, $V=|Q|/d$, $t=k^{1/(d-1)}$, and $\\Gamma_d=(d/(d+1))^d$. For normalized upper axial tails $F_A,F_D$ measured from the respective centroids,\n$$\nP(t):=\\min_{s\\in\\mathbb R}[F_A(s)+F_D(-s)]\n=\\Gamma_d\\frac{(1+t^{d-1})^d}{(1+t^d)^{d-1}},\\qquad\n\\frac{|(A+D)/2|}{V}=2^{-d}[1+(1+t)^d-t^d].\n$$\nThe least $c_d\\ge0$ for which $F_A(s)+F_D(-s)+c_d(|(A+D)/2|/V-1)\\ge2\\Gamma_d$ for all such $Q,k,s$ is the attained maximum over $t>1$ of the ratio of the shortfall $2\\Gamma_d-P(t)$ to the relative volume excess. In dimension two it equals $4(\\sqrt2-1)/9$ at $k=1+\\sqrt2$. At $d=2,k=2$ the respective minimum, relative excess and ratio are $4/5,1/2,8/45$.",
+  "subgoal_id": "pk-intake-axial-volume-preserving-cone-calibration",
+  "title": "Exact axial paired tails and compensation for volume-preserving cone pairs"
+}

@@ -1,0 +1,34 @@
+{
+  "advances": "Certificate and sharpness examples for compatible three-fiber families; no universal nonemptiness.",
+  "author": "PK-research-agent",
+  "candidate_id": "60294325ffa95e5f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:52:09.421517+00:00",
+  "depends_on": [],
+  "draft_key": "common-normal-allocation-hull",
+  "kind": "theorem",
+  "proof": "Each ordinary depth region is convex: for any halfspace containing a point on a segment, one endpoint of the segment belongs to the halfspace. The regions are closed because the cap through a mark has volume continuous in that mark for each nonzero normal, by dominated convergence off the limiting cutting hyperplane. Their compact convex hulls in the intersection lie in $K$ by compatibility. Given an allocation at $r$, increasing its entries to sum to any larger $r'$ shrinks all regions in that hull. This proves nesting.\n\nIf a closed containing ambient cap through or below $(0,y)$ captures masses $U,V,W$ with sum less than $r$, choose an allocation strictly greater than each corresponding mass. For a nonzero continuous normal $u$ translate the boundary parallel to pass through $(0,y)$, without increasing any of the three masses. The three continuous thresholds for the included side $u\\cdot x\\ge h_F$ obey $h_K=(h_A+h_B)/2=u\\cdot y$. Each ordinary depth region at its allocated level must lie in $u\\cdot x<h_F$ or it would contain a point of insufficient own depth. Hence the midpoint sum and the middle region lie strictly on the same excluded side of the middle plane, and so does their convex hull. For a pure-base cap, the captured mass includes all of $K$ and at least one whole endpoint; their allocated depth regions are both empty. Thus that allocation hull cannot contain $y$ either. This proves the depth assertion, with $r=0$ immediate.\n\nFor $y\\in R_s$, a deficient oblique endpoint-only cap similarly yields $p>U$ and $s-p>W$, excluding its entire allocation midpoint sum; a pure-base cap contains one endpoint of volume at least $s$. Now take any allocation summing to $t+s$ at a point of $D_K(t)\\cap R_s$. If $p_K\\le t$, the point belongs to $D_K(p_K)$. Otherwise the endpoint levels sum to less than $s$, and increasing them to sum $s$ gives a smaller midpoint sum containing the point. The last inclusion follows since $(D_A(p)+D_B(q))/2\\subset R_{\\min(p,q)}$ by nesting whenever the minimum is positive and at most the smaller endpoint volume. If the minimum exceeds that volume the intersection is empty; when it is zero the middle region alone gives depth and $D_K(t)\\subset C_t$ since every allocation there has $p_K\\le t$.\n\nFor the first interval example, the endpoint intervals at level $p\\le1/2$ are $[p,1-p]$, and the middle interval at level $t\\le1$ is $[t,2-t]$; larger levels give empty sets. If an endpoint allocation exceeds $1/2$, the middle allocation is below $5/6$ and its interval contains $5/6$. If $t>1$, both endpoint allocations are below $1/2$ and their midpoint interval $[(4/3-t)/2,1-(4/3-t)/2]$ contains $5/6$. Otherwise the hull contains $5/6$ since the middle right endpoint is at least $1$ and the midpoint interval's left endpoint is at most $1/2$. Conversely the allocations $(1/2+\\eta,5/6-\\eta,0)$ and $(1/3-\\eta,1+\\eta,0)$ force $y\\ge5/6-\\eta$ and $y\\le5/6+\\eta/2$, respectively, for all sufficiently small $\\eta>0$. Thus the intersection is the claimed singleton. At middle threshold $h\\in[0,1]$, the minimized endpoint lower and upper tails are $\\min(2h,1)$ and $\\min(2(1-h),1)$. For the lower tails the endpoint thresholds sum to $2h$. If neither tail is full, the sum of their nonnegative parts is at least $2h$; a full tail gives at least $1$. Balanced thresholds attain $2h$ when $2h\\le1$, and thresholds $0,2h$ attain $1$ when $2h\\ge1$. Reflection proves the upper-tail formula. At $h=5/6$, the lower and upper totals after including $K$ are $11/6$ and $3/2$, and the least pure-base cost is $3$. The separate depths are $5/6$ and $1/3$. For three identical unit intervals and $0<r\\le1/2$, every allocation hull is symmetric about $1/2$ and has left endpoint $\\min(t,(r-t)/2)$, whose maximum over $0\\le t\\le r$ is $r/3$. The same endpoint tail formulas give $\\Delta(y)=3\\min(y,1-y)$ for $0\\le y\\le1$.\n",
+  "source_candidate_ids": [
+    "8a1fb011e3d0549f"
+  ],
+  "source_candidate_sha256": {
+    "8a1fb011e3d0549f": "7f5b7e50f7c37161a1ffe8c72e90fe51683e11e9385749a49728d4c734d86418"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8a1fb011e3d0549f",
+      "locator": "8a1fb011e3d0549f:01 §§1–2, (1)–(2), common-normal allocation hull"
+    },
+    {
+      "candidate_id": "8a1fb011e3d0549f",
+      "locator": "8a1fb011e3d0549f:02 §3, (3), inclusion of endpoint-only and separate middle certificates"
+    },
+    {
+      "candidate_id": "8a1fb011e3d0549f",
+      "locator": "8a1fb011e3d0549f:03 §4, (4) and lines 145–165, exact interval comparisons"
+    }
+  ],
+  "statement": "Let $A,K,B\\subset\\mathbb R^d$ be convex bodies, $d\\ge1$, with $(A+B)/2\\subset K$, placed at integer bases $-1,0,1$. Let $\\Delta(y)$ be the raw closed-halfspace depth of $(0,y)$ for the sum of the three fiber volumes. Write $D_F(p)$ for the ordinary raw closed-halfspace depth-$p$ superlevel in $F$, with $D_F(0)=F$. For every $r\\ge0$ let\n$$\nC_r=\\bigcap_{\\substack{p_A,p_K,p_B\\ge0\\\\p_A+p_K+p_B=r}}\n\\operatorname{conv}\\!\\left(D_K(p_K)\\cup\\frac{D_A(p_A)+D_B(p_B)}2\\right),\n$$\nwith empty summands giving the empty sum. The sets $C_r$ are nested decreasing compact convex subsets of $K$, allowing the empty set, and $C_r\\subset\\{y\\in K:\\Delta(y)\\ge r\\}$.\n\nFor $0<s\\le\\min(|A|,|B|)$ put $R_s=\\bigcap_{0\\le p\\le s}(D_A(p)+D_B(s-p))/2$. Its points have raw closed-halfspace depth at least $s$ for the two endpoint fibers alone. For every $t\\ge0$, $D_K(t)\\cap R_s\\subset C_{t+s}$. In particular, for $p,q,t\\ge0$ the intersection of $D_K(t)$ and $(D_A(p)+D_B(q))/2$ is contained in $C_{t+\\min(p,q)}$.\n\nFor $d=1$, $A=B=[0,1]$ and $K=[0,2]$, one has $C_{4/3}=\\{5/6\\}$; at that point the sum of the ordinary middle and endpoint-only depths is $7/6$, and $\\Delta(5/6)=3/2$. For $A=K=B=[0,1]$ and $0<r\\le1/2$, $C_r=[r/3,1-r/3]$ is exactly the raw mixed-depth superlevel at $r$.",
+  "subgoal_id": "pk-intake-common-normal-allocation-hull",
+  "title": "A common-normal allocation hull inside the three-fiber depth region"
+}

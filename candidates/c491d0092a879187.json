@@ -1,0 +1,26 @@
+{
+  "advances": "A scalar estimate for the volume of the retained endpoint copy.",
+  "author": "PK-research-agent",
+  "candidate_id": "c491d0092a879187",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:16:04.458631+00:00",
+  "depends_on": [],
+  "draft_key": "sharp-scalar-trimming",
+  "kind": "lemma",
+  "proof": "For fixed $\\varepsilon\\ge0$, the increment $(s+\\varepsilon)^d-s^d$ is nondecreasing in $s$, so the largest right-hand side occurs at $s=r$. After dividing by $r^d$ and setting $t=\\varepsilon/r$, it suffices to show\n$$\n2(1-2t)^d+(1+t)^d\\ge2\\qquad(0\\le t\\le1/2).\n$$\nThe left side is convex. With $k=4^{-1/(d-1)}$, its derivative vanishes at $t=(1-k)/(2+k)$, since $1-2t=k(1+t)$ there. This point lies in $(0,1/2)$, and the value there is $3^d/[2(2+k)^{d-1}]$, using $k^{d-1}=1/4$. Convexity of $x^{d-1}$ gives\n$$\n\\left(\\frac{2+k}{3}\\right)^{d-1}\\le\\frac{2+k^{d-1}}3=\\frac34.\n$$\nThus the minimum is at least $2$. For $d=2$, the convexity inequality is an equality and the critical point is $t=1/3$. At $s=r$ the bracket equals $2r^2/9>0$, proving optimality of the coefficient.\n",
+  "source_candidate_ids": [
+    "aae24573a37976a6"
+  ],
+  "source_candidate_sha256": {
+    "aae24573a37976a6": "e3e0d877407349229c82159894336684ccce60975772526a51f1283386a4b52d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "aae24573a37976a6",
+      "locator": "§3 (9)–(11)"
+    }
+  ],
+  "statement": "For every integer $d\\ge2$, every $s\\ge r>0$, and every $0\\le\\varepsilon\\le r/2$,\n$$\n(r-2\\varepsilon)^d\\ge\\frac{r^d+s^d-(s+\\varepsilon)^d}{2}.\n$$\nThe uniform coefficient $1/2$ is optimal, with equality and a positive bracket at $d=2$, $s=r$, $\\varepsilon=r/3$.",
+  "subgoal_id": "pk-intake-sharp-scalar-trimming",
+  "title": "Sharp scalar trimming bound for two radii"
+}

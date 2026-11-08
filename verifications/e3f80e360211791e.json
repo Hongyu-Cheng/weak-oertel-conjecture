@@ -1,0 +1,87 @@
+{
+  "candidate_id": "519a245ee0cbdc6d",
+  "candidate_sha256": "fc74a84c35c2ce041c86e66215e71dbd5de2823379e774e07ccf46b7cbbf9b50",
+  "checked_dependency_candidate_sha256": {
+    "2df755910618e8d8": "9eb100e66161a05923c57f0bb4c82567d6f71b3437a5c121d91416cf9036a676",
+    "77d36834ea2179e7": "a8d2a2e30796e1998148e99061b6832d2ffd41d1f4057f78c0900359e255320d",
+    "aa4df3d20ca63976": "28e8755914ddaba52cd95420c9c8a0255aaf4eefdd9559a6d82b0c826d77d532",
+    "e4ef1ac154c5d280": "85eff8bf4977b758bdadfc4168ffd61057189dc81f0fe19b8cde541c18ecd2f4"
+  },
+  "checks": [
+    "The conditional hyperplane fraction at each retained coarse level is at most the global fraction divided by its fine mass share. A conditional fraction below one gives r independent fine-base directions; a positive section gives the complementary s vertical directions, with s=0 covered by the base directions alone.",
+    "The block normalization for a full m-body first has uniform inner and outer radii, so its scalar correction to volume one is bounded above and away from zero. The block determinant is |det A||det C|=1/M_{ell,z}; the transformed covolume times section Jacobian is exactly v_{ell}/M_{ell,z}. Direct calculation and the exact arithmetic verifier agree, including s=0.",
+    "Apply the frozen quantitative lattice result to each conditional transformed law in its bounded fine projection. Its hyperplane fraction is unchanged and tends to zero, so the transformed lattice covering radius tends to zero.",
+    "The measurable Voronoi cell lies in the radius-rho coordinate cube, including arbitrary translated cosets. The accepted one-body absolute discrepancy is uniform in this offset and in the bounded box. Hence the normalized sampled mass tends to volume one, and the exact determinant identity gives both ratios.",
+    "For an anchored integer average, convexity yields a translate of one positively scaled source body inside the target. The source linear block frame sends that copy to a bounded body up to a translation; removing its translation only shifts the coset. Its coarse volume is lambda_i^m, and sampling in this very coset yields the lower bound on its original fine mass with the factor M_{ell,z_i}. This proves the target is retained before any coarse ratio at that target is used.",
+    "After closure, Brunn–Minkowski on the full anchored inclusion gives the power inequality. Finiteness of P makes the positive alpha values sum to one and gives the discarded fine mass o(T_ell), which is also o(M_{ell,E}).",
+    "Rescaling an anchor map by (M_{ell,z}/M_{ell,E})^(1/m) multiplies its determinant by that factor to the mth power and keeps its inner/outer radii and lattice covering radius controlled. The fixed component has positive transformed volume lower bounds. Diameter propagation under a common linear map uses only those bounds and the bounded anchor, with no second shape map.",
+    "The source bytes match the frozen digest. §§3–5 state the retained-component claim and prove the recovery and concavity. The opening of §6 supplies the explicit determinant correction also reconstructed in the frozen proof. The draft stops before the separate center and conditional depth recovery claims."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "2df755910618e8d8",
+      "candidate_sha256": "9eb100e66161a05923c57f0bb4c82567d6f71b3437a5c121d91416cf9036a676",
+      "hypotheses": "Each retained conditional law is supported in the transformed fine lattice coset and within a uniformly bounded fine projection. Its hyperplane mass fraction tends to zero and its mass is positive. The exact frozen predecessor converts this into vanishing covering radius. Admission requires that predecessor’s independent approval.",
+      "reviewed_proof_sha256": "e9c2248d97eb93e3661841e80029e191f8315e90cf59235099b20ba75dfbe18c",
+      "reviewed_statement_sha256": "dd749006f3354132933471190b1e6282f04d8dd4df6223e8b12c1498f1b6f308"
+    },
+    {
+      "candidate_id": "77d36834ea2179e7",
+      "candidate_sha256": "a8d2a2e30796e1998148e99061b6832d2ffd41d1f4057f78c0900359e255320d",
+      "fact_id": "77d36834ea2179e7",
+      "fact_sha256": "832f092ce6a9928c87a06af950db24ec80a83b0c73b3e36478f3dc4544e3b2ca",
+      "hypotheses": "Apply the geometric block affine normalization in dimensions (r,s) to each eventually full m-dimensional convex coarse fiber. The standard-lattice sampling notation is not needed for the geometric clause; the proof separately computes the Jacobian of the actual full-rank lattice coset.",
+      "reviewed_proof_sha256": "dc4e1bfa9342e945daa602d9807f85d092f04d680c852426c01d2b8d3b1bc52d",
+      "reviewed_statement_sha256": "4cb0a819c8a753d4ec6f8f1a67255511ffb9507300e5150eb49cfe777de0b97d"
+    },
+    {
+      "candidate_id": "e4ef1ac154c5d280",
+      "candidate_sha256": "85eff8bf4977b758bdadfc4168ffd61057189dc81f0fe19b8cde541c18ecd2f4",
+      "fact_id": "e4ef1ac154c5d280",
+      "fact_sha256": "4fc0dfe1997be608231473097c2bf01da51c0e1ea91becf1d432703070491362",
+      "hypotheses": "Use the proof’s single-body bounded convex-set estimate with one coarse level, the transformed fine lattice and its Voronoi cell in the rho cube. Its uniformity in coset translation applies again to each bounded translated homothet. The compared volumes are positive, including s=0.",
+      "reviewed_proof_sha256": "323c2c69b9964a75db34548086ea3af6664edfdddc38c409cba5305df81b56bb",
+      "reviewed_statement_sha256": "aa1e4d8d310ba256274f12fa32c008aa8bbeabac35b39167d16ab2eb287cfa82"
+    },
+    {
+      "candidate_id": "aa4df3d20ca63976",
+      "candidate_sha256": "28e8755914ddaba52cd95420c9c8a0255aaf4eefdd9559a6d82b0c826d77d532",
+      "fact_id": "aa4df3d20ca63976",
+      "fact_sha256": "9715e654f5b41f725cc820b7d7bfc4f53990efa9ac9dfacd4c7c2e5ee8349ebf",
+      "hypotheses": "After fixing one common linear block frame, apply the propagation part of the proof in dimension m on the fixed retained compatible family. The anchor already has bounded diameter; all component volumes have common positive lower and finite upper bounds. No determinant-one renormalization is additionally required.",
+      "reviewed_proof_sha256": "7597f5853a24b1d14a518dcb9b9f1a6f1c0873de0a839f2ae4cb85060184c043",
+      "reviewed_statement_sha256": "cc833492526d04d61e89215e3db4df20736abb215b29c5af7a16a0bbee00b8b0"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:07:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Assumes fixed positive coarse volume ratios and vanishing component mesh and then transfers fine mass and depth in the intrinsic lift. The frozen claim derives these hypotheses and negligible omitted fine mass from the original fine hyperplane fractions. It does not state a new lift-depth inequality.",
+      "fact_id": "9b5058bf49ca5ea3"
+    },
+    {
+      "comparison": "Assumes an original common bounded frame and relative mesh small compared with coarse total volume, then selects positive coarse limiting weights. The frozen claim starts from fine limiting weights and obtains individual/component frames, so the accepted retention argument alone cannot give its fine-support closure.",
+      "fact_id": "84edfb2893287f73"
+    },
+    {
+      "comparison": "A greedy affine hyperplane bounds the coarse-to-fine volume ratio from below under a small fraction. Its dimension-dependent outside-mass bound does not give convergence of that ratio to one or small transformed covering radius.",
+      "fact_id": "ec2b7d125fe6a3f0"
+    }
+  ],
+  "readability": "For more precise provenance, the opening of source §6 could accompany the existing §§3–5 locator for the determinant adjustment. The latter sections already state the component normalization and the frozen proof derives it explicitly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ff1829652a9a7d88f78f2ef5c4ff258c88762dd83e8a0a7451dd601f3c49a888",
+  "reviewed_statement_sha256": "90918ca263dcdf287b539343fe1556ea62a9113a753780047f601f712019bda8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:04:41Z",
+  "summary": "The theorem correctly derives positive coarse shapes, dense transformed sampling, retained-set closure, and common component normalizations from the fine hyperplane fractions.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

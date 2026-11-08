@@ -1,0 +1,28 @@
+{
+  "advances": "Conditional estimate for an actual physical surface inequality. It does not identify its surface coupling with a tilted-volume coupling or give a numerical depth bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "442c4c99600062dc",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.114812+00:00",
+  "depends_on": [
+    "ac53fe19fef9ec25"
+  ],
+  "draft_key": "separate-surface-logarithmic-jensen-reserve",
+  "kind": "lemma",
+  "proof": "Testing both signs of each affine function gives equal mass and full first moments of the two Jordan marginals. The inequality for the convex tests gives the compact convex order of ac53fe19fef9ec25, which supplies $\\pi_S$. Its marginals are those of the actual signed surface density. To see that $B$ is itself an allowed convex test, write $L=\\min_r A_r$ and extend each $-\\log s$ below $\\min_C A_r>0$ by its tangent line. Composition with $A_r$ and finite maximum give a globally finite convex extension of $-\\log L$. Thus $R=-\\int\\Xi B\\,dS$ is nonnegative already by the test inequality. The marginal formula for the coupling also gives exactly\n$$\n-\\int\\Xi B\\,dS\n=k\\int[\\log L(w)-\\log L(w')]\\,d\\pi_S .\n$$\nConcavity of $L$ and the conditional physical barycenter give $d_L\\ge0$. For $a,b$ in the positive value range on $C$, the second derivative of $\\log$ is at most $-1/L_{\\max}^2$, so\n$$\n\\log b\\le\\log a+(b-a)/a-(b-a)^2/(2L_{\\max}^2).\n$$\nTake $a=L(w)$, $b=L(w')$ and integrate, first conditioning on $w$. This gives the claimed two terms. The conditional Jensen defect may be positive, since the coupling has surface marginals and no assumed $L$ equality in each row.\n",
+  "source_candidate_ids": [
+    "8f0725a173821a00"
+  ],
+  "source_candidate_sha256": {
+    "8f0725a173821a00": "4a1a141b566a692c4393bc4c4f98e22f46c2d8ba97c082045e72a8c3c6d0c22b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8f0725a173821a00",
+      "locator": "§6 (24)–(25), Jordan surface coupling and quantitative log Jensen split"
+    }
+  ],
+  "statement": "Let $dS$ be the finite sum of sampled fiber boundary area measures on the compact physical hull $C$, with endpoint counting measure for one-dimensional fibers. Let $\\Xi$ be an integrable actual signed boundary density. Assume the physical inequality $\\int\\Xi\\Phi\\,dS\\le0$ holds for every globally finite convex physical $\\Phi$, as when each such function is an actual common inward speed for this separator. Let $L>0$ on $C$ be the minimum of finitely many affine functions, $L_{\\max}=\\max_C L$, $k\\ge0$, $B=-k\\log L$, and $\\Xi_0=\\Xi-B$. Set $\\mu_S=\\Xi_+dS$ and $\\nu_S=\\Xi_-dS$.\n\nThere is a compactly supported physical martingale $\\pi_S$ from $\\mu_S$ to $\\nu_S$. For every such coupling and $d_L(w)=L(w)-\\mathbb E_{\\pi_S}[L(w')\\mid w]$, one has $d_L\\ge0$ $\\mu_S$-almost everywhere and\n$$\n\\begin{aligned}\nR&=-\\int\\Xi_0 B\\,dS-\\int B^2\\,dS\n =k\\int[\\log L(w)-\\log L(w')]\\,d\\pi_S\\\\\n&\\ge k\\int\\frac{d_L(w)}{L(w)}\\,d\\mu_S(w)\n +\\frac{k}{2L_{\\max}^2}\\int[L(w')-L(w)]^2\\,d\\pi_S\\ge0 .\n\\end{aligned}\n$$\nAll terms involving the coupling are zero when the common surface mass is zero.",
+  "subgoal_id": "pk-intake-separate-surface-logarithmic-jensen-reserve",
+  "title": "Surface logarithmic reserve with concavity defect and squared increments"
+}

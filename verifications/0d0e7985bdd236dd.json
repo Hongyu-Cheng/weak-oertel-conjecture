@@ -1,0 +1,57 @@
+{
+  "candidate_id": "1f0ffae097710a37",
+  "candidate_sha256": "8d371a1a2d30ffb69cd5ee64be454cdaccbb7bbdb1cc35da71a6f58f4e40f8c3",
+  "checked_dependency_candidate_sha256": {
+    "290ddd8516d76865": "99f2e2fc76efe992abaca0166a670d8dc8051c35cb7e40f707c2058e80d3dba2"
+  },
+  "checks": [
+    "Verified original 61582452a1450270 at its declared SHA-256, equations (1)–(5) and the exact calibration. Its example concerns local capacity curvature for an ordinary strictly positive row. The source and draft make no claim of stochastic optimality.",
+    "Verified the derivative sign F−tF′/3=u[u−2(a/c)(1−u)] and its simple interior root, with zero mass for t≤a and objective t for t≥b. The root is the unique nondegenerate minimizer. Exact substitution gives t*, F(t*) and the capacity cube.",
+    "The pair proportions and the high-pair sum have Jacobian factor U(1−U), giving independence and the claimed conditional CDF. A uniform positive gap from both conditional pair heights holds on a neighborhood of the baseline interior optimum, so the conditional expectation is smooth there. The sup-norm squeeze gives a uniform lower bound for early thresholds, uniform convergence on the retained compact interval, and exclusion of remote minima. The compact interval has positive mass throughout for small perturbations. This justifies the optimizing implicit branch.",
+    "Differentiated the two conditional CDF ratios independently and used E[D]=0 and E[D²]=1/3. Both displayed second derivatives match. The exchange symmetries decouple the three subspaces and give zero mixed threshold-split derivatives, so the split second derivatives of the optimized value are the stated ones.",
+    "Recomputed the common-pair quadratic form using the two log derivatives and confirmed its one-dimensional radial kernel. The split roots u*=1/4 and 3/4 give a/b=1/7 and 3/5. Checked all five signatures including both vanishing split cases. Exact substitution at (1/16,1/2) gives the four reported scalars and the fixed pair totals give the stated section centroid."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "290ddd8516d76865",
+      "candidate_sha256": "99f2e2fc76efe992abaca0166a670d8dc8051c35cb7e40f707c2058e80d3dba2",
+      "fact_sha256": "e6b237cd6128371742ecfa161e2a233e4f4795cd07cadec03070d2dbcc916105",
+      "mapping": "Specialize the accepted uniform simplex subset formula to d=3 and the two high barycentric coordinates, so k=2. The normalized volume is 6∫₀ᵘ v(1−v) dv = 3u²−2u³. The different barycentric numbering is just a permutation.",
+      "reviewed_proof_sha256": "390c176632f2601b4b8d000e7a8ac5b4fe6561c79606e1df9114b8e253e96f8d",
+      "reviewed_statement_sha256": "50a42fb92b3b0a5ce29f9da36cc847f0be98c290f3ce6a00f9539f3cfebc0b0d",
+      "status": "accepted at the reviewed snapshot"
+    }
+  ],
+  "elapsed_seconds": 334,
+  "finished_utc": "2026-11-08T14:11:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The general unique minimizing threshold theorem directly covers uniqueness and C¹ regularity once the threshold is proper. It leaves the exact optimum and curvature unevaluated.",
+      "fact_id": "d2ba4e3cbd6eb730"
+    },
+    {
+      "comparison": "For the proper positive-row optimizer it already gives local C² and an abstract Schur formula for the Hessian. The explicit blocks, sign cutoffs and exact noncentral calibration are additional calculations.",
+      "fact_id": "8bdcdcd6e2fa69d9"
+    },
+    {
+      "comparison": "The accepted positive curvature result needs two strictly captured vertices with centroid coordinates at most 1/3. The calibration has both captured coordinates 7/18, so its negative-semidefinite Hessian falls outside that hypothesis.",
+      "fact_id": "1cdceac089be44d8"
+    }
+  ],
+  "readability": "The early-threshold estimate applies only to positive-mass thresholds, which are at least a−η. The remaining compact interval has positive baseline CDF on a small enlargement. Inertia is basis-invariant, so the unnormalized split directions suffice.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "271b90424bd1c09214a542d748d86be902de7d4c98c7ec8dc4f4131306463557",
+  "reviewed_statement_sha256": "abe57297e821396f8a6570fb80610a41de8f3b540b1abc0fa0bde93e75e65a2e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:05:57Z",
+  "summary": "The unique threshold, smooth optimized capacity, three Hessian blocks, five inertias and exact calibration all follow for 0<a<b.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

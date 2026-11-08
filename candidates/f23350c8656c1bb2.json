@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary simplex stationarity for independent absolutely continuous step laws in at least three coordinates. The atom examples record stationary laws outside the uniqueness class.",
+  "author": "PK-research-agent",
+  "candidate_id": "f23350c8656c1bb2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:43:48.543289+00:00",
+  "depends_on": [
+    "bf9a7e56f89375b5"
+  ],
+  "draft_key": "simplex-independent-step-density-uniqueness",
+  "kind": "lemma",
+  "proof": "The beta-step merging lemma proves sufficiency. For necessity, set $G(u)=\\int_0^u w(b)/(1-b)^{m-1}\\,db$ for $0\\le u<1$. Conditioning on $B=b$ and $J=j$ gives density $(1-b)^{-(m-1)}\\mathbf 1_{\\{x_j\\ge b\\}}$ relative to uniform probability. Integrating and averaging yields density $m^{-1}\\sum_jG(x_j)$ almost everywhere. Thus stationarity gives $\\sum_jG(x_j)=m$ almost everywhere. The function $G$ is continuous on $[0,1)$, so the identity holds at every interior point and extends to each boundary tuple with all coordinates less than $1$ by continuity.\n\nFor $x,y>0$ with $x+y<1$, compare the tuples $(x,y,1-x-y,0,\\ldots,0)$ and $(x+y,1-x-y,0,\\ldots,0)$. Since $G(0)=0$, the comparison gives $G(x)+G(y)=G(x+y)$. This holds also when either variable is zero. The centroid gives $G(1/m)=1$. Additivity gives $G(1/(mn))=1/n$ for every positive integer $n$, and $G(k/(mn))=k/n$ for $0\\le k<mn$. Continuity now gives $G(u)=m u$ on $[0,1)$. Differentiate on compact subintervals of $[0,1)$ to obtain the claimed density almost everywhere.\n\nThe step $0$ leaves the uniform law unchanged, so mixtures with its unit mass are stationary by linearity. In the two-vertex case the two half-length images at step $1/2$ partition the interval up to a null midpoint, giving uniformity directly.\n",
+  "source_candidate_ids": [
+    "c6aadce19d219a98"
+  ],
+  "source_candidate_sha256": {
+    "c6aadce19d219a98": "41a9db5cd61db2a8a273e4c6b49fcd2ca47dcc369395884530aca188d38a7444"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c6aadce19d219a98",
+      "locator": "§5, uniqueness among absolutely continuous independent steps"
+    }
+  ],
+  "statement": "For an integer $m\\ge3$, let $W$ be uniform on the simplex $\\Delta_m=\\{x\\in\\mathbb R^m:x_j\\ge0,\\ \\sum_jx_j=1\\}$, let $J$ be uniform on its vertex indices, and let $B$ have an absolutely continuous probability density $w$ on $[0,1]$. Assume the three variables are independent. Then $(1-B)W+Be_J$ is uniform on $\\Delta_m$ if and only if $w(b)=m(1-b)^{m-1}$ almost everywhere. If an atom at zero is allowed, any mixture of this beta law and the unit mass at zero is stationary. For $m=2$ the constant step $B=1/2$ is also stationary.",
+  "subgoal_id": "pk-intake-simplex-independent-step-density-uniqueness",
+  "title": "Uniqueness of an absolutely continuous stationary vertex step"
+}

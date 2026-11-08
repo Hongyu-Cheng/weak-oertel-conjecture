@@ -1,0 +1,70 @@
+{
+  "candidate_id": "b22db3535d2a902a",
+  "candidate_sha256": "07684794a865467280bf897c6e145bf19508ef409fd8feb569e0999f9601e076",
+  "checked_dependency_candidate_sha256": {
+    "43ed87d91b76249c": "2707b8533ffcb2ddf282dfef53d1e9903a84d34036fdc151783aaac7fff51218",
+    "dec855d1498a4e64": "e4db9ffc3a282004fb85fc58d6901fe36646dab1a45abfcb56fa66aa1291a752"
+  },
+  "checks": [
+    "Verified cebc39c4f5ccbc96 §§1–3, (3)–(10) in the committed source, including its use of all actual post-expansion fibers, its raw objective and its unrestricted compatible fixed-base perturbation class.",
+    "Each fiber of the expanded hull contains its old fiber and is compact and convex. Group any new hull representation by sampled base using convexity of each input; replacing its expanded input point by an original point changes the sum by at most lambda_u t<=t. The replacement projects to the same site and is in its old exact fiber, proving both inclusions and Hausdorff convergence. Every new input lies in the corresponding new actual fiber, and all those fibers lie in the new hull, proving canonicity.",
+    "The expanded input K_u+tB_d contains an exterior open ball: if x is a supporting point and n the unit outward normal, the open ball centered at x+(t/2)n of radius t/2 lies beyond the supporting plane and in x+tB_d. Thus the actual new u-fiber strictly gains d-volume, including for d=1, while no sampled volume decreases. Every new fiber remains positive and the base hull is unchanged.",
+    "At every deepest base p, any convex combination whose base lies in F_p uses only inputs over F_p, by the face property. Since u is outside F_p, the entire old and new hull restrictions over F_p coincide. Both original summed-volume measures restrict identically there; same-batch exact face isolation then gives equal raw depths at every mark over p.",
+    "For each other p, fixed-base marked stability gives continuity at a fixed family and convergence at moving feasible marks. Compact fibers give maximizing marks. An original maximizer is feasible in the larger fiber and yields the lower limit; a subsequence of new maximizers has a limit in the old fiber by the Hausdorff bound and common boundedness, yielding the upper limit. The strict gaps persist simultaneously because P is finite.",
+    "A ball in a positive old fiber gives at least half its volume to every ambient cap through or containing its center, including whole-fiber restrictions. Therefore Q>0, and the strict denominator increase with constant numerator makes Q/M_t<Q/M in the ordinary objective.",
+    "The small positive radii yield arbitrarily small admissible perturbations in product Hausdorff topology. A relative-interior sampled site can only be covered by the full projection face, forcing some deepest p with F_p equal to the full hull, equivalently p in its relative interior. The rank-zero case is immediate with no uncovered site."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "dec855d1498a4e64",
+      "candidate_sha256": "e4db9ffc3a282004fb85fc58d6901fe36646dab1a45abfcb56fa66aa1291a752",
+      "mapping": "Apply to the old and new finite positive compatible sampled families separately, with their unnormalized summed Lebesgue measures, at every old mark over each deepest base p. The minimal face F_p is a nonempty projection face and the restrictions coincide exactly, so the original and expanded raw depths at those marks are equal.",
+      "reviewed_proof_sha256": "094492b83ff5f0ca81e1aecbb45ea4c8b126e4a9d52219cc132977426656f6ac",
+      "reviewed_statement_sha256": "97991a749d7cb8345ae551f903e9a029c46d597b39196f22ee7e6eab18cb1bcc",
+      "status": "same batch, independent approval required before admission"
+    },
+    {
+      "candidate_id": "43ed87d91b76249c",
+      "candidate_sha256": "2707b8533ffcb2ddf282dfef53d1e9903a84d34036fdc151783aaac7fff51218",
+      "mapping": "Take the finite base in its relative Euclidean affine hull and the same positive continuous dimension d. The original and new sampled fibers are positive compact convex bodies and their Hausdorff distances are bounded by t. The accepted fact gives convergence at feasible moving marks and continuity at fixed-family marks; the compact maximum argument then gives q_p(C_t) -> q_p(C). Any ambient directions vanishing on the relative product give only a whole containing trace and do not affect depth.",
+      "reviewed_proof_sha256": "b323bf5498e94689c6c1385317c201ed98ce467933a06b137c009c5d3381a72e",
+      "reviewed_statement_sha256": "807c43d9db4a6105e4d7a6741706bdbde502307c47e2ca352f9afc4c87ac7b2a",
+      "status": "accepted at the reviewed snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:50:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides the fixed-base marked-depth continuity and hence continuity of fiber maxima. It does not construct an admissible strictly volume-increasing family or keep raw maxima exactly unchanged.",
+      "fact_id": "43ed87d91b76249c"
+    },
+    {
+      "comparison": "Provides canonical compatibility and a restriction lower bound. That inequality alone cannot keep raw depths unchanged or imply exact ordinary descent.",
+      "fact_id": "ba0f3db1bf4f62c6"
+    },
+    {
+      "comparison": "Attains the unrestricted infimum on a smallest bad canonical base and gives proper closed-minor quotas. The exact uncovered-site perturbation and deepest-face coverage at arbitrary compatible fixed-base local minima are not its conclusion.",
+      "fact_id": "26d27b0f77ea4ac9"
+    },
+    {
+      "comparison": "Its local upper bound is for nested smaller fibers, a positive buffer and faces of the convex hull of deepest bases. The frozen result concerns expanding actual fibers, ordinary depth and faces of the full base hull, with an exact raw equality.",
+      "fact_id": "09a0ec46efc18691"
+    }
+  ],
+  "readability": "The operation changes one input, then recomputes every actual sampled section. Actual sections outside the deepest faces can enlarge even at unchanged input sites. Here the minimum is over all actual compatible positive families on the fixed base, so this perturbation is admissible as written.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c51f1f744427d03434e48a46dd2a81ee2d904bc54598294d9a3be9ab3169227c",
+  "reviewed_statement_sha256": "ced35868d6764a572af06459b09deadd528b49db5e948207ca3ba6c2761d3ba6",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:46:29Z",
+  "summary": "An uncovered input enlarges the compatible family and strictly increases total mixed mass while exactly preserving the global raw maximum for all sufficiently small positive radii.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

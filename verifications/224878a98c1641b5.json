@@ -1,0 +1,89 @@
+{
+  "candidate_id": "43567b84e915c6be",
+  "candidate_sha256": "3f74b5a83bd0d34090f4adb8b9ce5c2cedd533ec5af820adaaa4069c435199c6",
+  "checked_dependency_candidate_sha256": {
+    "b9a445fd1b7f9a6b": "0d826c472b357c112a88e57c923457ec6abf8e52a766510393a6fdbaabd359a8"
+  },
+  "checks": [
+    "The statement now says right cap derivative at t=0, and the proof specifies t↓0 before clipping and dividing by t.",
+    "With positive t the clipping endpoints give min(ψ,−s) for an inside face and (ψ−s)_+ for an outside face. Uniform tube domination and a null tangential rim give the same integrals in the revised scope.",
+    "The quadratic examples and the common local selector remain unchanged. Source f2040d65ee0d1d9e §5 (16) and the forward affine framework of §2 match the exact revised statement.",
+    "Verified the cap-uniform O(t²) bound from the exact unchanged regular-response predecessor. Dividing by t>0 eliminates this difference regardless of the support coincidence."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "b9a445fd1b7f9a6b",
+      "candidate_sha256": "0d826c472b357c112a88e57c923457ec6abf8e52a766510393a6fdbaabd359a8",
+      "hypotheses": "Uses only the cap-uniform O(t²) volume discrepancy in the first part of the unchanged regular-response theorem for a feasible forward hull repair on compatible common-normal simplex fibers. This bound is independent of the later regular-circuit hypotheses and holds at a positive-area supporting trace. The unchanged predecessor has been separately rechecked against the exact revised hull-repair parent.",
+      "reviewed_proof_sha256": "e973c076a5a1d2ebe8a1a7623c96551451e55c1a4502f8599776f0c0aa39543d",
+      "reviewed_statement_sha256": "3ff03ad5d0d9cb5c453aa7f50e9af9b4da99a35994209efb9963dbe90fe56d83"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:58:28Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "43567b84e915c6be",
+    "candidate_sha256": "d9c5c9ffc52750d1ed49b89f1b2c9b62535e6e046c848cc7fd3a9c331a28bcd9",
+    "checks": [
+      "Original f2040d65ee0d1d9e §5 describes the coincidence terms on the forward variation of §2. In old outward coordinates the affine facet position is tψ(x)+O(t²) over the relative interior. For t>0 the two intervals give min(ψ,−s) and (ψ−s)_+ after dividing by t.",
+      "Uniform normal displacement gives domination in the thin layer. The relative boundary of the facet is tangentially null, so its intersections with other facets do not alter the first-order coincident contribution.",
+      "With ψ(x)=x over the unit segment, integration on 0<s<1 gives (1−s)²/2 and on −1<s<0 gives −s−s²/2. Each genuinely quadratic restriction excludes a finite piecewise-linear formula.",
+      "The uniform O(t²) cap-mass discrepancy from the actual repair transfers the right derivative even for a nonregular cap row. The sign selectors in a local hinge jointly choose its body and threshold terms."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "b9a445fd1b7f9a6b",
+        "candidate_sha256": "0d826c472b357c112a88e57c923457ec6abf8e52a766510393a6fdbaabd359a8",
+        "hypotheses": "Only its cap-uniform O(t²) error estimate is used. That estimate precedes the regular circuit assumptions and is valid for this supporting cut on the forward repaired path.",
+        "review_status": "Independent admission approval required for this exact same-batch candidate.",
+        "reviewed_proof_sha256": "e973c076a5a1d2ebe8a1a7623c96551451e55c1a4502f8599776f0c0aa39543d",
+        "reviewed_statement_sha256": "3ff03ad5d0d9cb5c453aa7f50e9af9b4da99a35994209efb9963dbe90fe56d83"
+      }
+    ],
+    "finished_utc": "2026-11-08T17:56:42Z",
+    "issues": [
+      {
+        "defect": "The ordinary two-sided derivative can fail. Fix the cap at the old outside support and translate the body with constant outward speed ψ=1, so s=0. For t>0 the first capture is t|F|+o(t); for t<0 the trace remains empty. The stated hinge gives the right derivative |F|, while the left derivative is zero.",
+        "locator": "Statement, both formulas for the cap derivative. Proof, clipping and division by t.",
+        "repair": "State these as contributions to the right derivative as t↓0, and impose t>0 in the clipping and division step.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its local signed shell proof gives the same two one-sided hinges with inward speed v=−ψ, pure threshold motion, and a unit continuous covector. The affine repair transfer and explicit finite piecewise-linear failure are additional scope.",
+        "fact_id": "9ee0d9a1e9f65259"
+      }
+    ],
+    "readability": "‘Signed’ refers to the body and threshold speeds. It does not supply a two-sided time derivative.",
+    "review_method": "Independent cold proof read, source and predecessor comparison, and exact computations where applicable.",
+    "reviewed_proof_sha256": "b3a49ff2275cbc558d2987ec4b153572a57b8ad1d4cdf33c355c31c40ea0be15",
+    "reviewed_statement_sha256": "b7a78c408de2623ce9e8eab4c918107bbbadd577f833e2df733a7d624cf27965",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T17:50:18Z",
+    "summary": "The local affine facet hinge formulas and the quadratic witness are correct for right derivatives. The frozen statement leaves out this one-sided restriction.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its local signed shell proof gives the same two one-sided hinges with inward speed v=−ψ, pure threshold motion, and a unit continuous covector. The affine repair transfer and explicit finite piecewise-linear failure are additional scope.",
+      "fact_id": "9ee0d9a1e9f65259"
+    }
+  ],
+  "readability": "The revised time convention distinguishes signed velocities from a two-sided derivative.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent linked revision review against the exact frozen candidate, original review, and pinned sources.",
+  "reviewed_proof_sha256": "77b035be9b10a8ed16957a891beafbdb174417b89f3c01ba49b698b8e8e02f2d",
+  "reviewed_statement_sha256": "4f5003e81c5aeec28a5e57ceb80d57342ef848f24e44f8598f089281517cf9fb",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "d9c5c9ffc52750d1ed49b89f1b2c9b62535e6e046c848cc7fd3a9c331a28bcd9",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:57:26Z",
+  "summary": "The revised claim specifies a right derivative and proves both coincident-facet hinge terms as t↓0. The previous objection about unequal left and right derivatives is resolved.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

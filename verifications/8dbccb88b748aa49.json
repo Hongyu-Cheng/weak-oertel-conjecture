@@ -1,0 +1,142 @@
+{
+  "candidate_id": "b4efc0a0a7fcfb69",
+  "candidate_sha256": "7f49f536a668bcad66f2c64be4f18ed02744b3fabf3f2cf1fc5189b15aad8c99",
+  "checked_dependency_candidate_sha256": {
+    "0d017e6c3c14b846": "c8cae60599d45c62e8e4df34ab6f2af4fcb482c1ccd4cc25a8b22e798c2c91e5",
+    "21fe36cb211350dd": "309360dd9325c3f0b5079ed277bf9bc93587e8584ed3c3685683b11e9679f859"
+  },
+  "checks": [
+    "Compared decoded JSON fields and verified raw, statement and proof SHA-256 hashes. The only field changed is statement, and the only textual changes are the two requested repairs.",
+    "The n=0 optimizer clause now explicitly requires φ of class C² with the same uniform Hessian lower bound. This is exactly the regularity used in the unchanged local inverse-chart argument.",
+    "The integrality example now requires one integer representative r and P_i contained in r+kℤ^n for every slot. Write any product tuple of base points as p_i=r+k v_i with all v_i integral. Its equal-weight average is r+Σ_i v_i, an integer vector. The original nonintegral coset counterexample no longer satisfies the sufficient condition, and the general theorem still allows real base sets.",
+    "Reverified both same-batch dependency digests. The original proof review's area-formula, derivative, separation, sharpness and face checks continue to apply to the byte-identical proof."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "0d017e6c3c14b846",
+      "candidate_sha256": "c8cae60599d45c62e8e4df34ab6f2af4fcb482c1ccd4cc25a8b22e798c2c91e5",
+      "mapping": "For M>0, N=n+d≥1, the supports are compact and the weights are positive with sum one. Both smooth and C² optimizer clauses have the required global positive Hessian lower bound. The predecessor gives the local Lipschitz endpoint maps, exact marginal pushforwards and almost-everywhere weighted identity.",
+      "reviewed_proof_sha256": "c3f004696c1e377a56fff093a18cc71aa04312e896bb44863acc440136e66ab4",
+      "reviewed_statement_sha256": "3afcc1c1b36b082be2d3e63664040d88a2f220422fc22d4e41e1842c21a7c36e",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "21fe36cb211350dd",
+      "candidate_sha256": "309360dd9325c3f0b5079ed277bf9bc93587e8584ed3c3685683b11e9679f859",
+      "mapping": "For d≥1 and smooth φ, q_i(y)=λ_i∇φ(p,y) is C² on all of ℝ^d and V_i is convex C¹ with globally Lipschitz gradient, meeting the pullback hypotheses. The n=0 C² route uses inverse charts instead, and the atomic case does not use this lemma.",
+      "reviewed_proof_sha256": "3b9a462ded933293ba96dcc2995ddd1e079ce309c9e121d77541a58576a1579d",
+      "reviewed_statement_sha256": "fdccb8081be2092316d8d88d65a30278a8462e6e2445fe34d9be10217ff8942d",
+      "status": "same-batch independent approval required for admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:24:02Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "b4efc0a0a7fcfb69",
+    "candidate_sha256": "8675c0a3070ff2cea0a8fd534b1cd5649a6f063ceacce54e401df615b9b1aa2d",
+    "checks": [
+      "For M>0 all marginal supports are nonempty compact; weak compactness supplies any optimizer and the inverse endpoint maps supply exact marginal pushforwards and the almost-everywhere barycentric identity. For M=0 the unique law is zero, even with empty base sets.",
+      "For any nonzero ρ_p, the finitely valued base condition and the continuous-coordinate barycentric equality hold on its compact support by continuity. For each compact set D in that support, its part D_q with endpoint base q is compact, so its endpoint image is Borel and the full marginal pushforward dominates its ρ_p-mass. Apply the ceiling on the actual input fiber and the area formula with multiplicity, sum over q, and extend by inner regularity to Borel sets. This controls the full output slice, not independently selected parts whose ceilings would later be added.",
+      "After proving absolute continuity, finite joint strata and their density-one points justify zero derivatives of every endpoint base and of the barycentric identity residual. The smooth slice q_i takes values in the full ambient space, but the pullback lemma differentiates in the y domain, so no ambient exceptional null set is pulled onto a singular slice. The base derivative blocks vanish, leaving λ_i H DT_i where H is positive definite.",
+      "Congruence by H^(-1/2) applied to H DT_i gives symmetric positive semidefinite C_i, which are similar to DT_i and sum with weights to I_d. Their determinants are nonnegative; h_p≤a_i det C_i and determinant-root ≤ trace/d give the ceiling exactly. The transfer from ρ_p-a.e. to Lebesgue-a.e. on {h_p>0} is justified by positivity of h_p there. When d=0 a single output atom uses a single endpoint per slot and cannot exceed any a_i.",
+      "When n=0, for φ of class C² the derivative of z↦λ_i∇φ(z) is everywhere invertible. Countably many local inverse charts with locally Lipschitz inverse keep the exceptional preimage null, so the full chain rule with the symmetric positive semidefinite derivative of ∇V_i is valid almost everywhere. No such ambient-null argument is used for mixed slices.",
+      "The feasible density-constrained set is convex and weakly closed by nonnegative continuous tests; a quadratic optimizer proves nonemptiness. For any prescribed old coupling, smoothed strongly convex objectives give at least its value and converge uniformly on the common compact output support. Strict separation of the compact image of any finite collection of difference integrals from the positive orthant has nonnegative coefficients; testing their nonnegative convex sum contradicts that separation. Compactness then supplies a single coupling for all tests. The proof preserves the marginals and therefore mass and the physical first moment, not the old conditional kernels.",
+      "As an exact repeated-output check, take equal weights, two identical marginals of density one on [0,1] at each of the bases 0 and 2. Pair opposite bases and equal y in the old coupling: output density two at base 1. Pair equal bases and equal y in the replacement: output density one at bases 0 and 2, and convexity at each y gives 2f(1,y)≤f(0,y)+f(2,y). This illustrates the global ceiling and changing the old coupling without assuming distinct output bases for different tuples.",
+      "Sharpness uses homothetic Minkowski equality Σ_i λ_i r_i K=(Σ_i λ_i r_i)K, so every admissible law is confined to volume M/A_d. For example with d=2, M=1, a=(1,4) and equal weights the scales are 1 and 1/2, average 3/4 and ceiling 16/9. The common-point coupling attains it. In dimension zero, mass min_i a_i at a shared point is sharp.",
+      "For the face statement the common tangent space permits a common orthonormal coordinate map with weighted origins; physical convex tests restrict to convex tests there. Minkowski inclusion and tight height place the output in the actual exposed middle face. If the actual face has larger dimension, the ceiling is only intrinsic to the weighted m-plane. Substitution a_i=1/λ_i gives the claimed branch constant (for m=1 and λ=(1/3,2/3), it is 9/5). Product-base integrality works with an integer residue representative, since the average of r+k v_i is r+Σ_i v_i.",
+      "Verified both source digests and the locators 1bc960743a4bce34 §§1–2, 4–7 and 9c4bb3ca1bcd69e1 §§1, 3–7. The original residue discussion follows its integer-input hypothesis. Its same-parity-only restricted-coupling obstruction is compatible with the theorem, which optimizes over the full fixed-marginal coupling set."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "0d017e6c3c14b846",
+        "candidate_sha256": "c8cae60599d45c62e8e4df34ab6f2af4fcb482c1ccd4cc25a8b22e798c2c91e5",
+        "mapping": "For M>0, N=n+d≥1, the supports are compact and the weights are positive with sum one. Both smooth and C² optimizer clauses have the required global positive Hessian lower bound. The predecessor gives the local Lipschitz endpoint maps, exact marginal pushforwards and almost-everywhere weighted identity.",
+        "reviewed_proof_sha256": "c3f004696c1e377a56fff093a18cc71aa04312e896bb44863acc440136e66ab4",
+        "reviewed_statement_sha256": "3afcc1c1b36b082be2d3e63664040d88a2f220422fc22d4e41e1842c21a7c36e",
+        "status": "same-batch independent approval required for admission"
+      },
+      {
+        "candidate_id": "21fe36cb211350dd",
+        "candidate_sha256": "309360dd9325c3f0b5079ed277bf9bc93587e8584ed3c3685683b11e9679f859",
+        "mapping": "For d≥1 and smooth φ, q_i(y)=λ_i∇φ(p,y) is C² on all of ℝ^d and V_i is convex C¹ with globally Lipschitz gradient, meeting the pullback hypotheses. The n=0 C² route uses inverse charts instead, and the atomic case does not use this lemma.",
+        "reviewed_proof_sha256": "3b9a462ded933293ba96dcc2995ddd1e079ce309c9e121d77541a58576a1579d",
+        "reviewed_statement_sha256": "fdccb8081be2092316d8d88d65a30278a8462e6e2445fe34d9be10217ff8942d",
+        "status": "same-batch independent approval required for admission"
+      }
+    ],
+    "finished_utc": "2026-11-08T12:23:24Z",
+    "issues": [
+      {
+        "defect": "The main hypotheses put P_i in ℝ^n, so a common coset modulo kℤ^n in that ambient group need not have an integer representative. With n=1, d=0, k=2, P_1=P_2={1/2}, γ_i=δ_(1/2), and a_i=1, the common coset is 1/2+2ℤ and the equal-weight output base is 1/2, not integer. The source placed the common residue condition in the integer-input context.",
+        "locator": "Statement, paragraph 2, last sentence; proof, sharpness paragraph, final sentence.",
+        "repair": "State: Equal weights 1/k and P_i ⊆ r+kℤ^n for every i for some r∈ℤ^n suffice. The integer averaging identity proves the repaired implication.",
+        "severity": "major"
+      },
+      {
+        "defect": "The literal math text is `$phiin C^2$`, which omits both commands and does not state membership in C².",
+        "locator": "Statement, paragraph 1, n=0 optimizer clause.",
+        "repair": "Replace it with `$\\phi\\in C^2$`.",
+        "severity": "minor"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its first assertion gives the same reciprocal-root density constant for uniform probability laws on single actual source fibers; set a_i=1/w_i and M=1. It does not compare to an arbitrary old barycentric law or cover arbitrary capped laws on multiple bases. Its occurrence capacity rules are not replaced by this candidate.",
+        "fact_id": "793210f8a4be3647"
+      },
+      {
+        "comparison": "Uses the two-law continuous displacement ceiling to prove metronoid convexity at the interpolated first moment, with no convex-order comparison to a prescribed old coupling or simultaneous mixed-base ceiling.",
+        "fact_id": "dfd25e72c1f45a4e"
+      },
+      {
+        "comparison": "Equates convex order of two already specified laws with existence of a martingale. It does not select the larger law under a density constraint and exact original endpoint marginals.",
+        "fact_id": "ac53fe19fef9ec25"
+      },
+      {
+        "comparison": "A parameter-preserving martingale result assuming localized convex inequalities for already specified source and target laws. Here a single new capped barycentric law is selected, without prescribing old branches or imposing parameterwise comparison.",
+        "fact_id": "311757ca7529ae19"
+      }
+    ],
+    "readability": "The two endpoint derivatives in use are distinct: D_yF_i on a mixed slice and DF_i in the continuous-only case. The proof separates them. The original note makes the integer-input context for the residue example explicit.",
+    "reviewed_proof_sha256": "53fadbc779b1e5671e5401fa313100f94804cdecb413c0d8f156c9dd4e53a18d",
+    "reviewed_statement_sha256": "e24810545fa414272e081a1a76dd39e15097865b939ee833819c4f670892e14e",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T12:20:07Z",
+    "summary": "The density, arbitrary-old-law comparison, sharpness and face arguments check out. The statement must explicitly require an integral common residue class and correct the continuous optimizer regularity typo.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its first assertion gives the same reciprocal-root density constant for uniform probability laws on single actual source fibers; set a_i=1/w_i and M=1. It does not compare to an arbitrary old barycentric law or cover arbitrary capped laws on multiple bases. Its occurrence capacity rules are not replaced by this candidate.",
+      "fact_id": "793210f8a4be3647"
+    },
+    {
+      "comparison": "Uses the two-law continuous displacement ceiling to prove metronoid convexity at the interpolated first moment, with no convex-order comparison to a prescribed old coupling or simultaneous mixed-base ceiling.",
+      "fact_id": "dfd25e72c1f45a4e"
+    },
+    {
+      "comparison": "Equates convex order of two already specified laws with existence of a martingale. It does not select the larger law under a density constraint and exact original endpoint marginals.",
+      "fact_id": "ac53fe19fef9ec25"
+    },
+    {
+      "comparison": "A parameter-preserving martingale result assuming localized convex inequalities for already specified source and target laws. Here a single new capped barycentric law is selected, without prescribing old branches or imposing parameterwise comparison.",
+      "fact_id": "311757ca7529ae19"
+    }
+  ],
+  "readability": "The lattice example is explicit and the continuous optimizer regularity is now written as intended.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "53fadbc779b1e5671e5401fa313100f94804cdecb413c0d8f156c9dd4e53a18d",
+  "reviewed_statement_sha256": "2185e244eefe388473c8cbffcc3e56db24538f21c2a6d52f0a4513cf2e26345c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "8675c0a3070ff2cea0a8fd534b1cd5649a6f063ceacce54e401df615b9b1aa2d",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:23:34Z",
+  "summary": "The revision repairs both statement issues. The proof and dependencies are unchanged; the sharp mixed density theorem and applications now match the proof.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,54 @@
+{
+  "candidate_id": "bb755603257fd80b",
+  "candidate_sha256": "9681d068ee82cc4403d26672176ee53a9126f038368e003f33ef96291f1f8d94",
+  "checked_dependency_candidate_sha256": {
+    "4695ce8a8e29a1f1": "c80de1302604d3d957cefb73e8ba98fa6ac109994436da6711c0fd9a1d9a4771"
+  },
+  "checks": [
+    "Compared the frozen statement and proof with a260044e1f85011a §§1–2, including the closed internal cell endpoint atoms, terminal curvature weighting, possible infinite terminal derivative, and completed terminal value.",
+    "Internal case: integrated slope loss gives mass s_L-s_R and the hinge kernel. Fixing first curvature moment fixes the right endpoint. An atom at a lowers the left derivative and an atom at b raises the right derivative relative to s_R, with both still nonpositive.",
+    "Terminal case: monotone convergence gives finite weighted mass ell(b)-A(b); the kernel is continuous in t for each v<b and bounded by one. Dominated convergence yields A_eta(b)=A(b)+eta{b}. A terminal atom has no effect on the interior arm or its integral records. Close to a, active t are bounded away from b, justifying recovery of the left slope even with unbounded original terminal curvature.",
+    "Checked Fubini, continuity of all moment kernels, fixed-mass weak compactness and L2 continuity. Equality of arms recovers the interior curvature and the left atom; the mass record then recovers the right atom. Strict convexity of the squared record forces a maximum to be extreme, with support at most four or three by the disjoint-positive-sets linear perturbation.",
+    "Boundary moment data: the affine span is full by differentiating twice (and multiplying by b-t in the terminal case); a nonzero nonnegative supporting function vanishes on the support. The affine-load exceptions in both cases either give one zero or cannot hold on a positive-mass support.",
+    "Interior moment data: the minimum value is finite and convex on the moment hull, and its epigraph is closed by fixed-mass compactness and continuity. The supporting plane at an interior moment has nonzero value coefficient and hence provides a genuine subgradient. Point-mass variations produce the nonnegative first-variation potential vanishing on the support; twice differentiating, with the terminal factor b-t included, gives the stated load with coefficient -2.",
+    "The contact bound adds at most two interior locations to the two possible endpoints. Convex interpolation between minimizing and maximizing measures preserves every linear record and attains the original squared record by continuity, using at most eight internal or seven terminal locations."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "4695ce8a8e29a1f1",
+      "candidate_sha256": "c80de1302604d3d957cefb73e8ba98fa6ac109994436da6711c0fd9a1d9a4771",
+      "hypotheses": "Same-batch two-contact lemma. Both potentials are C² on the open cell after the indicated terminal multiplication. The weight is positive there, the potential is nonnegative, and the open-cell curvature support is contained in its zeros. The load has nonzero affine coefficients on the boundary or arm coefficient -2 at an interior moment. A translation of the interval preserves this form and gives the required positive coordinate domain.",
+      "review_status": "Independent review required before admission",
+      "reviewed_proof_sha256": "11b4183643fc29872a393915e4466cc3204da926cdb30fde88790b3c303a3bf0",
+      "reviewed_statement_sha256": "618d8cdac5aba075ac69212d8f643fb57f120a62886dee057e66f8b8b84e7d1b",
+      "same_batch": true
+    }
+  ],
+  "finished_utc": "2026-11-08T17:24:42Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It controls powers of finite sampled concave sequences, whereas this assertion preserves three continuous moments exactly with slope and endpoint constraints.",
+      "fact_id": "1c475f2afdd67f14"
+    },
+    {
+      "comparison": "Its scalar sampled area envelope does not assert exact continuous curvature replacement or preserve a quadratic arm moment.",
+      "fact_id": "4d628efe7673ce2d"
+    }
+  ],
+  "readability": "Internal right endpoint atoms encode join slack in the slope. Terminal right endpoint atoms instead encode slack in the completed value and are invisible to the arm below the terminal level.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of frozen statement and proof, source and dependency comparison, and exact symbolic or rational checks where applicable.",
+  "reviewed_proof_sha256": "53fa482313b78b4f806ae529d0e11ec3df5c8ecb4fde3d2186d1d202212fd084",
+  "reviewed_statement_sha256": "b6179a7e6aa7057abbbbcecc74ad00dde9f66c3f2272fad78549146238d8cbe2",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:19:22Z",
+  "summary": "Both compact measure problems are valid, and the exact endpoint and moment representations support the stated eight-atom internal and seven-atom terminal bounds.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

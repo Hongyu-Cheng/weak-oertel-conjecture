@@ -1,0 +1,26 @@
+{
+  "advances": "Finite atomic face-incidence rigidity for positive weights with actual same-label midpoint membership.",
+  "author": "PK-research-agent",
+  "candidate_id": "5c32c6fd8fbe588e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:55:23.202494+00:00",
+  "depends_on": [],
+  "draft_key": "midpoint-label-balanced-face-alternative",
+  "kind": "lemma",
+  "proof": "Assume $\\mathcal F$ is nonempty, and let $x_0=\\mathbf 1_P/k$. If $x_0$ lies outside the convex hull of the $\\chi_F$, strict separation gives a vector $u$ with $u\\cdot\\chi_F<u\\cdot x_0$ for every $F$. The vector $v=u-(\\sum_{p\\in P}u_p/M)w$ has zero total. Since $w\\cdot\\chi_F=\\alpha$, we have $v\\cdot\\chi_F=u\\cdot\\chi_F-u\\cdot x_0<0$. Thus case 1 holds.\n\nIf $x_0$ lies in that convex hull, multiply its convex combination by $k$ to obtain\n$$\n\\sum_{F\\in\\mathcal F}\\lambda_F\\chi_F=\\mathbf 1_P,\\qquad\n\\lambda_F\\ge 0,\\qquad\n\\sum_{F\\in\\mathcal F}\\lambda_F=k.\n$$\nSuch a balanced combination precludes case 1, since its inner product with a zero-total vector is zero. Conversely any nonnegative combination summing to $\\mathbf 1_P$ has coefficient sum $k$ by taking its inner product with $w$.\n\nPartition $P$ according to incidence in the faces with $\\lambda_F>0$. For distinct points $p,q$ of the same label, their midpoint $m$ belongs to $P$, and the face property gives $\\chi_F(m)=\\chi_F(p)\\chi_F(q)$. Each number $\\chi_F(p)+\\chi_F(q)-2\\chi_F(m)$ is nonnegative. Their weighted sum with the coefficients $\\lambda_F$ is $1+1-2=0$. Hence $p,q,m$ have identical incidence in every positive-coefficient face. In particular each label class lies inside one incidence class.\n\nEvery incidence class lies in a positive-coefficient face by the balanced combination, so it has weight at most $\\alpha$. There are at most $k$ incidence classes because each label maps to one class and every class has a label. Their weights sum to $M=k\\alpha$, so there must be exactly $k$ classes, each of weight $\\alpha$. The map from labels to classes is therefore bijective. Now the midpoint of two distinct points in a class is in the same class and has the same label. Any finite class with two or more points would have a closest distinct pair in a Euclidean norm on $\\operatorname{aff}(P)$. Its midpoint would give a closer distinct pair in the class, a contradiction. Thus each class is a singleton of weight $\\alpha$.\n\nEvery positive-coefficient face contains one of those singletons by its positive weight and contains no second point by its weight $\\alpha$. A face of a finite convex hull is the convex hull of its points in $P$, so this face is the corresponding singleton vertex. The balanced combination covers every point, proving case 2. Conversely, in case 2 the faces of weight $\\alpha$ are precisely the singleton vertices. This includes $Q$ itself when $k=1$. Their incidence vectors sum to $\\mathbf 1_P$, and each coefficient must be one.\n",
+  "source_candidate_ids": [
+    "58dcf29bfb78a573"
+  ],
+  "source_candidate_sha256": {
+    "58dcf29bfb78a573": "c8123ae5ab1310667e81b5a386cde7d8cacc401fa9ed3583fd6e3e1156ab9038"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "58dcf29bfb78a573",
+      "locator": "§4, Lemma 4 and (5)–(6); §7, label extension"
+    }
+  ],
+  "statement": "Let $P$ be a nonempty finite subset of a real affine space, with $k$ occupied labels. Assume the geometric midpoint of every pair of distinct points of the same label belongs to $P$. Give each $p\\in P$ a weight $w_p>0$, put $M=\\sum_{p\\in P}w_p$, $Q=\\operatorname{conv}(P)$ and $\\alpha=M/k$, and set $w(F)=\\sum_{p\\in P\\cap F}w_p$ for each face $F$ of $Q$, allowing $Q$ itself. Let $\\mathcal F$ be the faces of weight $\\alpha$, and write $\\chi_F$ for their incidence vectors on $P$.\n\nExactly one of the following holds.\n\n1. There is $v\\in\\mathbb R^P$ with $\\sum_{p\\in P}v_p=0$ and $v\\cdot\\chi_F<0$ for every $F\\in\\mathcal F$. When $\\mathcal F$ is empty, $v=0$ works.\n2. The set $P$ consists of exactly $k$ vertices of $Q$, all of weight $\\alpha$.\n\nMoreover, a nonnegative combination $\\sum_{F\\in\\mathcal F}\\lambda_F\\chi_F=\\mathbf 1_P$ exists precisely in case 2. In that case its coefficients are $\\lambda_{\\{p\\}}=1$ for all $p\\in P$.",
+  "subgoal_id": "pk-intake-midpoint-label-balanced-face-alternative",
+  "title": "Balanced face incidences force equally weighted vertices under midpoint closure"
+}

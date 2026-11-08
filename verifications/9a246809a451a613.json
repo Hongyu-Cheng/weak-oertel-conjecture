@@ -1,0 +1,70 @@
+{
+  "candidate_id": "4e6a79b213537299",
+  "candidate_sha256": "7f68d0042cf1c6b0562785f671d634dc01a511829171e368ce4f48e1aff73d13",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "8c184887a7947b64": "e61e99911a367854977c201fb30d0fb3c8ad83fa8ec119697beb30f5c85f8f26",
+    "f4547c4166b39683": "806c3ffc2b2d12e3b9e99ea001ddcac54ab92d1ad634554cccf01c9e601424a7"
+  },
+  "checks": [
+    "The finite disjoint placed fibers have Hausdorff dimension equal to the maximum affine dimension q; each nonempty q-dimensional convex fiber has finite positive intrinsic q-mass, and the lower-dimensional fibers give zero q-mass. Finite Borel additivity gives M and its cap analogue.",
+    "Same-base parity makes the midpoint base integral. The same-batch graph identity gives the exact midpoint mark even when original fibers have different affine directions elsewhere. Counting weights and at most 2^n occupied labels meet the finite theorem, including n=0.",
+    "Each retained centroid belongs to its original fiber. The ambient cut restricts either to a proper containing closed cut in that fiber’s affine q-plane or to all of it, including if it lies on the ambient boundary. The full-mass centroid case gives at least gamma_q a for the proper restriction. q=0 gives one count.",
+    "Summing over the selected marks yields 2^(-n) gamma_q a|P_max| in every cut at the same actual mark. Dividing by M keeps the factor M_max/M. With q=0 all nonempty fibers are singletons; with all positive intrinsic masses equal all mass is retained.",
+    "For x>0, the derivative of x log(1+1/x) is log(1+1/x)−1/(x+1)>0 by integrating 1/(1+t) over t from 0 to 1/x. Therefore gamma_q≥gamma_d for q≤d, with gamma_0=1.",
+    "Verified raw source digest and matched 7abc09359a7966ea:04 §§6–7 and (1)–(2) with §1. The frozen proof replaces the source’s separate midpoint Helly and centerpoint inputs with their accepted combined form."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "8c184887a7947b64",
+      "candidate_sha256": "e61e99911a367854977c201fb30d0fb3c8ad83fa8ec119697beb30f5c85f8f26",
+      "mapping": "Apply to every pair of distinct maximum-volume marks of the same base parity with both coefficients 1/2; integrality is in the original base. This supplies the exact geometric midpoint used to label the graph.",
+      "reviewed_proof_sha256": "4fd1c2abb7427ac18eb2c7925d5e6348d0f510f935c939ad0be6de0f2d2c6ec7",
+      "reviewed_statement_sha256": "977fafc6a170e46350b684fce296064d7648bccb302a81bf81a6d9f3bb45a1c1",
+      "status": "same-batch; independent approval required before admission"
+    },
+    {
+      "candidate_id": "f4547c4166b39683",
+      "candidate_sha256": "806c3ffc2b2d12e3b9e99ea001ddcac54ab92d1ad634554cccf01c9e601424a7",
+      "mapping": "The graph is finite nonempty, each occupied base parity supplies one label, all weights are one, and distinct equally labeled points have their exact midpoint in the graph. Its relative cuts include every ambient containing cut after restriction, with whole trace allowed.",
+      "reviewed_proof_sha256": "ed78bd06ec98e6cddd55551fa50cc871481ef483ec0182dc738bc302e9d2ae0f",
+      "reviewed_statement_sha256": "24ba016055b0ccd3c72c5fbe2406bfa9fd8f77e1bee8d19a0801c32baede60d6",
+      "status": "accepted fact at repository snapshot"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "mapping": "Apply at d=q>0, m=a equal to the full volume of an isometrically identified q-dimensional maximum fiber. Density one gives its original centroid and the bound gamma_q a for the proper restricted cap.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d",
+      "status": "accepted fact at repository snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:03:19Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Directly covers the equal-positive-volume q=d case for convex bodies with n,d>0. Its conclusion applied to the convex hull of just the maximal fibers also gives the q=d stratum transfer when that retained hull has full ambient dimension; lower base rank is handled by a saturated chart. Its hypothesis is full continuous-dimensional volume and it does not itself cover the general intrinsic q<d stratum.",
+      "fact_id": "e4253a0d6f78849c"
+    },
+    {
+      "comparison": "Supplies exactly the atomic center bound on the proved centroid graph, but no transfer to measured original convex fibers.",
+      "fact_id": "f4547c4166b39683"
+    }
+  ],
+  "readability": "The normalized depth in the conclusion is the depth of the same selected actual centroid. Equal positive intrinsic volumes can coexist with smaller-dimensional zero-q-mass fibers.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "5e7c12b0d1e59cf0e4b41bbc50b603553e712704de820bbe1ed2bf6bbaeac640",
+  "reviewed_statement_sha256": "704b6d270e0bed3d81ec4ee23f2a756cef3cd69437f66ba58c7a3cc26aa1b530",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:58:09Z",
+  "summary": "The retained centroid count multiplies by the intrinsic centroid cap bound, with the correct maximal-stratum mass fraction and counting convention.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

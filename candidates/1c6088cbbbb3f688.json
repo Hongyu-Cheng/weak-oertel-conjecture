@@ -1,0 +1,29 @@
+{
+  "advances": "Classifies equality for ordinary volume with exactly D+1 halfspaces. The projected density and mixed-integer problems have additional hypotheses.",
+  "author": "PK-research-agent",
+  "candidate_id": "1c6088cbbbb3f688",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:19:29.601279+00:00",
+  "depends_on": [
+    "ac7ba1e1e0ebc955",
+    "03bc771bddd39a8a"
+  ],
+  "draft_key": "ordinary-cap-profile-equality",
+  "kind": "theorem",
+  "proof": "For sufficiency, the halfspace at vertex $i$ is given by the barycentric inequality $\\lambda_i\\ge1/(D+1)$. The halfspaces cover because the barycentric coordinates sum to one. Each cap is a copy of the simplex scaled by $D/(D+1)$ about its vertex, so its volume is $\\gamma_D V$.\n\nSuppose there is equality. Write $H_i=\\{x:u_i\\cdot x\\ge b_i\\}$ and use the distal trimming construction of ac7ba1e1e0ebc955. For $A_i>\\alpha$ choose $t_i>b_i$ with $|K\\cap\\{u_i\\cdot x>t_i\\}|=A_i-\\alpha$. This follows from continuity of cap volumes, nullity of hyperplanes, and the vanishing mass above the top support value. Set\n$$\nL=K\\cap\\bigcap_{i:A_i>\\alpha}\\{x:u_i\\cdot x\\le t_i\\}.\n$$\nThe removed regions have total mass, counted with multiplicity, equal to $\\sum_i(A_i-\\alpha)_+$. Hence $|L|\\ge\\alpha/\\gamma_D>0$. Every original halfspace has mass at most $\\alpha$ in $L$. Since those halfspaces cover $L$, its maximal normalized depth is at most $\\alpha/|L|\\le\\gamma_D$. The ordinary maximum-depth theorem 03bc771bddd39a8a forces equality and shows that $L$ is a simplex. In particular $|L|=\\alpha/\\gamma_D$ and the removed regions have pairwise intersections of volume zero.\n\nLet $y$ be the centroid of $L$. If an original halfspace contains $y$, its parallel through-$y$ subcap has mass at least $\\gamma_D|L|=\\alpha$ by the ordinary centroid bound in 03bc771bddd39a8a. If the original halfspace contained $y$ in its interior, the slab between the two parallel boundaries would have positive volume in a small ball in $L$ about $y$, contradicting its mass bound. Thus such a halfspace passes through $y$ and attains centroid equality. The single-cap equality characterization in 03bc771bddd39a8a makes it a vertex halfspace of the simplex $L$, on the side containing that vertex.\n\nThe other original halfspaces miss a neighborhood of $y$. If the halfspaces containing $y$ omitted the one corresponding to a vertex $v_j$ of $L$, then $y+\\varepsilon(v_j-y)$ for small $\\varepsilon>0$ would lie in $L$ and fail every selected vertex inequality $\\lambda_i\\ge1/(D+1)$, since $\\lambda_i(v_j)=0$ for $i\\ne j$. It would also miss the halfspaces not containing $y$. Coverage therefore forces all $D+1$ distinct vertex halfspaces, which exhaust the original family.\n\nSuppose some distal region for index $i$ had positive volume. Its pairwise null intersections with the other removed regions, together with the nullity of all cutting planes and $\\partial K$, give a point $x\\in\\operatorname{int}K$ with $u_i\\cdot x>t_i$ and all the other retained inequalities strict. At $y$ all retained inequalities are strict, since their thresholds exceed the corresponding original thresholds through $y$. The segment from $y$ to $x$ crosses $u_i\\cdot x=t_i$ in $\\operatorname{int}K$ and strictly inside all other retained inequalities. Consequently $L\\cap\\{u_i\\cdot x=t_i\\}$ contains a relatively open patch of that hyperplane. The plane is a support plane of $L$. Its outward normal is the canonical vertex-cap normal, which exposes only one vertex of $L$. This is impossible since $D-1\\ge1$.\n\nThus $L=K$. All the original halfspaces are its canonical centroid vertex halfspaces, and equality gives $\\alpha=\\gamma_D V=A_i$.\n",
+  "source_candidate_ids": [
+    "8b5860c585f8735a"
+  ],
+  "source_candidate_sha256": {
+    "8b5860c585f8735a": "1751a1c251a8d58111f64e0ec9bcde7ce22dc00f4bd1a72d73bc62ec4e06b335"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8b5860c585f8735a",
+      "locator": "§2, m=D+1 ordinary-volume specialization; §1, equality proof specialized to uniform volume"
+    }
+  ],
+  "statement": "Let $D\\ge2$, let $K\\subset\\mathbb R^D$ be a convex body of volume $V$, and let $D+1$ closed halfspaces $H_i$ with nonzero normals cover $K$. Write $A_i=|K\\cap H_i|$, $\\gamma_D=(D/(D+1))^D$ and $x_+=\\max\\{x,0\\}$. For $\\alpha>0$,\n$$\n\\sum_i(A_i-\\alpha)_+ + \\frac{\\alpha}{\\gamma_D}=V\n$$\nif and only if $K$ is a simplex, the $H_i$ are its $D+1$ distinct vertex halfspaces through its centroid and parallel to the opposite facets, and $\\alpha=A_i=\\gamma_D V$ for every $i$.",
+  "subgoal_id": "pk-intake-ordinary-cap-profile-equality",
+  "title": "Equality in the ordinary cap profile for D+1 halfspaces"
+}

@@ -1,0 +1,32 @@
+{
+  "advances": "Actual uniform tetrahedral sections at a one-full-row maximum with two distinct holes and an identically zero row after merging.",
+  "author": "PK-research-agent",
+  "candidate_id": "912184a9314f7447",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.775368+00:00",
+  "depends_on": [
+    "06e309827d4af58d",
+    "643b08457d03e63b",
+    "5097879468363a7e",
+    "8bdcdcd6e2fa69d9",
+    "238906fb08a2b14c"
+  ],
+  "draft_key": "tetrahedral-two-distinct-holes-equal-low-heights",
+  "kind": "lemma",
+  "proof": "Apply the accepted one-full-row merger and centroid pushforward theorem at $d=3$, with a proper minimizing threshold and positive weights; the merger keeps feasibility and the objective, so the merged matrix is still a global maximizer. The accepted proper full-row centroid gradient and boundary multiplier identities give $c_r=F^{1/3}$ after normalization and the stated other two weights. The two holes are distinct, so every $b_j$ is at most $1/3$. The pushforward theorem gives $H_c(X)=1$, $0<t<1$, and image centroid $q_j=(1-x_j)b_j/(1-t)$, with $q_r=q_s=1/3$ and the remaining two strictly smaller. Since the two holes are distinct, some other row has positive entry in each column; hence $0<x_j<1$ everywhere.\n\nThe image section has equation $\\sum_j a_j Z_j=1/3$ on $\\Delta_3$, where $a_j=(1-t)/(3(1-x_j))$. The inverse diagonal map sends every point of that section back to the original section: its inverse image has coordinate sum one by the displayed equation and $x$-height $t$ by $\\sum_j Z_j=1$. The map is linear and invertible, with constant positive area Jacobian on the plane, giving the claimed uniform pushforward. The signs of $a_j-1/3$ equal those of $x_j-t$. At $r,s$ the centroid identity gives $a_j=b_j\\le1/3$, so both vertices are weakly captured.\n\nThe accepted proper full-row threshold theorem supplies at least two strictly captured vertices, allowing other margins zero. If both $r,s$ were on the cut, a strictly excluded vertex would leave at most one strictly captured vertex. If one were on the cut, the other would be strictly captured and the total would consist of two strictly captured vertices, the boundary vertex and one strictly excluded vertex. The section would be the triangle cutting off that single excluded vertex. In such a triangle any strictly captured vertex contributes to the centroid only via its intercept on the edge from the excluded vertex, with coefficient less than $1/3$ (the intercept parameter is strictly less than one). This contradicts $q_j=1/3$ for the other unmatched vertex. Thus both unmatched vertices are strictly captured. If either other vertex were weakly captured, properness again leaves exactly one strictly excluded vertex and the same triangle argument contradicts $q_r=1/3$. Hence the split is strict $2+2$.\n\nApply accepted within-pair ordering to the two equal central coordinates $q_r=q_s=1/3$ of the actual image section: their signed heights must coincide. Thus $a_r=a_s$ and $b_r=b_s$, and the equal $a_j$ give $x_r=x_s$. Strict capture gives $a_r<1/3$, completing the claim.\n",
+  "source_candidate_ids": [
+    "d94004c6b3f150dd"
+  ],
+  "source_candidate_sha256": {
+    "d94004c6b3f150dd": "6f6a252e6348cb4c16be4e074a7e8b7df65111b83fcfd28843e61cd1e9440c96"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d94004c6b3f150dd",
+      "locator": "§§2–3, (1)–(4)"
+    }
+  ],
+  "statement": "For uniform barycentric $U$ on $\\Delta_d=\\{u\\ge0:\\sum_j u_j=1\\}$ let $F_x(t)=\\Pr(x\\cdot U\\le t)$ and $\\phi_d(x)=\\inf_{t>0:F_x(t)>0}t/F_x(t)^{1/d}$. Fix $d=3$ and positive weights $c_i$, and consider a global maximizer $X$ of $H_c(X)=\\sum_i c_i\\phi_3(X_i)$ over nonnegative $4\\times4$ matrices with column sums one. Suppose it has exactly one strictly positive row $x=X_r$ with a unique proper regular minimizing threshold $t$ and differentiable capacity. After merging proportional rows with the same unique zero column, suppose there are two surviving distinct-hole one-zero rows and an identically zero row $s$. Relabel the columns to place the two surviving holes on the diagonal. Write $b$ for the actual normalized-area section centroid of $x\\cdot u=t$ and $F=F_x(t)$. Normalize the positive column multipliers and weights together so that their sum of multipliers is one. Then $H_c(X)=1$, $b_j\\le1/3$ for all $j$, $c_r=F^{1/3}$, and $c_i=3\\operatorname{GM}_3((b_j)_{j\\ne i})$ for the two surviving one-zero rows. The positive diagonal map $u_j\\mapsto (1-x_j)u_j/(1-t)$ sends the actual section measure to normalized area of its image section. Its centroid has value $1/3$ exactly at the two unmatched labels $r,s$. The original section strictly captures precisely $r,s$, with $x_r=x_s<t$ and $b_r=b_s<1/3$.",
+  "subgoal_id": "pk-intake-tetrahedral-two-distinct-holes-equal-low-heights",
+  "title": "Equal low heights forced by two distinct zero holes in a tetrahedral maximum"
+}

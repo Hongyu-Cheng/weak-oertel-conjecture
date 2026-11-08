@@ -1,0 +1,37 @@
+{
+  "advances": "Ordinary continuous depth and a geometric enclosure budget for actual Minkowski sums.",
+  "author": "PK-research-agent",
+  "candidate_id": "859545cd4bf45c6c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:19:28.701238+00:00",
+  "depends_on": [
+    "03bc771bddd39a8a",
+    "c99394a395ea2399",
+    "e823c82617a0bc70",
+    "e5152cdadf65331d"
+  ],
+  "draft_key": "global-ordinary-depth-stability-and-minkowski-defect-budget",
+  "kind": "theorem",
+  "proof": "Enclosing simplices exist, and a minimizing sequence can be taken with uniformly bounded volumes. Let $Q$ contain a ball of positive radius about $g$. For each vertex $v$ of an enclosing simplex, that simplex contains the cone from $v$ over the central disk of the ball perpendicular to $v-g$. The cone volume is its fixed positive base area times $\\lVert v-g\\rVert/d$. Thus all vertices in the minimizing sequence stay in a fixed bounded set. Taking convergent subsequences of the vertices gives an enclosing simplex with minimal volume, nondegenerate because it contains $Q$. Every facet of a minimizer supports $Q$, since a facet with positive gap can move inward slightly while retaining a simplex and reducing its volume.\n\nAffine-normalize a maximum-volume inscribed simplex of $Q$ to $T=\\operatorname{conv}(0,e_1,\\ldots,e_d)$. Such a maximum is attained by continuity of simplex volume on the compact product of vertex choices. In this normalization $T\\subseteq Q$, and replacing any vertex of $T$ by a point $x\\in Q$ shows that every barycentric coordinate of $x$ relative to $T$ is at least $-1$ and at most $1$. The inequalities $\\lambda_j(x)\\ge-1$ alone give a simplex of volume $(d+2)^d|T|$, since replacing each coordinate by $(\\lambda_j+1)/(d+2)$ produces the usual simplex. This is an enclosure of $Q$, so minimality gives $|S|\\le(d+2)^d|T|\\le(d+2)^d|Q|$.\n\nUse the local stability coefficient $c>0$ and permitted inner homothety parameter $\\delta_d$ from c99394a395ea2399. Put $L=8d^3$ and $\\rho=1/[d(d+1)]$. The centroid $g_T$ of $T$ satisfies $g_T+\\rho B_\\infty\\subseteq T$. Fix $\\epsilon>0$ with $\\epsilon\\le1/(64d^3)$ and $2L\\epsilon/\\rho\\le\\min(1,\\delta_d)$. By the uniform inscribed normalization theorem 03bc771bddd39a8a there is $\\tau>0$ depending only on $d,\\epsilon$ such that $D(Q)\\le\\Gamma_d(1+\\tau)$ ensures $d_{H,\\infty}(Q,T)\\le\\epsilon$ for every normalized choice of the inscribed simplex. Then e823c82617a0bc70 gives $d_{H,\\infty}(S,T)\\le L\\epsilon$, gives the same bound on the distances between corresponding vertices, and puts every facet centroid of $S$ in $Q$. In particular $\\lVert g_S-g_T\\rVert_\\infty\\le L\\epsilon\\le\\rho/2$, so $g_S+(\\rho/2)B_\\infty\\subseteq T\\subseteq S$.\n\nSince $T\\subseteq Q$, every direction $u$ has $h_S(u)-h_Q(u)\\le L\\epsilon\\lVert u\\rVert_1$. Also $h_S(u)-u\\cdot g_S\\ge(\\rho/2)\\lVert u\\rVert_1$. Thus for $\\delta=2L\\epsilon/\\rho$ the support functions give $g_S+(1-\\delta)(S-g_S)\\subseteq Q$. All hypotheses of c99394a395ea2399 now hold. It yields\n$$\n1-|Q|/|S|\\le \\frac{4}{\\Gamma_dc}\\,[D(Q)-\\Gamma_d].\n$$\nFor $D(Q)>\\Gamma_d(1+\\tau)$ the left side is at most one, which gives the inequality with constant $1/(\\Gamma_d\\tau)$. Take $A_d$ to be the maximum of these two constants. Invertible affine maps preserve both depth and volume ratios, so the result holds in the original frame. For nested uniform bodies the total variation is $1-|Q|/|S|$, obtained by integrating the positive density difference on $Q$. This bounds the closed-halfspace mass differences.\n\nThe parallel-simplex Minkowski enclosure transfer gives\n$$\n\\sum_i\\lambda_i^d(|P_i|-|A_i|)\\le(|S|-|Q|)+(|Q|-|K|).\n$$\nInsert the two ordinary estimates to obtain the absolute defect budget. If $Q=K$, the parallel Minkowski sum of the $P_i$ is $S$, and division by $|S|$ gives the scaled sum because $\\lambda_i^d|P_i|/|S|=\\alpha_i^d$. Apply the ordinary ratio bound with $Q=K$. In dimension one each full-dimensional summand is an interval, so its two supporting endpoints give $P_i=A_i$.\n",
+  "source_candidate_ids": [
+    "3787afd8b1ed0167",
+    "e2c21ddfc5abb8ca"
+  ],
+  "source_candidate_sha256": {
+    "3787afd8b1ed0167": "e86ea0ebb0a6000c09d1dcf918cae35917761b33d6f57558b0c86c30dc834b05",
+    "e2c21ddfc5abb8ca": "795b4be0120036d51297aa6b4a00310f67d260b0a990e04ca5b6d308223bec4d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e2c21ddfc5abb8ca",
+      "locator": "e2c21ddfc5abb8ca:03 Proof §3, (9)–(11a), depth control of the absolute and scaled defects"
+    },
+    {
+      "candidate_id": "3787afd8b1ed0167",
+      "locator": "Proof §§1–3, global inscribed-simplex normalization and dimension-only stability"
+    }
+  ],
+  "statement": "For every $d\\ge2$ there is a finite constant $A_d$ depending only on $d$ such that every compact convex body $Q\\subset\\mathbb R^d$ with nonempty interior and every minimum-volume enclosing simplex $S$ satisfy\n$$\n|S|\\le(d+2)^d|Q|,\\qquad\n1-|Q|/|S|\\le A_d\\,[D(Q)-\\Gamma_d],\n$$\nwhere $D$ is maximum normalized ordinary closed-halfspace depth and $\\Gamma_d=(d/(d+1))^d$. The latter bound also bounds the total variation and the supremum of closed-halfspace mass differences between the two uniform probability laws.\n\nLet $K=\\sum_i\\lambda_i A_i\\subseteq Q$ for full-dimensional compact convex bodies $A_i$ and finitely many coefficients $\\lambda_i\\ge0$, at least one positive. Write $u_j$ for the outward facet normals of $S$ and $P_i=\\bigcap_j\\{x:u_j\\cdot x\\le h_{A_i}(u_j)\\}$. Then\n$$\n\\sum_i\\lambda_i^d(|P_i|-|A_i|)\n \\le A_d(d+2)^d |Q|\\,[D(Q)-\\Gamma_d]+|Q|-|K|.\n$$\nIf $Q=K$, express the parallel $P_i$ as translated homothets of a common simplex with positive scales $r_i$, and put $\\alpha_i=\\lambda_i r_i/\\sum_j\\lambda_jr_j$. In that case\n$$\n\\sum_i\\alpha_i^d(1-|A_i|/|P_i|)\\le A_d\\,[D(K)-\\Gamma_d].\n$$\nFor $d=1$ the summand defects vanish.",
+  "subgoal_id": "pk-intake-global-ordinary-depth-stability-and-minkowski-defect-budget",
+  "title": "Ordinary depth stability controls Minkowski enclosure defects"
+}

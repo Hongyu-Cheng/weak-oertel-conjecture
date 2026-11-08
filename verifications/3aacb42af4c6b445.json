@@ -1,0 +1,63 @@
+{
+  "candidate_id": "316a05931f48d580",
+  "candidate_sha256": "aa8a8ac1b2ff021a95c7b869fc723dd402df468eec9552401f65ef3c5d336586",
+  "checked_dependency_candidate_sha256": {
+    "179057d934ea6812": "e593196fb6bdeeb5d46295242715d6e99f97ce1f5c3b0558415143eb0a70d631",
+    "1a5dac21f3a264d0": "98cb350232ae9e0caec91ce37e1add35e7a998b1acb4324dfaa20491a3570c5a"
+  },
+  "checks": [
+    "For fixed U, the derivatives of the reciprocal of 1+g_1 and the denominator factor of 1+g_2 have signs negative and positive, respectively, since 0<y<U<1. At fixed x the U derivative of 1+g_2 is strictly positive for 0<y<1. Both monotonicity comparisons stay inside this range.",
+    "The g_2=1/3 boundary exists uniquely from its two endpoint limits. Its parameter r lies in (1/2,sqrt(3/8)). Solving the boundary equation gives U=(3−8r²)/(8r(1−r)²), whose derivative has negative denominator and positive numerator on that range. At the boundary, substituting gives 1+g_1=64z²/[3(5−16z)] for z=r(1−r), increasing with U. Thus U=4/7 bounds the branch.",
+    "Independent rational arithmetic at U=4/7 and x=321/1000 gives the stated g_1 and g_2 fractions, with positive gaps 1319589887/175084307808 below 23/96 and 15753284/2011814963 below 1/3 respectively. Strict monotonicity transfers these to the whole first branch.",
+    "The other branch forces x≥1/4. For x≥1/3, equality in the 11/43 bound would give x=1/3 and U=4/7, but g_1=97/344 there. For x from 1/4 to 1/3, saturating the derived bound on y² yields the displayed radical. Both its variable terms increase, and at x=1/3 the allowed boundary U is strictly less than 4/7 since 1/24<25/441. The clipped-sum comparisons leave the exact strict gap 253/4128 in the second branch.",
+    "The geometric inputs are actual ray endpoints of one convex body. The normalized chord lengths at the three canonical cap normals are 1,U,U, dividing the diagonal length by sqrt(2), so the inverse weight is U/(U+2). A bound of 2/9 gives exactly U≤4/7.",
+    "Substitute (a,b,ρ,τ)=(x,x,1/2,1/2), (1/2,y,y,x), and (y,1/2,x,y) in the cyclic two-bridge formula. The determinants are x(1−x),xy,xy and all are positive. The three resulting E_i match the frozen proof, and the opposite double cores are y²/2,x/4,x/4. Subtraction and division by their sum reproduce both g formulas.",
+    "The accepted clipping lemma applies at c=128/279 in [4/9,1/2), with exactly the stated cap ceilings and sorted profile. Its two necessary inequalities contradict the strict scalar exclusion. The source d3d392e15e09e79f proves this only under B=b, A=r and a=t, and the frozen statement keeps all three equalities."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1a5dac21f3a264d0",
+      "candidate_sha256": "98cb350232ae9e0caec91ce37e1add35e7a998b1acb4324dfaa20491a3570c5a",
+      "fact_id": "1a5dac21f3a264d0",
+      "fact_sha256": "40915948cfaf4d7ee91e7b2a7e63a47b0609c1013db27075e9c6d0e5a4752d12",
+      "hypotheses": "Apply to the stated actual planar body, canonical three caps, c=128/279 and given sorted cap profile. The finite cyclic envelope bounds are upper bounds on unique sectors and have exactly its opposite double-core normalization, so its necessary tests apply.",
+      "reviewed_proof_sha256": "be0e6266e0e2360ad9b766ca7abf8b66fe6f377e5c07cb246ba9491a4c6d4ac6",
+      "reviewed_statement_sha256": "bfe765778d4f55d790fcd8497766e4e3e9ee1bf2585bc6d09616a6aa0f043802"
+    },
+    {
+      "candidate_id": "179057d934ea6812",
+      "candidate_sha256": "e593196fb6bdeeb5d46295242715d6e99f97ce1f5c3b0558415143eb0a70d631",
+      "hypotheses": "Use the frozen two-bridge actual endpoint envelope in the three determinant-one cyclic frames. The substitutions give strictly positive determinants x(1−x), xy and xy when U≤4/7, hence the three finite unique-sector bounds. This same-batch dependency needs independent approval on these exact bytes.",
+      "pending_review": true,
+      "reviewed_proof_sha256": "f5b9d7777216e8597c927f835c5f55da7faf2c90f3cfa0b4cd54b5181ca986b6",
+      "reviewed_statement_sha256": "57e60fe964b3470e7fc9933a7c2e53dd2dd03c52f6eaf2b9c051717798789cfe"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:55:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its cap and sorted-profile hypotheses give necessary clipped-credit inequalities for general actual ray envelopes. It does not exclude their feasibility in the fixed symmetric slice or give the strict normalized weight bound.",
+      "fact_id": "1a5dac21f3a264d0"
+    },
+    {
+      "comparison": "It gives a one-sector geometric envelope from two actual endpoints. Its hypotheses and sector bound do not supply the symmetric three-sector scalar contradiction.",
+      "fact_id": "ebea5ab33e39407b"
+    }
+  ],
+  "readability": "The normalized weight is the inverse coarea weight of the first vertical chord. The proof does not identify it with an optimized spectral row or use any unrestricted symmetrization.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read on the frozen candidate, followed by original-scope and exact dependency comparison, with exact rational checks where applicable.",
+  "reviewed_proof_sha256": "bfba0888a304746ee858ca15f4a312bc6aa00e517f34a4086850f74e7f3b9147",
+  "reviewed_statement_sha256": "6e915a5ef0dac6a9ef485ca64bbd3dc33d68a077c99db643b74c8d3f9c4551c6",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:50:31Z",
+  "summary": "The strict scalar exclusion and its geometric consequence hold on the stated symmetric ray slice. Admission uses the independently reviewed same-batch two-bridge envelope.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

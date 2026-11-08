@@ -1,0 +1,70 @@
+{
+  "candidate_id": "19210d0a14ccfebc",
+  "candidate_sha256": "28724f44286c6945bbad6a4a4560d63a746fb9760c81333d8cc01bafda33f293",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Compared the complete frozen and revised bytes. Only the identified sentence in the proof changes. The statement, source records and empty dependency list are byte-identical.",
+    "The named traces at bases −1,0,1 contribute U,q,0. All other contributions to Q are nonnegative. Consequently Q≥U+q, and 2^d q≥U+fh gives 2^d Q≥(2^d+1)U+fh with the stated normalization. In the triangular specialization the quotient of each supporting facet length by the normal norm is 3, preserving the factor 3(h_A(v_i)+1).",
+    "Rechecked the retained original witness in [−2,1]×[−2,2]^2 for the cap x₁≥z+1. The traces have areas 12,8,4,0 in base order −2,−1,0,1, so Q=24 and U+q=12. The witness satisfies the revised inequality and explains why the former equality failed.",
+    "The corresponding source formulas (4)–(6) continue to apply at the named fibers. The normalized statement needs only the inequality, so no additional census assumption is necessary."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T17:55:22Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "19210d0a14ccfebc",
+    "candidate_sha256": "d286a46c3d1b94e47427afacf601c470c7d5b56455f3fe457af2decfaf15d02a",
+    "checks": [
+      "Matched b9b0fda52c8adffe:01 §§1–3. With F translated to height zero, every decomposition of a height-t point of D+F takes its D summand at height t. The two inclusions in (D+F)_t=D_t+F hold with no unions over different heights. Each interior height meets int(D), and the endpoints have zero dt measure.",
+      "Brunn–Minkowski in e⊥ gives the stated power expansion with the j=0 term U and the j=m term fh. For d=2 the sections are intervals and their lengths add exactly, including the empty sum of intermediate terms.",
+      "For the proper cap D the lower height equals a₀/‖u‖ and the upper height equals h_A(u)/‖u‖. The midpoint inclusion gives (D+F)/2 inside the closed middle cap at (a₀+b₀)/2; volume scales by 2^−d. The endpoint B contributes zero d-volume, although its supporting facet has positive (d−1)-volume and must remain in the sum.",
+      "The planar triangle has vertices (1,1),(1,−2),(−2,1); its facets have lengths 3,3,3√2, exactly 3‖v_i‖. The three ambient thresholds of v_i·x≥z are −1,0,1. The claimed 5U_i+3(h_i+1) budget follows by using the actual cap mass lower bound Q_i≥U_i+q_i."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T17:53:04Z",
+    "issues": [
+      {
+        "defect": "The statement names the positive-volume fibers at −1,0,1 but does not exclude other positive-volume bases. For example take d=2, the mixed product [−2,1]×[−2,2]^2, and the cap x₁≥z+1. Its thresholds at −1,0,1 are 0,1,2, giving a proper A trace and a supporting facet at B. The additional base −2 contributes positive area, so Q>U+q.",
+        "locator": "Proof, cap-application paragraph, sentence ‘The endpoint trace on B is exactly F of d-volume zero, so Q=U+q.’",
+        "repair": "Replace Q=U+q by Q≥U+q, with equality when there are no other contributing bases. The displayed conclusion and all constants then follow directly.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its single-cut clauses give exactly the full-T planar extrusion and mixed cap budget on three and only three measured fibers. The present sliced inequality covers arbitrary supporting facets in d≥2, including the intermediate mixed terms when d>2.",
+        "fact_id": "9dd1398102da730a"
+      }
+    ],
+    "readability": "State the total-cap comparison as an inequality at the moment the three measured traces are counted.",
+    "review_method": "Independent cold reading of the frozen statement and proof, followed by source, dependency, and overlap checks",
+    "reviewed_proof_sha256": "90faefa7732d444deb84dc03e4690a5be447759a3ec6dde6507cb3bbb157d312",
+    "reviewed_statement_sha256": "f28b1f11df4b1c691b13f6d4159a045fbb103deb7339dd3c9108775ca7f17657",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T17:46:53Z",
+    "summary": "The section identity, all-dimensional volume bound, planar equality and stated cap budget are valid. The frozen proof asserts a total mixed cap equality that requires an extra census assumption.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its single-cut clauses give exactly the full-T planar extrusion and mixed cap budget on three and only three measured fibers. The present sliced inequality covers arbitrary supporting facets in d≥2, including the intermediate mixed terms when d>2.",
+      "fact_id": "9dd1398102da730a"
+    }
+  ],
+  "readability": "The isolated revision resolves the issue recorded in the preserved initial review.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent linked re-review of the exact revised bytes against the frozen candidate and the initial review",
+  "reviewed_proof_sha256": "7b13fd7fdf75c18cf648a1726323db007bca5e15907524eb88c624e986213164",
+  "reviewed_statement_sha256": "f28b1f11df4b1c691b13f6d4159a045fbb103deb7339dd3c9108775ca7f17657",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "d286a46c3d1b94e47427afacf601c470c7d5b56455f3fe457af2decfaf15d02a",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:54:03Z",
+  "summary": "The revised cap-counting step applies to the stated full mixed body, including any contributing bases outside the three named fibers. The section formula and cap constants remain correct.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

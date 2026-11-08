@@ -1,0 +1,28 @@
+{
+  "advances": "Finite or countable sampled log-concave law with a selected finite chord. All ambient normals are controlled, and the three-site consequence requires equal endpoint masses.",
+  "author": "PK-research-agent",
+  "candidate_id": "68438a6e07ec7ad6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:26:15.106483+00:00",
+  "depends_on": [
+    "7831e6cfc5f87556"
+  ],
+  "draft_key": "pk-w34-envelopes-sampled-logconcave-chord",
+  "kind": "theorem",
+  "proof": "For $d\\ge2$ choose the endpoint marks by 7831e6cfc5f87556. Each log-concave positive fiber has convex extended inverse power for any exponent parameter greater than $d+1$, its mass is finite by $M<\\infty$, and changing boundary values has no effect on the integrals. Hence every continuous cap through or containing an endpoint mark pays at least $\\Gamma_d$ times its fiber mass. For $d=1$ use the median of the integrable density on its interval of positive support. It is in the interior and both closed tails have mass half. Joint log-concavity gives positive values at the interpolated marks.\n\nLet $H$ be a closed ambient halfspace containing $(z_i,c_i)$, with continuous normal $\\beta$. The margins of $H$ along the affine marks form an affine sequence. The set of indices with nonnegative margin is a prefix, suffix or entire chain containing $i$. At every captured $j$, the trace of $H$ contains the continuous cap $\\beta\\cdot(x-c_j)\\ge0$ of the $j$th fiber. Truncate the endpoint densities to the two analogous continuous caps through $c_u,c_v$. Joint log-concavity gives the pointwise Prékopa–Leindler hypothesis for these two densities and the analogous truncation at $j$: for two points in the endpoint truncations, the interpolated signed margin is their weighted mean and is nonnegative. For any pair with one truncated density zero, the required inequality holds by nonnegativity. Applying the Prékopa–Leindler inequality in $\\mathbb R^d$ at weight $j/L$ gives the captured mass at least $(\\Gamma_d a)^{1-j/L}(\\Gamma_d b)^{j/L}$. The endpoints use their own bounds directly. For $\\beta=0$ use the whole densities in the same interpolation, since each captured trace is the entire fiber. The distinct fibers add without overlap, giving the displayed estimate for all $H$.\n\nFor the same-parity midpoint take $L=2$ and $i=1$. With three consecutive positive sites and equal endpoint masses $a$, let $m$ be the middle mass. If $m\\ge 2a$, apply the same continuous marked-fiber bound at the middle alone, giving at least $\\Gamma_dm/M\\ge\\Gamma_d/2$. If $m\\le2a$, use the midpoint estimate $2\\Gamma_da/M\\ge\\Gamma_d/2$.\n",
+  "source_candidate_ids": [
+    "b2fa14891f8dedf6"
+  ],
+  "source_candidate_sha256": {
+    "b2fa14891f8dedf6": "587410cea2eef661fee1c0c5fa0bae67a70479f54a39aa8085b6c1002b478e42"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b2fa14891f8dedf6",
+      "locator": "b2fa14891f8dedf6:01 Midpoint lemma (1), integer-chord lemma (2), equal endpoint mass consequence"
+    }
+  ],
+  "statement": "Let $f:\\mathbb R^n\\times\\mathbb R^d\\to[0,\\infty)$ be jointly log-concave, $d\\ge1$, with positive finite sampled mass $M=\\sum_{z\\in\\mathbb Z^n}m_z$, where $m_z=\\int_{\\mathbb R^d} f(z,x)\\,dx$. Suppose each positive sampled fiber density has full-dimensional support. Use normalized mass $M^{-1}\\sum_z\\delta_z\\otimes f(z,x)\\,dx$ and closed ambient halfspaces. Let $u,v\\in\\mathbb Z^n$ be distinct with masses $a,b>0$. There are marks $c_u,c_v$ in their positive interiors such that, for any integer $L\\ge1$ with $z_j=u+(j/L)(v-u)\\in\\mathbb Z^n$ for all $0\\le j\\le L$, the mark $c_j=(1-j/L)c_u+(j/L)c_v$ has positive density at $(z_j,c_j)$ and\n$$\n\\operatorname{depth}(z_i,c_i)\\ge\n\\frac{\\Gamma_d}{M}\n\\min\\left(\\sum_{j=0}^{i}a^{1-j/L}b^{j/L},\\ \\sum_{j=i}^{L}a^{1-j/L}b^{j/L}\\right),\\qquad\n\\Gamma_d=\\left(\\frac{d}{d+1}\\right)^d .\n$$\nIn particular a same-parity midpoint has depth at least $\\Gamma_d(\\sqrt{ab}+\\min(a,b))/M$. With exactly three consecutive positive-mass sites in $n=1$ and equal endpoint masses, some sampled mark has depth at least $\\Gamma_d/2$.",
+  "subgoal_id": "pk-intake-pk-w34-envelopes-sampled-logconcave-chord",
+  "title": "Closed-halfspace depth along a chord of a sampled jointly log-concave density"
+}

@@ -1,0 +1,32 @@
+{
+  "advances": "Scalar affine-power laws only. This lemma supplies the shared numerical endpoint estimate used by the two localization arguments.",
+  "author": "PK-research-agent",
+  "candidate_id": "75a1d57b1e81fdab",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T05:59:31.312012+00:00",
+  "depends_on": [],
+  "draft_key": "affine-power-inner-cdf",
+  "kind": "lemma",
+  "proof": "Pairing the density at points equidistant from the interval midpoint gives $m\\ge(1+r)/2$, because $f$ is increasing. The formula for $m$ is direct integration. Set $T=((2m-1)^d-r^d)/(1-r^d)=G(2m-1)$.\n\nFor $d=2$, substitution gives $T=1/9-8r^3/[9(1+r)^3]\\le1/9=1-2\\gamma_2$. For $d=3$, let $A=1+r+r^2$ and $N=A+3r^3$. Then $2m-1=N/(2A)$, and $T\\le5/32=1-2\\gamma_3$ is equivalent to $(5+27r^3)A^3-4N^3\\ge0$. Expansion factors the latter as\n$$\n(1-r)(1+4r+10r^2+8r^3+23r^4+80r^5+90r^6+108r^7+81r^8),\n$$\nwhich is nonnegative on the stated interval.\n\nFor $d\\ge4$ we first show, for $0<\\alpha<1$, $0\\le R<1$ and $a=(1+5R)/6$, that\n$$\n\\frac{2}{1-R}\\int_R^1 u^\\alpha\\,du\\le 1+a^\\alpha.\n$$\nFor $0<v\\le1$ the difference $-\\log v-(1-v)(7+5v)/(2(1+5v))$ has derivative $(v-1)(5v-1)(5v-2)/(2v(1+5v)^2)$. Its minima can only occur at $v=1$ or $1/5$, since it diverges at zero and the critical point $2/5$ is a local maximum. The values are respectively $0$ and $\\log 5-8/5>0$. The last sign follows by integrating the geometric series for $1/(1-x^2)$ from $0$ to $2/3$ and keeping its first four terms, which gives $2\\sum_{j=0}^3(2/3)^{2j+1}/(2j+1)-8/5=4/15309>0$.\n\nSubstitute $v=(R+t)/(1+t)$ for any $t>0$ in the resulting logarithm bound. Because $a+t=(1+t)(1+5v)/6$ and $1-v=(1-R)/(1+t)$, this gives\n$$\n\\frac{1}{1+t}+\\frac{1}{a+t}\\le\\frac{2}{1-R}\\int_R^1\\frac{du}{u+t}.\n$$\nSubtract each side multiplied by $t$ from $2$ to obtain\n$$\n\\frac{2}{1-R}\\int_R^1\\frac{u}{u+t}\\,du\\le\\frac{1}{1+t}+\\frac{a}{a+t}.\n$$\nIntegrate against $C_\\alpha t^{\\alpha-1}\\,dt$ on $(0,\\infty)$, where $C_\\alpha^{-1}=\\int_0^\\infty v^{\\alpha-1}/(1+v)\\,dv$. For $u>0$, scaling $t=uv$ gives $C_\\alpha\\int_0^\\infty t^{\\alpha-1}u/(u+t)\\,dt=u^\\alpha$, and at $u=0$ the integral vanishes. The integrands are nonnegative and the resulting integrals are finite. This proves the displayed power bound.\n\nNow use $R=r^d$ and $\\alpha=1/d$. The change of variable $u=t^d$ in the mean gives $m=(1-R)^{-1}\\int_R^1u^{1/d}\\,du$. Hence $0\\le 2m-1\\le[(1+5R)/6]^{1/d}$, so $T\\le1/6$. The function $-d\\log(1+1/d)$ decreases in positive real $d$, by $\\log(1+x)>x/(1+x)$ for $x>0$. Consequently $\\gamma_d\\le\\gamma_4=256/625$ for $d\\ge4$, and $1-2\\gamma_d\\ge113/625>1/6$.\n",
+  "source_candidate_ids": [
+    "732b11a769399016",
+    "dafd411c026c302c"
+  ],
+  "source_candidate_sha256": {
+    "732b11a769399016": "370eaa094d608be6791409aab53d2d5e5638370253d97ee2e9bf17d82028ae2c",
+    "dafd411c026c302c": "712b8ec633c19ab2a52e417dc53050df8e8a739696144bb084386937e3e1511f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "732b11a769399016",
+      "locator": "§§3–6, (4)–(13)"
+    },
+    {
+      "candidate_id": "dafd411c026c302c",
+      "locator": "§2, (7), application of the bound"
+    }
+  ],
+  "statement": "Let $d\\ge2$ be an integer, $0\\le r<1$, and let $G$ be the CDF of the probability density $f(t)=dt^{d-1}/(1-r^d)$ on $[r,1]$. Its mean is $m=\\frac{d}{d+1}\\frac{1-r^{d+1}}{1-r^d}$. With $\\gamma_d=(d/(d+1))^d$, one has $r\\le2m-1<1$ and\n$$\nG(2m-1)\\le1-2\\gamma_d.\n$$",
+  "subgoal_id": "pk-intake-affine-power-inner-cdf",
+  "title": "An endpoint bound for truncated affine-power laws"
+}

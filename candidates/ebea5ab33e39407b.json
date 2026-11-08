@@ -1,0 +1,26 @@
+{
+  "advances": "A planar sector bound from two actual chord endpoints.",
+  "author": "PK-research-agent",
+  "candidate_id": "ebea5ab33e39407b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:56:26.898518+00:00",
+  "depends_on": [],
+  "draft_key": "two-endpoint-sector-envelope",
+  "kind": "lemma",
+  "proof": "For a point $(u+v,-u)$ of the sector, its segment to $(0,-\\beta)$ lies in $K$. At the crossing of $x+y=0$, its $x$-coordinate is $\\beta(u+v)/(\\beta+v)>0$. This is at most $\\rho$ by the definition of the endpoint. Multiplying by the positive denominator gives the claimed inequality. The coordinate map has absolute determinant one. For $\\beta>\\rho$ the two positive intercepts of the resulting triangle are $\\rho$ and $\\beta\\rho/(\\beta-\\rho)$, which gives the area bound.\n\nThe sector closure is compact and contained in the closed triangle. If it misses any point of the triangle, its complement contains a relatively open set of positive area. Conversely, when the closure is the triangle, all points of that triangle with $u,v>0$ belong to the sector by closedness of $K$, so the area bound is attained.\n\nFor attainment, in the $(u,v)$ plane intersect the closed halfplane $\\beta u+(\\beta-\\rho)v\\le\\beta\\rho$ with a sufficiently large centered disk. This body contains $0$ in its interior. The intersections on the rays $u=-v,\\ u>0$ and $v=0,\\ u>0$ have endpoints $(\\beta,-\\beta)$ and $(\\rho,0)$, respectively, provided the disk contains both points. For $\\beta>\\rho$ choose the disk to contain the whole triangle. For $\\beta\\le\\rho$ the sector of the halfplane contains $0<u<\\rho,\\ v>0$, and the area of its intersection with disks of increasing radii is unbounded while both specified chord endpoints stay fixed.\n",
+  "source_candidate_ids": [
+    "1a4f9cc73e4a014c"
+  ],
+  "source_candidate_sha256": {
+    "1a4f9cc73e4a014c": "137b8ac5b2dd7a19129951f53db663c7cb8b69f1cbbcfd054378677ae3f29ac3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1a4f9cc73e4a014c",
+      "locator": "§2, (4)–(5), actual sector triangle from two chord endpoints"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^2$ be a convex body with $0$ in its interior. Suppose the endpoints of the $K$ chords on the negative $y$-axis and on the positive-$x$ ray of $x+y=0$ are $(0,-\\beta)$ and $(\\rho,-\\rho)$, with $\\beta,\\rho>0$. In the coordinates $u=-y$, $v=x+y$, the sector $K\\cap\\{y<0<x+y\\}$ lies in\n$$\nu>0,\\qquad v>0,\\qquad \\beta u+(\\beta-\\rho)v\\le\\beta\\rho.\n$$\nWhen $\\beta>\\rho$, its area is at most $\\beta\\rho^2/[2(\\beta-\\rho)]$. Equality holds exactly when the closure of the sector in $(u,v)$ is the corresponding closed triangle. This bound is attained for each $\\beta>\\rho$. When $\\beta\\le\\rho$, the two endpoints alone give no finite uniform area bound for the sector.",
+  "subgoal_id": "pk-intake-two-endpoint-sector-envelope",
+  "title": "Two chord endpoints bound a planar sector"
+}

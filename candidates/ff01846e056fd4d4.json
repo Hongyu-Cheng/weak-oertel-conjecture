@@ -1,0 +1,42 @@
+{
+  "advances": "Volume transport and gradient labels for a specified actual common separator. The original-volume identity concerns label masses. It gives neither original-volume row barycenters nor a surface transport.",
+  "author": "PK-research-agent",
+  "candidate_id": "ff01846e056fd4d4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.114399+00:00",
+  "depends_on": [
+    "91ad59d2662839ca",
+    "ac53fe19fef9ec25",
+    "a56f8711406a3870"
+  ],
+  "draft_key": "same-buffered-dual-gradient-labeled-volume-transport",
+  "kind": "theorem",
+  "proof": "If positivity of $\\Delta$ is supplied directly, proceed to the parameter inequality below. Otherwise, with only proper rows, some proper group has positive weight by normalization. With the atomic test available, if all the separator weight were atomic then that test would have weighted improvement at least $1-\\beta m_A>0$, a contradiction. Positive contact weights give positive $e_{ia}$ by positivity of the old buffer. The parameter contribution to the joint inequality with body and normal speeds zero is exactly\n$$\n\\sum_{ia} e_{ia}h(Y_{ia})/L_a\n\\ge(\\Delta/M)\\int_S h/L\\,dm .\n$$\nThis is an inequality for the old physical separator's own coefficients. Both affine signs give equal masses and all first moments. The permitted max-affine tests give convex order on the physical space: a globally finite convex function is uniformly approximable on the compact hull by finite maxima of its affine supports. To see this, for each point take a support touching there. Its error is less than any prescribed positive tolerance on a relative neighborhood by continuity, and finitely many such neighborhoods cover the hull. Applying ac53fe19fef9ec25 to the finite nonnegative compactly supported marginals now gives the coupling. Split any repeated source row in proportion to the masses of its occurrences.\n\nConcave Jensen gives the row inequality for $L$. Both $L$ integrals equal $\\Delta$, so every positive row has equality. Each active affine plane at the source has nonnegative gap above $L$ and zero gap integral in that row. Different continuous slopes would put the whole row in a mixed-null hyperplane in every fiber, which contradicts positive row mass and absolute continuity of its submeasure with respect to $\\nu_V$. At almost every target with a continuous gradient, the slope equals that of the active source plane, since the finitely many ties of unequal continuous slopes are mixed-null. Integrating the row masses, barycenters and $L$-moments with the constant label in each row gives exactly the two displayed identities.\n\nAt an own-interior minimum of the old assigned contact expression, that expression is differentiable in $X$ once the active continuous slope has been shown unique. Indeed, on that fiber all the active planes have the same continuous restriction, and every inactive plane has strictly positive gap there at the mark. The energy gradient in a56f8711406a3870 gives $\\nabla_X\\log E_a=N a_a$. Differentiating the old contact expression gives $U_i=\\varepsilon f_a[a_a+c_{ia}/(N L_a)]$, which is the last relation after multiplication by $\\kappa_{ia}$.\n",
+  "source_candidate_ids": [
+    "1a7cfa3d1047cbae",
+    "3b257d8ddacb6167",
+    "8f0725a173821a00"
+  ],
+  "source_candidate_sha256": {
+    "1a7cfa3d1047cbae": "104bd373d90aa199529ed8433492010269233b30279e5364a50695a4f9e79b66",
+    "3b257d8ddacb6167": "3d719a302911d9e927813a436f66c159e338233bc7cc8076de4eaa225e98398c",
+    "8f0725a173821a00": "4a1a141b566a692c4393bc4c4f98e22f46c2d8ba97c082045e72a8c3c6d0c22b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1a7cfa3d1047cbae",
+      "locator": "§4, (9)–(13), joint coefficients, atomic hinge, contact normal and labels"
+    },
+    {
+      "candidate_id": "8f0725a173821a00",
+      "locator": "§2 (13)–(14) and §3 (15)–(17), regular specialization"
+    },
+    {
+      "candidate_id": "3b257d8ddacb6167",
+      "locator": "§§3–6, finite-source convex order, contact equality and gradient label identities"
+    }
+  ],
+  "statement": "Use the common finite-contact buffered separator, including the contact budget coefficients $\\kappa_{ia}$ and $e_{ia}=\\varepsilon f_a\\kappa_{ia}$, or a regular singleton joint separator with the same contact terms and coefficients. Assume its joint cone includes pure raw parameter directions of both signs of affine functions and negatives of finite maxima of affine functions. Assume $\\Delta=\\sum_{ia}e_{ia}>0$, or obtain it from the separator's normalization when there are only proper rows or from a test in the same cone with $D=m_A$ and every atomic cap loss at least one, where $\\beta m_A<1$. Then the exact same coefficients give a martingale from\n$$\n\\mu_V=\\sum_{ia}(e_{ia}/L_a)\\delta_{Y_{ia}}\\quad\\text{to}\\quad\n\\nu_V=(\\Delta/M)dm/L.\n$$\nBoth measures have $L$-integral $\\Delta$. Each positive occurrence has a row with $L$-mean $L_a$ and support on every plane touching $L$ at its source. These planes have a unique continuous-coordinate slope $c_{ia}$, and the row is carried by points with $c(w)=\\nabla_XL(w)=c_{ia}$. For every function $\\chi$ of the finite label set,\n$$\n\\begin{aligned}\n\\frac{\\Delta}{M}\\int_S\\frac{\\chi(c(w))(1,w)}{L(w)}\\,dm\n&=\\sum_{ia}\\frac{e_{ia}}{L_a}\\chi(c_{ia})(1,Y_{ia}),\\\\\n\\frac{\\Delta}{M}\\int_S\\chi(c(w))\\,dm\n&=\\sum_{ia}e_{ia}\\chi(c_{ia}).\n\\end{aligned}\n$$\nHere sums with $c_{ia}$ run over positive occurrences. With $U_i=\\sum_j\\rho_{ij}u_{ij}$, every such occurrence that minimizes its old contact expression also satisfies\n$$\n\\kappa_{ia}U_i=e_{ia}\\left(a_a+\\frac{c_{ia}}{N L_a}\\right).\n$$",
+  "subgoal_id": "pk-intake-same-buffered-dual-gradient-labeled-volume-transport",
+  "title": "Same-separator tilted volume rows and their continuous gradient labels"
+}

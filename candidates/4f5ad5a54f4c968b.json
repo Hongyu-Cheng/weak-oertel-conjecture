@@ -1,0 +1,26 @@
+{
+  "advances": "One direction at the endpoint-centroid midpoint of a three-fiber body in dimension at least two, for prescribed endpoint section profiles.",
+  "author": "PK-research-agent",
+  "candidate_id": "4f5ad5a54f4c968b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.857490+00:00",
+  "depends_on": [],
+  "draft_key": "sharp-directional-whole-cap-profile",
+  "kind": "theorem",
+  "proof": "For $c=(g_A+g_B)/2$ the transformation is $(z,x)\\mapsto(z,x-c-z(g_B-g_A)/2)$. It preserves each fiber volume, the lattice of bases and all ambient halfspaces, and maps the middle inclusion to the centered one. In these coordinates each allowed allocation yields $(A_a+B_b)/2\\subseteq K_s$ after identifying the transverse spaces with $u^\\perp$. Brunn–Minkowski in dimension $d-1$ applies to these nonempty compact sections, including a supporting section of zero volume. It gives the displayed lower bound for the middle section volume. The endpoint integrals are the exact volumes of the cap traces at the two bases.\n\nFor either body the root of the section volume is concave by Brunn–Minkowski and convexity. At a support endpoint, interpolation with any fixed interior section gives the lower limit at least the endpoint value. For the upper limit, compactness implies that nearby sections, identified in $u^\\perp$, lie within any prescribed positive neighborhood of the endpoint section for all sufficiently close heights. The volumes of decreasing closed neighborhoods converge to the endpoint section volume. Thus the root is continuous on the closed interval. The allocation maximum is attained by compactness. Combining maximizing allocations proves concavity of its root on its support, so the volume profile is measurable. Integration by Fubini now gives the cap bound.\n\nReplace each section by a ball in $u^\\perp$ centered on the $u$-axis and with the same section volume, taking a point for zero volume. The radius functions are concave, giving convex bodies. Their axial first moments and volumes are unchanged and their transverse first moments vanish. Each section of their Minkowski midpoint is the union of the concentric averaged balls from all allowed allocations. The largest has volume $h(s)$ and contains all the others. With this midpoint as middle body every cap in the statement has exactly the claimed mass.\n\n[Brunn–Minkowski for nonempty compact sets, Gardner, The Brunn–Minkowski Inequality, Theorem 4.1](https://sites.stat.washington.edu/jaw/COURSES/520s/523/HO.523.20/Gardner.BullAMS.02.pdf).\n",
+  "source_candidate_ids": [
+    "443fb78ca8dd4f80"
+  ],
+  "source_candidate_sha256": {
+    "443fb78ca8dd4f80": "833f44dbf30c224b12c50241b124fba6dedcec71150495b397e75b242293daa8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "443fb78ca8dd4f80",
+      "locator": "443fb78ca8dd4f80:01 §1 (1)–(2), sharpness construction"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let $A,K,B$ be convex bodies in $\\mathbb R^d$ with $(A+B)/2\\subseteq K$, placed at bases $-1,0,1$ with the sum of their ordinary $d$-volumes as measure. Apply the affine shear sending the two endpoint centroids and their midpoint at base zero to the origin within each fiber. For a unit vector $u$, let $I_A,I_B$ be the closed projection intervals and $f_A,f_B$ the $(d-1)$-volumes of their transverse sections. For $s\\in(I_A+I_B)/2$ set\n$$\nh(s)=\\max_{\\substack{a\\in I_A,\\ b\\in I_B\\\\a+b=2s}}\n\\left(\\frac{f_A(a)^{1/(d-1)}+f_B(b)^{1/(d-1)}}{2}\\right)^{d-1},\n$$\nand set $h=0$ elsewhere. For every real $\\alpha$, the closed cap $u\\cdot x+\\alpha z\\ge0$ has raw mass at least $\\int_0^\\infty h(s)\\,ds+\\int_\\alpha^\\infty f_A(s)\\,ds+\\int_{-\\alpha}^\\infty f_B(s)\\,ds$, where the endpoint tails extend by zero off their projection intervals. There exist centered bodies with the same endpoint profiles and with their midpoint as middle body that attain equality for all $\\alpha$ in this fixed direction.",
+  "subgoal_id": "pk-intake-sharp-directional-whole-cap-profile",
+  "title": "The sharp directional whole-cap lower bound from endpoint sections"
+}

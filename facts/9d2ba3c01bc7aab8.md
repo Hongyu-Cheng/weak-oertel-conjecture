@@ -1,0 +1,51 @@
+---
+fact_id: 9d2ba3c01bc7aab8
+kind: counterexample
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-pk-w36-rates-disconnected
+depends_on: []
+verifier_run: 8d8a63ccea01fd61
+target_match: null
+---
+
+## Source
+
+- [6090c7ee45c2de64](../candidates/6090c7ee45c2de64.json), 6090c7ee45c2de64:02 §§1–5, (1)–(12), asymmetric group example and the common-lift obstruction.
+- [6090c7ee45c2de64](../candidates/6090c7ee45c2de64.json), 6090c7ee45c2de64:01 §§1–2, (1)–(8), actual positive-rate inverse law.
+- [e90eb0947d2b9feb](../candidates/e90eb0947d2b9feb.json), e90eb0947d2b9feb:05 §6, (10), symmetric profile and joint kernel.
+
+## Statement
+
+For $0<a,b<1/2$ let $H(s)=\max(2-s,1+s)$ on $[0,1]$, let $A$ be the maximum of $H$ and the chord line between $(a,2-a)$ and $(1-b,2-b)$, and put $E=[0,a]\cup[1-b,1]$. For $\rho>0$, write $t=x+y$ and take
+$$
+K_j=\{0\le s\le1,\ x,y\ge0,\ A(s)/j\le t\le1\},\qquad
+L_j=c_j(t-H(s)/j+e^{-j}),\qquad r_j=(\rho/j)(-\log L_j)_+,
+$$
+where $c_j\to c>0$. With $M_j=|K_j|\to1/2$, the joint inverse law $\mathbf1_{K_j}d(s,x,y)\,\delta_{r_j}/(M_j L_j)$ has on positive rates the physical conditional
+$$
+\gamma(r,ds)=\frac{2H(s)}{c\rho}\,\mathbf1_E(s)\,ds\qquad(0<r<\rho)
+$$
+at $(s,0,0)$, zero for $r>\rho$, with no positive rate atom. The two actual affine planes converge to $ct$. The actual exterior positive-rate log defect is $\sqrt2H(s)\mathbf1_E(s)\,ds\,\delta_{(x,y)=0}\delta_{n_0}\delta_\rho$, where $n_0=(0,-1,-1)/\sqrt2$. With an interior anchor $o$ of height $t_o$, its radial weight is $t_o/\sqrt2$, and $Mct_o\gamma(r)\,dr$ is exactly its position-preserving uniform rate kernel. The inverse and boundary-log masses are bounded, the bulk logarithms are uniformly integrable and the rates are bounded. The normalization $c_j$ giving volume-mean log zero has $c=e^{1/2}$.
+
+Every fixed $r$ in $(0,\rho)$ has a disconnected group support. The two cells separately have positive affine densities on their two intervals. The group cannot be an affine marginal of uniform volume on one compact convex body in any finite dimension. With $a=1/10$, $b=1/100$, $c_j=1$, its centroid is $9839/71650$ in the $s$ coordinate and the closed halfspace to the right of it has mass fraction $133/1433<4/9$. With $b=a^2$ this cap fraction tends to zero as $a\downarrow0$.
+
+## Proof
+
+The chord slope is $(a-b)/(1-b-a)$, strictly between $-1$ and $1$, so $A=H$ exactly on $E$, and $A\le2$. The epigraph condition for $A/j$ gives convex compact bodies with positive volume for $j\ge3$, converging in Hausdorff distance to $[0,1]\times\{x,y\ge0:t\le1\}$. The inverse integral of the limiting unscaled $t$ on that body is one. The $s$-coordinates on either side of $1/2$ determine the two actual active affine cells. The coordinates $(x,y)=(tv,t(1-v))$ have volume element $t\,ds\,dt\,dv$ for $0\le v\le1$, and $M_j=\frac12\int_0^1(1-A(s)^2/j^2)\,ds$. For $u=t-H(s)/j\ge0$, the bound $t\le u+2/j$ bounds the unnormalized inverse integrals by a fixed multiple of
+$$
+\int_0^1\frac{u+2/j}{u+e^{-j}}\,du\le1+\frac2j\log\frac{1+e^{-j}}{e^{-j}}.
+$$
+The same coordinates, with $u+e^{-j}\ge u$, bound the bulk logarithmic tails by a constant times the integral of $(u+2/3)(1-\log u)$ on an interval tending to zero. Bounded truncation and body convergence then give the limiting mean unscaled log $2\int_0^1t\log t\,dt=-1/2$.
+
+At rate $r>0$, the exact level is
+$$
+t_j(s,r)=H(s)/j-e^{-j}+e^{-rj/\rho}/c_j.
+$$
+It is admissible exactly when $t_j\le1$ and $(A-H)/j\le e^{-rj/\rho}/c_j-e^{-j}$. Since $dL_j/dt=c_j$, one has $|dt/dr|=j L_j/(c_j\rho)$. The exact inverse density in $(s,v,r)$ on the admissible levels is $jt_j/(M_j c_j\rho)$. On $r\ge r_0>0$ it is uniformly bounded and tends before imposing admissibility uniformly to $2H/(c\rho)$. For fixed $r<\rho$, the admissible $s$-indicator tends to $\mathbf1_E(s)$. For $r>\rho$ it eventually vanishes. The rates are bounded by $(\rho/j)(j-\log c_j)_+$, and all feasible points at rates bounded away from zero tend to $(s,0,0)$. Dominated convergence on every positive rate interval proves the joint law with no endpoint atom.
+
+On the bottom graph $t=A(s)/j$ the area element is $(A(s)/j)\sqrt{2+(A'(s)/j)^2}\,ds\,dv$. The positive log there is bounded by $j+O(1)$. On $E$ it equals $j-\log c_j$ for large $j$, and the rate tends to $\rho$. Off $E$ it is $O(\log j)$ at each fixed $s$. The outward normal tends to $n_0$ almost everywhere. Dominated convergence gives the displayed bottom law. The coordinate side faces have uniformly small log tails by integrating in $s,t$ with a bounded area factor and the lower floor $c_j(u+e^{-j})$. The endpoint faces $s=0,1$ have the element $t\,dt\,dv$ and the same bound. The top stays uniformly away from a zero of $L_j$. Thus the bottom supplies the whole positive-rate surface law, and multiplying it by $t_o/\sqrt2$ and applying the uniform rate kernel gives the stated inverse identity.
+
+The support consists of the two intervals because $H$ is strictly positive. For a full-dimensional convex body $Q$ and an affine map $T$, the support of $T_\#(\mathbf1_Q\,dX)$ is exactly the compact convex set $T(Q)$. Indeed $Q$ is the closure of its interior, and the inverse image of a relative neighborhood of any point of $T(Q)$ meets that interior in a nonempty open set. This excludes a common lift for the disconnected law.
+
+The left and right masses of $H\mathbf1_E\,ds$ are $2a-a^2/2$ and $2b-b^2/2$, with respective first moments $a^2-a^3/3$ and $2b-3b^2/2+b^3/3$. For $a=1/10$, $b=1/100$ these give masses $39/200$ and $399/20000$, total moment $29517/1000000$, and the claimed centroid in the gap. The right cap contains just the right interval and has the stated fraction. For $b=a^2$ the centroid divided by $a$ tends to $3/2$, so it is again in the gap for small $a$ and the right mass divided by the total tends to zero.

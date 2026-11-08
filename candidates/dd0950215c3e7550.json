@@ -1,0 +1,40 @@
+{
+  "advances": "Nonheaviness is local to the three marked volumes. The cut need not be critical, and the comparison concerns the stated two-destination barycentric row.",
+  "author": "PK-research-agent",
+  "candidate_id": "dd0950215c3e7550",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:22:43.020264+00:00",
+  "depends_on": [],
+  "draft_key": "w32-sharp-weighted-marked-fiber-residual-threshold",
+  "kind": "theorem",
+  "proof": "Scale the continuous coordinates so $c=1$, and put $a=|A|^{1/d}$, $b=|B|^{1/d}$. Brunn–Minkowski gives $wa+(1-w)b\\le1$. If $a\\le1$, then $wa\\le w<\\kappa_d(w)$. Otherwise $b\\le(1-wa)/(1-w)$ and the noheavy inequality on $A$ gives\n$$\n(wa/w)^d-\\bigl((1-wa)/(1-w)\\bigr)^d\\le a^d-b^d\\le1.\n$$\nFor fixed $w$ the left-hand root equation is strictly increasing in $k$ on $[w,1]$, from zero to $w^{-d}>1$, giving the claimed envelope for $wa$. Swapping endpoints proves the other envelope. For fixed $0<k<1$ the difference $(k/t)^d-((1-k)/(1-t))^d$ strictly decreases in $t$. This implies $\\kappa_d(t)$ strictly increases, since either a larger $t$ is at least the old root and its new root is larger than $t$, or comparison at the old root puts the new root strictly above it.\n\nThe strict residuals of both endpoints, when nonempty, have compact stricter-margin subcuts. The weighted Minkowski combination of those subcuts belongs to the strict residual at $K$ by the one ambient affine margin and the assumed body inclusion. Brunn–Minkowski and monotone convergence give $f_K\\ge wf_A+(1-w)f_B$. If an endpoint strict residual is empty, the remaining term is at most $\\kappa_d(t)$ by the endpoint envelopes. In both cases $f_K=(1-p)^{1/d}$ because the cap is closed and its residual is its exact complement, also for a pure base normal. This gives the bound.\n\nFor sharpness let $T$ be a volume-one convex body and write $k=\\kappa_d(t)$. Put $K=T$, the endpoint of weight $t$ equal to $(k/t)T$, and the other equal to $((1-k)/(1-t))T$. The weighted Minkowski sum is exactly $T$. The first root exceeds one and the second is positive and below one. Their volumes satisfy $|A_{\\rm large}|=1+|A_{\\rm small}|$ by the defining equation. Hence precisely the larger endpoint is half the local total. Fix a nonzero continuous normal and a middle threshold giving any prescribed $p$, which exists by continuity of the cap volume between its two support thresholds, including the two endpoints. A sufficiently large finite tilt fixing this middle threshold strictly misses the larger endpoint and strictly captures the smaller endpoint. The residual roots then attain the displayed bound. The lifted hull realizes the three marked sections, since the section of the endpoint hull at the mean is precisely $T$. For rational weights write $w=m/n$ with $0<m<n$ and take bases $-(n-m),0,m$. There can be extra integer fibers, while for $w=1/2$ the bases $-1,0,1$ give the complete integer census. For real weights use real bases with the prescribed mean.\n\nFor strict nonheaviness slightly decrease $a=k/t$ while keeping $a>1$ and set $b=(1-ta)/(1-t)$. Then $a^d<1+b^d$, and the other inequalities, initially strict, stay strict by continuity. The same cap construction approaches equality and gives a positive deficit for some strict triple at each $p>\\eta_d(w)$. Since $t<\\kappa_d(t)<1$, the limiting threshold is zero.\n\nAt the midpoint the root equation is the stated equation for $B_d$. Its values at $d=1,2$ are respectively $3/2,5/4$. For $d\\ge2$, $(5/4)^d-(3/4)^d\\ge(5/4)^2-(3/4)^2=1$, so $B_d\\le5/4$. Thus $1-(B_d/2)^d\\ge39/64$, while the binomial expansion gives $\\gamma_d<1/2$. Solving the bound for $p$ when $\\delta>0$ gives the excess condition. For each $0<\\delta/c\\le B_d/2$, the sharp construction attains that condition with equality by choosing the resulting $p$.\n\nFor $d=2,w=3/4$, the roots $(6-\\sqrt2)/4$ and $(3\\sqrt2-2)/4$ have weighted mean one and squared difference one. Hence $k=(18-3\\sqrt2)/16$ and $1-k^2=(54\\sqrt2-43)/128$. Choosing $T$ to be a simplex, take the canonical centroid cap on $T$ of fraction $4/9$ and use the same finite tilt. The comparison fails since $k>3/4>\\sqrt5/3$.\n",
+  "source_candidate_ids": [
+    "5c4e6b5e87c9fb06",
+    "68ce947b8ac91d32"
+  ],
+  "source_candidate_sha256": {
+    "5c4e6b5e87c9fb06": "a52549b35456d08f9ce9660b1d184e508564d3f43db88e2e20b0c719179438e2",
+    "68ce947b8ac91d32": "2c5f583e2c13d09643ee35c4226bf2242d6b75237dd57784dcd67b9f7973b0db"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5c4e6b5e87c9fb06",
+      "locator": "5c4e6b5e87c9fb06:01 Statement and proof, (1)–(4), weighted root envelope, threshold and sharpness"
+    },
+    {
+      "candidate_id": "5c4e6b5e87c9fb06",
+      "locator": "5c4e6b5e87c9fb06:02 Final comparisons, midpoint, limit and exact planar witness"
+    },
+    {
+      "candidate_id": "68ce947b8ac91d32",
+      "locator": "68ce947b8ac91d32:01 §§1–4, (1)–(5), residual convention and quantitative envelope"
+    },
+    {
+      "candidate_id": "68ce947b8ac91d32",
+      "locator": "68ce947b8ac91d32:02 §§5–6, sharpness construction and (6)"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $0<w<1$, and let $A,K,B$ be full-dimensional compact convex bodies in $\\mathbb R^d$ with $wA+(1-w)B\\subseteq K$. Put them at distinct endpoint bases and their $w,1-w$ weighted mean, with $K$ at the mean. Assume that each marked fiber volume is at most half their sum. For one closed ambient halfspace, let $p$ be the captured fraction in $K$ and let $f_A,f_K,f_B$ be the $d$th roots of the volumes of its strict complements on the three fibers. Write $c=|K|^{1/d}$, $t=\\max(w,1-w)$, and let $\\kappa_d(t)\\in(t,1)$ be the unique solution of\n$$\n\\left(\\frac{k}{t}\\right)^d-\\left(\\frac{1-k}{1-t}\\right)^d=1.\n$$\nThe endpoint roots satisfy $w|A|^{1/d}\\le c\\kappa_d(w)$ and $(1-w)|B|^{1/d}\\le c\\kappa_d(1-w)$. In particular\n$$\n[w f_A+(1-w)f_B-f_K]_+\n\\le c[\\kappa_d(t)-(1-p)^{1/d}]_+ .\n$$\nFor every $p\\in[0,1]$ the displayed bound is attained. It remains the supremum when all three volume inequalities are strict. Thus $\\eta_d(w)=1-\\kappa_d(t)^d$ is the largest universal no-deficit threshold in either class, and it tends to zero as $t\\uparrow1$.\n\nFor $w=1/2$, let $B_d=2\\kappa_d(1/2)$, so $B_d^d-(2-B_d)^d=1$ and $\\max(|A|,|B|)^{1/d}\\le B_d c$. The threshold is $1/4$ for $d=1$ and at least $39/64>1/2>\\gamma_d$ for $d\\ge2$, where $\\gamma_d=(d/(d+1))^d$. A positive midpoint deficit $\\delta$ requires $0<\\delta/c\\le B_d/2$ and $p\\ge 1-(B_d/2-\\delta/c)^d$, with equality attainable. At $d=2,w=3/4$ the threshold is $(54\\sqrt2-43)/128$, and an actual closed cut with middle fraction $4/9$ can give a positive deficit.",
+  "subgoal_id": "pk-intake-w32-sharp-weighted-marked-fiber-residual-threshold",
+  "title": "Sharp residual-root deficit for a weighted row of three nonheavy marked fibers"
+}

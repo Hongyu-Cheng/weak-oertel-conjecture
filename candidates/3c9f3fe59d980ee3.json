@@ -1,0 +1,26 @@
+{
+  "advances": "A statement about a sum of independent lattice variables and its mass function.",
+  "author": "PK-research-agent",
+  "candidate_id": "3c9f3fe59d980ee3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:03:04.801541+00:00",
+  "depends_on": [],
+  "draft_key": "geometric-conditional-mode",
+  "kind": "lemma",
+  "proof": "Discard deterministic zero variables, whose conditional means and contributions to $\\tau$ are zero. Write $\\lambda_i=b_i/(1+b_i)$, so $\\Pr(N_i=j)=(1-\\lambda_i)\\lambda_i^j$ for $j\\ge0$. Every nonempty sum of the remaining variables has positive mass at each nonnegative integer.\n\nFor a log-concave mass sequence $a$ positive on all nonnegative integers and zero on negative integers, the matrix with entries $a_{s-r}$ has nonnegative two-by-two minors. For $r_1<r_2$ and $s_1<s_2$, if the off-diagonal product is positive, the diagonal indices lie between the off-diagonal indices and have the same sum. Decreasing successive ratios then give the inequality. A zero off-diagonal product gives the inequality directly. Conversely, the consecutive minors give log-concavity. Convolution corresponds to multiplication of these matrices. For each minor of a product, only intermediate indices from the smallest chosen row to the largest chosen column can contribute. The two-by-two Cauchy–Binet identity expresses the minor as a finite sum of products of nonnegative minors. Each geometric mass sequence is log-concave, and its convolution with the others is therefore log-concave.\n\nIf only one positive mean remains, its conditional increment is one. Otherwise let $r$ be the mass sequence of the sum of all variables except $N_i$, extended by zero to negative integers. Let $g_n$ be the conditional mass function of $N_i$ given $N=n$, extended by zero outside $[0,n]$. For $0\\le u<v$, the expression for $g_n(j)$ proportional to $\\lambda_i^j r(n-j)$ and the decreasing ratios of $r$ give $g_n(v)g_{n-1}(u)\\ge g_n(u)g_{n-1}(v)$. Indeed, the inequality for $r$ is $r(a+1)r(b)\\ge r(a)r(b+1)$ with $a=n-1-v<b=n-1-u$. If the right side is positive, both $a$ and $b$ are nonnegative, so the ratio test applies. Expanding the two conditional expectations gives\n$$\nm_i(n)-m_i(n-1)\n=\\sum_{0\\le u<v\\le n}(v-u)[g_n(v)g_{n-1}(u)-g_n(u)g_{n-1}(v)].\n$$\nThe term $u=0,\\ v=n$ is strictly positive, since $g_n(n),g_{n-1}(0)>0$ and $g_{n-1}(n)=0$. Since $\\sum_i m_i(n)=n$, the increments sum to one and each is at most one.\n\nFor any finitely supported function $\\phi$, shifting the geometric series with the other variables held fixed gives $\\mathbb E[N_i\\phi(N)]=\\lambda_i\\mathbb E[(N_i+1)\\phi(N+1)]$. Substitution of $\\lambda_i=b_i/(1+b_i)$ yields\n$$\n\\mathbb E[(N_i-b_i)\\phi(N)]\n=b_i\\mathbb E[(N_i+1)(\\phi(N+1)-\\phi(N))].\n$$\nSum over $i$ and use $\\phi(j)=\\mathbf 1_{\\{j=n\\}}$ to obtain the recurrence. Its bracket is positive because $\\tau(n-1),p(n-1),p(n)>0$. The increment $\\tau(n)-\\tau(n-1)$ is a weighted average of the positive means, with weights given by their strictly positive conditional increments. It is at most $b_{\\max}$, with equality exactly when all positive means are equal. For $n\\le\\mu-b_{\\max}$ the bracket is at most $\\tau(n-1)$, which proves the bound and its equality condition.\n",
+  "source_candidate_ids": [
+    "a6e6fd61fe60c16a"
+  ],
+  "source_candidate_sha256": {
+    "a6e6fd61fe60c16a": "b23a4781c65a1c1e79591cd59e66c32e037575f27ceae99edb27e9f1eff3d030"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a6e6fd61fe60c16a",
+      "locator": "§§1–2, (1)–(3)"
+    }
+  ],
+  "statement": "Let $N_i$ be finitely many independent geometric random variables on the nonnegative integers, with means $b_i\\ge0$ and at least one $b_i>0$. A zero mean denotes a deterministic zero variable. Write $N=\\sum_i N_i$, $\\mu=\\sum_i b_i$, $b_{\\max}=\\max_i b_i$, $p(n)=\\Pr(N=n)$, $m_i(n)=\\mathbb E[N_i\\mid N=n]$, and $\\tau(n)=\\sum_i b_i(m_i(n)+1)$. Then $p(n)>0$ for $n\\ge0$, and for every integer $n\\ge1$ the increments $m_i(n)-m_i(n-1)$ belong to $[0,1]$ and sum to one. They are positive for each $i$ with $b_i>0$. The recurrence is\n$$\n\\tau(n-1)p(n-1)=[\\tau(n)+n-\\mu]p(n).\n$$\nIn particular, $p(n)\\ge p(n-1)$ for $1\\le n\\le\\mu-b_{\\max}$. In this range equality holds exactly when $n=\\mu-b_{\\max}$ and all the positive means are equal.",
+  "subgoal_id": "pk-intake-geometric-conditional-mode",
+  "title": "Conditional means and a mode bound for sums of independent geometric variables"
+}

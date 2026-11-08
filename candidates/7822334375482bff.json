@@ -1,0 +1,26 @@
+{
+  "advances": "A structural single-cell limit calibration with explicit slice normalizations, not a statement about critical cap laws.",
+  "author": "PK-research-agent",
+  "candidate_id": "7822334375482bff",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:49:23.772245+00:00",
+  "depends_on": [],
+  "draft_key": "hollow-single-cell-nonaffine-graph",
+  "kind": "counterexample",
+  "proof": "At a base $(x,y,z)$ the convex coefficient $t$ of $r$ can take exactly the values\n$$\n\\max\\{0,(x+y+z-2)/2\\}\\le t\\le\\min\\{x/2,y,z\\}.\n$$\nIndeed the other four coefficients in order $2e_1,2e_2,2e_3,0$ are $x/2-t,y/2-t/2,z/2-t/2,1-(x+y+z)/2+t$. The lifted height is $t$. Thus the base is described by $x,y,z\\ge0$, $y+z\\le2$, $x+y-z\\le2$, $x-y+z\\le2$. Strict $y,z>0$, $y+z<2$ exclude every integer interior point. In the lattice, $y+z\\le2$ implies that either one is zero or both equal one. With one zero the interval forces $t=0$ and membership in $2\\Delta_3$. With both one the possible integer $x$ are $0,1,2$ and $t=x/2$. This proves the census and singleton claims. The old sites already realize every parity except $111$, realized by $a$. The four affine-basis old vertices force any affine height to vanish identically, contrary to $b(r)=1$. The real base $(1/2,1/2,1/2)$ allows $0\\le t\\le1/4$, also proving that $D$ has dimension four.\n\nEach of the six displayed supporting planes gives a facet, as witnessed by three noncollinear base vertices on it. The facet $F$ is the $y+z=2$ plane and contains $a$ in its relative interior, since its three coefficients there are $1/4,1/4,1/2$. On $x=0$ the remaining relative-interior coordinates are positive with sum $<2$. The same argument applies to $y=0$ and $z=0$ using the corresponding sum inequality, and on each of $x+y-z=2,x-y+z=2$ use $y,z>0$ and $y+z<2$. Thus the other facets have no integer relative-interior point. The edges incident to $r$ are $[r,2e_i]$ for $i=1,2,3$ by the common facet incidences and all are primitive. The other edges are those of the old tetrahedron, with $[2e_2,2e_3]$ already in $F$. Each listed remaining edge contains its integer midpoint, and all vertices belong to these occupied faces. This proves the face census. The edges are connected through $0$ and $2e_1$ and meet $F$ at $2e_2,2e_3$. On $F$ the height is $x/2$ and on the five edges it is zero.\n\nThe added rectangles have zero base displacement and expand the dimension by one in the $x_2$ coordinate. Each integer fiber has area $2\\varepsilon_j^2$, so the twelve give the stated total. The level is at $x_2=e^{-j}-e^{-2j}\\in(0,\\varepsilon_j)$, since $e^j>12j$ for $j\\ge12$ (already $j^3/6>12j$). The continuous gradient norm is one. A horizontal slice has length $2\\varepsilon_j$ and its normalization $6j$ gives mass one, concentrating at $(b(p),0)$. Finally any positive-weight combination of the placed atoms at an integer output lies in $D$ by convexity and is the unique atom there. Compact sets of positive input mass contain the corresponding atoms, so the exponent-one measure inequality has left mass one and right mass one. This applies to every such combination.\n",
+  "source_candidate_ids": [
+    "64f65a59b216d00b"
+  ],
+  "source_candidate_sha256": {
+    "64f65a59b216d00b": "1ac28139c0d88420417fde62e7f96ef9d56e4d5d618209b4834b9d5a034bfbf2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "64f65a59b216d00b",
+      "locator": "64f65a59b216d00b:02 Proof §§2–4, (1)–(4), exact single-cell normalization and rank drop"
+    }
+  ],
+  "statement": "Let $e_1,e_2,e_3$ be the standard basis of $\\mathbb R^3$, let $r=(2,1,1)$ and $a=(1,1,1)$, and let $B=\\operatorname{conv}\\{0,2e_1,2e_2,2e_3,r\\}$. The body $B$ is hollow and its integer set is $P=(2\\Delta_3\\cap\\mathbb Z^3)\\cup\\{a,r\\}$, where $2\\Delta_3=\\{(x,y,z)\\ge0:x+y+z\\le2\\}$. It has twelve points and all eight occupied parities. Put $b=0$ on the ten simplex sites, $b(a)=1/2$, $b(r)=1$. The hull $D$ of the five lifted vertices has singleton integer fibers $\\{b(p)\\}$, and $b$ is nonaffine. The maximal faces containing a relative-interior integer point are $F=\\operatorname{conv}\\{2e_2,2e_3,r\\}$ and the five edges $[0,2e_1],[0,2e_2],[0,2e_3],[2e_1,2e_2],[2e_1,2e_3]$. They have connected overlaps and $b$ is affine on each.\n\nEmbed $D$ in continuous coordinates $(x_1,x_2)$ at $x_2=0$. For $j\\ge12$ let $\\varepsilon_j=1/(12j)$ and $D_j=D+(\\{0\\}^3\\times[-\\varepsilon_j,\\varepsilon_j]\\times[0,\\varepsilon_j])$. These are full-dimensional convex bodies in one compact set. Their actual fibers are the rectangles $[b(p)-\\varepsilon_j,b(p)+\\varepsilon_j]\\times[0,\\varepsilon_j]$, with total mixed area $M_j=1/(6j^2)$. One global affine function $A_j=x_2+e^{-2j}$ at level $s_j=e^{-j}$, with $\\lambda_j=j$ and common normalization $1/(M_j\\lambda_j|\\nabla_x A_j|)=6j$, has simultaneous normalized one-dimensional weak slice limits $\\delta_{(b(p),0)}$ at all twelve sites, of support dimension zero. These limits obey joint exponent-one measure Brunn–Minkowski at every integer-output combination.",
+  "subgoal_id": "pk-intake-hollow-single-cell-nonaffine-graph",
+  "title": "Connected occupied faces can give a nonaffine hollow graph in a single slice limit"
+}

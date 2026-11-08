@@ -1,0 +1,26 @@
+{
+  "advances": "Purely scalar anchor selection for monotone line tables. It does not assert automatic intersections or a corresponding general higher-rank superlevel theorem.",
+  "author": "PK-research-agent",
+  "candidate_id": "37f23d5b7414ae3e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:57:44.474727+00:00",
+  "depends_on": [],
+  "draft_key": "monotone-line-shell-superlevels",
+  "kind": "lemma",
+  "proof": "A pair with $h>j$ has zero left weight. For $h\\le j$ the right weight is the smaller one, including when the right index is beyond $N$. Thus $R_j=\\sum_{h=1}^j w_{j+h}=S_{\\min(2j,N)}-S_j$ and the two-branch expression follows. Its first term is nondecreasing. At each $j<N$ its second term has increment $-w_j-w_{j+1}+w_{2j+1}+w_{2j+2}\\le0$ by monotonicity on nonnegative indices with zero extension. Consequently a superlevel is the intersection of an initial and a terminal integer interval. For nondecreasing weights reverse the indexing, which preserves the reflected sums and interchanges the two atomic tails. For the finite family, take one interval with the largest lower endpoint and one with the smallest upper endpoint. Pairwise intersection or, if they are the same interval, nonemptiness shows that the largest lower endpoint is at most the smallest upper endpoint.\n",
+  "source_candidate_ids": [
+    "6ebae89f6484418b"
+  ],
+  "source_candidate_sha256": {
+    "6ebae89f6484418b": "6e95b1ae1573da01b2b48ffffd0e59b7f3866ed9875d6adc7f21b956e8027a32"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6ebae89f6484418b",
+      "locator": "6ebae89f6484418b:02 §2, (1)–(2), exact monotone line formula and interval intersection"
+    }
+  ],
+  "statement": "Let $w_0\\ge\\cdots\\ge w_N\\ge0$, extend by zero off $\\{0,\\dots,N\\}$, and put $S_j=\\sum_{i=0}^j w_i$ for $0\\le j\\le N$, with $S_{-1}=0$. At an integer anchor $0\\le j\\le N$, let $D_j=\\min\\{S_j,S_N-S_{j-1}\\}$ be closed weighted atomic depth, $R_j=\\sum_{h\\ge1}\\min(w_{j-h},w_{j+h})$, and $F_j=D_j+R_j$. Then\n$$\nR_j=S_{\\min(2j,N)}-S_j,\\quad\nF_j=\\min\\{S_{\\min(2j,N)},S_N-S_{j-1}+S_{\\min(2j,N)}-S_j\\}.\n$$\nEvery superlevel of $F$ is an integer interval, possibly empty. The interval assertion also holds for nondecreasing weights. For a nonempty finite family of such monotone profiles on the same base, if their chosen superlevel intervals are nonempty and pairwise intersect, they have a common integer anchor.",
+  "subgoal_id": "pk-intake-monotone-line-shell-superlevels",
+  "title": "Exact line superlevels for the atomic and reflected coefficient"
+}

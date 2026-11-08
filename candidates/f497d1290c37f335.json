@@ -1,0 +1,30 @@
+{
+  "advances": "Gives strictness for fixed independent-normal ordinary covers, with the overlap consequence restricted to positive minimum cap mass.",
+  "author": "PK-research-agent",
+  "candidate_id": "f497d1290c37f335",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:42:22.123737+00:00",
+  "depends_on": [
+    "23a563a735c07c25",
+    "f6c497926ac327fa",
+    "55467f91ed79e945"
+  ],
+  "draft_key": "independent-normal-strict-cap-profile",
+  "kind": "theorem",
+  "proof": "If a proper subfamily covers $K$, choose an inclusion-minimal one of size $k<j$. The effective cap-count inequality 23a563a735c07c25 gives its profile with coefficient $1/\\gamma_{k-1}$, including $\\gamma_0=1$ for $k=1$. The sequence $(\\gamma_q)_{q\\ge0}$ is strictly decreasing. For $q>0$ this follows by differentiating $q\\log(q/(q+1))$ and using $\\log(1+1/q)>1/(q+1)$. Therefore replacing $1/\\gamma_{k-1}$ by $1/\\gamma_{j-1}$ strictly increases the left side when $\\alpha>0$. Adding the omitted nonnegative terms proves the result in this case.\n\nNow suppose the cover is inclusion-minimal. Write $H_i=\\{\\ell_i\\ge0\\}$ for its affine margins. Their joint image of $K$ is convex and compact and avoids the open negative orthant. Separation gives $\\lambda_i\\ge0$, not all zero, such that $t=\\sum_i\\lambda_i\\ell_i\\ge0$ on $K$. Indeed a separating functional has finite supremum on the negative orthant only with nonnegative coefficients, and then that supremum is zero. Every coefficient is positive: if any were zero, the positive-coefficient caps alone would cover $K$. Independence implies that $t$ is nonconstant.\n\nUse affine coordinates $(v,t,y)$ where $v=(\\ell_1,\\ldots,\\ell_{j-1})$, and complete these independent coordinates by $y$. On $t>0$ the projective marginal f6c497926ac327fa in dimension $j-1$ preserves the total and all cap masses and has convex inverse power $-1/j$. Its density can be restricted to the open positive interior, since the boundary is null. In coordinates $z=v/t$ the projected margins are $z_i$ for $i<j$ and $(1-\\sum_{i<j}\\lambda_i z_i)/\\lambda_j$ for $i=j$. They are nonconstant, and their weighted sum with weights $\\lambda_i$ is one everywhere. Thus their open positive halfspaces cover the whole projected space. The strict open-cover profile applies with $r=j-1$ and $\\beta=j$. The resulting masses are the original $A_i$, because $t=0$ is null. This proves the strict profile in the minimal case.\n\nFor $a>0$ take $\\alpha=a$, so each positive part is $A_i-a$. When $a=0$, the overlap bound need not be strict. For example, take the cube $[-1,1]^D$, the halfspace $x_1\\ge-2$, and the halfspaces $x_i\\ge2$ for $2\\le i\\le j$. The first cap has mass $V$ and the others have zero mass.\n",
+  "source_candidate_ids": [
+    "eaf48fc18423f63a"
+  ],
+  "source_candidate_sha256": {
+    "eaf48fc18423f63a": "5d640c06cbdccf71396c96270c374507fd24dfeabdfbdd992188bab02e304f7c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "eaf48fc18423f63a",
+      "locator": "§2, (3)–(5), independent normals and the positive-minimum consequence"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^D$ be a convex body of volume $V$, and let $H_1,\\ldots,H_j$ be proper closed halfspaces covering $K$, where $2\\le j\\le D$. Assume their normals are linearly independent. With $A_i=|K\\cap H_i|$ and $\\gamma_q=(q/(q+1))^q$ for $q\\ge1$, for every $\\alpha>0$,\n$$\n\\sum_{i=1}^j(A_i-\\alpha)_+ + \\frac{\\alpha}{\\gamma_{j-1}}>V.\n$$\nIf $a=\\min_i A_i>0$, then $\\sum_i A_i-V>(j-1/\\gamma_{j-1})a$.",
+  "subgoal_id": "pk-intake-independent-normal-strict-cap-profile",
+  "title": "Strict effective cap profile for independent normals"
+}

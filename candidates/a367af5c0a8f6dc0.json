@@ -1,0 +1,29 @@
+{
+  "advances": "Fixed nonhollow lattice projection with a separate facet cap on each positive-volume fiber.",
+  "author": "PK-research-agent",
+  "candidate_id": "a367af5c0a8f6dc0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.792472+00:00",
+  "depends_on": [
+    "2fadf089fb53a6e3",
+    "cac63cc5f166ba86"
+  ],
+  "draft_key": "fixed-projection-bounded-facet-depth-attainment",
+  "kind": "theorem",
+  "proof": "For each $z$, take inner polytopes $A_{z,j}\\subset K_z$ converging to $K_z$ in Hausdorff distance by choosing finite nets. Include a point in every fiber and enough affinely independent points in every positive-volume fiber. The convex hull of their lifts is a polytope, and its actual fibers $K_{z,j}$ satisfy $A_{z,j}\\subset K_{z,j}\\subset K_z$ by original compatibility. Thus they converge simultaneously and have exactly lattice projection $P$. Every positive-volume fiber of this approximating hull is a polytope with finitely many facets. The fixed-projection depth-continuity theorem applies on a common ball, so some approximating family retains strict depth below $\\alpha$. Let $N$ bound its positive-fiber facet counts. The central fiber is positive by the relative-interior weight argument and can be normalized to volume one, preserving depth and all facet counts.\n\nNormalize a minimizing sequence in the stated facet class by the volume-preserving fixed-projection affine normalization. Take a simultaneous Hausdorff limit by that theorem, retaining compatibility and central unit volume. A limiting zero-volume fiber is allowed. If a limiting fiber $K$ is full-dimensional, its approximants eventually contain a fixed ball $B(q,r)$ about an interior point of $K$, by support-function convergence. They are thus full-dimensional polytopes with at most $N$ facets. Pass to a subsequence with a fixed number of rows, representing them by unit outward normals and touching offsets. All offsets are bounded by the common containing ball, so all rows have convergent subsequences. The limiting intersection contains $K$ and every row has slack at least $r$ at $q$. For any point of the intersection, its convex combination with $q$ with a positive weight on $q$ strictly satisfies all limiting rows, and hence belongs to all sufficiently late approximants. Such combinations belong to $K$ by Hausdorff convergence, and their limits as the weight goes to zero give the original point in $K$. The intersection is therefore exactly $K$ and has at most $N$ facets. Apply this argument to each of the finitely many positive limiting fibers. The limit is in the same facet class, and continuity of its normalized maximum depth gives the claimed minimum, below $\\alpha$ by the approximating witness.\n",
+  "source_candidate_ids": [
+    "21db6cba533d25dc"
+  ],
+  "source_candidate_sha256": {
+    "21db6cba533d25dc": "f39173bdc694efc40391d7d3f0b0938191c6b21226255bd522e70975a24c462c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "21db6cba533d25dc",
+      "locator": "21db6cba533d25dc:01 §§1–2, actual polytopal approximation and closed normalized facet class"
+    }
+  ],
+  "statement": "Fix $d\\ge1$ and a finite full-dimensional lattice-convex projection $P\\subset\\mathbb Z^n$ with an interior lattice point $z_0$. If an actual convex fiber family over $P$ has positive mixed $d$-volume and normalized maximum halfspace depth below $\\alpha$, then for some integer $N\\ge1$ the class of actual families over $P$ with $|K_{z_0}|=1$ in which every positive-volume fiber is a polytope with at most $N$ facets attains a minimum normalized maximum depth $\\beta_N<\\alpha$. Its zero-volume fibers may be arbitrary nonempty compact convex sets.",
+  "subgoal_id": "pk-intake-fixed-projection-bounded-facet-depth-attainment",
+  "title": "Attainment below a strict threshold in a bounded-facet fixed-projection class"
+}

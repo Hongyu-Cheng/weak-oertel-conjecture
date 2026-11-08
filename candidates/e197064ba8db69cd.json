@@ -1,0 +1,28 @@
+{
+  "advances": "A finite simplex product satisfying the stated initial depth hypothesis. The projective image uses its own finite real base, while the radius path preserves the original bases.",
+  "author": "PK-research-agent",
+  "candidate_id": "e197064ba8db69cd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.928022+00:00",
+  "depends_on": [
+    "16a66c8ae1d8c423"
+  ],
+  "draft_key": "pk-w33-identical-simplex-product-exact-cap-budget-descent",
+  "kind": "theorem",
+  "proof": "Put $\\alpha=d/(d+1)$, $r_p=1+tA(p)>0$, and let $l_j=\\lambda_j-1/(d+1)$ as in the strict-gap lemma. Because $A$ is affine in the base, every anchored combination $\\sum_q \\eta_q r_qK$ at $p$ equals $r_pK$, so the same-base family is compatible, and lattice completeness gives its asserted sampling. On the plane at zero the caps $l_j(x)-t\\alpha A(p)\\ge0$ cover every point because $\\sum_j l_j=0$. After writing $x=r_p X$, the $j$-th cap in each fiber has a proper threshold for small $t$, and its mass is\n$$\n|K|r_p^d(\\alpha-t\\alpha A(p)/r_p)^d=|K|\\alpha^d.\n$$\nThus each displayed cap has total budget exactly $Q$. Retain the old strict-slack covers at the other bases, which still cover whole planes. Their masses converge because each homothetic fiber changes in volume symmetric difference by $|K||r_p^d-1|$. The actual total mass $|K|\\sum_p r_p^d$ is strictly above $M$ for $d\\ge2$ and $t\\ne0$ by strict convexity of the power and the mean-one, nonconstant radii. The actual normalized maximum is thus at most the common raw budget divided by this increased total.\n\nFor the projective path, the positive denominator transforms convex combinations into convex combinations with coefficients proportional to the old coefficients times the old denominators. Its inverse on the image is $(z,y)\\mapsto(z,y)/(1-tA(z))$ and has the same property. Hence the image family is actual at the transformed sampled bases. Its volume pulls back to weight $r_p^{-d}$ on old fiber $p$, and multiplying affine halfspace margins by the positive denominator gives corresponding halfspace traces in the two charts. The old-coordinate caps $l_j(x)+t\\alpha A(p)\\ge0$ cover the whole plane at zero and have weighted per-fiber mass $|K|r_p^{-d}(\\alpha+t\\alpha A(p))^d=|K|\\alpha^d$, with proper thresholds for small $t$. The fixed covers at all other old planes preserve their strict slack under these finitely many continuous weights, and all covers transport to the image. Finally $|K|\\sum_p r_p^{-d}>M$ for every $d\\ge1$ by strict convexity of the inverse power. This proves strict normalized descent in the image for both signs of small nonzero $t$.\n",
+  "source_candidate_ids": [
+    "ad5c2c5e1c71ab38"
+  ],
+  "source_candidate_sha256": {
+    "ad5c2c5e1c71ab38": "dd4afa3af55bb0c8336c26ecd2d8911a6ec17c052a9c440572765982c2e49103"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ad5c2c5e1c71ab38",
+      "locator": "ad5c2c5e1c71ab38:02 §§2–3, (1)–(6)"
+    }
+  ],
+  "statement": "Use the simplex product of pk-w33-identical-simplex-product-strict-other-base-gaps, with $Q=\\gamma M$ and $d\\ge1$. Let $A$ be linear and nonconstant on $P$. For every sufficiently small nonzero $t$, the projective image $(p,x)\\mapsto(p/(1+tA(p)),x/(1+tA(p)))$ has a finite ambient cover with exact budget $Q$ and maximum normalized ordinary depth strictly below $\\gamma$. If $d\\ge2$, the same is true on the original base for the compatible fibers $(1+tA(p))K$. In the latter assertion, when $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ the lifted hull realizes precisely its original sampled lattice bases.",
+  "subgoal_id": "pk-intake-pk-w33-identical-simplex-product-exact-cap-budget-descent",
+  "title": "Exact cap-budget descent by simplex radii and projective weights"
+}

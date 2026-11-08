@@ -1,0 +1,61 @@
+{
+  "candidate_id": "e85ab5a80f874e71",
+  "candidate_sha256": "ea782c4dba613d9c2afc898c92ae1d3893deaee72fa5ac4aefdca7de9f342be4",
+  "checked_dependency_candidate_sha256": {
+    "33488d4938a6ee4a": "4cf5340cd24a87299f2b841763b116fe73283de907888c2f936ace54c818ba6a",
+    "5f923438468803ac": "9895cfc89a93b456485c2b08ddef90a629fe40ec0ec32a6abc477e783beb173a"
+  },
+  "checks": [
+    "Cold-read the frozen statement and proof. Source d61c49578c90db6d §§5–6 contains the same PSD, positive-ray and closure claims; its source byte digest matches.",
+    "The symmetric cyclic entries assign each distinct edge once. In the determinant the three transpositions give -sum f_i^2/4 and the two cyclic products give -f_1f_2f_3/4. For f>=0 the cubic bound implies each f_i<=2, so the one- and two-dimensional principal minors are nonnegative. Checking all principal minors gives PSD even at f_i=0 or 2. The affine condition and orthant imply closure and convexity, and replacing x by |x| then increasing the nonnegative edge weights decreases the quadratic form in the stated direction.",
+    "For f>0, a Rayleigh maximizer of B(f) can be made nonnegative because its entries are nonnegative. Its eigenvector equation forces all coordinates positive since every edge weight is positive. Testing the all-ones direction shows rho>0, and PSD gives rho<=1. Thus scaling by 1/rho increases all coordinates weakly and gives B(f')w=w.",
+    "With c_i=f'_i/2 the node i equation is c_{i-1}w_{i-1}/w_i+c_iw_{i+1}/w_i=1. Both terms are positive. The node i+1 equation gives the required 1-u_{i+1}=c_iw_i/w_{i+1}; products telescope, yielding the same positive product for u and 1-u. Expanding the product equality gives sum u_i=1+sum pair products-2 triple product>1, since each pair product exceeds the triple product. The complementary inequality gives sum u_i<2. This is the exact open triangle domain, not just its coordinate box.",
+    "The approximating point (1/2,1/2,1/2) has cubic value 7/8<4, so convex interpolation stays feasible and has all coordinates positive. The approximants themselves lie in the downward hull because they have actual dominators. Taking their limit yields inclusion in the closed downward hull; the reverse follows from closed downwardness and the cubic predecessor. The same two inclusions hold for the closed downward convex hull. The alternative subsequence argument is justified by the compact closed image from the row-image theorem.",
+    "The boundary example (2,0,0) has cubic value 4 and PSD with a zero two-dimensional principal minor; every strict triangle vector has all coordinates positive and each <2, so there is no actual strict dominator. This distinguishes the nonnegative closure statement from positive-ray attainment."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "5f923438468803ac",
+      "candidate_sha256": "9895cfc89a93b456485c2b08ddef90a629fe40ec0ec32a6abc477e783beb173a",
+      "mapping": "The positive eigenvector construction gives strict u coordinates and strict sum bounds, so the inverse theorem realizes f' by one actual nondegenerate strict triangle. The compact closure also justifies the optional subsequence argument.",
+      "reviewed_proof_sha256": "3cd74644d43a21aadfd30f04955b98c067f8f1e8d80c5dd7aece371bc235ced7",
+      "reviewed_statement_sha256": "6ad162a15082ffa0fa8f352daa5b986bd4ae663dfeec4b341a2c77e9b104e397",
+      "status": "same-batch approval required before admission"
+    },
+    {
+      "candidate_id": "33488d4938a6ee4a",
+      "candidate_sha256": "4cf5340cd24a87299f2b841763b116fe73283de907888c2f936ace54c818ba6a",
+      "mapping": "The exact deficit is nonnegative for the same actual strict triangle f, giving the needed inclusion of the strict triangle image in the cubic region. This inclusion needs no assertion about other convex bodies.",
+      "reviewed_proof_sha256": "97c560ebf4ac7a967d9c6749e620fd6fcf49bb7ff5f2604b3dc582c3c35b3d02",
+      "reviewed_statement_sha256": "2627a0768145e660338b8f307735ca8df6e5e86b2d1dad065733f3adc9dcc79e",
+      "status": "same-batch approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:53:14Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Specializing the cyclic harmonic budget to m=3, h_i=f_i/2 and b_i=1+h_{i-1}+h_i gives the same matrix I-B(f) and an analogous positive block vector. The accepted fact does not identify the cubic, link the block construction to the strict triangle parameter domain, or identify its geometric downward hull.",
+      "fact_id": "2fb8b0785692a5b4"
+    },
+    {
+      "comparison": "A cyclic PSD realization theorem for a convex polygon with prescribed radial endpoints and sector areas. These geometric data and the reconstructed polygon do not give the three actual cap/chord vectors or their downward hull.",
+      "fact_id": "7d1ee06fa4119930"
+    }
+  ],
+  "readability": "The cyclic orientation of u_i matters in the node equations. The equation at node i+1 shows why the complement is indexed i+1, and both products telescope with this convention.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7b4a6c0ac2a4ccb05916abfbbb62465c6ae47a08fb17385618ca1d7461d36477",
+  "reviewed_statement_sha256": "e5abe0955cf7df2d4b34a6ce34bbbb25596ee07cc219c04f54c54b11ba1ad572",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:50:22Z",
+  "summary": "The cubic defines a closed convex coordinatewise downward set. Every positive point has an actual strict triangle dominator on its ray, and the closure argument handles zero coordinates without asserting strict attainment there.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

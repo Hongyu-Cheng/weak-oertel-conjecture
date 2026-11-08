@@ -1,0 +1,35 @@
+{
+  "candidate_id": "02208c02fd8cb36e",
+  "candidate_sha256": "139a110c6ee541d8e16eb7b0dc402965806bd11059f014162cf52a897d523378",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Each boundary row is a coordinate row, so it contributes nothing off the diagonal of Q. Each other row is entrywise nonnegative with nonpositive W_z, hence Q_ij≤0 for i≠j.",
+    "The positive vector t makes diag(t) invertible and Qt=0 gives L1=0. The diagonal is the sum of incident positive edge weights. Expanding the edge squares gives the exact quadratic form.",
+    "The energy vanishes exactly on vectors constant on connected components, including isolated vertices. The nullspace follows either from semidefiniteness or by direct row expansion. Transforming Qt(θ)=0 by the same diagonal scaling gives the stated ratios.",
+    "For a row supported in one component the common ratio factors out with coefficient Σ_i H_zi t_i. A row spanning several components is a sum of their profiles, as the proof records."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T20:32:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted stress gives positivity and annihilation on a guarded active kernel. The graph extraction additionally assumes a particular free-coordinate interpolation and signs at nonboundary rows and derives the component description.",
+      "fact_id": "11af46a7b0db3c53"
+    }
+  ],
+  "readability": "The interpolation rows need only their stated nonnegative coefficients for the algebra. The conclusion about a row uses its actual support.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "474859e14777d2fb475810031853f3dd2b6c6a79cd17fbaa6fddc2aa314b0f8a",
+  "reviewed_statement_sha256": "1540e1539f9df5c12d46b118c50d29801cefd62a76519691d9d3495981df81bd",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:26:44Z",
+  "summary": "The interpolation sign condition produces a diagonally scaled graph Laplacian. Its connected components give exactly the nullspace and curvature profile ratios.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

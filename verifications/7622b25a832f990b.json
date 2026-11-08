@@ -1,0 +1,41 @@
+{
+  "candidate_id": "35c4875253d155d0",
+  "candidate_sha256": "21d3059651ca4523a225fd629456c71c971f38d5654ed9ba29d9e0341adccc56",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The triangle is described by −1≤y≤0 and |x|≤1+y. Thus the empty-area supporting trace at y=0 is the full length-two top edge. The line y=−1+ε clips both sloped edges at x=±ε, inside both edges for 0<ε<1.",
+    "Integrating the slice width 2(1+y) from −1 to −1+ε gives lower cap area ε². The whole triangle has area one and the separating line has zero area, so the upper cap has area 1−ε². Both areas are strictly positive and both recipient sections are proper.",
+    "The two recipient caps are complementary closed halfspaces and cover the plane. The top face satisfies y>−1+ε, so the respective trace lengths are 2 and 0. The common section has length 2ε, counted once for each recipient in the denominator.",
+    "The inward normals of H0, H+ and H− are respectively (0,1), (0,1) and (0,−1). Coefficients 1,1,2 are all strictly positive and cancel exactly. This is a positive dependence, with no minimality or common-contact assumption.",
+    "Independent integer-scaled shoelace checks at ε=1/31, 3/11 and 8/9 matched both cap areas and the common section length. The slice-width calculation is valid for every ε in the stated interval.",
+    "Verified both source candidate byte hashes. The section comparison in cdad0ee8b68e978a gives the exact triangle, signs, areas and positive dependence. Section 4.1 of e81d0f726880ea4a repeats the obstruction and its limited scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T13:16:15.488Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Controls proper and supporting sections of a common minimizing cap, with endpoints and exterior weight. The triangle exhibits a separate obstruction for arbitrary positive-area recipients in a local cover, with only positive normal dependence.",
+      "fact_id": "b319e7dcda1486e9"
+    },
+    {
+      "comparison": "Its closed-cover estimates concern cap volumes and effective cover size. They do not compare recipient traces on a null cap face with recipient boundary-section lengths.",
+      "fact_id": "23a563a735c07c25"
+    }
+  ],
+  "readability": "Recipient own section is the intersection of the recipient boundary line with the triangle. The two recipients share a line, and each contributes its section length to the sum.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "557772fcd117a278aa999f2b88d17d5caeb134da74968f4036c3ef0b3da87109",
+  "reviewed_statement_sha256": "f2d065f932d97dec89550cabc64acd0c83f3815aa02fdc9165386929e55090bf",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:12:24Z",
+  "summary": "The exact triangle gives a trace-to-section ratio of 1/(2ε), unbounded as ε decreases to zero, while both recipients cut properly and the three unit inward normals have strictly positive balance.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary cap incidence in an actual triangle. There is no balance assumption, no unique cap signature near an edge, and no claim about arbitrary enclosing bodies.",
+  "author": "PK-research-agent",
+  "candidate_id": "c365b957c457009b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.329839+00:00",
+  "depends_on": [
+    "2e657e976221a74d"
+  ],
+  "draft_key": "strict-triangle-edge-midpoint-cap-budget",
+  "kind": "lemma",
+  "proof": "Let $\\alpha_i$ be the barycentric coordinates of $y$. Fact 2e657e976221a74d applies with exactly the strict vertex incidences and individual cap ceiling in the statement, giving $\\alpha_i<5/14$. At the cap isolating vertex $i$, with intercept fractions $u,v$ toward vertices $j,k$, the through-source equation and determinant formula give $\\alpha_j/u+\\alpha_k/v=1$ and $q_i=uv$. Thus $q_i\\ge4\\alpha_j\\alpha_k$ by AM–GM. If $m=\\min_i\\alpha_i$ and the other two coordinates are $x,z$, expanding $(5/14-x)(5/14-z)>0$ shows\n$$\n(5/14)(1-m-5/14)<xz\\le32/279.\n$$\nConsequently $m\\ge9/14-7(128/279)/10=9/28+11/39060>9/28$.\n\nSuppose a cap has intercept $u\\le1/2$. Write $b,e$ for the two barycentric coordinates in the directions of its two intercepts, with $b$ corresponding to $u$. The cap fraction is $e u^2/(u-b)$, with $u>b$. As a function of $u$ its derivative has the sign of $u-2b$, which is negative here because $b>9/28$. It is therefore at least $e/(2-4b)$. The two other caps together have fraction at least $4(b+e)(1-b-e)$ by the AM–GM bound. The sum is at least\n$$\nG(b,e)=\\frac{e}{2-4b}+4(b+e)(1-b-e).\n$$\nOn $[9/28,5/14]^2$ the derivative in $b$ is at least $63/25-12/7=141/175>0$, using $e\\ge9/28$, $2-4b\\le5/7$ and $b+e\\le5/7$. At $b=9/28$ the function is concave in $e$, so its minimum is the smaller of the two endpoint values, $1341/980$ and $269/196$. The smaller value $1341/980$ exceeds $125/93$ by $2213/91140$. This contradicts the total budget. Interchanging the two directions of any cap gives the same conclusion for its other intercept.\n",
+  "source_candidate_ids": [
+    "8d217f8bc1752ff8"
+  ],
+  "source_candidate_sha256": {
+    "8d217f8bc1752ff8": "fa8ed64ac57448c769317827a09ecfd08f74ea42e03297c8eeadf89150d9672a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8d217f8bc1752ff8",
+      "locator": "§§1–2, strict barycentric box and the total-budget contradiction"
+    }
+  ],
+  "statement": "Let $y$ be interior to a nondegenerate triangle with three closed caps bounded by lines through $y$, each strictly capturing a different vertex and strictly excluding the other two. Let $q_i$ be their planar area fractions. If each $q_i\\le128/279$ and $\\sum_iq_i\\le125/93$, then for each cap both edge intercept fractions from the captured vertex are strictly greater than $1/2$. Equivalently, the two incident edge midpoints lie in the open capturing halfplane, though on the boundary of the triangle.",
+  "subgoal_id": "pk-intake-strict-triangle-edge-midpoint-cap-budget",
+  "title": "Two triangle cap budgets force strict edge-midpoint capture"
+}

@@ -1,0 +1,43 @@
+{
+  "candidate_id": "a09adcb28bc500c7",
+  "candidate_sha256": "cccb19aff75d9c5dd95a0b93edd70830de7835f84a9bdff03401107786db4601",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "914005c541cbe6d2": "0f551f619024f7402346137c9d886b92983f60935023fa83e8cc30effbb65dff"
+  },
+  "checks": [
+    "Independent rational replay of the four turns gives (657/10,55,171/2,481/5) and (803/10,55,209/2,649/5) at the endpoints; edge-to-origin determinants give (34,29,40,241/5) and (48,29,40,339/5). Only one vertex moves, so all these determinants are affine in the parameter. Positive consecutive turns put both other vertices strictly to the left of each directed edge in a quadrilateral. The signs against each normal agree strictly at both endpoints. The moving vertex lies on the line through its opposite vertex.",
+    "Independent clipping with exact rational edge intersections and shoelace area reproduces every k,Qᵢ,σᵢ entry. The first two normalized lengths are the vertical and horizontal differences. For the third, Euclidean length and normal norm both contribute a factor √2, giving the stated horizontal difference.",
+    "Exact replay of the formula for fᵢ² verifies A>0, r²>fᵢ²/4 and the three displayed reduced numerators of A²−P₂, with signs +,−,+. Expansion gives det(rI−B)=(A−√P₂)/4. At the endpoints r, the second leading principal minor and the determinant are positive, giving positive definiteness. The negative middle determinant prevents positive semidefiniteness and forces J>r.",
+    "Fixed clipping incidence with strict signs gives continuous intersections and nonzero chords and positive cap areas throughout, so the spectral objective is continuous. The endpoint comparisons imply nonquasiconvexity and rule out either endpoint as a maximizer. Independent replay verifies 4−S>0, (4−S)²>P₂ and Q₂/k>128/279 for each tested body.",
+    "The source has the exact same path, clipping table and spectral certificate. The checked companion path exists at the pinned snapshot; the arithmetic here was replayed independently."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:45:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It uses the same spectral objective but optimizes while all six sector areas are prescribed. This path varies actual areas and remains outside the small-cap ceiling, so the counterexample addresses an unrestricted diagonal monotonicity claim rather than that theorem.",
+      "fact_id": "069c12e409c756c3"
+    },
+    {
+      "comparison": "It proves the cubic inequality for a strict triangle with a specific vertex-cap incidence. The present quadrilaterals satisfy the tested cubic inequality and witness a different spectral quasiconvexity failure.",
+      "fact_id": "33488d4938a6ee4a"
+    }
+  ],
+  "readability": "The three explicit comparisons concern test parameters only, while continuity and the strict endpoint comparisons suffice to put every interval maximizer in its interior.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1f5779ac36dc3bdeabdd5b38f95d93c440e5b4a59291a68f42c3027c4242856e",
+  "reviewed_statement_sha256": "736e4e3266468851a49575927bf11f44e26f90053178749d07ff4d33095da360",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:41:49Z",
+  "summary": "An actual diagonal motion preserves strict incidence but gives a strict interior spectral value above both endpoints, certified by exact rational arithmetic.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

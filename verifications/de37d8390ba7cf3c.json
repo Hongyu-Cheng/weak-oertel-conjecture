@@ -1,0 +1,60 @@
+{
+  "candidate_id": "a2ae0382a43d1b23",
+  "candidate_sha256": "d5641c85a2a0e7d0f8af16e4a41387e041b2494c94a54d994bfc06adca29415b",
+  "checked_dependency_candidate_sha256": {
+    "dec855d1498a4e64": "e4db9ffc3a282004fb85fc58d6901fe36646dab1a45abfcb56fa66aa1291a752"
+  },
+  "checks": [
+    "Checked 25fed51eab0d77f0 §§2–3, equations (3)–(7), including the subpiece discussion after (4). The original note JSON byte digest matches. The statement does not claim a failure of actual mixed depth.",
+    "The exact integer-base census is (0,0), (2,0), (0,2), (1,0), (0,1), (1,1). Vertex extremality leaves each short interval unchanged. At a midpoint only the same edge can contribute and its endpoint coefficients agree; the corresponding averaged endpoint interval [0,1/2] is inside [0,1]. The projection is Q, and the three base vertices at height zero plus one at height 1/2 give full dimension. All generators are rational.",
+    "The three vertices occupy parity (0,0); the three midpoints occupy the other parities. There is no interior integer base in Q and each edge has one in its relative interior. Each edge has length sum 2. If a convex subpiece has only one occupied positive-length parity, two positive endpoint sections would force a positive midpoint section of another parity, so at most one section contributes and its length is at most 1. With two occupied parities the length sum is at most 2. The full edge gives equality.",
+    "For any containing closed halfspace, the trace of a captured mark's fiber contains a one-sided interval of at least its own depth, or is the whole interval when the continuous normal vanishes. Summing over disjoint fibers gives mu(H)≥nu_x(H) for every H, including endpoint marks with weight zero.",
+    "A pure base cap isolates each vertex so its atomic depth is at most 1/4. Exact face isolation reduces any midpoint calculation to its three edge marks. If they are noncollinear the midpoint-base mark is exposed in their triangle and can be cut out alone, giving depth equal to its weight at most 1/2.",
+    "In the collinear case the midpoint-base mark is the midpoint of the two other marks, so x_0=(x_-+x_+)/2≤1/2 and t_0=x_0. Closed halfspaces through this mark can retain it and either endpoint alone, and every containing halfspace retains at least one endpoint. Thus its exact depth is t_0+min(t_-,t_+)≤x_0+1/2−max(x_-,x_+)≤1/2. Zero endpoint weights and equal heights are allowed in this argument.",
+    "The center selection gives midpoint own weight 1/2, hence containing caps have at least that mass and attain the optimized bound by the upper estimate. Independently recomputed the source length 9/2 and target (9/2)/8=9/16>1/2."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "dec855d1498a4e64",
+      "candidate_sha256": "e4db9ffc3a282004fb85fc58d6901fe36646dab1a45abfcb56fa66aa1291a752",
+      "mapping": "The six bases are finite and nonempty, the marked singleton fibers are compact in R, and nu_x is finite and nonnegative even for zero weights. Each tested midpoint lies over a nonempty proper exposed edge of conv(P), so the ambient depth equals depth of its three-point restriction and may be computed in the relative base affine hull with height. No same-batch dependency.",
+      "reviewed_proof_sha256": "094492b83ff5f0ca81e1aecbb45ea4c8b126e4a9d52219cc132977426656f6ac",
+      "reviewed_statement_sha256": "97991a749d7cb8345ae551f903e9a029c46d597b39196f22ee7e6eab18cb1bcc"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:35:17Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its marked-fiber transfer contains the basic cap domination argument for positive interior marks; the present proof covers zero weights too and adds a sharp obstruction after optimizing all marks.",
+      "fact_id": "6b106c5bde8c99ab"
+    },
+    {
+      "comparison": "Gives the exact exposed-face identity, already accepting §1 of the same original note. It does not supply the six-fiber construction, atomic optimization, or edge subpiece bound.",
+      "fact_id": "dec855d1498a4e64"
+    },
+    {
+      "comparison": "Limits a fixed volume-weighted graph of even-base centroids in a different family; it neither optimizes arbitrary own-depth-weighted marks nor gives a complete six-base census.",
+      "fact_id": "aee43c69ee6407f1"
+    },
+    {
+      "comparison": "Limits a numerical affine-contact certificate on three triangle fibers, not exact atomic graph depth over all independently selected marks.",
+      "fact_id": "b2ed74a86a3478ae"
+    }
+  ],
+  "readability": "The optimization domain consists of the selected graph points for each choice of marks. The scalar statement uses inclusion-maximal faces among those with an integer point in their relative interior and counts only positive-length sections, as specified.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e54312d006fd3d59965487829c1eaf3bf4c244c2630711f94a652103801ebdc4",
+  "reviewed_statement_sha256": "ea1ee84a421e3d347b562be134bd5516270e3324f4524451a73a7df16bf709e9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:31:56Z",
+  "summary": "Every choice of six representatives has maximum representative atomic depth at most 1/2; interval centers attain it. The 9/16 target and the separate 1/2 bound for all edge subpieces follow exactly.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

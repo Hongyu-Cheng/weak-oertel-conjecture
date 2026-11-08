@@ -1,0 +1,101 @@
+{
+  "candidate_id": "e5152cdadf65331d",
+  "candidate_sha256": "b2adabf23f35b6dd024d80c434a2976bb4eb4157cdb3a3731a611a8d8aed42dd",
+  "checked_dependency_candidate_sha256": {
+    "a839bfd22b7f11a2": "e1f447eb6aa06575e5fff46a1e5f11a4bfff678f1de1f85265bbbda7e75f26a8"
+  },
+  "checks": [
+    "Compared the exact frozen and revised JSON. Only the containing-body clause in the statement changed, adding that Q is a compact convex body. The decoded proof, supporting-case statement and accepted dependency are unchanged.",
+    "In original e2c21ddfc5abb8ca §2, Q is a containing body. Compactness supplies measurability and attained supports. Since Q contains K and K is full-dimensional, Q has interior. The minimum-enclosing-simplex existence and actual facet contact theorem now applies to Q.",
+    "The supporting offsets of R remain h_K in the normals of S. Thus K⊆R⊆S and |R|−|K|≤(|S|−|Q|)+(|Q|−|K|). The mixed-volume coefficient proof, the zero-defect rigidity and the original-scope slack term are unaffected.",
+    "Recomputed the unchanged accepted candidate and fact hashes against the pinned graph."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "a839bfd22b7f11a2",
+      "candidate_sha256": "e1f447eb6aa06575e5fff46a1e5f11a4bfff678f1de1f85265bbbda7e75f26a8",
+      "fact_id": "a839bfd22b7f11a2",
+      "fact_sha256": "65960dd1a14b4a627f6d41ee06f8bdf986a7800a1d14019bf72513235eaed2bd",
+      "hypotheses": "K and the containing body Q are full-dimensional compact convex bodies in the ordinary continuous space. Its existence and facet-centroid contact conclusion gives a supporting enclosure when the enclosing simplex is minimum volume.",
+      "reviewed_proof_sha256": "812e459296673e7f00e7a9ca5f8a94f738a993776e4d978db79de42b4992c58d",
+      "reviewed_statement_sha256": "817910b8ac7ab91a70e825ee451fa27153dbe12a17fe5989dfec2d9b942ade77"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:27:01Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "e5152cdadf65331d",
+    "candidate_sha256": "967f87155626570ef2fa8ab2a4e236cd3b34a220c76b984f2d9bcdcfc3234320",
+    "checks": [
+      "Checked e2c21ddfc5abb8ca §§1–2, (1)–(8), including the scale version and the source rigidity statement. The depth-stability conversion in its §3 is separate.",
+      "Only the linear part of the simplex normalization is applied to the summands. Thus weighted sums commute for arbitrary nonnegative coefficients, not merely weights summing to one, and all volumes acquire the same determinant factor.",
+      "In the standard simplex frame each r_i is positive by interiority. Coordinate minima and the maximum of the coordinate sum optimize separately over each summand, so the offset sums yield exactly the supporting simplex R, and R=S in the supporting case.",
+      "Checked the Minkowski volume polynomial and monotonicity of each mixed-volume argument in van Handel and Wang §1.1, https://arxiv.org/html/2507.20082v1#S1.SS1. Coefficient grouping gives the multinomial coefficient, and every mixed defect is nonnegative since A_i⊆P_i. Keeping the pure terms gives the desired weighted bound, including zero weights and dimension one.",
+      "In the zero-defect simplex case every positive-weight summand has equal volume to its enclosing P_i. Strict separation of an additional point and a cone to an interior ball give strict volume increase under proper inclusion, so equality forces A_i=P_i. In the containing-body case h_K≤h_S gives R⊆S and preserves both stated slack terms."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "a839bfd22b7f11a2",
+        "candidate_sha256": "e1f447eb6aa06575e5fff46a1e5f11a4bfff678f1de1f85265bbbda7e75f26a8",
+        "fact_id": "a839bfd22b7f11a2",
+        "fact_sha256": "65960dd1a14b4a627f6d41ee06f8bdf986a7800a1d14019bf72513235eaed2bd",
+        "hypotheses": "K and the containing body Q are full-dimensional compact convex bodies in the ordinary continuous space. Its existence and facet-centroid contact conclusion gives a supporting enclosure when the enclosing simplex is minimum volume.",
+        "reviewed_proof_sha256": "812e459296673e7f00e7a9ca5f8a94f738a993776e4d978db79de42b4992c58d",
+        "reviewed_statement_sha256": "817910b8ac7ab91a70e825ee451fa27153dbe12a17fe5989dfec2d9b942ade77"
+      }
+    ],
+    "finished_utc": "2026-11-08T18:25:31Z",
+    "issues": [
+      {
+        "defect": "Q is introduced only by K⊆Q⊆S while the statement uses its Lebesgue volume and the proof invokes actual facet contacts for its minimum enclosure. The inclusions alone do not make Q measurable, closed or convex. For example Q=int T contains any sufficiently small full-dimensional K in int T, and T is its minimum enclosure, but Q has no points on its facets. The cited minimum-enclosure result is for compact convex bodies.",
+        "locator": "Statement, second paragraph beginning “If K⊆Q”, and the proof's last sentence",
+        "repair": "State “If K⊆Q for a compact convex body Q and S is any enclosing simplex of Q” as in the source. No change to the defect inequality or proof is needed under that assumption.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Establishes existence of a minimum enclosing simplex and actual facet-centroid contacts. It has no weighted Minkowski defect transfer.",
+        "fact_id": "a839bfd22b7f11a2"
+      },
+      {
+        "comparison": "Its ordinary Minkowski rigidity concerns equality of raw-depth roots and the Brunn–Minkowski volume root. The present enclosure defect coefficient is a different quantity.",
+        "fact_id": "9e6b5c9eeaab615d"
+      }
+    ],
+    "readability": "The scale version, support normalization and slack term are clear. The second paragraph needs to define Q as the compact convex containing body used in the source.",
+    "review_method": "Independent cold proof read, original-scope comparison, pinned dependency check and applicable exact arithmetic",
+    "reviewed_proof_sha256": "08b49b0fb2641916942521ee2a2208da83390923893417c28b29a366a45c0b83",
+    "reviewed_statement_sha256": "4a25f3e8ac7679ed953931f5eb225b82a490ff4a53ae6a2f4f902bfed6dff71a",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T18:19:46Z",
+    "summary": "The parallel-enclosure inequalities and sharp coefficient argument check. Specify that the auxiliary containing set Q is a compact convex body, as in the original source and the cited contact theorem.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Establishes existence of a minimum enclosing simplex and actual facet-centroid contacts. It has no weighted Minkowski defect transfer.",
+      "fact_id": "a839bfd22b7f11a2"
+    },
+    {
+      "comparison": "Its ordinary Minkowski rigidity concerns equality of raw-depth roots and the Brunn–Minkowski volume root. The present enclosure defect coefficient is a different quantity.",
+      "fact_id": "9e6b5c9eeaab615d"
+    }
+  ],
+  "readability": "The additional hypothesis is in the only clause that introduces Q. It leaves the preceding supporting-simplex result independent of Q.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent re-review of the exact one-clause revision and original source and dependency scope",
+  "reviewed_proof_sha256": "08b49b0fb2641916942521ee2a2208da83390923893417c28b29a366a45c0b83",
+  "reviewed_statement_sha256": "6624a9f32ad85b22578f678a4e8e3bdd76b511c92199a1889576227a7de3f182",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "967f87155626570ef2fa8ab2a4e236cd3b34a220c76b984f2d9bcdcfc3234320",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:26:06Z",
+  "summary": "The explicit compact convex body hypothesis for Q closes the source-scope and facet-contact issue. The verified proof and accepted dependency are byte-identical.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

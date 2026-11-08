@@ -1,0 +1,33 @@
+{
+  "advances": "The exact loss and common-center reserve concern ordinary planar halfspace incidence with arbitrary weights. The numerical corollary uses the special actual mixed chord weights.",
+  "author": "PK-research-agent",
+  "candidate_id": "6d1e0acd23043f7a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:27:15.712602+00:00",
+  "depends_on": [
+    "25cb17da7fc8ba32",
+    "ba445d671279810a"
+  ],
+  "draft_key": "exact-planar-corner-loss-common-center",
+  "kind": "theorem",
+  "proof": "Fix a positive-area corner $R_i$. A point of $\\operatorname{int}A$ satisfies both strict inequalities defining the corner because the boundary of a convex body has area zero. Mixing this point with any point of the closed intersection proves the closure identity.\n\nPull back $R_i\\cap A_t$ under the homothety. On the original $A$ the two thresholds become $(b_j-tv_j\\cdot p)/(1-t)=b_j+t(b_j-v_j\\cdot p)+O(t^2)$ for $j\\ne i$. At the original pair of thresholds, the derivative of the area cut by the two less-than inequalities with respect to the $j$-th threshold is $\\tau_{ij}$. Indeed, keeping the other threshold fixed, integrate over the signed strip parallel to the $j$-th cut. In the tangential coordinate the membership indicators have a pointwise limit except at the endpoints of the proper chord and at the single crossing of the two cut lines. Dominated convergence on a bounded projection of $A$, with the strip factor $1/\\lVert v_j\\rVert$, proves the partial derivative including the zero-length case. For simultaneous moves the correction to adding the two first-order changes is confined to the intersection of the two strips, of area $O(t^2)$ by invertibility of $x\\mapsto(v_j\\cdot x,v_\\ell\\cdot x)$. The expansion therefore holds for either sign of each threshold change. Multiplication by $(1-t)^2$ gives the exact loss. Its nonnegativity follows from $A_t\\subseteq A$, and on $C_i$ the coefficients $b_j-v_j\\cdot p$ are nonnegative. Minimizing this affine expression on compact $C_i$ gives the stated support value.\n\nAt every point of $A$ the weighted capture load is at least $\\tau_2-\\sum_i c_i\\mathbf1_{R_i}$. This is immediate on a singleton from the definition of $c_i$, and every set of at least two captures has weight at least $\\tau_2$. Integrate on $A\\setminus A_t$. Each cap's loss divided by $t$ tends to $L_i(p)$ by the proper-section homothety formula in the weighted shell lemma, and each null corner contributes zero. Divide by $t$ and pass to the limit to get the weighted estimate. Its right side is affine in $p$, so maximizing on compact $A$ gives the single-center value. The one-deficient-corner and all-deficient-null cases follow from the individual bounds. In the one-corner case one can also see $D_j(p)\\le 2r_j$ directly: for $p\\in C_j$ the homothetic copy of $R_j$ lies in $A_t\\cap R_j$, since a convex combination with positive weight on its strict point remains strict.\n\nFor the actual three-fiber configuration of the chord-weight theorem, the normals are pairwise independent because they span and sum to zero, and $\\tau_2\\ge\\Lambda/4$. The traces cover $A$: for an interior point of $B$ all three strict support comparisons give $\\sum_i b_i=-\\sum_i h_i<0$, whereas a point missing all three would have $0<\\sum_i b_i$. Thus the one-corner bound implies $\\sum_i\\lambda_i L_i(p)/\\Lambda\\ge(a-r_j)/2$, so $r_j\\le a/9$ gives a loss of at least $4a/9$. If all deficient corners are null the bound is at least $a/2$.\n",
+  "source_candidate_ids": [
+    "86934b651b11f7d5"
+  ],
+  "source_candidate_sha256": {
+    "86934b651b11f7d5": "8254b89175df007bbd9d3d3bba466612eeb3e0a62050893049c0f6e7f9f008ec"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "86934b651b11f7d5",
+      "locator": "§7, (12)–(14), exact removed-corner derivative and one attained reserve"
+    },
+    {
+      "candidate_id": "86934b651b11f7d5",
+      "locator": "§6, (8)–(11), one present deficient corner at its actual center"
+    }
+  ],
+  "statement": "Let $A\\subset\\mathbb R^2$ be a convex body, let $H_i=\\{x:v_i\\cdot x\\ge b_i\\}$ for $1\\le i\\le3$ cover $A$, and assume the normals are pairwise linearly independent and all cuts are proper. Write $a=|A|$, $U_i=|A\\cap H_i|$, $a_i=\\mathcal H^1(A\\cap\\{v_i\\cdot x=b_i\\})/\\lVert v_i\\rVert$, and $L_i(p)=2U_i+(b_i-v_i\\cdot p)a_i$. For arbitrary positive weights $\\lambda_i$ put $\\Lambda=\\sum_i\\lambda_i$, $\\tau_2=\\Lambda-\\max_i\\lambda_i$, and $c_i=(\\tau_2-\\lambda_i)_+$. The region $R_i=A\\cap\\bigcap_{j\\ne i}\\{v_j\\cdot x<b_j\\}$ is the region captured only by $H_i$. For each $i$ with $r_i=|R_i|>0$, set $C_i=\\overline{R_i}$ and, for $j\\ne i$, let $\\ell$ be the third index and put\n$$\n\\tau_{ij}=\\frac{\\mathcal H^1(A\\cap\\{v_j\\cdot x=b_j,\\ v_\\ell\\cdot x\\le b_\\ell\\})}{\\lVert v_j\\rVert}.\n$$\nThen $C_i=A\\cap\\bigcap_{j\\ne i}\\{v_j\\cdot x\\le b_j\\}$. For every $p\\in A$ and $A_t=p+(1-t)(A-p)$ the exact right loss is\n$$\nD_i(p)=\\lim_{t\\downarrow0}\\frac{|R_i\\setminus A_t|}{t}\n=2r_i-\\sum_{j\\ne i}(b_j-v_j\\cdot p)\\tau_{ij}\\ge0.\n$$\nIt satisfies $D_i(p)\\le2r_i$ on $C_i$ and its minimum there is attained and equals\n$$\n2r_i-\\sum_{j\\ne i}b_j\\tau_{ij}\n-h_{C_i}\\Bigl(-\\sum_{j\\ne i}\\tau_{ij}v_j\\Bigr),\n$$\nwhere $h_C$ is the support function of $C$.\n\nWith null corners omitted, for every $p\\in A$,\n$$\n\\sum_i\\lambda_i L_i(p)\\ge 2a\\tau_2-\\sum_i c_iD_i(p).\n$$\nThe right side attains its maximum at one common $p\\in A$, with value\n$$\n2a\\tau_2-2\\sum_i c_ir_i+\\sum_i c_i\\sum_{j\\ne i}b_j\\tau_{ij}\n+h_A\\Bigl(-\\sum_i c_i\\sum_{j\\ne i}\\tau_{ij}v_j\\Bigr).\n$$\nIf just one positive-area corner $R_j$ has $c_j>0$, every $p\\in C_j$ satisfies $\\sum_i\\lambda_i L_i(p)\\ge 2a\\tau_2-2(\\tau_2-\\lambda_j)r_j$. If all deficient corners are null, $\\sum_i\\lambda_i L_i(p)\\ge2a\\tau_2$ for every $p\\in A$.\n\nIn the actual mixed setting of the critical chord-weight theorem, these one-corner and all-deficient-null estimates imply a normalized loss of at least $(a-r_j)/2$ and $a/2$, respectively, after dividing by $\\Lambda$. In particular $r_j\\le a/9$ gives a normalized loss of at least $4a/9$ at every $p\\in C_j$.",
+  "subgoal_id": "pk-intake-exact-planar-corner-loss-common-center",
+  "title": "Exact losses of planar singleton corners and an attained common contraction center"
+}

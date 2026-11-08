@@ -1,0 +1,26 @@
+{
+  "advances": "This ordinary and mixed product calculation concerns an actual redundant supporting plane moved inward at a corner or product face.",
+  "author": "PK-research-agent",
+  "candidate_id": "5e587908d68a62bb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:29:19.954492+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-birth-square-corner-mass-descent",
+  "kind": "counterexample",
+  "proof": "The removed triangle has area $t^2/2$. It lies in $x,y\\ge0$ for $0\\le t\\le1$. Every fixed raw cap mass changes by at most the total removed mass. At $t=0$ the centered mark of the full product has raw depth exactly half the total mass by reflection symmetry and an ambient continuous median cap. This mark survives and every containing cap loses at most the removed mass, so the new normalized maximum is bounded below by the old raw depth minus the mass loss, divided by the new total mass. An upper bound is the old raw maximum divided by the new mass, since the candidate set and the measure both shrink. Both bounds differ from $1/2$ by $O(t^2)$. The fixed normalized cap masses have the same order of change, so the first-derivative assertions follow.\n\nThe three closed traces $x\\ge-t^2/12$, $y\\ge-t^2/12$, and $x+y\\le-t^2/6$ cover the entire plane. Each of the first two gains area $t^2/6$ relative to a half-square and then loses the entire removed triangle. The third intersects the square in a triangle of area $(2-h)^2/2$ with $h=t^2/6$ and does not intersect the deletion, giving area $2-t^2/3+t^4/72$. Their cylindrical extensions cover all candidates in each actual product, with the same cap fractions as in the planar calculation, giving the displayed estimate. At $t=0$ the original square's critical normals $(1,0),(0,1),(-1,-1)/\\sqrt2$ balance with weights $1,1,\\sqrt2$. Their corresponding section lengths are $2,2,2\\sqrt2$, and the deleted vertex lies in two caps, so the reciprocal-section incidence is $2/3>1/2$ even though the derivative in plane offset vanishes.\n\nIn the mixed products all $3^n$ fibers have equal mass, less than $M/2^n$ when $n\\ge1$. At a nonzero integer base some coordinate equals $1$ or $-1$. A sufficiently large finite integer tilt isolates its endpoint layer while retaining the trace of a continuous median cap through any marked height in that layer. Choosing the cheaper continuous orientation bounds depth by half the layer mass, at most $M/6$. The center above the zero base has raw depth $M/2$, so that base alone is deepest initially.\n",
+  "source_candidate_ids": [
+    "c9f582e034f0948d"
+  ],
+  "source_candidate_sha256": {
+    "c9f582e034f0948d": "3ddb15f9e734d9bdb3789ff1587661f4e9e64faa0bd545756fe1135d647f3e21"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c9f582e034f0948d",
+      "locator": "c9f582e034f0948d:06 §6, exact corner deletion and products, (11)"
+    }
+  ],
+  "statement": "Let $K_t=[-1,1]^2\\cap\\{x+y\\le2-t\\}$ for $0\\le t\\le1$. The removed area is $t^2/2$, and the right derivatives at zero in $t$ of every fixed cap area and of the normalized ordinary maximal depth vanish. Nevertheless, for $0<t\\le1$,\n$$\nD(K_t)\\le \\frac{2-t^2/3+t^4/72}{4-t^2/2}\n=\\frac12-\\frac{t^2(6-t^2)}{72(4-t^2/2)}<\\frac12.\n$$\nThe same bound and first-derivative assertions hold for the actual products with $[-1,1]^{d-2}$ in the continuous coordinates and $[-1,1]^n$ in the integer coordinates, $d\\ge2$, $n\\ge0$. If $n\\ge1$, every fiber is strictly nonheavy and the zero integer base is uniquely deepest at $t=0$.",
+  "subgoal_id": "pk-intake-pk-w34-birth-square-corner-mass-descent",
+  "title": "Square corner deletion with zero plane-offset derivative and strict finite descent"
+}

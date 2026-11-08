@@ -1,0 +1,32 @@
+{
+  "advances": "An abstract rank consequence for a fixed family of menus satisfying the universal balance condition. A depth application requires the actual circuit and variation hypotheses.",
+  "author": "PK-research-agent",
+  "candidate_id": "5f38d364d9b7443c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:10:55.909144+00:00",
+  "depends_on": [],
+  "draft_key": "universal-zero-convex-hull-essential-rank",
+  "kind": "lemma",
+  "proof": "First, sets $Y_1,\\ldots,Y_r$ in a finite-dimensional vector space admit independent representatives exactly when each index set $A$ satisfies\n$$\n\\dim W_A\\ge |A|,\\qquad W_A=\\operatorname{span}\\bigcup_{j\\in A}Y_j .\n$$\nNecessity follows by restricting the representatives. For sufficiency use induction on $r$. A single set with positive span has a nonzero choice. If some nonempty proper $A$ is tight, the inductively chosen representatives of $A$ span $W_A$. For any subset $B$ of its complement, the dimension of the sum of the remaining spans in the quotient by $W_A$ is $\\dim W_{A\\cup B}-|A|\\ge|B|$. Induction supplies the independent quotient choices, which lift to choices in the original sets. If there is no proper nonempty tight set, choose a nonzero representative from $Y_r$. Every nonempty set among the remaining indices had dimension at least its cardinality plus one, so quotienting by the chosen vector leaves the same criterion. Induction in that quotient completes the argument.\n\nNow restrict to $I$. Every representative system is dependent since it has a convex combination equal to zero. The criterion provides a nonempty subset of positive deficiency. Choose $A\\subset I$ maximizing $|A|-\\dim W_A$, now with $W_A=\\operatorname{span}\\bigcup_{i\\in A}X_i$. For each $B\\subset I\\setminus A$, maximality gives\n$$\n\\dim(W_A+W_B)-\\dim W_A\\ge |B|.\n$$\nThus one can fix outside representatives independent modulo $W_A$. For every choice inside $A$, a convex combination of all the representatives equals zero. After projection to the quotient, independence forces every outside coefficient to be zero. The inside representatives therefore satisfy the same universal convex-hull property. Minimality of $I$ forces $A=I$, whose positive deficiency gives the bound. The codimension of the joint kernel equals the dimension of the covector span.\n",
+  "source_candidate_ids": [
+    "4a38a3cfd6733dce",
+    "849b2bf661bcc86d"
+  ],
+  "source_candidate_sha256": {
+    "4a38a3cfd6733dce": "2fa1b2fcb3f1bbb66563422fe9ae23271f1ebe858ee85ebd240909b0fc891063",
+    "849b2bf661bcc86d": "77506229e8f07bb0c216d921dad67dce0f761e730d5d5322a62a939fa7ed85f4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4a38a3cfd6733dce",
+      "locator": "§6, (9) and maximal-deficiency argument following it"
+    },
+    {
+      "candidate_id": "849b2bf661bcc86d",
+      "locator": "§§1–2, (U)–(R)"
+    }
+  ],
+  "statement": "Let $X_1,\\ldots,X_k$ be nonempty subsets of a finite-dimensional real vector space $V$, with $k\\ge1$. Assume that $0\\in\\operatorname{conv}\\{x_1,\\ldots,x_k\\}$ for every choice $x_i\\in X_i$. Let $I$ be any inclusion-minimal nonempty set of indices for which this property holds on its own. Then\n$$\n\\dim\\operatorname{span}\\bigcup_{i\\in I}X_i\\le |I|-1.\n$$\nIn particular, when the sets lie in a dual space, the joint kernel of all covectors in this block has codimension at most $|I|-1$ in the original space.",
+  "subgoal_id": "pk-intake-universal-zero-convex-hull-essential-rank",
+  "title": "Rank of an essential block of universally balanced representatives"
+}

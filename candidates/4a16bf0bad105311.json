@@ -1,0 +1,26 @@
+{
+  "advances": "A real-variable inequality used in the auxiliary frustum tangent certificate.",
+  "author": "PK-research-agent",
+  "candidate_id": "4a16bf0bad105311",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:59.918650+00:00",
+  "depends_on": [],
+  "draft_key": "inverse-power-tangent-remainder-ratio",
+  "kind": "lemma",
+  "proof": "Taylor's integral remainder about $1$ writes the ratio as $(r+2)/r$ times the mean of $1/t$ under the density proportional to $|x-t|t^{-r-2}$ on the interval between $x$ and $1$. This follows from $(t^{-r})''=r(r+1)t^{-r-2}$ and the corresponding formula with $r+1$. Strict convexity gives $D_r(x)>0$ for $x\\ne1$.\n\nTake $x_1<x_2$ on the same side of $1$. On the common interior the quotient of the second weight by the first is $(x_2-t)/(x_1-t)$ on the right of $1$, or $(t-x_2)/(t-x_1)$ on the left. Both increase strictly with $t$. The change in support adds mass at the right on the first branch, or deletes mass at the left on the second. For normalized densities $w_1,w_2$ and $t<u$, it follows that $w_1(t)w_2(u)-w_1(u)w_2(t)\\ge0$, strictly on a set of positive area in the common support. The difference of the means of $1/t$ is the integral of $(1/t-1/u)[w_1(t)w_2(u)-w_1(u)w_2(t)]$ over $t<u$, and is positive. This proves strict decrease on each branch. Taylor expansion at $1$ gives the stated extension, so strict decrease holds across $1$ as well. The leading linear terms $D_r(x)\\sim rx$ and $D_{r+1}(x)\\sim(r+1)x$ give the limit.\n",
+  "source_candidate_ids": [
+    "ce4a362fe44872e9"
+  ],
+  "source_candidate_sha256": {
+    "ce4a362fe44872e9": "7313e16305cb8abf646e1654f42a880948fe69112b2d154ecbe7a1135741bd25"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ce4a362fe44872e9",
+      "locator": "ce4a362fe44872e9:06 §6, real power remainder ratio"
+    }
+  ],
+  "statement": "For every real $r>0$ define $D_r(x)=x^{-r}-1+r(x-1)$ for $x>0$. The ratio $D_{r+1}(x)/D_r(x)$, continuously extended at $x=1$, is strictly decreasing on $(0,\\infty)$, with value $(r+2)/r$ at $1$ and limit $(r+1)/r$ at infinity.",
+  "subgoal_id": "pk-intake-inverse-power-tangent-remainder-ratio",
+  "title": "Monotonicity of consecutive inverse-power tangent remainders"
+}

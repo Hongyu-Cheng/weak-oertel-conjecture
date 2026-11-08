@@ -1,0 +1,70 @@
+{
+  "candidate_id": "e454f87e89f53aaf",
+  "candidate_sha256": "3bd94cbc97c856e02be0d076ca4b68d358e3143ecc966bee64591d4de972e81c",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The exact revision changes a single sentence fragment in the proof. The statement and all other fields match the preserved candidate, and the original review binds to its preserved bytes.",
+    "At s=dr, (ds−r)/(d+1)=(d−1)r. Thus the right junction evaluates to [d^d−(d−1)^d]r^d. The bracket is greater than one for every integer d≥2, by binomial expansion about d−1.",
+    "For s≥dr and d≥2, 0<sA−rB<s and 0<A<1, so the displayed derivative of J is strictly positive. Hence J(s)≥J(dr)>r^d. The left saturated junction attains r^d in this branch, completing the increasing-orientation minimum.",
+    "The earlier checked clipped interval endpoints, d=1 argument, and reflection and plateau argument remain identical. The source locator in 5a9bea64014b6234 §3 has the same required large-ratio lower bound."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T16:23:50Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "e454f87e89f53aaf",
+    "candidate_sha256": "88e2bdbdbc0bb38ecf495fad506bbcbae9e414793cf4c6986998856ee967d3eb",
+    "checks": [
+      "Source 5a9bea64014b6234 §3 (4)–(13) gives the same two facet-normal profiles. Its large-ratio argument correctly uses a lower bound at s=dr rather than equality.",
+      "The scaled height density is d x^(d−1), with mean A and no atoms, so the reflected closed tails have the stated complement relation. The d=1 centered interval gives a lower bound r by nesting and reaches it at saturation.",
+      "For d≥2 the clipping events are −rA,rB,−sB,sA. Concavity on the proper overlap and monotonicity in each one-proper interval reduce minima to the two overlap endpoints and the two plateaus. At the left junction the candidate E is attained if s≤dr. If s≥dr, the plateau at t=−sB attains E=r^d.",
+      "The right junction is J=s^d−[(ds−r)/(d+1)]^d. For s/r in [1,d] the printed derivative difference is positive, using dλ as an upper bound for both nonnegative bases. At s=dr direct evaluation gives (d^d−(d−1)^d)r^d, strictly above r^d. The derivative of J for s≥dr is positive and therefore the intended inequality is valid throughout that branch.",
+      "The proper-overlap maximum is at t_*=A(s−r)/2 when t_*≤rB, equivalent to s/r≤1+2/d. Outside that regime the proper cost increases to J≤s^d and V_* exceeds 2r^d. Including plateaus and reflecting gives the claimed second minimum. The exact profile replay confirmed both orientation formulas on the rational calibration grid."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T16:22:21Z",
+    "issues": [
+      {
+        "defect": "The sentence calls r^d the boundary value of J. At s=dr its value is (d^d−(d−1)^d)r^d, which differs for every d≥2. In particular, for d=2 and r=1, J(2)=3.",
+        "proof_locator": "Increasing-density orientation, paragraph after the D'(λ) inequality, sentence beginning ‘For $s\\ge dr$’",
+        "repair": "Replace “so it is at least its boundary value $r^d$” by “so $J\\ge J(dr)=[d^d-(d-1)^d]r^d>r^d$,” reading $J(dr)$ as evaluation in $s$ at fixed $d,r$. The proof only requires the weaker lower bound.",
+        "severity": "minor"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its universal lower bound is exact when s≥dr and so covers that large-ratio minimum for every direction. The present result gives the exact two facet-normal minima throughout the intermediate range, including which thresholds control the two orientations.",
+        "fact_id": "e561372a5640eef8"
+      }
+    ],
+    "readability": "The endpoint-value correction leaves the statement and its two-orientation argument intact.",
+    "reviewed_proof_sha256": "50f3bf16631e48a66536e8c1c6924124c7821c9b28182f60a8936d2dd86758cd",
+    "reviewed_statement_sha256": "cb558c1ccbd9b047c467f01e8c5fd8dc140f203512ec15067639c2cd05be13af",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T16:16:46Z",
+    "summary": "The exact two-orientation minimum formulas hold. Correct the stated value of the right junction at the transition s=dr.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its universal lower bound is exact when s≥dr and so covers that large-ratio minimum for every direction. The present result gives the exact two facet-normal minima throughout the intermediate range, including which thresholds control the two orientations.",
+      "fact_id": "e561372a5640eef8"
+    }
+  ],
+  "readability": "In J(dr), s is the variable and d,r are fixed, as established in the preceding sentence.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "df5607b449b782fa58bd8b424810dfcf3e960fa9cb66d67304ca5382b9d62ff9",
+  "reviewed_statement_sha256": "cb558c1ccbd9b047c467f01e8c5fd8dc140f203512ec15067639c2cd05be13af",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "88e2bdbdbc0bb38ecf495fad506bbcbae9e414793cf4c6986998856ee967d3eb",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:23:21Z",
+  "summary": "The revised junction calculation is exact and proves the required strict bound in the large-ratio branch. The two stated minimum formulas follow.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

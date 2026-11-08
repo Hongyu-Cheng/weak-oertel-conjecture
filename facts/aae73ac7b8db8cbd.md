@@ -1,0 +1,55 @@
+---
+fact_id: aae73ac7b8db8cbd
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-strictly-convex-outer-approximation-and-mixed-depth-transfer
+depends_on: []
+verifier_run: 77bad79c9baeba52
+target_match: null
+---
+
+## Source
+
+- [ff5285005955b0c7](../candidates/ff5285005955b0c7.json), ff5285005955b0c7:01 §§1–3, (1)–(8), and §4 endpoint qualifications.
+
+## Statement
+
+Let $n,d\ge0$ be integers with $m=n+d\ge1$, and let $C\subset\mathbb R^n\times\mathbb R^d$ be a convex body with positive mixed $d$-volume $M$, with counting measure when $d=0$. Choose $R\ge1$ with $C\subset R B_m$ and a finite $1/k$-net $U_k$ of the unit sphere containing the signed coordinate vectors. With $T_k=k(R^2+1)+R$ and $h_C(u)=\max_{x\in C}u\cdot x$, put
+$$
+C_k=\bigcap_{u\in U_k}B(-T_k u,T_k+h_C(u)+1/k),
+$$
+where the balls are closed. These bodies are strictly convex, contain $C$ in their interiors, and satisfy
+$$
+d_H(C_k,C)\le\frac{1+\sqrt m(R+1)+R}{k}.
+$$
+Eventually the nonempty integer bases are exactly those of $C$. Each original nonempty integer fiber is full-dimensional in $C_k$ and converges in Hausdorff distance to its original fiber.
+
+Let $\mu_k,\mu$ be the ambient measures obtained by summing the $d$-volumes of their respective fibers, with totals $M_k,M$. Then
+$$
+\sup_{A\ \mathrm{Borel}}|\mu_k(A)-\mu(A)|=\delta_k=M_k-M\longrightarrow0.
+$$
+If $A_\nu(y)=\inf_{H\ni y}\nu(H)$ for closed ambient halfspaces, then
+$$
+\sup_y\left|\frac{A_{\mu_k}(y)}{M_k}-\frac{A_\mu(y)}{M}\right|\le\frac{\delta_k}{M_k}.
+$$
+Every subsequential limit of mixed points $y_k\in C_k$ of normalized depth at least $c$ is an original mixed point of normalized depth at least $c$. For $d\ge2$, all positive fibers of the approximants have zero $\mathcal H^{d-1}$ measure on each supporting hyperplane. For $d=1$, a supporting endpoint of a positive interval has $\mathcal H^0$ measure one. For $d=0$, the counting measures eventually coincide.
+
+## Proof
+
+For $x\in C$ and $u\in U_k$,
+$$
+|x+T_k u|^2\le T_k^2+2T_k h_C(u)+R^2<(T_k+h_C(u)+1/k)^2.
+$$
+Indeed the radius on the right is positive, and $2T_k/k>R^2$. Finiteness of $U_k$ gives $C\subset\operatorname{int}C_k$. Each ball is contained in $u\cdot x\le h_C(u)+1/k$. The signed coordinate inequalities put all $C_k$ in the ball of radius $B=\sqrt m(R+1)$. If $x\in C_k\setminus C$ and $c$ is its nearest point in $C$, put $v=(x-c)/|x-c|$. Convexity gives $h_C(v)=v\cdot c$. Choose $u\in U_k$ with $|v-u|\le1/k$. Since the support function is $R$-Lipschitz on the sphere,
+$$
+\operatorname{dist}(x,C)=v\cdot x-h_C(v)
+\le u\cdot x-h_C(u)+(|x|+R)/k\le(1+B+R)/k.
+$$
+A strict convex combination of two distinct points in $C_k$ lies in the interior of each of its finitely many defining balls, hence in the interior of $C_k$. This proves strict convexity.
+
+The common compact bound leaves only finitely many possible integer bases. At a base whose original fiber is empty, infinitely many nonempty approximating fibers would supply a sequence of points with a convergent subsequence. Hausdorff convergence would put its limit in that original fiber, a contradiction. Every original nonempty fiber is included in every approximating fiber, and lies in the relative interior of the affine slice of the approximating body because $C\subset\operatorname{int}C_k$. Again all limiting points of approximating slices belong to the original slice. These observations give stability of the base set and Hausdorff convergence of each nonempty slice, including lower-dimensional ones. A positive approximating fiber is strictly convex in its own continuous coordinates, by the same segment test in the ambient body. A supporting hyperplane therefore meets it in at most one point, giving the stated supporting-section properties.
+
+At every base and every continuous point, membership of the approximating fiber converges to membership of the original fiber, by outer containment and slice convergence or eventual emptiness. Dominated convergence in the common bounded support and summation over finitely many bases gives $M_k\to M$ for $d\ge1$. For $d=0$ base-set stability gives equality of the measures eventually. Outer containment makes $\mu_k-\mu$ a nonnegative measure of total mass $\delta_k$, giving the uniform estimate over Borel sets, including those carrying mass on their boundary.
+
+Taking infima over the same closed halfspaces through or containing $y$ gives $A_\mu(y)\le A_{\mu_k}(y)\le A_\mu(y)+\delta_k$. If $a=A_\mu(y)$ and $b=A_{\mu_k}(y)$, then $0\le a\le M$ and $0\le b-a\le\delta_k$. Hence $|M(b-a)-a\delta_k|\le M\delta_k$, proving the normalized bound. For any finite $\nu$, $A_\nu$ is upper semicontinuous: if $y_j\to y$ and $H=\{v\cdot x\ge b\}$ contains $y$, then $H_\eta=\{v\cdot x\ge b-\eta\}$ contains $y_j$ eventually. Thus $\limsup_j A_\nu(y_j)\le\nu(H_\eta)$ for every $\eta>0$. Let $\eta\downarrow0$ by continuity from above and take the infimum over $H$. Finally, the closed integer-continuous source space and Hausdorff convergence put any converging subsequence of mixed $y_k$ in the original mixed source. The normalized bound and upper semicontinuity give $A_\mu(y)/M\ge c$ at its limit.

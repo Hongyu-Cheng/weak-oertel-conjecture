@@ -1,0 +1,30 @@
+{
+  "advances": "The endpoint contribution for two opposite tilt shifts at one continuous normal.",
+  "author": "PK-research-agent",
+  "candidate_id": "b1157892c3044555",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.848619+00:00",
+  "depends_on": [],
+  "draft_key": "two-endpoint-optimized-cap-quantiles",
+  "kind": "theorem",
+  "proof": "Each ordinary cap profile is continuous, strictly decreasing between its two support endpoints, and constant on the complementary tails. Strict decrease follows because every nonempty open subinterval of the support interval cuts a positive-volume slab. The infimum over $v$ in $K(t)$ is attained since for sufficiently large positive or negative $v$ the two profiles are saturated. On a bounded $t$-interval one uniform bound on $|v|$ suffices, so $K$ is continuous. It is nonincreasing and belongs to $[0,a]$.\n\nFor $0<r<a$, let $q$ be the displayed expression for $q_K(r)$. For $t\\le q$ put $x=t+v$. If $U_A(x)>r$, the total endpoint mass exceeds $r$. If $0<U_A(x)\\le r$, set $s=U_A(x)$ and then $x=q_A(s)$. The inequality $2t\\le q_A(s)+q_C(r-s)$ gives $U_C(2t-x)\\ge r-s$. If $U_A(x)=0$, then $x\\ge q_A(0)$ and the same reasoning with $s=0$ gives $U_C(2t-x)\\ge r$. Thus $K(t)\\ge r$. At $t=q$ take a minimizing split $s,r-s$ and use thresholds $q_A(s),q_C(r-s)$, giving exact mass $r$. For $t>q$, hold the threshold of either component fixed and add $2(t-q)$ to the threshold of a component with positive split mass. That component has mass less than its full mass since $r<a\\le c$, so its cap mass strictly decreases. Hence $K(t)<r$. The minimum over $s$ can be written with $s=\\theta r$, $0\\le\\theta\\le1$, proving continuity in $r$, including the extension to $[0,a]$. If $r_1<r_2$, scale the two masses of an optimizing split at $r_1>0$ by $r_2/r_1$. At least one quantile strictly decreases and neither increases. The same strict decrease from $r_1=0$ follows by putting the new positive mass in one component. Thus $q_K$ decreases strictly, and if $t<q_K(r)$ then some $r'>r$ satisfies $t<q_K(r')$, giving $K(t)>r$. This proves uniqueness and identifies the plateau $K=a$ for $t\\le q_K(a)$ and the zero region for $t\\ge q_K(0)$, using continuity at those endpoints.\n\nOrdinary Brunn–Minkowski for parallel caps gives concavity of $U_A^{1/d}$ on its support interval because the Minkowski combination of two closed caps lies in the cap at the combined threshold. The endpoint of zero mass follows by continuity. A strictly decreasing concave function on an interval has a concave decreasing inverse: if the original function at a weighted mean of inputs is at least the weighted mean of the outputs, its inverse at that weighted mean of outputs is at least the weighted mean of the inputs. Thus $Q_A(s)=q_A(s^d)$ and $Q_C(s)=q_C(s^d)$ are concave on their respective root-mass intervals. For $0\\le w\\le a^{1/d}$ the split formula becomes\n$$\nq_K(w^d)=\\frac12\n\\inf_{\\substack{\\lambda,\\kappa\\ge0\\\\\\lambda^d+\\kappa^d=1}}\n   [Q_A(\\lambda w)+Q_C(\\kappa w)].\n$$\nThe fixed parameter set is valid at every $w$ in this interval because $a\\le c$. The infimum of these concave functions is concave, by applying the defining inequality to each function and then taking the infimum. Inverting the resulting strictly decreasing concave function proves concavity of the root on the transition interval. The extension as a constant to the left preserves concavity: in a convex combination with an input in the left plateau, moving that input to the left endpoint of the transition increases the combined threshold and leaves the value at that input unchanged. Use the transition concavity and then monotonicity. The positive set excludes the zero tail on the right.\n\nFor the midpoint bound, put $0<r<K(t)$, so $r<a$ and $t\\le q_K(r)$. The equal split gives $q_K(r)\\le(q_A(r/2)+q_C(r/2))/2$. The Minkowski midpoint of the corresponding endpoint caps is contained in the actual $B$ cap at $t$ and has volume at least $r/2$ by Brunn–Minkowski. Let $r$ increase to $K(t)$, including the full plateau, and the case $K(t)=0$ is immediate.\n",
+  "source_candidate_ids": [
+    "35649ddf5df0135c"
+  ],
+  "source_candidate_sha256": {
+    "35649ddf5df0135c": "1005fc1bc61a4f76a96ccc11ed3279c13cff56a7818832b9d2b732a609796428"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "35649ddf5df0135c",
+      "locator": "35649ddf5df0135c:01 §§1–2, (1)–(3), optimized cap quantile and d-root concavity"
+    },
+    {
+      "candidate_id": "35649ddf5df0135c",
+      "locator": "35649ddf5df0135c:02 §3, (4), midpoint compatibility bound"
+    }
+  ],
+  "statement": "Let $A,C\\subset\\mathbb R^d$ be convex bodies, $d\\ge1$, of volumes $0<a\\le c$. Fix a unit vector $u$ and write $U_A(t)=|A\\cap\\{u\\cdot x\\ge t\\}|$ and $U_C(t)=|C\\cap\\{u\\cdot x\\ge t\\}|$. Set $K(t)=\\inf_{v\\in\\mathbb R}[U_A(t+v)+U_C(t-v)]$. Write $q_A,q_C$ for their decreasing upper-cap quantiles at masses in $[0,a]$ and $[0,c]$, taking the upper and lower support endpoints at mass zero and full mass respectively. For $0<r<a$, the unique threshold with $K(t)=r$ is\n$$\nq_K(r)=\\frac12\\min_{0\\le s\\le r}\\bigl(q_A(s)+q_C(r-s)\\bigr).\n$$\nThe root $K^{1/d}$ is concave on its entire positive set, including the left constant plateau. If a convex body $B$ contains $(A+C)/2$, then $K(t)\\le2|B\\cap\\{u\\cdot x\\ge t\\}|$ for every real $t$.",
+  "subgoal_id": "pk-intake-two-endpoint-optimized-cap-quantiles",
+  "title": "Quantile formula and power concavity after optimizing two endpoint caps"
+}

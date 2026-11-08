@@ -1,0 +1,52 @@
+{
+  "candidate_id": "0609de1167223ac2",
+  "candidate_sha256": "927dcef7295b6200f22e84e34e7f9a1f9f450241651cc2c3786a59a90b8a0dc3",
+  "checked_dependency_candidate_sha256": {
+    "75a1d57b1e81fdab": "2279c0b3f742bde6beb8744f371e24e4caddc8585afbd1cea5af82d78656fa50"
+  },
+  "checks": [
+    "Matched source bb74919333cc624f §§1–7. For d=1 a centered interval gives the bound and a saturated right shift forces λ≤1. For d≥2 AM–GM gives λ≤4Γ²<1, so a negative shift cannot be worse than its positive reflection, and nonatomicity gives zero shift by continuity.",
+    "Checked Theorems 1–2 and the s-affine density definition in the primary Fradelizi–Guédon article. The original projected probability is 1/d-concave by Brunn–Minkowski on preimages and has no atoms. Use the continuous constraint x↦x on a compact interval. The shifted three-CDF objective is affine and weakly upper semicontinuous. Each admissible Dirac has x≥0 and score at most one. The remaining extremizers are centered and have affine-power exponent d−1 on their one-dimensional support. The argument bounds a larger family than their additional moment restrictions. Primary source: https://perso.math.u-pem.fr/fradelizi.matthieu/pdf/localizationDCG.pdf",
+    "Checked the quantile integral for m, the midpoint inequality m≥(1+r)/2, Jensen and the Cauchy–Schwarz second derivative of m(R)^d. These give Γ≤p₀≤1/2 and ensure both thresholds are proper up to the supporting transition.",
+    "In the decreasing orientation the derivative of the two-term score changes from negative to positive at the displayed critical shift. Past the upper-support transition the score decreases to its constant branch. On the critical branch the numerator difference is concave in R and has nonnegative values at R=0 and R=R_*, the latter from G(2m−1)≥0.",
+    "In the increasing orientation the derivative is nonpositive up to the upper supporting threshold and nonnegative afterwards. Recomputed the degree-two derivative and all Bernstein minima for d=3,…,6 from exact rational polynomial expansion. The d=7 margin recomputes as 29669536175/6597069766656, and Γ decreases with d. The accepted quadrature proof supplies T≤1/6 for d≥7.",
+    "For the decreasing simplex marginal the cut height v satisfies v^d=1/(1+k) and 2a₀−v=kv. Both cuts are proper, and the exact ratio is k^(d−1). Expanding log(2a₀) gives the stated limit 4/e²."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "75a1d57b1e81fdab",
+      "candidate_sha256": "2279c0b3f742bde6beb8744f371e24e4caddc8585afbd1cea5af82d78656fa50",
+      "fact_sha256": "3a36e73c535bdeed9d7d2690193b6bd6e6b250ffeb56610f138a3200dfb30a05",
+      "hypotheses": "The increasing affine-power law is exactly the accepted density d x^(d−1)/(1−r^d) on [r,1] with the same mean and inner CDF T=G(2m−1). The proof's quadrature estimate supplies T≤1/6 for every d≥4, hence d≥7 here.",
+      "reviewed_proof_sha256": "d58a10a13e32de957474ca0cfbf415d9fab879e732fa0f99cab6c9751276625e",
+      "reviewed_statement_sha256": "02080e057dba5320fdc0fc053674a06fb951a4d5b1c02e6ec90a012666f9c2ab"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:30:09Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same ordinary centered convex-body marginals and same three terms, with coefficient 1/2. Its equality at a saturated shift does not give the larger optimal coefficient or the proper positive-shift simplex equality.",
+      "fact_id": "7ad3d72ee6061cf3"
+    },
+    {
+      "comparison": "Its two-tail sum uses equal weights and has no extra central-tail term. It does not supply the optimal coefficient in this three-tail expression.",
+      "fact_id": "6a7d56e450b3126f"
+    }
+  ],
+  "readability": "The proof uses s both as the nonnegative shift and in the name s-affine for the localization class. These are separate, and the latter parameter is 1/d.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2d1ef8746e4a5f8cbe0af50c9cb865785e5cd34c4e4d827cb2f7778b07e90042",
+  "reviewed_statement_sha256": "1ded11de7386b23058eefeffa6c2dca6535fb788d3a32110e2b69c7303cdcef0",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:24:15Z",
+  "summary": "The proof establishes the largest all-shift coefficient, including the distinct affine-power orientations and an actual simplex equality at a positive shift.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

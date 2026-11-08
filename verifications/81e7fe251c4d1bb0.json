@@ -1,0 +1,42 @@
+{
+  "candidate_id": "6704fe389dbfcd2b",
+  "candidate_sha256": "ef44debd1b7eef010a0060c946ebc37e12c4ea60f3b389591b9212d7f16149dc",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The hexagon contains the endpoint rectangle because both bottom corners and the segment between the top corners of the rectangle lie in the hexagon. A convex combination at zero gives equal weights to the endpoint bases, hence stays in the middle fiber. The extreme bases fix their own fibers and the projection is [-1,1].",
+    "The middle width is 4 on [-1,0] and t+5 on [-3,-1]. Integration gives areas 4+6 and first moments -2-34/3, hence middle centroid (0,-4/3). An independent exact shoelace area and moment computation agrees. Each rectangle has area 6 and centroid (0,-3/2).",
+    "The odd class is {-1,1}, and the even class is {0}. All closed nonempty proper minors are {-1}, {0}, {1}, {-1,0}, {0,1}. Their (area, quota) pairs are (6,11), (10,11), (6,11), (16,22), (16,22). The pair {-1,1} is excluded by closure and the full set by properness.",
+    "The only nontrivial extreme anchored representation is the endpoint midpoint at base zero. The centroid hull has the two endpoint points and at zero the vertical segment from -3/2 to -4/3. Its support is linear on the upper and lower halfplanes of continuous normals, so the middle hexagon fan refines its fan.",
+    "The endpoint maps about their centroids have factor 1+s. The two middle vertical sides have length 1+5s/6. Both horizontal and both oblique sides are multiplied by 1+s, with preserved cyclic turns. In the cyclic normal order (0,1),(1,0),(2,-1),(0,-1),(-2,-1),(-1,0), the reverse middle supports are (4s/3,2(1+s),5+7s/2,3+3s/2,5+7s/2,2(1+s)). These match the claimed difference of supports on every ray and both functions are linear on its intervening cones.",
+    "In the same six-ray order the anchored gaps are (-s/6,1+s,0,0,0,1+s). This independently checks the upward obstruction and the initial contact census. All expressions hold for every s≥0; the gap becomes negative for every s>0.",
+    "Verified the original source digest at snapshot 8d2dca690a1b7d6d745b3ab445cd841f3e22d13a. Pending source fbc069c3d3ebfebf §4, (7)–(10) specifies the same hexagon, quotas, full reverse fan and upward gap. The older trapezoid discussed there is distinct and is not used as a premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T13:15:57Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted anchored compatibility and exact section equivalence apply here and imply the necessary midpoint inclusion. They do not give the concrete strict-quota reversal obstruction with valid individual supports.",
+      "fact_id": "ba0f3db1bf4f62c6"
+    },
+    {
+      "comparison": "The accepted rank-two uniform example verifies strict proper-minor parity quotas for a different base and mass profile. It has no centroid reversal or fan obstruction.",
+      "fact_id": "2f0f0c8da9a51a01"
+    }
+  ],
+  "readability": "The fan-linear verification uses the horizontal normal rays as the boundary of the two halfplanes on which the vertical segment support is linear. The title’s anchored obstruction refers to the type of failed constraint.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "40a2de9c02ec1ac7e40e84da2fe76f3d83e917ce42e34f6cf2a114dd42feebb9",
+  "reviewed_statement_sha256": "4211b39f54f73258456142e10e1851ee27785e5cc9093799cd7535c48be1a4ca",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:12:45Z",
+  "summary": "The compatible three-base family has all five proper closed-minor quotas strict. The reverse supports are realized by genuine polygons for all s≥0, and every s>0 fails the upward midpoint support condition with the claimed exact gap.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

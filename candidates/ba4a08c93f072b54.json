@@ -1,0 +1,41 @@
+{
+  "advances": "The equal-weight construction refutes a strict improvement based only on a supporting-hyperplane deficit. The unequal-weight construction gives an exact sharpness comparison for a vanishing unrestricted deficit.",
+  "author": "PK-research-agent",
+  "candidate_id": "ba4a08c93f072b54",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.767788+00:00",
+  "depends_on": [
+    "390b45541b0a46fc",
+    "2acc8bc803acf1c0"
+  ],
+  "draft_key": "sharp-simplex-fibers-internal-half-mass-hyperplane",
+  "kind": "counterexample",
+  "proof": "Use the ordered vertices $p_0,\\ldots,p_{15}$ of 390b45541b0a46fc. That fact proves that all sixteen are strictly exposed, are the only lattice points of $Q$, have distinct parities, and give lattice width two. For readability the ordered list is\n$\n\\begin{aligned}\n&(1,0,0,0),(0,1,0,0),(0,0,1,0),(0,0,0,1),(2,2,3,5),(1,3,5,5),\\\\\n&(0,0,0,2),(1,2,4,5),(1,1,2,3),(0,1,1,1),(0,1,3,2),(1,2,3,4),\\\\\n&(0,1,2,1),(1,1,2,2),(1,1,1,2),(1,2,3,3).\n\\end{aligned}\n$\n\nIn general, if an empty lattice $n$-polytope has $2^n$ vertices, their parities are distinct, since equal parities would put their midpoint in the lattice and violate emptiness. The affine span of the vertices on any real hyperplane is a rational proper subspace. If it is nonempty, there is a primitive nonzero integer normal $a$ orthogonal to all differences of those vertices, and the common value $a\\cdot p$ is an integer. Reduction modulo two gives a nonzero normal and places these vertices in a single affine parity class of size $2^{n-1}$. Thus every real affine hyperplane contains at most $2^{n-1}$ vertices, and equality uses the entire parity class.\n\nTo check the thirty parity classes for $Q$, take nonzero binary $a$ and $c\\in\\{0,1\\}$, and group the vertices by $a\\cdot p_j=c$ modulo two. The table gives a five-point witness for each full-rank class, followed by the determinant of the four difference rows based at its first index. The entries are obtained by integer determinant expansion from the displayed points. The starred class consists of indices $0,5,7,8,11,13,14,15$, all with first coordinate one. The three last-coordinate difference rows from $p_0$ to $p_5,p_7,p_8$ have determinant $1$, so it has affine rank three.\n\n| $a$ | $c=0$ | $c=1$ |\n|---|---|---|\n| 0001 | $(0,1,2,6,10);-8$ | $(3,4,5,7,8);-2$ |\n| 0010 | $(0,1,3,6,7);-4$ | $(2,4,5,9,10);-4$ |\n| 0011 | $(0,1,4,5,6);-22$ | $(2,3,7,8,11);-2$ |\n| 0100 | $(0,2,3,4,6);-2$ | $(1,5,8,9,10);2$ |\n| 0101 | $(0,2,5,6,8);6$ | $(1,3,4,7,10);-8$ |\n| 0110 | $(0,3,5,6,7);2$ | $(1,2,4,8,11);-2$ |\n| 0111 | $(0,4,6,8,10);-2$ | $(1,2,3,5,7);-2$ |\n| 1000 | $(1,2,3,4,6);2$ | starred |\n| 1001 | $(1,2,5,6,7);4$ | $(0,3,4,9,11);-2$ |\n| 1010 | $(1,3,5,6,11);2$ | $(0,2,4,8,9);-2$ |\n| 1011 | $(1,4,6,7,8);6$ | $(0,2,3,5,10);-2$ |\n| 1100 | $(2,3,4,5,6);-4$ | $(0,1,7,9,10);2$ |\n| 1101 | $(2,6,7,9,12);-2$ | $(0,1,3,4,5);-16$ |\n| 1110 | $(3,6,8,9,10);-2$ | $(0,1,2,4,5);-10$ |\n| 1111 | $(4,5,6,7,10);-6$ | $(0,1,2,3,8);-6$ |\n\nIt follows that $z_1=1$ is the only eight-point hyperplane. The support includes points at both $z_1=0$ and $z_1=2$, so it is internal. The supporting plane $z_1=0$ contains exactly seven vertices. Hence no supporting plane contains more than seven, with equality attained.\n\nTo treat both depth calibrations, let $0\\le\\varepsilon\\le1/30$. Choose a fixed positive $d$-simplex $K$ of volume $v$, and at bases in $z_1=1$ prescribe $A^{1/d}K$ with $A=1-2\\varepsilon$, at the other bases $B^{1/d}K$ with $B=1+2\\varepsilon$. For $\\varepsilon>0$ take $K$ to be the standard simplex, with one vertex at the origin and the other vertices the coordinate unit vectors. Let $C_\\varepsilon$ be the hull of the lifted fibers. Its projection is $Q$, so there are no other possible integer bases. At a vertex $p_i$, the projection of any convex combination at $p_i$ forces all participating bases to equal $p_i$. The actual fiber is therefore exactly the prescribed simplex. The hull has nonempty ambient interior: differences within a positive simplex span the continuous space and differences between lifted points project to a spanning set in the base. At $\\varepsilon=0$ all fibers coincide, and the hull is exactly $Q\\times K$.\n\nFor the cap census, use the integer exposing functional $n_i$ for $p_i$ from 390b45541b0a46fc. On its own fiber let $\\lambda_j^{(i)}$ denote the barycentric coordinates. For each $j=0,\\ldots,d$ the ambient cap with margin\n$$\n\\lambda_j^{(i)}(x)-1/(d+1)+2n_i\\cdot(z-p_i)\n$$\ncuts exactly its canonical simplex cap on that fiber, of volume $\\gamma_d$ times the own fiber volume. On any other fiber $n_i\\cdot(z-p_i)\\le-1$. At $\\varepsilon=0$ all the barycentric coordinates there are at most one. For positive $\\varepsilon$, each nonzero-index coordinate there is at most $(B/A)^{1/d}\\le(8/7)^{1/d}<2$, since the simplices are scaled from the standard one. The coordinate at the origin is at most one because all continuous coordinates are nonnegative. Every other fiber is therefore strictly excluded. The own canonical caps cover their simplex because its barycentric coordinates sum to one, so the mixed depth at every candidate is at most the largest such cap volume. A centroid of a largest fiber attains the matching lower bound by 2acc8bc803acf1c0, which identifies the mixed depth of an exposed fiber with its intrinsic depth and gives the exact intrinsic maximum of a simplex. The total mixed volume is $8(A+B)v=16v$, so the maximum normalized depth is $\\gamma_d B/16$.\n\nThe internal plane has normalized mass $8A/16=1/2-\\varepsilon$. Every other affine hyperplane meets at most seven fibers and has mass at most $7B/16\\le1/2-\\varepsilon$ for $30\\varepsilon\\le1$. At $\\varepsilon=0$ this proves the unique half-mass claim and the sharp supporting-plane bound. For positive $\\varepsilon$ the family meets the all-affine-plane premise with equality, so any universal improvement factor under that premise is at most $1+2\\varepsilon$ on the stated range.\n",
+  "source_candidate_ids": [
+    "ec1a047aab7b654b"
+  ],
+  "source_candidate_sha256": {
+    "ec1a047aab7b654b": "4359c3df74319da4f98716144d0e4e9b94be217572115452248a3ce5132dffb1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ec1a047aab7b654b",
+      "locator": "ec1a047aab7b654b:01 §2, parity test"
+    },
+    {
+      "candidate_id": "ec1a047aab7b654b",
+      "locator": "ec1a047aab7b654b:02 §§1–2, exact lattice and incidence certificate"
+    },
+    {
+      "candidate_id": "ec1a047aab7b654b",
+      "locator": "ec1a047aab7b654b:03 §3, exact product depth and supporting-plane bound"
+    },
+    {
+      "candidate_id": "ec1a047aab7b654b",
+      "locator": "ec1a047aab7b654b:06 §5, weighted all-hyperplane calibration"
+    }
+  ],
+  "statement": "There is a full-dimensional empty lattice polytope $Q$ in $\\mathbb R^4$ with sixteen vertices, lattice width two, and precisely one affine hyperplane containing eight vertices. This hyperplane is internal, and a supporting hyperplane contains at most seven vertices, with seven attained.\n\nFor each $d\\ge1$, the product of $Q$ with any positive $d$-simplex has exact maximum normalized mixed depth $\\gamma_d/16$, where $\\gamma_d=(d/(d+1))^d$. Its only half-mass base hyperplane is internal, and every supporting base hyperplane has mass at most $7/16$.\n\nFor each $0<\\varepsilon\\le1/30$ there is also a full-dimensional convex body with the same base hull and precisely these sixteen integer bases, such that the maximum mass on any real affine base hyperplane is exactly $1/2-\\varepsilon$ and the maximum normalized mixed depth is exactly $(1+2\\varepsilon)\\gamma_d/16$. All bodies equal the convex hulls of their actual mixed traces. Thus the coefficient $2$ in an improvement factor $1+2\\varepsilon$ under the all-affine-hyperplane mass deficit is sharp, already at integer dimension four and each fixed $d\\ge1$.",
+  "subgoal_id": "pk-intake-sharp-simplex-fibers-internal-half-mass-hyperplane",
+  "title": "Sharp simplex fibers with a unique internal half-cardinality hyperplane"
+}

@@ -1,0 +1,37 @@
+{
+  "candidate_id": "6891ffb0e03f50b5",
+  "candidate_sha256": "14141c408ab79731a4929aacb4bae5c95f198955885420fb661a29cf0bbb99ee",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For d+2 selected points in one fiber there is a nontrivial affine dependence with coefficients summing to zero, hence both a positive and a negative group. Discarding zero coefficients and normalizing gives two convex representations of one point.",
+    "The common point stays in that convex fiber. For every cap, one of the two groups excludes that cap's unique possible exclusive witness. If its color was not selected, either group works. The group's hull is in the closed complement of the open cap, including any points on its boundary.",
+    "The common point therefore misses all open caps, contradicting coverage. No full-dimensionality of the fiber, nonvertical normals or strict exclusion from closed caps is used.",
+    "The source's standalone exclusive-color assertion matches the frozen 83cafbb80e9cd454:03 locator.",
+    "Frozen candidate bytes, decoded statement and proof hashes, original candidate hashes and every source locator were checked against the pinned intake base."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T22:12:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its witness bound requires positive-volume fibers and witnesses strictly outside every other closed cap. The frozen lemma allows a witness on another cap boundary, and even lower-dimensional fibers, so the accepted statement does not cover the full scope.",
+      "fact_id": "bba06678def75096",
+      "fact_sha256": "266ec94ca6e21c2a598727854acdb15016e7c4363e52cd30d6f3c3c6ec169726"
+    }
+  ],
+  "readability": "The affine-dependence proof makes the zero-coefficient and closed-complement cases transparent.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e9bc72ce22cfae0821234ebd51819cf80559fe6aafc661b39b13261fe2e26ad1",
+  "reviewed_statement_sha256": "9f0d5def8746c51e7dedde38964454093f5c4782ea2f8f59497c6b1526a01d61",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:07:05Z",
+  "summary": "The Radon argument controls all nonempty open-exclusive traces in a fiber, including zero-volume and boundary traces.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

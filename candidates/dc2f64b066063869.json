@@ -1,0 +1,34 @@
+{
+  "advances": "The bound is for positive incidence constant almost everywhere within each positive intrinsic fiber. The constants may vary across fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "dc2f64b066063869",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.111050+00:00",
+  "depends_on": [
+    "0f6ca72852c286b2"
+  ],
+  "draft_key": "fiberwise-constant-fractional-cover-budget",
+  "kind": "theorem",
+  "proof": "Work first in the affine plane of a positive fiber. A restricted closed halfspace with full fiber measure contains the entire fiber, since every relatively open nonempty part of the convex body has positive intrinsic measure. In this case one original cap covers the fiber. Otherwise, by positive incidence and finiteness, some restricted cap has positive proper volume. Its hyperplane meets the relative interior of the fiber. On this hyperplane choose a point in the fiber interior avoiding every noncoincident cutting hyperplane. This is possible since their intersections with the chosen hyperplane are proper affine subspaces. For $q=1$ noncoincident cuts occur at different points.\n\nChoose a small relative ball about this point inside the fiber, avoiding the noncoincident hyperplanes. On either open half-ball the noncoincident indicators are fixed and the coincident indicators pick out their respective orientation. The weighted incidence on both half-balls must equal the same $b_z$, since each has positive intrinsic volume. The total weights of the two coincident orientations are therefore equal. The initial cap has positive weight, so an original cap of opposite orientation is present and the pair covers the entire affine plane. Restrictions that are all or empty on the plane cause no difficulty in either branch.\n\nApply the exact local-to-global fiber-cover theorem with $t=2$. The union of at most $2k$ selected original caps covers all positive fibers, which together have mass $M$. By subadditivity $M\\le2k\\max_i\\mu(H_i)$. Bernoulli's inequality gives $(1+1/d)^d\\ge2$ for $d\\ge1$, and $k\\le2^n$, yielding the second budget inequality. In a partition up to null sets and overlaps use unit weights and $b_z=1$. An omitted positive-mass cap would meet the finite selected union only in a null set and would leave positive mass uncovered. Hence every such cap must be selected.\n\nFor equality let $V=|K|$ and choose $u\\ne0$ and $A>\\max_{x\\in K}|u\\cdot x|$. For each binary vertex $p$ put $q_p(z)=\\sum_{j:p_j=0}z_j+\\sum_{j:p_j=1}(1-z_j)$ and use the pair $\\{\\pm u\\cdot x-Aq_p(z)\\ge0\\}$. The pair is empty on all other integer fibers since $q_p\\ge1$ there, and on its own fiber gives opposite central half-body cuts. The family is a partition up to null overlaps. Each cap has mass $V/2=M/(2k)$, with $k=2^n$, and each of the $2k$ caps is necessary.\n",
+  "source_candidate_ids": [
+    "05b459fea3722ebb",
+    "ed1a79b6ef1fd236"
+  ],
+  "source_candidate_sha256": {
+    "05b459fea3722ebb": "86d72a40f3f43450f071121bd74985148cccd4081d61ff5b967e5162b8b0bf9e",
+    "ed1a79b6ef1fd236": "1db4e541150c71c4bf715b14a709f95fa72546709c0f2b33aae3a3a96563b450"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "05b459fea3722ebb",
+      "locator": "§§1–2 and 5–6, (1)–(2), sharp original-cap budget"
+    },
+    {
+      "candidate_id": "ed1a79b6ef1fd236",
+      "locator": "§5, binary-product sharpness construction"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)\\ne\\varnothing$, and $q=\\dim_H S\\ge1$. Let $\\mu=\\mathcal H_q|_S$, $M=\\mu(S)$, and $k$ be the number of coordinate parity classes occupied by the positive $\\mathcal H_q$ fibers $C_z$. Suppose finitely many original closed ambient halfspaces $H_i$ have coefficients $\\lambda_i>0$ such that $\\sum_i\\lambda_i\\mathbf1_{H_i}(z,x)=b_z>0$ for $\\mathcal H_q$-almost every $x\\in C_z$ on each positive fiber, where $b_z$ is constant on that fiber. Then at most $2k$ original caps cover every positive fiber pointwise. In particular $\\max_i\\mu(H_i)\\ge M/(2k)\\ge\\gamma_d M/2^n$, where $\\gamma_d=(d/(d+1))^d$. A finite partition up to $\\mu$-null sets and overlaps consequently has at most $2k$ positive-mass original caps, allowing caps that contain entire positive fibers. The subcover size $2k$ and the mass bound $M/(2k)$ are both attained for $C=[0,1]^n\\times K$ with any full-dimensional centrally symmetric $d$-body $K$ centered at zero.",
+  "subgoal_id": "pk-intake-fiberwise-constant-fractional-cover-budget",
+  "title": "Sharp original-cap budget for constant fractional incidence on each fiber"
+}

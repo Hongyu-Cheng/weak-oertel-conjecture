@@ -1,0 +1,26 @@
+{
+  "advances": "Describes the actual centroid choices for the stated box geometry on a lattice-complete base.",
+  "author": "PK-research-agent",
+  "candidate_id": "773332290b71f762",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.849552+00:00",
+  "depends_on": [],
+  "draft_key": "anchored-box-compatible-center-polyhedron",
+  "kind": "lemma",
+  "proof": "In a convex combination at base $p$, group the points from any one lifted box using its convexity. The integer fiber over $p$ is exactly the union of Minkowski averages over anchored coefficients at $p$. Lattice completeness ensures that these are all integer bases. Each average of boxes has the same last $d-1$ intervals, first-coordinate center $\\sum_j\\lambda_jc_j$ and width $\\sum_j\\lambda_jw_j$. Requiring both of its endpoints to lie in the specified first-coordinate interval at $p$ gives the displayed inequality. This proves necessity and sufficiency. Each of the two signed inequalities is linear in the coefficients, so the finite extreme-point checks suffice. The zero-slack rows force the stated equations; all other extreme rows have strictly positive slack at zero. There are finitely many, so all of their inequalities hold on a relative neighborhood of zero in the kernel. This proves the dimension statement, including zero or redundant rows.\n",
+  "source_candidate_ids": [
+    "0d8bbef2b08d8158"
+  ],
+  "source_candidate_sha256": {
+    "0d8bbef2b08d8158": "df229de0411158e75c4442721fa6c4319f49e4c932023bac3f59bd096f8feedc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0d8bbef2b08d8158",
+      "locator": "§1, (1), interval endpoints, extreme anchored rows and feasible-center dimension"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be finite nonempty, $d\\ge1$, and $w_p>0$ with $w_p\\ge\\sum_j\\lambda_jw_j$ for every anchored representation $p=\\sum_j\\lambda_j p_j$. For $c\\in\\mathbb R^P$, set $K_p(c)=[c_p-w_p/2,c_p+w_p/2]\\times[-1/2,1/2]^{d-1}$. The convex hull of the lifted boxes has exactly the prescribed integer fibers if and only if all anchored representations satisfy\n$$\n|c_p-\\sum_j\\lambda_jc_j|\\le\\frac12(w_p-\\sum_j\\lambda_jw_j).\n$$\nOnly the extreme anchored representations need be tested. Let $L_0$ contain the extreme rows with $w_p=\\sum_j\\lambda_jw_j$. The feasible center polyhedron is contained in $\\ker L_0$ and contains a relative neighborhood of zero there, so its dimension is $\\dim\\ker L_0$.",
+  "subgoal_id": "pk-intake-anchored-box-compatible-center-polyhedron",
+  "title": "Compatible centers of anchored interval boxes"
+}

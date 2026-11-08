@@ -1,0 +1,34 @@
+{
+  "advances": "An above-target obstruction to obtaining a preserving integer birth from global coverage, including a nonempty ambient depth region and an explicit contraction.",
+  "author": "PK-research-agent",
+  "candidate_id": "f70483482332407a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:48:12.777302+00:00",
+  "depends_on": [],
+  "draft_key": "centered-four-fiber-global-cover-without-birth",
+  "kind": "counterexample",
+  "proof": "The upper roof obtained by linear interpolation of the interval radii is concave, and the lower roof is convex. Thus the hull realizes all four intervals, including when $a=0$. Write $F_v(s)=\\min(v,\\max(0,v/2-s))$ for the length above level $s$ in a centered interval of length $v$, including $F_0=0$. An upward through-cap at $(1,0)$ with threshold $x=s(z-1)$ has mass $b/2+F_b(s)+F_a(-s)+F_a(2s)$. For $s\\ge0$, $F_b(s)\\ge F_a(s)$ and $F_a(-s)+F_a(s)=a$. For $s<0$, $F_a(2s)\\ge F_a(s)$ gives the same lower bound $b/2+a$. Reflection in $x$ covers the opposite orientation. A pure-base through-cap at $(1,0)$ contains its entire length-$b$ fiber, and on the left side also the length-$a$ fiber; the right cap contains both length-$b$ fibers. Thus pure-base masses are at least $b/2+a$ for $0\\le a\\le b/2$. Any containing cap can be tightened to a through-cap without increasing mass.\n\nFor $s>b$, each of the two caps $\\pm x\\ge s(z-1)$ has mass $b/2+a$, and their union covers every integer plane $z\\le1$. Their base reflections about $3/2$ cover all planes $z\\ge2$ with the same masses. This gives the global upper bound, matching the lower bound at $(1,0)$ and its reflection. Divide by $2(a+b)$ for the normalized formula.\n\nIf an extension contains a point at base $-r$, its segment combinations with the length-$b$ interval at $1$ produce at base $0$ an interval of length $rb/(r+1)$. Preservation forces $r\\le a/(b-a)<1$. Reflect to handle the other side. Every new integer base has $r\\ge1$ on one side.\n\nIn the numerical specialization, each listed cap captures a full length-$1$ endpoint interval and length $5+1/4$ in one middle interval, with all other traces empty. Their closed complements give $|x|\\le6(z-1)-1/4$ and $|x|\\le6(2-z)-1/4$, which show the projection, the nonempty interior, and the two contact points. Each pair of continuous normals is opposite, and averaging its margins gives the corresponding projected-facet inequality. Strict violation of a projected facet gives coverage of the whole continuous plane at that base. Central symmetry of the mixed measure about $(3/2,0)$ gives raw depth $11$ there: any containing halfspace includes a through-halfspace of mass at least $11$, and a nonvertical through-halfspace has mass exactly $11$ by its null boundary. The actual mixed maximum is $6<13/2$. Any point in one of the four open caps lies in a parallel closed cap of mass at most $25/4$, so the exact depth superlevel is in their common closed complement.\n\nFinally the roof argument and depth computation hold for each $a_t=(1-t)a\\ge0$. The derivative of $(b/2+a_t)/[2(b+a_t)]$ with respect to $a_t$ is $b/[4(b+a_t)^2]>0$. Hence contraction strictly decreases normalized depth to $1/4$.\n",
+  "source_candidate_ids": [
+    "f66dcff3eb3e1f03"
+  ],
+  "source_candidate_sha256": {
+    "f66dcff3eb3e1f03": "10a4b028cc98925c24fa3fa5b2bf2406ed1c23d0f16dccfdcf7e69d8dcab55c2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f66dcff3eb3e1f03",
+      "locator": "f66dcff3eb3e1f03:04 §3, (4)–(5), exact actual depth and impossibility of preserving birth"
+    },
+    {
+      "candidate_id": "f66dcff3eb3e1f03",
+      "locator": "f66dcff3eb3e1f03:05 §3, (6), actual global certificate and nonempty region at a=1,b=10"
+    },
+    {
+      "candidate_id": "f66dcff3eb3e1f03",
+      "locator": "f66dcff3eb3e1f03:06 §4, endpoint contraction and exact depth throughout the path"
+    }
+  ],
+  "statement": "In $\\mathbb R\\times\\mathbb R$ take the lifted convex hull of centered intervals at $0,1,2,3$ of lengths $(a,b,b,a)$, with $0<a<b/2$. The raw maximum mixed depth is $Q=b/2+a$ and the normalized maximum is $\\beta=1/4+a/[4(a+b)]$. Any convex extension preserving the old fibers has no point at a new integer base. A preserving extension to base $-r<0$ or $3+r$ must have $r\\le a/(b-a)$.\n\nFor $a=1,b=10$, the four open caps $\\pm x-6(z-1)>-1/4$ and $\\pm x+6(z-2)>-1/4$ each have raw mass $25/4<13/2$. Their closed complements form a full-dimensional diamond with projection $[25/24,47/24]$ and attained group contacts $(25/24,0)$ and $(47/24,0)$. The two groups cover every integer plane. The exact raw depth superlevel at $13/2$ is nonempty, avoids the mixed lattice and is contained in the diamond.\n\nReplacing both endpoint lengths by $(1-t)a$ for $0\\le t\\le1$ gives compatible actual sources throughout, ending with two point endpoint fibers. The normalized maximum strictly decreases to $1/4$ according to the same formula with $(1-t)a$ in place of $a$.",
+  "subgoal_id": "pk-intake-centered-four-fiber-global-cover-without-birth",
+  "title": "A globally certified four-fiber cover can forbid every preserving integer birth"
+}

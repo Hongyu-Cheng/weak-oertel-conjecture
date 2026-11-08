@@ -1,0 +1,33 @@
+{
+  "advances": "Conditional first-order upper bound and local-minimum test. It uses a selected regular covering system and does not assert such a system or a descent direction at a general below-target minimum.",
+  "author": "PK-research-agent",
+  "candidate_id": "55b738938eff388b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:01:59.468530+00:00",
+  "depends_on": [
+    "0e160cd57a1b26fa",
+    "200b787a117477f5"
+  ],
+  "draft_key": "pk-w35-homothetic-green-circuit-response",
+  "kind": "theorem",
+  "proof": "For a permitted direction let $A_{gl}=\\sum_{j,r}b_{H_{gl},jr}\\delta_j(r)$ and $T_g=\\sum_l\\kappa_{gl}A_{gl}$. Change the threshold of cap $gl$ by $t(A_{gl}-T_g)/S_{gl}$. The weighted sum of changes with weights $\\rho_{gl}$ is zero by the definition of $T_g$. At base $p_g$ the weighted sum of the defining affine margins of the changed caps remains identically zero, so the closed caps cover the whole base plane for every $t$. By the shifted-cap conclusion of the Green variation lemma, the difference between deformed and original measure at the changed threshold is $tA_{gl}+o(t)$. The old measure at that threshold is $Q-t(A_{gl}-T_g)+o(t)$ by the two-sided assumption. Hence each group cap has mass $Q+tT_g+o(t)$. The old strict slack covers keep their coverage and strict gaps, since the finitely many fiber symmetric differences have volume $O(t)$ by the strip proof. There are exactly the old integer bases by the Green theorem. Every new candidate point is therefore covered by a closed cap of mass at most $Q+t\\max_g T_g+o(t)$, and its raw depth is at most that mass. Divide by $M+tM'(0+)+o(t)$ to obtain the normalized derivative with $T_g-\\beta M'(0+)=L_g(\\delta)$.\n\nAt a local minimum the convex cone of vectors $(L_g(\\delta))_g$ cannot meet the open strictly negative orthant. Separation from that open cone yields a nonzero nonnegative linear functional on the group coordinates which is nonnegative on all response vectors. Normalize its coefficients to sum to one. Substitute the independent Green parameters and endpoint parameters of the cone theorem. Each parameter can be tested alone, giving exactly the claimed curvature and endpoint inequalities. Both signs of any lineality vector are permitted, so its pairing is zero.\n\nIn the full-fan planar case each ray is an independent coordinate, both endpoint functions are arbitrary, and every curvature coordinate is nonnegative. The two endpoint interpolation pairings must vanish on each ray and are equivalent to the two displayed moment identities. The curvature tests become exactly $s_{ir}\\ge0$. On each ray the interior inverse is the discrete Dirichlet Green identity and symmetry. Summing the interior second differences gives $s_{1r}+s_{N-1,r}$, and summing them with weights $j$ gives $N s_{N-1,r}$. The moment equations then give the two stated endpoint values, with their signs. Equivalently, summation by parts with these endpoint terms gives\n$$\n\\sum_{j=0}^N q_{jr}\\delta_j(r)\n=\\sum_{i=1}^{N-1}s_{ir}\\bigl(2\\delta_i(r)-\\delta_{i-1}(r)-\\delta_{i+1}(r)\\bigr).\n$$\nThis proves the signed dual and its converse.\n",
+  "source_candidate_ids": [
+    "ed6a06822db211dc"
+  ],
+  "source_candidate_sha256": {
+    "ed6a06822db211dc": "ebcefd7be91f1ec8c7023b8c8a221455fd159f73ae55644f42d5e1e69c0b78b9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ed6a06822db211dc",
+      "locator": "ed6a06822db211dc:05 §§6–7, (18)–(25), regular derivative and separation"
+    },
+    {
+      "candidate_id": "ed6a06822db211dc",
+      "locator": "ed6a06822db211dc:06 §7, (26)–(28), planar full-fan dual"
+    }
+  ],
+  "statement": "Use the actual Minkowski chain and feasible direction cone of the discrete Green theorem. Let $\\mu_t$ be the summed $d$-volume measure, $M=\\mu_0(\\mathbb R^{1+d})$, and let $D(t)$ be the maximum normalized closed-halfspace depth over the new actual integer fibers, with $\\beta=D(0)$ and $Q=\\beta M$. For each deepest base $p_g$ select a finite group of old mass-$Q$ caps $H_{gl}=\\{\\alpha_{gl}z+v_{gl}\\cdot x\\ge b_{gl}\\}$ with $\\|v_{gl}\\|=1$ and weights $\\rho_{gl}>0$ such that\n$$\n\\sum_l\\rho_{gl}v_{gl}=0,\\qquad\n\\sum_l\\rho_{gl}(b_{gl}-\\alpha_{gl}p_g)=0.\n$$\nAssume every remaining base has a finite fixed whole-plane cap cover with all old masses strictly below $Q$. Assume the two-sided old-mass derivative of each selected cap in its threshold is $-S_{gl}$ with $S_{gl}>0$. Assume each selected cap plane is facet-null on the moving original facets of the directions under consideration. To test the full cone, it suffices to impose this on all original facets. Use $a_{jr}$ and the ordinary facet traces $b_{H_{gl},jr}$ of the Green first variation, taking zero coefficient at missing facets. Set\n$$\n\\kappa_{gl}=\\frac{\\rho_{gl}/S_{gl}}{\\sum_l\\rho_{gl}/S_{gl}},\\qquad\nq_{g,jr}=\\sum_l\\kappa_{gl}b_{H_{gl},jr}-\\beta a_{jr},\\qquad\nL_g(\\delta)=\\sum_{j,r}q_{g,jr}\\delta_j(r).\n$$\nFor every direction under these hypotheses,\n$$\n\\limsup_{t\\downarrow0}\\frac{D(t)-\\beta}{t}\\le\\frac1M\\max_g L_g(\\delta).\n$$\nStrict negativity for all groups gives actual descent. If there is a local minimum for the fixed-endpoint cone or the full cone, and the selected system is regular for every direction in the cone being tested, one probability vector $\\pi$ on the groups has aggregate coefficients $q_{jr}=\\sum_g\\pi_g q_{g,jr}$ whose functional is nonnegative on that entire cone. In the fixed-endpoint case this is exactly\n$$\n\\sum_r\\left(\\sum_{j=1}^{N-1}G_{ji}q_{jr}\\right)c(r)\\ge0\n\\quad (1\\le i<N,\\ c\\in C_{\\mathcal F}).\n$$\nFor the full cone it also requires nonnegative pairing of $T_A,T_B$ with the respective endpoint functionals $\\sum_j(1-j/N)q_{jr}$ and $\\sum_j(j/N)q_{jr}$, and these vanish on the respective endpoint lineality spaces.\n\nWhen both endpoint fans are the full common planar fan, a given signed array $q$ is nonnegative on the full cone exactly when, on every ray $r$,\n$$\n\\sum_{j=0}^Nq_{jr}=0,\\qquad\n\\sum_{j=0}^N j q_{jr}=0,\\qquad\ns_{ir}=\\sum_{j=1}^{N-1}G_{ji}q_{jr}\\ge0\\quad(1\\le i<N).\n$$\nWith $s_{0r}=s_{Nr}=0$, the exact inverse is $q_{jr}=2s_{jr}-s_{j-1,r}-s_{j+1,r}$ for $1\\le j<N$, $q_{0r}=-s_{1r}$ and $q_{Nr}=-s_{N-1,r}$.",
+  "subgoal_id": "pk-intake-pk-w35-homothetic-green-circuit-response",
+  "title": "Regular critical-circuit response and signed Green dual of an actual chain"
+}

@@ -1,0 +1,30 @@
+{
+  "advances": "A finite scalar optimization valid for arbitrary positive tables. On actual full-dimensional volume tables it computes the numerator of the convex-reference bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "fd2cf6b67e1db653",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:15:48.904772+00:00",
+  "depends_on": [],
+  "draft_key": "sampled-convex-root-majorant-exact-program-and-dual",
+  "kind": "theorem",
+  "proof": "Jensen's inequality gives the necessary constraints. For sufficiency set\n$$\n\\ell_l(x)=\\min\\left\\{\\sum_p\\lambda_p l_p:\\ \\lambda\\ge0,\\ \\sum_p\\lambda_p=1,\\ \\sum_p\\lambda_pp=x\\right\\}.\n$$\nThe minimum is attained on a nonempty compact polytope. The epigraph is the convex hull of the finitely many upward rays at $(p,l_p)$, a polyhedron, so this defines a finite convex piecewise-affine function on the relative domain. At a sample $z$ the vertex inequalities imply the same inequality for every representation, giving $\\ell_l(z)\\ge l_z$. The singleton representation gives equality. Its values are at least $\\min_p r_p>0$ everywhere.\n\nA constant $l\\ge\\max r_z$ is feasible. The projection of $\\mathcal L$ to the $A$ coordinates is a closed polyhedron. In it all coordinates have positive lower bounds and a sublevel of $\\sum_A l_z^q$ is bounded, so the minimum is attained by a projected vector with a feasible lift. The empty-subset objective is constant. The sum of positive parts is the maximum over subsets of the corresponding signed sum. Maximizing first over $l$ for each of these finitely many subsets gives the stated formula and attainment.\n\nAt a minimizer $l^*$ for $V_A$, the objective is differentiable on a neighborhood because every coordinate of $l^*$ is positive. The negative gradient is in the cone of active constraint normals. Otherwise a separating direction has nonpositive scalar products with these normals and strictly negative directional derivative for the objective. A sufficiently short positive step stays feasible for every active and inactive row, contradicting minimality. Thus there are multipliers $\\eta,\\lambda\\ge0$ with\n$$\n\\eta-D^\\mathsf{T}\\lambda=q\\mathbf1_A(l^*)^{q-1},\\qquad\n\\eta_z(l_z^*-r_z)=0,\\qquad \\lambda_j(Dl^*)_j=0.\n$$\nFor $q=1$ the right side of the first equation is $\\mathbf1_A$, and dotting with $l^*$ gives $\\eta\\cdot r=V_A$. For $q>1$, set $a$ to the right side. The same scalar product gives $\\eta\\cdot r=qV_A$ and the formula for $\\kappa$ gives $\\kappa\\sum_A a_z^p=(q-1)V_A$. These multipliers attain the proposed objective in both cases, including when $A$ is empty.\n\nFor any feasible $l$ and dual multipliers, $\\eta\\cdot r\\le\\eta\\cdot l=(a+D^\\mathsf{T}\\lambda)\\cdot l\\le a\\cdot l$, taking $a=\\mathbf1_A$ for $q=1$. For $q>1$ use $a_z l_z\\le l_z^q+\\kappa a_z^p$ on $A$, obtained by maximizing $a_z t-t^q$ over $t\\ge0$. This gives weak duality and completes both formulas.\n",
+  "source_candidate_ids": [
+    "3bbe467275a530f8"
+  ],
+  "source_candidate_sha256": {
+    "3bbe467275a530f8": "23989a34e4e0b8b1c8d910a9db3033f1ee5d97addab4a7e1b9162d3a5a668c40"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3bbe467275a530f8",
+      "locator": "3bbe467275a530f8:01 §1, (1)–(2), attained optimization of the positive-part numerator"
+    },
+    {
+      "candidate_id": "3bbe467275a530f8",
+      "locator": "3bbe467275a530f8:02 §2, (3)–(4), exact attained dual"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite and nonempty, let $q\\ge1$, and let $w_z>0$, $r_z=w_z^{1/q}$ for $z\\in P$. Put $\\gamma=(q/(q+1))^q$ and $c=1-\\gamma$. For each $z$, form the polytope of representations $\\lambda\\ge0$ with $\\sum_p\\lambda_p=1$ and $\\sum_p\\lambda_pp=z$. Let $D$ have a row for $l_z-\\sum_p\\lambda_p l_p$ for every vertex of each such polytope, dropping any zero rows. The sample vectors of finite convex functions $\\ell$ on $\\operatorname{conv}P$ with $\\ell(z)\\ge r_z$ are exactly $\\mathcal L=\\{l:l\\ge r,\\ Dl\\le0\\}$. Every vector in $\\mathcal L$ has a positive convex piecewise-affine interpolant on the relative domain. For $A\\subseteq P$, put $V_A=\\min_{l\\in\\mathcal L}\\sum_{z\\in A}l_z^q$, with $V_{\\varnothing}=0$. Every minimum is attained, and so is the maximum\n$$\nJ_*=\\max_\\ell\\sum_{z\\in P}[w_z-c\\ell(z)^q]_+\n=\\max_{A\\subseteq P}\\left(\\sum_{z\\in A}w_z-cV_A\\right).\n$$\n\nFor the same $V_A$ and $D$, the following dual maxima are attained. For $q=1$,\n$$\nV_A=\\max\\{\\eta\\cdot r:\\ \\eta-D^\\mathsf{T}\\lambda=\\mathbf1_A,\\ \\eta,\\lambda\\ge0\\}.\n$$\nFor $q>1$, put $p=q/(q-1)$ and $\\kappa=(q-1)q^{-p}$. Then\n$$\nV_A=\\max\\left\\{\\eta\\cdot r-\\kappa\\sum_{z\\in A}a_z^p:\n\\eta-D^\\mathsf{T}\\lambda=a,\\ \\eta,\\lambda,a\\ge0,\\ a_z=0\\ (z\\notin A)\\right\\}.\n$$\nNo strict feasibility assumption is needed.",
+  "subgoal_id": "pk-intake-sampled-convex-root-majorant-exact-program-and-dual",
+  "title": "Exact sampled convex-root majorant optimization and its attained dual"
+}

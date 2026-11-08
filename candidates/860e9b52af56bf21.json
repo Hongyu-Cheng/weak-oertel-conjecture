@@ -1,0 +1,35 @@
+{
+  "advances": "A restricted sharp-depth consequence with an explicit coarse-level count and volume ratio. Positive remaining integer ranks require the stated lower-rank bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "860e9b52af56bf21",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:07:29.003320+00:00",
+  "depends_on": [
+    "ec2b7d125fe6a3f0",
+    "69166b0fcb73425a"
+  ],
+  "draft_key": "bounded-coarse-level-fine-lattice-depth",
+  "kind": "theorem",
+  "proof": "At every level with $T_z>0$, use the sharp hyperplane concentration result on the section-volume function of $Q_z$. Retain its positive-volume sampled fibers on the selected hyperplane and let $R_z$ be their total mass. Then $R_z\\ge(T_z-r!M_z/v)_+$. Every selected hyperplane has positive retained mass, since it contains the positive support in the deficient case and contains the greedy points in the full-rank case. At zero-mass levels put $R_z=0$. Thus $\\sum_zR_z\\ge(T-r!M/v)_+$, with the ordinary volumes of coarse levels without positive samples included in $M$. Choose a positive level with greatest $R_z$, which has $R_z\\ge(T-r!M/v)_+/J$. Apply the exact retained-fiber lattice reduction there. The retained affine rank $t$ is at most $r-1$. If $t=0$ use its unconditional continuous conclusion, and if $t>0$ use the assumed bound in dimensions $(t,s)$. The resulting sampled point has raw original depth at least $2^{-t}\\Gamma_s R_z\\ge 2^{-(r-1)}\\Gamma_s R_z$. Dividing by $T$ proves the displayed formula. Under the two additional conditions the positive-part factor is at least $1/2$ and $J\\le2^k$ gives the stated sharp constant.\n\nWhen $r=1$, a hyperplane is one base point. In the full-rank case the greedy choice is a highest-volume fiber, and in the deficient case the unique positive sampled base is automatically highest. Therefore the chosen level with greatest $R_z$ gives a largest-volume fiber of the entire source. Its centroid is the point supplied by the rank-zero argument.\n",
+  "source_candidate_ids": [
+    "631839b23c1a0508",
+    "a779c844eb8df3e4"
+  ],
+  "source_candidate_sha256": {
+    "631839b23c1a0508": "a733e77a98e421c6fc4f509118feb40cebdfae8cc0033750845ab394cc16ed37",
+    "a779c844eb8df3e4": "7a10fea32daa5c38abb5627a8bc9cc670de8ee115a5a6cbc08ce64298d1ab4fe"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a779c844eb8df3e4",
+      "locator": "§4, (5), and §5, (6)"
+    },
+    {
+      "candidate_id": "631839b23c1a0508",
+      "locator": "§4, stronger-ratio specialization and sampled-level counting convention"
+    }
+  ],
+  "statement": "Let $k\\ge0$ and $r,s\\ge1$ be integers, let $C\\subset\\mathbb R^k\\times\\mathbb R^r\\times\\mathbb R^s$ be compact and convex, and sample at $(z,u)\\in\\mathbb Z^k\\times(a+L)$, where $L$ has full rank and covolume $v$ in $\\mathbb R^r$. For $z\\in\\mathbb Z^k$ let $Q_z=\\{(u,x):(z,u,x)\\in C\\}$, $T_z=\\sum_{u\\in a+L}\\operatorname{vol}_s((Q_z)_u)$, and $M_z=\\operatorname{vol}_{r+s}(Q_z)$. Put $T=\\sum_z T_z>0$ and $M=\\sum_z M_z$ over all coarse integer slices. Let $J\\ge1$ be any upper bound on the number of coarse levels with $T_z>0$.\n\nAssume for each $1\\le t\\le r-1$ that every full-dimensional compact convex body in $\\mathbb R^t\\times\\mathbb R^s$ with positive sampled mass on $\\mathbb Z^t\\times\\mathbb R^s$ has a sampled point of normalized depth at least $2^{-t}\\Gamma_s$, where $\\Gamma_s=(s/(s+1))^s$. Then $C$ has a sampled point for which every containing closed halfspace has sampled mass, divided by $T$, at least\n$$\n\\frac{\\Gamma_s}{J\\,2^{r-1}}\\left(1-\\frac{r!M}{vT}\\right)_+.\n$$\nIn particular $J\\le2^k$ and $M/(vT)\\le1/(2r!)$ imply normalized depth at least $\\Gamma_s/2^{k+r}$. For $k=0$ take $J=1$ to obtain the one-level estimate. For $r=1$ all these conclusions are unconditional, and the point can be chosen as the centroid of an actual largest-volume sampled fiber of $C$.",
+  "subgoal_id": "pk-intake-bounded-coarse-level-fine-lattice-depth",
+  "title": "Mixed depth from hyperplane concentration in finitely many coarse levels"
+}

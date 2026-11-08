@@ -1,0 +1,38 @@
+{
+  "advances": "Ordinary volume and a proper cut of one body. The endpoint statements are centroid-margin bounds. The result supplies no unconditional mixed-depth descent.",
+  "author": "PK-research-agent",
+  "candidate_id": "17087f3e780e00fb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.049314+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w30-sharp-actual-centroid-cap-contraction",
+  "kind": "theorem",
+  "proof": "The centroid is in $\\operatorname{int}A$: it is a convex barycenter in $A$, and a nonzero support functional has strictly smaller values than its maximum on the interior, of positive volume. Thus the contractions about $g$ are nested. The scalar cut coordinate is $t=v\\cdot x-b$. Fubini gives $F'(0)=-\\sigma$, since the coarea density is positive and continuous at every proper level. In $d\\ge2$ continuity follows from Brunn–Minkowski concavity of the $(d-1)$th root of the parallel section area on the proper interval. In $d=1$ the density is the constant $1/\\lVert v\\rVert$ there.\n\nConvex combinations of upper caps are contained in the upper cap at the combined threshold. Hence Brunn–Minkowski makes $F^{1/d}$ concave on the interval where $F>0$, including its constant left part. The tangent at zero bounds this root above by $U^{1/d}(1-t/D)$ there. The upper support in the scalar coordinate is therefore at most $D$, and using $F\\le a$ gives $F\\le G$ on the entire line. Both profiles agree far to the left and right.\n\nWrite $t_0=D(1-(a/U)^{1/d})$. The function $G$ is the volume survival profile of a pyramid of volume $a$ with base at $t_0$ and apex at $D$: the upper cap at $t\\in[t_0,D]$ is a homothetic copy with scale $(D-t)/(D-t_0)$. For $d\\ge2$ choose any parallel base with the required $(d-1)$-volume. For $d=1$ the interval $[t_0,D]$ has length $a$ in the original coordinate since $\\sigma=1/\\lVert v\\rVert$. Its scalar mean, and the pyramid mean in all dimensions, is $t_0+(D-t_0)/(d+1)=D(1-\\frac{d}{d+1}(a/U)^{1/d})$, by integrating the section density proportional to $(D-t)^{d-1}$. For any such compact volume profile the scalar first moment is the integral of the upper tail over $t\\ge0$ minus the integral of $a$ minus that tail over $t\\le0$. Subtracting the two first moments gives $a$ times the difference between this comparison mean and $m$ as $\\int_{\\mathbb R}(G-F)\\,dt$.\n\nThe exact pulled-back cap volume of $A_\\varepsilon$ is $(1-\\varepsilon)^d F(-\\varepsilon m/(1-\\varepsilon))$. Differentiating at zero gives $L_g=dU-\\sigma m$. Substituting the comparison mean and using $\\sigma D=dU$ gives the asserted identity. The lower bound for $\\sigma m$ is the upper bound applied to $(-v,-b)$, for which the volume is $a-U$ and the coarea density is unchanged. At an upper support $m<0$, so the upper bound with right side zero holds for every specified nonnegative effective density. As a proper level decreases to the lower support, its parallel section converges to the supporting section in the translated cut plane. Upper inclusion in every neighborhood follows by compactness, and the slice contains a homothetic copy of the supporting section with factor tending to one by convexity with a fixed interior point. These give convergence of section volume, including zero area. In $d=1$ the density is constant up to both endpoints. Passing to the limit gives the lower-support bound and reducing its section mass preserves it since $m>0$. The disjoint and full-cap cases with zero section follow directly.\n\nFor equality in the loss bound, continuity and nonnegativity give $F=G$ everywhere. The actual lower and upper support heights are then $t_0,D$, since every open subinterval of the proper projection has positive volume. Take an actual top point $p$. For $0<r<1$, convexity includes $p+r(A-p)$ in the upper cap at height $D+r(t_0-D)$, and both sets have volume $r^d a$. Inclusion of compact full-dimensional convex sets of equal volume is equality, since an exterior point of the smaller one and an interior ball there would otherwise give a positive-volume region outside it. The top support face lies in every such cap of diameter $r\\,\\operatorname{diam}A$, so it equals $\\{p\\}$. Every point at a height strictly between the support values belongs to the dilate for the corresponding $r$, and its preimage under the dilation is at height $t_0$. Hence $A$ is exactly the pyramid from its minimum face to $p$. The base dimension is $d-1$ by full dimension of $A$. Conversely, the same homothetic tail formula for any such pyramid gives $F=G$ and thus equality. Choosing its proper cut yields every fraction in $(0,1)$. The weighted conclusion follows by summing the inequalities with the same $g$.\n",
+  "source_candidate_ids": [
+    "06cc7d27835f78bc",
+    "117322dbc8c21242",
+    "268d75cf9619baac"
+  ],
+  "source_candidate_sha256": {
+    "06cc7d27835f78bc": "82b5b4ee8917793b429b330393a77a291131f8f2d8e61373b7dfbc37414c73ed",
+    "117322dbc8c21242": "b73ee9d1f88a1057d946d6a0f6a210916d4f3e694bcc0842c666347fe00ea438",
+    "268d75cf9619baac": "7cf729a9fcdedbfc74b77991e13fccd3238d26b965fe5c0b16232c2d6a25aa06"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "268d75cf9619baac",
+      "locator": "268d75cf9619baac:01 Theorem, §§1–3 and §5, (1)–(7), (10)"
+    },
+    {
+      "candidate_id": "06cc7d27835f78bc",
+      "locator": "06cc7d27835f78bc:01 Main theorem (1)–(2) and supporting-facet paragraph"
+    },
+    {
+      "candidate_id": "117322dbc8c21242",
+      "locator": "117322dbc8c21242:01 §1, single-cut pyramid rigidity"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $A\\subseteq\\mathbb R^d$ be a convex body of volume $a$ and volume centroid $g$. For $v\\ne0$ and a proper cut $v\\cdot x=b$, put\n$$\nU=|A\\cap\\{v\\cdot x\\ge b\\}|,\\qquad\n\\sigma=\\mathcal H^{d-1}(A\\cap\\{v\\cdot x=b\\})/\\lVert v\\rVert,\\qquad\nD=dU/\\sigma.\n$$\nSet $F(t)=|A\\cap\\{v\\cdot x-b\\ge t\\}|$ and $G(t)=\\min\\{a,U(1-t/D)_+^d\\}$, where $s_+=\\max(s,0)$. For $A_\\varepsilon=g+(1-\\varepsilon)(A-g)$ let $L_g$ be the right derivative at zero of the loss of volume in the fixed cap. Then $F\\le G$ everywhere and\n$$\nL_g=dU+(b-v\\cdot g)\\sigma,\\qquad\nL_g-\\frac{d^2}{d+1}a^{1/d}U^{(d-1)/d}\n=\\frac{\\sigma}{a}\\int_{\\mathbb R}(G-F)\\,dt\\ge0.\n$$\nEquality in the loss bound holds exactly for pyramids with a single apex on the maximum support plane and a $(d-1)$-dimensional base on the minimum support plane, both parallel to the cut. In dimension one these are intervals. Every proper fraction $U/a$ occurs in equality. For any finite family of proper caps on the same body, every nonnegative weighted sum satisfies the sum of the displayed bounds at the same $g$.\n\nEquivalently, put $m=v\\cdot g-b$ and $\\Psi_a(p)=p-\\frac{d}{d+1}a^{1/d}p^{(d-1)/d}$ for $0<p<a$. Then $-d\\Psi_a(a-U)\\le \\sigma m\\le d\\Psi_a(U)$. At the upper support the upper bound is valid with right side zero, and at the lower support it is valid with right side $da/(d+1)$, also when $\\sigma$ is reduced to any effective mass between zero and the supporting section's coarea density. Beyond support the analogous disjoint and full-cap conventions use $\\sigma=0$.",
+  "subgoal_id": "pk-intake-pk-w30-sharp-actual-centroid-cap-contraction",
+  "title": "Sharp cap loss under contraction about the volume centroid"
+}

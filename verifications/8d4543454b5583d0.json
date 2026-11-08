@@ -1,0 +1,59 @@
+{
+  "candidate_id": "1d56946d90d684b0",
+  "candidate_sha256": "5a30d51c500d911539492e542131fa25576d630f506c4fa1880162bed4feb813",
+  "checked_dependency_candidate_sha256": {
+    "73234f91aeecda16": "c1d4e47afa214bd112e97aba7e9b8aa21d436d2d73ef99bfa07078cf92e941f9"
+  },
+  "checks": [
+    "For b≠0 the stated affine map translates the integer base by the integer j and has continuous fiber derivative b/|b|∈{−1,1}. Its inverse maps the mixed lattice to itself, every fiber length is preserved, and affinity plus measure preservation sends the true mixed centroid to the origin and the chosen closed cap to x≥0.",
+    "Convex combinations of two positive intervals have strictly positive length and lie in the intermediate fiber. Hence the integer support is consecutive. Applying convexity to the two lower endpoints and the two upper endpoints proves convexity and concavity, respectively, of the endpoint profiles. Their difference is a positive concave length sequence. Singleton support and zero-length fibers cause no missing terms.",
+    "With a closed cap, l_i≥0 would include the entire positive-length interval, so every l_i<0. A fiber with r_i<0 misses the cap, a fiber with r_i=0 contributes a singleton of length zero, and a fiber with r_i>0 contributes length r_i. Thus A=Σ(r_i)_+ even at these boundaries.",
+    "On each interval, ∫x dx=(r_i²−l_i²)/2=w_i(r_i+l_i)/2. Its sum is exactly zero by the transformed true continuous centroid. Using l_i=r_i−w_i gives Σw_i r_i=Σw_i²/2. Dropping negative r_i terms and using w_i≤m then gives the claimed non-strict cap inequality.",
+    "The parent with p=1 gives 3Σw_i²−2mW≥m²/N>0 for the finite positive support of size N, so A≥Σw_i²/(2m)>W/3. In the singleton case the true centroid is the interval midpoint and the cap has exactly half its length, consistent with both inequalities.",
+    "The pinned source efcef1959b4a9d5f hash matches. Its §3 equation (4) uses the same no-full-fiber hypothesis, true centroid, and nonvertical closed cap, and expressly distinguishes r_i=0 from a full fiber at l_i=0."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "73234f91aeecda16",
+      "candidate_sha256": "c1d4e47afa214bd112e97aba7e9b8aa21d436d2d73ef99bfa07078cf92e941f9",
+      "mapping": "Apply p=1 to f_i=w_i over the consecutive positive-length fiber indices, shifted to 0,…,N−1. Its m is the maximum positive fiber length and Σw_i=W.",
+      "reviewed_proof_sha256": "cee5b2a3b010b77d7b255de92e2f819081c9857532df89029a927c4bc4efcd64",
+      "reviewed_statement_sha256": "4866c4fff4d1b101441438aa82be9772887ba651cd06ba6cc860863509583bcd",
+      "status": "Same-wave frozen parent. Its independent review is APPROVED on these hashes. Admit it first."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:43:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the true integer-base centroid, but controls only vertical halfspaces, whose continuous normal component is zero. Its bound does not address the oriented interval traces or the square-length lower bound.",
+      "fact_id": "4d24a4fbd205befd"
+    },
+    {
+      "comparison": "Controls all caps through the true centroid for three positive fibers with equal endpoint volumes. Its restricted geometric hypotheses and different depth bound do not yield the square-length bound for arbitrary consecutive interval profiles with no fully captured fiber.",
+      "fact_id": "da544e8fcada039b"
+    },
+    {
+      "comparison": "A particular two-piece partition obstruction at the true integer-base centroid. Its upper depth witness 7/16 is compatible with the present strict W/3 lower bound, and it does not furnish the general lower estimate.",
+      "fact_id": "22eef9feeab3bd98"
+    }
+  ],
+  "readability": "The cap is oriented. The hypothesis l_i<0 is checked after the sign in the shear/reflection, and the opposite cap need not satisfy it. The zero first moment is length-weighted through direct interval integration.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7abccabeda7beb80a83ef4e976465d6145e34454cd7248d93c5b4c040d4a2cd8",
+  "reviewed_statement_sha256": "b119a36e49f66ca642ee734b8e5ed4a21e8d15651b8cd3dfa07b9ca73477630f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "efcef1959b4a9d5f": "996035fe12af8f382bfefb1a33d7c2c4ed7c6b23480ea48c08feb192ee488d34"
+  },
+  "started_utc": "2026-11-08T09:39:57Z",
+  "summary": "The cap-mass identity uses the true mixed centroid and handles negative, zero, and positive upper endpoints. The finite quadratic correction proves strictness above W/3.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

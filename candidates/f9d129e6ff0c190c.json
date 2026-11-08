@@ -1,0 +1,30 @@
+{
+  "advances": "Extends the known ordinary D+1-cap equality criterion to the lower-rank case of fewer caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "f9d129e6ff0c190c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:12:12.089906+00:00",
+  "depends_on": [
+    "23a563a735c07c25",
+    "f497d1290c37f335",
+    "1bfd63d794648b5e"
+  ],
+  "draft_key": "few-ordinary-caps-profile-equality",
+  "kind": "theorem",
+  "proof": "Choose an inclusion-minimal subcover of size $j$. If $j<m$, the effective profile theorem 23a563a735c07c25 gives its inequality with $\\gamma_{j-1}>\\gamma_r$, taking $\\gamma_0=1$. Increasing the coefficient of $\\alpha$ strictly and adding the remaining nonnegative terms excludes equality. Thus the original family is minimal.\n\nWrite $\\rho$ for its normal rank. If $\\rho<r$, the same theorem gives the profile with $\\gamma_\\rho>\\gamma_r$ for this fixed minimal subcover, again excluding equality. If $\\rho=m$, the independent-normal theorem f497d1290c37f335 gives strictness at $\\alpha>0$. Hence equality requires $\\rho=r$.\n\nProject orthogonally onto the normal span. Each cap is a pullback of a proper closed halfspace in the span, so the cover and its cap masses are preserved. The projected measure has a full-dimensional log-concave density, by the section argument in 23a563a735c07c25, or the uniform indicator if $D=r$. The log-concave equality theorem for a cover by $r+1$ halfspaces applied in dimension $r$ gives exactly the claimed profile, arrangement and masses. Conversely those conditions give equality by the same theorem. For $m=3$, the positive-part sum at $\\alpha=\\min_i A_i>0$ is $\\sum_i A_i-3\\alpha$ and $1/\\gamma_2=9/4$, proving the overlap equivalence.\n",
+  "source_candidate_ids": [
+    "8b5860c585f8735a"
+  ],
+  "source_candidate_sha256": {
+    "8b5860c585f8735a": "1751a1c251a8d58111f64e0ec9bcde7ce22dc00f4bd1a72d73bc62ec4e06b335"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8b5860c585f8735a",
+      "locator": "§2, (3) and the equality corollary"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^D$ be a convex body of volume $V$ covered by $m$ proper closed halfspaces $H_i$, where $3\\le m\\le D+1$. Put $r=m-1$, $A_i=|K\\cap H_i|$, and $\\gamma_r=(r/(r+1))^r$. For $\\alpha>0$,\n$$\n\\sum_i(A_i-\\alpha)_++\\frac{\\alpha}{\\gamma_r}=V\n$$\nholds exactly when the normals span a space of dimension $r$, the orthogonal pushforward of ordinary volume on $K$ to that span is a log-concave nonincreasing gauge profile of a centroid-centered $r$-simplex translated to a point $y$, and the projected halfspaces are its distinct canonical vertex halfspaces through $y$. In this case every $A_i=\\alpha=\\gamma_r V$. At $m=3$, taking $\\alpha=\\min_i A_i>0$ gives the same equality classification for the overlap bound with coefficient $3/4$.",
+  "subgoal_id": "pk-intake-few-ordinary-caps-profile-equality",
+  "title": "Equality in the effective profile for few ordinary caps"
+}

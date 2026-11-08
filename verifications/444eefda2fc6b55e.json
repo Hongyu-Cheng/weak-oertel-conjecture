@@ -1,0 +1,56 @@
+{
+  "candidate_id": "a7e1597fe02bbbac",
+  "candidate_sha256": "f6c781ff25533d83e4b9e60c3baf9c0d2828d41b28ed320baa28d747c69766a3",
+  "checked_dependency_candidate_sha256": {
+    "5969e97329ff52ae": "e8b3d74bb0e1bd75e2909c61d941af63b612a9be70466d8e3f120bbacd42c29c"
+  },
+  "checks": [
+    "The orbit predecessor provides the terminal barycenter with positive dyadic coefficients. They sum to 2^{-k}(1+Σ_{j<k}2^j)=1, also for k=0. Lifting arbitrary chosen points into C and taking their convex combination gives the full Minkowski sum, even with repeated indices.",
+    "Every base in π(C) has a nonempty compact convex fiber. Brunn–Minkowski applies at positive d-volume. The asserted extension to a null but nonempty summand also follows directly by retaining a fixed point from it and translating the positive part; the all-null lower bound is zero. In dimension one these statements reduce to interval lengths.",
+    "Equal witness volume v₀ gives f(z)≤v₀^{1/d} using Σ_{j<k}2^j=2^k−1. When v₀=0 this forces every measured fiber to be null, without forcing it empty or imposing an equality shape conclusion.",
+    "If v₀>0 and the source attains it, each successive one-step midpoint has volume at least v₀, while the global bound forces at most v₀. The positive-volume equality case gives homothety, and equal volumes force translation. In d=1 every two equal-length positive intervals are translates.",
+    "A compact convex set containing a positive-volume convex subset of equal volume must equal that subset: an exterior point could be moved slightly toward an interior point to produce a nearby open ball outside the closed subset. This upgrades midpoint inclusion to exact equality and supports the iteration.",
+    "Read 668ad0ef7a63372e §4 and d0f838592db846be (2). The former states zero-volume validity and the equal-volume endpoint rigidity; the latter gives the same point-set inclusion along the finite forest.",
+    "Recomputed the frozen candidate and its UTF-8 statement/proof digests, checked every cited source digest against the pinned original candidate file, and checked each exact declared predecessor."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "5969e97329ff52ae",
+      "candidate_sha256": "e8b3d74bb0e1bd75e2909c61d941af63b612a9be70466d8e3f120bbacd42c29c",
+      "hypotheses_mapping": "For A=π(C), this predecessor gives z_j∈P and the terminal identity 2^kp_s=z+Σ_{j<k}2^jp_[z_j]. All chosen lifts lie in C at those bases. The predecessor is separately reviewed and must be approved before admission.",
+      "reviewed_proof_sha256": "be30be74753c3c29d05747088a436035aa3ccfb6885a06a30108a2807e75282e",
+      "reviewed_statement_sha256": "4329e068568366025a502271e30c08815a5e45e2758c45d8c0ef83a486e92f32"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:38:26+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its anchor map, quantified over all anchor choices, already implies the set inclusion. For repeated roots, replace the selected points at that root by their weighted average in its convex fiber, without changing the sum. It does not give the equal-root volume bound or all-step rigidity.",
+      "fact_id": "abb6c0fd2ba74ca0"
+    },
+    {
+      "comparison": "Its positive-volume barycentric inequality gives the same numerical bound by choosing the dyadic orbit indices and weights, including repeated indices. It requires positive-volume source fibers for its uniform laws; the reviewed volume inequality includes nonempty null fibers and states the consequences of equal root volumes for all orbit points.",
+      "fact_id": "793210f8a4be3647"
+    },
+    {
+      "comparison": "Its volume-root equivalence already yields equality rigidity at a single positive-volume actual Minkowski interpolation. The current argument combines the global upper bound from equal root volumes with this equality mechanism at every forest step.",
+      "fact_id": "9e6b5c9eeaab615d"
+    }
+  ],
+  "readability": "The exponent 1/d always uses ambient continuous d-volume. The positive-volume hypothesis for rigidity is separate from the validity of the containment and numerical inequality.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e067ce6f27915d7e698f1d179be1f2abe053971cf9d8627c09eaeb842c29478e",
+  "reviewed_statement_sha256": "60165590c9f3f980397597b9eecf7c5306ec484e43b052388cfb34cf23d0a499",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:34:20+00:00",
+  "summary": "The exact frozen proof gives the iterated Minkowski containment, its volume-root inequality including null fibers, and translation rigidity at equality for equal positive root volumes.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

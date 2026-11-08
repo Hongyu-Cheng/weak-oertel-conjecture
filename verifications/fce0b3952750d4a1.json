@@ -1,0 +1,63 @@
+{
+  "candidate_id": "f8cc9b4619513ed5",
+  "candidate_sha256": "7eed0ed6696a5422061aaec3ef8863f2fe50cc0f4f88a7635cfed68116327b5d",
+  "checked_dependency_candidate_sha256": {
+    "63c38ebdb1d43777": "2261349bd83ed6fac5b1e41507182857a2e16b2b4c43c7964d2673a8d12f8dda",
+    "8bdcdcd6e2fa69d9": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86"
+  },
+  "checks": [
+    "For each selected row, properness means min_j X_ij < t_i < max_j X_ij and t_i>0. The identity F_{X_i/t_i}(u)=F_{X_i}(t_i u) preserves the minimizer at normalized threshold one. The accepted uniform-simplex law applies with d≥2 and the independent unit exponentials giving the same normalized cap probability.",
+    "At the normalized row, write K=P^(−1/d)/(dP) and h=1ᵀH1=d(d−1)P−B. Expanding the accepted Schur Hessian on v+s1 with g·v=0 gives the linear coefficient 2s(1ᵀHv)dP/B and quadratic coefficient −s²d²P²/B after division by K. Together with the constant −vᵀHv−(1ᵀHv)²/B, these reproduce the accepted square exactly. The stated shift sets the square to zero.",
+    "Degree-one homogeneity differentiated twice at strictly positive rows gives the scale factor 1/t_i for the Hessian at X_i. The accepted C² regularity transfers on scaling. The factor K/t_i is strictly positive.",
+    "If T_i(v)=0 then v is a multiple of 1, and g_i·1=dP(c_i)>0 gives v=0 on the tangent. Therefore each negative-definite N_i maps to a positive-definite space of the same dimension, also for its objective Hessian after multiplication by the positive row weight.",
+    "The active rows sum to 1 by column stochasticity. Each correction is a multiple of 1, hence the original and corrected tuples have equal images under the quotient sum map, establishing both directions of the membership equivalence.",
+    "The joint positive-index predecessor applies at a least-active maximizer to the C² objective rows and subspaces T_i(N_i); the feasibility and correction identity for arbitrary X require no maximizing hypothesis.",
+    "Archived source 58f8bbb67f63ee23 §2, (2)–(3), gives the normalized correction and joint funding argument. The frozen proof uses the accepted all-dimensional Schur theorem to supply regularity and B>0, and explicitly accounts for undoing normalization. The archived raw digest matches the frozen provenance."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "8bdcdcd6e2fa69d9",
+      "candidate_sha256": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+      "fact_id": "8bdcdcd6e2fa69d9",
+      "mapping": "A strictly positive uniform-simplex row in d≥2 with proper minimizing threshold one has local C² capacity, g·1=dP>0, B>0, and the completed-square formula. These apply to X_i/t_i by positive scaling. The accepted candidate is byte-identical to its frozen input, its decoded fields agree with the fact, and all three digests match its verification.",
+      "reviewed_proof_sha256": "3f10992a46b97286bfba42b813249fa659b3504118defeeae9510650608b52f7",
+      "reviewed_statement_sha256": "deba3f575be9d9f26f3af97154bc46e151f89c2cdb0be8bb5cb80bcbb484e157",
+      "status": "accepted at the reviewed repository snapshot"
+    },
+    {
+      "candidate_id": "63c38ebdb1d43777",
+      "candidate_sha256": "2261349bd83ed6fac5b1e41507182857a2e16b2b4c43c7964d2673a8d12f8dda",
+      "mapping": "The final corollary selects a least-active global maximizer with homogeneous row objectives ω_i φ_d and local C² on the chosen positive rows. The corrected subspaces T_i(N_i) are positive definite for these Hessians and have the required dimensions.",
+      "reviewed_proof_sha256": "30889b6a906606647ddb784cf5179ef6fd8c82ce79f8893c3fbd6140a8b3ff3a",
+      "reviewed_statement_sha256": "f891986479fbc1a1da0b20a700ac1cf4082e71659f42a84f8f27faf0bff3d485",
+      "status": "same batch, independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:22:20Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The normalized one-row quadratic identity is exactly its completed square with s=(1ᵀHv)/(dP). It does not assert the quotient equivalence for simultaneous rows or the stochastic joint index bound.",
+      "fact_id": "8bdcdcd6e2fa69d9"
+    },
+    {
+      "comparison": "The accepted corrected central-pair direction is one specialization of T_i(v) with a proven negative tangent direction at a central strictly captured pair. It supplies no joint bound and its geometric sign hypothesis is absent here.",
+      "fact_id": "1cdceac089be44d8"
+    }
+  ],
+  "readability": "The normalized row in the accepted law and the original row in the final formula differ by t_i. The proof explicitly keeps the resulting inverse Hessian scale.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "9a448f542ca20fabfd9ceb2567817385297190d3d55d27db2b56ddb06bfa6b34",
+  "reviewed_statement_sha256": "30fef1f2dce7ceaccbd3c1a2b1e6585f76d0dcf2fe680c551f3d046c2dc9bc58",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:19:08Z",
+  "summary": "The accepted optimized Hessian gives the exact rowwise Schur correction. Its common-shift part vanishes in the active-span quotient, so the joint index bound transfers to negative tangent cap directions.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

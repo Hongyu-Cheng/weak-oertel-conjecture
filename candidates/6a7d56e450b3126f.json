@@ -1,0 +1,29 @@
+{
+  "advances": "A one-dimensional marginal inequality and its symmetric convolution and Cartesian product consequences.",
+  "author": "PK-research-agent",
+  "candidate_id": "6a7d56e450b3126f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T05:59:31.312546+00:00",
+  "depends_on": [
+    "75a1d57b1e81fdab",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "paired-centroid-tails",
+  "kind": "theorem",
+  "proof": "For $d=1$, a uniform interval is symmetric about its centroid and has no atoms, so the paired sum is one. For $d\\ge2$, the one-dimensional marginal of the uniform convex body is nonatomic and $1/d$-concave as a measure. For instance, use Brunn–Minkowski on the preimages in $K$ of Borel sets under the linear projection. Work with the more general scalar law and $s>0$.\n\nOn a compact interval containing the support, apply Theorem 2 of Fradelizi and Guédon, *The Extreme Points of Subsets of s-Concave Probabilities and a Geometric Localization Theorem*, DCG 31 (2004), 327–335, with probability-concavity parameter $1/d\\le1/2$ and continuous constraint function $x$. The admissible probabilities satisfy $\\int x\\,d\\nu\\ge0$. The objective $\\nu((-\\infty,-s])+\\nu((-\\infty,s])$ is affine and upper semicontinuous in the weak topology since the two cuts are closed relative to the interval. Its maximum is achieved at an admissible Dirac measure or a $1/d$-affine segment probability with zero mean. The latter has density proportional to a nonnegative affine function to the power $d-1$. We may bound the objective on all such centered interval laws, which includes the extremizers subject to the theorem's additional one-sided moment condition. An admissible Dirac lies at $x\\ge0$ and contributes at most one, which is at most $2-2\\gamma_d$. [Primary source, Theorem 2](https://perso.math.u-pem.fr/fradelizi.matthieu/pdf/localizationDCG.pdf).\n\nA nonconstant increasing affine-power law is a positive rescaling and translation of the law in the endpoint lemma, with CDF $G$ and mean $m$. After centering, its paired CDF sum at shift $h\\ge0$ is $H(h)=G(m-h)+G(m+h)$, where $h$ is measured in the rescaled coordinate. On $[0,1-m]$ both arguments lie in $[r,1]$ and $H$ is nondecreasing by monotonicity of the density. On $[1-m,m-r]$ only $G(m-h)$ varies, and $H$ is nonincreasing. After $m-r$ the sum is one. Its maximum is $1+G(2m-1)\\le2-2\\gamma_d$ by the endpoint lemma. Its minimum is $\\min\\{2G(m),1\\}$. The density is the first-coordinate marginal of the $d$-dimensional convex frustum with sections $tL$ for $r\\le t\\le1$, where $L$ is a fixed $(d-1)$-dimensional convex body. The centroid has first coordinate $m$, so the full-volume choice in accepted fact 6769574fc1bd9f8d, with density function identically one on that frustum, gives $G(m)\\ge\\gamma_d$. For the reflected (decreasing) law the paired CDF sum is $2-H(h)\\le2-2\\gamma_d$. A constant affine density is a uniform interval law with paired CDF sum one.\n\nThe original law has no atoms, so the objective bound is exactly the paired upper-tail bound. Letting $s\\downarrow0$ gives the zero-shift case by nonatomicity. The convex-body bound is sharp in every dimension at zero shift: the simplex whose sections scale as $tL$ on $[0,1]$, with $L$ a simplex, has mean first coordinate $d/(d+1)$ and a lower tail of probability $\\gamma_d$ there (for $d=1$, take an interval).\n\nFor the noise conclusion, condition on the projected noise $u\\cdot Y$. Its symmetry gives $\\mathbb P(u\\cdot(X+Y-g)\\ge0)=\\mathbb E[(F(u\\cdot Y)+F(-u\\cdot Y))/2]\\ge\\gamma_d$. With finite first moment $\\mathbb EY=0$, and zero noise attains equality in the simplex direction above. For the product, normalized mixed volume is the joint law of independent uniform points $I$ on $P\\cap\\mathbb Z^n$ and $X$ on $K$. The reflection $I\\mapsto2j-I$ preserves that finite set, and $j$ belongs to $P$. In an ambient normal $(b,u)$ through $(j,g)$ with $u\\ne0$, the scalar noise is $b\\cdot(I-j)$. The same pairing argument applies. For $u=0$ symmetry gives mass at least $1/2$, with the mass on the boundary included. A halfspace containing the point contains its parallel through-point halfspace.\n",
+  "source_candidate_ids": [
+    "732b11a769399016"
+  ],
+  "source_candidate_sha256": {
+    "732b11a769399016": "370eaa094d608be6791409aab53d2d5e5638370253d97ee2e9bf17d82028ae2c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "732b11a769399016",
+      "locator": "§§1–3, 7"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $\\gamma_d=(d/(d+1))^d$, and let $K\\subset\\mathbb R^d$ be a convex body with volume centroid $g$. For uniform $X$ on $K$, $u\\ne0$, and $F(s)=\\mathbb P(u\\cdot(X-g)\\ge s)$,\n$$\nF(s)+F(-s)\\ge2\\gamma_d\\qquad(s\\ge0).\n$$\nFor $d\\ge2$ the same bound holds with $F(s)=\\mathbb P(Z\\ge s)$ for any compactly supported, nonatomic, centered $1/d$-concave probability law of $Z$ on the line. In particular, for any independent random vector $Y\\in\\mathbb R^d$ with a distribution symmetric about zero, every closed halfspace through $g$ has $\\mathbb P(X+Y\\in H)\\ge\\gamma_d$. If $Y$ has finite first moment, the convolution has centroid $g$.\n\nFor a product of convex bodies $P\\times K$ with $P\\subset\\mathbb R^n$ centrally symmetric about $j\\in\\mathbb Z^n$, every closed ambient halfspace containing $(j,g)$ has normalized mixed-integer mass at least $\\gamma_d$.",
+  "subgoal_id": "pk-intake-paired-centroid-tails",
+  "title": "Paired centroid tails and independent symmetric additive noise"
+}

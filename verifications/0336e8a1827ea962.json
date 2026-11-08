@@ -1,0 +1,53 @@
+{
+  "candidate_id": "34c57a21180d530e",
+  "candidate_sha256": "a69c5257e364656b283ac4953af2b99a9e8f030a35c1ea21d5cbddff765a8573",
+  "checked_dependency_candidate_sha256": {
+    "c680a307d3f26cec": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0"
+  },
+  "checks": [
+    "Compared 0a935e60695a2b37 theorem and (1)–(4). An integral mean of three consecutive positive bases must be the middle base, forcing equal endpoint lengths. Subtracting the affine endpoint-center interpolant preserves integer bases and all cap masses. The midpoint inclusion gives b≥a and the full admissible shift range.",
+    "The true mixed height is t=bc/(b+2a), a point between zero and c in the middle interval. Extra zero-length fibers affect no cap mass or centroid. The three-positive-fiber hull has the exact fibers required by the predecessor.",
+    "At t≥0 the endpoint sums for the two oblique orientations are 2(a/2−t)₊ and a from the accepted clipping formula. Pure-base caps cost b+a. Independently evaluated both orientations at the four possible off-base slope knots and the two constant tails on 612 exact compatible parameter rows, also comparing the pure-base budget.",
+    "The second branch is bounded by 5/12 because (r−1)/(r+2)² has maximum 1/12 at r=4. The first branch is minimized at the seam t=a/2 if it is feasible and at maximum compatible shift otherwise. The two formulas and derivative signs give the global minimum at r=1+√3.",
+    "In the witness, summing the raw first moments gives centroid height one exactly, and the cap x≥1 has mass √3 because the endpoint boundary points are length-null. Its fraction √3/(3+√3) equals the universal lower bound."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c680a307d3f26cec",
+      "candidate_sha256": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0",
+      "fact_id": "c680a307d3f26cec",
+      "fact_sha256": "4908e98c45bfa104a83c5437a691833104576ea0fd397ed655df40899326d24c",
+      "kind": "accepted",
+      "mapping": "Take both endpoint lengths a, middle length b and middle shift c in the accepted exact pointwise formula, after replacing the original body by the hull with only the three positive slices. Compatibility verifies its domain. The formula already compares all finite tilts and purely integer directions.",
+      "reviewed_proof_sha256": "fbd43a05d11b238754907f092d0f8e020febd4bd8e9ffd7e46960a59ae92b7c0",
+      "reviewed_statement_sha256": "b80774a2792eb75e78f6de3ec9e17c99d1724c565943d7ccacdfc5f9c6bdab93"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:28:42Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The common-bottom theorem gives the same minimizing value and equality witness within its subclass. Arbitrary compatible middle shifts can produce a smaller depth than the common-bottom configuration at a given ratio. For example r=3 admits the interior seam shift where the upper raw mass is 11/6 instead of the common-bottom 19/10 for a=1. Thus the common-floor statement does not supply the all-shift lower envelope.",
+      "fact_id": "b7d01ed014603563"
+    },
+    {
+      "comparison": "The accepted integer-base centroid theorem permits arbitrarily many positive fibers and gives strict one third. The present three-fiber constant is larger and sharp in the narrower class.",
+      "fact_id": "9c1d072121e84553"
+    }
+  ],
+  "readability": "The normalized second branch stays above the target for every shift. The main minimization is over the first branch, where the optimal shift changes from boundary contact to t=a/2.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold read of the frozen statement and proof, followed by source and exact predecessor comparison. Exact rational checks supplement the proof when arithmetic is relevant.",
+  "reviewed_proof_sha256": "dc7b261e6b8a00273ae100e780cadcbf79d7a3dca2f9aaf98926cda0946619c8",
+  "reviewed_statement_sha256": "e81ace2c41f09b616f487c238171de34292c45d62a8394b209d3151464fd4396",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:21:59Z",
+  "summary": "The full-slope formula and optimization over compatible middle shifts give the stated sharp depth at the actual mixed centroid.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

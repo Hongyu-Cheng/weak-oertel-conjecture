@@ -1,0 +1,38 @@
+---
+fact_id: 2f5ca51cff3ecfca
+kind: lemma
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-pk-w36-split-finite-contact-minimum
+depends_on: ["da49875a9737b172", "b3c0088cf09b2894"]
+verifier_run: fd8b3a88629456c4
+target_match: null
+---
+
+## Source
+
+- [d750a370b2e831ee](../candidates/d750a370b2e831ee.json), d750a370b2e831ee:02 §4, (9)–(11), finite contact envelope.
+
+## Statement
+
+Let $d\ge1$, $N=d+1$, and let finitely many convex bodies $K_z(t)$ move from $K_z$ for $t\downarrow0$. About fixed old interior origins $o_z$, suppose an old boundary point $X$ moves radially to $o_z+(1-s_{z,t}(X))(X-o_z)$, with $|s_{z,t}|\le Ct$ uniformly and $s_{z,t}(X)/t\to v_z(X)/[n_z(X)\cdot(X-o_z)]$ at surface-almost every point for bounded signed inward speeds $v_z$. Here $n_z$ is the regular outward unit normal and $dS$ is fiber surface measure, counting endpoints when $d=1$. Let $E_{K_z(t)}(y)$ be the infimum of $\int_{K_z(t)}[1+a\cdot(X-y)]^{-N}dX$ over parameters with positive denominator on the body, with zero value on its boundary. For interior $y$ let $a_z(y)$ be the old minimizing parameter and set $C_z(y)=\int_{\partial K_z}[1+a_z(y)\cdot(X-y)]^{-N}v_z(X)\,dS$. Write $M_t=\sum_z|K_z(t)|$, $M=M_0$ and $D=\sum_z\int_{\partial K_z}v_z\,dS$.Let $J$ be a nonempty finite set of assigned bases. Fix $\varepsilon>0$ and affine functions $\ell_z$ on the fibers, and take either $f_t(z,X)=E_{K_z(t)}(X)^r$ for fixed $r>0$ or $f_t(z,X)=(E_{K_z(t)}(X)/M_t)^{1/N}$. Suppose $\ell_z-\varepsilon f_0$ is nonnegative on $K_z$ with a unique zero $y_z\in\operatorname{int}K_z$ for every $z\in J$. Let $A(t)=1+t a_1+o(t)$ and set
+$$
+\alpha(t)=\min_{z\in J,\,X\in K_z(t)}\bigl[\ell_z(X)-\varepsilon A(t)f_t(z,X)\bigr].
+$$
+Writing $\dot f_{\rm body}$ for the first coefficient of $f_t$ at a fixed mark, one has
+$$
+\alpha(0)=0,\qquad
+\alpha'(0+)=-\varepsilon\max_{z\in J}\bigl[a_1f_0(z,y_z)+\dot f_{\rm body}(z,y_z)\bigr].
+$$
+For inward nested paths with $f_t=E_{K_z(t)}^{1/N}$ and $A=1$, $\alpha(t)\ge0$ and
+$$
+\alpha'(0+)=\frac{\varepsilon}{N}\min_{z\in J} E_{K_z}(y_z)^{-d/N} C_z(y_z).
+$$
+
+## Proof
+
+Use da49875a9737b172 for the uniform signed energy expansion on each compact own-interior mark set, after writing the angular radial displacement as $-R_zs_{z,t}$. The radial projection formula transfers the almost-everywhere hypothesis to the sphere and gives the same inward speed. The positive energy on each compact interior set permits uniform Taylor expansion for every fixed $r>0$. Thus both versions of $f_t$ have uniform first coefficients continuous on the interior sets. The volume derivative for the normalized power is $-D$.
+
+The uniform radial bound gives $K_z(t)\to K_z$ in Hausdorff distance and compact interior neighborhoods of $y_z$ remain in the moving bodies. By b3c0088cf09b2894 the energy is continuous for moving body and mark pairs through boundary marks, so the finite minimum is attained. Testing $y_z$ gives values $O(t)$. Any sequence of minimizers has a subsequence converging at a fixed base to a mark in $K_z$. The old margin there is at most zero by continuity and the test bound, hence zero, so the mark must be $y_z$. Consequently all minimizing marks eventually lie in compact own-interior neighborhoods of the old contacts.
+
+The first-order expansion of the objective is uniform there and has coefficient $-\varepsilon[a_1 f_0+\dot f_{\rm body}]$. For a minimizing mark the old margin is nonnegative. Passing to contact limits gives a lower derivative bound by the smallest of the contact coefficients, and testing all old contacts gives the reverse bound. In the nested case inclusion decreases energy at each surviving fixed mark: each old admissible positive denominator restricts to a new admissible one, and the integral over the smaller body is at most its old value. Thus the new margin is nonnegative. The power coefficient for $r=1/N$ is $-E^{-d/N}C_z/N$, giving the final formula.

@@ -1,0 +1,29 @@
+{
+  "advances": "A necessary local second-variation condition for a single exact captured-side equality cap with fixed polytopal cut combinatorics.",
+  "author": "PK-research-agent",
+  "candidate_id": "6f941895b83af060",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.061795+00:00",
+  "depends_on": [
+    "2965bef6996cdba5",
+    "1269c554ca9a41b8"
+  ],
+  "draft_key": "critical-cap-equality-common-section-hessian",
+  "kind": "lemma",
+  "proof": "The original cap has positive middle capture by its root equality and proper endpoints. Fact 2965bef6996cdba5 applies to the given three compatible bodies and gives translated endpoint caps and exact middle cap equality. Their cutting faces are translates with common positive area, with $c_0=(c_-+c_+)/2$. Apply the standalone first variation in 1269c554ca9a41b8 §2 to variations of the continuous normal, with right-hand side adjusted so the cap still passes through $(0,y)$. All traces are proper, and stationarity makes $c_-+c_0+c_+=3y$. Thus $c_0=y$. The stated affine shear is volume-preserving on each fiber, and subtracts the translations of both endpoint caps. The section centroid of each becomes zero. Since $u\\cdot(c_+-y)=-\\alpha$ in the original cap, the shear also removes its integer coefficient. Choose $s$ to be the unit inward-normal coordinate.\n\nFor each transformed polytope, any facet meeting the common section has a point of positive height because the cut has no vertex, so its intersection with $s>0$ has full relative facet dimension. This plane is therefore a facet plane of the common cap, with the same orientation. Conversely every noncut facet plane of the common cap meeting the section arises this way for each fiber. The other finitely many facet inequalities are strictly slack on the compact common section. In a neighborhood of that section, all three polytopes are consequently given by the same active inequalities. Compactness implies that all three bodies' intersections with a sufficiently thin slab around $s=0$ lie in this neighborhood. Above the slab the captured parts are already identical.\n\nFor small $v,t$, no vertex changes sign relative to the moving plane, so the cap combinatorics are fixed. The surviving original vertices are constant and the section vertices are intersections with fixed crossing edges, with smooth coordinates given by solving the linear cut equation along each edge. A fixed pulling triangulation of the cap using a fixed ordering of its vertices depends only on the unchanged face lattice. Its determinant volumes are smooth in a neighborhood, proving $F$ is $C^2$. For small $v,\\beta$, the portions whose membership changes lie in the common slab because $\\xi$ is bounded. Thus the mass on each fiber is exactly its indicated $F$ value.\n\nDifferentiating the displayed sum, the mixed $v,\\beta$ blocks cancel and the diagonal blocks are as stated. The perturbed caps contain the same mark and the original minimizes mass, so the Hessian is positive semidefinite. Coarea along the unit normal gives $F_t(0,t)=-\\sigma(t)$ near zero, hence $F_{tt}(0,0)=-\\sigma'(0)$.\n",
+  "source_candidate_ids": [
+    "09527acafbefa083"
+  ],
+  "source_candidate_sha256": {
+    "09527acafbefa083": "f093e8d67304ca9ddd804db41d65106d9e916c420aa035df734aa90e6c75d931"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "09527acafbefa083",
+      "locator": "09527acafbefa083:05 §7, (8)–(10)"
+    }
+  ],
+  "statement": "Suppose $d\\ge2$ and three positive-volume polytopal fibers $A,K,B$ at $-1,0,1$ satisfy $(A+B)/2\\subseteq K$. At a fixed mark $(0,y)$ let a nonvertical actual cap attain raw halfspace depth, with proper endpoint cuts, exact captured-side Brunn–Minkowski equality, and no vertex on its plane in any of the three fibers. Translate by $-y$ and shear the translated continuous coordinates by $x\\mapsto x-z(c_+-y)$, where $c_+$ is the original section centroid at base $1$. In orthonormal coordinates $(\\xi,s)$ the transformed cap is $s\\ge0$, and the three captured caps and the fibers in a neighborhood of their common section coincide. For the transformed middle body $D$, put $F(v,t)=|D\\cap\\{s+v\\cdot\\xi\\ge t\\}|$. The actual three-fiber cap mass under $s+v\\cdot\\xi+\\beta z\\ge0$ near $(v,\\beta)=(0,0)$ is\n$$\nG(v,\\beta)=F(v,\\beta)+F(v,0)+F(v,-\\beta).\n$$\nAt $(0,0)$ its Hessian is $\\operatorname{diag}(3\\nabla_v^2F,2F_{tt})\\succeq0$. In particular the middle parallel section area $\\sigma(s)$ satisfies $\\sigma'(0)\\le0$, and the ordinary directional cap Hessian at the middle mark is positive semidefinite.",
+  "subgoal_id": "pk-intake-critical-cap-equality-common-section-hessian",
+  "title": "Critical cap equality decouples the section Hessian on three polytopes"
+}

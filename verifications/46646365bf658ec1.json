@@ -1,0 +1,65 @@
+{
+  "candidate_id": "a71ab5c885df1a85",
+  "candidate_sha256": "d8df07f94a1979599f15aedc93c6f36b4846337c5e33d32572b8cd9580141ce2",
+  "checked_dependency_candidate_sha256": {
+    "18ac4869642d018e": "169637ed41a336582f82124af5776665e5af598d16e834fdbcee453e013a1f6c",
+    "2acc8bc803acf1c0": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232",
+    "3a5bf9df95c246b2": "2535bbb6631c11f0809ef03be4c8b286adee2296c4201c9eebd9ded3b7e6884c"
+  },
+  "checks": [
+    "The convex hull has exactly the bases 0 and 1, whose exposed fibers are the given positive trapezoid and square. The accepted isolation formula gives own depth pointwise on each. The square's largest own depth is Δ²/8<1/2592, whereas t>4/9 gives D>56/81.",
+    "The square center height is g_0+Δ/2 and its upper edge is g_0+3Δ/4<t. Thus the only proper cut at t is in the trapezoid, its area is D, and its horizontal symmetric segment has ambient centroid (0,0,t).",
+    "Direct integration of y(2−y) gives trapezoid mean 4/9, and the square mean is c. The edge flow 0→1 is V_0 V_1 Δ/(2M)>0, while the head-minus-tail cap fraction is −D/V_0. Their product is −V_1ΔD/(2M)=−Δ³D/(8M).",
+    "For the coarea representative, the square height density is a positive constant in the square's height interval and zero just above it. The trapezoid density remains positive there, so the conditional integer mean drops to zero.",
+    "Matched 3121a9d11f167d7d §5 (12). The exact symbolic/rational replay independently reproduces the cap and flow comparisons."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3a5bf9df95c246b2",
+      "candidate_sha256": "2535bbb6631c11f0809ef03be4c8b286adee2296c4201c9eebd9ded3b7e6884c",
+      "hypotheses": "The first fiber is the predecessor's exact trapezoid in the same coordinates. Its all-normal maximum D is attained at (0,t), and the upward horizontal cap there attains D.",
+      "reviewed_proof_sha256": "65a47e51ebef1540236aa983fc2467918598f65203975d3a8df882eee9bbd606",
+      "reviewed_statement_sha256": "eb830efa7937da91da62950b0ba4a428c62631bb3be6557bf8c1446ebf2ec492",
+      "status": "pending independent admission"
+    },
+    {
+      "candidate_id": "18ac4869642d018e",
+      "candidate_sha256": "169637ed41a336582f82124af5776665e5af598d16e834fdbcee453e013a1f6c",
+      "hypotheses": "The two compact positive measures are planar fiber volumes with the scalar map L=y. The directed two-label spanning tree and threshold t meet the closed-tail flux identity.",
+      "reviewed_proof_sha256": "804059834768c6056ab9af8a2a43f6e81d7750cbb28ce8020f5ebc366d22768e",
+      "reviewed_statement_sha256": "ac049a564eaf3283ba10dd579f10589881b8d7ea2dceb4a639c65c4d264d8393",
+      "status": "pending independent admission"
+    },
+    {
+      "candidate_id": "2acc8bc803acf1c0",
+      "candidate_sha256": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232",
+      "fact_sha256": "d723a90d8b085a401f611b136903b3e751c05bbebed3219fd24588e89ed96ce4",
+      "hypotheses": "Each of the only two occupied positive bases is strictly exposed by ±z in the finite support. The accepted exposed-fiber depth identity therefore applies to every mark of both fibers.",
+      "reviewed_proof_sha256": "985b3dbdcc98c63b1ba63f236c11170d9714cc5a6cdba6af26568d2f9e370fcf",
+      "reviewed_statement_sha256": "8222b1c3268f5a4fb65d04c6e4e448ab1a57a3a2e33b9855b7c92748ff4b2dfa"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:57:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Already refutes nonnegative flux at a deepest active cap even with a balanced opposite pair, using three reflected triangular fibers and a continuous local conditional mean. This draft supplies an exact two-exposed-fiber construction and a discontinuous downward conditional-mean transition at a fiber endpoint. Those fixed two-fiber data and constants are not implied by the accepted example.",
+      "fact_id": "05514b3b9611f7d1"
+    }
+  ],
+  "readability": "The raw signed integer flux is distinct from the normalized depth. The cap's coarea centroid is in full ambient coordinates.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the frozen candidate, with original-source, dependency and scope checks.",
+  "reviewed_proof_sha256": "6d244996130ff6282cbd686a5bd35f5ab20ea6d33a7a023fdd58d19f5c53c01d",
+  "reviewed_statement_sha256": "2c52bba1353a7007e224db3ec7884c8fccc73effffcaf4ab777773f9f44975e7",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:51:21Z",
+  "summary": "Both actual fibers are exposed, so the trapezoid point is globally deepest. Its horizontal active cap has full coarea centroid at the mark and the exact negative integer flux.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

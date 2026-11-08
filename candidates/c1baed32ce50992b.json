@@ -1,0 +1,29 @@
+{
+  "advances": "Fixed actual anchor and maximal cores for the given template and center. The comparison uses independent pair infima and the full original mass.",
+  "author": "PK-research-agent",
+  "candidate_id": "c1baed32ce50992b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.049773+00:00",
+  "depends_on": [
+    "c4499e906cb816d8",
+    "6a7d56e450b3126f"
+  ],
+  "draft_key": "pk-w30-nonaffine-reflected-shell-crossing",
+  "kind": "theorem",
+  "proof": "Write $R(z)=1+(13/2)\\min_i\\lambda_i(z)$. It is continuous, concave, and at least one. For each normal $u$ the support of $K_z$ is $u\\cdot P+R(z)(h_J(u)-u\\cdot P)$, with nonnegative bracket since $P\\in J$. Its concavity in $z$ proves every required Minkowski inclusion for the fibers. Continuity and boundedness give a compact convex body, and it contains $Q\\times J$ because these expansions about $P$ contain $J$. Its original centroid graph is $(1-R(z))P$, zero at the three vertices of $Q$ and nonzero at zero, hence nonaffine.\n\nThe coordinate formulas are $\\lambda_1=(3+2x-y)/9$, $\\lambda_2=(3-x+2y)/9$, and $\\lambda_3=(3-x-y)/9$. The nonnegative conditions give the following integer census, where each row lists the possible second coordinates at the indicated first coordinate.\n$$\n\\begin{array}{c|l}\nx&y\\\\ \\hline\n-3&-3\\\\\n-2&-2,-1\\\\\n-1&-2,-1,0,1\\\\\n0&-1,0,1,2,3\\\\\n1&-1,0,1,2\\\\\n2&0,1\\\\\n3&0\n\\end{array}\n$$\nSubstituting these coordinates shows that $\\min_i\\lambda_i$ takes values $0,1/9,2/9,1/3$ with multiplicities $9,6,3,1$. The mixed area is therefore $9+6(31/18)^2+3(22/9)^2+(19/6)^2=219/4$. The largest area $(19/6)^2=361/36$ is below $M/4=219/16$, so the ordinary centroid lower bound of any own fiber alone does not pay the target.\n\nA normal exposing $P$ on $J$ satisfies $h_J(u)=u\\cdot P>0$ since zero is interior. The support of every $K_z$ in that direction is still $h_J(u)$, so $rJ\\subseteq K_z$ implies $r\\le1$. Thus the maximal weights are one. The nonzero reflected pairs about zero are represented by $(-2,-1),(-1,-2),(-1,-1),(-1,0),(-1,1),(0,-1)$ and their negatives, giving $R_0(w)=6$. The unpaired nonzero bases are the two triples $\\{(-3,-3),(3,0),(0,3)\\}$ and $\\{(-2,-2),(2,0),(0,2)\\}$. Each triple sums to zero, so each closed base halfspace through zero captures at least one point from each. The normal $(-5,-4)$ captures exactly the negative diagonal member of each triple, so their combined atomic depth is two. The atomic identity of the additive reflected-shell theorem gives $D_0(w)=1+6+2=9$. Thus the atomic-core bound is $\\Gamma_2\\cdot9=4$, and the additive bound is $\\Gamma_2(9+6)=20/3$.\n\nFor the exact separate budgets, let $\\ell$ be the affine height on $J$ that is one at $P$ and zero on the opposite edge. The centroid has $\\ell(0)=1/3$. For any $R\\ge1$ the trace of $\\{\\ell\\ge1/3\\}$ on $P+R(J-P)$ is precisely $P+(2/3)(J-P)$: in the preimage in $J$ the required height is at least $1-2/(3R)$. Hence this cap captures area $\\Gamma_2=4/9$ in every original fiber. The contained $J$ gives the matching lower bound on the ordinary depth of the own fiber at zero. Every pair of equal contained $J$ copies gives lower bound $2\\Gamma_2$ on its endpoint-only depth at $Y$ by 6a7d56e450b3126f, with pure-base caps capturing at least one full copy. The same continuous cap with zero base tilt attains $2\\Gamma_2$ on each original pair. Thus the exact sum is $\\Gamma_2(1+2\\cdot6)=52/9$. Both separate bounds are below $73/12=\\Gamma_2 M/4$, while $20/3-73/12=7/12$ and $(20/3)/M=80/657$.\n",
+  "source_candidate_ids": [
+    "4d7e8cb4ef98b96f"
+  ],
+  "source_candidate_sha256": {
+    "4d7e8cb4ef98b96f": "c8239f11de9dd30e30ec0c69c1a486668d3e3985fd34c139875111e1c4f34d54"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4d7e8cb4ef98b96f",
+      "locator": "4d7e8cb4ef98b96f:04 §7, (12)–(15)"
+    }
+  ],
+  "statement": "Let $Q=\\operatorname{conv}\\{(3,0),(0,3),(-3,-3)\\}$, let $\\lambda_i(z)$ be its three barycentric coordinates, and let $J$ be an area-one triangle with centroid zero and a vertex $P$. At each real $z\\in Q$ take\n$$\nK_z=P+\\left(1+\\frac{13}{2}\\min_i\\lambda_i(z)\\right)(J-P).\n$$\nThese are the real fibers of an actual convex body in $\\mathbb R^2\\times\\mathbb R^2$ with nineteen positive integer fibers, total original mixed area $M=219/4$, and a nonaffine original centroid graph. At $Y=(0,0)$ choose the constant affine center zero and common template $J$. The maximal centered radii are all one. The atomic-core bound alone is $4$, and the sum of the exact ordinary own depth and exact independent reflected-pair depths is $52/9$. The additive reflected-shell bound is $20/3$, exceeding the original target $\\Gamma_2 M/4=73/12$ by $7/12$. In particular the actual normalized depth at $Y$ is at least $80/657$.",
+  "subgoal_id": "pk-intake-pk-w30-nonaffine-reflected-shell-crossing",
+  "title": "An additive reflected-shell bound crosses the original target in a nonaffine nineteen-fiber body"
+}

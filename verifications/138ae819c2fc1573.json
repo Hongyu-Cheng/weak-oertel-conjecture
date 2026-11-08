@@ -1,0 +1,54 @@
+{
+  "candidate_id": "8434262e4a64f66c",
+  "candidate_sha256": "f3078d6e08b23789d747e648c3ab5d7f446966ce0c0ab736fefca79ce917c51e",
+  "checked_dependency_candidate_sha256": {
+    "c828e335be3abc3e": "578f5d472cd078b79d70496060699eceda58e1222b8dd1e34bf37b682cfe0c33"
+  },
+  "checked_source_candidate_sha256": {
+    "568f7cf028ec23b6": "bcb5d825d97ccf3fd5ea91bc5db9a975e904f097c9c5c2fcdd5ae8a50c730d1e"
+  },
+  "checks": [
+    "A rank-d matrix with d+1 columns has one-dimensional kernel, spanned here by a vector all of whose entries are positive. Hence no continuous normal is zero, since that would supply a kernel coordinate vector. An interior B point consequently has strictly negative margin in each row, so their positive combination gives D<0.",
+    "The specified positive row factors make the normal sum zero and the base-coefficient sum −(d+1). The normal evaluation map has rank d and image in the d-dimensional sum-zero subspace. The target vector (−1−tᵢ) has zero sum, so one unique q solves all equations.",
+    "Substitution x−y=x′+qz makes each base coefficient −1. Translation on each fiber preserves volume and midpoint compatibility, and the cap-normal change is invertible with the shear fixed. At base 1, absence of positive captured volume implies B lies in all weak halfspaces vᵢ·x′≤1, by density of its interior.",
+    "The displayed barycentric affine map is one-to-one by rank and onto the coordinate-sum-one plane by dimension. Nonnegative barycentric coordinates are exactly the constraints of the enclosing simplex. The origin maps to the centroid.",
+    "On the rows with an interior mark, proper A capture, and fixed-mark local minimality, the transformed cap meets every hypothesis of the proper/zero row lemma. Its section areas and the midpoint inclusion follow with levels −1,0,1. The purely affine normalization requires no minimizing hypothesis."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c828e335be3abc3e",
+      "candidate_sha256": "578f5d472cd078b79d70496060699eceda58e1222b8dd1e34bf37b682cfe0c33",
+      "hypotheses": "For each conditional row use its one-mark proper/zero hypothesis after shear: A is proper, K contains the interior translated mark, B captures zero, local minimality is preserved, and the compatible fiber midpoint condition is unchanged. This yields the area and midpoint conclusions.",
+      "proof_sha256": "82e4b68601fa4df33a222d5ec0855d5f4f32de867973cc9b31630d8b439d5fbc",
+      "statement_sha256": "b92b0595da85d28c0a67544c19c4515e03a745cbce9b7ef67be9491ff49a1e10",
+      "status": "same-batch, subject to independent approval before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:40:12Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It uses a distinct-mark shear to make the base coefficient vanish in the displacement direction of two maximizing bases. The present same-mark circuit with a common zero endpoint gives the common coefficient −1 and a bounded enclosing simplex.",
+      "fact_id": "c4532e797cea64f9"
+    },
+    {
+      "comparison": "It yields a minimal positive critical circuit and covers a fiber plane, but does not give the strict common-endpoint sign, normalized coefficients or enclosing simplex.",
+      "fact_id": "755cb08c379113cc"
+    }
+  ],
+  "readability": "Nonzero normals follow immediately from full rank and the strictly positive kernel vector, though this rank argument is implicit in the proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "43c84f0fb2687747b189feb39a903f4285958d40eddf8b71ca2f5d090a1899e4",
+  "reviewed_statement_sha256": "601754a66f43d39743d3fc04a5c0568769450a59766635c570186b5ce7d20169",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:36:24Z",
+  "summary": "The positive circuit gives a strictly negative weighted base coefficient, a simultaneous shear normalization, and one enclosing simplex for the common zero endpoint.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

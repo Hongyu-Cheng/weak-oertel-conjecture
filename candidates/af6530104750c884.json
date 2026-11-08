@@ -1,0 +1,28 @@
+{
+  "advances": "The depth comparison is for the measure difference on its actual added set or closure. It does not give a depth bound for centers in the convex hull or a counterexample for the original or extruded body.",
+  "author": "PK-research-agent",
+  "candidate_id": "af6530104750c884",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:12:16.491326+00:00",
+  "depends_on": [
+    "95b5a1ec678eeb67"
+  ],
+  "draft_key": "actual-unit-arithmetic-roof-shallow",
+  "kind": "counterexample",
+  "proof": "Concavity of the square root makes $C_N$ convex. By the exact Borel roof law, the added points lie on levels $t=j$ with $(j-1)^2/N^2\\le x<j^2/N^2$ for $1\\le j\\le N$, and at the extra point $(N+1,1)$ of zero mass. The $j$ intervals have lengths $(2j-1)/N^2<2/N$ and total mass one. At a point $(j_0,x_0)$ of any closed interval from these levels, take the closed cap\n$$\nx-\\frac{2j_0}{N^2}t\\le x_0-\\frac{2j_0^2}{N^2}.\n$$\nTo capture positive length at level $j$ requires $(j-1)^2\\le N^2 x_0+2j_0(j-j_0)\\le j_0^2+2j_0(j-j_0)$, or $(j-j_0-1)^2\\le2j_0\\le2N$. There are at most $2\\sqrt{2N}+1$ such indices. At the extra point use $\\{t\\ge N+1\\}$ of zero roof mass. Thus the bound holds on the entire actual roof and its closure. At $N=4096$, $2N<91^2$ gives a bound below $366/4096=183/2048<1/4$.\n\nFor dimensions $n,d\\ge1$, take the product body with $[0,1]^{n-1}$ in integer-base directions and $[0,1]^{d-1}$ in continuous directions. Each binary integer base carries the same roof law and a quotient unit $d$-cube of mass one. A finite base tilt isolates any chosen binary vertex without altering the cap on its fiber: for a vertex $b$, $(2b-\\mathbf1)\\cdot(z-b)\\le-1$ at every other binary vertex, and the untilted margin is bounded on the compact support. Consequently the roof raw upper bound is unchanged. The quotient has raw maximum $1/2$: the center of an individual cube gives at least that by symmetry, and a coordinate cut at each candidate, tilted to isolate its base, has at most that mass. Both total masses are $2^{n-1}$, yielding the normalized strict comparison.\n",
+  "source_candidate_ids": [
+    "372cc3158e8582ae"
+  ],
+  "source_candidate_sha256": {
+    "372cc3158e8582ae": "42b794695f3b8f1442a3e445b63a2a3225b2a2e8207ee7b64390613559225416"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "372cc3158e8582ae",
+      "locator": "372cc3158e8582ae:04 §5, (7)"
+    }
+  ],
+  "statement": "For any positive integer $N$, take $C_N=\\{(t,x):0\\le x\\le1,\\ 0\\le t\\le N\\sqrt{x}\\}$ in one integer and one continuous coordinate. The added unit-extrusion measure $\\rho_N=\\mu|_{C_N+[0,1]e_t}-\\mu|_{C_N}$ has mass one. Every point of its actual added set and its closure has raw depth under $\\rho_N$ at most $(4\\sqrt{2N}+2)/N$, while the quotient interval has maximum raw depth $1/2$. For every $n,d\\ge1$, products give a unit extrusion with maximum normalized roof depth strictly below half the maximum normalized depth of its quotient law, by taking $N=4096$.",
+  "subgoal_id": "pk-intake-actual-unit-arithmetic-roof-shallow",
+  "title": "An actual unit extrusion roof can have arbitrarily small depth"
+}

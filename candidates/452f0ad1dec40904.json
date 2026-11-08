@@ -1,0 +1,26 @@
+{
+  "advances": "Finite geometric cap families with actual cone apices and base cuts strictly beyond a common interior point.",
+  "author": "PK-research-agent",
+  "candidate_id": "452f0ad1dec40904",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.062508+00:00",
+  "depends_on": [],
+  "draft_key": "finite-cone-caps-indispensable-apices",
+  "kind": "theorem",
+  "proof": "For every label, $p_i$ is the unique exposed maximum of $u_i$ on $D$. The maximum is positive since zero is interior. Every other extreme point has $u_i\\cdot x\\le-\\epsilon_i$, since every point strictly above the cut plane besides the apex is interior to a nontrivial segment from the apex to the cut section. Thus every expression of zero as a convex combination of extreme points must use every distinct apex.\n\nA compact finite-dimensional convex set is the convex hull of its extreme points. One proof proceeds by induction in its affine hull: a boundary point lies in a proper supporting face, while an interior point lies between two boundary points. The induction starts with a singleton, and extreme points of a face are extreme in the whole body. Carathéodory now represents zero using at most $d+1$ extreme points. The indispensability gives the bound.\n\nIf the number is $d+1$, these apices $p_1,\\ldots,p_{d+1}$ represent zero with positive weights $\\alpha_j$ summing to one. They are affinely independent, since an affine dependence would allow a weight to reach zero in this representation. Write an arbitrary $x$ in affine coordinates $x=\\sum_j t_jp_j$, $\\sum_jt_j=1$. Take an index $i$ maximizing $t_i/\\alpha_i$ and use one of its exposing cap normals. Then\n$$\nu_i\\cdot x\n=\\sum_{j\\ne i}\\alpha_j(t_j/\\alpha_j-t_i/\\alpha_i)u_i\\cdot p_j\\ge0.\n$$\nThus the through-zero halfspaces cover all space, and any extreme point of $D$ must equal an apex. This gives the simplex assertion.\n\nUnder the positive balance, for every $x$ some $u_i\\cdot x\\ge0$ by summing the scores. The same segment argument identifies all extreme points with the apices, so full dimension forces exactly $d+1$. Let $U$ be the span of the normals, and project the vertices to $U$. The $d+1$ projections are distinct, since each apex is separated from all others by one of the normals. Their convex hull contains zero and any representation of zero by these projections still needs each projected vertex by the same strict sign argument. Carathéodory in $U$ gives $\\dim U\\ge d$, proving full rank.\n",
+  "source_candidate_ids": [
+    "d99f14f216938f2e"
+  ],
+  "source_candidate_sha256": {
+    "d99f14f216938f2e": "5489dc5104f0cf25997af5018a1201ab9516fbbe7af3725a07d115cf6f80e960"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d99f14f216938f2e",
+      "locator": "d99f14f216938f2e:03 §§3 and 6, (6)–(8) and partial-family apex bound"
+    }
+  ],
+  "statement": "Let $D\\subset\\mathbb R^d$ be a full-dimensional compact convex body with $0\\in\\operatorname{int}D$. Suppose a finite nonempty family has $u_i\\ne0$, $\\epsilon_i>0$, $u_i\\cdot p_i>-\\epsilon_i$, and\n$$\nD\\cap\\{u_i\\cdot x\\ge-\\epsilon_i\\}\n=\\operatorname{conv}\\bigl(p_i,D\\cap\\{u_i\\cdot x=-\\epsilon_i\\}\\bigr).\n$$\nThere are at most $d+1$ distinct apices $p_i$. If there are $d+1$, then $D$ is their simplex. If $\\sum_i\\beta_i u_i=0$ with all $\\beta_i>0$, then $D$ is a $d$-simplex whose vertices are exactly the distinct apices, and the $u_i$ span $\\mathbb R^d$.",
+  "subgoal_id": "pk-intake-finite-cone-caps-indispensable-apices",
+  "title": "Cone caps beyond an interior point have indispensable apices"
+}

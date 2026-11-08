@@ -1,0 +1,61 @@
+{
+  "candidate_id": "f9532baccf44bacb",
+  "candidate_sha256": "478e60efc07249d7128d81136c906168df632bde56fc35981c8d658baefd81a4",
+  "checked_dependency_candidate_sha256": {
+    "6a7d56e450b3126f": "31613c33abc90e519463fe09c7ef143869666384d5d0ea9886a759b1ceb3f965",
+    "f07bbd26b4981214": "63b61e41f4523de5ae9ceaf91174cd3d033f8e5dbadb8411fc4c847ed9c84db5"
+  },
+  "checks": [
+    "Each coordinate of A+B is at most 1+ε² and its coordinate sum is at least ε. At base one the endpoint coefficients are equal, so the endpoint average is in P/2. The original fibers are exactly A,P/2,B and have volumes V(1−ε^d), 2^(−d)V(da−ε)^d and Vε^(2d).",
+    "For fixed normals and shifts, cap masses vary continuously in the center because each cutting hyperplane is d-volume null. Taking the infimum yields upper semicontinuity and compactness gives the maxima. The shift-zero paired score coincides with the ordinary through-point infimum, hence D_pair≤D.",
+    "The paired centroid theorem gives the lower bound Γ for all full-dimensional fibers. A through-point vertex cap in T at a largest barycentric coordinate has T-volume at most ΓV. This supplies both simplex equalities and |A|D(A)≤ΓV. Subtracting Γ|A| gives the claimed deficit bound.",
+    "For all enclosing simplex choices, 0∈R_2 puts R_0/2 in the actual middle hull fiber. Its double also contains P, and the weighted excess of the double equals the actual middle volume excess. The nested estimate then applies with exactly its stated A,P,V.",
+    "A zero deficit immediately contradicts a finite cost bound, and in the positive case the ratio bound diverges since d≥2. The optional separate strict positivity facts from the source are unnecessary. The original a585520b0a2a14db theorem items 1–3 and §§1–3 have the same scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f07bbd26b4981214",
+      "candidate_sha256": "63b61e41f4523de5ae9ceaf91174cd3d033f8e5dbadb8411fc4c847ed9c84db5",
+      "mapping": "Same-batch nested-simplex estimate. Use its exact d,ε,V,A,P, R=R_0 and L=2K′_1. R_0 is any enclosing simplex, and L is compact convex and contains R_0 and P. Its factor 2^(−d) converts the L excess to the actual middle excess. This candidate requires approval before the dependent is admitted.",
+      "reviewed_proof_sha256": "0c1c4da3f1f4767eab38c59c006db41735f5688733422977e12be3a3f08f8b0e",
+      "reviewed_statement_sha256": "ff2f7e14f57d205a77df1804de57e67b9e92283b7b127a8d77292bb619d70330",
+      "status": "same-batch draft, independent approval required before admission"
+    },
+    {
+      "candidate_id": "6a7d56e450b3126f",
+      "candidate_sha256": "31613c33abc90e519463fe09c7ef143869666384d5d0ea9886a759b1ceb3f965",
+      "fact_sha256": "30b7bafd79c7f5e4dbed86451e8dcc90311f6234575d9c443f3bcbbd961bdae4",
+      "mapping": "For each positive full-dimensional fiber K in continuous dimension d, use its volume centroid g, arbitrary nonzero u and all s≥0. Dividing the sum of the two tails by two yields the claimed paired lower bound Γ. Its shift-zero case supplies the ordinary centroid lower bound.",
+      "reviewed_proof_sha256": "d4e3d70c7d102455f4a824e9e403043780a9b4afdcf2d9e14d29518d1c8202c7",
+      "reviewed_statement_sha256": "3aa2cd99e74ada6c00320324633e761a3eab87ce39d9d24207ec7f18ae66ce3f",
+      "status": "accepted fact at repository snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:36:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Take n=1 in its planar construction, which gives exactly A,P/2,B at the same bases and the same ordinary deficit upper bound 2ε²/9. Its cost ε/16 is stronger than ε/128. Together with nonnegativity from 6a7d56e450b3126f and δ_pair≤δ_ord from shift zero, this also covers the planar paired obstruction. It does not cover d≥3.",
+      "fact_id": "c7e97600d54831a4"
+    },
+    {
+      "comparison": "Its paired stability bound concerns the minimum-volume simplex containing one continuous body and uses the same paired score. It controls each standalone enclosure, with no bound on the additional volumes of other actual fibers after a common hull is taken.",
+      "fact_id": "8d5061c778ea7d72"
+    }
+  ],
+  "readability": "The statement explicitly allows a zero paired denominator. The no-finite-bound argument covers both denominator cases.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "8abb7d1dce12ad5eeb78283b4cf7755e1c61e0db3adcc4ed5722213d59571e15",
+  "reviewed_statement_sha256": "b6b48c84ea6b954ea253ce61267903519b0e63ee23f88c56f1917a3920abbcb2",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:32:26Z",
+  "summary": "The fixed-base construction and the all-container cost bound are sound. Its planar ordinary and paired obstructions follow from the stronger accepted planar estimate, while the d≥3 conclusions extend that scope.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

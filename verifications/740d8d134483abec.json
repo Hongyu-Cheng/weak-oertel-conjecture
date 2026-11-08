@@ -1,0 +1,40 @@
+{
+  "candidate_id": "dcb05945476b6c35",
+  "candidate_sha256": "3c4156a8c1d6ac316d5fec9b0561282ba84751f89b68ee88687ee107e1777bfd",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Moving a containing proper closed halfspace parallel through the specified point makes a subset, so it cannot increase mass. A vertical line through that point captures the full anchor fiber in both orientations, giving the two inclusive base sums.",
+    "At base j, the above-line mass is the interval length clipped at threshold x+a(j−k). It can change affine piece only when that threshold hits l_j or r_j. For j≠k these are exactly the stated candidate slopes. The anchor contribution is independent of a. Coincident candidate slopes and zero-width fibers do not affect the rule.",
+    "For a outside the finite breakpoint range, every nonanchor threshold is on the same side of both endpoints as for arbitrarily large positive or negative slope in that tail. The whole orientation mass is constant on each tail. With a single base the nonvertical masses are independent of slope for all real a.",
+    "An oblique line meets each placed interval in at most one point, with length zero even for a singleton interval. Hence the two closed orientations are complementary in mass. A continuous affine function on each bounded piece attains its extrema at the endpoints, and the unbounded pieces are constant. This also covers zero total mass because the assertion concerns raw depth.",
+    "Verified the original source digest at snapshot 8d2dca690a1b7d6d745b3ab445cd841f3e22d13a. Pending source 94a1565e143d393e §2 gives the same finite verification method. The frozen proof correctly uses endpoint slopes as a containing list for possible breakpoints, so cancellations or degenerate intervals need no extra assumption."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T13:15:57Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof uses parallel through-point reduction and the same clipping formula to derive a closed expression for compatible intervals at exactly three consecutive bases. It does not supply the finite endpoint-slope evaluation at any fiber of an arbitrary finite real base set.",
+      "fact_id": "c680a307d3f26cec"
+    },
+    {
+      "comparison": "This accepted result realizes limits of affine-threshold cap traces in general finite base and continuous dimensions. It implies that these limits can be achieved by an actual finite cap, without giving the endpoint-slope candidate list or evaluating all slopes by that list.",
+      "fact_id": "0a73ba4a9c7b24d1"
+    }
+  ],
+  "readability": "The word breakpoint denotes a candidate knot in the finite partition. A coincident or canceled knot can be included harmlessly, and by continuity the first and last candidate values duplicate the tails whenever the list is nonempty.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "53c5ba3623e6feb300ac6fc147f7f4dbf54dba141c120580e143cb2e7cfbf3db",
+  "reviewed_statement_sha256": "f3f3c27fbba3e0449f2b4e16e6f3c4be3738baed94e501461436b8e69f1b9ffd",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:12:45Z",
+  "summary": "All through-point closed halfspaces are covered by the vertical cuts and the two orientations of the finite slope list with its constant tails. The formula works for degenerate intervals and for a singleton base set.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,53 @@
+{
+  "candidate_id": "89563f7ef7a4762f",
+  "candidate_sha256": "cfa2e5ba08044bb77e88d904b38c6b105799d4d397c384963d8c52378e0e9181",
+  "checked_dependency_candidate_sha256": {
+    "ba0f3db1bf4f62c6": "80c7786ec3487f6cf51ae119cff069de8d52bd18b8b3b3dbb05254f0b5d8c782"
+  },
+  "checks": [
+    "The anchored coefficient polytopes are nonempty bounded polytopes, with the trivial anchored coefficient vector available. Their vertices span the row conditions by convex combination, so the kernel is precisely L(P). Zero rows do not alter the kernel, and the T=0 case projects identically.",
+    "Compatibility puts the target centroid and represented average of source centroids in the target fiber, giving each row residual norm at most D. Summing squared bounds and using the singular value on the orthogonal complement of the kernel gives D√m/σ. The residual radius is bounded by D plus this error, since each centroid is in its own fiber.",
+    "Subtracting a representation-preserving array commutes with each anchored combination, and the lift turns every projected coordinate into an affine function G. The map is a translation on each sampled fiber and pushes all mixed mass forward. An original halfspace pulls back to a halfspace or the whole affine space, so the original infimum is at least the lifted one.",
+    "When P is canonical, G is affine already in the original base coordinates. The triangular map with identity base and continuous linear part is an invertible affine shear, and its inverse gives the other depth inequality. A larger ambient space has the same induced halfspaces on the affine hull.",
+    "For each positive-dimensional limit, support functions give eventual membership of interior points and eventual exclusion of exterior points. A zero-volume fiber has a null limit set. Thus all indicator differences vanish in L¹ and bound raw fixed-mark errors. For the moving mark, translate cuts to the candidate, normalize each nonzero continuous normal, and bound each slab by κ_(d−1)R^(d−1) times its width. Pure-base cuts stay fixed even with boundary mass, and d=1 has κ_0=1.",
+    "A maximizer exists on each compact fiber by the slab bound. Hausdorff matching of maximizing marks in both directions bounds the raw maximum error by the symmetric-difference sum plus the Lipschitz constant times the maximum fiber Hausdorff distance. Total mass tends to a positive number. The pointwise map then yields the asserted liminf comparison.",
+    "Verified the archived digest and read dbf3b23d25004153 §§5–6, (8)–(13). The map and normalization retain the full residual fibers and their actual closed-halfspace cuts."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ba0f3db1bf4f62c6",
+      "candidate_sha256": "80c7786ec3487f6cf51ae119cff069de8d52bd18b8b3b3dbb05254f0b5d8c782",
+      "mapping": "Its hypotheses are a finite nonempty real affine base and compatible compact convex fibers. It supplies exact preservation of anchored equalities, the affine projection π, and affineness of representation-preserving functions on the lift, used for each coordinate of g.",
+      "reviewed_proof_sha256": "85354cd7f177fc1a4428289f74f24904dcb3c5fe23b42984d39548c9be34c47d",
+      "reviewed_statement_sha256": "91a694f67248f20d6618a4ff011ab9d0cb5cc3dbac5828570bb138b15c0234b0",
+      "status": "same batch, independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:56:34Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The fixed-base marked stability theorem proves the same slab and symmetric-difference bounds when every limit fiber has positive volume. The present claim allows a zero-volume limit fiber if total mass remains positive and adds the anchored projection and depth transfer.",
+      "fact_id": "43ed87d91b76249c"
+    },
+    {
+      "comparison": "The through-candidate reduction and maximum existence agree with this fact on actual mixed-integer bodies. The anchored normalization, comparison between different base placements, and moving-family stability are additional.",
+      "fact_id": "978e8555ec5bac42"
+    }
+  ],
+  "readability": "The projection g acts on the Euclidean centroid array, while π is the affine projection of the canonical base. The roles of the two projections are distinct.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c108570991bc930ba6900d3cc280077265be735fdf9eb0ece16136f63fbd28d0",
+  "reviewed_statement_sha256": "2fe641e6bf537bf13b0eee1f82314ce326837ca0a34e80d746339a7c65702646",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:52:50Z",
+  "summary": "The row equations bound the non-affine part of the centroid array and leave compatible residuals. The affine map gives pointwise depth transfer, and full-fiber depth is continuous at a positive-total-mass Hausdorff limit.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

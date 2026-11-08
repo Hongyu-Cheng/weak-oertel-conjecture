@@ -1,0 +1,42 @@
+{
+  "candidate_id": "5af5f275fa4c066e",
+  "candidate_sha256": "025a10e82cea6b7ceeb37fb62e31ce131bb820dcbe8ec1624e2aac61d93a7bf3",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Continuity of log f on its full-dimensional positive interior gives a local positive lower bound. The midpoint image of the small ball has fixed positive volume, so integrability and the bound sqrt(m f(x)) on that image bound f globally. The f(0)/2 superlevel set is convex and contains a ball. A cone from a fixed equatorial disk in that ball to a remote superlevel point would have arbitrarily large volume, which rules out unboundedness, including in dimension one.",
+    "At radius R beyond the superlevel set, the segment from 0 to any positive f(x) with norm at least R gives f(x) ≤ f(0) exp(−norm(x) log(2)/R). The global bound covers the remaining ball and zero-valued points are automatic. On the sphere, m δ^p/p is a positive lower bound on each ray integral and A times the p-th gamma integral after scaling supplies a finite upper bound. The factor t^(p−1) is integrable at zero because p>0. Substitution gives I_p(cx)=c^(−p) I_p(x).",
+    "For the two mass-one ray densities the positive support along each ray is an interval from zero. Every probability level u strictly between zero and one has a positive finite interior quantile. Interior continuity and positivity justify the inverse derivatives even when the density diverges at zero for p<1. Differentiation of the harmonic interpolation yields t'=t(a r'/r+b s'/s)>0, with a+b=1, t=ar+bs and tz=arx+bsy.",
+    "Log-concavity contributes f(tz)≥f(rx)^a f(sy)^b. Weighted AM–GM on the positive reciprocal terms yields t^(p−1)f(tz)t'≥t^p/(r^(pa)s^(pb)). Weighted AM–GM on r,s gives the final lower bound one because raising to p>0 preserves the inequality. Change variables first on compact probability intervals and then exhaust (0,1). The nonnegative full ray integral dominates the image integral, and boundary point values have no effect.",
+    "Segments between q_p=1 points, star-shapedness from homogeneity and regrouping the two radial weights give convexity of the full unit sublevel. The gauge equals q_p by homogeneity, so it is subadditive. The spherical bounds give k norm(x)≤q_p(x)≤K norm(x). Subadditivity applied to x−y and y−x gives Lipschitz continuity even for this asymmetric gauge. Closedness, boundedness and a centered ball follow.",
+    "Checked source 0f025bdf9a51573b at SHA-256 7f8f04d2812e70982b1d9123cab9b1d9d5538b6aba404d054deea505e92755d2. Lemma 1 gives the local and exponential bounds, and Lemma 2 gives the same normalized ray coupling for p>0. The source concludes continuity by dominated convergence while the frozen proof uses the convex gauge's Lipschitz bound.",
+    "Klartag's Theorem 2.2 states the non-even p≥1 case and attributes the earlier even formulation to Ball. Its threshold f(0)/p is related to threshold one by homogeneity. The attribution is contextual and the frozen proof invokes neither result. [Klartag, Theorem 2.2](https://www.math.tau.ac.il/~klartagb/papers/perturb.pdf)"
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T10:31:33.148Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This is the compact-support p≥1 inverse-power radial theorem and does not reach the candidate's exponent range. For p≥1 and a log-concave density with interior anchor, take U=int{f>0} and C_j=(1−1/j)(closure(U)∩j times the closed unit ball). These are increasing compact convex neighborhoods of 0 inside U that exhaust U. The continuous restriction truncated to C_j is bounded and upper semicontinuous, and its extended inverse power is exp(−log(f)/(p+1)) on C_j and infinity outside, hence convex. The accepted theorem gives finite convex gauges for those truncations. On each ray from 0 the discarded support boundary consists of at most one point, so monotone convergence of the integrals gives pointwise convergence of the gauges to q_p. Local and exponential bounds give compactness and positive interior for the limit, and the finite convex limit is continuous. This accounts for the p≥1 overlap.",
+      "fact_id": "3919a4dbe7ace166"
+    },
+    {
+      "comparison": "Its radial construction gives the dimension-matched exponent p=r for r≥2, up to dilation by r^(1/r), under an inverse-power hypothesis that includes log-concavity at an interior anchor. Its angular identity and rigidity do not supply the subunit-exponent gauge.",
+      "fact_id": "8bc17121df970992"
+    }
+  ],
+  "readability": "The letter c is reused for the tail exponent and the dilation factor in the homogeneity identity. The surrounding formulas disambiguate the two uses.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "932b268c4833f85df51281925d8f585e3990f56ab098713e5fb0556116ab72ea",
+  "reviewed_statement_sha256": "46bab6491b6b570f277217b161a2d42ef522126cffcfcb99bcab902f21d7b5ca",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:28:17.822Z",
+  "summary": "The pointwise bounds and normalized quantile argument establish convexity, positive homogeneity and continuity for every exponent in the stated open interval, without a symmetry or mode assumption.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

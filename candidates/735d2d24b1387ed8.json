@@ -1,0 +1,26 @@
+{
+  "advances": "An exact obstruction for optimizing raw moment width and selecting the normalized midpoint, including the median-restricted rule.",
+  "author": "PK-research-agent",
+  "candidate_id": "735d2d24b1387ed8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:44.513609+00:00",
+  "depends_on": [],
+  "draft_key": "free-mass-raw-width-midpoint-selector-obstruction",
+  "kind": "counterexample",
+  "proof": "The width differences $14,1,-16$ are decreasing. The interpolation is therefore concave and the body between its negative and zero is convex, with the stated actual fibers and total length. The prefixes through sites 0 and 1 have masses 2 and 18, and the suffixes from sites 2 and 3 have masses 18 and 1. This gives exactly the two stated median bases.\n\nFor a fixed fiber mass $p_i$, the upper subinterval attains maximal first moment $-p_i^2/2$. For mass $q_i$, the lower subinterval attains maximal negative first moment $w_iq_i-q_i^2/2$. Subtracting the threshold from the coordinate shows pointwise that replacing any bounded density by the chosen subinterval indicator improves the corresponding moment, since the two densities have equal mass. Consequently the raw-width optimization over all masses is the maximum of\n$$\n\\Phi(p,q)=-\\frac12\\sum_i p_i^2+\\sum_i(w_iq_i-q_i^2/2)\n$$\nsubject to $0\\le p_i,q_i\\le w_i$, $\\sum_i p_i=\\sum_iq_i$ and $\\sum_i(i-j)p_i=\\sum_i(i-j)q_i=0$. The box slice is compact and the objective strictly concave. Its nonzero optimum determines $t=\\sum_i p_i$ and $Q_t(j)=[-B,A]$ with $A=-\\sum_i p_i^2/2$, $B=\\sum_i(w_iq_i-q_i^2/2)$. At either endpoint base all mass is in the own fiber, so the width is $w_jt-t^2$ with unique maximum at $t=w_j/2$. This gives the endpoint data.\n\nAt the two interior bases the feasible optimal rows and multipliers are\n$$\n\\begin{array}{c|c|c|c}\nj&p&q&(\\lambda,\\nu,\\omega)\\\\ \\hline\n1&(2,31/4,2,0)&(7/4,33/4,7/4,0)&(-31/4,23/4,15/2)\\\\\n2&(0,1,8,1)&(0,1/2,9,1/2)&(-8,-7,-15/2)\n\\end{array}\n$$\nSubtract the equality-gradient components $\\lambda+\\nu(i-j)$ and $-\\lambda+\\omega(i-j)$ from the objective gradients $-p_i$ and $w_i-q_i$. The two residual rows at $j=1$ are $(23/2,0,0,-15/4)$ and $(0,0,0,-87/4)$, and at $j=2$ they are $(-6,0,0,14)$ and $(-21,0,0,0)$. Positive residuals occur at upper bounds and negative residuals at zero. Hence their dot product with any feasible displacement is nonpositive, and the equality-gradient terms have zero dot product. The exact quadratic expansion has remainder $-(\\|p-p_*\\|^2+\\|q-q_*\\|^2)/2$, so these certificates prove global uniqueness. At $j=1$ the data are $t=47/4$, $A=-1089/32$, $B=4101/32$, and at $j=2$ they are $t=10$, $A=-33$, $B=483/4$. Their widths are $A+B$ and their continuous midpoint coordinates are $(A-B)/(2t)$. This gives the displayed values and shows that the joint maximum occurs uniquely at base 1.\n\nAt base 1 the closed cap $x-100(z-1)\\ge-2595/376$ retains the whole fiber at 0 and length $2595/376$ at 1 and misses sites 2 and 3. Its mass is $3347/376$. At base 2 the closed cap $x+100(z-2)\\ge-123/16$ retains length $123/16$ at 2 and the whole fiber at 3 and misses the other sites, giving $139/16$. At bases 0 and 3 the respective caps $x-100z\\ge-1$ and $x+100(z-3)\\ge-1/2$ isolate their half-fibers. The four masses are strictly below 9. All cuts are nonvertical and the boundary has zero mixed length.\n",
+  "source_candidate_ids": [
+    "e16770c76630ebf6"
+  ],
+  "source_candidate_sha256": {
+    "e16770c76630ebf6": "dac47debcd6e23ca7f8b03673f8cc2d48368fdcae8ed87ab63e20dd76ac3fcc2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e16770c76630ebf6",
+      "locator": "e16770c76630ebf6:01 §§1–3, (1)–(5) and the remaining three bad caps"
+    }
+  ],
+  "statement": "Let $\\mu$ be original mixed length on the convex interval-fiber body at bases $0,1,2,3$ with fibers $K_i=[-w_i,0]$, $w=(2,16,17,1)$, and with piecewise affine width between the integer sites. Then $M=36$, and the weighted marginal median bases are 1 and 2. For each feasible mass $t>0$ and integer base $j$, let $Q_t(j)$ be the raw continuous first-moment interval of dominated sources of mass $t$ and base mean $j$. The unique masses maximizing its length at the four bases are $1,47/4,10,1/2$, with respective widths $1,753/8,351/4,1/4$. The midpoints of the normalized intervals $Q_t(j)/t$ at those masses are $-1,-2595/376,-123/16,-1/2$.\n\nEach of those four mixed points belongs to its actual fiber and has a containing closed ambient cap of mass, respectively, $1,3347/376,139/16,1/2$, all strictly below $M/4=9$. Thus choosing the midpoint after maximizing raw width can fail even when comparing every base's optimal midpoint or restricting to marginal medians. The joint raw-width maximum is unique at base 1 and also fails.",
+  "subgoal_id": "pk-intake-free-mass-raw-width-midpoint-selector-obstruction",
+  "title": "Free-mass raw-width maximizing midpoints can all be shallow"
+}

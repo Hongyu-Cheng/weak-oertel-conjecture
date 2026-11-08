@@ -1,0 +1,67 @@
+{
+  "candidate_id": "0fcb7fa715e2af62",
+  "candidate_sha256": "70f7f7222c4ece0801f1500f493af37833ceef14e02548c01f1400117dc5d5b2",
+  "checked_dependency_candidate_sha256": {
+    "290ddd8516d76865": "99f2e2fc76efe992abaca0166a670d8dc8051c35cb7e40f707c2058e80d3dba2"
+  },
+  "checks": [
+    "The vertices satisfy all coordinate and sum constraints of B and the wedge inequalities. The first coordinate of the transformed first edge is r, and the remaining edges are T e_2 through T e_5. The determinant is rT^4 and V=1/120. The exact rational root bounds give 20/11<q<2 and 0<a<10^(-5).",
+    "Both homothety coefficients are positive and sum to two. Convexity gives (A+C)/2⊆D, and using the same point of D in both terms proves equality. The lifted hull is compact and spans the ambient six-dimensional affine space. Its projection is [-1,1]. At z=±1 convexity permits only the corresponding extreme generators. At z=0 equal endpoint weights produce only points in D⊆B, including the zero endpoint-weight case. This proves the complete integer fiber census. The three volumes are aV,V,V by homothety, and 0<a<1 implies that all three are strictly below (2+a)V/2.",
+    "The proper closed H_1 has maximum of its defining functional r at both endpoints, attained at the base vertices. The gap h_1−r=1/1000−(2/25)a is positive. For H_2, x_2+2≥2>h_2 on A, whereas x_2−2≤q−2<0<h_2 on C. At z=0 the traces are the upper coordinate caps x_1≥h_1 and x_2≥h_2, with both thresholds in (0,1). The original mixed masses are (1−h_1)^5 V and [(1−h_2)^5+a]V. The coefficients 12/125 and 51/125 result from factoring out 5/6 in the corresponding lengths.",
+    "Convexity of D yields a representation (1−t)g+tx for every point of the hull, including t=0 and t=1. Points on the first threshold are captured because H_1 is closed. Below it, the wedge gives y_2−1/6≥R t(1/6−x_1)>(9/25)a>(17/50)a. Thus the second cap captures every point missed by the first.",
+    "Ran the archived exact Fraction checker at f8f4853 and recomputed the rational margins independently. It gave m=124581095445185057/3888000000000000000 and confirmed both fifth-power comparisons. The first mean-value coefficient is 1148810043113472/2384185791015625, strictly below 1/2 by 86565704788681/4768371582031250. The second binomial bound applies since 0<(51/125)a<1 and 10−5s+s²>0 there. Its linear slack per a is 323/15552 and its maximum quadratic penalty per a is 289/43200, giving positive slack 2737/194400. Neither strict comparison uses a floating-point root.",
+    "The original depth is at most the maximum of the two fixed masses at every covered point. The threshold normalized by the positive total (2+a)V is exactly Γ_5/2. Parallel inward translation reduces any proper containing cap to one with boundary through the query point. For each fixed unit normal, the limsup of the closed-cap indicator along converging query points is bounded by the cap indicator at the limit. Finiteness and reverse Fatou give upper semicontinuity, and taking the infimum preserves it. Compactness therefore gives the stated attained maximum, including directions with boundary mass.",
+    "Verified both source candidate hashes at f8f4853. e13ef2bc2dcc3baf §§1–2 and §§4–5 contain the exact body, wedge, fiber census, coverage and strict inequalities in (1)–(3) and (5)–(7). Its §3 free-mixture selector inclusion and §6 endpoint obstruction are separate claims. In 04408e720ec652dd §4 after (11), the same caps and strict comparisons are invoked for the same larger hull. The dominated coupling conclusions in that note are outside this normalization, and neither source is an accepted premise.",
+    "The locked statement quantifies over all mixed-integer points and uses a universal c_0 in (0,1/e) at scale 2^(−n). This certificate concerns a prescribed subset of one integer fiber, with n=1, and uses the sharp Γ_5/2 threshold. The subset is proper since every point of its continuous hull has x_1≤1/6, whereas e_1 belongs to B. There is no assertion here about points elsewhere or about the locked universal constant."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "290ddd8516d76865",
+      "candidate_sha256": "99f2e2fc76efe992abaca0166a670d8dc8051c35cb7e40f707c2058e80d3dba2",
+      "fact_sha256": "e6b237cd6128371742ecfa161e2a233e4f4795cd07cadec03070d2dbcc916105",
+      "mapping": "Set d=5, Δ_d=B, I={i}, and x=h_i e_i for i=1,2. Each h_i is in (0,1), so the point belongs to B, I is nonempty and proper, and s_I(x)=h_i since λ_i(y)=y_i. The proper closed upper cap formula gives 1−F_{5,1}(h_i)=(1−h_i)^5. The mixed mass then adds only the already verified endpoint traces.",
+      "reviewed_proof_sha256": "390c176632f2601b4b8d000e7a8ac5b4fe6561c79606e1df9114b8e253e96f8d",
+      "reviewed_statement_sha256": "50a42fb92b3b0a5ce29f9da36cc847f0be98c290f3ce6a00f9539f3cfebc0b0d",
+      "status": "accepted at f8f4853"
+    }
+  ],
+  "finished_utc": "2026-11-08T07:25:01.177467+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This covers the whole middle fiber at the same dimension-dependent sharp threshold for a different d=15 three-fiber family of volumes (a,1,1). Its larger endpoint is a clipped-simplex nonsimplex. It does not imply the fixed d=5 all-simplex hull or its two exact cap masses.",
+      "fact_id": "645f91d128f54e5b"
+    },
+    {
+      "comparison": "Its d=4 construction with an equal-volume large partner defeats the larger middle-star budget Γ_4(1+ε)V. The accepted scope explicitly leaves Γ_4(1+ε/2)V unexcluded. It gives neither the sharp threshold failure on this hull nor the fixed cap pair.",
+      "fact_id": "5e8a8af95fa24a1d"
+    },
+    {
+      "comparison": "Its nonheavy middle-centroid lower bound requires all three fibers to be positive homothets of one common body. Here the endpoints are homothetic to D, whereas B is not a positive homothet of D. For x_1 the minimizing face of B has dimension four and the minimizing face of D is the single vertex p.",
+      "fact_id": "1a7377b8dcb5b16b"
+    },
+    {
+      "comparison": "Its uniform upper bound addresses all mixed-integer points at the same continuous-dimension Γ_5 factor for n=14, with 17,770 fibers. The bound at scale 2^(−14) for that body does not give this exact n=1 three-fiber geometric obstruction.",
+      "fact_id": "a39d93bee9bf2fe9"
+    },
+    {
+      "comparison": "This supplies an exact single-fiber simplex cap mass. It imposes no endpoint tilts and gives no mixed-fiber coverage or strict comparison.",
+      "fact_id": "290ddd8516d76865"
+    }
+  ],
+  "readability": "The attainment paragraph invokes the standard limsup argument for closed caps. An explicit mention of the indicator inequality and reverse Fatou would make the treatment of possible boundary mass immediate.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "9d0682d738555e9f4899480af32b96afa6ce5401e24a0e3f7fa89ef0e86c9d8b",
+  "reviewed_statement_sha256": "a82ad8a51468e3ef5d20b2f73304f89d30d6ea5fe0febeae37178e3abff05a14",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:21:48+00:00",
+  "summary": "The two fixed ambient halfspaces cover the full specified middle hull. Each has original mixed volume strictly below the sharp threshold, and the actual fiber census and the existence of the stated depth maximum are valid.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

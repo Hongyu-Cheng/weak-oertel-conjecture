@@ -1,0 +1,29 @@
+{
+  "advances": "Full actual critical cover at the sharp target. Every original fiber is at the heavy threshold.",
+  "author": "PK-research-agent",
+  "candidate_id": "3cc2079026b54463",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.850258+00:00",
+  "depends_on": [
+    "c3e79bc0190bfda3",
+    "090cdd38b09bbfa8"
+  ],
+  "draft_key": "binary-simplex-critical-menu-freezing",
+  "kind": "counterexample",
+  "proof": "This is the product of c3e79bc0190bfda3. Its affine mismatch function at $v$ is exactly $-(2v-\\mathbf1)\\cdot(z-v)$, an integer at least one at any other binary base. The source chooses mismatch coefficient one, already sufficient to exclude other fibers since $\\lambda_j\\le1$ and $1/(d+1)>0$. At $v$ it gives the same canonical cap, of fraction $\\Gamma_d$, and the $d+1$ caps cover $T$ because the barycentric coordinates sum to one. Thus every mark is in a cap of mass $\\Gamma_d/N$. By the own centroid cap bound used in c3e79bc0190bfda3, every containing halfspace captures at least this much at $(v,g)$; this also includes pure-base cuts, which retain the full own fiber. The canonical cap attains equality there, so the entire menu is critical.\n\nThe capture function is $\\Gamma_d\\mathbf1_{\\{z=v\\}}$, so the covariance is exactly $\\Gamma_dp_v(v-m)$. Subtract the column $-m$ from each of the other raw columns to get $e_1,\\ldots,e_{n-1}$; expansion gives absolute determinant $m_n$, positive because the posterior gives weight to sites with $z_n=1$. This includes $n=1$ with no subtraction. The positive scalar factors give the stated determinant; at the uniform prior $m_n=1/2$. Finite Gaussian parameters keep all posterior weights positive, so adaptive-gaussian-active-cap-freezing gives $A=0$ almost everywhere if all the active bounds are preserved. In fact the selected $n$ caps already suffice. The original weights equal $2^{-n}$, so this example alone does not address a rule that stops on a heavy fiber.\n",
+  "source_candidate_ids": [
+    "5b4307751aab9c87"
+  ],
+  "source_candidate_sha256": {
+    "5b4307751aab9c87": "497deec70736f7309cb33d8a1e60b941858cf68574cdd45b2e3d044132f65aaa"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5b4307751aab9c87",
+      "locator": "5b4307751aab9c87:02 §3, (5)–(7)"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$, $P=\\{0,1\\}^n$, $N=2^n$, and put the same $d$-simplex $T$ at each base. Write $\\lambda_j$ for its barycentric coordinates, $g$ for its centroid, and $\\Gamma_d=(d/(d+1))^d$. Under the original normalized mixed volume, the actual caps\n$$\nH_{v,j}=\\{\\lambda_j(X)+(2v-\\mathbf1)\\cdot(z-v)\\ge1/(d+1)\\}\n$$\nhave mass $\\Gamma_d/N$, jointly cover the actual mixed set, and each attains the depth at its own centroid $(v,g)$. The global original maximal depth equals $\\Gamma_d/N$. At every positive posterior $p$ these caps have covariance vectors $\\Gamma_d p_v(v-m)$ spanning $\\mathbb R^n$. In particular the absolute determinant for one cap at each of $v_0=0,v_1=e_1,\\ldots,v_{n-1}=e_{n-1}$ is $\\Gamma_d^n m_n\\prod_{j=0}^{n-1}p_{v_j}$, initially $\\Gamma_d^n/(2N^n)$. An existing adaptive Gaussian process that preserves all these initially tight bounds has $A_t=0$ almost everywhere.",
+  "subgoal_id": "pk-intake-binary-simplex-critical-menu-freezing",
+  "title": "A sharp actual simplex-product cover freezes adaptive base covariance"
+}

@@ -1,0 +1,67 @@
+{
+  "candidate_id": "443b44e479f8d9d5",
+  "candidate_sha256": "4c90da24aeb47c244c074d93d5c86a4670f1b53905fc5eb90a1fdde9b3e89332",
+  "checked_dependency_candidate_sha256": {
+    "486fe778f838d99d": "eb812e3a5ade3090355718e597b223e24a4555370f325d3c8d02578086727de7",
+    "607dca34de472b94": "2abd02f50c0c05356ed847e6e4b39a1a4f4864acf287c6b97fecbee1475632f3"
+  },
+  "checks": [
+    "Matched the frozen statement and proof to a972493c7a264f4e:04, §4 (9)–(11). Verified that the reported first term and reserve use the original cap comparison.",
+    "The actual mass-a law and halfspace capture are checked with the two exact endpoint marginals as stated. Rescaling by θk gives ν≤κ, α=v_*/k≤1 and θα=a/k, while preserving the tilted centroid.",
+    "Closed parallel caps give a continuous strictly decreasing cap-volume coordinate and a concave root by Brunn–Minkowski. Its uniform pushforward under κ and dominated density under ν justify the weighted Jensen and left-fill calculations, including saturated prescribed masses.",
+    "Dividing by s^(1+1/d) yields the scalar lower bound with constant 2θ/(d+1). Applying the three slopes with multiplicities 1,2θ,2θ gives U+θQ−θL_dE≤A_d+θ(1+A_d/3−ε_d), with the same exact positive ε_d as the accepted theorem.",
+    "Substituting the cap-mass identity and s≥Γ_d/(1+2θα)^d gives the positive reserve after multiplication by k. The binomial bound implies ε_d≤A_d/3 and the right side is less than k+a, so vertical caps are included.",
+    "For fixed positive b,k and a→0 along compatible triples, v_* has a positive limit and θ→0, giving Γ_d k after adding the two limiting terms."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "486fe778f838d99d",
+      "candidate_sha256": "eb812e3a5ade3090355718e597b223e24a4555370f325d3c8d02578086727de7",
+      "fact_id": "486fe778f838d99d",
+      "fact_sha256": "80eaa3594e79d476dc0e9e3ab5468b43971468ba3714c6b7d4eb85ae5252fc03",
+      "hypotheses": "With weight 1/2 and containing body (A+B)/2, the actual conditional-quantile construction couples both full endpoint uniform probabilities. Its telescoping diagonal factors give midpoint probability density at most 1/v_*. Scaling by a gives marginals equal to the original small-endpoint volume and a/b times the original large-endpoint volume. Actual containment places the midpoint law in K.",
+      "reviewed_proof_sha256": "453f008cf56304760f5997ca492aa0ab404452657ab00d0683afa09a8c9fea56",
+      "reviewed_statement_sha256": "ea2e7f929ac99fb0ae6f6ecaa81eba3faa570c8672ff234d5304b584278fef42"
+    },
+    {
+      "candidate_id": "607dca34de472b94",
+      "candidate_sha256": "2abd02f50c0c05356ed847e6e4b39a1a4f4864acf287c6b97fecbee1475632f3",
+      "fact_id": "607dca34de472b94",
+      "fact_sha256": "342ffdc597719ea22ade3c690ec6d10723f4f33464b97191867fd6f236f9beec",
+      "hypotheses": "For every integer d≥1 the accepted scalar margin Δ_d>0 gives the exact ε_d=dΔ_d/(d+1). The coefficient-2θ Jensen, filling and dual argument are supplied in the frozen proof, so the accepted weight-two estimate is not used outside its hypotheses.",
+      "reviewed_proof_sha256": "341df7d5070df0e356feb96179207522c7092e828a741f3e8099927904acfebb",
+      "reviewed_statement_sha256": "8c2234492e6b6ec03d8914674373c4a562fe49d251a8b13375a687cb87341654"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:28:53Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The equal-endpoint case has θ=1 and an actual mixed centroid. The earlier positive reserve has the coarser 3^d denominator and does not capture the unequal-density term.",
+      "fact_id": "da544e8fcada039b"
+    },
+    {
+      "comparison": "Supplies the exact strictly positive dimension scalar and a dominated case, but does not state the θ-dependent calculation or original mixed cap transfer.",
+      "fact_id": "607dca34de472b94"
+    },
+    {
+      "comparison": "Its direction-adapted accounting retains the unused larger-endpoint mass for a chosen direction. It neither gives this one fixed coupled-center lower bound nor the scalar density-dependent reserve.",
+      "fact_id": "0c574ed07d9382b6"
+    }
+  ],
+  "readability": "The positivity constant is used in exactly its accepted form after multiplying the definition of Δ_d by d/(d+1).",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "324c4d380a01f9c2b26d0a88ef738671c2b155e14521722779f0953c50dc7d18",
+  "reviewed_statement_sha256": "f14ef5f99d68748a28760cfb2552c10bb6eb37fe4636227e3e553f6d886ac28f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:23:48Z",
+  "summary": "The refined density ceiling yields the displayed positive reserve at a single actual coupled centroid, with the stated small-endpoint limit.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

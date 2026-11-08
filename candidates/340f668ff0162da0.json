@@ -1,0 +1,26 @@
+{
+  "advances": "A full-normal minimizing-cap formula at prescribed marks and a two-sided directional-transfer example. For long extrusions the prescribed mark is strictly shallower than an explicit actual competitor.",
+  "author": "PK-research-agent",
+  "candidate_id": "340f668ff0162da0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:11:33.639207+00:00",
+  "depends_on": [],
+  "draft_key": "reflected-roof-exact-transverse-depth",
+  "kind": "theorem",
+  "proof": "Convexity follows from the concave upper roof and constant lower roof. Fubini gives the total mixed area. For the indicated $h$, the slab over $X$ with heights $[2h-g(-X),g(X)]$ lies in $[-L,g(X)]$, since $2h-g(-X)\\ge-L$. Its heights are ordered because $h\\le\\min_Dg$ gives $2h\\le g(X)+g(-X)$. The resulting subset is symmetric about $(0,h)$, which belongs to the actual body since its integer base is zero and $-L\\le h\\le g(0)$. The subset's mixed mass is $2(Q-hW)$ by the lattice-preserving reflection $X\\mapsto-X$. Every closed halfspace containing its center captures at least half its mass, since it contains at least one member of each reflected pair. The cap $t\\ge h$ has area $Q-hW$ by Fubini, giving equality over all ambient halfspaces, including pure base directions.\n\nThe section at $0$ is precisely $D$. Its reflection gives raw section depth at least $W/2$ at the origin. The complementary closed section halfspaces $s\\ge0$ and $s\\le0$ have equal mass and a measure-zero common boundary, so they cover the section at the common budget $W/2$. As $g>0$ and $L>0$, all positive fibers are cut properly at $t=0$. The normalization at $(0,0)$ is $Q/(LW+Q)$. For $L>2Q/W$ the point $(0,-L/2)$ has raw depth at least $LW/2>Q$ by the contained symmetric cylinder $D\\times[-L,0]$.\n\nIn the explicit example the complete base set is $-1,0,1$. Each section interval has length $2$ and each original fiber has area $17/2$. Integrating the affine roof on each interval gives area $5/2$ above the section and area $6$ below it. The roof extrema are $1/4$ and $9/4$, so the stated range is exactly the range of the sufficient conditions. In the direction $s\\ge0$, the three half-intervals have total length $3$. Their positive mass is $3\\int_0^1(5/4-s)\\,ds=9/4$ and their lower mass is $9$, giving the two fractions.\n",
+  "source_candidate_ids": [
+    "4c405e76fb81c248"
+  ],
+  "source_candidate_sha256": {
+    "4c405e76fb81c248": "3dbfc4e4c6e5198d6c7d90d4a327cfec5eac2fec6f938b58896fd6e93fa7dc25"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4c405e76fb81c248",
+      "locator": "§§4–6, (6)–(8) and the exact rational calibration"
+    }
+  ],
+  "statement": "Let $D\\subset\\mathbb R^n\\times\\mathbb R$ be a compact convex body centrally symmetric about $0$, with mixed length measure $\\nu$ of mass $W>0$. Let $g$ be continuous, positive and concave on $D$, and let $L\\ge\\max_Dg$. Set $Q=\\int_Dg\\,d\\nu$ and $C=\\{(X,t):X\\in D,\\ -L\\le t\\le g(X)\\}$. The total mixed area is $LW+Q$. Whenever $(\\max_Dg-L)/2\\le h\\le\\min_Dg$, the raw depth at the actual point $(0,h)$ is $Q-hW$, attained by $\\{t\\ge h\\}$. The section $t=0$ is $D$ and has normalized maximum depth $1/2$. At $h=0$ the original cap cuts every positive fiber properly and the original normalized depth tends to zero as $L\\to\\infty$ with $D,g$ fixed.\n\nFor $D=[-1,1]\\times[-1,1]$ in coordinates $(z,s)$, with $z$ integer, take $g=5/4-s$ and $L=3$. Then $W=6$, $Q=15/2$ and the total mixed area is $51/2$. On $-3/8\\le h\\le1/4$ the raw depth is $15/2-6h$, and the original normalized depth at $h=0$ is $5/17$. The direction $\\{s\\ge0\\}$ captures half the section and half the lower area at $t=0$, but only $3/10$ of the upper cap's area.",
+  "subgoal_id": "pk-intake-reflected-roof-exact-transverse-depth",
+  "title": "Exact depth along a transverse interval in a reflected roof body"
+}

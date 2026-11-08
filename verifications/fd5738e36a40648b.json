@@ -1,0 +1,56 @@
+{
+  "candidate_id": "4a0807e4166652bf",
+  "candidate_sha256": "c89bc464a0bfbcd95ef23730a4daea1fcbd6416577e0deb1df765c04b6b09664",
+  "checked_dependency_candidate_sha256": {
+    "700febf4b7a92759": "9c72688a255c1b12acbbcd09b9e11c980ad32db764ade71c97e1961518ed221b",
+    "7a7cc355a2b6c5c0": "d9a478e9a213ee80bf4d564bfd60ffeb20d49cdeb486199a34d14462e56a39f1"
+  },
+  "checks": [
+    "Verified that each canonical centroid cap is homothetic to the simplex with ratio d/(d+1), and checked from 700febf4b7a92759 that it attains ordinary centroid depth.",
+    "On each old facet verified that exactly d eligible cap pieces each scale facet area by a^(d−1), so the constant normal-marginal test is satisfied with β=a^d. This remains true for endpoint counting when d=1.",
+    "Used average cap shadow a^(d−1)B to obtain R/(2B)=a^(d−1)−a^d=Γ_d/d uniformly in e. Its angular ratio is the same.",
+    "Checked the box center and paired horizontal caps under central reflection. In the shared normal direction their sections project onto the full shadow, so R=B and the factor two is attained at β=1/2. Matched c2eb139e074f5fb3 §4."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7a7cc355a2b6c5c0",
+      "candidate_sha256": "d9a478e9a213ee80bf4d564bfd60ffeb20d49cdeb486199a34d14462e56a39f1",
+      "hypotheses": "Same-batch zonotope result supplies the directional identity for the actual finite menus. The proof verifies its unaugmented normal-marginal assumption on both the simplex and box.",
+      "reviewed_proof_sha256": "b22f15b5d2c23b371d140b2faedd47a3e66a898b21319365ef6c82a259c6e4be",
+      "reviewed_statement_sha256": "e8d0acd8ce949657fe766cd423426a71601f21549a34265c5f1d2d202609b1a6",
+      "status": "same-batch prerequisite for admission"
+    },
+    {
+      "candidate_id": "700febf4b7a92759",
+      "candidate_sha256": "9c72688a255c1b12acbbcd09b9e11c980ad32db764ade71c97e1961518ed221b",
+      "fact_id": "700febf4b7a92759",
+      "fact_sha256": "cfb324c62d51fed2ddbb9873c3d66c8564c7e8e6a37da2812d751baa4aed417d",
+      "hypotheses": "At equal barycentric coordinates its central-region condition holds and its minimizing intercepts give exactly the stated canonical caps.",
+      "reviewed_proof_sha256": "2cbc8c11af5c9424a0b6383af2550f0370176a121b8a1e15523cef3452c12218",
+      "reviewed_statement_sha256": "aa03de8379db66f47939e67ce0cff5c5841de3ce928b12c8b638a8485f76df8f"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:29:55Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It gives the canonical cap masses and minimality at a simplex centroid. It does not compute the shared normal marginal or calibrate the projection inequality.",
+      "fact_id": "700febf4b7a92759"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a89921a36bbb893881be763741d3dc86a2b44c091a09044549649aa23da6ecb2",
+  "reviewed_statement_sha256": "04f01137eadac482265b046f66e36af4bebfe4a1b3158008fd80631844a07b76",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:24:40Z",
+  "summary": "The simplex and box provide the stated exact, directionwise factor and sharp coefficient.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

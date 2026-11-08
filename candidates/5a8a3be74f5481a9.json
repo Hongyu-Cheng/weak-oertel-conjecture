@@ -1,0 +1,30 @@
+{
+  "advances": "Continuity of raw buffered maxima for changing weights with bounded sampled values, including a possibly nonzero limiting buffer.",
+  "author": "PK-research-agent",
+  "candidate_id": "5a8a3be74f5481a9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:07:51.863078+00:00",
+  "depends_on": [
+    "c42156e9c470da8e",
+    "155691fc3768c06f",
+    "b3c0088cf09b2894"
+  ],
+  "draft_key": "sampled-shift-and-depth-limit",
+  "kind": "theorem",
+  "proof": "Write $s_j(p,y)=(h_j(p,y)E_{K_{j,p}}(y)/M_j)^{1/(d+1)}$ and use $s$ for the limiting scalar, extended by zero on own boundaries. To prove uniform convergence of displacements on the stated correspondences, take any sequence of pairs of such marks, passing to a fixed base and a common limit. If this limit is own-interior, local uniform convergence of the weights, continuity of the interior limit, and b3c0088cf09b2894 give convergence of both scalar values to the same number. If it is on the own boundary, both energy values tend to zero by the same accepted result, while the weights stay bounded and the masses bounded away from zero. The norms converge uniformly and stay bounded. This proves the uniform claim by the sequential criterion. The same interior and boundary argument shows continuity of $s$ on each closed limiting fiber.\n\nAll fibers are in a common bounded ball, so there is a common bound on the sum of their unit-normal section areas, using section bound one in $d=1$. For fixed $a$ and Euclidean unit $u$, compare paired cap masses by replacing each moving body by its limit and then changing the threshold. The first error is bounded by $\\sum_z|K_{j,z}\\mathbin{\\triangle}K_z|$, which tends to zero by Hausdorff convergence of positive convex bodies. The second is at most the section-area bound times $|y_j-y|+|s_j(p,y_j)\\Gamma_j(u)-s(p,y)\\Gamma(u)|$. This bound does not depend on $a$. Pure-base caps require only the first error. Taking infima gives the uniform depth comparison. The same slab bound within a fixed family and continuity of its scalar displacement show continuity of depth on each closed fiber. Hence maxima exist. The correspondences cover both sampled sets, so the maxima converge. If maximizing marks converge, select their nearest limiting same-base points; these converge to the same mark. The uniform depth comparison and continuity show this mark is maximizing.\n\nAn inball at a fixed limiting base has a fixed smaller ball contained in that moving fiber for large $j$. At its center every nonvertical cap captures at least half this ball, and each containing pure-base cap captures the whole own fiber. Thus $Q_j$ has a common positive lower bound (reduced if necessary for the finitely many initial terms). For any boundary mark of any compatible positive family, choose a unit supporting continuous normal of the own fiber there. Apply 155691fc3768c06f to the anchored inclusion at that base to lift the support to the canonical hull. The closed outside cap has a nonzero continuous normal and meets each sampled fiber only in a hyperplane or the empty set, hence has mass zero. At such a mark the physical displacement is zero. This rules out a maximizing boundary mark in each fixed family and in the limit, since $Q>0$ as well. If moving maximizing marks had distances to their own boundaries tending to zero, a subsequence of these marks and nearest boundary points would converge to the same point on a limiting own boundary. For this last assertion, an own-interior limit would have a small ball contained in all sufficiently late moving bodies by support convergence. The cluster-point result just proved gives a contradiction, establishing the uniform interior bound. On $Z$ the limiting shift is zero and the two depths at the mark agree.\n",
+  "source_candidate_ids": [
+    "36607dd22d2fb045"
+  ],
+  "source_candidate_sha256": {
+    "36607dd22d2fb045": "f5f33cf7e6a453d29d8d77f581246a0a60b7a9c9a56cfc37be47610c5803cfd6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "36607dd22d2fb045",
+      "locator": "§4, including (11)"
+    }
+  ],
+  "statement": "In the setting and subsequential limit of the sampled concave roof compactness lemma, let $M_j=\\sum_z|K_{j,z}|$ and $M=\\sum_z|K_z|$. Let norms $\\Gamma_j$ converge uniformly on Euclidean unit continuous covectors to a norm $\\Gamma$. For sampled marks use the closed buffered caps with through-mark margin $a\\cdot(z-p)+u\\cdot(X-y)$ increased by\n$$\n\\left(\\frac{h_j(p,y)E_{K_{j,p}}(y)}{M_j}\\right)^{1/(d+1)}\\Gamma_j(u).\n$$\nHere $E$ is marked projective energy extended by zero on own boundaries, and the pure-base caps are unchanged. Define the limiting buffered caps using $h$, $K_z$, $M$, and $\\Gamma$, including zero displacement on own boundaries.\n\nThe raw maximum $Q_j$ is attained, and all maximizing marks stay at a common positive distance from their own fiber boundaries. The displacements and the raw point depths converge uniformly on corresponding sampled marks at the same base whose distance is at most $\\delta_j=\\max_z d_H(K_{j,z},K_z)$, taking the supremum for displacements over Euclidean unit $u$. The limiting maximum $Q$ is attained, $Q_j\\to Q$, and every cluster point of maximizing marks attains $Q$. A limiting maximizing mark over $Z$ has ordinary raw depth $Q$.",
+  "subgoal_id": "pk-intake-sampled-shift-and-depth-limit",
+  "title": "Buffered depth limits under sampled interior convergence"
+}

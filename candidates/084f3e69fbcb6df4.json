@@ -1,0 +1,30 @@
+{
+  "advances": "An exact finite change-of-measure envelope and its limitation for the specified heavy-fiber certificate.",
+  "author": "PK-research-agent",
+  "candidate_id": "084f3e69fbcb6df4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:26:15.105344+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-payments-sharp-posterior-event-correction",
+  "kind": "theorem",
+  "proof": "For an event let $g_i$ be its conditional probability in fiber $i$. Its original and posterior probabilities are the two corresponding weighted sums, so the minimum gives the asserted lower bound. For any $\\eta\\ge0$ and feasible $g$ one has\n$$\n\\sum_i\\pi_i g_i\\ge\\eta q-\\sum_i(\\eta p_i-\\pi_i)g_i\n\\ge\\eta q-\\sum_i(\\eta p_i-\\pi_i)_+.\n$$\nIn the stated order, choose $g_i=1$ for $i<j$, $g_j=(q-P_{j-1})/p_j$, and $g_i=0$ for $i>j$. This is feasible at posterior mass exactly $q$. Taking $\\eta=\\pi_j/p_j$ makes both displayed inequalities equalities, because earlier indices have $\\eta p_i-\\pi_i\\ge0$ and later ones have the reverse sign. This also covers equal slopes and both ends. The slope sequence $\\pi_j/p_j$ is positive and nondecreasing, giving continuity, monotonicity and convexity. Nonatomicity realizes the minimizing conditional fractions by measurable events in the respective fibers, so the bound is sharp among all events. Applying the lower envelope to the complement gives the sharp upper envelope. Applying the lower envelope to every containing closed halfspace and then taking the infimum gives the fixed-mark certificate.\n\nA heaviest fiber's own guarantee gives posterior depth at least $\\gamma p_i$ at its corresponding mark. The vector supported on that fiber alone with fraction $\\gamma$ is feasible in the relaxation at that probability. Its cost is $\\gamma\\pi_i$. When $p=\\pi$, $B_{p,\\pi}(q)=q$, which attains the upper bound on the optimized certificate. If the prior is uniform, a heaviest fiber has cheapest slope $1/(Np_{\\max})$, and $\\gamma p_{\\max}$ lies in that first segment. This proves the all-posterior identity $\\gamma/N$. The Gaussian family $p_i\\propto\\pi_i e^{a\\cdot z_i-t|z_i|^2/2}$ includes the original law at $a=0,t=0$, so the supremum identity applies there.\n\nFor each mark $Y$, the fixed-mark bound reads $D_Y(\\pi)\\ge B_{p,\\pi}(D_Y(p))$. Taking suprema over the same marks and using continuity and monotonicity of $B_{p,\\pi}$ gives $D_*(\\pi)\\ge B_{p,\\pi}(D_*(p))$. Taking $p=\\pi$ supplies the reverse bound for the supremum over the posterior family, both at a fixed mark and over all marks. The event relaxation retains only the scalar posterior probability and the two sets of weights.\n",
+  "source_candidate_ids": [
+    "62be7ad1e227f13d"
+  ],
+  "source_candidate_sha256": {
+    "62be7ad1e227f13d": "e1f9070c5e50f37f6301d40523d136cae4d912ccd7f9027d40b03e9a6a249ad1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "62be7ad1e227f13d",
+      "locator": "62be7ad1e227f13d:01 §1, (1)–(5)"
+    },
+    {
+      "candidate_id": "62be7ad1e227f13d",
+      "locator": "62be7ad1e227f13d:02 §2, (6)–(8), and §6, (17)"
+    }
+  ],
+  "statement": "Let $\\pi$ and $p$ be positive probability weights on the same finite set of disjoint fibers, with the same nonatomic conditional measure within each fiber. For $0\\le q\\le1$ the sharp lower original probability of an event with posterior probability $q$ is\n$$\nB_{p,\\pi}(q)=\\min\\left\\{\\sum_i\\pi_i g_i:0\\le g_i\\le1,\\ \\sum_i p_i g_i\\ge q\\right\\}.\n$$\nOrder $p_i/\\pi_i$ nonincreasingly and write $P_j=\\sum_{i\\le j}p_i$, $\\Pi_j=\\sum_{i\\le j}\\pi_i$. Then on $P_{j-1}\\le q\\le P_j$,\n$$\nB_{p,\\pi}(q)=\\Pi_{j-1}+\\frac{\\pi_j}{p_j}(q-P_{j-1})\n=\\max_{\\eta\\ge0}\\left[\\eta q-\\sum_i(\\eta p_i-\\pi_i)_+\\right].\n$$\nThe function is continuous, increasing and convex, and $1-B_{p,\\pi}(1-q)$ is the sharp upper probability. For every fixed mark whose posterior closed-halfspace depth is at least $\\delta$, its original depth is at least $B_{p,\\pi}(\\delta)$.\n\nFor any posterior-heaviest fiber $i$ and any ordinary conditional depth guarantee $\\gamma\\in[0,1]$, the corrected certificate obeys $B_{p,\\pi}(\\gamma p_{\\max})\\le\\gamma\\pi_i\\le\\gamma\\pi_{\\max}$. Its supremum over any posterior family containing $\\pi$ is $\\gamma\\pi_{\\max}$, and for a uniform prior on $N$ bases its value is $\\gamma/N$ for every posterior. For the actual maximum depth $D_*(p)$ on a fixed set of allowed marks, the supremum of $B_{p,\\pi}(D_*(p))$ over the same family equals $D_*(\\pi)$. The analogous statement holds at any fixed mark.",
+  "subgoal_id": "pk-intake-pk-w34-payments-sharp-posterior-event-correction",
+  "title": "Sharp likelihood-only correction of posterior cap probabilities"
+}

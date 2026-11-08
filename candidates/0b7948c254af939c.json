@@ -1,0 +1,29 @@
+{
+  "advances": "Constrains the scalar capped signed exponential optimization used in the restricted angular problem.",
+  "author": "PK-research-agent",
+  "candidate_id": "0b7948c254af939c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:07:13.942288+00:00",
+  "depends_on": [
+    "511d89569241b0d6",
+    "55ec62c36c689dfe"
+  ],
+  "draft_key": "unit-negative-exponential-half-mass",
+  "kind": "theorem",
+  "proof": "When $m=1$, condition on the positive sum. Its comparison with one unit exponential has probability $1-\\prod_i(1+p_i)^{-1}\\ge1/2$, because the product is at least $1+\\sum_i p_i=2$.\n\nLet $m\\ge2$. If there are at least two fractional positive coefficients, choose such a pair $p_i\\ge p_j>0$. Along the transfer that increases $p_i$ and decreases $p_j$ by the same amount, keep both coefficients in $[0,1]$. At interior transfer parameters let $V=\\sum_i p_i E_i-\\sum_j F_j$ and let $g$ be the density of $W=V+p_iE_i'+p_jE_j'$ with independent extra phases. Its reflection is a gamma of shape $m$ minus positive phases with coefficients at most one and total $m+p_i+p_j\\ge m$. The gamma density-sign lemma 55ec62c36c689dfe gives $g'(0)\\ge0$.\n\nFor positive scale $c$, convolution by the positive exponential kernel at scale $c$ sends a continuous density $f$ to a density $F_c$ satisfying $cF_c'=f-F_c$. Apply this identity in the two orders of convolution defining $g$. If $f_V$ is the density of $V$, the resulting difference is\n$$\nf_{V+p_iE_i'}(0)-f_{V+p_jE_j'}(0)\n=(p_j-p_i)g'(0)\\le0 .\n$$\nBy the signed-exponential derivative lemma 511d89569241b0d6, this is the derivative of the probability along the transfer. The two coefficients stay positive until a possible terminal zero, and at all interior points the lemma applies. Continuity at the endpoints follows by coupling and the absence of a zero atom. Transfer until one coefficient hits $0$ or $1$. Each step reduces the number of fractional coefficients. When at most one remains, the integer sum forces all coefficients to be integral. The positive and negative sums are then identically distributed independent gamma variables and the probability is $1/2$. The transfers could only decrease it.\n",
+  "source_candidate_ids": [
+    "9dace055ddbb6578"
+  ],
+  "source_candidate_sha256": {
+    "9dace055ddbb6578": "793d931e0e3a4600d32eb5144b37e6c5da57305359f7ba04329288e0af8e121a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9dace055ddbb6578",
+      "locator": "All-unit negative stratum"
+    }
+  ],
+  "statement": "Let $E_j,F_i$ be independent unit exponentials. Let $m\\ge1$ be an integer and $0\\le p_i\\le1$ be a finite list with $\\sum_i p_i=m$. Then\n$$\n\\Pr\\{\\textstyle\\sum_i p_i E_i\\ge\\sum_{j=1}^m F_j\\}\\ge\\frac12 .\n$$",
+  "subgoal_id": "pk-intake-unit-negative-exponential-half-mass",
+  "title": "Half-mass bound for unit negative exponential phases"
+}

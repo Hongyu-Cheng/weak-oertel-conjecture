@@ -1,0 +1,56 @@
+{
+  "candidate_id": "f566248002918e0f",
+  "candidate_sha256": "6b21b147a4c95b9ce1293e4061aa82358d124d00d2136c18e684e26637388d63",
+  "checked_dependency_candidate_sha256": {
+    "68c5513d4b6cae29": "63ea0f9d76d562de0b0fe099f65be44493b083f52410c90d044f1ced36cf0d74"
+  },
+  "checks": [
+    "Each component of the averaged law has Jacobian h^(d−1) and image y_i ≥ b. Ties have probability zero and each minimum label has mass 1/d for both laws, so conditioning leaves the density ratio unchanged. In the cell with minimum at i, t=dy_i is the barycentric coordinate of g, and the opposite facet point w is independent under the uniform cell law with slice density (d−1)(1−t)^(d−2).",
+    "For t<db, the i-th coordinate misses b and the remaining cutoffs are w_j ≥ (b−t/d)/(1−t). Their threshold decreases from b to zero, which lies within the admitted d−1-coordinate comparison for d≥3. Integrating the cutoff counts gives (d−1)(1−s)^(d−2). The opposite facet is a point for d=2. For t>db every coordinate exceeds b, so the angular law is uniform. The derivative and upward jump at db give a nondecreasing q/p, including the exponent-zero case.",
+    "After conditioning and replacing the angular law by uniform, the radial size-biased law has density rp_R/E_pR. Under it the product expectation of F_w/r and q_R/p_R is E_qF_w/E_pR, and the separate means are E_pF_w/E_pR and E_qR/E_pR. The increment-product argument gives the asserted covariance sign and contraction, with bounded factors.",
+    "For the minimum-coordinate survival function, the sum of imposed lower bounds in Z is (d−1)u/h below b and (du−b)/h above b. At u=b the expressions agree since h−(d−1)b=a. Integrating gives the displayed moment, and simplifying (d² E_q min−1)/(d−1) gives exactly c_d(b). Independently expanded and integrated the polynomials with rational arithmetic at 171 (d,b) pairs, including both endpoints, and checked the particular coefficient at b=1/(d+1) for 2≤d≤20.",
+    "The hypograph has a supporting hyperplane at (g,ψ(g)); its height coefficient is nonnegative by downward unboundedness and strictly positive by relative interiority of g. The resulting convex error f=ℓ−ψ has f(g)=0, and both laws have mean g, so its moment contraction gives the claimed Jensen-gap inequality for every continuous concave test.",
+    "At b=0 the laws agree, and at b=1/d the accepted critical comparison applies. The minimum-coordinate test has positive gap (d−1)/d² and its exact moment realizes c_d(b) including both endpoints. For 0<b<1/d, 0<a<h gives strict positivity.",
+    "Barycentric coordinates are an affine map with constant Jacobian, preserving normalized volume and the facet centroid. At b=1/m one has d h^(d−1)=mΓ, so the cutoff-count identity and affine-error bound follow with sharp equality for the minimum test. For E_d=0 the continuous nonnegative error has zero integral against a full-support measure, so ψ is affine. Affine functions give E_d=0 by the common mean, and negation yields the stated convex form.",
+    "Checked the pending source 81d65baa0f0a1024 at its exact candidate digest. Sections 1–4, equations (1)–(14), supply the same density decomposition, moment and affine extraction. The convex form is the immediate sign-reversed quantitative comparison. The fixed-roof body in source §5 lies outside this candidate."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "68c5513d4b6cae29",
+      "candidate_sha256": "63ea0f9d76d562de0b0fe099f65be44493b083f52410c90d044f1ced36cf0d74",
+      "fact_id": "68c5513d4b6cae29",
+      "fact_sha256": "43b1ca5d7fd8704a6e3ba0a637c6a1f1f9f97ae9ba19a7b902f779d0a4674e0f",
+      "mapping": "For d≥3, identify the opposite facet with the simplex in k=d−1 coordinates. At fixed i,t the pulled-back test is continuous convex and s(t)≤b<1/d<1/k. At the endpoint b=1/d use the same theorem in k=d coordinates with s=b. The d=2 point facet needs no predecessor.",
+      "reviewed_proof_sha256": "4724d7b0f22a088dfaad1da098d4e09fec624f850d9d5f6fdc0a92c2ac5541a2",
+      "reviewed_statement_sha256": "5847460bffc087ace14954fbd7a1a6483e35d672e22ae33074549953e7ba7898",
+      "status": "Accepted at d6689f9."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:15:03.269673Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same simplex laws and parameter range for the qualitative comparison, including affine-only equality at subcritical b and the critical endpoint. The present theorem determines the strictly positive best subcritical Jensen-gap coefficient and uses it for a sharp integrated affine error on arbitrary simplex facets.",
+      "fact_id": "68c5513d4b6cae29"
+    },
+    {
+      "comparison": "The merging martingale for a beta-distributed step gives qualitative convex-order input in the accepted predecessor. It does not give the sharp constant for the full fixed-step family.",
+      "fact_id": "bf9a7e56f89375b5"
+    }
+  ],
+  "readability": "The letter F denotes the barycentric simplex and then an arbitrary geometric facet, with the affine identification carrying all probability measures and centroids. The raywise covariance is under the radial law tilted by r, so its contraction factor is the ratio of radial means.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3544b7de2c95b17a195eab944bb8ddbb1ffb3e29d968da099200667a66530ff6",
+  "reviewed_statement_sha256": "2f14335d25b782dac211975e1f8b0ea219712b3de218f3b66fc784cf1a119fde",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:13:40Z",
+  "summary": "The minimum-cell decomposition and radial covariance give the sharp quantitative convex-order comparison throughout the stated range. The facet consequence has the same sharp coefficient and its equality characterization follows from the supporting affine error.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

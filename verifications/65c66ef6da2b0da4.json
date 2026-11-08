@@ -1,0 +1,66 @@
+{
+  "candidate_id": "b3203e0a479b9869",
+  "candidate_sha256": "015f2f177f93aa035d17d9dba0d0a7e5a89b1ab1ad6ef6a9afd9334d66ae602e",
+  "checked_dependency_candidate_sha256": {
+    "34836225febf7839": "0f4ba1cac938cbb81270a2b8b9af9041a04b02518e764793f81b5af1dca226ad",
+    "a56f8711406a3870": "cf4183b801df0f13dc195abfae0a454a6a749302a1a96e7b44aefdb4b7390624",
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "Verified local convergence directly by ray-section interpolation, uniform inner inclusion on interior product compacts, and compactness of the original tangential projection at bounded normal height.",
+    "The common source ball bounds the optimizing parameters by denominator positivity. A fixed small dual test gives a uniform finite objective because d+1>k.",
+    "The compact denominator floor passes to the product along interior compacts and then to its boundary by continuity. Fatou yields a finite lower bound at each cluster point, with the product theorem identifying its admissible minimum.",
+    "The fixed product optimizer is uniformly positive over all actual dilated bodies: local upper tangential convergence controls bounded radii, while strict duality controls the tail. Dominated convergence gives recovery with exponent d+1.",
+    "Convergent dual normals and the compact floor yield a uniform escort majorant (1+|q|)^{-d-2}, integrable with first moments because d>=k. Scaling the normal coordinate back gives weak convergence to the tangential marginal.",
+    "For a polytope a face-exposing functional is positive on all nonzero projected vertex generators, so its finitely generated projected cone is closed and pointed. Checked source e70b63e0e6efe01c:06, (19)–(22)."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "34836225febf7839",
+      "candidate_sha256": "0f4ba1cac938cbb81270a2b8b9af9041a04b02518e764793f81b5af1dca226ad",
+      "hypotheses": "Use the exact product coefficient, unique minimizer and escort of F×Q. F and x satisfy the tangential assumptions and the projection of the full-dimensional K makes Q full dimensional in addition to the stated closedness and pointedness.",
+      "reviewed_proof_sha256": "f95462a4c6a4a5180118cc4b783c1a473caf2c54cae36b7003dfe63c5ed262ab",
+      "reviewed_statement_sha256": "a0d71da74c91618f9c0423e8f9b09b7b0fb42eb42523038bef8bbc010eb317db",
+      "status": "same-wave independent approval required before admission"
+    },
+    {
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "fact_id": "d90ba05577427854",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "hypotheses": "The rescaled body is compact and full dimensional with (x,v) interior, giving attained energy and a normalized escort; normal affine covariance yields the original determinant factor.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+    },
+    {
+      "candidate_sha256": "cf4183b801df0f13dc195abfae0a454a6a749302a1a96e7b44aefdb4b7390624",
+      "fact_id": "a56f8711406a3870",
+      "fact_sha256": "03a9da2ef9e59a690579ec03b6c8cade64caaf4b8b2c2ad2bc400cb03b7cf04d",
+      "hypotheses": "The rescaled full-dimensional compact bodies have the mark in their interiors by the fixed source ball. Apply the uniform floor 1/(d+1) to every optimal denominator.",
+      "reviewed_proof_sha256": "fe29a2f6643f87670ea241d9dc09f195371a63853e47655622b8aa50bef99e48",
+      "reviewed_statement_sha256": "22b840fa739bd676a6bd5061cd02b421ab581a84413b06cba0b174b5104927e3"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:00:26Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides affine covariance and compact escort existence for individual interior marks, but not the normal blow-up coefficient, parameter limits or rescaled laws.",
+      "fact_id": "d90ba05577427854"
+    }
+  ],
+  "readability": "The proof needs both the local upper approximation and a separate large-radius bound; neither is replaced by an exhaustion assertion for the actual compact bodies.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent read of frozen proof, then source and predecessor comparison",
+  "reviewed_proof_sha256": "55144f06a644309dfcc8d97111fb435e628ae21fd8e4e177eefd03d5fe233212",
+  "reviewed_statement_sha256": "c12d15d6c384c9c0dd6b406f3e140d8fb29e4b559a0f242c3d7a0065f4d56ccc",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:56:45Z",
+  "summary": "The exact energy coefficient and escort persist in the exposed-face limit under the closed pointed projection-cone hypothesis.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "Concerns the proposed factor-two log-concave shadow on one fiber, not the existence of an original mixed-depth point.",
+  "author": "PK-research-agent",
+  "candidate_id": "dd95a215a39ec894",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:29:19.944735+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-lifts-logconcave-shadow-obstruction",
+  "kind": "counterexample",
+  "proof": "The two upper edges give the lengths $80/40,101/40,122/40,61/40,0$ at $z=0,1,2,3,4$, and all fibers start at $x=0$. The raw mass is $M=91/10$. The base cuts $z\\le1$ and $z\\ge3$ have respective raw masses $181/40$ and $61/40$, each strictly below $M/2=182/40$. Thus a dominated probability must be carried at $z=2$.\n\nFor $H_R=\\{x\\ge -z/2+121/40\\}$ the positive-length fibers contribute $0,0,41/40,0$ in base order. For $H_L=\\{x\\le4z-437/80\\}$ they contribute $0,0,203/80,61/40$. The zero-length fiber contributes nothing. Their traces at $2$ give\n$$\n\\nu([81/40,\\infty))\\le q:=41/182,\\qquad\n\\nu((203/80,\\infty))\\ge B:=39/364.\n$$\n\nPartition $(-1/40,61/20]$ into six consecutive intervals $I_j$ of length $41/80$, open on the left and closed on the right. Their masses $m_j=\\nu(I_j)$ sum to one. For a log-concave measure the $m_j$ form a log-concave sequence with consecutive positive indices: the midpoint of $I_j$ and $I_{j+2}$ is $I_{j+1}$, and any intermediate bin is a convex combination of two others. Apply set log-concavity to compact subsets approximating the masses from within the relevant bins. This also applies to Dirac probabilities. If log-concavity is given in density form, the same inequality follows directly by integrating $f(x+h)f(y)\\ge f(x)f(y+h)$ for $x\\in I_j,y\\in I_{j+1}$ and $h=41/80$: the points $x+h,y$ are complementary convex combinations of $x,y+h$. The support interval also gives consecutiveness in this case.\n\nThe last two bins lie above $81/40$, and the last is $(203/80,61/20]$. Hence $m_4+m_5\\le q$, $m_5\\ge B$, and $m_4\\le A:=43/364$. Some earlier bin is positive because $q<1$, so $m_4>0$ by consecutiveness. Log-concavity implies each preceding positive adjacent ratio $m_j/m_{j+1}$ is at most $m_4/m_5\\le A/B$. This gives $m_{4-k}\\le A(A/B)^k$ for $1\\le k\\le4$, including zeros. Summing gives\n$$\n1\\le q+A\\sum_{k=1}^4(A/B)^k=\\frac{50046773}{60149466}<1.\n$$\nThis excludes the required probability.\n",
+  "source_candidate_ids": [
+    "4b4c039de88670b2"
+  ],
+  "source_candidate_sha256": {
+    "4b4c039de88670b2": "8543c444292320b931f74f3646cbe93f94c2aad730d4a661a878c2da5610ab75"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4b4c039de88670b2",
+      "locator": "4b4c039de88670b2:01 Convex body and marginal; Two exact ambient cap constraints; Lemma; The contradiction"
+    }
+  ],
+  "statement": "Let $C=\\operatorname{conv}\\{(0,0),(4,0),(2,61/20),(0,2)\\}$ and let $\\mu$ be its normalized mixed length on $\\mathbb Z\\times\\mathbb R$. No log-concave probability $\\nu$ carried by a single integer fiber of $C$ satisfies $\\nu(H)\\le 2\\mu(H)$ for every closed ambient halfspace $H$.",
+  "subgoal_id": "pk-intake-pk-w34-lifts-logconcave-shadow-obstruction",
+  "title": "Two cap constraints exclude every log-concave median-fiber shadow"
+}

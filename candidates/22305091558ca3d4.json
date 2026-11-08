@@ -1,0 +1,30 @@
+{
+  "advances": "Global parameter minimization on fixed actual bodies at one positive scale.",
+  "author": "PK-research-agent",
+  "candidate_id": "22305091558ca3d4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:29:19.951841+00:00",
+  "depends_on": [
+    "b817b4ab3e2256b0",
+    "20210aa9d661295a",
+    "d90ba05577427854"
+  ],
+  "draft_key": "pk-w34-stress-fixed-body-contact-optimum",
+  "kind": "theorem",
+  "proof": "The contact entropy theorem applied to normalized $U$ gives $\\sum_i\\sigma_i\\log[U(Y_i)/L_i]\\ge0$. Thus some positive certificate mark has $U(Y_i)\\ge L_i$. The projective energy is positive at that interior mark by d90ba05577427854. The bodies, covariance and scale are fixed, so increasing the mark's scalar buffer enlarges every nonvertical cap for the same normal and leaves pure-base caps fixed. The mark therefore has new depth at least $Q$, proving global optimality.\n\nFor strictness, fix such a mark and suppose its scalar buffer is increased strictly. If the new infimum equals its pure-base depth, the old strict gap already proves increase. Otherwise apply the strict atomic-gap attainment fact 20210aa9d661295a at the new scalar buffer: the new depth is attained by a nonvertical cap with a proper own-fiber section. At the same tilt and normal, reducing to the old scalar raises the threshold strictly. The initial proper section implies positive own volume in the strip removed by this increase, and no other fiber's captured volume increases. Therefore the old infimum is strictly below the new cap mass, which is the new infimum. If $U$ has global maximum at most $Q$, it follows that $U(Y_i)\\le L_i$ for every positive certificate mark. Both parameters are normalized, so the contact entropy theorem gives equality everywhere on the sampled fibers. The argument applies also to normalized maximum depth since the total mass is fixed.\n",
+  "source_candidate_ids": [
+    "b2578378c7102b3c"
+  ],
+  "source_candidate_sha256": {
+    "b2578378c7102b3c": "6bac706b6532c365f0b3e0b796f9d24dab353cfe03e71852504b9271a26999df"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b2578378c7102b3c",
+      "locator": "b2578378c7102b3c:04 §5, actual fixed-body minimization"
+    }
+  ],
+  "statement": "Fix a finite compatible family of positive convex sampled $d$-fibers with total volume $M$ and pooled within-fiber covariance norm $\\Gamma$, and a scale $\\varepsilon>0$. For positive continuous concave $U$ with $\\int\\log U\\,dm/M=0$, define its buffered cap at $Y=(p,y)$ by\n$$\na\\cdot(z-p)+u\\cdot(X-y)+\\varepsilon[U(Y)E_{K_p}(y)/M]^{1/(d+1)}\\Gamma(u)\\ge0,\n$$\nwith $u\\ne0$ and the usual pure-base caps also included. Here $E$ is the marked projective energy with boundary value zero. Suppose $L$ has an actual contact certificate with positive weights as in the contact entropy theorem, and every positive certificate mark is an own-interior global deepest mark for $L$ of common raw depth $Q$ strictly less than its pure-base depth. Then $L$ globally minimizes the maximum raw buffered depth among these $U$, and every minimizer equals $L$ on all sampled fibers.",
+  "subgoal_id": "pk-intake-pk-w34-stress-fixed-body-contact-optimum",
+  "title": "A contact martingale certifies global fixed-body parameter optimality"
+}

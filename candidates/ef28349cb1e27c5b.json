@@ -1,0 +1,26 @@
+{
+  "advances": "An openness statement for the actual integer-fiber constraints on a fixed base set.",
+  "author": "PK-research-agent",
+  "candidate_id": "ef28349cb1e27c5b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:25:23.535898+00:00",
+  "depends_on": [],
+  "draft_key": "strict-compatibility-open",
+  "kind": "lemma",
+  "proof": "There are finitely many extreme points across the nonempty coefficient polytopes. Compact containment gives a positive distance to the complement of $K_q$ for every displayed sum, so choose a common positive $\\kappa$. When there are no rows, choose any $\\kappa>0$.\n\nFor every unit $u$, the extreme-point inequalities read $\\sum_{p\\ne q}\\lambda_p h_{K_p}(u)\\le h_{K_q}(u)-\\kappa$. By linearity in $\\lambda$ they hold on all of $E_q$. Hausdorff distance bounds the sup norm of the difference of support functions, so $\\sum_{p\\ne q}\\lambda_p h_{K'_p}(u)\\le h_{K'_q}(u)-\\kappa+2\\eta\\le h_{K'_q}(u)$. Hence every such Minkowski combination is contained in $K'_q$.\n\nGroup any lifted convex combination at base $q$ by its base indices. If its coefficient at $q$ is one, its continuous point lies in $K'_q$ by convexity. Otherwise, remove that coefficient and renormalize the rest to obtain a vector in $E_q$. The already proved inclusion and convexity with the contribution from $q$ put the continuous point in $K'_q$. The reverse inclusion follows because each lifted fiber generates the hull. Its projection is $\\operatorname{conv}(P)$, whose integer bases are exactly $P$. Applying the same argument to $K'_p=K_p$ gives actual original fibers.\n",
+  "source_candidate_ids": [
+    "97eab0f821e54041"
+  ],
+  "source_candidate_sha256": {
+    "97eab0f821e54041": "6fd053c8eaa203602363a7b90aa8383c0b8298506059ea381ff71a80d405853e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "97eab0f821e54041",
+      "locator": "§1, Lemma 1, (1)–(2), open compatibility"
+    }
+  ],
+  "statement": "Let $n\\ge0$ and $d\\ge1$ be integers. Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be finite and nonempty, with $\\operatorname{aff}(P)=\\mathbb R^n$, and let $K_p\\subset\\mathbb R^d$, $p\\in P$, be compact convex bodies with nonempty interior. For each $q\\in P$, let\n$$\nE_q=\\left\\{\\lambda\\in\\mathbb R_{\\ge0}^{P\\setminus\\{q\\}}:\\quad\n\\sum_{p\\ne q}\\lambda_p=1,\\quad \\sum_{p\\ne q}\\lambda_p p=q\\right\\}.\n$$\nCall the family strictly compatible if for each extreme point $\\lambda$ of each nonempty $E_q$, the Minkowski combination $\\sum_{p\\ne q}\\lambda_p K_p$ is compactly contained in $\\operatorname{int}K_q$. Under this condition there is a common $\\kappa>0$ such that $\\sum_{p\\ne q}\\lambda_p K_p+\\kappa B_d\\subseteq K_q$ for every such extreme point, where $B_d$ is the closed unit ball. For any family of convex bodies $K'_p$ with $d_H(K'_p,K_p)<\\eta<\\kappa/2$ for all $p$, the convex hull of the lifted bodies $\\{p\\}\\times K'_p$ has exactly the prescribed integer fibers $K'_p$ at $p\\in P$. In particular the original family is actual.",
+  "subgoal_id": "pk-intake-strict-compatibility-open",
+  "title": "Strict anchored Minkowski inclusions preserve exact fibers under small Hausdorff changes"
+}

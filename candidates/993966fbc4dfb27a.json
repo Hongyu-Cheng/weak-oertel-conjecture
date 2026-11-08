@@ -1,0 +1,26 @@
+{
+  "advances": "Finite posterior reweighting of unchanged continuous fibers. Fixed-mark depth is a supermartingale; the same assertion does not hold for the maximization over marks.",
+  "author": "PK-research-agent",
+  "candidate_id": "993966fbc4dfb27a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.849911+00:00",
+  "depends_on": [],
+  "draft_key": "isotropic-gaussian-base-posterior",
+  "kind": "theorem",
+  "proof": "Differentiate the finite positive sum. The probability derivatives are $\\partial_{a_i}p_z=p_z(z_i-m_i)$ and $\\partial_t p_z=-p_z(|z|^2-\\mathbb E_p|z|^2)/2$. Applying the first identity twice gives the centered Hessian (the terms proportional to $\\sum_z p_z(g_z-G)$ vanish). Since $\\operatorname{Cov}_p(g,|z|^2)=\\operatorname{Cov}_p(g,|z-m|^2)+2m\\cdot\\operatorname{Cov}_p(g,z)$, the displayed generator annihilates $G$.\n\nConditional on base $z$, the independent Gaussian increment likelihoods along a finite partition have product, relative to driftless increments, $\\exp(A_t\\cdot z-t|z|^2/2)$, independent of the partition with endpoint $t$. Bayes' formula gives the posterior for each finite partition. Increasing partitions whose union is dense, path continuity and convergence of bounded conditional expectations give the same posterior in the whole observation filtration. Given the base, sample the fiber point independently of the Brownian motion, so its conditional law is unchanged. The innovation is a continuous martingale: for $s\\le t$, $\\mathbb E[A_t-A_s\\mid\\mathcal F_s]=(t-s)m_s$, and $\\mathbb E[m_r\\mid\\mathcal F_s]=m_s$ for $r\\ge s$. Its covariation is $tI$ since the subtracted drifts have finite variation. Lévy's characterization gives Brownian motion. Itô's formula and the generator identity give the two SDEs. Driving $a$ directly by driftless Brownian motion without changing the law would instead leave drift $-m\\cdot\\nabla_aG$.\n\nFor a closed ambient halfspace $H$, take $g_z=|K_z\\cap H|/|K_z|$, allowing whole fiber capture on a pure-base boundary. Then $D_Y(p)=\\inf_{H\\ni Y}\\sum_zp_zg_z(H)$ is the infimum of linear maps whose Lipschitz constants in $\\ell^1$ are at most one. This gives concavity, the Lipschitz bound and measurability; conditional Jensen for the posterior gives the supermartingale inequality. For each unit ambient normal the closed through-mark halfspace mass is upper semicontinuous in $Y$ by continuity from above of the measures of closed threshold sets. Moving a parallel halfspace through its contained mark can only lower mass, so the infimum over through-mark caps is upper semicontinuous. The actual mark set is compact, giving the maximum. Taking the maximum of the same uniformly $1$-Lipschitz functions of $p$ preserves that constant.\n",
+  "source_candidate_ids": [
+    "41893e0c805c3bf4"
+  ],
+  "source_candidate_sha256": {
+    "41893e0c805c3bf4": "b43d61f9bbc726a14e1f5732727dcd5521adfdd3a4d86653027566114431d936"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "41893e0c805c3bf4",
+      "locator": "41893e0c805c3bf4:01 §1, (1)–(4), and §2, (5)"
+    }
+  ],
+  "statement": "Take a finite nonempty base $P\\subset\\mathbb R^n$ with positive prior $\\pi_z$ and fixed uniform laws on positive compact convex fibers $K_z$. Let\n$$\nZ(a,t)=\\sum_z\\pi_z e^{a\\cdot z-t|z|^2/2},\\qquad p_z(a,t)=\\pi_z e^{a\\cdot z-t|z|^2/2}/Z(a,t).\n$$\nFor a bounded fixed statistic with fiber means $g_z$, put $G=\\sum_z p_zg_z$ and $m=\\sum_zp_zz$. Then\n$$\n\\begin{aligned}\n\\nabla_a\\log Z&=m,&D_a^2\\log Z&=\\operatorname{Cov}_p(z),&\n\\partial_t\\log Z&=-\\tfrac12\\mathbb E_p|z|^2,\\\\\n\\nabla_aG&=\\operatorname{Cov}_p(g,z),&\nD_a^2G&=\\mathbb E_p[(g-G)(z-m)(z-m)^{\\mathsf T}],&\n\\partial_tG&=-\\tfrac12\\operatorname{Cov}_p(g,|z|^2).\n\\end{aligned}\n$$\nIn particular $(\\partial_t+m\\cdot\\nabla_a+\\Delta_a/2)G=0$. Sample $Z_0\\sim\\pi$ and independent standard Brownian motion $B_t$; observe $A_t=tZ_0+B_t$. In the observation filtration the conditional base probabilities are $p_z(A_t,t)$, and the innovation $W_t=A_t-\\int_0^t m_s\\,ds$ is Brownian. The processes $p_z,G$ are bounded martingales with $dp_z=p_z(z-m)\\cdot dW$ and $dG=\\operatorname{Cov}_p(g,z)\\cdot dW$. For fixed actual mark $Y$, its normalized depth $D_Y(p)$ for this measure is a concave $1$-Lipschitz function of $p$ in $\\ell^1$ and is a supermartingale. The attained maximum $D_*(p)$ over actual marks is also $1$-Lipschitz.",
+  "subgoal_id": "pk-intake-isotropic-gaussian-base-posterior",
+  "title": "Exact Gaussian base posterior and fixed-mark depth"
+}

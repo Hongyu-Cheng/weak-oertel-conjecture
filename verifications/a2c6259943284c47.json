@@ -1,0 +1,48 @@
+{
+  "candidate_id": "bdba0add78e31c89",
+  "candidate_sha256": "2f37172ca2c6d512cc4b4777f6ad09ba4567a1623f699c38c34e1b925eaa47a1",
+  "checked_dependency_candidate_sha256": {
+    "1ec728c26c11b368": "51806d2078f9a6c9f46e448043322072a544fc6daa2675217bae6c4dd260d10a"
+  },
+  "checks": [
+    "After translating x_i by one, the sampled simplex is nonnegative with coordinate sum at most d+1. An upper e_1 cut at level s in [−1,d] gives a simplex of side parameter d−s and volume (d−s)^d/d!. The cap formula matches the full and empty plateaux at their endpoints.",
+    "At the actual bases −1,0,1 the thresholds are a,0,−a. For |a|≤1 the pair expansion has only even powers and its quadratic coefficient is 2 binomial(d,2)d^(d−2)/d!=d^(d−2)/(d−2)!. The coefficient comparison was also checked exactly in sample dimensions.",
+    "For |a|≥1 at least one endpoint contributes its entire volume and the central contribution is Γ_dV_d. Subtract 3Γ_dV_d to obtain (1−2Γ_d)V_d>0. The first three binomial terms prove positivity for every d≥2.",
+    "The triangle-inequality comparison on the very same tilted halfspace is at most the summed symmetric difference Δ, uniformly in tilt. Comparing F_L(a) and F_L(0) spends Δ twice. Strict 2Δ<g_η excludes both endpoints of [−η,η] and everything outside.",
+    "At unit normal e_1 Hausdorff closeness controls each support value. When η<1 and displacement is less than 1−η, all three thresholds remain strictly inside their respective supports. The source 714bee9248df3ce6 §6 makes no perturbative global deepestness or variable-normal claim, and the frozen result preserves this scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1ec728c26c11b368",
+      "candidate_sha256": "51806d2078f9a6c9f46e448043322072a544fc6daa2675217bae6c4dd260d10a",
+      "fact_id": "1ec728c26c11b368",
+      "fact_sha256": "f0f8ad418ed5901792714b0379c4082385e14688567d06835bbbfedd119d51b1",
+      "hypotheses": "Use the three fixed bases and replacement convex bodies at (u,t)=(e_1,0) to obtain an actual finite minimizing tilt. The result does not require the old anchor to be deepest or even to lie in the replacement middle body for its fixed-threshold objective.",
+      "reviewed_proof_sha256": "d228493bd17db59a79e7167f3a5cd5a01124f5a57331f852f98d5496774d8919",
+      "reviewed_statement_sha256": "1948dbc9f536c80fe99603b5461223816abe121f3916599822f499d14854e940"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:55:23Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its constant radial array on the centrally symmetric three-site product supplies the same baseline minimizer and polynomial near zero, and its perturbation result concerns compatible centered radial simplex fibers. The present explicit uniform gap and arbitrary convex replacements at a fixed normal are additional.",
+      "fact_id": "3b07eecf22960599"
+    }
+  ],
+  "readability": "The fixed-normal objective is well defined on all replacements even if the old ambient mark is not in a replacement fiber. Proper cuts are asserted under the separate Hausdorff hypothesis.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read on the frozen candidate, followed by original-scope and exact dependency comparison, with exact rational checks where applicable.",
+  "reviewed_proof_sha256": "4401fe9bcfe7ca6eae650ed8630982ebd098f0bc6ee0b3e7926917f46ffe336a",
+  "reviewed_statement_sha256": "ee376378f50abd715dd0552d5ec783fa820e82f13eea1bdd7d602cf713633583",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:50:31Z",
+  "summary": "The exact all-tilt gap and the localization under volume-close arbitrary replacements follow with the stated constants and strict hypothesis.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

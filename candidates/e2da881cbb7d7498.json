@@ -1,0 +1,28 @@
+{
+  "advances": "An exact Lebesgue-volume bound for one optimized finite cost, without a depth conclusion for all halfspaces.",
+  "author": "PK-research-agent",
+  "candidate_id": "e2da881cbb7d7498",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.206383+00:00",
+  "depends_on": [
+    "cf4145da977a87e4"
+  ],
+  "draft_key": "pk-w35-trims-trim-unused-support-region",
+  "kind": "lemma",
+  "proof": "Since $c$ takes finitely many values, the selected set with value $r_0$ has positive $\\pi$ mass. The exact double-unused-endpoint condition of pk-w35-trims-trim-endpoint-replacement implies that $c((p'+q')/2)\\le r_0$ for $\\ell\\otimes r$ almost every pair, by restricting the original pairs to this selected set. The open-interior cost is lower semicontinuous and no larger than $c$. If it exceeded $r_0$ at a pair in $U\\times V$, it would do so throughout a product neighborhood with positive $\\ell\\otimes r$ mass, a contradiction.\n\nThe compact supports have Lebesgue volumes at least $l,s$ by the two density bounds. Their Minkowski average lies in $B$ and has volume at least the right side by Brunn–Minkowski. The open and closed costs agree off the finitely many cap boundary hyperplanes, of zero Lebesgue volume. Removing those hyperplanes therefore proves the stated lower bound.\n",
+  "source_candidate_ids": [
+    "5cea8474957220e7"
+  ],
+  "source_candidate_sha256": {
+    "5cea8474957220e7": "09ed41687b49d72705b9aff7b82e8161178dac2ce2148ec0b4a0f07cd47c16ed"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5cea8474957220e7",
+      "locator": "5cea8474957220e7:05 §6, (7)–(8), geometric low-cost region"
+    }
+  ],
+  "statement": "Let $A,B,C\\subset\\mathbb R^d$ be compact convex bodies, $d\\ge1$, with $(A+C)/2\\subseteq B$. Let $\\pi$ maximize the integral of $c\\circ T$ over mass-$m$ couplings with marginals dominated by Lebesgue volume on $A,C$, where $m>0$, $T(p,q)=(p+q)/2$, and $c(x)=\\sum_i\\theta_i\\mathbf1_{H_i}(x)$ for a finite list of closed proper halfspaces and $\\theta_i\\ge0$. Put $\\ell=\\mathbf1_A\\,dx-\\pi_X$, $r=\\mathbf1_C\\,dx-\\pi_Y$, with positive masses $l,s$ and supports $U,V$. If $r_0$ is the $\\pi$-essential infimum of $c\\circ T$, the cost formed with the open interiors of the $H_i$ is at most $r_0$ throughout $(U+V)/2$. In particular,\n$$\n|B\\cap\\{x:c(x)\\le r_0\\}|\\ \\ge\\\n\\left(\\frac{l^{1/d}+s^{1/d}}2\\right)^d .\n$$",
+  "subgoal_id": "pk-intake-pk-w35-trims-trim-unused-support-region",
+  "title": "Unused partial-transport supports force a low-cost region"
+}

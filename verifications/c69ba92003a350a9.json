@@ -1,0 +1,57 @@
+{
+  "candidate_id": "068afe456e871010",
+  "candidate_sha256": "0d7c9b5ff43a7195bc254b4b7d6db3c042dc50380594651e4e5d90e47df2a5ef",
+  "checked_dependency_candidate_sha256": {
+    "68438a6e07ec7ad6": "b8d01529f1fc34e7f43a75a97b7852815b982323a76fe6d9a441423de35fbbf1"
+  },
+  "checks": [
+    "The piecewise-affine log-profile has slopes log 100, 0 and −log 100. Extending the product by zero outside its convex base interval preserves joint log-concavity; a log-concave probability g gives exactly the four sampled masses and total 202.",
+    "Enumerating all endpoint pairs and allowed integer subgrids gave largest minimum inclusive tail 100. Full grids have either two adjacent weights, three weights (1,10,100) up to reflection, or four unit weights. Removing terms on a retained subgrid cannot increase either tail. The single-fiber maximum is also 100<101.",
+    "Choosing symmetric g yields an actual point (1,0) with depth at least 1/4: either base sign retains sites of weight at least 101, and at each such site a centered containing continuous trace captures at least half that site's mass. Pure-base boundaries include the whole retained site. Thus the proof does not turn the certificate deficit into an actual upper depth bound.",
+    "In d=1 the two radial integrals of e^z on the interval [-1,1] are each e^z. The midpoint of the displayed endpoint points lies strictly above e at z=1 by strict convexity of the exponential, refuting compatibility even at the integer midpoint."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "68438a6e07ec7ad6",
+      "candidate_sha256": "b8d01529f1fc34e7f43a75a97b7852815b982323a76fe6d9a441423de35fbbf1",
+      "hypotheses": "The frozen predecessor supplies the exact minimum of two geometric inclusive sums for each two-endpoint choice and each equal-step integer subgrid. This candidate computes the largest scalar sum in that formula for one log-concave mass table. The independent radialization example uses no estimate from that theorem.",
+      "review_status": "Independent predecessor approval required before admission",
+      "reviewed_proof_sha256": "ddaa0adebad1badfbfc7629d11c7a51d1691c5ea66ded873b1aa2d058284a130",
+      "reviewed_statement_sha256": "f5809f8719eab08f57ff66599bf708a9a791212ccfde65eade57f78b56d656e9"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:33:51Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted radial gauge theorem acts on one density at a time, and does not force midpoint containment across a varying sampled base.",
+      "fact_id": "5af5f275fa4c066e",
+      "fact_sha256": "27750146a71bc4630790894d553c25ad5ed5bdb9dc565341838e2fc8c36b647b"
+    }
+  ],
+  "readability": "The proof and its scope are clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent proof read, source-scope and graph dependency checks, and exact arithmetic where applicable",
+  "reviewed_proof_sha256": "0f8e16a7e8b77a60bc839ed702e43fb3a7a99300b6fb902a497dbf690ebd1dc6",
+  "reviewed_statement_sha256": "8393357ed3c27ea610f76a9c0ef1133a23a9390f79978c1cad39df339f979342",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "sources_verified": [
+    {
+      "candidate_id": "b2fa14891f8dedf6",
+      "candidate_sha256": "587410cea2eef661fee1c0c5fa0bae67a70479f54a39aa8085b6c1002b478e42",
+      "locator": "b2fa14891f8dedf6:02 Why this is not the general induction invariant, four weights and final paragraph",
+      "reviewed_proof_sha256": "95ed079cb4fea4d93cb27e1d08240bd676e061f9f320cea5b5af2bc83e36c473",
+      "reviewed_statement_sha256": "4adeb6a6b245d524ab267a7dd873b6109709855ea28950b1268e47286cbf27b6",
+      "scope_verified": "The final section of the original note gives both the four-weight scalar limitation and the separately explicit radial midpoint obstruction. The positive product-depth calibration in the draft is proved directly."
+    }
+  ],
+  "started_utc": "2026-11-08T21:28:49Z",
+  "summary": "The four sampled masses show a limitation of the specified certificates, and the separate exponential example fails convex midpoint compatibility after centered radialization.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,32 @@
+{
+  "advances": "This is a counterexample to replacing a moving integrand by its limit in a shell derivative based solely on the stated topology.",
+  "author": "PK-research-agent",
+  "candidate_id": "7e6679911d185bd9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.940174+00:00",
+  "depends_on": [],
+  "draft_key": "log-parameter-boundary-layer-shell-counterexample",
+  "kind": "counterexample",
+  "proof": "The minimum of the two displayed affine functions is positive, continuous and concave on $[0,1]$, and its minimum is $1/2$. With $s=1/2+x/(2t)$ we have\n$$\n\\int_0^t\\log(1/2+x/(2t))\\,dx\n=2t\\int_{1/2}^1\\log s\\,ds=t(\\log2-1).\n$$\nThe logarithm of the minimum is zero on $[t,1]$. The added constant $ct$ therefore makes the full log integral zero, and on $[0,t]$ it adds exactly $ct^2$. Away from the shrinking shell, $U_t=e^{ct}\\to1$ uniformly. On the shell the log integrand is uniformly bounded, which gives logarithmic $L^1$ convergence, and the parameters have a common positive floor $1/2$. On the retained interval $K_t$ the raw parameter is the constant $e^{ct}$, whose geometric normalization is one.\n",
+  "source_candidate_ids": [
+    "b2439018eaa1681d",
+    "c72585e587868cec"
+  ],
+  "source_candidate_sha256": {
+    "b2439018eaa1681d": "92e6eecb8af13ecc37b126b509e87e735b56696b04bcaf763a945462f7c132e8",
+    "c72585e587868cec": "c1c02203566243b31d9b8f4c1ab6b42f89cb845f07e4e6b68630ad981887fd7f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b2439018eaa1681d",
+      "locator": "b2439018eaa1681d:03 §3, explicit interval boundary profile"
+    },
+    {
+      "candidate_id": "c72585e587868cec",
+      "locator": "c72585e587868cec:06 §5, (20)–(21)"
+    }
+  ],
+  "statement": "Interior-uniform and logarithmic $L^1$ convergence of positive continuous concave log-normalized parameters, even with a common positive lower bound, need not allow replacement by their limit in a first-order shell integral. On $K=[0,1]$ let $L=1$, $c=1-\\log2$, and $U_t(x)=e^{ct}\\min(1,1/2+x/(2t))$, $0<t<1/2$. For the actual removed shell $R_t=[0,t]$ of $K_t=[t,1]$, the integral $\\int_{R_t}\\log U_t=-ct+ct^2$ has normalized limit $-c$ after division by $t$, whereas $\\int_{R_t}\\log L=0$. The current log renormalization of $U_t$ on $K_t$ is identically one.",
+  "subgoal_id": "pk-intake-log-parameter-boundary-layer-shell-counterexample",
+  "title": "A logarithmic boundary layer with nonzero first-order shell integral"
+}

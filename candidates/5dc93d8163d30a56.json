@@ -1,0 +1,33 @@
+{
+  "advances": "Counterexample to sufficiency of a relaxed certificate with one base tilt and separately optimized continuous normals. The actual three-fiber body meets the sharp target.",
+  "author": "PK-research-agent",
+  "candidate_id": "5dc93d8163d30a56",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:43:37.335510+00:00",
+  "depends_on": [
+    "b39ecb342488b802",
+    "8812feca6c8a1e97"
+  ],
+  "draft_key": "monotone-three-triangle-relaxed-envelope-counterexample",
+  "kind": "counterexample",
+  "proof": "The compact body defined by $0\\le z\\le2$, $x_1,x_2\\ge0$, $x_1+x_2\\le\\min(a+(R-a)z,R)$ is convex because its radius roof is concave. It has the exact positive integer fibers in the statement and total mixed area $V(a^2+2R^2)$. The weighted median test uses the two strict tails at each anchor: at $1$ both $a^2$ and $R^2$ are less than half the total of the squared radii, while at $0$ the right tail and at $2$ the left tail are larger.\n\nBy b39ecb342488b802 the own term of each relaxed sum is $\\Gamma r_j^2$, and all other terms are nonnegative. At $j=0$ take $\\beta=-2R$ and at $j=2$ take $\\beta=2R$. All nonown thresholds then exceed the corresponding $r_k/2$, so those envelope terms vanish. At $j=1$ take $\\beta=-R/6$ to obtain the thresholds $R/6,R/3,R/2$. Here $R/6\\ge a/2$, and both outside terms vanish, including at support contact when the closed cap may be a null edge. These witnesses establish the exact infima over all real tilts. Subtracting or dividing the relaxed optimum from or by the target gives the claimed shortfall and ratio.\n\nAt the middle witness tilt, if the largest normal coefficient exceeds $1/2$, the last triangle has a vertex strictly above threshold $R/2$ and a positive-area cap. Thus zero area there forces the equal normal. At threshold $R/3$ the equal normal excludes a similar corner of area fraction $(2/3)^2$, leaving $5/9$. The own envelope fraction is $4/9$, so the two minima cannot occur together at this tilt.\n\nFor the actual depth translate base $1$ to zero and apply 8812feca6c8a1e97 with its $A=aT$ and $B=C=K=RT$. The midpoint inclusion holds since $(aT+RT)/2=((a+R)/2)T\\subseteq RT$, the volumes are $a^2V,R^2V,R^2V$, and $g_K=(R/3,R/3)$. The accepted bound is for all closed containing caps, including pure-base caps. In raw units its gap above the target is $(1-\\Gamma)a^2V/2=5a^2V/18$.\n",
+  "source_candidate_ids": [
+    "303d01b7404003c0"
+  ],
+  "source_candidate_sha256": {
+    "303d01b7404003c0": "e0f7387caaf51cc2175107d24b7e99debba5d77a0c17773680638ad208256e08"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "303d01b7404003c0",
+      "locator": "303d01b7404003c0:03 §§1–2 (3)–(6), exact relaxed-envelope failure at every anchor"
+    },
+    {
+      "candidate_id": "303d01b7404003c0",
+      "locator": "303d01b7404003c0:04 §3, incompatible continuous normals at the middle witness tilt"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}(0,e_1,e_2)$, $V=|T|$ and $\\Gamma=4/9$. At bases $0,1,2$ take the actual triangle fibers $r_kT$ with $(r_0,r_1,r_2)=(a,R,R)$, where $R>0$ and $0<a\\le R/3$. For $r>0$ let $P_r(s)$ be the minimum area in units of $V$ of the cap $w_1x_1+w_2x_2\\ge s$ on $rT$ over $w_1,w_2\\ge0$ with $w_1+w_2=1$. For each anchor define the relaxed shared-tilt value\n$$\nE_j=\\inf_{\\beta\\in\\mathbb R}\\sum_{k=0}^2 P_{r_k}(r_j/3-\\beta(k-j)).\n$$\nThen $(E_0,E_1,E_2)=(\\Gamma a^2,\\Gamma R^2,\\Gamma R^2)$. The best relaxed value falls short of the target $(\\Gamma/2)(a^2+2R^2)$ by $(\\Gamma/2)a^2$ and has ratio $2R^2/(a^2+2R^2)$ to it. Base $1$ is the unique weighted median for weights $r_k^2$. For $a=1,R=3$ the best value is $4$ and the target $38/9$, giving ratio $18/19$.\n\nAt the middle witness tilt $\\beta=-R/6$, no single eligible continuous normal attains all three envelope terms. The actual point $(1,R/3,R/3)$ has raw closed-halfspace depth at least $V(\\Gamma R^2+a^2/2)>(\\Gamma/2)V(a^2+2R^2)$.",
+  "subgoal_id": "pk-intake-monotone-three-triangle-relaxed-envelope-counterexample",
+  "title": "A monotone three-triangle chain defeats the fiberwise positive-normal envelope"
+}

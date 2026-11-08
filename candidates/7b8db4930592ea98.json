@@ -1,0 +1,28 @@
+{
+  "advances": "Uses one actual enlargement with fixed middle and far fibers and one continued covering menu.",
+  "author": "PK-research-agent",
+  "candidate_id": "7b8db4930592ea98",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:29:19.950541+00:00",
+  "depends_on": [
+    "7514d7974e1bc9b7"
+  ],
+  "draft_key": "pk-w34-stress-face-bulge-descent",
+  "kind": "theorem",
+  "proof": "The apex stays in the closed convex set $E$ for small $\\varepsilon$, so midpoint inclusion holds for $A_\\varepsilon,K,B$. Any combination of the three lifted bodies at base zero has equal outer weights and is in $K$ by that inclusion. The extreme sections are exactly the extreme bodies, and there are only three integer bases.\n\nFor a moving mark $y$, define the original cap rows $F_i(y)=|K\\cap\\{v_i\\cdot x\\ge v_i\\cdot y\\}|+|A\\cap\\{v_i\\cdot x\\ge2v_i\\cdot y-h_i\\}|$. The support traces in $B$ have area zero. At proper cuts, the chord lengths are continuous by concavity on the interior of the projection interval, hence $F_i$ is $C^1$ near $y_0$ and its derivative is $-s_i v_i$. The map $G(y,q)=(F_i(y)-q)_i$ is locally invertible near $(y_0,Q)$: multiply a Jacobian kernel relation by $1/s_i$ and sum to obtain zero $q$-component, and then use spanning. Write $\\Delta_i^\\varepsilon(y)$ for the added area in the moving $A$ cap. The tent lemma gives $\\Delta_i^\\varepsilon=O(\\varepsilon)$ and, uniformly for $|y-y_0|=O(\\varepsilon)$,\n$$\n\\Delta_i^\\varepsilon(y)=\\varepsilon\\int_\\alpha^\\beta T_t(s)\\mathbf1_{\\{v_i\\cdot(s,0)\\ge b_i\\}}\\,ds+o(\\varepsilon).\n$$\nIn a fixed small neighborhood of $y_0$ these functions have Lipschitz constants tending to zero: each transverse cutting line has length $O(\\varepsilon)$ in the thin added band, and integrating those lengths bounds the moving-cap area change. Each parallel cutting line stays at a fixed positive distance from the band, so the added area in its cap is locally constant. The map $(y,q)\\mapsto G^{-1}(-\\Delta^\\varepsilon(y))$ consequently has Lipschitz constant less than one on a sufficiently large ball of radius $O(\\varepsilon)$ about $(y_0,Q)$. It maps that ball into itself by the bounded derivative of the inverse and the uniform added-area bound. Its fixed point gives the actual equal budgets. Expand the rows there and sum with the $p_i$ to cancel the mark derivatives, since $p_i s_i$ is constant. This gives the stated budget.\n\nAt the new mark the middle cap margins sum to zero, so they cover the whole middle plane. The original $A$ cap thresholds satisfy $\\sum_i b_i=-\\sum_i h_i<0$: evaluate the supports at one point in $\\operatorname{int}B$, where every support inequality is strict. The original $A$ caps thus cover the plane, so $W\\ge\\min_i p_i>0$. The positive tent integral gives $q_\\varepsilon>Q$ for small positive $\\varepsilon$. The mixed depth at an outer base equals ordinary depth on its own fiber: one can isolate either extreme by a sufficiently large finite tilt for any own cut, and every ambient cut through the mark includes its own trace. At any continuous point the old ordinary $A$ depth rises by at most the total added area, since every halfplane does. The old depth is zero outside $A$, by strict separation, so this also bounds new marks. The strict $A$ gap persists and the unchanged $B$ maximum is at most $Q$. This proves the global upper bound. Dividing by the actual mass $M+\\varepsilon\\int T_t+o(\\varepsilon)$ gives the coefficient and strict descent.\n",
+  "source_candidate_ids": [
+    "6e9992972c414d73"
+  ],
+  "source_candidate_sha256": {
+    "6e9992972c414d73": "ddffcd43ca01844d5b0ac84c8ca4bc943d8a611dcc6567f295cf750c9e935c8f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6e9992972c414d73",
+      "locator": "6e9992972c414d73:02 §§1, 3–4, (6)–(8), actual common budget and normalized descent"
+    }
+  ],
+  "statement": "Let $A,K,B$ be planar convex bodies at bases $-1,0,1$ with $(A+B)/2\\subseteq K$. For three spanning normals $v_i$ with $\\sum_i v_i=0$ and $y_0\\in\\operatorname{int}K$, suppose the ambient closed caps with respective fiber levels $2v_i\\cdot y_0-h_i$, $v_i\\cdot y_0$, $h_i=h_B(v_i)$ have a common mass $Q$ and proper cuts in $A,K$. Write $b_i=2v_i\\cdot y_0-h_i$, let $s_i=2\\sigma_{A,i}+\\sigma_{K,i}$ with the old section lengths divided by $\\|v_i\\|$, and normalize $p_i=(1/s_i)/\\sum_j(1/s_j)$. On a whole exposed face $F=[\\alpha,\\beta]\\times\\{0\\}$ of $A$ with $A$ below it, let $W(s)=\\sum_i p_i\\mathbf1_{\\{v_i\\cdot(s,0)\\ge b_i\\}}$. Let $T_t$ be the piecewise-affine tent on $[\\alpha,\\beta]$ with endpoint heights zero and height one at $t$. Choose a relative-interior apex base $(t,0)$ in $\\operatorname{int}E$ for $E=\\{x:x+B\\subseteq2K\\}$, and let $A_\\varepsilon=\\operatorname{conv}(A\\cup\\{(t,\\varepsilon)\\})$. Then $A_\\varepsilon,K,B$ are the actual integer fibers of their lifted hull. At some $y_\\varepsilon=y_0+O(\\varepsilon)$ in $K$ the same normals and $B$ support thresholds give equal actual cap mass\n$$\nq_\\varepsilon=Q+\\varepsilon\\int_\\alpha^\\beta T_t(s) W(s)\\,ds+o(\\varepsilon).\n$$\nIf $Q$ was the global raw maximum and the ordinary $A$ maximum was strictly below $Q$, the new global raw maximum is at most $q_\\varepsilon$, including when the unchanged $B$ maximum equals $Q$. With $M=|A|+|K|+|B|$, $r=Q/M$ and $C(t)=\\int_\\alpha^\\beta T_t(s)[W(s)-r],ds$, the normalized upper certificate changes by $\\varepsilon C(t)/M+o(\\varepsilon)$. If $C(t)<0$ this gives strict normalized descent.",
+  "subgoal_id": "pk-intake-pk-w34-stress-face-bulge-descent",
+  "title": "Actual normalized-depth response to a feasible planar face bulge"
+}

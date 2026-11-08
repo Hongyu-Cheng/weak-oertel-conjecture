@@ -1,0 +1,67 @@
+{
+  "candidate_id": "86dea7a7645bd94f",
+  "candidate_sha256": "b1c143f7b2817ab4bcd848b5191043fabea56e9c901c67a9d5118e9f07017b99",
+  "checked_dependency_candidate_sha256": {
+    "b026600b8d8e369b": "a84f71a68b85f75810033fa9a22db9d80686cf4f0d137c58381dd5aa67b6ba2c"
+  },
+  "checks": [
+    "For h<1/k both thresholds are positive because β<k/3, and their threshold-to-radius ratios have the stated positive derivative numerators and tend to infinity at the leg endpoint. Both tails therefore vanish strictly before radius zero.",
+    "For 1/2<a<2/3 the second derivative of the lower branch is 2(k²−β²/(ac))>0, since ac≥2/9 and β²<k²/9. The upper proper branch is an affine square and its first derivative vanishes when the cap empties. At s=cr the two formulas and each first partial derivative match.",
+    "At a=1/2 the endpoint tail is the positive part of r²−4s² for positive s. Its derivative jumps upward to zero at the terminal knot because k>2β. An initially empty branch is identically zero. Convex trapezoids give J≥I+O/2 and the first pair gives J≥O; their convex combination yields the first inequality including k=1.",
+    "The two-squared-hinge formula integrates to p³/(3ℓ) per active hinge, with positive steps including ck−β. The right thresholds change branches exactly at β=L and β=U; the removed squared hinge and its integral vanish at each transition, so shared boundaries are valid.",
+    "The three substitutions cover the original β interval, and w=(k−3β)/(1−3β)∈(0,1]. Every denominator is strictly positive on the required range with 1/2<a<2/3, β<k/3. For region 2, 1−3β=3L(1−v) and 3c−1=3L, so ck−β contains the factor L after substitution.",
+    "Independent exact rational expansion reconstructed the three mapped numerator polynomials and the polynomial denominators. A tensor binomial generating-polynomial transformation produced 819, 528, 528, 528 and 200 coefficients, matching all archived entries and the minima 0, 0, 0, 0 and 21/128. The three region-1 boxes cover the full square and nonnegative Bernstein basis functions prove positivity on each mapped cube.",
+    "With k,β fixed, dominated convergence on [0,1/k] gives the a↓1/2 limit of I and the pointwise convergence at h=0 gives that of O. The limiting nonzero normal has an area-null boundary, and the zero-radius values are zero. No denominator division is needed at the extra polynomial boundary.",
+    "The original Lemmas 1–3 contain the same scalar bound, domain, multipliers and exact coefficient certificate. The larger arbitrary-chain reduction is not needed for this claim."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "b026600b8d8e369b",
+      "candidate_sha256": "a84f71a68b85f75810033fa9a22db9d80686cf4f0d137c58381dd5aa67b6ba2c",
+      "fact_sha256": "ba679159065501d4d274843c49368a60fb602d26cc26445c615aee1941ddbbdf",
+      "hypotheses": "The accepted proof gives exactly the two proper-tail quadratics of the planar scaled standard triangle at 1/2<a<2/3, and the equal-height formula at a=1/2. The present proof verifies their convexity and integrated coefficient certificate separately.",
+      "reviewed_proof_sha256": "6222e57d8c22c4aaeb1185c5ccd88923e89a3a7775a49d33212fc1f40bf33e9a",
+      "reviewed_statement_sha256": "c9b765e6ad0e35c0ca69a14bfaaeea2892dadedbcddb43415fbc9a6b51225316",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:18:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted planar low-normal theorem supplies a cap surplus for the actual chain, using an affine-leg envelope and an own-cap bonus. It does not assert the combined real integral and initial pair inequality proved here.",
+      "fact_id": "a886f31c444612a5"
+    },
+    {
+      "comparison": "The accepted full-leg envelope bound uses the diagonal envelope over the sampled leg. The present certificate uses the exact positive-normal triangle tails integrated over the real leg and has a different numerical right side.",
+      "fact_id": "0beb1b53b181c0e7"
+    }
+  ],
+  "readability": [],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1f8f33af090fd7b0b951448c0424af58928f3eda03824a56d87a29af857ae06f",
+  "reviewed_statement_sha256": "a63d9cc523248492ec0a4812c775eab1eac4d17939abff1c7b6c23ad1a03d0bb",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_checks": [
+    {
+      "candidate_id": "28ba890fe1d08e06",
+      "candidate_sha256": "9323186a68f265638e5d5a9f7163f93c9edb382dbdcba1528fc5d6640dbe99fc"
+    }
+  ],
+  "started_utc": "2026-11-08T15:13:17Z",
+  "summary": "Convexity and the trapezoid bound reduce the low-normal inequality to five polynomial boxes. Exact rational reconstruction matched all 2,603 stored coefficients and the five claimed minima.",
+  "supporting_files": [
+    {
+      "path": "assets/pk-nov6/computations/half-integer-affine-low-sector-bernstein-candidate.json",
+      "sha256": "1b6afa1564bfda87b3ac85ef1b384e76d000ba7e2176de4d5294e6b3b3823a18"
+    }
+  ],
+  "target_match": null,
+  "verdict": "APPROVED"
+}

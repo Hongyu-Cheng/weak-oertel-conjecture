@@ -1,0 +1,28 @@
+{
+  "advances": "General Borel probability-coupling variation, including closed-cap step costs; the exact conclusion holds almost everywhere under the coupling's product law.",
+  "author": "PK-research-agent",
+  "candidate_id": "310a8aa0829c7dd2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.934576+00:00",
+  "depends_on": [
+    "0aaf1194bb28ee86"
+  ],
+  "draft_key": "bounded-borel-coupling-permutation-gain",
+  "kind": "lemma",
+  "proof": "Call the cost difference inside the positive part $\\Delta$. For a Borel set $A$ of tuples take the average of the $k$ original-pair pushforwards of $\\mathbf1_A\\sigma^{\\otimes k}$ and call it $\\eta_{\\rm old}$. Define $\\eta_{\\rm new}$ with the same averaging over the permuted pairs $(p_i,q_{\\tau(i)})$. Each original-pair pushforward is at most $\\sigma$, since the unrestricted corresponding pushforward equals $\\sigma$, and therefore $\\eta_{\\rm old}\\le\\sigma$. The sums of point masses in the first coordinates agree pointwise before and after permutation, as do those in the second coordinates. Thus the two measures have identical marginals. The measure $\\sigma-\\eta_{\\rm old}+\\eta_{\\rm new}$ is another admissible probability coupling and gains cost $\\int_A\\Delta\\,d\\sigma^{\\otimes k}/k$. Set $A=\\{\\Delta>0\\}$ and use the optimization-gap hypothesis to obtain the inequality. Setting $\\varepsilon=0$ proves the almost-everywhere assertion. For the median optimizer use its approximate complementarity with the finite dual cost. Swapping two second endpoints preserves legality because every new pair is still in the product of the left and right endpoint sets.\n",
+  "source_candidate_ids": [
+    "641c5559a440bf48"
+  ],
+  "source_candidate_sha256": {
+    "641c5559a440bf48": "5448729b0e8cd524066515f2ecb277789107753008b36a5a8bd35fbbc8d0a046"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "641c5559a440bf48",
+      "locator": "641c5559a440bf48:04 §4, (7)–(8), averaged replacement for Borel costs and the median specialization"
+    }
+  ],
+  "statement": "Let $c$ be a bounded Borel cost on a product $X\\times Y$ of compact metric spaces, and let $\\sigma$ be a probability coupling of given marginals whose value is within $\\varepsilon\\ge0$ of the supremum of $\\int c\\,d\\sigma$ among such couplings. For every integer $k\\ge2$ and permutation $\\tau$ of $\\{1,\\ldots,k\\}$,\n$$\n\\int\\left[\\sum_{i=1}^k c(p_i,q_{\\tau(i)})-\\sum_{i=1}^k c(p_i,q_i)\\right]_+\\,d\\sigma^{\\otimes k}\\le k\\varepsilon.\n$$\nFor an exact optimizer the bracketed difference before taking its positive part is nonpositive for $\\sigma^{\\otimes k}$-almost every tuple. In particular the minimizing finite dual weights at a joint median optimizer yield the two-pair estimate with $c=\\sum_i\\lambda_i\\mathbf1_{H_i}\\circ T$ and bound $2\\varepsilon$.",
+  "subgoal_id": "pk-intake-bounded-borel-coupling-permutation-gain",
+  "title": "Permutation gain bound for nearly optimal Borel transport"
+}

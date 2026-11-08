@@ -1,0 +1,28 @@
+{
+  "advances": "One simplex and one positively balanced isolated-vertex cap menu under actual affine-field neutrality. This proposition assumes neutrality and does not assert the mixed local-minimum application for arbitrary circuits.",
+  "author": "PK-research-agent",
+  "candidate_id": "907721f30246afd9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:54:35.361722+00:00",
+  "depends_on": [
+    "000f61e3347cadf2"
+  ],
+  "draft_key": "affine-neutrality-for-vertex-caps-of-a-simplex",
+  "kind": "theorem",
+  "proof": "The cut-face outward unit normal of $K\\cap H_j$ is $-u_j$. Gauss–Green therefore gives\n$$\n\\int_{\\partial K}\\mathbf1_{H_j}X\\cdot n_K\\,d\\mathcal H^{d-1}\n=\\operatorname{tr}(B)|K\\cap H_j|+S_j u_j\\cdot[a+B(g_j-y)].\n$$\nThe cut through the interior has no positive-measure coincidence with an old boundary facet, so the common boundary of the two pieces contributes no double count. The same identity in $d=1$ is integration of an affine derivative on a subinterval. Testing translations in the neutrality identity gives $\\sum_j\\theta_jS_j u_j=0$. The normal matrix has rank $d$, so $\\theta_jS_j=c\\rho_j$ with $c>0$. The field $x-y$ gives $\\sum_j\\theta_j |K\\cap H_j|=\\beta V$, because $u_j\\cdot(g_j-y)=0$ on its cutting plane and $d>0$.\n\nFor arbitrary $B$, the last identity cancels the trace terms. The remaining condition is $\\sum_j\\rho_j(g_j-y)u_j^{\\mathsf T}=0$. In each coordinate this is a relation of the $u_j$ and hence its coefficient vector is proportional to $(\\rho_j)_j$. Thus all $g_j-y$ are the same vector. That vector lies in the kernel of every $u_j^{\\mathsf T}$ since the centroids lie on their cutting planes. The normals span, so it is zero.\n\nBecause $v_j$ is the only strictly captured vertex, the cut section is the simplex on its $d$ incident edges, at fractions $t_{ji}\\in(0,1]$ from $v_j$ toward $v_i$. Its centroid has barycentric coordinate $t_{ji}/d$ at $i\\ne j$, giving $t_{ji}=dy_i$ and $r_i=1-dy_i\\ge0$. The $r_i$ sum to one. If $\\lambda_i(x)$ denote the barycentric functions, the affine margin for cap $j$, scaled to equal one at $v_j$, is\n$$\nL_j(x)=\\frac{\\lambda_j(x)}{dy_j}-\\sum_i\\frac{r_i}{dy_i}\\lambda_i(x).\n$$\nIt vanishes at the stated edge cuts and its gradient is a positive multiple of $u_j$. Since $\\sum_jr_jL_j=0$, the nonzero coefficient vector $(r_j)_j$ gives a relation among the gradients. They have rank $d$ and a strictly positive relation inherited from the $u_j$. Their unique relation implies $r_j>0$ for every $j$, so all edge fractions are strictly below one.\n\nNow the accepted simplex own-section facet payment lemma 000f61e3347cadf2 applies: all caps strictly isolate their designated vertices, the own centroids are $y$, and the own coarea-weighted normals balance by the translation test. It gives the $q_j$ and $\\theta_j$ formulas, and $1/\\sum_i(r_i/q_i)=\\prod_i(1-r_i)/(1-\\sum_i r_i^2)\\ge\\Gamma_d$, with equality exactly for uniform $r$ in $d\\ge2$ and constant $1/2$ in $d=1$. The homothety test identifies $\\beta$ with $\\sum_j\\theta_j q_j=1/\\sum_i(r_i/q_i)$. Uniform $r$ gives a centroid source, common edge fractions $d/(d+1)$, and uniform weights. Conversely, those caps have $g_j=y$, and $\\sum_j\\theta_j S_j u_j=0$ follows from $S_ju_j=dVq_j\\nabla L_j$ by the pyramid height formula and the margin relation. The displayed flux identity then gives neutrality at $\\beta=\\Gamma_d$. In $d=1$ the two normals are opposite, the proper sections are the common point $y$, and the weights $1/2$ give neutrality with $\\beta=1/2$ for every interior $y$.\n",
+  "source_candidate_ids": [
+    "19aecfceb071d1da"
+  ],
+  "source_candidate_sha256": {
+    "19aecfceb071d1da": "6ba83ab2b8a1e03ae095d18f29616648a6adb84de37b2df77bc5a7b1186c11c6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "19aecfceb071d1da",
+      "locator": "19aecfceb071d1da:01 §§1–5, (1)–(18)"
+    }
+  ],
+  "statement": "Let $K=\\operatorname{conv}(v_0,\\ldots,v_d)$ be a $d$-simplex, $d\\ge1$, of volume $V>0$, and let $y\\in\\operatorname{int}K$. For $j=0,\\ldots,d$ take the proper caps $H_j=\\{x:u_j\\cdot(x-y)\\ge0\\}$ with unit normals. Each $H_j$ contains $v_j$ strictly and no other vertex strictly. Assume the normals span $\\mathbb R^d$ with a positive dependence $\\sum_j\\rho_j u_j=0$, $\\rho_j>0$. Let $E_j=K\\cap\\partial H_j$, $S_j=\\mathcal H^{d-1}(E_j)$, and let $g_j$ be its centroid. Use counting measure for $d=1$.\n\nLet $\\theta_j>0$ sum to one, $W=\\sum_j\\theta_j\\mathbf1_{H_j}$ on $\\partial K$, and $\\beta>0$. Suppose that for every affine field $X(x)=a+B(x-y)$,\n$$\n\\int_{\\partial K} X(x)\\cdot n_K(x)\\,[W(x)-\\beta]\\,d\\mathcal H^{d-1}(x)=0.\n$$\nThen every $g_j=y$ and no cut contains another vertex even on its boundary. With $y_i$ the barycentric coordinates of $y$, put $r_i=1-dy_i>0$ and $q_j=|K\\cap H_j|/V$. The cut on edge $v_jv_i$, $i\\ne j$, is at fraction $dy_i$ from $v_j$, and\n$$\nq_j=\\prod_{i\\ne j}dy_i,\\qquad\n\\theta_j=\\frac{r_j/q_j}{\\sum_i r_i/q_i},\\qquad\n\\beta=\\sum_j\\theta_j q_j=\\frac{\\prod_i(1-r_i)}{1-\\sum_i r_i^2}\n\\ \\ge\\ \\Gamma_d=\\left(\\frac d{d+1}\\right)^d.\n$$\nFor $d\\ge2$, equality holds exactly when $y$ is the centroid, each cap has section parallel to its opposite facet, and the weights are uniform. For $d=1$, $\\beta=1/2$ and any interior mark is consistent with the hypotheses.",
+  "subgoal_id": "pk-intake-affine-neutrality-for-vertex-caps-of-a-simplex",
+  "title": "Affine neutrality of noncanonical vertex caps on a simplex"
+}

@@ -1,0 +1,32 @@
+{
+  "advances": "An exact counterexample to preserving the original minimizing cap budgets and their multiplier identity under uniform volume on the actual hypograph. The two section centroids are stationarity identities at the original source point.",
+  "author": "PK-research-agent",
+  "candidate_id": "17ef55f56b28af10",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.077767+00:00",
+  "depends_on": [
+    "c680a307d3f26cec"
+  ],
+  "draft_key": "own-depth-hypograph-critical-cap-budget-failure",
+  "kind": "counterexample",
+  "proof": "The lower endpoint $L$ is convex and the upper endpoint $U$ is concave, so $C$ is compact and convex with interior. Its only integer fibers are $[-1/2,1/2]$ at $z=\\pm1$ and $[-11/20,19/20]$ at $z=0$. This gives the mass and parity census. Apply c680a307d3f26cec with endpoint lengths $a=b=1$, middle length $3/2$ and middle center $s=1/5$. Its compatibility inequalities hold since $3/2\\ge1$ and $1/5\\le1/4$. Its second row applies since $\\alpha=0$ and $\\beta=1$. This gives the middle maximizer $x_*=1/10$ and raw depth $33/20$, exceeding the endpoint maxima $1/2$. Dividing by $M$ gives $33/70$.\n\nFor $H_+$ the traces have lengths $2/5,17/20,2/5$ at the three bases. Its three section points are $(-1,1/10),(0,1/10),(1,1/10)$ and have mean $y$. For $H_-$ the endpoint thresholds are $-19/10$ and $21/10$, strictly outside the left and right interval respectively. The trace lengths are $0,13/20,1$ and the unique section point is $y$. Thus both caps through $y$ attain its depth and have the stated full section centroids. Their continuous normals have length one, and ordinary coarea section masses are the section counts. Normalizing their inverse counts $1/3$ and $1$ gives $(1/4,3/4)$. Dividing these weights by the common normalized depth $33/70$ gives $(35/66,35/22)$ and summing the resulting original volume budget gives $M$.\n\nThe two terms in $f_z(x)$ are concave in $(z,x)$, hence their minimum is concave and its hypograph on $C$ is compact and convex. The height over an interval of length $l$ is a tent of area $l^2/4$, so $\\widehat M=1/4+9/16+1/4=17/16$. The lower part of the middle tent up to $x=1/10$ is before its peak at $x=1/5$ and has area $(13/20)^2/2=169/800$. Each endpoint upper trace of $H_+$ gives area $(2/5)^2/2=2/25$. The sole full endpoint of $H_-$ gives area $1/4$. Therefore\n$$\n\\begin{aligned}\n\\widehat\\mu(\\widehat H_+) &=9/16-169/800+2(2/25)=409/800,\\\\\n\\widehat\\mu(\\widehat H_-) &=169/800+1/4=369/800.\n\\end{aligned}\n$$\nDividing by $\\widehat M$ gives the stated fractions. The original multipliers give $(35/66)(409/800)+(35/22)(369/800)=2653/2640$, whereas $\\widehat M=2805/2640$. Since the cap inequalities have no $r$ term, the lift height of $y$ cannot change any of these quantities.\n",
+  "source_candidate_ids": [
+    "059d029e30e0be30"
+  ],
+  "source_candidate_sha256": {
+    "059d029e30e0be30": "05542333e95e97fba225495fc2c28f7375f06fd2a31e5b37fa6804a7263e9a80"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "059d029e30e0be30",
+      "locator": "059d029e30e0be30:04 Proof §3, (5)–(7), using original critical caps (2) and multipliers (4)"
+    },
+    {
+      "candidate_id": "059d029e30e0be30",
+      "locator": "059d029e30e0be30:02 Proof §2, (2)–(4), all-fiber critical-cap census, section weights, and multipliers"
+    }
+  ],
+  "statement": "Consider the compact convex polygon $C=\\{(z,x):-1\\le z\\le1,\\ L(z)\\le x\\le U(z)\\}$, with $L(z)=-11/20+|z|/20$ and $U(z)=19/20-9|z|/20$. Use summed interval length $\\mu$ on its integer fibers. Their total mass is $M=7/2$ and the largest fiber length is $3/2<M/2$, where two base parities are occupied.\n\nThe point $y=(0,1/10)$ attains the global maximum normalized mixed depth $33/70$. Its actual depth-attaining caps $H_+=\\{x\\ge1/10\\}$ and $H_-=\\{x-2z\\le1/10\\}$ have mass $33/20$ each. The first cuts all three fibers properly. The second is strictly empty on the left, proper in the middle and strictly full on the right. With continuous normals normalized to $+1$ and $-1$, their section counts are respectively $3$ and $1$, and both full ambient section centroids are $y$. Their normalized inverse-section weights are $(1/4,3/4)$, which yield cap multipliers $(\\lambda_+,\\lambda_-)=(35/66,35/22)$ with $\\sum_i\\lambda_i\\mu(H_i)=M$.\n\nLift the original polygon to the convex hypograph $0\\le r\\le f_z(x)$, where $f_z(x)=\\min\\{x-L(z),U(z)-x\\}$ is the own raw interval depth. Its uniform summed integer fiber area $\\widehat\\mu$ has total $\\widehat M=17/16$. The vertical lifts $\\widehat H_\\pm$ of the original caps, with their inequalities independent of $r$, have areas $409/800$ and $369/800$, giving different normalized budgets $409/850$ and $369/850$. Their original cap multipliers give $\\sum_i\\lambda_i\\widehat\\mu(\\widehat H_i)=2653/2640=\\widehat M-19/330$. These identities hold independently of the selected lift height over $y$.",
+  "subgoal_id": "pk-intake-own-depth-hypograph-critical-cap-budget-failure",
+  "title": "Uniform own-depth hypograph volume changes actual critical cap budgets"
+}

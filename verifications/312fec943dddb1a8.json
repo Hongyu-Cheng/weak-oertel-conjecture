@@ -1,0 +1,48 @@
+{
+  "candidate_id": "10dd12fa47c4bd4a",
+  "candidate_sha256": "475f5e1408dac047a92ccb8d07b2b3d865a2700fd7fdf2bc2b02d81999a269b4",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "The polygon verifier independently enumerated all pairs of the eight lower and reflected upper lines. Exactly the eight listed pairs are feasible vertices at c. Their successive orientation is counterclockwise and the minimum inactive slack is 12/233.",
+    "Checked the exact local shoelace coefficients, gradient zero at c, Hessian determinant 3728/55, negative first diagonal and value 1440/233. Strict inactive slacks and distinct adjacent vertices persist locally.",
+    "Interpolating both a point and its reflected point in K proves the Brunn–Minkowski inclusion. The square root of area is concave on K, and any center with nonempty overlap belongs to K. The strict local maximum thus rules out both a higher value and a second equal maximum.",
+    "The line 3x−y=−669/233 passes through c and meets the edges joining the first and second, and the third and fourth listed original vertices. The retained quadrilateral has area 210855/54289 and normalized fraction 70285/162867<4/9.",
+    "Matched the original scope and proof against bba44611fbbe7d39:01 The polygon and its overlap maximizer; Its centroid-type depth bound fails. The source bytes match the frozen input and pinned checkout."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "Take selector mass equal to the positive area of the full-dimensional planar K. The only selector gives its centroid, of ordinary closed-halfspace depth at least (2/3)^2 times area. This exceeds the displayed upper bound at c.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:15:00Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Optimizes mixed reflection intersection for at most six interval fibers, giving a lower depth bound at a maximizing center in continuous dimension one. It gives neither the planar polygon optimizer nor its failure of the dimension-two sharp constant.",
+      "fact_id": "55ed5986e19f3fd1",
+      "fact_sha256": "0a07b29118e482f867ba9d0c48db935029348bdeedf749f64ed4f3c59e6ff971"
+    }
+  ],
+  "readability": "The ordered active pairs make the local polynomial reproducible, and the slope and volume normalizations are explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "5c2463c9cfeacda3bed2237d44b82eb3cdf0118100c927f457f297e9e2bd2f80",
+  "reviewed_statement_sha256": "91d7292d01cca6a67be85f9808c94517ab736dcffca06d31000270b41ba7a9a3",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:07:08Z",
+  "summary": "The active reflected polygon and exact cut certify the unique symmetric-overlap maximum at a point whose depth is below the ordinary planar sharp constant.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

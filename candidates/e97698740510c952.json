@@ -1,0 +1,26 @@
+{
+  "advances": "Fails the stronger ambient centroid constant, far above the locked threshold.",
+  "author": "PK-research-agent",
+  "candidate_id": "e97698740510c952",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:55:48.563727+00:00",
+  "depends_on": [],
+  "draft_key": "vertical-integer-centroid-ambient-constant-obstruction",
+  "kind": "counterexample",
+  "proof": "Let $P_0=\\{(x,y,z)\\ge0:4x+2y+z\\le8\\}$ and use the fibers $hK$, where $K=\\operatorname{conv}\\{(0,0),(2,0),(0,1)\\}$ and $h=1+A(x-1)+B(y-1)$. Take $B$ to be the unique zero in $(1883682,1883684)/10^7$ of\n$$\nQ(B)=61281B^4+15298B^3-8940B^2-1944B+504\n$$\nand set $A=(1225620B^3+244679B^2-138654B+86268)/96110$. The polynomial is positive at the left endpoint and negative at the right endpoint by direct rational evaluation, and its derivative is at most $-170706/125$ on $[9/50,1/5]$ by bounding each monomial at the relevant endpoint. The derivative of the numerator defining $A$ is at least $8570088/125$ there. Substitution at the two root-bracketing endpoints bounds $A$ between $801411/10^6$ and $801412/10^6$, and $B$ between $188368/10^6$ and $188369/10^6$. Thus $1-A-B>0$, which bounds $h$ below throughout $P_0$. The lifted body is full-dimensional and convex because the fiber constraints are $s,t\\ge0$ and $s/2+t\\le h$, all affine.\n\nThe census is $x=0,1,2$, $0\\le y\\le4-2x$, $0\\le z\\le8-4x-2y$, with integer indices, giving $25+9+1=35$. The weighted moments of $x-1,y-1$ for weights $h^2$ obtained by summation over this census are\n$$\n\\begin{aligned}\nM_x&=-24A^2+8AB+52A-34B^2-12B-24,\\\\\nM_y&=4A^2-68AB-12A+42B^2+84B.\n\\end{aligned}\n$$\nAfter substituting the polynomial for $A$, the two expressions respectively equal $-2(73537200B^2+11003880B-7648837)Q(B)/2309283025$ and $(24512400B^2+3667960B-34586279)Q(B)/2309283025$. Both vanish. At fixed $(x,y)$ the mean of $z$ is $4-2x-y$, so the moment of $z-1$ is $-2M_x-M_y=0$. The full mixed centroid before the integer translation is $(1,1,1;2/3,1/3)$ because the centroid of $hK$ is $h(2/3,1/3)$ and $\\sum h^3=\\sum h^2+A M_x+B M_y=\\sum h^2$.\n\nTake the closed cap $5(x-1)+2(y-1)+4(z-1)\\ge0$. Summing over the full census and over its members satisfying this weak inequality gives\n$$\n\\begin{aligned}\nM&=26A^2-12AB-48A+42B^2+35,\\\\\nT&=14A^2+2AB-28A+16B^2-8B+19 .\n\\end{aligned}\n$$\nIn $(3125/7776)M-T$ bound each positive-coefficient monomial below by its value at the lower rectangle corner and each negative-coefficient monomial by its value at the upper corner. The resulting bound is $132828450791459/486000000000000>0$. This uses the actual closed cap and the original fiber areas.\n",
+  "source_candidate_ids": [
+    "dc03bcfaffa32184"
+  ],
+  "source_candidate_sha256": {
+    "dc03bcfaffa32184": "27f96e6cd159190bbce4ec657f15696f2236baefba26919a26c680534494b7eb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "dc03bcfaffa32184",
+      "locator": "dc03bcfaffa32184:02 §§2.1–2.3, algebraic moment root, body, and strict vertical cap"
+    }
+  ],
+  "statement": "There is a convex body with three integer and two continuous coordinates, exactly 35 positive integer fibers with positive affine volume root, and an actual mixed centroid of integer base, such that a closed vertical halfspace through it retains strictly less than $3125/7776=(5/6)^5$ of the total mixed volume.",
+  "subgoal_id": "pk-intake-vertical-integer-centroid-ambient-constant-obstruction",
+  "title": "An integer-base centroid can fail the ambient Grünbaum constant vertically"
+}

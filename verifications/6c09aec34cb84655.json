@@ -1,0 +1,50 @@
+{
+  "candidate_id": "f0df8c99f9702af9",
+  "candidate_sha256": "92730be14ccc3e0d66afb15f03965f656b290293c57f04d5f37cfe87ce364047",
+  "checked_dependency_candidate_sha256": {},
+  "checked_sources": {
+    "1233ee6dee49d9f8": {
+      "candidate_sha256": "4c818cd56597338f28c1c8bc94a2212ea950004ab1a8451fbc0183fe902161f4",
+      "original_source_sha256": "c9975a0051491a0fafb7bc907ec549d1db46c92a3ee9094a4b40b51aaf1dccf1"
+    }
+  },
+  "checks": [
+    "Checked 1233ee6dee49d9f8 §§1–4 at the cited d=1 locators. The completed-square formula and its second derivative are correct on real m≥0, including the affine case ρ=1/2. The assertion only concerns actual interior nodes.",
+    "For A≤b the two neighboring tail values are distinct with mean at most F, giving strictness. For A>b, concavity gives a termwise decreasing envelope and positivity at i+1 forces q>1. Writing q=m+ρ with ρ in (0,1] places the positive envelope terms at k=0 through m, including the integer q convention.",
+    "Expanding the conjugate numerator gives (A+b)^2−8δF, and F>b>δ makes both denominator factors strictly positive. Substituting the arithmetic envelope gives F*−F=δ(ρ−1/2)^2/2+Fmax−F. Both terms are nonnegative.",
+    "Equality requires every positive envelope entry to occur and be saturated. The last term is δ/2 and the predecessor supplies one further odd coefficient, yielding the exact suffix. Conversely its three tails are consecutive squares times a_r. The suffix condition propagates to later indices and gives the exact 5:3:1 criterion.",
+    "Checked the finite example and screened 13,480 interior nodes of positive concave integer profiles with exact arithmetic, including 120 equalities. The odd profile has mean offset (N−1)(2N−1)/(6N), which cannot be integral because its numerator is one modulo N. A supporting line at an integral mean is therefore strict at some positive-mass index, proving strict Jensen."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T16:18:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Proves arithmetic power-sum concavity for real d≥1 and includes the nonstrict d=1 inequality. It does not classify the exceptional shift by equality or compute the gap.",
+      "fact_id": "a0756c6751636340"
+    },
+    {
+      "comparison": "Gives tail-root concavity at all actual indices and uses the decreasing envelope. It does not assert an odd-suffix equality criterion or the exact factorized d=1 defect.",
+      "fact_id": "108bf10461a9c6ff"
+    },
+    {
+      "comparison": "Gives strict final closed-tail bounds at an integer mean via the strict endpoint Riemann sum. It uses nonstrict Jensen and does not assert that the Jensen step is itself strict.",
+      "fact_id": "4d24a4fbd205befd"
+    }
+  ],
+  "readability": "The root gap is rationalized in two stages with both denominator factors checked. The proof clearly separates strict Jensen from the earlier strict final closed-tail bound.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ef232b346cf039994ef8382ff987e05394ad22d4fd54a673c0c931470a5bba08",
+  "reviewed_statement_sha256": "d8ff4b6891de8b4d1ee4dfd69f850b9deac224d3d62d4dcfeeb8541be9237ce9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:14:25Z",
+  "summary": "Both exact defect identities hold. Their simultaneous vanishing gives precisely the stated odd suffix, and full-support positive weights with an integral mean give strict Jensen.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

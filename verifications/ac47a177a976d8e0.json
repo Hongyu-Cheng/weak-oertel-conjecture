@@ -1,0 +1,45 @@
+{
+  "candidate_id": "1f86e3e352aa0225",
+  "candidate_sha256": "c91a21f2e14fdbd2f6ed1af9211e2367e5a92e4bf0b919eee6d57cbbd3e5a1b3",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The Jacobian of x=r(z)u multiplies the original r(z)^(d−2)/2 by r(z); conditional u is uniform on [−1,1], so b=su gives the uniform layer. Reversing z=H−Br introduces B dr and integrates to V0=B/d on [0,1] or V0(1−a^d) on [a,1].",
+    "The endpoint margins at r=1 and r=a are b−1 and a(b+T), respectively. Their signs give the full, partial and empty ray cases. For a partial ray the upper radius H/(B−b) lies in [a,1]. The integral in units V0 gives the subtracted t on every captured ray, including the fully captured rays. At b=−T the radius interval degenerates and at b=1 the cap occupies the full ray; no mixture has atoms at these nonzero endpoints.",
+    "The section parametrization has coarea element dz/s. The variable b=−z/r(z) has derivative −H/(Br(z)^2), reverses endpoints from 1 to −T, and the physical condition clips it to [−s,s]. Thus its section weight is (B/H)r(z)^d db/(2s), and z=−br(z) gives the extra factor with the stated sign and power. For s=0, direct integration gives C0 and M=0, exactly matching the delta layer.",
+    "On the compact b interval the first two q derivatives are locally bounded for 0<q<1. Differentiating gives M/C0=−(H/B)e′(a0)/d and the nonnegative second derivative. Since a0 is interior, convexity gives both directions of the minimum criterion. The uniform fixed-interval bounds also justify averaging for unbounded laws of finite slopes without a moment condition on s.",
+    "For the full cone the apex margin is H>0, so the integrated energy uses b≤1. Support in [0,T] gives base support in [−T,T], hence this energy equals e(a0). Evenness gives central mass 2v−1 and negative tail mass 1−v. On the symmetric interval Jensen gives integrand average at least one (the zero-mass case is immediate), and on the negative tail its minimum is (1+T/B)^(−d)=t/p0. This includes T=1 and does not require centering.",
+    "The source candidate 0ab50bc17861492a matches the declared SHA-256 at d6689f9. Section 1 gives the record formulas and energy criterion; Section 4 equation (6) gives the bounded-support estimate. The source cites 6146c77d1d7c5e08 for the base mixture, but the normalized proof derives the mixture directly and uses no sharp cone comparison."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T08:13:46.812851+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses convex frusta for the first-coordinate law of uniform volume and bounds paired tails about the global centroid; it gives no oblique section records or slope-law energy.",
+      "fact_id": "6a7d56e450b3126f"
+    },
+    {
+      "comparison": "Its affine-frustum marginals are examples in a one-dimensional strict paired-tail estimate. Its centering concerns the mean of that marginal and does not identify the coarea moment or truncation term here.",
+      "fact_id": "37a5fc541beb1708"
+    },
+    {
+      "comparison": "Uses mixed coarea section centroids in a local projected-contact theorem. It neither specializes to the ray kernel here nor computes the clipped affine profile records.",
+      "fact_id": "1269c554ca9a41b8"
+    }
+  ],
+  "readability": "The two measures are easy to distinguish by retaining V0 for cone cap units and C0 for section units. The formula for P uses the entire event b≥−T in the subtracted term.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "8588d73688c684f5b00ac26f83b3bb855e99ab5041d9201a1e36c9db24bc9cbf",
+  "reviewed_statement_sha256": "623ecdd932553c39c2061f0aaf1ca8a469bd505e0bebc6441374dd123b85bc5e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:12:38Z",
+  "summary": "The two-sided cap, coarea and moment formulas have the stated physical normalizations. The convex energy characterization and bounded-cone estimate hold without a sharp cone comparison.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

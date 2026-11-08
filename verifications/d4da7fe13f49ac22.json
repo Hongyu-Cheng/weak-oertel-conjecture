@@ -1,0 +1,51 @@
+{
+  "candidate_id": "b3348090be42e30a",
+  "candidate_sha256": "c0878587dcf9557287b328179e558a505b5b76de7b48e13ee4a30a0c40d0f451",
+  "checked_dependency_candidate_sha256": {
+    "b965b9b920717bc3": "79eda6b00e3d352f5cfbeb6816c0975d4361d38565fda4f681ecbdee7ca4961b"
+  },
+  "checks": [
+    "Independent rational edge intersection and clipping give a strict interior mark, one strictly isolated vertex per cap, the six radii and sector areas, total area 7/128, the three cap areas and the coarea lengths.",
+    "The third chord uses the ray-vector norm √2 and divides by the norm √2 of its normal. Computing all three f squares gives the positive vector (7/4,1/2,1/2) and the cubic equals exactly 4.",
+    "The forward-to-backward signed-offset product ratio is 874/49. Independent exact expansion of the compressed matrix also reproduces all three positive leading principal minors.",
+    "Positive diagonal congruence retains positive definiteness. For any assignment the hypothetical domination gives a quadratic lower bound via coordinatewise absolute values and the normalized compression, forcing positive definiteness of the comparison matrix. The determinant expansion gives zero from cubic equality, regardless of the assignment.",
+    "The exact witness and the normalization agree with 3b0f32e0ae75b4d0 §3."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "b965b9b920717bc3",
+      "candidate_sha256": "79eda6b00e3d352f5cfbeb6816c0975d4361d38565fda4f681ecbdee7ca4961b",
+      "hypotheses": "This actual triangle has positive radii, an interior origin and strict incidence for the canonical normals. Its unequal signed-offset products give positive definiteness by the frozen period-three theorem, also verified independently by the rational minors. Admission requires the predecessor review on the bound bytes.",
+      "reviewed_proof_sha256": "e514617225e28deda06e6906495bf783f0cb3b8915d8b0c0cacc3971cb715ff4",
+      "reviewed_statement_sha256": "5edc0564ac725d675b2c62cc951af97682dcecd6eaa9ab31b6b31417c5b52f84",
+      "same_batch": true
+    }
+  ],
+  "finished_utc": "2026-11-08T17:53:28Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted ordinary triangle cubic theorem uses the same area and coarea normalization. Its cubic equality test concerns edge fraction splits. It supplies no implication for the normalized compressed sector entries, which this actual equality witness disproves.",
+      "fact_id": "b649b1adca5662b7"
+    },
+    {
+      "comparison": "The accepted fixed-ray incidence and quadrilateral frontier concern actual area modifications and reciprocal PSD block constraints. They give no domination of the ordinary cubic matrix entries for this strictly isolated triangle.",
+      "fact_id": "5a6895dfda8c791e"
+    }
+  ],
+  "readability": "The ordinary f vector and the normalized compressed entries are different expressions. The determinant argument applies without choosing a cap-to-edge indexing.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "df6144b1bf8e12c88c77f8ebf8b7f97dad95716b632fba6b034db99f033c89e2",
+  "reviewed_statement_sha256": "82464f3a95747ee43933ae12b8d6b35b01cb9a90f3009f09b33bb56b163eb651",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:47:48Z",
+  "summary": "The rational triangle attains ordinary cubic equality with a positive definite compressed matrix. The claimed normalized entrywise domination is impossible for every edge assignment.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

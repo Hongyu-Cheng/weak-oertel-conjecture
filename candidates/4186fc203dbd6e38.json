@@ -1,0 +1,26 @@
+{
+  "advances": "An original-volume law conditional on an actual full roof martingale. The projective map can move lattice bases off the lattice.",
+  "author": "PK-research-agent",
+  "candidate_id": "4186fc203dbd6e38",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:06:28.274339+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-roofs-prism-transport",
+  "kind": "theorem",
+  "proof": "The conditional mean under $P_s$ is $E_s(\\xi',H')=(\\xi,H)$. On a target column $2H'\\,dt/2$ is Lebesgue measure on $[-H',H']$. Integrating out the target before pushing forward the source gives $2E_sH'=2H$. This yields the asserted original marginals and masses by Fubini. It also yields the density formula by comparison with the column lift of $2H\\eta$.\n\nThe input point $w$ determines $s$ and $t$ since the height is positive and fixed at its base. Its conditional target roof row is $P_s^H(ds')=(H'/H)P_s(ds')$. Thus $E_s^H\\xi'=\\xi+\\operatorname{Cov}_{P_s}(\\xi',H')/H$ and $E_s^H(tH')=tH+t\\operatorname{Var}_{P_s}(H')/H$. If this drift vanishes, the second component for almost every $t\\ne0$ forces zero row height variance. Conversely row height constancy makes $P_s^H=P_s$ and the full drift is zero. Expanding the conditional variance and using $E_sH'=H$ gives $\\int H^2\\,d(\\eta-\\nu)=\\int\\operatorname{Var}_{P_s}(H')\\,d\\nu(s)$. Integrating the physical horizontal drift against $2H\\nu$ gives its first moment formula. The mean of $t$ is zero on both marginals.\n\nUnder $P_s^H$ the factor $H'$ cancels against the denominators in $\\xi'/H'$ and $1/H'$, giving conditional means $\\xi/H$ and $1/H$. The normalized vertical coordinate is the common $t$. The projective map is injective since it includes $1/H$, so the conditional mean conclusion is a martingale in these coordinates. For a convex test $\\varphi$ on the projective coordinates, the roof function $(\\xi,H)\\mapsto 2H\\varphi(\\xi/H,t,1/H)$ is convex for fixed $t$ by the perspective construction applied to the affine numerator $(\\xi,tH,1)$. Applying the roof order and then integrating in $t$ yields the same projective convex order.\n",
+  "source_candidate_ids": [
+    "193aa5f5cdaa5457"
+  ],
+  "source_candidate_sha256": {
+    "193aa5f5cdaa5457": "b08396a6e79a41c89d426140be159304b662d27f5cd28c103b0602ff5d3f54cd"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "193aa5f5cdaa5457",
+      "locator": "193aa5f5cdaa5457:01 §§1–3, 6, (1)–(11)"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be nonempty and finite. Let $K_z=B_z\\times[-H_z,H_z]$, $H_z>0$, be the actual sampled fibers of a canonical convex hull, where each $B_z$ is a positive $(d-1)$-dimensional compact convex body. For $d=1$, use a singleton of measure one. Write $S=\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$ for the placed sampled fibers, $\\mu$ for their summed original mixed $d$-volume, $M=\\mu(S)$ for its mass, and $\\eta$ for summed roof area at the points $s=(\\xi,H)=(z,X,H_z)$ with $X\\in B_z$.\n\nLet $\\Pi(ds,ds')=\\nu(ds)P_s(ds')$ be any finite martingale coupling from a measure $\\nu$ on this same roof to $\\eta$. Let $t$ have the uniform probability law $dt/2$ on $[-1,1]$. Under the joint measure $d\\Omega=2H'\\,d\\Pi\\,dt/2$ define $w=(\\xi,tH)$ and $w'=(\\xi',tH')$. Its target is exactly $\\mu$ and its source, denoted $\\mu_\\nu$, is the column lift of $2H\\nu$ by the uniform law of $t$. Both masses equal $M$. If $d\\nu=f\\,d\\eta$, then $d\\mu_\\nu(w)=f(z,X,H_z)\\,d\\mu(w)$.\n\nThe physical conditional drift of $w'$ from $w$ is\n$$\n\\left(\\frac{\\operatorname{Cov}_{P_s}(\\xi',H')}{H},\n      \\frac{t\\,\\operatorname{Var}_{P_s}(H')}{H}\\right).\n$$\nThe lift is a physical martingale exactly when $H'=H$ $\\Pi$-almost everywhere, equivalently when $\\int H^2\\,d(\\eta-\\nu)=0$. The target-minus-source first moment of $\\xi$ is $2\\int\\operatorname{Cov}_{P_s}(\\xi',H')\\,d\\nu(s)$ and both vertical first moments vanish. In the projective coordinates $(\\xi/H,y/H,1/H)$ the lift is always a martingale. The resulting convex order in those coordinates also follows directly by a perspective test on the roof.",
+  "subgoal_id": "pk-intake-pk-w35-roofs-prism-transport",
+  "title": "Target-height prism transport has an exact physical martingale defect"
+}

@@ -1,0 +1,54 @@
+{
+  "candidate_id": "2a3bedaaf9de2c3c",
+  "candidate_sha256": "6b0fe078d7d0cf5696c6e64f62fcd27da7c79ecce6029d2ed2fb9038ac1f32d2",
+  "checked_dependency_candidate_sha256": {
+    "01feaf08e73f95cf": "f8818879df83968e8650353386d48ae59823a53ad096ee205afc318d5cbb7f83"
+  },
+  "checks": [
+    "The parent supplies dim P=r and the strict comparison for all parallel T sections, so every positive r-dimensional B section has volume strictly less than that of P.",
+    "P projects to a single transverse coordinate. Therefore the section of P+B at y+y_P is exactly P+B_y. Brunn–Minkowski in the common r-plane gives the strict factor 2^r on each positive-volume section, including intervals when r=1.",
+    "Fubini gives strict global growth since the set of positive-volume sections contributes b>0. At r=d the whole-space comparison applies directly. Every omitted normal strictly misses the single midpoint set because P is strictly below −1 and B is at or below 1.",
+    "The midpoint volume scales by 2^(−d), giving b/2^(d−k+1). For k=m the entire T is an r-section and |P|>|T|, so |A|>|T|≥b. Compared with 5dd69a77cceb0773 §§1 and 4."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "01feaf08e73f95cf",
+      "candidate_sha256": "f8818879df83968e8650353386d48ae59823a53ad096ee205afc318d5cbb7f83",
+      "hypotheses": "Use the same actual residual points, canonical T and strict off-index misses. All selected points lie in A, and B⊆T makes every relevant B section a subset of the corresponding T section. Same-wave admission depends on the parallel-section parent’s separate approval.",
+      "reviewed_proof_sha256": "2f030bec9965d515d1abc6511f91c703bf9ef95d0592d975f1849a5eeef4e743",
+      "reviewed_statement_sha256": "5c62af09077046849443fd108a3132d2f89986747f67e11deb576014927fd3d5"
+    },
+    {
+      "hypotheses": "Translate P and a positive-volume B section to their common linear r-plane; both are compact convex with positive r-volume. For r=1 the same inequality is interval-length addition.",
+      "reference": "R. J. Gardner, The Brunn–Minkowski inequality, equation (3)",
+      "url": "https://sites.stat.washington.edu/jaw/COURSES/520s/523/HO.523.20/Gardner.BullAMS.02.pdf"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:03:09Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its common-baseline transfer underlies an accepted k=2 swept-segment comparison when used with an interval-section length increment. It does not supply the general 2^(k−1) strict growth for a common higher-dimensional residual simplex.",
+      "fact_id": "afd07648ec0ace5f"
+    },
+    {
+      "comparison": "Uses the exact addition of length under Minkowski sum by a coordinate segment, which together with the common-baseline comparison handles the k=2 case. The new result treats every 2≤k≤d+1 and proves the common missed-region bound from r-dimensional sections.",
+      "fact_id": "e4ef1ac154c5d280"
+    }
+  ],
+  "readability": "The transverse integral is unnecessary when k=d+1 and r=d, as the proof notes.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "32d9b979a8644cc2f301547a44acd9438cfef0e1d4c1ee67962ce8e8da8310a8",
+  "reviewed_statement_sha256": "dd0174e0a7a0d9be3c60985e2191877c64b2174c8d4aa8515d77bc9a0a3e916d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:00:43Z",
+  "summary": "The exact section identity for a single Minkowski sum and the strict section comparison give the stated growth and common missed-region bounds.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

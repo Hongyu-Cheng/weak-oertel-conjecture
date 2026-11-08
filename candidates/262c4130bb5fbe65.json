@@ -1,0 +1,26 @@
+{
+  "advances": "A finite scalar inequality for probability vectors.",
+  "author": "PK-research-agent",
+  "candidate_id": "262c4130bb5fbe65",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.816397+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w33-probability-vector-product",
+  "kind": "lemma",
+  "proof": "Let $e_j$ be the elementary symmetric coefficients of the $v_i$, with $e_0=e_1=1$, and extend the sequence by zero. The coefficients are log-concave with contiguous positive support. Indeed, successively convolve the initial sequence $(1)$ with $(1,v_i)$. If the current sequence is $a_j$ and the new one is $b_j=a_j+t a_{j-1}$, then\n$$\nb_j^2-b_{j-1}b_{j+1}\n=(a_j^2-a_{j-1}a_{j+1})\n+t(a_ja_{j-1}-a_{j-2}a_{j+1})\n+t^2(a_{j-1}^2-a_{j-2}a_j)\\ge0.\n$$\nThe middle bracket is nonnegative by the decreasing consecutive ratios, and if its subtracted product is positive then all four entries are in the positive support. Contiguity persists, also when $t=0$.\n\nPut $e=e_2=(1-s)/2$. The ratios $e_{j+1}/e_j$ for $j\\ge2$ with positive denominator are at most $e$. Hence $\\sum_{j\\ge3}e_j\\le e^2/(1-e)$, strictly if $e>0$ by finite support. Since $1+s=2(1-e)$, multiplying the bound $\\prod_i(1+v_i)\\le 2+e+e^2/(1-e)$ by $1+s$ gives $3+s$. If $e=0$, exactly one coordinate is positive and direct substitution gives equality.\n",
+  "source_candidate_ids": [
+    "4ac6f62135b1565c"
+  ],
+  "source_candidate_sha256": {
+    "4ac6f62135b1565c": "6b25b0016310b076c5d21ea263e90973fe4ee659229e6d2ee32fbb26f627f32e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4ac6f62135b1565c",
+      "locator": "4ac6f62135b1565c:02 §2, (2)"
+    }
+  ],
+  "statement": "Let $v_1,\\ldots,v_m\\ge0$ with $\\sum_i v_i=1$ and put $s=\\sum_i v_i^2$. Then $(1+s)\\prod_i(1+v_i)\\le3+s$. Equality holds exactly when one coordinate is positive.",
+  "subgoal_id": "pk-intake-pk-w33-probability-vector-product",
+  "title": "A sharp product bound for a finite probability vector"
+}

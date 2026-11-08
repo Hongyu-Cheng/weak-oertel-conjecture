@@ -1,0 +1,29 @@
+{
+  "advances": "A fixed-count comparison for balanced scalar exponential laws with unit positive phases, capped negative phases, and a fixed negative unit.",
+  "author": "PK-research-agent",
+  "candidate_id": "ad017d8380c3bf8d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:03:04.802354+00:00",
+  "depends_on": [
+    "511d89569241b0d6",
+    "55ec62c36c689dfe"
+  ],
+  "draft_key": "saturated-negative-equalization",
+  "kind": "theorem",
+  "proof": "Let $V=X-E_0-\\sum_\\ell b_\\ell E_\\ell$, realizing $X$ as a sum of $k$ independent unit exponential phases. This signed law has at least two positive phases and at least one negative phase, since $k\\ge2$ and the fixed negative phase is $-E_0$. Fact 511d89569241b0d6 applies even at zero residual coefficients. For independent additional unit exponentials $E_i',E_j'$ it gives\n$$\n\\partial_{b_i}P_k=-f_{V-b_iE_i'}(0),\n$$\nwhere $f_Z$ denotes the continuous density of $Z$. The minus sign comes from the signed coefficient $-b_i$. These derivatives are continuous on a neighborhood of each vector in the coefficient domain.\n\nFor distinct $i,j$, put $W=V-b_iE_i'-b_jE_j'$. If $W=U-cE'$ with an added phase of mean $c>0$ and $U$ the law with that phase removed, then\n$$\nf_W(x)=\\frac1c\\int_x^\\infty e^{-(u-x)/c}f_U(u)\\,du\n\\quad\\Longrightarrow\\quad f_U(x)=f_W(x)-c f_W'(x).\n$$\nThe signed density lemma gives continuity and boundedness of $f_U$, and the integral formula gives the derivative. The same identity at $c=0$ is $f_U=f_W$. Removing the added $j$ phase for the derivative in $b_i$ and the added $i$ phase for the derivative in $b_j$ yields\n$$\n\\partial_{b_i}P_k-\\partial_{b_j}P_k=-(b_i-b_j)f_W'(0).\n$$\nThe negative coefficients in $W$ are the fixed unit, the original residual coefficients, and the two added coefficients $b_i,b_j$. They lie in $[0,1]$ and sum to $k+b_i+b_j$. By the gamma density sign lemma, $f_W'(0)\\le0$, and it is strictly negative when $b_i+b_j>0$.\n\nIf $b_i>\\bar b>b_j$, use the path $(b_i-t,b_j+t)$ for $0\\le t\\le \\min(b_i-\\bar b,\\bar b-b_j)$. The box and sum constraints hold. Before either coordinate reaches the average the first is strictly larger than the second and their sum is positive, so the path derivative $-\\partial_{b_i}P_k+\\partial_{b_j}P_k$ is strictly negative. Continuity and differentiability through zero residual coordinates were supplied by 511d89569241b0d6, so the same strict decrease holds if the receiving coordinate starts at zero. At least one additional coordinate reaches the average each time, and an unequal vector of the given total always has a coordinate on each side of the average. Finitely many such transfers reach the equal vector. The sum of the remaining exponentials at that vector has law $\\bar b\\,G$. For $q=k-1$ the only admissible vector already has every coefficient one.\n",
+  "source_candidate_ids": [
+    "a6e6fd61fe60c16a"
+  ],
+  "source_candidate_sha256": {
+    "a6e6fd61fe60c16a": "b23a4781c65a1c1e79591cd59e66c32e037575f27ceae99edb27e9f1eff3d030"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a6e6fd61fe60c16a",
+      "locator": "§4, (5)–(6)"
+    }
+  ],
+  "statement": "Let $k\\ge2$ and $q\\ge k-1$ be integers. For $b=(b_1,\\ldots,b_q)\\in[0,1]^q$ with $\\sum_i b_i=k-1$, let\n$$\nP_k(b)=\\Pr\\!\\left(X\\ge E_0+\\sum_{i=1}^q b_iE_i\\right),\n$$\nwhere $X$ has the $\\operatorname{Gamma}(k,1)$ law and $E_0,\\ldots,E_q$ are unit-mean exponentials, with all variables independent. Set $\\bar b=(k-1)/q$. Transferring a positive amount from an above-average coefficient to a below-average one, up to the first point at which either reaches $\\bar b$, strictly decreases $P_k$. Consequently\n$$\nP_k(b)\\ge \\Pr(X\\ge E_0+\\bar b\\,G),\n$$\nwhere $G$ is an independent $\\operatorname{Gamma}(q,1)$ variable. Equality holds exactly when every $b_i=\\bar b$.",
+  "subgoal_id": "pk-intake-saturated-negative-equalization",
+  "title": "Equal residual negative coefficients minimize the saturated-positive probability"
+}

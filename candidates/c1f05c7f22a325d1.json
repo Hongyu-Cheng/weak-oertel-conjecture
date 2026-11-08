@@ -1,0 +1,33 @@
+{
+  "advances": "A necessary condition at a constrained maximum of original depth in the free-mixture set, with geometric localization for a nonzero minimizing linear functional.",
+  "author": "PK-research-agent",
+  "candidate_id": "c1f05c7f22a325d1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:52:39.942623+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d",
+    "dcccecd70b052857"
+  ],
+  "draft_key": "free-mixture-selector-interior-maximizers-and-tangents",
+  "kind": "theorem",
+  "proof": "By 6769574fc1bd9f8d, the selected centroids form the nonempty compact convex metronoid $\\mathsf M_a(C)\\subseteq C$. A fixed ball about $g_A$ in $A$, averaged with each $g_\\sigma$, gives a ball of half its radius about every point of $Z_0$ in $B$. A fixed ball about $g_B$ in $B$ and convexity then place all of $Z$ uniformly inside $B$.\n\nIf $m=(g_A+g_\\sigma)/2$, a closed halfspace containing $(0,m)$ contains at least one of $(-1,g_A)$ and $(1,g_\\sigma)$, by affinity of its defining margin. By 6769574fc1bd9f8d, the resulting endpoint trace pays at least $\\Gamma_d a$ in either case, using full selected mass on $A$ and mass $a$ on $C$. If the same halfspace contains $(0,g_B)$, its middle trace pays at least $\\Gamma_d b$ by that fact at full mass. If a trace is the whole fiber, its full mass also gives the required bound. The sum exceeds $\\tau$ since $a+b>c$.\n\nFor $y\\in Z$, tighten any containing halfspace to pass through $(0,y)$. A pure-base one then has mass at least $\\min(a+b,b+c)>M/2$. Opposite through-point halfspaces with nonzero continuous normals sum to $M$ in mass, since their boundaries have zero volume in each fiber. Thus the minimum can be computed using only nonzero continuous normals. Normalize those normals to unit vectors $u$ and write the margins as $u\\cdot(x-y)+vz$. Because the fibers and $Z$ are bounded, for sufficiently large $|v|$ the endpoint statuses are one full and one empty uniformly in $y,u$, and the middle trace is independent of $v$. Clipping the tilt to a sufficiently large compact interval gives the same minimum. The cap masses are continuous jointly in $(y,u,v)$ by dominated convergence, again using the null boundaries. It follows that $f$ is continuous and has an attained maximum on $Z$.\n\nAssume strict failure. At $y=g_B$ choose any $m\\in Z_0$, and at $y\\in Z_0$ choose $m=g_B$. Every minimizing cap at $y$ excludes $(0,m)$ by the common-cap inequality. Consequently $u\\cdot(m-y)<0$ uniformly on the compact family of minimizing parameters. There are an open neighborhood of that family in the compact parameter set and an $\\epsilon>0$ such that $u\\cdot(m-y)\\le-\\epsilon$ throughout the neighborhood. With the same parameters at $y+s(m-y)$ the cut on every fiber moves outward, so all masses are nondecreasing. The cap on $B$ gains at least a positive constant times $s\\epsilon$ for all sufficiently small $s>0$, uniformly in these parameters: intersect the newly gained slab with a ball in $B$ centered at $y$, and use the positive lower bound of its cross-sectional area for displacements up to half the radius, also in dimension one. On the compact complement of the neighborhood the old cap masses exceed $f(y)$ by a common positive margin whenever the complement is nonempty. Joint continuity keeps them above $f(y)$ for a sufficiently small move. Thus the new compact minimum strictly exceeds $f(y)$, ruling out each endpoint set.\n\nBy dcccecd70b052857 (1)–(2), $Z_0=(g_A+\\mathsf M_a(C))/2$ is strictly convex and full-dimensional. In fact each nonzero direction has a unique contact, and a proper affine hull would force both signs of a nonzero orthogonal vector into the same contact's normal cone, contrary to (2). Strict failure forces $g_B\\notin Z_0$. If a nonzero functional is minimized at $y_*$, its linearity and $0<t<1$ force both $g_B$ and $m_*$ to minimize it. In the plane, strict separation of $g_B$ from $Z_0$ puts the rays from $g_B$ meeting $Z_0$ in a closed angular interval of length less than $\\pi$. Convexity fills this interval and full dimension gives two different extreme rays. A line through $g_B$ meeting and supporting $Z_0$ must contain an extreme ray, and each extreme ray gives a supporting line. The contacts are unique by strict convexity. In dimension one $g_B\\ne m_*$, so $y_*$ is strictly between two points of the interval $Z$, where no nonzero linear functional can have a minimum.\n",
+  "source_candidate_ids": [
+    "005bedbecd71db6d"
+  ],
+  "source_candidate_sha256": {
+    "005bedbecd71db6d": "f7f0a94f41294ea5b3bf4952464a3d7fbfcf58465573194781eb4f4d2013a775"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "005bedbecd71db6d",
+      "locator": "005bedbecd71db6d:02 §§1–2, (2)–(3), common-cap exclusion and strictly interior mixing"
+    },
+    {
+      "candidate_id": "005bedbecd71db6d",
+      "locator": "005bedbecd71db6d:05 §4, planar tangents and one-dimensional consequence"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $A,B,C\\subset\\mathbb R^d$ be convex bodies at integer bases $-1,0,1$, with $(A+C)/2\\subseteq B$. Write $a=|A|$, $b=|B|$, $c=|C|$ and assume $0<a<c<a+b$ and $b<a+c$. Put $M=a+b+c$ and $\\tau=\\Gamma_d M/2$, where $\\Gamma_d=(d/(d+1))^d$. Let $\\mu$ be original mixed volume, $f(y)=\\inf_{H\\ni(0,y)}\\mu(H)$ for closed ambient halfspaces, and $g_K$ the ordinary centroid of a fiber. Set\n$$\nZ_0=\\left\\{\\frac{g_A+g_\\sigma}{2}:0\\le\\sigma\\le\\mathbf1_C\\,dx,\\ \\sigma(C)=a\\right\\},\n\\qquad Z=\\operatorname{conv}(\\{g_B\\}\\cup Z_0),\n$$\nwhere $g_\\sigma=a^{-1}\\int x\\,d\\sigma(x)$.\n\nBoth sets are compact convex and contained in $\\operatorname{int}B$. Every closed ambient cap containing $(0,g_B)$ and some $(0,m)$ with $m\\in Z_0$ has mass at least $\\Gamma_d(a+b)>\\tau$. Thus if $g_B\\in Z_0$, then $f(g_B)\\ge\\tau$. If $\\max_{y\\in Z} f(y)<\\tau$, the maximum is attained and every maximizer is outside $\\{g_B\\}\\cup Z_0$. Every representation $y_*=(1-t)g_B+t m_*$ of such a maximizer, with $m_*\\in Z_0$ and $0\\le t\\le1$, has $0<t<1$.\n\nIn the same strict-failure regime, suppose a nonzero linear functional is minimized on $Z$ at a maximizer $y_*$. For $d=2$, $y_*$ lies on one of the two segments from $g_B$ to the two supporting-line contacts of $Z_0$ through $g_B$. For $d=1$ no such nonzero functional exists.",
+  "subgoal_id": "pk-intake-free-mixture-selector-interior-maximizers-and-tangents",
+  "title": "Free-mixture selector maxima leave both endpoint sets under strict failure"
+}

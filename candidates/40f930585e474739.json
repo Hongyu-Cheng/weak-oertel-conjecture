@@ -1,0 +1,30 @@
+{
+  "advances": "A local calculation on positive smooth profiles and the specified planar proper-trace branch. Its use at a saturation transition would require a separate argument.",
+  "author": "PK-research-agent",
+  "candidate_id": "40f930585e474739",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:22:43.021166+00:00",
+  "depends_on": [],
+  "draft_key": "w32-directional-cap-component-root-curvature",
+  "kind": "lemma",
+  "proof": "Write $S=f^{d-1}f'+p^{d-1}p'$ and $T=f^{d-2}(f')^2+p^{d-2}(p')^2$. Then $W'=dS$ and $W''=d(f^{d-1}f''+p^{d-1}p'')+d(d-1)T$. The power rule reduces the second derivative to $W^{1/d-2}[W(f^{d-1}f''+p^{d-1}p'')+(d-1)(WT-S^2)]$. Expansion gives $WT-S^2=f^{d-2}p^{d-2}(fp'-pf')^2$.\n\nFor the planar branch expand the quadratic sum and complete the square. The assumption $s<\\min(s_0,s_1)$ forces $s<\\bar s$, which selects the negative square-root branch and ensures $B>E$ on its range. Differentiating $s_{R^2}=\\bar s-\\sqrt{R^2-E}/\\sqrt A$ twice gives\n$$\n\\frac{d^2}{dR^2}s_{R^2}=\\frac{E}{\\sqrt A\\,(R^2-E)^{3/2}}.\n$$\nThus the positive reserve and strict inverse curvature occur exactly when the two component roots vanish at different affine continuation points. When $E=0$ the inverse is affine in $R>0$.\n",
+  "source_candidate_ids": [
+    "41110850e150a6a0"
+  ],
+  "source_candidate_sha256": {
+    "41110850e150a6a0": "f859d9a7c519cdea0b502a5c0f1189473c93b12fce5685dff3c87fc0b56ab215"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "41110850e150a6a0",
+      "locator": "41110850e150a6a0:02 §3, (4), component-root curvature"
+    },
+    {
+      "candidate_id": "41110850e150a6a0",
+      "locator": "41110850e150a6a0:03 §4, (5)–(6), planar proper-trace branch"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $f,p$ be positive twice continuously differentiable functions on an open interval. Put $W=f^d+p^d$. Then\n$$\n(W^{1/d})''=W^{1/d-2}\\left[\n W(f^{d-1}f''+p^{d-1}p'')\n +(d-1)f^{d-2}p^{d-2}(fp'-pf')^2\n\\right].\n$$\nIn particular, suppose $d=2$ and on a proper-trace interval the actual middle and optimized endpoint cap volumes in one fixed continuous direction are $\\alpha(s_0-s)^2$ and $\\beta(s_1-s)^2$, with $\\alpha,\\beta>0$ and $s<\\min(s_0,s_1)$. Put $A=\\alpha+\\beta$, $\\bar s=(\\alpha s_0+\\beta s_1)/A$, and $E=(\\alpha\\beta/A)(s_0-s_1)^2$. The sum is $A(\\bar s-s)^2+E$. Its inverse on this interval is $s_B=\\bar s-\\sqrt{(B-E)/A}$. If $s_0\\ne s_1$, then $E>0$ and $R\\mapsto s_{R^2}$ is strictly convex on the corresponding branch.",
+  "subgoal_id": "pk-intake-w32-directional-cap-component-root-curvature",
+  "title": "Curvature of the root of a sum of cap volumes and the planar inverse"
+}

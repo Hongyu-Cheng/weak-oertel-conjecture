@@ -1,0 +1,36 @@
+{
+  "advances": "Two projected endpoints in one prescribed direction; a cone profile can occur without full-body homothety. The simplex consequence concerns only the prescribed middle facet trace.",
+  "author": "PK-research-agent",
+  "candidate_id": "ffff08d4959f609b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.479331+00:00",
+  "depends_on": [],
+  "draft_key": "cone-projection-exact-common-tilt-endpoint-minimum",
+  "kind": "theorem",
+  "proof": "The common-rank midpoint has upper quantile $(Q_A+Q_B)/2$. The support deficits $\\delta_A=h_A-h-\\tau,\\ \\delta_B=h_B-h+\\tau$ vary over the line with sum $c=h_A+h_B-2h$. The exact cost is $a\\operatorname{clip}(\\delta_A/w_A,0,1)^d+b\\operatorname{clip}(\\delta_B/w_B,0,1)^d$, where clipping truncates to the given interval. A full endpoint costs at least $a$, which is attained by taking $\\delta_A$ sufficiently large and $\\delta_B$ sufficiently negative. If $c\\le0$, choose both deficits $c/2$ to attain zero, matching $m=0$. If $c\\ge w_A+w_B$, every tilt has a full endpoint and $m=1$.\n\nFor $c>0$, with neither endpoint full put $x=(\\delta_A)_+/w_A$ and $y=(\\delta_B)_+/w_B$. Then $w_Ax+w_By\\ge c$. Minimizing $a x^d+b y^d$ under this constraint and $x,y\\ge0$ gives $C_d(c/(w_A+w_B))^d$: for $d>1$ this is sharp Hölder, with equality at the nonnegative weighted Hölder vector normalized to make $w_Ax+w_By=c$. For $d=1$ put all the mass of that constraint on the cheaper unit cost $\\min(a/w_A,b/w_B)$. This unconstrained minimum at $c=w_A+w_B$ is at least $a$, since one of $x,y$ is then at least one. This also proves $C_d\\ge a$ and the stated saturated branch. For $0<c<w_A+w_B$, the midpoint probability is $m=(c/(w_A+w_B))^d$. If $C_dm<a$, each summand at an equality allocation is less than $a\\le b$, so both coordinates are below one and the equality allocation gives actual admissible deficits summing to $c$. Otherwise the full-$A$/empty-$B$ allocation attains the minimum. Substituting the root-proportional width ratio into $C_d$ gives the stated special value, including $d=1$.\n\nFor the simplex specialization, let $K$ be a $d$-simplex of volume $k$, and write the endpoint barycentric coordinate as $a_i+\\alpha\\lambda_i$ and $b_i+\\beta\\lambda_i$ on the corresponding homothetic copies, $\\alpha\\ge\\beta>0$. The upper tails of $\\lambda_i$ on $K$ are powers of support deficits by homothety about vertex $i$, so the two endpoint widths are $\\alpha,\\beta$ and volumes $k\\alpha^d,k\\beta^d$. Every real tilt with the middle facet trace is of the form $\\lambda_i(x)+tz\\ge1/(d+1)$. With $\\sigma=(\\alpha+\\beta)/2$ and $h_i=(\\alpha+\\beta+a_i+b_i)/2-1/(d+1)$, the midpoint tail is $\\operatorname{clip}(h_i/\\sigma,0,1)^d$ and $C_d=2k\\sigma^d$. Since $2\\sigma^d\\ge\\beta^d$, the formula reduces to $k\\min\\{\\beta^d,2(h_i)_+^d\\}$ even when the midpoint cut saturates. The middle contributes $\\gamma_d k$.\n\nIn the balanced case $\\alpha^d=1+\\beta^d$ implies $(d+1)\\alpha\\ge 2+(d-1)\\beta$, since $\\alpha\\ge\\max(1,\\beta)$. Midpoint containment implies $(a_i+b_i)/2\\ge0$ by evaluating the minimum of $\\lambda_i$ on the midpoint homothet. These give $h_i\\ge d\\beta/(d+1)$. The binomial theorem gives $2\\gamma_d\\le1$, so the exact minimum pays $2\\gamma_d k\\beta^d=2\\gamma_d b$. If the smaller fiber has zero volume and $a=k$, the middle facet trace alone pays $\\gamma_d M/2$ for $M=2a$.\n",
+  "source_candidate_ids": [
+    "8c097da8eab2cd32",
+    "8da2bcc42f564809"
+  ],
+  "source_candidate_sha256": {
+    "8c097da8eab2cd32": "be1bb0d9c06ee855d367949ad801c26465e7ec765475680f006ed5abcfb2dd71",
+    "8da2bcc42f564809": "1be823720fd0f577be4751ef097f6139c7d1f58a0ff629d09023b48894daa7a5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8c097da8eab2cd32",
+      "locator": "8c097da8eab2cd32:04 §3, cone projection profiles (8)–(10)"
+    },
+    {
+      "candidate_id": "8da2bcc42f564809",
+      "locator": "8da2bcc42f564809:01 §§1–2 (2)–(4), exact optimized facet-trace endpoint mass"
+    },
+    {
+      "candidate_id": "8da2bcc42f564809",
+      "locator": "8da2bcc42f564809:02 Opening (1) and §3 (5)–(6), balanced volumes and the zero-smaller-fiber seam"
+    }
+  ],
+  "statement": "Let two projected endpoint probability laws have decreasing upper quantiles $Q_A(p)=h_A-w_Ap^{1/d}$ and $Q_B(p)=h_B-w_Bp^{1/d}$ for $p\\in[0,1]$, with $d\\ge1$, $w_A,w_B>0$, and actual volumes $0<a\\le b$. Let $m$ be the upper tail at $h$ of their common-rank midpoint projection, extended by its usual saturated values. The minimum actual endpoint mass over all common tilts $\\tau$ at thresholds $h+\\tau,h-\\tau$ is\n$$\n\\min\\{a,C_dm\\},\\qquad\nC_d=\\frac{(w_A+w_B)^d}{[w_A^{d/(d-1)}a^{-1/(d-1)}+w_B^{d/(d-1)}b^{-1/(d-1)}]^{d-1}}\\quad(d>1),\n$$\nand $C_1=(w_A+w_B)\\min(a/w_A,b/w_B)$. If $w_A/w_B=(a/b)^{1/d}$, then $C_d=2((a^{1/d}+b^{1/d})/2)^d$.",
+  "subgoal_id": "pk-intake-cone-projection-exact-common-tilt-endpoint-minimum",
+  "title": "Exact endpoint cap minimum for two cone projections at one tilt"
+}

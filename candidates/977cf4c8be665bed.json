@@ -1,0 +1,38 @@
+{
+  "advances": "Auxiliary cap-cover geometry and contact incidence under a strict failure threshold.",
+  "author": "PK-research-agent",
+  "candidate_id": "977cf4c8be665bed",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:48:12.776997+00:00",
+  "depends_on": [
+    "6d6fcf377e68c79c"
+  ],
+  "draft_key": "nonvertical-global-projected-cap-circuit-certificate",
+  "kind": "theorem",
+  "proof": "Every $y\\in\\Lambda$ lies in some closed cap of mass $<T$, by hypothesis on $C$ and by strict separation from $C$ off it. Move the threshold of such a cap slightly outward from its interior to put $y$ strictly inside the enlarged cap. Continuity from above keeps the closed cap mass $<T$. For a convergent sequence of normals and thresholds, the limsup of the indicators of the closed caps is bounded by the indicator of the limiting closed cap. Bounded convergence in this one-sided form shows that a sufficiently small normal perturbation to make the continuous component nonzero preserves the strict mass bound and the interior membership. Choose a bounded parallelepiped with nonvertical facet normals and with $C$ in its interior. Its outward caps have zero mass. A finite set of the strictly containing bad caps covers its compact mixed-lattice part. Intersect the closed complements with the parallelepiped to get a bounded polyhedron $Q_0$ disjoint from $\\Lambda$, with defining outward closed cap masses $<T$.\n\nWrite its inequalities as $A_j\\cdot y\\le b_j$. The normals positively span the ambient space because they include those of the parallelepiped. Hence for some $c>0$, $\\max_j A_j\\cdot y\\ge c|y|$. This estimate persists with a positive constant under small perturbations of the list. If $Q_0$ is nonempty, a small common positive increase of the $b_j$ makes it full-dimensional and keeps it disjoint from $\\Lambda$. Indeed the enlarged polyhedra are uniformly bounded, and any sequence of lattice points in them as the increase tends to zero would have a limit in $Q_0\\cap\\Lambda$.\n\nIf $Q_0$ is empty, $F(y)=\\max_j(A_j\\cdot y-b_j)$ has a strictly positive attained minimum by coercivity. Under sufficiently small perturbations of the normals the minima remain strictly positive, since the minimizers stay in a common bounded ball and the functions converge uniformly there. Choose the perturbation so that every $n+d$ normals are independent. This is possible by the density of the complement of the finitely many determinant zero sets, while preserving positive spanning, nonverticality and the strict cap mass bounds. Use the perturbed normals and put $\\delta=\\min_y F(y)>0$. At a minimizer, zero is in the convex hull of its active normals: otherwise a strict inward direction decreases all active margins and hence the maximum for a small step. A minimal positive dependence among these normals has exactly $n+d+1$ members by independence and the elementary convex hull reduction in dimension $n+d$. In the system with right-hand sides $b_j+\\delta$, the positively weighted sum of the corresponding slacks is constant zero, since it vanishes at the minimizer and the weighted normals sum to zero. Thus every feasible point satisfies all these equalities, and independence gives one feasible point only. Translate this system slightly so the point is off $\\Lambda$. The nonvertical caps have mass continuous in their parameters by dominated convergence on the integer fibers, and hence their strict bounds persist. Now a small common increase of the right-hand sides gives a full-dimensional $Q$ disjoint from $\\Lambda$, by the same bounded limit argument. The cap masses only decrease under a threshold increase. In both cases open and closed outward caps have the same mass by nonverticality.\n\nWrite the final inequalities as $a_j\\cdot z+u_j\\cdot x\\le b_j$. For fixed $z$, Farkas' alternative says that their feasibility in $x$ is equivalent to all inequalities $\\sum_j\\lambda_j(a_j\\cdot z-b_j)\\le0$ with $\\lambda\\ge0$ and $\\sum_j\\lambda_j u_j=0$. Normalize nonzero multipliers by $\\sum_j\\lambda_j=1$. The resulting compact polytope has finitely many vertices. Each vertex has a one-dimensional kernel on its support: otherwise an independent kernel relation, adjusted to have coordinate sum zero, allows a small perturbation in both signs. Hence its support is a minimal positive dependence of size at most $d+1$. The finitely many corresponding inequalities describe the projection of $Q$. That projection is full-dimensional, so each facet is defined by one such inequality: at a relative interior point of the facet some nontrivial inequality is tight, and its supporting hyperplane then contains the facet. A lift of a facet point to $Q$ exists. The weighted sum of the corresponding nonnegative slacks is zero there, so each constituent slack vanishes.\n\nThe projected closed facet halfspaces have intersection disjoint from $\\mathbb Z^n$. The lattice Helly number $2^n$ from accepted fact 6d6fcf377e68c79c selects at most $2^n$ of them whose intersection already misses $\\mathbb Z^n$. For any integer $z$ one selected facet is strictly violated. At every $(z,x)$ the positive weighted sum of its original cap margins is then positive. At least one original margin is positive, proving the whole-plane cover for every integer base.\n",
+  "source_candidate_ids": [
+    "d2b290ebd8e35052",
+    "f66dcff3eb3e1f03"
+  ],
+  "source_candidate_sha256": {
+    "d2b290ebd8e35052": "a7f8466582d1c974c456d20a3915bbffa912b5adfc30e6bf9fe4bdcbd17d52f9",
+    "f66dcff3eb3e1f03": "10a4b028cc98925c24fa3fa5b2bf2406ed1c23d0f16dccfdcf7e69d8dcab55c2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f66dcff3eb3e1f03",
+      "locator": "f66dcff3eb3e1f03:01 §1, global Doignon selection including an empty exact depth region"
+    },
+    {
+      "candidate_id": "d2b290ebd8e35052",
+      "locator": "d2b290ebd8e35052:01 §1, auxiliary polytope, including the empty initial intersection"
+    },
+    {
+      "candidate_id": "d2b290ebd8e35052",
+      "locator": "d2b290ebd8e35052:02 §2, projection elimination and attained contact"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$, $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a convex body, $\\Lambda=\\mathbb Z^n\\times\\mathbb R^d$, and let $\\mu$ be the summed $d$-volume of its integer fibers with total $M>0$. Suppose $T>0$ and each point of $C\\cap\\Lambda$ belongs to a closed halfspace of $\\mu$-mass $<T$.\n\nThere exists a bounded full-dimensional polytope $Q$ disjoint from $\\Lambda$ whose complementary open caps are nonvertical and have $\\mu$-mass $<T$. There are at most $2^n$ groups of at most $d+1$ such caps whose union covers all of $\\Lambda$. Each group is a minimal positive dependence of continuous normals, of rank one less than its size, and the positive weighted sum of its original margins is the margin of a projected facet of $Q$. Each group has a common attained contact in $Q$. These conclusions also hold if the ambient depth superlevel at $T$ is empty.",
+  "subgoal_id": "pk-intake-nonvertical-global-projected-cap-circuit-certificate",
+  "title": "Global nonvertical cap circuits for strict mixed depth failure"
+}

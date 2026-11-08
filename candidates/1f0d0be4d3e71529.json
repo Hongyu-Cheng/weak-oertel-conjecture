@@ -1,0 +1,26 @@
+{
+  "advances": "An exact projected-martingale balance identity. It requires full target second-moment information for the zero-displacement conclusion.",
+  "author": "PK-research-agent",
+  "candidate_id": "1f0d0be4d3e71529",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:19:28.699860+00:00",
+  "depends_on": [],
+  "draft_key": "capacity-martingale-projected-second-moment-balance",
+  "kind": "lemma",
+  "proof": "Put $D=z'-z$. The projected martingale property is $\\mathbb E[D\\mid\\text{source}]=0$. The second-moment assumptions and Cauchy–Schwarz give integrability of $(z-a)D^{\\mathsf T}$ and its transpose. These terms integrate to zero by conditioning. Expand $(z'-a)(z'-a)^{\\mathsf T}$ using $z'-a=(z-a)+D$. After integrating, the cross terms vanish and the marginal terms yield the identity with $\\nu'$ in place of $\\nu$ and no remainder. Adding the $\\delta$ term gives the displayed identity. Taking traces gives the sum of two nonnegative integrals. Equal source and full target masses force $\\delta=0$, since $\\pi$ already transports all of $\\mu$ and $\\delta$ is nonnegative. Equality of the scalar quadratic moments then forces $\\int|D|^2\\,d\\pi=0$, hence $D=0$ almost everywhere. Equality of projected marginals implies both needed equalities. Linearity proves the labeled sum assertion.\n",
+  "source_candidate_ids": [
+    "8ac2ff347361aad9"
+  ],
+  "source_candidate_sha256": {
+    "8ac2ff347361aad9": "05fb5aaf9359a3ac2f006c34dacc6895de63d557732b5bdac481884bca6098fd"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8ac2ff347361aad9",
+      "locator": "8ac2ff347361aad9:01 §1, (1), projected covariance and capacity closure"
+    }
+  ],
+  "statement": "Let $\\pi$ be a finite martingale coupling of $\\mu$ to $\\nu'\\le\\nu$ in physical coordinates. Let $z$ be a linear projection of the source point, $z'$ the same projection of the target point, and assume $\\mu,\\nu$ have finite projected second moments. Set $\\delta=\\nu-\\nu'$. For every projected vector $a$,\n$$\n\\int (z-a)(z-a)^{\\mathsf T}\\,d(\\nu-\\mu)\n=\\int (z'-z)(z'-z)^{\\mathsf T}\\,d\\pi\n+\\int (z-a)(z-a)^{\\mathsf T}\\,d\\delta .\n$$\nIts trace is the corresponding scalar quadratic identity. Equality of the projected marginals of $\\mu$ and $\\nu$, or just equality of their total masses and of one such scalar quadratic moment, forces $\\delta=0$ and $z'=z$ $\\pi$-almost everywhere. The identities add for any finite nonnegative labeled sum, retaining every capacity remainder.",
+  "subgoal_id": "pk-intake-capacity-martingale-projected-second-moment-balance",
+  "title": "Projected second-moment balance for a capacitated martingale"
+}

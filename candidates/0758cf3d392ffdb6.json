@@ -1,0 +1,29 @@
+{
+  "advances": "A scaled limit for coarea moments of signed exponentials; the limiting product uses actual old-cap conditional moments.",
+  "author": "PK-research-agent",
+  "candidate_id": "0758cf3d392ffdb6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:38:34.553541+00:00",
+  "depends_on": [
+    "716fa7580a098deb",
+    "efa4558174ce60cf"
+  ],
+  "draft_key": "large-negative-phase-section-variance-limit",
+  "kind": "lemma",
+  "proof": "The old sum has no atom at zero by conditioning on all variables except $Y_p$. Its positive event has positive probability since $Y_p$ is unbounded independently of the other variables. The expectation of $W_+$ is finite and positive. Conditional on the old variables, the cap probability is $\\mathbf1_{\\{W>0\\}}(1-e^{-W/a})$. Changing the last coordinate from $Y_*$ to $v=W-aY_*$ has Jacobian factor $1/a$. At $v=0$ the resulting density of the old vector relative to its original law is proportional to $e^{-W/a}\\mathbf1_{\\{W>0\\}}$, and $Y_*=W/a$. This is the coarea conditional law at zero since $W$ has no atom there. In particular, with $J_a=\\mathbb E[e^{-W/a}\\mathbf1_{\\{W>0\\}}]$, the density at zero is $J_a/a$ and\n$$\n\\mu_i(a)=J_a^{-1}\\mathbb E[Y_i e^{-W/a}\\mathbf1_{\\{W>0\\}}],\\qquad\na\\mu_*(a)=J_a^{-1}\\mathbb E[W e^{-W/a}\\mathbf1_{\\{W>0\\}}].\n$$\nThe density at zero is positive. Dominated convergence gives $J_a\\to P$, $\\mu_i(a)\\to\\nu_i$, and $a\\mu_*(a)\\to M$, using the integrable bounds $1$, $Y_i$, and $W_+$. Also $a(1-e^{-W/a})\\mathbf1_{\\{W>0\\}}\\le W_+$ and tends pointwise to $W_+$. Hence $aF_a\\to PM$ and $F_a\\to0$. The stated identity follows by multiplication.\n\nThe event $\\{W>0\\}$ agrees up to a null set with $\\{W\\ge0\\}$. If one old index is omitted, apply accepted fact 716fa7580a098deb to the old variables, allowing arbitrary signs and zeros on their coefficients. For the full old product, let $N$ be the number of old variables. Their sum and normalized vector are independent, with mean sum $N$ and normalized vector uniform on an $(N-1)$-simplex. The old event depends only on the normalized vector, so its simplex centroid has coordinates $\\nu_i/N$, all strictly positive. Its indicator is feasible for the retained-volume objective at this centroid in accepted fact efa4558174ce60cf. Dividing that fact's bound by the full simplex volume gives $P\\le N^N\\prod_i(\\nu_i/N)=\\prod_i\\nu_i$. This applies also when the old event has probability one.\n",
+  "source_candidate_ids": [
+    "16db32a020dc6379"
+  ],
+  "source_candidate_sha256": {
+    "16db32a020dc6379": "725f1daca30057db81769b3ff79098fcd9d8097068e806cfc41fa519dc57408a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "16db32a020dc6379",
+      "locator": "§3, (5)–(6) and final paragraph"
+    }
+  ],
+  "statement": "Let $W=pY_p+qY_q-\\sum_j r_jY_j$, where $p>q>0$, the list of $r_j\\ge0$ is finite and may be empty, and all variables are independent unit-rate exponentials. Add an independent unit-rate exponential $Y_*$ and set $V_a=W-aY_*$ for $a>0$. Write $F_a=\\Pr(V_a\\ge0)$ and $\\mu_i(a)$ for the coarea conditional mean of $Y_i$ at $V_a=0$. Set $P=\\Pr(W>0)$, $M=\\mathbb E(W\\mid W>0)$ and $\\nu_i=\\mathbb E(Y_i\\mid W>0)$ for every old index $i$. If $I$ is all old indices or all old indices except one, then\n$$\n\\lim_{a\\to\\infty} a\\left[\\mu_*(a)\\prod_{i\\in I}\\mu_i(a)-F_a(1-F_a)\\right]\n=M\\left[\\prod_{i\\in I}\\nu_i-P\\right]\\ge0.\n$$",
+  "subgoal_id": "pk-intake-large-negative-phase-section-variance-limit",
+  "title": "The leading section-variance gap under a large negative exponential phase"
+}

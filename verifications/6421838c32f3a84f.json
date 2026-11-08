@@ -1,0 +1,45 @@
+{
+  "candidate_id": "ffff08d4959f609b",
+  "candidate_sha256": "c746759a708542a37bc5bd2069e656deccfc6a675eed3757795e67ce9c43e138",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The common-rank midpoint law has upper quantile given by the endpoint average. Thus the support deficits add to c=h_A+h_B−2h and the midpoint probability is the clipped d-th power of c/(w_A+w_B). This includes both saturated regimes.",
+    "If either endpoint is full the cost is at least a, attained by taking the smaller endpoint full and the other empty. Otherwise positive-part deficits satisfy the relaxed weighted linear constraint, and sharp Hölder or the one-dimensional cheaper allocation gives exactly C_d times the unsaturated midpoint tail.",
+    "An equality allocation below a has both normalized deficits less than one, so it is an actual admissible unsaturated tilt. At c≥w_A+w_B there is necessarily a full endpoint. Applying the unconstrained minimization at equality c=w_A+w_B shows C_d≥a.",
+    "I checked the d=1 formula at all piecewise-affine breakpoints for 7,040 exact rational cases. When w_A/w_B=(a/b)^(1/d), factoring the common width-to-volume-root proportionality gives C_d=2((a^(1/d)+b^(1/d))/2)^d.",
+    "In the simplex case the endpoint widths are α,β and volumes kα^d,kβ^d. Midpoint containment gives (a_i+b_i)/2≥0, and balance gives (d+1)α≥2+(d−1)β. Therefore h_i≥dβ/(d+1) and 2γ_d≤1 gives at least 2γ_d kβ^d endpoint mass. The middle contributes γ_d k. The b=0 seam uses only the middle.",
+    "The exact minimum is over real coefficients of the discrete base coordinate and concerns a fixed direction or prescribed simplex facet trace, as in both source notes."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T16:55:09Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted exact interval theorem gives a specialization in d=1 with widths fixed by actual interval lengths and one common coordinate. It does not give arbitrary scalar width-to-volume ratios or the d>1 cone formula.",
+      "fact_id": "c680a307d3f26cec"
+    },
+    {
+      "comparison": "The accepted endpoint cap comparison provides a general lower bound, without the equality optimization or saturated full-smaller-endpoint branch in this cone family.",
+      "fact_id": "67ecf7db6692fe65"
+    },
+    {
+      "comparison": "The accepted homothetic theorem bounds all directions under different strict radius hypotheses, in particular both endpoint scales below the middle scale. The present balanced larger endpoint has α≥1 and uses prescribed facet normals to obtain an exact optimized directional expression.",
+      "fact_id": "a2427fccbd085fb5"
+    }
+  ],
+  "readability": "The cone statement labels the smaller endpoint A. The homothetic specialization labels its smaller endpoint β; swapping endpoint names leaves the cost and its real-tilt minimization unchanged.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7b2c2f32042c458f2df3c96d452ed8671a2f9364eb9acec62cfce5deccceb54b",
+  "reviewed_statement_sha256": "3bd9980de991ea2da744283c4b6d8c9bf763cb3373cf9843181313f5482bfc7b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:49:06Z",
+  "summary": "The scalar formula optimizes the actual two clipped endpoint masses at one tilt, with an exact full-small-endpoint branch and the stated homothetic facet consequence.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

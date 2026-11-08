@@ -1,0 +1,24 @@
+---
+fact_id: dfbf9dce320c31f2
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-canonical-fiber-difference-bodies-common-affine-section
+depends_on: []
+verifier_run: c1a63161f942d849
+target_match: null
+---
+
+## Source
+
+- [f7422e63e37f7d98](../candidates/f7422e63e37f7d98.json), f7422e63e37f7d98:03 Related comparison from a common affine section, (3), simplex criterion and binary-square equality.
+
+## Statement
+
+Let $K_z$ be the nonempty integer fibers of a compact convex set on a finite base $P$. Write $C_*=\operatorname{conv}\bigcup_{z\in P}(\{z\}\times K_z)$, $D_{\mathrm{int}}=\operatorname{conv}\bigcup_{z\in P}(K_z-K_z)$ and $D_{\mathrm{all}}=\{v:(0,v)\in C_*-C_*\}$. Suppose an affine map $c:\operatorname{aff}P\to\mathbb R^d$ has $c(z)\in K_z$ at every sampled base. Then $D_{\mathrm{int}}\subseteq D_{\mathrm{all}}\subseteq 2D_{\mathrm{int}}$. Such a map exists if $\operatorname{conv}P$ is a simplex. The factor two is attained for intervals $[-1,0]$ at $(0,0),(1,1)$ and $[0,1]$ at $(0,1),(1,0)$ on the binary square.
+
+## Proof
+
+Subtract $c(z)$ from the continuous coordinate. This preserves every same-base difference, both at integer and at real bases. Each sheared sampled fiber contains zero, hence lies inside its own difference body and inside $D_{\mathrm{int}}$. By convexity of $D_{\mathrm{int}}$, every real fiber of the sheared hull lies in $D_{\mathrm{int}}$. The difference of any two of its points lies in $2D_{\mathrm{int}}$, since $D_{\mathrm{int}}$ is symmetric and convex. The reverse inclusion $D_{\mathrm{int}}\subseteq D_{\mathrm{all}}$ follows because the latter is convex and contains all sampled-fiber differences.
+
+If $\operatorname{conv}P$ is a simplex, choose one point in the fiber at each vertex. Its affine interpolant belongs to every sampled fiber by convexity of the original set. For the binary square, all four sampled bases are vertices so the displayed fibers remain exact in their hull. The zero section is affine and $D_{\mathrm{int}}=[-1,1]$. At the real center, mixtures along one diagonal contain $[-1,0]$ and along the other contain $[0,1]$. The central fiber is exactly $[-1,1]$, because all generating heights are in that interval. Its difference is $[-2,2]$, attaining the factor.

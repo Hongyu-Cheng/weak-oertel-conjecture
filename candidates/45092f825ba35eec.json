@@ -1,0 +1,33 @@
+{
+  "advances": "Actual tight rows and fiberwise original volume. The rank-one conclusion uses all proper deepest marks for closure and parity.",
+  "author": "PK-research-agent",
+  "candidate_id": "45092f825ba35eec",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.848856+00:00",
+  "depends_on": [
+    "f636cefca2f636e9",
+    "e7612d199c90e9c9"
+  ],
+  "draft_key": "convex-gradient-label-representatives-rank-one",
+  "kind": "theorem",
+  "proof": "By f636cefca2f636e9, the three row identities imply all active planes at a positive source have one continuous gradient and its row is carried by the corresponding label region. The row proof also gives contact with each active source plane. If $c$ has just the row $i$, restrict the last displayed identity to $R_c$. All other rows vanish there, and $\\rho_i$ is carried by $R_c\\cap D_i$. Since $ML>0$ on $C$, this shows that $R_c\\setminus D_i$ is $dm$-null. Conversely $A_i$ is active at every point of $D_i$. At every sampled fiber-interior differentiability point of $D_i$ its continuous gradient is the derivative of $L$, since the affine majorant touches there. The fiber boundaries and the union of tie hyperplanes between planes of distinct continuous gradients are null on every sampled fiber. Thus $D_i\\setminus R_c$ is also $dm$-null, so the restrictions agree individually in every fiber.\n\nThe contact cell is the intersection of $C$ with the inequalities $A_i\\le A_r$ for all planes defining $L$. Hence its sampled sections satisfy every anchored convex inclusion, and their hull is contained in $D_i$ and contains each of those same sections. The projection of this hull lies in $\\operatorname{conv}P$, whose only integer points are $P$. This proves exact reproduction of all the sampled sections and excludes additional integer sections. A convex combination of positive-volume sections contains a convex combination of balls with positive radii. At an integer averaged base, it is contained in that section by convexity, so the section is again positive-volume. This proves the asserted closure of $P_i$.\n\nFor the additional hypotheses, apply e7612d199c90e9c9 to all proper deepest marks, using the specified buffer and cap attainment. It says the class $J_c$ of all such bases whose active continuous slope is uniquely $c$ is lattice-convex within $P$ and different classes occupy disjoint inherited parities. The row lemma places every positive source in one such class and ensures each occurring target label has a positive source. In rank one, if a label had two distinct positive sources, its $J_c$ would contain every inherited lattice point between their bases. Those points belong to $P$ by completeness and include two successive bases, hence both parities. No other occurring label could then have a source. Therefore at most two labels occur and, when there are two, each has exactly one positive source. Apply the first conclusion to each. In rank zero there is at most one source base and hence at most one label. In any rank a sole label has full sampled volume by the row identity, so $C$ represents it. Equality here is equality of volume restrictions, which permits intersections of the closed representatives along sampled null sets.\n",
+  "source_candidate_ids": [
+    "50a9575831060dc5"
+  ],
+  "source_candidate_sha256": {
+    "50a9575831060dc5": "c3bdee009c79f9e5bf3248414e9235f94db85060546be7d23d4154e3e4d9144e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "50a9575831060dc5",
+      "locator": "50a9575831060dc5:02 §2, (3)–(5), one-source label body"
+    },
+    {
+      "candidate_id": "50a9575831060dc5",
+      "locator": "50a9575831060dc5:03 §3, integer rank zero and one"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be finite and nonempty and let $C$ be the canonical convex hull of positive compact convex $d$-fibers $K_p$, $d\\ge1$, whose sections at $P$ are exactly the given fibers. Write $dm$ for their summed $d$-volume of total mass $M$. Let $L>0$ on $C$ be the minimum of finitely many affine planes. For source marks $Y_i\\in C$, set $L_i=L(Y_i)$. Suppose probability rows $\\rho_i$ and positive weights $\\sigma_i$ summing to one satisfy\n$$\n\\int w\\,d\\rho_i=Y_i,\\qquad\n\\int L\\,d\\rho_i=L_i,\\qquad\n\\sum_i(\\sigma_i/L_i)\\rho_i=dm/(ML).\n$$\nFor a continuous gradient label $c$ write $R_c=\\{\\nabla_X L=c\\}$ in the sampled fiber interiors where the derivative exists.\n\nIf an occurring label $c$ has exactly one positive source $Y_i$, choose any active plane $A_i$ at that mark. Then $D_i=C\\cap\\{A_i=L\\}$ is compact convex, and the restrictions of $d$-volume to its section and to $R_c$ agree on every sampled fiber. The sampled sections form a compatible family, their convex hull has exactly those integer sections, and their positive-volume base support $P_i$ satisfies $P_i=P\\cap\\operatorname{conv}P_i$.\n\nSuppose additionally that the inherited lattice $(\\operatorname{aff}P-p_0)\\cap\\mathbb Z^n$ has rank at most one and that the marks are indexed by distinct proper deepest bases in the following buffered depth setting. Use $f=L^sF^{1-s}$ for a nonnegative concave $F$ positive on sampled own-fiber interiors and $0<s<1$, and closed caps with threshold $N\\cdot Y-\\varepsilon f(Y)$ for $N=(a,u)$ with $G(u)=1$ for a fixed norm $G$ and $\\varepsilon>0$, together with pure-base depth. The largest sampled depth is $Q>0$. At every maximizing base of pure-base depth greater than $Q$, assume the deepest mark is unique, own-interior, and has an attaining nonvertical cap with proper own trace. Take each $Y_i$ among these marks. Then there are at most two occurring labels, and each has a compatible convex representative with exactly its fiberwise $d$-volume measure. With two labels each has one positive source and any of its active contact cells is a representative. With one label the original $C$ represents it.",
+  "subgoal_id": "pk-intake-convex-gradient-label-representatives-rank-one",
+  "title": "Convex gradient-label representatives from single sources and in rank one"
+}

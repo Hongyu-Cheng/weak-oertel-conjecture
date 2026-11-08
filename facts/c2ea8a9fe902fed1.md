@@ -1,0 +1,31 @@
+---
+fact_id: c2ea8a9fe902fed1
+kind: counterexample
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-pk-w34-probability-variance-ratio-interior-obstruction
+depends_on: ["7cae55c49007d765", "0758cf3d392ffdb6"]
+verifier_run: ff239a1f2c4d175d
+target_match: null
+---
+
+## Source
+
+- [e0294e8cfde61d00](../candidates/e0294e8cfde61d00.json), e0294e8cfde61d00:01 Full unnumbered proof, (1) and both endpoint limits.
+
+## Statement
+
+Let $Y_0,\ldots,Y_3$ be independent unit-rate exponentials. For $s\ge0$ set $W_s=Y_0+2Y_1-2Y_2-sY_3$, $F(s)=\Pr(W_s\ge0)$, and let $\mu_i(s)$ be the coarea conditional means at $W_s=0$. The ratio $R(s)=\prod_{i=0}^3\mu_i(s)/[F(s)(1-F(s))]$ satisfies
+$$
+R(1)=\frac{100}{81}<R(0)=\frac54,\qquad
+R(1)<\lim_{s\to\infty}R(s)=\frac{245}{192},
+\qquad \lim_{s\downarrow0}R(s)=R(0).
+$$
+
+## Proof
+
+For $s=1$, apply 7cae55c49007d765 with $p=2$, $q=1$, $r=(2,1)$, so $h=1/2$, $x=(1/3,1/4)$, $\rho=1/2$, $E=1$, and $X=1/3$. Its formulas give $F(1)=1/2$ and $(\mu_0,\mu_1,\mu_2,\mu_3)=(5/6,2/3,2/3,5/6)$. At $s=0$ use the same formulas with only the negative phase $r=2$ and with the fourth coefficient zero, so $h=1/2$, $x_1=1/3$, $\rho=2/3$, $E=1/2$, and $X=1/2$. This gives $F(0)=2/3$ and means $(2/3,1/2,5/6,1)$. As $s\downarrow0$, the second $x$ tends to zero, its negative-phase mean tends to one, and the other expressions are continuous because $1-\rho$ stays positive. These values yield the two finite ratios.
+
+For the infinite endpoint set $W=Y_0+2Y_1-2Y_2$ and $P=\Pr(W>0)$. The conditional-law formulas in the proof of 0758cf3d392ffdb6 apply with $p=2,q=1,r=2$ and the independent added phase $Y_3$. They give $sF(s)\to\mathbb E W_+$, $F(s)\to0$, $s\mu_3(s)\to\mathbb E W_+/P$, and $\mu_i(s)\to\mathbb E(Y_i\mid W>0)$ for $i=0,1,2$. Here $0<\mathbb E W_+<\infty$, so the limit of $R(s)$ is the product of the three old cap means divided by $P$.
+
+To compute them, condition on $(Y_0,Y_1)$ and set $c=Y_0/2+Y_1$. The event is $Y_2<c$ with conditional probability $1-e^{-c}$. Independence gives $\mathbb E e^{-c}=1/3$, $\mathbb E(Y_0e^{-c})=2/9$, and $\mathbb E(Y_1e^{-c})=1/6$. Also $\mathbb E[Y_2\mathbf1_{\{Y_2<c\}}\mid Y_0,Y_1]=1-(1+c)e^{-c}$, so its unconditional expectation is $7/18$. Hence $P=2/3$ and the old conditional means are $(7/6,5/4,7/12)$. Their product divided by $P$ is $245/192$. The two excesses over $100/81$ are $5/324$ and $215/5184$.

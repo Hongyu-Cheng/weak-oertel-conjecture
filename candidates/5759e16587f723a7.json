@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary continuous caps on common homothetic profiles, conditional on scalar layer inequalities.",
+  "author": "PK-research-agent",
+  "candidate_id": "5759e16587f723a7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:58.131112+00:00",
+  "depends_on": [
+    "8f1256d28f434b09"
+  ],
+  "draft_key": "pk-w32-orientation-separated-cap-criterion",
+  "kind": "theorem",
+  "proof": "Write $b_i$ for the vertical component of $u_i$. For $b_i>0$, divide the cap inequality by $b_i$ and apply 8f1256d28f434b09 in the horizontal direction of the resulting coefficient, using slope zero when the coefficient is zero. The layer law is a probability, and its average $M$ is zero by actual section centering. The cap mass divided by $|D|$ is its average $P$, and the average $C$ is $b_i S_i/|D|$, because the normal with vertical component one has norm $1/b_i$. Averaging the lower inequality gives $|K\\cap H_i|/|D|\\ge\\gamma V+c b_i S_i/|D|$.\n\nFor $b_i<0$, apply the upper inequality to the reverse cap and use complementation in ordinary volume. The reverse raw coarea is $-b_iS_i/|D|$, so the same lower bound holds for the original cap with the signed factor $b_i$. In particular each multiplier is canceled before caps of different orientations are combined. When $b_i=0$, horizontal central symmetry gives half of every fiber, and $1/2\\ge\\gamma$ since $(1+1/d)^d\\ge2$. Multiply the inequalities by $\\theta_i$, sum, use the vertical component of the response balance, and divide by $V=|K|/|D|$.\n",
+  "source_candidate_ids": [
+    "5b3b585d1663ccd0"
+  ],
+  "source_candidate_sha256": {
+    "5b3b585d1663ccd0": "e7bb353e183a79a66163ad57b3eab4a54d65594bf9a46a8da64e42797912f0c0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5b3b585d1663ccd0",
+      "locator": "5b3b585d1663ccd0:02 §§1–2, criterion (1) and final weighted ordinary cap inequality"
+    }
+  ],
+  "statement": "Let $m\\ge1$, $d=m+1$, $a<0<b$, and let $r:[a,b]\\to(0,\\infty)$ be finite and concave. In the planar layer with density $r(z)^{m-1}/2$ on $a\\le z\\le b,\\ |x|\\le r(z)$, let $V=\\int_a^b r(z)^m\\,dz$. For $s\\ge0$, let $P(s)$ be the mass of $z+sx\\ge0$. Let $\\sigma_s$ be the pushforward to the $z$-coordinate of the section measure obtained by integrating the layer density against $d\\mathcal H^1/\\sqrt{1+s^2}$ on $z+sx=0$. Set $C(s)=\\int d\\sigma_s$ and $M(s)=\\int z\\,d\\sigma_s$. Let $D\\subset\\mathbb R^m$ be a convex body centrally symmetric about $0$ and $K=\\{(X,z):a\\le z\\le b,\\ X\\in r(z)D\\}$. Consider any finite list of unit normals $u_i$, with caps $H_i=\\{Y:u_i\\cdot Y\\ge0\\}$, sections $K\\cap u_i^\\perp$ with centroid $0$ and area $S_i=\\mathcal H^m(K\\cap u_i^\\perp)$, and weights $\\theta_i\\ge0$ with $\\sum_i\\theta_i=1$ and $\\sum_i\\theta_iS_i u_i=0$. Put $\\gamma=(d/(d+1))^d$. Suppose there are real $c,\\lambda_L,\\lambda_U$ satisfying\n$$\n\\gamma V+\\lambda_LM(s)\\le P(s)-cC(s)\\le(1-\\gamma)V+\\lambda_UM(s)\n$$\nfor every $s\\ge0$. Then $\\sum_i\\theta_i |K\\cap H_i|/|K|\\ge\\gamma$. The same conclusion holds if one common $c$ satisfies both inequalities after averaging over every centered layer law arising in the menu, with the moment terms then zero.",
+  "subgoal_id": "pk-intake-pk-w32-orientation-separated-cap-criterion",
+  "title": "Orientation-separated moment criterion for actual weighted caps"
+}

@@ -1,0 +1,57 @@
+{
+  "candidate_id": "c4fc9a684d622e50",
+  "candidate_sha256": "93224b47f915e1817c302fabad87179ee36e60047bd27772ca7a302a2c1f7b13",
+  "checked_dependency_candidate_sha256": {
+    "d4e455a28be6cde4": "70e64ebde8500994520ce6e135fe69db7991724bfa85f1d67bd654231201538e"
+  },
+  "checks": [
+    "The original support data have a compact convex hull in the domain of the contraction functions. The perturbed data and their convex combinations stay in a small convex neighborhood of this hull, so the common derivative bound proves scalar monotonicity where it is used.",
+    "The homogeneous Hessian has block Q/|x| on tangent directions and zero radial block. Positive width orders the two slopes through zero. Uniform C² closeness retains these conditions and a smaller interior ball.",
+    "Common homogeneous evaluation preserves every anchored inequality at the same vector. Affine base terms cancel on every anchored convex combination, and the subsequent scalar contraction preserves them by monotonicity and joint concavity.",
+    "Strict curvature and differentiable support imply unique boundary points and unique normals. Radial minimizers stay away from zero denominators, so comparison of old and new minimizing directions gives the stated radial derivative with a uniform bound for dominated convergence.",
+    "A proper section has only a surface-null trace on the old boundary, and a support contact is a point. Decomposing the joint change into shape change at the old threshold and integration over the moving threshold interval gives the negative threshold term, including supporting and exterior fibers.",
+    "The frozen result matches original 833ec49c5d634bf9 §§1–3, 7–8. The radial proof fills in the shape derivative, and the threshold term uses the full sampled cap mass."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d4e455a28be6cde4",
+      "candidate_sha256": "70e64ebde8500994520ce6e135fe69db7991724bfa85f1d67bd654231201538e",
+      "fact_id": "d4e455a28be6cde4",
+      "fact_sha256": "badc16fc757e9222f90e1aca47ca761fe974ea71aac2419e43b232876f08675c",
+      "hypotheses": "The perturbed fibers converge in Hausdorff distance and retain positive interior. The old plane is proper and has unit normal, so the accepted moving-section limit gives exactly the unscaled section area. Supporting and exterior cases are proved separately.",
+      "reviewed_proof_sha256": "7a8b3a1bf580ff6a00b2e7b1d2370560b62038d84ce53759cf7353bb700d214f",
+      "reviewed_statement_sha256": "24814a2e48881f2b28f1453e761a634fe9673bd837a57df1ceed025616f54b9f"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:18Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted one-body signed bump controls fixed strict signatures and preserves selected sections. It does not give common nonlinear support evaluations, simultaneous concave contractions, or anchored compatibility across bases.",
+      "fact_id": "baa0b304f8ca0521"
+    },
+    {
+      "comparison": "The accepted lattice-compatible cone gives anchored support inequalities and a hull criterion. It does not establish the smooth actual paths or their cap variations.",
+      "fact_id": "6d64b23cb5b24ea1"
+    },
+    {
+      "comparison": "The proper-section continuity fact supplies one step of the derivative, with no shape or compatibility variation of its own.",
+      "fact_id": "d4e455a28be6cde4"
+    }
+  ],
+  "readability": "The threshold term uses the old section area at the old threshold. The proof makes clear that joint shape and threshold changes are handled by two exact differences.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of frozen bytes, source locator audit, comparison to accepted and same-batch predecessors, and direct checks of the derivations.",
+  "reviewed_proof_sha256": "9aaf4edbf9e20976bc04c8afdd0612ea6ecbecf150bb75115c4d1f323330a879",
+  "reviewed_statement_sha256": "a9382d022630cf24d207bc11d4b9261c74fed23fc557f8d0f25e8a3e05392684",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:22:13Z",
+  "summary": "The three simultaneous support operations give genuine nearby compatible convex fibers. The radial argument gives total, fixed-cap, and joint threshold derivatives with the stated signs.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

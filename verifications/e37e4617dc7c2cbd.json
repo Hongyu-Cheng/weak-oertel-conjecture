@@ -1,0 +1,58 @@
+{
+  "candidate_id": "e326aed89d7b2043",
+  "candidate_sha256": "f982e81a490d6d508937ee93a15d8aa5bbae66dec142fe2517e511925f8d4e56",
+  "checked_dependency_candidate_sha256": {
+    "df039ea7394654ca": "66b4b6e5b5610df30cb47230ee5a6fb222996d9f848661f97ccbb0ae10c6a0ba"
+  },
+  "checks": [
+    "The diagonal is feasible and each array entry lies in its fixed nonnegative column interval, giving compactness and a minimum. Any extra lattice point in the target hull, or any nonvertex positive target, admits a convex representation by at least two distinct positive targets.",
+    "Lattice completeness makes the proposed receiver a permitted row. The bound on epsilon makes each proportional subtraction feasible. Each removed subrow has its original mean, while the sum added has mass epsilon and first moment epsilon*j. These operations preserve each row moment and column sum even if the receiving row also supplies mass.",
+    "The cost changes by the negative of epsilon times the strict finite Jensen gap, because at least two distinct supplying targets have positive coefficients. This directly treats any minimizer, including lower-rank or singleton target hulls.",
+    "For the geometric rectangle consequence, conservation rules out a singleton target at integral base. Two distinct integer sites forming an empty interval are adjacent, so the only such interval containing 1/2 is [0,1]. The positive masses are two each; quadratic cost is two and the same-batch classification supplies the exact shallow partitions and contained witnesses.",
+    "The source b5f24b03b630e2b0 §7 explicitly states both the arbitrary strictly convex cost merge and the rectangle conclusion. The normalized input uses the full allocation polytope, rather than adding a two-row constraint to the merge."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "df039ea7394654ca",
+      "candidate_sha256": "66b4b6e5b5610df30cb47230ee5a6fb222996d9f848661f97ccbb0ae10c6a0ba",
+      "hypotheses": "At most two positive closed convex pieces cover the same rectangle with null mixed overlap and integral centroid bases. Their empty target hull forces bases 0 and 1, equal mass, and quadratic cost 2, so the stated minimizer classification applies.",
+      "reviewed_proof_sha256": "c7c1d15843a133076b368ad05c22292b2444e478c0c83c789999205f2d6d1476",
+      "reviewed_statement_sha256": "b61a06cc26f89999963b52bd6017343e287a69eeb197d05293c5bd6f5b87b444",
+      "status": "same-batch predecessor; independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:13:30Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted proof uses the identical proportional merge for a strictly convex cost and even permits costs specified by finite strict Jensen tests, under globally log-concave extendability of the weight table. The frozen claim removes that weight hypothesis, treats every minimizer directly, and adds the actual rectangle partition conclusion. For example arbitrary weights (2,1,2) on {0,1,2} are permitted here and violate the predecessor midpoint log-concavity test.",
+      "fact_id": "b0e3115534b9b6cc"
+    },
+    {
+      "comparison": "The accepted proof uses the same complete finite arrays with arbitrary positive weights, but minimizes the specified quadratic. The present assertion permits every strictly convex cost on the hull and gives a different physical consequence.",
+      "fact_id": "e4ec84652a3059bf"
+    },
+    {
+      "comparison": "This assumes the same empty-target condition and characterizes its consequences at integral original means. It does not derive that condition from minimizing any strictly convex cost, and the rectangle mean is nonintegral.",
+      "fact_id": "2d941f050262e936"
+    }
+  ],
+  "readability": "The full fractional minimization and the separately conditioned physical two-piece implication are stated as distinct scopes.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "16b4c33f86cae7b87cae258c0d57f4ba38f7e1be480cf606f411d555d5cef9b6",
+  "reviewed_statement_sha256": "6af97d491fdb82e67f947dd4dce0397ea41485ea46c9a309d62c21617f32ff3c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "b5f24b03b630e2b0": "6631f6e9dba6791e5f05675e1976e574b93fd4c34e305df967182e5e66024da2"
+  },
+  "started_utc": "2026-11-08T15:09:38Z",
+  "summary": "The strict Jensen merge applies to every minimizer for arbitrary positive weights on a complete base, and its rectangle consequence follows from the independent physical classification.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

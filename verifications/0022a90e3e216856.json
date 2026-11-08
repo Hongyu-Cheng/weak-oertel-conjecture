@@ -1,0 +1,54 @@
+{
+  "candidate_id": "d2f95e21650e61cb",
+  "candidate_sha256": "631aafceaa7da92dd92b68da097a07ac74fb5265386e6957aef2b21af821ffd6",
+  "checked_dependency_candidate_sha256": {
+    "53fe12b742a7608d": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7"
+  },
+  "checks": [
+    "After a fixed affine standardization, small distinct vertex corners are disjoint, have volume fractions ε_i^d, and all boundaries involved are volume-null. In dimension one, the exact interval is retained whenever ε_0+ε_1<1, and the scalar equation reduces to 2D+t=1.",
+    "At the centroid, the only minimizing normals are the oriented barycentric gradients. Compactness gives a gap for every other normal outside fixed neighborhoods. The cuts on the chosen closures isolate their corresponding vertices strictly, uniformly for nearby marks. Corner diameters shrink uniformly, so every selected cap loses exactly the designated t_i V. All competing caps lose at most tV, which preserves the gap.",
+    "For a cap with exactly vertex i, the edge intercept fractions are a_j^−1 and the constraint is sum a_j λ_j=1. AM–GM is attained at a_j=1/(d λ_j), and those coefficients exceed one in the fixed neighborhood and have the required limiting normal. At the centroid their cap volumes equal ΓV.",
+    "At any maximizer the canonical tests and the centroid lower bound give λ_i≤1−(Γ−t)^(1/d), forcing all coordinates near 1/m by the sum constraint. Thus global optimization legitimately reduces to the local formula.",
+    "At t_i=0 the root function is m^dD−d^d and its derivative is positive. Substituting the displayed coordinates gives d^d∏λ_i*=c. For the uniqueness certificate the weight on log r_j after summing the inequalities is 1−(1−dλ_j*)=dλ_j*, and strict Jensen forces all ratios to one.",
+    "The one-corner equations give d^d b^(d−1)(mb−1)=t by subtraction. For d=2 the explicit root yields D=4/9−t/3−t²/4+O(t³), matching the general coefficient with B_2=2/3 in that calibration. In general the product-log and inverse-sum-log coefficients combine to B/Γ+(d−1)B_2/(2mΓ²). The reciprocal total mass and first-order barycentrics give the stated remaining expansions.",
+    "The exact symmetric formula and the strict Bernoulli comparison for d≥2 are correct. The archived Sections 1–7 contain the exact root, uniqueness, and variation results, and the original raw source hash matches."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "53fe12b742a7608d",
+      "candidate_sha256": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7",
+      "fact_sha256": "17ab511a4692218e7e43724b35ffc6d2e01334fcd30453922acfa030abab0c57",
+      "mapping": "Apply its centroid inequality and oriented equality classification to the original full-dimensional simplex T. The cap fraction Γ and exactly the barycentric-gradient rays give the compact normal gap; no reflected-profile constant is used.",
+      "reviewed_proof_sha256": "1e85b289572563955be7b80c21339b8b799e57fa624f2527f26097c14e949b49",
+      "reviewed_statement_sha256": "e366513ae78549652332a52118bb60792388769ee765b4cc01dd53819fd3f98c",
+      "status": "accepted fact at repository snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:11:22Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "For all t_i=0 and marks sufficiently near the simplex centroid, the barycentrics are at most 1/d and the accepted central simplex formula gives the untruncated cap minimum. It has no deleted-corner term, implicit maximizing root, or perturbation coefficient.",
+      "fact_id": "700febf4b7a92759"
+    },
+    {
+      "comparison": "Small corner truncations retain all facet centroids and a near-centroid inner homothet, so the accepted stability theorem can give a lower bound in d≥2. Its loss bounds and prescribed candidate do not give the exact depth profile or unique maximizing root for independently truncated corners.",
+      "fact_id": "c99394a395ea2399"
+    }
+  ],
+  "readability": "The uniform gap is relative to the canonical trial caps at nearby marks. In d=1 the interval proof already covers the degenerate empty-complement normal comparison.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "cfa9ecc2a3bf9e03ff5b9d4c124671e95f8380f9a787c9dc1565ba4f8469145d",
+  "reviewed_statement_sha256": "fd3713258117a1160b20bc4a800a24e14aa2ddbe9a865402906761ff2395a269",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:06:00Z",
+  "summary": "The uniform normal gap and strict cap incidences justify the exact local formula after subtraction of the designated corner, and the weighted-log comparison proves the unique global maximum. The scalar root, planar specialization and variation coefficients check.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

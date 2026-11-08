@@ -1,0 +1,52 @@
+{
+  "candidate_id": "f545ae1e88044980",
+  "candidate_sha256": "bad3e12eaa9428283a0ce064b4d6466cdcdd55ee9d7bc650e4044a1c7904550c",
+  "checked_dependency_candidate_sha256": {
+    "edd55c0799496cc5": "20bda77523be1575ee9542de2c1116592daa2bb435ab6275e0bd37d554ab3c52"
+  },
+  "checks": [
+    "Read 2adcc478e651c9c4 §§3–4, (5)–(9). At the middle integer base the endpoint weights in any lift combination are equal. Their joint contribution is a scaled point of (A+B)/2, so all three integer fibers are actual. Independence of the d retained normals gives u≠0.",
+    "The undeformed cap contains all of A by the separator premise and only a hyperplane-null trace on B by B⊆T. Tilting to coefficient 1−ε keeps the exact K trace, loses the strict layer of A, and gains exactly B_ε. It continues to contain (0,0), so subtracting the true raw depth gives Δ≥L_A−|B_ε| for every ε≥0.",
+    "The inner simplex has r+1 affinely independent face vertices and p=d−r positive-height interior vertices. Its p-coordinate marginal is d!/r! times (1−s)^r. For s≤ε/H_*≤1/2 this is at least d!/(r!2^r). Multiplying by the small coordinate simplex volume gives the stated L exactly.",
+    "The assumption r>d−k implies 1≤p<k. At the stated ε_* the upper cap term is at most half the layer lower bound. In the facet case r=d−1 implies k≥2 under the same assumption, and integrating the actual cone section with coarea 1/||u|| gives the stated L_f. Both lower bounds are strictly positive.",
+    "If Δ=0, the finite inequality applies for all nonnegative ε and rules out any face at height −1 of dimension greater than d−k."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "edd55c0799496cc5",
+      "candidate_sha256": "20bda77523be1575ee9542de2c1116592daa2bb435ab6275e0bd37d554ab3c52",
+      "hypotheses": "Same-batch input has the identical enclosing simplex T, B⊆T, the same probability weights with one omitted index, nonzero u and support size k. Its bound is exactly |B_ε|≤Cε^k with the constant used here. Admission depends on the predecessor's independent approval.",
+      "reviewed_proof_sha256": "992a82be944f001fc6b70c900c9f0a53bceb02afa58d9b76e25367373e094c8d",
+      "reviewed_statement_sha256": "1c710010d9941a8a40ad9b75623ac33a452cf03db1c61bbcbd58bfec7f18416e"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:40:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses genuine finite base tilts at a fixed mark to equalize endpoint cap masses starting from a critical cap. This draft allows a noncritical initial averaged cap and quantifies its slack from the differing endpoint decay orders.",
+      "fact_id": "03c59c70402b66a2",
+      "fact_sha256": "56d4db67e145bd6b17cf364fed0702b117334f9a71047ec44d0ceb2e5b25d871"
+    },
+    {
+      "comparison": "Provides a strict separator in its bad-source critical circuit setting. It does not make the new cap critical or prove a positive-slack estimate from its face dimension.",
+      "fact_id": "e3f83ba0d435a3a1",
+      "fact_sha256": "4756dacea105839e7c9c4dafd6ea4762cb19f5b73e2dbb05a05068dcd77098f3"
+    }
+  ],
+  "readability": "The facet formula remains inside the hypothesis r>d−k; this is why its exponent 1/(k−1) is well-defined. An explicit reminder in the statement would reduce rereading.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "13dcaae933caf7a4be10b1dd4bb24fae6da9780284f97dd9070e40664f96b6e4",
+  "reviewed_statement_sha256": "208b1c9cddfd7829b4fa81434dc5ef03bfb0ed0af44582cc0709ad3e1a01206f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:34:43Z",
+  "summary": "The fixed-source tilt gives an exact slack inequality, and the inner simplex and facet cone prove the stated positive lower bounds under the face-dimension hypothesis.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

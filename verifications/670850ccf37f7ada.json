@@ -1,0 +1,41 @@
+{
+  "candidate_id": "edd55c0799496cc5",
+  "candidate_sha256": "20bda77523be1575ee9542de2c1116592daa2bb435ab6275e0bd37d554ab3c52",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Read 2adcc478e651c9c4 §2, (4). The rank and zero-sum hypotheses make the displayed slack-coordinate map an affine bijection onto the sum-one hyperplane; the inequalities defining T are exactly nonnegativity of those coordinates.",
+    "Delete the fixed index i with zero weight. For given k active coordinates with sum s≤1, the remaining d−k free coordinates form a simplex of coordinate volume (1−s)^{d−k}/(d−k)!. The constant affine Jacobian cancels under normalization by |T|, giving density at most d!/(d−k)! including the k=d endpoint.",
+    "Under y_j=λ_jq_j the enlarged weighted nonnegative k-simplex has volume (ε/m)^k/(k! product λ_j). Multiplication gives binom(d,k) and exactly the claimed product denominator. B is a subset of both its own full measure and the enclosing cap.",
+    "At ε=0 every one of the k positively weighted q coordinates vanishes. Their facet intersection has d−k free affine dimensions, and any nonempty equality section of B has at most that dimension."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T22:40:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Integrates the same simplex marginal over simultaneous coordinate ceilings at 1/(d+1). Its box formula does not state the product denominator or power estimate for an arbitrary weighted-sum cap.",
+      "fact_id": "33c2d990a116bf5c",
+      "fact_sha256": "28e4d3859f9f5b1b6b1d88ff44af3d0e221d00e89103f27501dba0ec302f65eb"
+    },
+    {
+      "comparison": "The scalar simplex tail calculation handles affine heights, including the present ones after rescaling. It does not give the stated support-size power bound with its explicit product of positive coefficients.",
+      "fact_id": "53fe12b742a7608d",
+      "fact_sha256": "17ab511a4692218e7e43724b35ffc6d2e01334fcd30453922acfa030abab0c57"
+    }
+  ],
+  "readability": "The lower-case k is the positive-weight support size and may equal d; the proof treats its zero-dimensional complementary simplex explicitly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "992a82be944f001fc6b70c900c9f0a53bceb02afa58d9b76e25367373e094c8d",
+  "reviewed_statement_sha256": "1c710010d9941a8a40ad9b75623ac33a452cf03db1c61bbcbd58bfec7f18416e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:34:43Z",
+  "summary": "The stated weighted product constant and order of cap decay follow from the exact marginal density, with the correct equality-face dimension.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,68 @@
+{
+  "candidate_id": "ac92c3b01909dae5",
+  "candidate_sha256": "dd313f31f08488699c21854ae817dff1e9ad0f6db254bd53f7e7142ecb180aa4",
+  "checked_dependency_candidate_sha256": {
+    "2fb8b0785692a5b4": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+    "7d1ee06fa4119930": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870"
+  },
+  "checks": [
+    "For the six listed direction vectors, all consecutive and one-skipped oriented determinants are 1. Thus D_i=R_iR_{i+1} and E_i=R_{i−1}R_{i+1}, and subtracting the adjacent h_i terms leaves the diagonal c_{i−1}+c_i−R_i⁻². All six gaps are less than π.",
+    "The horizontal intercepts are A=Br/(B+r) and −a=−bt/(b+t), both lying inside their respective chord segments. The four fixed core areas give zero consecutive matrix couplings on sectors 0, 2, 3 and 5. The diagonals at nodes 0 and 3 are zero by the same intercept identities.",
+    "The remaining diagonals are u+α, u+β, v+β and v+α, and are strictly positive for finite allowed X,Y. Their off-diagonals are u−1/(Bt) and v−1/(br). The two-by-two determinants therefore decide PSD. At a core lower equality the corresponding off-diagonal is zero and the two scalar blocks are positive.",
+    "Writing d=Bt and e=br, αβ=1/(de), while α+β+2/d=(bt+Br+2e)/(de) and α+β+2/e=(bt+Br+2d)/(de). The determinant numerators yield exactly X≤d(bt+Br+2e)/(2(e−d)) for e>d and Y≤e(bt+Br+2d)/(2(d−e)) for d>e. The other determinant is positive, and for d=e both determinants are positive for all finite allowed areas. Each restrictive bound is strictly above its core lower bound.",
+    "With both lower bounds strict, only sectors 1 and 4 contribute insertion vertices. The least eigenvector choice puts the same slack, the least eigenvalue, at every node in its block. Thus the two singleton nodes remain straight, and the ray vertices number four in the strict region or two when exactly one finite bound is attained. This count is for the specified construction.",
+    "The cap sector lists are (0,4,5), (0,1,2) and (2,3,4). The vertical and horizontal chord lengths give B+b and A+a. The diagonal chord has length √2(r+t) and normal norm √2, so its coarea length is r+t.",
+    "The raw digest for 1a5bfc0fdb9108c3 matches. Section 10 provides the same intercepts, bounds, matrix and reconstruction counts. An independent rational matrix recomputation checked all three signs of br−Bt, equality at each finite bound, failure above it, and the core lower equalities."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+      "fact_id": "7d1ee06fa4119930",
+      "fact_sha256": "e587b22c4c52f76df19679e8e61f467cd4e013f0efd5266a66f42c7265772ab0",
+      "hypotheses_mapping": "The canonical rays satisfy its order and gap conditions. After the core tests the candidate matrix is exactly the criterion’s matrix. Its sufficiency and turn formula apply to the positive block-vector construction and give the stated vertex counts.",
+      "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+      "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043",
+      "verification_sha256": "8d71c2e5937bd9f1de57a06963ff87f919fa685b40788d8209f2c48fbd0d2f53"
+    },
+    {
+      "candidate_sha256": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+      "fact_id": "2fb8b0785692a5b4",
+      "fact_sha256": "326d1150bfb1ff54791e0cadfb9d05e81404d449a613151ea47cd68b59abf925",
+      "hypotheses_mapping": "The matrix is cyclic with nonpositive adjacent entries. For feasible data its proof provides the positive least eigenvector of each connected block, with slack exactly (Lw)_i/w_i. A positive eigenvalue gives a strict ray turn, and a zero eigenvalue gives a straight join.",
+      "reviewed_proof_sha256": "4748e8e25d1403e53bee831d62f59ea4e4ed213361d14c7d076ffa35e592aaf8",
+      "reviewed_statement_sha256": "ce8a642e0b42373e9cc4d8ed52bbbce8e9bea3b10a4fb272d1232bcf2a4f3592",
+      "verification_sha256": "d30fc2d5fa38556765e7d2999e64bc90ae0b7a47256f48e7fe0d54b4b479253c"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:24:26.591752+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted general PSD criterion applies to this datum and underlies the explicit region. Its conclusion does not list the two scalar upper bounds or the specified vertex counts for these opposite collinearities.",
+      "fact_id": "7d1ee06fa4119930"
+    },
+    {
+      "comparison": "Uses the same canonical rays and cap/chord data but varies one or two radii at fixed sector areas. The frozen claim instead fixes the radii and four core areas and computes the feasible values of the remaining two areas.",
+      "fact_id": "63f90fd70f747bd0"
+    },
+    {
+      "comparison": "The same canonical matrix occurs in the accepted uniqueness theorem, which assumes a positive global kernel vector. Here at least one of the nonsingleton principal blocks remains positive definite when both lower bounds are strict, including the finite upper boundary, so that uniqueness hypothesis does not hold.",
+      "fact_id": "ffdb2bc33d7a6750"
+    }
+  ],
+  "readability": "At a lower equality a displayed two-by-two principal block is diagonal and splits into two graph blocks. The phrase “original three caps” near the end denotes the canonical caps x≥0, y≥0 and x+y≤0, as identified by the stated sector sums.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3be390102528087782ceab8681ed1319d0d9bfb044a8037894ce4708fc7ba473",
+  "reviewed_statement_sha256": "ddcea4b9282166fe8564b9f93bc925a377e7e04ebde55fa77af690f765dbda7f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:20:32Z",
+  "summary": "The two determinant inequalities give the full closed feasibility region at fixed positive B, b, r, t. The indicated least-eigenvector reconstruction has six vertices in the strict region and four on a finite upper boundary when both lower bounds are strict.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

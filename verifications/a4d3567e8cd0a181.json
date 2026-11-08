@@ -1,0 +1,56 @@
+{
+  "candidate_id": "c5ff0ecd0befdd62",
+  "candidate_sha256": "b2c48b64fa8d947fd9ba6b294b5782c0329171a6c63446546257901dc22acc4a",
+  "checked_dependency_candidate_sha256": {
+    "53fe12b742a7608d": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7"
+  },
+  "checks": [
+    "Source f1516303d16df6d4 §1 and 3795aff5f3322d52 §§2–4 support the precise localization, one-corner product formula and scalar optimization. The same argument applies to arbitrary removed shapes because only their support and volume enter each cap.",
+    "Affine normalization allows dimension-only choices. Compactness of the unit sphere and the exact centroid equality directions give a uniform positive gap away from the normal groups. Uniform vertex signs on their compact closures then include or exclude each small corner wholesale, even for nonflat deletions.",
+    "For the chosen group the cap is a corner simplex with edge fractions 1/c_j. AM–GM under sum c_j lambda_j(y)=1 gives the exact product minimum. The minimizing coefficients are strictly greater than one near the centroid, and the direction is in its designated group by continuity.",
+    "The retained centroid pays at least Gamma−t. Each canonical through-mark cap of T has fraction (1−lambda_i)^d, so every maximizing barycentric vector converges uniformly to the centroid as t decreases, and all maxima lie in the local regime. Compactness and upper semicontinuity give attainment.",
+    "At zero deletion the scalar left side is m^d D. Its derivative gives the positive local analytic root, and substituting c and the proposed coordinates makes all cap values equal D. For small losses the weights 1−d lambda_i^* are positive, sum to one, and give the exact coefficient d lambda_j^*. Strict log Jensen forces equality only at the proposed mark."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "53fe12b742a7608d",
+      "candidate_sha256": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7",
+      "fact_sha256": "17ab511a4692218e7e43724b35ffc6d2e01334fcd30453922acfa030abab0c57",
+      "hypotheses": "Its exact set of oriented minimum centroid normals applies to the full-dimensional reference simplex. With those directions removed the compact remaining normal set has a uniform positive cap-volume gap.",
+      "reviewed_proof_sha256": "1e85b289572563955be7b80c21339b8b799e57fa624f2527f26097c14e949b49",
+      "reviewed_statement_sha256": "e366513ae78549652332a52118bb60792388769ee765b4cc01dd53819fd3f98c"
+    }
+  ],
+  "draft_key": "exact-depth-localized-simplex-corner-removals",
+  "finished_utc": "2026-11-08T16:24:15Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same scalar formula and mark for actual parallel-flat cuts. It does not apply to arbitrary shapes supported in vertex neighborhoods.",
+      "fact_id": "d2f95e21650e61cb"
+    },
+    {
+      "comparison": "An ordinary depth rigidity and qualitative stability theorem, without the explicit localized-deletion mass law.",
+      "fact_id": "03bc771bddd39a8a"
+    }
+  ],
+  "readability": "The localization uses a fixed centroid neighborhood before choosing the dimension-only corner size. One can choose that size to keep the neighborhood inside the retained central region.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "daf4013c8bdfdc3d6049d2993441f9b1ae58cb941ed0f11f311ec462650e2ae1",
+  "reviewed_statement_sha256": "c519bd8ce025a212114a711f113ea88ab3b4c21e0290e119e48099bf13d9871a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "3795aff5f3322d52": "55da8731a27e8de2cc290f5c24a70b0348cdd6910fd5e17871d9138ac7041d30",
+    "f1516303d16df6d4": "94263a2d7c7ba60b288adf236ad35be3de04a9c185b89d433cefae3ff419320d"
+  },
+  "started_utc": "2026-11-08T16:17:06Z",
+  "summary": "The compact normal and mark localizations are uniform over arbitrary corner shapes, and the implicit scalar root and weighted Jensen argument give the exact unique maximum.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

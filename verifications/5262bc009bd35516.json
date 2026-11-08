@@ -1,0 +1,41 @@
+{
+  "candidate_id": "4d3ee3757f4ea53a",
+  "candidate_sha256": "0c84f7e20fa324f5589f80ff77121fef71863ee2ec081d70ee7bdb8560a9abe9",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For surjective π, integration over ker π gives absolute continuity, also when r=D (then π is invertible). The segment extension argument gives π(int K)=int B, so every nonempty open subset of int B has positive ν-mass. Every proper hyperplane is ν-null. Moving a containing halfspace to pass through the test point and minimizing over the compact unit sphere yields continuous depth, zero on ∂B by a supporting plane and positive in int B by attained minimization. Points outside B have zero depth by separation, so maximizing on B gives the global deepest set.",
+    "The scalar law is the uniform-K pushforward under ℓ∘π, with width one on K, rather than the scalar law from uniform B. For D≥2 its section representative is section area divided by |K| times the Euclidean coarea factor 1/||ℓ∘π||. The two cones sit on opposite sides of the section, their heights sum to 1/||ℓ∘π||, and degenerate cones contribute zero at the endpoints. Their normalized combined volume is p(t)/D, proving the pointwise bound for that representative.",
+    "For D≥2 identify parallel slices in a fixed hyperplane. Compactness bounds their indicators and gives pointwise limsup at most the indicator of the limit section, proving upper semicontinuity and an attained mode. Brunn–Minkowski gives concavity of the section root, including endpoints (zero-area slices contribute zero); unimodality bounds the tail opposite a mode by p(t*) times its length ≤1. Both scalar tails are through-c* caps of mass ≥α, giving p(t*)≥α. This uses no centroid property.",
+    "Because c* is interior and ℓ≠0, L>0. Root interpolation toward m gives the stated power, and exact integration gives L[1−(1−a/L)^D]/D. For 0≤a/L≤1, (1−a/L)^D≤1−a/L, so the integral is at least a/D. The endpoints a=0 and a=L are valid. D=1 forces r=1 and the unit-width scalar pushforward is uniform with section density 1 on the interval, giving mass exactly a. For r=1<D the same D-dimensional section argument applies, without assuming the law is uniform on an interval.",
+    "When c belongs to B, a=ℓ(c*−c)≥0 also satisfies a≤L. The closed slab and the original cap meet only in a proper hyperplane, which is ν-null, so their masses add exactly.",
+    "Source 3502773126e88b57 at fd41e97ff0cf53c3b4a631a7fd42bb4b5ca56499 has SHA-256 e2ea60fb2c5f36942333c917b05f6cf867eb3011b3a5c7eb762677d0a6c5fcfa. Its preamble and (1) cover the deepest-set definitions and compact interior attainment; §1 (4)–(7) covers the density bound, deepest-point pointwise lower bound, integrated slab, and shifted-cap consequence. The preamble's separate rank lower bound is not used in this lemma."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T08:38:58Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its width-one two-cone bound p≤d overlaps exactly for D≥2 after pulling ℓ back to K, and the root interpolation is shared. Its stronger p(ℓ(g))≥1 and slab a/d apply at the ambient uniform centroid g only. The new slab at any deepest point for the actual marginal does not follow from that centroid estimate.",
+      "fact_id": "6f5a2608fa056059"
+    },
+    {
+      "comparison": "Its cap-gain input uses the ordinary uniform body's centroid, and its conclusion is ordinary centroid localization under a cover budget. It does not imply the scalar gain at arbitrary deepest points of an exact marginal.",
+      "fact_id": "d84ce6b83e9e30d2"
+    }
+  ],
+  "readability": "The reference to a section-volume density fixes a specific representative at each level, which is needed for the pointwise inequality. At D=1 the corresponding 0-dimensional section convention gives density 1 also at the interval endpoints.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "545cf676863c8b2eca5afe7a5903bfeaf5778cfdb258c2de79dafe3d67c0b89a",
+  "reviewed_statement_sha256": "e9f1781f48388f29e4d114c046c9d7b9dd0564ffe7a3bb83369183b4532647d1",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:37:29Z",
+  "summary": "The exact marginal has a nonempty compact deepest set inside its support, and the width-one section density yields the stated one-sided gain at every deepest point, including in projected dimension one.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

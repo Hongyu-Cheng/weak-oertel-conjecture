@@ -1,0 +1,30 @@
+{
+  "advances": "Positive-width threshold smoothing with an attained positive-slab nonvertical cap. The conclusion concerns deepest bases and makes no width-zero assertion.",
+  "author": "PK-research-agent",
+  "candidate_id": "401acc7560f19c28",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.932342+00:00",
+  "depends_on": [],
+  "draft_key": "positive-slab-smoothed-deepest-base-interpolation",
+  "kind": "theorem",
+  "proof": "For fixed $a,u$, the threshold tail is continuous and nonincreasing and has limits $\\mu(S)$ and zero at the respective ends of the real line. The derivative with respect to $b$ is $-S_0$. For fixed $u$, the $a,b$ derivatives follow by dominated convergence using the finite compact support and the bounded derivative of the smooth CDF. For the ramp, the two kink planes meet each positive-dimensional sampled fiber in volume-null hyperplanes because $u\\ne0$. The ramp is Lipschitz, so dominated convergence gives the same derivatives off those null sets. At nearby $(a,b)$, the derivative integrands converge away from the two limiting kink planes, proving continuity for the ramp too. When the norm is $C^1$ away from zero, the inner argument and its derivatives in $u$ are uniformly bounded on a compact parameter neighborhood with $u\\ne0$ and on the support. Difference quotients are bounded there by Lipschitz continuity of the ramp, and the limiting kink planes are null. The same dominated-convergence argument then gives continuous derivatives in $u$.\n\nThe raw depth superlevel at $Q$ is convex on $C$. Indeed, a convex combination of feasible thresholds for any nonvertical cap is feasible because its threshold at the combination is at most the weighted thresholds and each input threshold belongs to an initial interval of allowable thresholds. For any fixed pure-base orientation its closed tail is also nonincreasing, so the same interval argument applies. A convex combination of deepest marks with integer base thus belongs to $S$ and is deepest.\n\nAt the combination $Y=\\sum_i t_iY_i$ with $t_i>0$ choose an attaining nonvertical cap with $S_0>0$. Its threshold $b=b_{a,u}(Y)$ has strictly negative derivative of the tail, so every strictly larger threshold has mass strictly smaller than $Q=T(a,u,b)$, by monotonicity. Every input has cap mass at least $Q$, hence $b_{a,u}(Y_i)\\le b$. The convex threshold at $Y$ is at most the average of the input thresholds, forcing equality in every input. This proves attainment for the same cap at all the inputs.\n\nAt $Y_i=(p_i,y_i)$ vary $a$ by $tv$, holding $u$ fixed. The through-mark threshold moves by $t v\\cdot p_i$ and the width is fixed. Since this is a two-sided differentiable variation of a minimizing normal,\n$$\n0=\\int v\\cdot(z-p_i)\\frac{\\psi((a\\cdot z+u\\cdot x-b)/(\\delta\\Gamma(u)))}{\\delta\\Gamma(u)}\\,d\\mu\n$$\nfor every $v\\in\\mathbb R^n$. The same measure of positive mass occurs at every input, forcing their bases to coincide. For any integer point of the deepest-base hull, represent it as a convex combination of distinct deepest bases and choose one deepest mark per input base. The conclusion forces a trivial combination. This proves both lattice intersection and the vertex assertion. A same-parity pair would have an integer midpoint, giving the parity bound, also when $n=0$.\n",
+  "source_candidate_ids": [
+    "54bd04196c016a99"
+  ],
+  "source_candidate_sha256": {
+    "54bd04196c016a99": "9ac4b37923fd6c7315b62047e70044475a799d82859cf11bad44b4a9e2d8a282"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "54bd04196c016a99",
+      "locator": "54bd04196c016a99:02 §§3–5, (2)–(6) and lattice consequences, with §2 convexity and §7 fixed-u ramp derivatives"
+    },
+    {
+      "candidate_id": "54bd04196c016a99",
+      "locator": "54bd04196c016a99:04 §7, fixed-u uniform ramp differentiation"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact and convex with $d\\ge1$. Its sampled set is $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$, with finite base $P$ and positive-volume fibers $K_z$. Write $\\mu=\\sum_z\\delta_z\\otimes 1_{K_z}\\,dx$. Let $f$ be continuous and concave on $C$, $\\varepsilon\\ge0$, $\\delta>0$, and $\\Gamma$ a norm on continuous covectors. Let $\\Psi$ be the CDF of a smooth probability density $\\psi$ supported on $[-1,0]$ and positive on $(-1,0)$, or let $\\Psi(s)=\\min(1,\\max(0,1+s))$ and $\\psi=\\mathbf1_{(-1,0)}$. For $u\\ne0$ put\n$$\nT(a,u,b)=\\int\\Psi\\!\\left(\\frac{a\\cdot z+u\\cdot x-b}{\\delta\\Gamma(u)}\\right)d\\mu,\\qquad\nb_{a,u}(Y)=a\\cdot p+u\\cdot y-\\varepsilon f(Y)\\Gamma(u)\n$$\nat $Y=(p,y)$. Define raw depth as the infimum of these masses through the mark and the ordinary closed pure-base cap masses. Assume the maximum $Q$ over $S$ is attained and every deepest mark has an attaining nonvertical cap with\n$$\nS_0(a,u,b)=\\int\\frac{\\psi((a\\cdot z+u\\cdot x-b)/(\\delta\\Gamma(u))}{\\delta\\Gamma(u)}\\,d\\mu>0.\n$$\nIf a positive-coefficient convex combination of deepest marks has integer base, every input mark has the same base. An attaining cap of positive $S_0$ at the combination attains at every input at the same threshold, and every input base is the base centroid of its one common $\\psi$-weighted slab. Thus the set of deepest bases is precisely the lattice intersection of its hull and consists of vertices of that hull. Its bases have distinct parities, so their count is at most $2^n$.\n\nFor the ramp, $T$ is $C^1$ in $(a,b)$ at fixed $u\\ne0$. If $\\Gamma$ is $C^1$ away from zero, as for a positive-definite covariance norm, $T$ is jointly $C^1$ in $(a,u,b)$ for $u\\ne0$.",
+  "subgoal_id": "pk-intake-positive-slab-smoothed-deepest-base-interpolation",
+  "title": "Positive-slab smoothed depth excludes integer combinations of distinct deepest bases"
+}

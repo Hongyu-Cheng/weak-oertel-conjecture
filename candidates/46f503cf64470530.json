@@ -1,0 +1,28 @@
+{
+  "advances": "All-dimensional cap equality counterexamples with rank-two circuits, with no higher-dimensional fraction or no-heavy claim.",
+  "author": "PK-research-agent",
+  "candidate_id": "46f503cf64470530",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:06:28.275558+00:00",
+  "depends_on": [
+    "eb3170ede1968b99"
+  ],
+  "draft_key": "pk-w35-roofs-higher-nongluing",
+  "kind": "counterexample",
+  "proof": "Use the planar nongluing construction with its $A,B,K,H_i$ and $(\\lambda_i,v_i)$. Write $p=(x,y)$ and set $m=d-2$. Adjoin $t\\in\\mathbb R_{\\ge0}^m$ with $\\sum_jt_j\\le\\phi_D(p)$ to each planar $D=A,B,K$, where\n$$\n\\phi_A=19-11x-y,\\qquad \\phi_B=14-11x-y,\\qquad \\phi_K=33/2-11x-y.\n$$\nThese are bounded convex bodies. At $p=0$, the vector with all $t_j=1/m$ gives an interior point of all three by their strict inequalities. Lift the three planar cuts by ignoring $t$. They remain proper, through that point, and cover the full space with the same rank-two minimal dependence.\n\nPut $\\rho_i=(1+\\lambda_i)/2$. With $w=(11,1)$ the three maps satisfy $14-w\\cdot v_i=19\\lambda_i$, namely $57/4=19(3/4)$, $323/16=19(17/16)$ and $19=19$. It follows that\n$$\n\\phi_B(\\lambda_i p+v_i)=\\lambda_i\\phi_A(p),\\qquad\n\\phi_K(\\rho_i p+v_i/2)=\\rho_i\\phi_A(p).\n$$\nThese identities preserve nonnegative roof status in both directions. Extending the planar maps by $t\\mapsto\\lambda_i t$ and $t\\mapsto\\rho_i t$, respectively, gives exact positive homotheties of the endpoint and midpoint caps. In particular each lifted $K$ cap is the midpoint of the corresponding lifted $A,B$ caps and has captured-side volume-root equality. The full Minkowski midpoint lies inside $K^{(d)}$ by the planar inclusion and the affine identity for averaging the full roofs. Conversely the cap cover and midpoint cap equalities put each point of $K^{(d)}$ in the full midpoint.\n\nThe planar projections are clipped by the corresponding nonnegative roof, since $t=0$ is feasible exactly there. For $A^{(d)}$ the upper-right planar vertex $(2,-1)$ is cut off and replaced by $(9/5,-4/5)$ on $x+y=1$, while the bottom-right vertex $(2,-3)$ lies on the roof-zero line. For $B^{(d)}$ the analogous replacement is $(27/20,-17/20)$ on $x+y=1/2$, with bottom-right vertex $(3/2,-5/2)$ on the roof-zero line. The other vertices have positive roofs. In the two projections the bottom edges both have vector $(4,-2)$, while the next edges have vectors $(-1/5,11/5)$ and $(-3/20,33/20)$ with ratio $3/4$. Each direction occurs only once in its oriented polygon boundary, so there is no positive homothety of the projections or the full bodies. The classical full-dimensional Brunn–Minkowski equality case gives strict whole-body inequality. The hull over bases $-1,1$ has exactly their Minkowski midpoint at base zero and no additional integer bases.\n",
+  "source_candidate_ids": [
+    "60dfb1dd651b7ddd"
+  ],
+  "source_candidate_sha256": {
+    "60dfb1dd651b7ddd": "85650c9f89ac9ac3f214a12460350d2962789660b02ee97265c157e192e06ea2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "60dfb1dd651b7ddd",
+      "locator": "60dfb1dd651b7ddd:02 §6, affine-roof construction"
+    }
+  ],
+  "statement": "For every $d\\ge3$, there are full-dimensional compact convex bodies $A^{(d)},B^{(d)},K^{(d)}=(A^{(d)}+B^{(d)})/2$ with three proper common through-interior halfspaces forming a rank-two minimal positive circuit. All captured-side $d$-volume root comparisons are equalities, yet $A^{(d)},B^{(d)}$ are not positively homothetic and whole-body Brunn–Minkowski is strict. They are also the actual fibers of one complete convex mixed family at bases $-1,0,1$, in the order $A^{(d)},K^{(d)},B^{(d)}$.",
+  "subgoal_id": "pk-intake-pk-w35-roofs-higher-nongluing",
+  "title": "Affine simplex roofs lift cap nongluing to every higher dimension"
+}

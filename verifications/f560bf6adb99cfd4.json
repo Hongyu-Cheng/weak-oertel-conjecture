@@ -1,0 +1,52 @@
+{
+  "candidate_id": "08b344179e054c1c",
+  "candidate_sha256": "e386ac56ce68bf0152d9b5a42cb297899efccf03683adbd9e13ce2dee1e0eb72",
+  "checked_dependency_candidate_sha256": {
+    "9ea9bc3d72c92743": "2290ddd9880f96523be775d90d77349247cdf66a8b95080535c415ba2ef5de18"
+  },
+  "checks": [
+    "Every balanced row, including the zero row, is supported on the minimal face by summing the exposing functional. Restricting a full containing halfspace to the face either gives a containing proper halfspace or the whole face trace. Conversely subtracting a large multiple of the exposing functional from an extension of the face normal excludes each of the finitely many off-face atoms and keeps the trace, including boundary atoms and the whole-face case.",
+    "The box slice contains zero and is compact. Weak duality holds term by term for either sign of 1+a·(z-p). Strict separation of (0,T_p+epsilon) from the compact box image yields a positive last coefficient because (0,T_p) lies in the image. Normalizing that coefficient and maximizing independently in each box coordinate proves the reverse inequality for the infimum without any assumption of dual attainment. The argument also applies to the face box.",
+    "The hinge integral uses closed superlevels and the open interval 0<t<1, of length one. Each of these levels contains p; a=0 gives the whole-space trace. Endpoints have no effect on the integral. The allowed rank-zero trace gives T_p=D_p=M directly; the same argument also covers the case D_p=M in general. A D_p=0 case is vacuous here because a halfspace containing p in conv(P) contains at least one positive-mass atom, and only finitely many traces occur.",
+    "For every N>0 the second derivative of L^(-N) is positive on (0,infinity). The tangent at one has slope -N; the positive part preserves equality only at L=1 because the inverse power is strictly positive. Evaluating the restricted hinge infimum at a=-N alpha_p gives the stated lower bound on E_p-T_p in the correct direction. If E_p=T_p, all L_z equal one and the spanning offsets force alpha_p=0; stationarity is precisely face mean balance. Conversely the mean condition makes alpha=0 minimize and the full face box corner feasible; it saturates exactly the available face mass M_p.",
+    "Independently, the source Hölder proof uses a maximizing dominated row q and lambda=q/T_p. Here T_p>0, for instance by the proven depth bound. Equality in m_z^(1/(N+1))q_z^(N/(N+1))>=q_z requires saturation wherever q_z>0; equality in the entropy maximization forces lambda to be the strictly positive-on-face escort row. This gives the identical full-face saturation and no extra premise.",
+    "The largest escort scaling is the minimum face ratio m_z/e_z, all positive; off-face coordinates impose no constraint. A nonzero relative parameter has a negative score at some face atom by relative interior, giving that atom excess escort mass. The parent escort identities imply positive rescaled mass c E_p and the same base mean. Since the zero parameter has objective M_p, attaining M requires the full face and that zero parameter minimize; the unique stationary mean has full minimal face because all atom masses are positive. At it the continuous selector uses weights m_z/M, exactly as stated.",
+    "Exact check at unoccupied p=2/5 on P={0,2}, both masses 1, N=1: the stationary parameter is 5/12 and denominators are 5/6 and 5/3. The two singleton closed traces give D_p=1; balance requires q_0=4q_2 and yields T_p=5/4. The energy is 9/5, total tangent defect 3/10, and c E_p=5/4. This checks strictness and scaling at a center not covered by the source occupied-point wording.",
+    "Source candidate 2b7d1c7e003a98d0 at base f8f4853 has SHA-256 8ca4fbe8f31beb6bd8440f323583e0ed5bd94c02c8928057b5cd58f8cb4846dd. Its §4, (7)–(9) and (7a), and continuous-maximum passage in §5 match. Source b4c3b9c6a52059d2 at that base has SHA-256 3c68baa42db20f20a46e7cd529484ba122079d98970789de06b176aca0241278. Its §1 (2)–(4) and §2 separation specialized to just zero base moment give exactly the finite hinge/Cavalieri argument. The proof itself establishes both arguments for all p in Q; neither source note is a logical dependency."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "9ea9bc3d72c92743",
+      "candidate_sha256": "2290ddd9880f96523be775d90d77349247cdf66a8b95080535c415ba2ef5de18",
+      "mapping": "The same finite P, positive masses, p in Q and real N>0 satisfy every parent hypothesis. Its relative minimizer and stationarity supply alpha_p and the escort identities; its proper-face exposing functional supports the restriction. The optional compatible-fiber hypotheses are invoked only when the original mean is occupied and the statement identifies the continuous coordinate.",
+      "status": "independently approved in this wave, pending admission at the reviewed base"
+    }
+  ],
+  "finished_utc": "2026-11-08T07:24:38.051126+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Already yields T_p>=D_p by its generic finite coefficient-polytope proof, using normalized masses and target mass D_p/M; its statement is specialized to actual mixed-volume tables at integral bases. It does not state the exact hinge infimum or compare T_p with inverse-power energy. The source crosswalk records the covered depth comparison only.",
+      "fact_id": "725defc391f9d55d"
+    },
+    {
+      "comparison": "Proves sharp universal retained mass for integral-base metronoid membership in the original mixed-body setting. It does not give the comparison, equality condition, or maximal scaling of this particular escort row.",
+      "fact_id": "daf10421c94b79ba"
+    }
+  ],
+  "readability": "The depth proof mentions D_p=0 as an endpoint that the integral would accommodate, although it is impossible under the stated positive finite support and p in its hull. This is harmless. Equality E_p=T_p is derived from the hinge defect in the frozen proof; the source also supplies a distinct direct saturation argument via Hölder.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7cff3026c1b87d8a7266252d96caa1a0fbaccea1007893c416ce629bd3a59f37",
+  "reviewed_statement_sha256": "9c6d9866364397e55278ad6e788235c9f51bde0a2759e718222d0b3816076a14",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:23:03Z",
+  "summary": "The frozen proof gives the exact attained balanced-mass primal and hinge infimum for every p in Q, and correctly identifies when power entropy equals balanced mass. The tangent defect, optimal dominated scaling, and full-hull maximizing base are all established.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

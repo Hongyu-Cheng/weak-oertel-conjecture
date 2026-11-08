@@ -1,0 +1,43 @@
+{
+  "candidate_id": "4c65d2a05d1be51c",
+  "candidate_sha256": "da02ee0e00347087aa28a354729d6cb5145682e774e3c3b0e2e09a84b1b6bdea",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For either threshold u, u ≥ t(1−ah). Positive slack forces s = 1−ah > 0 and u > 0, with 0 < s−du ≤ u. At nonpositive s the extended product of positive parts gives zero. This covers a zero threshold, simultaneous zero radius and zero slack, and all indices beyond 1/ε. The finite continuous sum attains its maximum on the nonempty compact domain.",
+    "At each fixed β the admissible a-slice is a closed interval or a point. The thresholds are constant there, so active terms are affine in a, inactive terms vanish, and the central right term is constant. The mass positive powers are convex across zero radius. Splitting at the finitely many noncentral slack zeros suffices, with continuity at each endpoint and with simultaneous zeros treated as one split.",
+    "Independently differentiated u^(d−1)(s−du) twice on its active piece and divided by the stated positive factor. The envelope formula gives (d−2)x+2ℓ′/u′. Adding the normalized mass derivative gives Aη²−2η+2d−(d−2)x with the displayed A. Its derivative in η is strictly negative on [0,d] since Ad ≤ d²/(d+1)². At η = d the expression is B(x). For d = 2 B is constant, and for d ≥ 3 its derivative is strictly negative using Γ(1+1/d)^(d−3) = (d/(d+1))³. Direct simplification gives B(1) = (3d+2)/(d+1)².",
+    "On the left line, same-side active indices are exactly h < H, the h = 0 contribution is constant, and all other active ones have η = d. The active right derivative ratio is −d(2h+1)/(h+1), including h = 0 and its switch β = t/d. On the noncentral right line, a > 0 gives β < t/[d(J+1)], so right activity is exactly h < J. For those indices η = dh(1+1/J)/(h+1) belongs to [0,d], including η = 0 for h = 0. The opposite left ratio is −d(2+1/J) for h ≥ 1 and the central left term is constant. In each case the active opposite envelope is concave since x ≤ 1. Convexity is asserted separately on each closed piece, so no derivative jump condition at an opposite activation is needed.",
+    "Solving a = dβ+t/H and Ja+dβ(J+1) = t gives the stated coordinates and exactly J ≤ H ≤ (2d+1)J+d for the two tilt constraints. The J = 0 equation is the central right switch. Every feasible left activation has H ≤ 1/a and every noncentral right activation has J < 1/a. At β = 0, H = J; at β = at, the left knot can have zero radius and threshold and remains a feasible closed-piece endpoint. Opposite activations at a domain endpoint or at the same split point are included. Degenerate ε = 1 leaves a closed slice on a = 1.",
+    "At β = at the left envelope alone equals the target mass termwise. For a ≥ 1 only the central mass remains and its left envelope equals Γ. The zero value at (1,t/d) is feasible for every compact domain. At β = 0 the two normalized envelopes both have samples (1−(d+1)ah)_+; the decreasing-function mass sum bound and convex trapezoid envelope sum bound have the same comparison value 1+1/[(d+1)a], including an integral support endpoint. These signs leave the a = ε edge intact, and all displayed right-hand candidates are feasible, proving equality.",
+    "Checked both original candidate hashes against 3220f79. The canonical a38c69b78fd106d1 §1 (2)–(3), with §§2–5, and e06a5b80357a8187 Lemma 3 (9)–(10), with (1), give the same reduction and retained edge. Their upper bound is equality because the knot and cutoff-edge points are feasible and (1,t/d) realizes the zero term. The frozen all-a ≥ 1 edge extension follows from the same single-positive-radius argument.",
+    "Independently used exact fractions to check the two intersection equations, the two tilt endpoint identities, the zero witness and the H = 1 positive witness. Checked 3,460 exact rational deficits across 30 compact domains, including ε = 1, against the knot and cutoff-edge upper bound and the relevant nonpositive outer edges."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T07:48:05.254193Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same scalar deficit at the feasible knots with J ≥ 1. Its pointwise strict negative bound neither localizes a compact maximum to the listed sets nor addresses J = 0 or the cutoff edge. The compact proof does not require its sign bound.",
+      "fact_id": "3da9e3745e7c7879"
+    },
+    {
+      "comparison": "The planar symmetric-profile calculation uses a supremum of a retained-area minimum envelope and a planar geometric depth claim. Its envelope and hypotheses differ from this all-dimensional finite scalar deficit and its activation-line reduction.",
+      "fact_id": "82092cd50249b044"
+    }
+  ],
+  "readability": "The horizontal central right activation is fixed within a fixed-β slice, and its only use in the line step is as an opposite-side split on a left line. The meaning follows from the proof, although the phrase ‘each activation line’ in Intersections could name the two noncentral families being followed. This does not alter the proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "655d6f2f4fc8681e13e06cff95277690ef52b9d9c85844e28776dcbacaff805a",
+  "reviewed_statement_sha256": "cba21dce0e9e17da8d90c87ffb6845c839da6d22496af8f81f00113e971c35ff",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:45:55Z",
+  "summary": "The exact frozen proof reduces the attained compact maximum to zero, the full a = ε edge, and finitely many feasible left/right activation intersections. Both directional curvature arguments, all support and threshold degeneracies, and the outer edge signs check out.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,45 @@
+{
+  "candidate_id": "ff17fc4086613a91",
+  "candidate_sha256": "85881688da2be7c5bd5eb6cd904d89ea86207b66777f56d73d0e1c24ded41363",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The continuous shear interpolating the two endpoint centers translates each fiber and preserves closed halfspaces and within-fiber distances. The common reflection achieves L≤U. The midpoint inclusion gives L,U≥s/2 and A_1=(L+U)/2. If any A_z≥T, its midpoint belongs to every tested cap and supplies enough capacity by itself.",
+    "For the upper trace on [−a,a] the maximum of own depth is min(a,(a−r)_+), including a singleton or empty upper tail. The thresholds at bases 0 and 2 of a line through (1,x) sum to 2x and every such pair is realizable. If either endpoint saturates at its own maximum, the sum is ≥m; otherwise the positive-part inequality gives ≥(s−2x)_+.",
+    "The saturated value m is attained by placing the smaller endpoint threshold far below zero and the other above its upper endpoint. For 0<s−2x<m the two nonnegative residuals can be allocated within their endpoint radii, giving the required sum; for s−2x≤0 choose both thresholds at least their radii. Equality s−2x=m is covered by the saturated choice. Reflection gives the lower counterpart. Fraction arithmetic checked 816 two-threshold minima at the exact breakpoints and extremes.",
+    "Since both endpoints are nonheavy, max(A_0,A_2)=s−m<T, so A_1>s−2m. The middle nonheavy condition gives A_1<s. Thus 0<T−A_1<m and T−m<A_1. The compatibility bound L≥s/2 and L+c=A_1 then give 0≤x_*≤min(c,T/2).",
+    "The lower cap has endpoint minimum m and middle contribution at least T−m. The upper cap retains the middle peak A_1 and pays at least T−A_1 at the endpoints because s−2x_*≥s−T=T−A_1 and m>T−A_1. A pure-base closed cap through the middle includes that fiber and one endpoint, hence costs at least A_1+m>T. Inward translation to pass through the mark can only lower all terms.",
+    "Checked source 973565454d10d0f4:01 §§1–3 (1)–(6). The finite search in its §4 is not a premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:14:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The underlying endpoint allocation algebra is related, but that fact minimizes actual interval lengths for the two orientations. Here the endpoint and middle terms are suprema of own depth, not the captured interval volumes.",
+      "fact_id": "c680a307d3f26cec"
+    },
+    {
+      "comparison": "The sums here equal the projected hit-range masses at d=1, where the depth-coordinate density is uniform. That theorem bounds hit mass by mixed volume and supplies no unconditional hit-depth guarantee.",
+      "fact_id": "4bd2e6d22487dfef"
+    },
+    {
+      "comparison": "Uses the same capacity definition and three consecutive bases, but in continuous dimension two, where the proposed half-total guarantee actually fails. It is compatible with this one-dimensional theorem.",
+      "fact_id": "e49b3faee87f1dff"
+    }
+  ],
+  "readability": "A 'full' endpoint summand refers to saturation at its maximum own depth, which occurs as soon as the cap includes the midpoint.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "8d7f89e156db6910b923a5af8201b2cbb6add7b6a50ab89370bb5f6995aadcc3",
+  "reviewed_statement_sha256": "9012f74f0e5f33ef0e2777bec314ca3a49ffa7a614679eb14a59210a7ab56358",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:11:11Z",
+  "summary": "The exact clipped endpoint formulas hold for all finite slopes. The explicit middle point pays both nonvertical orientations and the pure-base caps, while a heavy interval gives the bound directly.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

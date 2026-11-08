@@ -1,0 +1,41 @@
+{
+  "candidate_id": "bc71f5494b89f489",
+  "candidate_sha256": "f23dc71adb9ca2cbcfce415e822073ea1b905f7dc725a8902af5acd4cdccfd09",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For all sufficiently large j, the equality u_j*=(e^(−R_1j)−e^(−R_2j))/(k−1) lies in the available width [0,1−1/j]. Positivity and the comparison to u+eta_2j hold throughout that interval. The upper bound is uniform and the log tail integrates against t dt with bounded t, yielding uniform bulk log integrability and c_j→e^(1/2).",
+    "Differentiating u/l+(a_j−eta/l)log(lu+eta)/l gives (a_j+u)/(lu+eta). At the interface the common value is (k eta_1j−eta_2j)/(k−1), whose log is −R_1j+O(1). At the bottom the branch-2 raw value is eta_2j. The primitive yields 1+R_1 and (R_2−R_1)/k and proves the inverse bound.",
+    "On each branch the coarea conversion is |dt/dr|=jL_j/(c_jl). At any fixed positive distance from rate zero, jt→1 uniformly on the admissible levels and stays bounded. This gives 2/c and 2/(ck) on the two stated intervals and excludes positive atoms, including at the two phase boundaries.",
+    "The lower exterior edge has length sqrt(2)/j and log mass tending to sqrt(2)R_2, with outward normal −(1,1)/sqrt(2). The top has no positive-rate contribution, and the coordinate sides have uniformly integrable log tails. The actual interface normal for the upper cell is the same negative normal, and the lower cell has its opposite. At the interface, length sqrt(2)t and log asymptotic R_1j give the radial limits ±t_oR_1.",
+    "The two weighted cell densities are both 2t_o, and multiplication by M=1/2 gives t_o. A physical atom t_oR_2 at exterior rate R_2 has exactly this constant uniform rate density. All positive-rate physical positions tend to the origin.",
+    "The exact construction and ranges match e90eb0947d2b9feb §5, crosswalk :04."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T22:37:21Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "check": "It uses the same planar truncation with a single affine parameter and computes allocated cap defects and one uniform total rate law. It has no actual second affine branch or compensating interior interface. Its conclusion does not give the separated phase exchange.",
+      "fact_id": "a4b65634eb70af87"
+    },
+    {
+      "check": "The aggregate radial kernel allows the exchange but gives no existence example or signed internal-interface limit.",
+      "fact_id": "54a99a86bc0178c9"
+    }
+  ],
+  "readability": "The construction is asymptotic. Writing j sufficiently large at the start would make it explicit that the j=1 degenerate slice is excluded and that u_j* is inside the available interval.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "beacb02ddac8b8239164ad018fd2557dd73bed78b30af6c9268368d3743e0a35",
+  "reviewed_statement_sha256": "3676b803fdcc307c8f6efd5f11fc4b5e7b25c206e4ea0de35feff8e53478b7e9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:31:48Z",
+  "summary": "The two actual affine branches produce the claimed staggered positive-rate densities, and their signed interface flux exactly compensates the branch change.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,53 @@
+{
+  "candidate_id": "1c475f2afdd67f14",
+  "candidate_sha256": "be8465d88d803a86412f3d38da0ecf5753b879a56d8a7b3848233f8f981a4c45",
+  "checked_dependency_candidate_sha256": {
+    "4d628efe7673ce2d": "6d6206eb1f7f68c4c528797f3d1d7512a69f1a964c6dab8e9501bbb4a1ba3cb9"
+  },
+  "checks": [
+    "Normalize by H > 0. Both arms are concave in their outward order, and their successive differences start at a nonpositive value because j is a maximum. This includes a peak at either endpoint and any index in a plateau.",
+    "The fixed-length replacement has the same tail square sum and the same peak. Strict increase in the admissible slope gives η ≤ 0 since each original arm entry is at most one. Positive square differences precede negative ones, and their sum is zero. On their nonzero indices the sums uᵢ+vᵢ are positive and nonincreasing. Replacing those denominators by the one at the last positive difference increases both the early positive quotients and the late negative quotients, so the sum of the original quotients is at most zero. If there is no positive difference all differences vanish.",
+    "With S₁=h(h+1)/2 and S₂=h(h+1)(2h+1)/6, the quadratic minimum for h≥1 is at −2S₁/(3S₂)=−2/(2h+1), with admissible endpoint 1/(2h+1). Its value is h+1−4S₁²/(3S₂)=(h+1)/(2h+1). An empty arm has value one. The two minima minus the repeated peak term give exactly half the sum of the two stated reciprocals.",
+    "For every 0<t<1 the strict superlevel set is a nonempty interval containing the same chosen j, by interpolation between any two entries above t. On that interval g−t is concave of maximum 1−t. Both arm lengths are weakly shorter, so the coefficient weakly increases. Outside zeros are added only to the sums after applying the quadratic estimate on this interval.",
+    "For p>2 and x>0, expansion gives the integrals of t^(p−3)(x−t) and t^(p−3)(x−t)² on (0,x) as x^(p−1)/((p−2)(p−1)) and 2x^p/((p−2)(p−1)p). The integrand in the draft is (x−t)²−2(1−x)(x−t) on (0,x), yielding the displayed identity, also at x=0. The weight is integrable at zero, the finite remaining factors are bounded, and the integral at x=1 gives the common positive factor. The quadratic argument handles p=2 directly. Homogeneity restores H^p.",
+    "Source c3c2ca0e4dcbdc9d, Proof (4)–(6), contains the same chosen-peak quadratic and real-power conclusions. Its archival references supply provenance. The frozen proof uses the accepted fixed-length replacement and derives the level integration itself. Its exponent range begins at 2 on the higher power. The accepted moment fact uses p for the lower power and begins at p=1 in that convention."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "4d628efe7673ce2d",
+      "candidate_sha256": "6d6206eb1f7f68c4c528797f3d1d7512a69f1a964c6dab8e9501bbb4a1ba3cb9",
+      "fact_sha256": "3b63f636f57db2e8f1a1dea48947fbd1383561eb95ed6d3bc43b0bdbd752c5a8",
+      "mapping": "Use the fixed-length scalar part of assertion (5) with R=1, m=h≥1 and rᵢ=uᵢ. The arm is finite, nonnegative and concave, with positive anchor one. The accepted conclusion yields the nonnegative affine replacement of equal tail square sum. The proof of (5) gives monotonicity of its square sum in η and the required ordering of the signs of rᵢ²−gᵢ². The h=0 arm is handled directly.",
+      "reviewed_proof_sha256": "8edcdc6fa21a1496dfec8cde0f21124efaa4602f3e22aa80ff26a7d01541546f",
+      "reviewed_statement_sha256": "9194727b108d8e6a11f9e10a615ae463bdc54662872e7a87586643673adade79",
+      "status": "accepted at cf4684d0a6250d1ac1d187da54eaac3f049b348c"
+    }
+  ],
+  "finished_utc": "2026-11-08T10:00:24.814Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "With the accepted exponent set to p−1, the hypotheses and left side agree and the accepted statement gives H^p/m. Its proof already gives the exact chosen-peak bound at p=2. For p>2 that proof integrates with the uniform coefficient 1/m. Here the coefficient is at least 1/m by the reciprocal-mean inequality and is strictly larger for j≠(m−1)/2, for example 2/3 instead of 1/2 on an all-positive two-entry interval. A change of exponent notation alone accounts for the different lower endpoint of the stated exponent ranges.",
+      "fact_id": "73234f91aeecda16"
+    },
+    {
+      "comparison": "Assertion (5) gives the affine square-sum replacement and its proof gives the crossing of the square differences. Its conclusion bounds an affine clipping envelope. The quadratic minimization and the higher-power inequality do not occur in that assertion.",
+      "fact_id": "4d628efe7673ce2d"
+    }
+  ],
+  "readability": "The quotient comparison benefits from reading the positive and negative terms separately. The denominators of the two reciprocals decrease when the arm lengths shorten, so the reciprocals increase. Both points are determinate from the written proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "89d094d44884c1fde9c9e9dd65cad00197551ca26350b78c9ca1e3836711bf4c",
+  "reviewed_statement_sha256": "3b0c00d06f7b883fdc770ed92f373406f619a1c25a147792de4b4959ae1da9cd",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:56:47.431Z",
+  "summary": "The affine-arm minimum and integration over strict superlevel blocks give the stated coefficient for every real p ≥ 2 and every chosen peak. The p = 2 bound occurs in an accepted proof. At p > 2 the candidate retains a strictly larger lower bound for off-center peaks than the accepted length-only statement on the same index interval.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "A lattice-point dilation estimate in the saturated affine lattice. It does not assert a mixed center.",
+  "author": "PK-research-agent",
+  "candidate_id": "2a2d0b8b12c873cb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.472495+00:00",
+  "depends_on": [],
+  "draft_key": "ehrhart-first-two-coefficient-lower-bound",
+  "kind": "lemma",
+  "proof": "For $s\\ge1$, choose an integer vertex $v$ and put $L=\\operatorname{span}(Q-v)$. The lattice $L\\cap\\mathbb Z^n$ has rank $s$, since integer vertex differences span $L$. An integer-lattice basis of this saturated lattice identifies $Q-v$ with a full-dimensional lattice polytope in $\\mathbb R^s$. In the dilation by $m$ the translating vector is $mv$, so this identification preserves both counts in the statement.\n\nTriangulate $Q$ with lattice vertices by a pulling triangulation: order the vertices, recursively triangulate the facets not containing the first vertex with the induced order, and cone their simplices to the first vertex. The restrictions to shared faces agree by the same recursion in those faces. Cones over the resulting $s$-simplices, with generators $(u,1)$ for their vertices $u$, triangulate the closed cone over $Q$. Choose a vector $\\xi$ in the interior of this cone outside all linear spans of simplex-cone facets. Assign each point $w$ of the closed cone to the simplex cone whose interior contains $w+\\varepsilon\\xi$ for all sufficiently small $\\varepsilon>0$. The perturbation enters the interior of the whole cone and resolves each facet through $w$, so this is a partition. In the generator coordinates of a simplex cone it makes a coordinate closed at zero if the corresponding coordinate of $\\xi$ is positive, and open at zero if it is negative.\n\nFor a lattice point in one such half-open cone, subtract from each generator coefficient its floor in a closed coordinate or its ceiling minus one in an open coordinate. This gives a unique decomposition into nonnegative integer multiples of the generators and a lattice point in the corresponding bounded parallelepiped, with coordinate intervals $[0,1)$ or $(0,1]$. All generators have last coordinate one, and the remainder heights are nonnegative integers. The height generating series in each half-open cone is therefore a polynomial with nonnegative coefficients divided by $(1-t)^{s+1}$. Summing the disjoint series gives\n$$\n\\sum_{j\\ge0}|jQ\\cap\\mathbb Z^s|t^j=\\frac{\\sum_{l\\ge0}h_lt^l}{(1-t)^{s+1}},\\qquad h_l\\ge0.\n$$\nHeights zero and one give $h_0=1$ and $h_1=N-s-1$. Keeping these two terms when extracting the coefficient of $t^m$ gives the claim.\n",
+  "source_candidate_ids": [
+    "57e3e17a84fce5c1"
+  ],
+  "source_candidate_sha256": {
+    "57e3e17a84fce5c1": "54e760cf7f980946103713ff574e35aafb1d9188d19b0be014ae649e6ac72745"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "57e3e17a84fce5c1",
+      "locator": "57e3e17a84fce5c1:02 §2, (3)–(4)"
+    }
+  ],
+  "statement": "Let $Q\\subset\\mathbb R^n$ be a nonempty lattice polytope of affine dimension $s$, and let $N=|Q\\cap\\mathbb Z^n|$. For every integer $m\\ge1$,\n$$\n|mQ\\cap\\mathbb Z^n|\\ge B_m(s,N):=\\binom{m+s}{s}+(N-s-1)\\binom{m+s-1}{s}.\n$$\nFor $s=0$, both sides equal one.",
+  "subgoal_id": "pk-intake-ehrhart-first-two-coefficient-lower-bound",
+  "title": "An Ehrhart lower bound from the first two numerator coefficients"
+}

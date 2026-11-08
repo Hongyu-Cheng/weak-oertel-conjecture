@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary d-volume in a single continuous cap, with a fixed tested halfspace and actual Minkowski sums.",
+  "author": "PK-research-agent",
+  "candidate_id": "83154daacbc9309d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.095974+00:00",
+  "depends_on": [],
+  "draft_key": "all-dimensional-minkowski-upper-tail-reserve",
+  "kind": "theorem",
+  "proof": "Let $s_-,s_+$ be the segment endpoints and let $t(s_+)>t(s_-)$. Choose coordinates $(x,t)$ with $x$ transverse. Subtracting $t$ times the transverse slope of $S$ from $x$ is a linear shear of determinant one. It preserves height and Minkowski sums, and makes the transverse coordinate of $S$ constant, say $x_0$. Fix these coordinates.\n\nFirst let $B$ be a polytope. Write $P$ for its transverse projection, a full-dimensional polytope in dimension $d-1\\ge1$. For each vertex $p_i$ of $P$ choose a lift $b_i=(p_i,t_i)\\in B$. Put $\\Omega_i=\\{v:v\\cdot p_i>v\\cdot p_j\\text{ for all }j\\ne i\\}$. The $\\Omega_i$ cover transverse space outside a finite union of hyperplanes, and $0$ is in none of them. For $v\\in\\Omega_i$, $v\\cdot(v+p_i)=|v|^2+h_P(v)>h_P(v)$, where $h_P$ is the support function. Thus $v+p_i\\notin P$. Moreover the regions $\\Omega_i+p_i$ are pairwise disjoint. If $v+p_i=w+p_j$ for $v\\in\\Omega_i$, $w\\in\\Omega_j$ and $i\\ne j$, the strict maximizing inequalities give $(v-w)\\cdot(p_i-p_j)>0$, whereas the equality gives $(v-w)\\cdot(p_i-p_j)=-|p_i-p_j|^2$.\n\nPartition $A\\cap\\{t\\ge c\\}$, up to a volume-null set, into pieces with $x-x_0\\in\\Omega_i$. Translate the $i$th piece by $b_i$. It lands in $A+B$ at height at least $c+t_i\\ge0$, with transverse coordinate outside $x_0+P$, the projection of $S+B$. The image pieces are pairwise disjoint by the transverse argument. Since $S+B\\subset A+B$, the difference of the captured volumes is at least the total volume of these translated pieces, which equals the volume of the original upper tail.\n\nFor general $B$, take increasing full-dimensional inscribed polytopes $B_n$ with Hausdorff distances $\\varepsilon_n\\to0$, obtained by taking successive convex hulls of a dense subset including a full-dimensional simplex. Fix an inner ball of radius $\\rho>0$ and center $z$ in $B_1$. For $\\lambda_n=\\varepsilon_n/(\\rho+\\varepsilon_n)$, the support-function bounds $h_B(u)\\le h_{B_n}(u)+\\varepsilon_n|u|$ and $h_{B_n}(u)\\ge u\\cdot z+\\rho|u|$ give $(1-\\lambda_n)B+\\lambda_n z\\subset B_n$ by separation. For each $D=A,S$, fix $d_0\\in D$. Convexity then gives\n$$\n(1-\\lambda_n)(D+B)+\\lambda_n(d_0+z)\\subset D+B_n\\subset D+B .\n$$\nThe missing volume is at most $[1-(1-\\lambda_n)^d]|D+B|$, and this also bounds the missing captured volume. The finite proof applies to every $B_n$ with the same threshold and upper tail. Taking the limit proves the claim.\n\nFor sharpness use $m=d-1$, $A=[-1,1]^m\\times[\\ell,h]$, $S=\\{0\\}\\times[\\ell,h]$, and $B_\\varepsilon=[-\\varepsilon,\\varepsilon]^m\\times[-c,-c+\\varepsilon]$ for small $\\varepsilon>0$. The captured difference is $[(2+2\\varepsilon)^m-(2\\varepsilon)^m](h-c+\\varepsilon)$, and the tail volume is $2^m(h-c)$. Their ratio tends to one. In $d=1$, taking $A=S=[-2,3]$, $B=[-1,0]$, $t(x)=x$ and $c=1$ makes the difference zero and the tail length two.\n",
+  "source_candidate_ids": [
+    "669694f08be75bf9"
+  ],
+  "source_candidate_sha256": {
+    "669694f08be75bf9": "5855f4341b5c53de5daecbe8c0ef83b0cce16182b2dc3c6889629981bcbacf85"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "669694f08be75bf9",
+      "locator": "§§1–4, (1)–(2), and §5, coefficient sharpness and dimension-one failure"
+    }
+  ],
+  "statement": "Let $d\\ge2$, let $A,B\\subset\\mathbb R^d$ be compact convex bodies, and let $t$ be a nonzero linear height. Let $S\\subset A$ be a segment with distinct endpoint heights, and let $c\\in\\mathbb R$ satisfy $\\min_B t\\ge-c$. In ordinary $d$-dimensional volume,\n$$\n|(A+B)\\cap\\{t\\ge0\\}|-|(S+B)\\cap\\{t\\ge0\\}|\\ \\ge\\ |A\\cap\\{t\\ge c\\}|.\n$$\nThe coefficient one is sharp even when $t(A)=[\\ell,h]$ with $\\ell<-1$, $h>c>0$, $t(B)\\subset[-c,1]$, and $S$ joins the extreme heights of $A$. The inequality can fail in dimension one.",
+  "subgoal_id": "pk-intake-all-dimensional-minkowski-upper-tail-reserve",
+  "title": "An additive upper-tail reserve for a captured Minkowski sum"
+}

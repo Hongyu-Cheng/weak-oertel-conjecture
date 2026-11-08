@@ -1,0 +1,37 @@
+{
+  "advances": "A weaker fractional packing bound than the proposed M/2^n in general dimensions; exact on the line.",
+  "author": "PK-research-agent",
+  "candidate_id": "2b5f8afe26027493",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:52:09.423515+00:00",
+  "depends_on": [
+    "c74ffab8666d5d3d",
+    "6d6fcf377e68c79c"
+  ],
+  "draft_key": "fractional-hull-packing-versus-depth",
+  "kind": "theorem",
+  "proof": "For every closed halfspace $H$ containing $z$, each qualifying group has at least one member in $H$, since otherwise its convex hull is in the open complement. Summing full charges over members in $H$ therefore bounds the total packing by $\\sum_{v\\in H}w_v$. Taking the infimum proves the upper bound.\n\nUse an optimal packing over inclusion-minimal groups, as in the finite packing-dual theorem. If $z\\in P$, the singleton $\\{z\\}$ is the only minimal group using $z$, and its mass in an optimum is $w_z$. The remaining positive residual capacities cannot have a hull containing $z$, since one could put additional positive mass on a qualifying group of such residual sites. If there are residual sites, strict separation gives a halfspace through $z$ containing none of them; a small perturbation avoids all other source points on its boundary while keeping strict separation. With no residual sites take any generic through-$z$ halfspace. Every source on the chosen side is saturated. In a nonsingleton minimal group, some convex representation of $z$ uses all its vertices with positive weights (otherwise the remaining vertices qualify). Because no nonsingleton vertex is on the generic boundary, the vertices occur on both sides. With at most $n+1$ vertices per group, the chosen side counts each nonsingleton at most $n$ times. Summing the saturated masses on that side gives at most $w_z+n(f_w(z)-w_z)$, and its mass is at least $\\delta_w(z)$. This proves the lower bound, including $z\\notin P$.\n\nFor $P$ lattice complete, apply 6d6fcf377e68c79c in integer dimension $n$ and continuous dimension zero to the finite atomic measure of mass $M$. Its chosen lattice point has depth at least $M/2^n$, so strict separation puts it in $\\operatorname{conv}P$ and hence in $P$. The pointwise lower bound gives the weighted assertion. For unit weights its own mass is one and the infimum of finitely many integer halfspace masses is an integer, at least $\\lceil |P|/2^n\\rceil$, giving the refinement.\n\nFor $n=1$, the two rays through $z$ give $\\delta_w(z)=w_z+\\min(L_z,R_z)$ and the two bounds coincide. Take the first positive-weight source at which cumulative mass reaches $M/2$ from the left; both closed side masses are at least $M/2$. In dimension zero the singleton is the only qualifying group and uses all capacity.\n",
+  "source_candidate_ids": [
+    "81d3a9207b6b68f5"
+  ],
+  "source_candidate_sha256": {
+    "81d3a9207b6b68f5": "f67d185ed4a05d80bd738a5ecca9ffac7e81d965bc3c925586493043b00c008f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "81d3a9207b6b68f5",
+      "locator": "81d3a9207b6b68f5:02 §2, pointwise packing versus halfspace depth, including the own atom"
+    },
+    {
+      "candidate_id": "81d3a9207b6b68f5",
+      "locator": "81d3a9207b6b68f5:03 §2, lattice corollaries after the pointwise proof"
+    },
+    {
+      "candidate_id": "81d3a9207b6b68f5",
+      "locator": "81d3a9207b6b68f5:04 §3, exact line packing and n=0 endpoint"
+    }
+  ],
+  "statement": "Let $n\\ge1$, let $P\\subset\\mathbb R^n$ be finite, and let $w_v\\ge0$ have positive total $M$. Write $\\delta_w(z)$ for the raw closed-halfspace depth of a real point $z$ under $\\sum_{v\\in P} w_v\\delta_v$, and $f_w(z)$ for the full-occurrence fractional packing of groups whose convex hull contains $z$. With $w_z=0$ if $z\\notin P$,\n$$\n\\frac{\\delta_w(z)+(n-1)w_z}{n}\\le f_w(z)\\le\\delta_w(z).\n$$\nIf $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$, then $\\max_{z\\in P} f_w(z)\\ge M/(n2^n)$. For unit weights the lower bound is $[\\lceil |P|/2^n\\rceil+n-1]/n$. On the line, $f_w(z)=w_z+\\min(L_z,R_z)$, where $L_z,R_z$ are the strictly left and right masses, and some occupied source has value at least $M/2$. In dimension zero the only mark has packing value $M$.",
+  "subgoal_id": "pk-intake-fractional-hull-packing-versus-depth",
+  "title": "Pointwise comparison of fractional convex-hull packing with halfspace depth"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "Finite complete base arithmetic and its equality case for the fixed buffered contact cover.",
+  "author": "PK-research-agent",
+  "candidate_id": "347dc8c30a1e79ad",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:33:00.809442+00:00",
+  "depends_on": [
+    "088f4667ef9ef0b0"
+  ],
+  "draft_key": "occupied-parity-saturation-of-maximal-minimal-faces",
+  "kind": "theorem",
+  "proof": "Choose $p_i\\in I$ in the relative interior of each inclusion-maximal minimal face $F_i$. For distinct faces, if two representatives had the same parity their midpoint would be in $I$. The midpoint's minimal face contains both representatives, since a face containing an interior point of a segment contains both endpoints. Thus it contains both their minimal faces, contradicting maximality. The same argument applies to any two points in the relative interiors of distinct maximal minimal faces. In particular $m\\le k(I)$.\n\nAssume $m=k(I)$ and take any $z\\in I$. It has the parity of a unique representative $p_i$. The integer midpoint of $z$ and $p_i$ has a minimal face containing $z$ and $F_i$, hence equal to $F_i$ by maximality. In particular $z\\in F_i$. Its midpoint with the relative-interior point $p_i$ lies in $\\operatorname{relint}F_i$, and its parity is that of $p_i$: any other parity would be the parity of some $p_j$ in the relative interior of a distinct maximal minimal face, which was just excluded. Repeating with the same $p_i$ makes $p_i+2^{-j}(z-p_i)$ integral for every $j$, so $z=p_i$. Thus $I=\\{p_i\\}$.\n\nIf $F_i$ had positive dimension, it would have a vertex $v\\ne p_i$. That vertex of $Q$ belongs to $I$, so equals some representative $p_j$; its singleton minimal face would then be properly contained in $F_i$, contradicting maximality of $F_j$. Therefore all the representatives are vertices. Conversely if $I$ consists exactly of parity-distinct vertices then each minimal face is a singleton, giving $m=k(I)$. Extremality rules out a nontrivial anchored convex representation. The fixed buffered face cover of 088f4667ef9ef0b0 uses exactly these maximal minimal faces and identifies $I$ as complete. The chain $m\\le k(I)\\le k(P)$ and equality at its ends give the asserted contact-set conclusion. For a lower-rank base, the inherited saturated affine lattice has the same parity relation on $P$: a half-difference that is integral lies in the direction space, hence in the inherited direction lattice.\n",
+  "source_candidate_ids": [
+    "c3bb7df3660a88b5"
+  ],
+  "source_candidate_sha256": {
+    "c3bb7df3660a88b5": "adc6583e419ae85b6b088b9fc2fb4aca776de48a61122628c71ee729ff532806"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c3bb7df3660a88b5",
+      "locator": "c3bb7df3660a88b5:01 §1, Theorem 1, and §5, saturation"
+    }
+  ],
+  "statement": "Let $I=\\operatorname{conv}(I)\\cap\\mathbb Z^n$ be finite and nonempty, put $Q=\\operatorname{conv}(I)$, and let $F_p$ be the minimal face of $Q$ containing $p\\in I$. Allow $Q$ itself as a face. Let $m$ count the inclusion-maximal members of $\\{F_p:p\\in I\\}$, and let $k(I)$ count the occupied coordinate parities modulo $2$. Then $m\\le k(I)$, with equality if and only if $I$ consists of exactly $k(I)$ vertices of $Q$, one per occupied parity. In equality every maximal minimal face is a singleton and every positive-coefficient convex representation anchored at a base in $I$ uses only that base.\n\nIn particular, in the fixed buffered face cover of 088f4667ef9ef0b0 on a complete base $P$, if the number $m$ of maximal minimal faces of the maximizing set $I$ equals $k(P)$, then $m=k(I)=k(P)$ and each old contact set $I\\cap F_i$ consists of one base.",
+  "subgoal_id": "pk-intake-occupied-parity-saturation-of-maximal-minimal-faces",
+  "title": "Saturation of the occupied-parity bound for maximal minimal faces"
+}

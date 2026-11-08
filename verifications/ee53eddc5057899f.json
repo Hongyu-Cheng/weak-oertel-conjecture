@@ -1,0 +1,51 @@
+{
+  "candidate_id": "81238d80ed62466f",
+  "candidate_sha256": "895995e0536e74dbde6c1b9d2a923747286df66b3393faecc6eef5d979870142",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Any dependence among the columns at strictly partial sites gives a nonzero h preserving the mass and all base moments. A common small epsilon makes both signs of the perturbation feasible. Conversely, any nontrivial midpoint representation preserves each active bound at both endpoints, so the difference supplies the required dependence on partial columns. A non-extreme point always admits a nontrivial midpoint representation by shrinking a segment containing it.",
+    "Compactness gives a linear minimizer. A minimizer with fewest partial coordinates exists since the possible counts are a finite set. If a dependence direction exists, both signs are locally feasible, so its linear cost is zero. A nonzero component and finite box endpoints guarantee a finite positive first hitting time among moving coordinates. No bound coordinate moves, so the resulting equal-cost point contradicts minimality of the partial count.",
+    "The cone uses both signs of a basis for range(A^T) and the indicated signed active coordinate vectors. For a dependent positive support of a conic representation, choose the sign of a nontrivial dependence to have a positive coefficient and subtract the largest multiple preserving nonnegativity. At least one support element disappears. After repeating, the conic representation has independent support. Each independent generator cone is closed because the generator map has a continuous inverse on its finite-dimensional closed span. Their finite union is closed, also if the generator list is empty.",
+    "Separation from this closed convex cone yields h with c·h<0 and h nonnegative on the cone. Orthogonality to the full range gives Ah=0. The signed coordinate generators give h_z>=0 at zero and h_z<=0 at full. Positive capacities keep these sets disjoint and the finite box allows a small positive step even at a boundary allocation. This would improve c, proving cone membership and the signs of rho=c-A^T(lambda,v).",
+    "For every feasible b the exact nonnegative dual gap is the sum of rho_z b_z for rho_z>0 and (-rho_z)(a_z-b_z) for rho_z<0. It vanishes at the minimizer used to construct the pair, so the same pair characterizes every optimizer by the strict sign conditions. Zero reduced-cost sites are subject only to the original feasibility equations and bounds.",
+    "Expansion gives rho_z=||z-(g+v/2)||^2-(lambda+v·g+||v||^2/4). A positive mass m implies a positive optimal coordinate, so some rho_z<=0 and the squared radius is nonnegative. Radius zero gives an empty strict interior and a singleton sphere. For m=0 the allocation is zero and the ball claim is not invoked. For empty P the feasible case m=0 has rank and objective zero. At full total mass every coordinate is saturated, consistently with the rank bound and sign rule.",
+    "The rank bound applies to partial sites of extreme allocations, not to positive sites in general. Arbitrarily many distinct sites on a line with capacities one are all full if the mass is their count and the prescribed mean is their arithmetic mean, while the augmented columns have rank two. The feasibility constraints specify only base moments.",
+    "Verified archived source candidate 773c78a48aafd464 against SHA-256 519e5f501939d38986eaaa79cccfa2f191c8043c5d43696086c442eec9ea23fd at base 694b9a0. Section 3 contains (3)–(4), the linear optimum and fractional rank bounds, and the dual bound. The frozen proof spells out both directions of the vertex criterion and proves dual attainment directly by separation."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T06:37:48.737182+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its stated normal form assumes positive-volume lattice-convex mixed-body support, target mass and integral mean, and a circuit-generic positive-definite quadratic. Its proof (20)–(26) already derives complementary slackness for every optimizer using one dual pair, and those proof steps apply to this general box LP as well. Use tau=lambda+v·g and eliminate s_z as max(0,lambda+v·z-c_z) to recover the reduced-cost value formula. Circuit genericity enters at (27) to bound the entire boundary and obtain uniqueness. The new statement isolates the arbitrary-cost, arbitrary-real-data rule with no genericity and includes a vertex characterization.",
+      "fact_id": "00da31d22f77fad2"
+    },
+    {
+      "comparison": "The accepted statement is a TU mean-fiber probability theorem. Its box-integrality proof already uses the identical bound-hitting perturbation, proves both directions of the vertex criterion, and exhibits a vertex maximizing an affine cost. These steps themselves need no integrality or TU, which enter afterward for the integrality conclusion. It does not give the reduced-cost dual characterization.",
+      "fact_id": "b2660cc23c9dfa80"
+    },
+    {
+      "comparison": "The proof after (6) uses the same two-sided null-direction and bound-hitting argument to sparsify one linear minimizer under row inequalities. The theorem concerns row-margin rounding and does not state the full vertex or common-dual characterization for fixed mass and mean.",
+      "fact_id": "9ec030107c9689ad"
+    },
+    {
+      "comparison": "The proof of (8)–(9) uses the same finite-generator cone closure argument for a per-occurrence component packing LP. Its rank bound concerns the support of each separate barycentric component, and its dual variables are source prices. Neither program fixes a single selection's total mass and mean with box bounds at the source sites.",
+      "fact_id": "793210f8a4be3647"
+    }
+  ],
+  "readability": "In the first paragraph the first binding box constraint is understood to be among the moving partial coordinates. The cone proof uses standard finite-dimensional separation of a point from a closed convex cone.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1ac7e10fa6ce6556c3cb036ac68a90a382def3609d529da9038b1fecd41d4665",
+  "reviewed_statement_sha256": "53b848ff99a43d467500467fd03c4622f74c0d9775fc1891eefab3d37ce10b2d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:34:04+00:00",
+  "summary": "The extreme-point characterization and the attained common-multiplier rule hold for arbitrary feasible finite real base data and every linear cost, including degeneracies. The rank bound is guaranteed for extreme optimizers. The ball characterization holds for every quadratic optimizer when m>0.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

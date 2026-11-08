@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary simplex-volume computation; the containing body need not be a simplex and this is not a mixed-depth bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "33c2d990a116bf5c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:24:15.610513+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-simplex-barycentric-truncation",
+  "kind": "lemma",
+  "proof": "The imposed ceilings give the containment directly. Use inclusion-exclusion on the $r$ strict violations. For a specified $j$ of them, subtract $1/N$ from those coordinates; the translated barycentric simplex has total remaining mass $1-j/N$ and hence relative $d$-volume $(1-j/N)^d$. Replacing strict inequalities by weak ones affects only null hyperplanes. If $j=N$ the volume is zero because $d\\ge1$. This proves the sum formula.\n\nWhen $r<N$, omit one unconstrained coordinate as the dependent coordinate. For each $x\\in[0,1/N]^r$, the $k-1$ independent unconstrained coordinates fill a coordinate simplex of volume $(1-\\sum_i x_i)^{k-1}/(k-1)!$. The whole box is allowed since $r/N<1$, and division by the coordinate volume $1/d!$ of $B$ gives the integral; the affine Jacobian cancels. Taking all constrained coordinates strictly between zero and $1/N$ and distributing the remaining positive mass over the unconstrained coordinates gives an interior point. Each constrained coordinate reaches $1/N$ by putting the remaining mass in an unconstrained coordinate. Each unconstrained coordinate reaches one at its vertex. Finally, for $r=N$ the sum-one condition forces all coordinates equal to $1/N$.\n",
+  "source_candidate_ids": [
+    "3ebb848426a73808"
+  ],
+  "source_candidate_sha256": {
+    "3ebb848426a73808": "eb85afa1f817d1f39fc1797f4b56077267a529d053eaa8e8a25c4d2299d768b5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3ebb848426a73808",
+      "locator": "3ebb848426a73808:01 §1, (2)–(3)"
+    }
+  ],
+  "statement": "Let $B$ be a $d$-simplex with $d\\ge1$, $N=d+1$, and barycentric coordinates $\\lambda_i$. For $0\\le r\\le N$, the largest subset of $B$ satisfying the $r$ specified bounds $\\lambda_i\\le1/N$ is $P_{N,r}=B\\cap\\bigcap_{i=1}^r\\{\\lambda_i\\le1/N\\}$, with\n$$\n \\frac{|P_{N,r}|}{|B|}=\\sum_{j=0}^r(-1)^j\\binom{r}{j}(1-j/N)^d.\n$$\nIf $k=N-r\\ge1$, this is a full-dimensional convex body with exactly $k$ coordinates whose supremum strictly exceeds $1/N$, and\n$$\n \\frac{|P_{N,r}|}{|B|}\n =\\frac{d!}{(k-1)!}\\int_{[0,1/N]^r}\\!\\left(1-\\sum_{i=1}^r x_i\\right)^{k-1}\\,dx .\n$$\nThe empty-coordinate integral has its usual zero-dimensional convention. For $r=N$ the feasible set is just the centroid.",
+  "subgoal_id": "pk-intake-pk-w34-simplex-barycentric-truncation",
+  "title": "Exact maximum volume under fixed barycentric coordinate ceilings"
+}

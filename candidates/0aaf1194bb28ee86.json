@@ -1,0 +1,28 @@
+{
+  "advances": "Finite dual over cap weights for a generally discontinuous step cost, with approximation at an optimizer of the original closed-cap objective.",
+  "author": "PK-research-agent",
+  "candidate_id": "0aaf1194bb28ee86",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.934488+00:00",
+  "depends_on": [
+    "a16dfa31498230d5"
+  ],
+  "draft_key": "median-pair-finite-cap-dual-complementarity",
+  "kind": "theorem",
+  "proof": "The feasible coupling space is weakly compact and convex, and each closed-cap mass is affine and upper semicontinuous. Hence any finite minimum attains its maximum. If the closed constraints $\\int\\mathbf1_H\\circ T\\,d\\sigma\\ge v_y+\\varepsilon$ for caps through $y$ were feasible for every finite subfamily, their finite intersection property on the compact coupling set would give one feasible coupling for the whole family. This contradicts the definition of $v_y$. An infeasible finite family has optimum strictly below the threshold by attainment, and using only its constraints cannot decrease the optimum.\n\nFor the finite list consider the set $B\\subset\\mathbb R^m$ of vectors whose $i$th coordinate is at most $\\int c_i\\,d\\sigma$ for some coupling $\\sigma$, simultaneously for all $i$. It is convex by affinity and closed by weak compactness and upper semicontinuity in every coordinate. It is downward closed, and the largest point of the form $(t,\\ldots,t)$ it contains is $(v_F,\\ldots,v_F)$. A supporting hyperplane there has a nonzero outward vector with nonnegative coordinates by downward closure. Normalize this vector to have sum one, obtaining $\\lambda$. The support bound is $\\sum_i\\lambda_i\\int c_i\\,d\\sigma\\le v_F$ for all $\\sigma$. Conversely any nonnegative weights of sum one give a weighted average at least the least of the cap masses, so their optimized weighted cost is at least $v_F$. This proves the attained dual identity, with the weighted maximum attained by upper semicontinuity. At any finite primal optimizer, each cap mass is at least $v_F$, and the weighted average equals $v_F$ for any minimizing weights. This gives exact activity at positive weights and weighted transport optimality.\n\nAt $y_*$, the fixed-center value is $V$. Each of its caps has mass at least $V$ under $\\sigma_*$. The selected weighted cost at $\\sigma_*$ is therefore between $V$ and the optimal weighted value $v_F<V+\\varepsilon$. The two stated inequalities follow.\n",
+  "source_candidate_ids": [
+    "641c5559a440bf48"
+  ],
+  "source_candidate_sha256": {
+    "641c5559a440bf48": "5448729b0e8cd524066515f2ecb277789107753008b36a5a8bd35fbbc8d0a046"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "641c5559a440bf48",
+      "locator": "641c5559a440bf48:03 §§2–3, (3)–(6), finite constraints, finite dual, and approximate activity"
+    }
+  ],
+  "statement": "In the median-pair depth problem in continuous dimension $d\\ge1$, fix a median-fiber mark $y$. Let $v_y=\\max_\\sigma f_y(\\sigma)$ over the prescribed probability couplings and let $v_F=\\max_\\sigma\\min_i\\int c_i\\,d\\sigma$ for a nonempty finite list of closed through-$y$ caps $H_i$, with $c_i=\\mathbf1_{H_i}\\circ T$. For every $\\varepsilon>0$ some list satisfies $v_y\\le v_F<v_y+\\varepsilon$. For every finite list,\n$$\nv_F=\\min_{\\lambda_i\\ge0,\\,\\sum_i\\lambda_i=1}\\ \\max_\\sigma\\int c_\\lambda\\,d\\sigma,\n\\qquad c_\\lambda=\\sum_i\\lambda_i c_i.\n$$\nBoth optima and a finite primal optimum are attained. For any minimizing $\\lambda$, every finite primal optimizer maximizes the weighted cost and satisfies $\\int c_i\\,d\\sigma_F=v_F$ whenever $\\lambda_i>0$. At a joint optimizer $(\\sigma_*,y_*)$ of value $V$, choose an approximating list at $y_*$. Its minimizing weights satisfy\n$$\n0\\le\\max_\\sigma\\int c_\\lambda\\,d\\sigma-\\int c_\\lambda\\,d\\sigma_*<\\varepsilon,\n\\qquad\n0\\le\\sum_i\\lambda_i\\bigl(\\nu_{\\sigma_*}(H_i)-V\\bigr)<\\varepsilon.\n$$",
+  "subgoal_id": "pk-intake-median-pair-finite-cap-dual-complementarity",
+  "title": "Finite cap duality and approximate complementarity for median targets"
+}

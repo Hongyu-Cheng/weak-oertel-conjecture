@@ -1,0 +1,28 @@
+{
+  "advances": "The measured cap is the continuous projection of the whole real cap. Integer membership uses the explicit endpoint-mean interval.",
+  "author": "PK-research-agent",
+  "candidate_id": "a788b69cf415be71",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:14:16.433039+00:00",
+  "depends_on": [
+    "336f6bd4ee1c4a8a"
+  ],
+  "draft_key": "ordinary-endpoint-mean-interval-shadow-center",
+  "kind": "theorem",
+  "proof": "By convexity of $C$, $a$ is convex and $b$ concave. Compactness makes $a$ lower semicontinuous and $b$ upper semicontinuous: converging subsequences of endpoint points stay in $C$, so limits of lower endpoints are at least the limiting fiber's minimum, and limits of upper endpoints at most its maximum. They are bounded because $C$ is compact. Jensen gives $a(g)\\le\\bar a\\le\\bar b\\le b(g)$ and proves membership.\n\nTranslate a containing halfspace inward to its parallel position through $(t_0,g)$, with margin $\\alpha(t-t_0)+u\\cdot(x-g)$. If $\\alpha>0$, maximizing over the line section at $x$ selects $b(x)$, and the projected condition is $-b(x)-(u/\\alpha)\\cdot(x-g)\\le-t_0$. Its left side is convex lower semicontinuous and has mean $-\\bar b\\le-t_0$. If $\\alpha<0$, the maximizing endpoint is $a(x)$ and the condition is $a(x)+(u/\\alpha)\\cdot(x-g)\\le t_0$. The mean of the convex lower semicontinuous left side is $\\bar a\\le t_0$. If $\\alpha=0$, apply the same mean-sublevel theorem to the affine function $-u\\cdot(x-g)$ at zero. In all cases the closed projected cap contains the corresponding mean sublevel, so the ordinary convex-function mean-sublevel result gives the bound.\n\nFubini gives $\\bar b-\\bar a=|C|_{d+1}/|K|$. An interval of length at least one contains $\\lceil\\bar a\\rceil$. In the example the integrals give $3/20,17/20$, substitution of $t=0$ or $1$ gives the stated two fibers, and the fiber in the $t$ direction at $g=1/2$ is $[3/20,17/20]$.\n",
+  "source_candidate_ids": [
+    "206ce63695a66fe5"
+  ],
+  "source_candidate_sha256": {
+    "206ce63695a66fe5": "3c27e7b1055209d3b9f39ab0b4b53430d3ba2933aabcae1ddbc75d726eb63de2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "206ce63695a66fe5",
+      "locator": "206ce63695a66fe5:02 §§2–3, (2)–(3), a common endpoint-shadow center and exact lattice membership"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R_t\\times\\mathbb R_x^d$ be a convex body, $d\\ge1$, with ordinary projection $K$ onto $x$ and line sections $[a(x),b(x)]$. Let $g$ be the centroid of $K$ and let $\\bar a,\\bar b$ be the uniform means of the endpoint functions on $K$. For every $t_0\\in[\\bar a,\\bar b]$, the point $(t_0,g)$ belongs to $C$ and every closed ambient halfspace $H$ containing it has $|\\pi_x(C\\cap H)|\\ge\\Gamma_d|K|$ for $\\Gamma_d=(d/(d+1))^d$.\n\nAny integer in $[\\bar a,\\bar b]$ gives an actual mixed-integer point with that property. In particular, $|C|_{d+1}/|K|\\ge1$ suffices. The interval can miss all integers even when the original mixed set has positive mass. In the planar body $0\\le x\\le1$, $x/2-1/10\\le t\\le11/10-x/2$, the endpoint-mean interval is $[3/20,17/20]$, the fibers at $t=0,1$ both equal $[0,1/5]$, and the line at $g=1/2$ has no integer $t$.",
+  "subgoal_id": "pk-intake-ordinary-endpoint-mean-interval-shadow-center",
+  "title": "A shared interval of centers for ordinary projected caps"
+}

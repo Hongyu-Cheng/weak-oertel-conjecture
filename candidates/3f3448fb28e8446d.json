@@ -1,0 +1,30 @@
+{
+  "advances": "An exact increase of the finite source's relative Helly number under an additional integer-height filter. The coarse support has more than one dependence component.",
+  "author": "PK-research-agent",
+  "candidate_id": "3f3448fb28e8446d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:35:06.878057+00:00",
+  "depends_on": [
+    "bc5a8b26a83fc327",
+    "3d5f56b513c21fc4",
+    "bee3cc8e50a0dcea"
+  ],
+  "draft_key": "ten-point-diamond-filter-exact-relative-helly-increase",
+  "kind": "counterexample",
+  "proof": "Apply integral-jensen-graph-helly-nine to its original eleven-site base and ten-site integral graph. The point $p_9$ is outside $\\operatorname{conv}(W)$ by the separating functional $b+c$ in the original coordinates $(a,b,c)$. The two disjoint midpoint pairs $p_2=(p_0+p_6)/2=(p_1+p_3)/2$ put $p_2$ in $\\operatorname{conv}(W)$. These are the only sites of the original base outside $W$. The predecessor's exposing normals make every member of $W$ a vertex, and restriction preserves every anchored representation. The face $b=0$ consists of the diamond on $p_0,p_1,p_3,p_6$ in the hull, with $p_2$ at its center. The only excluded height in $P'$ is $g_2=1/2$. Hence $T'=\\widehat W$, and the predecessor's full-dimensional empty lattice hull and nine deletion hulls apply to this very set. Each eight of those hulls meet $T'$ and all nine miss it. The upper bound $h(T')\\le9$ follows from its nine sites by choosing one excluding set per site in any infeasible family.\n\nFor the coarse base use the dependence decomposition of 3d5f56b513c21fc4. Its only nontrivial minimal-face hyperedge is the set $D=\\{p_0,p_1,p_2,p_3,p_6\\}$, because all the other sites are vertices. Thus $h(P')=h(D)+5$. The finite-set empty-vertex lemma in the proof of bee3cc8e50a0dcea gives $h(D)\\le3$. The four corners have the fifth point in their hull, while any four-point subset with the center contains an opposite pair of corners and therefore is not in convex position. The full five-point set also fails convex position. Three noncollinear corners give three deletion segments with pairwise nonempty intersection and empty triple intersection, so $h(D)=3$. The same component theorem on the graph, where all nine sites are vertices, makes each retained corner a singleton. This gives the stated component contributions.\n",
+  "source_candidate_ids": [
+    "a2bca99efffd5fb9"
+  ],
+  "source_candidate_sha256": {
+    "a2bca99efffd5fb9": "830538c5620e0deb3d6787b5773fc520621f07eaadcb0e65cc9be5e4f2e8eaba"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a2bca99efffd5fb9",
+      "locator": "a2bca99efffd5fb9:01 §§1–2, (1)–(4), exact support restriction, Helly numbers and component change."
+    }
+  ],
+  "statement": "Use the indexed base points\n$$\n\\begin{array}{c|rrrrrrrrrrr}\ni&0&1&2&3&4&5&6&7&8&9&10\\\\ \\hline\np_i&(0,0,1)&(1,0,0)&(1,0,1)&(1,0,2)&(1,1,0)&(1,1,1)&(2,0,1)&(2,1,0)&(2,1,1)&(2,1,2)&(2,2,0)\n\\end{array}\n$$\nand heights $g_0=g_1=1$, $g_2=1/2$, and $g_i=0$ otherwise. Write $\\widehat p_i=(p_i,g_i)$, $I=\\{0,1,3,4,5,6,7,8,10\\}$, $W=\\{p_i:i\\in I\\}$, and $\\widehat W=\\{\\widehat p_i:i\\in I\\}$.\n\nThe complete three-dimensional lattice base $P'=\\operatorname{conv}(W)\\cap\\mathbb Z^3$ equals $W\\cup\\{p_2\\}$. Its only nonvertex sampled site is $p_2$, in the relative interior of the diamond face $\\operatorname{conv}\\{p_0,p_1,p_3,p_6\\}$. The restricted height preserves all convex representations anchored in $P'$. Its integral graph $T'=\\widehat W$ is a complete full-dimensional lattice set in $\\mathbb Z^4$. The relative Helly numbers of convex traces satisfy $h(P')=8$ and $h(T')=9$. The dependence components of $P'$ are the five-point diamond of affine rank two and five singletons. Under the integrality filter the diamond leaves four singleton components, with total Helly contribution four in place of three.",
+  "subgoal_id": "pk-intake-ten-point-diamond-filter-exact-relative-helly-increase",
+  "title": "The ten-point diamond filter increases the relative Helly number from eight to nine"
+}

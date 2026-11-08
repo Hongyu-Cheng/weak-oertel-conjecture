@@ -1,0 +1,30 @@
+{
+  "advances": "A counterexample to automatic outward hull-bump localization from smooth strictly convex old fibers and ambient exposure alone.",
+  "author": "PK-research-agent",
+  "candidate_id": "4ee3181ef8f1a39c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:25:23.537226+00:00",
+  "depends_on": [],
+  "draft_key": "ball-cylinder-hull-bump",
+  "kind": "counterexample",
+  "proof": "The linear functional $x_1-z_1-\\sum_{j=2}^n z_j$ exposes $w$. If any binary base coordinate equals one, every point in a convex representation of that base must have the same coordinate, so the added point cannot occur and the original fiber stays unchanged. At the all-zero binary layer the hull is the hull of the endpoint fibers $K(t)$ and $B_d$ at $0$ and $2$, since their interpolations contain the original product there. Grouping the convex combinations by endpoint gives the section at first coordinate $z_1$ as $(1-z_1/2)K(t)+(z_1/2)B_d$. This proves the three exact integer fibers. The original midpoint compatibility row is active, with $(B_d+B_d)/2=B_d$.\n\nWith $x=\\Delta_0/V>0$, the Brunn–Minkowski inequality gives\n$$\n1+\\Delta_1/V\\ \\ge\\\n\\left(\\frac{(1+x)^{1/d}+1}{2}\\right)^d\n\\ \\ge\\ 1+\\frac{x}{2^d}.\n$$\nFor the second inequality, expand the power. Its highest-power term contributes the increase $x/2^d$ from its value at $x=0$, and every other term is at least its value at zero. Convexity and $B_d\\subset K(t)$ give $(K(t)+B_d)/2\\subset K(t)$, which yields $\\Delta_1\\le\\Delta_0$. There is no other added mixed mass, so the portion at first coordinate one is $\\Delta_1/(\\Delta_0+\\Delta_1)\\ge1/(2^d+1)$. This portion remains at least unit distance from $w$, which rules out weak convergence to the point mass. For the base-zero addition, a unit normal $\\nu$ strictly separating $y\\in K(t)\\setminus B_d$ from the ball satisfies $\\nu\\cdot y>1$ and $(1+t)\\nu\\cdot e_1>1$. Since $\\lVert y\\rVert\\le1+t$, these inequalities imply both $\\lVert y-\\nu\\rVert\\to0$ and $\\lVert \\nu-e_1\\rVert\\to0$ uniformly as $t\\downarrow0$.\n\nIn the plane put $a=1+t$, $\\theta=\\arccos(1/a)$, and $s=\\sqrt{a^2-1}=\\tan\\theta$. The two tangent segments have length $s$ and replace a circular arc of angle $2\\theta$. Their chord has half-length $s/a$ and lies at coordinate $1/a$, so the tangent triangle over the chord has area $s^3/a^2$. The replaced disk cap has area $\\theta-s/a^2$. The difference is $s-\\theta=\\Delta_0$, and the perimeter is $2\\pi+2\\Delta_0$. The planar Steiner formula for an outer parallel body of radius one gives $|K(t)+B_2|=|K(t)|+\\operatorname{per}(K(t))+\\pi$. The formula here also follows by partitioning the outer layer by nearest boundary point into strips along straight pieces, annular sectors along the circular arc, and circular sectors at corners. The boundary turning angles sum to $2\\pi$, giving the term $\\pi$. Scaling by $1/2$ gives $\\Delta_1=3\\Delta_0/4$, so the first-coordinate-one fiber accounts for exactly $3/7$ of the added mixed mass.\n\nThe original total is $3\\cdot2^{n-1}V$, so its value divided by $2^n$ is $3V/2$. The new total only increases, while every new fiber mass is at most $V+\\Delta_0<5V/4$ under the stated small-bump condition.\n",
+  "source_candidate_ids": [
+    "97eab0f821e54041"
+  ],
+  "source_candidate_sha256": {
+    "97eab0f821e54041": "6fd053c8eaa203602363a7b90aa8383c0b8298506059ea381ff71a80d405853e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "97eab0f821e54041",
+      "locator": "§5–§5.2, (14)–(17), exact actual nonlocal bump obstruction"
+    },
+    {
+      "candidate_id": "97eab0f821e54041",
+      "locator": "§5.1, (18)–(19), planar exact nonlocal fraction"
+    }
+  ],
+  "statement": "For every pair of integers $n\\ge1$, $d\\ge2$, let $C=[0,2]\\times[0,1]^{n-1}\\times B_d$, where $B_d$ is the unit Euclidean ball and $V=|B_d|$. Set $w=(0,e_1)$ and $w_t=(0,(1+t)e_1)$, with $0$ the all-zero base and $t>0$, and let $C_t=\\operatorname{conv}(C\\cup\\{w_t\\})$. All original integer fibers are smooth strictly convex balls and $w$ is exposed in $C$. In the all-zero binary layer the actual new fibers at first coordinates $0,1,2$ are $K(t)$, $(K(t)+B_d)/2$, and $B_d$, where $K(t)=\\operatorname{conv}(B_d\\cup\\{(1+t)e_1\\})$. All other integer fibers are unchanged. Write $\\Delta_0=|K(t)|-V>0$ and $\\Delta_1=|(K(t)+B_d)/2|-V$. Then $2^{-d}\\Delta_0\\le\\Delta_1\\le\\Delta_0$. Thus at least $1/(2^d+1)$ of all added mixed mass lies at distance at least one from $w$, although the entire base-zero addition approaches $w$ as $t\\downarrow0$. The normalized added mixed measures cannot converge weakly to the unit point mass at $w$. In dimension $d=2$ the proportion of all added mass in the first-coordinate-one fiber is $\\Delta_1/(\\Delta_0+\\Delta_1)=3/7$ for every $t>0$. The original family and, when $\\Delta_0<V/4$, the perturbed family have every fiber mass strictly less than their respective total mixed mass divided by $2^n$.",
+  "subgoal_id": "pk-intake-ball-cylinder-hull-bump",
+  "title": "A smooth ball cylinder with nonlocal mass under an actual hull bump"
+}

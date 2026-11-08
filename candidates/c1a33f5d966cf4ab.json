@@ -1,0 +1,28 @@
+{
+  "advances": "Sharp jointly attainable bound in the central drift range. The separate endpoint bound is valid globally, without a joint attainment assertion outside the central range.",
+  "author": "PK-research-agent",
+  "candidate_id": "c1a33f5d966cf4ab",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.746575+00:00",
+  "depends_on": [
+    "4b006d72b238bcc6"
+  ],
+  "draft_key": "pk-w36-shape-simplex-central-drift-optimization",
+  "kind": "theorem",
+  "proof": "Apply the scalar envelope to each threshold sum to get the upper bound. Its branch point is $h_*=m(1-\\kappa)=1-\\eta$. Thus the specified range of $B$ is exactly the condition that both sums are on the Jensen branch, where each constant vector is optimal separately. The two constant vectors satisfy the paired identity, and setting $\\delta=0,\\beta_i=B/m$ realizes them in the same actual convex body. This gives the joint maximum.\n\nThe weighted mean of the two constant arguments is $1/m$. They are nonnegative in the indicated range since $h_*=m(1-\\kappa)>0$. When $B\\ne0$ they are distinct, and the interval between them has nonempty interior inside $(0,1)$ since it contains $1/m$ strictly between its endpoints. The nonnegative-domain concavity and strict concavity on that subinterval give strict Jensen even if an argument is at or above one. If $d=1$, $\\eta=0$, so only $B=0$ is in the range and the formula remains valid.\n",
+  "source_candidate_ids": [
+    "d9b60e76f58eda77"
+  ],
+  "source_candidate_sha256": {
+    "d9b60e76f58eda77": "e935e0803b54dcffe81d8842a3405ffe10c513cfba74a4291409621dc1e3e5c2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d9b60e76f58eda77",
+      "locator": "d9b60e76f58eda77:04 §4, (14)–(16), attained central-range optimization"
+    }
+  ],
+  "statement": "For $d\\ge1$, let $m=d+1$, $r=d/m$, $\\kappa=(1-r^d)^{1/d}$, $\\psi(q)=\\min\\{1,\\max\\{0,1-q\\}\\}$ and $\\phi(q)=(1-\\psi(q)^d)^{1/d}$.\n\nLet $T\\subset\\mathbb R^d$ be a full-dimensional simplex of centroid zero and volume $V>0$, with barycentric coordinates $\\lambda_i=1/m+\\ell_i$ for $1\\le i\\le m$. The convex hull of the lifts of $A=aT+\\delta$ at $-1$ and $D=bT-\\delta$ at $1$, with $a,b>0$, has actual midpoint fiber $K=((a+b)/2)T$. Take ambient halfspaces $H_i=\\{(z,x):\\ell_i(x)+\\beta_i z\\ge0\\}$, with $B=\\sum_i\\beta_i$. Their endpoint barycentric cutoffs on the reference $T$ are\n$$\nq_i^A=1/m-\\ell_i(\\delta)/a+\\beta_i/a,\\qquad\nq_i^D=1/m+\\ell_i(\\delta)/b-\\beta_i/b.\n$$\nThey satisfy\n$$\n\\sum_iq_i^A=1+B/a,\\qquad\\sum_iq_i^D=1-B/b,\\qquad\na q_i^A+b q_i^D=(a+b)/m.\n$$\nThe endpoint capture fractions are $\\psi(q)^d$. The actual volume roots of the residuals are $aV^{1/d}\\phi(q_i^A)$ and $bV^{1/d}\\phi(q_i^D)$. The closed residual is empty for $q<0$ and tangent for $q=0$, while the capture is tangent for $q=1$ and empty for $q>1$. For $0<q<1$ both have positive volume.\n\nDefine the normalized residual-root overshoots\n$$\n\\Delta_i=\\frac{a\\phi(q_i^A)+b\\phi(q_i^D)-\\kappa(a+b)}2,\n\\qquad \\widehat\\Delta_i=V^{1/d}\\Delta_i,\n$$\nwhere $\\widehat\\Delta_i$ is the actual overshoot in volume-root units.\n\nPut $\\eta=m\\kappa-d$ and let $E_d(h)=\\max\\{d,m\\phi(h/m)\\}$. For any real $B$,\n$$\n\\sum_i\\Delta_i\\le\n\\frac{aE_d(1+B/a)+bE_d(1-B/b)-m\\kappa(a+b)}2.\n$$\nFor fixed $a,b,d$ and $-a\\eta\\le B\\le b\\eta$, the exact maximum of $\\sum_i[a\\phi(q_i^A)+b\\phi(q_i^D)]$ over the actual paired vectors is\n$$\nm\\left[a\\phi\\left(\\frac{1+B/a}{m}\\right)\n+b\\phi\\left(\\frac{1-B/b}{m}\\right)\\right].\n$$\nIt is attained with $\\delta=0$ and $\\beta_i=B/m$. It is strictly below $m\\kappa(a+b)$ if $d\\ge2$ and $B\\ne0$. For $d=1$ this central range is $B=0$.",
+  "subgoal_id": "pk-intake-pk-w36-shape-simplex-central-drift-optimization",
+  "title": "Attained central-range simplex circuit-drift optimization"
+}

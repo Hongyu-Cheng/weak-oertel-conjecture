@@ -1,0 +1,29 @@
+{
+  "advances": "Sharp stationary weighted-cap bound restricted to vertex-isolating simplex sections and their complements. Multi-vertex cuts and mixed-integer volumes are not covered.",
+  "author": "PK-research-agent",
+  "candidate_id": "4087bb1651d58261",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.097361+00:00",
+  "depends_on": [
+    "edb8f4e5b0dca345",
+    "efd5942c9039d9fe"
+  ],
+  "draft_key": "simplex-balanced-vertex-sections-either-orientation",
+  "kind": "theorem",
+  "proof": "For $d\\ge2$, apply simplex-vertex-section-balance-formula to list the available sections and their oriented normalized area vectors $f_i u_i$. First suppose all $\\lambda_i\\le1/d$. Assign each selected cap to an available vertex section and orientation and aggregate repeated labels; if one section admits two vertex labels, any valid assignment works. For each label cancel equal amounts of its two orientations. These paired weights have mean fraction $1/2$ because a cap and its complement partition $T$ up to a volume-null section. The remaining signed coefficients, when multiplied by $f_i$, are in the one-dimensional relation space spanned by $t_i=1-d\\lambda_i$, so all nonzero surviving orientations have the same sign. If they have positive total weight, their normalized distribution is the unique vertex-side balanced distribution or its complete reversal. By probability-complement-product-over-pair-sum with $m=d+1$ its vertex-side mean lies in $[\\gamma_d,1/2]$ with the stated lower equality; the reverse mean is $1-F_d$. The canceled part and the surviving part both have mean at least $\\gamma_d$.\n\nIf $\\lambda_k>1/d$ is the only such coordinate, exactly the label $k$ meets the edge-intercept criterion. Its two unit normals have equal section area, and balance forces their total weights equal. If two coordinates exceed the cutoff, every label fails the criterion. In dimension one the area is counting measure at the section point; balance likewise makes the total weights of the two orientations equal.\n",
+  "source_candidate_ids": [
+    "1f45640ee74685ef"
+  ],
+  "source_candidate_sha256": {
+    "1f45640ee74685ef": "ad8b383c0552630e32544b054d83735bc9a9e5ced6ea2e3d2945850a7ec9418a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1f45640ee74685ef",
+      "locator": "§2, (7) and §3, all balanced orientations"
+    }
+  ],
+  "statement": "Let $T$ be a $d$-simplex, $d\\ge2$, and $y$ an interior point with barycentrics $\\lambda$. Choose any finite list, with repetitions allowed, of either orientation of vertex-isolating sections whose actual area centroid is $y$. If nonnegative probability weights balance the inward unit normals multiplied by section area, the mean cap fraction is at least $\\gamma_d=(d/(d+1))^d$. When all $\\lambda_i\\le1/d$, the pure vertex-side balanced mean $F_d$ lies in $[\\gamma_d,1/2]$ with lower equality exactly at uniform $\\lambda$; its reversal has mean $1-F_d$. If exactly one $\\lambda_k>1/d$, only the section at $k$ is available and the balanced mean is $1/2$. If at least two coordinates exceed $1/d$, no such section exists. In $d=1$ any balanced combination of the two interval caps through any point of the interval has mean $1/2=\\gamma_1$.",
+  "subgoal_id": "pk-intake-simplex-balanced-vertex-sections-either-orientation",
+  "title": "Sharp balanced mean for simplex vertex sections in either orientation"
+}

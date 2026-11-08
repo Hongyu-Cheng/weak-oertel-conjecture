@@ -1,0 +1,28 @@
+{
+  "advances": "A limitation on the fixed isolated-cover mechanism. An upper budget alone does not certify a matching lower bound for true mixed depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "6788e766489cbd9f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:54:35.357981+00:00",
+  "depends_on": [
+    "03bc771bddd39a8a"
+  ],
+  "draft_key": "w31-isolated-binary-cover-ceiling",
+  "kind": "lemma",
+  "proof": "Fix a regular fiber $K$ and take an ordinary deepest point of $K$. By 03bc771bddd39a8a in dimension two, every containing closed halfplane has area in $K$ at least $\\gamma_2|K|$. One assigned cap contains this point. Its fiber trace is a halfplane or all of $K$, so its mixed area is at least $\\gamma_2|K|$. Thus $|K|\\le B/\\gamma_2$ separately for all $2^n-2$ regular fibers. The three core caps cover the core mixed source, so that source has mixed area at most $3B$. Add and use $3\\gamma_2=4/3$. The positive area of any covered fiber forces $B>0$, giving the strict inequality. Applying it with $B=\\gamma_2 M/2^n$ gives the stated exclusion.\n",
+  "source_candidate_ids": [
+    "8b96bf0ef6c68bc7"
+  ],
+  "source_candidate_sha256": {
+    "8b96bf0ef6c68bc7": "e4c6135675b3b843e7b584089f85b7a71993a21d1dc31b311c956524b9d05ad8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8b96bf0ef6c68bc7",
+      "locator": "8b96bf0ef6c68bc7:04 §6, (7), isolated-cover mass ceiling"
+    }
+  ],
+  "statement": "Let $n\\ge2$ and let an actual mixed source have $2^n-2$ regular fibers and three core fibers, all positive planar convex bodies. Suppose each regular fiber has its own group of closed caps covering it and missing all other fibers in mixed area. Suppose three more closed caps cover the three core fibers together and miss the regular fibers in mixed area. If every selected cap has mixed area at most $B$, then, for $\\gamma_2=4/9$ and total mixed area $M$,\n$$\nM\\le (2^n-2)B/\\gamma_2+3B=(2^n-2/3)B/\\gamma_2<2^n B/\\gamma_2.\n$$\nIn particular the selected budgets cannot all be at most $\\gamma_2 M/2^n$.",
+  "subgoal_id": "pk-intake-w31-isolated-binary-cover-ceiling",
+  "title": "An isolated binary cap cover has a strict total mass ceiling"
+}

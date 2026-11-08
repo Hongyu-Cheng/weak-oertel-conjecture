@@ -1,0 +1,26 @@
+{
+  "advances": "Finite arithmetic estimates for all nonnegative intercepts and positive spacings, with no geometric hypothesis.",
+  "author": "PK-research-agent",
+  "candidate_id": "092da3dd16fe42c7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:04:54.973661+00:00",
+  "depends_on": [],
+  "draft_key": "arithmetic-linear-quadratic-hinge-sums",
+  "kind": "lemma",
+  "proof": "Write $p/\\ell=N+\\delta$ with $N=\\lfloor p/\\ell\\rfloor$ and $0\\le\\delta<1$. Reversing the finite sum gives\n$$\nS_2(p,\\ell)=\\ell^2\\sum_{j=0}^N(j+\\delta)^2\n=\\ell^2\\left[\\frac{N(N+1)(2N+1)}6+\\delta N(N+1)+(N+1)\\delta^2\\right].\n$$\nSubstitute $N=p/\\ell-\\delta$ and collect the powers of $p/\\ell$ to obtain the identity. It includes integral phases and $p=0$. For $\\delta\\le1/2$ we have $B_3(\\delta)\\ge0$. For $\\delta>1/2$ the two nonnegative factors $\\delta-1/2$ and $1-\\delta$ have sum $1/2$, so $-B_3(\\delta)\\le\\delta/16$. Since $\\ell\\delta\\le p$, the phase term is at most $p\\ell/48$. Adding it to $p\\ell/6$ proves the upper bound.\n\nThe function $x\\mapsto(p-\\ell x)_+$ is convex on $[0,\\infty)$, and the sum of the trapezoids over the unit intervals is $S_1(p,\\ell)-p/2$. Its integral is $p^2/(2\\ell)$ and is at most that trapezoid sum.\n",
+  "source_candidate_ids": [
+    "dd382d5b121a0508"
+  ],
+  "source_candidate_sha256": {
+    "dd382d5b121a0508": "d71a2417456b9d33a5a4ad1d7ff2eb7bfe657265a68fc107e1c561e6dd94650e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "dd382d5b121a0508",
+      "locator": "§2.2, (6)–(7)"
+    }
+  ],
+  "statement": "For $p\\ge0$, $\\ell>0$ and $j\\in\\{1,2\\}$ let $S_j(p,\\ell)=\\sum_{h\\ge0}(p-\\ell h)_+^j$, where the indices are integers. With $\\delta=\\{p/\\ell\\}$ and $B_3(u)=u(u-1/2)(u-1)$,\n$$\nS_2(p,\\ell)=\\frac{p^3}{3\\ell}+\\frac{p^2}{2}+\\frac{p\\ell}{6}-\\frac{\\ell^2}{3}B_3(\\delta)\n\\le \\frac{p^3}{3\\ell}+\\frac{p^2}{2}+\\frac{3p\\ell}{16},\n\\qquad\nS_1(p,\\ell)\\ge\\frac{p^2}{2\\ell}+\\frac p2 .\n$$",
+  "subgoal_id": "pk-intake-arithmetic-linear-quadratic-hinge-sums",
+  "title": "Finite square-hinge identity and linear and quadratic sum bounds"
+}

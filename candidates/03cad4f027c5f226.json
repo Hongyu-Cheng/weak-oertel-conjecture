@@ -1,0 +1,28 @@
+{
+  "advances": "Continuous support choices on a finite anchored base, with no dimension or parity conclusion about weak Oertel depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "03cad4f027c5f226",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:28:33.682268+00:00",
+  "depends_on": [
+    "155691fc3768c06f"
+  ],
+  "draft_key": "pk-w34-rigidity-continuous-forced-contact-slope",
+  "kind": "lemma",
+  "proof": "Write $V$ for the matrix with rows $(z-p)^{\\mathsf T}$ and $c_z(u)=h_z(u)-h_p(u)$. The anchored inclusions are exactly the hypotheses of 155691fc3768c06f, so $F_u$ is nonempty. The projection $P_q(u)$ of a fixed target $q$ onto $F_u$ is $q$ plus the minimum-norm solution of $VB\\ge c(u)-Vq$. The feasible right side is continuous in $u$, and the fixed-matrix proof of 155691fc3768c06f gives continuity of its minimum-norm solution on the entire feasible right-side domain. The variational inequalities for projecting $q$ and $0$ onto the same closed convex set, added together, give $\\lVert P_q(u)-P_0(u)\\rVert^2\\le (P_q(u)-P_0(u))\\cdot q$. Thus $\\lVert P_q(u)\\rVert\\le\\lVert q\\rVert+\\max_u\\lVert P_0(u)\\rVert$.\n\nChoose dense targets $q_0,q_1,\\ldots$, with $q_0=0$, and use the repeated zero vector if $n=0$. Let $A_m$ be the equal-weight average of the projections for $0\\le j\\le m$. Each is feasible, continuous and bounded. Its row slack is an average of nonnegative slacks, so its tight rows are the intersection of the corresponding tight rows for the projected targets. If a row has positive slack at some $A\\in F_u$, then targets tending to $A$ have projections tending to $A$, by nonexpansiveness with $P_A(u)=A$. Thus that row is removed from the intersection at some finite index. This proves the intersection assertion for every $u$.\n\nTo obtain a single exact choice, use weights $\\omega_j$ proportional to $2^{-j-1}/(1+\\lVert q_j\\rVert)$, normalized to have sum one. The projection bound makes $A_*(u)=\\sum_j\\omega_jP_{q_j}(u)$ uniformly convergent. The function is continuous, bounded and feasible, by the closedness of $F_u$ and the feasible normalized partial averages. Every $\\omega_j$ is positive, so the nonnegative slack of any row vanishes precisely when its slack at every projected target vanishes. This gives the asserted exact tight rows.\n\nFor the characterization, a tight anchored representation using $z$ with positive weight averages the feasible nonnegative slacks to zero. This forces the $z$ slack to vanish. Conversely, if row $z$ is always tight, the finite linear program maximizing $(z-p)\\cdot A$ over $VA\\ge c(u)$ has optimum $c_z(u)$. Finite linear-programming duality gives a nonnegative array $t$ with $V^{\\mathsf T}t=-(z-p)$ and $\\sum_w t_w c_w(u)=-c_z(u)$. Adding one to its $z$ entry and dividing by the resulting sum gives a tight anchored representation using $z$ positively. Decompose it into vertices of the bounded polytope of anchored representations. All gaps $h_p(u)-\\sum_w\\lambda_w h_w(u)$ are nonnegative by compatibility. Their zero average forces each vertex used to have zero gap, and at least one retains positive weight at $z$. The converse follows from the same slack argument. The resulting finitely many gap-zero sets are closed by continuity of the supports. A Minkowski sum of supporting-face points for a tight representation lies in $K_p$ by compatibility and has support value $h_p(u)$, giving the face inclusion.\n",
+  "source_candidate_ids": [
+    "4bf40258fc44a4e6"
+  ],
+  "source_candidate_sha256": {
+    "4bf40258fc44a4e6": "cc6aae2a7d849f8fe56017832cda39183f79d485fdffd6294fa2398fdd7c215d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4bf40258fc44a4e6",
+      "locator": "4bf40258fc44a4e6:02 §§3–4, (4)–(8), exact continuous selection and extreme anchored representations"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite and nonempty, $n\\ge0$, let $p\\in P$, and let $K_z\\subset\\mathbb R^d$, $d\\ge1$, be nonempty compact convex sets. Suppose $\\sum_z\\lambda_z K_z\\subseteq K_p$ for every nonnegative array with $\\sum_z\\lambda_z=1$ and $\\sum_z\\lambda_z z=p$. For $u\\in\\mathbb S^{d-1}$ let $F_u=\\{A:(z-p)\\cdot A\\ge h_z(u)-h_p(u)\\ \\forall z\\in P\\}$, where $h_z=h_{K_z}$. Call a row forced at $u$ if it is tight for every $A\\in F_u$. There exists a bounded continuous selection $A_*(u)\\in F_u$ whose tight rows are exactly the forced rows at every $u$. The equal-weight averages of projections onto $F_u$ of successive initial segments of one countable dense target sequence have decreasing tight-row sets with pointwise intersection equal to the forced rows.\n\nA site $z$ is forced at $u$ exactly when some extreme anchored representation $\\lambda$ of $p$ has $\\lambda_z>0$ and $h_p(u)=\\sum_w\\lambda_w h_w(u)$. Thus the forced normal set for $z$ is a finite union of closed tight-support sets. For any such tight representation, $\\sum_w\\lambda_w F_{K_w}(u)\\subseteq F_{K_p}(u)$, where $F_{K_w}(u)$ is the exposed supporting face.",
+  "subgoal_id": "pk-intake-pk-w34-rigidity-continuous-forced-contact-slope",
+  "title": "One continuous anchored slope realizes exactly the forced support contacts"
+}

@@ -1,0 +1,51 @@
+{
+  "candidate_id": "b1737542a85a4328",
+  "candidate_sha256": "632b69e3231eec519d9a9438e3e303cdde5f08d60362b261eb168614d1ec0d1a",
+  "checked_dependency_candidate_sha256": {
+    "9cf77d0f76fb9706": "4d542eb0190db9bd4eebcd797287858fbdb639e3657474e051bbb562b65c39dd"
+  },
+  "checks": [
+    "The formula q_0=sum theta_j a_j q_j/s is exact, so the source threshold is proper. The weighted sum of the endpoint caps lies in the source cap because all use the same actual halfspace.",
+    "Equality of volume roots forces equality in inclusion and ordinary Brunn–Minkowski. A strict positive-weight pair bound would stay strict on adding the other bodies, so the normalized caps are pairwise positive homothetic. Verified the positive-volume equality statement and the weighted inequality in Gardner's equations (3)–(4). [The Brunn–Minkowski inequality](https://sites.stat.washington.edu/jaw/COURSES/520s/523/HO.523.20/Gardner.BullAMS.02.pdf).",
+    "If thresholds differ, apply the pinned nested-truncation result to the lowest and highest, both strictly between the projection endpoints. The lowest cap becomes a cone. If all thresholds agree, the common normalized cap immediately proves set and root equality.",
+    "In the cone case the cap scale is affine in q. Its weighted sum at q_j equals s times the scale at q_0, and the translation is the same weighted center/apex translation. Thus the actual source cap is exactly the weighted cap sum and its volume root has the claimed value.",
+    "Positive volume in each open band proves strict monotonicity of the normalized fractions. The case N=1 falls in equal thresholds. Original §2 (4)–(5) matches."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "9cf77d0f76fb9706",
+      "candidate_sha256": "4d542eb0190db9bd4eebcd797287858fbdb639e3657474e051bbb562b65c39dd",
+      "hypotheses": "Once positive-volume Brunn–Minkowski equality gives homothetic extreme normalized truncations, the thresholds obey m<q_min<q_max<h, so the pinned nested-cone lemma applies.",
+      "review_status": "Independent approval required before admission",
+      "reviewed_proof_sha256": "a482dded9f228094d22b450566bc7b54e01a5c2453d7cdc6b9cd7b094bcd1850",
+      "reviewed_statement_sha256": "e7f7eac1041dc44acae957d984e772a5a736fa98c9b0b967a01fd8a009a33460"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:02:45Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses Brunn–Minkowski equality for optimal retained cap bodies subject to a centroid constraint. It does not characterize ordinary common-halfspace cuts of a homothetic family by their normalized thresholds.",
+      "fact_id": "cec377ec22e9690f"
+    },
+    {
+      "comparison": "Uses raw halfspace depth stationarity on three integer fibers to get translated captures; this one-direction statement assumes whole bodies homothetic and no mixed criticality.",
+      "fact_id": "2965bef6996cdba5"
+    }
+  ],
+  "readability": [],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "131ca8bc8d3a81eaef79fb15fca27f0f60535586e8da10588da4712733575e30",
+  "reviewed_statement_sha256": "e1998da0e906024705a320530ed1993a4c9570d135fb4af1ceaf0ca05cb41abf",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:00:15Z",
+  "summary": "The exact normalized threshold average and the nested-cone lemma give the stated necessary and sufficient classification. Both alternatives give equality of the actual captured sets as well as their volume roots.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

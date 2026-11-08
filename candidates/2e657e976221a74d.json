@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary triangle cap and source-coordinate bounds. The strict incidence is an explicit premise.",
+  "author": "PK-research-agent",
+  "candidate_id": "2e657e976221a74d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:49:19.104819+00:00",
+  "depends_on": [],
+  "draft_key": "strict-triangle-cap-floor",
+  "kind": "lemma",
+  "proof": "Write $\\alpha_i$ for the barycentric coordinate of $y$ at vertex $P_i$. For the cap at $P_i$, let $r,u\\in(0,1)$ be the intercept fractions along the edges from $P_i$ to $P_j,P_k$. Since the cut has edge intercepts at those fractions, the through-source condition is $\\alpha_j/r+\\alpha_k/u=1$ and $q_i=ru$. In particular $q_i\\ge4\\alpha_j\\alpha_k$ by arithmetic–geometric mean.\n\nIf $\\alpha_j\\ge1/2$, the same formula gives $q_i=\\alpha_k r^2/(r-\\alpha_j)$ for $\\alpha_j<r<1$. The derivative of $r^2/(r-\\alpha_j)$ is $r(r-2\\alpha_j)/(r-\\alpha_j)^2\\le0$, so $q_i\\ge\\alpha_k/(1-\\alpha_j)$. Applying this to the two caps at vertices other than $P_j$ makes their fractions sum to at least one, contrary to $q_i\\le128/279<1/2$. Thus $z=\\max_i\\alpha_i<1/2$.\n\nOf the other two coordinates, at least one is at least $(1-z)/2$. Using the cap whose excluded vertices carry those two specified coordinates gives $2z(1-z)\\le128/279$. The function $2z(1-z)$ is increasing up to $1/2$ and has value $45/98>128/279$ at $5/14$. Thus $z<5/14$. For distinct $j,k$, $\\alpha_j+\\alpha_k>9/14$ and $(5/14-\\alpha_j)(5/14-\\alpha_k)>0$. Expanding the product gives $\\alpha_j\\alpha_k>5/49$, so $q_i\\ge4\\alpha_j\\alpha_k>20/49$ for each $i$.\n",
+  "source_candidate_ids": [
+    "919c51f1d263878e"
+  ],
+  "source_candidate_sha256": {
+    "919c51f1d263878e": "6b0ffb2986d69a7dc995935fa4d156875e4241266b21e9cd2608e847cb0d9bbf"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "919c51f1d263878e",
+      "locator": "§6, barycentric cap lower bound"
+    }
+  ],
+  "statement": "Let $K$ be a nondegenerate planar triangle, with an interior point $y$ and three caps cut by lines through $y$ that each strictly capture a different vertex and strictly exclude the other two. Let $q_i$ be the ordinary area fractions of the caps, indexed by the captured vertices. If $q_i\\le128/279$ for all $i$, then each barycentric coordinate of $y$ is less than $5/14$, and each $q_i>20/49$.",
+  "subgoal_id": "pk-intake-strict-triangle-cap-floor",
+  "title": "A lower cap floor under the strict triangle cap ceiling"
+}

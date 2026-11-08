@@ -1,0 +1,66 @@
+{
+  "candidate_id": "7d1ee06fa4119930",
+  "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+  "checked_dependency_candidate_sha256": {
+    "2fb8b0785692a5b4": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+    "4b408a905c45b287": "422e4649538c6870faa4eb09f695b2853979e12e5cc4718152e28a24472382dc"
+  },
+  "checks": [
+    "Each realizing body contains the core triangle of area D_i/2. The replacement theorem applies to an arbitrary realizing body, because its ray and interior assumptions coincide and a support may be chosen at each boundary point. Its clipping along a pair of rays adds only the origin or the fixed endpoints as possible vertices, so the clipped polygon is a core triangle or has one extra vertex with strictly positive sector coordinates.",
+    "Expanding the oriented turn det(P_i−V_{i−1},V_i−P_i) gives u_{i−1}(1−u_i)D_{i−1}+v_i(1−v_{i−1})D_i−u_{i−1}v_iE_i. Dividing by the positive product and substituting 1−u_i=v_i−a_i and 1−v_{i−1}=u_{i−1}−a_{i−1} yields exactly (1). A redundant midpoint in a core sector lies on its outer edge and leaves this turn condition valid.",
+    "For the converse, P_{i−1} has coefficients E_i/D_i and −D_{i−1}/D_i in the next sector basis. Hence the previous-sector coordinate of P_{i−1} is −D_i y/D_{i−1}, and its coordinate of P_i is x+E_i y/D_{i−1}. The form for the edge ending at P_i gives the stated y<0 formula. The new edge starting at P_i gives the y>0 formula. They are active near the shared ray, strictly for a positive excess and by equality of the two forms for a core sector.",
+    "The transverse slope difference is the slack of (1) divided by D_{i−1}; either crossing direction multiplies this by the absolute transverse speed. Along lines through zero positive homogeneity and positivity give ordered slopes. The gauges thus join convexly, and their finite union sublevel preserves all endpoints and areas and includes an interior neighborhood of zero. Zero jump permits collinear edges.",
+    "After division by D_{i−1}D_i the incident terms are r_{i−1}+s_i. On positive edges, the harmonic value is a_i/(D_i t_i)=1/D_i−1/(2A_i), so reconstruction by the reciprocal charges gives u_i+v_i=t_i; on zero edges use (1/2,1/2), with no division by zero. The block vector formulas for the two insertion coordinates have the correct orientation.",
+    "Independently checked the four unit cardinal rays: D_i=1, E_i=0, b_i=2. Equal areas A_i=1 give h_i=1/2, a singular cycle Laplacian and the square, with insertion coordinates (1,1). Equal areas A_i=3/2 give form value −8/3 on the all-ones vector, so they are impossible. Inserting (1/2,1/2) between the first two rays gives κ=0 there; all core areas give the diamond, but increasing an adjacent core area from 1/4 to 3/8 makes that diagonal −2/3. Inserting (1/4,1/4) instead gives κ=−1/2 and fails even with all core areas.",
+    "The three raw source digests match. In 2e26c63010f03ffc, §§1–3 and §7 supply the identical data, matrix, finite charges and reconstruction. In be9098c627b40217, §§1–4 give exact ordinary replacement and positive insertion coordinates. In 697de064a9368ba1, §§1–3 and §5 give the determinant, joined gauges and harmonic reparametrization at the same hypotheses."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "4b408a905c45b287",
+      "candidate_sha256": "422e4649538c6870faa4eb09f695b2853979e12e5cc4718152e28a24472382dc",
+      "mapping": "Used for necessity: apply the theorem to an arbitrary realizing convex body with the given interior origin and same counterclockwise rays, choosing one actual support at each P_i. It preserves the given endpoints and all sector areas and supplies at most one open-sector vertex per sector, which yields positive sector coefficients or the redundant core midpoint. Its gauge computation also applies to the explicitly built pieces in sufficiency.",
+      "reviewed_proof_sha256": "edc803d15759137767512932ef990b65cdf87dd709f1ba55deffced3f8e11f64",
+      "reviewed_statement_sha256": "4e6428c6c442d37d44ef572a6295870583bfab8da9e541b71e635af4ec4ea75c",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "2fb8b0785692a5b4",
+      "candidate_sha256": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+      "mapping": "Used for equivalence of the finite turn system and PSD: m≥3, all h_i=a_i/(D_i t_i)≥0, and each b_i is finite real since D_{i−1}D_i>0. The quadratic form and budget orientations agree exactly. Positive edge charges reconstruct u_i,v_i, and the zero edge case has a_i=0 and uses the core midpoint.",
+      "reviewed_proof_sha256": "4748e8e25d1403e53bee831d62f59ea4e4ed213361d14c7d076ffa35e592aaf8",
+      "reviewed_statement_sha256": "ce8a642e0b42373e9cc4d8ed52bbbce8e9bea3b10a4fb272d1232bcf2a4f3592",
+      "status": "same-batch independent approval required for admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:18:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Bounds one coordinate sector from two specified actual chord endpoints and establishes one-sector sharpness. Whenever its fan and endpoint hypotheses hold, its bound applies to a PSD-certified realization as to any actual convex body. It supplies neither arbitrary simultaneous prescribed-sector sufficiency nor the cyclic matrix condition.",
+      "fact_id": "ebea5ab33e39407b"
+    },
+    {
+      "comparison": "Its ordinary positive three-fan auxiliary inequality constrains ratios of opposite sector areas of a realizing body without prescribed endpoints. It neither supplies sufficiency for given endpoints and sector areas nor reconstructs a polygon from a matrix.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    },
+    {
+      "comparison": "Uses actual mixed depth-attaining caps and the endpoint envelope for strict scale bounds. The present result is ordinary planar realization of a prescribed data list and makes no claim about the mixed caps or fiber compatibility required there.",
+      "fact_id": "d372e5eb0caea032"
+    }
+  ],
+  "readability": "At a zero excess the extra point may be retained in a boundary walk as an edge midpoint. In the change of basis, the previous sector is locally y<0, and the stated transverse slope jump is multiplied by absolute transverse speed for either orientation of a crossing line.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+  "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:15:28Z",
+  "summary": "Exact ordinary planar realization is equivalent to the core bounds and PSD of the stated matrix. The proof is complete given admission of the exact same-batch replacement theorem and budget lemma.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

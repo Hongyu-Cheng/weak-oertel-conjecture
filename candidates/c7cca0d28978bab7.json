@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary longitudinal chord lengths and physical transverse measure in a simplex.",
+  "author": "PK-research-agent",
+  "candidate_id": "c7cca0d28978bab7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.060661+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w31-simplex-directional-chord-distribution",
+  "kind": "lemma",
+  "proof": "The determinant for the coordinates $x=y+te$ is the absolute normal component of $e$ relative to $\\ker a_0$, namely $1/\\|a_0\\|$. In particular $|T|=\\int\\ell\\,d\\nu$. Since $a_0\\cdot e=1$, $\\sigma\\ge1$. The overlap inequalities are\n$$\na_i\\cdot x\\le 1-s(a_i\\cdot e)_+ \\quad(0\\le i\\le d).\n$$\nTheir right sides are the sum of $1-s\\sigma/m$ and the entries of a vector of coordinate sum zero. The map $x\\mapsto(a_i\\cdot x)_i$ is an isomorphism from $\\mathbb R^d$ onto the coordinate-sum-zero hyperplane, so the latter vector specifies a unique translation. When $s<L$ this gives the translated homothety. At $s=L$ all translated margins must be zero since they sum to zero, yielding one point. For $s>L$ summing the inequalities gives $0\\le m-s\\sigma<0$.\n\nOn each parallel line the intersection has length $(\\ell-s)_+$. Thus $\\int(\\ell-s)_+\\,d\\nu=V(1-s/L)^d$ for $0\\le s\\le L$. The right derivative equals $-\\nu\\{\\ell>s\\}$ by dominated convergence on the bounded projection, proving the tail. The projection is a $(d-1)$-dimensional convex body. Each interior projected point is the projection of some interior point of $T$: extend a line segment from the projection of an interior point of $T$ past the desired projected point inside $\\pi_eT$, then interpolate an interior representative with a representative of the farther point. Hence $\\ell>0$ almost everywhere on $\\pi_eT$, since its boundary is null. At $s=0$ the tail gives its measure. The continuous tail and its limit zero at $L$ for $d\\ge2$ prove absence of positive atoms, and differentiation gives the density.\n",
+  "source_candidate_ids": [
+    "588e75e8ff86db2e"
+  ],
+  "source_candidate_sha256": {
+    "588e75e8ff86db2e": "b447121113f0c583216c7f85fcb0e831b9b905c1c0e0a07acb22ac85f34e3c00"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "588e75e8ff86db2e",
+      "locator": "588e75e8ff86db2e:01 §§1–2, (1)–(5), exact simplex directional overlaps and chord distribution"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $m=d+1$, and let $T=\\{x\\in\\mathbb R^d:a_i\\cdot x\\le1,\\ 0\\le i\\le d\\}$ be a full-dimensional bounded simplex of volume $V$, where the normals span $\\mathbb R^d$ with $\\sum_i a_i=0$. Fix $e$ with $a_0\\cdot e=1$, and use $x=y+te$ with $t=a_0\\cdot x$, $y\\in\\ker a_0$. Let $\\pi_e(x)=y$, let $\\nu$ be $\\mathcal H_{d-1}/\\|a_0\\|$ on $\\ker a_0$, and let $\\ell(y)$ be the length of the $t$ interval on that line in $T$, zero for an empty section. Set $\\sigma=\\sum_i(a_i\\cdot e)_+$, $L=m/\\sigma$, and $P=Vd/L$.\n\nFor $0\\le s\\le L$, $T\\cap(T-se)$ is a translate of $(1-s/L)T$, interpreted as a point at $s=L$, and the intersection is empty for $s>L$. The transverse projection $\\pi_eT$ has measure $P$, and\n$$\n\\nu\\{\\ell>s\\}=P(1-s/L)^{d-1}\\quad(0\\le s<L).\n$$\nThe pushforward of $\\nu|_{\\pi_eT}$ under $\\ell$ has density $\\frac{P(d-1)}{L}(1-v/L)^{d-2}$ on $(0,L)$ and no atoms.",
+  "subgoal_id": "pk-intake-pk-w31-simplex-directional-chord-distribution",
+  "title": "The chord-length distribution in an arbitrary simplex direction"
+}

@@ -1,0 +1,40 @@
+{
+  "candidate_id": "82894b05233cbc9c",
+  "candidate_sha256": "d562b165305080b506d6306bfd911fed25491ff5cbdeef07f5ba87451e09c100",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Matched 0d48b13f5ad2c2a1 §1, (1), and the one-copy comparison. The result concerns fractional convex-hull packing with fixed geometric sites and arbitrary nonnegative capacities.",
+    "There are finitely many nonempty admissible groups, and each group weight is bounded by the capacity of any of its member sites. Hence an optimum exists, including when all groups are unavailable or have zero capacity.",
+    "For a packing at the merged capacities, take t=(usage at m minus w_m)_+. This lies between zero and the new capacity at m and can be extracted by splitting fractional groups. The unselected part fits the old capacity at m and the decreased endpoint budgets.",
+    "Replacing m by the two endpoints preserves containment of the target in the group hull because m lies on their segment. Set union handles an endpoint already in a selected group. Half-weight substitution spends at most t/2<=delta at each endpoint and loses t/2 of the objective. Full-weight substitution for the one-copy merge spends at most t<=delta and loses no objective.",
+    "At delta zero the formulas reduce to equality. When the lower-mass merge adds only one delta at m and removes two delta in total at the endpoints, the nominal total-mass threshold drops by exactly delta/2^n."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T17:52:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its full-occurrence packing definition agrees on the common domain by the accepted group support reduction, but its result compares affine-root packing and threshold integration, without a midpoint compression comparison.",
+      "fact_id": "660d6d033fa0f21a"
+    },
+    {
+      "comparison": "It evaluates ordinary atomic halfspace depth on one ten-site example under a full unit merge. It does not give a universal pointwise comparison for fractional convex-hull packing.",
+      "fact_id": "7b255d603cdbc585"
+    }
+  ],
+  "readability": "The selected weight t is exactly the excess usage at m. Replacing an already-present endpoint uses set union, so no endpoint is charged twice within a group.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold read of the exact frozen statement and proof, source-locator and dependency comparison, and exact arithmetic replay where applicable.",
+  "reviewed_proof_sha256": "758ff7db02d73cfda9cc8bbcd9793c2146904cf6c64a4cca36a9174ea46bf82d",
+  "reviewed_statement_sha256": "c6a3898ab500d5f43e9c8aa55a1a27f863ea62662f42f11f39203787a48360ae",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:48:09Z",
+  "summary": "Fractional group substitution proves both stated packing comparisons for every target, with the exact capacity accounting.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,71 @@
+{
+  "candidate_id": "34c7dceea88090ac",
+  "candidate_sha256": "f32d71d32dc225a64bfb8fde4ec44336c7ed45c78e42b6468def2b88e79fbb8d",
+  "checked_dependency_candidate_sha256": {
+    "1d5a3b7238b5e00e": "9f40c43dae38cd6a51dc9ba0b148d0eacd46b2e3fe7d94b6a41f5d8d2fcc99fb",
+    "53fe12b742a7608d": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7"
+  },
+  "checks": [
+    "Checked source candidate 8e66c09047f42ba1, §§3–4, (6)–(11), against the frozen statement and proof. The source SHA-256 agrees with the declared provenance. Section 5’s exact partial-trace example is outside this theorem and is not needed.",
+    "After flipping a fixed q to zero, every nonzero binary vertex has a 1-coordinate and hence dot product with η at least h when each coordinate is at least h. The chosen cap has barycentric threshold b at q, at least 1 at any other core, and at least U_{p,i} on each retained outside fiber. Equality can retain only a volume-null supporting plane because λ_i is nonconstant and the fibers carry d-dimensional volume.",
+    "For Mη≥r with free η, multiplication by y≥0 with Mᵀy=0 gives y·r≤0. The converse is the exact finite Farkas alternative. Here the rows are e_j and p and the right-hand sides are h and U_{p,i}−b, including zero or negative values. With all right sides one, y·r>0 holds for every nonzero such dependence, giving the strict exposure test. Retaining no outside sites always leaves a feasible coordinate system.",
+    "Strict exposure with q as a minimizer is equivalent to positive evaluation at each other retained base. The e_j are core vertices and force all other nonzero binary vertices positive. A positive finite minimum gap scales to at least one. Each owned p is opposite a nonzero binary vertex, so a feasible retained set discards p. Discarding all is feasible, hence E_q≤χ_q≤E. Finite linear costs on fixed feasible subsets yield continuity, positive homogeneity and piecewise linearity on nonnegative weights.",
+    "At any core point y some λ_i(y)≥b. With slope 2η from a minimizing unit-gap test, the cap through y excludes every other retained base because its threshold exceeds 1, and its own cap mass is at most Γ_dV. The discarded fibers contribute at most χ_q(a). At a positive outside base, a vertical cap at a coordinate level −1 or 2 captures at most E and excludes every core vertex.",
+    "An actual null integer base cannot belong to the convex hull of the positive bases. A representation there, with at least one positive coefficient, would give a translate of a positively scaled positive-volume fiber inside the null fiber by fixing points in the other generators. The convex hull of the finite positive bases is compact, so strict separation through the null base gives every point there a zero-mass vertical cap. Attainment of the actual maximum follows from the standard compact-source depth lemma 978e8555ec5bac42.",
+    "The global smallness hypothesis implies E_q≤ρ_dV for every q. Outside positive bases have depth ≤E<Γ_dV, and null bases have zero depth. For fixed finite support, each discarded-set cost is t times its value on ω plus o(t) uniformly over the finitely many sets and core vertices. This gives the stated liminf and limsup after subtracting Γ_dV, the depth at the zero-mass baseline. Zero components in ω are allowed.",
+    "The archived exact verifier passed 96 finite rational LP checks, including opposing outside rows, and 17,496 cap-mass checks on the six-base example. The general certificate and first-order bounds follow from the proof."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1d5a3b7238b5e00e",
+      "candidate_sha256": "9f40c43dae38cd6a51dc9ba0b148d0eacd46b2e3fe7d94b6a41f5d8d2fcc99fb",
+      "mapping": "The first part applies to each original core q with the exact same positive shell fibers, A_p⊆T, and E_q≤E≤ρ_dV. It gives the lower bound at every core centroid, so taking the maximum over q gives the lower bracket. The proof uses the original clamping anchor even though the LP has separate flipped coordinates for each q.",
+      "reviewed_proof_sha256": "c3a231aebae0b471c3c2864131e6cb4fce6540c8ff71461b00337a6b61c604bd",
+      "reviewed_statement_sha256": "c0f26895d67254a8172498800a348921bf806fcd77a15f92a2f05fe56f0285bc",
+      "status": "same-batch frozen statement and invocation checked; reviewed separately and pending coordinated admission"
+    },
+    {
+      "candidate_id": "53fe12b742a7608d",
+      "candidate_sha256": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7",
+      "mapping": "The same d≥2 reflected-profile threshold satisfies ρ_d<Γ_d, yielding E<Γ_dV for the positive-outside cap bound. Its cap formula is also consistent with the canonical own volumes and the baseline.",
+      "reviewed_proof_sha256": "1e85b289572563955be7b80c21339b8b799e57fa624f2527f26097c14e949b49",
+      "reviewed_statement_sha256": "e366513ae78549652332a52118bb60792388769ee765b4cc01dd53819fd3f98c",
+      "status": "accepted at the pinned repository snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:35:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same linear alternative for an anchored supporting slope at the own support maximum, with Minkowski compatibility guaranteeing feasibility. It does not test the lower centroid thresholds on retained subsets, optimize discarded mass, or provide a depth bracket.",
+      "fact_id": "155691fc3768c06f"
+    },
+    {
+      "comparison": "Its proof already establishes completeness of positive-volume bases by the same positive homothetic interpolation. This gives the convex-hull exclusion used for null fibers, without the directional exposure costs or the mixed-depth bracket.",
+      "fact_id": "26d27b0f77ea4ac9"
+    },
+    {
+      "comparison": "The exact one-addition theorem specializes the bracket globally for one small contained reflected addition. It does not give directional LP certificates or the all-point exposure upper bound over multiple anchors.",
+      "fact_id": "a0223f71231de506"
+    },
+    {
+      "comparison": "Establishes attainment of the actual closed-halfspace depth maximum for compact convex bodies, without quantitative exposure bounds.",
+      "fact_id": "978e8555ec5bac42"
+    }
+  ],
+  "readability": "The opening shorthand imports n≥1, d≥2, A_p⊆T, the positive shell support condition, and the original clamp from the aggregate-credit theorem. For a more self-contained proof the word maximum can cite 978e8555ec5bac42, or note upper semicontinuity of finite closed-halfspace depth and compactness of the actual mixed source. The derivative conclusion gives lower and upper difference quotient bounds.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2b89e179b2828055f47623fcb184192516f9e84f1d84d21d1d09bccaca5a7985",
+  "reviewed_statement_sha256": "4fb9d2ecb88b96688344d814a1649d3a7f639152ac62d8bf33d18d3d42578260",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:32:42Z",
+  "summary": "The finite directional and base-only exposure systems yield the stated all-point depth upper bounds. The aggregate-credit lower bound combines with the shell and null-fiber caps to give the global raw bracket and the two one-sided first-order bounds.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

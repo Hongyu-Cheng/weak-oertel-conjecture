@@ -1,0 +1,26 @@
+{
+  "advances": "A pointwise prelimit estimate conditional on a pointwise separator remainder and the stated convex tests. The lower bound may decay as the logarithmic coefficient tends to zero.",
+  "author": "PK-research-agent",
+  "candidate_id": "7b7941a7c233c801",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.082827+00:00",
+  "depends_on": [],
+  "draft_key": "separator-exponential-parameter-floor",
+  "kind": "lemma",
+  "proof": "The function $\\ell_j$ is convex on the positive neighborhood by the convexity and monotone decrease of $-\\log$. Set $a_j=\\beta_j/\\lambda_j+C$ and use $\\Phi=(\\ell_j-a_j)_+$ on the body. It is a permitted test: the supremum of the affine supports of this convex function at points of a compact convex neighborhood of the hull is globally finite by the local boundedness of slopes on that neighborhood and agrees with it on the hull. Take the maximum of this extension and zero to keep it nonnegative everywhere.\n\nOn $\\{\\Phi>0\\}$, $W_j\\ge0$ and $R_j\\ge-C\\lambda_j$ give $W_j-\\beta_j+\\lambda_j\\ell_j+R_j\\ge\\lambda_j\\Phi$. With $\\psi=1$ the separator thus implies $0\\ge\\lambda_j\\int\\Phi^2\\,d\\eta_j$, and $\\Phi=0$ almost everywhere for $\\eta_j$. The surface measure of a full-dimensional compact convex body has full support on its boundary, so continuity gives $\\Phi=0$ everywhere there. In dimension one every endpoint has positive counting measure. The physical hull is the convex hull of these sampled boundaries, because each positive fiber is the convex hull of its own boundary. Concavity of $L_j$ propagates the lower bound to that hull. Multiplying by $\\lambda_j$ after taking the positive logarithmic part yields the second inequality.\n",
+  "source_candidate_ids": [
+    "942ae5a91bb1a792"
+  ],
+  "source_candidate_sha256": {
+    "942ae5a91bb1a792": "94c66893dda492e00e9319b92b2eabc59f2c68fac7e4c2747021a8270ff81ed7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "942ae5a91bb1a792",
+      "locator": "942ae5a91bb1a792:01 §1, (1)–(3), exponential floor from a fixed separator"
+    }
+  ],
+  "statement": "At each index let finitely many sampled full-dimensional convex fibers have recorded boundary surface measure $\\eta_j$ on their actual normals and physical points, using endpoint counting for $d=1$. On an open convex neighborhood of their canonical convex hull let $L_j$ be positive finite piecewise-affine concave. Put $\\ell_j=-\\log L_j$. Suppose $\\lambda_j>0$, $0\\le W_j\\le1$, $|R_j|\\le C\\lambda_j$ $\\eta_j$-almost everywhere, and the same separator\n$$\n\\int\\psi(n)\\Phi(w)(W_j-\\beta_j+\\lambda_j\\ell_j+R_j)\\,d\\eta_j\\le0\n$$\nholds for every nonnegative continuous normal weight $\\psi$ and every globally finite nonnegative convex $\\Phi$. Then throughout the canonical hull\n$L_j\\ge \\exp(-\\beta_j/\\lambda_j-C)$ and $0\\le\\lambda_j(\\ell_j)_+\\le\\max(0,\\beta_j+C\\lambda_j)$.",
+  "subgoal_id": "pk-intake-separator-exponential-parameter-floor",
+  "title": "Pointwise exponential parameter floor from a convex separator"
+}

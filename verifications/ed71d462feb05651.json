@@ -1,0 +1,43 @@
+{
+  "candidate_id": "6eda2f91067422d6",
+  "candidate_sha256": "a0865d254b5c4a353fd3bc5a3ca2340c3d5e461ce4781a701ef4d08e707cacc1",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Conditioning on the first waiting time gives the convolution plus its own survival term. With the remaining survival identically zero after the last phase, differentiating gives q'(t)=Tq(t) and q(0)=1 in all retained phase rows.",
+    "The matrix is triangular with negative diagonal, so the exponentially weighted matrix integral against the density of b_j F_j converges, including repeated eigenvalues. Integrating the derivative of exp((T−I/b_j)t) gives exactly (I−b_j T)^{-1}.",
+    "Independence and the semigroup law give the product expectation, and X is atomless so strict and weak comparisons agree against Y. The factors commute as rational functions of the same T.",
+    "The upper bidiagonal row for the solve uses the already updated (i+1)st coordinate and a positive pivot p_i+b_j. The formula needs no division by differences of coefficients, so repetitions on either side cause no exception.",
+    "The frozen formula and update match 9c4cc37531230a2a:01.",
+    "Frozen candidate bytes, decoded statement and proof hashes, original candidate hashes and every source locator were checked against the pinned intake base."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T22:12:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its signed exponential density and finite distinct-phase formulas used in section calculus do not give this arbitrary repeated-list triangular evaluator.",
+      "fact_id": "3e6e1eb15d927db8",
+      "fact_sha256": "95ff5f403b5d8339a9d5a691ffc6246101c0c2c40682a5e48a19ae6dfdd9eb6e"
+    },
+    {
+      "comparison": "Its survival computation concerns two distinct positive phases in a more specialized sign comparison. It is consistent with the matrix result but does not cover arbitrary phase counts or repetition.",
+      "fact_id": "7cae55c49007d765",
+      "fact_sha256": "56a93170e9d607a5fa2914f3c24d54cc360cf1de1163881fbd1e5ca617d08c6e"
+    }
+  ],
+  "readability": "Here q(t) collects the retained k survival functions, with q_{k+1} only a zero boundary convention.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d1fc3db0e0c604971bbe64ae2c56ee7923e29bf89fd646017522fad52c8fa560",
+  "reviewed_statement_sha256": "4d2ec50d1d1a56a954a8ad2e43f2b9e977996441c25f057e9fedc49bcfde1107",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:07:05Z",
+  "summary": "The survival ODE, expectation of the matrix exponential, and exact backward solve are valid for arbitrary positive lists, including repeated coefficients.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

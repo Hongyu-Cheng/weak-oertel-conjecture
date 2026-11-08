@@ -1,0 +1,26 @@
+{
+  "advances": "Second derivatives of a supplied local comparison on an open chart of actual positive fibers. The regularity of the cap masses is a hypothesis.",
+  "author": "PK-research-agent",
+  "candidate_id": "f73024c7ebf4e57f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:13:09.528403+00:00",
+  "depends_on": [],
+  "draft_key": "exact-circuit-quantile-cover-hessian",
+  "kind": "lemma",
+  "proof": "At the old mark, the weighted threshold sum is $A\\cdot z$ because the continuous normals balance. The implicit function theorem first inverts each threshold to a $C^2$ function $Q_j(p,\\tau)$; its old mass derivative is $-1/S_j$. A second implicit inversion of $\\sum_j\\rho_j Q_j(p,\\tau)=A\\cdot z$ is valid since its mass derivative is $-\\sum_j\\rho_j/S_j<0$. Every cap has the asserted actual mass. The weighted sum of shifted cap margins at any $(w,x)$ is $A\\cdot(w-z)$. When it is nonnegative at least one margin is nonnegative, which proves the closed cover.\n\nDifferentiate the individual mass equations on the straight chart line $p_0+t\\delta$. They give $\\tau_c'=B_j-S_jb_j'$. Together with $\\sum_j\\rho_j b_j'=0$ this yields $a$ and $v'_j$. On differentiating again, $\\tau_c''$ is the displayed cap quadratic term minus $S_jb_j''$. Multiply by $\\rho_j/S_j$, sum, and use $\\sum_j\\rho_j b_j''=0$ to obtain the Hessian. In $\\tau_c=M f_c$, the cross term $2M'f_c'$ vanishes on the stated kernel. Solving for $f_c''$ gives the normalization.\n",
+  "source_candidate_ids": [
+    "a0a4e151af2d0678"
+  ],
+  "source_candidate_sha256": {
+    "a0a4e151af2d0678": "f731f54c2513ec60f36d85b094ff2fc2a797c7cfe5348d8be3afb172dcddc9e3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a0a4e151af2d0678",
+      "locator": "a0a4e151af2d0678:01 §1, (1)–(2), exact C² quantile-cover Hessian"
+    }
+  ],
+  "statement": "Let $K_w(p)\\subset\\mathbb R^d$ be a finite actual family of positive compact convex fibers at fixed bases $w\\in P$, parametrized on an open neighborhood of $p_0$ (which can be an open coordinate chart of a feasible equality family). Write $\\mu_p$ for the sum of their fiber Lebesgue measures and $M(p)>0$ for its total mass. Fix a positive circuit of actual closed caps $H_j(b)=\\{(w,x):v_j\\cdot w+u_j\\cdot x\\ge b\\}$ through an old interior mark at base $z$, each with the same old raw mass $\\tau_0$. The fixed weights satisfy $\\sum_j\\rho_j=1$, $\\sum_j\\rho_ju_j=0$, and $A=\\sum_j\\rho_jv_j$. Assume $F_j(p,b)=\\mu_p(H_j(b))$ and $M(p)$ are $C^2$ near the old data and $S_j=-\\partial_bF_j(p_0,b_j)>0$.\n\nThe actual common-mass thresholds $b_j(p)$ and mass $\\tau_c(p)$ solving $F_j(p,b_j(p))=\\tau_c(p)$ and $\\sum_j\\rho_jb_j(p)=A\\cdot z$ are locally unique and $C^2$. The caps cover every continuous plane over $A\\cdot w\\ge A\\cdot z$. At the old parameter in direction $\\delta$, put $B_j=\\partial_pF_j[\\delta]$, $\\theta_j=(\\rho_j/S_j)/\\sum_k(\\rho_k/S_k)$, $a=\\sum_j\\theta_jB_j$ and $v'_j=(B_j-a)/S_j$. Then\n$$\nD\\tau_c[\\delta]=a,\\qquad Db_j[\\delta]=v'_j,\\qquad\nD^2\\tau_c[\\delta,\\delta]=\\sum_j\\theta_j\\bigl(\\partial_{pp}F_j[\\delta,\\delta]+2\\partial_{pb}F_j[\\delta]v'_j+\\partial_{bb}F_j(v'_j)^2\\bigr).\n$$\nFor $f_c=\\tau_c/M$ with $f_c(p_0)=\\beta$, on $\\ker Df_c(p_0)$ one has $D^2 f_c[\\delta,\\delta]=(D^2\\tau_c[\\delta,\\delta]-\\beta D^2M[\\delta,\\delta])/M(p_0)$.",
+  "subgoal_id": "pk-intake-exact-circuit-quantile-cover-hessian",
+  "title": "The Hessian of an actual fixed-normal circuit quantile cover"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "Dimension-dependent scalar estimate, independent of the existence of any compatible fiber profile.",
+  "author": "PK-research-agent",
+  "candidate_id": "e9da2489a6c65517",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:17:06.630663+00:00",
+  "depends_on": [],
+  "draft_key": "ordered-simplex-peak-scalar",
+  "kind": "lemma",
+  "proof": "Put $s=1+1/d$, and write $F(b,c)=1+[s b+2c-2]_+^d-(2b-1)^d-b^d-c^d$. At fixed $b$ the derivative in $c$ is negative in the inactive region. Where the positive part is active its sign is the sign of $2(sb+2c-2)^{d-1}-c^{d-1}$. The ratio $(sb+2c-2)/c$ increases strictly, because $sb<2$. With $q=2^{-1/(d-1)}$, the only possible interior minimum therefore occurs at $c_*(b)=(2-sb)/(2-q)$. Its value is\n$$\nF(b,c_*(b))=1-(2b-1)^d-b^d-\\frac{(2-sb)^d}{2(2-q)^{d-1}}.\n$$\nThis is concave in $b$. The feasibility condition $b\\le c_*(b)\\le1$ gives the interval $[\\max(1/2,q/s),\\,2/(s+2-q)]$. If this interval is nonempty, its endpoints give $c=b$, $c=1$ or $b=1/2$. Concavity shows it suffices to check these three edges, including their corners.\n\nAt $c=1$, $F(b,1)=(s^d-1)b^d-(2b-1)^d\\ge0$ since $s^d\\ge2$ and $0\\le2b-1\\le b$. At $c=b$, divide by $b^d$ and put $u=1/b-1\\in[0,1]$. The desired inequality becomes\n$$\n(1+u)^d-(1-u)^d+[1+1/d-2u]_+^d\\ge2.\n$$\nThe odd terms in the binomial difference give at least $2du$. For $v=2du$, Bernoulli gives $[1+(1-v)/d]_+^d\\ge2-v$ when $v\\le d+1$. When $v\\ge d+1$, the $v$ term alone exceeds $2$. This proves the second edge.\n\nFor $b=1/2$ and $d\\ge3$, $q\\ge1/\\sqrt{2}>2/3\\ge s/2$, so $c_*(1/2)\\ge1$ and $F(1/2,c)$ is nonincreasing up to the first edge. For $d=2$, $F(1/2,c)=3/4+[2c-5/4]_+^2-c^2$. It is at least $23/64$ when $c\\le5/8$, and equals $3(c-5/6)^2+11/48$ when $c\\ge5/8$. This proves the remaining edge and the inequality.\n",
+  "source_candidate_ids": [
+    "8f194c2219f76d2a"
+  ],
+  "source_candidate_sha256": {
+    "8f194c2219f76d2a": "37672b75a5f6e62978e2c4af7cb6d6da56e8adfef77302fdc6b2ea7f45d4fe14"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8f194c2219f76d2a",
+      "locator": "8f194c2219f76d2a:02 §2, (6), boundary proof following (8)–(10)"
+    }
+  ],
+  "statement": "For every integer $d\\ge2$ and real numbers $1/2\\le b\\le c\\le1$,\n$$\n1+[(1+1/d)b+2c-2]_+^d\\ge (2b-1)^d+b^d+c^d,\n$$\nwhere $[r]_+=\\max\\{r,0\\}$.",
+  "subgoal_id": "pk-intake-ordered-simplex-peak-scalar",
+  "title": "A scalar inequality for ordered simplex peak radii"
+}

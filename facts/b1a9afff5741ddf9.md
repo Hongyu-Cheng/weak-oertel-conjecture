@@ -1,0 +1,31 @@
+---
+fact_id: b1a9afff5741ddf9
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-pk-w35-centers-identical-reflected-marginal
+depends_on: ["6d6fcf377e68c79c"]
+verifier_run: 53e057a4ef6d02fc
+target_match: null
+---
+
+## Source
+
+- [c58c06a13eeebb18](../candidates/c58c06a13eeebb18.json), c58c06a13eeebb18:01 Proposition and §§1–4, (1)–(11).
+
+## Statement
+
+Let $C\subset\mathbb R^n\times\mathbb R^d$ be a convex body with nonempty mixed set $S=C\cap(\mathbb Z^n\times\mathbb R^d)$ and fibers $K_z=\{x:(z,x)\in C\}$. Suppose $K_{-z}=K_z$ for every $z\in\mathbb Z^n$, including empty fibers. Set $q=\dim_H S$, $M=\mathcal H_q(S)$ and $m_0=\mathcal H_q(\{0\}\times K_0)$. On $\operatorname{aff}(K_0)$ let $\mu_z$ be the restriction of $\mathcal H_q$ to $K_z$ and let $\eta=\sum_z\mu_z+\mu_0$. Choose an ordinary centerpoint $y$ of $\eta$ with raw depth at least $\eta(\operatorname{aff}(K_0))/(q+1)$, taking the lexicographic minimum in fixed coordinates if a single deterministic choice is desired. Then $y\in K_0$, and every closed ambient halfspace containing $(0,y)$ captures at least $(M+m_0)/[2(q+1)]$ of the intrinsic mixed measure. The resulting normalized bound is at least $\Gamma_d/2^n$, where $\Gamma_d=(d/(d+1))^d$, whenever $2^{n-1}(1+m_0/M)\ge(q+1)\Gamma_d$. In particular, if $q=d=2$, this holds for $n\ge2$ or for $n=1$ with $m_0/M\ge1/3$.
+
+## Proof
+
+If $x\in K_z$, reflection of the base alone puts the same $x$ in $K_{-z}$. Their midpoint belongs to the zero fiber, so all fibers lie in $K_0$. Since there are finitely many nonempty fibers and their slices are isometric to the corresponding convex sets, the Hausdorff dimension of their union is their largest affine dimension, which is $\dim K_0=q$. Thus $A=\operatorname{aff}(K_0)$ is a common Euclidean $q$-space, all fiber measures are finite there, and $\eta(A)=M+m_0>0$ by disjoint additivity of the lifted fibers and positivity of the intrinsic volume of $K_0$.
+
+In $q\ge1$ apply the continuous specialization ($n=0$, continuous dimension $q$) of 6d6fcf377e68c79c to the finite Borel measure $\eta$ under an affine isometry of $A$ to $\mathbb R^q$. The resulting depth level is positive, so strict separation excludes any candidate outside $K_0$. The superlevel set is compact: on $K_0$ the closed through-cap mass for each fixed unit normal is upper semicontinuous by continuity from above, and the infimum over normals is upper semicontinuous. Minimizing the fixed orthonormal coordinates successively on this nonempty compact set picks a unique $y$ if desired. In $q=0$ there is only the one point in $A$ and its ordinary depth is the entire mass.
+
+For a closed cap containing $(0,y)$, translate its boundary parallel to that mark to obtain a smaller cap of the form $\beta\cdot z+u\cdot(x-y)\ge0$. Put $G=\{x\in A:u\cdot(x-y)\ge0\}$, which is all of $A$ if the continuous functional vanishes on the direction space of $A$. The central fiber contributes $\mu_0(G)$. For each unordered pair $\{z,-z\}$ with $z\ne0$, the two traces on the identical fiber have opposite thresholds $\pm\beta\cdot z$ for the same functional $u\cdot(x-y)$. One threshold is nonpositive, so at least one trace contains $G$ and the pair contributes at least $\mu_z(G)$. Counting each pair once gives
+$$
+\mathcal H_q(S\cap H)\ge\mu_0(G)+\sum_{\{z,-z\},\,z\ne0}\mu_z(G)
+=\tfrac12\eta(G)\ge\frac{M+m_0}{2(q+1)}.
+$$
+The argument uses closed inequalities, including when $G=A$ and when $q=0$. Divide by $M$ and compare with $\Gamma_d/2^n$ for the threshold. For $q=d=2$ this comparison reduces to $2^{n-1}(1+m_0/M)\ge4/3$.

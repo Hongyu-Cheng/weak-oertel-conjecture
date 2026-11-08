@@ -1,0 +1,79 @@
+{
+  "candidate_id": "4d24a4fbd205befd",
+  "candidate_sha256": "8075c295bd316ffb4bae29880db8969b4e9ff82c6487ed87113a224841dc3416",
+  "checked_dependency_candidate_sha256": {
+    "108bf10461a9c6ff": "745d31f422e8205d7bba1d1df79ac04d6b37e39d4f981175a636971642cca532"
+  },
+  "checks": [
+    "The predecessor applies to positive masses on the given consecutive actual interval for all real d≥1. The root-tail interpolation is concave there. For a nonsingleton, positivity puts the integer mean strictly between endpoints, so Jensen evaluates at the true node F_μ. Singletons give mass one and the constant is below one; two positive consecutive atoms cannot have an integer mean.",
+    "Since a_i=F_i−F_(i+1)>0, each interval of the tail-value partition has positive length. Its upper endpoint gives a strict overestimate of the integral of the strictly increasing t^p. F_(r+1)=0 is used only for the partition. Raising the strict bound 1/(p+1) to 1/p gives the asserted constant. Index reflection preserves the midpoint inequalities, gives mean −μ, and includes the μ atom in the reflected closed tail.",
+    "On any fixed positive support interval in L, w_j′=d w_j/(L−j), so μ′ is d times the covariance of j and 1/(L−j). Expanding the covariance over unordered pairs gives precisely the displayed derivative. Each summand is positive, including the pair 0,1 on all intervals with L>1. Local finiteness gives continuity at integers where a weight is born at zero, and piecewise strict increase extends across those integers. The mean tends to zero as L decreases to one.",
+    "Writing the normalized first moment on the mesh 1/L gives denominator limit ∫_0^1(1−t)^d dt=1/(d+1) and numerator limit ∫_0^1 t(1−t)^d dt=1/((d+1)(d+2)). Hence μ(L)/L tends to 1/(d+2) and μ(L) tends to infinity. For each positive integer k, continuity and strict increase give a unique L_k with mean k, and all positive indices are <L_k, so k<L_k.",
+    "At L_k the roots are affine on the actual positive integer support. Moving the lower cutoff k/L_k to 1/(d+2) changes the scaled sum by at most the cutoff difference plus 2/L_k, by counting grid points and bounding each summand by one. The integral ratio from the fixed cutoff equals (1−1/(d+2))^(d+1), and reflection realizes the same limiting value for the other tail.",
+    "For d=1 and integral L, summation gives total L(L+1)/2 and first moment L(L−1)(L+1)/6. With L=3k+1 the upper tail consists of consecutive weights 2k+1 down to 1, giving the stated rational fraction. Independently checked the two identities by integer sums for k=1 through 100.",
+    "Convexity gives inclusion of the Minkowski combination of fibers in the interpolated fiber. Brunn–Minkowski gives concavity of the volume roots along the positive support, and positivity between its extremes. Compactness makes the positive integer support finite. Dividing all fiber volumes by W scales roots by W^(−1/d) and makes the base mixed-centroid coordinate exactly the weighted integer mean. Every containing vertical cap includes the corresponding closed through-mean cap, hence the whole fiber at μ.",
+    "The cone family is a compact convex body by the norm inequality, with positive d-volume fibers κ_d(L−j)^d for j<L and zero volume at the tip if it is integral. The factor κ_d cancels in the centroid and mass fraction. The cap x≥k contains the true mixed centroid and has exactly the scalar limiting ratio. The strict inequality over W/e follows from log(1+s)<s at s=1/(d+1).",
+    "Pinned sources and locators verified against 694b9a0: 821242aee5d2f3e1 §§7–8, SHA-256 5ead3b8be5c75043b6d82f1329efd279e4d32ac3d3bd6c9a4d4f95f0c6db55f1, provide the Jensen proof, affine-root family and geometric transfer. b1b0de9a36eb803f, Closed tails at an integer mean, SHA-256 6e7c14761eeb86c18abf3502d5be5bdacb85659c2c7d175761844bc494fe7f2c, supplies the exact d=1 family. The frozen text independently proves strictness and exhibits the geometric sharpness witness."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "108bf10461a9c6ff",
+      "candidate_sha256": "745d31f422e8205d7bba1d1df79ac04d6b37e39d4f981175a636971642cca532",
+      "mapping": "The real d, positive consecutive support and concave roots are exactly the parent hypotheses. Jensen uses its concavity on the actual support. The terminal zero appears solely in the Riemann partition.",
+      "reviewed_proof_sha256": "dd1a14ec592486a89b66088bfbb35719f2cd797c413d3bb8e616311f306729ec",
+      "reviewed_statement_sha256": "b397b189a3efeeab3a201805c4c5da7b0859c2d296f936cae50d726295b824ae",
+      "status": "Independently approved against these frozen bytes; admission pending."
+    }
+  ],
+  "finished_utc": "2026-11-08T06:37:53Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof (3)–(4) uses the same Brunn–Minkowski root-volume calculation for convex capped fibers; the conclusion concerns separation for a nonvertical cap rather than the vertical integer-mean mass bound.",
+      "fact_id": "c13409b4041cc35d"
+    },
+    {
+      "comparison": "The ordinary continuous centroid bound in ambient dimension d+1 has the same numerical constant at full mass, with Lebesgue measure and its continuous centroid. It does not imply the normalized counting-times-volume assertion.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "Proof (5) gives an averaged cubic bound for the smaller closed tail evaluated at a random height in an arbitrary height law. The frozen result bounds each tail at the specific integer mean using the root-concave hypothesis.",
+      "fact_id": "cdf4b723cb4dc8ec"
+    },
+    {
+      "comparison": "Its mixed consequence assumes a centrally symmetric integer-coordinate body in a product. The vertical bound there comes from symmetry, which is absent for a general convex fiber profile.",
+      "fact_id": "6a7d56e450b3126f"
+    },
+    {
+      "candidate_id": "5dfdef886fd3ea86",
+      "comparison": "Pending result (2) and §4 contain the weak scalar bound and exact-integer-mean sharpness for d=1,2,3. The frozen result covers all real d≥1 and states strictness."
+    },
+    {
+      "candidate_id": "b1b0de9a36eb803f",
+      "comparison": "Pending d=1 source has the same infimum and exact witness; its mixed interpretation gives the weak vertical lower bound only at d=1."
+    },
+    {
+      "candidate_id": "1233ee6dee49d9f8",
+      "comparison": "Pending §4 already notes strictness in the finite Jensen/Riemann-sum argument; the frozen proof uses that elementary strictness independently of the separate midpoint equality classification."
+    },
+    {
+      "candidate_id": "f0bdcdaa85d37338",
+      "comparison": "Pending source proves 1/e for the larger class of discrete log-concave laws. Positive concave dth roots imply log-concavity, but the constant here is strictly larger than 1/e for finite d."
+    }
+  ],
+  "readability": "The convention that vertical cuts depend only on the base is clear from the transfer to the two closed tails. The exact d=1 sum is a check on the general affine-root limiting argument.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ea3d181540a4ee76bb1e1b801bd9898a6c2f1da083b859e42e7614ae16593362",
+  "reviewed_statement_sha256": "6a68e0ff79eb5e087428b7547ad06937eafadc2e5ee87510f5dbffebbebb56e8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:36:16Z",
+  "summary": "The finite tail-value partition makes the Jensen bound strict for both closed tails. The affine-root profile attains exact integer means and approaches the sharp constant. The mixed-volume calculation transfers the same infimum to vertical caps in every positive integer continuous dimension.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

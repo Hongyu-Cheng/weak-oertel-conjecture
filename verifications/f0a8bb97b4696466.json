@@ -1,0 +1,60 @@
+{
+  "candidate_id": "ac7ba1e1e0ebc955",
+  "candidate_sha256": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "Cold read, threshold zero: the finite cover gives the union bound. A finite Borel measure on Euclidean space is concentrated on its support, so the cap masses may be taken either in the ambient space or inside K. Zero total mass also gives the asserted inequality.",
+    "Cold read, positive threshold: for a nonzero normal, the halfspace indicators converge pointwise off the limiting boundary, which is null. The tail tends to zero by finiteness of the measure, even if support is unbounded. For A_i > alpha > 0 the target A_i - alpha lies strictly between zero and the original mass, so continuity gives a finite threshold at or beyond the original one. Strict monotonicity is unnecessary.",
+    "Cold read, surviving region: each removed open tail has mass A_i - alpha by nullity of the cutting boundary. The union bound therefore gives the stated lower bound on the common closed convex remainder. A nonpositive lower bound already proves (1). Otherwise the remainder has positive mass and qualifies for the hereditary premise. Every original halfspace meets it in at most alpha mass, including uncut caps and the cut caps whose entire retained bands in K have exactly alpha mass. The hereditary point lies in at least one original closed covering halfspace, including the case of a boundary point, so g times the remaining mass is at most alpha. Division uses g > 0.",
+    "For ordinary volume the support is the convex body itself and hyperplanes are null. Each positive-volume closed convex restriction is compact and full-dimensional. The full-mass case of 6769574fc1bd9f8d applies and supplies the required point of the restriction. Grünbaum's primary source also states the centroid conclusion in its proof of Theorem 2, §3, pp. 1259–1260.",
+    "At alpha = min_i A_i all positive parts are exactly A_i - alpha, including zero differences. At alpha = A_(3), all terms beyond the first two vanish and the first two are A_(1) - A_(3) and A_(2) - A_(3), including ties. Zero padding when m < 3 adds zero terms. For D >= 2 the binomial terms of degrees zero, one, and two give (1 + 1/D)^D > 2, while log(1 + 1/D) < 1/D gives the upper bound e < 3. For D = 1, 1/gamma_1 = 2 and alpha = A_(2) yields the two-largest bound, including a zero-padded second entry.",
+    "Simplex equality: the barycentric coordinates sum to one, so the threshold 1/(D+1) covers. Under homothety about v_i of ratio D/(D+1), lambda_i is transformed into 1/(D+1) + D lambda_i/(D+1). The image is exactly the designated cap, and all cap volumes are gamma_D V by the volume determinant. With alpha and a both equal to gamma_D V, (1), (2) for m = D+1, and (3) are equalities. For D = 1 the two half-intervals give equality as well. This is an equality example.",
+    "The frozen JSON, decoded statement, and decoded proof hashes match the reviewed bytes. All three declared archived candidate-byte SHA-256 values were recomputed at commit 8d10c1e114e402b08db897c546291eece8cc2523 and agree with the frozen provenance and intake manifest. The manifest source digests also agree with the archived source_sha256 fields. Raw contributor notes are outside the checkout, so those raw digests were checked for metadata agreement.",
+    "cd833c78fb705a2e supplies the hereditary premise, (1) and (2), the trimming proof, the ordered consequence including D = 1, and the simplex equality example. The explicit finite-tail and zero-threshold checks fill in the abstract argument for the stated generality.",
+    "eb88c1c4c388daab §3 (7) gives the same ordinary all-threshold inequality by successive trimming. The scoped part of §4.2 (12) is exactly the D >= 2, m >= 3 ordered formula, including ties. The later use for mixed-depth estimates is outside the citation scope.",
+    "64b80eee72258d21 §1 (1) independently records the ordinary all-threshold formula and proves it by trimming relative to the current remaining body. The sum of those removals is bounded by the original cap positive parts, as in the reviewed result. The later mixed residual criterion is outside the citation scope. All three archived candidates are pending source records."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "6769574fc1bd9f8d",
+      "mapping": "Accepted at the reviewed base. Take d = D, its convex body to be each closed convex L subset of the ordinary K with a = vol_D(L) > 0, and its metronoid mass m = a. Since 0 <= f <= 1 and the integral of f equals a, f = 1 almost everywhere. The right inclusion gives the centroid in L and the depth bound gamma_D vol_D(L) for every containing closed halfspace. The abstract result assumes its own hereditary premise and needs no other dependency."
+    }
+  ],
+  "finished_utc": "2026-11-08T06:19:40Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The full-mass metronoid inclusion supplies ordinary centroid depth for every positive-volume convex restriction. On the original body alone it gives max_i A_i >= gamma_D V for a cover. It supplies the depth step in the new trimming argument. It has no positive-part cover estimate or ordered cap formula.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "Its planar common-budget conclusion V <= 9 eta/4 matches the D = 2, alpha = eta case when all cap areas are at most eta. The accepted open-cover bound also yields the closed-cover case by enlarging each halfplane by epsilon and passing to the limit using null lines. It includes separate residual and overlap estimates and has no variable positive-part budget or abstract hereditary statement.",
+      "fact_id": "ceecf08780802b6a"
+    },
+    {
+      "comparison": "Section 1 proves the top-two sum is at least 8V/9 for a full positive planar three-fan. The present D = 2 formula yields this numerical consequence since gamma_2 = 4/9 and A_(3) <= (A_(1) + A_(2))/2. The accepted argument concerns a fan, and its pair bound does not give the displayed coefficient on the third-largest cap or the all-threshold result. The further source-hitting conclusions are distinct.",
+      "fact_id": "58879ca8313c4b41"
+    },
+    {
+      "comparison": "Its auxiliary sector inequalities for concurrent positive planar three-fans supply the 8V/9 argument in 58879ca8313c4b41 and already include the planar centroid-fan example with cap areas 4V/9. The fan hypotheses and sector conclusions do not cover arbitrary closed halfspace covers or the abstract hereditary inequality.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    }
+  ],
+  "readability": "The retained band argument counts mass in the original support before intersecting with the other cuts. Zero padding covers both the two-cap and one-cap cases directly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "76922090615d5ce7641a49c1ff447e454326f5634bc45eff19e5aa9daf91279f",
+  "reviewed_statement_sha256": "bc29bec04a379e95f5f6632e6ed13ef21f0726dfed029e01d071527d2787773a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:16:54Z",
+  "summary": "The parallel cuts prove the hereditary-depth bound for every nonnegative threshold, including unbounded support. The centroid specialization, overlap estimate, ordered cap bounds, and simplex equality are valid. The archived scopes agree, the sole accepted dependency applies, and the accepted planar overlaps do not cover the full claim.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

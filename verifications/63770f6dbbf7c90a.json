@@ -1,0 +1,44 @@
+{
+  "candidate_id": "12d2b1d23b041387",
+  "candidate_sha256": "a7e3c3a3b5c7e2c228205044f26a958a463f61afa52c49c022b4fe116c399578",
+  "checks": [
+    "Read the frozen statement and proof before consulting sources. Compared with pending source candidate 0ce014ed03a74ef8, sections 1 and 3; the source JSON hash matches the frozen provenance field and its decoded proof hash matches its source digest. Section 1 supplies the general change-of-variables context and section 3 the identical concrete construction, thresholds and constants. The separate unrestricted mixture in section 2 is neither assumed nor included as a second result.",
+    "The grouped height coefficients range over the compact simplex and the grouped points over compact convex planar sets. The height projection is exactly [0,2]. Heights 0 and 2 force pure endpoint combinations, and height 1 forces equal endpoint coefficients; if they are positive, their normalized contribution is in (K0+K2)/2, and otherwise the contribution is entirely from K1. Pairwise vertex averaging gives minimal coordinate 19/2000 and maximal coordinate sum 121/1000, strictly inside T. Thus all three integer fibers are exactly the prescribed sets. The square and both triangles have positive area; x0 is interior to the square. Three noncollinear points at height 1 and one at height 0 ensure full ambient dimension.",
+    "The positive heights are 1 and 2; translating the slope coordinate by x0 maps their slope images onto T and D, respectively. The inverse area Jacobian is k squared, so the translated density is (1_T+4 1_D)/(13/25), with positive-fiber areas 1/2 and 1/50. The normalized mixture weights are exactly 25/26 and 1/26. The pointwise indicator representative has only T, D, and the empty set as positive superlevel sets, so the translated density and its inverse translation are quasiconcave.",
+    "The three proper closed halfspaces cover the whole translated plane: failing all three would make the sum of affine barycentric coordinates strictly less than the sum of thresholds, whereas both sums equal 1. This applies outside T and at equality, as well as inside T. On D, lambda0 is at least 22/25 and the other coordinates are at most 11/100, placing D entirely in cap 0 and outside the other two. A vertex cap of T is the image of T under the homothety about that vertex with ratio 1 minus its threshold.",
+    "Independently clipped both triangles by all three affine cap inequalities with exact rational arithmetic and used the shoelace formula. The normalized masses are 114329/260000, 458329/1040000, and 458329/1040000. The difference of the larger and smaller masses is 1013/1040000 and the gap below 4/9 is 35039/9360000. At every original slope point, the inverse translation of a containing cap bounds the depth from above; attainment or optimality of the bound is unnecessary and not asserted.",
+    "Checked the locked problem statement: its admissible centers are actual mixed-integer points, its halfspaces are ambient, and its normalization includes the anchor fiber. This candidate instead measures slope-space halfspaces with positive-index area only. Pending candidate 6efe0f0511281fac also treats a two-level planar density with a three-cap cover but has different density and no actual-ray realization, and is not invoked."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T05:42:12Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its midpoint containment hypotheses apply to the three explicit planar bodies, and it already proves that their hull has exactly those integer fibers. It also uses an entire-plane three-halfplane cover in its auxiliary fan analysis. Its depth conclusion is the ambient mixed-integer lower bound 2/9 of total area; it neither defines the normalized positive-ray shadow nor implies the candidate upper bound.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    },
+    {
+      "comparison": "The full-mass planar specialization gives 4/9 at the centroid for uniform area on a convex body. The candidate has a two-level weighted density even though its support and upper level set are convex. This uniform-area fact provides the benchmark, not the claimed upper bound.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "Its continuous projective epigraph construction treats log-affine or log-concave laws and proves an averaged depth lower bound. It does not apply as a sharp deepest-point assertion for this discrete positive-fiber pushforward.",
+      "fact_id": "16148092acb7d0aa"
+    }
+  ],
+  "readability": "No substantive ambiguity. The middle-fiber grouping is valid even when both endpoint coefficients are zero; spelling out that immediate case is optional. The direction of the shadow translation is confirmed by t+x0=x at height 1 and t+x0=(x+x0)/2 at height 2.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "9d1cec52fafdd1d44d016aa4ca15b838792cd027173006f57650250924bed10b",
+  "reviewed_statement_sha256": "75567f981d53420a2eb6947f15d2724691f842d6a7c8e60ee65207f16fda0831",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T05:39:27Z",
+  "summary": "The explicit three-fiber convex body has a quasiconcave positive-ray probability shadow with every planar point of depth at most 458329/1040000, strictly less than 4/9. The self-contained proof establishes the stated fibers, normalization and all-plane cap certificate. No accepted fact supplies the new shadow-depth upper bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

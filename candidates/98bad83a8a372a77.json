@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary triangle caps at the endpoint of the strict incidence theorem. The counterexample concerns including the endpoint in that incidence implication.",
+  "author": "PK-research-agent",
+  "candidate_id": "98bad83a8a372a77",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:14:09.023426+00:00",
+  "depends_on": [],
+  "draft_key": "sharp-positive-circuit-triangle-incidence-witness",
+  "kind": "counterexample",
+  "proof": "Put $s=\\sqrt3$, $x=(s-1)/2$, and $z=(3-s)/4$. The point $p$ with barycentric coordinates $(x,z,z)$ is interior since all three coordinates are positive and $x+2z=1$. Let $\\lambda_i$ be the barycentric coordinate functions of the three vertices. Define the affine margins\n$$\nf_1=(s/2)\\lambda_1-\\lambda_3,\\qquad\nf_2=-x\\lambda_1+\\lambda_2-\\lambda_3/s,\\qquad\nf_3=-x\\lambda_1-\\lambda_2/s+\\lambda_3.\n$$\nUse the halfspaces $H_i=\\{w:f_i(w)\\ge0\\}$. The identities $(s/2)x=z$ and $x^2=z(1-1/s)$ give $f_i(p)=0$ for every $i$. Since $x(1+1/s)=s/3$ and $1/s^2=1/3$, the coefficient of each $\\lambda_j$ in $(2/3)f_1+f_2/s+f_3$ is zero. This supplies a positive dependence of the gradients. The first two gradients are independent: if proportional, the corresponding margins would be proportional because both vanish at $p$, but $f_1(P_2)=0$ and $f_2(P_2)=1$. Thus the gradients span the plane.\n\nThe first margin has vertex values $(s/2,0,-1)$. The cap is the triangle at $P_1$ with edge-intercept fractions $1$ and $s/(s+2)$, so its area fraction is $s/(s+2)=2s-3$. The second margin has vertex values $(-x,1,-1/s)$. Its cap is the triangle at $P_2$ with edge-intercept fractions $1/(1+x)=2x$ and $1/(1+1/s)=2z$, both strictly between zero and one. Its area fraction is $4xz=2s-3$. Interchanging $P_2,P_3$ gives the same calculation for the third cap. These are actual caps on the specified triangle, including the boundary incidence of the first one.\n",
+  "source_candidate_ids": [
+    "ca9f00bdb64d6d9e"
+  ],
+  "source_candidate_sha256": {
+    "ca9f00bdb64d6d9e": "bcccbe7c82f2c3d72e2b4a2d476804771589201ca3ffedf5e8588f921365c3e9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ca9f00bdb64d6d9e",
+      "locator": "§4, attaining the sharp threshold"
+    }
+  ],
+  "statement": "In any nondegenerate planar triangle with vertices $P_1,P_2,P_3$, there is an interior point $p$ and three closed through-$p$ caps whose normals span the plane and admit a strictly positive linear dependence, each of ordinary area fraction $2\\sqrt3-3$, such that the first cap strictly captures $P_1$ and contains $P_2$ on its cutting line. Thus the strict incidence conclusion at smaller ceilings can fail at the threshold.",
+  "subgoal_id": "pk-intake-sharp-positive-circuit-triangle-incidence-witness",
+  "title": "A positive-circuit triangle cap with a boundary vertex at the sharp ceiling"
+}

@@ -1,0 +1,38 @@
+{
+  "advances": "Exact fixed-body obstruction to strict positivity and to an unaugmented original-volume dual row. It treats a parameter optimum on the actual three-interval family.",
+  "author": "PK-research-agent",
+  "candidate_id": "7efb20592013a727",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.941657+00:00",
+  "depends_on": [
+    "c680a307d3f26cec"
+  ],
+  "draft_key": "arithmetic-concave-boundary-optimum",
+  "kind": "counterexample",
+  "proof": "Compatibility of the three centered intervals is their middle containment, since $(1/8+1)/2<1$. They give $M=17/8$ and centroid $(7/17,0)$ by direct summation. For comparison, every singleton has mass less than $M/2$ and either consecutive closed pair has mass less than $M$. Their ordinary unique deepest mark and raw maximum $5/8$ follow from c680a307d3f26cec with $a=1/8$, $b=U=1$, and $s=0$.\n\nThe mark $Y$ is ambient-interior, since the original hull contains a neighborhood of the middle of its nondegenerate sampled interval. A finite affine supporting majorant of $L$ at $Y$ is $A(z,x)=\\ell+a z+b x$, with $\\ell=L(Y)$. At the two endpoints of the smallest fiber, $A\\ge L\\ge0$ gives $a\\le\\ell-|b|/16$. Thus $1\\le\\int A\\,d\\mu/M=\\ell+(7/17)a\\le(24/17)\\ell$. Equality forces $a=\\ell$, $b=0$ and $L=A$ mixed-almost everywhere. Continuity gives equality on every sampled interval. Any point of $C$ is a convex combination of sampled points, so concavity and the same majorant imply equality throughout $C$. This proves $\\ell\\ge17/24$ with equality only at the feasible $L_*$.\n\nThe interval of length $v$ centered at zero has energy $v(1-4y^2/v^2)$. Indeed its projective integral equals $v/[(1+a(-v/2-y))(1+a(v/2-y))]$. For $|y|<v/2$, the quadratic product is maximized at $a=-y/(v^2/4-y^2)$, where both factors are positive. The endpoint values follow by the zero extension. Direct second moments give $\\Sigma=((1/8)^3+2)/(12M)=1025/13056$. The two physical shifts at $Y$ for $L_*$ are the claimed increments $\\delta_*$, since $E_0(0)=1$ and $L_*(0)/M=1/3$.\n\nFor a center shift $\\delta$ near $\\delta_*$ the middle own interval contributes $1/2+\\delta$. The tilted endpoint infimum is $1/8$ in either orientation by the clipping formula in c680a307d3f26cec at common height $-\\delta$, and is attained by a finite steep tilt. Pure-base caps through the middle have mass at least $9/8$. Thus the center value is $5/8+\\delta$. At another middle mark $y$ use the orientation pointing away from zero and the same steep-isolation choice of tilt. The resulting upper bound is $1/8+(1/2-|y|+\\delta(y))$, because $0\\le\\delta(y)\\le\\delta_*$ for $L_*$ and the length is unclipped there. It is strictly below the center value for $y\\ne0$. At each extreme base choose an outward finite base tilt, excluding the other two fibers. The own depth there is at most half that interval's length plus the largest physical shift there. For the energy buffer $E_z\\le|K_z|$ and $L_*\\le17/12$ give the bound $1/2+\\varepsilon\\sqrt{2\\Sigma}$, and for the direct buffer it is $1/2+(17/12)\\varepsilon$. Both are strictly below $5/8$ in the stated range.\n\nEvery other admissible $L$ has strictly greater shift at $Y$. Monotonicity in that scalar shift, together with the exact center formula for a strictly larger sufficiently nearby shift, gives a strictly larger global maximum. The positive parameters $(1-\\theta)L_*+\\theta$ approach $L_*$ uniformly as $\\theta\\downarrow0$. Their shift functions converge uniformly in each version. At a fixed sampled mark and unit continuous normal, shifting the threshold by $\\Delta$ changes the total cap mass by at most $3|\\Delta|$ by interval clipping, uniformly in tilt. Pure-base masses are fixed. Therefore the buffered maxima converge, proving strict-positive infimum and nonattainment.\n\nThe two sides of the convex order have mass $24/17$, and the right barycenter is $Y$ because its unnormalized first moment is $(7/17,0)+(7/17)(-1,0)=0$. Jensen proves the order. Any one-source law at $Y$ would have barycenter $Y$, so it cannot have original target $\\mu/M$ alone. Equivalently every concave feasible direction $h$ at $L_*$ satisfies $(24/17)h(Y)\\ge\\langle h\\rangle+(7/17)h(Z)\\ge\\langle h\\rangle$, since $L_*(Z)=0$ forces $h(Z)\\ge0$. Finally the retained mean is $(M-r)/(M-a)$ by integration. When $r\\le sa$ the inverse factor differs from one by $(a-r)/(M-r)\\le a/(M-a)$.\n",
+  "source_candidate_ids": [
+    "3101206ec4580190",
+    "ec7a5867f3acc4b0"
+  ],
+  "source_candidate_sha256": {
+    "3101206ec4580190": "a67cd30d84b6968e0beaf4f27cd8b4fae405ead2368d6b68d8967b272b5c7bef",
+    "ec7a5867f3acc4b0": "b17d26fe71661b6ef1941adea4d4f7a89fb3860d3e35deb43d3321ab7f231c53"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ec7a5867f3acc4b0",
+      "locator": "ec7a5867f3acc4b0:03 §§2–3, (6), (8)–(10)"
+    },
+    {
+      "candidate_id": "ec7a5867f3acc4b0",
+      "locator": "ec7a5867f3acc4b0:04 §4, (11)–(13), boundary multiplier and renormalization"
+    },
+    {
+      "candidate_id": "3101206ec4580190",
+      "locator": "3101206ec4580190:06 §8, (16)–(18), affine-base arithmetic boundary example"
+    }
+  ],
+  "statement": "Take centered intervals at bases $-1,0,1$ of lengths $1/8,1,1$, with their canonical convex hull $C$ and original mixed mass $M=17/8$. Let $L\\ge0$ run over all continuous concave functions on $C$ with $M^{-1}\\int L\\,d\\mu=1$. Use either the invariant energy buffer with physical shift $\\varepsilon\\sqrt{\\Sigma}\\sqrt{L(z,y)E_z(y)/M}$ for unit continuous normals, where $\\Sigma$ is the volume-weighted within-fiber variance, or the direct buffer with shift $\\varepsilon L(z,y)$. At $0<\\varepsilon\\le10^{-4}$ the unique minimizer of the global raw buffered maximum over $L$ is\n$$\nL_*(z,y)=\\tfrac{17}{24}(1+z).\n$$\nThe unique deepest mark for $L_*$ is $Y=(0,0)$. The two optimal raw maxima are respectively $5/8+\\varepsilon\\sqrt{\\Sigma/3}$, with $\\Sigma=1025/13056$, and $5/8+(17/24)\\varepsilon$. Over strictly positive parameters the infimum is the same and is unattained.\n\nThe one-source original-volume row is obstructed by the nonzero original centroid $(7/17,0)$. With the zero mark $Z=(-1,0)$ there is instead the exact convex order\n$$\n\\tfrac{24}{17}\\delta_Y\\le_{\\rm cx}\\mu/M+\\tfrac7{17}\\delta_Z.\n$$\nFor any cut removing mass $a$ and parameter integral $r=\\int_RL\\,d\\mu$ from an arithmetic-normalized parameter on a body, the mean-one rescaling factor is $(M-a)/(M-r)$, when $M-r>0$. On cuts with $0\\le L<s\\le1$ and $a\\downarrow0$ the factor differs from one by $O(a)$.",
+  "subgoal_id": "pk-intake-arithmetic-concave-boundary-optimum",
+  "title": "Boundary optimum and slack measure for full concave arithmetic buffers"
+}

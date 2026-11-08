@@ -1,0 +1,36 @@
+{
+  "candidate_id": "b22dc8da956b1d36",
+  "candidate_sha256": "11256aaa778a61e1eebe9cd0798f1255f71fb63f1b651b090b4a3c22d0a1b788",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Checked fed95f84ea97787a §§3,5 and 7234d49b6c886f4b §6. The frozen tent and one-node paths use precisely the same ordinary zero-buffer data. Positivity and concavity of the widths and heights imply convexity via piecewise-affine interpolation and exact sampled-hull fibers.",
+    "Verified the positive-part-square mixed difference formula by integrating a rectangular cap twice. Reflections reduce both continuous signs while retaining both signs of the base tilt. Positive homogeneous normalization covers all oblique continuous directions; the two axes and pure-base cuts are separate.",
+    "Ran the exact rational certificate extracted from the frozen proof. It checked 86 cells and 138 nondegenerate triangles. Each affine split retains both closed sides and discards zero-area pieces, and the triangle fan covers each convex polygon. Barycenter signs select the active linear forms on the triangle interior. The matrix is the correct polarization of the homogeneous cap-area difference. Its nonnegative entries yield the bound, and the zero-support test makes it strict when p,q>0.",
+    "Recomputed the axis minima and constants: the vertical minimum is 812869/160000 at tilt -1/2, the horizontal minimum is 32523/6400, total area is 814069/80000, and M-2Q=3/200. The outward pure-base caps at the nonzero bases are strictly cheaper than Q, while the closed pure-base caps through the origin are more expensive. The two vertical minimizing caps cover the entire center plane, giving the matching global upper bound without requiring uniqueness of the maximizing mark.",
+    "The tent speed sums to 1223/200 after multiplying by widths. The single changed roof node gives coefficient 51/50 and its four new successive height slopes are concave for 0<t<3/400. Each moving rectangle remains strictly cut by both old minimizing caps, so one height strip is lost per cap and two in total. Other-base slack bounds persist for small t, and the resulting normalized comparison is strictly negative because M>2Q."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T18:56:29Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Also proves a five-rectangle global normalized descent, but on different half-widths and height data, with an initially symmetric depth fraction 1/2 and an oblique tilted circuit. It gives neither this zero-buffer all-normal minimum nor the two paired height descents of the frozen source.",
+      "fact_id": "b22985ed3620f212"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "185453af24f760e71c56d952bade8fdf3f6c895bcad81fd544a76667a9e3b2c7",
+  "reviewed_statement_sha256": "198794a3e1c42e0d574862b132cab343e9589a74f038af21422e162071d2574b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:53:59Z",
+  "summary": "The exact all-normal partition proves the baseline depth, and both compatible roof paths strictly reduce the actual normalized maximum.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

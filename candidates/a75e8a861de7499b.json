@@ -1,0 +1,26 @@
+{
+  "advances": "Two ordinary proper tetrahedral signed-exponential sections. They refute either fixed direction of change for the displayed ratio under this merge.",
+  "author": "PK-research-agent",
+  "candidate_id": "a75e8a861de7499b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.059536+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w31-phase-merging-section-product-obstruction",
+  "kind": "counterexample",
+  "proof": "For $c=(a,b,-1,-1)$, let $T=aY_0+bY_1$. The sum of the negative phases has $\\operatorname{Gamma}(2,1)$ density $t e^{-t}$ on $t>0$. Thus at $V=0$ the conditional density of the two positive-phase exponentials $x,y$ is proportional to $(ax+by)e^{-(1+a)x-(1+b)y}$. Given $x,y$, the two negative-phase exponentials have fixed sum $ax+by$ and uniform splitting, by their constant joint density along that segment. Their means are both $(a\\mathbb E x+b\\mathbb E y)/2$. Also the gamma distribution gives $F=1-\\mathbb E[(1+T)e^{-T}]$.\n\nFor $(a,b)=(1,1)$, the normalizing integral is $1/4$, each positive first-moment integral is $3/16$, and symmetry gives $F=1/2$. All four means equal $3/4$. For $(a,b)=(1,3)$ the normalizing integral is $5/32$ and the positive first-moment integrals are $7/64$ and $1/16$, giving means $7/10,2/5$ and the two negative means $19/20$. Here $\\mathbb E e^{-T}=1/8$ and $\\mathbb E[Te^{-T}]=5/32$, so $F=23/32$.\n\nAfter merging, $V=aY_0+bY_1-2Y_2$. Conditioning at zero gives independent positive-phase exponentials of rates $1+a/2,1+b/2$ by eliminating $Y_2$. The means are $2/(2+a),2/(2+b),a/(2+a)+b/(2+b),1$, with the last coordinate independent. The same negative exponential gives $F=1-4/[(2+a)(2+b)]$. The two pairs give $(F,\\mathcal R)=(5/9,6/5)$ and $(11/15,14/11)$. The initial ratios from the previous paragraph are $81/64$ and $161728/129375$. The second change is $32242/1423125>0$, and the first is negative.\n",
+  "source_candidate_ids": [
+    "c324e86ba3893a31"
+  ],
+  "source_candidate_sha256": {
+    "c324e86ba3893a31": "fe80f98f13b7addf881441c09df9e15e7d8f384fda884fbd5c7b10c57601320c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c324e86ba3893a31",
+      "locator": "c324e86ba3893a31:03 §4, two exact phase-merging witnesses"
+    }
+  ],
+  "statement": "For independent unit exponentials $Y_i$ and any coefficient vector $c$ with both signs, write $V=\\sum_i c_iY_i$, $F=\\Pr(V\\ge0)$, and\n$$\n\\mathcal R(c)=\\frac{\\prod_i\\mathbb E[Y_i\\mid V=0]}{F(1-F)}\n$$\nusing coarea conditioning. Replacing the two negative unit coefficients by $-2$ and $0$ changes $\\mathcal R$ from $81/64$ to $6/5$ for $c=(1,1,-1,-1)$, and from $161728/129375$ to $14/11$ for $c=(1,3,-1,-1)$. The changes have opposite signs.",
+  "subgoal_id": "pk-intake-pk-w31-phase-merging-section-product-obstruction",
+  "title": "A conditional section-product ratio can move either way under phase merging"
+}

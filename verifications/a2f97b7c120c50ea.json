@@ -1,0 +1,55 @@
+{
+  "candidate_id": "179057d934ea6812",
+  "candidate_sha256": "e593196fb6bdeeb5d46295242715d6e99f97ce1f5c3b0558415143eb0a70d631",
+  "checked_dependency_candidate_sha256": {
+    "1c59eb04985632f3": "7e5d9900b17d8db069ee24c0aeaf6a0d0efa1086011f22be59e969f249062a3b"
+  },
+  "checks": [
+    "Convexity puts each segment from the sector point to the opposite diagonal endpoint inside K. Its coordinate crossing must remain within the actual axis chord, which gives each inequality with the stated sign. Testing the actual negative axis endpoints gives the two endpoint constraints.",
+    "After axis scaling, the two bounds have p,q≤1 and 1−pq=D/(ρτ). A recession direction exists exactly when p,q<0 and pq≥1. The excluded nonnegative boundary case p=q=1 would force both a>b and b>a. Equality D=0 is included in the unbounded branch.",
+    "Cramer's rule yields the displayed intersection with nonnegative coordinates. The only other vertices are the origin and two axis intercepts, allowing a repeated vertex. The area from the two origin triangles expands to the stated numerator.",
+    "The coordinate cycles have determinant one. Tracking the four relevant endpoints gives precisely the two stated parameter tuples. Under the cap ceiling the complement of the union of the other caps has area at least (1−2c)|K|, giving 279/23 at c=128/279.",
+    "Actual rectangles [−a,1]² with a=1,2,3 supply positive, zero and negative determinants and confirm that the arbitrary-ray extension includes bodies beyond the strict half-cap regime. The theorem and corollary agree with 104bb1564dc1ac15 §§1–3."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1c59eb04985632f3",
+      "candidate_sha256": "7e5d9900b17d8db069ee24c0aeaf6a0d0efa1086011f22be59e969f249062a3b",
+      "fact_sha256": "55bfc7bb01327f023010c6fd0d23aa9aa5ae26a92f69d26d17ab3710db48a9af",
+      "hypotheses": "Only the last strict-half-cap consequence uses this predecessor. The three canonical normals are spanning and balanced, the mark is interior, and all cap areas are strictly below half. The accepted bounded bridge triangle has its first bridge automatically valid in the negative quadrant, so its local restriction is the same two-line envelope. The other sectors follow by the two determinant-one cycles.",
+      "reviewed_proof_sha256": "2e40ac495cc30957e88569f8cdf6208d2447635b50baf12e81bb3a26e34cf859",
+      "reviewed_statement_sha256": "4674391783bc423f5a914427e60ed54bc3a4a469b57889e2264e6da25434bf1d"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:53:28Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "For actual strict-half-cap data its other two bridges on the negative quadrant are the same after clearing positive denominators. The remaining bridge is automatic there. The accepted bounded triangle therefore contains the identical local polygon in this regime. The reviewed result gives the full arbitrary-ray determinant classification and explicit cyclic capacities.",
+      "fact_id": "1c59eb04985632f3"
+    },
+    {
+      "comparison": "Its proof has the same normalized quadrant polygon calculation for two prechosen supporting lines. Here the coefficients are determined by additional actual chord endpoints, and containment is proved by segments inside K without asking the bridges to support K globally.",
+      "fact_id": "4b408a905c45b287"
+    },
+    {
+      "comparison": "It gives a one-line bound from two selected endpoints with its own boundedness condition. The reviewed two-line envelope uses four actual endpoints and its determinant condition differs.",
+      "fact_id": "ebea5ab33e39407b"
+    }
+  ],
+  "readability": "Boundedness is a property of the two-line envelope. The actual compact sector is still bounded when the determinant is nonpositive.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "f5b9d7777216e8597c927f835c5f55da7faf2c90f3cfa0b4cd54b5181ca986b6",
+  "reviewed_statement_sha256": "57e60fe964b3470e7fc9933a7c2e53dd2dd03c52f6eaf2b9c051717798789cfe",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:47:48Z",
+  "summary": "The two actual chord bridges give the stated local sector polygon and area. The determinant exactly characterizes boundedness of that envelope on the full actual-ray domain.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

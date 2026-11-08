@@ -1,0 +1,40 @@
+{
+  "advances": "The invariant is an actual outside-mass comparison and its positive branch supplies no payment by itself.",
+  "author": "PK-research-agent",
+  "candidate_id": "52d20c4aec789250",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:06:28.268499+00:00",
+  "depends_on": [
+    "04d2aa17b5c75972"
+  ],
+  "draft_key": "pk-w35-reserves-minimum-mean-saturation-deficit",
+  "kind": "lemma",
+  "proof": "At the fixed source the normalized continuous covectors lie on a compact sphere. Choose $R$ strictly larger than $h+\\max_{z\\in P,\\,x\\in K_z,\\,\\Gamma(u)=1}|u\\cdot(x-y)|$. To clip any base tilt, preserve each evaluation $a\\cdot(z-p)$ in $[-R,R]$ by two weak inequalities, and constrain evaluations outside this interval to stay in their corresponding closed rays. The old tilt is feasible. On changed fibers the ramp remains strictly saturated with its old status, while all other margins are unchanged.\n\nThere is a uniform bound for one feasible tilt of every such system. Indeed choose the minimum Euclidean norm feasible tilt. It lies in the span of the active rows, since a small perturbation in either direction perpendicular to those rows remains feasible, and would reduce its norm if it had a nonzero component perpendicular to their span. For independent active rows in a matrix $A$ and their right-hand sides $c$, the tilt is $A^{\\mathsf T}(AA^{\\mathsf T})^{-1}c$; with no independent active rows it is zero. There are only finitely many choices of row matrices from the signed base differences, and $c$ is uniformly bounded by $R$. Thus every old normalized active cap has a bounded replacement with exactly its old ramp and continuous covector. This is the exact ramp clipping of 0fa64553cd01d7ae, §2, used at a fixed mark, as in 6e754f2bf13bdbd1, §1. On the compact tilt ball times the unit sphere the active set is closed by continuity of the ramp integrals. Its image under $N\\mapsto(u,\\Delta_N)$ is compact since $\\Delta_N=B_p+Q_p^{\\rm own}(u)-Q$ is continuous.\n\nThe convex hull of this image is compact by Carathéodory's theorem. Its intersection with $\\{0\\}\\times\\mathbb R$ is nonempty by the balance hypothesis: an integral of points in a compact convex set belongs to the set by linear separation. Every point of this intersection is also a finite convex combination of the image, so minimizing the last coordinate is exactly the original infimum, and it attains. By nonnegativity of each deficit, a zero minimizing combination uses only zero-deficit caps. Apply Carathéodory in the continuous covector space to those caps' normals to retain at most $d+1$ terms while preserving balance. Conversely a zero-deficit balanced menu gives $D_p=0$. The retargeting theorem applies to the resulting finite menu.\n",
+  "source_candidate_ids": [
+    "0fa64553cd01d7ae",
+    "6e754f2bf13bdbd1",
+    "80791dd8739dad42"
+  ],
+  "source_candidate_sha256": {
+    "0fa64553cd01d7ae": "758c712bd97c251e4f83c5137fdcbe304fbf26779e48cd63213ba37a1c7d84a9",
+    "6e754f2bf13bdbd1": "f5115f555eee74019b9bb9d2da9b9ddba3ba09c3eb3ff307aa6e67871271a55e",
+    "80791dd8739dad42": "46306208b07025d49a614247965119da967f1114699d8aed1b161b1883b83bcc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "80791dd8739dad42",
+      "locator": "80791dd8739dad42:05 §4, attained minimal mean deficit"
+    },
+    {
+      "candidate_id": "0fa64553cd01d7ae",
+      "locator": "0fa64553cd01d7ae:01 §2, paragraph beginning 'Compact support of psi also preserves EXACT finite tilt clipping'"
+    },
+    {
+      "candidate_id": "6e754f2bf13bdbd1",
+      "locator": "6e754f2bf13bdbd1:02 §1, exact finite base-tilt clipping paragraph"
+    }
+  ],
+  "statement": "In the pure-width setting of the zero-deficit retargeting theorem, suppose some probability menu on actual nonvertical active caps satisfies $\\int u\\,d\\rho=0$. With $\\Delta_N$ as in that theorem, define $D_p=\\inf_{\\rho:\\int u\\,d\\rho=0}\\int\\Delta_N\\,d\\rho$, over active probability menus. This infimum is attained and nonnegative. It is zero exactly when a finite balanced menu is supported on the zero-deficit active caps; such a menu may use at most $d+1$ terms and admits the exact retargeting. Otherwise $D_p>0$.",
+  "subgoal_id": "pk-intake-pk-w35-reserves-minimum-mean-saturation-deficit",
+  "title": "An attained minimum of mean pure-base saturation deficit"
+}

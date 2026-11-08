@@ -1,0 +1,52 @@
+{
+  "candidate_id": "77cb0f80a93d0415",
+  "candidate_sha256": "ad57d05bd3cb4fd7d4d5f2f5a4c2c8e45976363e41358b2797b7cd2b2600fac1",
+  "checked_dependency_candidate_sha256": {
+    "ec4f7e236aeff668": "eab1d5e32565e0a6d1830d849cff81822c3127a9ebc34422403ee8c5a308e3ca"
+  },
+  "checks": [
+    "Verified the raw digest and source locators 61e9db32fbeb3f83:02 §§2–3, (3)–(8). The proof preserves the distinction between optimizing the charge divided by |B| and dividing it by |B|+eta(B).",
+    "At fixed s,r the nonlinear slack decreases with alpha and the upper linear bound becomes weaker when alpha decreases. Setting alpha=r leaves s+r unchanged and gives the claimed reduced constraint. Conversely this subdomain is allowed. The variable t increases the left side and the cost, and its unique equality root is below 1 since q>1.",
+    "For each u, r=u^d t^d, s=t^d obey 0≤r≤s<1. The scalar equality has the simplex realization by its one upper band, as seen directly from the construction in the fixed-mass proof even if the pair is not optimal at its fixed alpha.",
+    "Implicit differentiation gives F_u=k(d+1)u^(d−1)(1−u)t^(d+1), and cancellation in tF_t−(1+u^d)F_u/u^(d−1) gives qt(1−kt^d Z). When Z>0, the value of F+1 at (kZ)^(−1/d) is (D^d/(kZ^(d+1)))^(1/d); monotonicity in t gives the required direction of the sign comparison.",
+    "Verified D=qZ+u^d(q−u), the logarithmic derivative of D^d/Z^(d+1), and its positive numerator (1−u)[1+u^d+u^(d−1)(d+1−du)]. The ratio runs from 1/(d gamma_d) to infinity at the positive root of Z, giving uniqueness on the closed interval, including equality at the threshold.",
+    "At the interior stationary point t=Z/D. For d=1, independently writing y=1+kr gives (3y−4+(k+1)/y)/(2k), minimized at sqrt((k+1)/3). Its pair is feasible since m≥1, s−r=m/k and k=3m²−1≥2m−1. For d≥2 the binomial bound gives a threshold below (d+1)/d≤3/2, while d=1 gives exactly two."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ec4f7e236aeff668",
+      "candidate_sha256": "eab1d5e32565e0a6d1830d849cff81822c3127a9ebc34422403ee8c5a308e3ca",
+      "mapping": "Minimize the attained fixed-mass scalar program over all alpha with the same body, dominated added measure and ordinary-volume denominator. Its simplex proof constructs every feasible equality pair, including the empty-second-band equality at alpha=r used for arbitrary u.",
+      "reviewed_proof_sha256": "92c6879a34b56e0fe2d32f1920bcac16faec2584b760834a6f5c62f091e4f255",
+      "reviewed_statement_sha256": "3cbfb5634f09c6c9ba07fc57095bd234a9dbc092e0a4dba939f236f5b8be8ad4",
+      "status": "same wave; independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:02:40Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted depth inclusion for a metronoid applies to the weighted centroid after dividing its density by k+1. It gives v at least gamma_d(1+k alpha)/(k+1), with the weaker coefficient 1/(k+1) on 1+k alpha. It supplies neither the exact optimization nor the strengthened linear bound.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "The accepted weighted three-tail inequality uses the centroid of uniform volume and shifted tails on the same body. Here the added measure changes the tested centroid, and the objective charges ordinary volume plus one copy of the added mass in a single cap.",
+      "fact_id": "7ad3d72ee6061cf3"
+    }
+  ],
+  "readability": "The predecessor statement highlights minimizing pairs, but its simplex paragraph applies to any feasible equality pair. This stronger use is justified directly by that paragraph.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1ab58599dab77893841eaf66fa828ba88c8b8b51518c86d73e5d729f8bb3a759",
+  "reviewed_statement_sha256": "951dde7a16fe6b3dc442ce224ddb5d2003c1b3d601d0dddcd36a6c260788ca79",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:58:16Z",
+  "summary": "Lowering alpha to r is exact for the ordinary-volume denominator. The reduced one-band program has the stated unique optimizing u and finite-k values.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

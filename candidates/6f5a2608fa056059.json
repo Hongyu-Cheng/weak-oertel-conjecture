@@ -1,0 +1,28 @@
+{
+  "advances": "Gives a quantitative ordinary cap gain from lowering a threshold below the centroid level.",
+  "author": "PK-research-agent",
+  "candidate_id": "6f5a2608fa056059",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:09:25.054136+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "width-one-centroid-slab",
+  "kind": "theorem",
+  "proof": "Write $\\ell(x)=u\\cdot x$ with $u\\ne0$. The section at level $t$ and each of the two support points of $K$ in directions $\\pm u$ span cones contained in $K$. Their interiors are disjoint, and the heights sum to $1/\\|u\\|$, including a possible zero height at an endpoint. If the section has area $S(t)$, their total volume is $S(t)/(d\\|u\\|)$. Since $p(t)=S(t)/(|K|\\|u\\|)$, this gives $p(t)\\le d$ and bounds the mass added by lowering a threshold.\n\nBy the Brunn–Minkowski inequality on sections, $p^{1/(d-1)}$ is positive and concave on the open projection interval. Thus $\\log p$ is concave there. The interval has length one, so Jensen's inequality for $s\\log s$ gives $\\int p\\log p\\ge0$. This integral is finite since $p\\le d$ and $s\\log s$ is bounded below on $[0,d]$. The mean $m$ lies in the open interval. Integrate a supporting affine upper bound to $\\log p$ at $m$ against the probability density $p$. Its integral is its value at $m$, giving $\\log p(m)\\ge\\int p\\log p\\ge0$.\n\nConcavity of the section root and the nonnegative endpoint limit imply $p(m-s)\\ge p(m)(1-s/A)^{d-1}$ for $0\\le s<A$. Integrating yields\n$$\n\\mathbb P\\{m-a\\le\\ell(X)\\le m\\}\n\\ge \\frac{A}{d}\\bigl[1-(1-a/A)^d\\bigr]\\ge a/d.\n$$\nThe inequality at $a=A$ follows by monotone convergence. Finally apply the full-mass centroid case of 6769574fc1bd9f8d to the through-centroid cap. The added slab has $a=\\ell(g-y)\\in[0,A]$. Its overlap with the through-centroid cap is a hyperplane of zero volume.\n",
+  "source_candidate_ids": [
+    "e81e0e86f9a482f3"
+  ],
+  "source_candidate_sha256": {
+    "e81e0e86f9a482f3": "a7bddaad96afa96f4b656161b59ff03d275ba8615e7b644212030500e5271047"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e81e0e86f9a482f3",
+      "locator": "§§1–2, (2)–(6)"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a convex body, $d\\ge2$, with centroid $g$, and let $X$ be uniform on $K$. Fix a linear functional $\\ell$ of width one on $K$. Write $p$ for the density of $\\ell(X)$ given by section volumes, $m=\\ell(g)$, and $A=m-\\min_K\\ell$. Then $p\\le d$ and $p(m)\\ge1$. Lowering a cap threshold by $a\\ge0$ increases its normalized mass by at most $da$. For $0\\le a\\le A$,\n$$\n\\mathbb P\\{m-a\\le\\ell(X)\\le m\\}\\ge a/d.\n$$\nIn particular, if $y\\in K$ and $\\ell(g-y)\\ge0$, then\n$$\n\\frac{|K\\cap\\{\\ell(x)\\ge\\ell(y)\\}|}{|K|}\n\\ge \\left(\\frac{d}{d+1}\\right)^d+\\frac{\\ell(g-y)}{d}.\n$$",
+  "subgoal_id": "pk-intake-width-one-centroid-slab",
+  "title": "Centroid slab gain for a width-one projection"
+}

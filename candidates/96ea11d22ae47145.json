@@ -1,0 +1,37 @@
+{
+  "advances": "Actual caps with bounds tight at their own common budget; partial menus need not cover the mixed set or contain globally deepest marks. No obstruction is claimed for a rule retaining only globally justified cap constraints.",
+  "author": "PK-research-agent",
+  "candidate_id": "96ea11d22ae47145",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.850340+00:00",
+  "depends_on": [
+    "090cdd38b09bbfa8",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "arbitrarily-small-full-rank-gaussian-cap-menus",
+  "kind": "theorem",
+  "proof": "For each selected vertex $v_i$ choose a nonzero continuous functional on its full-dimensional fiber. Its closed upper-tail volume is continuous because all cutting planes are $d$-null, ranges from the full volume to zero at the support extremes, and is strictly decreasing between them since every intermediate strip contains interior points. Thus the required fraction $q/\\pi_{v_i}\\in(0,1)$ is attained by some proper cut. Choose a base exposing functional for $v_i$; the exposing margin is zero there and has a strictly negative finite gap at each other sampled base. Add a sufficiently large multiple to the own cut. Boundedness of the finitely many other fibers makes all their margins strictly negative, so the ambient capture fractions and mass are as claimed.\n\nLet $m=\\sum_zp_zz$ for an arbitrary positive posterior. A facet functional equal to $b$ on the facet and at most $b$ on $P$ is strictly smaller at $m$, since a full-rank $P$ has a base strictly off the facet. For a relation $\\sum_i a_i(v_i-m)=0$ the facet functional then gives $\\sum_i a_i=0$. Affine independence gives $a_i=0$ for all $i$. The covariance vectors are $(q/\\pi_{v_i})p_{v_i}(v_i-m)$ with positive coefficients; adaptive-gaussian-active-cap-freezing forces zero adaptive covariance.\n\nIn the triangle calibration the closed cap is empty at $z=1,2$ since $\\lambda_j\\le1$. At zero its fraction is $(2/3)^2$ by homothety. At the uniform prior, $m=1$ and $c_j=(4/9)(1/3)(-1)=-4/27$; generally $m>0$ and $c_j=-(4/9)p_0m\\ne0$. The three own caps cover the zero fiber since some barycentric coordinate is at least $1/3$. This is an obstruction with unchanged conditional laws, distinct from the source f7afca279c65bd1a's continuous-needle question.\n\nIn the ternary calibration, $v_i\\cdot(z-v_i)\\le-1$ at any other ternary base, so each cap is isolated and has own fraction $\\Gamma_d$. For the listed columns $v_i-m$, subtract the column $v_0-m$ from the others to get $-2e_i$ for $i<n$. The absolute determinant is $2^{n-1}(1-m_n)>0$, also for $n=1$, since the strictly positive posterior includes bases with $z_n<1$. Multiplication by the positive factors $\\Gamma_dp_{v_i}$ preserves rank. The selected groups leave other fibers uncovered. At the prior, every ambient containing cap of $(0,g_T)$ may be translated parallel inward to pass through it. For a through-mark oblique normal with base component $a$, at least half the base weight lies on $\\{z:a\\cdot z\\ge0\\}$ by base reflection, and on each such fiber the cap includes the corresponding centroid cut. This cut has fraction at least $\\Gamma_d$ by 6769574fc1bd9f8d at full volume. A pure-base through-cap already retains at least half the weight. Thus the original center attains the asserted lower bound despite absence of a heavy fiber.\n\nThe general rank construction works for arbitrarily small $q$ even when the prior is not heavy anywhere. It establishes no active constraint at a larger budget $\\alpha$ and no global cover; rank of such arbitrary retained caps alone therefore supplies no extra geometry of deepest marks.\n",
+  "source_candidate_ids": [
+    "5b4307751aab9c87"
+  ],
+  "source_candidate_sha256": {
+    "5b4307751aab9c87": "497deec70736f7309cb33d8a1e60b941858cf68574cdd45b2e3d044132f65aaa"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5b4307751aab9c87",
+      "locator": "5b4307751aab9c87:03 §§4–5"
+    },
+    {
+      "candidate_id": "5b4307751aab9c87",
+      "locator": "5b4307751aab9c87:04 §6, (8)–(9)"
+    },
+    {
+      "candidate_id": "5b4307751aab9c87",
+      "locator": "5b4307751aab9c87:05 §7, (10) and full-rank argument"
+    }
+  ],
+  "statement": "For a finite base $P\\subset\\mathbb R^n$ of full affine rank, $n\\ge1$, positive compact convex $d$-fibers, $d\\ge1$, and positive prior $\\pi_z$, fix $\\alpha>0$. Choose $n$ affinely independent vertices $v_i$ of any facet of $\\operatorname{conv}P$ and $0<q<\\min\\{\\alpha,\\pi_{v_1},\\ldots,\\pi_{v_n}\\}$. There are actual ambient closed caps $H_i$ of original mass $q$ with capture fractions $g_i(z)=(q/\\pi_{v_i})\\mathbf1_{\\{z=v_i\\}}$. Their base covariance vectors span $\\mathbb R^n$ at every positive posterior. Preservation of these active $q$-bounds forces $A_t=0$ in any existing adaptive Gaussian process of the stated type.\n\nOn $[0,2]\\times T$ for the ordinary triangle, the caps $\\lambda_j(X)-z\\ge1/3$ have probability $4/27<2/9$, cover only the index-zero fiber, and each has scalar base covariance $-4/27$ initially and nonzero covariance at every positive posterior. On $[-1,1]^n\\times T$ for a $d$-simplex, all $3^n$ original base probabilities are $3^{-n}<2^{-n}$. At the $n$ corners $v_0=\\mathbf1$ and $v_i=\\mathbf1-2e_i$ for $1\\le i<n$, use the $d+1$ caps $\\lambda_j(X)+v_i\\cdot(z-v_i)\\ge1/(d+1)$. They cover their respective selected fibers and have common original budget $\\Gamma_d/3^n<\\Gamma_d/2^n$, with full covariance rank at every positive posterior. The original point $(0,g_T)$ has normalized depth at least $\\Gamma_d/2$.",
+  "subgoal_id": "pk-intake-arbitrarily-small-full-rank-gaussian-cap-menus",
+  "title": "Arbitrarily small actual cap menus can freeze adaptive base covariance"
+}

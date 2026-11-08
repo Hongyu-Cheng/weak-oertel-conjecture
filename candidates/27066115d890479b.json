@@ -1,0 +1,26 @@
+{
+  "advances": "Exact reflected-pair comparison at a prescribed point in dimension three, over all opposite shifts in the grouped class.",
+  "author": "PK-research-agent",
+  "candidate_id": "27066115d890479b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:21.034240+00:00",
+  "depends_on": [],
+  "draft_key": "grouped-positive-reflected-simplex-pair-obstruction",
+  "kind": "counterexample",
+  "proof": "For uniform $X$ in $T_3$, the sum of $k$ fixed barycentric coordinates has density proportional to $y^{k-1}(1-y)^{3-k}$ on $[0,1]$. To see the powers, separate the $k$ chosen and $4-k$ unchosen barycentric coordinates and scale each group's simplex at fixed group sum by $y$ and $1-y$, respectively. Integration gives upper tails $G(y)=(1-y)^3$, $1-3y^2+2y^3$, and $1-y^3$ for $k=1,2,3$, clipped to $1$ below zero and $0$ above one. For any grouped normal the pair divided by $r^3$ is $G(q-v)+G(q+v)$, with $q=kt/r$ and $v=ks/r$.\n\nFor $k=1$, $q=5/18$. For $v\\le q$ apply convexity of $(1-y)_+^3$ on nonnegative arguments; for $v\\ge q$ the first term is one, larger than $2(13/18)^3$. The minimum is at $v=0$ and is $2(r-t)^3=2197/4000$ in the original units. For $k=2$, $q=5/9$. On $0\\le v\\le1-q$ the sum is $2G(q)+(12q-6)v^2$. After that the upper-threshold term vanishes and the other term increases weakly. The minimum is $2r^3G(5/9)=608/1000$ at $v=0$. For $k=3$, $q=5/6$. On $0\\le v\\le1-q$ the sum is $2-2q^3-6qv^2$, decreasing, and afterward the remaining term increases weakly. At $v=1-q$ the original shift is $1/20$ and the cost is $r^3[1-(2q-1)^3]=513/1000$.\n\nFor $u=(5/9,2/9,2/9)$, the vertex heights on $rT_3$ are $0,1/2,1/5,1/5$. At $t=1/4$ the cap is a simplex at the vertex of height $1/2$. Its intercept fractions along the three incident edges are the excess $1/2-t$ divided by the respective height differences. Multiplying them by $r^3$ gives $F_u(t)=(1/2-t)^3/[(5/9)(1/3)^2]=81/320$. Doubling gives the claimed cost, and $513/1000-81/160=27/4000$.\n",
+  "source_candidate_ids": [
+    "b6d513a5f78979c5"
+  ],
+  "source_candidate_sha256": {
+    "b6d513a5f78979c5": "3a4bf53ba2e70c7b61b230646bc9aa284bc6e3aab92e919109264751c42d5765"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b6d513a5f78979c5",
+      "locator": "b6d513a5f78979c5:01 §1, (1)–(2), grouped-normal obstruction"
+    }
+  ],
+  "statement": "Let $T_3=\\operatorname{conv}(0,e_1,e_2,e_3)$, $V_3=|T_3|$, $r=9/10$, $t=1/4$, and $F_u(h)=|rT_3\\cap\\{u\\cdot x\\ge h\\}|/V_3$. For nonnegative normals $u$ with $\\sum_i u_i=1$ and with $k$ equal positive coordinates and $3-k$ zero coordinates, the respective minima over $s\\ge0$ of $F_u(t-s)+F_u(t+s)$ are $2197/4000$, $608/1000$, and $513/1000$ for $k=1,2,3$. They are attained at $s=0,0,1/20$ respectively. The normal $(5/9,2/9,2/9)$ with $s=0$ gives $81/160$, smaller than every grouped value by at least $27/4000$.",
+  "subgoal_id": "pk-intake-grouped-positive-reflected-simplex-pair-obstruction",
+  "title": "Equal positive normal entries miss the reflected-pair minimum"
+}

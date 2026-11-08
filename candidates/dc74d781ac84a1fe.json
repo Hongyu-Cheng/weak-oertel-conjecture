@@ -1,0 +1,34 @@
+{
+  "advances": "An exact compatibility obstruction from all true triangle facets and one canonical endpoint simplex. The enclosing-triangle clause also applies when the middle body is a subset of the displayed homothet.",
+  "author": "PK-research-agent",
+  "candidate_id": "dc74d781ac84a1fe",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:54:35.360921+00:00",
+  "depends_on": [],
+  "draft_key": "true-triangular-facet-enclosure-and-shape-bound",
+  "kind": "theorem",
+  "proof": "The barycentric coordinate functions of $P-g$ are $(1-u_j\\cdot x)/3$. Thus $\\sum_j u_j=0$, and this is their sole dependence. The defining right sides of the equations for $z$ sum to zero, so there is a unique solution. Positivity of $\\rho$ follows by evaluating each support against a common interior point of $B$, which makes the three inequalities strict before summing. The enclosure of $B$ follows from its supports in these three normals. Erosion by $B$ is equivalent to imposing all three inequalities\n$$\nu_j\\cdot x+h_B(u_j)\\le 2u_j\\cdot(z_0+sg)+2s.\n$$\nSubtracting the support equations proves the exact identity if $2s-\\rho>0$. Summing the inequalities shows that the intersection is empty if $2s-\\rho<0$ and a point at equality. Thus positive area of the erosion is equivalent to $2s-\\rho>0$.\n\nUnder the matched support hypothesis, $\\sum_i h_{P-g}(-v_i)=3$. Properness gives $h_A(-v_i)>1-2v_i\\cdot y$. Since $A$ lies in the erosion, summing these support inequalities cancels the translations and source terms, giving $3<3(2s-\\rho)$. Hence $\\rho<2s-1$. Now let $D=z+\\rho(P-g)$, so $B\\subseteq D\\cap T$ and $|D|=\\rho^2p$. For some $i$, $h_D(v_i)\\ge\\rho S/3$ because the sum of the three supports of $D$ is $\\rho S$. Its width in that coordinate is at most $\\rho W$. If the level $v_i\\cdot x=1$ is below the maximum, contract $D$ about a maximizing point with ratio equal to the excess above one divided by its width. The level is above the minimum whenever there is an excess, because $D\\cap T$ has positive area. The homothet lies in the removed cap and the boundary line has zero area. Consequently that cap occupies at least $(\\rho S/3-1)_+^2p/W^2$. This proves $b/p\\le F(\\rho)$, including the case of zero excess.\n\nWe have $S>0$ by translating to $g$ and $W\\ge 1+S/3$ by averaging the widths. Thus $F$ increases strictly for $r\\ge0$: below the hinge it is $r^2$, and above it the derivative is $2r(1-(S/3)^2/W^2)+2S/(3W^2)>0$. Evaluate at $2s-1$, or at one in the unexpanded case. If $p\\le a+b$, then $a/b\\ge p/b-1>\\zeta^2/(1-\\zeta^2)$. As $P\\subseteq -T$, each $h_P(v_i)\\le2$ and hence $W\\le3$, proving the simpler shape test.\n",
+  "source_candidate_ids": [
+    "3f10007d0abab8f7"
+  ],
+  "source_candidate_sha256": {
+    "3f10007d0abab8f7": "fb6c08b232bbbbf8b77f6a8af67d3a162f27e27dd40c96e12f08a347e2ae2a69"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3f10007d0abab8f7",
+      "locator": "3f10007d0abab8f7:06 §5, Theorem 4, (12)–(14), matched true triangular erosion and shape test"
+    },
+    {
+      "candidate_id": "3f10007d0abab8f7",
+      "locator": "3f10007d0abab8f7:04 §4, (9)–(10), actual enclosing homothet extension"
+    },
+    {
+      "candidate_id": "3f10007d0abab8f7",
+      "locator": "3f10007d0abab8f7:01 §1, Theorem 1, (1)–(7), exact erosion and symmetric-triangle area credit"
+    }
+  ],
+  "statement": "In $\\mathbb R^2$ put $v_1=(1,0)$, $v_2=(0,1)$, $v_3=(-1,-1)$, and $T=\\{x:v_i\\cdot x\\le1\\ \\forall i\\}$. For any nondegenerate triangle $P$, let $g$ be its centroid and let $u_j$ be the three outward facet normals scaled so that $P-g=\\{x:u_j\\cdot x\\le1\\ \\forall j\\}$. For a convex body $B$ put $\\rho=\\sum_j h_B(u_j)/3>0$. There is a unique $z$ with $u_j\\cdot z=h_B(u_j)-\\rho$. For $s>0$ and $z_0\\in\\mathbb R^2$ the full erosion of $2(z_0+sP)$ by $B$, if full-dimensional, and the enclosing homothet for $B$ are\n$$\n\\{x:x+B\\subseteq 2(z_0+sP)\\}=2z_0+2sg-z+(2s-\\rho)(P-g),\n\\qquad B\\subseteq z+\\rho(P-g).\n$$\n\nAssume $h_P(-v_i)=1$ for every $i$, $B\\subseteq T$, $A$ is a convex body with $(A+B)/2\\subseteq z_0+sP$, and all three lines $v_i\\cdot x=2v_i\\cdot y-1$ meet $\\operatorname{int} A$ for one $y\\in\\mathbb R^2$. Write $p=|P|$, $a=|A|$, $b=|B|$, $S=\\sum_i h_P(v_i)$ and $W=\\max_i[h_P(v_i)+1]$. Then $0<\\rho<2s-1$ and\n$$\n\\frac bp\\le F(\\rho)<F(2s-1),\\qquad F(r)=r^2-\\frac{(rS/3-1)_+^2}{W^2}.\n$$\nIn particular, at $s=1,z_0=0$ put $\\zeta=(S/3-1)_+/W$. Then $b/p<1-\\zeta^2$. If $p\\le a+b$ and $a<b/32$, this forces $\\zeta^2<1/33$, so $S\\ge3+9/\\sqrt{33}$ is impossible.",
+  "subgoal_id": "pk-intake-true-triangular-facet-enclosure-and-shape-bound",
+  "title": "Exact true-facet triangle erosion and a matched-support shape bound"
+}

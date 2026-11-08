@@ -1,0 +1,32 @@
+{
+  "advances": "Continuous ordinary-volume pushforward. The change of variables makes no assertion about a mixed-integer measure or a lattice-preserving map.",
+  "author": "PK-research-agent",
+  "candidate_id": "f6c497926ac327fa",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:20:32.436164+00:00",
+  "depends_on": [],
+  "draft_key": "general-projective-volume-marginal",
+  "kind": "lemma",
+  "proof": "The coordinate $t$ is nonconstant and nonnegative on $K$, hence positive on $\\operatorname{int}K$. Its zero set is contained in an affine hyperplane of $D$-volume zero. At each positive $t$, $v=tz$ contributes the Jacobian $t^r$, giving the first formula. Compactness bounds $t$ and $y$ in fixed bounded sets, so the first formula is bounded uniformly in $z$. Integration in $z$ gives $|K|$. The projection $v/t$ maps $\\operatorname{int}K$ to an open nonempty set: at an interior point one can vary $v$ while holding $t$ and $y$ fixed. For each such image point $z$, its $(t,y)$ section contains an open set with $t>0$, giving $F(z)>0$.\n\nNow set $s=1/t$ and $w=y/t$. The change $(s,w)\\mapsto(t,y)$ has absolute Jacobian $s^{-2}s^{-(D-r-1)}$; multiplying by $t^r$ gives $s^{-(D+1)}$. To check convexity of $\\Omega$, the inverse image in $K$ of a convex combination of $(z_0,s_0,w_0)$ and $(z_1,s_1,w_1)$ with weights $1-\\theta,\\theta$ is the convex combination of their inverse images with weights proportional to $(1-\\theta)s_0,\\theta s_1$. These weights are positive for $0<\\theta<1$. Thus $\\Omega$ is convex, and the integrand $J\\mathbf1_\\Omega s^{-(D+1)}$ raised to the power $p=-1/(D+1)$ is the affine function $J^p s$ wherever the integrand is positive.\n\nExtend the integrand by zero to $s\\le0$. Apply functional Borell–Brascamp–Lieb to the $(s,w)$ sections at any two points of $\\{F>0\\}$ and at their interpolated point. In integration dimension $k=D-r$, [Bobkov, *Convex bodies and norms associated to convex measures*, Lemma 2.3](https://www-users.cse.umn.edu/~bobko001/papers/2010_PTRF_Norms.pdf) takes the input power mean $p>-1/k$ to the output power mean $p/(1+kp)$. Here the input inequality holds whenever both endpoint integrands are positive by convexity of $\\Omega$ and affinity of their $p$-powers. All section integrals are finite by the first formula. The output exponent is\n$$\n\\frac{p}{1+kp}=-\\frac{1}{r+1}.\n$$\nIn particular the interpolated density is positive, and taking its negative power gives the claimed convexity. A full-dimensional convex set has Lebesgue-null boundary. Finally, for $t>0$, $a\\cdot v+bt=t(a\\cdot z+b)$, giving exact mass preservation by the pushforward; the discarded set $t=0$ contributes zero.\n",
+  "source_candidate_ids": [
+    "2338b9b22d6faa2f",
+    "55fd8fec61360536"
+  ],
+  "source_candidate_sha256": {
+    "2338b9b22d6faa2f": "ac7b11afacea031ffe5583bc5ac2ab2968a6db303c61fd7b62d1f11c64354f70",
+    "55fd8fec61360536": "5dfc9bb7737abaaa8cec8887b4d7c3d0771adfb4665af91fec11fa7515cfab3e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "55fd8fec61360536",
+      "locator": "§3, both density formulas and homogeneous cap transfer"
+    },
+    {
+      "candidate_id": "2338b9b22d6faa2f",
+      "locator": "§3, precise Borell–Brascamp–Lieb formulation"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^D$ be a full-dimensional compact convex body with affine coordinates $(v,t,y)$, where $v\\in\\mathbb R^r$, $1\\le r\\le D-1$, $y\\in\\mathbb R^{D-r-1}$, and $t\\ge0$ on $K$. Write $J>0$ for the constant volume Jacobian of these coordinates. The pushforward of $D$-volume on $K\\cap\\{t>0\\}$ under $z=v/t$ has bounded integrable density\n$$\nF(z)=J\\int_0^\\infty\\int_{\\mathbb R^{D-r-1}}\\mathbf1_K(tz,t,y)t^r\\,dy\\,dt\n    =J\\int_0^\\infty\\int_{\\mathbb R^{D-r-1}}\\mathbf1_\\Omega(z,s,w)s^{-(D+1)}\\,dw\\,ds,\n$$\nwhere $\\Omega=\\{(z,s,w):s>0,\\ (z/s,1/s,w/s)\\in K\\}$. The set $\\{F>0\\}$ is convex and full-dimensional, and $F^{-1/(r+1)}$ is convex on it. Its boundary may be discarded without changing the measure. The total mass is $|K|$, and any cap on $K$ with margin $a\\cdot v+bt$ has exactly the mass of $\\{z:a\\cdot z+b\\ge0\\}$ under $F(z)\\,dz$.",
+  "subgoal_id": "pk-intake-general-projective-volume-marginal",
+  "title": "Exact projective marginal of ordinary convex-body volume"
+}

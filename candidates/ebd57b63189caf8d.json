@@ -1,0 +1,33 @@
+{
+  "advances": "A sufficient mixed-depth bound for prescribed homothetic fibers and a finite Jensen-affine approximation; arbitrary translation defects are outside the tolerance conclusion.",
+  "author": "PK-research-agent",
+  "candidate_id": "ebd57b63189caf8d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:01:59.469138+00:00",
+  "depends_on": [
+    "6d6fcf377e68c79c",
+    "03bc771bddd39a8a"
+  ],
+  "draft_key": "pk-w35-homothetic-jensen-core",
+  "kind": "theorem",
+  "proof": "For $q_p>0$, membership of $a_p-b_p$ in $\\gamma_J(a_p-b_p)J$ and convexity of $J$ give $a_p+q_pJ\\subset b_p+r_pJ=K_p$. The cores are used only at sites of $E$. If $E$ is empty, any actual point gives the zero bound.\n\nFor $E\\ne\\varnothing$, let $G$ be the convex hull of $(p,a_p)$ for $p\\in E$, and let $P_E=P\\cap\\operatorname{conv}(E)$. By completeness, $P_E$ is the full integer set of $\\operatorname{conv}(E)$. Every representation of $j\\in P_E$ by points of $E$ yields continuous coordinate $a_j$ by the Jensen property. Thus $G$ has exactly the singleton $(j,a_j)$ over each such site, and this point is feasible in the original convex set because every $(p,a_p)$ for $p\\in E$ belongs to its core. Let $T$ be the set of these integer graph points. For each convex test in the graph ambient space, its trace on $T$ is identified by projection with the trace on $P_E$ of its intersection with $G$. Indeed the projected intersection is convex and every relevant graph fiber is a singleton. This gives $h(T)\\le h(P_E)$. Also $h(P_E)\\le h(P)$ since a family of convex tests on $P_E$ can be intersected with $\\operatorname{conv}(E)$ and treated on $P$.\n\nAssign weights $q_p^d$ to $(p,a_p)$ for $p\\in E$ and zero to the other points of $T$. Apply 6d6fcf377e68c79c to the finite closed set $T$ and its finite Borel measure of positive total $\\sum_{p\\in E}q_p^d$. The selected point of $T$ has at least $\\sum_{p\\in E}q_p^d/h(P)$ weight in every closed halfspace containing it. At a counted site $p$ that halfspace either includes the entire core or restricts to a closed halfspace containing $a_p$. By homothety, its core volume is then at least $\\beta q_p^d|K|_d$. Summing and dividing by the original mass $|K|_d\\sum_p r_p^d$ proves the bound, even if the chosen graph site has zero core weight.\n\nThe uniform gauge bound gives $q_p\\ge(1-\\varepsilon)r_p$. The claimed tolerance follows by taking $d$th roots of $\\beta(1-\\varepsilon)^d\\ge\\Gamma_d$. The Jensen-affine assignments form a closed linear subspace in the finite product of the site coordinates, and the objective is continuous. Since $J$ contains a ball about zero and is contained in a bounded ball, its gauge is continuous and bounded below by a positive multiple of Euclidean norm. The objective is therefore coercive on the subspace, giving attainment. At a symmetry center the ordinary depth is $1/2$ by reflection and zero hyperplane volume. For $d\\ge2$ the binomial expansion gives $(1+1/d)^d>2$, hence $\\Gamma_d<1/2$. The ordinary attainment and rigidity theorem 03bc771bddd39a8a gives maximum strictly above $\\Gamma_d$ exactly off the simplex class. Any maximizing point is interior since a supporting closed halfspace at a boundary point captures zero $d$-volume.\n",
+  "source_candidate_ids": [
+    "fdbf593f0d365c0d"
+  ],
+  "source_candidate_sha256": {
+    "fdbf593f0d365c0d": "2295f77a17b87052dac1a98ae697d26df507ad307fdf0f9d1fdeeb9c50a625d4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fdbf593f0d365c0d",
+      "locator": "fdbf593f0d365c0d:02 §2, (3)–(4), Jensen-affine core transfer"
+    },
+    {
+      "candidate_id": "fdbf593f0d365c0d",
+      "locator": "fdbf593f0d365c0d:03 §3, (5)–(6) and the attained tolerance test"
+    }
+  ],
+  "statement": "Let $d\\ge1$, let $K\\subset\\mathbb R^d$ be a compact convex body, and let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be nonempty and finite. Suppose a compact convex set has actual integer fibers $K_p=c_p+r_pK$ with $r_p>0$ for $p\\in P$, with no positive $d$-volume at other integer sites. Fix $t\\in\\operatorname{int}K$ and let $\\beta$ be the normalized ordinary closed-halfspace depth of $t$ in the uniform body $K$. Put $J=K-t$ and $b_p=c_p+r_pt$. Let $a:P\\to\\mathbb R^d$ preserve every anchored convex representation of a site of $P$ by sites of $P$. With $\\gamma_J$ the Minkowski gauge of $J$, put $q_p=(r_p-\\gamma_J(a_p-b_p))_+$. Then some actual mixed point has normalized depth at least\n$$\n\\frac{\\beta}{h(P)}\\frac{\\sum_{p\\in P}q_p^d}{\\sum_{p\\in P}r_p^d},\n$$\nwhere $h(P)$ is the relative Helly number. If $E=\\{p:q_p>0\\}$ is nonempty, the point can be taken on the graph of $a$ above $\\operatorname{conv}(E)\\cap P$.\n\nIn particular, if $\\gamma_J(a_p-b_p)\\le\\varepsilon r_p$ for every $p$ and $0\\le\\varepsilon<1$, the depth is at least $\\beta(1-\\varepsilon)^d/h(P)$. With $\\Gamma_d=(d/(d+1))^d$, this gives $\\Gamma_d/h(P)$ when $\\varepsilon\\le1-(\\Gamma_d/\\beta)^{1/d}$. For fixed $t$ the infimum of $\\max_p\\gamma_J(a_p-b_p)/r_p$ over the Jensen-affine assignments $a$ is attained. If $K$ is centrally symmetric its center has $\\beta=1/2$, yielding positive tolerance for $d\\ge2$. More generally a nonsimplex $K$ admits an interior $t$ with $\\beta>\\Gamma_d$, while a simplex has maximum ordinary depth $\\Gamma_d$.",
+  "subgoal_id": "pk-intake-pk-w35-homothetic-jensen-core",
+  "title": "Weighted depth transfer from Jensen-affine homothetic cores"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "A scalar unit-step inequality at actual nodes, for arbitrary real d≥1.",
+  "author": "PK-research-agent",
+  "candidate_id": "a0756c6751636340",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:33:30.158354+00:00",
+  "depends_on": [],
+  "draft_key": "arithmetic-power-sum-concavity",
+  "kind": "theorem",
+  "proof": "Put $D=d+1$ and $p=1/D$. The function $g(x)=((x+1)_+^D-x_+^D)^{1/d}$ is convex on $\\mathbb R$. Indeed, the fundamental theorem of calculus gives $g(x)=D^{1/d}\\lVert(x+s)_+\\rVert_{L^d(0,1)}$, with $s$ the integration variable. The pointwise convexity of positive part, monotonicity of the norm on nonnegative functions, and Minkowski's inequality for $L^d$ give convexity for all $d\\ge1$. Also $g(x-1)\\le x^{D/d}$ for $x\\ge0$, by dropping $(x-1)_+^D$ from the difference in $g(x-1)^d$.\n\nFor $q>1$, let $a=(q+1)^d$, $b=q^d$ and $h(s)=(1+as)^p+(1-bs)^p-2$ for $0\\le s\\le1/b$. This function is continuous and strictly concave, with $h(0)=0$, $h'(0)=p(a-b)>0$, and $h(1/b)=(1+a/b)^p-2<0$ since $a/b<2^d$ and $1+2^d<2^D$. The secant quotient $h(s)/s$ is strictly decreasing for $s>0$. Thus there is a unique zero $s_*\\in(0,1/b)$, with $h$ positive on $(0,s_*)$ and negative on $(s_*,1/b]$. It follows that $B(q)=1/s_*>b$ is the unique zero of $E_q(F)=(F+a)^p+(F-b)^p-2F^p$ on $F\\ge b$, and $E_q(F)\\le0$ exactly for $b\\le F\\le B(q)$, because $E_q(F)=F^p h(1/F)$.\n\nWrite $U=B(q)^p$ and $\\delta=(B(q)+a)^p-U>0$. The equation $E_q(B(q))=0$ gives $(B(q)-b)^p=U-\\delta>0$. With $x=U/\\delta>1$, taking $1/d$ powers of the adjacent differences of $D$th powers gives $\\delta^{D/d}g(x-1)=q$ and $\\delta^{D/d}g(x)=q+1$. Hence convexity gives $\\delta^{D/d}g(x+1)\\ge q+2$, or\n$$\n(U+2\\delta)^D-(U+\\delta)^D\\ge(q+2)^d.\n$$\nLet $G=B(q)+(q+1)^d=(U+\\delta)^D$. Then $(G+(q+2)^d)^p\\le U+2\\delta$ and $(G-(q+1)^d)^p=U$, so $E_{q+1}(G)\\le0$. Since $G>(q+1)^d$, the sign characterization gives $B(q+1)\\ge B(q)+(q+1)^d$.\n\nTo start the induction, put $U_0=A_0^p$, $U_1=A_1^p$, $\\delta=U_1-U_0>0$ and $t=U_0/\\delta>0$. Then $\\delta^{D/d}t^{D/d}=\\rho$ and $\\delta^{D/d}g(t)=\\rho+1$. Convexity and the bound on $g(t-1)$ give\n$$\n\\delta^{D/d}g(t+1)\\ge 2\\delta^{D/d}g(t)-\\delta^{D/d}g(t-1)\\ge\\rho+2.\n$$\nThis is $(U_1+\\delta)^D-U_1^D\\ge(\\rho+2)^d$, so $A_2^p+A_0^p\\le2A_1^p$. Since $A_1\\ge(\\rho+1)^d$, the sign characterization gives $A_1\\le B(\\rho+1)$. Whenever $A_m\\le B(\\rho+m)$ for $m\\ge1$, the bound on $B(q+1)$ gives $A_{m+1}=A_m+(\\rho+m+1)^d\\le B(\\rho+m+1)$. Thus $A_m\\le B(\\rho+m)$ at all $m\\ge1$. Applying the sign characterization with $F=A_m\\ge(\\rho+m)^d$ and $q=\\rho+m$ yields the claimed midpoint inequality.\n\nFor noninteger $q>1$, let $\\rho=q-\\lfloor q\\rfloor$ and $m=\\lfloor q\\rfloor$. For integer $q\\ge2$, let $\\rho=1$ and $m=q-1$. In either case $0<\\rho\\le1$ and $m\\ge1$. Reading the positive terms in reverse order gives $S_d(q+j)=A_{m+j}$ for $j=-1,0,1$. A zero endpoint contributes zero. Each sum has finite support.\n\nFor optimality of the exponent, take $\\rho=1$. Then $A_m=\\sum_{j=1}^{m+1}j^d\\ge\\int_0^{m+1}t^d\\,dt=(m+1)^{d+1}/(d+1)$. For any $\\alpha>p$, $A_m^\\alpha/(m+1)$ is unbounded. A concave sequence on $m=0,1,\\ldots$ has nonincreasing first differences and is bounded above by its initial affine extrapolation. Thus $(A_m^\\alpha)$ fails at some integer midpoint. The same example gives failure for the unit-step statement at an integer $q\\ge2$.\n",
+  "source_candidate_ids": [
+    "821242aee5d2f3e1"
+  ],
+  "source_candidate_sha256": {
+    "821242aee5d2f3e1": "5ead3b8be5c75043b6d82f1329efd279e4d32ac3d3bd6c9a4d4f95f0c6db55f1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "821242aee5d2f3e1",
+      "locator": "§§1–5, (1)–(7)"
+    }
+  ],
+  "statement": "Let $d\\ge1$ be real and $\\rho>0$. For integers $m\\ge0$ put $A_m=\\sum_{j=0}^m(\\rho+j)^d$. The sequence $(A_m^{1/(d+1)})_{m\\ge0}$ is concave at every integer midpoint $m\\ge1$. In particular, for $S_d(q)=\\sum_{j\\ge0}(q-j)_+^d$, where $x_+=\\max\\{x,0\\}$, every real $q>1$ satisfies\n$$\nS_d(q+1)^{1/(d+1)}+S_d(q-1)^{1/(d+1)}\\le 2S_d(q)^{1/(d+1)}.\n$$\nFor each fixed $d$ the exponent $1/(d+1)$ is the largest positive exponent that works uniformly over the sequences $A_m$.",
+  "subgoal_id": "pk-intake-arithmetic-power-sum-concavity",
+  "title": "Concavity of arithmetic power sums at consecutive indices"
+}

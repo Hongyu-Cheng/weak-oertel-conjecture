@@ -1,0 +1,29 @@
+{
+  "advances": "Exact sharpness and failure examples for the new oriented scalar bound. The cube refutes a lower bound on the mixed-volume term, not one on its actual cap depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "2508aa78b91697c2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.204326+00:00",
+  "depends_on": [
+    "8185884fb3e30ecb",
+    "9a92720e59c67dc1"
+  ],
+  "draft_key": "pk-w35-sweeps-mixed-volume-calibrations",
+  "kind": "counterexample",
+  "proof": "For the simplex the exact centroid cap law of 8185884fb3e30ecb gives criticality, the old-boundary marginal, and $S_J=r^{d-1}S_B/(d+1)$. A simplex centered at its centroid has support in the direction opposite any facet normal equal to $d$ times its support in that facet normal: at the opposite vertex the centered barycentric coordinate of that vertex is $d/(d+1)$, while its value on the facet is $-1/(d+1)$. Therefore\n$$\nV(J[d-1],B)=\\frac{r^{d-1}}{d+1}|B|,\n\\qquad\nV((-J)[d-1],B)=d\\,V(J[d-1],B)=r^d|B|.\n$$\nThe first expression also equals $|J|^{(d-1)/d}|B|^{1/d}$, so $\\alpha=d$. Every vertex cap is the pyramid over its section with the corresponding vertex as apex.\n\nFor the cube, symmetry about its center gives half the volume in every through-center cap and hence at least half for every containing cap. Thus the coordinate center halfcaps are critical. Each pair's indicators sum to one on the original boundary off its section plane, a null set for boundary area, so the weighted old normal marginal is $S_B/2$. Each section has area one, yielding atoms $w_i/2$ at each of $\\pm e_i$. This is the surface-area measure of a positive box: put $m_i=w_i/2$, $V=(\\prod_i m_i)^{1/(d-1)}$ and use side lengths $V/m_i$. The centered support of the unit cube is $1/2$ at each of these normals. The two support integrals divided by $d$ both equal $1/(2d)$, and each halfcube remainder is $1/2-1/(2d)$. Since $(1+1/d)^d<e<3$ and $1/(2d)\\le1/4$, the mixed volume is strictly smaller than $\\Gamma_d|B|$.\n",
+  "source_candidate_ids": [
+    "600f7b09ccd06ced"
+  ],
+  "source_candidate_sha256": {
+    "600f7b09ccd06ced": "b2b582af5eaa50ed671853bd1c27308859067715cc199a0601b84cdb6c0f06a8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "600f7b09ccd06ced",
+      "locator": "600f7b09ccd06ced:02 §§4–5, exact simplex and cube calibrations, (7)"
+    }
+  ],
+  "statement": "Use the oriented section measure $R=S_J$, average cap fraction $\\beta$, remainders and oriented factor $\\alpha$ of the actual cap pyramid identities. For the $d+1$ equal-weight centroid vertex caps of a $d$-simplex $B$, $d\\ge2$, put $r=d/(d+1)$. Then $\\beta=r^d$, $J=r(d+1)^{-1/(d-1)}B$ up to translation, $V((-J)[d-1],B)=\\beta|B|$, $V(J[d-1],B)=\\beta|B|/d$, and $\\alpha=d$. All captured remainders vanish. For the unit cube and the two coordinate center halfcaps in each axis with weights $w_i/2$, where $w_i>0$ and $\\sum_iw_i=1$, $\\beta=1/2$, both mixed volumes are $1/(2d)$, and each of the two signed mean remainders is $(d-1)/(2d)$. These are actual critical cap laws with old-boundary normal marginal $\\beta S_B$. In particular, the universal bound $V((-J)[d-1],B)\\ge (d/(d+1))^d |B|$ fails even with this marginal and actual criticality.",
+  "subgoal_id": "pk-intake-pk-w35-sweeps-mixed-volume-calibrations",
+  "title": "Simplex and cube calibrations distinguish the oriented term from cap depth"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "Counterexample to extending the two prescribed peak centroids to arbitrary tails. The tested peak bases need not be marginal medians.",
+  "author": "PK-research-agent",
+  "candidate_id": "4f9df69800fcab6e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.815775+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "w33-peak-centroid-selector-long-tail-failure",
+  "kind": "counterexample",
+  "proof": "Interpolate the radii piecewise linearly on $[0,9]$. They are positive and concave, since the first slope is zero and the rest are $-1/100$. The centroid zero lies in $K$. For nonnegative coefficients, the Minkowski sum of two scaled copies of $K$ is the copy scaled by their sum, and $rK\\subset r'K$ when $0\\le r\\le r'$. These facts show that the body with fibers $r(z)K$ over $[0,9]$ is compact and convex. On each unit interval the fibers are the Minkowski interpolants of the adjacent lifted fibers, so the body is their convex hull and has exactly the ten listed integer fibers. Only $r_0,r_1$ are maximal.\n\nThe summed area is $2+\\sum_{k=1}^8(1-k/100)^2=23251/2500$. The pure-base closed caps $z\\le0$ and $z\\le1$ give the two upper bounds and the gap $23251/11250-2=751/11250>0$. At base $4$ the strict left and right masses are $39405/10000$ and $44190/10000$, each below $M/2=46502/10000$. Every closed cap containing $(4,0)$ includes the centroids on at least a closed half-line of bases through $4$. The corresponding original fibers have total mass at least $M/2$. At each of those centroids the trace is whole or a closed containing halfplane. Apply the full-mass centroid consequence of 6769574fc1bd9f8d with $d=2$ and density identically one to pay at least $4/9$ of each such fiber. This proves the all-normal lower bound at $(4,0)$.\n",
+  "source_candidate_ids": [
+    "24b9a17cce573038"
+  ],
+  "source_candidate_sha256": {
+    "24b9a17cce573038": "7cf1da9bcfc6fd547cc70d4cfef03e5d24f648a67fdafe77c9125f2df92ee313"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "24b9a17cce573038",
+      "locator": "24b9a17cce573038:02 §3, (3), including weighted-median calibration"
+    }
+  ],
+  "statement": "For every centroid-zero planar convex body $K$ of area one, let $r_0=r_1=1$ and $r_i=1-(i-1)/100$ for $2\\le i\\le9$. There is a compact convex body whose complete actual integer fibers are $r_iK$ at $i=0,\\ldots,9$, with total mixed area $M=23251/2500$. Its unique adjacent maximum-radius pair is at $0,1$. The two prescribed peak centroids have raw depth at most $1$ and $2$ respectively, below $2M/9=23251/11250$. The actual centroid at base $4$ has raw depth at least $2M/9$ over all closed ambient halfspaces.",
+  "subgoal_id": "pk-intake-w33-peak-centroid-selector-long-tail-failure",
+  "title": "A ten-fiber counterexample to the adjacent peak-centroid selector"
+}

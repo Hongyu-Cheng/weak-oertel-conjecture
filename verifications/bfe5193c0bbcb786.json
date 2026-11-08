@@ -1,0 +1,64 @@
+{
+  "candidate_id": "879a2e8d029fc5b2",
+  "candidate_sha256": "5f079938b3af1d7233ced18730db611aae24264fcf59364e6fc6a836f9e6b015",
+  "checked_dependency_candidate_sha256": {
+    "155691fc3768c06f": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+    "311757ca7529ae19": "a4c7afe3ee84946749dd01e1cddaaee2255efeee3616c3456570ec3c604a08fd"
+  },
+  "checks": [
+    "Checked 8ab518b2afa5de5c:09 §7 and (18). The premise is an already given physical martingale; no surface convex-order separator or existence statement is assumed from the ambient variational problem.",
+    "The primal anchored support maximum equals h_{K_p}(u) by inclusion and the identity representation. A feasible constant majorant and finite LP duality give a touching plane, consistent with the accepted support theorem.",
+    "For a row with the full martingale mean, the target slack l(Z′)−u·X′ is nonnegative and its conditional mean is the source slack zero. Splitting it gives separate equality with the sampled majorant and with the actual support face.",
+    "For every touching l, the discrete slack l(z)−h_{K_z}(u) must vanish at every base with positive conditional mass, because the set of possible bases is finite. Thus these equalities hold simultaneously for all touching planes. The continuous face equality is the same for every l and can be enforced using one of them.",
+    "The null set of nonregular target points has zero marginal mass, hence zero conditional mass at almost every source. At a regular target its unique normal is u because it lies on the u-face. Averaging the discrete coordinate and the continuous scalar support identities gives the two required anchored equalities."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+      "fact_id": "155691fc3768c06f",
+      "fact_sha256": "afecd88a8ebe5c473d9297f6454db7d90db5c79dd7986e3072a482620d9a126a",
+      "mapping": "Use its anchored support at p for the finite positive sampled family. Actual compatibility supplies every required anchored Minkowski inclusion. For every outward u, the support theorem gives an affine majorant attaining h_{K_p}(u), including lower affine rank and boundary bases.",
+      "reviewed_proof_sha256": "2c027df5280f826f67575a9caf2fc48f86961afb4378d9b6cc9503c2e1aed953",
+      "reviewed_statement_sha256": "ae620bc47a6c7c8bd2eac230a3afeee4e3a8ca76a0eb43dcfa9603f6609fa787"
+    },
+    {
+      "candidate_sha256": "a4c7afe3ee84946749dd01e1cddaaee2255efeee3616c3456570ec3c604a08fd",
+      "fact_id": "311757ca7529ae19",
+      "fact_sha256": "e57dd9a8274b0a06c50713d77ca609e63402ea77492baa8ced77a8a4f2e30187",
+      "mapping": "Use its proof's surface regularity argument only, with the labeled positive-volume convex fibers and their boundary measures. The source and target marginals are both absolutely continuous, and the dimension-one endpoint normals are unique. Its normal-localized test hypotheses are not invoked to construct a coupling here.",
+      "reviewed_proof_sha256": "77cf48da34517ccf2714e4d7a21db65937298c5b7eb5afbf8950dc753481196e",
+      "reviewed_statement_sha256": "6475953041b02238b4302c4bf4cd00c3cc166424431041671cccb4054961975c"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:32:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its general compact marked theorem obtains a normal-preserving coupling under parameter-localized tests. This draft assumes an arbitrary existing unmarked physical martingale on actual compatible surface fibers and deduces same normal and every touching majorant from affine slack.",
+      "fact_id": "311757ca7529ae19"
+    },
+    {
+      "comparison": "The contact-row argument there enforces majorant equalities for a prescribed concave parameter L at interior marks with its parameter moments. Here the supporting height of each actual fiber provides the nonnegative slack for surface rows without a prescribed L.",
+      "fact_id": "9b0e9ed78338976f"
+    },
+    {
+      "comparison": "The accepted sampled concave-parameter law is a base-only volume martingale with a preserved roof moment. It does not determine continuous target exposed faces or their normals.",
+      "fact_id": "b9e0b3b29694badd"
+    }
+  ],
+  "readability": "For simultaneous plane equalities, a finite affine spanning family of plane coefficients would suffice. The finite-base argument also follows directly from the preceding two-slack calculation and avoids any basis convention.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "da9bdd95107236d33694735dc9a9a3ecf6afb977a34308dbb58bea7a1189f4c7",
+  "reviewed_statement_sha256": "359a66e26e43e4829ca509c0797573839ebafb8ff2df5be80e8ac2464ff44477",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:28:42Z",
+  "summary": "Every physical martingale row is confined to the actual supporting contacts for every touching majorant at its regular source, which forces target normal preservation.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

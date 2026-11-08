@@ -1,0 +1,100 @@
+{
+  "candidate_id": "2cc402f30700bdef",
+  "candidate_sha256": "a705ac02b66ace90360621bad84e403da36bf63378783c4a9985ead2c813e17d",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+    "1f0ffae097710a37": "8d371a1a2d30ffb69cd5ee64be454cdaccbb7bbdb1cc35da71a6f58f4e40f8c3",
+    "6ad992fcbb68c716": "9a1371752dc6d361eb74f0975544c902198783cc0897de6ac4988626c931321c",
+    "8bdcdcd6e2fa69d9": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+    "d2ba4e3cbd6eb730": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0"
+  },
+  "checked_source_candidate_sha256": {
+    "de0cd073e31eb7f8": "5fbadc6a90f177a70e241ec019b40ba73f2683824996fbd5c077fe6b34c2cb07"
+  },
+  "checks": [
+    "Verified pq=(1-s)/3 and 2/3<s<1 on 0<p<1/3, the strict positivity of the first three rows, and λ(2T+U₀)=1. The nonzero first-pair difference and nonconstant pair-constant third row give the claimed active rank and span.",
+    "Recomputed the cap fractions and exponential densities directly from the raw cap formula and the beta CDF for the repeated-pair row. The three proper stationarity conditions are T=P₁/f₁ and U₀=P₃/f₃. Root-CDF concavity and threshold uniqueness identify the actual optimizer.",
+    "Checked that the three weighted gradients equal the common actual section centroid and that the first variation into any nonzero nonnegative zero-row velocity is negative using min b_j>1/8>1/10 and φ₃(v)≤max v.",
+    "Differentiated the rational cap probability independently along the two exchange directions. Verified H[e,e]=27(3s-2)/(8(s+2)²), H[z,z]=3/(8(s+2)), and the zero mixed term by symmetry. The homogeneity identity gives the tangent cap kernel, and the positive threshold-Schur square leaves exactly the row-radial capacity kernel.",
+    "Checked the three weighted unscaled curvatures, the orthogonality of symmetric funding velocities to z, and minimization of [θ²+(1-θ)²]/6 at θ=1/2. Independently computed the surplus 13/8748, λ=35/247 and actual second derivative 3211/306180 at p=1/5.",
+    "Matched de0cd073e31eb7f8 §§2–5, (3)–(10), to the stated rows, weights and feasible funded path. The claim concerns this explicit family."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1462fa9ce6ced54e",
+      "candidate_sha256": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+      "fact_sha256": "90c54522176a9bd2392576c6f61a0ae6c5f7dfca357cf8869ae656c987ddcda1",
+      "hypotheses_mapping": "Every optimizing cut used has two strictly positive and two strictly negative margins. The raw cap fraction and normalized coarea apply with repeated heights permitted.",
+      "reviewed_proof_sha256": "8de3c29eaf4b9ea31778296cf6c19010b1e74d947e37a33c223e812e662b921a",
+      "reviewed_statement_sha256": "bca7b2d2230b274880856fcf4ccd9e8239bbbebad59eed011d4c53736003028c",
+      "status": "accepted predecessor at pinned snapshot"
+    },
+    {
+      "candidate_id": "6ad992fcbb68c716",
+      "candidate_sha256": "9a1371752dc6d361eb74f0975544c902198783cc0897de6ac4988626c931321c",
+      "fact_sha256": "b66d57346e262fe03bdbbaf524608c6d5287c5a191a36c5ff7fbf7db551e5210",
+      "hypotheses_mapping": "Here b has A=1/(s+2) in (1/3,3/8) and C=s/[2(s+2)], with pq=(1-s)/3. Its three raw representatives have the exact common actual centroid.",
+      "reviewed_proof_sha256": "0a00439444021a190fb4c24facd52f83f6231f5fce6ef6bab42fa1ae9c06e309",
+      "reviewed_statement_sha256": "f79b7a3e268d18663d3316daa0e781c6236437a1763f9d143ebfc0e344b73d2a",
+      "status": "accepted predecessor at pinned snapshot"
+    },
+    {
+      "candidate_id": "d2ba4e3cbd6eb730",
+      "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+      "fact_sha256": "1ea56df969a8d887e9e78ed86174eee2934f79a095ee0f54bf7fb9255fd58f61",
+      "hypotheses_mapping": "The first three rows are positive and nonconstant with proper minimizing cuts. This gives threshold uniqueness and the actual area-centroid capacity gradient used in the first variation.",
+      "reviewed_proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+      "reviewed_statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc",
+      "status": "accepted predecessor at pinned snapshot"
+    },
+    {
+      "candidate_id": "8bdcdcd6e2fa69d9",
+      "candidate_sha256": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+      "fact_sha256": "b6b826a3e6a8e77bf027fc6db3d5a210aaf645644d9a18b27289fbad6ebab319",
+      "hypotheses_mapping": "Rescale by each positive proper threshold. The exact Schur form has a positive square denominator and a negative prefactor. Applying it to the b-orthogonal subspace and restoring the threshold units proves the kernel and split curvature claims.",
+      "reviewed_proof_sha256": "3f10992a46b97286bfba42b813249fa659b3504118defeeae9510650608b52f7",
+      "reviewed_statement_sha256": "deba3f575be9d9f26f3af97154bc46e151f89c2cdb0be8bb5cb80bcbb484e157",
+      "status": "accepted predecessor at pinned snapshot"
+    },
+    {
+      "candidate_id": "1f0ffae097710a37",
+      "candidate_sha256": "8d371a1a2d30ffb69cd5ee64be454cdaccbb7bbdb1cc35da71a6f58f4e40f8c3",
+      "fact_sha256": "415ea3fbb86ba39c64e4993408469afc7f00685f0331c42592097333d3df65ff",
+      "hypotheses_mapping": "For row 3 put a=U₀-2 and h=U₀+s. Then 0<a<h and a/h=1/(s+1) lies in (1/2,3/5). Its low pair occupies coordinates 3 and 4, so its stated beta threshold, low-pair split Hessian and inertia apply after permutation.",
+      "reviewed_proof_sha256": "271b90424bd1c09214a542d748d86be902de7d4c98c7ec8dc4f4131306463557",
+      "reviewed_statement_sha256": "abe57297e821396f8a6570fb80610a41de8f3b540b1abc0fa0bde93e75e65a2e",
+      "status": "accepted predecessor at pinned snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:10:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Classifies the three common-centroid sections and gives the exact raw directions. It does not form the stochastic rows and their fixed weights or compute their optimized Hessians and funding.",
+      "fact_id": "6ad992fcbb68c716"
+    },
+    {
+      "comparison": "Gives an abstract Schur map and proportional funding test for selected positive modes. Here the only positive mode lies outside the active span, and the explicit signed second-variation comparison funds it through rows with nonpositive Hessians.",
+      "fact_id": "f8cc9b4619513ed5"
+    },
+    {
+      "comparison": "Gives a necessary active-rank plus positive-index bound at a least-active maximizer. The explicit family meets the numerical bound and still has an improving funded direction.",
+      "fact_id": "63c38ebdb1d43777"
+    }
+  ],
+  "readability": "The raw, threshold-one and actual stochastic units are all distinguished in the proof. The row-3 split uses the lower pair after permutation.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3be189bfcd690636d54a7d928496ce7fe0748e22a0a3575f091ea41b386d5bbc",
+  "reviewed_statement_sha256": "fe12e64ac07da58247503d2f09e849f1e47e69805d7d5bdad6720324d4248411",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:06:03Z",
+  "summary": "The explicit positive stochastic rows have the claimed unique thresholds, first-order behavior and strictly positive funded second derivative. The exact unscaled least funding cost is 1/12.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

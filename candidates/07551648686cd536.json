@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary Lebesgue densities on a convex body with a fixed interior barycenter. The feasible class has no pointwise density cap.",
+  "author": "PK-research-agent",
+  "candidate_id": "07551648686cd536",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:45:21.611210+00:00",
+  "depends_on": [
+    "d90ba05577427854"
+  ],
+  "draft_key": "projective-energy-ordinary-entropy-dual",
+  "kind": "theorem",
+  "proof": "For any density $\\rho$ in the maximum and any admissible denominator $L_a=1+a\\cdot(x-y)$, the mass and mean constraints give $\\int_K\\rho L_a\\,dx=1$. Hölder with exponents $1/p$ and $d+2$ applied to $\\rho^p=(\\rho L_a)^p L_a^{-p}$ gives\n$$\n\\int_K\\rho^p\\,dx\n\\le \\left(\\int_K \\rho L_a\\,dx\\right)^p\n     \\left(\\int_K L_a^{-d-1}\\,dx\\right)^{1/(d+2)}\n=\\left(\\int_K L_a^{-d-1}\\,dx\\right)^{1/(d+2)}.\n$$\nMinimizing over $a$ yields the upper bound. Let $E=E_K(y)$ and use the attained denominator $L$. The escort lemma gives feasibility of $\\rho_*=L^{-d-2}/E$, and $\\int_K \\rho_*^p\\,dx=E^{-p}\\int_K L^{-d-1}\\,dx=E^{1/(d+2)}$. Equality in Hölder with this $L$ requires $\\rho L$ to be proportional to $L^{-d-1}$ almost everywhere. The normalization fixes the proportionality constant as $1/E$, proving uniqueness.\n",
+  "source_candidate_ids": [
+    "5811f0ad1132ce56"
+  ],
+  "source_candidate_sha256": {
+    "5811f0ad1132ce56": "cf888fb2717b5d4b3cfabc3c9ae14a262d47186f2d905801d018fe8579528548"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5811f0ad1132ce56",
+      "locator": "§6, (18)"
+    }
+  ],
+  "statement": "Let $d\\ge1$, let $K\\subset\\mathbb R^d$ be a convex body, and let $y\\in\\operatorname{int}K$. Put $p=(d+1)/(d+2)$ and let $E_K(y)$ be the minimum of $\\int_K[1+a\\cdot(x-y)]^{-d-1}\\,dx$ over affine denominators strictly positive on $K$. Then\n$$\nE_K(y)=\\max_{\\substack{\\rho\\ge0,\\ \\int_K\\rho\\,dx=1\\\\\\int_K x\\rho(x)\\,dx=y}}\n\\left(\\int_K\\rho(x)^p\\,dx\\right)^{d+2}.\n$$\nThe maximum is over ordinary Lebesgue densities on $K$ with the displayed mass and mean. Its unique maximizer up to Lebesgue null sets is $\\rho=L^{-d-2}/E_K(y)$, where $L(x)=1+a_*\\cdot(x-y)$ is the attained optimal denominator.",
+  "subgoal_id": "pk-intake-projective-energy-ordinary-entropy-dual",
+  "title": "Barycentric power-entropy dual of ordinary projective volume energy"
+}

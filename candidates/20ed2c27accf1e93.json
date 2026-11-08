@@ -1,0 +1,42 @@
+{
+  "advances": "Fixed hollow double triangle, with summed d-volume and a strict sublevel. The facet bound is per positive fiber. The theorem supplies compactness and describes degeneration.",
+  "author": "PK-research-agent",
+  "candidate_id": "20ed2c27accf1e93",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:11.840672+00:00",
+  "depends_on": [
+    "aa4df3d20ca63976",
+    "c6b7777f667984de",
+    "55a57b1cf55d0c87"
+  ],
+  "draft_key": "hollow-double-triangle-compactness",
+  "kind": "theorem",
+  "proof": "Dilate the continuous coordinates by $M^{-1/d}$. The three midpoint masses sum to at most $3q$, so one vertex, relabeled $v_0$, has mass at least $v_*$. Apply the first paragraph of the proof of aa4df3d20ca63976 to this positive vertex, using its volume $a\\le q$, to put it in $R\\mathbb B_d$ with a point at zero and absolute determinant one. Select a point in each of the other vertex fibers. Subtract their affine interpolation with the zero point from the continuous coordinate. The three vertex bases are affinely independent, so this shear is defined and makes all three vertex fibers contain zero while fixing the fiber at $v_0$. All maps preserve compatibility and the last two maps preserve mixed volume. Every map preserves normalized depth because it bijects ambient halfspaces and scales all fiber and cap volumes by the same factor.\n\nCompatibility gives $(K_{v_i}+K_{v_j})/2\\subset K_{m_{ij}}$. The two midpoints incident with $v_0$ contain $K_{v_0}/2$, in $(R/2)\\mathbb B_d$ and of mass at least $v_*/2^d$. Apply the cone estimate in the second paragraph of aa4df3d20ca63976 with upper mass $q$. It bounds both midpoints by $T\\mathbb B_d$. Those same midpoints contain the halves of the other vertex fibers, which are thus in $2T\\mathbb B_d$. The chosen vertex and the three midpoint fibers account for at most $4q$, so one of the other vertices, relabeled $v_1$, has mass at least $v_{**}$. The last midpoint contains $K_{v_1}/2$, of mass at least $v_{**}/2^d$ in $T\\mathbb B_d$. The cone estimate gives radius $T(1+2^{d+1}dq/v_{**})$ there, proving the common bound.\n\nTake a common subsequence by Blaschke selection and make both chosen vertex labels constant using finiteness. Compatibility passes to the limit by approximating every point in a fixed barycentric representation with the same coefficients. Lattice completeness of $P$ precludes any further integer base. Fiber indicators converge in $L^1$: for a positive limit, support-function convergence retains each interior point eventually and exterior points are eventually absent, while the convex boundary is null. For a null limit the sets lie in shrinking neighborhoods of a compact null set, so their volumes tend to zero. This proves both total variation convergence and preservation of total mass one and of each stated lower or upper mass bound. Each midpoint contains half of at least one selected positive vertex with a suitable translation using the other endpoint, giving the asserted minimum mass bound.\n\nFor depth at a fixed mark, total variation bounds the mass error uniformly over all closed caps and hence also the error of their infimum. At a fixed base, take through-mark caps. Pure-base caps do not change when the continuous mark moves. Normalize each nonvertical continuous coefficient to norm one. Moving the continuous mark by $h$ moves each fiber threshold by at most $\\|h\\|$; the swept slab has mass at most $\\kappa_{d-1}R_*^{d-1}\\|h\\|$ per fiber, where $\\kappa_0=1$. This bounds the change of the infimum by six times that amount. Compactness gives maximizing marks. A subsequence of prelimit maximizing marks at one base has a limit mark in the limit fiber and gives the upper limit inequality. Conversely, approximate a limit maximizer by prelimit marks in its fiber for the lower limit inequality. The masses equal one. If the remaining vertex is null, 55a57b1cf55d0c87 applies to this actual family with positive total mass and gives exact deletion and depth preservation. For deletion of $(0,2)$, $(2,0)$, or $(0,0)$, use respectively the integer functional $z_2,z_1,$ or $z_1+z_2$ for width one. The retained bases span the plane, so each nonzero integer linear functional has positive integral width.\n\nThe canonical ambient hull has full dimension because one positive fiber supplies every continuous direction and the projection spans the plane. At the true centroid of any positive fiber, c6b7777f667984de, proof (4), bounds its contribution to every containing ambient halfspace by $\\gamma_d|K_z|_d$ from below. This gives the stated $q$ for the strict sublevel. If the infimum is below $\\gamma_d/4$, a minimizing sequence eventually lies in a single such sublevel. Normalization, compactness and depth continuity give a minimizer.\n\nFor the facet variant, the affine normalization preserves the bound. At a positive limit fiber, the approximants are eventually positive and contain a fixed ball about a limit interior point. Use unit supporting facet normals, repeat rows to length $N$, and pass to convergent normals and offsets, all bounded by the common ball. The limit fiber lies in the limiting intersection. Mix any point of the intersection with the center of the retained ball, with positive weight on the center. The resulting point satisfies all limit rows strictly, hence all sufficiently late rows, and belongs to the limit fiber. Let that weight tend to zero to obtain the reverse inclusion. Null limit fibers are allowed by definition, so the minimizing sequence stays in the specified class after passage to the limit.\n",
+  "source_candidate_ids": [
+    "2a5bf571e6159901"
+  ],
+  "source_candidate_sha256": {
+    "2a5bf571e6159901": "f6441e644654ef05144e2825079ff6b8e1c25ecccb22588a5ff390580801467a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2a5bf571e6159901",
+      "locator": "2a5bf571e6159901:03 §3, Theorem 3, (3)–(8)"
+    },
+    {
+      "candidate_id": "2a5bf571e6159901",
+      "locator": "2a5bf571e6159901:04 §4, limits and maximum depth"
+    },
+    {
+      "candidate_id": "2a5bf571e6159901",
+      "locator": "2a5bf571e6159901:06 §§5–6, strict sublevel and attainment"
+    },
+    {
+      "candidate_id": "2a5bf571e6159901",
+      "locator": "2a5bf571e6159901:07 §6, last three paragraphs"
+    }
+  ],
+  "statement": "Let $d\\ge1$, let $v_0=(0,0),v_1=(2,0),v_2=(0,2)$, and let $P$ consist of these vertices and their three pairwise midpoints. Consider nonempty compact convex fibers $K_z\\subset\\mathbb R^d$ that are the actual sections at $P$ of the convex hull of their lifts. Write $M=\\sum_z|K_z|_d>0$, and let $D$ be the maximum, over the actual lifted fiber points, of the infimum of summed $d$-volume in containing closed ambient halfspaces, divided by $M$.\n\nIf $|K_z|_d\\le qM$ for all $z$, where $1/6\\le q<1/4$, a map $(z,x)\\mapsto(z,Ax+Bz+b)$ with invertible $A$ gives unit total mass and puts all six fibers in $R_*\\mathbb B_d$, where\n$\nv_*=(1-3q)/3,\\quad v_{**}=(1-4q)/2,\\quad R=\\sqrt d(d!q)^{1/d},\\quad\nT=\\tfrac R2(1+2^{d+1}dq/v_*),\\quad\nR_*=2T(1+2^{d+1}dq/v_{**}).\n$\nThe class is empty for $q<1/6$. For a sequence with fixed $d,q$, these normalized fibers have a simultaneous Hausdorff subsequence with actual compatible limits of unit total mass. The mixed measures converge in total variation and $D$ converges. Two fixed limit vertices have volume at least $v_*$ and $v_{**}$ respectively, and each midpoint fiber has volume at least $\\min(v_*,v_{**})/2^d$. If the remaining vertex is null, deleting it preserves the mixed measure and maximum depth, and the resulting projection has lattice width one.\n\nPut $\\gamma_d=(d/(d+1))^d$. A fixed depth sublevel $D\\le\\gamma_d/4-\\epsilon$ with $\\epsilon>0$ has the preceding compactness with $q=1/4-\\epsilon/\\gamma_d$. In the class of all actual families on $P$, an infimum strictly below $\\gamma_d/4$ is attained. This also holds in the class in which every positive fiber is a polytope with at most a fixed $N$ facets, allowing arbitrary nonempty compact convex null fibers.",
+  "subgoal_id": "pk-intake-hollow-double-triangle-compactness",
+  "title": "Compactness below the quarter-mass threshold on the hollow double triangle"
+}

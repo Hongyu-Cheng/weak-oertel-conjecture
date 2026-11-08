@@ -1,0 +1,48 @@
+{
+  "candidate_id": "4087c90731447cce",
+  "candidate_sha256": "51b734aa1ab565829f4905752717e96e8b4bb1f3e11ef3d7271b38e10f936386",
+  "checked_dependency_candidate_sha256": {
+    "1aa8cb39550cb9d1": "c8f1ab7fced6a80ced3e4f5aa1953829d91006a2c776d52610ffc25ca6f5c17c"
+  },
+  "checks": [
+    "Checked original note 5dd0d34dec315bd7, §4, (5), and the following excluded parameter range. This use does not require the source note's separate comparison with the shifted-cover result.",
+    "Since e>0 there is positive area below -1, and h>2 gives points above -1. The cutting line therefore meets the interior. In particular 0<e<a, H>3 and Delta>0.",
+    "The predecessor upper-tail bound in the same coordinates is a-v-8a²/H² at level 2. Its complement is the area of the lower cap through level 2 because the level line has zero area, so that area is at most v+8a²/H².",
+    "The lower cap at -1 has area e and A has area a. The Minkowski average with weight 3/H on A lies in the lower cap at level 2 because -1+(3/H)(h+1)=2. The weight lies strictly between zero and one. Planar Brunn–Minkowski gives the asserted lower bound for the square root of the area.",
+    "Multiplication by positive H followed by squaring nonnegative quantities is reversible. The resulting cross term is -6 sqrt(e) Delta H, the square of the increment contributes -9 Delta², and the v and e terms give (v-e)H². Under v≤e and 8a²<9 Delta² the sum is strictly negative, proving impossibility, including the case v=e.",
+    "Independently checked the constant expansion with the unit-Jacobian rectangle |s|≤1/2, -2≤t≤7 and x=s-t/2, y=-s-t/2. It gives a=9, e=1, v=4, H=8, Delta=2. Both the squared-side difference and the expanded quadratic evaluate to 708."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1aa8cb39550cb9d1",
+      "candidate_sha256": "c8f1ab7fced6a80ced3e4f5aa1953829d91006a2c776d52610ffc25ca6f5c17c",
+      "hypotheses_mapping": "Same body and coordinate caps, with u≤v and 0<v<a/2. The assumptions e>0 and h>2 ensure a proper t=-1 cut. The predecessor's last estimate with H=h+1 applies at level 2. The dependency must be independently approved before admission.",
+      "reviewed_proof_sha256": "98414fb375165cd90f3b49bce9976d9b8d4a90767756dc420c431298ec09da0f",
+      "reviewed_statement_sha256": "1ed390295f7e2c820a4abf090fcf32a85d9fd6e0bd453b57dbca66edaaca3986",
+      "status": "same-wave predecessor requiring independent approval before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:40:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof uses exactly the same lower-cap interpolation at -1, 2 and h, but combines it with an upper bound from the shifted-cover estimate in a mixed three-fiber setting. The current standalone restriction uses the common-slice width estimate instead and has the explicit quadratic in v,e,H.",
+      "fact_id": "077e154ea4666171"
+    }
+  ],
+  "readability": "Here e denotes the mass below the original t=-1 cut, not the mass below the shifted cut. The quadratic is a necessary constraint obtained from upper and lower area bounds.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "708f60bb4f50d0f870b0eb02a43e87beef7b31b21ef4504d75e77ac2deb990da",
+  "reviewed_statement_sha256": "888f40f750dbbdd4b26bd8f720d6f69efb1e924dc78bd1019d25adc1e6e8da28",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:36:34Z",
+  "summary": "The common-slice upper bound and Brunn–Minkowski interpolation give the displayed quadratic restriction, with the exact properness and strict exclusion hypotheses.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

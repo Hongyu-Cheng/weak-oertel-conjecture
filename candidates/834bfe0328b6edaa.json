@@ -1,0 +1,26 @@
+{
+  "advances": "A conditional local-minimum threshold for the positive-coordinate scalar gap.",
+  "author": "PK-research-agent",
+  "candidate_id": "834bfe0328b6edaa",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:38:34.554864+00:00",
+  "depends_on": [],
+  "draft_key": "two-positive-envelope-pair-stability-location",
+  "kind": "lemma",
+  "proof": "On the equal-coordinate family let $U=E-mx$ and $E'=m(E+1)/(1-x)$. The function $E(x)$ is strictly convex with $E(0)=0$ and $E'(0)=m$, so $U>0$ and $Z=(1-x)(xE'-E)>0$. Write $\\Phi=(E+h)(h-x)^m/h^{m+1}$ and $D=x[mh+(m+1)E]-Eh$. Since $R\\ge L>0$ and $R=\\rho(E+h)(1-\\Phi)$ with $\\Phi>0$, we have $0<\\Phi<1$. At the minimum, the $h$ derivative of $R$ is zero because $L$ is independent of $h$. Using $\\Phi_h/\\Phi=(E+h)^{-1}+m/(h-x)-(m+1)/h$ gives\n$$\n1-\\Phi=(E+h)\\Phi_h,\\qquad \\frac{\\Phi}{1-\\Phi}=\\frac{h(h-x)}D,\\qquad D>0 .\n$$\nThe two logarithmic derivatives along the equal-coordinate variation are\n$$\n\\begin{aligned}\n\\frac{L_x}{L}\n&=\\frac{E'-m}{U}+m\\frac{E'+1}{E+x}-(m+1)\\frac{E'}E\n=\\frac{m(m+1)x Z}{(1-x)E U(E+x)},\\\\\n\\frac{R_x}{R}\n&=\\frac{E'}{E+h}-\\frac{E'}{E+1}\n-\\frac{\\Phi}{1-\\Phi}\\left(\\frac{E'}{E+h}-\\frac{m}{h-x}\\right)\n=\\frac{m(m+1)x(1-h)}{(1-x)D}.\n\\end{aligned}\n$$\nThe last equalities use the formulas for $E'$ and $\\Phi/(1-\\Phi)$ and put the fractions over a common denominator. Both are positive, and $L_x=R_x$ gives $L/R=E U(E+x)(1-h)/(DZ)$.\n\nTo split two coordinates at fixed product, set their two complementary variables to $(1-x)e^{s}$ and $(1-x)e^{-s}$. Their sum $T_0$ increases from $2(1-x)$ for nonzero small $s$ and all coordinates remain interior. At fixed $h,E$, the changing factor $E-\\sum_j x_j$ has derivative one in $T_0$; the pair factor in $\\prod_j(E+x_j)$ has value $(E+x)^2$ and derivative $-(E+1)$ at the equal point. Hence $L_{T_0}/L=A/[U(E+x)^2]$, since $(E+x)^2-(E+1)U=A$. The pair factor in $\\Phi$ has value $(h-x)^2$ and derivative $h-1$, so\n$$\n\\frac{R_{T_0}}R=\\frac{\\Phi}{1-\\Phi}\\frac{1-h}{(h-x)^2}\n=\\frac{h(1-h)}{(h-x)D}.\n$$\nThe feasible split requires $L_{T_0}-R_{T_0}\\ge0$. Using $L/R$ above and cancelling positive factors gives $E(h-x)A-h(E+x)Z\\ge0$. Expanding and factoring gives\n$$\nE(h-x)A-h(E+x)Z=x[h(E+1)U-EA],\\qquad\n\\frac{EA}{(E+1)U}-x-\\frac ZE=\\frac{Z^2}{E(E+1)U}.\n$$\nAll factors in the final denominator are positive. Since $x>0$ and $Z>0$, these identities prove the claimed threshold.\n",
+  "source_candidate_ids": [
+    "31dd328861ee872c"
+  ],
+  "source_candidate_sha256": {
+    "31dd328861ee872c": "cae711118e992b66aac2e4e213f2ba0aedd644671104e23790f26557a5d82e6b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "31dd328861ee872c",
+      "locator": "§3, (4)–(8), corrected stability factorization"
+    }
+  ],
+  "statement": "For an integer $m\\ge1$ and $0\\le x_j\\le h<1$ with some $x_j>0$, put $\\rho=\\prod_j(1-x_j)$, $E=\\rho^{-1}-1$, and\n$$\nL=\\left(1-\\frac{\\sum_j x_j}{E}\\right)\\prod_j(1+x_j/E),\\qquad\nR=\\rho(E+h)\\left[1-\\frac{(E+h)\\prod_j(h-x_j)}{h^{m+1}}\\right].\n$$\n\nSuppose $m\\ge2$ and $x_1=\\cdots=x_m=x$ with $0<x<h<1$ is a local minimum of $L-R$ in the full open domain and $L-R\\le0$. In particular $E=(1-x)^{-m}-1$. Put $Z=E((m+1)x-1)+mx$, $A=Z+x(E+x)$, $h_c=x+Z/E$, and $h_b=EA/[(E+1)(E-mx)]$. Then\n$$\nh\\ge h_b>h_c>x,\\qquad h_b-h_c=\\frac{Z^2}{E(E+1)(E-mx)}.\n$$",
+  "subgoal_id": "pk-intake-two-positive-envelope-pair-stability-location",
+  "title": "The pair-stability threshold at an equal-coordinate scalar minimum"
+}

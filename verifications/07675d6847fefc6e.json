@@ -1,0 +1,56 @@
+{
+  "candidate_id": "3f276165ef08636d",
+  "candidate_sha256": "77299ff44ab85a6f0e953dec99d2785fef15bf4d5823222639107058dfb1f28b",
+  "checked_dependency_candidate_sha256": {
+    "6bd6bb822eee0863": "029e1326a4c3ddbcbd5700b3791e62a7cb23c86e92d331957b54d574b27a5305"
+  },
+  "checks": [
+    "The sampled set P is finite by compactness of the projection. Full affine rank, including nonempty zero-volume fibers, is precisely the spanning hypothesis needed for the all-vertices lattice triangulation. If T=0 the inequality is immediate.",
+    "For each barycentric point, convexity includes the weighted Minkowski sum of the nonempty vertex fibers in the actual section. Indices with zero coefficient can be ignored. Apply Brunn–Minkowski to the positive-volume summands and translate by a chosen weighted point from each remaining nonempty null summand. If there are no positive summands the desired bound is zero. For integer s≥1 the pure powers in the nonnegative multinomial expansion give the sum of α_i^s b_i.",
+    "The event α_i≥t is precisely the homothetic copy t p_i+(1−t)Δ, giving normalized density r(1−t)^(r−1). Independently, if B(s,r)=∫₀¹t^s(1−t)^(r−1)dt, integration by parts gives B(s,r)=(s/r)B(s−1,r+1), with B(0,r)=1/r. Hence r B(s,r)=r!s!/(r+s)!. Exact binomial-expansion arithmetic also agreed for all 180 pairs 1≤r≤12 and 1≤s≤15.",
+    "Multiply the normalized moment by each simplex's real r-volume and use its lower bound v/r!. Fubini integrates the actual section volume, simplex boundary overlaps have zero r-measure, and the part of the projection outside the triangulation can only increase M. Every sampled vertex contributes at least once to the incidence sum, and all contributions are nonnegative.",
+    "For the sharp example the unimodular base simplex has exactly its r+1 vertices as sampled bases. Barycentric uniqueness gives exact fiber α₀K, making T=V and M=vVs!/(r+s)!. The lift has dimension r+s from the spanning base and the s independent vertical directions in K. With εK at the other vertices, convexity of K gives exact fiber (α₀+ε(1−α₀))K and T=V(1+r ε^s). For 0<ε≤1 the scaled fiber volumes are at most V, giving the claimed limit.",
+    "For the finite family, apply the inequality only to full-rank members and use their total ordinary volume ≤M. Subtract the resulting upper bound from T, together with nonnegativity of the complement. Empty sample sets have zero mass. Verified original 631839b23c1a0508 raw digest and §§1–2, (1)–(4); §5 explicitly excludes s=0 and does not get used in the proof."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "6bd6bb822eee0863",
+      "candidate_sha256": "029e1326a4c3ddbcbd5700b3791e62a7cb23c86e92d331957b54d574b27a5305",
+      "hypotheses_mapping": "The full-rank set P consists of finitely many points of a+L. The predecessor gives a triangulation of conv(P) with every p∈P a vertex and full-simplex volumes at least v/r!, as required for the vertex-volume incidence sum.",
+      "reviewed_proof_sha256": "2cd1728f11661eaf352c53dfb0149e43f8f1c71c51f38d27a604370b84bacb05",
+      "reviewed_statement_sha256": "0fde96059e5f5bdb58ded5cdee7d6506f67dfa65b82accb05939de03d7998a49",
+      "status_at_review": "Same-batch frozen candidate. Approved in its separate review. Admit it before this dependent theorem."
+    }
+  ],
+  "finished_utc": "2026-11-08T13:11:19Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof derives general normalized simplex monomial moments, giving the exact α_i^s moment as a special case. Its theorem and proof do not give a volume floor for a sampled family of arbitrary sections.",
+      "fact_id": "a6e9cdfe74e6c831"
+    },
+    {
+      "comparison": "Its proof uses the same one-coordinate barycentric density in a weighted-strip bound for simplex cap comparisons. It does not triangulate a lattice trace or compare sampled and ordinary volumes.",
+      "fact_id": "275b3b7cccde92d4"
+    },
+    {
+      "comparison": "Controls the discrete mass of same-parity midpoints under a smaller-rank subset condition. It neither estimates ordinary volume between sampled bases nor treats affine rank supplied by zero-volume fibers.",
+      "fact_id": "75798cede16b89c5"
+    }
+  ],
+  "readability": "The family sentence uses the same ambient dimensions, compact convexity and covolume while allowing member ranks to differ, as shown by its full-rank/complement distinction and the proof. Saying this explicitly would remove the mild ambiguity in 'such sets'.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "fe0d092e63e20d9dafd0192750b1b8ee0826f8c6239d76ab91360307f247800f",
+  "reviewed_statement_sha256": "2f26a4d3fcbfa34ae5796af3f79fadd5916de1c1cba39e2b61c8b9f099caad37",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:07:44Z",
+  "summary": "The ordinary-volume inequality follows by integrating the actual section volumes over the all-sample triangulation. The coefficient is attained with null fibers and approached with all sampled fibers positive.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

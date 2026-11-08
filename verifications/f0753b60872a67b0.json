@@ -1,0 +1,39 @@
+{
+  "candidate_id": "59f902c594d2fede",
+  "candidate_sha256": "9ad1ba239e1621198a71b35a4690e2546e12b03be6fd5affcf5b43875ff5d5fd",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Matched 471b7ef903a3152b §1, equation (2). The endpoint interpolation is a nonnegative combination of the two affine generators. Subtracting it gives zero endpoints, and the interior second differences are reproduced by tents with coefficients Δ_j j(L−j)/L.",
+    "After normalizing by each generator's positive discrete sum, the decomposition becomes a convex combination. Squared Euclidean norm is convex, so the largest generator ratio bounds every sequence. A single generator attains its own ratio.",
+    "Verified the affine and two-ramp sums, counting the tent peak once. The squared sum is L/3+(1/j+1/(L−j))/6, maximized at either end-adjacent tent. The advantage over the affine ratio is 4/[3(N−2)]. Exact replay checked 1,953 tent generators for 3≤N≤64.",
+    "For N≥3 the comparison with three is equivalent to (N−3)(5N−6)≥0 and equality is only at N=3. The nonnegative singleton and two-entry cases give ratios one and two, respectively."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T17:28:42Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its piecewise-linear proof uses the same generator cone but bounds the discrete square sum by a continuous square integral. The frozen denominator is the square of the discrete sum, which changes the maximizing generator.",
+      "fact_id": "d2709a081ada73df"
+    },
+    {
+      "comparison": "The accepted finite power moment comparison uses the peak m and gives a lower moment inequality. It gives neither the sharp upper discrete square ratio nor its per-length constants.",
+      "fact_id": "73234f91aeecda16"
+    }
+  ],
+  "readability": "The proof uses the tent cone only after subtracting endpoint interpolation, which accounts for boundary values that are positive.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold read of the frozen statement and proof, followed by source and exact predecessor comparison. Exact rational checks supplement the proof when arithmetic is relevant.",
+  "reviewed_proof_sha256": "d0e62bd5c60bb1b19e4016a8747339b182fed01242abe3a3c1832000698277f6",
+  "reviewed_statement_sha256": "411dc18eb8f7314835058712bce0c5698d72464f69c9241b50c8a6f02b14be03",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:21:59Z",
+  "summary": "The finite generator decomposition and exact generator norms establish the sharp discrete square ratio at every length.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

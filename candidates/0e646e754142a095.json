@@ -1,0 +1,30 @@
+{
+  "advances": "A finite-measure sign lemma with exact isolation. The atomic example excludes a replacement of that hypothesis in this measure class; it makes no claim of a convex volume counterexample or a below-target configuration.",
+  "author": "PK-research-agent",
+  "candidate_id": "0e646e754142a095",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:58.126022+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w32-isolated-equal-budget-flux",
+  "kind": "lemma",
+  "proof": "By the displayed finite-sum definition and isolation, $J_j=D a_j\\cdot(g_{z_*}-g)$. The definition agrees with the finite closed-tail flux of 18ac4869642d018e; no tree representation is needed. Put $a=\\sum_j\\lambda_j a_j$. Its continuous component is zero, so $a\\cdot(g_{z_*}-y_*)=0$. In each other positive fiber the closed cap has zero mass, so $a_j\\cdot(w-y_*)<0$ almost everywhere there for each $j$. Hence $a\\cdot(g_z-y_*)<0$ for every such $z$, since at least one $\\lambda_j>0$. Averaging over the fibers gives $D a\\cdot(g_{z_*}-g)>0$ if another fiber is positive, and gives zero otherwise.\n\nFor the coarea remark, varying the continuous anchor by $\\xi$ shifts each scalar cut threshold by $u_j\\cdot\\xi$. At regular cuts, with the summed slice density continuous at the threshold, integration along $u_j/\\lVert u_j\\rVert$ gives the derivative $-S_j u_j\\cdot\\xi$. Thus $\\sum_j\\theta_jS_j u_j=0$ is exactly the required balance for the stated raw weights.\n\nIn the example the cap fractions at $0,1$ are $(3/4,1/4)$ and $(1/4,3/4)$, respectively; no atom is on a cap plane. The two scalar margin mean pairs are $(-97/4,-1/2)$ and $(97/4,-1/2)$. For unit fiber masses the global scalar mean is the average, so with mean pair $(m_0,m_1)$ and cap fractions $(P_0,P_1)$ the flux is $(m_0-m_1)(P_0-P_1)/2$. This gives respectively $-95/16$ and $-99/16$. The continuous normals are $1,-1$, and the two halfspaces strictly exclude the outside barycenter.\n",
+  "source_candidate_ids": [
+    "02ab05d91af31cbf"
+  ],
+  "source_candidate_sha256": {
+    "02ab05d91af31cbf": "37cdc32714c05d374610d960f1f457171a43b4a194803643fa46a878bc053af5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "02ab05d91af31cbf",
+      "locator": "02ab05d91af31cbf:01 §1, equations (1)–(3) and the coarea-weight paragraph"
+    },
+    {
+      "candidate_id": "02ab05d91af31cbf",
+      "locator": "02ab05d91af31cbf:02 §1, exact two-fiber atomic counterexample after equation (3)"
+    }
+  ],
+  "statement": "Let $\\mu=\\sum_z\\mu_z$ be a finite positive measure on finitely many compact fibers at distinct bases $z$, keeping only positive masses $w_z$, with lifted fiber barycenters $g_z$ and global barycenter $g$. Fix an anchor $y_*=(z_*,x_*)$ at a positive fiber and finitely many closed caps $H_j=\\{w:a_j\\cdot(w-y_*)\\ge0\\}$ with $a_j=(v_j,u_j)$. Suppose that every cap has the same mass $D>0$ and zero mass on every other fiber. Let $\\lambda_j\\ge0$, not all zero, satisfy $\\sum_j\\lambda_j u_j=0$. Define the raw flux $J_j=\\sum_z (a_j\\cdot(g_z-g))\\mu_z(H_j)$. Then $\\sum_j\\lambda_j J_j\\ge0$, with equality exactly when there is no other positive fiber. For a regular nonvertical cut of an ordinary mixed-volume family, the coarea section mass is $S_j=\\sum_z\\mathcal H_{d-1}(K_z\\cap\\partial H_j(z))/\\lVert u_j\\rVert$; continuous center-gradient balancing coefficients $\\theta_j$ give raw coefficients $\\lambda_j=\\theta_jS_j$ (which must be nonzero as a vector to apply the conclusion).\n\nReplacing zero outside mass by strict exteriority of every outside fiber barycenter fails for finite measures. At bases $0,1$ take $\\mu_0=\\frac34\\delta_1+\\frac14\\delta_{-100}$ and $\\mu_1=\\frac14\\delta_3+\\frac34\\delta_{-1}$ on compact interval fibers, and the anchor $(0,0)$. For the two closed caps with margins $x-z/2$ and $-x-z/2$, the common mass is $1$ and the outside barycenter $(1,0)$ has both margins $-1/2$, but the raw fluxes are $-95/16$ and $-99/16$, summing to $-97/8$ with weights $(1,1)$.",
+  "subgoal_id": "pk-intake-pk-w32-isolated-equal-budget-flux",
+  "title": "Balanced equal-budget flux is nonnegative under exact fiber isolation"
+}

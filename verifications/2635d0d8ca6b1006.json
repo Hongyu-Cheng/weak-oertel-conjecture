@@ -1,0 +1,69 @@
+{
+  "candidate_id": "6f616779219fd76c",
+  "candidate_sha256": "a0c0bc5356a6112542aa8db938d3f22be3051e598919ea1570c5690c0997a241",
+  "checked_dependency_candidate_sha256": {
+    "155691fc3768c06f": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+    "9a3bf974682e425a": "c6a7159ab6b72e25d584cff2c53586a2835183ed27559a37671d85fe25bdefa0"
+  },
+  "checks": [
+    "Increasing the threshold of a containing halfspace to its value at (j,y_j) shrinks its closed traces. If its continuous coefficient u is already nonnegative and nonzero, division by its positive coordinate sum gives a normalized w, with w·y_j=q.",
+    "For a negative minimum u_i, exchanging X_i and the slack swaps 0 and r_p e_i and fixes the other vertices. It is an affine involution with determinant −1, preserving ordinary d-volume, and it fixes y_j since r_j−dq=q. The new coefficient has i-th entry −u_i>0 and remaining entries u_l−u_i≥0, including ties for the minimum.",
+    "Expanding u·(σ_pX−y_j) gives u_i r_p + ũ·X − q Σu_l, and Σũ_l = Σu_l−(d+1)u_i. Hence the additional constant relative to ũ·(X−y_j) is u_i(r_p−r_j). Multiplication of r_p−r_j≤b·(p−j) by u_i<0 gives the required lower bound on the transformed original margin. The replacement affine margin with tilt a_0+u_i b is no larger on any fiber, so its closed trace is contained in the transformed original trace. Dividing by the positive sum preserves this inequality of trace masses.",
+    "For u=0 and nonzero s=a_0·(p−j), the finite choice R|s|>q+r_p, together with 0≤X_1≤r_p, leaves the replacement margin strictly positive when s>0 and strictly negative when s<0. A tied closed original trace is the full fiber, so a subset is allowed. If there are no nonzero offsets any R>0 works. The replacement with w=e_1 passes through the anchor.",
+    "Both directions of equality of infima follow from the per-fiber domination and the fact that the restricted caps are actual ambient closed halfspaces containing the anchor. The separate tilt lemma applies to exactly these positive radii, real bases and normalized normals and gives compact attainment.",
+    "For actual fibers of a convex set, any weighted sum of points selected from these fibers with weighted base j belongs to the fiber at j, giving the anchored Minkowski inclusion. The support of r_p T_d at the unit vector e_1 equals r_p, so the accepted support-slope lemma gives precisely the touching radius majorant. It includes boundary anchors and rank zero.",
+    "Compared the proof with archive 42889f299dc055c9 opening (1)–(2), §§1–3 (3)–(10), and §§4–5 (11)–(15). Its fiberwise comparison and one shared ambient margin agree. The source sometimes says positive normal, but its exact class is nonnegative with coordinate sum one, as frozen. The statement concerns the prescribed centroid, with no lower bound or centroid selection claim."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+      "fact_id": "155691fc3768c06f",
+      "fact_sha256": "afecd88a8ebe5c473d9297f6454db7d90db5c79dd7986e3072a482620d9a126a",
+      "hypotheses": "Finite nonempty real P, nonempty compact convex K_p=r_p T_d, and the anchored Minkowski inclusion at j, which follows directly from actual convex fibers. Apply to unit u=e_1; h_{K_p}(e_1)=r_p. The resulting slope lies in span(P−j)."
+    },
+    {
+      "candidate_id": "9a3bf974682e425a",
+      "candidate_sha256": "c6a7159ab6b72e25d584cff2c53586a2835183ed27559a37671d85fe25bdefa0",
+      "hypotheses": "Exactly the same n,d,P,j,r_p,q and Δ. Replacing the shared tilt preserves every fiber mass for all w, and compactness with continuity yields a minimum.",
+      "status": "Approved in the separate frozen review; must be admitted first."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:57:51Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its accepted proof uses the same barycentric swap in any d for paired chains with central maximal radius, so the constant majorant b=0 suffices there. Here j is arbitrary subject to a touching affine majorant, with a nonzero tilt correction permitted on any finite real base set, and the result gives per-fiber comparison including vertical caps and compact depth optimization.",
+      "fact_id": "fca4c60158080a5f"
+    },
+    {
+      "comparison": "The planar paired case contains the same nonvertical comparison when the marked radius is maximal, and proves a depth bound specific to that support. It does not supply this arbitrary affine-majorant comparison.",
+      "fact_id": "a886f31c444612a5"
+    },
+    {
+      "comparison": "It gives finite attainment with unrestricted unit continuous normal and the same qualitative vertical-cap perturbation for general compact convex fibers. It does not justify confining nonvertical normals to the nonnegative simplex.",
+      "fact_id": "1ec728c26c11b368"
+    },
+    {
+      "comparison": "It supplies the touching majorant for actual fibers by the e_1 support direction; it makes no assertion about per-fiber cap domination or minimizing normal signs.",
+      "fact_id": "155691fc3768c06f"
+    }
+  ],
+  "readability": "The fiberwise swap is only a change of variables; the corrected margin is the single ambient cap. In the vertical branch, the bound on R is vacuous when there are no nonzero offsets.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "5a8e2260ef7fdb3891187f7b6a5b00673b117f0564f917066e33314ac6eefe8a",
+  "reviewed_statement_sha256": "455e48840a0bd2be28081e6be2029f4b27ca4d8ba831142b5c6a9c741d0c6465",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "42889f299dc055c9": "dd3b87788bcf8ab822756caef2197d9910ef91689729d55de6c75caa93f33665"
+  },
+  "started_utc": "2026-11-08T09:55:13Z",
+  "summary": "The affine radius majorant gives an exact reduction to one shared nonnegative normal cap that has no greater mass on each fiber. With the independently reviewed tilt lemma the reduced depth is a minimum on the stated compact set.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

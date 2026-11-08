@@ -1,0 +1,42 @@
+{
+  "candidate_id": "2fb8b0785692a5b4",
+  "candidate_sha256": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The diagonal is b_i−h_{i−1}−h_i, and the adjacent off-diagonal for edge i is −h_i, including m=3 where the three unordered edges are distinct. The positive-edge graph components therefore give matrix blocks.",
+    "Redistributing each node coefficient using the slack yields the asserted square, because s−rs/(r+s)=s²/(r+s), r−rs/(r+s)=r²/(r+s), and the mixed coefficient is −2rs/(r+s). There is no quotient on a zero edge.",
+    "Compactness of the unit sphere gives a least Rayleigh vector on each block, and absolute values preserve or lower its quotient. A zero entry in a nonnegative minimizing eigenvector propagates over all strictly negative off-diagonals, so a nonsingleton connected block has a positive minimizing eigenvector. A singleton contributes entry one; its scalar eigenvalue is nonnegative under PSD.",
+    "For w>0 the reciprocal sum on a positive edge is 1/h_i. Substituting the explicit charges gives slack (Lw)_i/w_i, so singular blocks cause no loss of finiteness and their budgets are tight. When all h vanish, this simply reduces to b_i≥0.",
+    "The square-root substitution covers the entire nonnegative orthant, including its boundary. Replacing x by its absolute value can only decrease the form. Equality in the Gram identity forces each slack term and edge square separately to vanish, which gives s_i/r_i=x_{i+1}/x_i for positive entries of a positive block null vector.",
+    "Independently checked h=(1,0,0,0), b=(3,3/2,0,5). The form is (2x₁−x₂)²/2+5x₄², with the singular edge vector (1,2,0,0) giving equality at θ=(1,4,0,0). The reconstruction from w=(1,2,1,1) gives r₁=3/2, s₁=3 and all other edge charges zero. Reducing b₂ to 1 gives form value −2 on that vector. For m=3, h_i=1, b_i=4 gives the cycle sum of squared differences and equality on the all-ones vector.",
+    "The raw source digest for 2e26c63010f03ffc matches; §§3–7 verify the charge normalization, all-weight statement, off-diagonal signs, positive block vectors, and Gram identity. Its separation argument is an alternative route and is not an input to the frozen proof."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T11:18:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses copositivity of a mixed-area circuit matrix under specific geometric hypotheses. Its off-diagonal signs are not stipulated nonpositive and it gives no cyclic edge charges or positive-block reconstruction.",
+      "fact_id": "2021348e0b2d8c9f"
+    },
+    {
+      "comparison": "Proves a three-by-three copositivity test in a mixed-area setting. That test can address the three-node quadratic form at the algebraic level but does not prove the arbitrary cyclic charge equivalence, construct charges, or give the identity for all valid charges.",
+      "fact_id": "b7646e88958a76a4"
+    }
+  ],
+  "readability": "The indexing convention is that edge i pays s_i at node i and r_i at node i+1. This convention makes both the slack substitution and the orientation of the displayed edge square unambiguous.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4748e8e25d1403e53bee831d62f59ea4e4ed213361d14c7d076ffa35e592aaf8",
+  "reviewed_statement_sha256": "ce8a642e0b42373e9cc4d8ed52bbbce8e9bea3b10a4fb272d1232bcf2a4f3592",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:15:28Z",
+  "summary": "The charge, PSD, and nonnegative-weight conditions are equivalent for all stated data. The explicit positive block vector and the sum of squares cover singular blocks, zero edges, and zero weights.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

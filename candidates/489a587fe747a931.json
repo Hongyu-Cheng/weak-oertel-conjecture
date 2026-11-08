@@ -1,0 +1,28 @@
+{
+  "advances": "A cover compression preserving an already feasible budget. Strict base exposure is used for ambient isolation; the claim supplies no low-budget cover on general nonextreme lattice supports.",
+  "author": "PK-research-agent",
+  "candidate_id": "489a587fe747a931",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.048010+00:00",
+  "depends_on": [
+    "828211a20fa24681"
+  ],
+  "draft_key": "exposed-fiber-hinge-cover-compression",
+  "kind": "theorem",
+  "proof": "For each $z$, restrict the original margins to the compact convex body $K_z$. The coverage margin $\\min_{x\\in K_z}\\max_i L_i(z,x)$ is nonnegative. Accepted fact 828211a20fa24681 supplies weights on at most $d+1$ of the original restrictions such that their weighted margin is nonnegative throughout $K_z$. Thus the retained restrictions cover the whole fiber with their closed caps.\n\nIf no retained cap contains the entire fiber, discard all zero-volume restrictions. None of those contains an interior point, because its continuous normal is nonzero. The remaining finite union is closed and contains the interior, so covers all of $K_z$. Each retained mass is strictly below the fiber volume, since a proper closed subset cut by a halfspace that misses any point of $K_z$ misses a relatively open set containing an interior point. If some retained cap contains the whole fiber, keep only that cap for the following replacement. Write its restriction as $X-t\\ge0$ with $X=u\\cdot x$. The projection of fiber volume onto the $X$ axis is atomless and assigns positive mass to every interior subinterval of its range. At its median $s$, use the two margins $X-s$ and $s-X$. Each cap has half the fiber mass and they cover $K_z$. Their hinge numerator is $\\int_{K_z}|X-s|\\,dx$. A median minimizes absolute deviation, as the left and right derivatives with respect to the center are the differences of the masses below and above it, with the interval between them at an atom. Since $t\\le\\min_{K_z}X$, the new numerator is at most $\\int_{K_z}|X-t|\\,dx=\\int_{K_z}(X-t)_+\\,dx$. The support denominators agree because $D=-D$. The number of retained or replacement caps never exceeds $d+1$.\n\nAt each vertex $z$ choose an affine function $q_z$ on the base with $q_z(z)=0$ and $q_z(w)>0$ for every other $w\\in P$. For each of the local margins $u\\cdot x-t$, extend it by $u\\cdot x-t-Aq_z(w)$ at base $w$. A sufficiently large finite $A$ makes the margin strictly negative on every other compact fiber, since the gaps are positive and there are finitely many. Thus the cap mass and hinge are exactly those of its local restriction, with unchanged continuous normal and support denominator. The local masses were no larger than those of their original full caps. The original local hinge sums dominate the new ones fiberwise by deletion and the median bound. Summing over fibers compares each new integral with the original full sum, even when an original cap had been used on several fibers.\n\nEach new margin on its own properly cut fiber has positive part at most $h_{K_z-K_z}(u)\\le h_D(u)$, since its threshold lies between the extreme values of $u\\cdot x$. Its normalized hinge is therefore at most its cap mass. Sum either the bound of $(d+1)$ times each fiber volume or the uniform bound of $\\tau M$ per cap. Finally, two distinct same-parity points of a lattice-complete $P$ would have an integer midpoint in $P$ that is not a vertex. Thus the number of vertices is at most $2^n$.\n",
+  "source_candidate_ids": [
+    "25f2a08c9ca43383"
+  ],
+  "source_candidate_sha256": {
+    "25f2a08c9ca43383": "0ad25318444a78216ff53fe456aabfc022af332e9a56fa7be0efd7738b86e66e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "25f2a08c9ca43383",
+      "locator": "25f2a08c9ca43383:01 §1, compression theorem and entire proof including lattice-parity count"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite and nonempty with every point a vertex of $\\operatorname{conv}P$. Let $d\\ge1$, let each $K_z\\subset\\mathbb R^d$ for $z\\in P$ be a compact convex body of positive $d$-volume, and put $S=\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$. Write $\\mu$ for the sum of $d$-volumes on these fibers, $M=\\mu(S)$, and $D=\\operatorname{conv}\\bigcup_{z\\in P}(K_z-K_z)$. For an affine margin $L(z,x)=a\\cdot z+u\\cdot x-b$ with $u\\ne0$, use the normalized hinge $\\int_S L_+\\,d\\mu/h_D(u)$, where $h_D$ is the support function.\n\nIf a finite family of closed nonvertical caps covers $S$ and each has mass at most $\\tau M$, there is another such cover of at most $|P|(d+1)$ caps. Each new cap cuts one fiber in positive mass strictly smaller than that fiber's volume and strictly misses every other fiber. Its mass is at most $\\tau M$. The sum of normalized hinges does not increase and is at most $\\min\\{(d+1)M,|P|(d+1)\\tau M\\}$. If $P=\\operatorname{conv}P\\cap\\mathbb Z^n$, then $|P|\\le2^n$, so the cap count is at most $2^n(d+1)$ and the total hinge at most $\\min\\{d+1,2^n(d+1)\\tau\\}M$.",
+  "subgoal_id": "pk-intake-exposed-fiber-hinge-cover-compression",
+  "title": "Budget and hinge compression over exposed fibers"
+}

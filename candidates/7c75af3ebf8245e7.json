@@ -1,0 +1,26 @@
+{
+  "advances": "A weak-limit example for summed area on an actual two-fiber hull.",
+  "author": "PK-research-agent",
+  "candidate_id": "7c75af3ebf8245e7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:31:51.393331+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-coarse-thin-profile-laws",
+  "kind": "counterexample",
+  "proof": "The functions are concave and nonnegative, so the two-sided width inequalities give convex compact sets. Their positive integrals make both areas positive. The hull projects to $[0,1]$ and has exactly the listed sections at its extreme bases, hence there are no other integer fibers. Each set contains the entire segment obtained by putting its thin coordinate to zero and is within $\\varepsilon\\max(\\lVert f\\rVert_\\infty,\\lVert g\\rVert_\\infty)$ of that segment. Taking convex combinations gives the same bounds for the hull relative to the hull of the two segments. At a real base $z\\in[0,1]$ that segment hull is precisely the rectangle given by the inequalities defining $T$. At interior $z$ both widths are positive, so $T$ is full dimensional.\n\nWrite $J=\\int_{-1}^1(f+g)>0$. The total summed area is $2\\varepsilon J$. For any continuous test $\\phi$ on a common compact box for $0<\\varepsilon\\le1$, replacing the thin coordinate by zero changes the integral against the normalized measure by at most the modulus of continuity at $\\varepsilon\\max(\\lVert f\\rVert_\\infty,\\lVert g\\rVert_\\infty)$. The resulting integral is exactly $J^{-1}\\int_{-1}^1[f(t)\\phi(0,t,0)+g(t)\\phi(1,0,t)]\\,dt$ by integrating section lengths. Positive constants give any prescribed relative weights. At fixed equal integrals the choices $(f,g)=((1+t)/2,1/2)$ and $(f,g)=((1-t)/2,1/2)$ produce two distinct nonuniform densities.\n",
+  "source_candidate_ids": [
+    "e306d42187c98e53"
+  ],
+  "source_candidate_sha256": {
+    "e306d42187c98e53": "3f2fb1cfb259595dc0e4f9a09c2e2ae714442123c09a37595e38cffd1bb4b379"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e306d42187c98e53",
+      "locator": "e306d42187c98e53:02 §3, (9), different thin laws with the same hull"
+    }
+  ],
+  "statement": "Let $f,g$ be continuous nonnegative concave functions on $[-1,1]$, neither identically zero. At bases $0,1$ place the convex planar sets\n$$\nQ_{0,\\varepsilon}=\\{(v,x):-1\\le v\\le1,\\ |x|\\le\\varepsilon f(v)\\},\\qquad\nQ_{1,\\varepsilon}=\\{(v,x):-1\\le x\\le1,\\ |v|\\le\\varepsilon g(x)\\}\n$$\nand take their lifted hull $C_\\varepsilon$ for $\\varepsilon>0$. These are its complete integer fibers. As $\\varepsilon\\downarrow0$ the hull converges to the same full-dimensional tetrahedron $T=\\{(z,v,x):0\\le z\\le1,\\ |v|\\le1-z,\\ |x|\\le z\\}$ for every such pair $f,g$. Normalized summed fiber area converges weakly to\n$$\n\\frac{f(t)\\,dt\\ \\text{on }(0,t,0)\\ +\\ g(t)\\,dt\\ \\text{on }(1,0,t)}\n{\\int_{-1}^1 f(t)\\,dt+\\int_{-1}^1 g(t)\\,dt}.\n$$\nIn particular the fixed hull limit permits any two strictly positive relative masses summing to one and also permits distinct nonuniform densities.",
+  "subgoal_id": "pk-intake-pk-w36-coarse-thin-profile-laws",
+  "title": "The same full mixed hull can carry different thin probability limits"
+}

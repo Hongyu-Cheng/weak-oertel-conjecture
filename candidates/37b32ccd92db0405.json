@@ -1,0 +1,40 @@
+{
+  "advances": "The threshold is for a fixed actual profile on marked facet measures. The face quotas constrain a single transport and give no favorable-menu selection or parity estimate.",
+  "author": "PK-research-agent",
+  "candidate_id": "37b32ccd92db0405",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:34:26.401433+00:00",
+  "depends_on": [
+    "ac53fe19fef9ec25"
+  ],
+  "draft_key": "finite-marked-capacity-and-face-quotas",
+  "kind": "theorem",
+  "proof": "First, for finite nonnegative compactly supported Borel measures $\\mu,\\nu$ on $\\mathbb R^D$, the inequalities $\\int\\phi\\,d\\mu\\le\\int\\phi\\,d\\nu$ for every finite continuous nonnegative convex $\\phi$ are equivalent to a martingale from $\\mu$ into a submeasure of $\\nu$. One implication follows from conditional Jensen and domination. For the converse let $r=\\nu(\\mathbb R^D)-\\mu(\\mathbb R^D)\\ge0$ by the constant test. If $r=0$, for every finite continuous convex $f$ the test $\\max(0,f+C)$ agrees with $f+C$ on both compact supports when $C$ is sufficiently large. The masses agree, so cancellation gives $\\mu\\preceq_{\\rm cx}\\nu$, and ac53fe19fef9ec25 applies directly.\n\nIf $r>0$, put $b=(\\int y\\,d\\nu-\\int x\\,d\\mu)/r$ and let $\\widehat\\mu=\\mu+r\\delta_b$. Its mass and first moment agree with those of $\\nu$. Given any finite continuous convex $f$, take a supporting affine function $a$ at $b$, which exists because $f$ is finite on all of $\\mathbb R^D$. Then $f-a$ is a nonnegative convex test with zero value at $b$. Its integral over $\\widehat\\mu$ equals that over $\\mu$ and is at most the integral over $\\nu$. The affine moments cancel, giving $\\widehat\\mu\\preceq_{\\rm cx}\\nu$. By ac53fe19fef9ec25 there is a martingale $\\widehat\\pi$ with these exact marginals. Multiply $\\widehat\\pi(dx,dy)$ by $(d\\mu/d\\widehat\\mu)(x)\\in[0,1]$. The first marginal is $\\mu$, the second is at most $\\nu$, and every bounded Borel row-moment test still gives zero by absorbing the density into the test. This includes collisions of $b$ with original source mass and $\\mu=0$.\n\nAt mark $n_i$, choose a nonnegative continuous normal selector that is one at $n_i$ and zero at the other finitely many normals. Multiply by a nonnegative continuous convex function $\\phi(z,x)$ to see that $\\mathcal E(W)\\le c$ implies $\\int\\phi(W-c)\\,d\\eta_i\\le0$. A nonnegative test of denominator zero has zero numerator since $W$ is bounded. Conversely, add these inequalities for the restrictions of each admissible $\\Phi$ to the marks. This is exactly the preceding comparison for $\\mu_i,\\nu_i$. Their supports are compact, so the first part applies and retains both physical coordinates.\n\nDisintegrate a feasible transport over its source. For a row starting at $(p,x)$ on the $i$-facet, let $t_z$ denote its output base probabilities. The physical mean and the facet equation of the targets give\n$$\n\\sum_z t_z z=p,\\qquad \\sum_z t_z b_i(z)=\\lambda_i(x)=b_i(p).\n$$\nThese identities hold for almost every source row. The lifted point $(p,b_i(p))$ is therefore a positive combination of exactly the lifted bases with $t_z>0$. Every face containing that point contains each positive term, so the targets lie in its minimal face. A source in $E_F$ can only send to $E_F$, and hence $\\mu_i(E_F)\\le\\nu_i(E_F)$ by target domination. The equivalent integral quota follows by subtracting the excesses. In particular each target's minimal face is contained in that of its source and capacity on a common subface is counted only in the one target marginal. If the source lift is a vertex the only possible target lift is that vertex, which determines the base.\n\nFor the claimed hinge choose $\\delta>0$ less than every positive $b_i(z)-a(z)$ on bases outside $F$ (any $\\delta>0$ works if there are no such bases). With the normal selector $\\psi_i$ used above, set $\\Phi(n,z,x)=\\psi_i(n)[\\delta+a(z)-\\lambda_i(x)]_+$. Its values on the actual bundle have the required form. It is finite, continuous and convex at each fixed normal, and the corresponding ratio detects the quota on $E_F$.\n",
+  "source_candidate_ids": [
+    "6eda5637cc09a539"
+  ],
+  "source_candidate_sha256": {
+    "6eda5637cc09a539": "d35f6c23808ed75a9290c4e14c186fa4a73b50cd21c37f026f707351853ff567"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6eda5637cc09a539",
+      "locator": "6eda5637cc09a539:01 §1, (1)–(4) and compact-measure passage"
+    },
+    {
+      "candidate_id": "6eda5637cc09a539",
+      "locator": "6eda5637cc09a539:02 §2, (5)–(8)"
+    },
+    {
+      "candidate_id": "6eda5637cc09a539",
+      "locator": "6eda5637cc09a539:03 §3, (10)–(11)"
+    },
+    {
+      "candidate_id": "6eda5637cc09a539",
+      "locator": "6eda5637cc09a539:05 §4, (12)–(13) and face-poset support"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite and nonempty and let $d\\ge1$. Let $\\lambda_0,\\ldots,\\lambda_d$ be the affine barycentric coordinates of a nondegenerate $d$-simplex. For each $z\\in P$, let $K_z=\\{x:\\lambda_i(x)\\ge b_i(z)\\ \\forall i\\}$, where $1-\\sum_i b_i(z)>0$. Assume that these placed fibers are the actual sampled sections of their convex hull. Let $F_i(z)=K_z\\cap\\{\\lambda_i=b_i(z)\\}$, let $n_i$ be its outer unit normal, and put $\\eta_i=\\sum_{z\\in P}\\delta_z\\otimes\\mathcal H^{d-1}|_{F_i(z)}$ in the physical variables $(z,x)$. For $d=1$ use counting measure on the endpoints. Let $\\eta$ be the sum of these measures with their respective normal marks. For any bounded nonnegative Borel profile $W$ on this bundle, define\n$$\n\\mathcal E(W)=\\sup_\\Phi \\frac{\\int \\Phi W\\,d\\eta}{\\int\\Phi\\,d\\eta},\n$$\nover continuous nonnegative fields whose restriction at each fixed normal is a finite convex function of $(z,x)$ and whose denominator is positive.\n\nFor every $c\\ge0$, $\\mathcal E(W)\\le c$ if and only if, for each $i$, there is a physical martingale with source $\\mu_i=(W-c)_+\\eta_i$ and second marginal at most $\\nu_i=(c-W)_+\\eta_i$, with $W$ restricted to mark $n_i$. The transport uses the actual measures, including any closed-cap boundary values in $W$.\n\nWrite $G_i=\\operatorname{conv}\\{(z,b_i(z)):z\\in P\\}$. For almost every source row on $F_i(p)$, all its target lifted bases lie in the minimal face of $G_i$ containing $(p,b_i(p))$. If $F$ is any nonempty face of $G_i$ and $E_F$ is the union of the actual $i$-facets whose lifted bases lie in $F$, then $\\mathcal E(W)\\le c$ implies\n$$\n\\mu_i(E_F)\\le\\nu_i(E_F),\\qquad \\int_{E_F}W\\,d\\eta_i\\le c\\eta_i(E_F).\n$$\nThe used target mass is subject to one global $\\nu_i$ ceiling, including where source faces share subfaces. If every lifted base is a vertex of $G_i$, transport at mark $n_i$ preserves the base. If an affine $a$ satisfies $b_i(z)\\ge a(z)$ with equality precisely on the bases in $F$, then for some $\\delta>0$ an admissible potential equals $\\delta$ on $E_F$ and zero on the rest of the marked bundle.",
+  "subgoal_id": "pk-intake-finite-marked-capacity-and-face-quotas",
+  "title": "Capacity duality and face quotas for an actual finite simplex-facet profile"
+}

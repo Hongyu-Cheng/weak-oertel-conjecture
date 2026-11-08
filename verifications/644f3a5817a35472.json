@@ -1,0 +1,46 @@
+{
+  "candidate_id": "55ec62c36c689dfe",
+  "candidate_sha256": "98f48b140dcfda5dce37dcae3f9d5a6cfd158fe3b5ee442a07326c345999686e",
+  "checked_dependency_candidate_sha256": {
+    "3c9f3fe59d980ee3": "5b1fceb7a823dbdb70f69c4724a17e415b09f7a3f336363695c89645dd824960"
+  },
+  "checks": [
+    "The continuous gamma density extended by zero is globally Lipschitz for every integer k≥2. The coefficient sum forces at least one nonzero phase, hence Y>0 almost surely. The bounded difference quotient gives differentiation at zero even for k=2, where the density has a corner at the origin.",
+    "The normalizer L factors over phases. Tilting a phase of mean b by e^(−y) gives mean b/(1+b), and deterministic zero phases stay at zero. The integer moments in the multinomial expansion give L r! h_r. The factorials cancel in the derivative to give L(h_{k−2}−h_{k−1}), which is p(k−2)−p(k−1).",
+    "At n=k−1 one has 1≤n≤μ−b_max. Equality in the geometric comparison forces μ−b_max=k−1 and equality of all positive means. Since μ≥k and b_max≤1, this entails μ=k and b_max=1, hence exactly k unit coefficients. The same configuration satisfies the geometric equality conditions in the converse direction.",
+    "Source a6e6fd61fe60c16a at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5 matches SHA-256 b23a4781c65a1c1e79591cd59e66c32e037575f27ceae99edb27e9f1eff3d030. Section 3, equation (4), gives the density sign by tilting. Its non-strict sign is sharpened by the independently reviewed equality clause of the geometric predecessor."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3c9f3fe59d980ee3",
+      "candidate_sha256": "5b1fceb7a823dbdb70f69c4724a17e415b09f7a3f336363695c89645dd824960",
+      "mapping": "Take independent geometric variables of means b_i, zero entries deterministic, and n=k−1. The geometric mass formula matches the tilted moments, and μ≥k, b_max≤1 guarantee the exact range for both inequality and equality.",
+      "reviewed_proof_sha256": "716950461e6700958944d025e9b30714b38df73d2dac646d5b909731c4e0e144",
+      "reviewed_statement_sha256": "5e57824cdca1deb9c275e59ece30143de289866d9b3e257fe03bd2a7938c8742",
+      "status": "Frozen same-wave predecessor approved in its separate review and pending graph admission. Admit it before this candidate."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:06:31.725605+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted signed-exponential lemma gives differentiability for this law since it has k≥2 positive unit phases and a nonzero negative phase. It gives no sign or equality criterion for the derivative in the density argument.",
+      "fact_id": "511d89569241b0d6"
+    }
+  ],
+  "readability": "The moment parameter r is an integer in the multinomial formula, as indicated by the indexing and factorial, and only r=k−2,k−1 are used.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c399e1c63981decc22b2906e7bfc9982ff4d6669bb09fb41dd81e30d22758b61",
+  "reviewed_statement_sha256": "57715e4dc6e74d1e3a083d4e6e7bb0dd19393a7fc74770fbfc1d380e1d7676d0",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:03:18.479Z",
+  "summary": "The derivative at zero equals the difference of consecutive geometric-sum masses and vanishes exactly for k unit negative phases.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

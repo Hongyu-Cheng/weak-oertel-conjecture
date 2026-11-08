@@ -1,0 +1,52 @@
+---
+fact_id: bf1ea1ab1ca2de45
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-affine-score-moment-partition
+depends_on: []
+verifier_run: 668486706f3f3873
+target_match: null
+---
+
+## Source
+
+- [edf02845b3275e8c](../candidates/edf02845b3275e8c.json), Opening theorem and §§1–5.
+
+## Statement
+
+Let $n,d$ be positive integers and let $C\subseteq\mathbb R^n\times\mathbb R^d$ be a compact convex body. Put $\Lambda=\mathbb Z^n\times\mathbb R^d$, $S=C\cap\Lambda$, and assume $q=\dim_{\mathrm H}S\ge 1$. Set $\mu=\mathcal H_q|_S$. For $z\in\mathbb Z^n$ put $K_z=\{x:(z,x)\in C\}$, and let $P=\{z:w_z=\mathcal H_q(K_z)>0\}$.
+
+Suppose finitely many labeled mass and base moment pairs $(t_i,m_i)\in\mathbb R\times\mathbb R^n$ are feasible: there are $s_{iz}\ge 0$ with $\sum_i s_{iz}=w_z$ for $z\in P$ and $(t_i,m_i)=\sum_{z\in P}s_{iz}(1,z)$ for every label. Discard the labels with $t_i=0$ and index the remaining $k$ labels by $1,\ldots,k$. Fix any vectors $u_i\in\mathbb R^d$ such that $x\mapsto(u_i-u_j)\cdot x$ is nonconstant on each $K_z$ for $z\in P$ whenever $i\ne j$.
+
+There are finite $\theta_i\in\mathbb R^{n+1}$ such that the affine scores $L_i(z,x)=\theta_i\cdot(1,z)+u_i\cdot x$ give closed cells
+$$
+D_i=C\cap\bigcap_{j\ne i}\{(z,x):L_i(z,x)\ge L_j(z,x)\}.
+$$
+Each $D_i$ is an ambient convex body cut from $C$ by at most $k-1$ closed halfspaces, and $D_i\cap\Lambda$ has Hausdorff dimension $q$. The cells satisfy
+$$
+\bigcup_iD_i=C,\qquad
+\mu(D_i\cap D_j)=0\quad(i\ne j),\qquad
+\left(\mu(D_i),\int_{D_i} z\,d\mu\right)=(t_i,m_i).
+$$
+In particular they exhaust the mixed measure. The centroid of $\mathcal H_q|_{D_i\cap\Lambda}$ belongs to $D_i$, has base $m_i/t_i$, and lies in $D_i\cap\Lambda$ if that base is integral. Suitable $u_i$ always exist.
+
+## Proof
+
+There are finitely many nonempty integer fibers. Since they are compact convex sets and $S$ is a finite union of their isometric copies, $q$ is the largest dimension of such a fiber. Hence $P$ is nonempty, $0<\mu(C)<\infty$, every $K_z$ with $z\in P$ has dimension $q$, and all other fibers are $\mu$-null. Removing a zero-mass label removes only zero assignments. To see that the score condition is possible, choose $u$ outside the finite union of the orthogonal complements of $\operatorname{span}(K_z-K_z)$ for $z\in P$, then set $u_i=i u$. These complements are proper because $q\ge1$.
+
+Write $v_z=(1,z)$ and $r=((t_i,m_i))_{i=1}^k\in(\mathbb R^{n+1})^k$. For any nonempty sets of allowed labels $I_z\subseteq\{1,\ldots,k\}$ define the corresponding moment polytope and score potential by
+$$
+\begin{aligned}
+Z_I &=\sum_{z\in P}w_z\operatorname{conv}\{e_i\otimes v_z:i\in I_z\},\\
+\Psi_I(\theta)&=\sum_{z\in P}\int_{K_z}
+\max_{i\in I_z}(\theta_i\cdot v_z+u_i\cdot x)\,d\mathcal H_q(x).
+\end{aligned}
+$$
+Here $e_i\otimes v_z$ means the vector with $v_z$ in block $i$ and zero in the other blocks. The polytope is exactly the set of moments obtained by allowing each $z$ to distribute $w_z$ among the labels in $I_z$. For each fixed $\theta$, ties on a positive fiber lie in finitely many proper hyperplanes of its affine hull and have $\mathcal H_q$ measure zero. At a point with a unique winner, sufficiently small changes in $\theta$ preserve that winner. Difference quotients in a parameter coordinate are bounded by the corresponding absolute coordinate of $v_z$. Dominated convergence therefore gives the partial derivatives, and applying it to the winner indicators for a sequence of parameters converging to $\theta$ shows that these derivatives are continuous. The $i$-th gradient block is the sum of $v_z$ times the $\mathcal H_q$ measure won by $i$ on each $K_z$ (zero if $i\notin I_z$). In particular, $\nabla\Psi_I(\theta)\in Z_I$.
+
+The support function is $h_{Z_I}(\theta)=\sum_{z\in P}w_z\max_{i\in I_z}\theta_i\cdot v_z$. The difference $|\Psi_I(\theta)-h_{Z_I}(\theta)|$ is bounded uniformly by $\sum_{z\in P}\int_{K_z}\max_{1\le i\le k}|u_i\cdot x|\,d\mathcal H_q(x)$, which is finite by compactness. If $r\in\operatorname{relint}Z_I$, let $U=\operatorname{span}(Z_I-Z_I)$. For the unit ball $B_U$ in $U$, some $r+\varepsilon B_U$ with $\varepsilon>0$ lies in $Z_I$, so $h_{Z_I}(\theta)-\theta\cdot r\ge\varepsilon\|\theta\|$ on $U$. Hence $\Psi_I(\theta)-\theta\cdot r$ has a minimizer on $U$ by continuity and coercivity (if $U=\{0\}$, take $\theta=0$). Its restricted gradient is zero, and $\nabla\Psi_I(\theta)-r$ lies in $U$, so the full gradient equals $r$.
+
+Let $Z$ be the polytope with all labels allowed and let $F$ be its minimal face containing $r$. A polytope face is exposed, so choose a vector $\omega$ with $F=\{\zeta\in Z:\omega\cdot\zeta=h_Z(\omega)\}$. Use $\omega=0$ if $F=Z$. In the Minkowski sum for $Z$ equality in the exposing functional requires each summand to maximize it. Thus $F=Z_I$ for $I_z=\{i:\omega_i\cdot v_z=\max_j\omega_j\cdot v_z\}$. Since $r\in\operatorname{relint}F$, the preceding minimization gives $\theta_0$ with $\nabla\Psi_I(\theta_0)=r$. Set $\theta=\theta_0+T\omega$. On a given $K_z$, this adds the same term to all allowed scores, with a strictly smaller coefficient of $T$ for every disallowed score. All score differences at $\theta_0$ are bounded on the compact fibers, and the list of strict coefficient gaps is finite. Thus a single finite $T\ge0$ makes every disallowed label lose to the allowed labels throughout each positive fiber. If no labels are disallowed take $T=0$. The full scores at $\theta$ therefore have the prescribed winner moments exactly, including when $r$ is on the boundary of $Z$.
+
+A maximum of the full scores exists at every point of $C$, so the closed winner cells cover all of $C$. The null tie sets on the positive fibers give the pairwise null overlaps, and the winner moments give the displayed identities. Since $t_i>0$, cell $i$ has a point with strict inequalities against all other labels. Interior points of $C$ approach this point, and sufficiently close ones preserve the strict inequalities, so $D_i$ has nonempty ambient interior. Its mixed dimension is exactly $q$ by its positive $\mathcal H_q$ measure and inclusion in $S$ after intersection with $\Lambda$. Its centroid belongs to the compact convex set $D_i$ because the measure is supported there, and the moment identity gives its base.

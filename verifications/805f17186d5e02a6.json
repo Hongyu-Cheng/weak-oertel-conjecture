@@ -1,0 +1,66 @@
+{
+  "candidate_id": "1c6088cbbbb3f688",
+  "candidate_sha256": "f27772e43b10719df3fa5fcdf1fbe9e0935aec58bef04ab87fe63dd96fb2fe04",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "ac7ba1e1e0ebc955": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df"
+  },
+  "checks": [
+    "Cold read of the exact frozen proof preceded archive inspection. Archived 8b5860c585f8735a §2 states the m=D+1 ordinary-volume specialization, and §1 contains the corresponding trim, local covering and facet-patch arguments. The archive digest matches the base; the draft removes the general log-concave rigidity and projection assumptions, using only accepted ordinary-volume facts.",
+    "For sufficiency, writing s=D/(D+1), homothety about v_i sends the barycentric coordinate λ_i to 1−s+sλ_i and scales all other coordinates by s. Its image is exactly the cap λ_i≥1/(D+1), hence its volume is s^D V. Their cover follows from the sum of barycentric coordinates, and substituting α=s^D V gives equality.",
+    "For every A_i>α, the tail starts at A_i at b_i and ends at zero, so its continuous quantile for A_i−α occurs strictly above b_i. Its retained band has mass α because cut hyperplanes are null; L lies in that band inside H_i. Untrimmed caps already have mass at most α.",
+    "The union bound and assumed equality give |L|≥α/γ_D>0. At every point of L, a containing cover halfspace has mass at most α, and shifting its boundary through that point only reduces mass. Thus γ_D≤D(L)≤α/|L|≤γ_D; in particular L is a simplex and |L|=α/γ_D. Equality of the volume of the removed union with the sum of volumes forces pairwise volume-null overlaps by integrating the nonnegative excess multiplicity.",
+    "A halfspace containing the interior centroid y of L has a parallel subcap through y of mass at least α. If the original boundary lay strictly below y, the intervening slab would contain an open subset of an interior ball, contradicting the upper bound α. Equality and the apex-side pyramid characterization identify it with a vertex halfspace of L. A missing vertex leaves the nearby ray y+ε(v_j−y) uncovered, since the other barycentric coordinates strictly decrease and caps missing y miss a common neighborhood. There are precisely D+1 halfspaces, so all are the distinct vertex caps.",
+    "If a positive trim exists, choose x inside its removed region avoiding all other removed regions, all cut planes and ∂K; these exclusions are null within that trim. The centroid y has strict slack in each retained inequality because every original cap passes through y and t_i>b_i. The crossing of the segment with the ith trim plane is in int K and strictly satisfies all other retained constraints, producing a relatively open hyperplane patch. This plane supports L on its ≤ side, with outward normal proportional to the gradient of the corresponding vertex's barycentric coordinate; the maximizing face is the vertex alone. Since D−1≥1 this is a contradiction. Hence no trim occurs and K=L.",
+    "The dimension and positive-α restrictions are used in the proof. In dimension one, [0,1] covered by x≤1/4 and x≥1/4 attains equality at α=1/4 with unequal masses, so the exposed-vertex obstruction cannot be extended to that case."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ac7ba1e1e0ebc955",
+      "candidate_sha256": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+      "fact_id": "ac7ba1e1e0ebc955",
+      "mapping": "Use its uniform-volume specialization and proof of (1): the cover is finite and closed, all normals are nonzero, and full-dimensional ordinary volume charges no hyperplane. This supplies the distal quantiles and retained-band mass upper bound. The exact equality analysis is supplied by the reviewed proof.",
+      "reviewed_proof_sha256": "76922090615d5ce7641a49c1ff447e454326f5634bc45eff19e5aa9daf91279f",
+      "reviewed_statement_sha256": "bc29bec04a379e95f5f6632e6ed13ef21f0726dfed029e01d071527d2787773a"
+    },
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "fact_id": "03bc771bddd39a8a",
+      "mapping": "The retained L is compact, convex and full-dimensional by positive D-volume, so its maximal normalized depth is at least γ_D and equality forces a simplex. The proof of the accepted theorem also records the centroid cap bound and its oriented equality characterization for D≥2. In a simplex, any pyramid representation in that characterization has an apex at one vertex and its parallel base containing all remaining vertices, so the cut is the corresponding canonical apex-side halfspace.",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb"
+    }
+  ],
+  "finished_utc": "2026-11-08T07:24:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its ordinary specialization already gives the exact positive-part inequality for any finite cover; its final example establishes equality for the canonical simplex cover at α=γ_D V. It does not prove necessity or classify all equality configurations.",
+      "fact_id": "ac7ba1e1e0ebc955"
+    },
+    {
+      "comparison": "Its ordinary maximal-depth theorem classifies the body L after trimming and supplies the equality cap direction at its centroid. It has no cover-level equality classification or argument excluding positive trimming from K.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Its already stationary, spanning minimal positive circuit of D+1 caps yields a support-bump descent theorem under smoothness and a signature inequality. It neither assumes nor classifies equality in the ordinary positive-part cap inequality.",
+      "fact_id": "11c2f4875e5c3035"
+    }
+  ],
+  "readability": "The cap-volume argument is direct. At the normalized-depth step one may spell out that moving the boundary of a containing cover halfspace through the marked point only decreases volume; the proof already uses this same subcap operation in the next paragraph.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0639b08d22d94f07c186cb886393f7d1d6dbb9f9c9c4a88d9016d3fcffa79f42",
+  "reviewed_statement_sha256": "4648125878696163ff39f09220007cc9e0609bd49cfe448f726a843e5e17a712",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:22:22Z",
+  "summary": "The ordinary-volume equality characterization for exactly D+1 halfspaces holds. The accepted trimming fact proves the inequality and an equality example; this draft proves that equality forces that example.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

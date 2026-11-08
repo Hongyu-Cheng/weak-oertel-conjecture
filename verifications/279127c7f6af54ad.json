@@ -1,0 +1,43 @@
+{
+  "candidate_id": "e61be865fa5bee2c",
+  "candidate_sha256": "56fb55892949a13676601a2daf8222a01c34615d44c041b186e9675e84d46cee",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "f525b2b4bb53c54e": "00d397a23e50564bc5fb4ebf1cde0b1d70f660acb13f07dc1ac9b59510b581c7"
+  },
+  "checks": [
+    "Projection commutes with the hull, so both extreme bases belong to the finite sample and all indices between them are nonempty. At N=1 the hull is vertical, area is zero, and counting the endpoint twice gives E=T.",
+    "Successive lower-endpoint slopes are nondecreasing and upper-endpoint slopes nonincreasing by convexity. Their piecewise affine interpolants form a convex region containing the sampled trace. Each strip is contained in the hull of its two adjacent sampled intervals, proving equality with Q under the grid-hull assumption.",
+    "Each strip integrates to h(w_j+w_{j+1})/2, so endpoint samples are counted with half weight. Width concavity puts every width above its affine endpoint chord. Summing the chord gives NE. With E≥0 this gives both stated inequalities and the N≥2 factor two.",
+    "Independently checked the integer-weighted trapezoid identities for 11 affine-width cases and 10 zero-endpoint cases using doubled areas. A horizontal or oblique segment has every width zero and satisfies the same formula.",
+    "Source f525b2b4bb53c54e §3 (8)–(11) matches the statement. The adjacent-strip interpolation is proved in the frozen text and needs no pending premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:49:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses adjacent interpolation for one explicitly specified homothetic-fiber body. It does not determine all fibers or area for arbitrary compact planar grid hulls.",
+      "fact_id": "b6b303900dccfd66"
+    },
+    {
+      "comparison": "Its one-coordinate concentration inequality bounds mass outside one high-volume grid fiber for general convex section profiles. It does not assume the exact grid hull or give the trapezoid identity.",
+      "fact_id": "ec2b7d125fe6a3f0"
+    }
+  ],
+  "readability": "The grid-hull equality is used in the direction that rules out extra area between sampled bases. The proof records the single-fiber convention before interpolating.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e9ed3563f91edebe5630f1be2b3e422d29312399fd205a281c366f43a17ecd11",
+  "reviewed_statement_sha256": "cec4b327c71018dfcdd078587c74626e3dc9ce9961a7783ca639c287ba26a754",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:44:38Z",
+  "summary": "The grid-hull identity and the two endpoint-corrected inequalities are exact, including collapsed projections and null sections.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

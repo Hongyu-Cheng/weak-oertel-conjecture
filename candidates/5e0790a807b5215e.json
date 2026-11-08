@@ -1,0 +1,28 @@
+{
+  "advances": "An actual strict half-cap witness, also with cap fraction $4/9<128/279$. The obstruction concerns the displayed termwise Cauchy replacement.",
+  "author": "PK-research-agent",
+  "candidate_id": "5e0790a807b5215e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:47:32.362540+00:00",
+  "depends_on": [
+    "b965b9b920717bc3"
+  ],
+  "draft_key": "opposite-sector-cauchy-aggregation-destroys-psd",
+  "kind": "counterexample",
+  "proof": "The triangle is $\\{x\\ge-1,\\ y\\ge-1,\\ x+y\\le1\\}$ and contains the origin strictly. Its six canonical ray endpoints have scalar radius $1$. The double sectors are the cores, of area $1/2$. In each intervening unique sector the vertex is the sum of its two unit ray endpoints, so splitting at that vertex's ray gives area $1$. Thus each pair of opposite positive terms in the compressed energy has coefficient $1+1/2=3/2$ on $(x_i+x_{i+1})^2$. Subtracting $2(x_0+x_1+x_2)^2$ as in the period-three compression gives the exact form, equal to $\\tfrac12\\sum_{i<j}(x_i-x_j)^2$.\n\nWeighted Cauchy gives the displayed lower replacement on each pair, with $\\sigma_i=2$ and $W_i+W_{i+3}=3/2$. This changes the coefficient of $(x_i+x_{i+1})^2$ from $3/2$ to $4/3$. Subtract the same $2(x_0+x_1+x_2)^2$ to obtain the asserted negative value. Each through-origin cap captures one unique and two double sectors, so each cap has fraction $2/(9/2)=4/9$.\n",
+  "source_candidate_ids": [
+    "3b0f32e0ae75b4d0"
+  ],
+  "source_candidate_sha256": {
+    "3b0f32e0ae75b4d0": "62d8d544f477d61e246b028a78a0d58fadb5f1d2fa24a090f4bab90d2d2f787b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3b0f32e0ae75b4d0",
+      "locator": "3b0f32e0ae75b4d0:04 §4, exact symmetric triangle and lowered quadratic form"
+    }
+  ],
+  "statement": "For the actual planar triangle $\\operatorname{conv}\\{(2,-1),(-1,2),(-1,-1)\\}$ at $0$, the period-three sector form is $\\sum_i x_i^2-\\sum_{i<j}x_i x_j$. Replacing each opposite pair of its positive terms by the Cauchy lower bound\n$$\n\\frac{(\\sigma_i x_i+\\sigma_{i+1}x_{i+1})^2}{2(W_i+W_{i+3})},\\qquad \\sigma_i=R_i+R_{i+3},\n$$\nwith $i=0,1,2$ and the variables cyclic, yields the form $(2/3)\\sum_i x_i^2-(4/3)\\sum_{i<j}x_i x_j$. It is negative at $(1,1,1)$, where its value is $-2$.",
+  "subgoal_id": "pk-intake-opposite-sector-cauchy-aggregation-destroys-psd",
+  "title": "Opposite-sector Cauchy aggregation can destroy positive semidefiniteness"
+}

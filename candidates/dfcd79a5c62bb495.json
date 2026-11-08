@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary equal-volume bodies with a specified classical smooth transport between their interiors.",
+  "author": "PK-research-agent",
+  "candidate_id": "dfcd79a5c62bb495",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.857253+00:00",
+  "depends_on": [],
+  "draft_key": "smooth-midpoint-transport-defect",
+  "kind": "theorem",
+  "proof": "For distinct $x,x'$ in the convex interior of $A$, integrate the positive-definite derivative of $Y$ along their segment to obtain $(Y(x)-Y(x'))\\cdot(x-x')>0$. Thus $Y$ is injective and the inverse function theorem gives a $C^1$ inverse on the open image. Differentiation gives $B=(DT-I)(DT+I)^{-1}$, which is symmetric with eigenvalues $\\beta_j\\in(-1,1)$ by diagonalizing the positive-definite $DT$. The two inverse source maps on the midpoint image are $Y\\mapsto Y-W(Y)$ and $Y\\mapsto Y+W(Y)$. Their Jacobians are $I-B,I+B$ and have the same positive determinant by $\\det DT=1$. Their determinant product is $\\det(I-B^2)$. Ordinary change of variables gives the midpoint density $\\eta$ and shows $\\int_\\Omega\\eta=V$. The two first moments follow by taking the half-sum and half-difference of the original first moments, since $T$ transports volume.\n\nThe decomposition of $|L|-V$ follows by splitting $L$ at $\\Omega$. For $d\\ge2$,\n$$\n\\eta=\\prod_j(1-\\beta_j^2)^{1/2}\n\\le (1-\\|B\\|_F^2/d)^{d/2}\\le1-\\|B\\|_F^2/d.\n$$\nThe first inequality is arithmetic–geometric mean and the second uses $d/2\\ge1$. In dimension two, expanding the equality of the two determinants gives $\\operatorname{tr}B=0$, hence the eigenvalues are $b,-b$ and $\\eta=1-b^2$. This gives the pointwise equality. Finally change variables separately in the two source caps using $x=Y-W(Y)$ and $T(x)=Y+W(Y)$. The source boundary has volume zero and its closed inequality becomes the corresponding closed indicator in the formula.\n",
+  "source_candidate_ids": [
+    "68d3d3976d28a947"
+  ],
+  "source_candidate_sha256": {
+    "68d3d3976d28a947": "a083d3cf7e8b308ed063c192311926c21401f3188c4876d29b7b2ed5baab9fe6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "68d3d3976d28a947",
+      "locator": "68d3d3976d28a947:04 §3 (7)–(12), smooth midpoint transport and exact cap expression"
+    }
+  ],
+  "statement": "Let $A,D\\subset\\mathbb R^d$ be equal-volume convex bodies with volume $V$ and centroids zero. Assume a $C^1$ convex-gradient diffeomorphism $T:A^\\circ\\to D^\\circ$ with $DT>0$ and $\\det DT=1$. Put $L=(A+D)/2$, $Y(x)=(x+T(x))/2$, $\\Omega=Y(A^\\circ)$, $W(Y(x))=(T(x)-x)/2$ and $B=DW$. The midpoint pushforward of ordinary volume has density $\\eta=\\det(I-B)=\\det(I+B)=\\sqrt{\\det(I-B^2)}\\le1$ on $\\Omega\\subset L$. Its mass is $V$ and $\\int_\\Omega Y\\eta=\\int_\\Omega W\\eta=0$. The volume defect satisfies\n$$\n|L|-V=|L\\setminus\\Omega|+\\int_\\Omega(1-\\eta),\\qquad\n\\int_\\Omega\\|DW\\|_F^2\\le d(|L|-V)\\quad(d\\ge2).\n$$\nIn dimension two $1-\\eta=\\|DW\\|_F^2/2$ pointwise. For normalized source tails in any direction $u\\ne0$ and any real shift $h$, one has\n$$\nV[F_A(h)+F_D(-h)]\n=\\int_\\Omega \\eta(Y)\\left[\\mathbf 1_{\\{u\\cdot Y\\ge h+u\\cdot W(Y)\\}}+\\mathbf 1_{\\{u\\cdot Y\\ge-h-u\\cdot W(Y)\\}}\\right]\\,dY .\n$$",
+  "subgoal_id": "pk-intake-smooth-midpoint-transport-defect",
+  "title": "Exact midpoint transport volume defect and adaptive paired cap formula"
+}

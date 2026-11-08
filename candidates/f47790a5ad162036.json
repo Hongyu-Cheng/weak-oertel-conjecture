@@ -1,0 +1,28 @@
+{
+  "advances": "A sufficient approximation theorem for a prescribed original cap family and intrinsic measure. It needs a pointwise local threshold on every positive fiber.",
+  "author": "PK-research-agent",
+  "candidate_id": "f47790a5ad162036",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:35:06.876664+00:00",
+  "depends_on": [
+    "bee3cc8e50a0dcea"
+  ],
+  "draft_key": "intrinsic-convex-threshold-original-cap-subcover",
+  "kind": "theorem",
+  "proof": "There are finitely many nonempty integer fibers. Each is compact and convex, with Hausdorff dimension its affine dimension. Thus $q$ is their maximum dimension, $P$ is nonempty, and $\\mathcal H_q$ on $S$ sums the fiber measures. At an integer midpoint of two same-parity bases in $P$, the fiber contains their Minkowski midpoint. Its dimension is at least $q$ by fixing a point of either summand, and is at most $q$ because the base is integral. Hence the midpoint belongs to $P$.\n\nThe finite-set witness lemma in accepted fact bee3cc8e50a0dcea bounds the Helly number on $P$ by the largest cardinality of a subset whose convex hull has exactly that subset as its $P$-trace and whose points are all vertices. No such subset has two same-parity points: their midpoint belongs to $P$ and to the hull, and cannot be a vertex. Thus the Helly bound for arbitrary convex sets tested on $P$ is $k$.\n\nFor an index set $J$ with $|J|\\le t$, let $U_J=C\\cap\\bigcap_{j\\in J}H_j^c$ and define\n$$\nE_J=\\{z\\in\\operatorname{conv}(P):\\mathcal H_q((U_J)_z)>\\ell(z)^q\\}.\n$$\nThese use the actual strict complements of the original closed caps. To show $E_J$ convex, take two of its bases and an interpolation with weights $1-s,s$ in $(0,1)$. Both endpoint sections have positive $\\mathcal H_q$ and affine dimension at least $q$. Their Minkowski interpolation is contained in the intermediate section by convexity of $U_J$. If either endpoint dimension is greater than $q$, a scaled translate of that section already gives dimension greater than $q$. If both have dimension $q$ but distinct direction spaces, the sum of their relative interior neighborhoods has dimension greater than $q$, since the sum of the direction spaces has greater dimension. In both cases the intermediate section has infinite $\\mathcal H_q$, hence its base is in $E_J$. In the remaining case translate both sections into their common $q$-dimensional direction space. Ordinary Brunn–Minkowski, applicable to the bounded measurable convex sections, bounds the intermediate measure root below by the weighted average of their roots. This strictly exceeds the weighted average of the two $\\ell$ values, which is at least the intermediate $\\ell$ value by convexity. This proves convexity even when $U_J$ is nonclosed or real-base sections can have larger dimension than any integer fiber.\n\nBy hypothesis the common intersection of all $E_J$ misses $P$. The finite Helly bound selects at most $k$ of these sets whose intersection still misses $P$. Take the union of their index sets. It contains at most $kt$ original caps. At each $z\\in P$, one selected $E_J$ misses $z$, and the residual left by the union is contained in that selected list's residual, which has measure at most $\\ell(z)^q$. Summing gives the total residual bound. The covered measure is at least $M-\\sum_{z\\in P}\\ell(z)^q$ and at most $ktB$, proving the numerical statements.\n",
+  "source_candidate_ids": [
+    "2623b39acd3d4a1d"
+  ],
+  "source_candidate_sha256": {
+    "2623b39acd3d4a1d": "f2e0f542223192e00e9d461044b1dc5340713274dc2a8f7071cb095caed6172e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2623b39acd3d4a1d",
+      "locator": "2623b39acd3d4a1d:02 §§1–3 and 7, (1)–(4) and (8)"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a convex body with nonempty mixed set $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$, and write $C_z=\\{x:(z,x)\\in C\\}$. Put $q=\\dim_H S\\ge1$, $V_z=\\mathcal H_q(C_z)$, $P=\\{z\\in\\mathbb Z^n:V_z>0\\}$, $M=\\mathcal H_q(S)=\\sum_{z\\in P}V_z$, and let $k$ count the occupied coordinate parity classes of $P$. Fix finitely many original closed ambient halfspaces $H_i$ and an integer $t\\ge1$. The mass of a cap is $\\mathcal H_q(S\\cap H_i)$.\n\nLet $\\ell:\\operatorname{conv}(P)\\to[0,\\infty)$ be finite and convex. Suppose at every $z\\in P$ some at most $t$ original caps leave $\\mathcal H_q$-measure at most $\\ell(z)^q$ uncovered in $C_z$. Then one subfamily of at most $kt$ original caps gives that same residual bound simultaneously at every $z\\in P$. Its total residual is at most $\\sum_{z\\in P}\\ell(z)^q$. If every original cap has mass at most $B$ for some $B\\ge0$, then $ktB\\ge M-\\sum_{z\\in P}\\ell(z)^q$. In particular, for any $g$ with $0\\le tg\\le1$, a total allowance $\\sum_{z\\in P}\\ell(z)^q\\le(1-tg)M$ yields $B\\ge gM/k$. For $q=d$, $t=2$ and $g=\\gamma_d=(d/(d+1))^d$, this allowance is $M/9$ when $d=2$ and zero when $d=1$. For general $q$ one can take $g=\\gamma_q$ or $g=\\gamma_d$ whenever the corresponding $tg\\le1$.",
+  "subgoal_id": "pk-intake-intrinsic-convex-threshold-original-cap-subcover",
+  "title": "An intrinsic convex residual threshold selects original caps"
+}

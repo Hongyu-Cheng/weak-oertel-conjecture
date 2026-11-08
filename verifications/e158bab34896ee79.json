@@ -1,0 +1,76 @@
+{
+  "candidate_id": "c073357d2abdba9f",
+  "candidate_sha256": "86e51a1703f03b015e0877bf19bc2fa9234a06522c9a5a4cdad538c1b5495e45",
+  "checked_dependency_candidate_sha256": {
+    "0a73ba4a9c7b24d1": "e2fc877b162d675b1837abcbacbf156d4b6144ae10b904452e385c7c3f9478d5",
+    "1ec728c26c11b368": "51806d2078f9a6c9f46e448043322072a544fc6daa2675217bae6c4dd260d10a",
+    "6d6fcf377e68c79c": "d5b251e75567aff3da9f0767d89121ad75927a3913df28543a8b5083e25ae135"
+  },
+  "checks": [
+    "Since S is nonempty, the cover cardinalities lie in {1,…,N}. Take a constant-cardinality subsequence, index the caps, and use finitely many successive compactifications. Earlier trace, mass and recurrent membership conclusions persist on each refinement.",
+    "For an arbitrary fixed point, an index contains it infinitely often along the common subsequence. Its limiting cap contains it, with no full-measure exceptional set. All limiting masses are at most Q. A deepest point is in a member of the cover and forces that member's mass to be at least Q, equivalently the proof's finite-maximum argument.",
+    "The anchored predecessor supplies Q and an attaining nonvertical through-point cap at every point, including null fibers. A small outward translation gives ambient interior membership and mass strictly below Q+εM, because εM>0 and the mass converges to the original mass. Compactness gives a finite interior cover.",
+    "The complement of each cap interior is a convex closed halfspace. These complements and C have empty intersection on Λ. The primary Helly theorem applies to their restrictions to Λ. If the family has fewer than h members, retain it all. Otherwise an empty subfamily has at most h members. Any point of S belongs to C, so the selected complements cannot all contain it, whether or not C was selected. This gives the desired interior subcover.",
+    "Checked the definition (H) and Theorem 1.1(3) in the Averkov–Weismantel primary preprint https://arxiv.org/pdf/1002.0948. Its real dimension is d and its integer dimension is n in this application. Equality concerns the Helly number; the candidate's cap count is an upper bound. The limiting conclusion concerns a closed cover of S.",
+    "Checked the opening assertion and §§1–2 in archive b989614dc4f86228 at b9df7802ecad0edda8b411a145484010a4b7a695. The source assumes the strict covers as an input and proves the exact closed limit; the frozen version additionally establishes that input in the actual mixed-integer convex setting using the anchored predecessor and the primary Helly theorem."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "0a73ba4a9c7b24d1",
+      "candidate_sha256": "e2fc877b162d675b1837abcbacbf156d4b6144ae10b904452e385c7c3f9478d5",
+      "mapping": "Normalize the continuous component of each nonvertical cap to a unit vector. Apply the lemma to each cap index on one ball containing every fiber. It provides actual closed caps, convergence of mass and retention of all fixed recurrent points.",
+      "reviewed_proof_sha256": "be526f6d1f2091d0d46035ac3af6f3030339216800ad8391ccc4ff4bb1786412",
+      "reviewed_statement_sha256": "ee467ca4de5c4198f9e5d1582d7822a4a8dc51d7363241dfdb440dbee97001e6",
+      "status": "Frozen predecessor independently approved in its own review and pending admission at the pinned base. Admit first."
+    },
+    {
+      "candidate_id": "1ec728c26c11b368",
+      "candidate_sha256": "51806d2078f9a6c9f46e448043322072a544fc6daa2675217bae6c4dd260d10a",
+      "mapping": "The finite compact convex fiber family meets every hypothesis. The predecessor supplies a global depth maximum and a depth-attaining nonvertical through-point cap for each point, before the small outward translation.",
+      "reviewed_proof_sha256": "d228493bd17db59a79e7167f3a5cd5a01124f5a57331f852f98d5496774d8919",
+      "reviewed_statement_sha256": "1948dbc9f536c80fe99603b5461223816abe121f3916599822f499d14854e940",
+      "status": "Frozen predecessor independently approved in its own review and pending admission at the pinned base. Admit first."
+    },
+    {
+      "candidate_id": "6d6fcf377e68c79c",
+      "candidate_sha256": "d5b251e75567aff3da9f0767d89121ad75927a3913df28543a8b5083e25ae135",
+      "fact_sha256": "4d94a57facfebf6c82ff6ff9114186ef0d95d819e68e571362b809791b3cbd49",
+      "mapping": "Use the finite Helly property documented in the accepted proof and its primary source on the nonempty closed set Λ. Apply the contrapositive to C and the complementary closed halfspaces. Only the Helly theorem is used, rather than the centerpoint conclusion.",
+      "status": "Accepted at pinned base b9df7802ecad0edda8b411a145484010a4b7a695."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:35:21Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Documents the exact mixed Helly number and proves a lower depth bound. It does not furnish nonvertical caps whose closed union covers S at its actual maximum depth.",
+      "fact_id": "6d6fcf377e68c79c"
+    },
+    {
+      "comparison": "In continuous dimension two, its final bridge gives an open subthreshold cover of positive-area fibers and its planar reduction acts on a single fiber. This supplies neither the global mixed Helly count nor the zero-loss closed cover of all fibers.",
+      "fact_id": "ceecf08780802b6a"
+    },
+    {
+      "comparison": "Gives an approximately balanced active family on a distinguished weighted lattice centerpoint fiber. The hypotheses, covered set, and mass control differ from an exact global cap cover at the maximum depth.",
+      "fact_id": "981a6c3aa5982216"
+    }
+  ],
+  "readability": "“Complementary caps” means the original caps whose interiors are complements of the selected closed halfspaces. The stated bound is an at-most count.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1aad17a3c13962437f778f69701440e6ac1cd5a736b3bcb05a1c845c610c3ad5",
+  "reviewed_statement_sha256": "5b45e870673a2c490165e7fbca73be52e639ebecef4df943fee4e30c1d8b923b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "b989614dc4f86228": "894c65b9f729ca59cff24bfa23226e047632ef3d245722c2da9e64fe620690e1"
+  },
+  "started_utc": "2026-11-08T09:32:31Z",
+  "summary": "The strict interior covers yield an exact closed cover, and the mixed-integer convex case admits the required strict covers with at most 2^n(d+1) members.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

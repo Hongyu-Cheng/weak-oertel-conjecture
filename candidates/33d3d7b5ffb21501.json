@@ -1,0 +1,29 @@
+{
+  "advances": "A pointwise ordinary-density minorant for one real base dimension, with no lower bound on its total mass.",
+  "author": "PK-research-agent",
+  "candidate_id": "33d3d7b5ffb21501",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:54:32.072948+00:00",
+  "depends_on": [
+    "f6c497926ac327fa",
+    "f8437af96d5a4886"
+  ],
+  "draft_key": "pk-w33-shifted-affine-weight-pointwise-minorant",
+  "kind": "lemma",
+  "proof": "The set $A_\\xi$ is a compact interval when nonempty, by intersecting $C$ with the graph of the affine function $z\\mapsto y(z)+\\ell(z)\\xi$. Write $k_0=\\lceil\\inf A_\\xi\\rceil$ and $k_1=\\lfloor\\sup A_\\xi\\rfloor$. The common integer point gives $k_0\\le p_-\\le k_1$. For each $k=k_0,\\ldots,k_1$, the part of $[k,k+1]$ in $A_\\xi$ has length at most one and on it $(\\ell(z)-b)_+=(\\ell(z-1))_+\\le\\ell(k)$, since $k\\in A_\\xi$ and $\\ell(k)>0$. Hence all such cells together cost at most $f(\\xi)$. The only remaining part is the interval from $\\inf A_\\xi$ to $k_0$, on which the weight is at most $(\\ell(k_0)-b)_+^d\\le(\\ell(p_-)-b)_+^d$. The same inequality holds for empty $A_\\xi$, where $G_b=0$.\n\nFor the density class, restrict the original family to $\\ell\\ge b$ and add $v\\in[0,1-b/\\ell(z)]^d$. The added coordinate bound is nonnegative and concave on this restriction, so the lifted set is compact convex. The accepted projective marginal theorem applies with affine coordinates $(x-y(z),\\ell(z),v)$ and denominator $\\ell(z)$. Its pointwise density is $G_b$: changing $x$ to $y(z)+\\ell(z)\\xi$ at fixed $z$ multiplies the volume element by $\\ell(z)^d$, and integration in $v$ supplies $(1-b/\\ell(z))^d$. If $\\max\\ell\\le b$, $G_b$ is zero. If $\\max\\ell>b$ but $C$ has empty interior, use closed $\\epsilon$-neighborhoods of $C$ with $\\ell>0$. Each lift has interior, and its weighted section integrals decrease pointwise to $G_b$ by bounded convergence. The corresponding extended inverse roots increase to a convex function. The positive-part closure with $\\beta=d+1$ proves the assertion for $g$. The pointwise bound and $f\\ge0$ imply $g\\le f$. Reflection $z\\mapsto-z$ preserves Lebesgue measure and the set of sampled integer points and converts a negative slope to a positive one.\n",
+  "source_candidate_ids": [
+    "bab3610552c0df1c"
+  ],
+  "source_candidate_sha256": {
+    "bab3610552c0df1c": "092a48c2baa7501ddfe52c9a0ba97481d1913d4c498c79c535f06aa5622175c2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "bab3610552c0df1c",
+      "locator": "bab3610552c0df1c:04 §3, cell comparison; historical review 3dc9c4be9e984412, paragraph 4"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $C$ be a compact convex family with fibers $C_z$ over a compact interval of $\\mathbb R$. Suppose $C_z\\subset y(z)+\\ell(z)D$, with $D$ a convex $d$-body, $y$ affine, and $\\ell(z)=a+bz>0$ on the base interval, where $b>0$. Put $D_z=(C_z-y(z))/\\ell(z)$ and $A_\\xi=\\{z:\\xi\\in D_z\\}$. Assume every nonempty $A_\\xi$ contains a fixed interval with left integer endpoint $p_-$. Let\n$$\nf(\\xi)=\\sum_{z\\in\\mathbb Z\\text{ in the base}}\\ell(z)^d\\mathbf1_{D_z}(\\xi),\n\\qquad G_b(\\xi)=\\int_{A_\\xi}(\\ell(z)-b)_+^d\\,dz .\n$$\nThen $G_b\\le f+(\\ell(p_-)-b)_+^d$ pointwise. The function $g=(G_b-(\\ell(p_-)-b)_+^d)_+$ is a pointwise minorant of $f$ with convex extended inverse $(d+1)$-st root. The corresponding result for negative slope uses reflection of the base and the reflected left integer endpoint.",
+  "subgoal_id": "pk-intake-pk-w33-shifted-affine-weight-pointwise-minorant",
+  "title": "A shifted-affine-weight minorant of sampled pointed density"
+}

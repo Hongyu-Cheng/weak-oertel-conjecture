@@ -1,0 +1,28 @@
+{
+  "advances": "A fixed-width-parameter actual descent in a specific smoothed family. The proof gives an upper derivative comparison, not a two-sided formula for the new maximizing depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "90c2c8e4c1d47196",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:54:35.359476+00:00",
+  "depends_on": [
+    "ca8ce0f1c315a21b"
+  ],
+  "draft_key": "w31-replicated-guard-signed-descent",
+  "kind": "theorem",
+  "proof": "Write $c_i=(1-\\sigma)v_i$ and $k=1/r_T$. Take the convex hull of the prescribed lifts. The crosspolytope projection stays fixed and its exposed integer vertices retain their prescribed fibers. Any convex combination of guard points landing at base zero uses equal weights on the two signs of each axis. Since $(c_i+(\\sigma-kt)T+c_i+(\\sigma+kt)T)/2=c_i+\\sigma T\\subset T$, all such combinations stay in $T$. Combinations also using points of $T$ do so as well. Hence the central fiber remains exactly $T$ and no new integer fibers occur. Positivity persists for small signed $t$.\n\nArea and centered covariance under homothety yield exactly\n$$\nM(t)=V(1+6L\\sigma^2+6Lk^2t^2),\\qquad\n\\Sigma(t)=\n\\frac{1+6L\\sigma^4+36L\\sigma^2k^2t^2+6Lk^4t^4}{1+6L\\sigma^2+6Lk^2t^2}\\Sigma_T.\n$$\nIn particular every fixed-direction covariance norm and the total area have zero first derivative. The selected old canonical caps with matching base coefficients $+1$ and others zero attain the exact old depth by w31-axis-guard-active-menus. Their guard statuses have strict margins and persist after small changes in the bodies and widths. Each such through-centroid cap thus has the same test mass $Q_{\\rm test}(t)=q(t)+LV(\\sigma-kt)^2$, where $q(t)$ is the own canonical smoothed area. The canonical vertex-cut formula is a polynomial in the barycentric width in a neighborhood of the old value, so $q'(0)=0$. Each old guard has area $\\sigma^2V$ and inradius $\\sigma r_T$; the identity $|D_i|=(\\sigma r_T)P_D/2$ gives $Q'_{\\rm test}(0)=-2LV\\sigma k=-LP_D$.\n\nFor every point in the central fiber, at least one of the three fixed continuous normals has nonnegative projection on the displacement from zero, since they sum to zero. The corresponding cap through that mark has threshold at least its through-origin threshold and so has mass at most $Q_{\\rm test}(t)$. Each outer base is exposed and has depth at most its own volume, strictly below $Q_{\\rm test}(0)$ at zero and still below $Q_{\\rm test}(t)$ for small $|t|$. Therefore the actual normalized maximum is bounded above by $Q_{\\rm test}(t)/M(t)$, with equality at zero by the exact old depth theorem. The derivative of this comparison is $-LP_D/M(0)$, giving strict descent.\n",
+  "source_candidate_ids": [
+    "a78d27235a5a2dff"
+  ],
+  "source_candidate_sha256": {
+    "a78d27235a5a2dff": "00245fb48910f71faaa8e32f4ccf94bc4ba51b181b5a54daf41a4fcaafb0b387"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a78d27235a5a2dff",
+      "locator": "a78d27235a5a2dff:01 §§1–3, (1)–(5), actual normalized depth descent"
+    }
+  ],
+  "statement": "Take the independent reflected guard body of w31-axis-guard-active-menus with a Euclidean regular triangle $T$ of area $V$ and inradius $r_T$, $\\sigma=1/4$, and fixed $h>0$ with old $0<w\\le1/100$. Keep $T$ at zero and change the guards at $\\pm e_{i,r}$ to $(1-\\sigma)v_i+(\\sigma\\mp t/r_T)T$. For sufficiently small $|t|$ these are the exact integer fibers of an actual compatible body. Its normalized maximum of pure outward-smoothed depth strictly decreases from its old value for all sufficiently small $t>0$. With $P_D$ the old guard perimeter and $M(0)$ the old total mass, the actual normalized maximum has an upper comparison equal at zero whose right derivative there is $-LP_D/M(0)$. More explicitly, for $k=1/r_T$ the area is $M(t)=V(1+6L\\sigma^2+6Lk^2t^2)$ and the actual pooled covariance is $(1+6L\\sigma^4+36L\\sigma^2k^2t^2+6Lk^4t^4)\\Sigma_T/(1+6L\\sigma^2+6Lk^2t^2)$. The common raw test mass has $Q'_{\\rm test}(0)=-LP_D$ and $M'(0)=0$.",
+  "subgoal_id": "pk-intake-w31-replicated-guard-signed-descent",
+  "title": "Opposite guard homotheties decrease the actual outward-smoothed depth"
+}

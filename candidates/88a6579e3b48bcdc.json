@@ -1,0 +1,36 @@
+{
+  "advances": "An ambient contact-geometry theorem for caps with strictly exclusive witnesses. It has no mixed-depth hypothesis.",
+  "author": "PK-research-agent",
+  "candidate_id": "88a6579e3b48bcdc",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.858681+00:00",
+  "depends_on": [],
+  "draft_key": "minimal-empty-cap-contact",
+  "kind": "theorem",
+  "proof": "Omitting any row of the complementary system leaves it feasible by the omitted row's witness. Farkas gives a nonnegative certificate with $\\sum_i\\lambda_i a_i=0$ and $\\sum_i\\lambda_i b_i<0$. Normalize it by $\\sum_i\\lambda_i=1$ and minimize the linear objective $\\sum_i\\lambda_i b_i$ on the compact polytope of normalized nonnegative certificates with zero weighted normal. There is a minimizing vertex, and its negative objective forces full support by feasibility of every proper subfamily. If the kernel of the normal map had dimension greater than one, it would contain a nonzero vector with coordinate sum zero. Both sufficiently small signed displacements in this direction would keep this positive minimizing vertex in the certificate polytope, a contradiction. The kernel is one-dimensional, giving rank $k-1$ and the circuit.\n\nThe functions $L_i(w)=\\lambda_i(a_i\\cdot w-b_i)/B$ sum identically to one. Their joint map identifies the quotient by the common normal kernel with the affine hyperplane $\\sum_i L_i=1$ by rank. The quotient of $\\bigcap_i H_i$ is the standard simplex in these coordinates. Let $U$ have columns $L(p_i)$. Its column sums are one and its off-diagonal entries are negative. Write $U=D-N_0$ with $D$ positive diagonal and $N_0$ nonnegative with zero diagonal. Every column sum of $N_0D^{-1}$ is less than one since $U_{ii}=1+\\sum_{j\\ne i}|U_{ji}|$. The Neumann series for $(I-N_0D^{-1})^{-1}$ shows $U^{-1}$ is nonnegative. Also the columns of $U^{-1}$ sum to one. Thus each simplex coordinate vector is represented as a convex combination of the witness columns. This proves containment of the quotient simplex in the projected witness hull and actual containment when the common kernel is zero.\n\nSumming the relaxed inequalities against $\\lambda$ requires $\\delta\\ge\\delta_0$. At equality all constraints are tight, which is feasible because the prescribed coordinates $\\lambda_i\\delta_0/B$ sum to one. These coordinates are strictly positive. Moving the witnesses slightly into $\\operatorname{int} C$ preserves every strict sign, and the same inverse argument now represents these coordinates by an interior convex combination of moved witnesses in $C$. The first relaxed set thus meets $\\operatorname{int} C$ and has the dimension of the common kernel. When this kernel is zero the point has strictly positive simplex coordinates. For independent normals the map $w\\mapsto(a_i\\cdot w)_i$ is onto, so the equality system at the original thresholds already has a solution.\n\nIn the example the complementary inequalities $x\\le-1/4$ and $x\\ge1/4$ are incompatible, and both sampled fibers contribute captured length $5/4$ to each respective cap, out of length $2$ per fiber. The displayed witnesses have the required strict signs. After perturbation the complement is $\\{x\\ge1/4,\\ z\\le(-1/4-x)/\\eta\\}$, and the witness at $(1,-1)$ remains strictly outside the first cap for $\\eta<3/4$.\n",
+  "source_candidate_ids": [
+    "e711a2f2fa42ce54",
+    "f8f6582d5c261f3e"
+  ],
+  "source_candidate_sha256": {
+    "e711a2f2fa42ce54": "a93fab7675114c705f3ebf6655fb122e9a24a8eeb5cfc700408c9008e994de8d",
+    "f8f6582d5c261f3e": "50d9106a1fd8a2c76aa381dca395ff1e9cb9a8fbed5f83178a04231b687a6e26"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f8f6582d5c261f3e",
+      "locator": "f8f6582d5c261f3e:01 §1, positive circuit, barycentric containment and first feasible δ"
+    },
+    {
+      "candidate_id": "f8f6582d5c261f3e",
+      "locator": "f8f6582d5c261f3e:03 §§2–3, smaller family and two-cap example"
+    },
+    {
+      "candidate_id": "e711a2f2fa42ce54",
+      "locator": "e711a2f2fa42ce54:01 §1, exclusive witness simplex containment"
+    }
+  ],
+  "statement": "Let $C$ be a convex body in $\\mathbb R^N$ and $H_i=\\{w:a_i\\cdot w\\ge b_i\\}$ for $1\\le i\\le k$ be proper closed halfspaces. Suppose $\\{w:a_i\\cdot w\\le b_i\\ \\forall i\\}$ is empty and each $i$ has a strictly exclusive witness $p_i\\in C$, with $a_i\\cdot p_i>b_i$ and $a_j\\cdot p_i<b_j$ for $j\\ne i$. The normals form a positive circuit of rank $k-1$ with positive coefficients $\\lambda_i$ and $B=-\\sum_i\\lambda_i b_i>0$. Their common cap intersection is a simplex cylinder in the quotient by the common kernel. The first feasible uniform relaxation $a_i\\cdot w\\le b_i+\\delta$ occurs at $\\delta_0=B/\\sum_i\\lambda_i$. Its feasible set is an affine $(N-k+1)$-flat meeting $\\operatorname{int} C$. If $k=N+1$, the common cap intersection is a nondegenerate bounded simplex contained in $\\operatorname{conv}\\{p_i\\}$, and the first relaxed set is a single point in the interior of that simplex. If $k\\le N$, making the normals independent always makes the complementary intersection feasible.\n\nFor $n=d=1$, on $C=[0,1]\\times[-1,1]$ the caps $x\\ge-1/4$ and $x\\le1/4$ have normalized mixed mass $5/8$ each and strictly exclusive witnesses $(0,1),(1,-1)$. Replacing the first by $\\eta z+x\\ge-1/4$ for $0<\\eta<3/4$ preserves those witnesses and gives a nonempty complementary intersection.",
+  "subgoal_id": "pk-intake-minimal-empty-cap-contact",
+  "title": "First relaxed contact of an inclusion-minimal empty complementary cap family"
+}

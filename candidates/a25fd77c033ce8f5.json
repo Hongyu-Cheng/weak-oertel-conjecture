@@ -1,0 +1,30 @@
+{
+  "advances": "The obstruction concerns exact uniform volume representation at the same labels for the specified projectively weighted contact measures. The original product and the ordinary projective image are actual convex sets, and the example gives no assertion about their deepest marks.",
+  "author": "PK-research-agent",
+  "candidate_id": "a25fd77c033ce8f5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.108848+00:00",
+  "depends_on": [],
+  "draft_key": "projective-contact-weight-same-label-obstruction",
+  "kind": "counterexample",
+  "proof": "For the general coordinate comparison, if $u\\cdot x\\le h(z)$ is an affine support, write $x=\\xi+t u$ with $\\xi\\perp u$. On its full contact face $t=h(z)$. The affine shear $(z,\\xi,t)\\mapsto(z,\\xi,t-h(z))$ fixes the lattice coordinates and is a translation at fixed base. After dropping the zero normal coordinate the original intrinsic face-fiber measure is $d\\xi$ in the orthonormal tangent coordinates.\n\nBy contrast, writing homogeneous coordinates as $(Z,X,t)$, the original base label $z$ is the plane $Z=tz$. Under $\\tau=t+a\\cdot X+b\\cdot Z$, the equation becomes $Z=z(\\tau-a\\cdot X-b\\cdot Z)$. The slice $\\tau=1$ has ordinary coordinates $(z,x)/L(z,x)$. In ambient dimension $n+d$, the derivative of $q\\mapsto q/(1+\\lambda\\cdot q)$ is $L^{-1}(I-q\\lambda^{\\mathsf T}/L)$ and the rank-one determinant gives $L^{-n-d-1}$. This is an ordinary volume change, and the base coordinate $z/L$ can vary with $x$ in one old fiber or be nonintegral even if $a=0$.\n\nIn the stated product, all three original face intervals have length one and the apex height is one. The denominator is positive on the entire compact body, with minimum $1/2$. Hence the weights are $L(z)^{-2}$, giving the three asserted masses. The continuous coefficient is zero, the ordinary optimizing coefficient at the centroid of the central rectangle. For example the centroid makes the derivative at zero of the convex objective $\\int[1+a\\cdot(x-y_0)]^{-3}dx$ vanish, so zero minimizes it. A particular base supergradient is unnecessary for this representation question.\n\nSuppose convex fibers $A_{-1},A_0,A_1\\subset\\mathbb R^r$ had volumes equal to a common positive factor times those masses and obeyed $(A_{-1}+A_1)/2\\subset A_0$. The Brunn–Minkowski inequality for $r$-dimensional Lebesgue volume would give\n$$\n1\\ge\\tfrac12\\bigl(4^{1/r}+(4/9)^{1/r}\\bigr).\n$$\nYet $z\\mapsto(1+z/2)^{-2/r}$ has strictly positive second derivative on $[-1,1]$ for every $r\\ge1$. At $0$ its value is one, strictly less than the average of the endpoint values. The common volume factor cancels, and reversing or translating all base labels preserves the midpoint inclusion. Thus no such convex lift has the required three volume totals.\n\nIn the ordinary projective image the bases are $z/L(z)$. At each fixed original base both tangent and normal distances from the mapped apex are scaled by $1/L(z)$, so the face lengths and apex heights are $2,1,2/3$. Their products recover the masses, with the original base midpoint relation lost.\n",
+  "source_candidate_ids": [
+    "b0296f8a3b0d3d48"
+  ],
+  "source_candidate_sha256": {
+    "b0296f8a3b0d3d48": "d2136a2f2d061d3caa8f70ddaf2588e5c04d7e9f4ba8fc9609a02e59e35213a0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b0296f8a3b0d3d48",
+      "locator": "b0296f8a3b0d3d48:01 §1 equations (1)–(2)"
+    },
+    {
+      "candidate_id": "b0296f8a3b0d3d48",
+      "locator": "b0296f8a3b0d3d48:03 §3 equation (6)"
+    }
+  ],
+  "statement": "There is a compact convex product with original lattice bases $-1,0,1$, a single common exposed contact plane, and a positive affine projective denominator $L$, whose weighted contact masses $\\int_{F_z}H(z)L(z,\\xi)^{-2}\\,d\\xi$ cannot be the uniform volumes of any compact convex family in any finite positive continuous dimension at the same labels, even after a common positive rescaling. Explicitly, take $C=[-1,1]_z\\times[0,1]_s\\times[-2,0]_t$, contact plane $t=0$, the affine apex graph $y_z=(1/2,-1)$, so $H=1$, and $L=1+z/2$. The masses are $4,1,4/9$ at the three labels. Its ordinary projective image has bases $-2,0,2/3$, face lengths $2,1,2/3$ and perpendicular apex heights $2,1,2/3$.",
+  "subgoal_id": "pk-intake-projective-contact-weight-same-label-obstruction",
+  "title": "Projective contact masses need not be volumes at the original labels"
+}

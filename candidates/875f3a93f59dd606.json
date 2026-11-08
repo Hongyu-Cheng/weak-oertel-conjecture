@@ -1,0 +1,35 @@
+{
+  "advances": "The two conclusions concern a selected base and use all points of its continuous fiber. Both bodies have a sampled centroid attaining more than the sharp mixed bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "875f3a93f59dd606",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:11.342276+00:00",
+  "depends_on": [
+    "1ca50f1bd2d34218",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "w32-four-dimensional-marginal-padding-counterexamples",
+  "kind": "counterexample",
+  "proof": "The projection of $D$ is $[-1,1]$. The extreme fibers are exactly $B$, while the middle fiber contains $T$ and is contained in $T$ by convexity of $T$ and $B\\subset T$. The four continuous directions of $T$ and one endpoint base difference give full dimension. The exact two-layer census of w32-two-layer-depth-transfer proves the stated fibers after either padding, including the absence of further integer fibers. The mass of $B$ is $\\epsilon V$ and that of $K$ is $(3+2\\epsilon)V$, giving the claimed totals. The old marginal depth at zero is $\\beta=(1+\\epsilon)/(1+2\\epsilon)$ because a closed tail through zero contains the central site and at least one endpoint, and either orientation of through-zero tail takes exactly that mass. The two transfer factors yield $\\beta/2=10001/20004$ and $(1+\\epsilon)V/M_{\\mathrm{fac}}=1/4$.\n\nWrite the barycentric coordinates on $T$ as $\\lambda_i(x)=x_i$ for $1\\le i\\le4$ and $\\lambda_0(x)=1-\\sum_{i=1}^4x_i$. The required raw comparison threshold is the same for both paddings, namely $\\tau V$ with $\\tau=\\gamma_4(1+\\epsilon)=160016/390625$. For each $x\\in T$ and $i=0,\\ldots,4$, use the proper closed containing caps\n$$\n\\lambda_i(w)-2u\\ge\\lambda_i(x)\\quad\\text{in }C_{\\mathrm{bin}},\n\\qquad\n\\lambda_i(w)-4u\\ge\\lambda_i(x)\\quad\\text{in }C_{\\mathrm{fac}},\n$$\nwhere $u$ is the new integer coordinate and $w$ is the continuous coordinate of a tested point. In the product's added layer $\\lambda_i(w)\\le1$. In the facet's added layer each $\\lambda_i(w)\\le3+2\\epsilon<4$, using $w\\in K$ and $\\lambda_0(w)\\le1$. Thus both families of caps strictly miss their added layer. Their common old middle trace is the simplex homothet about vertex $i$ of factor $1-\\lambda_i(x)$, giving mass $(1-\\lambda_i(x))^4V$.\n\nSuppose all five caps at a given $x$ had raw mass at least $\\tau V$. On the endpoint fibers $\\lambda_i\\le r$ for $i=1,\\ldots,4$, so for $\\lambda_i(x)>r$ the endpoint contributions vanish and $\\lambda_i(x)\\le1-\\tau^{1/4}$. For $\\lambda_i(x)\\le r$ this bound holds because $\\tau<(1-r)^4$. The $i=0$ cap receives at most $2\\epsilon V$ from the endpoints, so $\\lambda_0(x)\\le1-(\\tau-2\\epsilon)^{1/4}$. The rational witnesses $a=8000199/10^7$ and $b=7999223/10^7$ satisfy\n$$\n\\begin{aligned}\n\\tau-a^4&=2032792963819263760799/10^{28}>0,\\\\\n\\tau-2\\epsilon-b^4&=664183074753367294559/10^{28}>0,\\\\\n4a+b-4&=19/10^7>0.\n\\end{aligned}\n$$\nIt follows that $4\\tau^{1/4}+(\\tau-2\\epsilon)^{1/4}>4$, so summing the five barycentric upper bounds gives a sum strictly below one, impossible. Thus at every $x$ at least one cap is strictly below the threshold. Each cap mass is continuous in $x$ because the continuous normal is nonzero and the sampled fibers have full continuous dimension. Their minimum is continuous on the compact fiber $T$ and has maximum strictly below $\\tau V$. The actual depth is bounded by this minimum. Its own maximum exists by upper semicontinuity, obtained for any fixed finite law by bounding moving through-point caps by fixed parallel enlargements and taking their closed limit.\n\nFor scope, the centroid in any of the two product fibers of volume $V$ pays at least $\\gamma_4V$ from that fiber alone by the full-volume case of 6769574fc1bd9f8d. This exceeds $\\gamma_4 M_{\\mathrm{bin}}/4$. In the facet example the centroid of the added fiber pays at least $\\gamma_4(3+2\\epsilon)V>\\gamma_4 M_{\\mathrm{fac}}/4$ by the same argument. In both cases a containing cap restricts to a containing continuous halfspace or the entire fiber.\n",
+  "source_candidate_ids": [
+    "602a896509d6d63a",
+    "9f93c4a811829b3c"
+  ],
+  "source_candidate_sha256": {
+    "602a896509d6d63a": "387faf7d1e624c8e4a5bdc25c60d2076ce7fdd86309b9329e22f5cf9dc956e8c",
+    "9f93c4a811829b3c": "f792fa2e07b04132f6ba0bd5498082098dd94b50cb2e23b375490785b762bc91"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "602a896509d6d63a",
+      "locator": "602a896509d6d63a:02 A fully specified n=2,d=4 example, five cap inequalities and rational root certificate"
+    },
+    {
+      "candidate_id": "9f93c4a811829b3c",
+      "locator": "9f93c4a811829b3c:02 Rational counterexample with n=2 and d=4, (2)–(4) and rational root witnesses"
+    }
+  ],
+  "statement": "Put $T=\\{x\\in\\mathbb R^4:x_i\\ge0,\\ \\sum_i x_i\\le1\\}$, $V=|T|_4=1/24$, $r=1/10$, $\\epsilon=r^4$, $B=rT$, and $D=\\operatorname{conv}((\\{-1\\}\\times B)\\cup(\\{0\\}\\times T)\\cup(\\{1\\}\\times B))$. Let $K=\\operatorname{diag}(3+2\\epsilon,1,1,1)T$. Consider\n$$\nC_{\\mathrm{bin}}=[0,1]\\times D,\\qquad\nC_{\\mathrm{fac}}=\\operatorname{conv}((\\{0\\}\\times D)\\cup(\\{1\\}\\times\\{0\\}\\times K)).\n$$\nThese are full-dimensional rational convex bodies in $\\mathbb R^2\\times\\mathbb R^4$ with all sampled fibers positive. The six fibers of $C_{\\mathrm{bin}}$ are $B,T,B$ in each new layer, with total $M_{\\mathrm{bin}}=2(1+2\\epsilon)V$. The four fibers of $C_{\\mathrm{fac}}$ are $B,T,B$ over $(0,-1),(0,0),(0,1)$, and $K$ over $(1,0)$, with total $M_{\\mathrm{fac}}=4(1+\\epsilon)V$. Write $\\gamma_4=(4/5)^4$. At base $(0,0)$ the normalized marginal depths are $10001/20004<1/2$ and $1/4$, respectively. Over that entire base fiber, the normalized mixed depth has maximum strictly below $\\gamma_4(10001/20004)$ in $C_{\\mathrm{bin}}$ and strictly below $\\gamma_4/4$ in $C_{\\mathrm{fac}}$. Thus the first refutes lifting to $\\gamma_d\\min(1/2,\\beta)$ at a specified base of marginal depth $\\beta$, and the second refutes lifting at every specified base of marginal depth at least $2^{-n}$ to $\\gamma_d 2^{-n}$.",
+  "subgoal_id": "pk-intake-w32-four-dimensional-marginal-padding-counterexamples",
+  "title": "Two exact marginal lifting counterexamples with two integer and four continuous dimensions"
+}

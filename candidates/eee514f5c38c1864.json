@@ -1,0 +1,26 @@
+{
+  "advances": "The example uses one global affine cell and common normalization. It concerns compatibility of the limiting radial intervals.",
+  "author": "PK-research-agent",
+  "candidate_id": "eee514f5c38c1864",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:25:09.677310+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w30-one-cell-projected-square-radial-defect",
+  "kind": "counterexample",
+  "proof": "The inequalities $|x|,|u|\\le1+\\delta z$ and $-1\\le z\\le1$ are affine after separating the signs and have exactly the stated integer fibers. Projection integrates out the second coordinate. In one dimension radial centering is equality of the masses of the two rays and thus gives the unique median $0$ here. Each radial half-width is $2s_z^2$, so the mean of the endpoint half-widths is $2(1+\\delta^2)$.\n\nFor $\\delta=1/2$ let $j\\ge12$ be integral and $\\varepsilon_j=1/(14j)$. Use the single compact full-dimensional convex body given by $-1\\le z\\le1$, $|x|\\le s_z$, $|u|\\le\\varepsilon_j s_z$, and $0\\le v\\le\\varepsilon_j$, uniformly bounded in all coordinates. Its mixed three-volume is $M_j=4\\varepsilon_j^2\\sum_z s_z^2=14\\varepsilon_j^2$. The single global affine cell $A_j=v+\\exp(-2j)$ has continuous gradient norm one. Take rate $j$ and level $\\exp(-j)$, which gives $0<v=\\exp(-j)-\\exp(-2j)<\\varepsilon_j$ because $\\exp(j)>j^3/6\\ge 14j$ for $j\\ge12$. On the level the two-dimensional area element is $dx\\,du$ and the common coarea factor $(M_j j\\lVert\\nabla_{x,u,v}A_j\\rVert)^{-1}$ is $1/\\varepsilon_j$. Integrating bounded continuous tests against this normalized area and substituting $u=\\varepsilon_j w$ gives the limit $2s_z\\mathbf1_{[-s_z,s_z]}dx\\otimes\\delta_0(du)\\otimes\\delta_0(dv)$ at each of the three bases.\n",
+  "source_candidate_ids": [
+    "181842182f63ac33"
+  ],
+  "source_candidate_sha256": {
+    "181842182f63ac33": "29e5a587941c2e547c3573bb417ec13c36a3c10dec03c613a6fb9239b1bd743c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "181842182f63ac33",
+      "locator": "181842182f63ac33:02 §§3–4, (7)–(10), exact projected-square and one-cell rate example"
+    }
+  ],
+  "statement": "At integer bases $z=-1,0,1$, put $s_z=1+\\delta z$ with $0<\\delta<1$. The compatible square fibers $[-s_z,s_z]^2$ have first-coordinate marginal densities $2s_z\\mathbf1_{[-s_z,s_z]}$ and masses $4s_z^2$. Their centered radial intervals are $[-2s_z^2,2s_z^2]$, and the Minkowski midpoint of the endpoint intervals protrudes by $2\\delta^2$ on each side of the middle interval. At $\\delta=1/2$ the masses are $1,4,9$ and the respective half-widths are $1/2,2,9/2$. At this parameter the marginal measures arise as simultaneous weak limits on the three bases of the normalized two-dimensional slices of one actual global affine cell at positive rate, with limiting support dimension $1<2$.",
+  "subgoal_id": "pk-intake-pk-w30-one-cell-projected-square-radial-defect",
+  "title": "One common coarea slice yields incompatible mass-preserving radial intervals"
+}

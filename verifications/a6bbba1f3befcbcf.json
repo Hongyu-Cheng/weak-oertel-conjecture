@@ -1,0 +1,134 @@
+{
+  "candidate_id": "446929d370c73df3",
+  "candidate_sha256": "b39445485ad5fcc9ee0680ac439d2cbd0b2102e4d44f6fc493239062093aaccf",
+  "checked_dependency_candidate_sha256": {
+    "08e57a9d5210184f": "3b3aeb0501b04b66879e9995631034301c50d97eab8e263f9eed946760e85141",
+    "0c8e3bec450b31c1": "b515460a1d08ac14060f8ac32fd32c686c75b4e9fcd96878c456d2fe7fb8091d",
+    "10916437d7f6301d": "ec83bbe10f1a0289573890e163a5cf7740f06b08448a4bddf113a701a251bfa8",
+    "1cdceac089be44d8": "ddafa09c9e491977cfde7bc9bd1b4fea84f5836f5b425a5f9dad329565c8c1dd",
+    "5097879468363a7e": "b6026e29aef886843672e82b650c02392225de7bf979ad087ccd1b5f7a2139d4",
+    "63c38ebdb1d43777": "2261349bd83ed6fac5b1e41507182857a2e16b2b4c43c7964d2673a8d12f8dda",
+    "643b08457d03e63b": "8f804d289dc7d801da532c05c681ec72e36c6be92021a4f4464587136e1dcd72",
+    "8bdcdcd6e2fa69d9": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+    "c80576b633835713": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729"
+  },
+  "checks": [
+    "Least-active independence applies to the finite homogeneous row objectives. Four active rows are independent. If a full row had a full-cut minimum, at least three saturated columns would force the other three active rows into at most one coordinate direction, violating independence.",
+    "The centroid lemma's nonunit hypothesis follows once full-cut minima are ruled out. The capacity of a full row is positive because it is at least its least entry. Evaluating the ratio at its largest entry gives a full cut of value at most one, and the absence of a full-cut minimum makes the capacity strictly below that value. This row's capacity therefore lies in (0,1), which rules out every standard unit capacity vector even when this is the only full row.",
+    "The actual common centroid has positive coordinates, so the weighted gradient of each full row is strictly positive. Transferring a small amount of a positive entry from a row with at least two zeros to a full row leaves the donor's support and its zero capacity fixed. The receiving row then has strictly positive first-order gain. Thus any other active nonfull row has exactly one zero. At its hole h the multiplier estimate gives b_j≤1/3 for all j≠h.",
+    "For each active row t_i=b·X_i>0. It is the actual threshold for full rows. In any column h, Σ_i(t_i−X_ih)=b·1−1=0. With J={j:b_j>1/3} empty, every strict captured pair is central. With J={h} and one or more one-zero rows, they all have hole h and contribute strictly positive t_i, forcing a strictly negative full-row margin. This argument does not require the holes to be distinct.",
+    "With J={h} and all rows full, the accepted same-side lemma rules out zero margin at h since a boundary centroid coordinate equals 1/3. Zero sum forces a negative margin at h. If |J|≥2, the one-zero bound forces all rows to be full. In each proper section every index in J has the same strict margin sign. At a fixed h∈J some row has a negative margin by balance, so it strictly excludes every index in J.",
+    "In all cases a full row captures at least two vertices with coordinates at most 1/3. The accepted Schur theorem covers proper minimizing sections with zero margins and yields local C². The corrected central-pair lemma gives strictly positive optimized Hessian value after normalization. Degree-one homogeneity scales that Hessian by the positive reciprocal threshold, and a positive weight preserves the sign. The joint index bound would require 4+1≤4.",
+    "Verified the archived source hash and locator 58f8bbb67f63ee23 §4. The accepted same-side theorem replaces the source's incidence-specific quadrilateral and triangle checks, including through-vertex sections. The margin argument needs neither merger of repeated holes nor the source's later capacity containment consequence."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "application": "For f_i=ω_iφ_3, the row objectives are finite and degree-one homogeneous for nonnegative scales, with value zero at the zero row. Least-active global attainment is assumed, so the four active rows are independent.",
+      "candidate_id": "0c8e3bec450b31c1",
+      "candidate_sha256": "b515460a1d08ac14060f8ac32fd32c686c75b4e9fcd96878c456d2fe7fb8091d",
+      "reviewed_proof_sha256": "ee6bc48645901e320ec4090ffe2aeb58e53b306197b761b045c40abf77e587d9",
+      "reviewed_statement_sha256": "06ad20e0846bbb4f77415fa2be6bcbb736083d7732c8d56689b039efddd51d05",
+      "status": "same-batch, pending predecessor admission"
+    },
+    {
+      "application": "At d=3 this is the identical square stochastic local problem with positive weights. A full-cut full row saturates at least three columns, contradicting the independence of the four rows.",
+      "candidate_id": "10916437d7f6301d",
+      "candidate_sha256": "ec83bbe10f1a0289573890e163a5cf7740f06b08448a4bddf113a701a251bfa8",
+      "fact_sha256": "2ee81d21df53fd02e0dc3aec3900d70ceab270d547fe83c52a37aba7dc1feb25",
+      "reviewed_proof_sha256": "506e222335dcc7049a17ce4c3562966da838201536403e83135fdfe080e6eefc",
+      "reviewed_statement_sha256": "e17b570fbbea86cbd22d853fb3dfd259689e49351143bd1ac2a1ff442ba1d49c",
+      "status": "accepted at reviewed snapshot"
+    },
+    {
+      "application": "The assumed full row has capacity in (0,1) after the saturated case is excluded. This supplies the nonunit hypothesis of the first part, which gives the common actual section centroid and strictly positive weighted gradient even if only one row is full.",
+      "candidate_id": "643b08457d03e63b",
+      "candidate_sha256": "8f804d289dc7d801da532c05c681ec72e36c6be92021a4f4464587136e1dcd72",
+      "reviewed_proof_sha256": "ccff615025a8ca050d6291b09450ece71009148a399b85c8f9be2bf2221eaf75",
+      "reviewed_statement_sha256": "452306aac0ef1af44a8de524b38c5fcce04bfde7ba377e99fdc973257bb5322d",
+      "status": "same-batch, pending predecessor admission"
+    },
+    {
+      "application": "The fixed-support capacity calculation gives φ_3=0 for a donor with at least two zero entries. Decreasing any positive entry by a sufficiently small amount leaves support and the zero value unchanged.",
+      "candidate_id": "c80576b633835713",
+      "candidate_sha256": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729",
+      "fact_sha256": "370ea6c3991b1d6a95daede2fd8d3d9517c62e8f3c5edb298ef4bee8352eaed5",
+      "reviewed_proof_sha256": "ec660ed58ec144de72b71ff2ad5d5658d53793955b55e9584645412d757a77e8",
+      "reviewed_statement_sha256": "7aa377887ba7f60185aa7c650f4da7a0e7b203a2e491c9071e11bb6a417a903b",
+      "status": "accepted at reviewed snapshot"
+    },
+    {
+      "application": "Any proper full row can fund transfers. The one-zero portion bounds b_j for all nonhole columns of each active boundary row after normalizing λ by its positive sum.",
+      "candidate_id": "5097879468363a7e",
+      "candidate_sha256": "b6026e29aef886843672e82b650c02392225de7bf979ad087ccd1b5f7a2139d4",
+      "reviewed_proof_sha256": "3e5aeda84b32fa732ca5d4c5e6fee5c8eb4367a1f02004702ae4cc4f77a692b9",
+      "reviewed_statement_sha256": "9d7e56c11ad94dfe4eb4cd74150a32104553af0ce1cfb6fa23b215428f13a5be",
+      "status": "same-batch, pending predecessor admission"
+    },
+    {
+      "application": "The selected row is strictly positive with a proper minimizing threshold, so the Schur theorem gives at least two strictly captured vertices and local C² regularity of the optimized capacity, also at a through-vertex section.",
+      "candidate_id": "8bdcdcd6e2fa69d9",
+      "candidate_sha256": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+      "fact_sha256": "b6b826a3e6a8e77bf027fc6db3d5a210aaf645644d9a18b27289fbad6ebab319",
+      "reviewed_proof_sha256": "3f10992a46b97286bfba42b813249fa659b3504118defeeae9510650608b52f7",
+      "reviewed_statement_sha256": "deba3f575be9d9f26f3af97154bc46e151f89c2cdb0be8bb5cb80bcbb484e157",
+      "status": "accepted at reviewed snapshot"
+    },
+    {
+      "application": "Each full row has an actual proper minimizing section. The stated automatic density hypothesis then applies. It rules out zero margins at b_j>1/3 and forces one strict sign for all such indices in each row.",
+      "candidate_id": "08e57a9d5210184f",
+      "candidate_sha256": "3b3aeb0501b04b66879e9995631034301c50d97eab8e263f9eed946760e85141",
+      "fact_sha256": "a69e2d1c1ce5e01a310f0812ef4fd2fbf23f463b669beb9164ee7844ba29d263",
+      "reviewed_proof_sha256": "593cb3ca6be9ee3903320b0ac5f67bd5a763fe301f5866c7d4f4b69697dea623",
+      "reviewed_statement_sha256": "9f3b1e4d9f0b1428f6991415eba159a4863c16c19d0bf22b275be7ffa84e8e55",
+      "status": "accepted at reviewed snapshot"
+    },
+    {
+      "application": "The selected full row at threshold one strictly captures two vertices with actual centroid coordinates at most 1/3, giving its positive optimized Hessian direction.",
+      "candidate_id": "1cdceac089be44d8",
+      "candidate_sha256": "ddafa09c9e491977cfde7bc9bd1b4fea84f5836f5b425a5f9dad329565c8c1dd",
+      "fact_sha256": "d41f0ed1bedbd16cdb5bdcad3a46be90cbb5819c5a8ab2f1beb423cbd9f400a0",
+      "reviewed_proof_sha256": "662efa98774b132ac1b36b9ffbf550af384affea7733acb7b862df681d164201",
+      "reviewed_statement_sha256": "4a28e0cb09d18a0e13eb5d8dc3aaaa4a99f9b1053c9be2cfcb133b1f808e2107",
+      "status": "accepted at reviewed snapshot"
+    },
+    {
+      "application": "The chosen maximum is global and least-active with k=m=4. The full selected row is locally C², its weight is positive, and one positive direction spans the positive-definite line prohibited by the bound.",
+      "candidate_id": "63c38ebdb1d43777",
+      "candidate_sha256": "2261349bd83ed6fac5b1e41507182857a2e16b2b4c43c7964d2673a8d12f8dda",
+      "reviewed_proof_sha256": "30889b6a906606647ddb784cf5179ef6fd8c82ce79f8893c3fbd6140a8b3ff3a",
+      "reviewed_statement_sha256": "f891986479fbc1a1da0b20a700ac1cf4082e71659f42a84f8f27faf0bff3d485",
+      "status": "same-batch, pending predecessor admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:25:50Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It constrains full-cut full rows at square local maxima. The new result rules out all full rows, including proper-cut ones, under the additional least-active four-row hypothesis.",
+      "fact_id": "10916437d7f6301d"
+    },
+    {
+      "comparison": "Its same-side and zero-margin conclusions concern one proper section. The proof uses them together with the shared centroid and column balance to force a strict pair of central captured vertices at one row.",
+      "fact_id": "08e57a9d5210184f"
+    },
+    {
+      "comparison": "It proves row-level positive curvature conditional on a captured central pair. The four-row claim forces such a pair and uses least-active joint optimality to exclude a full row.",
+      "fact_id": "1cdceac089be44d8"
+    }
+  ],
+  "readability": "An optional clarification in the centroid paragraph is that any proper full row has capacity strictly between zero and one, which verifies the centroid lemma's nonunit hypothesis even in the sole-full-row case. For nonfull rows the t_i are auxiliary dot products.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e89b64c7f8a7f3590ee6ab4e8fa56952b2b889582d7d6d50016773d3debf5ab9",
+  "reviewed_statement_sha256": "6631d08fa2df5831b6de61afe95b7521bd90e9139fffc0a6b964e195ad39c80c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:20:59Z",
+  "summary": "Every four-active least-active tetrahedral maximizer has a zero entry in each row. An assumed full row leads to a proper full row with two central strictly captured vertices, yielding a positive Hessian direction forbidden by the joint index bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

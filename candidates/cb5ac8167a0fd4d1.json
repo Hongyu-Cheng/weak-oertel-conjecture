@@ -1,0 +1,26 @@
+{
+  "advances": "Exact scalar maximization on a fixed finite integer interval.",
+  "author": "PK-research-agent",
+  "candidate_id": "cb5ac8167a0fd4d1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:59.919508+00:00",
+  "depends_on": [],
+  "draft_key": "concave-floor-two-affine-majorants",
+  "kind": "lemma",
+  "proof": "The sequence $h=v-a$ is nonnegative and concave with $h_i=1-k$. Choose $s\\in[h_{i+1}-h_i,h_i-h_{i-1}]$. The consecutive differences of $h$ are nonincreasing, so $h_j\\le 1-k+s(j-i)$ at each site by summing differences to the left or right of $i$. The affine majorant must be nonnegative at both endpoints, forcing $-(1-k)/(R-i)\\le s\\le(1-k)/i$.\n\nFor every $s$ in this interval the affine majorant is nonnegative throughout. Thus $\\sum_j[a_j+1-k+s(j-i)]^d$ is convex in $s$ by convexity of the $d$th power on nonnegative inputs, and it dominates $\\sum_jv_j^d$ for the chosen $s$. Its maximum is at an endpoint of the slope interval. Both endpoint profiles are positive affine sequences, dominate $a$, and have source value one, so each is feasible and the larger sum is attained. Finally, at an endpoint source index all terms of the claimed critical balance have the same weak sign and at least one has strict sign, since all $a_j$ are positive and another site exists. Hence the balance implies an interior source.\n",
+  "source_candidate_ids": [
+    "b73ef8fbc2c9ea1b"
+  ],
+  "source_candidate_sha256": {
+    "b73ef8fbc2c9ea1b": "038accffe554933f7de494219673273aaef07b88801d98346389caab8f91c1cb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b73ef8fbc2c9ea1b",
+      "locator": "b73ef8fbc2c9ea1b:02 §2, sharp two-majorant reduction"
+    }
+  ],
+  "statement": "Let $0<i<R$ be integer sites and let $a_j>0$ be affine on $j=0,\\ldots,R$, with $k=a_i\\le1$. For each integer $d\\ge2$, the maximum of $\\sum_jv_j^d$ over positive concave sequences $v\\ge a$ with $v_i=1$ is\n$$\n\\max\\left\\{\\sum_{j=0}^R\\left[a_j+(1-k)\\frac{R-j}{R-i}\\right]^d,\\;\n           \\sum_{j=0}^R\\left[a_j+(1-k)\\frac{j}{i}\\right]^d\\right\\}.\n$$\nIf there are at least two sites, the additional balance $\\sum_j(j-i)a_j^{d-1}=0$ forces the source index to be interior.",
+  "subgoal_id": "pk-intake-concave-floor-two-affine-majorants",
+  "title": "Exact maximization of a concave floor by two affine profiles"
+}

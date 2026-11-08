@@ -1,0 +1,32 @@
+{
+  "advances": "An exact one-sided first-moment maximization under an integer site capacity.",
+  "author": "PK-research-agent",
+  "candidate_id": "e38bbe8abb5ab718",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:55:23.201791+00:00",
+  "depends_on": [],
+  "draft_key": "capped-integer-first-moment",
+  "kind": "lemma",
+  "proof": "Index the masses by distance from $h$, so $v_j=a_{h-j}$ for integers $j\\ge0$. Let $b_j$ denote the proposed masses: $b_j=m$ for $0\\le j<q$, $b_q=u$, and $b_j=0$ for $j>q$. Both sequences have total mass $A$, so\n$$\n\\sum_{j\\ge0}j(v_j-b_j)=\\sum_{j\\ge0}(j-q)(v_j-b_j)\\ge0.\n$$\nFor $j<q$ both factors on the right are nonpositive, for $j>q$ both are nonnegative, and for $j=q$ the product is zero. Thus the minimal distance moment is $\\sum_{j\\ge0}j b_j=mq(q-1)/2+qu$. The first moment equals $hA$ minus the distance moment. Expanding $A=qm+u$ gives $mq(q-1)/2+qu=A^2/(2m)-A/2+u(m-u)/(2m)$, proving the formula and the bound, including $A=0$.\n",
+  "source_candidate_ids": [
+    "3c669076dab13e6a",
+    "ad8324f468564d7c"
+  ],
+  "source_candidate_sha256": {
+    "3c669076dab13e6a": "795d52c7ac458e5e99f76eeaa7baae254da4f4420e70cc74278ac6e60e11bbc1",
+    "ad8324f468564d7c": "a6b301ee9f602fbc452e126ce6382e653a18c456e491ffde85b10e47c70c65be"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3c669076dab13e6a",
+      "locator": "§1 (6) and the packing remainder"
+    },
+    {
+      "candidate_id": "ad8324f468564d7c",
+      "locator": "§3 (4) and the sharp filled-site value"
+    }
+  ],
+  "statement": "Let $h\\in\\mathbb Z$, $m>0$, and let $(a_i)_{i\\le h}$ be finitely supported with $0\\le a_i\\le m$ and total mass $A$. Write $A=qm+u$ with $q\\in\\mathbb Z_{\\ge0}$ and $0\\le u<m$. The largest possible first moment for these $h,m,A$ is\n$$\nhA-\\frac{mq(q-1)}2-qu\n=hA-\\frac{A^2}{2m}+\\frac A2-\\frac{u(m-u)}{2m}.\n$$\nIt is attained by putting mass $m$ at $h,h-1,\\ldots,h-q+1$, mass $u$ at $h-q$, and zero elsewhere. In particular the first moment is at most $hA-A^2/(2m)+A/2$.",
+  "subgoal_id": "pk-intake-capped-integer-first-moment",
+  "title": "Sharp first-moment bound under an integer-site mass cap"
+}

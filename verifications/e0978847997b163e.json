@@ -1,0 +1,59 @@
+{
+  "candidate_id": "2508aa78b91697c2",
+  "candidate_sha256": "d0622601fcc7482fa7f4f9d6ab114d154f67e21d999a33e256a01eb9ccc841c1",
+  "checked_dependency_candidate_sha256": {
+    "8185884fb3e30ecb": "c4eabc31234a5fe18904805f7afa83a75e86c01fd2f0f84f996c39a2063d4fd7",
+    "9a92720e59c67dc1": "3195d3aef0284ec31e15bf82dc5a8cbaec07c52d3c1467c9555cc879d7d343ba"
+  },
+  "checks": [
+    "For the simplex the accepted cap law gives centroid criticality, the normal marginal βS_B and the exact scale of J. At a facet normal the original support is the centered barycentric displacement 1/(d+1) times its normal scaling, and the reflected support is d times that displacement. The mixed volumes are β|B|/d and β|B|, so α=d. Every centroid vertex cap is the corresponding pyramid.",
+    "For the cube, symmetry gives exactly half the volume in every through-center halfspace, and a containing cap is at least as large. Off null cut sections each opposite pair partitions the old boundary, yielding β=1/2. Each section has area one and the corresponding support height is 1/2.",
+    "The proposed box with sides V/m_i has volume V and facet areas m_i=w_i/2. Thus its area measure is the asserted R. The two support integrals give 1/(2d), and subtracting from the halfcube volume gives (d−1)/(2d). Since 1/(2d)≤1/4 and Γ>1/3, the obstruction is strict including d=2.",
+    "Matched the frozen source section locators to the original proofs and verified raw source hashes against the pinned graph."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "8185884fb3e30ecb",
+      "candidate_sha256": "c4eabc31234a5fe18904805f7afa83a75e86c01fd2f0f84f996c39a2063d4fd7",
+      "fact_id": "8185884fb3e30ecb",
+      "fact_sha256": "3d60dc3d29d3d6f7d97c81f6e64abc881be998212078c413afc37e342dbd6fcf",
+      "hypotheses": "Take the identical d-simplex and equal-weight centroid vertex caps. Its accepted law supplies criticality, old normal marginal, cap fraction β=r^d and section-body dilation.",
+      "reviewed_proof_sha256": "65a8f0ba7560e6a6510a89fd82bb040a5014c9ed5dc691e4180e38c3ed805a88",
+      "reviewed_statement_sha256": "987e5f13e39059252706475e186cecbcf285d885a4be50d8d9f81ec8de50189b"
+    },
+    {
+      "candidate_id": "9a92720e59c67dc1",
+      "candidate_sha256": "3195d3aef0284ec31e15bf82dc5a8cbaec07c52d3c1467c9555cc879d7d343ba",
+      "hypotheses": "Both cube and simplex cuts are actual proper through-interior caps with positive weights, and the two section measures have positive representing bodies J. The oriented support formulas apply to these exact laws. Same-wave predecessor approval required.",
+      "reviewed_proof_sha256": "cf6b4bc3a5159ccaa4a188d69c293f8e3f418309e1b16e5a5413b737d8ea254f",
+      "reviewed_statement_sha256": "05968be74f080aacdb0ddfd8f06137d1d9e95816dc7c99ecaec83e3c0189e7ed"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:09:53.816Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Already gives the exact simplex cap law and section body scale. The present statement explicitly compares the two orientations of mixed volume and their cap remainders.",
+      "fact_id": "8185884fb3e30ecb"
+    },
+    {
+      "comparison": "Uses the same coordinate halfcaps and section boxes for d≥3 to refute a containment statement. The present proof evaluates the oriented mixed volumes and remainders, includes d=2 and refutes a different lower bound.",
+      "fact_id": "65436bd3ddc55cf5"
+    }
+  ],
+  "readability": "The cube statement refers to weighted mean remainders, while the proof happens to give the same value for each individual cube halfcap.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "74e88c5a3eecb0ad02111dae9077e52de68feb90b9ca9bfb6ba978f1718af715",
+  "reviewed_statement_sha256": "403f3493c23d2e5ae8d5d48beccde11b363151ac6882cf3cc7379c259bfebe1c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:04:27Z",
+  "summary": "The simplex and cube computations prove the stated contrasting mixed-volume values and the counterexample to the universal reflected mixed-volume lower bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

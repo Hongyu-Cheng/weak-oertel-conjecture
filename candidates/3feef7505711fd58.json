@@ -1,0 +1,28 @@
+{
+  "advances": "A quantitative depth estimate at a specified actual point in the three-fiber setting, conditional on one depth-attaining cap with a large middle trace and a controlled root deficit.",
+  "author": "PK-research-agent",
+  "candidate_id": "3feef7505711fd58",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:43:58.558853+00:00",
+  "depends_on": [
+    "03c59c70402b66a2"
+  ],
+  "draft_key": "three-fiber-critical-cap-deficit-margin",
+  "kind": "theorem",
+  "proof": "Apply the whole-endpoint floors of the finite-tilt lemma to the given three full-dimensional compatible bodies and the given actual depth-attaining cap. This gives $|A|,|B|\\ge U+V$. Convexity of $t\\mapsto t^d$ for $t\\ge0$, also valid for zero captured volume and $d=1$, gives $U+V\\ge2[(U^{1/d}+V^{1/d})/2]^d\\ge Dq$. Thus $Q=q+U+V\\ge(1+D)\\Gamma|K|$ and $|A|,|B|\\ge D\\Gamma|K|$.\n\nSet $a=|A|^{1/d}/|K|^{1/d}$ and $b=|B|^{1/d}/|K|^{1/d}$. Ordinary Brunn–Minkowski on the whole endpoint bodies and their midpoint inclusion give $a+b\\le2$, while the floors give $a,b\\ge\\rho$. The binomial theorem gives $(1+1/d)^d\\ge2$, so $\\Gamma\\le1/2$ and $0\\le\\rho\\le1$. Increase one root to saturate the sum and maximize the convex function $a^d+(2-a)^d$ over $[\\rho,2-\\rho]$. Its maximum is $\\rho^d+(2-\\rho)^d$ at an endpoint, including a constant function when $d=1$ and a singleton when $\\rho=1$. It follows that $M\\le[1+\\rho^d+(2-\\rho)^d]|K|$. Dividing the raw depth lower bound by this upper bound gives the displayed ratio.\n\nFor the strict estimate, assume $\\eta\\le1/[2(d+1)]$. Bernoulli's inequality gives $D\\ge2(1-d\\eta)>1$. Put $c_0=1-\\log 2\\in(0,1)$. Since $\\log(1+1/d)<1/d$, one has $\\Gamma>e^{-1}$. Therefore $\\rho=(2\\Gamma)^{1/d}(1-\\eta)\\ge(1-c_0/d)(1-\\eta)\\ge1-c_0/d-\\eta$ and\n\n$$\n(2-\\rho)^d\\le e^{d(1-\\rho)}\\le e^{c_0+d\\eta}<e^{3/2}/2<9/4.\n$$\n\nFor the last comparison, the exponential series gives $e<8/3+(1/24)/(1-1/5)=87/32$ by bounding the tail from term $1/4!$ by a geometric series, strictly from the term $1/6!$ onward. The exact comparison $(87/32)^3=658503/32768<81/4$ proves $e^{3/2}<9/2$. Finally $\\rho^d=D\\Gamma\\le D/2$, so the normalized-depth bound divided by $\\Gamma$ exceeds $(1+D)/(13/4+D/2)$. This function is strictly increasing for $D\\ge0$ since the derivative has positive numerator $11/4$. Its value at $D=1$ is $8/15$, proving the strict margin.\n",
+  "source_candidate_ids": [
+    "fee4b98d94ecbcf2"
+  ],
+  "source_candidate_sha256": {
+    "fee4b98d94ecbcf2": "2a07684c571e373b25997e0aab57c2130b3c1b97aadbebc56f65461d60cbab2d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fee4b98d94ecbcf2",
+      "locator": "§§1–4, (1)–(11)"
+    }
+  ],
+  "statement": "Let $d\\ge1$ be an integer and let $A,K,B\\subset\\mathbb R^d$ be compact convex bodies with nonempty interiors and $(A+B)/2\\subseteq K$. Put $S=(\\lbrace-1\\rbrace\\times A)\\cup(\\lbrace0\\rbrace\\times K)\\cup(\\lbrace1\\rbrace\\times B)$, measured by $d$-dimensional Hausdorff measure $\\mu$ on $S$. Fix $y\\in K$ and let $Q$ be the infimum of $\\mu(S\\cap H)$ over all closed ambient halfspaces $H$ containing $(0,y)$.\n\nSuppose $H_\\alpha=\\lbrace(z,x):u\\cdot(x-y)+\\alpha z\\ge0\\rbrace$, with $u\\ne0$, attains $Q$. Let $U,q,V$ be the respective $d$-volumes of its traces on $A,K,B$. Write $M=|A|+|K|+|B|$ and $\\Gamma=(d/(d+1))^d$. Suppose $q\\ge\\Gamma|K|$ and $U^{1/d}+V^{1/d}\\ge2(1-\\eta)q^{1/d}$ for some $0\\le\\eta\\le1$. Set $D=2(1-\\eta)^d$ and $\\rho=(D\\Gamma)^{1/d}$. Then the normalized depth at $(0,y)$ satisfies\n\n$$\n\\frac{Q}{M}\\ge\\frac{(1+D)\\Gamma}{1+\\rho^d+(2-\\rho)^d}.\n$$\n\nIf $\\eta\\le1/[2(d+1)]$, then $Q/M>8\\Gamma/15>\\Gamma/2$.",
+  "subgoal_id": "pk-intake-three-fiber-critical-cap-deficit-margin",
+  "title": "A strict three-fiber depth margin from one critical cap with small root deficit"
+}

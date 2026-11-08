@@ -1,0 +1,36 @@
+{
+  "advances": "The arithmetic labels are actual; the abstract responses are not asserted to come from critical cap derivatives, a below-target body, or an attainable local minimum.",
+  "author": "PK-research-agent",
+  "candidate_id": "7c6a95cd1c124b3a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.047695+00:00",
+  "depends_on": [],
+  "draft_key": "strict-parity-abstract-menu-saturation",
+  "kind": "counterexample",
+  "proof": "In $\\mathbb Z^s$ take the lattice set of $\\operatorname{conv}(0,2e_1,e_2,\\ldots,e_s)$. Its defining inequalities $x_i\\ge0$ and $x_1/2+\\sum_{i\\ge2}x_i\\le1$ show that the lattice set is precisely $\\{0,e_1,2e_1,e_2,\\ldots,e_s\\}$, with parities $0,e_1,\\ldots,e_s$. The maximal occupied minimal faces are the edge $[0,2e_1]$ and singleton vertices $\\{e_i\\}$ for $i\\ge2$. Choose $p_i=e_i$.\n\nLet $E=\\{x\\in\\mathbb R^s:\\sum_i x_i=0\\}$, $v_i=e_i-s^{-1}\\mathbf1$, and $\\varepsilon=1/(4s)$. Take $\\Gamma_i=v_i+\\varepsilon B_E$ for the closed Euclidean unit ball $B_E$. These menus are full-dimensional in $E$, and exclude zero because $\\lVert v_i\\rVert=\\sqrt{(s-1)/s}>\\varepsilon$. For any choices $g_i=v_i+d_i$, let $\\Delta:\\mathbb R^s\\to E$ have columns $d_i$ and write $\\pi=s^{-1}\\mathbf1+\\eta$ with $\\eta\\in E$. The balance equation is\n$$\n(I_E+\\Delta|_E)\\eta=-\\Delta(s^{-1}\\mathbf1).\n$$\nThe operator norm of $\\Delta$ is at most $\\sqrt{s}\\varepsilon\\le1/4$. The inverse therefore exists with norm at most $4/3$, and the right side has norm at most $\\varepsilon$. Hence $\\lVert\\eta\\rVert\\le1/(3s)$ and the unique normalized solution has the stated positive coordinate bounds. It is continuous by continuity of inversion. Varying the choice at any one label forces its coefficient in a putative common balancing vector to vanish, so no common probability exists.\n\nFor the balls, $\\min_{g\\in\\Gamma_i}g\\cdot x=x_i-\\varepsilon\\lVert x\\rVert$, so $T_i=\\{x:x_i\\ge\\varepsilon\\lVert x\\rVert\\}$. It is pointed. For $x\\ne0$ put $A=\\max_i x_i>0$; express $x$ as a convex combination of the vectors $A\\mathbf1-sAe_j$ with weights $(A-x_j)/(sA)$. These vectors all have norm $A\\sqrt{s(s-1)}$, so $A\\ge\\lVert x\\rVert/s$. Subtraction of $\\varepsilon\\lVert x\\rVert$ proves the strict margin. If every cone contains $x$, summing the cone inequalities and using zero coordinate sum gives $x=0$.\n\nFor the finite rational variant put $\\delta=1/(8s)$ and take $\\Gamma_i$ to be the convex hull of $v_i\\pm\\delta(e_j-e_s)$ for $1\\le j<s$. The error vectors have norm at most $\\sqrt2\\,\\delta<\\varepsilon$ and their differences span $E$, so the menus are full-dimensional subsets of the balls, exclude zero, and retain the balance bounds and continuity, strict margin, and the nonexistence of a common balancing probability by variation in each menu. Their exact cones are $T_i=\\{x:x_i\\ge\\delta\\max_{j<s}|x_j-x_s|\\}$. If both $x$ and $-x$ lie in one cone, all coordinates coincide and their sum is zero, so $x=0$. Summing the inequalities also gives that their intersection is zero.\n\nFor either choice of menus, $v_i$ lies in $T_i$ because the strict margin ensures some cone contains it, while $v_j\\cdot v_i=-1/s<0$ for $j\\ne i$ and each $v_j$ belongs to its menu. Thus removal of any label leaves an uncovered direction and, by choosing $g_j=v_j$ for the remaining labels, fails the universal balance property. The centers span $E$, so the essential block has dimension $s-1=k-2$ and trivial common annihilator.\n",
+  "source_candidate_ids": [
+    "377015272f07c571",
+    "d832490f406df490"
+  ],
+  "source_candidate_sha256": {
+    "377015272f07c571": "032438a61355869c9ae7ce21a700e06d990eb7780f7d422ab7f2d26a91a181e5",
+    "d832490f406df490": "969ffbf8e941426e15a46d1ab31a0104a5fb4b9c04f58f9edcba86bdeddc1316"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d832490f406df490",
+      "locator": "d832490f406df490:02 §§1–3, (1)–(5), arithmetic labels and ball menus"
+    },
+    {
+      "candidate_id": "d832490f406df490",
+      "locator": "d832490f406df490:03 §4, (6)–(7), finite rational menu strengthening"
+    },
+    {
+      "candidate_id": "377015272f07c571",
+      "locator": "377015272f07c571:02 §3, the same complete lattice simplex and strict witness-count saturation"
+    }
+  ],
+  "statement": "For any integer $k\\ge3$, there is a complete integer set with $k+1$ sites in $k$ occupied parity classes and exactly $s=k-1$ inclusion-maximal occupied minimal faces. At fixed witnesses of these faces there are compact convex full-dimensional abstract response menus on a Euclidean space $E$ of dimension $s-1$. They exclude zero and span $E$. For every independent selection $g_i$ from the menus, a unique balancing probability $\\pi$ satisfies $\\sum_i\\pi_i g_i=0$ and $2/(3s)\\le\\pi_i\\le4/(3s)$; it varies continuously with the selected vectors. No fixed probability balances every selection.\n\nThe protecting cones $T_i=\\{x\\in E:g\\cdot x\\ge0\\text{ for every }g\\in\\Gamma_i\\}$ are pointed and cover $E$, with $\\max_i\\min_{g\\in\\Gamma_i}g\\cdot x\\ge3\\lVert x\\rVert/(4s)$. No cone can be removed, and their intersection and the common annihilator of all menus are both $\\{0\\}$. The essential menu block has rank exactly $k-2$. These properties hold for ball menus and for rational polytopes generated by $2(s-1)$ explicitly given choices per witness.",
+  "subgoal_id": "pk-intake-strict-parity-abstract-menu-saturation",
+  "title": "Strict parity witness counts allow full-rank abstract circuit menus"
+}

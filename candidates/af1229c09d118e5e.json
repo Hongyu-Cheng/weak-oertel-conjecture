@@ -1,0 +1,26 @@
+{
+  "advances": "Variable-mass barycenter geometry and the exact directional-width bound for a mandatory section measure.",
+  "author": "PK-research-agent",
+  "candidate_id": "af1229c09d118e5e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.862545+00:00",
+  "depends_on": [],
+  "draft_key": "compact-section-barycenter-bodies",
+  "kind": "lemma",
+  "proof": "The measures $0\\le\\nu\\le E$ form a weakly compact set of measures on the common compact support. Indeed their masses are bounded and the inequality is closed against nonnegative continuous tests. Each has a Borel Radon–Nikodym density in $[0,1]$ with respect to $E$. The barycenter of $L+\\nu$ is continuous in the weak topology because the denominator is at least $A$ and the coordinate functions are continuous. Hence $\\mathcal B$ is compact. For barycenters $x_1,x_2$ of $L+\\nu_1,L+\\nu_2$ with total masses $T_1,T_2$, use $\\nu=a\\nu_1+(1-a)\\nu_2$ with $a=tT_2/[tT_2+(1-t)T_1]$. Its barycenter is $t x_1+(1-t)x_2$, so $\\mathcal B$ is convex.\n\nFor any $R$, the maximum of the unnormalized numerator $\\int(u\\cdot w-R)\\,d(L+\\alpha E)(w)$ is the displayed left side, attained by $\\alpha=\\mathbf1_{\\{u\\cdot w>R\\}}$. This function is continuous and decreases by at least $A$ times the increase in $R$, with opposite infinite limits, so it has one root. At the root all barycenter projections are at most $R$ and the threshold density attains equality. For the minimum use $\\alpha=\\mathbf1_{\\{u\\cdot w<R\\}}$ and the same argument with the minimum numerator.\n\nEvery probability measure $(L+\\alpha E)/(A+\\int\\alpha\\,dE)$ dominates the same submeasure $L/(A+B)$. The residual measure has mass $B/(A+B)$ and support in $K$. Thus all barycenters lie in the translate of $(B/(A+B))K$ by the common first moment $\\int w\\,dL/(A+B)$, giving the width bound, including the singleton case $B=0$.\n",
+  "source_candidate_ids": [
+    "dd5d434ad1e8172b"
+  ],
+  "source_candidate_sha256": {
+    "dd5d434ad1e8172b": "97a2be84a7ba2e06347c847764844c4c459a19771684f0a8663f56924cb184d1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "dd5d434ad1e8172b",
+      "locator": "dd5d434ad1e8172b:04 §§4 and 6, (4)–(5) and (7)"
+    }
+  ],
+  "statement": "Let $L,E$ be finite nonnegative Borel measures supported on a common compact subset of a Euclidean space, with masses $A=L(\\mathbb R^m)>0$ and $B=E(\\mathbb R^m)$. The barycenters of the measures $L+\\alpha E$, where $\\alpha$ is Borel and $0\\le\\alpha\\le1$, form a compact convex set $\\mathcal B$. For any linear functional $u$, its support in direction $u$ is the unique real $R$ solving\n$$\n\\int(u\\cdot w-R)\\,dL(w)+\\int(u\\cdot w-R)_+\\,dE(w)=0.\n$$\nThe minimum of $u\\cdot w$ on $\\mathcal B$ is the unique root obtained by replacing the positive part by $\\min(u\\cdot w-R,0)$. For $K=\\operatorname{conv}(\\operatorname{supp}L\\cup\\operatorname{supp}E)$,\n$$\n\\operatorname{width}_u\\mathcal B\\le \\frac{B}{A+B}\\operatorname{width}_u K .\n$$",
+  "subgoal_id": "pk-intake-compact-section-barycenter-bodies",
+  "title": "Support and width of barycenter bodies with mandatory measure"
+}

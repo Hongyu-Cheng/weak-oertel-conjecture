@@ -1,0 +1,30 @@
+{
+  "advances": "An exact area identity for planar hulls of original grid sections, including collapsed projections.",
+  "author": "PK-research-agent",
+  "candidate_id": "e61be865fa5bee2c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:43:59.887926+00:00",
+  "depends_on": [],
+  "draft_key": "planar-grid-hull-exact-trapezoid-mass",
+  "kind": "lemma",
+  "proof": "The projection is the hull of the finitely many nonempty sampled bases, with both endpoints on the grid. Every intervening sampled fiber is nonempty by convexity. At $N=1$ the hull is a single interval with zero area and $E=T$.\n\nFor $N\\ge2$ write the sampled intervals as $[\\ell_j,r_j]$, permitting equal endpoints. Convexity makes the consecutive slopes of $\\ell_j$ nondecreasing and those of $r_j$ nonincreasing. Their piecewise affine interpolants therefore bound a convex region containing the sampled sections. Each strip of the region is exactly the hull of its two adjacent sections, so it lies in $Q$. The grid-hull assumption gives the reverse inclusion. The strip width is affine and Fubini gives strip area $h(w_j+w_{j+1})/2$. Summing yields the claimed identity.\n\nThe widths form a concave sequence. Summing the pointwise lower bound by the affine chord joining its two endpoint widths gives $T\\ge N(w_a+w_b)/2$. Combining this with $E\\ge0$ proves the bounds. Affine widths give equality in the chord sum, and $E=0$ when both endpoints have zero width.\n",
+  "source_candidate_ids": [
+    "f525b2b4bb53c54e"
+  ],
+  "source_candidate_sha256": {
+    "f525b2b4bb53c54e": "00d397a23e50564bc5fb4ebf1cde0b1d70f660acb13f07dc1ac9b59510b581c7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f525b2b4bb53c54e",
+      "locator": "f525b2b4bb53c54e:7 §3, (8)–(11), exact planar area"
+    },
+    {
+      "candidate_id": "f525b2b4bb53c54e",
+      "locator": "f525b2b4bb53c54e:6 §3, adjacent interval interpolation"
+    }
+  ],
+  "statement": "Let $G=t+h\\mathbb Z$, $h>0$, and let $Q\\subset\\mathbb R_u\\times\\mathbb R_x$ be nonempty, compact and convex, with $Q=\\operatorname{conv}(Q\\cap(G\\times\\mathbb R))$. Its nonempty grid fibers have consecutive indices $j=a,\\ldots,b$. Write $N=b-a+1$, their lengths $w_j\\ge0$, $T=\\sum_jw_j$, and $E=(w_a+w_b)/2$, counting the same endpoint twice if $N=1$. Then $|Q|_2=h(T-E)$. If $N\\ge2$, then $T\\ge NE$ and $(1-1/N)T\\le|Q|_2/h\\le T$, so $T\\le2|Q|_2/h$. Affine widths attain the lower inequality and zero endpoint widths attain the upper one.",
+  "subgoal_id": "pk-intake-planar-grid-hull-exact-trapezoid-mass",
+  "title": "Exact trapezoid mass of a planar grid hull"
+}

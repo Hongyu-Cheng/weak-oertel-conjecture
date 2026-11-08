@@ -1,0 +1,35 @@
+{
+  "candidate_id": "b4e81c2cbc607662",
+  "candidate_sha256": "87d410ba77736326d4b566a9c537cabab41a802e9f0f931cff563dfd8b1b6985",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The first old coupling is the pushforward of Lebesgue measure on [-1,1] by x↦(x,−x). Both marginals are Lebesgue on that interval, its mass is two, and its midpoint law is 2δ_0. The affine weight a(x)=1+x/2 lies in [1/2,3/2] on all supports and a(0)=1.",
+    "Exact rational antiderivative checks give ∫a(x)dx=2 and ∫xa(x)dx=[x²/2+x³/6]_{−1}^1=1/3. Under every coupling of the tilted marginals the midpoint first moment is the average of the two marginal first moments, 1/3, while the directly tilted old law has first moment zero. Both signs of the linear test rule out either order.",
+    "Jensen verifies the initial probability convex order δ_0≼cx(δ_{−1}+δ_1)/2. Division by a gives left mass one and right atoms with masses 1 and 1/3. The right total is 4/3, and after normalization its mean is −1/2 exactly, whereas the left mean is zero. The first-moment test rules out either normalized convex-order direction.",
+    "Verified source candidate 1972e280d049f336 byte hash and §7 after (10), which gives both exact examples and distinguishes multiplying the original midpoint law from inducing the endpoint tilts through a joint law."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T13:38:59.255Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It repairs convex order for a prescribed old coupling of the actual marginals with genuine endpoint ceilings. The examples concern an operation that changes the marginals and may make the directly tilted old law fail a necessary compatibility condition.",
+      "fact_id": "bbbf8fc4a00f02d8"
+    }
+  ],
+  "readability": "Specify that the affine function is positive on the common convex support, as in the example on [-1,1]. A globally positive affine function on all of ℝ would have to be constant. The support-based interpretation is the one used in both comparisons.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4a9ba15fdbf9fe120eca4d903af03226ed111ad6067d809961cef80ac3d99f56",
+  "reviewed_statement_sha256": "e397351732071e02e4e058ea2f2e1ad7b8d5bfaa514f418627062c588692d351",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:35:02Z",
+  "summary": "Both examples are valid on the common interval where the affine weight is positive. Tilted masses match in the first example, and distinct first moments rule out either convex-order direction. The normalized inverse example also fails the first-moment test.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

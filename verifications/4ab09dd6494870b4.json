@@ -1,0 +1,115 @@
+{
+  "candidate_id": "c45098d7a6bdc237",
+  "candidate_sha256": "7a3ed2c22f9e00a206a67c85c190e0b124e0f8e8560f6872365282d5703b2979",
+  "checked_dependency_candidate_sha256": {
+    "84cd8a85417b0d7a": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e",
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "The revision specifies δ and both branches of f. Positivity and convexity are valid on the full real domain, so the input argument need not stay above the join.",
+    "The middle support inequalities in the proof divide by H(n)>0 to give the exact cut g_(K−y)(x−y)+εf(1+a·(x−y))≤1. Thus the named target in the statement has a definite interpretation.",
+    "The positive cutoff region has Δ<2η, so its field coefficient s is positive. When Δ≤η the average input cut yields the target after spending Δ against εf≤1. When Δ>η, the old midpoint has uniform slack at least η and the bounded target field fits that slack. This check does not require y∈M."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d90ba05577427854",
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "hypotheses": "Apply to the full-dimensional middle K and its arbitrary interior y. It gives a unique parameter whose denominator is positive on K and no endpoint-center hypothesis.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+    },
+    {
+      "candidate_id": "84cd8a85417b0d7a",
+      "candidate_sha256": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e",
+      "fact_sha256": "16bd146b2050f339f2be11288d8c222c5ab509906f9b840ab78ad17f7f96786b",
+      "hypotheses": "Apply on each singleton with support ceiling h_L and the defined continuous nonnegative convex field. The same application on K uses H(n)f(1+a·(x−y)); full, empty and proper traces use its stated selectors.",
+      "reviewed_proof_sha256": "387bb6105dddce5e09b51c4e0a5eca4c06f2132620577a14ab7c507ac6d2593c",
+      "reviewed_statement_sha256": "edb6bc1e4f85bd5b779ce923003896f53e7e6834fc8a3e8e50fd2d59b4c674ed"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:31:11Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "c45098d7a6bdc237",
+    "candidate_sha256": "b09def53c96770ac655709e40a8a3a2a861417b7b20f6fe6ecfa119250aa5a5a",
+    "checks": [
+      "Since H has positive minimum, the active cutoff band has s>min H/2. The other cutoff coefficient is nonnegative with positive old support distance. This makes the fields continuous, nonnegative and convex in the physical point.",
+      "The two normal-dependent centers average to y even when y is outside M. At Δ≤η, Jensen gives the midpoint cut with coefficient s; the lost Δ gap permits raising it to H uniformly for small ε.",
+      "For Δ>η, nestedness places the midpoint in the old M, with more than η old slack. The bounded target field fits this slack uniformly, including the transition band.",
+      "The singleton loss integrals retain full, empty and proper selectors and the lifted hull has exactly three fibers. Source §6 assumes the exact inverse-dth-power extension already defined in its setup."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "d90ba05577427854",
+        "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+        "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+        "hypotheses": "Apply to the full-dimensional middle K and its arbitrary interior y. It gives a unique parameter whose denominator is positive on K and no endpoint-center hypothesis.",
+        "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+        "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+      },
+      {
+        "candidate_id": "84cd8a85417b0d7a",
+        "candidate_sha256": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e",
+        "fact_sha256": "16bd146b2050f339f2be11288d8c222c5ab509906f9b840ab78ad17f7f96786b",
+        "hypotheses": "Apply on each singleton with support ceiling h_L and the defined continuous nonnegative convex field. The same application on K uses H(n)f(1+a·(x−y)); full, empty and proper traces use its stated selectors.",
+        "reviewed_proof_sha256": "387bb6105dddce5e09b51c4e0a5eca4c06f2132620577a14ab7c507ac6d2593c",
+        "reviewed_statement_sha256": "edb6bc1e4f85bd5b779ce923003896f53e7e6834fc8a3e8e50fd2d59b4c674ed"
+      }
+    ],
+    "finished_utc": "2026-11-08T19:29:44Z",
+    "issues": [
+      {
+        "defect": "The exponent and tangent-extension formula are absent, and the only parameter predecessor concerns a different energy exponent. The target gauge erosion is also given by name in the statement rather than by its actual inequality.",
+        "locator": "Statement first paragraph, f and the projective gauge erosion",
+        "repair": "Define δ=min_{x∈K}(1+a·(x−y))>0 and f(q)=q^(−d) above δ with its matching tangent line below. State the target as g_(K−y)(x−y)+εf(1+a·(x−y))≤1.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Also uses a support-gap cutoff, but the mark is an ordinary centroid, middle motion is homothetic, and endpoint shifts depend only on normals. It does not give these physical-point projective fields at an arbitrary interior mark.",
+        "fact_id": "9e9892a792bf6619"
+      },
+      {
+        "comparison": "Provides a global affine-base positive chart. It does not use a contact-band cutoff or normal-dependent endpoint centers.",
+        "fact_id": "b29b972734a1208b"
+      }
+    ],
+    "readability": [],
+    "reviewed_proof_sha256": "90aab8fec46da724ecaa42b3f6fada352d14ca5431aa0f7d29afbb38f307bc3f",
+    "reviewed_statement_sha256": "68406256afbda806d997b19243d822eb7ac446eaed99b113e58c00769316bd69",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:24:23Z",
+    "summary": "The contact-band geometry and uniform slack estimates are valid, but the exact field and target erosion need a defined tangent extension.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Also uses a support-gap cutoff, but the mark is an ordinary centroid, middle motion is homothetic, and endpoint shifts depend only on normals. It does not give these physical-point projective fields at an arbitrary interior mark.",
+      "fact_id": "9e9892a792bf6619"
+    },
+    {
+      "comparison": "Provides a global affine-base positive chart. It does not use a contact-band cutoff or normal-dependent endpoint centers.",
+      "fact_id": "b29b972734a1208b"
+    }
+  ],
+  "readability": [
+    "The statement names the middle gauge erosion. Its defining support inequalities are provided in the proof."
+  ],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "90aab8fec46da724ecaa42b3f6fada352d14ca5431aa0f7d29afbb38f307bc3f",
+  "reviewed_statement_sha256": "16421ed1d6b2c76f9262c568c1857e6d6f53e4f458473a0ef8fc9ab8c922ce6a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "b09def53c96770ac655709e40a8a3a2a861417b7b20f6fe6ecfa119250aa5a5a",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:30:14Z",
+  "summary": "The revised tangent extension fixes the field, and the proof identifies the middle gauge cut and checks every normal including the transition band.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

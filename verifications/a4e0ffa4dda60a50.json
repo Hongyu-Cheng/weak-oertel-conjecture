@@ -1,0 +1,53 @@
+{
+  "candidate_id": "6d1e0acd23043f7a",
+  "candidate_sha256": "ea9caf9566fd1644adea2bc0aadd1e2664559a7b6cff7f2dff45dfd244ff429b",
+  "checked_dependency_candidate_sha256": {
+    "25cb17da7fc8ba32": "a1196a18bf574d0dbe4cb92847f61f51f69fd710bf947d76095ac9bbf3b84c7c",
+    "ba445d671279810a": "54e186027ed4746ddecfb675bd635221ad15daeb36bef6164fb35a798f4185b9"
+  },
+  "checks": [
+    "Coverage makes R_i exactly the singleton region, since both other closed halfspaces are missed. A positive-area R_i contains an interior point of A with both strict inequalities; convex combinations with that point approximate every point of the closed intersection. Thus C_i is the asserted nonempty compact set.",
+    "In the pulled-back corner, the two threshold increments are t(b_j−v_j·p)+O(t²). At a proper cut, its chord interior lies in int A and only the two endpoints and the single crossing with the other line can affect pointwise convergence in the strip. Coarea gives precisely τ_ij with either inequality convention on the crossing point. It can be zero. The overlap of the strips is O(t²) by independence, with either sign of increments. Multiplying the retained corner by (1−t)² and subtracting from r_i gives D_i(p)=2r_i−Σ(b_j−v_j·p)τ_ij. Nesting implies D_i≥0 and the sign of the terms gives D_i≤2r_i on C_i.",
+    "In D_i the linear term is +p·Στ_ijv_j. Its minimum on C_i is the constant minus h_C_i(−Στ_ijv_j), so both support signs are as stated. The load bound holds on every singleton and on every multiple capture, hence integrates over one removed shell. Null corners have exactly zero measure there. The right side is affine with coefficient −Σ_i c_iΣ_{j≠i}τ_ijv_j, and its support maximum is attained on the same A, not by combining separate centers.",
+    "Independent check: take A=[0,1]², H_1={x+y≤3/2}, H_2={x≥3/5}, H_3={y≥7/10}. R_1 is a rectangle of area 21/50; the exact shell losses at p=(0,0) and (1,1) have derivatives 0 and 13/10, matching the formula even with negative threshold velocities. R_2 is a triangle of area 1/50 with D_2= (1−p_x)/5. With weights (1/10,1/10,4/5) the two deficient corners yield a common attained reserve 19/50 at (0,0), below the independent-minimum value 2/5; the two zero losses cannot be attained at one center.",
+    "With one positive-area deficient corner, 2aτ_2−2(τ_2−λ_j)r_j≥2τ_2(a−r_j). For the actual mixed weights τ_2≥Λ/4, giving (a−r_j)/2; r_j≤a/9 makes this ≥4a/9. If all deficient corners are null, 2aτ_2/Λ≥a/2. These are normalized weighted loss estimates, independent of a global below-2/9 depth assumption.",
+    "Verified the declared SHA-256 and original 86934b651b11f7d5 §§6–7, (8)–(14), matching the incidence deficit, signed two-strip derivative, and attained support formulas. The frozen general result takes arbitrary positive weights; only its final numerical corollary uses the actual mixed menu."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "25cb17da7fc8ba32",
+      "candidate_sha256": "a1196a18bf574d0dbe4cb92847f61f51f69fd710bf947d76095ac9bbf3b84c7c",
+      "hypotheses": "Uses the proper-section homothetic cap-loss formula with d=2 at the same p∈A for each original H_i. The deficit load is integrated directly rather than applying the constant-τ inequality to the corners.",
+      "status": "Pending independent admission"
+    },
+    {
+      "candidate_id": "ba445d671279810a",
+      "candidate_sha256": "54e186027ed4746ddecfb675bd635221ad15daeb36bef6164fb35a798f4185b9",
+      "hypotheses": "Only the final numerical specialization uses it. Its actual three caps give proper A cuts, positive reciprocal section weights and max λ_i≤3Λ/4. Pairwise independence follows from spanning and v_1+v_2+v_3=0; support positivity supplies the A cover.",
+      "status": "Pending independent admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T10:32:10Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its sector selection uses ordinary planar cap, singleton, and overlap areas at a positive fan through a common mark. It does not compute homothetic corner derivatives or a simultaneous support-function bound with one contraction center. Its global depth bound does not imply these ordinary planar loss statements.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    }
+  ],
+  "readability": "“Normalized loss” in the final paragraph means division of the weighted raw cap loss by Λ, as stated. It does not differentiate division by the total mixed area.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2fd800d0fa39beadc1b94c1aa7943b3b569ee8125567a365aa5a2a0277500270",
+  "reviewed_statement_sha256": "c57bba71f9daf39a0c48cd2b634c5178a0d51891c20dba7852873bbdb5094a3b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:27:40Z",
+  "summary": "The signed corner derivative holds at every center in A. The reserve comes from one affine objective on A and is attained at one common center, even if separate corner minima require different centers.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

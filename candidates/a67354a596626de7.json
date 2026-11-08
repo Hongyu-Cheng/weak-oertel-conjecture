@@ -1,0 +1,26 @@
+{
+  "advances": "An ordinary cap-area lower bound for the specified four core sectors and opposite collinearities, including zero-excess limits in the other sectors.",
+  "author": "PK-research-agent",
+  "candidate_id": "a67354a596626de7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:40:07.756330+00:00",
+  "depends_on": [],
+  "draft_key": "opposite-singular-core-cap-lower-bound",
+  "kind": "theorem",
+  "proof": "The collinearities give $A=Br/(B+r)$ and $a=bt/(b+t)$. Put $x=W_1$, $y=W_4$ and\n$$\nP=Bt/2,\\quad Q=br/2,\\quad U=Br/2,\\quad V=bt/2,\\quad Z=(AB+at)/2.\n$$\nThe core inclusions give $x\\ge P$, $y\\ge Q$, and $UV=PQ$. For instance $W_0+W_5=A(B+r)/2=U$ and $W_2+W_3=a(t+b)/2=V$. Adding the appropriate sectors gives\n$$\n|K|=x+y+U+V,\\qquad q_1=y+U,\\quad q_2=x+Z,\\quad q_3=y+V.\n$$\nWith $\\xi=B/r$ and $p=P/Q$, the formulas for $A,a$ give\n$$\nZ=U\\frac{\\xi}{1+\\xi}+V\\frac{p}{\\xi+p}.\n$$\n\nIf a cap fraction is at least $1/2$ the assertion follows. Otherwise, set $T=\\max(U,V)$, $R=\\min(U,V)$ and $S=U+V$. The inequalities $2(y+T)<x+y+S$ and $2(x+Z)<x+y+S$ yield $T-R<x-y<S-2Z$, so $Z<R$. Order $U\\ge V$ in the scalar calculation by interchanging the two terms and replacing $\\xi$ by $p/\\xi$ when needed. From $Z<V$, division by $\\xi>0$ gives $U/(1+\\xi)<V/(\\xi+p)$, hence $(U-V)\\xi<V-Up$. Thus $V>Up$, and $UV=PQ$ gives $U<Q$. We have $0<P<R\\le T<Q$.\n\nWrite $Z_0=P(2Q-S)/(Q-P)>0$, since $(Q-U)(Q-V)>0$ and $UV=PQ$ imply $S<P+Q<2Q$. Substitution into the expression for $Z$ gives the exact identity\n$$\nZ-Z_0=\\frac{[PQ(1+\\xi)-PU-QU\\xi]^2}{U(Q-P)(P+Q\\xi)(1+\\xi)}\\ge0.\n$$\nAt fixed $y,T,R,Z$, the largest cap fraction is $\\max(y+T,x+Z)/(x+y+S)$. As a function of $x\\ge0$ this decreases up to $x=y+T-Z$ and increases thereafter, since the latter derivative has positive numerator $y+S-Z$. Consequently it is at least\n$$\n\\frac{y+T}{2y+T-Z+S}\\ \\ge\\\n\\frac{Q+T}{2Q+T-Z+S}\\ \\ge\\\n\\frac{Q+T}{2Q+T-Z_0+S}.\n$$\nThe first comparison within this display uses the positive derivative numerator $R-Z$ and $y\\ge Q$. All denominators are positive.\n\nRescale the area variables by $Q$ so that $Q=1$. Write $P=s^2$, $0<s<1$, and note $s\\le T<1$ and $R=P/T$. The last quotient is\n$$\nF_P(T)=\\frac{(1-P)T(1+T)}{(2-P)T^2+(2-4P)T+P}.\n$$\nIts derivative is $P(1-P)(1-T)(3T+1)$ divided by the squared denominator, so $F_P(T)\\ge F_P(s)$. Finally,\n$$\nF_{s^2}(s)-\\frac8{17}\n=\\frac{(1+s)^2}{s^2+5s+2}-\\frac8{17}\n=\\frac{(3s-1)^2}{17(s^2+5s+2)}\\ge0.\n$$\nThe strict comparison $8/17-128/279=56/4743>0$ gives the last clause.\n",
+  "source_candidate_ids": [
+    "10ff75afdda8a25f"
+  ],
+  "source_candidate_sha256": {
+    "10ff75afdda8a25f": "34135ff029384e461b1687ea3463162bbc247ee78b452bd3d8225d08f050709e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "10ff75afdda8a25f",
+      "locator": "§§1–5, (1)–(11), exact opposite singleton core bound"
+    }
+  ],
+  "statement": "Let $K$ be a planar convex body containing zero in its interior. On six rays its boundary endpoints in cyclic order are\n$$\n(A,0),\\ (0,B),\\ (-t,t),\\ (-a,0),\\ (0,-b),\\ (r,-r)\n$$\nwith all radii positive. Index the rays from zero and let $W_i$ be the area of the sector between rays $i$ and $i+1$ modulo six. Suppose sectors $0,2,3,5$ equal their core triangles spanned by zero and their two ray endpoints, and the triples of endpoints on rays $(5,0,1)$ and $(2,3,4)$ are collinear. Let $q_1,q_2,q_3$ be the areas in the three closed halfplanes $x\\ge0$, $y\\ge0$ and $x+y\\le0$. Then\n$$\n\\max_i q_i\\ge \\frac{8}{17}|K|.\n$$\nIn particular these data cannot occur when all three fractions are at most $128/279$.",
+  "subgoal_id": "pk-intake-opposite-singular-core-cap-lower-bound",
+  "title": "Opposite singular core nodes force an ordinary cap fraction of at least 8/17"
+}

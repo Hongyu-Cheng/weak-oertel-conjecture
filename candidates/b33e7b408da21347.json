@@ -1,0 +1,28 @@
+{
+  "advances": "Actual middle cap at a nonheavy three-fiber budget. The saturation case does not invoke Brunn–Minkowski with an empty endpoint residual.",
+  "author": "PK-research-agent",
+  "candidate_id": "b33e7b408da21347",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.857725+00:00",
+  "depends_on": [
+    "03c59c70402b66a2"
+  ],
+  "draft_key": "critical-middle-cap-residual-root-bound",
+  "kind": "lemma",
+  "proof": "Whole-body Brunn–Minkowski gives $a^{1/d}+b^{1/d}\\le2$, so $a\\le1$, while $b\\le1+a$ by nonheaviness. Hence $Q\\le\\gamma_d(1+a)\\le2\\gamma_d<1$. The function $F_Q$ is continuous and strictly increasing in $q$, and is positive at $q=1$. If $Q<a$, then $F_Q(0)<a^{1/d}+b^{1/d}-2\\le0$. Otherwise the left endpoint $q_0=Q-a$ satisfies $1-q_0\\ge(1-\\gamma_d)(1+a)\\ge(1-\\gamma_d)b>b/2$, so $F_Q(q_0)<b^{1/d}-2(b/2)^{1/d}<0$, using $d>1$. Thus the root exists and is interior. If $Q'>Q$ and the old root lies in the new domain, $F_{Q'}(h(Q))<F_Q(h(Q))=0$; otherwise the new left endpoint is already greater than $h(Q)$. Both cases give $h(Q')>h(Q)$.\n\nWrite $U,q,V$ for the masses on $A,K,B$ of the given critical cap. By the endpoint floors of 03c59c70402b66a2, $s=U+V=Q-q\\le a$. If $s=a$, then $q=Q-a<h(Q)$ from the left-endpoint bound. If $s<a$, both strict endpoint residuals have positive volumes $a-U,b-V$. Their midpoints lie on the strict excluded side of the same original cap in $K$. Apply ordinary Brunn–Minkowski to positive-volume compact subcuts at margins at most $-\\varepsilon$ for small $\\varepsilon>0$, then let $\\varepsilon\\downarrow0$ to get\n$\n(a-U)^{1/d}+(b-V)^{1/d}\\le2(1-q)^{1/d}.\n$\nAt fixed $s$, the left-hand side as a function of $U\\in[0,s]$, $V=s-U$, is concave, so its minimum is at an endpoint. The decrement $t^{1/d}-(t-s)^{1/d}$ is nonincreasing for $t\\ge s$, as follows from concavity of the root. Thus the smaller value comes from $U=s,V=0$. This gives $F_Q(q)\\le0$ and proves $q\\le h(Q)$. The inequality $q\\le Q$ follows by nonnegativity of the other captures.\n",
+  "source_candidate_ids": [
+    "4dfc7dda63b85569"
+  ],
+  "source_candidate_sha256": {
+    "4dfc7dda63b85569": "35bb8987c36bc7a1ef91fe1b9b3b9a8cd1c7382c78d38bb073ee58f6a957daf5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4dfc7dda63b85569",
+      "locator": "4dfc7dda63b85569:02 §2, (3)–(6), and §6 first paragraph"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let $A,K,B\\subset\\mathbb R^d$ be convex bodies at $-1,0,1$ with $(A+B)/2\\subseteq K$, volumes $0<a\\le b$ for the endpoints and $|K|=1$. Put $M=1+a+b$, $\\gamma_d=(d/(d+1))^d$, and assume every whole fiber mass is at most $M/2$. For $0<Q\\le\\gamma_d M/2$, let\n$\nF_Q(q)=(a-Q+q)^{1/d}+b^{1/d}-2(1-q)^{1/d},\\qquad \\max(0,Q-a)\\le q\\le1.\n$\nThere is a unique root $h(Q)$ strictly inside this interval, strictly increasing in $Q$ in the stated range. For every nonvertical ambient cap of raw mass $Q$ that attains the mixed depth at its middle source $(0,y)$, the middle mass is at most $\\min(Q,h(Q))$.",
+  "subgoal_id": "pk-intake-critical-middle-cap-residual-root-bound",
+  "title": "A residual-root bound for critical middle cap mass"
+}

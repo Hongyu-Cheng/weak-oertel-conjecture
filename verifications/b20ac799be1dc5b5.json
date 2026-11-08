@@ -1,0 +1,56 @@
+{
+  "candidate_id": "0f6ca72852c286b2",
+  "candidate_sha256": "b4cf246c69c3246485f3300727e3eeb7394988902100ebbf33e68809fc683629",
+  "checked_dependency_candidate_sha256": {
+    "bee3cc8e50a0dcea": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa"
+  },
+  "checks": [
+    "Checked 05b459fea3722ebb §4, Lemma 2 and (3), and its §3 midpoint argument against the frozen statement. The frozen proof uses the accepted finite-set Helly lemma for the needed base selection.",
+    "Compactness bounds the number of nonempty integer fibers. Each fiber is compact convex and has Hausdorff dimension equal to its affine dimension. Their finite union therefore has maximum dimension q, and exactly the q-dimensional fibers have positive q-measure.",
+    "A same-parity midpoint is integral and its fiber contains the Minkowski midpoint. Holding a point of one endpoint fiber fixed gives a translate of the other scaled by one half, so the midpoint fiber has dimension at least q and belongs to P.",
+    "Two same-parity points in an empty vertex set would give a point of P in its hull that cannot be a vertex. Hence each such set has at most k points, including a singleton P.",
+    "Each E_J is convex because C and all complements are convex and projection preserves convexity. Its possibly nonclosed trace is covered by the accepted lemma. A base is outside E_J exactly when the original caps in J cover the entire actual fiber there, including boundaries.",
+    "Local covers give an empty intersection on P, so at most k lists suffice. Their union contains at most kt original indices. The argument includes dimension-zero singleton fibers and the sole base when n=0."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bee3cc8e50a0dcea",
+      "candidate_sha256": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa",
+      "fact_sha256": "d7fb8bf1055406ebcaa03906c37ae5c346a791238bfc82ab445225504cc670e3",
+      "mapping": "Apply the general finite-set witness lemma proved in the first part of the accepted proof with F equal to the actual positive-fiber base P. The lemma allows arbitrary convex sets and uses their traces on finite nonempty F. The draft verifies the empty-vertex bound k separately. The graph-specific weighted conclusion and graph midpoint identity of the predecessor are not invoked.",
+      "reviewed_proof_sha256": "5f71717b77abc881a8566e239b260d568886b9968e0805f252142523621e3ddb",
+      "reviewed_statement_sha256": "b35d11bb8b5672e290f57d665efd27927629b295e5ae5d1e0655b22288a2bd12"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:05:29Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same projected residual selection with t=q+1 supplied by ordinary Helly, and its zero-dimensional specialization also yields the base Helly bound. The present statement isolates the conclusion at an arbitrary supplied local cover size t, including t<q+1, for actual positive fibers and original caps.",
+      "fact_id": "151fa708661bd0e3"
+    },
+    {
+      "comparison": "Proves the occupied-label Helly bound in its proof from the same empty-vertex argument. Its statement concerns weighted depth and minimal faces, without the exact original-cap subcover conclusion.",
+      "fact_id": "f4547c4166b39683"
+    },
+    {
+      "comparison": "Obtains new halfspaces at a depth budget. The present conclusion must select from a fixed original list and uses the local cover premise rather than depth-level assumptions.",
+      "fact_id": "c073357d2abdba9f"
+    }
+  ],
+  "readability": "The lists J are nonempty index sets. Since every positive fiber is nonempty, the local premise never requires the empty set as a cover.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "18453531c804b6e1aeae9e49ba8d8e7f101599a59530282eb8c159dd2f298f09",
+  "reviewed_statement_sha256": "38e2755fbc81a4e016813e9318ec8d404ca25446165d5799471e0785bbed0dd8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:01:36Z",
+  "summary": "The proof selects original halfspaces from the given family and covers all maximal-dimensional integer fibers pointwise with at most kt caps.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

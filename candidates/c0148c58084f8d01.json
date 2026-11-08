@@ -1,0 +1,28 @@
+{
+  "advances": "The two side gains use the actual extreme points and section widths in one planar Minkowski sum.",
+  "author": "PK-research-agent",
+  "candidate_id": "c0148c58084f8d01",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.817590+00:00",
+  "depends_on": [
+    "897267d3c8f88fdd"
+  ],
+  "draft_key": "pk-w33-planar-directional-sweep-side-reserve",
+  "kind": "lemma",
+  "proof": "The map $(x,y)\\mapsto(t,s)$ has absolute determinant one. In these coordinates $t(B)\\subseteq[-2,1]$. After the tangent translations, $S$ lies at $s=0$ and $a_-(t)\\le0\\le a_+(t)$ on $[l,h]$. Put $D=S+B$ and $C=A+B$. Then $D\\subseteq C$ and they have the same projection on the height coordinate because $t(S)=t(A)$. On each common interior height $v$, the gain in section length from $D$ to $C$ is the sum of the right endpoint gain and the left endpoint gain, both nonnegative.\n\nFor a chosen rightmost point of $B$ with coordinates $(s_+,t_+)$ and each $t\\in[-t_+,h]$, set $v=t+t_+\\ge0$. The interval lies in $[l,h]$ since $-t_+\\ge-1>l$. Adding the chosen point to $(0,t)\\in S$ attains $s_+$ in the section of $D$ at $v$, and no point of $D$ has larger $s$. Adding it to $(a_+(t),t)\\in A$ shows that the right endpoint gain is at least $a_+(t)$. Integrating gives the first side integral. Applying the same argument to the leftmost point gives the other integral. The two gains can be integrated over overlapping height intervals because they are separate summands of the section-length difference. Both intervals contain $[2,h]$ by $t_\\pm\\ge-2$. Their sum is at least the area of the $A$ tail above $2$, and when both $t_\\pm=1$ it equals the area above $-1$.\n\nFor $S$ and $B$ in these coordinates, a nonempty $s$ column of $D$ has height interval $[l+L_B,h+U_B]$. It crosses zero since $l<-1$, $h>2$, and $-2\\le L_B\\le U_B\\le1$. Thus $|D\\cap\\{t\\ge0\\}|=R_c$. The midpoint inclusion gives $4q\\ge |C\\cap\\{t\\ge0\\}|$. Finally apply the result “Sharp simplex roof costs for each fixed direction” with $d=2$, $V=9/2$, $e=(c,-1-c)$, and $v_0=(-1,-1)$. The parametrization $s\\mapsto(s,-s)$ on $\\ker v_0$ gives physical $d\\nu=ds$. The volume quantile obeys $\\eta=1-\\sqrt{1-2b/9}$ and the lower bound becomes $H[3-\\sqrt{9-2b}]$.\n",
+  "source_candidate_ids": [
+    "cde78a6346699a8a"
+  ],
+  "source_candidate_sha256": {
+    "cde78a6346699a8a": "b60f11ed1e17ae03f9e0d1c7c0e9627179b984f06ab667c45ea474bec2e313ca"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cde78a6346699a8a",
+      "locator": "cde78a6346699a8a:02 §4, (11)–(13), exact two-side integral"
+    }
+  ],
+  "statement": "Let $T=\\{(x,y):x\\le1,\\ y\\le1,\\ t=-x-y\\le1\\}$ and let $A,B,K$ be planar convex bodies with $B\\subseteq T$ and $(A+B)/2\\subseteq K$. Assume the $t$ range of $A$ is $[l,h]$ with $l<-1$ and $h>2$. Set $q=|K\\cap\\{t\\ge0\\}|$, $b=|B|$, and $H=h+1$. Choose an actual segment $S\\subset A$ joining heights $l,h$ and set $s=x-ct$ with $c$ its transverse slope. In these area-preserving coordinates, translate $A$ tangentially so that $S$ lies at $s=0$, translating $K$ by half the same vector and keeping $B$ fixed. Write the sections of $A$ at height $t$ as $[a_-(t),a_+(t)]$. Choose rightmost and leftmost $s$ points of $B$ at heights $t_+,t_-$, respectively. With $U_B$ the upper $t$ endpoint of $B$ in each $s$ column, put $R_c=\\int_{\\operatorname{proj}_s B}(h+U_B)\\,ds$. Then\n$$\n\\begin{aligned}\n4q&\\ge R_c+\\int_{-t_+}^h a_+(t)\\,dt+\\int_{-t_-}^h[-a_-(t)]\\,dt\\\\\n&\\ge R_c+|A\\cap\\{t\\ge2\\}|\\\\\n&\\ge H[3-\\sqrt{9-2b}]+|A\\cap\\{t\\ge2\\}|.\n\\end{aligned}\n$$\nIf both transverse extreme points can be chosen at height one, the sum of the two integrals equals $|A\\cap\\{t\\ge-1\\}|$.",
+  "subgoal_id": "pk-intake-pk-w33-planar-directional-sweep-side-reserve",
+  "title": "Additive planar sweep reserve from the two transverse extremes"
+}

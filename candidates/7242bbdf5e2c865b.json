@@ -1,0 +1,26 @@
+{
+  "advances": "An exact intrinsic pushforward for rational weights and actual integral target bases. Directions may vary across different pairs and residue classes.",
+  "author": "PK-research-agent",
+  "candidate_id": "7242bbdf5e2c865b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:11.839499+00:00",
+  "depends_on": [],
+  "draft_key": "rational-dilation-residue-pushforward",
+  "kind": "theorem",
+  "proof": "The occupied bases are finite, and the maximum of their fiber dimensions equals $q$. The first scaled endpoint has displacement $t(z-p)$ in its base coordinate. Matching it to the second gives $rz+sw=mp$. For a fixed $p$ distinct solutions have distinct first bases and hence disjoint displacements. In the continuous coordinate translating by $tx$ gives the stated intersection at each displacement. Coprimality in the identity $r(z-p)=-s(w-p)$ yields the parameterization coordinatewise. The weighted base $w+(r/m)(z-w)$ is integral precisely when $z-w\\in m\\mathbb Z^n$ since $\\gcd(r,m)=1$.\n\nOnly pairs of $q$-dimensional fibers can have positive $q$-measure. For an integral-output pair of these fibers, convexity places $tK_z+(1-t)K_w$ inside $K_p$. The affine direction of that sum is the sum of the two $q$-dimensional directions, and $\\dim K_p\\le q$, so both directions coincide with the direction of $K_p$. Use orthonormal coordinates in their common direction, choosing affine origins $x_z,x_w$ and $t x_z+(1-t)x_w$ in the three fibers. In these coordinates the intersection measure is the convolution of the indicators of the scaled sets at the output coordinate. Its support lies in $K_p$. Tonelli and the change of variables from scaled endpoints to original endpoints produce the Jacobian $t^q(1-t)^q$. Sum over the finitely many pairs, grouped by residue class. The same argument for $q=0$ is a count of singleton endpoint pairs, with factor one. The measure identity also gives measurability, for example each intersection-volume summand is the integral of a joint Borel indicator in the common coordinates. Signed bounded tests follow by subtraction of nonnegative tests since the measures are finite.\n\nTake tests $1$ and the bounded coordinate functions on $S$ to compute the moments. For the vector moment both endpoint integrals give $M_cm_c$, multiplied by $t$ and $1-t$. Finally the unscaled summand differs by the factor $t^{-q}$, giving its stated pushforward. At $t=1/2$, $G_t=2^{-q}\\mathcal H_q(S\\cap(2Y-S))$ and the residue classes are parity classes, with the corresponding factor $2^{-q}$ for the unscaled reflection mass.\n",
+  "source_candidate_ids": [
+    "84f22b883b24046f"
+  ],
+  "source_candidate_sha256": {
+    "84f22b883b24046f": "51b15e3ff06282c35d5ff6d54a57533b9c1c9c2a52ce86e284c7dc8bd48e1350"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "84f22b883b24046f",
+      "locator": "84f22b883b24046f:04 §4 (8)–(9), rational congruences, pushforward and moments"
+    }
+  ],
+  "statement": "Let $C\\subseteq\\mathbb R^{n+d}$ be compact and convex, let $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ be nonempty, and put $q=\\dim_H S$, $\\mu=\\mathcal H_q|_S$. Fix an actual $Y\\in S$ and $0<t<1$. Define $L_t=t(S-Y)\\cap[-(1-t)(S-Y)]$, $G_t(Y)=\\mathcal H_q(L_t)$. Suppose $t=r/m$ with $m=r+s$ and positive coprime integers $r,s$. Write $K_z=\\{x:(z,x)\\in S\\}$. At $Y=(p,x)$, $G_t(p,x)$ is the sum of $\\mathcal H_q(tK_z\\cap(x-(1-t)K_w))$ over ordered occupied pairs with $rz+sw=mp$. This equation is equivalent to $z=p+s\\ell,\\ w=p-r\\ell$ for $\\ell\\in\\mathbb Z^n$. An ordered pair has integral weighted base precisely if $z\\equiv w\\pmod m$. For each residue class $c\\bmod m$ let $\\mu_c$ be the original intrinsic measure restricted to its fibers, $M_c=\\mu_c(S)$ and $m_c=\\int A\\,d\\mu_c(A)$. For every nonnegative Borel or bounded signed Borel test $\\varphi$,\n$$\n\\int_S \\varphi(Y)G_t(Y)\\,d\\mu(Y)\n=[t(1-t)]^q\\sum_c\\iint\\varphi(tA+(1-t)B)\\,d\\mu_c(A)d\\mu_c(B).\n$$\nIn particular the total and vector first moment are $[t(1-t)]^q\\sum_c M_c^2$ and $[t(1-t)]^q\\sum_c M_cm_c$. If the summand uses the unscaled intersection $K_z\\cap((x-(1-t)K_w)/t)$, its pushforward factor is instead $(1-t)^q$.",
+  "subgoal_id": "pk-intake-rational-dilation-residue-pushforward",
+  "title": "Intrinsic weighted reflection pushforward by residue class"
+}

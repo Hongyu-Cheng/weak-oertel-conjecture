@@ -1,0 +1,26 @@
+{
+  "advances": "Finite simplex fibers and ordinary d-volume. The bound is for one real base tilt and preserves each mass simultaneously over all nonnegative normalized normals; it supplies no depth lower bound or selector.",
+  "author": "PK-research-agent",
+  "candidate_id": "9a3bf974682e425a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:54:50.689682+00:00",
+  "depends_on": [],
+  "draft_key": "bounded-simplex-shared-tilt",
+  "kind": "lemma",
+  "proof": "For $X\\in r_pT_d$ and $w\\in\\Delta$ we have $0\\le w\\cdot X\\le r_p$. For the offset $s_p=a\\cdot(p-j)$, the trace has full mass when $s_p\\ge q$ and zero mass when $s_p\\le q-r_p$. At the latter endpoint the trace is at most a supporting face, which has zero $d$-volume because $w\\ne0$. Both saturation rules are independent of $w$.\n\nProject $a$ onto $L$, leaving its offsets unchanged. If $m=0$ all offsets are zero, so take $a'=0$. Otherwise the following finite system is feasible, since it contains $E^{\\mathsf T}a$:\n$$\n\\begin{aligned}\nv_p\\cdot b&=s_p &&\\text{if }q-r_p\\le s_p\\le q,\\\\\nv_p\\cdot b&\\ge q &&\\text{if }s_p>q,\\\\\nv_p\\cdot b&\\le q-r_p &&\\text{if }s_p<q-r_p.\n\\end{aligned}\n$$\nThere is no feasible line, since its direction would annihilate every $v_p$. Start at any feasible point. If its equality and tight inequality rows do not span $\\mathbb R^m$, take a nonzero direction perpendicular to all of them. Sufficiently short steps of either sign are feasible because the remaining inequalities have strict slack. At least one sign reaches a first new tight inequality in finite distance, since otherwise the full line would be feasible. The new tight row has nonzero pairing with the direction, so it increases the rank of the tight rows. Repeat to obtain a feasible point with $m$ independent tight rows. For some $I$ it then solves $V_I b=c_I$ with $\\lVert c_I\\rVert_\\infty\\le C_j$. This gives $\\lVert b\\rVert_\\infty\\le B_j^{(m)}$. The exact-offset constraints preserve the corresponding traces as sets, while the weak saturated constraints preserve their masses by the two saturation rules. Thus $a'=Eb$ works for all $p,w$.\n\nIf $n=1$ and $a\\ge B_j$, every $p>j$ has $s_p\\ge q$ and every $p<j$ has $s_p\\le q-r_p$, including at $a=B_j$. If $a\\le-B_j$ these roles reverse, including at $a=-B_j$. The offset at $j$ is always zero. This proves the clipping claim, including the singleton case.\n\nThe objective is jointly continuous in $(a,w)$: along any convergent parameter sequence its fiber indicators converge except on the limiting affine hyperplane in each fiber. This hyperplane is null since $w\\ne0$. Dominated convergence on each finite-volume fiber and finiteness of $P$ give continuity of the sum. Restricting $a$ to the indicated compact set preserves every value for each $w$, and $\\Delta$ is compact, so the infimum is attained.\n",
+  "source_candidate_ids": [
+    "42889f299dc055c9"
+  ],
+  "source_candidate_sha256": {
+    "42889f299dc055c9": "dd3b87788bcf8ab822756caef2197d9910ef91689729d55de6c75caa93f33665"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "42889f299dc055c9",
+      "locator": "§§4–5, (11)–(15), explicit shared-tilt compactification"
+    }
+  ],
+  "statement": "Let $n\\ge0$, $d\\ge1$ be integers, $P\\subset\\mathbb R^n$ be nonempty and finite, $j\\in P$, and $r_p>0$ for $p\\in P$. Put $T_d=\\operatorname{conv}(0,e_1,\\ldots,e_d)$, $q=r_j/(d+1)$, and $\\Delta=\\{w\\in\\mathbb R^d:w_i\\ge0,\\ \\sum_i w_i=1\\}$. Let $L=\\operatorname{span}(P-j)$ and $m=\\dim L$. If $m>0$, fix an orthonormal coordinate map $E:\\mathbb R^m\\to L$, put $v_p=E^{\\mathsf T}(p-j)$, and let $V_I$ have rows $v_p^{\\mathsf T}$ for any $m$-element index set $I\\subseteq P$ with independent rows. Define\n$$\nC_j=\\max_{p\\in P}\\max\\{q,|q-r_p|\\},\n\\qquad B_j^{(m)}=C_j\\max_I\\lVert V_I^{-1}\\rVert_\\infty,\n$$\nwhere the matrix norm is the maximum absolute row sum.\n\nFor every $a\\in\\mathbb R^n$ there is one $a'=Eb$ with $\\lVert b\\rVert_\\infty\\le B_j^{(m)}$ (or $a'=0$ if $m=0$) such that for every $w\\in\\Delta$ and every $p\\in P$,\n$$\n\\left|r_pT_d\\cap\\{X:a'\\cdot(p-j)+w\\cdot X\\ge q\\}\\right|\n=\\left|r_pT_d\\cap\\{X:a\\cdot(p-j)+w\\cdot X\\ge q\\}\\right|,\n$$\nwhere $|\\cdot|$ is $d$-volume. If $n=1$, clipping $a$ to $[-B_j,B_j]$ suffices with $B_j=0$ for $P=\\{j\\}$ and otherwise\n$$\nB_j=\\max_{p\\in P\\setminus\\{j\\}}\\frac{\\max\\{q,|q-r_p|\\}}{|p-j|}.\n$$\nThe sum of the cap masses attains its infimum over all $a\\in\\mathbb R^n$ and $w\\in\\Delta$ on the indicated compact parameter domain.",
+  "subgoal_id": "pk-intake-bounded-simplex-shared-tilt",
+  "title": "Explicit bounded shared tilts for simplex fiber caps"
+}

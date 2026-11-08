@@ -1,0 +1,26 @@
+{
+  "advances": "Exact in the finite atomic normal-labeled model, without treating general convex boundaries as a finite discretization.",
+  "author": "PK-research-agent",
+  "candidate_id": "50402c8efa2199c1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:06:28.268860+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-reserves-finite-capacity-profile-polytope",
+  "kind": "lemma",
+  "proof": "A joint atomic law yields the array of masses transported between ordered labeled atoms. Its first marginal and target capacity give the row and column conditions. On a row of positive mass the martingale condition is the last equation divided by that row's mass; on a zero row it is automatic. Conversely an array with these properties is exactly such a joint law. Identical atoms with the same label can be regarded as indexed copies; aggregating their rows preserves the equations, and a coupling on aggregated atoms can be split using their source weights and target capacities.\n\nThe joint feasible set in $(\\theta,\\pi)$ is a finite linear system. The response probabilities are bounded by one and the nonnegative transport entries by the total capacity, so the joint set is a compact convex polytope. Projection onto $\\theta$ gives the stated feasible polytope. If every extreme point of $T$ is feasible, its convex hull is contained in the convex feasible set, and this hull is $T$ since $T$ is a bounded polyhedron. The converse is immediate, and the empty-$T$ case is vacuous.\n",
+  "source_candidate_ids": [
+    "a9fd9b4c832ea48f"
+  ],
+  "source_candidate_sha256": {
+    "a9fd9b4c832ea48f": "b566b9005946a369eeb3cdbd91fa0b7a99ea8de1a83af5da38b8947ff45cb3ef"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a9fd9b4c832ea48f",
+      "locator": "a9fd9b4c832ea48f:01 §1, (1)–(3), finite capacity and extreme profiles"
+    }
+  ],
+  "statement": "Let $v_\\ell=(z_\\ell,x_\\ell)$ be finitely many labeled physical atoms with positive capacities $e_\\ell$ and fixed normal labels $n_\\ell$. For finitely many caps $H_i$ with given response vectors $b_i$, put\n$$\nT=\\{\\theta\\ge0:\\ \\sum_i\\theta_i=1,\\ \\sum_i\\theta_i b_i=0\\},\n\\qquad\n\\mu_\\ell(\\theta)=\\frac{e_\\ell}{\\beta}\\sum_i\\theta_i\\mathbf1_{H_i}(v_\\ell),\\quad \\beta>0.\n$$\nA label-preserving physical martingale from this source to a submeasure of the full capacity exists exactly when a nonnegative array $\\pi_{\\ell k}$ satisfies\n$$\n\\begin{aligned}\n\\pi_{\\ell k}&=0 &&\\text{if }n_\\ell\\ne n_k,\\\\\n\\sum_k\\pi_{\\ell k}&=\\mu_\\ell(\\theta),&\n\\sum_\\ell\\pi_{\\ell k}&\\le e_k,\\\\\n\\sum_k\\pi_{\\ell k}(v_k-v_\\ell)&=0 &&\\text{for every }\\ell.\n\\end{aligned}\n$$\nThe feasible set $T_{\\rm cap}\\subseteq T$ is a compact convex polytope, possibly empty. There exists a response profile in $T\\setminus T_{\\rm cap}$ exactly when an extreme point of $T$ lies outside $T_{\\rm cap}$.",
+  "subgoal_id": "pk-intake-pk-w35-reserves-finite-capacity-profile-polytope",
+  "title": "Finite cap profile selection with labeled martingale capacity"
+}

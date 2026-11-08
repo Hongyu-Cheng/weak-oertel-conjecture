@@ -1,0 +1,51 @@
+{
+  "candidate_id": "1cc539e9d37a3eb0",
+  "candidate_sha256": "3440b7d227f52ad19bbda5215167f45aa7823f70604e10957df98d68c9749888",
+  "checked_dependency_candidate_sha256": {
+    "875f3a93f59dd606": "37d4258747083f1baa5d8fa4bbe93835e978d26e16e2fcc06825059905f68e1f"
+  },
+  "checks": [
+    "The convex hull has exactly B_r,T,B_r, because the endpoints are extreme and B_r⊂T. The positive central simplex and a base difference give full dimension. Since B_r=rT, the exact closed marginal depth is (1+rᵈ)/(1+2rᵈ) and the raw lifting threshold is γ_d(1+rᵈ)V.",
+    "For d=4,r=1/10 the accepted binary-padded body is exactly [0,1] times this body. A containing padded halfspace restricts on the selected binary layer to a containing old halfspace or the entire old ambient space. Its old raw mass is bounded above by the padded mass. The accepted padded normalized bound times its doubled total is precisely the old raw threshold.",
+    "Independently verified the accepted rational fourth-root witnesses and their strict sum, including τ=160016/390625. This also verifies the original source certificate at the stated finite r.",
+    "For all small positive r, t<(1−r)ᵈ and t−2rᵈ>0. Each of the d nonzero-vertex caps receives zero endpoint mass when its threshold exceeds r, and otherwise the bound follows directly from r<1−t^(1/d). The zero-vertex cap receives at most both full endpoint masses. These inequalities use closed caps and cover every barycentric mark.",
+    "As a function of a=rᵈ the root sum is d at zero and has derivative γ_d^(1/d−1)[(d+1)γ_d−2]/d. Positive derivative yields the strict contradiction on all sufficiently small positive a. The sign for d≥4 follows from 5(4/5)^4>2 and, for d≥5, (1+1/d)^d<e<3."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "875f3a93f59dd606",
+      "hypotheses": "The accepted body C_bin has original fiber tuple rT,T,rT on the old coordinate at each added binary base, with r=1/10,d=4 and old middle base zero. Its strict normalized bound at the selected padded base converts to the claimed raw threshold under the exact total mass.",
+      "status": "verified against the pinned accepted fact"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:39:58Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its binary padding gives the same finite d=4,r=1/10 case in raw units by restriction to one binary layer. It does not supply the arbitrary-d small-radius argument under the stated derivative condition.",
+      "fact_id": "875f3a93f59dd606"
+    }
+  ],
+  "readability": "The factor from the padded marginal depth cancels the factor from its doubled total mass. The comparison is made in the same raw volume units.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "daf9510eb318766e20be2a8a944c6f9036ff702c891d0e9c878efadf713706e2",
+  "reviewed_statement_sha256": "ee333fc238d716a0091db891c26ab17534887821e995b7aba7bc5fab700c634f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_checks": [
+    {
+      "candidate_id": "8dd62757ee4f1859",
+      "candidate_sha256": "e40aa06db4c74712a00df5bd43c9de709d78d5b68f61e180a3d37b04fd907f75",
+      "locator": "8dd62757ee4f1859:05 Marginal-depth lifting fails for n=1,d=4, exact certificate and small-r extension"
+    }
+  ],
+  "started_utc": "2026-11-08T22:33:45Z",
+  "summary": "The central fiber fails the marginal-depth lifting guarantee in the explicit fourth-dimensional example and in the stated small-radius range.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "Comparison of actual raw caps through a given fiber centroid for arbitrary positive homothetic fibers; no all-direction depth bound for a general common shape.",
+  "author": "PK-research-agent",
+  "candidate_id": "f388180fb6231b20",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:24:15.609644+00:00",
+  "depends_on": [
+    "155691fc3768c06f"
+  ],
+  "draft_key": "pk-w34-simplex-support-minorant",
+  "kind": "lemma",
+  "proof": "The centroid is interior, so $a>0$. Apply 155691fc3768c06f to the compatible fibers at $j$ with unit direction $-u/\\lVert u\\rVert$. Multiply its touching upper bound by $-\\lVert u\\rVert$ to obtain the touching lower bound for $u\\cdot c_p-ar_p$, namely\n$$u\\cdot(c_p-c_j)\\ge a(r_p-r_j)+b\\cdot(p-j).$$\nParameterize $K_p$ by $c_p+r_pX$ and $L_p$ by $r_jv+r_p(X-v)$ using the same $X\\in K$. The original margin is at least $(\\beta+b)\\cdot(p-j)+a(r_p-r_j)+r_pu\\cdot X$, exactly the comparison margin. Both parameterizations have volume Jacobian $r_p^d$, so inclusion of the nonnegative-margin sets gives the fiberwise inequality with closed caps. Dividing the comparison margin by $a$ gives the scalar formula and the centroid of $K$ gives $\\mathbb EY=1$. A pure-base cap sees only whole-fiber volumes, which agree.\n\nFor every convex representation of $k$ as in the hypothesis, the Minkowski sum of the original fibers is a translate of $(\\sum_p\\lambda_p r_p)K$. Taking its width and the width of $K_k$ in any fixed nonzero direction gives $\\sum_p\\lambda_p r_p\\le r_k$, since the common width of $K$ is positive. As $0\\in K-v$, the corresponding Minkowski sum of $L_p$ is $r_jv+(\\sum_p\\lambda_p r_p)(K-v)\\subset L_k$. The section of the lifted convex hull at any $k\\in P$ is $L_k$: any convex combination may be grouped by base, and the preceding inclusion handles the resulting representation; the reverse inclusion is immediate. Its projection is $\\operatorname{conv}(P)$, giving the exact integer-fiber conclusion.\n",
+  "source_candidate_ids": [
+    "24467ade6f021ae8"
+  ],
+  "source_candidate_sha256": {
+    "24467ade6f021ae8": "a57f36270122119439e7d5e218c019abb7d090d522c0543d95cb2c2affb13cd6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "24467ade6f021ae8",
+      "locator": "24467ade6f021ae8:02 §§2–3, (3)–(11)"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite and nonempty, and let $K\\subset\\mathbb R^d$ be a full-dimensional compact convex body, $d\\ge1$, with centroid zero and volume $V$. Suppose $K_p=c_p+r_pK$ with $r_p>0$ are compatible at all sampled bases: $\\sum_p\\lambda_p K_p\\subset K_k$ whenever $k=\\sum_p\\lambda_p p$, $\\lambda_p\\ge0$ and $\\sum_p\\lambda_p=1$. Fix $j\\in P$, $u\\ne0$, and any minimizer $v$ of $u\\cdot x$ on $K$. Put $a=-u\\cdot v>0$ and $L_p=r_jv+r_p(K-v)$. There is a slope $b\\in\\mathbb R^n$ such that for every tilt $\\beta\\in\\mathbb R^n$ and every $p\\in P$ the trace of $\\beta\\cdot(p-j)+u\\cdot(x-c_j)\\ge0$ on $K_p$ has $d$-volume at least that of $(\\beta+b)\\cdot(p-j)+u\\cdot x\\ge0$ on $L_p$. In particular the raw summed volume of the original closed cap is at least\n$$\n V\\sum_{p\\in P}r_p^d\\,\\Pr\\!\\left(r_pY\\ge r_j-\\frac{\\beta+b}{a}\\cdot(p-j)\\right),\n \\qquad Y=1+\\frac{u\\cdot X}{a},\\quad X\\text{ uniform on }K,\\quad \\mathbb E Y=1.\n$$\nThe $L_p$ are compatible at all sampled bases; their lifted convex hull has exactly these integer fibers if $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$. Pure-base caps have identical volumes on corresponding fibers.",
+  "subgoal_id": "pk-intake-pk-w34-simplex-support-minorant",
+  "title": "Cap domination by compatible support-anchored homothets"
+}

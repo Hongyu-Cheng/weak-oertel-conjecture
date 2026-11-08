@@ -1,0 +1,68 @@
+{
+  "candidate_id": "c91bf79a7ca137c5",
+  "candidate_sha256": "94617937c8febbb18010481dd8392cd6251b24de84bed2dc73ec71261e6f580f",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The decoded diff adds unit normalization in the statement and in the first sentence of the proof. The other mathematical text, source attribution and candidate ID are identical.",
+    "With unit normals, the facet-area formula uses the actual surface area measure. The retained old facet areas match the original after weighting, while each new face contributes S_j h_L(-u_j)/d. Minkowski first inequality and the multiplier sum then give the stated lower bound.",
+    "The diamond uses the two outward unit directions of its cut. Its four original facet terms sum to four before division by d=2, and the two cut terms sum to four. Thus the mixed-volume identity gives 4=2+2, while the proposed support-sum upper bound fails as 4>2. The rank-one balanced circuit and zero signed facet moments remain as checked in the first review.",
+    "The revised convention agrees with the unit normalization in the original source. Source and candidate hashes were recomputed from the exact bytes."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T20:02:41Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "c91bf79a7ca137c5",
+    "candidate_sha256": "0b6db595df381f3b4d69aa8fc8173cd070c49668a6bc6d8b7aaa478255d04b10",
+    "checks": [
+      "For the correctly normalized facet formula, each old facet's weighted retained areas reproduce its full original area, and the proper cut contributes its extra facet separately. Minkowski's first inequality gives β^{(d−1)/d}|K| per cap at L=K, then Σλ_j=1/β yields β^{−1/d}|K|.",
+      "Exact clipping of the diamond gives |K|=2 and both cap areas one. Their section length is two, centroid is zero, and the opposite through-center normals give a positive circuit. Central symmetry also gives actual optimality at the origin. Old facets are partitioned up to null points, so W_f=0. The unit-normal support sum is four.",
+      "The original §4 uses the unit-normal convention stated in its §1. Its actual example needs only a rank-one positive circuit in the plane."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T20:01:44Z",
+    "issues": [
+      {
+        "defect": "The cut normals are called outward, with no normalization specified. Positive rescaling preserves the facet, its area and all cap mixed volumes, but scales the support value. For the diamond with L=K, doubling just one outward normal keeps the left side at 4 and changes the right side from 4 to 5.",
+        "locator": "Statement, first paragraph and displayed mixed-volume identity",
+        "repair": "Replace 'with outward normals $-u_j$' by 'with outward unit normals $-u_j$'.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Studies signed-facet covariance and fiberwise flux under an additional marked coupling. It does not supply the first mixed-volume inequality or the diamond witness.",
+        "fact_id": "d66cfeb1cecb11ab"
+      }
+    ],
+    "readability": "The proof invokes the standard surface-area-measure formula, whose normals are unit vectors.",
+    "reviewed_proof_sha256": "edf62b431cd0bf9b58ab9b4959d843adaf0797a5f1f13ba67e7505d5e1a9263b",
+    "reviewed_statement_sha256": "9f1bb2936b088722399a798000d5ba88c87b147594575a4a2c37b1a32ac63bb5",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:58:04Z",
+    "summary": "The mixed-volume identity and the diamond obstruction check with outward unit normals. The statement must specify that normalization.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Studies signed-facet covariance and fiberwise flux under an additional marked coupling. It does not supply the first mixed-volume inequality or the diamond witness.",
+      "fact_id": "d66cfeb1cecb11ab"
+    }
+  ],
+  "readability": "The normalization convention is now explicit where the support function is evaluated.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "be1167a972c69237193fa4d8246a673c6ed1c444533981603ac3c9ca06816d6c",
+  "reviewed_statement_sha256": "0c30b231905b69248adec50df10f40e75a752a052572538c846ac51b21c73a06",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "0b6db595df381f3b4d69aa8fc8173cd070c49668a6bc6d8b7aaa478255d04b10",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:02:11Z",
+  "summary": "The statement now requires outward unit normals and the proof uses them explicitly. This resolves the normalization defect on the exact revised bytes.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

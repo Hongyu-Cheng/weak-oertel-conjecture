@@ -1,0 +1,57 @@
+{
+  "candidate_id": "4fc403cf46f23e49",
+  "candidate_sha256": "9c0a919525ace8d169953e039646142cfc406a9c0be3420e64fbed541809edc2",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "After moving a containing closed halfspace parallel to itself through the mark, normalize its nonzero continuous normal to u. The margin on source i is a·(p_i−j)+u·x−u·y, so the required threshold average is u·y. Affine independence gives an affine interpolant on the affine hull of the bases for the prescribed values u·y−h_i, and it extends to the ambient base. Its weighted value at j is zero, yielding exactly the needed linear form on p−j. For N=1 the threshold is uniquely fixed, including n=0.",
+    "Full dimension and the interval of projected interior values give strict cap-volume decrease between support extrema, and null hyperplanes give continuity including the endpoints. Each cap used for Brunn–Minkowski is nonempty and compact. Zero mass at maximum support uses a supporting face, and full mass at minimum support uses the whole body. Their Minkowski combination lies in the cap at the combined threshold. Body-volume Brunn–Minkowski puts the combined root in range, decreasing inversion gives the inequality at every positive root including the full-volume root, and additivity of support values handles root zero.",
+    "The common allocation set is compact and each coordinate lies in [0,1], so the quantile domains contain every argument up to the smallest full-source root. The weighted objective is jointly continuous, and evaluating a minimizer for the smaller budget at the larger budget strictly lowers it because some allocation coordinate and its barycentric coefficient are positive. The zero-budget minimum is the support value of the Minkowski section.",
+    "For 0<R≤R_*, increasing all quantile thresholds by the same positive amount achieves the larger average s and strictly reduces some positive cap, even a cap whose threshold initially equals the minimum support. Conversely, any strictly cheaper threshold vector has all volumes strictly below their source volumes. Increasing each volume by the same positive amount to reach total R^d keeps every new individual volume at most R^d≤min_i|A_i|. Every new threshold is strictly smaller, including when an original volume was zero or a new volume is full. The new root allocation therefore proves Q(R)<s. This establishes the strict equivalence at R=R_* as well as below it.",
+    "For N≥2, all thresholds except the one at a smallest source can be set high enough to empty those caps and force the remaining threshold low enough for the whole chosen source. For N=1, the only cap is automatically bounded by the source volume. This gives the upper plateau with finite thresholds. The strict inversion at R_* gives its matching lower bound for s≤Q(R_*). Supporting thresholds and their common upward shifts give the zero plateau. At an intermediate value of s, a minimizing allocation at the unique inverse budget attains the directional infimum. As an independent exact calibration, with d=1, sources [0,2], [0,3], weights (2/3,1/3) and u=1, enumeration of the four threshold breakpoints gives directional masses 2, 2, 3/2, 0, 0 at s=0, 1, 4/3, 7/3, 3. The two breakpoints of Q(R)=7/3−2R/3 match these values.",
+    "A purely base-normal through-point cap contains at least one whole source by barycentric averaging and hence has mass at least R_*^d. Nonvertical costs are at most R_*^d and are realized by the interpolated affine thresholds. Thus for positive R up to R_* the depth criterion is exactly the collection of directional inequalities u·y≤Q(R). At R=0, membership in the Minkowski section gives all support inequalities.",
+    "The interpolation uses the same feasible allocation for both arrays in each component, so their individual minimizers need not coincide. Componentwise volume Brunn–Minkowski puts the combined budget in the target range. The combined center belongs to the target Minkowski section, and the directional criterion proves the pointwise bound for positive combined budget. A zero budget for one endpoint uses its support inequality; if the combined budget is zero the conclusion is nonnegativity.",
+    "At fixed j a change of continuous center shifts each normalized through-point threshold by at most the displacement. A bounded enclosing ball provides a uniform slab-volume estimate, including dimension one, and pure-base cap masses are constant. The infimum is therefore Lipschitz and attains its maximum on the compact Minkowski section. For a center built from chosen interior points, each containing halfspace contains at least one source point by barycentric averaging, hence at least half of that point's interior source ball. This proves positivity. Taking endpoint maximizers proves the maximum inequality. The invertible map scaling only the continuous coordinate gives the homogeneous inequalities, including the single-array case when one coefficient vanishes.",
+    "Compared with archive 239caf8af54c6294 opening (1)–(2) and §§1–4 through the scaling paragraph, and archive 0fcbc670d417c3ed §§1–3 and 6. The first provides the joint array interpolation and the second the fixed-array directional inversion and independent threshold representation. Both are provenance: the frozen proof derives these steps directly. It strengthens the strict sublevel equivalence to include the upper budget endpoint with a direct threshold argument. The claim concerns only the prescribed raw source measure at a fixed barycentric base."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T10:11:59Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The ordinary fiber depth theorem yields the pointwise and maximum root inequalities for N=1 by taking the endpoint fibers of the convex hull of two bodies at auxiliary heights 0 and 1. Its depths use a single ordinary fiber and a halfspace in the continuous space. It does not treat the sums of raw source volumes across different bases for N≥2.",
+      "fact_id": "4e868f774de77608"
+    },
+    {
+      "comparison": "Finite source arrays at an occupied base have continuous depth and attained directional and total cap minima. For N≥2 the barycentric base here is outside the source base set, and the theorem here proves joint interpolation of arrays with a fixed base and common barycentric weights. That fact does not supply this interpolation.",
+      "fact_id": "1ec728c26c11b368"
+    },
+    {
+      "candidate_id": "0fcbc670d417c3ed",
+      "comparison": "Pending provenance. Its §6 proves center-only root concavity for a fixed array at independent bases. The frozen interpolation recovers that specialization by choosing both arrays equal, and also permits different component bodies."
+    },
+    {
+      "candidate_id": "cd9374750b11bd94",
+      "candidate_sha256": "943b8ffd8ef0d871017adf8b83393f5f2d0b518edb9a3dd4a3877163cebc89e9",
+      "comparison": "Pending downstream archive. §3 uses only the homogeneous pointwise inequality at fixed bases −1,+1 with barycentric coefficients 1/2,1/2, for arrays (K,K) and (K,dK), both at center zero in their midpoint sections. For d≥2 and r≤s≤dr its coefficients α=(dr−s)/(d−1), β=(s−r)/(d−1) are nonnegative, sum to r>0, and satisfy α+dβ=s. By convexity their componentwise Minkowski combination is exactly (rK,sK). A zero coefficient is the single-array scaling case. This matches the frozen input without using its maximum or introducing intermediate fibers. The subsequent scalar inequality is outside this review."
+    }
+  ],
+  "readability": "The bound p≤R_*^d comes from the available nonvertical directional costs. The pure-base estimate supplies the lower bound needed to omit pure-base caps from the depth criterion.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6a304a8a5ec70e61709f634dd8f566d0a981da102bb8c0c74ba667bc96158dcf",
+  "reviewed_statement_sha256": "339dec4dbaf9242acf3813442dc5a2b5eb6a3f6e2383e8f77aff7728834d33df",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "0fcbc670d417c3ed": "d2e79b8de2daf3e0ff75fbdeaab9e12d8229a7b6b6fe9779aacb07f7e3727a7e",
+    "239caf8af54c6294": "46a6e74035d38658423c2d21604588fe0f581ee17e8688d12772e47a7e3bed14"
+  },
+  "started_utc": "2026-11-08T10:09:58Z",
+  "summary": "The exact directional inversion and the common volume-root allocation prove joint body-and-center depth interpolation for fixed affinely independent source bases. Both budget endpoints, positivity and attainment of the maximum, and the homogeneous versions hold as stated.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

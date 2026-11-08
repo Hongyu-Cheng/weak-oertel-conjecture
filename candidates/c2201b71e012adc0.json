@@ -1,0 +1,26 @@
+{
+  "advances": "This is a volume estimate for compact mixed sets and for parity expansion inside an actual body. It selects no halfspace center.",
+  "author": "PK-research-agent",
+  "candidate_id": "c2201b71e012adc0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.853159+00:00",
+  "depends_on": [],
+  "draft_key": "compact-mixed-fiber-monotone-path-volume",
+  "kind": "lemma",
+  "proof": "Choose a real linear functional $\\ell$ injective separately on each finite set of bases by avoiding finitely many hyperplanes. In base dimension zero each list has one term, so the same argument below has a one-cell path. List the bases $z_i,w_j$ in increasing $\\ell$-order. At each step of the path, $\\ell(z_i+w_j)$ strictly increases, since exactly one index increases. Thus the sum fibers for all cells of the path are distinct.\n\nThe fiber at $z_i+w_j$ contains $A_{z_i}+B_{w_j}$. Ordinary Brunn–Minkowski gives its $d$-volume at least $(a_i^{1/d}+b_j^{1/d})^d$ when both fiber volumes are positive. If one vanishes, a point of that nonempty fiber plus the other entire fiber gives the same lower bound. If both vanish the bound is zero. Summing over distinct cells proves the sum inequality. For a common parity coset, halving the sum sends its even bases injectively to integer bases and multiplies each $d$-volume by $2^{-d}$, proving the midpoint form.\n\nFor the single family take $B=A$ and the path $(1,1),(1,2),(2,2),(2,3),\\ldots,(m-1,m),(m,m)$. The diagonal contributes $\\sum_i a_i$ and the other cells contribute the successive two-fiber root averages. By convexity $(A+A)/2\\subseteq C$, and the parity assumption puts each output base in the integer lattice. This proves the asserted lower bound for the actual mixed volume in $C$.\n\nThe continuous inequality used is classical Brunn–Minkowski for nonempty compact sets of positive volume. See [Gardner, The Brunn–Minkowski Inequality, Theorem 4.1](https://doi.org/10.1090/S0273-0979-02-00941-2).\n",
+  "source_candidate_ids": [
+    "0de198a47cdc74fc"
+  ],
+  "source_candidate_sha256": {
+    "0de198a47cdc74fc": "307c25d4a9754a52902ce43e2ead928f6dbd091759b48cb0d455f0792987e61f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0de198a47cdc74fc",
+      "locator": "0de198a47cdc74fc:02 Lemma 3 and Corollary 4, distinct path and parity expansion"
+    }
+  ],
+  "statement": "Let $n\\ge0$, $d\\ge1$, and let $A,B\\subseteq\\mathbb Z^n\\times\\mathbb R^d$ be nonempty compact sets. Write $\\mu$ for the sum of the $d$-volumes of their integer fibers. Order the nonempty fiber bases of each input by one linear functional injective on each base set. Denote the respective fiber volumes by $a_i$ and $b_j$, allowing zero volumes. For every full monotone path $P$ from $(1,1)$ to $(m,k)$ in this ordered grid, using steps $(1,0)$ or $(0,1)$,\n$$\n\\mu(A+B)\\ge\\sum_{(i,j)\\in P}(a_i^{1/d}+b_j^{1/d})^d.\n$$\nIf both base sets lie in one common parity coset, the corresponding bound for $\\mu((A+B)/2)$ has an extra factor $2^{-d}$. In particular, if $A$ is supported on one parity coset and is contained in a compact convex set $C\\subseteq\\mathbb R^{n+d}$, then\n$$\n\\mu(C\\cap(\\mathbb Z^n\\times\\mathbb R^d))\n\\ge \\mu((A+A)/2)\n\\ge \\sum_{i=1}^m a_i+\\sum_{i=1}^{m-1}\\left(\\frac{a_i^{1/d}+a_{i+1}^{1/d}}2\\right)^d.\n$$",
+  "subgoal_id": "pk-intake-compact-mixed-fiber-monotone-path-volume",
+  "title": "Pathwise Brunn–Minkowski bounds for finite compact mixed fibers"
+}

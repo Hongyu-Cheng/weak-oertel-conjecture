@@ -1,0 +1,62 @@
+{
+  "candidate_id": "b649b1adca5662b7",
+  "candidate_sha256": "92146fe68be23b2c1ddc6201d4c68ed69d3efd4798f50930932e3bf3c35a7d13",
+  "checked_dependency_candidate_sha256": {
+    "0e05a6b227ca280f": "0449524281f2318fb93fabcd2e025fdcc6c4abb71e769d845c5db48c52986094",
+    "d60eaa0765022694": "2056f51440cb90bc3832227c98142418e323329f7e200d0f8199d5076499a4ac"
+  },
+  "checks": [
+    "Checked 6b3596acb8604c8b §6 (4)–(5), including all proper incidences and the coarea normalization.",
+    "The clipped-polygon divergence calculation gives the opposite-edge contribution 2kR_ij, zero flux on incident edges, and positive cut flux t_ijσ_i with the outward normal. Passing a vertex causes no area or length term to be missed.",
+    "Normal balance gives unit column sums exactly. The affine row sublevel condition reproduces the original cap and its coarea derivative G'_i(a_i)=2MS_i. Since the mark is interior, the derivative is at an interior threshold, including at a vertex level.",
+    "Planar Brunn–Minkowski gives the concave root CDF; its tangent passes through zero by the derivative equality. Thus the raw cap threshold realizes the capacity, and f_i=2√F(X_i) with all capacities positive.",
+    "The matrix equality criterion applies in its positive-capacity case. A row edge fraction is zero exactly when the opposite vertex is the only strictly captured vertex. Two strictly captured vertices force a full positive row. The product condition and matching diagonals are therefore exactly the stated geometric equality condition, including permissible vertex levels.",
+    "Using f_j f_l≤(f_j+f_l)^2/4 in the cubic gives the row bound; since f_i<2, equality requires both cubic equality and f_j=f_l."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d60eaa0765022694",
+      "candidate_sha256": "2056f51440cb90bc3832227c98142418e323329f7e200d0f8199d5076499a4ac",
+      "hypotheses": "Exact same-group frozen stochastic cubic applies to X because it is nonnegative with unit column sums. The three rows have positive capacities because each actual cap is proper and a_i>0; thus its positive-capacity equality criterion is applicable.",
+      "reviewed_proof_sha256": "58429e7be73ae9c746ff2f44674e7072bde1d1dfad145837c5e8959f082e6ee1",
+      "reviewed_statement_sha256": "598d3d9d9ec7bb16462cd5663b435463885c9c2fa4553e8b21a4b5e52904a66b"
+    },
+    {
+      "candidate_id": "0e05a6b227ca280f",
+      "candidate_sha256": "0449524281f2318fb93fabcd2e025fdcc6c4abb71e769d845c5db48c52986094",
+      "hypotheses": "Exact same-group frozen capacity formula applies to each row on the uniform probability triangle, without assuming the row entries distinct or nonzero. The maximum-Q_j identity gives the same capacity used by the stochastic cubic.",
+      "reviewed_proof_sha256": "790ca8dc54cf2525c4c08edf23387a5f1a4ec118dc9ea48e8c892396d0d7f532",
+      "reviewed_statement_sha256": "647676fd7bd6ed463e06e2123036a058703594ee261f3a37480862c6428d10de"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:23:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the same cubic and row inequalities for strictly distinct one-vertex caps with the other vertices strictly excluded. This draft includes all cap incidences, proves strictness for a two-vertex cap, and includes boundary-incidence equality tests.",
+      "fact_id": "33488d4938a6ee4a"
+    },
+    {
+      "comparison": "Reduces a fixed-sector optimization for general planar convex bodies to triangles or quadrilaterals, using a strict-incidence subcase. It does not give the unrestricted triangle result.",
+      "fact_id": "069c12e409c756c3"
+    }
+  ],
+  "readability": "The edge index labels the vertex opposite the edge. Strict capture refers to positive signed margin, so a vertex exactly on the cut does not contribute a positive edge segment by itself.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3cc883d4ed9c0fc0f512b27def6450edcb36f62f86d719545c444ccf9ceec8c5",
+  "reviewed_statement_sha256": "32e6ca793b1ddca628c61ec96e0ac2993e45f81ebcc5767bedb4b0d3a6de3440",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "6b3596acb8604c8b": "5e60b96d635ca2cea727a3ce4b8435556d8961d11145ef98ebf1ac3aafa4f040"
+  },
+  "started_utc": "2026-11-08T16:16:40Z",
+  "summary": "The normalized flux transfer proves the cubic and all row inequalities for the full ordinary triangle incidence range, with the stated equality conditions.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

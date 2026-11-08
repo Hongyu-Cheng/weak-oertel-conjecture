@@ -1,0 +1,76 @@
+{
+  "candidate_id": "27066115d890479b",
+  "candidate_sha256": "a722750a1180108d857193450ffb51bd4080aac2da30d03924609349d63586bf",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The only decoded change is the statement’s explicit sum-one normal condition. It matches the original source and makes the grouped positive entries 1/k, so it exactly supplies the normalization required by the unchanged proof.",
+    "The source's opening lines specify nonnegative u with ∑u_i=1. A grouped normal then has each positive coordinate equal to 1/k, exactly the proof's scaling q=kt/r, v=ks/r. This scale matters because t is fixed rather than rescaled with u.",
+    "For that normalization, direct simplex slicing gives the three beta tails. For k=1 convexity up to v=q and a saturated lower threshold afterwards gives the minimum at zero. For k=2 the both-interior branch has positive coefficient 12q−6 and the remaining tail after clipping increases. For k=3 that branch decreases and then the surviving tail increases, placing the minimum at v=1−q.",
+    "Independent rational replay gives the grouped minima 2197/4000, 608/1000, and 513/1000, with last shift 1/20. The nongrouped normal has vertex heights 0, 1/2, 1/5, 1/5. The product of the three intercept fractions gives twice the cap mass 81/160 and gap 27/4000."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T20:32:35Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "27066115d890479b",
+    "candidate_sha256": "8a42de3fe4296b983159bbf9c6dd6a6ef315b17072f87aff6dcaa2e894937767",
+    "checks": [
+      "The source's opening lines specify nonnegative u with ∑u_i=1. A grouped normal then has each positive coordinate equal to 1/k, exactly the proof's scaling q=kt/r, v=ks/r. This scale matters because t is fixed rather than rescaled with u.",
+      "For that normalization, direct simplex slicing gives the three beta tails. For k=1 convexity up to v=q and a saturated lower threshold afterwards gives the minimum at zero. For k=2 the both-interior branch has positive coefficient 12q−6 and the remaining tail after clipping increases. For k=3 that branch decreases and then the surviving tail increases, placing the minimum at v=1−q.",
+      "Independent rational replay gives the grouped minima 2197/4000, 608/1000, and 513/1000, with last shift 1/20. The nongrouped normal has vertex heights 0, 1/2, 1/5, 1/5. The product of the three intercept fractions gives twice the cap mass 81/160 and gap 27/4000."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T20:32:10Z",
+    "issues": [
+      {
+        "defect": "The normal scale is unspecified even though t=1/4 is fixed. The numerical minima use positive entries 1/k, and the witness (5/9,2/9,2/9) is not Euclidean unit. Interpreting normalization as Euclidean unit changes the grouped k=2,3 costs.",
+        "locator": "Statement, “For normalized nonnegative normals”",
+        "repair": "Replace the quoted phrase by “For nonnegative normals u with ∑_i u_i=1” and keep the rest of the statement and proof.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its ordinary central simplex depth gives the zero-shift nongrouped cap value at the corresponding diagonal mark. It does not optimize over every opposite shift under grouped normals.",
+        "fact_id": "700febf4b7a92759"
+      },
+      {
+        "comparison": "Uses the sum-one convention in an actual symmetric simplex chain for large maximum-coordinate normals, and lower-bounds whole-chain depth. This auxiliary single reflected-pair minimization is distinct.",
+        "fact_id": "5adcdc64a058b8aa"
+      }
+    ],
+    "readability": "The source normalization makes the proof unambiguous once it is included in the statement.",
+    "reviewed_proof_sha256": "4ae050496056167b284cc6bc9870ebe4ad1ac1a13e33ab256ad754b8eee9f361",
+    "reviewed_statement_sha256": "450abeb24a5ee1dfe316b64a83b4e8b8031f3d5b336eddb457a6cd7b9ca29ca0",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T20:25:50Z",
+    "summary": "The rational reflected-pair comparison is correct with the source's sum-one normal normalization. The frozen statement leaves that normalization unspecified.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its ordinary central simplex depth gives the zero-shift nongrouped cap value at the corresponding diagonal mark. It does not optimize over every opposite shift under grouped normals.",
+      "fact_id": "700febf4b7a92759"
+    },
+    {
+      "comparison": "Uses the sum-one convention in an actual symmetric simplex chain for large maximum-coordinate normals, and lower-bounds whole-chain depth. This auxiliary single reflected-pair minimization is distinct.",
+      "fact_id": "5adcdc64a058b8aa"
+    }
+  ],
+  "readability": "The sum-one condition and fixed threshold now use the same scale throughout the statement and proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4ae050496056167b284cc6bc9870ebe4ad1ac1a13e33ab256ad754b8eee9f361",
+  "reviewed_statement_sha256": "77d9eef1547baf959beb091ad682ace5d177e1f27c998312b05f95265aa094d0",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "8a42de3fe4296b983159bbf9c6dd6a6ef315b17072f87aff6dcaa2e894937767",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:28:25Z",
+  "summary": "The revised statement specifies the sum-one normal scale. The unchanged proof gives the exact grouped minima and the strictly better nongrouped pair.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

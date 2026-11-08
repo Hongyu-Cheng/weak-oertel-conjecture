@@ -1,0 +1,45 @@
+{
+  "candidate_id": "2f0f0c8da9a51a01",
+  "candidate_sha256": "d1961ff4883b62b9d2cea45241bcc0fbc2c54f216259b69ca43257d8ec12e018",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Independently counted the lattice points by oriented triangle-edge determinants. The 31 sites have parity counts (10,7,7,7), with all three outer vertices in the ten-site even-even class. The stated row bounds also give the same site list. Because conv(T) lies in D4, the relative closure is exactly ordinary lattice completeness in conv(T).",
+    "For two distinct lattice sites, the primitive first step along the joining segment belongs to T and differs from its starting point modulo 2. Thus a one-parity minor is a singleton.",
+    "For a least positive-area triangle in T, determinant magnitude greater than one gives a nonzero lattice representative in the half-open edge parallelogram. If its two coefficients sum to at most one, it is a nonvertex point of the triangle; otherwise reflection across the parallelogram center places it in the triangle, still a nonvertex point. Closure includes that point, and splitting at an edge or interior point produces a smaller positive-area triangle. Determinant magnitude one forces three distinct parity classes, so a two-parity set is collinear. A coordinate with nonzero primitive step is injective along the line and takes at most nine integer values in the box.",
+    "For three parities, omitting the even-even class leaves at most 21 sites. Omitting a seven-site class leaves at most 24 before closure; keeping all three even-even vertices would force T=P, so at least one further site is lost. For four parities properness bounds the size by 30.",
+    "Recomputed the four exact lower gaps from maximal sizes (1,9,23,30): 27/124, 13/62, 1/124, and 1/31. A positive common fiber area cancels from the normalized total on T; no halfspace-depth factor is asserted.",
+    "Both source candidate file hashes match. The census and full strict quota proof are in b78a2eb10bd3783f §§1–2 around (2); de93c4f08837e128 §8 restates the proper-minor consequence while distinguishing it from a quantitative bad-depth hypothesis."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T11:22:07Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof establishes that a full-dimensional lattice polygon contains a unimodular triangle. This supplies the general ingredient behind collinearity at two parities for complete planar sets, but does not give the fourth-dilate census, missing-vertex estimate, or the 1/124 quota.",
+      "fact_id": "20b9c918a887c030"
+    },
+    {
+      "comparison": "It bounds complete sets with the additional maximum-reflection-count-three hypothesis using the ambient parity count and hull vertices. This is a different cardinality constraint, with no comparison of a proper minor to the full 31-site base.",
+      "fact_id": "768d9712b73c4ab7"
+    }
+  ],
+  "readability": "The four displayed values are lower bounds in the four cases; the proof does not assert attainment of the uniform 1/124 margin.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a1a914e71193c224a3093742befa5b6ed26dd77795c551a118cbbdab8c6431a3",
+  "reviewed_statement_sha256": "9e53e05a323ae0b657c5e250276b4f4d23948125ae72a5db16192641e872850c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "b78a2eb10bd3783f": "c875e2a5196291973cd71164bfa4bc2a4db6329d398a7a6f7c99bb52ae4e5be9",
+    "de93c4f08837e128": "2b2bb7d53cbbf8e42e775b5e8ef18be21d16120373cd1dcd3bd3d60b4fbbd459"
+  },
+  "started_utc": "2026-11-08T11:18:19Z",
+  "summary": "All proper nonempty lattice-closed minors satisfy the stated uniform count gap. The proof controls each parity count separately, and equal positive fiber areas give the stated mass interpretation.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "Fixed positive concave widths and their true integer-base mixed centroid. An exact optimization representation, with no universal numerical lower bound claimed.",
+  "author": "PK-research-agent",
+  "candidate_id": "b28f38da13704ada",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.937376+00:00",
+  "depends_on": [],
+  "draft_key": "fixed-interval-widths-actual-cap-linear-programs",
+  "kind": "theorem",
+  "proof": "The upper endpoint sequence is concave and the lower endpoint sequence is convex, since integer-fiber interpolation in a compatible family contains the corresponding interpolated interval. These conditions are exactly the second-difference inequalities. Conversely the piecewise-linear interpolations of both sequences define a convex region with exactly the required integer fibers. It is an ambient convex body if there are at least two bases; in the singleton case one may take a product with a short base interval introducing no additional integer base. Integrating the continuous coordinate over each interval gives the condition $\\sum_i w_i(r_i-w_i/2)=0$, and the other centroid coordinate vanishes by hypothesis. The set of choices is nonempty: $r_i=w_i/2$ has the required differences and moments.\n\nThe weighted average of the upper endpoints is $Q/(2M)$ and that of the lower endpoints is $-Q/(2M)$. Jensen applied at the width-weighted base mean zero yields the two bounds at zero. The strict inequalities $r_i>0$ and $r_i-w_i<0$ each hold on a consecutive set containing zero, by concavity of $r$ and convexity of $r-w$, respectively. Their intersection is exactly the consecutive proper block. On either side, once one of the inequalities ceases to hold it cannot hold again on that side; the other cannot fail there, since the lower endpoint is strictly below the upper. Thus either the tail is wholly captured or it is wholly excluded. Equalities at a fiber endpoint may be counted in an adjacent weak pattern and give the same length. The mixed length is exactly the linear objective in each pattern, and every feasible program vector gives an actual family by interpolation. Each nonempty feasible polyhedron has a finite lower bound for its linear objective (the cap length is nonnegative), so its infimum is attained by the elementary attainment theorem for linear programs. Taking the minimum over the finite pattern list proves the result.\n",
+  "source_candidate_ids": [
+    "9a8aeae7f2236762"
+  ],
+  "source_candidate_sha256": {
+    "9a8aeae7f2236762": "4b28c8ca1b81a63a200fff757fa610492f2fe8ab849a2eb3621fd7def260f601"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9a8aeae7f2236762",
+      "locator": "9a8aeae7f2236762:01 §1, (1)–(4), exact attained finite LP representation"
+    }
+  ],
+  "statement": "Let $w_i>0$ be concave on consecutive integer indices $P=\\{-L,\\ldots,R\\}$ containing zero, with $\\sum_i iw_i=0$, and let $M=\\sum_iw_i$, $Q=\\sum_iw_i^2$. Consider all actual compatible interval families $K_i=[r_i-w_i,r_i]$ of these widths with mixed centroid $(0,0)$, using summed length on the sampled fibers. The smallest mixed length in the cap $x\\ge0$ is the minimum of finitely many attained linear programs.\n\nFor each consecutive block $[p,q]\\cap P$ containing zero and each choice of the two outer tails as wholly captured or excluded, impose\n$$\n\\Delta^2 w_i\\le\\Delta^2 r_i\\le0\\quad(i\\text{ interior}),\\qquad\n\\sum_iw_ir_i=Q/2,\n$$\nand impose $r_i\\le0$ on an excluded tail, $0\\le r_i\\le w_i$ on the block, and $r_i\\ge w_i$ on a captured tail. The objective is $\\sum_{p\\le i\\le q}r_i+\\sum_{\\text{captured }i}w_i$. Each nonempty program attains its minimum. In every actual family $r_0\\ge Q/(2M)$ and $r_0-w_0\\le-Q/(2M)$.",
+  "subgoal_id": "pk-intake-fixed-interval-widths-actual-cap-linear-programs",
+  "title": "Attained finite linear programs for fixed-width centroid caps"
+}

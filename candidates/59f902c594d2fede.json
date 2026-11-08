@@ -1,0 +1,26 @@
+{
+  "advances": "An auxiliary discrete norm inequality for one nonnegative concave sequence, with a sharp constant for each number of entries.",
+  "author": "PK-research-agent",
+  "candidate_id": "59f902c594d2fede",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:59.917766+00:00",
+  "depends_on": [],
+  "draft_key": "sharp-finite-concave-sequence-discrete-square-ratio",
+  "kind": "lemma",
+  "proof": "The first two cases follow from nonnegativity, with equality for one nonzero entry. Let $N\\ge3$ and $L=N-1$. Subtract the affine interpolation of the endpoints. For $1\\le j\\le N-2$ write\n$$\nT_i^j=\\min(i/j,(L-i)/(L-j)),\\qquad \\Delta_j=2c_j-c_{j-1}-c_{j+1}.\n$$\nThe remainder is $\\sum_{j=1}^{N-2}\\Delta_j j(L-j)T^j/L$: both sides vanish at the endpoints and have the same second differences because each tent has its sole nonzero second difference at its peak. All coefficients are nonnegative by concavity. The original sequence is therefore a nonnegative combination of the two affine endpoint generators $i/L,1-i/L$ and the interior tents.\n\nAfter normalizing by the discrete sum, this is a convex combination of the individually normalized generators. By convexity of squared Euclidean norm its ratio is bounded by the largest generator ratio. An affine endpoint generator has sum $N/2$ and squared sum $N(2N-1)/(6(N-1))$, giving ratio $2(2N-1)/(3(N-1))$. For a tent at $j$, with $\\ell=L-j$,\n$$\n\\sum_i T_i^j=L/2,\\qquad \\sum_i(T_i^j)^2=L/3+(1/j+1/\\ell)/6.\n$$\nThese are the sums of the two arithmetic ramps, counting the peak once. At fixed $j+\\ell=L$, the second expression is largest at $j=1$ or $\\ell=1$, since $j\\ell$ is then smallest. The resulting ratio is $2N(2N-3)/(3(N-1)(N-2))$, greater than the affine value by $4/(3(N-2))$. The same generator gives equality. For $N\\ge3$, the inequality that this ratio is at most $3$ is equivalent to $(N-3)(5N-6)\\ge0$, with equality only at $N=3$.\n",
+  "source_candidate_ids": [
+    "471b7ef903a3152b"
+  ],
+  "source_candidate_sha256": {
+    "471b7ef903a3152b": "3e71ed1e366be9e36d757abe71d60d05af4e4f3dc8865657191decc10d77571d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "471b7ef903a3152b",
+      "locator": "471b7ef903a3152b:01 §1, equation (2), tent decomposition and sharp constants"
+    }
+  ],
+  "statement": "For every nonnegative nonzero concave sequence $c_0,\\ldots,c_{N-1}$ on consecutive indices,\n$$\nN\\sum_{i=0}^{N-1}c_i^2\\le\\kappa_N^2\\left(\\sum_{i=0}^{N-1}c_i\\right)^2,\\qquad\n\\kappa_1=1,\\quad \\kappa_2=\\sqrt2,\\quad\n\\kappa_N^2=\\frac{2N(2N-3)}{3(N-1)(N-2)}\\quad(N\\ge3).\n$$\nThese are the sharp constants for each $N$. For $N\\ge3$, a tent with zero endpoints and peak at index $1$ or $N-2$ attains equality. Over all $N$, $\\kappa_N$ has maximum $\\sqrt3$, attained only at $N=3$.",
+  "subgoal_id": "pk-intake-sharp-finite-concave-sequence-discrete-square-ratio",
+  "title": "Sharp square-to-sum ratio for finite concave sequences"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "A counterexample to an auxiliary mean-only probabilistic relaxation with a retained negative unit.",
+  "author": "PK-research-agent",
+  "candidate_id": "b4b8764dcdfe74f8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:54:32.073433+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w33-fixed-negative-unit-mean-relaxation-counterexample",
+  "kind": "counterexample",
+  "proof": "Take $Y=0$ with probability $2/5$ and $Y=40$ with probability $3/5$. Then $\\mathbb EY=24$ and\n$$\n\\Pr(X\\ge E+Y)\\le \\frac25+\\frac35\\Pr(X\\ge40).\n$$\nThe gamma moment generating function gives, by Markov's inequality at $3/8$,\n$$\n\\Pr(X\\ge40)\\le e^{-15}(8/5)^{25}<(3/8)^{15}(8/5)^{25}<2/27.\n$$\nFor the first strict inequality, $e>8/3$ follows from the partial sum of its power series through $1/4!$. The second is exactly $3^{18}8^{10}=415989582513831936<596046447753906250=2\\cdot5^{25}$. The probability is therefore strictly less than $2/5+(3/5)(2/27)=4/9$. This residual law has a positive atom at zero despite its positive mean. A sum of independent exponentials with nonnegative coefficients and positive mean is almost surely positive, since at least one coefficient is positive.\n",
+  "source_candidate_ids": [
+    "81b740bba26c81d7"
+  ],
+  "source_candidate_sha256": {
+    "81b740bba26c81d7": "4b118646bb40a624519725c630608501e608af0b1ae1e27984c73113f2e71fc8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "81b740bba26c81d7",
+      "locator": "81b740bba26c81d7:01 Whole example, Chernoff calculation and coefficient restriction"
+    }
+  ],
+  "statement": "There are independent random variables $X,E,Y$ with $X$ a sum of $25$ independent unit-rate exponentials, $E$ a unit-rate exponential, and $Y\\ge0$ with $\\mathbb EY=24$, for which $\\mathbb EX=\\mathbb E(E+Y)=25$ yet $\\Pr(X\\ge E+Y)<4/9$. Thus the comparison $\\Pr(X\\ge E+Y)\\ge4/9$ cannot follow from retaining a fixed negative unit exponential and allowing an arbitrary independent nonnegative residual law with only its mean specified.",
+  "subgoal_id": "pk-intake-pk-w33-fixed-negative-unit-mean-relaxation-counterexample",
+  "title": "A fixed negative exponential does not rescue a mean-only relaxation"
+}

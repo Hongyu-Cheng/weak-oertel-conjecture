@@ -1,0 +1,26 @@
+{
+  "advances": "An obstruction for the radial integral of a sampled slope law at a genuine deepest mixed centroid. The source itself has depth one half; this gives no mixed-depth shortfall.",
+  "author": "PK-research-agent",
+  "candidate_id": "299161ee97f8440e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:02.042425+00:00",
+  "depends_on": [],
+  "draft_key": "w32-deepest-centroid-sampled-ball-nonconvexity",
+  "kind": "counterexample",
+  "proof": "The integer fibers in order are $D,Q,Q,Q,D$ at $-2,-1,0,1,2$. The outer ones are fixed by extremality of their heights. All fibers are in $Q$, and the middle slab $[-1,1]\\times Q$ lies in the hull, proving the other three equalities. The mixed mass is $2+4+4+4+2=16$. Central inversion preserves the set and the mixed measure, so the mixed centroid is zero. A through-origin cap with nonzero continuous normal has zero mixed boundary mass, and inversion exchanges its opposite caps, so each has mass eight. A pure integer cap through the origin captures ten, since it includes all of the central fiber. Any cap containing the origin contains a parallel cap through it. At any other candidate, two opposite caps with a nonzero continuous normal have combined mass sixteen, so at least one has mass at most eight. This establishes the claimed exact global depth and the anchor is interior to $Q$.\n\nOn the positive side the fiber at $1$ contributes $\\mathbf1_Q$ and the fiber at $2$ contributes $4\\mathbf1_{D/2}$ by the two Jacobians. Their integrated masses are four and two. For a nonzero vector $v$, rescaling the ray parameter gives gauge $\\bigl(2\\int_0^\\infty t f(tv)\\,dt\\bigr)^{-1/2}$. At $(1,s)$ the square contributes up to parameter one and $D/2$ up to $1/(2(1+s))$. Thus the expression inside the inverse square root is $1+1/(1+s)^2$. The resulting gauge has second derivative $-3(1+s)/((1+s)^2+1)^{5/2}<0$ on the segment, proving the asserted strict midpoint inequality. The radial body contains zero in its interior and a convex body containing zero has a convex gauge, since mixing positive dilates gives the convexity inequality for the gauge. Hence the radial body is nonconvex.\n",
+  "source_candidate_ids": [
+    "3175dfaa311e9f49"
+  ],
+  "source_candidate_sha256": {
+    "3175dfaa311e9f49": "d86f7f8e22c11e1c3ee6394e6922cf65f1f5c08034474e44dfc696ac3709d243"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3175dfaa311e9f49",
+      "locator": "3175dfaa311e9f49:05 §§4–5, (7)–(10)"
+    }
+  ],
+  "statement": "Let $Q=[-1,1]^2$, $D=\\{x\\in\\mathbb R^2:|x_1|+|x_2|\\le1\\}$, and $C=\\operatorname{conv}((\\{-1,1\\}\\times Q)\\cup(\\{-2,2\\}\\times D))$. With one integer base coordinate, its mixed centroid $(0,0)$ is interior to its fiber and attains global maximum normalized mixed closed-halfspace depth $1/2$. The positive-side sampled slope density $f$ about this mark is $\\mathbf1_Q+4\\mathbf1_{D/2}$, of mass six. The radial body with radius $\\rho_f(e)$ in a unit direction $e$, defined by $\\rho_f(e)^2=2\\int_0^\\infty t f(te)\\,dt$, is nonconvex. On the nonunit rays $v_s=(1,s)$, $0\\le s\\le1$, its gauge is $(1+s)/\\sqrt{(1+s)^2+1}$, and at the midpoint it is $3/\\sqrt{13}>(1/\\sqrt2+2/\\sqrt5)/2$.",
+  "subgoal_id": "pk-intake-w32-deepest-centroid-sampled-ball-nonconvexity",
+  "title": "A sampled slope Ball body can be nonconvex at the deepest centroid"
+}

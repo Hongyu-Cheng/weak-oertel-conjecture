@@ -1,0 +1,41 @@
+{
+  "candidate_id": "88a6579e3b48bcdc",
+  "candidate_sha256": "54f7ccd15a08bd48ef9dd51cb2498773486fdb416772b8e82325cf27d75de127",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Deleting row i leaves the strict witness p_i feasible. Farkas produces a nonzero nonnegative kernel vector with negative weighted threshold. A normalized minimizing vertex with negative objective has full support; any additional kernel direction can be centered to have coordinate sum zero and yields two feasible displacements, contradicting extremality.",
+    "The affine margin map has rank k−1 and image exactly the sum-one hyperplane. Nonnegative margins give the standard simplex in the quotient by the common kernel.",
+    "The witness matrix has column sums one and diagonal entries equal to one plus the off-diagonal absolute column sums. Its inverse exists and is nonnegative by the column-norm Neumann series. The inverse also has column sums one, so the simplex coordinates lie in the convex hull of witness columns.",
+    "At δ=B/Σλ the weighted complement forces every row tight. The prescribed positive simplex coordinates exist; the same inverse applied after moving witnesses into int C gives an interior preimage. The fiber of the margin map has dimension N−k+1.",
+    "Each original interval cap captures length 5/4 on both length-two fibers, giving 5/8 after normalization. At the perturbed exclusive witness (1,−1), η−1<−1/4 exactly for η<3/4. The displayed complementary intersection has a real point for every η>0.",
+    "Checked f8f6582d5c261f3e §§1–3 and e711a2f2fa42ce54 §1, including the strict witnesses and the contained simplex."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T18:55:36Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses strict exclusive witnesses under an open mixed-set cover to bound how many share a fiber. It does not assume empty real complementary intersection or give its circuit rank and first contact flat.",
+      "fact_id": "bba06678def75096"
+    },
+    {
+      "comparison": "Constructs strict mixed-cap witnesses with bounded common mass under a depth hypothesis. It does not force real-space infeasibility or classify that case.",
+      "fact_id": "a0637bba959354a4"
+    }
+  ],
+  "readability": "The complementary system uses weak ≤ inequalities throughout. The simplex in a lower-rank case is in the quotient, while the actual first-contact set is a flat.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the frozen candidate, with original-source, dependency and scope checks.",
+  "reviewed_proof_sha256": "8b100b64ec8c6a08d4396a50a641052481dc948dc3792613ba31a99b3885eb16",
+  "reviewed_statement_sha256": "e44f7c8055a45a95e8ad76ec6d2a763fe072b39c7f9665730dd5b6f2d3f72ec5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:51:21Z",
+  "summary": "Strict exclusive witnesses make the complementary infeasibility minimally supported. The positive rank-(k−1) circuit, quotient simplex and interior first relaxed contact follow, with the claimed smaller-rank obstruction.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

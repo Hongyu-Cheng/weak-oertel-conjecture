@@ -1,0 +1,29 @@
+{
+  "advances": "An exact capacity and power-concavity obstruction for the trimmed family of compatible actual median targets.",
+  "author": "PK-research-agent",
+  "candidate_id": "8d65dd8d17f194e9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:15:48.902948+00:00",
+  "depends_on": [
+    "2f355ace664c0068",
+    "431423848c9bacf8"
+  ],
+  "draft_key": "trimmed-triangle-exact-depth-power-obstruction",
+  "kind": "counterexample",
+  "proof": "Measure all three equal fibers in units of their common area, writing $\\kappa=\\operatorname{Unif}(K)$. The two raw half-marginals from 2f355ace664c0068, each of mass $3/2$, consist respectively of one strict outer copy of $\\kappa$ and $1/2$ of the central copy. Without a central-central block, the two blocks with a central endpoint each have mass $1/2$, project to that endpoint and together give the full central law $\\kappa$. The strict-cross block $\\pi$ has mass $1/2$ and both marginals dominated by $\\kappa$. Conversely any such $\\pi$ completes to a legal trimmed coupling by pairing the unused outer marginals, each of mass $1/2$, with the corresponding opposite central halves. The target probability is exactly $(\\kappa+T_\\#\\pi)/(3/2)$, where $T$ is the ordinary midpoint of the outer continuous coordinates.\n\nThe barycentric coordinates of $y_t$ are $(1-2t,t,t)$. For $D_t=K\\cap(2y_t-K)$, membership within $K$ requires each barycentric coordinate to be at most twice the corresponding coordinate of $y_t$. The excluded vertex triangles have pairwise disjoint interiors because the sum of any two bounds is at least one. Their relative areas are $(4t-1)^2,(1-2t)^2,(1-2t)^2$. Hence\n$$\n \\kappa(D_t)=-2+16t-24t^2=\\frac23-24(t-1/3)^2\\ge\\frac12.\n$$\nThe measure $\\eta=(2\\kappa(D_t))^{-1}\\mathbf1_{D_t}\\kappa$ has mass $1/2$, is dominated by $\\kappa$, and is invariant under reflection about $y_t$. Pairing every point of $\\eta$ with its reflection gives an admissible $\\pi$ with midpoint image $(1/2)\\delta_{y_t}$.\n\nPart 1 of 431423848c9bacf8 gives normalized triangle depth $4t^2$, since the two smallest barycentric coordinates of $y_t$ are $t,t$. Every closed cap containing $y_t$ contains the whole residual atom for the constructed coupling. Conversely the cap $x_1+x_2\\le2t$ has $\\kappa$-mass $4t^2$ and residual mass at most $1/2$ for every coupling. These two bounds give the displayed equality. Finally the second derivative of $(4t^2+1/2)^p$ is\n$$\n8p(4t^2+1/2)^{p-2}\\bigl[1/2+4(2p-1)t^2\\bigr]>0\n$$\non the interval, because the bracket is at least $1/2-4/9$. Division by the positive constant $(3/2)^p$ preserves the sign.\n",
+  "source_candidate_ids": [
+    "39a2ef7b63aae46b"
+  ],
+  "source_candidate_sha256": {
+    "39a2ef7b63aae46b": "621fcab1d0f73d0326a9a4def539458889a43f62b094e6c0eb783e0b78f4342f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "39a2ef7b63aae46b",
+      "locator": "39a2ef7b63aae46b:7 §4, (1)–(2), exact trimmed capacity and power obstruction"
+    }
+  ],
+  "statement": "Let $K=\\operatorname{conv}\\{(0,0),(1,0),(0,1)\\}$, and take $C=[-1,1]\\times K$ with normalized mixed volume. At median base $0$ use only median couplings with no central-central pairs. Let $V_{\\rm trim}(y)$ be the maximum target depth at $y\\in K$ over these couplings. For $y_t=(t,t)$ with $1/4\\le t\\le1/3$,\n$$\n V_{\\rm trim}(y_t)=\\frac{4t^2+1/2}{3/2}.\n$$\nFor every $p>0$, the function $V_{\\rm trim}^p$ is strictly convex along this segment, hence is nonconcave on $K$.",
+  "subgoal_id": "pk-intake-trimmed-triangle-exact-depth-power-obstruction",
+  "title": "Every positive power of optimized trimmed triangle depth can fail concavity"
+}

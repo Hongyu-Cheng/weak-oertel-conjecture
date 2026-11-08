@@ -1,0 +1,51 @@
+{
+  "candidate_id": "2d40d8c6e56282d7",
+  "candidate_sha256": "7916adbc9727a54ef944fdcb62ac4a093262bc555ac7b79396e0cf88d6597cde",
+  "checked_dependency_candidate_sha256": {
+    "41e91e1dea46f672": "a52861bee586886df8106c17289a2df235d136c1b50004020edc7c1b324e6bcc"
+  },
+  "checks": [
+    "For B+sA the support derivative is exactly h_A uniformly, so the accepted whole-volume derivative gives dX₁. Each surface-area atom is at v_i/||v_i||, with facet area divided by ||v_i|| equal to db/(d+1) by the centroid pyramid formula. This gives dX₁=ΣP_i−db without requiring individual P_i>0.",
+    "Verified the cited Alexandrov–Fenchel Theorem 1.1. With A and B in the two distinguished slots and j−1 copies of A plus d−j−1 of B elsewhere it gives X_j²≥X_(j−1)X_(j+1). All coefficients are positive for full-dimensional convex bodies.",
+    "Interpolation of the logarithms on indices 1 to d gives X_j≥X₁(a/X₁)^((j−1)/(d−1)). The binomial sum at s=1 then gives b+X₁[(1+r)^d−1]/r. Scaling the actual inclusion (A+B)/2⊆K gives the upper comparison 2^d k.",
+    "For d=3 the binomial sum is 3X₁+3sqrt(aX₁)+a. With X=3X₁ this is X+sqrt(3aX)+a. These are the exact constants and scope in b69ebda3a2e6d72a §8 (18)–(20)."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "a52861bee586886df8106c17289a2df235d136c1b50004020edc7c1b324e6bcc",
+      "fact_id": "41e91e1dea46f672",
+      "fact_sha256": "4c6da7eb393d5354a41e0fa9ef3a9839d80f09cc571082eb91348cf0010c5a58",
+      "hypotheses": "Take both branches equal to the compact convex path B+sA. The initial B is full dimensional and h_A is continuous, with no remainder in the uniform support expansion.",
+      "reviewed_proof_sha256": "7f400da299fbac22a3d8692ab35e5408a40cdcc33171aee7596a52a508ac633c",
+      "reviewed_statement_sha256": "ee177fec1a337122cde4cf810f9f8e7ed1014b7d4242213f7287e10dba0083f5"
+    },
+    {
+      "hypotheses": "The theorem applies in dimension d≥2 to the convex bodies A and B and the remaining d−2 copies used in the mixed-volume log-concavity inequality.",
+      "reference": "Yair Shenfeld and Ramon van Handel, Mixed volumes and the Bochner method, Theorem 1.1",
+      "url": "https://web.math.princeton.edu/~rvan/yairb190305.pdf"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:04:01Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the underlying general first variation. It does not combine the simplex support sum with Alexandrov–Fenchel to bound the whole Minkowski sum in terms of this first coefficient.",
+      "fact_id": "41e91e1dea46f672"
+    }
+  ],
+  "readability": "The stated hypotheses and proof scope are clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d0f52e926d302b1762fab00f45575de077ef0c631b75778b8c2259efe8199ee9",
+  "reviewed_statement_sha256": "7c724c7948c4a3bcdc57e306b71f122afb3db1ea94e4ebaf03dfb3b8ee921667",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:58:19Z",
+  "summary": "The first simplex mixed coefficient and log-concavity of the mixed-volume sequence imply the stated global binomial lower bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

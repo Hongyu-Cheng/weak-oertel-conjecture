@@ -1,0 +1,60 @@
+{
+  "candidate_id": "b906b7bfd9d4e87d",
+  "candidate_sha256": "0f1a7769212cd16a7371a1c74959ae93dbbe35d682df4c901de76fb4bb9cd1ed",
+  "checked_dependency_candidate_sha256": {
+    "33488d4938a6ee4a": "4cf5340cd24a87299f2b841763b116fe73283de907888c2f936ace54c818ba6a",
+    "49a3b81814664012": "0de7c7df5ab5888ec9440e44934c929f8693b83c7a74938895f065c6638b63a3"
+  },
+  "checks": [
+    "Strict cap incidence orders the two cut points on each triangle edge. The complement of their six-point hull is the three disjoint corners, one per unique sector.",
+    "The core contains each full chord and the marked point in its interior. Exact loss bookkeeping changes only k and Q_i by the corresponding corner losses, preserving the actual coarea factors.",
+    "A proper closed convex subset omits a positive-area part, by strict separation of an omitted point and the nonempty interior of T. Thus the global loss lemma gives strict Psi.",
+    "With g=f_j+f_l, the product inequality f_j f_l≤g²/4 gives Psi≥f_i²+(2+f_i)g²/4. Strict cubic gives strict rows by division by 2+f_i.",
+    "Checked the proof against its pinned source locator: b59c030c1c2567d0:02 Proof §4, actual fixed-ray inner-body application."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "33488d4938a6ee4a",
+      "candidate_sha256": "4cf5340cd24a87299f2b841763b116fe73283de907888c2f936ace54c818ba6a",
+      "fact_sha256": "f8984683c74029e46b557b60af5120ad1efc62edd5e0e1b9470d2ba2f9023b41",
+      "hypotheses": "The baseline is exactly a strict triangle with interior mark, three spanning zero-sum normals and positive chord/cap data, so its Psi≤4 conclusion applies.",
+      "reviewed_proof_sha256": "97c560ebf4ac7a967d9c6749e620fd6fcf49bb7ff5f2604b3dc582c3c35b3d02",
+      "reviewed_statement_sha256": "2627a0768145e660338b8f307735ca8df6e5e86b2d1dad065733f3adc9dcc79e"
+    },
+    {
+      "candidate_id": "49a3b81814664012",
+      "candidate_sha256": "0de7c7df5ab5888ec9440e44934c929f8693b83c7a74938895f065c6638b63a3",
+      "hypotheses": "Both actual data sets have positive cap and total areas. Their exact losses are nonnegative and unique-sector only, with unchanged section factors, so the global cubic theorem applies.",
+      "reviewed_proof_sha256": "b096847f9043c4af06d0e342c22260a4a5553118ca28acb98e6820585d5efddc",
+      "reviewed_statement_sha256": "e92bb2afb935def92510ba51173c47b4b50d0c9483af78f594b3c18fabb77a75",
+      "status": "Same-batch predecessor; independent approval required before admission."
+    }
+  ],
+  "finished_utc": "2026-11-08T16:21:46Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same actual fixed-ray inner-body geometry in the plane, but only sufficiently small losses and row bounds, with no global cubic control.",
+      "fact_id": "a6b895b7e48e8037"
+    },
+    {
+      "comparison": "Covers the untrimmed baseline T only.",
+      "fact_id": "33488d4938a6ee4a"
+    }
+  ],
+  "readability": "The statement and proof are readable as frozen.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c8c2e1010a8016d98291b40601fcc5e25d2b6800582d7e8f69dc504be5cf6f45",
+  "reviewed_statement_sha256": "4353a02f32de6878d8b5036c0174bc1368b49b1f51fcbadc2b8580b20da0a13f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:17:13Z",
+  "summary": "Every proper convex inner body preserving the strict triangle's full ray core satisfies strict cubic and row bounds.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

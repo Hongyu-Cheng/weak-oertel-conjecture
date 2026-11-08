@@ -1,0 +1,26 @@
+{
+  "advances": "An upper bound on the specified certificate outputs. The claim concerns neither the exact actual mixed depth nor different mark-selection or aggregation rules.",
+  "author": "PK-research-agent",
+  "candidate_id": "f8a9e969cf35ede8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:33:00.809281+00:00",
+  "depends_on": [],
+  "draft_key": "three-fiber-centroid-leaf-certificate-obstruction",
+  "kind": "counterexample",
+  "proof": "The projection is $[-1,1]$, so the two endpoint fibers are exact. In any convex combination projecting to zero the total coefficients on the two endpoints agree. Their midpoint body is $[-5/4,5/4]\\times K$, contained in the stated middle fiber. Thus grouping the endpoint contribution and then combining with the middle fiber produces only points in the stated middle fiber. Its full volume is present by construction.\n\nA halfspace acting only on the triangle factor and given by a barycentric coordinate at least $1/3$ contains the centroid on its boundary and captures area fraction $(2/3)^2=4/9$: the selected triangular cap is a homothetic copy of linear ratio $2/3$. It follows that each centroid leaf in an actual fiber of volume $a$ has own capacity at most $4a/9$. This yields the single-node bound.\n\nThere are three bases and every tree label is distinct, so a nontrivial binary tree can only have three nodes. The only pair of distinct available integer bases with an available integer midpoint is $-1,1$ with midpoint $0$. Their averaged centroid mark has continuous coordinates $(0,g)$. The actual middle fiber's closed own-fiber cut by interval coordinate $\\le0$ has volume $5/4$. The smaller endpoint has centroid own capacity at most $4/9$. The rule therefore gives at most $5/4+4/9=61/36$. Both numbers are less than $243/128$ by multiplication of the positive denominators. The actual middle centroid has interval coordinate $3/4$, different from the required averaged endpoint coordinate.\n",
+  "source_candidate_ids": [
+    "6db3f4932a57c2cc"
+  ],
+  "source_candidate_sha256": {
+    "6db3f4932a57c2cc": "48384ae1eb46a17a58f6cea71cfb285e1a5e0c16b8b9ed2f5c68ad5565118226"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6db3f4932a57c2cc",
+      "locator": "6db3f4932a57c2cc:01 Three product fibers, centroid-leaf bounds and the sole distinct-label midpoint tree"
+    }
+  ],
+  "statement": "Let $K$ be a triangle of area one and centroid $g$. In one integer and three continuous dimensions, take the convex hull of the product fibers\n$$\n[-2,2]\\times K,\\qquad [-5/4,11/4]\\times K,\\qquad [-1/2,1/2]\\times K\n$$\nat bases $-1,0,1$, respectively. These are the actual integer fibers, with volumes $4,4,1$ and total mixed volume $9$, so none has volume at least $9/2$. Use the centroids of the full actual fibers as leaves. Every single centroid-leaf own-fiber certificate has raw value at most $16/9$. Every nontrivial binary midpoint certificate with distinct node bases, centroid leaves, averaged node marks, and the update $b=k_{\\rm own}+\\min(b_\\ell,b_r)$ has raw value at most $61/36$, even when exact own-fiber capacities in the original fibers are allowed at every node. Both bounds are strictly below the raw target $9\\gamma_3/2=243/128$.",
+  "subgoal_id": "pk-intake-three-fiber-centroid-leaf-certificate-obstruction",
+  "title": "Three actual fibers defeat the centroid-leaf midpoint certificate rule"
+}

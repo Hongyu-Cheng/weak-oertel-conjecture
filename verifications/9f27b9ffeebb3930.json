@@ -1,0 +1,55 @@
+{
+  "candidate_id": "56b0987e853e0500",
+  "candidate_sha256": "5a1a63777a9bce913502e1954555b4c5e1875c82de9dad1f3b6d1c7a546349c3",
+  "checked_dependency_candidate_sha256": {
+    "bd0a8fbcb2d1cc47": "3a98fb3261e38b87a085843741d0216c6099b86e80c1c80ddb77b1f61a95388c"
+  },
+  "checked_source_candidate_sha256": {
+    "146226205b30285c": "ac4a8bfaaa98f6c397026eb4b1d65f927a8fc05d9387f0641a0bdb1fba592bc1"
+  },
+  "checks": [
+    "For either family n+c_j=H and the base point has margins p−Lθ and Hθ−n_j. The exact difference pH−(v+w)L=sp+vx>0 proves the interval is nonempty, and 0<n_j/H≤θ≤p/L<1 puts its endpoints in the old edge's relative interior.",
+    "The segment from P_j to the displaced peak crosses P_1P_l at Q_0 in both relative interiors, proving an actual quadrilateral for every ε>0. Its ear altitude is ε/k_0 times the old altitude, giving area ε. The two affected margins strictly increase from nonnegative base values because both were negative at P_j. The unaffected margin stays negative throughout the ear because it is negative at the old base and positive at P_j.",
+    "The negative-corner clipping and coarea formulas at zero ear area give the two affected derivatives exactly. Their denominators L²(1−θ) and H²θ stay positive on the closed interval. The moving peak heights enter multiplied by the ear area, which vanishes at zero, so no moving-height term is missing from the first derivatives. Affected old and ear sections intersect only at one old-edge point and their lengths add.",
+    "Recomputed M' by differentiating the two changing Q/σ ratios and obtained (p−Lθ)/[(1−θ)pB]+(Hθ−n)/(θ L c_j). Pairing the logarithmic f-derivatives with the row gradient gives the printed D_j, including coefficient 4−L/H.",
+    "I parsed all printed E_j,F_j,G_j,P_star,P_+,P_- polynomials from the frozen proof and replayed both identities using exact rational termwise polynomial division in SymPy 1.14. For each j the residual polynomial is identically zero. The printed supplements and P_+,P_- have positive nonzero coefficients. P_star has the positive term 15x⁴/16 in its square completion, and R_j has the positive leading term 2s³p²L. The denominators and coefficients remain positive at w=0 and at both seams u=0,1.",
+    "The shared other-row slack identity was verified by exact expansion. If z=1 all three derivatives coincide, and otherwise both other rows are strict at zero and remain so. Source 146226205b30285c §§1–4, (1)–(6) matches both families and retains the small-size-only conclusion."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bd0a8fbcb2d1cc47",
+      "candidate_sha256": "3a98fb3261e38b87a085843741d0216c6099b86e80c1c80ddb77b1f61a95388c",
+      "mapping": "The vertices and three initial row data are those of the canonical lemma. It supplies the explicit affected cap areas and coareas at ε=0. The proof of the other-row implication is included, so the opposite-edge lemma is unnecessary.",
+      "reviewed_proof_sha256": "71e3bc56955b714dc8fa1236e408727a242e70cd3ab4e68ed92ce6705fcd75c7",
+      "reviewed_statement_sha256": "ffc5cc32166d8f1609d608b3beae99353ba029a7366f717e07b26c94ee95b1db",
+      "status": "same-batch, admission conditional on independent approval"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:42:53Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its fixed-sector maximizing polygon result does not fix an adjacent edge or compute a row derivative under a change in sector areas.",
+      "fact_id": "f56c82f24e66e60b"
+    },
+    {
+      "comparison": "Its exact row statements apply to strictly cut triangles. The new result is local to two specified adjacent-edge ears in quadrilaterals.",
+      "fact_id": "a19fb2ae234afb2a"
+    }
+  ],
+  "readability": "The symbols B and B_j denote distinct positive quantities, respectively the original vertical edge length and HL(1−θ). The proof labels them separately.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e280e1894544002718cae5f1320627ca39cf9f2fb130fdabc9f66967c16e766e",
+  "reviewed_statement_sha256": "026f20b2b5ac25c7a1383c8207f6c7d0609f9291f3f01f2cca030a75ed41df85",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:35:42Z",
+  "summary": "Both actual adjacent-edge families have a strictly negative first-row derivative throughout their closed double-signature interval, with all three rows strict at sufficiently small positive ear area.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

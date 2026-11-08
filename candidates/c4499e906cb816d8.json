@@ -1,0 +1,28 @@
+{
+  "advances": "An anchored sufficient bound on retained affine-centered copies using the original mass for normalization. The original full fibers can have different shapes and nonaffine centroid graphs.",
+  "author": "PK-research-agent",
+  "candidate_id": "c4499e906cb816d8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.049665+00:00",
+  "depends_on": [
+    "6a7d56e450b3126f"
+  ],
+  "draft_key": "pk-w30-anchored-reflection-plus-residual-shell",
+  "kind": "theorem",
+  "proof": "Let $\\sigma_p=w_p$ and, for $z\\ne p$, set $\\sigma_z=\\min(w_z,w_{2p-z})$. Put $v_z=w_z-\\sigma_z$. At each retained fiber split the copy into an inner copy of volume $V\\sigma_z$ and its disjoint outer shell, of volume $Vv_z$. Zero inner radii represent zero volume. For a nonconstant halfspace through zero, the shell $(rJ)\\setminus(sJ)$ with $r\\ge s\\ge0$ contributes $(r^d-s^d)|J\\cap H|$ by homogeneity and nesting, since $0\\in J$. Therefore every halfspace containing its center captures at least $\\Gamma_d$ of the shell volume: it contains a parallel through-center cap, and 6a7d56e450b3126f at shift zero gives the ordinary centroid fraction in $J$. A full trace captures the entire shell.\n\nTranslate an ambient halfspace containing $Y$ to pass through $Y$, reducing its mass. If its continuous normal $u$ is nonzero, the affine centers of the two equal inner copies at $z,2p-z$ have average $a(p)$. Their thresholds relative to their own centers are opposite, so 6a7d56e450b3126f gives combined capture at least $2\\Gamma_d V\\sigma_z$ for that pair. The own core contributes at least $\\Gamma_d Vw_p$. For a pure-base normal, at least one endpoint of each pair and the whole own core are captured. This gives the same bound since $2\\Gamma_d\\le1$, by $(1+1/d)^d\\ge2$. Thus the total inner credit is at least $\\Gamma_d V[w_p+2R_p(w)]$.\n\nWrite $a(z)=a(p)+A(z-p)$ and let $b$ be the ambient base normal. The centers of the retained copies that lie in the halfspace are those with $(b+A^{\\mathsf T}u)\\cdot(z-p)\\ge0$. If this normal is nonzero, their residual weight is at least $D_p(v)$, including centers on the boundary. If the normal is zero, all centers are included, with residual weight also at least $D_p(v)$. Thus the disjoint shells contribute at least $\\Gamma_d VD_p(v)$ in the same halfspace.\n\nFor $n\\ge1$, in either atomic infimum one may restrict to nonzero normals generic on the support of $w$ away from $p$. A sufficiently small generic perturbation of any normal preserves every strict sign and can only discard some atoms that were on its closed boundary. The restriction therefore leaves the infimum unchanged, also for $v$ supported inside that finite set. Every such generic normal captures precisely $w_p+R_p(w)$ symmetric inner weight, so\n$$\nD_p(w)=w_p+R_p(w)+D_p(v).\n$$\nAdding the two credits gives the first bound. For $n=0$ this is the ordinary centroid estimate for the retained own copy. To obtain the improvement, replace the own-core contribution $\\Gamma_d Vw_p$ by $\\delta_p$, which is at least that contribution by containment and the same ordinary centroid bound. No shell contribution used any mass in the own fiber, since $v_p=0$. This also covers zero own-core weight.\n",
+  "source_candidate_ids": [
+    "4d7e8cb4ef98b96f"
+  ],
+  "source_candidate_sha256": {
+    "4d7e8cb4ef98b96f": "c8239f11de9dd30e30ec0c69c1a486668d3e3985fd34c139875111e1c4f34d54"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4d7e8cb4ef98b96f",
+      "locator": "4d7e8cb4ef98b96f:01 §§1–4, (4)–(10)"
+    }
+  ],
+  "statement": "Let $n\\ge0$, $d\\ge1$, and let $K_z$ denote the continuous fibers at integer bases of an actual compact mixed-integer convex source measured by summed $d$-volume. Fix a convex body $J\\subset\\mathbb R^d$ of centroid zero and volume $V$, an affine map $a:\\mathbb R^n\\to\\mathbb R^d$, and finitely supported radii $r_z\\ge0$ such that $a(z)+r_zJ\\subseteq K_z$ whenever $r_z>0$. Set $w_z=r_z^d$ and fix an integer $p$ for which $Y=(p,a(p))$ is an actual mixed point. Define $D_p(w)$ as the infimum of the weight in a closed base halfspace through $p$, and set\n$$\nR_p(w)=\\sum_{\\{z,2p-z\\},\\,z\\ne p}\\min(w_z,w_{2p-z}),\n$$\nsumming each unordered pair once. In base dimension zero set $D_p(w)=w_p$ and $R_p(w)=0$. With $\\Gamma_d=(d/(d+1))^d$, every closed ambient halfspace containing $Y$ captures at least $\\Gamma_d V[D_p(w)+R_p(w)]$ in raw $d$-volume. If the actual ordinary raw depth in $K_p$ at $a(p)$ is $\\delta_p$, the lower bound improves to $\\delta_p+\\Gamma_d V[D_p(w)+R_p(w)-w_p]$.\n\nIn particular the first bound pays the target $\\Gamma_d M/2^n$ whenever $V[D_p(w)+R_p(w)]\\ge M/2^n$, where $M=\\sum_z|K_z|$ is the original mixed mass.",
+  "subgoal_id": "pk-intake-pk-w30-anchored-reflection-plus-residual-shell",
+  "title": "Reflected cores and residual homothetic shells give additive depth at one anchor"
+}

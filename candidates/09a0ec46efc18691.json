@@ -1,0 +1,30 @@
+{
+  "advances": "A cover and contact identity on one old minimal deepest-base face, including a nested-family upper comparison with frozen thresholds.",
+  "author": "PK-research-agent",
+  "candidate_id": "09a0ec46efc18691",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:18:26.264042+00:00",
+  "depends_on": [
+    "7227bbfcd12ad3d2",
+    "0b2fbdaf8d3134a0",
+    "c5ce541ffa55a29c"
+  ],
+  "draft_key": "fixed-deepest-base-face-buffered-cap-cover",
+  "kind": "theorem",
+  "proof": "Fix the prescribed own supergradient $g$ and set $\\phi(z)=\\max_{X\\in C_z}[f(z,X)-g\\cdot(X-y)]$. The maximum is attained by compactness. Concavity follows by combining the maximizing marks inside $C$, and $\\phi(p)=f(p,y)$ by the own supergradient inequality. To obtain a full supporting slope even at boundary bases, use 7227bbfcd12ad3d2, which applies to the finite canonical hull and supplies a uniform inradius $r_0>0$ and Hausdorff-Lipschitz fibers. For two fibers at Hausdorff distance $\\delta\\le r_0/2$, contracting the first about its inball center by $1-\\delta/r_0$ puts it inside the second. In fact the support value after contraction decreases in every unit direction by at least $\\delta$. Apply the contraction to a maximizing mark in the first fiber. Monotonicity and homogeneity give a buffer value in the second at least $(1-\\delta/r_0)^\\kappa$ times the old one. Its change in the linear term is bounded by a constant times $\\delta$ because the fibers are uniformly bounded. Since $1-(1-\\delta/r_0)^\\kappa=O(\\delta)$ on this interval, and $f$ is bounded, $\\phi$ decreases by at most a constant times $\\delta$. Reverse the roles for the other bound. For $\\delta>r_0/2$, boundedness of $\\phi$ gives the same estimate after increasing the constant. Thus $\\phi$ is Lipschitz on $B$.\n\nFor a Lipschitz constant $L_\\phi$ of $\\phi$ on $B$, the function $\\inf_{z\\in B}[-\\phi(z)+L_\\phi\\|w-z\\|]$ is a finite convex extension of $-\\phi$ to $\\operatorname{aff}B$. Convexity follows by combining candidate pairs, and agreement follows from the Lipschitz inequality and the choice $z=w$ on $B$. The negative of any subgradient of this finite convex extension at $p$ gives a supergradient $\\alpha$ of $\\phi$ on $B$. Its bound on $\\phi$ gives the asserted full tangent with the prescribed $g$.\n\nFor the cap group, let $c_j=a_j\\cdot p+u_j\\cdot y-\\varepsilon f(p,y)=c_q(a_j,u_j)$. The weighted buffered constraint margin at $(z,X)$ is\n$$\n\\sum_j\\rho_j[a_j\\cdot z+u_j\\cdot X-\\varepsilon f(z,X)-c_j]\n=\\ell\\cdot(z-p)+\\varepsilon[f(p,y)+\\alpha\\cdot(z-p)+g\\cdot(X-y)-f(z,X)].\n$$\nThe bracket is nonnegative. At a feasible point of $D_{q,\\varepsilon}$ every individual term on the left is nonpositive by the closed quantile-region theorem. In particular $\\ell\\cdot(z-p)\\le0$ at all bases in $I$, hence on their hull. As $p$ is in the relative interior of its minimal face, this linear displacement vanishes on $F_p$. Over that face the weighted buffered constraint margin is nonnegative. Adding $\\varepsilon f(z,X)$ proves the bound on the fixed cap margins throughout each fiber. At a feasible point over the face the weighted buffered margin must instead equal zero, and every individual term vanishes by positivity of the weights. Since $\\varepsilon>0$, the tangent bracket also vanishes.\n\nOn $C_t$ over $F_p$, replacing $f$ by $f_t$ only increases the same weighted buffered margin, with the old thresholds kept fixed. At least one new buffered threshold at the tested point is at least the corresponding old $c_j$, so its new closed cap lies in the old mass-$q$ cap and has mass at most $q$ under the smaller fiber measures. Taking the infimum gives the upper bound.\n",
+  "source_candidate_ids": [
+    "86dd5366456916a8"
+  ],
+  "source_candidate_sha256": {
+    "86dd5366456916a8": "9e80790250a5e444c1338cd04bce6505226ee2333e955947128bd06b1d686fbf"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "86dd5366456916a8",
+      "locator": "§8, (18)–(20)"
+    }
+  ],
+  "statement": "Use the finite mixed family and buffer of the closed quantile-region theorem. Assume additionally that $f(z,X)=\\mathcal F(C_z,X)$, where the nonnegative marked functional $\\mathcal F$ is inclusion-monotone and is multiplied by $s^\\kappa$ under any common homothety of the body and its mark with ratio $s>0$, for some $\\kappa>0$. Then every own-fiber supergradient $g$ at $(p,y)$ has a finite full extension $(\\alpha,g)$ satisfying\n$$\nf(z,X)\\le f(p,y)+\\alpha\\cdot(z-p)+g\\cdot(X-y)\\qquad((z,X)\\in C).\n$$\n\nLet $(p,y)\\in S$ be a global buffered maximizer at $\\varepsilon>0$ satisfying $y\\in\\operatorname{int}K_p$ and $\\varepsilon f(p,y)<\\operatorname{dist}(y,\\partial K_p)$. Put $q=Q_\\varepsilon$ and take any positive-weight group of right-quantile mass-$q$ caps with the balance $\\sum_j\\rho_j u_j=\\varepsilon g$ of the finite active-cap balance theorem. Write $I$ for the bases of the sampled global maximizers and $F_p$ for the minimal face of $\\operatorname{conv}I$ containing $p$. For any such full extension $(\\alpha,g)$, the corrected vector $\\ell=\\sum_j\\rho_j a_j-\\varepsilon\\alpha$ satisfies $\\ell\\cdot(z-p)\\le0$ on $\\operatorname{conv}I$ and vanishes in displacement from $p$ on $F_p$. For every $z\\in F_p$ and $X\\in C_z$, the weighted margin of the same fixed actual caps is at least $\\varepsilon f(z,X)$. Thus these closed caps cover the whole fiber. At any $(z,X)\\in D_{q,\\varepsilon}$ over $F_p$, all their buffered quantile constraints are equalities, as is the displayed full tangent.\n\nFor a nested compatible smaller family on the same positive sampled bases, with updated buffer $f_t\\le f$ on its canonical hull $C_t$, the old fixed cap thresholds give the upper bound $b_{\\varepsilon,t}\\le q$ on the part of $C_t$ over $F_p$.",
+  "subgoal_id": "pk-intake-fixed-deepest-base-face-buffered-cap-cover",
+  "title": "A fixed actual cap group covers its deepest-base face"
+}

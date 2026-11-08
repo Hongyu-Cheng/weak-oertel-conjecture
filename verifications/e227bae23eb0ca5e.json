@@ -1,0 +1,51 @@
+{
+  "candidate_id": "c46af73e6a927eff",
+  "candidate_sha256": "4c35748c63c6040f503afe3b8888c75ca43e34f6e41803f218d14c99a4c5acdb",
+  "checked_dependency_candidate_sha256": {
+    "636ab2c480ef41f7": "779482ca0294a7dfc81e6a17c364c7bd1db96907bc856a7a71b770fc32d59b1f"
+  },
+  "checks": [
+    "Checked the original general graph and global affine-majorant contact clauses in e40a05fd5546debc §§3–4. The draft uses neither fixed mass nor strict interpolation of moment sections.",
+    "An equal ball argument in all source ellipsoids proves containment of the ellipsoid with averaged center and averaged positive definite shape in the target section.",
+    "Conjugation by A^{-1/2} reduces the two-shape determinant inequality to the product expansion in the positive eigenvalues. The mean over degree-r products is at least the geometric mean of those products, equal to the determinant ratio to power r/d. Degree one is strict for nonconstant eigenvalues in d≥2; all positive scalar shapes are proportional in d=1.",
+    "For a finite positive mixture, applying the two-shape bound inductively gives strictness if any pair differs by more than proportional scaling. Equal maximal determinants force equal shapes. At affine-majorant contacts linearity produces the exact upper bound at the integer average, so only proportionality is required.",
+    "The averaged ellipsoid has the target's maximal volume, so general John uniqueness identifies its center and shape. Every integer point in the lifted center graph comes from a convex average, giving precisely the stated singleton sections."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "636ab2c480ef41f7",
+      "candidate_sha256": "779482ca0294a7dfc81e6a17c364c7bd1db96907bc856a7a71b770fc32d59b1f",
+      "fact_sha256": "fc6e2e74c25abcb380cebce7759055afb2c9a0ef5859f8c6c407c0b183bc2060",
+      "hypotheses": "Its proof establishes ellipsoid existence and uniqueness for any compact convex set with interior, using log-determinant for shapes and a larger ellipsoid in B_d+[-v,v] to exclude different centers. Each source and target section invoked here has a positive-volume ellipsoid.",
+      "reviewed_proof_sha256": "f3695422f446feff8c9f47515984ad20a9b1c1f0036f310335f1cd209f0077f2",
+      "reviewed_statement_sha256": "762c59f873c775814b86ec05cbde1d1ac3d1ac4f8539763b9ec77f556058aef2"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:29:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The raw-moment optimizer bases have a stronger integer-free property by strict interpolation in a special moment graph. It gives no equality analysis for arbitrary compact convex graphs or for general positive affine-majorant contacts.",
+      "fact_id": "849dcd8e5c008d21"
+    },
+    {
+      "comparison": "Contains the general existence and uniqueness proof for a single compact convex body, but no integer graph or averaged-shape rigidity.",
+      "fact_id": "636ab2c480ef41f7"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, exact original-source and predecessor comparison, and exact arithmetic replay for numerical certificates.",
+  "reviewed_proof_sha256": "50d03e424f74bf50db26d47884852fc5b8755901dd27b386849a7b71dc16ec48",
+  "reviewed_statement_sha256": "b614336de9f0b6ffe7069f900c4ff76e3127e13c0b854cddb31359d1a860a861",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:25:49Z",
+  "summary": "For an arbitrary compact convex graph the interpolated ellipsoid attains equality at every permitted integer average, yielding the claimed singleton center graph.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

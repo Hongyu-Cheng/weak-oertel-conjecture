@@ -1,0 +1,26 @@
+{
+  "advances": "An exact finite packing restriction and its simultaneous original cap guarantee. The restricted tuple set can be smaller than all physical convex-hull groups, and the dual does not model an active boundary cap menu.",
+  "author": "PK-research-agent",
+  "candidate_id": "f25015adbdd1f87b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:11.341270+00:00",
+  "depends_on": [],
+  "draft_key": "deterministic-barycenter-original-cap-packing-dual",
+  "kind": "theorem",
+  "proof": "Write the halfspace as the region of nonnegative affine margin. The $\\lambda_j$-average of the lifted tuple's margins equals the margin of $Y$, which is nonnegative. Therefore at least one tuple member lies in $H$. The sum of its profile values is at least one, and integrating a probability coupling gives the marginal assertion. For distinct original fibers their raw contributions sum to $\\sum_j V_j\\mu_j(H_{z_j})\\ge(\\min_jV_j)\\sum_j\\mu_j(H_{z_j})$, which gives the literal cap lower bound by choosing indicators. The same argument applies to the stated nonnegative profiles.\n\nFor the finitely supported sources, multiply the pointwise capture inequality by each feasible $\\gamma_e$ and sum over tuples. The resulting charged marginal contributions are at most the original mass captured, because $\\sum_e m_{ae}\\gamma_e\\le w_a$ at each atom. The objective is thus a simultaneous quota for the same original measures, even for overlapping tuples. Every tuple is nonempty, so $\\sum_e\\gamma_e\\le\\sum_aw_a$, and the primal feasible polytope is nonempty and compact. The nonnegative covering variables and the displayed constraints are exactly the finite linear programming dual; strong duality gives equality and attainment. If there are no tuples both values are zero. For continuous tuple measures integrate the same pointwise inequality and sum over the finite family. The assumed measure domination bounds the integrated marginals by the original capture. No approximation of exact barycenter equalities by an atomic packing is needed.\n",
+  "source_candidate_ids": [
+    "aadf3a80572ef300"
+  ],
+  "source_candidate_sha256": {
+    "aadf3a80572ef300": "ba39f9fd0bfe341eff99b27d97dbad67e204eee7b1cb23e22b3cbe2d17d89fac"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "aadf3a80572ef300",
+      "locator": "aadf3a80572ef300:02 Proof §2, (4)–(6) and continuous lower-bound paragraph"
+    }
+  ],
+  "statement": "Fix a physical point $Y=(p,y)$ and a finite collection of tuple types, each with positive coefficients $\\lambda_j$ summing to one and fixed bases satisfying $\\sum_j\\lambda_jz_j=p$. A tuple of type $(z_j,\\lambda_j)_j$ is admissible if $\\sum_j\\lambda_jx_j=y$. Suppose the prescribed probability laws at the distinct bases of one type have an admissible coupling. For every containing closed halfspace $H$ and every nonnegative Borel profile $\\Psi_H$ that equals one on $H$, the sum of the marginal profile integrals is at least one. For uniform laws on distinct original fibers of volumes $V_j>0$, the original raw cap credit on their union is at least $\\min_j V_j$, including every base tilt.\n\nFor finitely supported atomic source measures, index the atoms by $a$ and let $w_a\\ge0$ be their masses. Let $e$ run over all admissible atomic tuples of the given types, and let $m_{ae}$ count occurrences of atom $a$ in $e$. A simultaneous lower bound on every original containing cap is the exact packing optimum\n$$\n\\max_{\\gamma\\ge0}\\left\\lbrace \\sum_e\\gamma_e:\\ \\sum_e m_{ae}\\gamma_e\\le w_a\\text{ for all }a\\right\\rbrace\n=\\min_{f\\ge0}\\left\\lbrace \\sum_a w_a f_a:\\ \\sum_a m_{ae} f_a\\ge1\\text{ for all }e\\right\\rbrace .\n$$\nThe same lower-bound principle holds for any finite family of finite measures on admissible continuous tuple sets, if the summed use of each original source measure, with multiplicities, is dominated by that source measure.",
+  "subgoal_id": "pk-intake-deterministic-barycenter-original-cap-packing-dual",
+  "title": "Exact packing and covering dual for deterministic barycenter cap credit"
+}

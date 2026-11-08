@@ -1,0 +1,53 @@
+{
+  "candidate_id": "19dd15c9bce38f93",
+  "candidate_sha256": "5e32e9eec1a06fd4089efc3ea5b0517f07a6252ae9cc9ccece5276012a35e079",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The gamma–beta change of variables factors as the Gamma(m+1,1) density times m(1−u)^(m−1). Independence of the other two phases then gives independence of U and Z. The event is Z+(p+b)U≥b, and its beta survival changes branches at z=−p and z=b.",
+    "Evaluated the convolution for W on either side of zero and the gamma moments of T. They give both displayed density branches for Z, with common value (m+1)/4 at zero. The moving upper endpoint cancels the derivative of the tail, the lower endpoint contributes zero, and direct differentiation gives 1−(m+1)z in the numerator.",
+    "Independently reduced both Jacobian substitutions by exact symbolic rational arithmetic. For the positive branch, z=(t−p)/(1−t) gives dz/dt=(1−p)/(1−t)^2 and 1+(2m+5)z=[1−(2m+5)p+(2m+4)t]/(1−t). The t endpoints are p and (1+(m+1)p)/(m+1+p), with p<t_*<1 when 0<p<1.",
+    "Expanded the transformed product to integrate t^(m−1) times a quadratic. Exact symbolic cancellation verified the negative integral, Q(t_*), and the Q(p) combination. The remaining contributions have powers p^(m+2) and t_*^(m+2). Substituting t_* and clearing the positive common denominator gives L with exponent r+1=m+2.",
+    "For r=m+1≥3, D>0 and A increases from −r at zero to 4r+4 at one, so L is positive through the unique root α of A. For p>α all factors cleared in the comparison to R−1 and the logarithmic derivative are positive.",
+    "Recomputed the exact numerator of the logarithmic derivative as (p−1)^2 K_r(p) and independently expanded the three high-order coefficients at r=3+s. Their strict positivity and the two strictly negative low-order coefficients give one sign change regardless of the middle coefficient. The opposite limiting signs and Descartes' rule give a unique simple positive zero c.",
+    "Reduced the cleared identity modulo A to verify the evaluation at α and hence c>α. The isolated derivative zero at p=1 preserves strict monotonicity away from c. As a further exact check, K_r(1)=2(r−3)(r+1)^2(7r−1), so c=1 for m=2 and α<c<1 for m≥3. The limit R(α+)=+∞ and the value R(1)=1 give either strict increase of P_m or strict increase followed by strict decrease.",
+    "Coupling through p=0 and p=1 makes the signed variable continuous in p. Conditioning away from E_0 gives zero probability of a tie at each fixed p, even at p=0 with an inactive E_+ or at m=2,p=1 with b=1. Bounded convergence transfers the monotonic comparison to both endpoints, and strict monotonicity on the relevant branches rules out interior equality.",
+    "An independent endpoint check using the gamma survival functions and the negative-side Laplace transforms gave P_m(0)=m^m(5m+3)/(4(m+1)^(m+1)) and P_m(1)=m^m(27m^2+60m+28)/(8(m+2)^(m+2)). A tie would force (m+1)^(m+1) to divide 2(5m+3) by coprimality with m+2. The divisor is larger, since (m+1)^3−2(5m+3) is positive for m≥2. Thus equality in the stated bound occurs at the unique smaller endpoint.",
+    "Checked source ea3c1d3cbe80cfbc, repaired theorem (1) and §§1–3, (2)–(7), at the pinned checkout. Its SHA-256 is 63eaa2e9f9f09925c4f50a32016f5131674075720dcdeb1266e59f9b3d18fb9f. Both referenced archive verifiers passed, including the two direct phase-type derivative identities in the symbolic verifier. The frozen statement claims the source's endpoint comparison only."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T09:32:48.555746Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its k=2 fractional path with m≥2 has the same coefficient relation in the interior. It excludes stationary minima when p≤b, leaving p>b open. The frozen candidate compares the entire path to its fixed-m endpoints.",
+      "fact_id": "18d3a5cf0b729f6d"
+    },
+    {
+      "comparison": "The saturated fixed-count quantities A_{2,m} and A_{3,m} are the two endpoints. Its hypotheses concern a gamma positive block and do not cover the fractional interior.",
+      "fact_id": "3f633c7a06ebe428"
+    },
+    {
+      "comparison": "Its k=2 specialization covers the same family and gives the limit as m→∞. It gives no fixed-m comparison of interior and endpoint values.",
+      "fact_id": "f4bc58c878c5d61a"
+    },
+    {
+      "comparison": "The capped sign reduction combined with 870ad0085472647d implies the uniform floor above 9/20 for this coefficient pattern. The floor does not imply comparison to the two actual endpoint probabilities.",
+      "fact_id": "65d374efd09b8c3d"
+    }
+  ],
+  "readability": "The positive-branch numerator and the removable denominator at p=1 were the main points to check. The displayed inverse substitution supplies the former, and the endpoint coupling supplies the latter.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ca5b7506f76b3fac23355ba9bd09213f9f975b601a28e62a58907345caacf9c1",
+  "reviewed_statement_sha256": "f67076af4917b8601e190fe107968e1648614b4cef6321d2daee556fdc244060",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:29:15.139000Z",
+  "summary": "The corrected substitutions and symbolic quintic prove fixed-m endpoint minimality for every integer m≥2 on the full closed interval. The proof has no graph premises.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

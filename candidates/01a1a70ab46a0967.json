@@ -1,0 +1,29 @@
+{
+  "advances": "Exact ordinary planar frontier for the specified two-loss branch. The cap ceiling is a separate condition if required by an application.",
+  "author": "PK-research-agent",
+  "candidate_id": "01a1a70ab46a0967",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:16:52.937298+00:00",
+  "depends_on": [
+    "212f957189de9062",
+    "cc5768d4e9bc27ab"
+  ],
+  "draft_key": "two-corner-one-double-edge-exact-frontier",
+  "kind": "theorem",
+  "proof": "The unchanged third block rules out its two incident gains by the reciprocal sector-change lemma and remains a decoupled rank-one block. For each changed block $C_k=L_{T,k}+\\ell_k\\mathbf1\\mathbf1^{\\mathsf T}$, its determinant is $\\lambda_k\\ell_k(\\alpha_k+\\beta_k)^2=\\lambda_k\\ell_k>0$, and it is positive definite. At the first node its inverse diagonal is $(\\lambda_k\\alpha_k^2+\\ell_k)/(\\lambda_k\\ell_k)=\\alpha_k^2/\\ell_k+1/\\lambda_k$, and the analogous entry at the second node uses $\\beta_k$. The four changed nodes have matrix $C-g aa^{\\mathsf T}$ with $C=\\operatorname{diag}(C_i,C_j)$ and $a$ indicating the two incident nodes. Conjugation by $C^{-1/2}$ shows it is PSD exactly when $g\\,a^{\\mathsf T}C^{-1}a\\le1$. The inverse diagonals give the bracket, and the reciprocal sector-change lemma turns this condition into actual realization. Finite area is equivalent to $g<1/(2Y^T)$, and solving the reciprocal definition gives the stated maximum or lack of additional bound.\n\nAt finite equality the conjugated matrix on the four changed nodes has exactly one zero eigenvalue and three unit eigenvalues. With the unchanged rank-one block, the full rank is four. The two double edges touching the unchanged corner are cores. A realization exists by the PSD criterion already used, so cc5768d4e9bc27ab applies to these same rays and areas and gives a polygon with exactly four vertices. The block calculation does not require the changed unique sectors to remain strictly above their cores.\n",
+  "source_candidate_ids": [
+    "29c2230b74378948"
+  ],
+  "source_candidate_sha256": {
+    "29c2230b74378948": "e6ef8faeffcbe53a2a223db6d9416c33b26380e75add8a1a7367235e49c59397"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "29c2230b74378948",
+      "locator": "29c2230b74378948:02 Proof §3, (5)–(7), reciprocal Schur-complement frontier and equality reconstruction"
+    }
+  ],
+  "statement": "In the fixed-ray setting of the reciprocal sector-change lemma, assume exactly two positive unique reciprocal losses $\\ell_i,\\ell_j$. All double gains other than the one on their common edge must vanish. For proposed areas satisfying the same positive finite area and core bounds and with those other gains zero, let $g$ denote the remaining gain, let $\\theta_i,\\theta_j$ be the positive entries of the corresponding triangle kernels at its two endpoints, and let $\\lambda_i,\\lambda_j$ be their block scales. The data are realizable if and only if\n$$\ng\\left(\\frac{\\theta_i^2}{\\ell_i}+\\frac{\\theta_j^2}{\\ell_j}+\\frac1{\\lambda_i}+\\frac1{\\lambda_j}\\right)\\le1.\n$$\nWrite $g_*$ for the reciprocal of the bracket and $Y^T$ for this double sector's original area. When $g_*<1/(2Y^T)$, the maximum finite double area is $Y^T/(1-2Y^Tg_*)$. When $g_*\\ge1/(2Y^T)$, this frontier imposes no further finite upper bound. At finite equality the matrix has rank four and there is an exact quadrilateral realization.",
+  "subgoal_id": "pk-intake-two-corner-one-double-edge-exact-frontier",
+  "title": "Exact fixed-ray area frontier for two corner losses and their double gain"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "An exact normalized all-direction depth formula along the vertical axis on the specified interval, not a claim about tilted off-axis marks.",
+  "author": "PK-research-agent",
+  "candidate_id": "92d4826a487fc79b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:17:06.633871+00:00",
+  "depends_on": [
+    "37a18dc30993f7b0"
+  ],
+  "draft_key": "triangle-frustum-exact-vertical-depth-germ",
+  "kind": "lemma",
+  "proof": "Use the triangle scaling, height law, and exterior gap from triangle-frustum-actual-depth-and-active-menu. Moving the mark from $t_*$ to $t_0$ changes each cap fraction by at most $6|h|$. For $n\\ne0$ and $|\\beta|\\le4$ condition on $t$: the density of $r(t)n\\cdot X$ is at most $2/[3r(t)]\\le4/3$, and the threshold moves by $|\\beta h|$. If $|\\beta|\\ge4$, condition on $X$: the height coefficient is $\\beta+\\varepsilon n\\cdot X$ with magnitude at least $|\\beta|-2\\ge|\\beta|/2$, since $\\varepsilon\\le1/2$ and $|n\\cdot X|\\le4$. The height density is at most $9/8$, so the interval moved has probability at most $(9/4)|h|$. Pure vertical caps have the same bound by directly moving the height threshold. Thus every exterior direction remains above $\\gamma+g_0/2$.\n\nInside the local region, $|h|<1/48$ gives physical threshold magnitude at most $(1+1/6+1/48)/4<3/8$, preserving the slice incidence. The exact numerator of the local fraction is $4I_2-8\\beta h+2\\beta^2(1/3+t_0^2)$, since $\\int_{-1}^1r(t)(t-t_0)dt=-2h$ and $\\int_{-1}^1(t-t_0)^2dt=2(1/3+t_0^2)$. The denominator is $(9-s^2)I_2$. The numerator is positive, so minimize by $s=0$ and then by completing the square in $\\beta$. The resulting $\\beta$ has magnitude at most $6|h|<1/4$. The displayed value is at most $\\gamma$, hence it is the global cap minimum by the exterior gap.\n",
+  "source_candidate_ids": [
+    "29c345ef7c2b94ab"
+  ],
+  "source_candidate_sha256": {
+    "29c345ef7c2b94ab": "5aed09c61efe2845555dc0b002f1f3c626c90b945174c68297376bdad5412bf8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "29c345ef7c2b94ab",
+      "locator": "29c345ef7c2b94ab:03 §5, (16), exact depth on a vertical interval"
+    }
+  ],
+  "statement": "Use $T=\\operatorname{conv}\\lbrace(2,-1),(-1,2),(-1,-1)\\rbrace$, $K_\\varepsilon=\\lbrace(x,t):|t|\\le1,\\ x\\in(1+\\varepsilon t)T\\rbrace$ with $0<\\varepsilon\\le10^{-9}$, and $t_*=\\varepsilon/3$. Put $g_0=1/19{,}876{,}428-8\\cdot10^{-9}$. If $t_0=t_*+h$ and $|h|<\\min(1/48,g_0/12)$, the normalized ordinary depth at $(0,t_0)$ is\n$$\n\\frac49-\\frac{4h^2}{9(1+\\varepsilon^2/3)(1/3+t_0^2)}.\n$$\nIt is realized at any of the three canonical horizontal normals with vertical coefficient $\\beta=2h/(1/3+t_0^2)$ in the same scaled normal units.",
+  "subgoal_id": "pk-intake-triangle-frustum-exact-vertical-depth-germ",
+  "title": "Exact vertical depth loss near the deepest point of the triangle frustum"
+}

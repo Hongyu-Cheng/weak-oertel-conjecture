@@ -1,0 +1,28 @@
+{
+  "advances": "This proves covariance of the normalized parameter and the actual covariance-buffered caps under the common continuous affine maps and base-dependent continuous shears.",
+  "author": "PK-research-agent",
+  "candidate_id": "7c4c9bc125f16261",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.935553+00:00",
+  "depends_on": [
+    "d90ba05577427854"
+  ],
+  "draft_key": "negative-power-full-affine-buffer-covariance",
+  "kind": "lemma",
+  "proof": "The map preserves the sample bases and transports each fiber by the same linear map followed by a translation. Thus it transports the canonical hull and multiplies all fiber volumes and $M$ by $|\\det A|$. The resulting normalized mixed probability measure is its pushforward. The transported scalar $L$ is affine, positive on the new hull and has the same inverse-power mean. The energy covariance law in d90ba05577427854 applies on each fiber interior and extends to boundary marks by the zero convention. It scales the energy by the same determinant, so $f_L$ agrees. The transported fiber centroid is $g'_z=Ag_z+Bz+c$, so $u'\\cdot(X'-g'_z)=u\\cdot(X-g_z)$ and the normalized integrals defining $G_K$ agree. For a nonvertical cap through $(p,y)$, its margin $\\alpha\\cdot(z-p)+u\\cdot(X-y)$ is preserved by taking $\\alpha'=\\alpha-B^{\\mathsf T}u'$ and the new continuous covector $u'$. This correspondence is bijective, and pure-base caps are fixed because $z$ is fixed. The cap displacement and normalized measure are preserved.\n",
+  "source_candidate_ids": [
+    "5a3c8a5af6aaf266"
+  ],
+  "source_candidate_sha256": {
+    "5a3c8a5af6aaf266": "ff6139d8ce0a0baa8446205623f659276ca909d5fa261de7009453c9a888cfe0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5a3c8a5af6aaf266",
+      "locator": "5a3c8a5af6aaf266:1 §1, (1)–(2), affine covariance"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $N=d+1$ and $r\\ge d$. Let $P$ be a finite complete canonical lattice base with positive compatible convex $d$-fibers $K_z$. Put $S=\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$, $C=\\operatorname{conv}S$, $M=\\sum_z|K_z|$ and let $\\langle\\cdot\\rangle$ be integration against the mixed probability measure on $S$ with density $1/M$ on each fiber. Take $L$ affine on $\\operatorname{aff}P\\times\\mathbb R^d$, positive on $C$, and normalized by $\\langle L^{-r}\\rangle=1$. Write $g_z$ for the centroid of $K_z$, $E_{K_z}(y)$ for marked projective energy extended by zero to the boundary, and put\n$$\nf_L(z,y)=\\left(\\frac{L(z,y)E_{K_z}(y)}{M}\\right)^{1/N},\\qquad\nG_K(u)^2=\\frac1M\\sum_z\\int_{K_z}[u\\cdot(X-g_z)]^2\\,dX.\n$$\nUnder any map $(z,X)\\mapsto(z,AX+Bz+c)$ with invertible $A$, transport $L$ by composition with the inverse map. Then positivity and inverse-power normalization are preserved, $f_L$ agrees at corresponding marks and $G_K$ agrees at corresponding continuous covectors $u'=A^{-\\mathsf T}u$. The shifted caps using displacement $\\varepsilon f_LG_K$ correspond exactly and have the same normalized mass, as do pure-base caps.",
+  "subgoal_id": "pk-intake-negative-power-full-affine-buffer-covariance",
+  "title": "Affine covariance of negative-power full-space buffers"
+}

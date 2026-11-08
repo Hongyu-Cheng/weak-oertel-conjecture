@@ -1,0 +1,26 @@
+{
+  "advances": "A continuous polynomial interpolation statement for each fixed residue and only the three specified exponents.",
+  "author": "PK-research-agent",
+  "candidate_id": "11ed226bd6e6cbe9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.096502+00:00",
+  "depends_on": [],
+  "draft_key": "fixed-residue-low-degree-sampled-tail-interpolants",
+  "kind": "lemma",
+  "proof": "For each $d$, substitution gives $P_d(\\rho)=\\rho^d$, and expanding the displayed formulas gives $P_d(q+1)-P_d(q)=(q+1)^d$. Induction proves the sampled identity. Each polynomial is strictly increasing for $q>0$ by differentiating in $x=q+1/2>1/2$. It is therefore positive on $q\\ge\\rho>0$, and on $q>0$ when $\\rho=0$.\n\nFor a positive polynomial $P$, the sign of $(P^{1/(d+1)})''$ is the sign of $PP''-\\frac{d}{d+1}(P')^2$. Positive constant factors in $P$ do not affect the sign. For $d=1$, write $c_1=(\\rho-1/2)^2$. Taking $P=x^2-c_1$ gives $-2c_1\\le0$. For $d=2$, $c=\\rho(\\rho-1/2)(\\rho-1)$ has $|c|\\le1/(12\\sqrt3)$, by evaluating the endpoints and the stationary points $\\rho=(1\\pm1/\\sqrt3)/2$. Taking $P=x^3-x/4-c$ gives\n$$\n-\\frac{x^2}{2}-6cx-\\frac1{24}\n=-\\frac{(x+6c)^2}{2}+18c^2-\\frac1{24}\\le0.\n$$\nFor $d=3$ write $c_3=1/16-\\rho^2(1-\\rho)^2$, so $0\\le c_3\\le1/16$. Taking $P=x^4-x^2/2+c_3$ gives\n$$\n(12x^2-1)c_3-x^4-x^2/4\n\\ \\le\\ \\frac{12x^2-1}{16}-x^4-x^2/4\n=-(x^2-1/4)^2\\le0\n$$\nsince $x\\ge1/2$. The second derivative tests prove concavity wherever the polynomials are positive. The limiting value at the zero endpoint extends concavity there by continuity.\n",
+  "source_candidate_ids": [
+    "5dfdef886fd3ea86"
+  ],
+  "source_candidate_sha256": {
+    "5dfdef886fd3ea86": "2a56c875d775aa3d08a0513b516093bb90d11f4a1012d65a4b952842784418ca"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5dfdef886fd3ea86",
+      "locator": "§2, fixed-fraction polynomials and their second derivatives"
+    }
+  ],
+  "statement": "Fix $d\\in\\{1,2,3\\}$ and $0\\le\\rho<1$, and write $x=q+1/2$. Define\n$$\n\\begin{aligned}\nP_1(q)&=\\tfrac12\\bigl(x^2-(\\rho-\\tfrac12)^2\\bigr),\\\\\nP_2(q)&=\\tfrac13\\bigl(x^3-x/4-c\\bigr),\\qquad c=\\rho^3-\\tfrac32\\rho^2+\\tfrac12\\rho,\\\\\nP_3(q)&=\\tfrac14\\bigl(x^4-x^2/2+1/16-\\rho^2(1-\\rho)^2\\bigr).\n\\end{aligned}\n$$\nFor every integer $m\\ge0$, $P_d(\\rho+m)=\\sum_{j\\ge0}(\\rho+m-j)_+^d$. For each fixed $\\rho$, the real-variable interpolant $P_d(q)^{1/(d+1)}$ is concave on $q\\ge\\rho$, including the continuous value zero at $q=0$ for $\\rho=0$.",
+  "subgoal_id": "pk-intake-fixed-residue-low-degree-sampled-tail-interpolants",
+  "title": "Concave fixed-residue interpolants for low-degree sampled tails"
+}

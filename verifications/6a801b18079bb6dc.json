@@ -1,0 +1,52 @@
+{
+  "candidate_id": "ccdec63f3d30d475",
+  "candidate_sha256": "34753d5ea943b65217f0757fc0ecdbf92c83b8b7d58599109dc83b2e451c9a1c",
+  "checked_dependency_candidate_sha256": {
+    "4e868f774de77608": "c20e69f71cfbaaac0ad0ad0b9d5de36166ee2609080d8f18008ec3696754bbb8"
+  },
+  "checks": [
+    "Apply the depth-root result to [0,1]×K with base dimension one and take any fixed base slice. Its raw ordinary depth on that slice is δ_K. The roof is nonnegative, bounded, concave and upper semicontinuous; thus its hypograph is compact and convex. An interior ball gives a uniform positive cap-volume lower bound over a smaller ball, so the lifted body has interior.",
+    "At an original boundary point a supporting hyperplane exists for the compact convex body. Its outward containing halfspace captures only the face in that hyperplane, of zero d-volume. Nonnegativity forces depth zero there. The graph image is exactly the rim and lies on the lifted boundary because r≥0.",
+    "The homothetic image about an interior point with factor 1−ε lies in int K by the interior-ball convex combination. Hence the volume of ∂K is at most [1−(1−ε)^d]|K| and is zero as ε decreases to zero. The isometric rim copy in the d-plane at height zero has zero H_d measure. The pushforward is concentrated there and is therefore singular.",
+    "For d=1 the roof is the tent of the nearer endpoint distance, its hypograph is a triangle, and its two rim points are vertices of zero H_1 measure. The proof applies independently to every interval of the example.",
+    "Checked source 059d029e30e0be30:05 §4, first two paragraphs. Its original H_(d−1) surface-stress case is covered by the stated arbitrary finite positive boundary measure."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "4e868f774de77608",
+      "candidate_sha256": "c20e69f71cfbaaac0ad0ad0b9d5de36166ee2609080d8f18008ec3696754bbb8",
+      "fact_sha256": "935cb537633be894947e0be1cc465c259ce4f5c0232f70d0423d6409b79f10b7",
+      "mapping": "Use its positive-base-dimension hypothesis with C=[0,1]×K and n=1. Every slice is K, so the fixed-slice absolute depth function and exponent agree with δ_K^(1/d). The proof uses its concavity and upper semicontinuity.",
+      "reviewed_proof_sha256": "75a46a3aabd25edd4cb6492e7c2a1c7d4d9780e0d5ef12461c418d0ddf6bedc1",
+      "reviewed_statement_sha256": "7af387e709fe460182f5f72ed88461db9d7b571218bf5bccfefa823504762050",
+      "status": "accepted at pinned graph"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:14:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies depth-root regularity but not the dimension and singular-pushforward conclusion.",
+      "fact_id": "4e868f774de77608"
+    },
+    {
+      "comparison": "Its lift projects out the original fiber variable and assigns a weighted depth-coordinate measure. It does not concern a graph pushforward of ordinary boundary measure.",
+      "fact_id": "4bd2e6d22487dfef"
+    }
+  ],
+  "readability": "The zero lifted boundary length refers to H_1 mass of the rim, while the pushforward of original endpoint atoms remains a nonzero singular measure.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "35778e6decbc7287dde01586e959d695ddf45b8185e02c8ce831db62b8f0c569",
+  "reviewed_statement_sha256": "41b884372ae0ecec0956af48cbca05014acf97cbd5087f1c29011834a72910e3",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:11:11Z",
+  "summary": "The graph sends every original boundary point to height zero. The resulting closed rim has zero ambient d-dimensional surface measure, so every nonzero finite positive original boundary measure pushes forward singularly.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

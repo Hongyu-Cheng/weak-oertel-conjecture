@@ -1,0 +1,62 @@
+{
+  "candidate_id": "b3c0088cf09b2894",
+  "candidate_sha256": "95733c6d03501de28c8a03360b0d951a008f5d2683daef0b0e9bacecfc23b0d5",
+  "checked_dependency_candidate_sha256": {
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "At a positive support gap δ, the tested denominator has affine coefficient −u/(2δ), value one at the mark, and minimum at least 1/2 on the body. Setting t=h_A(u)−u·x converts its integral by unit-normal slicing to the stated bound. The substitution s=1+t/δ gives exactly 2^(d+1) L δ ∫₁^∞ s^(−d−1) ds = 2^(d+1)Lδ/d.",
+    "At a boundary mark, h_A(u)=u·v so 1+s(h_A(u)−u·x) is an admissible denominator with affine coefficient −su. Its inverse power is bounded by one and converges to zero except on the supporting hyperplane, which has zero d-volume even if the supporting face is a facet. The objective is nonnegative, so the infimum is zero.",
+    "At a limiting boundary mark choose one supporting direction for K and keep it fixed. Hausdorff convergence controls h_{K_j}(u) and mark convergence controls u·y_j, so the nonnegative support gaps tend to zero. A common ball supplies a uniform section bound; in d=1 each level section is empty or one point of zero-dimensional mass one. Zero gaps use the boundary case.",
+    "The translated Hausdorff distance satisfies η_j≤d_H(K_j,K)+‖y_j−y‖. Since h_{K−y}≥r in all unit directions, the additive η_j support error implies the two multiplicative support inequalities. For η_j<r the inner homothet contains a positive centered ball, so the origin is interior in every body used in the scaling and monotonicity squeeze.",
+    "The frozen source digest matches b096cc2ab4c584d9. Its §1 paragraph before (2) asserts the same joint marked continuity, with a retained-volume boundary argument. The frozen proof supplies the explicit support-gap estimate and replaces that argument with a direct admissible test. The bodies and limits remain full-dimensional."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d90ba05577427854",
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "hypotheses": "Accepted. Apply affine covariance to translation and multiplication by each positive 1±η_j/r and apply inclusion monotonicity at the common interior mark 0. The boundary argument uses no interior-optimizer assumption.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:22:11Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The same energy at interior marks, including affine covariance and inclusion monotonicity. These give the interior squeeze, while the accepted conclusion does not evaluate the same infimum on the boundary or state joint Hausdorff continuity through boundary marks.",
+      "fact_id": "d90ba05577427854"
+    },
+    {
+      "comparison": "Proves local Lipschitz control for interior marks of nearby canonical fibers and uses an interior marked-inball comparison in its proof. Its hypotheses do not cover arbitrary positive Hausdorff sequences at boundary marks.",
+      "fact_id": "d7ff9f9aad2b6512"
+    },
+    {
+      "comparison": "Joint concavity yields fixed-body interior continuity, while its domain requires interior marks and its assertion does not give the boundary infimum or the quantitative support-gap estimate.",
+      "fact_id": "5aeb5916857f97a9"
+    },
+    {
+      "comparison": "Gives an interior energy-to-retained-volume bound and explicit interval and simplex energies. It covers special cases of boundary limits through the formulas, while the result here treats arbitrary bodies and moving marks.",
+      "fact_id": "efa4558174ce60cf"
+    }
+  ],
+  "readability": "The statement uses the usual full-dimensional meaning of convex body. In the support-gap clause, the unit normal can be any unit slicing direction.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3af5bfa3266b56011e1cec33a0b3b51f2135f23ca7ab46999a7d94935ed90ec5",
+  "reviewed_statement_sha256": "bbbcf14f109b39cff0dcba5e719ed2026e2b24a3c0b8c3a20f9289d5e1a63596",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "b096cc2ab4c584d9": "5d218047a024e1d522b71c97a4b29f6ff4e2b2e46745c6efb03ba8002224d2ae"
+  },
+  "started_utc": "2026-11-08T11:18:42Z",
+  "summary": "The infimum is jointly continuous at all marks of positive limiting bodies. The direct support-gap test supplies the claimed linear upper bound and gives the boundary value independently of any interior optimizer.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

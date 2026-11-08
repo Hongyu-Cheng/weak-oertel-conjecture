@@ -1,0 +1,60 @@
+{
+  "candidate_id": "f876ac74ec5d116c",
+  "candidate_sha256": "bebd3870b298f48b90f217f061c72433d4a1b4a53a693fac3924626e95612230",
+  "checked_dependency_candidate_sha256": {
+    "2acc8bc803acf1c0": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232",
+    "c3835529a10c63ef": "1e99b384e4af419556f141227de46be304f40b1ad44cdc34df807e16e6b2dfaa"
+  },
+  "checks": [
+    "The two actual fibers are the extreme-base triangles, each of area 1/2. Strict exposing tilts isolate either positive fiber, and pointwise ambient depth equals its intrinsic depth including at boundary marks.",
+    "The Minkowski sum polygon has axis endpoints L+1/L and the corner (L,L). Its other vertex sums lie on axis or diagonal segments. The shoelace area is L(L+1/L), including the collinear vertex at L=1.",
+    "The centroid vertex caps are proper homothetic copies of ratio 2/3. A finite exposing base tilt strictly misses the other triangle. Their cap masses are 2/9.",
+    "The original edge normal receives length 2/3 of its total from each of the two incident caps. Multipliers 3/4 reproduce each original normal measure. Full cap area measures give a distinct aggregate scaling 3/2, hence area (9/4)(L²+1), although the weighted sum of cap areas is one.",
+    "Original 4b6ce6cf06c8f669 §2, (2)–(3), gives this exact indexed pair, not the same-body higher-dimensional containment examples."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232",
+      "fact_id": "2acc8bc803acf1c0",
+      "fact_sha256": "d723a90d8b085a401f611b136903b3e751c05bbebed3219fd24588e89ed96ce4",
+      "hypotheses": "Both positive bases are strictly exposed and each fiber is a positive triangle. Apply pointwise identity (7) and ordinary simplex maximum (12) to get raw mixed maximum 2/9.",
+      "reviewed_proof_sha256": "985b3dbdcc98c63b1ba63f236c11170d9714cc5a6cdba6af26568d2f9e370fcf",
+      "reviewed_statement_sha256": "8222b1c3268f5a4fb65d04c6e4e448ab1a57a3a2e33b9855b7c92748ff4b2dfa"
+    },
+    {
+      "candidate_sha256": "1e99b384e4af419556f141227de46be304f40b1ad44cdc34df807e16e6b2dfaa",
+      "fact_id": "c3835529a10c63ef",
+      "fact_sha256": "6cca7f287b57f6b3c879a9e951ce72b2c78ca212ff83184be0e72eb02cb89679",
+      "hypotheses": "The planar support distribution h''+h is additive and equality determines a translate, so the Blaschke reconstruction of the summed planar measures is the Minkowski sum. The proof uses this identity directly and does not substitute the non-probability cap multipliers into the predecessor's probability-law theorem.",
+      "reviewed_proof_sha256": "e8b2e70ffa12f0f4397bcf97ef6585e613ce5687157b8d928542155d3c91551f",
+      "reviewed_statement_sha256": "60251148280faeb01e09c94d76cdef5d55eb6089b3302f80d5e1ef013d665d45"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:01:48Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies exposed-fiber and simplex depth but no aggregate-volume statement.",
+      "fact_id": "2acc8bc803acf1c0"
+    },
+    {
+      "comparison": "Supplies planar normal-measure additivity and bounded same-plane section containment. Its three-fiber midpoint example has different fiber incidence and bounded aggregate-to-mixed area ratio; it does not cover the unbounded two-exposed-fiber construction.",
+      "fact_id": "c3835529a10c63ef"
+    }
+  ],
+  "readability": "The old and full cap measures are kept separate. The old measure identity is equality after taking the normal marginal, not an assertion of pointwise selector equality.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, exact arithmetic where applicable, and pinned source/dependency comparison",
+  "reviewed_proof_sha256": "d5cbbb6c25fd53e626f24e9b3018946d0d8632f482fc77e3804dcf307d395f19",
+  "reviewed_statement_sha256": "097514ecf15be0b119eea6a4122f66e36fd4764e18f9eac660237b46c9a53f73",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:56:22Z",
+  "summary": "The two-triangle construction gives exact sharp mixed depth and unbounded planar aggregate area.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

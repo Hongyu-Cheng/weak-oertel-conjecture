@@ -1,0 +1,26 @@
+{
+  "advances": "Finite scalar tail inequality; it neither assumes a geometric fiber model nor gives strictness for arbitrary infinite log-concave laws.",
+  "author": "PK-research-agent",
+  "candidate_id": "bc1a6747fb75edb6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:57:44.475435+00:00",
+  "depends_on": [],
+  "draft_key": "strict-finite-logconcave-survival",
+  "kind": "lemma",
+  "proof": "Log-concavity makes $w_{i+1}/w_i$ nonincreasing on the positive support. For $i<N$ compare $S_i/w_i$ and $S_{i+1}/w_{i+1}$ termwise as sums of $w_{i+h}/w_i$ and $w_{i+1+h}/w_{i+1}$. Each common term in the latter is no larger, by multiplying consecutive mass ratios. The former has the additional positive term $w_N/w_i$. Therefore $S_{i+1}/w_{i+1}<S_i/w_i$, and $S_{i+1}/S_i=1-w_i/S_i$ decreases strictly as claimed. If $i+k\\le N$, compare the product of $k$ successive survival ratios starting at $i$ with the product starting at $0$. They give $S_{i+k}/S_i$ and $S_k/M$; the comparison is strict when $i,k>0$ because each ratio in the second product is positive. If $i+k>N$, the left side is zero, strictly smaller when both tails on the right are positive. If $i=0$ or $k=0$, the submultiplicativity inequality is an identity.\n",
+  "source_candidate_ids": [
+    "8db47b3dd5d8d71d"
+  ],
+  "source_candidate_sha256": {
+    "8db47b3dd5d8d71d": "179b2a562de51c17b52788c83c201764080cef44e2932fa45ee4a01b95ff96c5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8db47b3dd5d8d71d",
+      "locator": "8db47b3dd5d8d71d:02 §2, (4), strict finite survival inequality"
+    }
+  ],
+  "statement": "Let $w_0,\\ldots,w_N>0$ be log-concave, with zero extension, $S_i=\\sum_{h\\ge i}w_h$ for integer $i\\ge0$, and $M=S_0$. The ratios $S_{i+1}/S_i$ for $0\\le i\\le N$ decrease strictly when there is more than one, ending at zero. For all integers $i,k\\ge0$, $S_{i+k}\\le S_i S_k/M$, strictly if $i,k>0$ and $S_i,S_k>0$. Monotonicity of the original weights is unnecessary.",
+  "subgoal_id": "pk-intake-strict-finite-logconcave-survival",
+  "title": "Strict survival submultiplicativity on a finite log-concave support"
+}

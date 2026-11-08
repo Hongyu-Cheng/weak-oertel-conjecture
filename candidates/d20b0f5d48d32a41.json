@@ -1,0 +1,29 @@
+{
+  "advances": "Necessary conditions on one common A and K with a full simplex endpoint B and common opposite cap masses.",
+  "author": "PK-research-agent",
+  "candidate_id": "d20b0f5d48d32a41",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.817140+00:00",
+  "depends_on": [
+    "23a563a735c07c25",
+    "ab61d9604953b1b4"
+  ],
+  "draft_key": "pk-w33-shared-simplex-residual-height",
+  "kind": "theorem",
+  "proof": "The middle halfspaces cover all of $\\mathbb R^d$ because their normals sum to zero. Apply the full profile of 23a563a735c07c25 in ordinary dimension $d$ with $d+1$ proper halfspaces and cutoff $\\alpha=Q-U_3$. This is nonnegative since it is a middle cap mass. The cap masses are $q_i=Q-U_i$, so the profile reads $k\\le q_1+q_2+(1/\\Gamma-2)q_3=Q/\\Gamma-F$, also with ties. Substituting the upper bound for $Q$ gives $k\\le a+b-2F$ and then $Q\\le\\Gamma(a+b-F)$. Since $k\\ge b-a$, we obtain $F\\le a$.\n\nHere $\\kappa>0$ because $(1+1/d)^d>2$ for $d\\ge2$ by the binomial theorem, and $\\kappa<1$ because $(1+1/d)^d<e<3$. Thus the strict complements of the first two $A$ cuts have intersection of volume at least $a-U_1-U_2\\ge\\kappa U_3>0$. At a common point $x$ in this intersection, $\\sum_{i=3}^{d+1}v_i\\cdot x>2$ by normal balance. Hence $\\sum_{i=3}^{d+1} H_i>d+1$, giving the strict sum of $P_i$. In $d=3$ the two actual local facet bounds of the result “Sharp full-binomial volume reserve for a supporting facet” apply with $q_i=Q-U_i$. Adding them for $i=3,4$ and using $P_3+P_4>3b$ gives the displayed inequality.\n",
+  "source_candidate_ids": [
+    "b69ebda3a2e6d72a"
+  ],
+  "source_candidate_sha256": {
+    "b69ebda3a2e6d72a": "a1bc16469fe72a189c40ec9e994c9bb3b53bfedffbdf712ff1cbe6d22d145482"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b69ebda3a2e6d72a",
+      "locator": "b69ebda3a2e6d72a:05 §5, (7)–(10)"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and $B=\\{x:v_i\\cdot x\\le1,\\ 1\\le i\\le d+1\\}$ be a full-dimensional simplex of volume $b$ with $\\sum_i v_i=0$. Let $A,K$ be convex bodies with $(A+B)/2\\subseteq K$ and $a=|A|$, $k=|K|$. Assume each cut $v_i\\cdot x=-1$ is proper on $A$. Put $U_i=|A\\cap\\{v_i\\cdot x\\ge-1\\}|$, $q_i=|K\\cap\\{v_i\\cdot x\\ge0\\}|$, $H_i=1+\\max_A v_i\\cdot x$, and $P_i=dbH_i/(d+1)$.\n\nSuppose $U_i+q_i=Q$ for all $i$, order $U_1\\le\\cdots\\le U_{d+1}$, and let $\\Gamma=(d/(d+1))^d$, $\\kappa=1/\\Gamma-2$, $F=U_1+U_2+\\kappa U_3$. Then $k\\le Q/\\Gamma-F$. If also $Q\\le\\Gamma(a+b+k)/2$ and $b\\le a+k$, then\n$$\nk\\le a+b-2F,\\qquad F\\le a,\\qquad Q\\le\\Gamma(a+b-F),\\qquad\n\\sum_{i=3}^{d+1}P_i>db .\n$$\nIn dimension three, $16Q>9(U_3+U_4)+3b+\\sqrt{3U_3P_3}+\\sqrt{3U_4P_4}$.",
+  "subgoal_id": "pk-intake-pk-w33-shared-simplex-residual-height",
+  "title": "Shared two-residual support bound for simplex-facet cap menus"
+}

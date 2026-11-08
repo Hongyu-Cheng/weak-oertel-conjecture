@@ -1,0 +1,30 @@
+{
+  "advances": "Two actual-body obstructions to a cap-mass comparison with the relative volume in the fixed-global-mass moment section.",
+  "author": "PK-research-agent",
+  "candidate_id": "896a6bf490efdc3a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:44.513321+00:00",
+  "depends_on": [],
+  "draft_key": "fixed-global-mass-moment-volume-payment-obstructions",
+  "kind": "counterexample",
+  "proof": "For two convex bodies $K_0,K_1\\subset[0,1]^d$, lift them at bases 0 and 1 in the first integer coordinate and take their convex hull. Take the product with the other $n-1$ unit base intervals. The integer bases are exactly the binary vertices, with fibers $K_0$ or $K_1$ according to their first coordinate. The fibers are actual because the two first-coordinate values are extreme and the remaining factors are independent. At $j=0$ balance forces the source into its own fiber, since all base coordinates are nonnegative. The marginal depth there is $|K_0|$: each containing halfspace includes this fiber, and $\\sum_i z_i\\le0$ isolates its base.\n\nTake $K_0=[0,1]^d$ and $K_1=[0,4/5]\\times[0,1]^{d-1}$. The mass is $M=2^n(9/10)$, so $t=9/10$ and $D_0=1$. The smallest $x_1$-mean of a density of mass $t$ in the cube is $9/20$. Indeed the bottom slab $x_1\\le9/10$ has the required mass, and for its indicator $f_*$ and any competing density $f$ the product $(x_1-9/10)(f-f_*)$ is nonnegative. Its integral is the raw first-moment difference since the masses agree. Integrating the slab gives mean $9/20$. The closed halfspace $H=\\{x_1-2\\sum_i z_i\\ge9/20\\}$ thus contains the full moment section at $j=0$. It misses all other fibers since there $x_1\\le1$ and $\\sum_i z_i\\ge1$. Its mass is $1-9/20=11/20$.\n\nFor the limiting family let $K_0$ be the standard simplex $\\Delta_d=\\{x\\ge0:\\sum_i x_i\\le1\\}$, of volume $V=1/d!$, and let $K_1=(1-2\\delta)^{1/d}\\Delta_d$. Now $M=2^n(1-\\delta)V$, $D_0=V$, and the retained fraction at base zero is $1-\\delta$. Under the uniform law on $\\Delta_d$, the $x_1$-tail at $c\\in[0,1]$ has probability $(1-c)^d$ by a homothety about the vertex $e_1$. Its unconditional mean is $1/(d+1)$, and the mean of its top fraction $\\delta$ is $1-[d/(d+1)]\\delta^{1/d}$ by the same homothety. Threshold exchange as in the cube shows that the smallest retained mean is attained by removing this top fraction. It equals\n$$\nc_\\delta=\\frac{1/(d+1)-\\delta+[d/(d+1)]\\delta^{1+1/d}}{1-\\delta}.\n$$\nThe closed halfspace $H=\\{x_1-2\\sum_i z_i\\ge c_\\delta\\}$ contains the entire section at zero and misses the other fibers, because $c_\\delta\\in[0,1]$. Its mass is $V(1-c_\\delta)^d$. Dividing by $t=(1-\\delta)V$ gives the displayed ratio, which tends to $\\gamma_d$.\n\nFor both examples the section has interior. On the own fiber let $g$ be its uniform centroid and vary the strictly fractional constant density $t/|K_0|$ by sufficiently small functions of the form $v\\cdot(x-g)$. Their mass is zero and their first moments span $\\mathbb R^d$: the uniform covariance is positive definite because $K_0$ has interior. Thus the denominator in the proposed inequality is positive, and the entire-section fraction is one in both examples. In the simplex family every affine vertex permutation preserves volume, carries the section to itself, and fixes its centroid collectively only at the simplex centroid.\n",
+  "source_candidate_ids": [
+    "a9ae71caa73717f1"
+  ],
+  "source_candidate_sha256": {
+    "a9ae71caa73717f1": "88ba2c9637ed7896f6f4adc99310403bc50895ce9d387315c65ed5438633d919"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a9ae71caa73717f1",
+      "locator": "a9ae71caa73717f1:02 §2, (3)–(4) and limiting coefficient conclusion"
+    },
+    {
+      "candidate_id": "a9ae71caa73717f1",
+      "locator": "a9ae71caa73717f1:01 §1, (1)–(2), including D_j and full dimensionality"
+    }
+  ],
+  "statement": "For every $n,d\\ge1$ there is an actual compact convex mixed body with total mixed volume $M$, an integer base $j$ of marginal closed-halfspace depth $D_j\\ge t=M/2^n$, a full-dimensional section $M_t(j)$ of continuous means of dominated mass-$t$ sources of base mean $j$, and a closed ambient halfspace $H$ with $M_t(j)\\subseteq H_j$ and $\\mu(H)<t$. In the cubical example one has $D_0=1$, $t=9/10$ and $\\mu(H)=11/20$.\n\nIn each fixed dimension $n,d\\ge1$, any coefficient $c_d$ valid uniformly for the inequality\n$$\n\\mu(H)\\ \\ge\\ c_dt\\,\\frac{|M_t(j)\\cap H_j|}{|M_t(j)|}\n$$\nunder those mass, marginal depth, and positive-section-volume hypotheses must satisfy $c_d\\le\\gamma_d=(d/(d+1))^d$. In a simplex-fiber family indexed by $0<\\delta<1/2$, one has $M_t(0)\\subseteq H_0$ and\n$$\n\\frac{\\mu(H)}{t}=\\gamma_d\\frac{(1-\\delta^{1+1/d})^d}{(1-\\delta)^{d+1}}\\longrightarrow\\gamma_d\\quad(\\delta\\downarrow0).\n$$",
+  "subgoal_id": "pk-intake-fixed-global-mass-moment-volume-payment-obstructions",
+  "title": "Fixed global mass does not pay the moment-section volume fraction"
+}

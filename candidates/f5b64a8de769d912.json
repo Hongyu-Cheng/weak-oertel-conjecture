@@ -1,0 +1,29 @@
+{
+  "advances": "An obstruction to inference from one selected first-order stress certificate. The example has fiber mass fraction 1/5 above the heavy-fiber threshold 1/8, and no depth minimality among the permitted extremal competitors is asserted.",
+  "author": "PK-research-agent",
+  "candidate_id": "f5b64a8de769d912",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.288594+00:00",
+  "depends_on": [
+    "9b80c98b9a04bc5d",
+    "0cc20c574d81be36"
+  ],
+  "draft_key": "tetrahedron-product-shared-plane-stress-obstruction",
+  "kind": "counterexample",
+  "proof": "Let $u_j$ be the four forms from the depth theorem, with $u_j\\cdot p_i=4\\mathbf1_{i=j}-1$ and $\\sum_j u_j=0$. Take $H_j$ with margin $10u_j\\cdot z+u_j\\cdot x$. On $T$, $u_j\\cdot x$ ranges from $-1$ to $3$. Thus $H_j$ includes its whole outer fiber and excludes the other three, and in the central fiber takes the barycentric cap at level $1/4$. Each mass is $(1+27/64)V=\\beta(5V)$, and each cap passes through the central deepest mark. The margins sum to zero, proving whole-space coverage. Divide the whole margin by $c_j=\\lVert u_j\\rVert$ and choose $\\rho_j=c_j/\\sum_\\ell c_\\ell$. The vectors span three dimensions (their values at the four spanning vertices have rank three), and their only linear dependence is the positive sum, so the unit-normal circuit is minimal of rank three in dimension $D$.\n\nOnly the central fiber has a proper cap section. In the unnormalized tetrahedral coordinate its tail mass near threshold $s=0$ is $V((3-s)/4)^3$. Its negative derivative at zero is $\\sigma=27V/64$, so the unit-normal section area is $S_j=c_j\\sigma$. The central section fixes barycentric coordinate $1/4$, so its section centroid in the tetrahedron is $p_j/4+(3/4)(-p_j/3)=0$. The extra factor $B$ has centroid zero. Hence $Z_j=X_j=0$ in the full coordinates.\n\nFor the shared-plane moments first work with $B$ omitted and fiber mass $A=|T|$. The signed volume measure has zero mass by the equality $\\lambda(4+4\\gamma_3)=5$. Its base moment vanishes since the outer full fibers have base sum zero, and the central cap centroid is $p_j/4$: that cap is a copy of $T$ under the homothety of factor $3/4$ about $p_j$. These cap centroids sum to zero, giving the vanishing continuous moment. For each tetrahedral facet $F_\\ell$, the cap of index $\\ell$ does not meet it centrally, and each of the other three central traces is a copy of $F_\\ell$ of linear factor $3/4$ about the corresponding facet vertex. Their area sum is $3(3/4)^2|F_\\ell|=(27/16)|F_\\ell|$. Their first moments sum to $27/16$ times that of $F_\\ell$, since the three centers of homothety average to its centroid. On the outer fibers there are four full traces with zero base sum. Hence the equality $\\lambda(4+27/16)=5$ proves the vanishing signed mass and all first moments for this shared plane. These are all old planes. There are no owner ties and the sections are either proper or strictly full or empty. Apply shared-plane-signed-moment-tensorization to recover the same signed moment equalities after including $B$, including the new facet planes and the conditional identities with arbitrary bounded functions of $w$.\n\nFor the cap-side equations, assign the center to this group and take its only nonzero coverage multiplier to be $t=\\lambda\\sigma\\sum_jc_j$. Its projected margin is identically zero. Thus $\\lambda S_j=\\rho_jt$, and $\\lambda Z_j=\\lambda X_j=0$ are the corresponding first-moment equations with zero right sides. For a complete assignment each nondeep outer index can use the tetrahedral circuit through its fiber's centroid, adding a sufficiently large common exposing base tilt that is zero at that base and negative at the other sites. Its caps each have slack mass $\\gamma_3V$ and all its cap and coverage multipliers are zero. Set $\\omega_f=1$ on each unique body owner and let $\\alpha_{jf}$ be the cap indicator on that facet. Then the boundary and section covectors satisfy the objective-one identity with the given coverage multiplier and zero continuous-normal multiplier. Finally $4\\lambda=320/91=1/\\beta>3>e>(1+1/D)^D=1/\\gamma_D$.\n",
+  "source_candidate_ids": [
+    "e500aa8a70b96d55"
+  ],
+  "source_candidate_sha256": {
+    "e500aa8a70b96d55": "2240a31b707765c3dcd4164a265bf65e310efd669be011a04a690c6484b1a701"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e500aa8a70b96d55",
+      "locator": "e500aa8a70b96d55:03 §§5–7, exact critical group, signed traces and multiplier obstruction"
+    }
+  ],
+  "statement": "For every $D\\ge4$, the body of tetrahedron-product-exact-mixed-depth has a rank-three positive circuit of four actual critical caps, normalized maximum depth $\\beta=91/320$, and one deepest integer base zero. The circuit covers all ambient space and has effective-section centroid $(0,0,0)$. It admits cap weights $\\lambda_j=80/91$ with objective coefficient one and consistent section traces, satisfying every shared-plane signed mass and first moment and every cap-side section mass and first moment equation of the shared-plane stress. Their sum $320/91=1/\\beta$ exceeds $1/\\gamma_D$, where $\\gamma_D=(D/(D+1))^D$. This refutes a bound of $1/\\gamma_D$ derived from these moment equations for one selected critical group alone.",
+  "subgoal_id": "pk-intake-tetrahedron-product-shared-plane-stress-obstruction",
+  "title": "Deficient-rank stress obstruction with non-simplex fibers"
+}

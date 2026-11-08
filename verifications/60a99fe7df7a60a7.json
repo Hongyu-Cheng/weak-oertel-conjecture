@@ -1,0 +1,70 @@
+{
+  "candidate_id": "3824f38cebb3b637",
+  "candidate_sha256": "acf7a309b98d39ace04594ca699625fe15ae3620f474c5004d6b07527c9f2c3a",
+  "checked_dependency_candidate_sha256": {
+    "028fa638d6c396d9": "20b44cbbce8e51e1f7d3cc9391951538472192822d3a7d6ec52873c8397900a3",
+    "636ab2c480ef41f7": "779482ca0294a7dfc81e6a17c364c7bd1db96907bc856a7a71b770fc32d59b1f",
+    "8c6a53dd27e5c125": "b0ad38a189b298edb2725b4082811faacf9a2e8a55e38a912789602e0fa82fe5"
+  },
+  "checks": [
+    "Compared with e40a05fd5546debc §§7–8. The fixed mass and real feasible target bases are retained, including the zero-volume target case.",
+    "Any mass-t original source at j' satisfies the cap hinge inequality with its actual base mean; subtracting the equality at j yields the signed support shift −a_s·(j'−j).",
+    "In normalized coordinates the target ellipsoid contributes v_s·b+||Hv_s||, and zero shape with an arbitrary section point is allowed when the target section has no interior. The balanced contact weights cancel b, turn Σλ_s v_s^THv_s into tr H, and bound it by d−ā·(j'−j). AM–GM of the shape eigenvalues gives the desired determinant-root ratio.",
+    "At common positive mass the raw constraint pairs (t,tj') differ for distinct bases. Strict interpolation applies even to zero-volume endpoints, preventing a second affine touch. The affine function is positive everywhere and compactness makes its minimum positive.",
+    "The unimodular base map bijects the integer bases. The affine fiber map scales ordinary mixed volume by Δ relative to pushforward and carries normalized means by the full affine map. The new symmetric shape is the positive square root of LA²Lᵀ, and (A')^{-1}LA is orthogonal.",
+    "Direct margin substitution gives u'=L^{-T}u, a'=U^{-T}(a−Bᵀu'), and β'=β+u'·(Bj+c). Weighted normal balance removes the shear and threshold corrections. Pointwise margin preservation gives exact Δ scaling of each hinge integral."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "8c6a53dd27e5c125",
+      "candidate_sha256": "b0ad38a189b298edb2725b4082811faacf9a2e8a55e38a912789602e0fa82fe5",
+      "fact_sha256": "5bf2f6e44d40ffeb86d947c7916b8a5a1a4a14dcc0a54803ef36faeaa7081f0a",
+      "hypotheses": "Use the compact feasible raw graph and strict John interpolation for distinct (t,tj') at common mass. Scaling by 1/t and the unit-ball volume root converts it to strictness of the present function.",
+      "reviewed_proof_sha256": "575700ce2b9bef6c366fac3503a095ef1e0ee3933556a986196391a6bf1c8a78",
+      "reviewed_statement_sha256": "69cacb2bd38cf7aa5bbabbe69a7c2ce1ea6de2280d15f8d34f9efe115714df68"
+    },
+    {
+      "candidate_id": "636ab2c480ef41f7",
+      "candidate_sha256": "779482ca0294a7dfc81e6a17c364c7bd1db96907bc856a7a71b770fc32d59b1f",
+      "fact_sha256": "fc6e2e74c25abcb380cebce7759055afb2c9a0ef5859f8c6c407c0b183bc2060",
+      "hypotheses": "Apply its general ellipsoid uniqueness proof to positive fixed-base sections, so the transported ellipsoid, which maximizes by the bijection and volume factor, is the unique John ellipsoid.",
+      "reviewed_proof_sha256": "f3695422f446feff8c9f47515984ad20a9b1c1f0036f310335f1cd209f0077f2",
+      "reviewed_statement_sha256": "762c59f873c775814b86ec05cbde1d1ac3d1ac4f8539763b9ec77f556058aef2"
+    },
+    {
+      "candidate_id": "028fa638d6c396d9",
+      "candidate_sha256": "20b44cbbce8e51e1f7d3cc9391951538472192822d3a7d6ec52873c8397900a3",
+      "hypotheses": "Its strict-mass part applies at real j and 0<t<T_j for the same finite positive-fiber measure. It gives the same original-source cap margins, exact mass and mean, and finite contact equations; the target-base hinge calculation uses those actual caps.",
+      "reviewed_proof_sha256": "867e46130d1bb60179da5450d6e276596689df4005a164e908701921a6136217",
+      "reviewed_statement_sha256": "3bae08adee2c2992e6258cf70053d5068819164fb0752e196ba16e6c4dc7fd67",
+      "status": "same-wave dependency; independent approval and admission required"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:29:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Stationarity there varies the raw mass at a fixed base. This theorem varies the base at fixed mass and obtains a global affine majorant with unique touch.",
+      "fact_id": "52b1c0ed5583eacd"
+    },
+    {
+      "comparison": "Strict interpolation implies uniqueness once a majorant is supplied. It does not identify a supporting slope using the original cap tilts or give their affine transformation law.",
+      "fact_id": "8c6a53dd27e5c125"
+    }
+  ],
+  "readability": "The symbol j' is first a competing feasible mean and later the image Uj+b in the separate affine-law paragraph. The two roles are locally clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, exact original-source and predecessor comparison, and exact arithmetic replay for numerical certificates.",
+  "reviewed_proof_sha256": "942f7ec18ac80edbfd529a7ea29b25bc590e179aab108ddedf6f4b68f9c3462c",
+  "reviewed_statement_sha256": "19cfb3f421fb7cfd97dfb9134184f5bc3d26d853aef0ea8d2124dd0b05e82fe5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:25:49Z",
+  "summary": "The weighted support-cap tilt gives a global affine supergradient of the fixed-mass John-volume root, and the mixed affine transformation formulas follow by exact substitution.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

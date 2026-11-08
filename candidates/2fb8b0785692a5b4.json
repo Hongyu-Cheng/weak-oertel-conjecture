@@ -1,0 +1,26 @@
+{
+  "advances": "Standalone finite matrix and budget equivalence, without geometric or mixed-integer assumptions.",
+  "author": "PK-research-agent",
+  "candidate_id": "2fb8b0785692a5b4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:15:09.178028+00:00",
+  "depends_on": [],
+  "draft_key": "cyclic-harmonic-budget-psd",
+  "kind": "lemma",
+  "proof": "With feasible charges, distribute the node term using $b_i=\\delta_i+r_{i-1}+s_i$. For $h_i>0$ the contribution of edge $i$ is $s_i x_i^2+r_i x_{i+1}^2-h_i(x_i+x_{i+1})^2$, which equals the asserted square because $h_i=r_i s_i/(r_i+s_i)$. For $h_i=0$ the contribution is zero. This gives the identity and positive semidefiniteness.\n\nConversely, join $i$ and $i+1$ when $h_i>0$. The resulting connected components are the blocks of $L$, whose off-diagonal entries are nonpositive. On each block choose a unit vector minimizing the Rayleigh quotient. Taking coordinatewise absolute values cannot increase the quadratic form, so a nonnegative least-eigenvalue vector exists. In a block of size greater than one, a zero coordinate in this vector would force all neighbors to have zero coordinates by the corresponding eigenvector equation: their coefficients are strictly negative and all other off-diagonal terms are nonpositive. Connectivity would force the whole unit vector to vanish. Thus it is positive on the block. Choose entry $1$ for a singleton. Concatenating yields $w>0$ and $Lw\\ge0$, since every block's least eigenvalue is nonnegative. The displayed charges are finite; for a positive edge their reciprocals add to $1/h_i$, and for a zero edge both vanish. Direct substitution gives $b_i-r_{i-1}-s_i=(Lw)_i/w_i\\ge0$.\n\nFinally the scalar inequality is nonnegativity of the form on the nonnegative orthant, with $x_i=\\sqrt{\\theta_i}$. For arbitrary real $x$, the off-diagonal signs give $x^\\top Lx\\ge |x|^\\top L|x|$, with $|x|$ taken coordinatewise. This proves equivalence, including vanishing weights, zero edges and singular blocks. In particular, equality in the quadratic inequality is exactly the vanishing of every weighted slack and every edge square in the identity. If $x$ is a positive null vector on one block and zero elsewhere, every budget in that block is tight and every positive-edge charge ratio there satisfies $s_i/r_i=x_{i+1}/x_i$.\n",
+  "source_candidate_ids": [
+    "2e26c63010f03ffc"
+  ],
+  "source_candidate_sha256": {
+    "2e26c63010f03ffc": "0b2ee4306252b9fb0b4ff7a0a4016c316a9ba6085f224b3466d620aabc8da8fc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2e26c63010f03ffc",
+      "locator": "§§3–7, harmonic charges, all-weight inequality, block vectors and Gram identity"
+    }
+  ],
+  "statement": "Let $m\\ge3$, with cyclic indices, and let $h_i\\ge0$ and $b_i\\in\\mathbb R$. Define a real symmetric matrix $L$ by\n$$\nx^\\top Lx=\\sum_i b_i x_i^2-\\sum_i h_i(x_i+x_{i+1})^2.\n$$\nThe following are equivalent:\n\n1. There are finite charges $r_i,s_i$, both zero when $h_i=0$ and both positive with $r_i s_i/(r_i+s_i)=h_i$ when $h_i>0$, satisfying $r_{i-1}+s_i\\le b_i$ for every $i$.\n2. $L$ is positive semidefinite.\n3. $\\sum_i b_i\\theta_i\\ge\\sum_i h_i(\\sqrt{\\theta_i}+\\sqrt{\\theta_{i+1}})^2$ for every $\\theta\\in[0,\\infty)^m$.\n\nWhen $L$ is positive semidefinite, there is a vector $w>0$ with $Lw\\ge0$ coordinatewise, and valid charges are $r_i=h_i(1+w_i/w_{i+1})$ and $s_i=h_i(1+w_{i+1}/w_i)$. For any valid charges, writing $\\delta_i=b_i-r_{i-1}-s_i$, one has\n$$\nx^\\top Lx=\\sum_i\\delta_i x_i^2+\n\\sum_{i:h_i>0}\\frac{(s_i x_i-r_i x_{i+1})^2}{r_i+s_i}.\n$$",
+  "subgoal_id": "pk-intake-cyclic-harmonic-budget-psd",
+  "title": "Positive semidefinite criterion for cyclic harmonic edge budgets"
+}

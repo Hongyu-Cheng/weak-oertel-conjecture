@@ -1,0 +1,30 @@
+{
+  "advances": "Local tilt cell with real base-normal coefficients and a fixed unit continuous normal. The polygon pair isolates failure of the proposed weaker hypothesis.",
+  "author": "PK-research-agent",
+  "candidate_id": "9f2876079c035c72",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.289487+00:00",
+  "depends_on": [],
+  "draft_key": "actual-cone-cap-tilt-polynomial",
+  "kind": "lemma",
+  "proof": "At the varied coefficient the exact thresholds are $t_z-\\delta b\\cdot(z-z_0)$, so substituting these into the assumed actual volume roots and summing their powers proves the identity. The binomial linear term vanishes by the base balance. Since each root is positive throughout its interval, the Hessian on the effective span is positive definite: its quadratic form on a nonzero vector $v$ there is a positive factor times the sum of the squares of $v\\cdot(z-z_0)$ with strictly positive root weights. The stationary cap is therefore a strict local minimum in these directions.\n\nFor the limitation, let the sampled bases be $-1,0,1$ and take the same polygon at every base via $C=[-1,1]\\times K$. Use the two choices $K=\\{(x,s):-1\\le s\\le1,\\ |x|\\le1-s\\}$ and $\\widetilde K=\\{(x,s):-1\\le s\\le1,\\ |x|\\le\\min(1,1-s)\\}$. Both are intersections of affine halfspaces. At $s=0$ their upper caps coincide, have area one, and have section length two. For $|b|<1$ the cap $s+bz\\ge0$ makes all cuts proper. The upper tail at threshold $t\\in(-1,1)$ of $K$ is $(1-t)^2$ by integrating its widths. The upper tail of $\\widetilde K$ is $(1-t)^2$ for $t\\ge0$ and $1-2t$ for $t\\le0$. Summing at thresholds $-b,0,b$ yields $3+2b^2$ and $3+b^2$ respectively. Both have the same selected affine roots and section weights, with a strict local tilt minimum at $b=0$. The common selected triangle has unit height, so its persistent-cone polynomial would be $3+2b^2$ in both examples. The second polygon disproves this inference.\n",
+  "source_candidate_ids": [
+    "ad88f967d6335089"
+  ],
+  "source_candidate_sha256": {
+    "ad88f967d6335089": "275901176730853a15ff22ff4ac8cdb292e15be2bcc7fceabaa8dbb7c11a6747"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ad88f967d6335089",
+      "locator": "ad88f967d6335089:05 §6, (14)–(16), cone persistence and exact actual tilt polynomial"
+    },
+    {
+      "candidate_id": "ad88f967d6335089",
+      "locator": "ad88f967d6335089:06 §6, exact two-polygon counterexample following (16)"
+    }
+  ],
+  "statement": "Let $d\\ge2$, let $C$ be a convex body with finitely many positive full-dimensional integer fibers $C_z$, $z\\in P$, and let $z_0\\in P$. Fix a unit continuous normal $u$ and a through-point cap with base coefficient $b$ and thresholds $t_z=u\\cdot x_0-b\\cdot(z-z_0)$. Suppose on an open interval $I_z$ about each $t_z$ the actual upper cap on $C_z$ is a cone cap whose positive $d$th volume root is $(u\\cdot p_z-s)/h$ at threshold $s$, for fixed apex $p_z$ and common $h>0$. Write $a_z$ for the root at $s=t_z$ and assume $\\sum_z a_z^{d-1}(z-z_0)=0$. For every $\\delta b$ such that $t_z-\\delta b\\cdot(z-z_0)\\in I_z$ for every $z$, the raw cap mass is\n$$\nM(b+\\delta b)=\\sum_z[a_z+h^{-1}\\delta b\\cdot(z-z_0)]^d.\n$$\nIts increment is $\\sum_{k=2}^d\\binom dk h^{-k}\\sum_z a_z^{d-k}[\\delta b\\cdot(z-z_0)]^k$. The original cap is a strict local minimizer in every nonzero effective base-tilt direction in $\\operatorname{span}(P-z_0)$. Single-cut homothety and fixed-normal tilt criticality alone do not imply this formula.",
+  "subgoal_id": "pk-intake-actual-cone-cap-tilt-polynomial",
+  "title": "Exact local tilt polynomial for persistent cone caps"
+}

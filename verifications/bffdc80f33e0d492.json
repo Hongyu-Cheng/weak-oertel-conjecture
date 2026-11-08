@@ -1,0 +1,64 @@
+{
+  "candidate_id": "a82d196439c6ff16",
+  "candidate_sha256": "c4f09bf69d8466fcdec353607b47d35271ecc791b6b139186d06868a19cea322",
+  "checked_dependency_candidate_sha256": {
+    "08b344179e054c1c": "e386ac56ce68bf0152d9b5a42cb297899efccf03683adbd9e13ce2dee1e0eb72",
+    "8c6a53dd27e5c125": "b0ad38a189b298edb2725b4082811faacf9a2e8a55e38a912789602e0fa82fe5"
+  },
+  "checks": [
+    "Every positive fiber has bounded projection density along u from the containing compact section bound and the factor 1/|u|. Translating by an arbitrary base tilt keeps that bound; the infimum over tilts therefore preserves the common Lipschitz estimate and monotonicity.",
+    "For sufficiently negative s the fully captured bases contain a closed halfspace trace containing j. Perturb a finite minimizing marginal trace outward to put j strictly inside and retain its trace, then normalize the threshold to -1. The scaled tilt -s a0 gives exactly that trace when -s exceeds the finite support bound divided by the strict gap. The right plateau follows from the zero tilt.",
+    "The resulting continuous survival function has compact support and total mass D_j. Continuity provides a quantile even at t=D_j and when the tail has flat intervals; the threshold exchange inequality and layer-cake identity give the full infimum formula without differentiating a quantile.",
+    "The balanced row capacity is at least D_j, and constant densities on each positive fiber realize any scaled feasible row. Strict separation at an epsilon-raised support point gives positive coefficient on the moment; the hinge dual bound and reverse weak duality are valid even at a boundary mass. Comparing the fixed-tilt tail to its pointwise infimum inside the integral gives the stated inequality.",
+    "Checked original b4c3b9c6a52059d2 §3, (7)–(9), and §2, (6). The draft preserves the full-law case and does not imply equality or a common law in different directions."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "e386ac56ce68bf0152d9b5a42cb297899efccf03683adbd9e13ce2dee1e0eb72",
+      "fact_id": "08b344179e054c1c",
+      "fact_sha256": "b473bf54221af4001970ad52b9ec6a946ef8d32d11a64e28c5f3dadab635933d",
+      "hypotheses": "Take the finite positive masses w_z=|C_z| and the occupied point j. Relative base trace depth agrees with ambient base trace depth by restriction/extension (including whole-space traces). The theorem gives a maximizing feasible balanced row with T≥D_j.",
+      "reviewed_proof_sha256": "7cff3026c1b87d8a7266252d96caa1a0fbaccea1007893c416ce629bd3a59f37",
+      "reviewed_statement_sha256": "9c6d9866364397e55278ad6e788235c9f51bde0a2759e718222d0b3816076a14"
+    },
+    {
+      "candidate_sha256": "b0ad38a189b298edb2725b4082811faacf9a2e8a55e38a912789602e0fa82fe5",
+      "fact_id": "8c6a53dd27e5c125",
+      "fact_sha256": "5bf2f6e44d40ffeb86d947c7916b8a5a1a4a14dcc0a54803ef36faeaa7081f0a",
+      "hypotheses": "Apply the compact convex moment graph theorem to the finite positive compact actual fibers and their summed Lebesgue measure. Center the base moment by subtracting j times mass and project the continuous moment to u; these linear operations preserve compactness and convexity.",
+      "reviewed_proof_sha256": "575700ce2b9bef6c366fac3503a095ef1e0ee3933556a986196391a6bf1c8a78",
+      "reviewed_statement_sha256": "69cacb2bd38cf7aa5bbabbe69a7c2ce1ea6de2280d15f8d34f9efe115714df68"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:07:02Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the scalar base-balanced feasible capacity T≥D_j and its hinge dual with no continuous support direction. It does not form a directional survival law or compare its integrated quantiles.",
+      "fact_id": "08b344179e054c1c"
+    },
+    {
+      "comparison": "Gives an upper-tail support formula for a fixed random variable without a centered base-moment constraint. Here V is the threshold-by-threshold infimum over base tilts and the other support comes from the common balanced constraint.",
+      "fact_id": "6e64ae6cfa5cab7e"
+    },
+    {
+      "comparison": "Establishes the compact joint moment graph and its constrained support selectors, but does not bound that support by the trimmed mean of the optimized directional law.",
+      "fact_id": "8c6a53dd27e5c125"
+    }
+  ],
+  "readability": "The left-plateau normalization includes the whole trace by taking a0=0. At t=D_j a threshold on the left plateau is allowed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent proof read, predecessor-scope and provenance check, and exact rational replay where needed",
+  "reviewed_proof_sha256": "852ffa9b6b4d44644fb4c94ca7e34de61dfcbf43118f70b23531b5ea389ae28e",
+  "reviewed_statement_sha256": "a92b08d6903465d493703c0efe385c1e1d51e3c6d9262ac7f67676941cf677b4",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T21:00:44Z",
+  "summary": "The optimized one-directional cap tail defines an atomless law of precisely the marginal depth, and its trimmed mean is bounded by the support of the actual balanced moment body.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

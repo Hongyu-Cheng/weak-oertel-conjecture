@@ -1,0 +1,35 @@
+{
+  "advances": "Energy selection on a fixed deepest source fiber. Finite exact multipliers need the stated qualification; these are not body-variation or circuit cover weights.",
+  "author": "PK-research-agent",
+  "candidate_id": "5ee071d7ed1449cc",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.480939+00:00",
+  "depends_on": [
+    "55a57b1cf55d0c87",
+    "a56f8711406a3870",
+    "5aeb5916857f97a9",
+    "0a73ba4a9c7b24d1"
+  ],
+  "draft_key": "deepest-energy-actual-quantile-normal-cone",
+  "kind": "lemma",
+  "proof": "At base $p$, the conditions imposed by pure-base halfspaces are independent of the continuous coordinate and already satisfied at $(p,y)$. Every nonvertical containing cap can be reduced to the cap through the tested point without increasing its measure. For a fixed direction and tilt the tail is continuous and nonincreasing from the total mass to zero, since all nonvertical boundaries are mixed-null. The through-point cap has mass at least $Q$ exactly when its threshold is at most the rightmost $Q$ quantile. This proves the claimed intersection for all continuous marks. A point outside $K_p$ has zero depth: the anchored convex hull of the family is compact, has $p$-fiber exactly $K_p$ by compatibility, and a separating cap through the exterior point misses it. Fact 55a57b1cf55d0c87 gives own-interiority at positive depth. Thus if a nonvertical through-point cap has mass $Q$, its own trace is proper and its tail strictly decreases locally at that level. It is therefore the rightmost quantile. Conversely any active quantile gives such a cap. The same proper-section argument forbids strict inclusion of the mark by any cap of mass $Q$.\n\nThe gradient of energy is $(d+1)E_{K_p}(y)a$ by a56f8711406a3870. Differentiating along feasible segments gives normal-cone necessity, and concavity of $E_{K_p}^{1/d}$ from 5aeb5916857f97a9 gives sufficiency by the tangent inequality. If $a=0$, the first derivative in the minimizing parameter at zero is proportional to the first moment about $y$, so $y$ is the centroid.\n\nFor the conic characterization, let $G=\\{(u,c_{b,u})\\}$. If $(a,0)$ is a limit of finite conic combinations of $G$, testing them on $(h,-1)$ for feasible $h$ gives $a\\cdot h\\le0$. Conversely, if $(a,0)$ is outside the closed cone, separation gives $(h,s)$ with $a\\cdot h>0$ and $u\\cdot h+s c_{b,u}\\le0$ for all indices. For $s\\ge0$ the point $h$ is feasible, and for $s<0$ the point $h/(-s)$ is feasible. Both contradict the normal-cone condition. Conic Carathéodory in $\\mathbb R^{d+1}$ proves the approximate cardinality.\n\nTake a sequence of bounded-weight certificates and subsequences of their coefficients and unit normals, padding with zero coefficients if needed. Every positive limiting coefficient has $c_j\\to0$. For each such slot use 0a73ba4a9c7b24d1 on the sequence of actual quantile caps, with affine thresholds $\\tau_j-b_j\\cdot z$ and a fixed ball containing all sampled fibers. This produces a finite affine threshold with the same limiting mass $Q$ and the same limiting own threshold $u_j\\cdot y$, because that finite evaluation is preserved by the compactification. Its own section is proper, so it is a genuine active quantile cap. The terms with coefficients tending to zero have vanishing normal contribution. Conic Carathéodory in $\\mathbb R^d$ now gives at most $d$ normals. A Slater ball $w+rB_d\\subseteq D_p$ gives $c_j-u_j\\cdot(w-y)\\ge r$ for each normalized inequality, and therefore $r\\sum_j\\lambda_j\\le\\sum_j\\lambda_jc_j-(\\sum_j\\lambda_j u_j)\\cdot(w-y)$, which stays bounded. In the finite local case, the normal cone is the conic hull of the finitely many active normals: if a vector is outside that closed polyhedral cone, a separating velocity satisfies all active inequalities to first order and is feasible along a short segment because all other finitely many inequalities are strictly slack. Finally if the active normals positively span, their inequalities already force $h=0$, and the full cone contains every vector.\n",
+  "source_candidate_ids": [
+    "ad7cea9b764c02b5"
+  ],
+  "source_candidate_sha256": {
+    "ad7cea9b764c02b5": "92a7299573557dd78743c05accb5736d31ad1a02ebfb843d9912c3c67a729d0c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ad7cea9b764c02b5",
+      "locator": "ad7cea9b764c02b5:01 §§1–2, (1)–(3)"
+    },
+    {
+      "candidate_id": "ad7cea9b764c02b5",
+      "locator": "ad7cea9b764c02b5:02 §§3–4, (4)–(6)"
+    }
+  ],
+  "statement": "Let $K_z$ be a finite complete compatible family of positive $d$-volume compact convex fibers over integer bases, with summed volume measure $\\mu$, $d\\ge1$. Let $Q>0$ be its attained maximum raw closed-halfspace depth over the mixed set, and let $D_p=\\{x:h_\\mu(p,x)\\ge Q\\}$ at a deepest base $p$. For $y\\in D_p$ write $a$ for its unique minimizing projective parameter in\n$$\nE_{K_p}(y)=\\min_{a:\\,1+a\\cdot(x-y)>0\\ \\forall x\\in K_p}\\int_{K_p}[1+a\\cdot(x-y)]^{-d-1}\\,dx.\n$$\nFor each $b\\in\\mathbb R^n$ and unit continuous $u$, define the rightmost raw $Q$ quantile $\\tau_{b,u}=\\sup\\{t:\\mu\\{b\\cdot z+u\\cdot x\\ge t\\}\\ge Q\\}$ and $c_{b,u}=\\tau_{b,u}-b\\cdot p-u\\cdot y\\ge0$. Then\n$$\nD_p-y=\\bigcap_{b,u}\\{h:u\\cdot h\\le c_{b,u}\\}.\n$$\nThe active indices $c_{b,u}=0$ are precisely the actual nonvertical minimizing caps through $(p,y)$ and have proper own sections. With the outward normal cone convention,\n$$\ny\\in\\operatorname{argmax}_{x\\in D_p}E_{K_p}(x)\n\\quad\\Longleftrightarrow\\quad\na\\in N_{D_p}(y)\n\\quad\\Longleftrightarrow\\quad\n(a,0)\\in\\overline{\\operatorname{cone}}\\{(u,c_{b,u}):b\\in\\mathbb R^n,\\ \\|u\\|=1\\}.\n$$\nIn particular an interior point of $D_p$ maximizes energy only at the own-fiber centroid; a singleton places no restriction on the optimizer vector.\n\nThe cone condition is equivalent to certificates with at most $d+1$ actual quantile caps for every $\\varepsilon>0$:\n$$\n\\lambda_j\\ge0,\\qquad\n\\left\\|a-\\sum_j\\lambda_j u_j\\right\\|\\le\\varepsilon,\\qquad\n0\\le\\sum_j\\lambda_j c_j\\le\\varepsilon.\n$$\nIf a sequence of certificates with $\\varepsilon\\downarrow0$ has bounded total multiplier weight, then $a$ is a nonnegative combination of at most $d$ genuine critical normals. A Slater ball in $D_p$ ensures this boundedness. A finite local definition of $D_p$ by actual quantile inequalities also gives the exact representation. Conversely, if genuine critical continuous normals positively span $\\mathbb R^d$, then $D_p=\\{y\\}$ and every vector has such an exact representation.",
+  "subgoal_id": "pk-intake-deepest-energy-actual-quantile-normal-cone",
+  "title": "Actual quantile normal cone for a deepest-energy maximizer"
+}

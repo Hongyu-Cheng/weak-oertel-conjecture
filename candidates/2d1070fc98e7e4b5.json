@@ -1,0 +1,30 @@
+{
+  "advances": "An exact limitation of the uniform residual and support-width estimates for a realized equal-volume pair. The actual three-fiber body satisfies the depth target.",
+  "author": "PK-research-agent",
+  "candidate_id": "2d1070fc98e7e4b5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:21:26.821452+00:00",
+  "depends_on": [
+    "f0399a8f0bae48c6",
+    "6769574fc1bd9f8d",
+    "b96c4c9a6a57340b"
+  ],
+  "draft_key": "equal-endpoint-width-residual-box-gap",
+  "kind": "counterexample",
+  "proof": "Volumes of the two endpoints are one. Averaging their side lengths gives the midpoint side lengths $(1,97/72,97/72,1,\\ldots,1)$ and the exact ratio $r=9409/5184$. The first-coordinate width of each endpoint is one, so the support-width result gives $W_d(1)=2/(d+1)^d$. The residual estimate is the scalar complementary-cap lemma of f0399a8f0bae48c6 on the midpoint $M$ with endpoint volumes both one, using the full-mass centroid bound of 6769574fc1bd9f8d to substitute $(1-\\Gamma)r$ for the residual volume. This describes the estimate using the uniform ordinary centroid guarantee.\n\nFor $d=3$, $\\Gamma=27/64$, $(1-\\Gamma)r=348133/331776>1$ and the residual estimate vanishes. Here $\\Gamma(2-r)=959/12288$, $W_3(1)=1/32$, and the difference is $575/12288$. For $d\\ge3$, the function $s\\log(1+1/s)$ is increasing in real $s>0$ because its derivative is $\\log(1+1/s)-1/(s+1)>0$. The inequality follows by integrating $1/(1+t)$ from $0$ to $1/s$. Therefore $\\Gamma$ decreases as $d$ increases, and the residual estimate still vanishes. The lower bound $\\Gamma>1/e>1/3$ follows from $\\log(1+x)<x$ and the exponential series, which gives $e<87/32<3$. Hence\n$$\n W_d(1)\\le 1/32 < (959/5184)/3 < \\Gamma(2-r),\n$$\nwhere the middle comparison is $32\\cdot959>3\\cdot5184$. Keeping exact widths already gives this deficit, so an allowable range of width ratios containing the actual ratio cannot certify a larger uniform lower bound from the width formula alone.\n\nSince $r<2$, the centered homothetic enlargement $K$ contains $M$. The hull of the three lifted bodies has exactly these integer fibers, because a convex combination at base zero mixes a point of $K$ with an endpoint midpoint in $M$. Its total mixed volume is four. The endpoint projections in the tested direction have the same uniform law on $[-1/2,1/2]$ of total mass one, and opposite shifts give complementary tail masses, including saturated thresholds. Every nonzero continuous normal through $(0,0)$ captures half of the actual centrally symmetric middle fiber by reflection and the null hyperplane boundary. A purely integer normal through that point captures the whole middle fiber and an endpoint. Translation of the boundary inward gives the same depth lower bound for all containing halfspaces. Thus the actual mark has raw depth at least one, greater than $2\\Gamma$ for $d\\ge3$. The deficit concerns the two lower estimates.\n",
+  "source_candidate_ids": [
+    "8407bedf6b42ff39"
+  ],
+  "source_candidate_sha256": {
+    "8407bedf6b42ff39": "7757fd6d317e0f474556464e59a1b8bf448b7c7c23f00123f0e625f5a861c1df"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8407bedf6b42ff39",
+      "locator": "8407bedf6b42ff39:06 §5, (10)–(11), realized gap for the residual and width lower estimates"
+    }
+  ],
+  "statement": "For every $d\\ge3$ take centered coordinate boxes $A,B\\subset\\mathbb R^d$ with side lengths $(1,9/4,4/9,1,\\ldots,1)$ and $(1,4/9,9/4,1,\\ldots,1)$ respectively. Their volumes are one and their true midpoint $M=(A+B)/2$ has volume $r=9409/5184<2$. Write $\\Gamma=(d/(d+1))^d$. For opposite endpoint thresholds in the first coordinate centered at $g_M=0$, the uniform centroid-residual bound $[1-(2[(1-\\Gamma)r]^{1/d}-1)^d]_+$ and the exact-width estimate $W_d(1)=2/(d+1)^d$ are both strictly below $\\Gamma(2-r)$. In $d=3$ their maximum falls short by $575/12288$. Hence the two lower estimates and the ordinary guarantee $\\Gamma |M|$ for the own cap fail to certify the required raw mass $2\\Gamma$ on those scalar data.\n\nThe actual midpoint-compatible choice $K=(2/r)^{1/d}M$ gives a middle fiber of volume two. The paired endpoint mass in the tested direction equals one for every opposite shift, and the actual mark $(0,0)$ has raw depth at least one in the lifted three-fiber body.",
+  "subgoal_id": "pk-intake-equal-endpoint-width-residual-box-gap",
+  "title": "Reciprocal boxes separate two paired-cap estimates from the required payment"
+}

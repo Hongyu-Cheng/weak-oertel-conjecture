@@ -1,0 +1,31 @@
+{
+  "advances": "A cardinality conclusion under one qualifying cap per maximizing mark, with a sharp strictly convex calibration. Gives no quantitative lower bound for the maximizing depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "c2b134930a064a59",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:11:33.639018+00:00",
+  "depends_on": [
+    "55a57b1cf55d0c87",
+    "1ec728c26c11b368",
+    "1269c554ca9a41b8",
+    "eb59598e64f94c2d"
+  ],
+  "draft_key": "global-parity-bound-from-one-regular-cap",
+  "kind": "theorem",
+  "proof": "The sampled fibers are compatible because the inducing set is convex, and the sampled bases are all lattice points in their own convex hull. Facts 55a57b1cf55d0c87 and 1ec728c26c11b368 give positive depth at an interior point of a positive fiber, zero depth in null fibers, and continuity on each positive fiber. The finite union of compact positive fibers therefore contains a positive global maximizer, and every global maximizer is in the interior of its own positive-volume fiber. Each chosen cap has a proper own section. If all supporting sections of that cap in positive-volume fibers are null, its differentiability follows from the local variation formula in §2 of fact 1269c554ca9a41b8, applied only to the finitely many positive-volume fibers. The sampled interior cut has positive section measure, and disjoint cuts have zero variation.\n\nLet $Q$ be the global maximum. Suppose distinct maximizing points $Y_1,Y_2$ have bases congruent modulo $2\\Lambda$. Their midpoint $Y$ is sampled by convexity and the base parity assumption. Every closed halfspace containing $Y$ contains at least one endpoint, so $D(Y)\\ge Q$ and hence $D(Y)=Q$. The chosen cap at $Y$ contains an endpoint. Fact eb59598e64f94c2d gives that its only point of depth at least $Q$ is $Y$, using its proper own cut and its assumed differentiability. The endpoint is distinct from $Y$, a contradiction. The integer group $\\Lambda$ has rank $r$ and therefore $2^r$ classes modulo $2\\Lambda$. Strict convexity makes every supporting face a singleton, of zero section measure when $d\\ge2$, and finite nonvertical attainment at positive-depth marks follows from fact 1ec728c26c11b368.\n\nFor the product with the ball, the sampled bases are exactly the cube vertices. At each such base the ball's own depth is a lower bound on mixed depth. For the reverse bound, a linear base functional uniquely maximized at that vertex exists, for instance by choosing coordinate signs according to its $0$ or $1$ coordinates. Adding a sufficiently large positive multiple of this functional, shifted to vanish at the vertex, to any continuous cap margin excludes every other sampled fiber while retaining that cap at the chosen vertex. The strict separation of the finitely many other bases and boundedness of the ball give a finite multiple. Thus the mixed depth there equals the ordinary depth in the ball. Its center has half the volume by reflection and by any central cut. Every other point has a radial cap of strictly smaller volume. This proves the asserted census and its sharpness.\n",
+  "source_candidate_ids": [
+    "4c405e76fb81c248"
+  ],
+  "source_candidate_sha256": {
+    "4c405e76fb81c248": "3dbfc4e4c6e5198d6c7d90d4a327cfec5eac2fec6f938b58896fd6e93fa7dc25"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4c405e76fb81c248",
+      "locator": "§§9–10, conditional parity and ball calibration"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$, $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ for a compact convex $C$, and $\\mu(S)>0$ for summed fiber $d$-volume $\\mu$. Use raw closed-halfspace depth $D$. Let $P$ be the set of positive-volume integer bases and fix $p_*\\in P$. Write $\\Lambda=(\\operatorname{aff}P-p_*)\\cap\\mathbb Z^n$ and let $r=\\operatorname{rank}\\Lambda$.\n\nSuppose each global maximizing point $Y$ admits one nonvertical through-cap attaining $D(Y)$ such that the cap mass is differentiable at zero under each ambient normal perturbation through $Y$. Then the maximizing points number at most $2^r$, at most one in each class of $(p_*+\\Lambda)/2\\Lambda$. It suffices that the chosen cap at each mark has $\\mathcal H^{d-1}$-null traces on every supporting section of a positive-volume fiber. In particular, strictly convex positive fibers suffice for $d\\ge2$. For $C=[0,1]^n\\times B_d$ with $B_d$ a centered Euclidean ball and $d\\ge2$, the maximizing set consists of the $2^n$ fiber centers.",
+  "subgoal_id": "pk-intake-global-parity-bound-from-one-regular-cap",
+  "title": "A global parity bound from one regular attaining cap per maximizer"
+}

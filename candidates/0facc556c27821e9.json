@@ -1,0 +1,28 @@
+{
+  "advances": "Only hyperplanes in the distinguished fine coordinate have the fraction 1/9. The coarse source uses intrinsic dimension s despite ambient continuous dimension s+1.",
+  "author": "PK-research-agent",
+  "candidate_id": "0facc556c27821e9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:15:48.902563+00:00",
+  "depends_on": [
+    "358113ce6a951053"
+  ],
+  "draft_key": "diamond-fine-coordinate-hyperplane-one-ninth",
+  "kind": "counterexample",
+  "proof": "Start with 358113ce6a951053 and apply the invertible integral shear $(z,u,x)\\mapsto(z,u+100z_1+10z_2+z_3,x)$. It preserves both sampling rules, since its translation in the fine coordinate is integral at every coarse base. It preserves every conditional intrinsic $\\mathcal H_s$ measure because the action in each coarse fiber is a translation, and it bijects ambient closed halfspaces. Hence it preserves the two normalized all-halfspace depths, full dimension, and equality with the hull of the fine source.\n\nIn the index order $0,1,3,4,5,6,7,8,10$ of 358113ce6a951053, the fine heights become $2,101,102,110,111,201,210,211,220$. The only extra coarse fiber has $z=(1,0,1)$ and height $203/2$, still nonintegral. In the one-dimensional fine coordinate a hyperplane fixes one height, so its maximal mass fraction is precisely one out of the nine equal fibers. In contrast the combined-base hyperplane $u-100z_1-10z_2-z_3=0$ contains seven of them. The strict comparison with $\\Gamma_{s+1}/8$ is the one proved in the accepted predecessor, and $\\Gamma_s/9>\\Gamma_s/16$ follows from $\\Gamma_s>0$.\n",
+  "source_candidate_ids": [
+    "f241458264cd17f2"
+  ],
+  "source_candidate_sha256": {
+    "f241458264cd17f2": "3646bb5b4b4415ce3cb594c713700ba873dd6ad7bf70be770f4a4e03814c9b15"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f241458264cd17f2",
+      "locator": "f241458264cd17f2:01 §1, (1), affine shear and exact fine-only mass fraction"
+    }
+  ],
+  "statement": "For every integer $s\\ge2$ and full-dimensional $s$-simplex $K$, there is a full-dimensional body in coordinates $(z,u,x)\\in\\mathbb R^3\\times\\mathbb R\\times\\mathbb R^s$, equal to the convex hull of its fine mixed source with $(z,u)\\in\\mathbb Z^4$. The coarse source takes only $z\\in\\mathbb Z^3$, and both sources use the sum of their intrinsic $\\mathcal H_s$ fiber measures. The fine source has nine equal positive fibers, and the largest fine mass fraction on a hyperplane in the $u$ coordinate alone is exactly $1/9$. The respective maximum normalized fine and coarse closed-halfspace depths are $\\Gamma_s/9$ and $\\Gamma_s/2$, where $\\Gamma_s=(s/(s+1))^s$. Thus the fine maximum is strictly below $\\Gamma_{s+1}/8$ and strictly above $\\Gamma_s/16$.",
+  "subgoal_id": "pk-intake-diamond-fine-coordinate-hyperplane-one-ninth",
+  "title": "The intrinsic diamond depth gap with fine-coordinate hyperplane mass one ninth"
+}

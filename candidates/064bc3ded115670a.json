@@ -1,0 +1,28 @@
+{
+  "advances": "Strict-budget certificate on actual sampled bases; no assertion of critical actual source marks or a sharp mixed depth factor.",
+  "author": "PK-research-agent",
+  "candidate_id": "064bc3ded115670a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:53:57.532182+00:00",
+  "depends_on": [
+    "977cf4c8be665bed"
+  ],
+  "draft_key": "pk-intake-finite-source-parity-cap-circuit-witnesses",
+  "kind": "theorem",
+  "proof": "By 977cf4c8be665bed, applied to the same $C,\\mu,T$, choose a bounded full-dimensional auxiliary polytope disjoint from the mixed lattice, and a finite family of its projected facet circuits whose original inequalities jointly miss the full integer lattice. Their attained contacts lie in this same polytope, hence satisfy every complementary inequality. Nonverticality gives equal open and closed cap masses, so the original closed cap budgets remain strict.\n\nBecause $P$ is finite and every $p\\in P$ violates at least one original projected inequality, choose $\\delta>0$ smaller than $\\min_{p\\in P}\\max_i(a_i\\cdot p-h_i)$. Start with offsets $\\beta_i=h_i+\\delta$; no $p\\in P$ strictly satisfies every expanded inequality. With the other retained offsets fixed, increase $\\beta_i$ to the minimum of $a_i\\cdot p$ over $p\\in P$ strictly satisfying every other retained inequality. If there is no such point, delete inequality $i$ (equivalently put $\\beta_i=+\\infty$). The update does not decrease the offset, since otherwise the minimizing point would have strictly satisfied all the old inequalities. It keeps the system of strict inequalities free of points of $P$. Each strict update uses a new member of a finite list of thresholds or deletes an inequality. Perform any available strict update until none remains. Each remaining inequality then has a witness attaining its offset and satisfying all other retained inequalities strictly. At least one inequality remains since $P$ is nonempty.\n\nFor distinct witnesses $p_i,p_j$ every retained inequality is strict at their midpoint: for each of the two indexed inequalities one witness is strict, and for every other inequality both are. If the two parities agreed this midpoint would be in $\\mathbb Z^n\\cap\\pi(C)=P$, by convexity of $\\pi(C)$, a contradiction. Each retained original threshold is strictly less than its expanded one. Thus the retained original inequalities jointly exclude $P$. At a violated base $z$, the corresponding weighted sum of original margins is $a_i\\cdot z-h_i>0$ independently of $x$, so some open cap in that group contains every given $(z,x)$. This gives the claimed count and, by summing the strict individual bounds and using the union inequality, the strict mass bound.\n",
+  "source_candidate_ids": [
+    "d2b290ebd8e35052"
+  ],
+  "source_candidate_sha256": {
+    "d2b290ebd8e35052": "a7f8466582d1c974c456d20a3915bbffa912b5adfc30e6bf9fe4bdcbd17d52f9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d2b290ebd8e35052",
+      "locator": "d2b290ebd8e35052:03 Opening certificate and §3, finite-P expansion and parity witnesses"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$, let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a convex body and put $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$, $P=\\pi(S)$, and $M=\\mu(S)>0$ for summed full fiber $d$-volume $\\mu$. Assume every point of $S$ belongs to a closed halfspace of mass strictly less than $T>0$.\n\nThere exist $s\\le k(P)$ groups, where $k(P)$ is the number of occupied parity classes of $P$. In each group $i$ the cap margins are $v_{ij}\\cdot z+u_{ij}\\cdot x-b_{ij}$, each $u_{ij}\\ne0$, and each closed cap has mass $<T$. The continuous normals are a minimal positive dependence with weights $\\lambda_{ij}>0$ summing to one, and the group size $k_i$ is at most $d+1$, with continuous rank $k_i-1$. Put $a_i=\\sum_j\\lambda_{ij}v_{ij}\\ne0$ and $h_i=\\sum_j\\lambda_{ij}b_{ij}$. The inequalities $a_i\\cdot z\\le h_i$ jointly exclude $P$. Each group has an attained real contact $q_i$ where its own original cap margins vanish and all selected cap margins are nonpositive.\n\nThere are $\\beta_i>h_i$ and $p_i\\in P$ such that $a_i\\cdot p_i=\\beta_i$ and $a_j\\cdot p_i<\\beta_j$ for $j\\ne i$. The witnesses have distinct parities. In particular the original open caps cover $S$ in at most $k(P)(d+1)$ occurrences, and $M<T\\sum_i k_i$. The real contacts are auxiliary and need not lie in $C$.",
+  "subgoal_id": "pk-intake-pk-intake-finite-source-parity-cap-circuit-witnesses",
+  "title": "Finite-source parity witnesses for auxiliary cap circuits"
+}

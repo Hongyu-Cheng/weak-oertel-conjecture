@@ -1,0 +1,28 @@
+{
+  "advances": "An actual above-target critical body. Positive tent tests do not imply a pointwise load bound or local minimality under other variations.",
+  "author": "PK-research-agent",
+  "candidate_id": "82cb221614bc7dbf",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.858068+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "actual-critical-positive-tent-low-edge-load",
+  "kind": "counterexample",
+  "proof": "The triangle $T$ has vertices $(1,1),(1,-2),(-2,1)$, centroid zero and area $9/2$. Since $h_A(-v_i)=6/5$ and $h_B(-v_i)=4/5$, the average satisfies $(A+B)/2\\subseteq K$ by the three inequalities defining $K$. At the extreme bases the hull can use only the original fiber, and a convex combination at zero has equal coefficients on the two endpoints, so its section is exactly $K$. The areas are $81/50,9/2,72/25$, summing to $9$.\n\nAfter moving any containing cap parallel to pass through $(0,0)$, reflection pairs the whole $A$ fiber at $-1$ with a subset of $B$ at $1$, since $-A\\subset B$. Reflection preserves area, and each pair has at least one member in the closed cap. Thus the endpoint contribution is at least $81/50$. The ordinary centroid bound from the full-mass specialization of 6769574fc1bd9f8d gives middle area at least $2=(4/9)(9/2)$ for nonzero continuous normal, and a pure integer cap takes the whole middle fiber. Each displayed cap realizes this lower bound: on $A$ the minimum of $v_i\\cdot x$ is $-6/5>-8/5$; on $B$ its maximum is $8/5$; and on $K$ the middle cap is the canonical vertex cap. Their middle traces cover the entire plane since $\\sum_i v_i=0$. Each endpoint can be isolated by a sufficiently large finite outward slope; an ordinary closed cap through any endpoint source then has at most half its fiber area by taking the smaller of the two opposite traces. Both half-areas are below $Q$, proving the global assertion.\n\nOn $K$, the $v_i$ functional has apex value $2$ and opposite edge value $-1$. The cap area at threshold $s\\in[-1,2]$ is $(2-s)^2/2$. The negative derivative at zero gives $k_i=2$, so the weights are equal. On an edge the two varying barycentric coordinates are $s,1-s$ in the fractional edge parameter $0\\le s\\le1$; a middle cap corresponds to a barycentric coordinate at least $1/3$. This proves the load pattern. Under the density $2T_t(s)$ on $[0,1]$, the mass of $[1/3,2/3]$ is $1/[3(1-t)]$ for $t\\le1/3$, $1/(3t)$ for $t\\ge2/3$, and $1-1/[9t(1-t)]$ for $1/3\\le t\\le2/3$. These formulas follow by integrating the two affine tent pieces and are at least $1/3$. Hence the normalized tent average of $W_K$ is at least $4/9$. The physical tent area is $L/2$ and $4/9-181/450=19/450$, giving the bound. In particular it is $19/300$ on either coordinate-parallel edge, where $L=3$.\n",
+  "source_candidate_ids": [
+    "929f9f6bc9acea34"
+  ],
+  "source_candidate_sha256": {
+    "929f9f6bc9acea34": "0168c61d8e5db25fa41837f403e697b7873b9c9c2a166451c911bd6f27e57cf3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "929f9f6bc9acea34",
+      "locator": "929f9f6bc9acea34:04 §4, actual triangle example and all interior tent peaks"
+    }
+  ],
+  "statement": "Let $v_1=(1,0),v_2=(0,1),v_3=(-1,-1)$ and $T=\\{x:v_i\\cdot x\\le1,\\ i=1,2,3\\}$. Put $A=(3/5)T,\\ K=-T,\\ B=(4/5)(-T)$ at integer bases $-1,0,1$. They are the exact integer fibers of their convex hull. At $(0,0)$ the three caps $v_i\\cdot x-(8/5)z\\ge0$ attain the true global maximum raw depth $Q=181/50$, with total area $M=9$. Their $A$ cuts are strictly full, $K$ cuts proper, and $B$ cuts supporting with zero area. Define the normalized middle load $W_K=\\frac13\\sum_i\\mathbf1_{\\{v_i\\cdot x\\ge0\\}}$, with weights from the inverse section coefficients $1/(k_i+2\\sigma_i)$, where $k_i$ and $\\sigma_i$ are the $K,A$ section lengths divided by $\\|v_i\\|$ and $\\sigma_i=0$ at strictly full cuts. On each $K$ edge, $W_K=1/3$ on the outer thirds and $2/3$ on the middle third, up to null endpoints. Every unit-height tent of interior peak on an edge of length $L$ has\n$\n\\int_{\\mathrm{edge}} T_t(W_K-Q/M)\\,ds\\ \\ge\\ (L/2)(19/450)>0,\n$\nalthough the outer loads $1/3$ are below $Q/M=181/450$.",
+  "subgoal_id": "pk-intake-actual-critical-positive-tent-low-edge-load",
+  "title": "Positive face-tent costs with low boundary load"
+}

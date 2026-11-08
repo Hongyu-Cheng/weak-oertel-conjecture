@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary planar data preservation for a body already between the six-ray hull and the triangle and containing two triangle vertices.",
+  "author": "PK-research-agent",
+  "candidate_id": "6229efd272b28ad2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:16:52.936529+00:00",
+  "depends_on": [],
+  "draft_key": "exact-single-unique-corner-compression",
+  "kind": "lemma",
+  "proof": "On each original edge of $T$, the third cap margin is strictly negative at both endpoints and hence along the entire edge. The other two margins sum to its negative. Their zeros are thus distinct interior points ordered so that their two positive portions overlap. Consequently the hull $C$ consists of the portion left after trimming the three disjoint vertex corners along the segments joining their neighboring ray endpoints. The corner at each vertex lies in that vertex's unique sector up to boundaries: the two other margins are nonpositive at its three vertices and therefore throughout. The hull of $C$ and the two retained original vertices fills everything except the third corner, so all missing area $E$ belongs to $U$.\n\nFor $E>0$, draw the segment between the two points at relative distance $\\sqrt{E/L}$ from the third vertex on the sides of $U$. The retained closed halfplane contains $C$, and its removed area is $E$ by planar homothety. Both endpoints of the new segment are in relative interiors of two different original edges even at $E=L$. This gives four vertices. The case $E=0$ is handled by $T$ itself. The retained body lies between $C$ and $T$, hence keeps all six endpoints and all full chords. Both bodies lose only $E$ in the same unique sector and no other sector area, which also fixes total area and all cap areas. The normalized Lorentz rows depend only on those cap areas, total area and fixed-normal coarea lengths.\n",
+  "source_candidate_ids": [
+    "fd39a28eeb41e9c4"
+  ],
+  "source_candidate_sha256": {
+    "fd39a28eeb41e9c4": "d9cfc8941c55d5d69585bc3c46c3f244baa872b2661118e0b732a05afb8d416c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fd39a28eeb41e9c4",
+      "locator": "fd39a28eeb41e9c4:02 §5, exact one-corner compression"
+    }
+  ],
+  "statement": "Let $T$ be a nondegenerate planar triangle with an interior mark and three balanced spanning cap normals whose cuts through that mark strictly capture distinct vertices and strictly exclude the other two. Let $C$ be the hull of the six cut-line endpoints. If $C\\subseteq K\\subseteq T$ is a convex body containing two vertices of $T$, let $U$ be the corner triangle at the third vertex cut off by the line through its two neighboring cut-line endpoints. Set $E=|T|-|K|$ and $L=|U|$. Then $0\\le E\\le L$. Removing the corner homothetic to $U$ about that vertex with ratio $\\sqrt{E/L}$ gives a quadrilateral if $E>0$ and $T$ if $E=0$. It has exactly the same six ray endpoints, full cutting chords, six sector areas, three cap areas, and normalized Lorentz rows as $K$.",
+  "subgoal_id": "pk-intake-exact-single-unique-corner-compression",
+  "title": "Exact planar compression of one missing corner with fixed rays"
+}

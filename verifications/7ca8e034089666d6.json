@@ -1,0 +1,51 @@
+{
+  "candidate_id": "c8651ae0583260d9",
+  "candidate_sha256": "082325cd8fd4d64693037c7af852379ad05eb9051672cea66b017bf3f9c9bcfd",
+  "checked_dependency_candidate_sha256": {
+    "e42e4ad8eaa4f705": "420797c10d20c9ddabe5b3971417fb8863776e63a4becc2dac09d68607cdc472"
+  },
+  "checks": [
+    "Verified the source §4 on the shared budgets, rank, and physical acceleration. Its reference simplex setup in §§1–3 matches the same-batch inertia predecessor.",
+    "The sum of copywise Lagrangians is stationary and its Hessian is block diagonal. Its positive index is dN. Restricting a dN-dimensional positive subspace to the kernel of m linear constraints leaves dimension at least dN−m=d(N−1)−1≥1.",
+    "For a one-copy translation v1ᵀ with sum v_i=0, the column sums and trace are zero and row sums are mv_i. The cap derivative formula gives exactly the zero-sum cap subspace. For I−11ᵀ/m, the column and row sums vanish and its trace is d, giving a nonzero common derivative. Both are valid physical tangent matrices.",
+    "For B in the positive critical kernel, stationarity gives M′=0. For I+tB+t²C/2 the cap second derivative is its Hessian value plus the surjective first-derivative map applied to C, so it can be set to −ε in every row. The acceleration contributes zero to the stationary Lagrangian second derivative. M″ equals the positive Lagrangian Hessian value minus ε/γ, with γ=(d/m)^d. Positive and negative quadratic signs persist for all sufficiently small positive t.",
+    "The columns stay normalized, and the independent-neighborhood hypothesis ensures all small simultaneous vertex changes on the polynomial path satisfy actual compatibility. The theorem does not infer this feasibility from positive index alone."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "e42e4ad8eaa4f705",
+      "candidate_sha256": "420797c10d20c9ddabe5b3971417fb8863776e63a4becc2dac09d68607cdc472",
+      "mapping": "Apply its smooth physical vertex cap formula at each copy of the same reference simplex, with γ=(d/m)^d, fixed caps ξ_i≥1/m, and the column-sum-zero tangent space. It gives stationarity, positive index d per copy, and F_i′/(γV)=trace(B)+Σ_j B_ij. Independence gives the direct sum. Exact dependency bytes require their own approval before admission.",
+      "reviewed_proof_sha256": "a7420bef647b543cec06a53a7b58671da11a77cc761475b70c0b860e23802344",
+      "reviewed_statement_sha256": "8a2aaf1f5005f9964c49494853558b1276461cdc278a298b42c162cf5087cbce",
+      "status": "pending_same_batch_admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:37:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Treats first-order support variation with a fixed active facet-normal list and gives a volume-neutral translation conclusion for simplices. Its hypotheses and quantities differ from independently varying physical vertices with fixed external aggregate cap budgets, and it has no second-order common-budget improvement.",
+      "fact_id": "3c9324a0a9f45a1e"
+    },
+    {
+      "comparison": "Characterizes the canonical caps and equal cap volume at equality in an ordinary one-body covering profile. It does not give aggregate perturbation rank or a compatible path for independently varying copies.",
+      "fact_id": "1c6088cbbbb3f688"
+    }
+  ],
+  "readability": "The phrase 'physical canonical cap Hessian setting' imports the fixed caps, reference volume, column convention and γ from the sole predecessor. The path notation is componentwise on the copies.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "865d997efa160fd7458073e47eb2dcf9b64cb8dabc4cf4b67367214e01c460fe",
+  "reviewed_statement_sha256": "2f90baff19d585c91c3ca225a8a5a5ba518d1f18977041c9144b01fa50c6838c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:34:16Z",
+  "summary": "The positive index and rank of the aggregate derivative imply a physical quadratic path that decreases every shared cap budget and increases total volume, conditional on local independent feasibility.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

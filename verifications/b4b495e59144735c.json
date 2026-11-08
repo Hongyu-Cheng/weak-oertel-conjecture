@@ -1,0 +1,51 @@
+{
+  "candidate_id": "fd4943bd225affe6",
+  "candidate_sha256": "fa0376738aca7ea6f9b6d844599820a7b529070c670d5d78e59d09507650bdc2",
+  "checked_dependency_candidate_sha256": {
+    "e42e4ad8eaa4f705": "420797c10d20c9ddabe5b3971417fb8863776e63a4becc2dac09d68607cdc472"
+  },
+  "checks": [
+    "At a labeled simplex the column-sum-zero matrices give precisely independent vertex displacements in its barycentric plane. The open admissibility assumption keeps every displaced simplex as an actual fiber while fixing the other fibers. On each selected fiber the active canonical cap volume is smooth, strictly full caps contribute the volume of that fiber, and strictly empty caps contribute zero.",
+    "For the displayed lift, the off-diagonal column sums are c and the off-diagonal row sums are -c/(dm-1). Thus the trace is zero and the full row sums are -dm c/(dm-1). The quantity in the accepted Hessian is ||s||²+||A||²=m||c||²/(dm-1), giving the positive coefficient (d²-1)/(d(dm-1)). For d=2 and c=(1,-1,0), the exact normalized Hessian is 3/5.",
+    "Complete canonical permutations have derivative sum zero because the full matrix entries sum to zero. A group containing only strict full or empty traces on a block also has zero derivative sum. The h equations have disjoint cap coordinates. The annihilator of the kernel contains the d independent coordinates for each identically zero block, and the finite-union argument works also when no nonzero block remains.",
+    "A simplex translation has zero volume derivative and arbitrary zero-sum row vector, forcing equal total canonical multipliers on its vertices. Centroid dilation fixes each canonical cutting plane and gives 1=F_z+mγ α_z. Substitution into the actual fiberwise Lagrangian yields w_z times the accepted canonical Lagrangian up to constants.",
+    "The affine acceleration image either intersects the strict positive orthant or separates with nonnegative coefficients. Simultaneous centroid contraction strictly decreases each affected active cap, excluding a zero objective multiplier on separation. On the chosen kernel direction the Hessian is a sum of nonnegative block terms, so separation forces positive weights onto U. In the other case the degree-two path has the required strict signs, and strict slack keeps inactive budgets feasible."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "e42e4ad8eaa4f705",
+      "candidate_sha256": "420797c10d20c9ddabe5b3971417fb8863776e63a4becc2dac09d68607cdc472",
+      "fact_sha256": "2ed15a6bed423772058d07f41bf4070fc4ba0cb21e12df9894f8cb1ec2674963",
+      "reviewed_proof_sha256": "a7420bef647b543cec06a53a7b58671da11a77cc761475b70c0b860e23802344",
+      "reviewed_statement_sha256": "8a2aaf1f5005f9964c49494853558b1276461cdc278a298b42c162cf5087cbce",
+      "verification": "Apply in each simplex's fixed physical barycentric metric, with reference matrix I, canonical thresholds 1/m and column-sum-zero displacement B. The volume factor V_z scales the Hessian, including for different simplex shapes."
+    }
+  ],
+  "finished_utc": "2026-11-08T18:22:08Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides the physical single-simplex cap formula, derivative, and Hessian on the exact chosen lift. The new rank, forced-zero blocks, and nonnegative full-trace weights depend on simultaneous incidence across fibers and groups.",
+      "fact_id": "e42e4ad8eaa4f705"
+    },
+    {
+      "comparison": "One complete shared tuple with independently variable copies and no full traces yields its special improving path. It has neither the grouped rank bound with mixed full traces nor the existence of a low-support separating stress.",
+      "fact_id": "c8651ae0583260d9"
+    }
+  ],
+  "readability": "The no-affected-cap line uses a nonzero objective direction when at least one simplex is selected. If N=0 is permitted, that case is vacuous for improvement and the empty stress gives the claimed local certificate directly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold reading of the frozen proof, then direct checks of the archived source locators, pinned predecessors and mathematical arguments.",
+  "reviewed_proof_sha256": "8cc9c9e0f0f054ac0d9f0a8285ce469e68c9bf59e355dd67e52478180f6e0f27",
+  "reviewed_statement_sha256": "9c53adfcbd026ca720bc812e004566d161656193b6feffcae259a14d5ce83768",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:16:17Z",
+  "summary": "The complete-tuple incidences force the claimed rank and support bounds, and the acceleration alternative gives the stated objective-one second-order stress or a physical improving path.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

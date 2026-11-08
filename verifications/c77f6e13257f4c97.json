@@ -1,0 +1,47 @@
+{
+  "candidate_id": "f0d6276552741806",
+  "candidate_sha256": "75beeb560b55b4e5e85c76741926a677b52b1b267e850b757eba02e95832707f",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Expanded the numerator of g in x = 1 + z as ((2d+1)x−d)Q + 3d(d+1)(x−1)^2 = xR. The coefficients of Q and the factor 1+dx show that the cleared denominator is positive on x ≥ 0. The factor x gives the endpoint equality at z = −1.",
+    "Differentiating f twice leaves the factor d(d+1)(1−θ)^2 = θ and gives the displayed second derivative. Its derivative at zero is −3θc. The rational minorant has the same coefficients through degree three, so the nonvanishing factors at x = 1 give a root of P of multiplicity at least four.",
+    "For 0 ≤ j < d the two coefficient ratios are obtained from adjacent binomial coefficients with out-of-range terms zero. The first strictly increases, the second is zero at j = 0 and j = 1 and is nondecreasing afterward. The last normalized coefficient is at most −(d−1)(d+4+2/d), already negative at d = 2. The low coefficients give one sign change, and the three remaining positions add at most three. Descartes forces exactly four changes, multiplicity exactly four at 1, and no other positive root. The sign is positive away from 1 on the positive half-line by P(0)>0 and even multiplicity.",
+    "The paired numerator follows from c = e+1/2. On [0,1], D is positive and D−1 = v²(e−1/4−e²(1−v²)). Since e < 1/6, D < 1 at positive v, making the quartic inequality strict even at v = 1, where f(−1) = 0 and D(1) = 3/4+e. Equality at v = 0 follows by substitution.",
+    "The base 1+zx is affine and nonnegative up to the support endpoint, where it equals A/B. Substituting y = 1+zx gives (A−By)/z for the bracket and dy/z for dx, with oriented limits also for negative z. Independently integrating the two monomials gives the displayed A^(d+1)/(d(d+1)B^d) = f(z)/d. The affine terms at opposite tilts sum to −2/d. At z = 0 direct integration gives 1/[2(d+1)] per leg, and the even Taylor expansion verifies continuity of the paired quotient.",
+    "As a supplementary exact check, rebuilt the integer coefficients of P for d = 2 through 60, verified its first four Taylor coefficients at x = 1 vanish and its fourth-degree coefficient is positive, and integrated the kernels by a separate binomial expansion at v = 0, 1/50, 1/4, 2/3, 1. All rational identities and strict inequalities for positive v passed. The arbitrary-d proof uses the coefficient monotonicity and exact integration above.",
+    "Checked both source blobs at f8f4853 against the frozen source SHA-256 values. The scalar estimate, rational minorant and normalized lower bound are precisely 31c8bae81eb26cc3 Theorem (1)–(2), (3)–(10). The expression and zero-tilt value are c21aa22115d69526 §2 (2) at a = 0 and §4 (8), proved anew in the frozen text. The strict quartic equality assertion follows from D < 1 at positive v.",
+    "Downstream match: in pending 08dc040bda1a0f7a §4 (10), L_v = K_{−v} and R_{0,v} = K_v including their zero extensions. At its knot v = (d+1)(H−J)/[d(H+J+1)] lies in [0,1] exactly by J ≤ H ≤ (2d+1)J+d, so the frozen bound supplies the full claimed integral input even when H = J. Pending e06a5b80357a8187 Lemmas 1 and 4 use the same quartic input in the positive-right-index argument. The frozen estimate concerns the unshifted kernels. Finite shifts and trapezoid errors are downstream steps."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T07:24:14.866Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The closest accepted envelope result treats n = 1 and d = 2, with upper bounds on a discrete retained-area envelope maximized over a tilt. It does not give the paired continuous affine kernels or their all-d lower bound.",
+      "fact_id": "4d628efe7673ce2d"
+    },
+    {
+      "comparison": "The planar discrete tail comparison assumes a mixed body with at least five positive-area fibers and bounds its depth through adjacent anchors. Its sampled scalar tail and normalizations do not imply the continuous kernel inequality.",
+      "fact_id": "fd5758bb129f2e08"
+    },
+    {
+      "comparison": "The accepted quartic surplus is for a finite geometric probability law with reflected counts and concerns its fourth-power sum and score moment. It has neither the affine kernel pair nor the d and v quantifiers of the frozen theorem.",
+      "fact_id": "f35126e13cfd3cb5"
+    }
+  ],
+  "readability": "The compact Taylor step and negative-tilt substitution required checking the vanishing orders and orientation explicitly. Both steps are valid as written. The two pending source notes serve as provenance, and the standard multiplicity form of Descartes’ rule is the only named algebraic theorem used.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3afdaf8c57ee023e7ba16c9f44e795452cfb567b93415d5ac5533dd60959b0e3",
+  "reviewed_statement_sha256": "2e23799ba5b7bf33821b2f69cacd76b06e7534361314c14b7285eeb1eb3594e8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:21:32.918Z",
+  "summary": "The exact frozen proof establishes the pointwise rational minorant, the paired quartic bound and its equality case, and the integral identity and lower bound for all integers d ≥ 2, including both tilt endpoints. It is self-contained and supplies the continuous-kernel input to the pending positive-right-index knot estimate.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "Finite scalar optimization on an affine evaluation space. It does not by itself construct an ambient depth cap.",
+  "author": "PK-research-agent",
+  "candidate_id": "faf0509574789c00",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:33:00.811112+00:00",
+  "depends_on": [],
+  "draft_key": "clipped-affine-root-budget-attainment",
+  "kind": "lemma",
+  "proof": "Write $r_z=V_z^{1/d}$ and let $E$ be the affine subspace of evaluation vectors $(k+b\\cdot(z-z_0))_{z\\in P}$. For every partition of $P$ into $L,I,U$, intersect $E$ with the closed constraints $x_z\\le0$ on $L$, $0\\le x_z\\le r_z$ on $I$, and $x_z\\ge r_z$ on $U$. These finitely many cells cover $E$. On each cell the objective is $\\sum_{z\\in I}x_z^d+\\sum_{z\\in U}V_z$.\n\nFor a nonempty cell its image in the coordinates $x_I$ is a polyhedron. In fact, describe $E$ by pairs of nonstrict affine inequalities and eliminate each omitted real coordinate by comparing every affine lower bound with every affine upper bound, retaining the inequalities independent of that coordinate. The comparisons are equivalent to existence of a finite value of the coordinate, including when only one side has bounds. Repeating the elimination gives finitely many nonstrict affine inequalities on $x_I$. The image is thus closed and lies in the compact box $\\prod_{z\\in I}[0,r_z]$. The displayed continuous objective attains a minimum there. If $I$ is empty the objective is constant on the cell. A minimizing point in the image lifts to an actual point of the cell and hence to a finite $b$ by the definition of $E$. Minimize over the finitely many nonempty cells.\n",
+  "source_candidate_ids": [
+    "763180a256538232"
+  ],
+  "source_candidate_sha256": {
+    "763180a256538232": "ddb6a8f960715e5f556fc32d650576ee823d47b5482f53025f7a0b7fbd7158f1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "763180a256538232",
+      "locator": "§3, (5), attainment of the clipped affine-root minimum"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite, let $z_0\\in P$, let $k\\ge0$ and let $d\\ge1$ be an integer. Assign each $z\\in P$ a positive $V_z$. Then\n$$\n\\Phi_k(b)=\\sum_{z\\in P}\\min\\{V_z,[k+b\\cdot(z-z_0)]_+^d\\}\n$$\nattains its infimum over finite $b\\in\\mathbb R^n$, where $[s]_+=\\max\\{s,0\\}$.",
+  "subgoal_id": "pk-intake-clipped-affine-root-budget-attainment",
+  "title": "Attainment of the clipped affine-root budget"
+}

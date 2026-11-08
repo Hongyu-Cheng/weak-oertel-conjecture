@@ -1,0 +1,26 @@
+{
+  "advances": "Finite fixed lattice projection and anchored convex representations. The scalar rank formula describes compatibility constraints.",
+  "author": "PK-research-agent",
+  "candidate_id": "c685efebebd86415",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.849849+00:00",
+  "depends_on": [],
+  "draft_key": "anchored-jensen-face-and-matrix-characterization",
+  "kind": "lemma",
+  "proof": "Every vertex of $Q$ belongs to $P$, so the sites of a face span it. For an anchored face $F$, choose $z\\in P\\cap\\operatorname{relint}F$ and let $\\bar w$ be the average of all sites in $F$. For small $t>0$, $y=(z-t\\bar w)/(1-t)$ is in $F$. Expanding $y$ in vertices gives a convex representation $\\rho$ of $z=t\\bar w+(1-t)y$ with a positive coefficient at every site of $F$. If $a$ is any affine dependence on those sites, then $\\rho+\\varepsilon a$ and $\\rho-\\varepsilon a$ are both representations for sufficiently small $\\varepsilon>0$. Applying the defining equality for $g\\in L(P)$ and subtracting gives $\\sum_w a_w g(w)=0$. Such annihilation is exactly agreement with the affine interpolant of the values on any affine basis.\n\nConversely, every positive-weight source of a representation of $z$ lies in the minimal face containing $z$, by exposure of that face. It is anchored by $z$. Affinity on its sites preserves the representation. Every anchored face is the minimal face of one of its relative-interior sites and is contained in a maximal anchored face, giving all equivalences. The rows of $D_P$ impose precisely the affine interpolation equations. For $T_P$, the coefficient polytope is bounded, so all coefficients are convex combinations of its vertices. A vertex cannot have an affine dependence on its positive support, since the coefficients could then be perturbed in both signs along that dependence. Both constructions use rational linear equations with integer site coordinates, so their rows are rational. The dimension follows by rank-nullity.\n\nEach site is in an anchored minimal face and is interpolated from the vertices there. Compatible affine assignments on faces agree on every intersection because the vertices of the intersection are shared and span it. This proves the exact characterization by vertex values. An anchored whole $Q$ forces one affine function. In a hollow polygon all nonvertex sites are on edges, where arbitrary endpoint values interpolate independently and agree at shared vertices. A lattice simplex with only its vertices likewise has no nonaffine mode. In the binary square all sites are vertices and their only anchored representations are trivial. The array $z_1z_2$ violates the square's ordinary alternating affine relation, as asserted.\n",
+  "source_candidate_ids": [
+    "254a4d13e061ac3e"
+  ],
+  "source_candidate_sha256": {
+    "254a4d13e061ac3e": "88aa9e3bd60ceeba4b8936457d05363c5305b6ed95ee6e2e79bdbba25a09758c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "254a4d13e061ac3e",
+      "locator": "254a4d13e061ac3e:01 §§1–2, Lemma 1 and (2)–(5), anchored face and matrix descriptions"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be finite and nonempty, set $Q=\\operatorname{conv}P$ and $r=\\dim Q$, and let $L(P)$ be the scalar functions on $P$ preserving all convex representations of targets in $P$. A face of $Q$ is anchored when its relative interior meets $P$, including singleton vertices. Membership in $L(P)$ is equivalent to affinity on the sites of each anchored face, or just each inclusion-maximal anchored face, or each minimal face of a target in $P$.\n\nForm $D_P$ by choosing an affine basis of sites for each maximal anchored face and making a row for the difference of each remaining site's value and its affine interpolant. Form $T_P$ from the nonzero rows $e_z-\\lambda$ for vertices $\\lambda$ of the coefficient polytopes $\\{\\lambda\\ge0:\\sum_w\\lambda_w=1,\\ \\sum_w\\lambda_w w=z\\}$, over all $z\\in P$. Then $L(P)=\\ker D_P=\\ker T_P$, both matrices are rational, and $\\dim L(P)=|P|-\\operatorname{rank}D_P$. Each vertex coefficient vector has support size at most $r+1$.\n\nVertex values of $Q$ determine all of $L(P)$ and may be chosen precisely subject to affinity on the vertices of each anchored face. If $\\operatorname{relint}Q$ contains a lattice point, $L(P)$ is the space $A(P)$ of ordinary affine restrictions. For a hollow lattice polygon with $v$ vertices the dimension is $v$. On $\\{0,1\\}^2$, the array $z\\mapsto z_1z_2$ lies in $L(P)\\setminus A(P)$.",
+  "subgoal_id": "pk-intake-anchored-jensen-face-and-matrix-characterization",
+  "title": "Anchored faces and finite matrices characterize the Jensen space"
+}

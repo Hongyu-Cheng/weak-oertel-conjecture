@@ -1,0 +1,26 @@
+{
+  "advances": "Auxiliary signed-exponential probability with integer shapes. The primitive supports derivative analysis over the stated interior parameter range.",
+  "author": "PK-research-agent",
+  "candidate_id": "8e9593a77c241bb2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.058686+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w31-all-index-exponential-density-and-primitive",
+  "kind": "lemma",
+  "proof": "Put $T=E_++Y$ and $U=E_+/T$. The change $(E_+,Y)=(tu,t(1-u))$ has Jacobian $t$. Its density factors as the density of $\\operatorname{Gamma}(m+1,1)$ times that of $\\operatorname{Beta}(1,m)$, with $U$ independent of $(T,X,E_-)$. The event is $Z+(p+b)U\\ge b$. Conditional on $Z=z$ its probability is zero for $z<-p$, one for $z\\ge b$, and $[(p+z)/(p+b)]^m$ in between by the beta survival formula.\n\nFor $W=X-E_-$ the convolution integrand is $(w+v)^qe^{-w-2v}/q!$ for $v\\ge\\max(0,-w)$. For $w<0$, shifting $v$ by $-w$ gives $2^{-k}e^w$. For $w\\ge0$, expanding the power and integrating each term gives $2^{-k}e^{-w}\\sum_{j=0}^q (2w)^j/j!$. In $f_Z(z)=\\mathbb E[T f_W(Tz)]$, integration of $t^{m+j+1}e^{-(1+z)t}$ on the positive side and $t^{m+1}e^{-(1-z)t}$ on the negative side gives the displayed density. It is continuous at zero. The Leibniz derivative of the probability integral has upper boundary term $b'f_Z(b)$, canceled by the derivative of the tail, and zero lower boundary term. The integrand and its partial derivative are bounded on the moving intervals locally in $p$. The remaining derivative formula uses $m(p+b)-(m+1)(p+z)=q-(m+1)z$.\n\nWrite $J_-$ and $J_+$ for the parts below and above zero. In $J_-$ take $t=(p+z)/(1-z)$ with $0\\le t\\le p$. Its integrand becomes\n$$\n\\frac{m+1}{2^k(1+p)^2}\\,t^{m-1}[A+(q-m-1)t],\n$$\nand hence $J_-=p^mN_0/[2^k m(1+p)^2]$ with $N_0=(m+1)q+(mk+1)p$. In $J_+$ take $t=(p+z)/(1+z)$, with $p\\le t\\le A/B$. The $j$-th term of the density contributes\n$$\n\\frac{m+1}{2^k c^{j+2}}\\,2^j\\binom{m+j+1}{j}\\,t^{m-1}(t-p)^j[A-(m+k)t].\n$$\nThus $J_+=(m+1)[(A/B)^mQ(A/B)-p^mQ(p)]/(2^kc^{k+1})$. Existence and uniqueness of $Q$ follow by dividing each coefficient of $[A-(m+k)t]S(t)$ of degree $\\ell$ by $m+\\ell$.\n\nFor the lower endpoint let $V_0=(m+1)A-m(m+k)p$, $r=-2p$, and $s=c$. Integrating the polynomial primitive from $0$ to $p$ and setting $t=pu$ gives\n$$\nm(m+1)Q(p)=\\sum_{j=0}^q r^js^{q-j}(V_0+jA).\n$$\nIn fact the two beta integrals in the $j$-th term are $\\int_0^1u^{m-1}(1-u)^j\\,du=(m-1)!j!/(m+j)!$ and $\\int_0^1u^m(1-u)^j\\,du=m!j!/(m+j+1)!$. Multiplying them by $m(m+1)\\binom{m+j+1}{j}$ produces $m+j+1$ and $m$, respectively. The geometric sum is $(s^k-r^k)/(s-r)$ and its $r\\partial_r$ derivative is $[rs^k-ksr^k+(k-1)r^{k+1}]/(s-r)^2$. Expanding the two brackets gives\n$$\nV_0(s-r)+Ar=N_0s,\\qquad V_0(s-r)+A[ks-(k-1)r]=D.\n$$\nConsequently $m(m+1)Q(p)=[N_0 s^{k+1}-D r^k]/(1+p)^2$. In $J_-+J_+$ the term with $N_0$ cancels and $p^m r^k/2^k=(-1)^k p^{m+k}$, as claimed.\n",
+  "source_candidate_ids": [
+    "b2bd978e973816b6"
+  ],
+  "source_candidate_sha256": {
+    "b2bd978e973816b6": "888676a0b10573e6dcaafdb448882e77a4a9e4daf27c82abe3a7b30d7920bba0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b2bd978e973816b6",
+      "locator": "b2bd978e973816b6:01 Scope; §§1–3, (3)–(10), actual density and primitive"
+    }
+  ],
+  "statement": "Let integers $m\\ge k\\ge2$ and $0<p<1$ be given. Let $X,Y,E_+,E_-$ be independent, with $X\\sim\\operatorname{Gamma}(k,1)$, $Y\\sim\\operatorname{Gamma}(m,1)$, and $E_\\pm\\sim\\operatorname{Exp}(1)$. Write\n$$\nq=k-1,\\quad c=1-p,\\quad b=\\frac{q+p}{m},\\quad\nA=q+(m+1)p,\\quad B=m+p+q,\\quad\nD=qp^2+\\bigl[(k+1)m+k^2-k+2\\bigr]p+q(m+k+1).\n$$\nSet $P(p)=\\Pr(X+pE_+\\ge E_-+bY)$ and $Z=(X-E_-)/(E_++Y)$. Then\n$$\nf_Z(z)=\\frac{m+1}{2^k}\n\\begin{cases}\n(1-z)^{-m-2}, & z<0,\\\\[2pt]\n\\displaystyle\\sum_{j=0}^q 2^j\\binom{m+j+1}{j}\\frac{z^j}{(1+z)^{m+j+2}}, & z\\ge0 .\n\\end{cases}\n$$\nThe probability and its derivative are\n$$\nP(p)=\\Pr(Z\\ge b)+\\int_{-p}^b\\left(\\frac{p+z}{p+b}\\right)^m f_Z(z)\\,dz,\\qquad\nP'(p)=\\frac{J(p)}{(p+b)^{m+1}},\n$$\nwhere $J(p)=\\int_{-p}^b(p+z)^{m-1}[q-(m+1)z]f_Z(z)\\,dz$. Put\n$$\nS(t)=\\sum_{j=0}^q2^j\\binom{m+j+1}{j}(t-p)^jc^{q-j}.\n$$\nLet $Q$ be the unique polynomial with $(t^mQ(t))'=t^{m-1}[A-(m+k)t]S(t)$, where the prime in this equation is with respect to $t$. Then\n$$\nJ(p)=\\frac{(m+1)(A/B)^mQ(A/B)}{2^k c^{k+1}}\n     +\\frac{(-1)^k p^{m+k}D}{m c^{k+1}(1+p)^2}.\n$$",
+  "subgoal_id": "pk-intake-pk-w31-all-index-exponential-density-and-primitive",
+  "title": "The exact all-index primitive for a fractional exponential phase"
+}

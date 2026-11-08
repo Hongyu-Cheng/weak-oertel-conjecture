@@ -1,0 +1,28 @@
+{
+  "advances": "An exact two-source marginal-preserving modification. The bounds quantify density cost and retained surplus separately and give no favorable net comparison for critical-response weights.",
+  "author": "PK-research-agent",
+  "candidate_id": "37a4e78e87ecba58",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.753107+00:00",
+  "depends_on": [
+    "793210f8a4be3647"
+  ],
+  "draft_key": "pk-w36-localize-mixture-cap-surplus",
+  "kind": "lemma",
+  "proof": "Use 793210f8a4be3647, (1), at the two positive-volume bases with weights $1/2,1/2$ to take a coupling $\\Pi_0$ with the prescribed marginals and midpoint density at most $1/B_*$. When the bases coincide, use the diagonal coupling of their common uniform law, which has this bound. Let $\\Pi_1$ be the independent coupling. Its midpoint density at $x$ is $2^d|A\\cap(2x-B)|_d/(ab)$ by convolution and scaling, bounded by $2^d/\\max(a,b)$ since the overlap has volume at most $\\min(a,b)$. Mix the joint laws as $(1-\\varepsilon)\\Pi_0+\\varepsilon\\Pi_1$. Both marginals stay uniform, and convexity of the original body places all realized midpoints in the actual target fiber. The asserted density bound follows by linearity and multiplication by $t$.\n\nFor any one closed halfspace $H$, the pointwise difference of the two endpoint indicators minus the midpoint indicator is nonnegative. Indeed a captured midpoint cannot have both endpoints outside, since the open complementary halfspace is convex. If both endpoints are captured, convexity of $H$ gives midpoint capture and the difference is one. Under $\\Pi_1$ the probability of this latter event is the product of the two uniform cap fractions. Under $\\Pi_0$ the difference remains nonnegative. Integrating, scaling by $t$, and summing with the fixed nonnegative $\\theta_\\ell$ proves the simultaneous lower bound.\n",
+  "source_candidate_ids": [
+    "c90117ce6c41cc95"
+  ],
+  "source_candidate_sha256": {
+    "c90117ce6c41cc95": "e6f3b6552a2fc6a3242c64ff6b75bc6b11bf5afd35b9df63bde4804d69d2b357"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c90117ce6c41cc95",
+      "locator": "c90117ce6c41cc95:04 §3, (B1)–(B2), exact density and simultaneous surplus trade, lines 108–156"
+    }
+  ],
+  "statement": "Let $A,B$ be positive-volume $d$-dimensional fibers of one actual convex body at integer bases $z_A,z_B$ with integer midpoint $z_0=(z_A+z_B)/2$, where $d\\ge1$. Write $a=|A|_d$, $b=|B|_d$ and $B_*=\\bigl((a^{1/d}+b^{1/d})/2\\bigr)^d$. For every $t\\ge0$ and $\\varepsilon\\in[0,1]$ there is a coupling of the two uniform probabilities whose mass-$t$ midpoint output lies in the actual $z_0$ fiber and has density at most\n$$\nt\\left[\\frac{1-\\varepsilon}{B_*}+\\frac{\\varepsilon\\,2^d}{\\max(a,b)}\\right].\n$$\nFor every finite menu of ambient closed halfspaces $H_\\ell$ with $\\theta_\\ell\\ge0$ and $\\sum_\\ell\\theta_\\ell=1$, the same coupling has weighted captured source-minus-output mass at least\n$$\n\\varepsilon t\\sum_\\ell\\theta_\\ell\n\\frac{|A\\cap H_{\\ell,z_A}|_d}{a}\\frac{|B\\cap H_{\\ell,z_B}|_d}{b}.\n$$\nHere the two source masses are each $t$, the output mass is $t$, and $H_{\\ell,z}$ denotes the section of $H_\\ell$ at base $z$. The source cap masses use the whole original halfspace traces on each allocated marginal.",
+  "subgoal_id": "pk-intake-pk-w36-localize-mixture-cap-surplus",
+  "title": "Midpoint coupling mixtures retain simultaneous closed-cap surplus"
+}

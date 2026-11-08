@@ -1,0 +1,26 @@
+{
+  "advances": "A finite-amplitude local integral calculation for the logarithmic part, independent of the full reoptimized buffered depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "83ca7858994b510b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.217420+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-tilt-flat-collar-log-remainder",
+  "kind": "lemma",
+  "proof": "The exact primitive gives $I=A[F(T+\\eta+k)-F(\\eta+h+k)]$. At the origin $I_h=-A\\log\\eta$ and $I_k=A\\log((T+\\eta)/\\eta)$. Subtracting the linear terms leaves the upper Bregman remainder minus $A B_F(\\eta+h+k,\\eta)$. The latter is $A\\eta J((h+k)/\\eta)$, yielding the identity. Since $F''(y)=1/y$, the upper remainder is nonnegative and at most a constant times $A k^2/T$ for bounded $t$ and small $\\eta$. The singular part in $-\\lambda I$ is $\\lambda A\\eta J((h+k)/\\eta)$. Here $J(0)=J'(0)=0$ and $J''(v)=1/(1+v)>0$, giving the sign, Hessian and null line. At any fixed nonzero $s+t$ the singular scale is $\\lambda A\\eta$ and the upper term is smaller by order $\\eta/T$. The computation holds with the upper endpoint and transverse area frozen.\n",
+  "source_candidate_ids": [
+    "f6c4fce660e140cf"
+  ],
+  "source_candidate_sha256": {
+    "f6c4fce660e140cf": "1568f52d320eebf076c5a0c0068094b05bd6537cba38313d489b2756baee2f45"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f6c4fce660e140cf",
+      "locator": "f6c4fce660e140cf:03 §3, (3)–(4), exact frozen flat-collar logarithmic remainder"
+    }
+  ],
+  "statement": "Let $A,T,\\eta>0$. For $h\\le T$ and $\\eta+h+k>0$, put $I(h,k)=A\\int_h^T\\log(\\eta+x+k)\\,dx$ and $F(y)=y\\log y-y$ for $y>0$. With $h=\\eta s$, $k=\\eta t$ and $J(v)=(1+v)\\log(1+v)-v$, its remainder after the full linear term at $(0,0)$ is\n$$\nA B_F(T+\\eta+\\eta t,T+\\eta)-A\\eta J(s+t),\\qquad\nB_F(y,x)=F(y)-F(x)-F'(x)(y-x).\n$$\nFor bounded $s,t$ as $\\eta\\downarrow0$ at fixed $T$, the first term is $O(A\\eta^2/T)$. The singular remainder in $-\\lambda I$ for $\\lambda>0$ is nonnegative, with Hessian at $(h,k)=(0,0)$ equal to $(\\lambda A/\\eta)\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$ and null direction $h+k=0$.",
+  "subgoal_id": "pk-intake-pk-w35-tilt-flat-collar-log-remainder",
+  "title": "The exact logarithmic remainder for a frozen flat collar"
+}

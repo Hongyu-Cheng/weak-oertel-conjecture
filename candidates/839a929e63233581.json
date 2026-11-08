@@ -1,0 +1,36 @@
+{
+  "advances": "Local proper-cap criticality on an actual finite integer base, with extra geometric hypotheses. The formal slope minimization alone gives no actual tilt identity or global depth bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "839a929e63233581",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.289255+00:00",
+  "depends_on": [
+    "1269c554ca9a41b8"
+  ],
+  "draft_key": "critical-homothetic-cap-root-budget",
+  "kind": "theorem",
+  "proof": "Let $F$ be the bottom exposed face of $D$ in direction $u$. Its image under the given homothety is the actual cutting section, because that section is the bottom face of a proper upper cap. Its $(d-1)$-area is $A_Da_z^{d-1}$, with $A_D=|F|_{d-1}>0$. Apply the full cap derivative of 1269c554ca9a41b8 §2 to the positive-volume fibers, varying the base coefficient by $\\dot b$, keeping $u$ fixed and varying the threshold by $\\dot b\\cdot z_0$. The derivative vanishes by local minimality, so the displayed base balance follows after division by $A_D/\\lVert u\\rVert$. Its weights are all positive, giving the relative-interior assertion.\n\nDot the balance with $\\ell$ to get $\\sum_z a_z^{d-1}(a_z-a_0)=0$. The factorization\n$$\nx^d-y^d-dy^{d-1}(x-y)=(x-y)^2\\sum_{j=0}^{d-2}(j+1)x^{d-2-j}y^j\n$$\nfollows by multiplying out. Apply it with $x=a_0,y=a_z$ and sum. The linear terms cancel, and the inner sums are positive. The slope objective has zero gradient at $\\ell$ by the same balance. Its Hessian evaluated on $v\\in E$ is $d(d-1)\\sum_z[a_0+\\eta\\cdot(z-z_0)]^{d-2}(v\\cdot(z-z_0))^2$, which is positive for $v\\ne0$ in the positive-root domain. The assertion extends to the closure by continuity: every slope with nonnegative roots is approached by taking convex combinations with the zero slope, at which all roots are positive.\n\nFor any finite convex combination of the sampled bases, convexity includes the corresponding Minkowski combination of actual fibers in the actual output fiber. Brunn–Minkowski gives the same concavity inequality for their whole-fiber roots. Apply this at $z_0$ with normalized weights proportional to $a_z^{d-1}$ and divide by $B=a_0\\sum_z a_z^{d-1}$ to get the first-moment bound. The right side equals $p^{-1/d}$ for own captured fraction $p=a_0^d/r_{z_0}^d$.\n\nFor the last assertion, the derivative of 1269c554ca9a41b8 §2 for a continuous variation $\\dot u$ and threshold variation $\\dot u\\cdot x_0$ gives $\\sum_z A_Da_z^{d-1}(c_z-x_0)=0$, where $c_z=a_zc_F+v_z$ is the centroid of the cutting section and $c_F$ is the centroid of $F$. The map $z\\mapsto c_z$ is affine on $P$, so its weighted mean is $c_{z_0}$ by the base balance. Thus $x_0=c_{z_0}$.\n",
+  "source_candidate_ids": [
+    "ad88f967d6335089"
+  ],
+  "source_candidate_sha256": {
+    "ad88f967d6335089": "275901176730853a15ff22ff4ac8cdb292e15be2bcc7fceabaa8dbb7c11a6747"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ad88f967d6335089",
+      "locator": "ad88f967d6335089:02 §§2–3, (3)–(8), homothetic critical section weights and affine-root budget"
+    },
+    {
+      "candidate_id": "ad88f967d6335089",
+      "locator": "ad88f967d6335089:04 §5, (13), actual whole-fiber root budget"
+    },
+    {
+      "candidate_id": "ad88f967d6335089",
+      "locator": "ad88f967d6335089:07 §7, Corollary 4, (19)"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a convex body, $d\\ge2$, and let $P$ be all its nonempty integer-fiber bases. Assume each fiber is full-dimensional and an ambient cap through $(z_0,x_0)$, $z_0\\in P$, with continuous normal $u\\ne0$, cuts every fiber properly. Suppose its raw mass is a local minimum under variation of the real base-normal coefficient with $u$ fixed. If its actual captured fibers are $K_z=a_zD+v_z$ with $|D|_d=1$ and $a_z>0$, then $\\sum_{z\\in P}a_z^{d-1}(z-z_0)=0$, so $z_0\\in\\operatorname{relint}\\operatorname{conv}(P)$.\n\nIf the roots are affine on $P$, write $a_0=a_{z_0}$, $N=|P|$, $B=\\sum_za_z^d$, $E=\\operatorname{span}(P-z_0)$, and let $\\ell\\in E$ satisfy $a_z=a_0+\\ell\\cdot(z-z_0)$. Then\n$$\n\\begin{aligned}\nB&=a_0\\sum_z a_z^{d-1}\\le Na_0^d,\\\\\nNa_0^d-B\n&=\\sum_z(a_0-a_z)^2\\sum_{j=0}^{d-2}(j+1)a_0^{d-2-j}a_z^j.\n\\end{aligned}\n$$\nEquality holds exactly when all $a_z=a_0$. The slope $\\ell$ is the unique minimizer of $\\sum_z[a_0+\\eta\\cdot(z-z_0)]^d$ over $\\eta\\in E$ with all roots positive, and a minimizer over the closure with all roots nonnegative. For the actual whole-fiber roots $r_z=|C_z|_d^{1/d}$, one has the first-moment bound $\\sum_z(a_z^d/B)(r_z/a_z)\\le r_{z_0}/a_0$.\n\nIf the original cap is locally minimizing under joint variation of the base and continuous normal and both $a_z$ and $v_z$ are affine on $P$, then $x_0$ is the ordinary centroid of its own cutting section.",
+  "subgoal_id": "pk-intake-critical-homothetic-cap-root-budget",
+  "title": "Section balance and exact budgets for affine homothetic captured-cap roots"
+}

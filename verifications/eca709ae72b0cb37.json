@@ -1,0 +1,55 @@
+{
+  "candidate_id": "87916b38231264fe",
+  "candidate_sha256": "abaf0c8ed3f8e192897e87bde98b67a0390587e96f58d386fe950c275d40ef4b",
+  "checked_dependency_candidate_sha256": {
+    "c97ee48b18ef88e8": "097fd052d1ea5647acabb5a1b76592e29914726b0e06e2eb2194b5b17f57d6b2"
+  },
+  "checked_source_candidate_sha256": {
+    "965c1fac7900f6cc": "14bd3c4527535515076c8d34acd17d802054df5b5dac54465dd5b829e76120f9"
+  },
+  "checks": [
+    "Completeness of P ensures every same-parity pair has its midpoint in P, so its hyperedge joins the entire triple and different components have disjoint parity classes. A lattice segment with endpoints in one component is filled by the overlapping triples of consecutive primitive steps; length at most one needs no new points.",
+    "The affine plane of a rank-two component has ambient integer trace c+(V∩Z^n). Its lattice is saturated, rank two, and parity is preserved in both directions because an ambient integral half-difference remains in V. The restricted trace T is contained in P and preserves all edges and paths of the component.",
+    "A minimum-area component triangle would be halved by a midpoint if its three vertices used only two parities. Therefore the component uses at least three plane parities, and all omitted points are confined to the fourth. This omitted set is midpoint-closed; a closest pair would have a strictly closer distinct pair with its midpoint. Any omission is thus a singleton, isolated in T.",
+    "Primitive-step filling gives every boundary lattice point of the component hull, so an isolated omission must be interior. The same-batch classification then yields a four-point trace with no hyperedges, contradicting the connectivity of the three remaining component points. The affine-lattice map is bijective on the whole ambient integer trace of the plane.",
+    "Independent exact enumeration of 2,855 distinct complete traces from a 4×4 planar lattice box verified all 4,638 resulting components were complete. The analytic proof handles the ambient lattice and all rank≤2 cases.",
+    "Source 965c1fac7900f6cc Theorem and §§1,4–5 match the final scope. The proof requires the classification only at a sole omitted interior point in the same restricted trace."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c97ee48b18ef88e8",
+      "candidate_sha256": "097fd052d1ea5647acabb5a1b76592e29914726b0e06e2eb2194b5b17f57d6b2",
+      "hypotheses_mapping": "Use the exact same-batch classification after identifying the saturated affine plane lattice with Z². The hull is a two-dimensional lattice polygon and the sole omitted point is an interior isolated hypergraph vertex. The classification's four distinct-parity trace has no edges, contradicting the connected rank-two component.",
+      "reviewed_proof_sha256": "96d7bc08db77ada791fa4b2f0ab3b978052a2307397edce4b178cf8ff8ca6b0a",
+      "reviewed_statement_sha256": "4f940a04381fbeffb8b9302c91ce18b400081845171b187cf6f20b7795625d24",
+      "status": "same-batch predecessor reviewed separately at these bytes; admission pending coordinator checks"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:49:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Unconditionally gives closed components for the graph of all anchored dependencies. Those components can combine several midpoint components, so its result does not imply closure of each midpoint component. The isolated four-point trace exhibits the difference of connectivity.",
+      "fact_id": "3d5f56b513c21fc4"
+    },
+    {
+      "comparison": "Proves disjointness of parity classes and integral-midpoint closure in a weighted hub model with at most two atoms per parity. Closure under midpoints alone does not supply lattice completeness of the convex hull in rank two, and the present result has no weights or parity-multiplicity assumption.",
+      "fact_id": "551424a1dec591ee"
+    }
+  ],
+  "readability": "The distinction between parity in a chosen sublattice and in the entire ambient integer trace is essential. The proof uses the saturated lattice and spells out the half-difference test.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1da9c1f004df09519ff9077fc19279a9067589faff9269353eef605deb2dcb20",
+  "reviewed_statement_sha256": "1e36979338cd192a31c7adbda492a8884bde249f7716d4ca96adb5ee7cde8aa1",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:44:38Z",
+  "summary": "Primitive-step filling and the isolated-interior-point classification establish completeness of every component of affine rank at most two in the original ambient lattice.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

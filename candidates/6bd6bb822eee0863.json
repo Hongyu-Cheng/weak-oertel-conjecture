@@ -1,0 +1,32 @@
+{
+  "advances": "An unconditional geometric bound for finite lattice hulls.",
+  "author": "PK-research-agent",
+  "candidate_id": "6bd6bb822eee0863",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:07:29.002290+00:00",
+  "depends_on": [],
+  "draft_key": "finite-lattice-hull-volume-floor",
+  "kind": "lemma",
+  "proof": "Start with the simplex on an affine basis of $A$ and insert the remaining points one at a time. If a new point lies outside the current hull, cone it over the boundary simplices of dimension $r-1$ in facets whose outer open halfspaces contain the new point. To see coverage, describe the old hull by its facet inequalities. On each segment from the new point to the old hull, some inequality initially violated by the new point is active at the first entry into the hull. This gives a point of one of those boundary simplices. Conversely the open segment from the new point to any point on such a facet stays outside the old hull. Uniqueness of first entry on a ray implies the new cones meet in common faces, as do the cones and the old simplices. Thus they triangulate the enlarged hull. At least one new full simplex is added. If the point lies in the current hull, let $F$ be the unique simplex whose relative interior contains it. Its dimension $m$ is at least one, since the point is new. Replace each incident simplex by the cones from the new point over the facets of that simplex which do not contain $F$. These subdivisions agree on common faces. Each incident full simplex is replaced by $m+1$ full simplices, with all old vertices retained. Each insertion therefore increases the number of full simplices by at least one. Starting with one simplex gives at least $1+(|A|-r-1)=|A|-r$ full simplices.\n\nSubtract one vertex of any full lattice simplex and express its $r$ edge vectors in a basis of $L$. The resulting determinant is a nonzero integer. Its absolute value times $v/r!$ is the simplex volume. Sum over the disjoint simplex interiors to obtain the bound.\n",
+  "source_candidate_ids": [
+    "631839b23c1a0508",
+    "a779c844eb8df3e4"
+  ],
+  "source_candidate_sha256": {
+    "631839b23c1a0508": "a733e77a98e421c6fc4f509118feb40cebdfae8cc0033750845ab394cc16ed37",
+    "a779c844eb8df3e4": "7a10fea32daa5c38abb5627a8bc9cc670de8ee115a5a6cbc08ce64298d1ab4fe"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a779c844eb8df3e4",
+      "locator": "§1, (3)"
+    },
+    {
+      "candidate_id": "631839b23c1a0508",
+      "locator": "§1, triangulation and lattice determinants"
+    }
+  ],
+  "statement": "Let $L\\subset\\mathbb R^r$, $r\\ge1$, be a full-rank lattice of covolume $v$, and let a finite $A\\subset a+L$ affinely span $\\mathbb R^r$. The hull $\\operatorname{conv}(A)$ has a triangulation with vertex set exactly $A$ and at least $|A|-r$ full-dimensional simplices. Each full-dimensional simplex of any triangulation with vertices in $a+L$ has volume at least $v/r!$. In particular, $\\operatorname{vol}_r(\\operatorname{conv} A)\\ge (|A|-r)v/r!$.",
+  "subgoal_id": "pk-intake-finite-lattice-hull-volume-floor",
+  "title": "Finite lattice hull volume from its sampled points"
+}

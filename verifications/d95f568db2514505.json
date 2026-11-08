@@ -1,0 +1,84 @@
+{
+  "candidate_id": "a364e94a8c2a1064",
+  "candidate_sha256": "91d91934340174c985c7bbf7acc11fc3a937f3c285e7dfc85d4c8ca43263c840",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Compared the original and revised fields. The statement adds only nonemptiness and the proof is unchanged. Nonemptiness now supplies the integer anchor in the lower-rank argument and handles the n=0 case.",
+    "For each affected extreme row the initial support gap is uniformly positive on the sphere. A Hausdorff change below one third of its least gap changes the target and weighted input support by less than two thirds together. Identity and unaffected rows stay valid, and support linearity propagates to all rows.",
+    "Grouping lifted convex combinations by base verifies the exact designated fiber. When rank is lower, the orthogonal projection matrix is rational by the Gram-matrix formula, and the nonzero transverse projections of integer offsets have a fixed positive norm floor. Adding the stated small ball fills the transverse directions while leaving every integer fiber unchanged.",
+    "The source is 4e871da0351ca07a:04 §3, specifically the affected extreme inclusions and integer affine-hull thickening."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T19:33:43Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "a364e94a8c2a1064",
+    "candidate_sha256": "7a41b087fc577fe1812c8a38d993a9af036dd5dc98b24fd0b84c4143c93e0797",
+    "checks": [
+      "Every target probability polytope has finitely many vertices, and the identity row is tautological. The positive uniform margins of affected rows lose less than two thirds of their least value under the displayed perturbation. Extreme rows imply all rows by support linearity.",
+      "At a nonempty complete base, group a lifted convex combination by site to recover the exact fibers. The rational orthogonal projection of integer offsets is contained in a scaled integer lattice, so the chosen transverse ball cannot add integer bases or change existing fibers.",
+      "The source locator 4e871da0351ca07a:04 §3 describes simultaneously perturbing assigned source fibers in an actual family and the ambient realization about an existing integer point."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T19:30:13Z",
+    "issues": [
+      {
+        "defect": "P is allowed to be empty as written, but the proof chooses p0 in P. For n=0, Z^0 has its sole site 0, so a nonempty ambient convex body cannot have the prescribed empty integer-fiber set.",
+        "locator": "Statement first sentence and proof second paragraph",
+        "repair": "Specify that P is finite and nonempty in the first sentence.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Already gives arbitrary simultaneous perturbations under strictness of every row on a full-rank nonempty base. The local statement instead requires strictness only in rows involving a marked fiber.",
+        "fact_id": "ef28349cb1e27c5b"
+      },
+      {
+        "comparison": "Provides extreme-row characterization of sampled compatibility, without the affected-only perturbation conclusion.",
+        "fact_id": "6d64b23cb5b24ea1"
+      },
+      {
+        "comparison": "The proof supplies transverse thickening of a positive-volume lattice family. This overlaps the realization step, with no affected-only compatibility estimate.",
+        "fact_id": "246870f33de53498"
+      }
+    ],
+    "readability": "The same displacement bound controls both the target support and the weighted input support. The no-affected-row clause concerns compatibility only.",
+    "reviewed_proof_sha256": "82a1187faf60c85236a35f42a8b3eb827a8e50a12b6337877c0bd5b913950486",
+    "reviewed_statement_sha256": "674afde90d8b5265f0bb9521183c4b8cb135cc9538df074f223a18cc72f1b451",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:24:28Z",
+    "summary": "The affected-row stability and transverse thickening arguments work for a nonempty base. The frozen statement omits that hypothesis.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the full-rank, all-rows-strict perturbation result. The revised statement localizes strictness to affected rows.",
+      "fact_id": "ef28349cb1e27c5b"
+    },
+    {
+      "comparison": "Supplies the anchored extreme-row equivalence used in the argument, with no localized quantitative perturbation conclusion.",
+      "fact_id": "6d64b23cb5b24ea1"
+    },
+    {
+      "comparison": "Includes transverse thickening for full ambient realization. The present candidate also proves affected-row perturbation stability.",
+      "fact_id": "246870f33de53498"
+    }
+  ],
+  "readability": "The no-affected-row branch has no compatibility displacement condition.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "82a1187faf60c85236a35f42a8b3eb827a8e50a12b6337877c0bd5b913950486",
+  "reviewed_statement_sha256": "b7e0bb721cfd36921061fd2d69a0e6501452677b124cf861b1efae0294457ccf",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "7a41b087fc577fe1812c8a38d993a9af036dd5dc98b24fd0b84c4143c93e0797",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:31:21Z",
+  "summary": "The revision explicitly requires a nonempty base. The unchanged proof gives the affected-row perturbation estimate and exact transverse realization.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

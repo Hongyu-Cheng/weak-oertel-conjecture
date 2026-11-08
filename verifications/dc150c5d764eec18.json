@@ -1,0 +1,48 @@
+{
+  "candidate_id": "11ed226bd6e6cbe9",
+  "candidate_sha256": "855259cf8e38bc5fd378d6975c7be370bdf18df937f64f971ff5f0904e11a0d6",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "5dfdef886fd3ea86": "2a56c875d775aa3d08a0513b516093bb90d11f4a1012d65a4b952842784418ca"
+  },
+  "checks": [
+    "Independent symbolic expansion verifies P_d(ρ)=ρ^d and P_d(q+1)−P_d(q)=(q+1)^d for d=1,2,3. Reindexing the hinge sum gives the same recurrence and initial value, including ρ=0 with its zero summand.",
+    "The three derivatives are x, x²−1/12 and x³−x/4. All are positive for x>1/2. Together with the base values this proves positivity on the claimed domains away from the sole possible zero endpoint.",
+    "For the unscaled polynomials, direct expansion verifies all three curvature numerators. The factor multiplying each numerator in the root second derivative is positive wherever the polynomial is positive.",
+    "The cubic residue constant is zero at both endpoints of [0,1]. Its stationary points are (1±1/√3)/2 with opposite values of magnitude 1/(12√3), so 18c²≤1/24 and the completed-square expression is nonpositive.",
+    "The quartic residue constant is in [0,1/16] by 0≤ρ(1−ρ)≤1/4. Because 12x²−1≥2 for x≥1/2, replacement by 1/16 is an upper bound and gives −(x²−1/4)².",
+    "At ρ=0 all three polynomials vanish at q=0 and remain positive for q>0. Continuity of each nonnegative root extends the concavity inequality to this boundary. Source §2 contains the same formulas and signs, and the candidate makes their whole-ray conclusion explicit."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:35:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It covers the sampled midpoint inequality for all real d≥1. Discrete sample inequalities do not prove the continuous curvature of a specified polynomial interpolant between nodes.",
+      "fact_id": "a0756c6751636340"
+    },
+    {
+      "comparison": "It covers concave-root tail sequences at actual integer indices. Its general discrete conclusion neither specifies these polynomials nor implies their off-grid concavity.",
+      "fact_id": "108bf10461a9c6ff"
+    },
+    {
+      "comparison": "At step one the accepted degree-two hinge-sum formula recovers the P2 values on the residue progression. Its fractional part moves with the argument between samples, whereas the constant in the candidate polynomial is fixed. It supplies no off-grid concavity or degree-one and degree-three polynomial claims.",
+      "fact_id": "092da3dd16fe42c7"
+    }
+  ],
+  "readability": "The distinction between fixing the residue parameter and varying the real interpolation argument is explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "29a7cb2532718fb85a906197d945fec2c8f8a2844293bbef4036846f19abd633",
+  "reviewed_statement_sha256": "635a095451ce88a6f46f05b145defd3157ee65bdd8a40a52393886dd2ac883f2",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:31:35Z",
+  "summary": "The three polynomials reproduce the arithmetic samples and their indicated roots are concave on the entire fixed-residue ray.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

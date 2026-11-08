@@ -1,0 +1,28 @@
+{
+  "advances": "Depth is measured in the original mixed volume at the limiting atoms of the specified iteration. The example tests both the sharp atom selector and the stronger halfspace comparison with an atom's limiting weight.",
+  "author": "PK-research-agent",
+  "candidate_id": "dd23298d2fc3e5d6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.048813+00:00",
+  "depends_on": [
+    "29f2ee400dd21ddb"
+  ],
+  "draft_key": "parity-consensus-simplex-selector-obstruction",
+  "kind": "counterexample",
+  "proof": "The section of $B$ at $x_1=\\beta$ is a tetrahedron whose three-volume is $(1-\\beta)^3$ times the three-volume of the face at $x_1=0$. Take a homothetic copy of that section of factor $\\theta=(q^{-4}/(\\beta(1-\\beta)^3))^{1/3}$ about its centroid. Indeed $q>19/10$ gives $q^{-4}<(10/19)^4<1/12$, whereas $\\beta(1-\\beta)^3>(19/100)(4/5)^3>1/12$. The factor lies strictly between zero and one. Joining this tetrahedron to a point in the relative interior of the face at zero gives a simplex contained in $B$, with relative volume $\\beta(1-\\beta)^3\\theta^3=q^{-4}$ by the base-area-times-height formula. Its first centroid coordinate is $4\\beta/5$.\n\nThe endpoint volumes of $A=rL$ and $D=qL$ are $aV$ and $V$. Since $r+q=2$ and $L$ is convex, $(A+D)/2=L\\subset B$. The projection of the lifted hull is $[-1,1]$. A convex combination at base zero uses the endpoint bases with equal weights, so its endpoint contribution lies in the same weighted copy of $L$, and the resulting point is in $B$. The lifts themselves give the reverse inclusion and both extreme fibers are exactly $A,D$. The hull has interior since it contains the full-dimensional middle fiber and points off its hyperplane. This proves the census and total volume.\n\nMeasure the three evolving masses in units of $V$, with constant total $2+a$, and call them $a_k,b_k,c_k$. The endpoints have the same parity. Independent sampling within the class of mass $a_k+c_k$ gives\n$$\n(a_{k+1},b_{k+1},c_{k+1})\n=\\left(\\frac{a_k^2}{a_k+c_k},\\,b_k+\\frac{2a_kc_k}{a_k+c_k},\\,\\frac{c_k^2}{a_k+c_k}\\right).\n$$\nThe initial triple is $(a,1,1)$. The difference $c_k-a_k=1-a$ is invariant, so $a_{k+1}\\le a_k/2$. The limits are $(0,1+2a,1-a)$. Endpoint conditional continuous means remain $g_A,g_D$ because each endpoint receives only averages of two samples of its own conditional law. The consensus theorem gives weak convergence, and a single atom in each surviving parity. Because the finite base levels are clopen, endpoint masses and their continuous first moments pass to the limit, giving the endpoint atom at $(1,g_D)$. Preserving the full first moment gives the middle continuous location $(g_B+a g_A+a g_D)/(1+2a)=(g_B+2ag_L)/(1+2a)$. Dividing the limiting masses by $2+a$ gives the stated probabilities.\n\nThe first coordinate of $g_D$ is $4q\\beta/5$. The closed cap in $D$ below that height is a homothetic copy of $D$ of ratio $4/5$ about its apex at height zero, hence has volume $\\gamma_4 V$. Extend it to the ambient cap $-x_1+R(z-1)\\ge-4q\\beta/5$ with $R>4q\\beta/5$. Since all fibers have nonnegative first continuous coordinates, the other two fibers are excluded. The raw cap mass at $(1,g_D)$ is strictly less than $\\gamma_4(1+a/2)V$.\n\nThe middle atom has first continuous coordinate $h=1/5-(51/625)a/(1+2a)$. Since $a<1/1000$, one has $h>\\beta$. The closed ambient halfspace $x_1+(1-q)\\beta z\\ge h$ contains the middle atom and excludes both endpoints. The maximum of its left side on either endpoint is $\\beta$, using $r+q=2$. In $B$ the cap is the homothetic simplex at the vertex $e_1$, of ratio $1-h$, so its raw volume is\n$$\n(1-h)^4V=\\gamma_4\\left(1+\\frac{51a}{500(1+2a)}\\right)^4V.\n$$\nThe increment inside the parentheses is below $1/1000$. The mean-value theorem bounds the excess of the fourth power over one by $(51/125)(1001/1000)^3 a<a/2$. The latter inequality follows by cross-multiplying positive integers. Hence this cap also has mass strictly below $\\gamma_4(1+a/2)V$. Dividing by $(2+a)V$ gives both strict depth bounds. Since $1+a/2<1+2a$, the middle cap also has original probability below $\\gamma_4(1+2a)/(2+a)$.\n",
+  "source_candidate_ids": [
+    "233dacf87d7f01e6"
+  ],
+  "source_candidate_sha256": {
+    "233dacf87d7f01e6": "508aeaf2e934d4100f64e312b9bb66cfc9c5a2a0a5d793e08cf762f1c3bc2c81"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "233dacf87d7f01e6",
+      "locator": "233dacf87d7f01e6:02 §§2–5, (4)–(10)"
+    }
+  ],
+  "statement": "In $\\mathbb R\\times\\mathbb R^4$ let $B=\\operatorname{conv}\\{0,e_1,e_2,e_3,e_4\\}$ and $V=|B|$. Put $\\beta=199/1000$, $q=199/100$, $r=1/100$, $a=199^{-4}$, and $\\gamma_4=(4/5)^4$. There is a simplex $L\\subset B$ of volume $q^{-4}V$ with one vertex at $x_1=0$ and four at $x_1=\\beta$. Use $rL,B,qL$ at bases $-1,0,1$ in their lifted convex hull. They are its exact integer fibers, with total mixed volume $(2+a)V$. Under original-parity-mass midpoint iteration, the original mixed probability converges to the two atoms $(1,g_{qL})$ and $(0,(g_B+2ag_L)/(1+2a))$ of masses $(1-a)/(2+a)$ and $(1+2a)/(2+a)$, respectively, where $g$ denotes the uniform centroid. Both atoms have original normalized closed-halfspace depth strictly less than $\\gamma_4/2$. The middle atom has a containing closed halfspace with original probability strictly below $\\gamma_4$ times its limiting atom mass.",
+  "subgoal_id": "pk-intake-parity-consensus-simplex-selector-obstruction",
+  "title": "All parity consensus atoms can fail the sharp mixed depth target"
+}

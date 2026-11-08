@@ -1,0 +1,26 @@
+{
+  "advances": "Counterexample to extension of the scale inequality to unrestricted ordinary quadrilaterals. The witness exceeds the half-cap ceiling on cap 2. Its conclusion concerns scale rather than the cubic.",
+  "author": "PK-research-agent",
+  "candidate_id": "d011995188cf8e81",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:18:43.798063+00:00",
+  "depends_on": [],
+  "draft_key": "ordinary-quadrilateral-triangle-scale-counterexample",
+  "kind": "counterexample",
+  "proof": "The four vertices in the given cyclic order have consecutive edge-turn determinants $(219,109,34,144)$. Their successive pair determinants are $(54,50,65,84)$, so the origin lies strictly inside the four oriented edge halfplanes. For convexity one can also check that both nonincident vertices lie strictly to the left of every directed edge, since their oriented determinants with that edge are the two corresponding adjacent turn determinants. The shoelace sum gives $k=253/2$.\n\nThe clipped cap polygons, in counterclockwise order, are as follows.\n\n- Cap $x\\ge0$ has vertices $(0,-9/2),(2,-6),(5,10),(0,65/7)$.\n- Cap $y\\ge0$ has vertices $(-10,3),(-6,0),(25/8,0),(5,10),(-2,9)$.\n- Cap $x+y\\le0$ has vertices $(-10,3),(2,-6),(50/19,-50/19),(-6,6)$.\n\nEach new vertex is obtained by linear interpolation on the crossed edge. Shoelace gives the three asserted areas. For the first two sections the coarea length is the coordinate difference of the two intersections. On $x+y=0$ the Euclidean chord length is $\\sqrt2$ times the horizontal difference, and dividing by $\\sqrt2$ again gives the coordinate difference. These calculations give the asserted $\\sigma$, so adding $Q_i/\\sigma_i$ gives $M$, and substituting gives the stated exact square gap. Since both sides of the proposed coarea inequality are positive, the negative square gap refutes it.\n",
+  "source_candidate_ids": [
+    "4937f031db0025a7"
+  ],
+  "source_candidate_sha256": {
+    "4937f031db0025a7": "4112258af403369521c1be0b4620533220d8d6541ac6894e670d94f7fc336032"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4937f031db0025a7",
+      "locator": "Proof after (2), exact quadrilateral and squared gap"
+    }
+  ],
+  "statement": "For $K=\\operatorname{conv}\\{(-10,3),(2,-6),(5,10),(-2,9)\\}$ at source $0$ with normals $(1,0),(0,1),(-1,-1)$, the data $k=|K|$, $Q_i$ cap areas, $\\sigma_i$ coarea chord lengths and $M=\\sum_iQ_i/\\sigma_i$ satisfy\n$$\nk=253/2,\\quad Q=(369/7,793/8,1012/19),\\quad\n\\sigma=(193/14,73/8,164/19),\\quad M=12048360/577649.\n$$\nThey give $(M\\prod_i\\sigma_i)^2-16kQ_1Q_2Q_3=-891738498096/17689<0$. Thus the triangle coarea scale inequality fails for ordinary quadrilaterals. In this example $Q_2/k=793/1012>1/2$.",
+  "subgoal_id": "pk-intake-ordinary-quadrilateral-triangle-scale-counterexample",
+  "title": "An exact quadrilateral fails the ordinary triangle coarea scale bound"
+}

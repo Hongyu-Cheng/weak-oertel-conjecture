@@ -1,0 +1,38 @@
+{
+  "advances": "One retained proper concurrent vertex-parallel group of a symmetric three-fiber star, with only its left simplex moving. The explicit cubic path has first-order cap motion and only second-order endpoint motion.",
+  "author": "PK-research-agent",
+  "candidate_id": "5660e9bff8ec5e16",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:54:35.361982+00:00",
+  "depends_on": [
+    "dad8b277ce2587c7"
+  ],
+  "draft_key": "pk-w31-selected-star-fixed-linear-and-joint-cubic-escape",
+  "kind": "theorem",
+  "proof": "The actual star proof of dad8b277ce2587c7 supplies the baseline depth and free endpoint: the forced old midpoint is $(K-K)/2$, strictly interior to $K-K$. For any proper threshold vector under consideration, each selected cap has mass $D$ on the original source, by reflection of the two endpoint caps and the central bisection of the middle. The edge-fraction formula from that fact gives the normalized own-endpoint mass\n$$\nP_k(W,a)=\\det W\\frac{(W_{kk}-a_k)^d}{\\prod_{l\\ne k}(W_{kk}-W_{kl})}\n$$\nfor every $W$ near $I$ at each nearby proper $a$. The normalized change in global mass is exactly $P_k(W,a)-P_k(I,a)$ even along a changing $a$, since all other fibers retain their original geometry at that same threshold vector. The total mass change is $V(\\det W-1)$. All formulas are analytic on one neighborhood of any specified proper vector.\n\nHere are the right inverse and strict-gain calculation from 38d7f24c2bba775c, §§3–4. For a zero-column-sum vertex velocity $B$, put $T=\\operatorname{tr}B$, $b_k=B_{kk}$, and $s_k=\\sum_{l\\ne k}B_{kl}$. Direct differentiation gives\n$$\nf_k(B):=D_WP_k(I,a)[B]\n=(1-a_k)^d\\bigl[T+s_k+(d/(1-a_k)-d)b_k\\bigr].\n$$\nLet $h_k=d(1-a_k)^{d-1}$. For a vector $f$, define $z_k=f_k/h_k$, $Z=\\sum_kz_k$ and let $S_a(f)_{kk}=z_k$, $S_a(f)_{kl}=z_k-Z/d$ for $k\\ne l$. Each column sums to zero, the trace is $Z$, and substitution of $s_k=dz_k-Z$ gives $f_k(S_a(f))=f_k$. Using $\\sum_k a_k=1$, the coefficient of the independent off-diagonal entry $B_{ij}$ in $T-\\sum_k f_k(B)/h_k$ is $J_{ij}=a_j+(a_i-1)/d$: indeed $\\sum_k(1-a_k)/d=1$, $s_i$ changes by $B_{ij}$, and $b_j$ changes by $-B_{ij}$. For a nonuniform vector some $J_{ij}\\ne0$, because if all vanished then for every fixed $j$ all $a_i$ with $i\\ne j$ would be equal, which forces equality of all $a_i$ since $m\\ge3$.\n\nTake $E_{ij}=\\operatorname{sign}J_{ij}$, $E_{jj}=-\\operatorname{sign}J_{ij}$, and every other entry zero. With $J=|J_{ij}|$ and $\\epsilon=J/(2H)$, put\n$$\nA(a)=E-S_a(f(E))+S_a(-\\epsilon\\mathbf 1).\n$$\nIt is physical, has trace $J/2$, and satisfies $f_k(A(a))=-\\epsilon$ for every $k$. Along $W(t)=I+tA(a)$ the first-order expansions follow with $a$ fixed.\n\nFor the canonical case take $a(t)=a^*+t(e_1-e_0)$ and the single fixed pair $(i,j)=(0,1)$ with positive sign in $E$. Then $J_{01}(a(t))=(d-1)t/d$. Define $A(a(t))$ by this fixed $E$ and the signed analytic expression $\\epsilon(t)=(d-1)t/(2dH(t))$, including at zero. The analytic path $W(t)=I+t^2 A(a(t))$ is physical, with both cap and body parameters converging to their old values. On the proper neighborhood the endpoint volume increment is $Vt^2\\operatorname{tr}A(a(t))+O(t^4)$ and the cap increment is $Vt^2f_k(A(a(t)))+O(t^4)$ uniformly over the finite list. Since $H(0)=1/\\Gamma_d$, these are the stated cubic coefficients. For both paths strict midpoint slack persists, and the ambient cap margins continue to sum to zero. The largest retained mass bounds actual maximum depth, so it is strictly below $D$ for small $t>0$.\n",
+  "source_candidate_ids": [
+    "38d7f24c2bba775c",
+    "9b703b460ed5bf2b"
+  ],
+  "source_candidate_sha256": {
+    "38d7f24c2bba775c": "de9c216a8d67693ae09057f889e027ecbe87e83ea8cc80be0ee9b058dc676d3d",
+    "9b703b460ed5bf2b": "3650a6f723d8c488e6ac7fdcbb423af637ced478961a25745a272c09f372c62b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9b703b460ed5bf2b",
+      "locator": "9b703b460ed5bf2b:02 §§3–5, (6)–(11)"
+    },
+    {
+      "candidate_id": "38d7f24c2bba775c",
+      "locator": "38d7f24c2bba775c:01 §3, (6)–(7), physical right inverse"
+    },
+    {
+      "candidate_id": "38d7f24c2bba775c",
+      "locator": "38d7f24c2bba775c:02 §4, (8)–(11), trace residual and strict first-order signs"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $m=d+1$, and let $K$ be a centered $d$-simplex of volume $V$. Use the actual star with fibers $K,K-K,-K$ at $-1,0,1$, total mixed mass $M$, and maximal raw depth $D=M/2$. Write its simplex barycentric functions as $\\lambda_i(x)=l_i(x)+1/m$. For a proper threshold vector $a$ with $a_i>0$ and $\\sum_i a_i=1$, retain the group $H_i(a)=\\{l_i(x)+(a_i-1/m)z\\ge0\\}$. Keep the middle and reflected endpoint fixed. If $a$ is nonuniform, there is a linear labeled-vertex path with these caps fixed, such that for some $i\\ne j$ and $J=|a_j+(a_i-1)/d|>0$,\n$$\nM(t)=M+VJt/2+O(t^2),\\qquad\n\\mu_t(H_k(a))=D-VJt/(2H)+O(t^2)\\quad\\text{for every retained row }k,\n$$\nwhere $H=\\sum_k[d(1-a_k)^{d-1}]^{-1}$. At the canonical vector $a^*=m^{-1}\\mathbf 1$, there is an analytic joint path with $a(t)=a^*+t(e_1-e_0)$ and vertex change $O(t^2)$ giving\n$$\nM(t)=M+\\frac{V(d-1)}{2d}t^3+O(t^4),\\qquad\n\\mu_t(H_i(a(t)))=D-\\frac{\\Gamma_d V(d-1)}{2d}t^3+O(t^4),\n\\qquad \\Gamma_d=(d/m)^d.\n$$\nThus every neighborhood of the original endpoint and one selected proper cap group contains an actual strictly larger-mass source with strictly smaller mass in each retained cap and strictly smaller maximum raw depth.",
+  "subgoal_id": "pk-intake-pk-w31-selected-star-fixed-linear-and-joint-cubic-escape",
+  "title": "A selected proper star group admits an explicit physical escape"
+}

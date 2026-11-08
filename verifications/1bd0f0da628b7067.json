@@ -1,0 +1,45 @@
+{
+  "candidate_id": "1e3b20d458e3c43c",
+  "candidate_sha256": "48936341e8b6dc9ce3586f6bc35f425c874bd7f8bccf352c4b0e8c59eca533dc",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The projection of the lifted hull is the binary square, whose only integer points are its four extreme vertices. Any combination projecting to one vertex uses only that base, so its unit interval is the actual fiber and M=4.",
+    "A two-cap whole-line cover in continuous dimension one must use both signs. Coverage is equivalent to a(z)≤b(z) at every binary base. Integrating the untruncated positive-sign margin on the two upper fibers and the untruncated negative-sign margin on the two lower fibers gives 4L+Σ_- b−Σ_+ a. The opposite-diagonal sums of affine a are equal and b≥a pointwise, so this is at least 4L.",
+    "L>1/2 strictly separates the four source intervals from x=0. The two opposite horizontal caps each retain two full unit fibers, with hinge 2L each. The union bound forces τ≥1/2, and this pair is feasible at every such τ. Thus v=4L and v'=0 at all the stated interior budgets.",
+    "At each base, max(x,−x) has its unique minimum at zero, and the equal convex combination of the margins is identically zero with balanced unit normals. These are whole-line saddle contacts, outside every fiber. With η_z=1 and weights 1/2, transport to each cap has mass two, base moment (1,1), and continuous moment zero. Actual cap mass and base moment match, while continuous moment is ±2L=Ψ_i u_i. Zero budget multipliers satisfy complementarity including at τ=1/2, and the objective-one moment equations and interior sensitivity follow.",
+    "The caps partition the actual source, so ν=μ after forgetting the unique labels, and U=ε_z. On the binary bases the signs have zero sum and zero affine base moment, giving orthogonality to the intercept and both coordinates. Thus the affine least-squares prediction is zero. Each conditional unit interval contributes variance 1/12 and mean ε_z L, so A=4, Q=4L and R_x=4L²+1/3. Exact rational checks confirm Q²/A=4L² and the ratio 1+1/(12L²). Sending L to infinity rules out every larger uniform coefficient.",
+    "Checked 4a935c6b02656f36:01 setting and §§1–3. The source moment balances agree with the whole-space equations in da91e18223378a53 §§4–6, verified here directly by the displayed finite data without assuming its general existence theorem."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:14:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Derives offset stress for a pointwise cover of the actual fibers. It neither requires covering the entire continuous line nor gives the exact regression calibration.",
+      "fact_id": "0366ccb8fa1881a1"
+    },
+    {
+      "comparison": "Its joint stress uses minimax contacts constrained to the actual fibers and allows an abnormal objective multiplier. Here the different whole-line problem has explicit outside-fiber contacts and objective multiplier one.",
+      "fact_id": "c343c9f3dc96957e"
+    },
+    {
+      "comparison": "Uses sixteen differently located unit intervals for a divergent hinge lower bound under mixed-trace coverage. It does not establish this exact four-fiber whole-line optimum or the limiting regression ratio.",
+      "fact_id": "8556262ab4dbc2a5"
+    }
+  ],
+  "readability": "The hinge is the sum of positive-part margin integrals over the actual source. The words 'objective-one stress' refer to the mass, base, and continuous moment equations and whole-line saddle conditions verified directly in the proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "daa0d35122ef12749508f566bd68acd54aa8118435af9bd0a5930ae263144234",
+  "reviewed_statement_sha256": "5c21c4752246a5a4f22f18444e817c574cc09bfdd9fe3d95a75419eed8eee0b5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:11:11Z",
+  "summary": "The two-cap optimum and its whole-line moment stress are explicit. The regression residual is exactly 1/3 and the variance ratio tends to one, establishing sharpness within the stated minimizing-cover class.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

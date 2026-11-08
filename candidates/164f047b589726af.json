@@ -1,0 +1,28 @@
+{
+  "advances": "The theorem concerns limiting directions of actual coarse slices and does not infer a normalized limiting volume law, an Oertel cap allocation or a lower bound on total mass.",
+  "author": "PK-research-agent",
+  "candidate_id": "164f047b589726af",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:52:39.941491+00:00",
+  "depends_on": [
+    "ee91760a8d1f988b"
+  ],
+  "draft_key": "pk-w31-positive-fiber-barycentric-direction-strata",
+  "kind": "theorem",
+  "proof": "All volumes are full $m$-dimensional Lebesgue volumes. By the stated Minkowski inclusion and classical Brunn–Minkowski,\n$$\n|Q_{\\ell,j}|^{1/m}\\ge\\sum_i t_i |Q_{\\ell,z_i}|^{1/m}\n$$\nwhen the used sources have positive volume, which holds eventually for the representations within $P_+$. Divide by $M_\\ell^{1/m}$ and take limits. After zero coefficients are dropped, the right side is positive, so this also proves that the positive support is lattice-complete.\n\nFor the general fixed representation, choose a point of each of the other nonempty source fibers. Compatibility gives $\\lambda Q_{\\ell,z}+b_\\ell\\subseteq Q_{\\ell,j}$ for their weighted sum $b_\\ell$, including if some of them have zero volume. In particular $|Q_{\\ell,j}|\\ge\\lambda^m |Q_{\\ell,z}|$ and $p_j\\ge\\lambda^m p_z$. Put $K=Q_{\\ell,z}$ and $L=Q_{\\ell,j}$. For all sufficiently large $\\ell$ both are convex bodies. Convexity of $L$ gives\n$$\nK+L\\subseteq \\lambda^{-1}(L-b_\\ell)+L=(1+\\lambda^{-1})L-\\lambda^{-1}b_\\ell.\n$$\nSince $|L|\\le M_\\ell$ and $|K|\\ge\\eta M_\\ell$ eventually for any fixed $0<\\eta<p_z$, the two-body comparison applies with precisely the stated constants and its Hausdorff consequence gives equality of the limiting direction spaces. The argument applies to each positive source of the representation. For a zero-weight source the translated scaled inclusion survives in the limit, by choosing convergent points in the other fibers, but equality of directions is not implied.\n\nFor distinct positive same-parity bases $z,w$, the midpoint is integral and belongs to $P_+$. The preceding argument gives equality of the two directions through their midpoint. Also compatibility directly gives $|Q_{\\ell,z}+Q_{\\ell,w}|\\le 2^m|Q_{\\ell,(z+w)/2}|\\le2^m M_\\ell$. If both masses are at least $\\eta M_\\ell$, then $|Q_{\\ell,w}|\\ge\\eta|Q_{\\ell,z}|$ and $2^m M_\\ell\\le(2^m/\\eta)|Q_{\\ell,z}|$, which proves the specified direct bound. This uses only relative masses; $M_\\ell$ may tend to zero.\n",
+  "source_candidate_ids": [
+    "c0cb4d49afb99df3"
+  ],
+  "source_candidate_sha256": {
+    "c0cb4d49afb99df3": "2185fb9deb8a73c857a71fb2d89a96e7080cd5437e28e77251f9323981fee322"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c0cb4d49afb99df3",
+      "locator": "c0cb4d49afb99df3:02 §§3–3.1, (9)–(12)"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb Z^k$ be finite and let $Q_{\\ell,z}\\subseteq\\mathbb R^m$, $z\\in P$, $m\\ge1$, be nonempty compact convex fibers. Assume that every integer convex combination $j=\\sum_i t_i z_i$ of bases in $P$ belongs to $P$ and $\\sum_i t_iQ_{\\ell,z_i}\\subseteq Q_{\\ell,j}$. Suppose the fibers converge in Hausdorff distance, $M_\\ell=\\sum_z|Q_{\\ell,z}|>0$, and $|Q_{\\ell,z}|/M_\\ell\\to p_z$. Set $P_+=\\{z:p_z>0\\}$. For every such representation with $z_i\\in P_+$, $p_j\\ge(\\sum_i t_i p_{z_i}^{1/m})^m$, and $P_+=\\operatorname{conv}(P_+)\\cap\\mathbb Z^k$.\n\nIn any fixed representation using actual bases and a source $z\\in P_+$ of coefficient $\\lambda>0$, one has $p_j\\ge\\lambda^m p_z$. The source and target have the same limiting affine direction space. Whenever $|Q_{\\ell,z}|\\ge\\eta M_\\ell$ for $\\eta>0$, their widths are comparable by the two-body Minkowski-volume bound with $a=\\lambda^m$ and $D=(1+\\lambda^{-1})^m/\\eta$. In particular each positive parity class has one limiting direction space, so there are at most $2^k$ such strata. Directly comparing two same-parity sources whose masses are at least $\\eta M_\\ell$ gives the same two-body bound with $a=\\eta$ and $D=2^m/\\eta$.",
+  "subgoal_id": "pk-intake-pk-w31-positive-fiber-barycentric-direction-strata",
+  "title": "Positive coarse fibers share limiting directions along integer barycentric incidences"
+}

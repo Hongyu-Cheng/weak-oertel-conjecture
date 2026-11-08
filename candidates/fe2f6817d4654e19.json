@@ -1,0 +1,32 @@
+{
+  "advances": "Stationarity of weighted ordinary enclosing simplex volume.",
+  "author": "PK-research-agent",
+  "candidate_id": "fe2f6817d4654e19",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.789760+00:00",
+  "depends_on": [
+    "3e2e95472b619800"
+  ],
+  "draft_key": "common-simplex-envelope-aggregate-contact-stationarity",
+  "kind": "theorem",
+  "proof": "For nonzero $u$ and variation $v$, the right derivative of $h_A(u+tv)$ is $h_E(v)$ with $E=\\{x\\in A:u\\cdot x=h_A(u)\\}$. Testing any point of $E$ gives the lower bound. A maximizer $x_t$ at $u+tv$ gives the upper difference quotient bound $v\\cdot x_t$, and every cluster point of $x_t$ belongs to $E$ by compactness and continuity.\n\nVary one outward facet normal of a nonsingleton envelope from $u$ to $u+tv$. The other facet planes stay fixed, and the changing support offset is $h+tk+o(t)$ with $k=h_E(v)$. Write $q$ for the fixed opposite vertex and $p_1,\\ldots,p_d$ for the old facet vertices. They move along the rays $q+\\mathbb R_{\\ge0}(p_l-q)$ with factors\n$$\n\\frac{h+tk+o(t)-(u+tv)\\cdot q}{(u+tv)\\cdot(p_l-q)}\n=1+t\\frac{k-v\\cdot p_l}{h-u\\cdot q}+o(t).\n$$\nThe positive old denominators persist, and simplex orientations remain valid for sufficiently small perturbations because every $d$ normals remain independent and positive spanning persists. The volume is multiplied by the product of those factors. Using the height formula for simplex volume, the derivative is $\\mathcal H_{d-1}(\\text{facet})[h_E(v)-v\\cdot c]/\\|u\\|$, where $c$ is the facet centroid. A singleton envelope has constant zero volume.\n\nThe facet area of the $i$th envelope is $r_i^{d-1}$ times the corresponding area of $T$. Thus the one-facet derivative of $F$ is a strictly positive common factor times\n$$\nh_{\\sum_i w_i r_i^{d-1}E_{ij}}(v)-v\\cdot\\sum_i w_i r_i^{d-1}c_{ij}.\n$$\nBy separation this is nonnegative for every $v$ exactly when the membership in the statement holds. For simultaneous variations the full derivative is the sum of the one-facet derivatives: on a neighborhood with fixed facet labels the volume is smooth in normals and offsets, by the nonsingular vertex systems and the determinant formula, and each offset has the stated right expansion. This proves both directions, since one-facet variations are included. Addition of parallel simplices adds corresponding vertices and hence facet centroids, proving the geometric form. For $d=1$, each envelope is its original interval or point and there is only one orientation.\n",
+  "source_candidate_ids": [
+    "ae6af582a4950210"
+  ],
+  "source_candidate_sha256": {
+    "ae6af582a4950210": "a0f109ed2d34b4a44899e733949af8fe35cd021414a9081d818f38d0275b7aec"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ae6af582a4950210",
+      "locator": "ae6af582a4950210:04 §4, (11)–(13), exact first-order aggregate contact characterization"
+    },
+    {
+      "candidate_id": "ae6af582a4950210",
+      "locator": "ae6af582a4950210:03 §3, (7)–(10), supporting derivative calculation"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let $A_i$ be finitely many nonempty compact convex sets with positive weights $w_i$ and at least one full-dimensional member. Set $F(U)=\\sum_i w_i|P_U(A_i)|$, fix an orientation $U$ and write $P_U(A_i)=a_i+r_iT$ for a representative simplex $T$ of that orientation. At each facet $j$, let $c_{ij}$ be the centroid of the corresponding envelope facet and let $E_{ij}=\\{x\\in A_i:u_j\\cdot x=h_{A_i}(u_j)\\}$. For singletons put $r_i=0$ and $c_{ij}$ equal to the point. All right directional derivatives of $F$ under simultaneous linear variations of the facet normals are nonnegative if and only if, for every $j$,\n$$\n\\sum_i w_i r_i^{d-1} c_{ij}\\in\\sum_i w_i r_i^{d-1}E_{ij}.\n$$\nIn particular any local or global minimizer obeys these identities. Equivalently, there are points $x_{ij}\\in E_{ij}$ balancing $\\sum_i w_i r_i^{d-1}(x_{ij}-c_{ij})=0$ for each $j$. The facet centroids of the simplex $\\sum_i w_i r_i^{d-1} P_U(A_i)$ belong to $\\sum_i w_i r_i^{d-1}A_i$. In dimension one the objective is independent of the sole orientation.",
+  "subgoal_id": "pk-intake-common-simplex-envelope-aggregate-contact-stationarity",
+  "title": "Aggregate contact conditions for common simplex envelope stationarity"
+}

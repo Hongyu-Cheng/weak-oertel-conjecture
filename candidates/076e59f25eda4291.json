@@ -1,0 +1,26 @@
+{
+  "advances": "A geometric statement about fixed weighted halfspaces on a boundary patch.",
+  "author": "PK-research-agent",
+  "candidate_id": "076e59f25eda4291",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:55:19.362465+00:00",
+  "depends_on": [],
+  "draft_key": "constant-boundary-score-plane-pairing",
+  "kind": "lemma",
+  "proof": "Fix such an $L$. At a point of $U\\cap L$, the tangent plane of $U$ is the supporting plane of $K$. It cannot equal $L$ because $L$ intersects $\\operatorname{int}K$. Hence the affine linear equation for $L$ restricts to a function with nonzero differential on $U$ at every such point. The implicit function theorem shows that $T=U\\cap L$ is a $C^1$ submanifold of $L$ of dimension $d-2\\ge1$.\n\nFor any different listed plane $L'$, the set $T\\cap L'$ is relatively closed in $T$. If $L'$ is parallel to $L$, it is empty. Otherwise $L\\cap L'$ has dimension $d-2$. If it contained a relatively open patch of $T$, at any point of that patch the tangent space of $T$ would equal the direction space of $L\\cap L'$. The inverse function theorem in local coordinates, applied to the orthogonal projection onto $L\\cap L'$, would then give a relatively open subset of $L\\cap L'$ contained in that patch. Its positive dimension would give a nontrivial segment in $U$, contrary to hypothesis. Thus $T\\cap L'$ has empty interior in $T$.\n\nThe complements of these finitely many closed sets are open dense in $T$. Their intersection contains a point $v\\in T$. Every plane other than $L$ has a strict margin at $v$, and the restriction of the equation for $L$ to $U$ has nonzero differential there. Thus there are nearby points of $U$ strictly on opposite sides of $L$ at which the incidences for all planes other than $L$ agree. Subtracting their two score equations gives the difference between the two orientation weights on $L$, which must be zero.\n\nFor sharpness in $d=2$, take the unit circle and the three caps $u_i\\cdot x\\ge1/2$ with $u_1=(1,0)$, $u_2=(-1/2,\\sqrt3/2)$, and $u_3=(-1/2,-\\sqrt3/2)$. The interiors of their $2\\pi/3$ arcs partition the circle off their shared endpoints. Equal weights $1/3$ give constant score $1/3$ there, while each of the three distinct lines has only one orientation present. For $d=1$, a proper cutting plane is a point in the interior of an interval, so it cannot meet its boundary.\n",
+  "source_candidate_ids": [
+    "571b5ceb2d4e114a"
+  ],
+  "source_candidate_sha256": {
+    "571b5ceb2d4e114a": "4392e3c261cfa6a209b16cd3e7ee94ec00394e2c41605be44f6af4c608890ded"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "571b5ceb2d4e114a",
+      "locator": "§2, (2), geometric pairing on a C¹ strictly convex boundary and §4, dimensional sharpness"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a convex body with $d\\ge3$, and let $U$ be a nonempty relatively open subset of $\\partial K$ that is a $C^1$ hypersurface and contains no nontrivial line segment. Let $H_j$ be finitely many closed halfspaces with nonzero normals and weights $\\omega_j\\ge0$. Suppose $\\sum_j\\omega_j\\mathbf1_{H_j}(x)=b$ at every $x\\in U$ off all the boundary hyperplanes of the $H_j$. For each listed unoriented plane $L$ meeting $U$ and intersecting $\\operatorname{int}K$, the sum of the weights of the $H_j$ with boundary $L$ in one orientation equals the sum in the other orientation.",
+  "subgoal_id": "pk-intake-constant-boundary-score-plane-pairing",
+  "title": "Constant boundary score forces opposite orientation weights on proper affine cuts"
+}

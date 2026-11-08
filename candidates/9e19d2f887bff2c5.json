@@ -1,0 +1,30 @@
+{
+  "advances": "Continuous weighted centroid with fixed centroid multiplier two and a freely varying density ceiling. The two-band condition is necessary for through-point caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "9e19d2f887bff2c5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:28:33.685037+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-reflection-arbitrary-ceiling-saturation",
+  "kind": "theorem",
+  "proof": "Normalize the measures by $k$, so the uniform volume probability is $\\kappa=\\mathbf1_K\\,dx/k$ and the added measure is $\\nu=\\eta/k$. The centroid $g$ is interior, since the weighted law has positive mass in the interior and every supporting plane is null. Tighten any containing cap to pass through $g$. For a through cap with nonzero normal $u$, let $V(t)=\\kappa\\{x:u\\cdot x\\ge t\\}$. On the projection interval $V^{1/d}$ is concave by Brunn–Minkowski on pairs of nested parallel caps. All boundaries are null and every open interior projection interval has positive probability, so $V$ is continuous and strictly decreasing from one to zero. The rank $V(u\\cdot x)$ is uniform under $\\kappa$ and has density $0\\le h\\le L$ under $\\nu$, with total mass $\\alpha$ and mass $r$ in $[0,s]$. Domination gives the bounds on $r$. Jensen applied to $\\kappa+2\\nu$ after normalization yields\n$$\n(1+2\\alpha)s^{1/d}\\ge d/(d+1)+2\\int_0^1 v^{1/d}h(v)\\,dv.\n$$\nOn any interval a mass of given size under ceiling $L>0$ minimizes its integral against an increasing function by filling the leftmost subinterval at density $L$. Indeed the difference from that filled density integrates to zero, and multiplying by the integrand minus its cutoff value gives a nonnegative product on each side. Apply this to $[0,s]$ and $[s,1]$ with lengths $r/L$ and $(\\alpha-r)/L$ and integrate $v^{1/d}$ to obtain the two-band inequality. Applying it to the whole interval with length $\\alpha/L$ instead gives $s\\ge b$. The complement measure $L\\kappa-\\nu$ has mass $\\delta$, so $r\\ge\\max(0,Ls-\\delta)$ and the combined expression follows by monotonicity. For $L=0$ Jensen gives $s\\ge\\Gamma_d$ directly. At saturation $\\eta=L\\mathbf1_K\\,dx$, choose the cap from the apex of a simplex cut by the plane through its centroid parallel to its opposite facet. Its volume fraction is $(d/(d+1))^d$ by similarity, so it attains the bound.\n\nFor the explicit margin, use $h=L-(L-h)$ and $\\int (L-h)=\\delta$. Since $v^{1/d}\\le1$, Jensen gives\n$$\ns^{1/d}\\ge\\frac d{d+1}-\\frac{2\\delta}{(d+1)(1+2\\alpha)}.\n$$\nThe right side is nonnegative by assumption. Taking powers and using Bernoulli gives $s\\ge\\Gamma_d[1-2\\delta/(1+2\\alpha)]$. Add $r\\ge Ls-\\delta$ and substitute $\\alpha=L-\\delta$ to get the displayed $E_d$. For $\\delta\\le1/8$ one has $2\\delta\\le1/4\\le d(1+2\\alpha)$. The ratio $2(1+L)/(1+2L-2\\delta)$ decreases with $L$ and increases with $\\delta$; it is at most $9/4$ on $L\\ge\\delta$ by evaluating at $L=\\delta$, and at most $16/11$ on $L\\ge1$ by evaluating at $(L,\\delta)=(1,1/8)$. Substitution yields the two margins, using $\\Gamma_d>4/11>1/3$ because $(1+1/d)^d<e<11/4$. The last strict bound on $e$ follows from the series through degree three plus the geometric tail at most $(1/24)/(1-1/5)$.\n",
+  "source_candidate_ids": [
+    "21545f87e4705da7"
+  ],
+  "source_candidate_sha256": {
+    "21545f87e4705da7": "6c02d6679c1ac854b5105fc3642c9cb9fefbd90cfb8fbbecaf52a5ab90efe27f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "21545f87e4705da7",
+      "locator": "21545f87e4705da7:04 §3 (5)–(7), general ceiling and quantile feasibility"
+    },
+    {
+      "candidate_id": "21545f87e4705da7",
+      "locator": "21545f87e4705da7:05 §4 (8)–(10), explicit saturation margin"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a convex body of volume $k>0$, $d\\ge1$, and $0\\le\\eta\\le L\\mathbf1_K\\,dx$. Write $\\alpha=\\eta(K)/k$, $\\delta=L-\\alpha$, and let $g$ be the centroid of $\\mathbf1_K\\,dx+2\\eta$. For any closed through-$g$ cap put $s=|K\\cap H|/k$, $r=\\eta(H)/k$, and $q=1+1/d$. Then $\\max(0,\\alpha-L(1-s))\\le r\\le\\min(\\alpha,Ls)$, and if $L>0$,\n$$\nq(1+2\\alpha)s^{q-1}\\ge1+2L^{1-q}r^q+2L[s+(\\alpha-r)/L]^q-2Ls^q.\n$$\nLet $\\Gamma_d=(d/(d+1))^d$. Every closed cap containing $g$ has $s\\ge b$ and $s+r\\ge b+\\max(0,Lb-\\delta)$, where\n$$\nb=\\Gamma_d\\left(\\frac{1+2L(\\alpha/L)^{1+1/d}}{1+2\\alpha}\\right)^d\n$$\nfor $L>0$, and $b=\\Gamma_d$ when $L=0$. The bound for $s+r$ is attained when $\\alpha=L$ by a simplex centroid cap.\n\nIf $2\\delta\\le d(1+2\\alpha)$, every such containing cap satisfies\n$$\ns+r\\ge\\frac{\\Gamma_d}{2}(1+2\\alpha)+E_d(L,\\delta),\\qquad\nE_d(L,\\delta)=\\frac{\\Gamma_d}{2}-\\delta\\left[1-\\Gamma_d+\n\\frac{2\\Gamma_d(1+L)}{1+2L-2\\delta}\\right].\n$$\nFor $\\delta\\le1/8$ the hypothesis on $2\\delta$ is automatic and $E_d\\ge(11\\Gamma_d-4)/32>0$. If additionally $L\\ge1$, then $E_d\\ge(39\\Gamma_d-11)/88>1/44$.",
+  "subgoal_id": "pk-intake-pk-w34-reflection-arbitrary-ceiling-saturation",
+  "title": "Quantile constraints and explicit saturation margins for a dominated centroid"
+}

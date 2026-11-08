@@ -1,0 +1,28 @@
+{
+  "advances": "Counterexample to an unrestricted base selector at half the original mixed length. The accepted weighted-median guarantee applies at base $-1$ in this example.",
+  "author": "PK-research-agent",
+  "candidate_id": "221f3fba49c7d906",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:59.917481+00:00",
+  "depends_on": [
+    "f96beff4bebe6a19"
+  ],
+  "draft_key": "longest-half-mass-balanced-moment-interval-obstruction",
+  "kind": "counterexample",
+  "proof": "The midpoint of the endpoint fibers is $[-1/2,19/40]\\subseteq[-1/2,1/2]$. Any point of the lifted hull at base zero is a convex combination of points in the prescribed middle fiber and such endpoint midpoints; at either extreme base only that fiber contributes. Thus the hull is a full-dimensional planar convex body with the three stated integer fibers. Their lengths are $a=171/100$, $1$, and $c=6/25$. The two endpoint centers are both $e=-1/80$. These give the stated $M,t$.\n\nAt base zero, the allowed allocations for the mass vector are $(\\ell,t-2\\ell,\\ell)$ with $19/80\\le\\ell\\le6/25$, since the middle mass must lie in $[0,1]$ and both outer masses are bounded by their widths. For each allocation use the two endpoint optimization formulas of f96beff4bebe6a19 on the actual bounded intervals. In particular, for a fiber $[l_i,u_i]$ of allocated mass $m_i$, the extreme raw first moments are $l_i m_i+m_i^2/2$ and $u_i m_i-m_i^2/2$, also over arbitrary dominated densities. Put $\\Delta_u=2u_0-u_{-1}-u_1=1/20$ and $\\Delta_l=l_{-1}+l_1-2l_0=0$. Substituting the allocation into the upper raw moment and the negative lower raw moment gives, up to additive constants, $(2t-\\Delta_u)\\ell-3\\ell^2$ and $(2t-\\Delta_l)\\ell-3\\ell^2$. Their derivatives decrease with $\\ell$ but at its upper bound are respectively $73/50$ and $151/100$, so both objectives uniquely maximize at $\\ell=c$. The middle mass is then $q=199/200$. The interval of possible centroids has midpoint $2ce/t=-6/1475$ and length\n$$\n\\frac{c(a-c)+q(1-q)}t=\\frac{14311}{59000}.\n$$\nThese give the displayed endpoints. The two interval extrema are attained and the feasible density set is convex, so every intervening barycenter is attained. At an extreme base its barycenter condition confines all selected mass to that fiber. Because $c<t<a$, only $-1$ is feasible among the extremes and its moment interval has endpoints $l_{-1}+t/2=-13/100$ and $u_{-1}-t/2=21/200$. The resulting length comparison is $14311/59000-47/200=223/29500>0$.\n\nAt base $-1$, $x-z\\le y$ requires $x\\le y-1< -347/400$, and at base $1$ it requires $x\\le y+1>43/400$. At base zero it retains exactly $[-1/2,y]$. The mixed length is therefore $c+1/2+y=2171/2950$ and $M/4-\\mu(H)=37/23600>0$. Nonvertical boundaries have zero length in each fiber. Finally $a>t$, so the unique weighted median is $-1$, and the lesser of the pure-base through-zero masses is $1+c=31/25<t$.\n",
+  "source_candidate_ids": [
+    "fe1eeaef87ebe1c8"
+  ],
+  "source_candidate_sha256": {
+    "fe1eeaef87ebe1c8": "336646c79fde9f21d6facf1f14acaa4f152d0f065d7731dedd5ab2663355e523"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fe1eeaef87ebe1c8",
+      "locator": "fe1eeaef87ebe1c8:01 Opening definition and §§1–3, (1)–(5)"
+    }
+  ],
+  "statement": "Let $K$ be the lifted convex hull of the intervals $[-347/400,337/400]$, $[-1/2,1/2]$, and $[-53/400,43/400]$ at $-1,0,1$, and let $\\mu$ be its original mixed-length measure of mass $M=59/20$. For $t=M/2=59/40$, write $M_t(j)$ for the set of continuous barycenters of submeasures $\\nu\\le\\mu$ of mass $t$ and base barycenter $j$. Then\n$$\nM_t(-1)=[-13/100,21/200],\\qquad\nM_t(0)=[-14791/118000,13831/118000],\\qquad M_t(1)=\\varnothing.\n$$\nTheir two feasible lengths are $47/200$ and $14311/59000$, respectively. Base zero uniquely maximizes length by $223/29500$. Its moment interval midpoint $y=-6/1475$ lies on the closed cap $x-z\\le y$, of mass $2171/2950<M/4$, with raw gap $37/23600$. Thus the rule taking the midpoint of a longest feasible half-original-mass moment interval can return a point of normalized depth below $1/4$. The base $-1$ is the unique weighted median, and the original marginal closed-halfspace depth at base zero is $31/25<t$.",
+  "subgoal_id": "pk-intake-longest-half-mass-balanced-moment-interval-obstruction",
+  "title": "The longest half-mass moment interval can select a bad base"
+}

@@ -1,0 +1,32 @@
+{
+  "advances": "An exact obstruction to forgetting the base and boundary location in a boundary overlap test for a genuine critical circuit.",
+  "author": "PK-research-agent",
+  "candidate_id": "358432c2baa81cd1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:01:59.471436+00:00",
+  "depends_on": [
+    "6a7d56e450b3126f"
+  ],
+  "draft_key": "pk-w35-normality-normal-only-boundary-obstruction",
+  "kind": "counterexample",
+  "proof": "Set $L=8$ and $\\delta=1/800$. At each chain coordinate $j=-4,\\ldots,4$, place at the four binary base vertices $(0,0),(1,0),(0,1),(1,1)$, respectively,\n$$\nT=\\operatorname{conv}((0,0),(1,0),(0,1)),\\quad\nR_1=[-\\delta/2,\\delta/2]\\times[-L/2,L/2],\\quad\nR_2=[-L/2,L/2]\\times[-\\delta/2,\\delta/2],\n$$\nand $R_3=\\lbrace s(1,-1)+t(1,1):|s|\\le L/2,\\ |t|\\le\\delta/4\\rbrace $. Take their lifted convex hull. Its projected base is the binary square times $[-4,4]$. Every representation at a binary vertex uses only that vertex, and the fiber is constant along each chain, so the 36 prescribed integer fibers are exact. All have interior, and the body is full-dimensional. Areas per chain layer are $1/2,1/100,1/100,1/100$ (the linear map for $R_3$ has determinant of absolute value two), hence mass $477/100$, all eight parities, and the claimed individual maximum.\n\nAt $Y=(0,0,0,1/3,1/3)$ the triangle column alone supplies raw mass at least $9|T|\\gamma_2=2$ to every containing ambient halfspace. Apply the product clause of 6a7d56e450b3126f to $[-4,4]\\times T$ in the third base coordinate, with chain center $0$ and the centroid of $T$; the ambient halfspace restricts to a containing halfspace or the entire column subspace. Now take the nonnegative sides of the margins\n$$\nx-10(z_1+z_2)-1/3,\\qquad\ny-10(z_1+z_2)-1/3,\\qquad\n-x-y-10(z_1+z_2)+2/3.\n$$\nAt every rectangle $|x|,|y|,|x+y|<5$ and $z_1+z_2\\ge1$, so each cap strictly misses each rectangle. The three triangle traces each have area $2/9$ by the similarity factor $2/3$ from their respective vertices. Thus each cap has mass $2$ and goes through $Y$. The three margins sum to zero on the triangle column, covering its whole continuous plane at every chain base. At a mark in any other column, choose one of two opposite continuous cuts through it with mass at most half that column's total $9/100$, since the cut plane has area zero in every fiber. Add a sufficiently large base tilt whose affine functional vanishes at the chosen binary vertex and is strictly negative at all other binary vertices. This retains the chosen cut within its column and excludes the other columns, giving depth at most $9/200$. This proves global criticality. The raw continuous normals $(1,0),(0,1),(-1,-1)$ sum to zero. Each section inside $T$ has length $2/3$ times its raw normal length. Summing coarea, section length divided by raw normal length, over the nine triangles gives $6$ for each cap, so the positive response weights are all $1/3$.\n\nOn each edge of $T$, two cap traces have length $2/3$ of that edge each and the third has zero length. This follows on $x=0$ from $y\\ge1/3$ and $y\\le2/3$, on $y=0$ by symmetry, and on $x+y=1$ from $x\\ge1/3$ and $y\\ge1/3$. Thus the mean of $W$ on each edge is $4/9$. At normals $-e_1,-e_2$, the triangle length is one per normal and the matching rectangle lengths total $L+\\delta$ per normal. At normal $(1,1)/\\sqrt2$, the triangle length is $\\sqrt2$ and $R_3$ supplies $L\\sqrt2$. All other normals have zero numerator, and repetition along the chain multiplies every contribution by nine. Therefore every ratio is at most $(4/9)/(1+L)$ and selecting only the diagonal normal attains it. The hinge is one on the triangle column and zero on the other columns, so its ratio is $4/9$. The triangle column already carries fraction $50/53$ of the mass on two parities, so this example does not impose minimal closed-minor premises.\n",
+  "source_candidate_ids": [
+    "9b66f93d0de2960b"
+  ],
+  "source_candidate_sha256": {
+    "9b66f93d0de2960b": "7970a9be554d92835eed0fd9162393de9028b602333863ebd5d0f34c25bb8920"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9b66f93d0de2960b",
+      "locator": "9b66f93d0de2960b:02 §§3–4, (3), sharp normal-only boundary obstruction"
+    },
+    {
+      "candidate_id": "9b66f93d0de2960b",
+      "locator": "9b66f93d0de2960b:01 §§1–2, (1)–(2), complete actual body and global critical circuit"
+    }
+  ],
+  "statement": "In dimensions $(n,d)=(3,2)$, there exists a compact convex body with exactly the positive integer fibers at $\\lbrace 0,1\\rbrace ^2\\times\\lbrace -4,\\ldots,4\\rbrace $, total mass $477/100$ and maximal individual fiber area $1/2<477/800$. Its global raw depth maximum is $Q=2$, and three actual critical caps through the same deepest point have balanced continuous normals and equal coarea factors $6$. Let $\\eta$ be the sum of the fiber perimeter measures with outward continuous normal $\\nu$ and $W$ the average of the three cap indicators. Then\n$$\n\\sup_{\\psi\\ge0:\\ 0<\\int\\psi(\\nu)\\,d\\eta<\\infty}\n\\frac{\\int\\psi(\\nu)W\\,d\\eta}{\\int\\psi(\\nu)\\,d\\eta}=\\frac4{81}<\\frac{\\gamma_2}{8}=\\frac1{18}.\n$$\nThe base-dependent convex hinge $(1-z_1-z_2)_+$ has boundary ratio $4/9$ on the same body and circuit.",
+  "subgoal_id": "pk-intake-pk-w35-normality-normal-only-boundary-obstruction",
+  "title": "Normal-only boundary tests can miss a genuine critical circuit"
+}

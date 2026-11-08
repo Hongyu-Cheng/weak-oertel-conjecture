@@ -1,0 +1,65 @@
+{
+  "candidate_id": "ec5e140eb107957e",
+  "candidate_sha256": "a30ef8860140aa079ee7b040ab65d5f3bc20dde1c863a0f082849d2178eadb8e",
+  "checked_dependency_candidate_sha256": {
+    "755cb08c379113cc": "333ebd70029e9411c1ac6f8bcf0d9484ab2fff8b378d4da40e25f8dade420a11",
+    "fa420503475f57e1": "95142c03ed873e0eccb7b2e1876c84b92fe1b93afa4f342d50312ed01b67dc21"
+  },
+  "checks": [
+    "Raw depth is upper semicontinuous because a strict depth sublevel is witnessed by one closed cap of strictly smaller mass, and expanding that cap slightly preserves the strict bound by continuity from above while including a neighborhood. Every finite positive compact family has a maximizing mark at every site, and I is finite and nonempty.",
+    "For each chosen circuit, the unshifted weighted margins vanish identically on its base plane. The shift is ε(g_j−a_p)/S_j, and the weighted sum is ε times [Σ ρ_j g_j/S_j−a_p Σ ρ_j/S_j], which is zero by the chosen κ. Thus every point on the entire plane, including outside the old fiber, stays covered by at least one shifted closed cap.",
+    "At each selected cap the old aggregate mass is Q−S_j δb_j+o(ε), where δb_j=O(ε); if the shift coefficient is zero the error is zero. The exact signed identity contributes εg_j at the same threshold. Thus all new cap masses in the circuit have common first-order coefficient a_p. The hypothesis is agreement of left and right slopes per cap, with potentially different S_j between caps. There is no assertion that regular circuits exist simultaneously without this hypothesis.",
+    "At nondeep sites the accepted predecessor supplies fixed finite covers of the entire planes at budgets q_p<Q. The finite list has a uniform positive slack. Total variation at most εΣ|ξ_i| changes every fixed cap mass by at most that amount, so these covers stay below the perturbed deep budget, even when the latter decreases. When n=0 all bases are deep because there is just one.",
+    "Taking the largest deep budget and the exact denominator M+εΣξ_i gives after subtracting β the divided upper bound (max_p a_p−βΣξ_i)/M in the limit. The finite set of expansions has a uniform o(ε) error and all covers are for actual perturbed fibers.",
+    "For every signed ξ the competitors eventually lie in any Hausdorff neighborhood of the original, so local minimality makes the displayed maximum row pairing nonnegative for every ξ. Strict separation of zero from the finite row hull would give a single direction making all row pairings negative. A convex representation of zero gives the stated probability vector, including the singleton case, with dependence on the fixed selected marks and circuits.",
+    "Checked source 97eab0f821e54041 at SHA-256 6fd053c8eaa203602363a7b90aa8383c0b8298506059ea381ff71a80d405853e, §4, Theorem 5 and (9)–(13). The formerly pending critical-cover reference is now accepted as 755cb08c379113cc. None of the other historical variational references is used as a premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "fa420503475f57e1",
+      "candidate_sha256": "95142c03ed873e0eccb7b2e1876c84b92fe1b93afa4f342d50312ed01b67dc21",
+      "mapping": "The theorem explicitly uses the signed local-mass setting. All selected cap boundaries avoid the marks, and the chosen finite list of shifts is O(ε) for fixed ξ because each S_j>0. This gives the exact same-threshold cap changes, variation control, denominator, and convergence used here.",
+      "reviewed_proof_sha256": "e0ffde0102defa48846891096fb6b5535981059c7e1c66d1b0d871741e60bc07",
+      "reviewed_statement_sha256": "4d7e0687f40a0475f09b3589c8035ac36a0970bad165c99cc795ab5c29852b0b",
+      "status": "Frozen predecessor separately approved in this Batch 12 review. Admission is pending and must precede its child."
+    },
+    {
+      "candidate_sha256": "333ebd70029e9411c1ac6f8bcf0d9484ab2fff8b378d4da40e25f8dade420a11",
+      "fact_id": "755cb08c379113cc",
+      "fact_sha256": "468e385f4995b6ea13fe7ae2e7b60334c7f6eec0ba2d176fb71fb2732c4d3c40",
+      "mapping": "Apply only when a nondeep base exists, hence n≥1. The d≥1 nonempty finite base set with compact positive fibers is compatible by the strict-row predecessor and M>0. The fact applies at a maximizing mark on each nondeep base and supplies a finite cover of the entire plane by actual closed caps each of mass q_p<Q.",
+      "status": "Accepted in the pinned graph snapshot."
+    }
+  ],
+  "finished_utc": "2026-11-08T10:29:22Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted theorem supplies unshifted actual equal-depth circuits and whole-plane covers, including slack on nondeep bases. It gives neither the response to signed mass changes nor the equality dual.",
+      "fact_id": "755cb08c379113cc"
+    },
+    {
+      "comparison": "The accepted ordinary theorem gives a one-body common cap-mass response for a smooth support bump and a spanning stationary circuit. It has no multiple deepest bases, no aggregate slopes from other fibers, and no finite signed equality dual across bases.",
+      "fact_id": "11c2f4875e5c3035"
+    },
+    {
+      "comparison": "The accepted ambient contact theorem concerns cap-section centroids and projected faces under its own differentiability assumptions. It does not imply the selected-circuit Hausdorff variation or stationarity equation.",
+      "fact_id": "1269c554ca9a41b8"
+    }
+  ],
+  "readability": "The final proof paragraph’s “Equal positive two-sided slopes” means the one-sided slopes agree for each individual cap. The displayed formula uses a separate S_pj for each cap, so equality across different caps is unnecessary. “Equal first-order perturbed cap masses” is a separate consequence of the balanced shifts.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3cac0cae8cabf530303da00f10c9b02d8a5e77b115d8500039562db5db849d01",
+  "reviewed_statement_sha256": "6e0dc229b1146dc353e083a55ddd8ec9d9a48cc3a00b5415d124f287efc61638",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:25:46Z",
+  "summary": "Balanced threshold shifts give simultaneous whole-plane covers at all deepest bases, and signed competitors force the finite equality dual at a local minimum.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

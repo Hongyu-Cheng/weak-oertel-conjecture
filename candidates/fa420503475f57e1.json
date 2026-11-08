@@ -1,0 +1,29 @@
+{
+  "advances": "A local convex deformation of a fixed positive family with strict compatibility and selected exposed points.",
+  "author": "PK-research-agent",
+  "candidate_id": "fa420503475f57e1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:25:23.536784+00:00",
+  "depends_on": [
+    "ef28349cb1e27c5b",
+    "b3dd5f87b2f6ec9e"
+  ],
+  "draft_key": "actual-signed-local-masses",
+  "kind": "theorem",
+  "proof": "For every $\\xi_i>0$, use the exact inverse in the local hull-addition lemma to choose $t_i$ with added own-fiber volume $\\varepsilon\\xi_i$. In each fiber adjoin all its chosen apices by taking the convex hull with its original body. By the same lemma the added pieces within a fiber are disjoint and shrink to their marked points. The new fiber bodies are uniformly Hausdorff-close to the original ones. The open compatibility lemma makes them the actual integer fibers of their lifted hull. That hull is exactly $L_\\varepsilon=\\operatorname{conv}(C\\cup\\{(p_i,v_i+t_i h_i):\\xi_i>0\\})$, since the lifted generating bodies use only the original fibers and the listed apices.\n\nFor $\\xi_i<0$, write $\\ell_i$ for the exposing functional and $m_i=\\ell_i(w_i)$. On all other original integer fibers $\\ell_i$ has a strict gap from $m_i$ by compactness and finiteness. In its own original fiber, the piece $\\{\\ell_i>m_i-s\\}$ shrinks to $w_i$ as $s\\downarrow0$ by unique exposure and compactness. The restriction of $\\ell_i$ to that plane is nonconstant, and the original fiber has nonempty interior. Its pushed-forward volume has no atoms, and every slab between distinct levels strictly between its extremal values contains a relatively open subset of the fiber. Consequently the removed volume is continuous and strictly increasing for small $s>0$, with limit zero at $s=0$. Choose $s_i$ to remove exactly $\\varepsilon|\\xi_i|$. Each such trim leaves the original other fibers untouched. The finitely many removed pieces are disjoint for small $\\varepsilon$ by locality. The strict gap at the other selected marks and locality of their positive additions also ensure that no trim reaches any positive addition.\n\nIntersect $L_\\varepsilon$ with the closed trim halfspaces $\\ell_i\\le m_i-s_i$. Its integer sections have exactly the additions and deletions just computed. For each old fiber choose an interior point $c_p$. For any fixed $0<\\delta<1$, the homothet $(1-\\delta)K_p+\\delta c_p$ satisfies every exposing inequality with strict slack since each $c_p$ does. All these homothets are retained for small $\\varepsilon$. Together with the Hausdorff convergence of the expanded fibers, this proves fiberwise convergence and positivity. The projection is still $\\operatorname{conv}(P)$, since all $P$ remain occupied and the expanded hull had that projection. One can take the lifted hull of the new integer sections for $C_\\varepsilon$, which has these same sections since it is contained in the trimmed body. Its affine hull is $\\mathbb R^{n+d}$ because the bases span $\\mathbb R^n$ and the sections have interior. The new measures differ on precisely the added and removed regions, with the prescribed signs and exact masses.\n\nEvery selected cap has a fixed strict margin at each $w_i$. The complete corresponding changed region has the same membership for small $\\varepsilon$, also after an $O(\\varepsilon)$ shift of threshold. Summing its exact signed volume proves both cap formulas.\n",
+  "source_candidate_ids": [
+    "97eab0f821e54041"
+  ],
+  "source_candidate_sha256": {
+    "97eab0f821e54041": "6fd053c8eaa203602363a7b90aa8383c0b8298506059ea381ff71a80d405853e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "97eab0f821e54041",
+      "locator": "§3, Theorem 4, (6)–(8), exact arbitrary signed local masses"
+    }
+  ],
+  "statement": "Let $P$, $K_p$, and $C=\\operatorname{conv}\\bigcup_{p\\in P}(\\{p\\}\\times K_p)$ satisfy the strict compatibility hypotheses of the open compatibility lemma. Let $\\mu_C$ be summed $d$-dimensional Lebesgue measure on its integer fibers and $M=\\mu_C(\\mathbb R^{n+d})$. Choose finitely many distinct $w_i=(p_i,v_i)$, $p_i\\in P$, each exposed in $C$ by an ambient linear functional with unique maximizer $w_i$. Assume $v_i$ has a unique unit supporting normal $u_i$ in $K_{p_i}$, whose support face is $\\{v_i\\}$, and fix $h_i$ with $u_i\\cdot h_i>0$. For each fixed real vector $\\xi=(\\xi_i)$ and every sufficiently small $\\varepsilon>0$ there is an actual convex body $C_\\varepsilon$ with nonempty integer fibers of positive volume exactly at $P$, converging fiberwise in Hausdorff distance to $C$. The signed measure $\\mu_{C_\\varepsilon}-\\mu_C$ is a sum of signed restrictions of mixed volume to pairwise disjoint regions shrinking to the respective $w_i$, each of exact signed mass $\\varepsilon\\xi_i$. In particular $M_\\varepsilon=M+\\varepsilon\\sum_i\\xi_i$. For every fixed finite family of closed halfspaces $H$ whose boundaries avoid all $w_i$, one has\n$$\n\\mu_{C_\\varepsilon}(H)-\\mu_C(H)=\\varepsilon\\sum_i\\xi_i\\mathbf1_H(w_i)\n$$\nfor all sufficiently small $\\varepsilon$. The same identity holds for parallel threshold changes of order $O(\\varepsilon)$, comparing the two measures at the same shifted threshold and keeping the old indicators on the right.",
+  "subgoal_id": "pk-intake-actual-signed-local-masses",
+  "title": "Exact signed local mass variations for strictly compatible mixed fibers"
+}

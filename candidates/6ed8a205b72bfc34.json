@@ -1,0 +1,29 @@
+{
+  "advances": "The product equality is for this exact diamond gadget and its binary height slices.",
+  "author": "PK-research-agent",
+  "candidate_id": "6ed8a205b72bfc34",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.328742+00:00",
+  "depends_on": [
+    "3f3448fb28e8446d",
+    "6d6fcf377e68c79c"
+  ],
+  "draft_key": "exact-helly-numbers-for-diamond-filter-products",
+  "kind": "theorem",
+  "proof": "By 3f3448fb28e8446d the original base is a complete lattice set in $\\mathbb Z^3$, its only nonvertex is $p_2$, and its five-point diamond is the face on $y=0$. In one factor put $U=\\{p_0,p_1,p_2,p_4,p_5,p_7,p_8,p_{10}\\}$. The two omitted sites $p_3,p_6$ lie on $y=0$, but the face of $\\operatorname{conv}U$ there is the triangle on $p_0,p_1,p_2$, with both $x,z\\le1$. Since $p_3$ has $z=2$ and $p_6$ has $x=2$, neither is in the hull. The seven selected old vertices remain vertices. The point $p_2$ is a vertex of the triangle and hence of the entire hull since the triangle is a face. Thus $U$ consists of eight vertices and its hull has no other lattice points by completeness of $P'$.\n\nThe convex hull of a Cartesian product of finite sets equals the product of their hulls, since one can multiply the coefficients of factorwise convex combinations. The vertices of the product are exactly the products of vertices: a sum of exposing functionals exposes a tuple of vertices, and a nonvertex in one coordinate makes the tuple nonextreme. Hence $U^r$ is an empty set of $8^r$ vertices in the complete base $P_r$. Its deletion hulls give $h(P_r)\\ge8^r$. The lattice Helly number $2^{3r}$ from 6d6fcf377e68c79c bounds the Helly number of its convex intersection $P_r$ by the same number. The coordinatewise graph equality follows by testing each coordinate for integral height. The $9^r$ sites of $T_r$ are all vertices by the accepted fine support in one factor, so their deletion hulls give $h(T_r)\\ge9^r$, while choosing one excluding set per site in an infeasible family gives $h(T_r)\\le9^r$.\n\nThe height-one slice of $T'$ consists of the two lifted sites with indices $0,1$, and the height-zero slice has the other seven. Each factor slice is in convex position and so are their products. The same finite-source argument gives each slice Helly number equal to its size, $2^j7^{r-j}$, and the sum is $(7+2)^r$.\n",
+  "source_candidate_ids": [
+    "a67ad6a5110953aa"
+  ],
+  "source_candidate_sha256": {
+    "a67ad6a5110953aa": "80cdb478cd842673ab62ff1de7216cb73f0250629dad3b4297ab706a360722c2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a67ad6a5110953aa",
+      "locator": "a67ad6a5110953aa:04 §3, (6)–(8), exact diamond products and slice sum"
+    }
+  ],
+  "statement": "Use the ten-point diamond source $P'$, its Jensen height $g$, and its nine-point integral graph $T'$ of accepted fact 3f3448fb28e8446d, with exactly its indexed points $p_i$. For $r\\ge1$, let $P_r=(P')^r$ and apply $g$ coordinatewise to give the integral graph $T_r=(T')^r$ after reordering coordinates. The exact relative Helly numbers are\n$$\nh(P_r)=8^r,\\qquad h(T_r)=9^r.\n$$\nAn occupied integer height slice with $j$ entries equal to one and $r-j$ entries equal to zero has Helly number $2^j7^{r-j}$. Their sum is $9^r$, and the ratio of filtered to original Helly number is $(9/8)^r$.",
+  "subgoal_id": "pk-intake-exact-helly-numbers-for-diamond-filter-products",
+  "title": "The diamond filter has exact Helly numbers under products"
+}

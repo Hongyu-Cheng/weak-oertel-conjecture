@@ -1,0 +1,26 @@
+{
+  "advances": "Failure of unchanged residual-root Jensen for the displayed finite cap cover and exact row. The global depth and full critical menu use the additional strict profile range.",
+  "author": "PK-research-agent",
+  "candidate_id": "3e203e154e297bd1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:31:43.946452+00:00",
+  "depends_on": [],
+  "draft_key": "binary-simplex-finite-original-row-failure",
+  "kind": "counterexample",
+  "proof": "An integer point of the projection outside the cube has a coordinate equal to $-1$, so all its convex weight lies at $v_-$, the only generator with that coordinate. All continuous generators lie in $T$, and every cube base carries $T$, so the exact integer fibers are the specified ones. The hull contains $[0,1]^n\\times T$ and is full dimensional. The extra base has the same parity as $\\mathbf1$, which proves the parity and nonheaviness assertions.\n\nThe $\\delta_0$ cap in direction $i$ has threshold $b$ at $0$, includes all of $A$ since $\\delta_0(v_-)=-n$, and misses the nonzero cube fibers since $\\delta_0\\ge1$ there. For $w\\ne0$, $\\delta_w(w)=0$ and $\\delta_w(z)\\ge1$ at the other cube vertices. If $w$ has $r\\ge1$ ones, then $\\delta_w(v_-)=(2n+3)r-n\\ge n+3$. Thus these caps isolate the canonical traces at their own fibers. Each canonical trace on $T$ has volume $\\Gamma$ by homothety. They cover each $T$ because $\\sum_i\\lambda_i=1$, and the source caps cover $A$. These exact traces give the stated budgets and obstacles.\n\nWrite $e_z$ for the obstacles. Use constraints $h_z\\ge e_z$ and $h_z+g_z\\cdot(y-z)\\le h_y$ for every ordered pair of distinct bases. The midpoint $0=(v_-+\\mathbf1)/2$ gives $h_{v_-}+h_{\\mathbf1}\\ge2h_0\\ge2c$. Nonnegativity and strict convexity of the $d$th power give $h_{v_-}^d+h_{\\mathbf1}^d\\ge2c^d$. The other $2^n-1$ cube heights have lower bound $c$. Equality forces every height to equal $c$, and they are feasible with slopes $g_z=0$.\n\nPut $s=dc^{d-1}$. Take convexity multiplier $s$ on each of the outgoing edges from $0$ to $v_-,u_1,\\ldots,u_n$, and zero on all other edges. The displacement sum is $s(v_-+\\sum_j u_j)=0$. Take obstacle multipliers $(n+2)s$ at $0$, zero at those destinations, and $s$ at the remaining bases. Height stationarity requires the obstacle multiplier to equal $s$ plus outgoing minus incoming convexity multiplier mass. This holds at the source, each destination and each remaining base. Complementarity holds since every support constraint is tight and every positive obstacle multiplier is at a cube base. In the KKT absorbing chain, the denominator at each state is $s$ plus the outgoing convexity multiplier mass. The stop probability has numerator $s$ and each transition has numerator the corresponding edge multiplier. At $0$ the stop and all $n+1$ transitions have probability $1/(n+2)$, and all destinations stop with probability one. This is the claimed terminal row.\n\nFor each original cap centered at $0$ the roots on $v_-,0,u_1,\\ldots,u_n$ are $0,c,1,\\ldots,1$, respectively. Its mean is $(c+n)/(n+2)$, which exceeds $c$ by the claimed amount. This calculation uses the unchanged KKT row and the original strict residuals of the ambient halfspace.\n",
+  "source_candidate_ids": [
+    "c323819a201d7580"
+  ],
+  "source_candidate_sha256": {
+    "c323819a201d7580": "cecb34c6c00d53c723d22d71cb1d115014908a587a2b3415f2179cb5fd62bb93"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c323819a201d7580",
+      "locator": "§§1–4, (1)–(15), finite cover and exact KKT row"
+    }
+  ],
+  "statement": "Let $d,n\\ge2$, let $T$ be a volume-one $d$-simplex with a vertex at $0$, and write $\\lambda_i$ for its barycentric coordinates, $b=1/(d+1)$, $\\Gamma=(1-b)^d$, and $c=(1-\\Gamma)^{1/d}$. Assume $c<n/(n+1)$ and $0<\\varepsilon<1$. Form the actual lift with $T$ at every binary cube vertex and $A=\\varepsilon T$ at $v_-=-\\mathbf 1$. Write $a=\\varepsilon^d$. Its integer fibers are exactly the assigned positive fibers. The total is $M=2^n+a$, the occupied parity count is $k=2^n$, and the largest fiber has volume $1<M/k$.\n\nDefine $\\delta_0(z)=\\sum_jz_j$ and for nonzero cube vertices $w$ define $\\delta_w(z)=(n+1)\\sum_{j:w_j=1}(1-z_j)+\\sum_{j:w_j=0}z_j$. The caps $\\lambda_i(x)-2\\delta_w(z)\\ge b$ for all $w,i$ cover the mixed source with budgets at most $\\Gamma+a$. The one-cap residual-root obstacles are zero at $v_-$ and $c$ at every cube base. The sampled convex-threshold program minimizing the sum of the $d$th powers has unique optimal heights all equal to $c$ and value $(2^n+1)c^d$. It has an exact KKT terminal row from $0$ uniform on $0,v_-,u_1,\\ldots,u_n$, where the $u_j$ are the coordinate unit vectors. For each of the original $w=0$ caps the residual-root mean under this unchanged row exceeds its source value by $[n-(n+1)c]/(n+2)>0$.",
+  "subgoal_id": "pk-intake-binary-simplex-finite-original-row-failure",
+  "title": "A finite simplex cap cover with a failing original KKT row"
+}

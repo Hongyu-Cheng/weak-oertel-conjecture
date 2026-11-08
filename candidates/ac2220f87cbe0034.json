@@ -1,0 +1,28 @@
+{
+  "advances": "The strict failure concerns reflected base weight for actual compatible full-dimensional mixed fibers; the cube variant supplies a separate original depth lower bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "ac2220f87cbe0034",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:17:06.634768+00:00",
+  "depends_on": [
+    "fe5c8e394e2c0d19"
+  ],
+  "draft_key": "actual-planar-affine-root-reflection-below-quarter",
+  "kind": "counterexample",
+  "proof": "The predecessor's reflection table applies unchanged to the same complete twelve-point support with $t_v=(21-v)^{14}$. Put $(A,B,C_2,D,E)=(21^{14},20^{14},19^{14},18^{14},17^{14})$. The only competitors for the maximal value are $A$, $B+2C_2$, and $C_2+4D+4E$. Exact subtraction gives $A-B-2C_2=7506560955740439$ and $A-C_2-4D-4E=272148470172696748$. All other rows are bounded by the third competitor. The mass is $2(A+B+C_2)+3(D+E)$, giving the displayed exact values.\n\nWrite $r(u,v)=21-v>0$. For a convex combination of points $(p_i,r(p_i)k_i)$, their continuous combination belongs to $r(\\sum_i\\lambda_ip_i)K$ by taking the weighted combination of the $k_i$ with weights $\\lambda_ir(p_i)/r(\\sum_i\\lambda_ip_i)$. This proves convexity. Compactness and interior follow from compactness of $Q,K$, continuity and strict positivity of the radius, and their nonempty interiors. Conversely express any base point as a combination of the integer vertices $(0,0),(1,0),(1,4),(-1,4),(-1,3)$ of $Q$. Using the same $k\\in K$ at each vertex realizes every point of its real fiber in the sampled hull. Thus the fibers and weights used in the table are actual.\n\nWith the centered cube, each closed ambient halfspace through or containing either heaviest fiber center takes at least half of its own symmetric cube. Direct integer comparison gives $M<(9/2)A$ and $9\\cdot14^{14}\\le4\\cdot15^{14}$, so $\\Gamma_{14}M/4<A/2$.\n",
+  "source_candidate_ids": [
+    "ad68d9332c30d210"
+  ],
+  "source_candidate_sha256": {
+    "ad68d9332c30d210": "d1d8d5d7ffb89a44cb245c7d79f9ba264a3cc748359064075957311e02688e83"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ad68d9332c30d210",
+      "locator": "ad68d9332c30d210:02 §§1, 3–4, (1)–(3), (5)–(9)"
+    }
+  ],
+  "statement": "On the polygon $Q=\\{(u,v):-1\\le u\\le1,\\ 0\\le v\\le4,\\ 3u+v\\ge0\\}$ take a $14$-dimensional convex body $K$ of volume one and set $C=\\{(u,v,x):(u,v)\\in Q,\\ x\\in(21-v)K\\}$. This is full-dimensional, convex, and equal to the hull of its actual integer fibers. Its actual masses are $w_{(u,v)}=(21-v)^{14}$ on $Q\\cap\\mathbb Z^2$. For $B(j)=\\sum_p\\min(w_p,w_{2j-p})$ with zero weights off that support,\n$$\n\\max_{j\\in\\mathbb Z^2}B(j)=21^{14}=3243919932521508681,\\quad\nM=12992226819033231463,\\quad M-4\\max_jB(j)=16547088947196739>0.\n$$\nExactly $(0,0),(1,0)$ attain the maximum. With $K=[-1/2,1/2]^{14}$ both of those own-fiber centers have original closed-halfspace depth at least $21^{14}/2>\\Gamma_{14} M/4$, where $\\Gamma_d=(d/(d+1))^d$.",
+  "subgoal_id": "pk-intake-actual-planar-affine-root-reflection-below-quarter",
+  "title": "Actual affine-radius fibers with planar base retention below one quarter"
+}

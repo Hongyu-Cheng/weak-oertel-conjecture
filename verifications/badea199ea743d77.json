@@ -1,0 +1,62 @@
+{
+  "candidate_id": "c6512973765c1029",
+  "candidate_sha256": "cec355b76951f61689ef800e65193addf35849ebee617a80fe2e8688cf5fed7c",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "efa4558174ce60cf": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3"
+  },
+  "checks": [
+    "The normalized hinge gives a retained cap with positive mass and centroid at zero. If the cap is proper then its threshold −1 lies strictly inside the projection interval, zero is interior to K, and its top has positive height. The apex homothet of the retained cap gives survival at least ((B−s)/(B+1))^d and the retained mean height is zero, yielding B≤d.",
+    "The cone section law on [−1,d] has total retained mass T and centered first moment zero. Concavity of the difference of section roots bounds the positive set by a single interval. Matched mass and moment exclude a positive interval touching either end, and the affine secant comparison gives the convex-test ordering with strictness for unequal laws. Extending concavity across −1 proves the left-side comparison against the untruncated cone, including the equal-law case.",
+    "Truncating at a₀=d−(d+1)/η matches total mass V, with η=(T/V)^(1/d). On the exterior interval the mass difference is positive below the truncation threshold and nonpositive above it, so an increasing test gives the second ordering. The affine energy denominator is positive because the actual top is at most d and c<0. The endpoints are 1/(d+1−dη) and 1/η. Differentiating the primitive or directly changing the radial variable gives cone energy V(d+1−dη)η^d.",
+    "Strict convexity and strict monotonicity of the same energy kernel enforce equality in the two section laws separately. Convexity and compactness give Hausdorff convergence of the sections to the bottom face, so its positive base area agrees with the comparison profile. Its cone to an actual top point is an included convex body of equal volume. The retained subcone has barycenter at the mark, placing the mark on the centroid-apex axis. Conversely its indicator is retained-mass optimal by the normalized hinge inequality, and d/L_d+d a₀/L_a₀=0 gives axial stationarity. The transverse first moment vanishes because section centroids are on the same axis and are affine in height. Strict convexity makes this the full energy minimum.",
+    "Substitution gives F_d(Γ_d τ)=(d+1)τ−dτ^(1+1/d), and F_d has positive derivative below Γ_d and endpoint values 0 and 1. The metronoid lower bound applies with m=T. For equality at α<Γ_d, the top volume-T cap in the tested direction must have its centroid at the mark's tested height or an interior slab gives strict excess. Equality in the directional filling forces that cap to be the actual retained subcone. This fixes the cap orientation; conversely the axial apex cap captures Γ_d T and is globally minimal.",
+    "At α=Γ_d, equality is exactly E=V at the ordinary centroid. In dimension one T=2 min(ℓ,r) and E=4ℓr/(ℓ+r), giving 2τ−τ² and the exact depth conversion for the smaller cap. Compactness of unit normals and null hyperplanes give a minimizing through-mark cap. The curvature minimum of −F_d'' is attained at Γ_d and is ((d+1)/d)^(2d+1); two integrations give the square-root lower bound including the zero floor and the α>Γ_d case.",
+    "Checked source da4697fe92a737cb opening and §§1–6, and 5f5575d4f9e40719 opening and §§1–5. The frozen proof derives the latter note's any-cap theorem from the retained comparison and the accepted directional metronoid bound, and preserves its equality and sharpness scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3",
+      "fact_id": "efa4558174ce60cf",
+      "fact_sha256": "46fe81dabdb3dce217066cbdf0b03811e5f31600f47ff212687d11ef712b7b0e",
+      "mapping": "Its retained-cap proof uses the normalized hinge 1+u·(x−y) for precisely the full-dimensional K and interior mark in this statement, including the proper-cap condition, attained projective energy and the interval formulas.",
+      "reviewed_proof_sha256": "3f02b0dc5890813c93ca758645cbc602e93b598f5e7b2d5e6ea6f5f983ecfca5",
+      "reviewed_statement_sha256": "930a2a913d290a108052291c9fbf63e5f9e4b67fcb18c94309504f165bdfa29e"
+    },
+    {
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "mapping": "The retained indicator of mass T>0 places y in the mass-T metronoid of K. Its directional top-cap support proof supplies the equality comparison, and its full-mass case applies to the centroid of the positive-volume top cap.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:32:25Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same ordinary energy and maximum retained mass. Its upper estimate E<(d+1)T compares to an untruncated cone and has no V-dependent loss. The frozen bound subtracts dT(T/V)^(1/d), supplies equality cases, and yields the inverse cap formula.",
+      "fact_id": "efa4558174ce60cf"
+    },
+    {
+      "comparison": "Provides the exact lower ordinary cap mass Γ_d T for a retained barycenter. It gives the cap step of the current argument, without comparing E to V and T or describing the energy equality family.",
+      "fact_id": "6769574fc1bd9f8d"
+    }
+  ],
+  "readability": "The normalization of the one-dimensional coarea density is explicit. The equality argument on the left interval uses the limiting retained equality at the interior threshold −1.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "701a01c5257bc5047a4c7bfe489314d7aa13711e40247024a203ce34f0e4b90b",
+  "reviewed_statement_sha256": "2f5716561811b3c6e886ab6c99fc063b9f486bccbcecbd1a973143e7da0b8cec",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:27:21Z",
+  "summary": "The sharp retained-mass bound, equality classification, and its ordinary cap and depth consequences all follow. The two one-dimensional comparisons match different moments on the retained and discarded height intervals.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

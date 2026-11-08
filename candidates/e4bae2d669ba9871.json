@@ -1,0 +1,32 @@
+{
+  "advances": "Actual simplex fibers and a fixed enlargement path. The strict loss concerns the moving ordinary fiber centroid and the raw mass, with a better fixed point still present.",
+  "author": "PK-research-agent",
+  "candidate_id": "e4bae2d669ba9871",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.049547+00:00",
+  "depends_on": [
+    "6a7d56e450b3126f"
+  ],
+  "draft_key": "pk-w30-simplex-shell-moving-centroid-cap-loss",
+  "kind": "counterexample",
+  "proof": "The inequality with $|z|$ is the conjunction of two affine inequalities, so $C_r$ is compact convex and full dimensional. Its displayed integer fibers follow by substitution, and $C_1\\subseteq C_r$. The endpoint midpoint body is $T$, while the middle volume is $r^d V$ and centroid is $rg$, giving the root surplus and the displacement $(r-1)g$. The coordinate sum of $rg$ is $rc\\le1$. The largest fiber weighs $r^dV<(r^d+2)V/2$ precisely when $r^d<2$.\n\nThe sublevel at coordinate sum $s\\in[0,1]$ in $T$ has volume $s^d V$ by dilation. Thus the entire middle shell lies above $rc$ up to a null set and pays $\\Delta$, while moving the old threshold from $c$ to $rc$ loses $((rc)^d-c^d)V=\\Gamma\\Delta$ on each of the three original fibers. This proves the first identity. The opposite caps exhaust total mass and their common boundary is null in every fiber, giving the second. The binomial expansion gives $(1+1/d)^d\\le\\sum_{k=0}^d1/k!<3$, the last strict inequality following by comparison with $1/k!\\le2^{1-k}$ for $k\\ge1$. Hence $\\Gamma>1/3$. The first moment of the shell is $(r^{d+1}-1)Vg$ by scaling. Subtracting $rg\\Delta$ gives the centered moment.\n\nIn the original planar product $[-1,1]\\times T$, accepted fact 6a7d56e450b3126f gives raw depth at least $(4/9)3V$ at $(0,g)$, since the base interval is centrally symmetric about integer zero. The zero-tilt cap $x_1+x_2\\le2/3$ passes through that mark and captures $4V/9$ in each fiber, giving equality.\n\nNow $r^2=19881/10000<2$ and $rg=(47/100,47/100)$ has coordinate sum $47/50<1$. Its middle-fiber shortfall from half the total is $(119/20000)V$. The closed ambient cap $x_1+x_2+(3/50)z\\ge47/50$ has thresholds $1,47/50,22/25$ at bases $-1,0,1$, respectively. The captured areas in units of $V$ are $0$, $r^2-(47/50)^2=2209/2000$, and $1-(22/25)^2=141/625$. Their sum is $13301/10000<4/3$. The cap gives an upper bound on depth at the moving mark. Inclusion preserves the original lower bound at the fixed mark $(0,g)$.\n",
+  "source_candidate_ids": [
+    "d4b54fbaf58fa904"
+  ],
+  "source_candidate_sha256": {
+    "d4b54fbaf58fa904": "083f1b4286e0359590c3a37c270707ebf8f3112e0ad4403b61875cf9a5f4b59e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d4b54fbaf58fa904",
+      "locator": "d4b54fbaf58fa904:01 §§1–2, (1)–(2), actual simplex shell and signed cap masses"
+    },
+    {
+      "candidate_id": "d4b54fbaf58fa904",
+      "locator": "d4b54fbaf58fa904:04 §4, (3), strict-noheavy moving-centroid depth loss"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $T=\\{x\\in\\mathbb R^d:x_i\\ge0,\\ \\sum_i x_i\\le1\\}$, $V=1/d!$, $g=(1,\\ldots,1)/(d+1)$, $c=d/(d+1)$, and $\\Gamma=c^d$. For $r\\ge1$, use summed $d$-volume $\\mu_r$ on the actual integer fibers of\n$$\nC_r=\\{(z,x):-1\\le z\\le1,\\ x_i\\ge0,\\ \\textstyle\\sum_i x_i\\le r-(r-1)|z|\\}.\n$$\nThe three fibers are $T,rT,T$ at $-1,0,1$, the middle centroid is $rg$, and the middle root-volume surplus over the endpoint midpoint body is $(r-1)V^{1/d}$. Write $\\Delta=(r^d-1)V$. For $1\\le r\\le1/c$ the marked point $(0,rg)$ is in the original product and the two opposite caps $H_r^+=\\{\\sum_i x_i\\ge rc\\}$ and $H_r^-=\\{\\sum_i x_i\\le rc\\}$ obey\n$$\n\\mu_r(H_r^+)-\\mu_1(H_1^+)=(1-3\\Gamma)\\Delta,\\qquad\n\\mu_r(H_r^-)-\\mu_1(H_1^-)=3\\Gamma\\Delta.\n$$\nThe signs are strict for $r>1$. The centered moment of the added shell is $\\int_{rT\\setminus T}(x-rg)\\,dx=(r-1)Vg$. These claims hold also in the regime $r^d<2$, where all fibers weigh strictly less than half the total.\n\nIn dimension two, at $r=141/100$ the actual raw mixed depth at the moving middle centroid $(0,rg)$ is at most $(13301/10000)V=(4/3-97/30000)V$. This is strictly below the original raw mixed depth $4V/3$ at $(0,g)$. The enlarged source still has raw depth at least $4V/3$ at $(0,g)$.",
+  "subgoal_id": "pk-intake-pk-w30-simplex-shell-moving-centroid-cap-loss",
+  "title": "A simplex shell can lower raw depth at the moving fiber centroid"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "The common-core center and the $\\gamma_d/2$ lower bound for inclusion-ordered compatible triples, with $n=1$ and arbitrary $d\\ge1$.",
+  "author": "PK-research-agent",
+  "candidate_id": "8812feca6c8a1e97",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T05:59:31.313023+00:00",
+  "depends_on": [
+    "7ad3d72ee6061cf3",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "nested-three-fiber-depth",
+  "kind": "theorem",
+  "proof": "The convex hull of $S$ has $S$ as its integer-base part: at $-1$ and $1$ only the corresponding endpoint fiber can contribute, and at $0$ a convex combination uses equal weights at the two endpoints, so their midpoint belongs to $B$. The total mixed volume is $2V+E+a$.\n\nThe point $(0,g_K)$ belongs to $S$. It suffices to check halfspaces through that point, since a containing halfspace contains the corresponding parallel through-point halfspace. If the continuous part of the normal is nonzero, write such a cap as $\\{(z,x):u\\cdot(x-g_K)+tz\\ge0\\}$ for $u\\ne0$ and $t\\in\\mathbb R$. Its thresholds on $A,B,C$ are respectively $t,0,-t$. Apply the measurable-subset conclusion of the weighted-tail theorem to $A\\subseteq K$ in this direction. The two copies of $K$ are contained in $B$ and $C$, respectively, so the actual mass is at least $\\gamma_dV+a/2$. If the continuous normal is zero, the whole middle fiber lies in the cap, paying at least $V\\ge\\gamma_dV+a/2$, by $a\\le V$ and $\\gamma_d\\le1/2$. Divide by the actual total mass. Multiplying out gives the stated condition on $E$.\n\nIf $C=B+v$, the shear $(z,x)\\mapsto(z,x-zv)$ makes the two large fibers both equal to $B$ and sends $A$ to $A+v$. The midpoint condition becomes $(A+v+B)/2\\subseteq B$, implying $A+v\\subseteq B$ by support functions. The shear leaves the middle centroid and each fiber's volume fixed and takes halfspaces to halfspaces. The bound with $K=B$ therefore applies.\n\nFor a totally ordered triple there is a smallest endpoint, after reversing bases if necessary denoted $A$. Indeed, if both endpoints contained $B$ and at least one contained it strictly, there would be a direction in which their average support function exceeds that of $B$, contrary to $(A+C)/2\\subseteq B$. Let $K$ be the smaller of $B$ and $C$, of volume $V$, and let $W$ be the volume of the larger. Then $E=W-V$ and $A\\subseteq K\\subseteq B\\cap C$. If $E<a$, then $E\\le(1/\\gamma_d-1)a$ because $\\gamma_d\\le1/2$. The common-core bound applies. If $E\\ge a$, the largest fiber has volume $W\\ge(a+V+W)/2$. Its own centroid pays at least $\\gamma_d W$ in every containing ambient cap, since each trace on that fiber is either the full fiber or an ordinary containing cap. This is the full-volume case of accepted fact 6769574fc1bd9f8d with density function one on the largest fiber. The normalized depth is at least $\\gamma_d/2$. The argument includes equality and coincident fibers.\n\nAny invertible affine map preserving $\\mathbb Z\\times\\mathbb R^d$ acts on the base by $z\\mapsto\\pm z+k$ for an integer $k$ and has the same invertible continuous linear part on each fiber. It multiplies all fiber volumes by one common factor and maps halfspaces to halfspaces, preserving normalized depth. This transfers the nested conclusion back after an order-producing change of coordinates.\n",
+  "source_candidate_ids": [
+    "dafd411c026c302c"
+  ],
+  "source_candidate_sha256": {
+    "dafd411c026c302c": "712b8ec633c19ab2a52e417dc53050df8e8a739696144bb084386937e3e1511f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "dafd411c026c302c",
+      "locator": "§§6–7, (17)–(19) and following"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $\\gamma_d=(d/(d+1))^d$, and let $A,B,C\\subset\\mathbb R^d$ be convex bodies with $(A+C)/2\\subseteq B$. Set $S=(\\{-1\\}\\times A)\\cup(\\{0\\}\\times B)\\cup(\\{1\\}\\times C)$, measured by summing $d$-dimensional volumes on its three fibers. If a convex body $K$ satisfies $A\\subseteq K\\subseteq B\\cap C$, let $a=|A|$, $V=|K|$, $E=|B|+|C|-2V$ and let $g_K$ be the volume centroid of $K$. Then the actual point $(0,g_K)$ has normalized mixed halfspace depth at least\n$$\n\\frac{\\gamma_d V+a/2}{2V+E+a}.\n$$\nThis is at least $\\gamma_d/2$ if $E\\le(1/\\gamma_d-1)a$. In particular, for $B=C=K$ the displayed bound holds with $E=0$, and the same conclusion holds at the actual middle centroid when $B$ and $C$ are translates of one another, taking $V=|B|$.\n\nIf $A,B,C$ are totally ordered by inclusion, some actual mixed point has normalized depth at least $\\gamma_d/2$. The same holds if such an order is obtained by an affine change preserving $\\mathbb Z\\times\\mathbb R^d$, including a shear affine in the integer base.",
+  "subgoal_id": "pk-intake-nested-three-fiber-depth",
+  "title": "Depth from a common core in three fibers and the nested-chain consequence"
+}

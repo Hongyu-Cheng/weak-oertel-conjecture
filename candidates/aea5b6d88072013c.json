@@ -1,0 +1,32 @@
+{
+  "advances": "Scalar certificate for one sector of the integer-centered symmetric planar chain reduction.",
+  "author": "PK-research-agent",
+  "candidate_id": "aea5b6d88072013c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.947107+00:00",
+  "depends_on": [],
+  "draft_key": "integer-centered-triangle-chain-rational-kernel-certificate",
+  "kind": "lemma",
+  "proof": "Here $1/2<c<\\rho<1$, and the two formulas for $E$ agree at $\\rho$. The numerator of $v-2/9$ over $27a^2$ is $D=12a^2-9a+1$, whose larger root is $\\alpha$ and smaller root is below $1/2$. Thus $2/9-v>0$. Also\n$$\n\\lambda-2/9=\\frac{(2a-1)(6a^2-6a+1)}{27a^2(a-1)}>0\n$$\nbecause $6a^2-6a+1<0$ on $[1/2,2/3]$. Let $F_M(a,b)$ be the left side of the claimed inequality with its maximum replaced by $M$. It is increasing in $M$.\n\nParametrize the three branches by $b_0=cy$, $b_1=c+(\\rho-c)y$, and $b_2=\\rho+(1-\\rho)y$ for $0\\le y\\le1$. The respective formulas for $k(b_i)$ are $0$, $A(b_i-c)^2$, and $A(b_i-c)^2-L(b_i-\\rho)^2$. The first two branches use the rational formula for $E$ with $b_i<\\rho$, extended by equality to $\\rho$, and the third uses $(1-b_i)^2/6$. Write $M_6=6$ and $J=3a^2+2ay-4a-y+1$. For the branch and choice of $M$ indicated by each subscript, define the clearing factors\n$$\n\\begin{aligned}\nD_{0,M_1}&=-729a^4(-3a+y)(a-1)^3D,&\nD_{1,M_0}=D_{1,M_2}&=1458a^4(a-1)^3J,\\\\\nD_{2,M_0}&=-1458a^3(a-1)^3,&\nD_{0,M_6}&=729a^4(-3a+y)(a-1)^3,\\\\\nD_{1,M_6}&=729a^4(a-1)^3J,&\nD_{2,M_6}&=-729a^2(a-1)^3.\n\\end{aligned}\n$$\nThey are positive on the parts of the actual domain where used. In fact $-3a+y<0$, $a-1<0$, $D<0$, and $J\\le J(a,1)=a(3a-2)<0$ since $2a-1>0$. For each choice form $P_{i,M}=D_{i,M}F_M(a,b_i)$, canceling rational factors. The displayed formulas make these products polynomials. The endpoints $a=1/2,2/3$ below are used only for those polynomials.\n\nFor a polynomial $P(x,z)=\\sum p_{k\\ell}x^kz^\\ell$ of bidegree at most $(m,n)$ set\n$$\nC_{ij}=\\sum_{k\\le i,\\,\\ell\\le j}p_{k\\ell}\n\\frac{\\binom{i}{k}\\binom{j}{\\ell}}{\\binom{m}{k}\\binom{n}{\\ell}}.\n$$\nIt equals the coefficient of the product of the degree-$m$ and degree-$n$ Bernstein basis polynomials with indices $(i,j)$. Indeed, multiply $x^k$ by $(x+(1-x))^{m-k}$ and use $\\binom{m-k}{i-k}=\\binom{m}{i}\\binom{i}{k}/\\binom{m}{k}$, and do the same for $z^\\ell$. The products of the Bernstein basis functions are nonnegative on the square and sum to one. Therefore $P\\ge\\min_{i,j} C_{ij}$ there.\n\nFor each row, substitute $a=a_0+(a_1-a_0)x$ and $y=y_0+(y_1-y_0)z$ into the corresponding $P_{i,M}$. The exact minima of the coefficient formula above are as follows.\n\n| Branch | $M$ | $[a_0,a_1]$ | $[y_0,y_1]$ | Degree | Minimum |\n| --- | --- | --- | --- | --- | --- |\n| 0 | $M_1$ | $[1/2,3/5]$ | $[0,1]$ | $(9,3)$ | $3/512$ |\n| 1 | $M_0$ | $[1/2,11/20]$ | $[0,1/2]$ | $(9,3)$ | $3/256$ |\n| 1 | $M_0$ | $[1/2,11/20]$ | $[1/2,1]$ | $(9,3)$ | $3/256$ |\n| 1 | $M_2$ | $[11/20,3/5]$ | $[0,1/2]$ | $(9,3)$ | $13082/1953125$ |\n| 1 | $M_0$ | $[11/20,3/5]$ | $[1/2,1]$ | $(9,3)$ | $15032430113/256000000000$ |\n| 2 | $M_0$ | $[1/2,3/5]$ | $[0,1]$ | $(6,2)$ | $3/32$ |\n| 0 | $M_6$ | $[3/5,2/3]$ | $[0,1]$ | $(8,3)$ | $148954/390625$ |\n| 1 | $M_6$ | $[3/5,2/3]$ | $[0,1]$ | $(9,3)$ | $0$ |\n| 2 | $M_6$ | $[3/5,2/3]$ | $[0,1]$ | $(5,2)$ | $12664/3125$ |\n\nFor reproducibility, each row is computed by expanding the canceled product into the power coefficients $p_{k\\ell}$. At each fixed $\\ell$ replace the list of coefficients in $k$ by the list $\\sum_{k=0}^i p_{k\\ell}\\binom{i}{k}/\\binom{m}{k}$ for $i=0,\\ldots,m$. At each fixed $i$ apply the same replacement in the second index with degree $n$. The smallest resulting coefficient gives the last column. The first six rows cover all three branches for $a\\le3/5$. In each such row the selected $M$ is at most the required maximum. The clearing factors and Bernstein bounds imply $F_M\\ge0$ throughout those rectangles in the actual domain.\n\nFor the remaining range,\n$$\ng-6(2/9-v)=\\frac{27a^3-44a^2+20a-2}{9a^2(a-1)}.\n$$\nAfter $a=3/5+x/15$ the negative of its numerator is $1/125+(91/375)x-(23/1125)x^2-(1/125)x^3$. Its cubic Bernstein coefficients are $1/125,4/45,22/135,2/9$ and hence are all positive on the unit interval. The denominator is negative. Since $2/9-v>0$ on the actual domain, this gives $M_1>6$ for $3/5\\le a<\\alpha$. The last three rows therefore prove the required inequality on that range as well. The branch changes cover both endpoints of $[0,1]$ and the shared knots.\n",
+  "source_candidate_ids": [
+    "9c420d2e51075e2c",
+    "f1d41e47743392b2"
+  ],
+  "source_candidate_sha256": {
+    "9c420d2e51075e2c": "0ebeae0e0de45be0efb231f6297d628ddf410b65946dcd6501b0ad795ad90892",
+    "f1d41e47743392b2": "58c371f7bccaea07cbda0e670ac179e23b27904379825587bdf4667e1da89e32"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f1d41e47743392b2",
+      "locator": "f1d41e47743392b2:01 Statement and definitions, (S); The explicit certificates, (4)–(7) and table"
+    },
+    {
+      "candidate_id": "9c420d2e51075e2c",
+      "locator": "Opening (1)–(S) and (2), and §5, the scalar claim shared with f1d41e47743392b2:01"
+    }
+  ],
+  "statement": "Let $1/2<a<\\alpha=(9+\\sqrt{33})/24$ and $0\\le b\\le1$. Define\n$$\n\\begin{gathered}\nc=\\frac1{3a},\\quad \\rho=\\frac1{3(1-a)},\\quad\nA=\\frac a{2a-1},\\quad L=\\frac{(1-a)^2}{(2a-1)(2-3a)},\\quad B=\\frac{2a-1}{2-3a},\\\\\nk(b)=A(b-c)_+^2-L(b-\\rho)_+^2,\\quad\ng=\\frac{2-3a}{9(1-a)},\\quad\n\\lambda=\\frac{18a^3-24a^2+8a-1}{27a^2(a-1)},\\quad v=\\frac{(3a-1)(6a-1)}{27a^2},\\\\\nM_0=\\frac92-\\frac1{2a(1-a)},\\qquad M_1=\\frac{g}{2/9-v},\\qquad\nM_2(b)=\\frac32+b+\\frac52 b^2,\\\\\nE(b)=\\begin{cases}\n(1-b)^2/6,&b\\ge\\rho,\\\\\n(1-\\rho)^2/2-(1-\\rho)^3/[3(1-b)],&b<\\rho.\n\\end{cases}\n\\end{gathered}\n$$\nThen\n$$\ng+(\\lambda-2/9)\\max\\{M_0,M_1,M_2(b)\\}+k(b)-\\lambda[b^2+(1-b)^2/3]-2B E(b)\\ge0.\n$$",
+  "subgoal_id": "pk-intake-integer-centered-triangle-chain-rational-kernel-certificate",
+  "title": "A rational kernel certificate for integer-centered triangle chains"
+}

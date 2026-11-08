@@ -1,0 +1,81 @@
+{
+  "candidate_id": "f9d129e6ff0c190c",
+  "candidate_sha256": "2183d8987feeb86439d822fffa75c16011791b0e69a1a906472e1dc83ca3fb79",
+  "checked_dependency_candidate_sha256": {
+    "1bfd63d794648b5e": "8354fe053c13f2fb0172ad3e9ccbddc917e1cfb92e1722ef473bf6640b4baccc",
+    "23a563a735c07c25": "585fc3fea7952f0d573abda678b75588c8528379e7f45e6792ed4c009b82361e",
+    "f497d1290c37f335": "25b4c14bb2b109543aee01e0aee432b4194bf44aff9a5211bbe24dfac17ad721"
+  },
+  "checks": [
+    "Original candidate 8b5860c585f8735a at its pinned digest, §2, (3) and the corollary, contains the claim. The reviewed theorem keeps 3≤m≤D+1 and makes the positive minimum explicit for the three-cap overlap consequence.",
+    "For a fixed proper inclusion-minimal j-cap subcover, 23a563a735c07c25 first gives dimension min(ρ,j−1); weakening its coefficient gives the j−1 version. This includes j=1: one cap has mass V and γ_0=1. For q>0, differentiating q log(1+1/q) gives log(1+1/q)−1/(q+1)>0, so γ_q strictly decreases, with γ_0>γ_1. As α>0 and j−1<r, the coefficient change to 1/γ_r is strictly positive; omitted hinge terms are nonnegative.",
+    "With all m caps minimal, proper normals give 1≤ρ≤m. If ρ<r then min(ρ,m−1)=ρ and the same strict coefficient comparison applies to the entire family. If ρ=m then the normals are independent and m≤D automatically, so the strict independent-normal theorem applies at every α>0. In the boundary case m=D+1 that rank is impossible. The only surviving rank is r=m−1.",
+    "At rank r, each halfspace is the inverse image of a proper closed halfspace in the normal span. Each point of the projected body has a lift in K, so the projected family covers it, and the pushforward definition preserves total mass and every cap mass. The projected body is full dimensional in the span. For D>r the section argument in 23a563a735c07c25 gives a log-concave density positive on the projected interior; if D=r the density is the uniform indicator. The parent log-concave theorem now applies to exactly r+1 proper caps, with r≥2, in both directions.",
+    "At m=3 and a=min_i A_i>0, every A_i−a is nonnegative even under ties, and (1/γ_2)=(3/2)^2=9/4. Thus the equality equation is exactly Σ_i A_i−V=(3−9/4)a=(3/4)a. No such rigidity is inferred at a=0: a proper halfspace can contain all of K and two others can miss K, giving overlap equality with zero minimum."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "23a563a735c07c25",
+      "candidate_sha256": "585fc3fea7952f0d573abda678b75588c8528379e7f45e6792ed4c009b82361e",
+      "fact_id": "23a563a735c07c25",
+      "fact_sha256": "2621df7fd406ca7dd8683d226068d2ad51a17cbd344af1e9addbb64e5b96feb0",
+      "mapping": "K and the finite proper closed cover satisfy the effective-profile hypotheses. Apply its fixed minimal-subcover bound first to a proper minimal subcover if one exists, and then to the original family once minimality is necessary. Its orthogonal section-density argument gives log-concavity and full-dimensional positive interior at rank r.",
+      "reviewed_proof_sha256": "4af106804fe99545b57233abe2b9131c64e1e86c51af7ab9db90120a5a9a2437",
+      "reviewed_statement_sha256": "8d63b4e7db60e6cb2b4e4a924845a411db9988b9dff322d8acbbb0e2b3d3e2d4",
+      "status": "Accepted at d6689f9."
+    },
+    {
+      "candidate_id": "f497d1290c37f335",
+      "candidate_sha256": "25b4c14bb2b109543aee01e0aee432b4194bf44aff9a5211bbe24dfac17ad721",
+      "fact_id": "f497d1290c37f335",
+      "fact_sha256": "8c160081ff85089b4c7946ff7e70aff45982c57801eec923cf06f6f23349e2ec",
+      "mapping": "The ρ=m case gives m independent normals, hence m≤D and 2≤m. With K covered by those proper closed halfspaces and α>0, its strict inequality has coefficient 1/γ_{m−1}, the same as this statement.",
+      "reviewed_proof_sha256": "370be41781f1404f1482518a7b8c3ed4551abd50d1ab487b5997191f3d1c053e",
+      "reviewed_statement_sha256": "87c5ca6a7357a2af7045db4683ad465b8a650d4bcef9a04e363d49a55692eb02",
+      "status": "Accepted at d6689f9."
+    },
+    {
+      "candidate_id": "1bfd63d794648b5e",
+      "candidate_sha256": "8354fe053c13f2fb0172ad3e9ccbddc917e1cfb92e1722ef473bf6640b4baccc",
+      "mapping": "Identify the r-dimensional normal span with R^r by an orthonormal isomorphism. The orthogonal pushforward is a full-dimensional integrable log-concave density of mass V, the m=r+1 projected proper closed halfspaces cover its positive interior, and their masses are A_i. Invoke the exact iff statement at α>0 for the profile, cap arrangement and common mass.",
+      "reviewed_proof_sha256": "d385e1df96e8363cf879bfda4dca3d2adc6730e871e99bbdad219fb0592b51a2",
+      "reviewed_statement_sha256": "0c20770f4fbf3d567028741867c24dec2c9e35b28d19c01d5516f36f9f1fef5c",
+      "status": "Frozen wave07 candidate with exact independent approval; admission of that exact parent is required before admitting this child."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:17:54.576828Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "For m=D+1 the projection in the equality case is the identity. A uniform full-dimensional indicator with the required finite-mass simplex profile has a homothetic simplex as its support, and hence this case is exactly the accepted theorem. That theorem does not cover m<D+1 or section densities on a proper subspace.",
+      "fact_id": "1c6088cbbbb3f688"
+    },
+    {
+      "comparison": "It gives the same effective profile and overlap inequalities and sharp equality examples, but it does not classify all equality cases. Its fixed-subcover estimate proves the lower-rank exclusions.",
+      "fact_id": "23a563a735c07c25"
+    },
+    {
+      "comparison": "It already excludes equality when the m normals are independent; it says nothing about the remaining rank m−1 gauge-profile classification.",
+      "fact_id": "f497d1290c37f335"
+    },
+    {
+      "comparison": "The planar three-cap homothetic equality test concerns mixed-integer metronoid fibers with a balanced negative circuit. It has different hypotheses and conclusions from the ordinary-volume overlap classification.",
+      "fact_id": "9c3ea953ac8ea360"
+    }
+  ],
+  "readability": "The use of γ_{j−1} for a proper subcover is the weaker bound from γ_{min(ρ,j−1)}. The overlap sentence is restricted to a positive minimum and does not include the α=0 union-bound equality cases.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "dabe9679a7b0441a997fd21581beeb81ef44d24f27fdd38f2bbe3cc8e8f8f985",
+  "reviewed_statement_sha256": "3b824e9e6db742786e15bfb1aeacf977fdea46c9a88b1ba97b5158edc7ea32e4",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:15:36Z",
+  "summary": "For 3≤m≤D+1, positive-parameter equality forces normal rank m−1. Orthogonal projection to that span preserves the cover and its cap masses, so the log-concave equality classification gives the precise marginal and canonical caps.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

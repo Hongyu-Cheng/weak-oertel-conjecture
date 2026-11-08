@@ -1,0 +1,47 @@
+{
+  "candidate_id": "564e798ecec2b61f",
+  "candidate_sha256": "fc8db5030613da42de7dd5b974d44db1714f5ad252f1dbbc80a6bd89b926ae28",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For a positive or negative exponential translation kernel, the diagonal arguments lie between the off-diagonal arguments. If both off-diagonal factors are positive, equality of sums of arguments gives equality of products. If either factor vanishes, nonnegativity gives the determinant inequality. The ordered double-integral identity then propagates it to convolutions.",
+    "For s1<s2 and u<v the determinant with rows s1,s2 and columns u,v gives the claimed sign for p_s1(u)p_s2(v)-p_s1(v)p_s2(u). The integral against v-u is exactly m_k(s2)-m_k(s1) by swapping u,v on the other ordered half. Bounded phase densities and integrable first moments justify the integrals. Translation continuity gives continuous numerator and denominator, and the convolution of opposite phases gives strictly positive denominator everywhere.",
+    "The conditional means sum to s everywhere by full support and continuity. Their nonnegative increments imply each is 1-Lipschitz. Every c_k m_k(s) is positive for the explicit conditional density, so division by tau is legitimate locally. Their a.e. derivatives form convex weights, giving tau'<=c_+ even for signed c_k.",
+    "The exponential integration by parts identity gives c_k^2 E_k after the chain rule, including for a negative coefficient. The distributional derivative of tau f is (mu-s)f. Local absolute continuity and the product rule give the derivative inequality, which extends to zero for the continuously differentiable density used in the transfer.",
+    "The negative-sum CDF has bounded density, continuous at every positive argument. Dominated differentiation on the open coefficient domain and unit-exponential size bias give the density evaluations. Removing the added a_j phase yields the a_i partial, and removing the added a_i phase yields the a_j partial. Their difference therefore has the factor a_j-a_i. Balance gives mu_W-c_+=a_j, hence f_W'(0)>0 while the donor is positive.",
+    "A largest receiver stays largest and strictly exceeds the donor at any positive interior transfer, so the path derivative is negative there even for an initial tie. The no-atom endpoint limit follows by conditioning on a surviving positive exponential. Comparing with any positive interior transfer preserves strictness at the endpoint. Discarding zero entries leaves the law unchanged.",
+    "Full merges preserve the common sum and reduce any effective p>1 to p=1 with strict loss. The one-phase value is the negative-sum Laplace transform. The arithmetic-geometric mean equality criterion includes q=1, where equal b_j is automatic. With fixed p>1, the stated vanishing-coefficient sequence gives the claimed infimum by the same no-atom convergence.",
+    "Checked source candidate 191a0eb2244ea4a9, §§1–4, at SHA-256 6b642bc8d4183f64a958f0fd6bf408fce5b242842f48f0ae291dc2f2030a84c9. The source gives weak monotonicity and the balanced tail bound. The frozen proof supplies the strictness, tie and endpoint reasoning and the fixed-p infimum directly."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T08:42:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its inscribed-simplex capacity for an affine simplex cut has product a/(a+b_j) for the maximum positive height a. When there is a single positive height a equals the positive total and the cap itself is a simplex, so that case agrees. With several positive heights its product can be strictly smaller, and the result does not establish strict transfer monotonicity or the scalar total-based bound.",
+      "fact_id": "6fbefd0eb6914aa9"
+    },
+    {
+      "comparison": "Its beta tail formula gives centroid cap volumes for two groups with heights constant within each group. This yields matching special cases of the scalar representation and the p=1, equal-b extremizer. It gives neither the arbitrary-coefficient comparison nor largest-receiver transfer monotonicity.",
+      "fact_id": "290ddd8516d76865"
+    },
+    {
+      "comparison": "Its 1/e bound concerns balanced mixed-integer fiber fractions. It gives no finite negative-phase constant or signed-exponential coefficient comparison.",
+      "fact_id": "ecdcb5a24b2eac2c"
+    }
+  ],
+  "readability": "The density-removal subtraction is brief but the two signs follow directly by identifying the remaining added phase in each partial. The equality claims count positive coefficients after deleting zeros.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bdd23ecfc045e446fb9995ff21a276a9fff0c3b6311bc9ccdad3020692821895",
+  "reviewed_statement_sha256": "8480e71d550ee7b922ac6e6b72ffbe9cf3434358e50d77f9b75ba7ed1f982fbb",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:41:14Z",
+  "summary": "The frozen argument proves strict largest-receiver transfer monotonicity, both equality criteria, and sharpness for any fixed positive phase counts. The proof is self-contained.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

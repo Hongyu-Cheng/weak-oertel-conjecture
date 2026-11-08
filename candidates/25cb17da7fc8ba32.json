@@ -1,0 +1,26 @@
+{
+  "advances": "An ordinary shell estimate for fixed proper-cut halfspaces in any dimension. It does not assert a dimension-independent depth bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "25cb17da7fc8ba32",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:27:15.712053+00:00",
+  "depends_on": [],
+  "draft_key": "weighted-homothetic-shell-incidence",
+  "kind": "lemma",
+  "proof": "Let $A_t=p+(1-t)(A-p)$ for $0\\le t<1$. It lies in $A$ because $p\\in A$. Integrating the weighted pointwise load over $A\\setminus A_t$ gives\n$$\n\\sum_i w_i(U_i-|A_t\\cap H_i|)\\ge \\tau |A|\\bigl[1-(1-t)^d\\bigr].\n$$\nThe $i$-th moving cap has volume $(1-t)^d$ times the original cap with threshold $(b_i-tv_i\\cdot p)/(1-t)$. The original cap volume has threshold derivative $-\\sigma_i$ at $b_i$: Fubini gives the integral of section measure divided by $\\lVert v_i\\rVert$, and Brunn–Minkowski gives continuity of the section measure at an interior threshold. In dimension one the section of a proper cut is one point. Divide by $t$ and take $t\\downarrow0$ to obtain the stated inequality, including for boundary centers.\n\nOff the null union of the forbidden singleton regions, every point is captured either by one allowed halfspace or by at least two halfspaces. Positivity of the weights gives the stated minimum bound.\n",
+  "source_candidate_ids": [
+    "86934b651b11f7d5"
+  ],
+  "source_candidate_sha256": {
+    "86934b651b11f7d5": "8254b89175df007bbd9d3d3bba466612eeb3e0a62050893049c0f6e7f9f008ec"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "86934b651b11f7d5",
+      "locator": "§5, general shell incidence lemma"
+    }
+  ],
+  "statement": "Let $A\\subset\\mathbb R^d$ be a convex body and let the finitely many closed halfspaces $H_i=\\{x:v_i\\cdot x\\ge b_i\\}$ cover $A$ and cut it properly. Write $w_i>0$, $U_i=|A\\cap H_i|$ and $\\sigma_i=\\mathcal H^{d-1}(A\\cap\\{v_i\\cdot x=b_i\\})/\\lVert v_i\\rVert$. If $\\sum_{i:x\\in H_i}w_i\\ge\\tau$ almost everywhere on $A$, then every $p\\in A$ satisfies\n$$\n\\sum_i w_i\\bigl[dU_i+(b_i-v_i\\cdot p)\\sigma_i\\bigr]\\ge d|A|\\tau.\n$$\nIf all singleton-capture regions with indices in a set $E$ are null, a valid $\\tau$ is the minimum of the singleton weights $w_i$ for $i\\notin E$ and all pair sums $w_i+w_j$ with $i\\ne j$, taking the minimum over the combined nonempty list.",
+  "subgoal_id": "pk-intake-weighted-homothetic-shell-incidence",
+  "title": "Weighted incidence bounds the first loss of a homothetic shell"
+}

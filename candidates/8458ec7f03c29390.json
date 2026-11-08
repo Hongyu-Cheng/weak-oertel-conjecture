@@ -1,0 +1,28 @@
+{
+  "advances": "Fixed-mark buffered caps, one integer coordinate and one continuous coordinate, with consecutive positive fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "8458ec7f03c29390",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:11.841150+00:00",
+  "depends_on": [
+    "a38b7a6fa2ecd337"
+  ],
+  "draft_key": "consecutive-interval-support-removal",
+  "kind": "theorem",
+  "proof": "Reflect the continuous coordinate and rescale the margin if needed to write the cap as $x\\ge q-a(z-p)$, with $q$ held fixed under changes of $a$. The proper own trace gives points on both sides of the cap line in $C$. Approximate them by interior points of the ambient body and interpolate to see that the cap line cuts its interior. The interior of the crossing segment lies in $\\operatorname{int} C$: a supporting line at an interior segment point would contain the crossing line, contradicting an interior point on that line. Hence supporting points in positive measured fibers can occur only at its two endpoints. If there is inside support, the buffered normal condition of the buffered normal-facet derivative and moment lemma yields outside support. These are distinct endpoints, and the proper own point is strictly between them. Every sampled base strictly between them is proper, and outside the segment every positive fiber is strictly saturated.\n\nPut $N=s-r-1\\ge1$ and $c=(r+s)/2-p$. Consecutive sampling gives the proper sum $\\sum_{r<z<s}(z-p)=Nc$. Each section has counting coarea one. For $r$ inside and $s$ outside, the right derivatives under increments $+a$ and $-a$ are $(N+2)c$ and $-Nc$, respectively, from the oriented derivative formula. In the reverse order they are $Nc$ and $-(N+2)c$. Nonnegativity of both forces $c=0$. In the first case decrease $a$ slightly, and in the second increase it slightly. The inside fiber becomes strictly full and the outside fiber strictly empty. All proper and strictly saturated statuses persist for a sufficiently small change because the sample is finite. The mass is affine on that one-sided interval and its total slope equals $Nc=0$. It is therefore the old minimum. If the original cap already lacks inside support the desired approximation can be the constant sequence.\n",
+  "source_candidate_ids": [
+    "f991b5d72c5d9103"
+  ],
+  "source_candidate_sha256": {
+    "f991b5d72c5d9103": "2d690808b82779c923ce1d1a3abb713d4a4ab2bf37750bb4d355c3c6da7984ee"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f991b5d72c5d9103",
+      "locator": "f991b5d72c5d9103:04 §5, (10)–(12), exact removal along consecutive interval fibers"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R\\times\\mathbb R$ be a compact convex body whose positive sampled fibers are intervals at every integer of a finite consecutive base set, with summed length measure. At a fixed integer-base mark $(p,y)$ use the buffer $\\delta\\sqrt{u^2\\Sigma}$ added to the through-mark margin, with fixed $\\delta>0,\\Sigma>0$. An attaining minimizing nonvertical cap with proper own trace is a limit of equally minimizing caps without inside-supporting traces on any positive fiber. If the old cap has inside support, it has exactly two supporting traces, with integer bases $r<s$ satisfying $r<p<s$ and $p=(r+s)/2$. A sufficiently small one-sided base-tilt change makes both contacts strict and keeps the mass exactly constant.",
+  "subgoal_id": "pk-intake-consecutive-interval-support-removal",
+  "title": "Lossless removal of supporting traces on consecutive interval fibers"
+}

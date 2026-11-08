@@ -1,0 +1,26 @@
+{
+  "advances": "Exact geometry of the canonical hull of sampled fibers. Real fibers of the original body may bulge outside it.",
+  "author": "PK-research-agent",
+  "candidate_id": "f16dc015ba31f2af",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.932921+00:00",
+  "depends_on": [],
+  "draft_key": "one-integer-coordinate-canonical-fiber-interpolation-and-differences",
+  "kind": "theorem",
+  "proof": "The hull contains the sampled fibers and is contained in the original convex set, so it preserves those fibers. Fix a continuous covector $u$. Actual convex compatibility says that whenever an integer $j$ lies between integers $i$ and $k$, $K_j$ contains the corresponding Minkowski combination of $K_i,K_k$. Its support value $h_{K_j}(u)$ is thus at least the same combination of their support values. The adjacent piecewise affine interpolation $F_u$ of this sequence is concave because consecutive slopes are nonincreasing.\n\nAt a real base $s\\in[a,b]$, every point of $(C_*)_s$ is a combination of sampled-fiber points with weights having base mean $s$. Its $u$-coordinate is bounded above by the weighted supports, hence by $F_u(s)$ by concavity. The adjacent Minkowski combination is inside $(C_*)_s$ and has support $F_u(s)$. Equality of compact convex support functions in every $u$ proves the fiber identity. The hull is compact because its generating finite union is compact.\n\nAt $s=j+t$, the fiber width $h_{(C_*)_s}(u)+h_{(C_*)_s}(-u)$ is the corresponding affine interpolation of integer widths, and its maximum over $s$ is the maximum integer width. The vertical section of $C_*-C_*$ is compact convex and consists exactly of differences taken inside one common real fiber. Its support is therefore this maximum integer width, which is also the support of the convex hull of the integer-fiber differences. Equality follows in every direction. With one fiber the difference equality is direct.\n",
+  "source_candidate_ids": [
+    "f7422e63e37f7d98"
+  ],
+  "source_candidate_sha256": {
+    "f7422e63e37f7d98": "19c1c8f57c29a4933e3eaccde8e1c6c1ee76f4503ce8486a5b8550256f253970"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f7422e63e37f7d98",
+      "locator": "f7422e63e37f7d98:01 Opening theorem and Proof, (1)–(2), including a=b"
+    }
+  ],
+  "statement": "Let the nonempty integer fibers of a compact convex set in $\\mathbb R\\times\\mathbb R^d$, $d\\ge1$, be $K_j$ at the consecutive integers $a,\\ldots,b$, $a\\le b$, allowing every affine dimension. Put $C_*=\\operatorname{conv}\\bigcup_{j=a}^b(\\{j\\}\\times K_j)$. Its integer fibers are the original ones. For $a\\le j< b$ and $0\\le t\\le1$,\n$$\n(C_*)_{j+t}=(1-t)K_j+tK_{j+1}.\n$$\nThe same-real-base difference body and the convex hull of the integer-fiber difference bodies coincide:\n$$\n\\{v:(0,v)\\in C_*-C_*\\}=\\operatorname{conv}\\bigcup_{j=a}^b(K_j-K_j).\n$$\nThe difference equality includes $a=b$.",
+  "subgoal_id": "pk-intake-one-integer-coordinate-canonical-fiber-interpolation-and-differences",
+  "title": "Adjacent real-fiber interpolation and equality of the two difference bodies in one integer coordinate"
+}

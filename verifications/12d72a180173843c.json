@@ -1,0 +1,49 @@
+{
+  "candidate_id": "33b3270f3cb6bffd",
+  "candidate_sha256": "1e02ea9886d3251e778ba17ce3daccb2bb94de1f976431cbfe31ded0962b1e76",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "bd4e19d78aaec9e1": "c1c508ddeeae6de737b8b82476439e389de001b518603003dcac464025ba63df"
+  },
+  "checks": [
+    "The positive row L-mean normalizes (L/L_i)rho_i to a probability. The first homogeneous moment cancels L pointwise and uses the full original barycenter including base coordinates and last coordinate one.",
+    "Multiplying the inverse-density row mixture by L gives exactly dm/M with weights sigma_i. Pushing forward yields the target in the statement and the weights sum to one.",
+    "For every piece active at the mark, the nonnegative gap A_j−L has zero row expectation by the affine barycenter and L-moment identities. Hence its equality holds almost surely for each active piece. The positive reweighting preserves the null sets, and lifting gives A_j^hom=1.",
+    "Source bd4e19d78aaec9e1 §7 (18) contains the reweighting and lifted moment. The frozen proof specifies the exact input mixture and handles each active affine slice by the zero-expectation argument."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:46:22Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof gives the same reweighted probabilities and original-volume mixture in a canonical concave logarithmically normalized certificate. It does not state the homogeneous pushforward barycenters or the affine-slice confinement, and the frozen moment identity also allows arbitrary continuous positive L.",
+      "fact_id": "86609687edc6bef4",
+      "fact_sha256": "e4c5a8d57e44f9c486cc0c8ba05fc4b13906c498ac1c0fe0c3c6ca25aeb46cb9"
+    },
+    {
+      "comparison": "Its proof shares the untilted probabilities and original-volume mixture, then computes their Euclidean barycenter drift assuming affine contact. The frozen barycenter identity acts after the homogeneous map and keeps the original source marks after applying that map.",
+      "fact_id": "26cdd2aa78711055",
+      "fact_sha256": "731b72ed0110e5b6bbf5fd9ea9359f281daf6a49aabf446fae16db18b189c40d"
+    },
+    {
+      "comparison": "It groups whole rows to recover original volume and an entropy decomposition. It does not prove the pushed row means or the slice condition.",
+      "fact_id": "811391cd777de9c0",
+      "fact_sha256": "5fefb979f0d2be255482f9034559c400280bf3690903593f5139105104245b48"
+    }
+  ],
+  "readability": [],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7d6dc13c49c9bd024f1d9b935d77f4d362ccf710ec5dadfdd3b14fe9352bb913",
+  "reviewed_statement_sha256": "8998512a95e0c008c2ea5ff82416846abc372c62fe0138c884ebfc6bf122115b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:42:24Z",
+  "summary": "The reweighted rows are a martingale with the printed homogeneous source marks and with original-volume pushforward as target. Every affine piece active at a given mark carries that row in its corresponding slice.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

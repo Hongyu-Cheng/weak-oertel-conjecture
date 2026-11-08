@@ -1,0 +1,63 @@
+{
+  "candidate_id": "a1abcf2b7d99c3be",
+  "candidate_sha256": "5de5c59c28b9383c48d25ec6f2aff1a923394c4045062e7b8769c5341c40084c",
+  "checked_dependency_candidate_sha256": {
+    "3acaacf5c13d6f0e": "3175a25fe334ce1f054f9024ac5ffbfe4437717fd4ad770e6e987f4a6ea21ca8",
+    "b319e7dcda1486e9": "5b38a6cab3beff1f598bf6086bf3ecd02163eb7760975a555d68734e8634e590"
+  },
+  "checked_source_candidate_sha256": {
+    "6ac02348e3ceb9a9": "28a7130eeec37132194cf15d45d685440920f1dd6bd539fef8ff903d70c07016"
+  },
+  "checks": [
+    "The slice formulas give the exact moment inequality after the common unit-normal factor is removed. If the B trace is empty or a point, its length is zero and the base-only positive direction has derivative −t/‖u‖, agreeing with failure of inclusion of a length-t interval.",
+    "For a positive-length B support trace the moment theorem applies. If b<t both conditions fail. For b≥t the mass-t selector means range between the centers of the two end length-t intervals. Every center in between is realized by translating one interval, including the full-length case b=t. The prescribed mean equals the center of the stated J. Reflection through y exchanges the endpoint cutting lines, and c_K−y is tangent, so this is an equality of geometric containment conditions on the correct line.",
+    "The inclusion of the midpoint sum of E_A and F in E_K yields length at most s and exactly the claimed center tolerance. The midpoint sum with J instead has length t and center y−(s/(2t))(c_K−y); its containment gives (1+s/(2t))‖y−c_K‖≤(s−t)/2.",
+    "The length bounds give 0<t/s≤1. Exact symbolic replay verifies the completed-square identity and its zero at (√3−1)/2. The chord endpoint distances are s/2±‖y−c_K‖; evaluating their decreasing ratio at the stated maximum gives 1/√3. The attainment statement is only about the scalar maximum."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3acaacf5c13d6f0e",
+      "candidate_sha256": "3175a25fe334ce1f054f9024ac5ffbfe4437717fd4ad770e6e987f4a6ea21ca8",
+      "hypotheses": "For a positive-length B trace the outside facet has positive intrinsic measure in d=2, A and K are proper, and midpoint compatibility holds. Invoke exact first-order inequality equivalence and the support formula for interval mass-t means. Empty or null traces are handled separately.",
+      "proof_sha256": "6bf013b44092482f7abfbbd5ea2ea93b8d55788b06e5fff87c390f3b40d520d4",
+      "statement_sha256": "3735d755d36df7e915dd6fe589ca02077f376290671ac17f7377555c0c7074ab",
+      "status": "same-batch, subject to independent approval before admission"
+    },
+    {
+      "candidate_id": "b319e7dcda1486e9",
+      "candidate_sha256": "5b38a6cab3beff1f598bf6086bf3ecd02163eb7760975a555d68734e8634e590",
+      "fact_sha256": "1ea44a469af7453f80ba107c6e4b483f1960dd4c8e04a2e6cdc7589e0a3be7cd",
+      "hypotheses": "Use fixed-body slice right derivatives for the proper A and K chords and the empty-side B support trace, with the common normalization factor ‖u‖.",
+      "proof_sha256": "ca6dd9d90b4e14ac577a351bc1d5f87271988bc01ff4786fa8dbf47e8004796e",
+      "statement_sha256": "db8656e785fc33ad79fef17768f6d8800dc19040b532b6df1c99d443ca3465fa",
+      "status": "accepted at pinned snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:40:12Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Under its stronger three-row, global actual-depth hypotheses, each row gives the same forward interval inclusion and the same chord offset estimate, after multiplying coordinate lengths and offsets by ‖vᵢ‖. Its proof uses only the forward implication there. This statement covers any single row, the converse first-order condition, the empty or null trace cases, the whole-facet center relation, and the sharp scalar endpoint-distance bound.",
+      "fact_id": "ba445d671279810a"
+    },
+    {
+      "comparison": "It assumes centrally bisected chords and bounds weighted cap areas. It does not give the present center and length conditions on actual proper/zero three-fiber cuts.",
+      "fact_id": "b82858197fd14145"
+    }
+  ],
+  "readability": "The normalized chord lengths and the sharpness of the scalar bound are explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "52815540a2a7b106128e068aaef86c4c6189bfffa014fb5af40007c501c2e6d1",
+  "reviewed_statement_sha256": "2b72af3a87cbfdd8701583e6123a991bc8463a9141a7ef08f209a5d86979d428",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:36:24Z",
+  "summary": "A single planar row has nonnegative right derivative in every normal direction exactly when the actual reflected and translated A chord fits in the B trace, giving the stated bounds.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

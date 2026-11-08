@@ -1,0 +1,26 @@
+{
+  "advances": "Optimizes a pair of stated scalar lower bounds. No global nonnegativity or geometric hypothesis is asserted.",
+  "author": "PK-research-agent",
+  "candidate_id": "8c454d290be841c2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:53:47.674656+00:00",
+  "depends_on": [],
+  "draft_key": "opposite-order-peak-scalar-certificate",
+  "kind": "lemma",
+  "proof": "The expression $v^d-\\alpha[v-x]_+^d$ increases up to $x$ when $x>0$. Above $x$ its derivative has the sign of $v^p-\\alpha(v-x)^p$, positive before $v=x/(1-\\alpha^{-1/p})$ and negative after it. Substitution at this point proves the loss formula, and clipping the maximizing point proves the restricted formula. For $x=0$ the expression is $(1-\\alpha)v^d$ and has maximum zero at $v=0$.\n\nWeight the two terms of the maximum defining $G$ by $1/(2t)$ and $1-1/(2t)$. After subtracting the half-total, the coefficient of $A$ cancels and the resulting lower bound is $[(t-1)S-t(c^d-RH)]/(2t)$. This gives the clipped estimate. With the unrestricted loss in place of $L$, the displayed sufficient condition follows from $S=(1-b)(1+b+\\cdots+b^{d-1})\\ge d(1-b)b^{d-1}$ when $b<1$, and at $b=1$ the estimate is zero.\n\nAfter subtracting the half-total, the two affine pieces in $A$ have slopes $t-1/2>0$ and $-1/2<0$, crossing at $H+S/t\\ge0$. Clipping yields $\\widehat A$, and substitution gives the two branches in the displayed minimum formula. Their first-minus-second difference is $H-Z$. For $x\\ge b$ the remaining dependence on $c$ is just $-c^d$. For $0<x<b$, the expression decreases up to $c=x$, so minimize on $c\\ge x$. The derivative of $(x+H^{1/d})^d$ for $H>0$ is $(1+x/H^{1/d})^p$, strictly decreasing from infinity to one. Thus the minimum formula is convex in $H$. Its derivative has constant term $R$ below $Z$ and $2t$ above $Z$, minus this decreasing derivative on both sides. Since $H_{2t}<H_R$, its minimizer is the median of $H_{2t},Z,H_R$ clipped to $[0,(b-x)^d]$. Finally at $b=1$ the weighted lower bound is zero and $A=c=0$ attains it.\n",
+  "source_candidate_ids": [
+    "03cc52bdd22fe702"
+  ],
+  "source_candidate_sha256": {
+    "03cc52bdd22fe702": "132bfa292e85e91a863c479f45ee3c5444e9185f78276bb81f3edaaaf392d006"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "03cc52bdd22fe702",
+      "locator": "03cc52bdd22fe702:02 §2 (8)–(10) and §3 (11)–(13), exact scalar crossover and uniform estimate"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $t>1$, $1/2<b\\le1$, $p=d-1$, $R=2t-1$, and $x=2d(1-b)/(d+1)$. Write $B=b^d$, $S=1-B$, $A_{\\max}=(2b-1)^d$, $Z=A_{\\max}-S/t$, and $H=[c-x]_+^d$. For $0\\le A\\le A_{\\max}$ and $0\\le c\\le b$, put\n$$G(A,c)=\\max\\{B+tA,1+tH\\}-(A+B+1+c^d)/2.$$\nIts minimum over $A$ is attained at $\\widehat A=\\min(A_{\\max},H+S/t)$ and satisfies\n$$2G(\\widehat A,c)=-c^d+\\max\\{S-A_{\\max}+2tH,(1-1/t)S+RH\\}.$$\nIf $x\\ge b$, take $c=b$ to minimize over $c$. If $0<x<b$, write $H_\\alpha=x^d/(\\alpha^{1/p}-1)^d$ for $\\alpha>1$. The minimum over $c$ is attained at\n$$H=\\min\\{(b-x)^d,\\max\\{H_{2t},\\min\\{Z,H_R\\}\\}\\},\\qquad c=x+H^{1/d}.$$\nIf $b=1$, the overall minimum is zero.\n\nFor every $x\\ge0,\\alpha>1$, the sharp loss over $v\\ge0$ is\n$$\\max_{v\\ge0}\\{v^d-\\alpha[v-x]_+^d\\}=x^d(1-\\alpha^{-1/p})^{-p}.$$\nOver $0\\le v\\le b$, use the same value if $x\\le b(1-\\alpha^{-1/p})$ and use $b^d-\\alpha[b-x]_+^d$ otherwise. If $L$ is this clipped loss with $\\alpha=R$, then\n$$G(A,c)\\ge\\frac{(t-1)S-tL}{2t}.$$\nIn particular $G(A,c)\\ge0$ uniformly in both endpoints whenever\n$$\\frac{1-b}{b}\\le(1-R^{-1/p})\\left[\\frac{d(t-1)}{t(2d/(d+1))^d}\\right]^{1/p}.$$",
+  "subgoal_id": "pk-intake-opposite-order-peak-scalar-certificate",
+  "title": "The exact opposite-order four-simplex scalar certificate"
+}

@@ -1,0 +1,30 @@
+{
+  "advances": "The integer projection and positivity of every listed fiber are prescribed. This is a restricted sharp-constant result.",
+  "author": "PK-research-agent",
+  "candidate_id": "0918520f27de797f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.327277+00:00",
+  "depends_on": [
+    "57f8d4d4c600b90b",
+    "6a7d56e450b3126f",
+    "da544e8fcada039b"
+  ],
+  "draft_key": "strict-actual-depth-on-doubled-standard-simplex",
+  "kind": "theorem",
+  "proof": "Write $p_0=0$ and $p_i=e_i$. The integer points of $2\\Delta_n$ are precisely the vertices $2p_i$ and the distinct edge midpoints $p_i+p_j$, because the integer coordinates are nonnegative and sum to at most two. Denote the corresponding positive volumes by $v_i,k_{ij}$ and define $B$ by the complete-graph mass lemma. The centroid of any one fiber certifies raw depth at least $\\Gamma_d$ times its volume, by the zero-shift case of 6a7d56e450b3126f when the continuous normal is nonzero. A constant containing restriction includes the full fiber.\n\nAt a chosen edge let $v=\\min(v_i,v_j)$. Shrink the larger endpoint body by a homothety about its centroid to volume $v$, inside the original fiber. The midpoint of the two trimmed endpoints is contained in the original middle body of volume $k_{ij}$ by convexity. Parametrize this edge by $[-1,1]$. The lifted hull of these three fibers then satisfies da544e8fcada039b and gives a point at the actual integer midpoint with raw depth strictly greater than $3\\Gamma_d(k_{ij}+v)/4$. A nonconstant restriction of an ambient cap pulls back to a cap in the edge chart. A constant containing restriction contains all three retained fibers and has mass $k_{ij}+2v>3\\Gamma_d(k_{ij}+v)/4$. Additional original fibers contribute nonnegative mass. Consequently one of these finitely many points guarantees at least $\\Gamma_d B$, with strictness if an edge term attains $B$.\n\nFor $N=n+1$, write $L_N=(3N^2-N+4)/6$. The complete-graph lemma gives $M\\le L_N B$. We have $L_4=8$ and $2L_N-L_{N+1}=(3N-1)(N-2)/6>0$ for $N\\ge4$, so $L_N<2^{N-1}$ for $N>4$. If $N=4$ and $M=8B$, the equality implication in the same lemma gives an edge that attains $B$ and hence a strict depth bound. This proves strictness in every case.\n",
+  "source_candidate_ids": [
+    "0e12a7390f0ce25f"
+  ],
+  "source_candidate_sha256": {
+    "0e12a7390f0ce25f": "f012469fa3245eb5cd25a00133b9c7d9f7631021f16d8a941b896c18467a82ed"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0e12a7390f0ce25f",
+      "locator": "0e12a7390f0ce25f:03 §3 (5), strict depth on 2Δ_n"
+    }
+  ],
+  "statement": "Let $n\\ge3$, $d\\ge1$, and let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a compact convex body whose integer projection is exactly $2\\Delta_n\\cap\\mathbb Z^n$, where $\\Delta_n=\\operatorname{conv}(0,e_1,\\ldots,e_n)$. Suppose every sampled fiber has positive $d$-volume. With $M$ the total mixed $d$-volume and $\\Gamma_d=(d/(d+1))^d$, some actual mixed point has raw closed-halfspace depth strictly greater than $\\Gamma_d M/2^n$.",
+  "subgoal_id": "pk-intake-strict-actual-depth-on-doubled-standard-simplex",
+  "title": "Strict depth for positive fibers over a doubled standard simplex"
+}

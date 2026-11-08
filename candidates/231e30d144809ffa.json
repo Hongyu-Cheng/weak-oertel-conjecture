@@ -1,0 +1,26 @@
+{
+  "advances": "This is an ordinary planar depth upper bound for the one-sided weighted pushforward, with an actual interior apex in its own fiber.",
+  "author": "PK-research-agent",
+  "candidate_id": "231e30d144809ffa",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.174103+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-radial-planar-pointed-equal-cap-menu",
+  "kind": "counterexample",
+  "proof": "The endpoint heights fix their own fibers. Any convex representation at height zero uses equal weights at the endpoints, and their Minkowski midpoint is $(21/200)D+(89/100)v_0$. This is contained in $D$ because the displayed coefficients sum to $199/200$ and the remaining weight can multiply $0\\in D$. Thus the middle fiber is exactly $D$. The hull is compact and full-dimensional, and only $-1,0,1$ can be integer bases. Each fiber has positive area and zero belongs to the interior of $D/100$.\n\nThe inverse planar Jacobians of the projection are $1$ at zero and $4$ at $-1$, and $2T$ projects to $T$. Since $|T|=|D|/100$, this gives the exact density and total. For $\\xi=x/10+(89/100)v_0$ with $x\\in D$, use the missing affine weight $1/100$ on the centroid zero. Thus $\\lambda_0(\\xi)\\ge 89/100+1/300=67/75$ and $\\lambda_1(\\xi),\\lambda_2(\\xi)\\le 1/10+1/300=31/300$.\n\nUsing $9<\\sqrt{97}<10$ gives $1/3<t<7/15$ and $4/15<s<1/3$. Consequently $T$ belongs entirely to the first cap and to neither other cap. The thresholds sum to one, so the three closed caps cover the plane since the affine barycentric coordinates also sum to one. In $D$, the cap $\\lambda_i\\ge b$ for $0<b<1$ has area $(1-b)^2|D|$ by scaling about $v_i$. The masses here in units of $|D|$ are $(1-t)^2+1/25$ and $(1-s)^2$ twice. The equation $3t^2-10t+79/25=0$ makes all three equal to $(1+t)^2/4$. Every candidate belongs to a closed cap of that mass. Dividing by $26/25$ gives the upper bound. It equals $(20-\\sqrt{97})^2/234$, and $4/9=104/234$. The gap is strictly positive because $393^2=154449<155200=40^2\\cdot97$.\n",
+  "source_candidate_ids": [
+    "ef093ba9b166b4a3"
+  ],
+  "source_candidate_sha256": {
+    "ef093ba9b166b4a3": "6fd4b5f622260593ee48d735f6dd0f8d28029d5efd8fc1fdf885e04866a20e00"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ef093ba9b166b4a3",
+      "locator": "ef093ba9b166b4a3:01 Full note, projection density, three-cap menu and exact strict gap"
+    }
+  ],
+  "statement": "Let $D$ be a triangle with centroid zero, vertices $v_0,v_1,v_2$, and barycentric coordinates $\\lambda_i$. Set $T=D/10+(89/100)v_0$. The lifted hull of $2T,D,D/100$ at integer bases $-1,0,1$ has exactly these three positive-area fibers. Project the two fibers at $z\\le0$ from $(1,0)$, which is interior to its own fiber, onto base zero by $x=(1-z)\\xi$. The area pushforward has density $f=\\mathbf1_D+4\\mathbf1_T$ of mass $(26/25)|D|$. With $t=(25-2\\sqrt{97})/15$ and $s=(1-t)/2$, the closed halfspaces $\\lambda_0\\ge t$, $\\lambda_1\\ge s$, $\\lambda_2\\ge s$ cover the plane and each has $f$-mass $(1+t)^2|D|/4$. Its maximum normalized ordinary closed-halfspace depth is therefore at most $25(1+t)^2/104$, below $4/9$ by $(40\\sqrt{97}-393)/234>0$.",
+  "subgoal_id": "pk-intake-pk-w36-radial-planar-pointed-equal-cap-menu",
+  "title": "Equal closed caps bound a planar pointed marginal strictly below four ninths"
+}

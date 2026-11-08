@@ -1,0 +1,54 @@
+{
+  "candidate_id": "b3a3fe7bee3a516f",
+  "candidate_sha256": "a0fd1a12635556ccb0527f8667cabf184321e39cec90fd9582f68757d9be811c",
+  "checked_dependency_candidate_sha256": {
+    "03f650d1c4f1b86d": "4e9f327541f53ba8985b69a271551d41e335d3999f4ec2ebab2e9d4f78dc8cfc"
+  },
+  "checks": [
+    "Verified source cf1b9ba5ada0a5ef by raw SHA-256 and read its main theorem (1)–(4). The normalized statement preserves the whole-residual inclusions, arbitrary-subset sum, complement bound, and planar specialization.",
+    "The spanning and sole-dependence hypotheses force every normal to be nonzero. For each j≠i the strict residual inequality and weak B inequality give v_j·(x+y)<0, and midpoint compatibility places the result inside K.",
+    "Replacing each defining strict inequality by a weak one adds points only on finitely many null hyperplanes. The weak A region is a positive-volume compact convex body when r_i>0. Its Minkowski average with B is compact and lies in the weak middle region, so Brunn–Minkowski proves the volume estimate for the original strict sector.",
+    "If two distinct strict sectors intersect, all d+1 normal coordinates at a point are negative, contradicting their zero sum. For any J the sectors with indices in J lie in the left-hand region. An empty J contributes zero, and a full J leaves K on the left. The elementary complement union bound gives the stated lower bound for each residual.",
+    "In the planar specialization the cap of the remaining index contains A area U_ℓ, K area Q−U_ℓ, and zero B area. Therefore its strict complement in K has area |K|−Q+U_ℓ. Applying the two-sector sum gives the two squared roots with factor 1/4."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "03f650d1c4f1b86d",
+      "candidate_sha256": "4e9f327541f53ba8985b69a271551d41e335d3999f4ec2ebab2e9d4f78dc8cfc",
+      "mapping": "The external-source section states the weighted Brunn–Minkowski form for bounded measurable sets with measurable Minkowski sum. Use the compact weak-inequality residual and the compact B with weight 1/2, then use equality of strict and weak region volumes.",
+      "reviewed_proof_sha256": "d6e1bb0bf06a35bd9c1e083a8a7eb303eb10804a892a9694a5ff681f6f03448d",
+      "reviewed_statement_sha256": "9d4b89e61c096e910759cdd5d566ee87819024a95123879dd013576e5e302213"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:38:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its external-source section records weighted Brunn–Minkowski. This supplies the volume inequality once the relevant containment is established, while the strict-sector signs and disjoint aggregation are specific to the new claim.",
+      "fact_id": "03f650d1c4f1b86d"
+    },
+    {
+      "comparison": "Selects two covering halfplanes and bounds their common complement using an overlap on a chosen fiber. It retains barycentric combinations in that same complement. It neither sums disjoint distinct residual midpoint sectors nor compares them with the whole B fiber.",
+      "fact_id": "ceecf08780802b6a"
+    },
+    {
+      "comparison": "Studies equality for a single critical cap using the two captured endpoint portions. The present statement combines whole B with endpoint residuals and needs neither criticality nor Brunn–Minkowski equality.",
+      "fact_id": "2965bef6996cdba5"
+    }
+  ],
+  "readability": "The planar phrase common mixed area means the sum of the captured fiber areas. The proof makes that interpretation explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "59282b87f74156fe3510121de0cab5222f106a4fc240f79dd9114f9695402330",
+  "reviewed_statement_sha256": "552065ae6a8f894e84b961b23ff16c0e63e2d2f78bea907756d94b927c054424",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:34:44Z",
+  "summary": "The midpoint images of whole positive-volume endpoint residuals fit into pairwise disjoint strict middle sectors. The aggregate volume bound and common-cap planar identity follow.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

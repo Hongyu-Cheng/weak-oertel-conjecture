@@ -1,0 +1,65 @@
+{
+  "candidate_id": "f670cd39b5fbf1fd",
+  "candidate_sha256": "f479064c81506d29dc3f164ad78aca3b98ffae72141472d1042ef0b21fee48f6",
+  "checked_dependency_candidate_sha256": {
+    "0487ae7e836ac430": "0ee43fc3a4fc65da7b104b2f7dc6564df558830946790ec67532bd30a4652212",
+    "9ea9bc3d72c92743": "2290ddd9880f96523be775d90d77349247cdf66a8b95080535c415ba2ef5de18"
+  },
+  "checks": [
+    "Use the minimal face and base exponent N=d+1, so the positive face denominator has escort weights m_z L_z^(-d−2), whose mass is B(b) and whose barycenter is b. Its objective is exactly the finite-base dual value, with all volumes unnormalized.",
+    "The actual-fiber hypothesis turns the escort barycentric row into an inclusion of the entire Minkowski average inside K_b. Hence the weighted centroid lies in the interior by interpolating a positive-radius ball from a positive-weight fiber.",
+    "The base-only denominator is feasible on the full face hull and has value B(b) at every mark over b. At the escort centroid, both the base and continuous gradients vanish; convexity makes it a minimizer.",
+    "At any different mark the continuous derivative is nonzero. The face's full parameter span contains the continuous directions, and a sufficiently small variation preserves strict positivity on its compact hull. The derivative argument covers boundary marks without requiring their minimizing denominator to exist.",
+    "Checked baefc769abdb40f1 (2) and f3dc7a372eeb1eae §3. For the actual lifted triangles, (T+4T)/2=(5/2)T⊂3T, masses are (1,9,16)V, the balanced escort is (81/16,9,81/16)V and B(0)=153V/8 exceeds both endpoint values. Independently checked the exact fractions.",
+    "For x_1−8z≥0 the left threshold is −8 and includes all T, the middle vertex cap has fraction 4/9, and the right cap is just its supporting vertex. Raw mass 5V is below 52V/9. This disproves the selector at its unique maximizing mark."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "9ea9bc3d72c92743",
+      "candidate_sha256": "2290ddd9880f96523be775d90d77349247cdf66a8b95080535c415ba2ef5de18",
+      "fact_sha256": "79f348c753934641ab0bd12880629378c634066de12555e3ae6670893e1327e1",
+      "hypotheses": "Apply the exact finite-base dual with masses |K_z|, exponent N=d+1, and mark b. Its relative positive minimizer and escort vector satisfy the stated moment constraints and give the centroid interior once actual compatibility is checked.",
+      "reviewed_proof_sha256": "5e2fe4c5a6e7a0e374c357d5c16bf1308bfc142098f548e848b72c36c49e2ae7",
+      "reviewed_statement_sha256": "daddb44877d6e3117da564e108793c426704f6be802761c6d9d295704e9f30d2"
+    },
+    {
+      "candidate_id": "0487ae7e836ac430",
+      "candidate_sha256": "0ee43fc3a4fc65da7b104b2f7dc6564df558830946790ec67532bd30a4652212",
+      "hypotheses": "Same compact positive fibers, relative parameter span and raw mixed measure. The full infimum equals the face infimum even at boundary marks. The tested base-only denominator is admissible for that face objective.",
+      "reviewed_proof_sha256": "f3186ce71387b2384aca389970c27a3509de9eade93038c8f76e6de98cc8c9c5",
+      "reviewed_statement_sha256": "64a5fe3ffc90b516c49315f1d5ed5a89ee2994204920ef9aca1ac0c54128dff6",
+      "same_batch": true
+    }
+  ],
+  "finished_utc": "2026-11-08T16:54:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted finite-base dual yields the base-only denominator and escort probabilities. It does not identify the maximum of the continuous-coordinate energy or prove uniqueness among all continuous marks.",
+      "fact_id": "9ea9bc3d72c92743"
+    },
+    {
+      "comparison": "Supplies discrete energy comparisons and the escort interpretation in a weighted-mean case. The triangle arithmetic is a calibration of the discrete rule. The theorem's exact identification with the global mixed energy is additional.",
+      "fact_id": "08b344179e054c1c"
+    },
+    {
+      "comparison": "A heavier-fiber centroid gives the sharp-constant bound for these homothetic triples, whereas the present result only refutes the global-energy selection rule; the right endpoint is heavy in this witness.",
+      "fact_id": "1a7377b8dcb5b16b"
+    }
+  ],
+  "readability": "B(b) denotes the blocked finite-base optimum. The sharp-constant failure is a failure at the energy maximizer, not a failure of the existential bound.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold mathematical proof review with exact symbolic and rational replays where applicable.",
+  "reviewed_proof_sha256": "2272016ff30cd092b0cfee41a042d1cc35071fae71aea10a59523bff5e5aa066",
+  "reviewed_statement_sha256": "312337bb729a5ea9a4a15d3203a66e4784da8d067d2770591076955f51894795",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:49:19Z",
+  "summary": "The base dual gives the exact maximum of the full mixed energy on each occupied fiber. The unique maximizing continuous coordinate is the escort centroid, and the actual triangle witness defeats the sharper selector target.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

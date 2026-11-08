@@ -1,0 +1,70 @@
+{
+  "candidate_id": "5097879468363a7e",
+  "candidate_sha256": "b6026e29aef886843672e82b650c02392225de7bf979ad087ccd1b5f7a2139d4",
+  "checked_dependency_candidate_sha256": {
+    "15649c49010660b8": "feb48e1b3dd10396839dec38078422b8d3ed94a21778c6a2d60a4c3a96df5fa7",
+    "c80576b633835713": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729",
+    "d2ba4e3cbd6eb730": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0"
+  },
+  "checks": [
+    "Checked 6a014eb26413a72b §§1, 3–4, (2)–(7) against its frozen hash. The source distinguishes variation on the positive support, opening the sole zero, and adding mass to an identically zero row.",
+    "The funding row has a positive weighted gradient by the proper-threshold envelope and positivity of the section centroid. In a column j≠h both row entries are strictly positive, so the two transfer signs are feasible. Equating the funding cost to c_i g_i/(dX_ij) gives X_ij=μ_i/λ_j. Its geometric mean is μ_i/GM_d(λ_{j≠h}); using μ_i=c_i g_i/d and cancelling g_i>0 gives c_i=d GM_d(λ_{j≠h}).",
+    "Opening the zero uses the positive parameter only, so local maximality requires recipient right derivative minus donor weighted derivative to be ≤0. Since 1/X_ij=λ_j/μ_i and c_i g_i=dμ_i, the recipient derivative is d max_{j≠h}λ_j−Σ_{j≠h}λ_j. Adding the donor λ_h to the upper bound yields d max_{j≠h}λ_j≤S. The two complementary supports cover every column if the two zero columns differ.",
+    "For an identically zero recipient and any fixed z≥0, small ε keeps the positive donor feasible. Homogeneity and φ_d(0)=0 make the recipient increment exactly εc_iφ_d(z), yielding c_iφ_d(z)≤λ·z. Setting z_h=0 and z_j=1/λ_j gives λ·z=d and φ_d(z)=1/GM_d(λ_{j≠h}). For fixed h the bound is also sufficient on its zero-coordinate face by AM–GM, and directions with further zeros have capacity zero."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "application": "The funding row is strictly positive with a proper capacity-minimizing threshold for d≥2, so it has the differentiable capacity needed for all transfer derivatives.",
+      "candidate_id": "d2ba4e3cbd6eb730",
+      "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+      "fact_sha256": "1ea56df969a8d887e9e78ed86174eee2934f79a095ee0f54bf7fb9255fd58f61",
+      "reviewed_proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+      "reviewed_statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc",
+      "status": "accepted at reviewed snapshot"
+    },
+    {
+      "application": "Its final proof paragraph supplies the exact geometric mean on a one-zero support and zero capacity with further zeros, which justify the fixed-zero derivative and the face-direction tests.",
+      "candidate_id": "c80576b633835713",
+      "candidate_sha256": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729",
+      "fact_sha256": "370ea6c3991b1d6a95daede2fd8d3d9517c62e8f3c5edb298ef4bee8352eaed5",
+      "reviewed_proof_sha256": "ec660ed58ec144de72b71ff2ad5d5658d53793955b55e9584645412d757a77e8",
+      "reviewed_statement_sha256": "7aa377887ba7f60185aa7c650f4da7a0e7b203a2e491c9071e11bb6a417a903b",
+      "status": "accepted at reviewed snapshot"
+    },
+    {
+      "application": "The sole-zero coordinate is raised with all d other entries fixed and strictly positive. The same-batch one-zero right derivative supplies the recipient derivative including ties at its smallest positive entry.",
+      "candidate_id": "15649c49010660b8",
+      "candidate_sha256": "feb48e1b3dd10396839dec38078422b8d3ed94a21778c6a2d60a4c3a96df5fa7",
+      "reviewed_proof_sha256": "d109eb638ccfe58bb07d14b5f2b00697b4c52162eebaff11ab4d40f9128bbca6",
+      "reviewed_statement_sha256": "f80a55834449fe3b4200b6700dbaa23b8948c812c71a28af0dda8689368b8b85",
+      "status": "same-batch, pending predecessor admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:22:13Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The final proof paragraph gives the geometric-mean value for one zero and the zero value for at least two zeros when d≥2. The stated derivative assertions vary strictly positive entries with their zero pattern fixed.",
+      "fact_id": "c80576b633835713"
+    },
+    {
+      "comparison": "An individual strictly positive row at a proper minimum already has the stated capacity gradient and a unique threshold. The fact does not impose cross-row stochastic transfer or multiplier conditions.",
+      "fact_id": "d2ba4e3cbd6eb730"
+    }
+  ],
+  "readability": "The identically zero-row test is sharp for each fixed face z_h=0, the scope stated in the proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3e5aeda84b32fa732ca5d4c5e6fee5c8eb4367a1f02004702ae4cc4f77a692b9",
+  "reviewed_statement_sha256": "9d7e56c11ad94dfe4eb4cd74150a32104553af0ce1cfb6fa23b215428f13a5be",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:19:09Z",
+  "summary": "Fixed-support and one-sided transfers give the reciprocal-multiplier identities and the sharp necessary inequality for directions with a specified zero coordinate.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

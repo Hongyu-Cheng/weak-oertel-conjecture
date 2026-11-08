@@ -1,0 +1,34 @@
+{
+  "advances": "Disproves uniqueness for unrestricted centroids of strict quadrilateral sections with a fixed split.",
+  "author": "PK-research-agent",
+  "candidate_id": "8c6f3575c5bfa87a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:01:39.478166+00:00",
+  "depends_on": [
+    "1462fa9ce6ced54e"
+  ],
+  "draft_key": "tetrahedral-section-centroid-inverse-nonuniqueness",
+  "kind": "counterexample",
+  "proof": "The roots $x,y=(1-2z\\pm\\sqrt{1-8z})/2$ are distinct and positive, since their product and sum are positive. Apply the diagonal parametrization from tetrahedral-quadrilateral-section-calculus. Because $(x+z)(y+z)=xy+z(x+y)+z^2=2z$, the centroid coordinate at index $0$ obeys\n$$\n3\\lambda_0=x\\left(\\frac{2}{x+z}-1\\right)=1+z.\n$$\nFor the last equality, $(1+z+x)(x+z)=2x$ follows by substituting $x^2=(1-2z)x-z-z^2$. The same calculation gives $\\lambda_1=(1+z)/3$, and symmetry and the sum to one give $\\lambda_2=\\lambda_3=(1-2z)/6$. Swapping $x,y$ preserves that centroid. In the third diagonal point $A+B=1/2$, so each of its centroid coordinates equals its diagonal coordinate by the same formula. The three points differ because $x\\ne y$, and the diagonal bijection gives distinct planes. At $z=3/25$ the first two diagonal points are $(12,7,3,3)/25$ and $(7,12,3,3)/25$, and the centroid is $(56,56,19,19)/150$. Substitution of these rational data into the reciprocal-height, cap, and moment formulas gives the displayed values.\n",
+  "source_candidate_ids": [
+    "5c1f3bb21840ea60",
+    "de0cd073e31eb7f8"
+  ],
+  "source_candidate_sha256": {
+    "5c1f3bb21840ea60": "5ac5069fd592406ab78c1381c7a8f63f15df19ecd72200ae75cc4e59ca743c62",
+    "de0cd073e31eb7f8": "5fbadc6a90f177a70e241ec019b40ba73f2683824996fbd5c077fe6b34c2cb07"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5c1f3bb21840ea60",
+      "locator": "§4, (9)"
+    },
+    {
+      "candidate_id": "de0cd073e31eb7f8",
+      "locator": "§1, symmetric three-plane pencil for p in (0,1/3)"
+    }
+  ],
+  "statement": "Fix a tetrahedron and the split $\\{0,1\\}\\mid\\{2,3\\}$. For every $0<z<1/8$, take distinct positive $x,y$ with $x+y=1-2z$ and $xy=z+z^2$. The three strict quadrilateral planes whose diagonal intersections are $(x,y,z,z)$, $(y,x,z,z)$, and $(A,A,B,B)$, where $A=(1+z)/3$, $B=(1-2z)/6$, all have actual section centroid $(A,A,B,B)$. At $z=3/25$ their oriented raw heights can be taken as $(7,12,-28,-28),(12,7,-28,-28),(19,19,-56,-56)$, and each of the first two caps has fraction $4/25$ and normalized scalar moment $-111/400$ toward the ordinary tetrahedral centroid.",
+  "subgoal_id": "pk-intake-tetrahedral-section-centroid-inverse-nonuniqueness",
+  "title": "Three distinct quadrilateral planes with the same tetrahedral section centroid"
+}

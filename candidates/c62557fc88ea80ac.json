@@ -1,0 +1,32 @@
+{
+  "advances": "One-dimensional shape preservation and its application to an actual coupling chosen for one normal. The proof does not pool couplings across normals.",
+  "author": "PK-research-agent",
+  "candidate_id": "c62557fc88ea80ac",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.479433+00:00",
+  "depends_on": [
+    "486fe778f838d99d"
+  ],
+  "draft_key": "one-dimensional-concave-density-root-quantile-interpolation",
+  "kind": "theorem",
+  "proof": "For one such law, its increasing quantile $Q$ is continuously differentiable on $(0,1)$ and $q=Q'=1/f(Q)>0$. Write $W=q^{-(p+1)}=f(Q)^{p+1}$. Then $f^p$ is concave if and only if $W$ is concave. For the forward direction, $f^p$ is locally Lipschitz, as are $Q$ and $Q^{-1}$ on compact interior subintervals. The chain rule gives $W'=(p+1)(f^p)'\\circ Q/p$ almost everywhere. This derivative has a nonincreasing representative and $W$ is locally absolutely continuous, proving its concavity. Conversely, if $W$ is positive concave, then $f(Q)=W^{1/(p+1)}$ gives local absolute continuity of $f^p$, and $(f^p)'=p W'\\circ Q^{-1}/(p+1)$ almost everywhere. This derivative again has a nonincreasing representative. The local changes of variable preserve null sets, so no regularity at support endpoints is needed.\n\nFor the interpolated quantile $q=(1-\\lambda)Q_A'+\\lambda Q_B'$ is continuous and positive. Its rank function is $W=[(1-\\lambda)W_A^r+\\lambda W_B^r]^{1/r}$, where $r=-1/(p+1)$. The power mean on the positive quadrant is coordinatewise increasing and concave. With $S=(1-\\lambda)v^r+\\lambda w^r$ its Hessian is\n$$\n(r-1)\\lambda(1-\\lambda)S^{1/r-2}v^{r-2}w^{r-2}\n\\begin{pmatrix}w^2&-vw\\\\-vw&v^2\\end{pmatrix},\n$$\nwhich is negative semidefinite, and its first partial derivatives are nonnegative by direct differentiation. The endpoint weights give coordinate projections. Composing this mean with the two concave rank functions shows $W$ is concave. Since $Q$ is the convex combination of finite endpoint quantiles it gives a bounded support interval and the inverse has positive continuous derivative there. The rank characterization proves the density claim.\n\nFor the actual convex-body application, use the proof of 486fe778f838d99d with first coordinate $u/\\|u\\|$, parameter $1/2$, and containing body $(A+B)/2$. It gives a coupling with the correct probability marginals, comonotone first coordinate, and midpoint law absolutely continuous in $\\mathbb R^d$ with the stated volume-interpolation ceiling there. Its directional projected quantile is the arithmetic mean of the two endpoint directional quantiles, after converting the first coordinate to $u\\cdot x$. The normalized input projected densities are the corresponding section volumes divided by total body volume and the coordinate scale. By section Brunn–Minkowski they are positive and continuous on the open support with concave $1/(d-1)$-st root. Apply the interpolation result with that $p$. For $d=1$ increasing quantiles of uniform intervals are affine and their average is also affine.\n\nFor the supporting tail statement one may argue directly. The input upper $1/d$-tail roots are decreasing and concave on their closed projected supports by cap Brunn–Minkowski, using nonempty null endpoint caps at the support maximum. They are strictly decreasing because every interior projection slab has positive volume. A decreasing concave bijection has decreasing concave inverse: apply concavity at two inverse values and then apply the inverse, which reverses the inequality. Thus each $r\\mapsto Q_A^+(r^d)$ and $r\\mapsto Q_B^+(r^d)$ is concave, where $Q_A^+,Q_B^+$ denote decreasing upper quantiles, and their average is as well. Inverting gives the upper-tail root of the interpolated projection; apply the same argument to the reflected projection for its lower-tail root, for the same comonotone pair. If $R$ has density $d r^{d-1}$ on $[0,1]$, its mean is $d/(d+1)$ and the directional mean is the expectation of the concave function $R\\mapsto Q^+(R^d)$. Jensen and monotonicity give upper-tail probability at least $\\gamma_d$ at that mean. Reflection gives the same lower-tail estimate. Multiplying the normalized law by its original mass $a$ restores both mass bounds, and the vector mean is $(g_A+g_B)/2$ from the endpoint marginals, regardless of the chosen direction.\n",
+  "source_candidate_ids": [
+    "8c097da8eab2cd32"
+  ],
+  "source_candidate_sha256": {
+    "8c097da8eab2cd32": "be1bb0d9c06ee855d367949ad801c26465e7ec765475680f006ed5abcfb2dd71"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8c097da8eab2cd32",
+      "locator": "8c097da8eab2cd32:05 §5, density interpolation (12)–(17)"
+    },
+    {
+      "candidate_id": "8c097da8eab2cd32",
+      "locator": "8c097da8eab2cd32:02 §1 (3) and §2 (7), two directional tail roots and centroid threshold"
+    }
+  ],
+  "statement": "Let $f_A,f_B$ be probability densities positive and continuous on bounded open support intervals, with $f_A^p,f_B^p$ concave there for some $p>0$. If $Q_A,Q_B$ are increasing quantiles and $0\\le\\lambda\\le1$, the law of increasing quantile $Q=(1-\\lambda)Q_A+\\lambda Q_B$ has positive continuous density $f$ on its open support with $f^p$ concave. In particular for convex bodies in $\\mathbb R^d$, $d\\ge2$, the normalized projected density of the direction-adapted midpoint law has concave $1/(d-1)$-st root, and both normalized projected $1/d$-tail roots are concave on the closed projection support, and both tails at the projected centroid have probability at least $\\gamma_d$. In $d=1$ the midpoint projected law is uniform on an interval and the tail assertions still hold.",
+  "subgoal_id": "pk-intake-one-dimensional-concave-density-root-quantile-interpolation",
+  "title": "Concave density powers under one-dimensional quantile interpolation"
+}

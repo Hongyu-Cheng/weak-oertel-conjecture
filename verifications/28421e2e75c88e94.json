@@ -1,0 +1,51 @@
+{
+  "candidate_id": "c365b957c457009b",
+  "candidate_sha256": "8a369b59d6b3b6cc7f3b41bfa9003e6a6d1e82620bc24d51ae3d941e186cd584",
+  "checked_dependency_candidate_sha256": {
+    "2e657e976221a74d": "76d6e0c753bea58e0678fb6c8169fdb53219639a1158d645b44c03e23ea3a0ac"
+  },
+  "checks": [
+    "The accepted strict vertex-incidence result applies with the exact individual ceiling and makes each barycentric coordinate less than 5/14. The through-source intercept identity gives uv at least four times the product of the two other barycentric coordinates.",
+    "For the minimum barycentric coordinate, expand the positive product of the gaps from 5/14 for the other two coordinates. The opposite cap upper bound then gives the strict lower bound above 9/28. The exact comparison to 9/28 is 11/39060.",
+    "If one intercept u is at most one half, solve for the other intercept and differentiate e u²/(u-b). It decreases from u>b throughout the relevant range because u<2b, so its value is at least e/(2-4b). The other two cap bounds add to at least 4(b+e)(1-b-e).",
+    "The derivative of their combined lower bound in b is at least 63/25 minus 12/7, or 141/175. At b=9/28 the lower bound is concave in e and its two endpoint values are 1341/980 and 269/196. The smaller exceeds the total budget by the exact 2213/91140. Interchanging intercept directions proves the other strict incidence.",
+    "Checked 8d217f8bc1752ff8 §§1–2 and independently verified all rational constants. The conclusion concerns the open cap halfplane relative to its boundary line and keeps the midpoints on the boundary of the triangle."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "76d6e0c753bea58e0678fb6c8169fdb53219639a1158d645b44c03e23ea3a0ac",
+      "fact_id": "2e657e976221a74d",
+      "fact_sha256": "e17718c59f2717688aef46b5d00bc7ec9aeda10120a19ea2d8e209b3427c8cdf",
+      "hypotheses": "Its three caps have the same nondegenerate triangle, interior mark, strict one-vertex incidence, and identical 128/279 individual ceiling. Use only its upper barycentric coordinate bound.",
+      "reviewed_proof_sha256": "fff0a0e590416ab4e3a66bb541ebf69948249162d5c22ce7cd3b15a209e81e84",
+      "reviewed_statement_sha256": "a7e9a98090d67608e9c3b1cb27386e3b11069e4e37ffd93b13dc00c6f0bf1ce8"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:34:19Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted individual cap budget gives the strict barycentric ceiling and cap-area floor. The second, total cap budget is essential to the strict intercept conclusion here.",
+      "fact_id": "2e657e976221a74d"
+    },
+    {
+      "comparison": "The accepted reciprocal chord-margin analysis concerns balanced spanning cap normals and chord weights. The present consequence uses the individual and total area budgets and needs no such balance.",
+      "fact_id": "d4f185291093d4db"
+    }
+  ],
+  "readability": "The definitions and scope are explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "61c09f3c70a47f2743f631d289ac5cc1ac81dffebb44b0f50dfd71c0f001937f",
+  "reviewed_statement_sha256": "54d3e82b1ce44c243ce7d58b9a3798e1329e4c076a86b98c7033f9c3cbba2ca5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:27:41Z",
+  "summary": "The two simultaneous area budgets force strict capture of each incident edge midpoint.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

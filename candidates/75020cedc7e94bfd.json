@@ -1,0 +1,26 @@
+{
+  "advances": "This gives exact whole-mass calculus for an actual three-fiber deformation in continuous dimension two.",
+  "author": "PK-research-agent",
+  "candidate_id": "75020cedc7e94bfd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.852375+00:00",
+  "depends_on": [],
+  "draft_key": "opposed-minkowski-flow-mixed-area",
+  "kind": "lemma",
+  "proof": "Minkowski distributivity and convexity give $A_s+C_s=A+C$. In the hull of the two lifted endpoints the fibers at $-1$ and $1$ are their original endpoint bodies, while the fiber at zero uses equal endpoint weights and is $(A_s+C_s)/2=B$. The projection is $[-1,1]$, so there are no other integer sites. The endpoints have interior and their affine hulls are parallel at distinct bases, giving a full-dimensional compact hull. Every parameter in $(0,1)$ permits both signs of small changes.\n\nThe planar mixed-area polynomial gives\n$$\n\\begin{aligned}\na_s&=(1-s)^2a+2s(1-s)q+s^2c,\\\\\nc_s&=s^2a+2s(1-s)q+(1-s)^2c,\\\\\nW&=(a+c+2q)/4.\n\\end{aligned}\n$$\nHere $V(A,C)$ is the mixed area normalized so that $|xA+yC|=x^2a+2xyq+y^2c$ for $x,y\\ge0$. See [Schneider, Convex Bodies, second expanded edition, §5.1](https://www.cambridge.org/core/books/convex-bodies-the-brunnminkowski-theory/400F6173EE613859F144E9598DDD8BDF). Adding and subtracting the endpoint polynomials gives $M_s=M_0+2\\Delta s(1-s)$ and $a_s-c_s=(1-2s)(a-c)$, where $\\Delta=4W-2(a+c)$. Differentiation gives the two mass derivatives.\n\nFor $a=c=V$, ordinary planar Brunn–Minkowski gives $W\\ge V$, with equality exactly for positively homothetic endpoints. Their equal areas then force the homothety ratio to be one, so equality means translates. See [Gardner, The Brunn–Minkowski Inequality, Theorem 4.1 and its equality discussion](https://doi.org/10.1090/S0273-0979-02-00941-2). When $C=rA$ with $r>0$, $r\\ne1$, one instead has $\\Delta=-(r-1)^2a<0$.\n",
+  "source_candidate_ids": [
+    "ac652e84a5ae457b"
+  ],
+  "source_candidate_sha256": {
+    "ac652e84a5ae457b": "91806e760ad08e296c1c6da5658e0c44ce4caae6cd88577b982abb4f1f916ac7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ac652e84a5ae457b",
+      "locator": "ac652e84a5ae457b:01 §1, (1)"
+    }
+  ],
+  "statement": "Let $A,C\\subseteq\\mathbb R^2$ be convex bodies of areas $a,c>0$, and write $q=V(A,C)$ for their mixed area. For $0\\le s\\le1$, put $B=(A+C)/2$, $A_s=(1-s)A+sC$, and $C_s=sA+(1-s)C$. The lifted hull of $A_s,B,C_s$ at $-1,0,1$ is a convex body and has exactly those integer fibers, with $B=(A_s+C_s)/2$. Write $W=(a+c+2q)/4=|B|$ and $\\Delta=2q-a-c$. Its raw mixed mass is $M_s=a+c+W+2\\Delta s(1-s)$, with derivatives $M_s'=2\\Delta(1-2s)$ and $M_s''=-4\\Delta$. Also $|A_s|-|C_s|=(1-2s)(a-c)$. For $a=c=V$, $\\Delta=4(W-V)\\ge0$, with equality exactly for translates. When $a\\ne c$, $\\Delta$ can be negative.",
+  "subgoal_id": "pk-intake-opposed-minkowski-flow-mixed-area",
+  "title": "The actual opposed planar Minkowski flow has exact quadratic mixed mass"
+}

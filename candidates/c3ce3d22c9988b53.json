@@ -1,0 +1,26 @@
+{
+  "advances": "Refutes a numerical condition on affine cap roots and concave whole roots. The witness imposes no global deepest-point condition on actual convex-body fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "c3ce3d22c9988b53",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:59.919661+00:00",
+  "depends_on": [],
+  "draft_key": "critical-affine-root-concave-floor-counterexample",
+  "kind": "counterexample",
+  "proof": "The derivative of $P$ is positive on $[0,\\infty)$, and exact substitution gives $P(2/3)=-239945/243<0$ and $P(3/4)=1198965/1024>0$. Hence the unique positive root satisfies $2/3<c<3/4$. The $a_j$ are positive affine and at most $1$, and $a_8>6/7$ since $7(8+c)-6(9+c)=2+c>0$. The sequence $v$ is constant and satisfies all its constraints. Expanding the finite sum yields $\\sum_{j=0}^9(j-8)(j+c)^5=-P(c)$, so the critical balance holds exactly after division by $(9+c)^5$.\n\nFor $j<9$ the ratio $(j+c)/(9+c)$ increases with $c$, and the term at $j=9$ is constant. Thus\n$$\n\\sum_j a_j^6<\\sum_{j=0}^9\\left(\\frac{4j+3}{39}\\right)^6\n=\\frac{2280098630}{1172914587}<\\frac{39}{20}\n<5\\left(\\frac67\\right)^6 .\n$$\nThe two strict rational comparisons follow by cross multiplication from $39\\cdot1172914587-20\\cdot2280098630=141696293$ and $100\\cdot6^6-39\\cdot7^6=77289$. Since $\\sum_jv_j^6=10$, the claimed inequality is reversed strictly.\n\nFor the polynomial assertion, put $k=a_8$ and $\\delta=(1-k)/k=t_*$. Then $a_j/k=1+t_*(j-8)$ and $\\Phi'(t_*)=0$ by critical balance. The left endpoint $e=-1$ of the nonnegative-root slope interval $[-1,1/8]$ gives $1+e(j-8)=9-j\\ge0$ on all sites. The expression $a_j/k+\\delta[1+e(j-8)]$ equals the constant $1/k=v_j/k$, by direct substitution. Since $0<\\delta<1/6$, increasing $\\delta$ to $1/6$ weakly increases every such root and gives $(7/6)[1+((6t_*+e)/7)(j-8)]$. Taking sixth powers and summing, the strict inequality $\\sum_jv_j^6>(2/\\Gamma_6)\\sum_ja_j^6$ implies $(7/6)^6\\Phi((6t_*+e)/7)> (2/\\Gamma_6)\\Phi(t_*)$. Cancelling $(7/6)^6=1/\\Gamma_6$ proves the assertion.\n",
+  "source_candidate_ids": [
+    "b73ef8fbc2c9ea1b"
+  ],
+  "source_candidate_sha256": {
+    "b73ef8fbc2c9ea1b": "038accffe554933f7de494219673273aaef07b88801d98346389caab8f91c1cb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b73ef8fbc2c9ea1b",
+      "locator": "b73ef8fbc2c9ea1b:01 §1, exact counterexample; §3, polynomial growth consequence"
+    }
+  ],
+  "statement": "The following scalar inequality fails. On $j=0,\\ldots,R$, suppose $a_j$ is a positive affine sequence, $a_i\\ge d/(d+1)$, and $\\sum_j(j-i)a_j^{d-1}=0$. Suppose $v$ is a positive concave sequence with $v\\ge a$ and $v_i=1$. The claimed bound is $\\sum_jv_j^d\\le(2/\\Gamma_d)\\sum_ja_j^d$, with $\\Gamma_d=(d/(d+1))^d$.\n\nA counterexample has $d=6$, $R=9$, $i=8$, $a_j=(j+c)/(9+c)$ and $v_j=1$, where $c$ is the unique positive root of\n$$\nP(c)=35c^5+375c^4+2550c^3+8670c^2+9195c-11805.\n$$\nIn the corresponding polynomial $\\Phi(t)=\\sum_{j=0}^9[1+t(j-8)]^6$, the critical slope is $t_*=1/(8+c)$, and for the endpoint $e=-1$ of the nonnegative-root slope interval one has $\\Phi((6t_*+e)/7)>2\\Phi(t_*)$.",
+  "subgoal_id": "pk-intake-critical-affine-root-concave-floor-counterexample",
+  "title": "A ten-site counterexample to the critical affine-root moment bound"
+}

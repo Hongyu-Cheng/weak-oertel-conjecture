@@ -1,0 +1,26 @@
+{
+  "advances": "Supplies actual centered contacts and a bounded minimization argument for ordinary convex bodies.",
+  "author": "PK-research-agent",
+  "candidate_id": "a839bfd22b7f11a2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:42:21.746196+00:00",
+  "depends_on": [],
+  "draft_key": "minimum-enclosing-simplex-facet-contacts",
+  "kind": "theorem",
+  "proof": "The facet-centroid property is the simplex case of Klee, [Facet-centroids and volume minimization](https://real-j.mtak.hu/5463/1/StudScientMath_21.pdf), Corollary (i), p. 143. We prove it by a feasible tilt.\n\nFor $v\\ne x_0$ take the equatorial $(m-1)$-disk of $B_2(x_0,r)$ in the hyperplane through $x_0$ perpendicular to $v-x_0$. Its cone with apex $v$ lies in the enclosing simplex and has volume $\\kappa_{m-1}r^{m-1}\\lVert v-x_0\\rVert_2/m$. This gives the stated bound, also for $m=1$ with a point as the base. The bound is immediate for $v=x_0$. There is an enclosing simplex because $K$ is bounded. Choose a minimizing sequence of simplices with volume bounded by the volume of some enclosing simplex. The vertex bound gives a subsequence whose labeled vertex tuples converge. Their convex hulls converge in Hausdorff distance, since the same convex combination of the vertices differs by at most the maximum displacement. The limit contains $K$ and is full-dimensional, so it is a simplex. The determinant formula gives convergence of volumes and hence attainment.\n\nNormalize a minimizing simplex by an affine map to $\\{x_i\\ge0,\\ \\sum_i x_i\\le1\\}$, with the chosen facet $F$ at $\\sum_i x_i=1$. If $K$ misses $F$, compactness gives $\\max_K\\sum_i x_i<1$, allowing a parallel inward move that decreases the volume. Thus $C=K\\cap F$ is nonempty. If its convex set $C$ misses the facet centroid $g=(1/m,\\ldots,1/m)$, strict separation gives $v\\in\\mathbb R^m$ and $s\\in\\mathbb R$ with $\\max_C v\\cdot x<s<v\\cdot g$. For small $\\varepsilon>0$ the tilted inequality\n$$\n\\sum_i x_i-1+\\varepsilon(v\\cdot x-s)\\le0\n$$\nholds on $K$. Indeed, compactness and strict negativity on $C$ give some $\\eta>0$ such that $v\\cdot x-s<0$ wherever $x\\in K$ and $\\sum_i x_i>1-\\eta$. On the rest of $K$, the original slack is at least $\\eta$ and the added function is uniformly bounded. Keep the other facets fixed. The intercepts of the tilted simplex are $(1+\\varepsilon s)/(1+\\varepsilon v_i)$, all positive for small $\\varepsilon$. Its volume ratio to the original is $(1+\\varepsilon s)^m/\\prod_i(1+\\varepsilon v_i)$, with derivative $m(s-v\\cdot g)<0$ at zero. This contradicts minimality. Affine maps preserve facet centroids and ratios of volumes, giving the result for the original facet and simplex.\n",
+  "source_candidate_ids": [
+    "783495094e97ee67"
+  ],
+  "source_candidate_sha256": {
+    "783495094e97ee67": "62853841490ba27f90342765d3daf6f5fd99a459a030b733641684f6360ff42d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "783495094e97ee67",
+      "locator": "§§1–3, (1), (4)–(7)"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^m$ be a convex body, $m\\ge1$. A minimum-volume enclosing $m$-simplex exists, and the centroid of each facet of every minimum-volume enclosing simplex belongs to $K$. More generally, if $B_2(x_0,r)\\subset K$ with $r>0$, every vertex $v$ of every enclosing simplex of volume at most $V_0$ satisfies\n$$\n\\lVert v-x_0\\rVert_2\\le \\frac{mV_0}{\\kappa_{m-1}r^{m-1}},\n$$\nwhere $\\kappa_j$ is the volume of the Euclidean unit ball in dimension $j$ and $\\kappa_0=1$.",
+  "subgoal_id": "pk-intake-minimum-enclosing-simplex-facet-contacts",
+  "title": "Minimum enclosing simplices and all facet-centroid contacts"
+}

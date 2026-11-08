@@ -1,0 +1,29 @@
+{
+  "advances": "Selects at most $2^n$ unchanged group constraints for one scalar max-min value. It does not select a common surviving point of all groups.",
+  "author": "PK-research-agent",
+  "candidate_id": "06fed2682a269d0d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.743073+00:00",
+  "depends_on": [
+    "f47790a5ad162036",
+    "bee3cc8e50a0dcea"
+  ],
+  "draft_key": "pk-w36-menu-joint-remainder-max-min",
+  "kind": "lemma",
+  "proof": "Deleting groups can only increase the minimum at each base, so it can only increase $V$. For the converse set $t=V(\\mathcal G)$, which is nonnegative and attained. For $q\\ge1$, the strict superlevel bases of $e_I(z)>a_I t$ are the trace on $P$ of the convex real-base set $E_I$ in the proof of f47790a5ad162036, with constant threshold $\\ell=(a_I t)^{1/q}$. The section-convexity argument in that proof uses compact convexity and the intrinsic dimension, with no ambient interior requirement. It applies separately for each group, including when $t=0$. For $q=0$ the remainder is either zero or one; its strict superlevel trace is empty if $a_I t\\ge1$, and otherwise is the trace on $P$ of the convex projection $C\\cap\\bigcap_{i\\in I}H_i^c$ onto the base. The common intersection of the strict superlevels misses $P$ by the choice of $t$.\n\nThe positive-fiber base set is closed under integer same-parity midpoints: the midpoint fiber contains a translate of a half-scaled $q$-fiber and so has dimension at least $q$ and at most $q$. For $q=0$ the same inclusion proves nonemptiness. By the finite-set witness lemma in bee3cc8e50a0dcea, applied to $P$, at most one site per parity occurs in any empty vertex subset, hence the Helly bound is at most $m$. Select at most $m$ groups whose strict superlevels still have common intersection missing $P$. This subfamily is nonempty since $P$ is nonempty. Each base then has a selected group with $e_I(z)/a_I\\le t$, so $V(\\mathcal J)\\le t$, proving equality and attainment.\n",
+  "source_candidate_ids": [
+    "fd71224e218c86d2"
+  ],
+  "source_candidate_sha256": {
+    "fd71224e218c86d2": "16ac75da2864496f4c1cd5be15a907120b8b51f042b0eebc47d29d6c3fe607d2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fd71224e218c86d2",
+      "locator": "fd71224e218c86d2:03 §2.1, (2a), exact finite max-min compression"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ nonempty, $q=\\dim_H S$, $\\mu=\\mathcal H_q|_S$, and $P$ the bases of the positive $\\mathcal H_q$-measure fibers $K_z$, with $w_z=\\mathcal H_q(K_z)$, $M=\\sum_{z\\in P}w_z$ and $m=2^n$. For a finite list of original closed ambient halfspaces $H_i$ and a nonempty group $I$ of their indices, write $U_I=\\bigcup_{i\\in I}H_i$, $e_I(z)=\\mathcal H_q(K_z\\setminus (U_I)_z)$, and $B_I=\\mu(U_I)$.\n\nFor a nonempty finite family $\\mathcal G$ of groups and positive constants $a_I$ (which may all be one), set\n$$\nV(\\mathcal G)=\\max_{z\\in P}\\min_{I\\in\\mathcal G}\\frac{e_I(z)}{a_I}.\n$$\nThen\n$$\nV(\\mathcal G)=\\min_{\\substack{\\varnothing\\ne\\mathcal J\\subseteq\\mathcal G\\\\|\\mathcal J|\\le m}} V(\\mathcal J).\n$$\nIn particular an attaining subfamily exists, without any cover hypothesis.",
+  "subgoal_id": "pk-intake-pk-w36-menu-joint-remainder-max-min",
+  "title": "Exact finite selection for a joint-remainder max-min"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "An explicit sufficient subcover certificate from relative errors at every positive intrinsic fiber.",
+  "author": "PK-research-agent",
+  "candidate_id": "9cf4bf4f237be818",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:35:06.876920+00:00",
+  "depends_on": [
+    "f47790a5ad162036"
+  ],
+  "draft_key": "intrinsic-relative-residual-affine-majorant",
+  "kind": "theorem",
+  "proof": "The sampled vectors $(L(z))_{z\\in P}$ of affine functions form a finite-dimensional linear subspace of $\\mathbb R^P$. The lower constraints are closed and strictly positive in every coordinate. A constant $\\max_{z\\in P}V_z^{1/q}$ is feasible, and any bounded objective sublevel bounds every coordinate above. Intersecting with the closed constraints gives compactness, so the continuous objective attains its minimum. Strict convexity on the positive orthant gives uniqueness of the value vector for $q>1$. Every feasible term is at least $V_z$. The lower bound and the characterization of equality follow by summing and observing that equality requires every term to equal $V_z$. The displayed constant gives the upper bound.\n\nFor an attaining $L$, the threshold $\\ell=\\tau^{1/q}L$ is affine and nonnegative on $\\operatorname{conv}(P)$, since its sampled values are nonnegative. The local relative hypothesis bounds the residual by $\\ell(z)^q$. Apply the intrinsic convex-threshold subcover theorem with the given $q,t,k$ and these exact caps. Its total residual allowance is $\\sum_z\\ell(z)^q=\\tau A_q(P,V)M$, which proves the cap budget and specializations.\n",
+  "source_candidate_ids": [
+    "2623b39acd3d4a1d"
+  ],
+  "source_candidate_sha256": {
+    "2623b39acd3d4a1d": "f2e0f542223192e00e9d461044b1dc5340713274dc2a8f7071cb095caed6172e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2623b39acd3d4a1d",
+      "locator": "2623b39acd3d4a1d:03 §4, (5)–(7), and §7 final paragraph"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a convex body with nonempty mixed set $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$, and write $C_z=\\{x:(z,x)\\in C\\}$. Put $q=\\dim_H S\\ge1$, $V_z=\\mathcal H_q(C_z)$, $P=\\{z\\in\\mathbb Z^n:V_z>0\\}$, $M=\\mathcal H_q(S)=\\sum_{z\\in P}V_z$, and let $k$ count the occupied coordinate parity classes of $P$. Fix finitely many original closed ambient halfspaces $H_i$ and an integer $t\\ge1$. The mass of a cap is $\\mathcal H_q(S\\cap H_i)$.\n\nAmong affine functions $L$ on $\\operatorname{aff}(P)$ with $L(z)\\ge V_z^{1/q}$ on $P$, define the normalized minimum\n$$\nA_q(P,V)=\\frac{1}{M}\\min_L\\sum_{z\\in P}L(z)^q.\n$$\nIt is attained, its sampled value vector is unique when $q>1$, and $1\\le A_q(P,V)\\le |P|\\max_{z\\in P}V_z/M$. One has $A_q(P,V)=1$ exactly when the volume roots are affine on $P$. If each $z\\in P$ admits at most $t$ original caps with residual measure at most $\\tau V_z$ for $\\tau\\ge0$, then at most $kt$ original caps leave total residual at most $\\tau A_q(P,V)M$. Any nonnegative common cap mass bound $B$ satisfies $B\\ge(1-\\tau A_q(P,V))M/(kt)$. For $t=2$, $q=d$, the condition $\\tau A_d(P,V)\\le1-2\\gamma_d$ gives $B\\ge\\gamma_dM/k$, where $\\gamma_d=(d/(d+1))^d$. In particular, the condition for equal-volume planar fibers is $\\tau\\le1/9$.",
+  "subgoal_id": "pk-intake-intrinsic-relative-residual-affine-majorant",
+  "title": "An attained affine majorant for relative cap residuals"
+}

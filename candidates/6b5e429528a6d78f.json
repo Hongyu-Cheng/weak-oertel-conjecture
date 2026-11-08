@@ -1,0 +1,28 @@
+{
+  "advances": "Counterexample to log-concavity of the full-volume continuous marginal even in the ambient-simplex class.",
+  "author": "PK-research-agent",
+  "candidate_id": "6b5e429528a6d78f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.473573+00:00",
+  "depends_on": [
+    "d31524ef9dee3ce8"
+  ],
+  "draft_key": "ambient-simplex-nonlogconcave-count-marginal",
+  "kind": "counterexample",
+  "proof": "The differences of the vertices from $(0,0)$ form a triangular block matrix with determinant of absolute value $4$, so the simplex is full dimensional and its ambient volume is $4/(d+1)!$. In the base-preserving simplex coordinates with the extreme vertices selected, the displayed continuous coordinates are already the unselected barycentric coordinates. If $S=\\sum_i x_i$, the real base interval at $x\\in T_d$ is\n$$\n[2S-\\varepsilon(x_1-x_2),\\ 4-2S-\\varepsilon(x_1-x_2)].\n$$\nAt base one, the lower endpoint condition gives $A$. It implies $S\\le(2-\\varepsilon)^{-1}<1$, and also implies $2S+\\varepsilon(x_1-x_2)\\le(2+\\varepsilon)/(2-\\varepsilon)<3$, giving the upper endpoint condition. The coordinate swap combined with $z\\mapsto4-z$ gives base three. At base two, the two inequalities give $B$, which implies $S\\le1$. At the extreme integer heights only their single vertices occur.\n\nThe determinant of the diagonal map gives $a$. The two strict excluded parts of $T_d$ at base two are the opposite vertex caps cut out by $2S\\pm\\varepsilon(x_1-x_2)>2$. They are disjoint since both inequalities would force $S>1$. Each has volume fraction $\\varepsilon/[2(2+\\varepsilon)]$ by the edge ratios from its apex to $0$, the other of $e_1,e_2$, and the other $d-2$ vertices, respectively $\\varepsilon/(2+\\varepsilon),1/2,1,\\ldots,1$. This gives $W$. The non-coordinate facet normals of the two endpoint simplices differ by swapping two unequal positive entries and are not proportional, precluding a positive homothety. Both roof constraints of $B$ give distinct facets: the first is tight at points with $x_1>x_2$ and all coordinates positive, the second at the swapped points. All $d$ coordinate constraints are facets as seen with small positive coordinates on each coordinate hyperplane. Thus $B$ has $d+2$ facets.\n\nAt $x_s=(s/d,\\ldots,s/d)$ the real base interval is $[2s,4-2s]$. Its counts at $s=2/5,3/5,4/5$ are $3,1,1$. The middle point is the midpoint of the others, and the violation $1<\\sqrt{3}$ persists in neighborhoods because all six base interval endpoints are nonintegral and the points are interior to $T_d$. To rule out a null-set modification, choose endpoints in the two neighborhoods with midpoint in the middle neighborhood, all outside the null set. This is possible by shrinking the neighborhoods so every such midpoint lands there, and using Fubini and the fact that each translated, dilated preimage of a null set under the midpoint map with one endpoint fixed is null. Dividing the density by its positive total mass does not affect the violation.\n",
+  "source_candidate_ids": [
+    "56a670ccbde263ec"
+  ],
+  "source_candidate_sha256": {
+    "56a670ccbde263ec": "d2859959d217e53e6092a93491b3a5fe32454083a08d3d6e7c661f04217ad2ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "56a670ccbde263ec",
+      "locator": "56a670ccbde263ec:07 §6, (17)–(19) and Failure of projected logconcavity"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and $0<\\varepsilon<1$. The ambient simplex $C\\subset\\mathbb R\\times\\mathbb R^d$ with vertices $(0,0),(4,0),(2-\\varepsilon,e_1),(2+\\varepsilon,e_2),(2,e_3),\\ldots,(2,e_d)$ has exactly three positive integer fibers. At bases $1,2,3$ they are, respectively,\n$$\nA=\\operatorname{diag}((2-\\varepsilon)^{-1},(2+\\varepsilon)^{-1},1/2,\\ldots,1/2)T_d,\\qquad\nB=\\{x\\ge0:2\\textstyle\\sum_i x_i+\\varepsilon|x_1-x_2|\\le2\\},\n$$\nand $A$ with coordinates $1,2$ swapped, where $T_d=\\{x\\ge0:\\sum_i x_i\\le1\\}$. The integer fibers at $0$ and $4$ are singletons. The positive volumes, divided by $|T_d|$, are $a,W,a$ with $a=2^{2-d}/(4-\\varepsilon^2)$ and $W=2/(2+\\varepsilon)$. The endpoint simplices at bases $1$ and $3$ are nonhomothetic, and $B$ is not a simplex. The continuous projection of the full $d$-volume mixed law has no log-concave version of its density.",
+  "subgoal_id": "pk-intake-ambient-simplex-nonlogconcave-count-marginal",
+  "title": "A non-log-concave mixed projection of an ambient simplex"
+}

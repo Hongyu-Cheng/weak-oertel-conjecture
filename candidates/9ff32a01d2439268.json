@@ -1,0 +1,26 @@
+{
+  "advances": "Continuous convex-body coordinate, volume and proper-section formulas for a nonlinear radius.",
+  "author": "PK-research-agent",
+  "candidate_id": "9ff32a01d2439268",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:33:00.811468+00:00",
+  "depends_on": [],
+  "draft_key": "concave-homothetic-projective-coarea",
+  "kind": "lemma",
+  "proof": "At every differentiability point the supporting tangent at $z$ bounds $r(0)$ by $r(z)-zr'(z)$. The formulas for $u'$ and $dz/du$ follow by differentiation and show strict increase on the entire interval. Differentiating $R$ with respect to $u$ gives the stated formulas for $R'$, $R''$ and $R-uR'$. At a piece boundary the one-sided slopes of $r$ decrease. For fixed $z,r(z)$ the expression $-h/(r(z)-zh)$ is decreasing in $h$ on positive denominators, so the slopes of $R$ increase across the boundary. On each affine piece of $r$, $R'$ is constant. This proves the asserted convexity in both cases.\n\nThe volume Jacobian in $(q,z)$ is $r^m$, and the change to $u$ makes it $r^{m+2}/D_r=(R-uR')R^{-d-1}$. The cap condition follows by dividing $z+c\\cdot X$ by $r(z)>0$. On the section $z=-c\\cdot X$ its measure $d\\mathcal H^m/\\|(c,1)\\|_2$ is precisely Lebesgue measure in $X$ coordinates, by the graph Jacobian. Its parametrization in the $q$ coordinates is $X=q/R(s)$ with $s=-c\\cdot q$. It is injective, since $X$ fixes $z=-c\\cdot X$ and then $q=X/r(z)$. The absolute Jacobian is\n$$\nR(s)^{-m}\\bigl(1-sR'(s)/R(s)\\bigr)=w(s)R(s)>0.\n$$\nFor $c\\ne0$ the finitely many piece boundaries and interval ends have preimages of $m$-measure zero. For $c=0$ the section is simply $r(0)D$ and $w(0)R(0)=r(0)^m$ for either one-sided slope. Multiplication by $X=q/R(s)$ gives the horizontal first moment. The vertical first moment is its pairing with $-c$, and the section measure is positive since $0$ is interior to $K$. Normalizing by a constant does not change the centroid.\n",
+  "source_candidate_ids": [
+    "9cc7f272d6dd1c14"
+  ],
+  "source_candidate_sha256": {
+    "9cc7f272d6dd1c14": "5dca77deb13c31fe77f562f0b24d8f364d3d0345910c69374875df0f3ffa8bd2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9cc7f272d6dd1c14",
+      "locator": "§§1–2, equations (1)–(6), projective coordinate and coarea"
+    }
+  ],
+  "statement": "Let $D\\subset\\mathbb R^m$ be a convex body centrally symmetric about $0$, $m\\ge1$, and let $r$ be positive and concave on $[a,b]$, with $a<0<b$. Assume $r$ is $C^2$ or continuous piecewise affine with finitely many pieces. Set $d=m+1$ and $K=\\{(X,z):a\\le z\\le b,\\ X\\in r(z)D\\}$. In coordinates $X=r(z)q$, $u=z/r(z)$, put $D_r=r-zr'$, $I=u([a,b])$ and $R(u)=1/r(z(u))$. Then $u$ is strictly increasing and $R$ is convex, with\n$$\nD_r\\ge r(0)>0,\\quad u'=\\frac{D_r}{r^2},\\quad \\frac{dz}{du}=\\frac{r^2}{D_r},\\quad\nR'=-\\frac{r'}{D_r},\\quad R''=-\\frac{r^3r''}{D_r^3}\\ge0,\\quad R-uR'=\\frac1{D_r}\n$$\non smooth pieces. In the piecewise affine case $R$ is continuous piecewise affine. Volume in these coordinates is $dq\\,w(u)du$ for $w(u)=(R-uR')R^{-d-1}$ on $I$ and zero off $I$.\n\nFor $c\\in\\mathbb R^m$, the through-origin cap with raw normal $(c,1)$ has condition $u+c\\cdot q\\ge0$. Its section with measure $d\\mathcal H^m/\\|(c,1)\\|_2$ pulls back to $w(s)R(s)\\,dq$ on $\\{q\\in D:s=-c\\cdot q\\in I\\}$. Its horizontal first moment for this measure is $\\int_D q\\,w(-c\\cdot q)dq$. The section centroid is $0$ exactly when this vector vanishes.",
+  "subgoal_id": "pk-intake-concave-homothetic-projective-coarea",
+  "title": "Projective axial coordinates and coarea for concave homothetic profiles"
+}

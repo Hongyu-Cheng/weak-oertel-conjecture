@@ -1,0 +1,26 @@
+{
+  "advances": "A scalar capacity law and a direction-by-direction transfer. It gives neither a common point whose projections are those means nor a lower bound on actual depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "6574a94c3c5b0101",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.949283+00:00",
+  "depends_on": [],
+  "draft_key": "midpoint-optimized-survival-and-directional-mean-transfer",
+  "kind": "lemma",
+  "proof": "Write $l_A,l_C$ and $r_A,r_C$ for the respective projection minima and maxima. The cap functions are nonincreasing and Lipschitz: a slab of projection width $\\delta$ has volume at most $\\delta/\\lVert u\\rVert$ times an upper bound on the volumes of the orthogonal sections of the bounded body. For $d=1$ one can use section bound one. The sum has a common Lipschitz bound for every $v$, and the finite infimum preserves it and monotonicity. A finite sufficiently large tilt always allows the smaller body to be full and the other empty, proving $0\\le K_u\\le a$. For $t\\le(l_A+l_C)/2$ the two thresholds sum to at most $l_A+l_C$, so at least one cap is full and the sum is at least $a$. For $t\\ge(r_A+r_C)/2$ choose thresholds at or above their respective maxima, so both cap volumes are zero (including the supporting planes). Thus $a-K_u$ is a continuous distribution function of total mass $a$ and the associated finite measure is atomless and has the claimed closed survival.\n\nFor every $v$, a midpoint with $u$-projection at least $t$ has first endpoint projection at least $t+v$ or second endpoint projection at least $t-v$. Integrate this indicator inequality against the coupling and apply the second marginal bound to obtain $\\eta\\{u\\cdot x\\ge t\\}\\le A_u(t+v)+C_u(t-v)$. Infimizing gives the asserted domination, including any atoms of $\\eta$. The two scalar laws have the same mass $a$ and bounded support. On a common support interval $[L,U]$, Fubini gives $\\int s\\,d\\nu=La+\\int_L^U\\nu([t,\\infty))\\,dt$, yielding the first-moment comparison. Affinity of the midpoint gives the claimed $g_\\eta$.\n\nThe law of $V_u$ adds the projection of volume on $B$ to $\\kappa_u$. Its mass is $b+a$, and its first moment is at least $b\\,u\\cdot g_B+a\\,u\\cdot g_\\eta$. Convexity and support give $g_\\eta\\in(A+C)/2\\subseteq B$ and therefore $y\\in B$. The actual mass of $H$ includes $B_u(t_0)$ and its two endpoint cap costs at the tilt $v$, so $V_u(t_0)\\le\\mu(H)$. Since $h(u)\\ge u\\cdot y\\ge t_0$ and $V_u$ is nonincreasing, the two asserted inequalities follow.\n",
+  "source_candidate_ids": [
+    "a26d4b26fb2a803f"
+  ],
+  "source_candidate_sha256": {
+    "a26d4b26fb2a803f": "b0c82ddaa4ec1f988b3cde3c7cf9ce8db73f1df1a995ec708a55032576a7f966"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a26d4b26fb2a803f",
+      "locator": "a26d4b26fb2a803f:01 §§1–2, (1)–(5); a26d4b26fb2a803f:02 §3, (6)–(9)"
+    }
+  ],
+  "statement": "Let $A,C\\subset\\mathbb R^d$ be convex bodies with $0<a=|A|\\le |C|$ and let $u\\ne0$. For a body $E$ put $E_u(t)=|E\\cap\\{u\\cdot x\\ge t\\}|$. Then\n$$\nK_u(t)=\\inf_{v\\in\\mathbb R}[A_u(t+v)+C_u(t-v)]\n$$\nis the Lipschitz continuous closed survival function of an atomless finite measure $\\kappa_u$ of mass $a$, carried by the interval between the averages of the two projection minima and maxima. For any measure $0\\le\\sigma\\le\\mathbf1_C\\,dx$ of mass $a$ and any coupling of $\\mathbf1_A\\,dx$ and $\\sigma$, let $\\eta$ be its midpoint pushforward and $g_\\eta$ its centroid. Then $\\eta\\{u\\cdot x\\ge t\\}\\le K_u(t)$ at every real threshold, and $\\int s\\,d\\kappa_u(s)\\ge a\\,u\\cdot g_\\eta$, where $g_\\eta=(g_A+g_\\sigma)/2$.\n\nIf a middle body $B$ of volume $b>0$ contains $(A+C)/2$, place the bodies at integer levels $-1,0,1$ and use their actual mixed measure $\\mu$. Write $V_u=B_u+K_u$, let $h(u)$ be the mean of its scalar law of mass $b+a$, and put $y=(b g_B+a g_\\eta)/(b+a)$. Then $y\\in B$, $h(u)\\ge u\\cdot y$, and for every closed cap $H=\\{u\\cdot x+v z\\ge t_0\\}$ containing $(0,y)$,\n$$\nV_u(h(u))\\le V_u(u\\cdot y)\\le \\mu(H).\n$$\nAll assertions scale by a common positive volume normalization on the fibers.",
+  "subgoal_id": "pk-intake-midpoint-optimized-survival-and-directional-mean-transfer",
+  "title": "An optimized endpoint survival dominates every admissible midpoint projection"
+}

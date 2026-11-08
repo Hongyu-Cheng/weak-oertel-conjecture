@@ -1,0 +1,44 @@
+{
+  "advances": "Whole-fiber upper covers and their exact first-order loss at positive width.",
+  "author": "PK-research-agent",
+  "candidate_id": "d12441923715ac68",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.944861+00:00",
+  "depends_on": [
+    "580ce39d736a2d9e",
+    "88f06d5537aba0ae",
+    "32418f8d50e792af",
+    "a56f8711406a3870",
+    "5efc62439ac46cfb"
+  ],
+  "draft_key": "outward-smoothed-balanced-finite-quantile-cover",
+  "kind": "theorem",
+  "proof": "At a deepest own-interior mark, the gradient of through-mark mass in the continuous mark is $-S_j(u_j-\\varepsilon\\nabla_x f)$ after normalizing $\\Gamma(u_j)=1$. This follows by differentiating the threshold with $K$ fixed. The profile is differentiable there by a56f8711406a3870 and the definition of $f$. The pure-base gap and the clipping theorem give a fixed compact minimization domain near the mark. If the convex hull of the active gradients omitted zero, there would be a mark direction whose derivative is uniformly positive on the compact active set. It would remain uniformly positive on a neighborhood of that set and the compact complement has a strict value gap. The uniformly differentiable cap family then gives a strict increase of own depth for a small feasible mark motion, a contradiction. Carathéodory first balances $S_j(u_j-\\varepsilon\\nabla f)$ with probability weights, and multiplying each weight by $S_j$ and normalizing gives the stated $\\rho_{ij}$. The argument works for every finite balanced selection with these weights.\n\nFor positive buffer the old bracket is the own supporting tangent defect of the strictly concave tied profile of 32418f8d50e792af, multiplied by $\\varepsilon$. It vanishes only at the mark, including on the boundary by joining a hypothetical zero to the interior mark. The uniform energy and covariance shell calculation in the proof of 5efc62439ac46cfb applies to the present signed radial path on a compact own-interior neighborhood, so the bracket has a uniform first expansion there. The old source remains feasible, and global profile continuity implies that all minimizing points of the new bracket approach the unique old contact. Bounding the minimum between testing at the old contact and using old-bracket nonnegativity at the moving minimizers proves its first expansion. In the unbuffered frozen-normal case, $\\sum_j\\rho_{ij}u_j=0$ and $c_{ij}=N_{ij}\\cdot Y_i$, so the bracket is zero identically. An arbitrary signed normal motion in this zero-buffer case would instead minimize a first-order affine function on the whole old fiber.\n\nBy dominated differentiation the moving-threshold derivative is continuous in all plane parameters and under positive-fiber Hausdorff convergence. Thus near each old threshold it stays bounded away from zero in absolute value. Each local inverse is well-defined for nearby masses. Uniform monotonicity and continuity give the unique common scalar solution, and its threshold displacements are $O(t)$ since the old masses have $O(t)$ response and $\\alpha_i(t)=O(t)$. Its first expansion follows by the uniform first-order cap expansions in an $O(t)$ threshold window. For a point in the current source fiber the weighted through-mark thresholds sum to at least the right side of the scalar equation. At least one through-mark threshold is therefore at least its equalized inverse, giving the asserted mass upper bound. The other-base gaps persist by the uniform continuity in the clipping theorem.\n\nFor the cap derivative, the signed radial shell formula in 5efc62439ac46cfb applies to the continuous ramp and gives the loss $B_j$. On the old domain differentiation of the ramp gives the loss $S_jr_j-m_j\\cdot\\nu_j+A_j\\dot\\Gamma_j$, including the separate width contribution. The covariance derivative is $(D-J_j)/(2M)$ with normal held fixed by the centered shell calculation of 5efc62439ac46cfb, and ordinary differentiation adds $\\nabla\\Gamma(u_j)\\cdot\\dot u_j$. The uniform first expansion used above follows from bounded equi-Lipschitz shell integrands near each cap and dominated differentiation in plane parameters, since the two kink hyperplanes are fiberwise null. Equalize the losses to $-\\dot q_i$, solve the linear equations for $r_j$, and sum with weights $\\rho_{ij}$ using $\\sum_j\\rho_{ij}r_j=\\alpha_i'(0)$. This gives the claimed loss. At fixed normal and buffer parameter the old contact calculation for $\\alpha_i'(0)$ equals the weighted derivative of the through-source thresholds, $-\\sum_j\\rho_{ij}\\varepsilon[\\dot f(Y_i)+f(Y_i)\\dot\\Gamma_j]$, also zero when $\\varepsilon=0$. This proves the stated response average. Differentiating the through-source threshold at a moving mark gives the additional velocity term.\n",
+  "source_candidate_ids": [
+    "0fa64553cd01d7ae",
+    "26e4bc3a75ffef69",
+    "6e754f2bf13bdbd1"
+  ],
+  "source_candidate_sha256": {
+    "0fa64553cd01d7ae": "758c712bd97c251e4f83c5137fdcbe304fbf26779e48cd63213ba37a1c7d84a9",
+    "26e4bc3a75ffef69": "b50552baf45dca12cd583bd788a2f3e4acece1c95c5bf5c539a9c78a7310fe2a",
+    "6e754f2bf13bdbd1": "f5115f555eee74019b9bb9d2da9b9ddba3ba09c3eb3ff307aa6e67871271a55e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0fa64553cd01d7ae",
+      "locator": "0fa64553cd01d7ae:03 §4, (10) and weighted quantile continuation; §5, (11)–(13)"
+    },
+    {
+      "candidate_id": "6e754f2bf13bdbd1",
+      "locator": "6e754f2bf13bdbd1:04 §3, (5)–(6), finite frozen-normal cover"
+    },
+    {
+      "candidate_id": "26e4bc3a75ffef69",
+      "locator": "26e4bc3a75ffef69:02 §2 (2), through-source raw cap loss"
+    }
+  ],
+  "statement": "Use the uniform outward positive-width problem of the clipping theorem with tied buffer $\\varepsilon f$ for $\\varepsilon\\ge0$. Assume the compact response-preserving clipping, proper coarea and pure-base reserve hold at all deepest marks, which are singleton on their bases. For each deepest mark $Y_i=(p_i,y_i)$ of raw depth $Q$, there is an actual finite menu of $\\Gamma$-unit active caps $(N_{ij},c_{ij})$ with positive weights $\\rho_{ij}$ summing to one, at most $d+1$ caps, and $\\sum_j\\rho_{ij}u_{ij}=\\varepsilon\\nabla_x f(Y_i)$.\n\nTake an actual compatible signed radial path with the uniform $O(t)$ radial bound and bounded almost-everywhere inward speed $v_z$. For $\\varepsilon>0$ allow finite cap-normal velocities $\\nu_j=(\\dot a_j,\\dot u_j)$ and a signed log-scale velocity $s$, with $\\varepsilon(t)=\\varepsilon e^{st}$. For $\\varepsilon=0$ keep the cap normals fixed and $\\varepsilon(t)=0$. In both cases keep $h>0$ fixed. Put\n$$\n\\alpha_i(t)=\\min_{x\\in K_{p_i}(t)}\\left[\n\\sum_j\\rho_{ij}\\{N_{ij}(t)\\cdot(p_i,x)-c_{ij}\\}\n-\\varepsilon(t) f_t(p_i,x)\\sum_j\\rho_{ij}\\Gamma_t(u_{ij}(t))\\right].\n$$\nThen $\\alpha_i(0)=0$. For positive buffer its first derivative is obtained by evaluating the derivative of the bracket at the old singleton mark, and for zero buffer and frozen normals $\\alpha_i(t)=0$. Let $c_{ij}(t,q)$ be the exact nearby threshold with raw mass $q$. The equation $\\sum_j\\rho_{ij}c_{ij}(t,q_i(t))=\\sum_j\\rho_{ij}c_{ij}+\\alpha_i(t)$ has a unique nearby solution and every point of the entire deformed source fiber has some selected cap of mass at most $q_i(t)$. The finite optimized-depth gaps at other bases persist.\n\nAt an old selected cap with $\\Gamma(u_j)=1$, $q_j=(N_j\\cdot w-c_j)/h$, write $S_j=\\int\\psi(q_j)d\\mu/h$, $m_j=\\int w\\psi(q_j)d\\mu/h$, $A_j=\\int q_j\\psi(q_j)d\\mu$, $D=\\sum_z\\int_{\\partial K_z}v_z$, $J_j=\\sum_z\\int_{\\partial K_z}[u_j\\cdot(X-g_z)]^2v_z$, $B_j=\\sum_z\\int_{\\partial K_z}\\Psi(q_j)v_z$, where $g_z$ is the old centroid of $K_z$. For threshold velocity $r_j$ the loss is\n$$\nL_j=B_j+S_jr_j-m_j\\cdot\\nu_j+\n A_j\\big[(D-J_j)/(2M)+\\nabla\\Gamma(u_j)\\cdot\\dot u_j\\big].\n$$\nIn particular, putting $m_j^{\\rm eff}=m_j-A_j(0,\\nabla\\Gamma(u_j))$, the group loss is\n$$\n-\\dot q_i=\n\\frac{\\alpha_i'(0)+\\sum_j(\\rho_{ij}/S_j)\\{B_j+A_j(D-J_j)/(2M)-m_j^{\\rm eff}\\cdot\\nu_j\\}}\n     {\\sum_j\\rho_{ij}/S_j}.\n$$\nWith fixed normals and fixed $\\varepsilon$, it is the average of the through-source losses $B_j-\\varepsilon S_j\\dot f(Y_i)+(A_j-\\varepsilon f(Y_i)S_j)(D-J_j)/(2M)$ with response probabilities $\\nu_{ij}=(\\rho_{ij}/S_j)/\\sum_k\\rho_{ik}/S_k$. A continuous mark velocity $z$ adds $S_j(u_j-\\varepsilon\\nabla_x f(Y_i))\\cdot z$ to a through-source cap's loss.",
+  "subgoal_id": "pk-intake-outward-smoothed-balanced-finite-quantile-cover",
+  "title": "Exact finite quantile covers for outward-smoothed singleton sources"
+}

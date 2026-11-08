@@ -1,0 +1,30 @@
+{
+  "advances": "An exact calculation for feasible linearized equations and a quadratic objective. It does not realize the velocities by compatible bodies or prove second differentiability in a singular normal chart.",
+  "author": "PK-research-agent",
+  "candidate_id": "8c3661bf73c37d6f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:55:29.873994+00:00",
+  "depends_on": [],
+  "draft_key": "physical-normal-quadratic-reduction",
+  "kind": "lemma",
+  "proof": "Decompose $w$ and $b$ orthogonally into $\\operatorname{ran}K$ and $\\ker K$. If the kernel component of $b$ is nonzero, send the kernel component of $w$ along its negative ray; the objective tends to $-\\infty$. Otherwise complete the square on $\\operatorname{ran}K$, where $K$ is positive definite, to obtain the stated value and affine family of minimizers.\n\nFor the distinction from an optimized value, take $\\Phi(h,\\theta)=\\theta^4+h\\theta^2$. At $(0,0)$ all three Hessian blocks vanish, and $\\theta=0$ is an isolated normal minimum at $h=0$. Minimization over $\\theta$ is equivalent to minimization of $s^2+hs$ over $s=\\theta^2\\ge0$. The value is zero for $h\\ge0$ and $-h^2/4$ for $h<0$, with minimizing $\\theta$ of size $\\sqrt{-h/2}$ in the latter case. The optimized value has no second derivative at zero.\n\nFor $K\\succ0$, substitute $p=K^{1/2}(w+K^{-1}b)$. The objective is the unconstrained minimum plus $\\lVert p\\rVert^2$, and the constraint is $Mp=e$ with $M=RK^{-1/2}$. Feasibility gives $e\\in\\operatorname{ran}M=\\operatorname{ran}(MM^{\\mathsf T})$. The minimum-norm solution is $p_0=M^{\\mathsf T}(MM^{\\mathsf T})^\\dagger e$: it solves the equation and is perpendicular to $\\ker M$, so adding any nonzero kernel vector increases its squared norm. Its squared norm is $e^{\\mathsf T}(MM^{\\mathsf T})^\\dagger e$, as claimed.\n",
+  "source_candidate_ids": [
+    "0e4cb84a76d46e82"
+  ],
+  "source_candidate_sha256": {
+    "0e4cb84a76d46e82": "d3bd8aa219fa9b26700338874115e231dbca3aed1eb94bb31c75da34a25712b2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0e4cb84a76d46e82",
+      "locator": "0e4cb84a76d46e82:02 §2, (3)–(4), including the quartic qualification"
+    },
+    {
+      "candidate_id": "0e4cb84a76d46e82",
+      "locator": "0e4cb84a76d46e82:03 §2, (5), linearized equality cost"
+    }
+  ],
+  "statement": "For a symmetric matrix $K\\succeq0$, set $b=B^{\\mathsf T}v$ and $q(w)=v^{\\mathsf T}Av+2b^{\\mathsf T}w+w^{\\mathsf T}Kw$. The infimum of $q$ is finite exactly when $b\\in\\operatorname{ran}K$. Then it equals $v^{\\mathsf T}Av-b^{\\mathsf T}K^\\dagger b$ with minimizers $-K^\\dagger b+\\ker K$, where $\\dagger$ denotes the Moore–Penrose inverse. This need not give the Hessian of a truly optimized cap or of a general optimized smooth function.\n\nIf $K\\succ0$ and $Rw=d(v)$ is feasible, the minimum of the same quadratic under that constraint is\n$$\nv^{\\mathsf T}Av-b^{\\mathsf T}K^{-1}b+e^{\\mathsf T}(RK^{-1}R^{\\mathsf T})^\\dagger e,\n\\qquad e=d(v)+RK^{-1}b.\n$$\nThe constraint rows may be redundant.",
+  "subgoal_id": "pk-intake-physical-normal-quadratic-reduction",
+  "title": "Quadratic normal reduction with singular Hessians and linear incidence constraints"
+}

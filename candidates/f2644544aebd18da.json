@@ -1,0 +1,26 @@
+{
+  "advances": "Realizes curvature at one individual centered section of an ordinary convex polytope, at an arbitrary fraction.",
+  "author": "PK-research-agent",
+  "candidate_id": "f2644544aebd18da",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:57:00.612537+00:00",
+  "depends_on": [],
+  "draft_key": "stationary-cap-hessian-realization",
+  "kind": "theorem",
+  "proof": "First take arbitrary $c_1,\\ldots,c_k$ and positive heights $\\ell_-,\\ell_+$ so that all widths $1+c_it$ stay positive on $[-\\ell_-,\\ell_+]$. The linear inequalities $-\\ell_-\\le t\\le\\ell_+$ and $|z_i|\\le1+c_it$ define a compact convex polytope with $0$ interior. Every horizontal section is centered. Write $J(t)=\\prod_i(1+c_it)$, $C=\\sum_i c_i$, and $V=|K|$. The volume is $2^k\\int_{-\\ell_-}^{\\ell_+}J(t)\\,dt$ and the horizontal cap fraction is the ratio of the integral over $[0,\\ell_+]$ to the integral over $[-\\ell_-,\\ell_+]$.\n\nSet $z_i=(1+c_it)v_i$ with $v\\in[-1,1]^k$. The cut $t+h\\cdot z\\ge0$ is $t(1+\\sum_i h_i c_i v_i)\\ge-\\sum_i h_i v_i$. For small $h$ the denominator is positive and the resulting threshold stays strictly within the height interval uniformly in $v$. Write $L=\\sum_i h_i v_i$ and $B=\\sum_i h_i c_i v_i$. The threshold is $\\tau=-L/(1+B)=-L+LB+O(\\lVert h\\rVert^3)$. The exact cap mass is the integral over the cube of $\\int_\\tau^{\\ell_+}J(t)\\,dt$. Because $J$ is polynomial and the power series for $(1+B)^{-1}$ converges uniformly in the cube for $h$ near zero, this cap mass is analytic there. Its difference from the horizontal cap mass is the integral of $L-LB-(C/2)L^2$ up to $O(\\lVert h\\rVert^3)$. The linear and mixed moments vanish by symmetry, and the integral of $v_i^2$ over the cube is $2^k/3$. The critical point therefore has spherical Hessian\n$$\n-\\frac{2^k}{3V}\\operatorname{diag}(C+2c_1,\\ldots,C+2c_k)\n$$\nin the same tangent coordinates, using the chart $h\\mapsto(h,1)/\\sqrt{1+\\lVert h\\rVert^2}$.\n\nFor the eigenvalues $a_i$ of $A$, choose $c_i=-a_i/2+\\operatorname{tr}(A)/(2(k+2))$. Then $C=-\\operatorname{tr}(A)/(k+2)$ and $C+2c_i=-a_i$. Rotate the horizontal coordinates by an orthogonal eigenbasis to obtain the claimed matrix. Choose $L_0>0$ small enough that the widths stay positive on $[-L_0,L_0]$. Take $\\ell_->0$ sufficiently small that $\\alpha/(1-\\alpha)$ times $\\int_{-\\ell_-}^0J(t)\\,dt$ is less than $\\int_0^{L_0}J(t)\\,dt$. The function $\\ell\\mapsto\\int_0^\\ell J(t)\\,dt$ increases continuously and strictly. There is a unique $\\ell_+\\in(0,L_0)$ with its value equal to that scaled lower integral, yielding the exact fraction $\\alpha$. As $\\ell_-\\downarrow0$, the lower integral, $\\ell_+$, and $V$ all tend to zero. This gives the unbounded factor.\n\nFor example, in $k=2$ take $\\ell_-=1/4$ and $\\ell_+=1/100$. All widths below stay positive. The integrals of $J$ have antiderivative $t+(c_1+c_2)t^2/2+c_1c_2t^3/3$. The resulting data are\n$$\n\\begin{array}{c|ccc}\n(c_1,c_2)&V&p(0,1)&3V\\operatorname{Hess}_{\\mathbb S^2}p(0,1)\\\\ \\hline\n(1,1)&304213/375000&30301/608426&-16I_2\\\\\n(-1,-1)&491413/375000&29701/982826&16I_2\\\\\n(1,-1)&382187/375000&29999/764374&\\operatorname{diag}(-8,8)\n\\end{array}\n$$\nEach fraction is below $1/10<27/64$. The three stationary directions are a strict angular maximum, a strict angular minimum, and a saddle, respectively.\n",
+  "source_candidate_ids": [
+    "4e8f9d0191e9e822"
+  ],
+  "source_candidate_sha256": {
+    "4e8f9d0191e9e822": "637232cdb52b9c4b90555d623cf8a4924f93c22334c7fb3e48c8680b8a887ad5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4e8f9d0191e9e822",
+      "locator": "§§2–4, (4)–(6) and rational examples"
+    }
+  ],
+  "statement": "For every $k\\ge1$, $\\alpha\\in(0,1)$, and symmetric real $k\\times k$ matrix $A$, there are convex polytopes $K\\subset\\mathbb R^k\\times\\mathbb R$ with $0\\in\\operatorname{int}K$ and section $t=0$ centered at $0$, whose angular cap fraction $p$ is analytic near $(0,1)$ and satisfies $p(0,1)=\\alpha$ and $\\operatorname{Hess}_{\\mathbb S^k}p(0,1)=2^k A/(3|K|)$ in horizontal tangent coordinates. The factor $2^k/(3|K|)$ can be arbitrarily large while $\\alpha,A$ are fixed. In particular every Hessian signature occurs at each prescribed fraction.",
+  "subgoal_id": "pk-intake-stationary-cap-hessian-realization",
+  "title": "Any stationary cap Hessian signature at a prescribed fraction"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "Unrestricted polytopal local minimality; transverse selected cuts and a separate separator for each fixed complete selection. This does not assert a per-group bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "9f32f149f0943fe9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.928835+00:00",
+  "depends_on": [
+    "7a5ea4f8a4c5094c",
+    "755cb08c379113cc"
+  ],
+  "draft_key": "w33-fixed-critical-cover-concave-roof-dual",
+  "kind": "theorem",
+  "proof": "For each original row $L_f\\le0$, choose a finite concave roof $r_f=\\min_l\\ell_{fl}$ with affine pieces. Replace that row by all $L_f\\le t\\ell_{fl}$, $t\\ge0$. Apply 7a5ea4f8a4c5094c to the list with one duplicate per piece before deformation. At a positive-area facet the original unique owner now has exactly its own copies as owners, and the minimum of their velocities is $r_f$. In the proof of that fact the noncoincident fixed-cap term is exactly the inside integral of this minimum; if its threshold moves there is additionally the proper-section term. Thus\n$\nM'=\\sum_f\\int r_f\\,d\\mu_f,\\qquad g_{ij}:=\\left.\\frac{d}{dt}\\mu_t(H_{ij})\\right|_{0+}=\\sum_f\\int r_f\\mathbf1_{H_{ij}}\\,d\\mu_f .\n$\nThe coefficient perturbation produces positive bounded fibers over the fixed base. Taking the convex hull of their lifts gives those same fibers, since the shared ambient inequalities contain the hull and prevent larger sections at those bases. The tuples of roofs form a convex cone, including each independent signed affine choice.\n\nPut $L_i=\\sum_j\\kappa_{ij}g_{ij}$. Increase the $ij$-th threshold at speed $(g_{ij}-L_i)/S_{ij}$. The jointly varied cap has mass $Q+tL_i+o(t)$, since its moving-section contribution is minus the threshold velocity times $S_{ij}$. The $\\rho$-weighted sum of these threshold changes is zero, so the weighted summed margin on each originally covered base plane is unchanged. Each such plane remains covered. At all other bases the fixed strict-gap covers of 755cb08c379113cc keep their plane coverage and stay below $Q$ by volume continuity. Therefore if all $A_i(r):=L_i-\\beta M'$ were negative, the new normalized depth would be strictly smaller than $\\beta$ on all measured fibers for small $t>0$, contrary to local minimality. This uses actual retargeted thresholds, not a claim about the derivatives of all individually optimized caps.\n\nThe convex cone $A(r)$ is disjoint from the open negative orthant. Separating gives a nonzero nonnegative functional $\\pi$, normalized by $\\sum_i\\pi_i=1$, with $\\sum_i\\pi_iA_i(r)\\ge0$ for all roofs. Closedness of the image is unnecessary for separation from that open set. Vary one roof at a time. Both signs of each affine roof give equality of mass and first moment, and the roof $r_f=-\\phi$ gives the convex-order inequality for convex polyhedral $\\phi$. A continuous convex function on the compact convex hull of the marked facets is uniformly approximable from below by finite maxima of affine minorants: strictly separate each point below the closed epigraph in the relative affine space and use a finite cover by neighborhoods where the selected minorants are within the desired error. Passing to the finite integrals proves convex order for all continuous convex tests.\n",
+  "source_candidate_ids": [
+    "ffc34ddb869ec7d5"
+  ],
+  "source_candidate_sha256": {
+    "ffc34ddb869ec7d5": "f992fd1e4f1508b05ed224da09ef431347901ba2e55173050dc287cdfa2f6c27"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ffc34ddb869ec7d5",
+      "locator": "ffc34ddb869ec7d5:02 §2, (3)–(6)"
+    }
+  ],
+  "statement": "Suppose actual positive polytopal fibers over a fixed finite complete sampled base are given by a finite shared list of nonvertical affine inequalities with unit continuous normals and unique owners of positive-area facets. Let $\\mu_f$ be the sum of area on the facets owned by row $f$, retaining both physical coordinates. Suppose the normalized maximum closed-halfspace depth $\\beta>0$ has an unrestricted polytopal local minimum. Fix any finite selection of whole through-mark critical circuits covering every deepest base, with unit continuous normals $u_{ij}$, positive balancing weights $\\rho_{ij}$, and critical mass $Q=\\beta M$ where $M$ is total mixed volume. Assume the selected cuts have no cap boundary coincident with a positive-area body facet, and that each selected cap has a positive total section area $S_{ij}$. Write $\\kappa_{ij}=(\\rho_{ij}/S_{ij})/\\sum_l(\\rho_{il}/S_{il})$ and $\\nu_{i,f}=\\sum_j\\kappa_{ij}\\mathbf1_{H_{ij}}\\mu_f$. There is one probability vector $\\pi$, possibly depending on the selection, such that $\\beta^{-1}\\sum_i\\pi_i\\nu_{i,f}$ is dominated by $\\mu_f$ in convex order on the full physical facet for every $f$, with equality of mass and first moment.",
+  "subgoal_id": "pk-intake-w33-fixed-critical-cover-concave-roof-dual",
+  "title": "Concave shared-facet roofs force convex order for each fixed critical cover"
+}

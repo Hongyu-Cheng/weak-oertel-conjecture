@@ -1,0 +1,66 @@
+{
+  "candidate_id": "643b08457d03e63b",
+  "candidate_sha256": "8f804d289dc7d801da532c05c681ec72e36c6be92021a4f4464587136e1dcd72",
+  "checked_dependency_candidate_sha256": {
+    "10916437d7f6301d": "ec83bbe10f1a0289573890e163a5cf7740f06b08448a4bddf113a701a251bfa8",
+    "d2ba4e3cbd6eb730": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0"
+  },
+  "checks": [
+    "Checked 6a014eb26413a72b §3, (3) against its frozen source hash. The original first variation and transfers are retained, and accepted parents supply the required differentiability and true minimizing thresholds including repeated proper knots.",
+    "The nonunit capacity vector satisfies the exact hypothesis of the full-cut exclusion in the same dimension, feasible domain and positive weights. Every strictly positive row therefore has a proper minimum. The pairwise clause assumes proper minima directly and does not require a unit-vector comparison.",
+    "A proper threshold lies strictly between vertex heights, so interior points on both sides exist and yield an interior section point on their segment. A relatively open patch inside the simplex gives strictly positive centroid coordinates. The coarea weight for this affine section is constant, so its normalized measure is the normalized section volume used by the gradient fact.",
+    "For distinct strictly positive rows and any column, adding s to one and subtracting s from the other is feasible for both signs for small |s|. The derivative is c_i∂_jφ_d(X_i)−c_k∂_jφ_d(X_k) and vanishes. With a single proper row, its positive weighted gradient supplies λ directly.",
+    "Integrating the affine identities Σ_j u_j=1 and X_i·u=t_i gives Σ_j(b_i)_j=1 and X_i·b_i=t_i. Summing the components of the common gradient gives S=c_i F_i^(−1/d), and evaluating capacity at the true minimum gives c_iφ_d(X_i)=St_i."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "application": "The matrix dimension, column sums, positive weights, local maximality and nonunit capacity vector match. Its last conclusion supplies properness and uniqueness for every strictly positive row.",
+      "candidate_id": "10916437d7f6301d",
+      "candidate_sha256": "ec83bbe10f1a0289573890e163a5cf7740f06b08448a4bddf113a701a251bfa8",
+      "fact_sha256": "2ee81d21df53fd02e0dc3aec3900d70ceab270d547fe83c52a37aba7dc1feb25",
+      "reviewed_proof_sha256": "506e222335dcc7049a17ce4c3562966da838201536403e83135fdfe080e6eefc",
+      "reviewed_statement_sha256": "e17b570fbbea86cbd22d853fb3dfd259689e49351143bd1ac2a1ff442ba1d49c",
+      "status": "accepted at reviewed snapshot"
+    },
+    {
+      "application": "Every strictly positive row used in a transfer has a proper minimizing threshold and is nonconstant, so the local C¹ gradient equals F_i^(−1/d) times the actual section centroid. This parent also applies directly under the pairwise hypothesis.",
+      "candidate_id": "d2ba4e3cbd6eb730",
+      "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+      "fact_sha256": "1ea56df969a8d887e9e78ed86174eee2934f79a095ee0f54bf7fb9255fd58f61",
+      "reviewed_proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+      "reviewed_statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc",
+      "status": "accepted at reviewed snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:22:13Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The same local stochastic problem with a nonunit capacity vector already gives the unique proper threshold and differentiability for each strictly positive row. It does not compare the weighted gradients or centroids across proper rows.",
+      "fact_id": "10916437d7f6301d"
+    },
+    {
+      "comparison": "An individual strictly positive row at a proper minimum already has the stated capacity gradient and a unique threshold. The fact does not impose cross-row stochastic transfer or multiplier conditions.",
+      "fact_id": "d2ba4e3cbd6eb730"
+    },
+    {
+      "comparison": "The proper-section coarea derivative and actual centroid are already available for a single cut. Neither a capacity-minimizing threshold nor equality of weighted gradients across stochastic rows is part of that fact.",
+      "fact_id": "aef64d0fab6e1fa1"
+    }
+  ],
+  "readability": "The opening properness conclusion uses the nonunit hypothesis. The comparison of a pair only uses positivity, proper minima and local maximality.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ccff615025a8ca050d6291b09450ece71009148a399b85c8f9be2bf2221eaf75",
+  "reviewed_statement_sha256": "452306aac0ef1af44a8de524b38c5fcce04bfde7ba377e99fdc973257bb5322d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:19:09Z",
+  "summary": "At a local maximum, two-sided transfers between proper positive rows equate their weighted capacity gradients and therefore their actual minimizing-section centroids.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

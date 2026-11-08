@@ -1,0 +1,48 @@
+{
+  "candidate_id": "a1792f9e61611562",
+  "candidate_sha256": "e48f10537f488374bc9d759e788e5e3a66ebf05698947830ff294d2a4e475d10",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Matched 0145a0829278406d §§3–4, equations (5)–(8). This frozen candidate abstracts the cost calculation and explicitly assumes its independent kernel vectors, semidefinite funding forms and favorable direction.",
+    "The two given kernel vectors span U. If an additional kernel vector lies outside U, the two kernels sum to E and the fixed v admits a decomposition of zero cost.",
+    "If both kernels lie in U, ℓ annihilates both kernels and belongs to each Euclidean matrix range. For y=A⁺ℓ one has Ay=ℓ, A(y,y)=ℓ(y)>0, and Cauchy–Schwarz in the induced positive quotient form gives the stated sharp cost for any fixed ℓ(u).",
+    "Minimizing the two scalar costs gives s=d_Xℓ(v)/(d_X+d_Z) and value ℓ(v)²/D. The chosen equality vectors miss their target sum by an element of U, and independent c_X,c_Z correct it in their separate kernels without changing the cost. This includes both ℓ(v)=0 and an enlarged kernel contained in U.",
+    "The quotient form is well defined because c_Y is a bilinear kernel vector and ℓ(c_Y)=0. For signature (+,−) the subtracted form keeps a strictly negative direction, so positivity is equivalent to negative determinant. Since det Q_Y<0 and D>0, the determinant lemma yields exactly the strict inequality D>ℓᵀQ_Y⁻¹ℓ.",
+    "Checked all scalar cases in the ℓ=(0,1) basis. With a>0 use the first basis vector. With a=0,c≠0 the determinant is −c². With a=c=0 the positive-direction test is b−1/D>0. With a<0 completing the square leaves b−c²/a−1/D and equality gives no positive direction."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T16:47:12Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its scope is the Schur-corrected curvature and feasible active-span criterion for selected actual simplex rows. The frozen lemma takes abstract forms with their kernel and sign hypotheses and minimizes the costs over a fixed decomposition.",
+      "fact_id": "f8cc9b4619513ed5"
+    },
+    {
+      "comparison": "Gives a fixed split direction in an explicit stochastic family with an attained scalar cost of 1/12. It has no general arbitrary-v kernel and pseudoinverse formula.",
+      "fact_id": "2cc402f30700bdef"
+    }
+  ],
+  "readability": "The funding-cost formula is independent of the Euclidean coordinates chosen: ℓ(A⁺ℓ) is ℓ(y) for any solution Ay=ℓ, since ℓ annihilates the kernel. The inverse in the signature test is on the two-dimensional quotient.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, original-source comparison, and accepted-predecessor hypothesis and exact-byte checks.",
+  "reviewed_proof_sha256": "1b279509137619474fbf8d4d511669fd60a22b8d0ca07b49c61931d8f0246c01",
+  "reviewed_statement_sha256": "7ce5792f1df7374c2137761b8db350073f2deb30dbd90fad2cfd3c45bb115783",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_bindings": [
+    {
+      "candidate_id": "0145a0829278406d",
+      "candidate_sha256": "060578a3838a8c4bdd890a113dec4902304cf899cea47484ba933eaebbcba297",
+      "locator": "0145a0829278406d:03 §§3–4, (5)–(8), quotient determinant and degenerate cases"
+    }
+  ],
+  "started_utc": "2026-11-08T16:43:14Z",
+  "summary": "The abstract three-dimensional funding cost is attained in both kernel cases. The quotient criterion retains the strict boundary and all zero-diagonal cases.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

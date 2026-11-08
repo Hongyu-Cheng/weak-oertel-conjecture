@@ -1,0 +1,63 @@
+{
+  "candidate_id": "79deea94519ac768",
+  "candidate_sha256": "4a5371692bfa0ec29a5bfd50a2c461a1a0186e037df2e5081eeb7ab167b149d1",
+  "checked_dependency_candidate_sha256": {
+    "4c54e089191137d9": "b6dc4b99afb7b5adfd7b9346471c9b5d76039621a72dce998d1f5809d5a03c10"
+  },
+  "checks": [
+    "The source c5a29d6b8953c3ed:01 fixes the same support equality, proper cuts and fixed interior apex, and varies the two trim parameters independently.",
+    "The old midpoint face lies where the roof is nonnegative, and the displaced seed face is on its height-one plateau. All other vertices have strict lower limiting normal height. The relative-interior apex has strict slack in the other middle facet inequalities after taking the midpoint, so convexity and hull realization are valid.",
+    "The signed difference strip has thickness O(epsilon) and endpoint exceptions of tangential size O(epsilon) because the adjacent faces are nonparallel. A transverse cap crossing introduces another such interval at O(epsilon) threshold shifts. The signed area errors are O(epsilon squared), including inward trims.",
+    "The inverse row budget from the proper old cuts uses slope 2 sigma_A+sigma_K because B is unchanged. Spanning and the sum-zero condition give one actual common moving mark. The total mass term is retained when dividing by the changing mass.",
+    "On each side of the fixed plateau only the corresponding ramp is active, so the two integrals separate. Quotient differentiation gives the stated constant-sign numerators with positive squared denominators, including point plateaus and collapsed trim intervals.",
+    "For a tied unchanged B and a strict A gap, the relevant normalized upper coefficient includes the maximum of the middle numerator and minus r times total mass derivative. Minimizing middle cost alone leaves that additional sign test."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "4c54e089191137d9",
+      "candidate_sha256": "b6dc4b99afb7b5adfd7b9346471c9b5d76039621a72dce998d1f5809d5a03c10",
+      "fact_sha256": "bf3caf4325c93be7d531f14c6cd06e341ee6014097eea3523d2e6dc91c88b21b",
+      "hypotheses": "Identical three caps, proper A and K coareas, fixed B support levels, balanced continuous normals, and current fixed inball at y_0. Its proof explicitly establishes the inverse continuation for signed paths with O(epsilon) symmetric differences and uniform shifted cap expansions, checked for this roof family.",
+      "reviewed_proof_sha256": "2087787abf9c0b41c42dbc6ee893b45130c6300b83fcb359896d0bf011ed77bc",
+      "reviewed_statement_sha256": "aab8c6afbdb7914b679df8b124ba024ad483268dda1610839ecf0538b8055fbc"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:08:21Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Contains the full-face roof and equal-budget continuation mechanism, not the two independently moving trim boundaries or rectangle minimization.",
+      "fact_id": "4c54e089191137d9"
+    },
+    {
+      "comparison": "Provides the fully trimmed corner with its mass and endpoint tests. It does not realize all choices in the rectangle and minimize the signed middle integral over them.",
+      "fact_id": "4dca09e80fd4a739"
+    },
+    {
+      "comparison": "Gives the same signed profile as a linear functional via its Green potential for piecewise constant loads, conditional on actual variation. It supplies neither compatible realization over the rectangle nor its arbitrary-integrable-load extremum statement.",
+      "fact_id": "261ee2b3de0b984a"
+    }
+  ],
+  "readability": "The minimization concerns the fixed-apex middle cost. It should not be read as a joint extremum for the numerator and tied-endpoint mass condition.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6daa24ae4cf192f1603efb932349d87d2fe8a52b3ecbb61558744a72ad6f7384",
+  "reviewed_statement_sha256": "cb393a4bf2b6fa0722b8743b84563b2d63d669d85771b8fb8c2ce98a741ad95c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_bindings": [
+    {
+      "candidate_id": "c5a29d6b8953c3ed",
+      "candidate_sha256": "9650ed3265e3858008ae417de64c0e3b49c5d19bceb238f6e51698c49cc5d212",
+      "locator": "c5a29d6b8953c3ed:01 §§1–2, (1)–(6)"
+    }
+  ],
+  "started_utc": "2026-11-08T22:04:37Z",
+  "summary": "Both signed trimming parameters give actual compatible polygons and the regular middle-cap response. The middle cost has a minimizer among the four corners of the parameter rectangle.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

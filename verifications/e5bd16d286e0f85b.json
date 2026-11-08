@@ -1,0 +1,83 @@
+{
+  "candidate_id": "5dc93d8163d30a56",
+  "candidate_sha256": "b603a924a0c3cd00cfc73c681d7f464acf1289032fd50b5c46a51acb5abf6c12",
+  "checked_dependency_candidate_sha256": {
+    "8812feca6c8a1e97": "e8e6dbf764084cf0ad838ace0e67f87d5b9187ecf81bf999230532cbfc9a0183",
+    "b39ecb342488b802": "b6dc11a1888669a50e8a521f13814cda328d9496ac559fcba48b8a0e8bd1b7f7"
+  },
+  "checks": [
+    "The radius roof min(a+(R−a)z,R) is concave on [0,2] and gives the actual integer fibers aT,RT,RT; all have positive area. The strict tails verify the unique weighted median at base 1.",
+    "The own term in each relaxed sum is the fixed Γr_j²; no other term is negative. The two endpoint tilts exclude every other envelope. At j=1 the thresholds R/6,R/3,R/2 make both outer envelope areas zero, including a possible null support edge at equality. This proves exact infima over all real tilts.",
+    "At the middle witness tilt, any unequal nonnegative normalized normal gives a top vertex above R/2 on the last triangle, so positive area there. The equal normal misses a similar lower corner at the middle threshold and leaves exactly 5/9 of that middle area, larger than the own envelope 4/9.",
+    "After base translation, the nested three-fiber theorem uses A=aT and B=C=K=RT. The midpoint containment, centroid, volumes, and zero excess all match. The raw bound differs from the target by 5a²V/18, as checked algebraically and by exact rational examples.",
+    "Read 303d01b7404003c0 §§1–3 (3)–(7) after the cold read. The frozen claim keeps the scalar relaxed certificate distinct from the actual-depth bound, and its endpoint witness tilts are the general-parameter choices from §2."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "b39ecb342488b802",
+      "candidate_sha256": "b6dc11a1888669a50e8a521f13814cda328d9496ac559fcba48b8a0e8bd1b7f7",
+      "fact_id": "b39ecb342488b802",
+      "fact_sha256": "cae8b10b29785bb61ff7b16ef7e502f891c139c4e765541070ca91ddb8808cd2",
+      "kind": "accepted",
+      "mapping": "Each fiber is a positive scaling of the same standard triangle, and the continuous normals are exactly nonnegative pairs summing to one. The predecessor gives P_r(r/3)=(4/9)r² and zero envelope at thresholds at least r/2, including support contact.",
+      "reviewed_proof_sha256": "0528ab22ed20f3c23ce0d5b5fe5c9447b43712a6b86e8b57c465e32968bfdf18",
+      "reviewed_statement_sha256": "88dfdeab4690a5d677dd89e421f8857f87e97b9c4e2bc78dc893d50eaee62d07"
+    },
+    {
+      "candidate_id": "8812feca6c8a1e97",
+      "candidate_sha256": "e8e6dbf764084cf0ad838ace0e67f87d5b9187ecf81bf999230532cbfc9a0183",
+      "fact_id": "8812feca6c8a1e97",
+      "fact_sha256": "7564ed30f4f5028a4c8764f683fab1b77348b96128bd48c8af25c05bafb128da",
+      "kind": "accepted",
+      "mapping": "Take d=2, A=aT, B=C=K=RT after translating bases 0,1,2 to −1,0,1. Then (A+C)/2⊆B, A⊆K⊆B∩C, g_K=(R/3,R/3) and the excess is zero. Multiplying the predecessor's normalized bound by the original total gives the stated raw bound on all closed caps.",
+      "reviewed_proof_sha256": "c4d00ebd353a766918aeed49e9f58a3520367dd565d8e75075f662771a46d45f",
+      "reviewed_statement_sha256": "991652278c6414468a4c4b9aefa81707e28c4f57a4c1835d4277bd70b3023f89"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:49:27Z",
+  "gaps": [],
+  "graph_base": "d849b7aa17afde345198d2b2e6832ad7e0b7ae41",
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives each individual envelope but does not optimize the sum under one base tilt or supply this complete example.",
+      "fact_id": "b39ecb342488b802"
+    },
+    {
+      "comparison": "Covers the final actual-depth comparison as a direct nested-triple specialization. It does not constrain the weaker relaxed envelope.",
+      "fact_id": "8812feca6c8a1e97"
+    },
+    {
+      "comparison": "Its monotone triangle theorem needs exactly four positive fibers and gives an actual centroid guarantee. The three-site relaxed failure here has different support and conclusion.",
+      "fact_id": "d73af8faaea6933f"
+    }
+  ],
+  "parent_disposition_sha256": "4bce23395cac034b6d216fae57a9f9f131c261f46d82fe97c42403000727d60a",
+  "readability": "The symbol a here is the small triangle radius. The relaxed quantities omit V throughout, while the actual cap comparison restores it.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c702efb700a5eda02e953cfed7bd70363bf7c53c27fd5b012367ad8f0606c3da",
+  "reviewed_statement_sha256": "4815c39556e317dac19cef83e1b3a6f0d3ddc6c9f26c3d0c82ec9da6843ee722",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "303d01b7404003c0": "e0f7387caaf51cc2175107d24b7e99debba5d77a0c17773680638ad208256e08"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "303d01b7404003c0",
+      "locator": "303d01b7404003c0:03 §§1–2 (3)–(6), exact relaxed-envelope failure at every anchor"
+    },
+    {
+      "candidate_id": "303d01b7404003c0",
+      "locator": "303d01b7404003c0:04 §3, incompatible continuous normals at the middle witness tilt"
+    }
+  ],
+  "started_utc": "2026-11-08T16:45:04Z",
+  "summary": "The concave three-triangle family gives an exact all-anchor counterexample for the relaxed envelope. The actual all-halfspace centroid comparison has the stated positive gap.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

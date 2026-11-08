@@ -1,0 +1,47 @@
+{
+  "candidate_id": "ac04bfb96352ad8a",
+  "candidate_sha256": "f2d00312c8183a6c975a6db4fd46b335d03b6c6634a9f975a497dab9b079a724",
+  "checked_dependency_candidate_sha256": {
+    "2021348e0b2d8c9f": "770b39a4ab1f04ab25dd5f9fa9d22621c612ec75832212a30548e7c0cab758d6"
+  },
+  "checks": [
+    "Matched b9b0fda52c8adffe:02 §4 (7)–(9). Translation of A leaves area unchanged and the support sum changes by the translation paired with v₁+v₂+v₃=0. After placing 0 in A, all h_i≥0.",
+    "The map x↦(v₁·x,v₂·x,v₃·x) has image exactly the zero-sum plane. Hence the outer triangle at levels 1+th_i is a translate of (1+tS/3)T. Its area derivative is (2/3)|T|S=3S since |T|=9/2.",
+    "On a shortened facet the two other constraints have Ct slack; the removed pieces have total length O(t) because the facet lines meet transversely at both ends. For each λ in the stated strip, subtracting ta_i satisfies the i-th constraint by λ‖v_i‖≤th_i and the two others by the chosen slack. The added area on facet i is 3th_i−O(t²), with zero-area strip if h_i=0. Each strip violates only its own facet constraint for λ>0, proving disjointness outside T.",
+    "The two estimates give right derivative 3S. The mixed polynomial with coefficient 2V₂(T,A) and quadratic term |A| then gives the exact t=1 area, divided by 4 under midpoint scaling. The positive-area residual R_i is a planar convex body. Its midpoint with T is inside the ≤0 middle cut, which has measure |K|−q_i because the dividing line is null."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "2021348e0b2d8c9f",
+      "fact_sha256": "f23e9d1c8224d8c1986d9f2376893d547fac5a0d535b604ff76c0a164a004974",
+      "hypotheses": "Use its equation (3) for the nonempty compact convex planar sets T and A with coefficients 1,t≥0. The general polygon/Hausdorff proof of the polynomial in that fact has no mixed-circuit prerequisite."
+    }
+  ],
+  "finished_utc": "2026-11-08T17:53:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Equation (3) and its proof give the general mixed-area quadratic in the same normalization, without evaluating 2V₂(T,A) for this T. The explicit support sum and complementary-cap application are additional.",
+      "fact_id": "2021348e0b2d8c9f"
+    },
+    {
+      "comparison": "Uses the Minkowski sum with a single supporting segment, giving a strip formula. It does not evaluate the full-triangle mixed-area term.",
+      "fact_id": "9dd1398102da730a"
+    }
+  ],
+  "readability": "The condition involving v_j·(λn_i) without subtracting ta_i ensures each strip violates just the i-th inequality, and therefore ensures disjointness.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold reading of the frozen statement and proof, followed by source, dependency, and overlap checks",
+  "reviewed_proof_sha256": "16806c9e3de1b53429ea1eace4dc5641f1ef61f1fd5d753f90d7f25a83aaa0e6",
+  "reviewed_statement_sha256": "64b96b46ca1f998b4b138a5440d861887f9067e3db91a5a96c6bca7054b9a8ab",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:46:53Z",
+  "summary": "The planar support-function formula and its residual-cap consequence are correct. The proof computes the mixed coefficient using explicit outer-triangle and disjoint-strip estimates.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

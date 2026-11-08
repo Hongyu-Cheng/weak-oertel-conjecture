@@ -1,0 +1,26 @@
+{
+  "advances": "Full d-dimensional mixed volume. A lower-dimensional fiber may acquire an orientation-dependent Hausdorff Jacobian.",
+  "author": "PK-research-agent",
+  "candidate_id": "d31524ef9dee3ce8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.473093+00:00",
+  "depends_on": [],
+  "draft_key": "ambient-simplex-lattice-count-normal-form",
+  "kind": "lemma",
+  "proof": "The projection of $C$ spans $\\mathbb R^n$, so the selected vertices exist. If two points have equal new coordinates, the differences of the unselected barycentric coordinates vanish. The selected differences have zero sum and zero base moment, so affine independence makes them all zero. This proves invertibility. At fixed $x\\in T_d$ the remaining barycentric weights sum to $1-S$, giving the stated closed base simplex, also when $S=1$.\n\nUse one selected vertex as origin for the independent barycentric coordinates. The derivative into $(z,x)$ has diagonal blocks the $n$ selected base differences and the $d$-dimensional identity. Its absolute determinant is $n!|Q|$ in these coordinates. The derivative into the original coordinates has absolute determinant $(n+d)!|C|$. Their ratio is $J$, also the continuous block determinant of the base-preserving affine map. This gives the image volume $J|C|$. It scales full-dimensional fiber volumes by $J$. It carries each closed ambient halfspace to a closed ambient halfspace, so it scales every mixed cap mass by the same factor. Normalized depth and affine centroids therefore transform as claimed. Summing the indicators of the actual integer fibers of $\\mathcal C$ gives $N(x)$ by finite Fubini. Counting integers in the closed interval gives the $n=1$ formula, and the argument in dimension zero uses the single base of $\\mathbb Z^0$.\n",
+  "source_candidate_ids": [
+    "56a670ccbde263ec"
+  ],
+  "source_candidate_sha256": {
+    "56a670ccbde263ec": "d2859959d217e53e6092a93491b3a5fe32454083a08d3d6e7c661f04217ad2ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "56a670ccbde263ec",
+      "locator": "56a670ccbde263ec:01 §1, (1)–(5), including the n=0 convention"
+    }
+  ],
+  "statement": "Let $C$ be a full-dimensional $(n+d)$-simplex in $\\mathbb R^n\\times\\mathbb R^d$ with $n\\ge0$ and $d\\ge1$. Choose $n+1$ vertices with affinely independent base projections and let $Q$ be their projected $n$-simplex. Let $h_1,\\ldots,h_d$ be the other projected vertices and $x_1,\\ldots,x_d$ their barycentric coordinates. The map to $(z,x)$ fixes the base $z$ and is an affine bijection taking $C$ to\n$$\n\\mathcal C=\\{(z,x):x\\in T_d,\\ z\\in\\textstyle\\sum_jh_jx_j+(1-S)Q\\},\\qquad S=\\sum_jx_j,\\quad T_d=\\{x\\ge0:S\\le1\\}.\n$$\nThe image volume is $n!|Q|/(n+d)!$ and the absolute continuous-coordinate Jacobian is $J=n!|Q|/((n+d)!|C|)$. It multiplies full $d$-volume on each integer fiber and every mixed closed cap mass by $J$. For positive mixed total mass, it transports normalized depth and the mixed centroid. The continuous projection of raw mixed measure in these new coordinates has density\n$$\nN(x)=\\left|\\mathbb Z^n\\cap\\left(\\textstyle\\sum_jh_jx_j+(1-S)Q\\right)\\right|\\qquad(x\\in T_d)\n$$\nand zero outside $T_d$. For $n=1$ choose the extreme projected vertices $a<b$. The interval has endpoints $\\ell(x)=a+\\sum_j(h_j-a)x_j$, $u(x)=b+\\sum_j(h_j-b)x_j$, with width $(b-a)(1-S)$. Its count is $\\max(0,\\lfloor u(x)\\rfloor-\\lceil\\ell(x)\\rceil+1)$. For $n=0$ use $|Q|_0=1$ and $N=1$ on $T_d$.",
+  "subgoal_id": "pk-intake-ambient-simplex-lattice-count-normal-form",
+  "title": "Base-preserving barycentric coordinates for mixed simplex volume"
+}

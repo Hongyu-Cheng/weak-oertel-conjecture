@@ -1,0 +1,31 @@
+{
+  "advances": "A pointwise upper obstacle for strictly positive weights in a fixed actual body.",
+  "author": "PK-research-agent",
+  "candidate_id": "b9840fb2088a1b22",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:30:44.669293+00:00",
+  "depends_on": [
+    "7227bbfcd12ad3d2",
+    "5aeb5916857f97a9",
+    "b3c0088cf09b2894",
+    "e217e1ce3b4500a7"
+  ],
+  "draft_key": "pk-w34-buffered-left-quantile-obstacle",
+  "kind": "theorem",
+  "proof": "If $y$ is on the boundary of its real fiber, choose an outward nonzero supporting covector and rescale it to $\\Gamma$-unit length. By 7227bbfcd12ad3d2 the support-height linear program admits a finite affine majorant touching at $z$. The resulting ambient supporting cap through $w$ has zero volume on every sampled fiber. Its projection tail is continuous and is zero at the supporting threshold, while $Q>0$. Its left $Q$-quantile lies strictly below that threshold, so $r_Q(w)>0$ or $r_Q(w)=\\infty$. Its zero buffered displacement at these marks gives depth zero. At a positive-energy mark the signed-radius law gives the equivalence directly on raising the positive displacement to the power $d+1$, including the case $r_Q\\le0$ where no positive parameter can satisfy the inequality.\n\nBy 5aeb5916857f97a9, the function $F=E^{1/d}$ is jointly concave on own-fiber interiors. Hausdorff continuity of the actual real fibers in 7227bbfcd12ad3d2 and the marked energy continuity of b3c0088cf09b2894 give continuity on $C$, including zero at fiber boundaries. Concavity extends there by approaching each endpoint along its own fiber interior. The closed perspective of $x^{d+1}$ on $x\\ge0$ is $g(x,s)=x^{d+1}/s^d$ for $s>0$, with $g(x,0)=\\infty$ for $x>0$ and $g(0,0)=0$. It is increasing in $x$ and decreasing in $s$. On points with finite $T_Q$, combine convexity of $(r_Q)_+$, concavity of $F$, and perspective convexity to get the desired convexity inequality. If an endpoint has infinite $T_Q$, the same convexity inequality at a nontrivial combination is automatic. For lower semicontinuity use the lower semicontinuity of $(r_Q)_+$, continuity of $F$, and this monotone closed perspective. In particular, at an own-fiber boundary the positive lower limit of $(r_Q)_+$ forces divergence as $F\\to0$, and at an infinite radius its lower limit is infinite while $F$ is bounded. Thus the perspective agrees with the specified extension everywhere.\n\nThe markwise equivalence gives the assertion at all sampled marks. For attainment of their maximum, a finite positive concave $L$ is bounded above on $C$. Indeed fix a relative interior point $o$ and a small fixed $\\lambda>0$ so that $(o-\\lambda w)/(1-\\lambda)\\in C$ for every $w\\in C$. Positivity and concavity give $L(w)\\le L(o)/\\lambda$. On each sampled fiber, $L$ is continuous in its interior. Its boundedness and the zero boundary energy extend $LE$ continuously there. The buffered depth is then an infimum of continuous oblique tail masses and the constant pure-base value on each compact sampled fiber, hence upper semicontinuous and attaining a maximum on the finite union.\n",
+  "source_candidate_ids": [
+    "b12ff19e04f5fad1"
+  ],
+  "source_candidate_sha256": {
+    "b12ff19e04f5fad1": "729dfdc540431371351959f7642e6ef288e7ab0607c8cdae2442c5658b7e6706"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b12ff19e04f5fad1",
+      "locator": "b12ff19e04f5fad1:03 §5, (6)–(8), closed positive-parameter convex sublevel obstacle"
+    }
+  ],
+  "statement": "Use the actual canonical hull, summed mass $M$, fixed norm and signed left-quantile radius $r_Q$ of the fixed-body sublevel law. Fix $\\varepsilon>0$, and write $E(w)=E_{C_z}(y)$ for projective energy at $w=(z,y)\\in C$, with zero value on each own-fiber boundary. Define\n$$\nT_Q(w)=\\frac M{\\varepsilon^{d+1}}\\frac{[r_Q(w)_+]^{d+1}}{E(w)}\n$$\nwhen $E(w)>0$ and $r_Q(w)<\\infty$, and $T_Q(w)=\\infty$ otherwise. This is convex and lower semicontinuous on $C$ and can be extended by infinity outside $C$. At every actual real mark and every positive finite $\\ell$,\n$$\nB\\bigl(w,\\varepsilon[\\ell E(w)/M]^{1/(d+1)}\\bigr)\\le Q\n\\quad\\Longleftrightarrow\\quad \\ell\\le T_Q(w).\n$$\nIn particular, for a finite positive concave weight $L$ on $C$ the maximum of the corresponding buffered depths over the sampled fibers is at most $Q$ exactly when $L(w)\\le T_Q(w)$ at every sampled mark.",
+  "subgoal_id": "pk-intake-pk-w34-buffered-left-quantile-obstacle",
+  "title": "A closed convex obstacle for positive buffered sublevel parameters"
+}

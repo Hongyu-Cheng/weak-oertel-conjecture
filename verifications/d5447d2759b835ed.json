@@ -1,0 +1,55 @@
+{
+  "candidate_id": "489a587fe747a931",
+  "candidate_sha256": "b64a3a46e5b5eacd598ac6697e55a06d35b4e3809610650cdb3fc9a58c0d8a58",
+  "checked_dependency_candidate_sha256": {
+    "828211a20fa24681": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558"
+  },
+  "checks": [
+    "All continuous coefficients remain nonzero, and the centrally symmetric difference body D is full-dimensional because each positive convex fiber is full-dimensional, so h_D(u)>0 and h_D(−u)=h_D(u).",
+    "After sparse extraction, zero-volume traces miss the interior because a nonvertical halfspace containing an interior point captures positive volume. Removing them leaves a finite closed union covering the closure of the interior. A retained proper closed trace misses a relatively open subset of positive volume.",
+    "If a selected trace contains the whole fiber, the scalar projection under u is atomless and has positive mass in every interior subinterval of its range. Two opposite cuts at its median each have half the mass and cover all points. Their summed numerator is absolute deviation at the median, bounded by the deviation at the original threshold below the fiber, and their denominators agree. Their count is at most d+1 also for d=1.",
+    "At each base vertex a finite affine tilt gives strict exclusion of all other compact fibers while retaining its own trace and continuous normal. Local sums compare with the original sum after summing over the fibers, so a cap retained on several bases does not double-count any original hinge contribution.",
+    "A proper trace has positive margin bounded by h_{K_z−K_z}(u)≤h_D(u), hence normalized hinge at most its cap mass. Summing uses either the fiber volume bound or the cap budget. A repeated parity on a complete integer vertex set would give an integer nonvertex midpoint. The entire construction agrees with 25f2a08c9ca43383:01 §1."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558",
+      "fact_id": "828211a20fa24681",
+      "fact_sha256": "7b05183f5850aa4c0caba911f7e82624e596238e84e3c0cde2c135208bd5f6ab",
+      "mapping": "Apply its finite affine minimax lemma to the nonempty finite family of restrictions on each positive compact convex K_z. Closed coverage gives a nonnegative attained value. The sparse dual maximizer has at most d+1 positive weights, and its weighted margin is at least that value everywhere on K_z, so the selected closed caps still cover the fiber.",
+      "reviewed_proof_sha256": "93725456fe067e71e1b890b2febcade19ef334360d13d743a01dd5dbb9ef0a0c",
+      "reviewed_statement_sha256": "be2e0225a338b79b0ce1cbc618a06460b3076262265172b1970e4f053bd2b70b"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:28:01Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies sparse extraction inside one compact convex body. It has no ambient isolation, proper cap replacement, or global normalized hinge comparison.",
+      "fact_id": "828211a20fa24681"
+    },
+    {
+      "comparison": "Uses the same exposed-base tilt for an individual halfspace depth test. It does not compress a cover or preserve its summed hinge and individual cap budgets.",
+      "fact_id": "2acc8bc803acf1c0"
+    },
+    {
+      "comparison": "Its fixed binary interval example has an explicit isolated midpoint cover after increasing the cap count from two to 32. The frozen theorem treats all exposed configurations, any positive continuous dimension, and an arbitrary feasible input budget.",
+      "fact_id": "8556262ab4dbc2a5"
+    }
+  ],
+  "readability": "The summed hinge comparison is local before isolation. Every restriction can be compared to its original contribution on that same fiber, even if its original ambient cap was selected elsewhere too.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a38c27aa59e297893f09a61f39f3b25cf1eafe79e86459e74f8a8b5d2a3ee8c5",
+  "reviewed_statement_sha256": "58dc2b8e4411552dd524e5a54fba69cc2bedccb9f124723352f18a3be9173529",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:22:33Z",
+  "summary": "Sparse extraction, exact median replacement and strict base isolation give the cap count and both hinge bounds without increasing the budget.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

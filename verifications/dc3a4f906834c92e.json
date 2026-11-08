@@ -1,0 +1,101 @@
+{
+  "candidate_id": "95dab3d4efaa95c1",
+  "candidate_sha256": "06d5473eaf9604f5282efd31e139292285ab3cbba06c7d01fe2c8ba62d8ab2f4",
+  "checked_dependency_candidate_sha256": {
+    "c680a307d3f26cec": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0"
+  },
+  "checks": [
+    "Compared the original and revised fields. The statement and proof now encode the closed cap signs, thresholds, inequalities, multipliers and terminal-root formula without dropped markup. Original 8426c7487ce19740:02 §5 (6)–(9) has the same geometry and program.",
+    "The affine half-width gives actual fibers of lengths 1,3/2,2 and midpoint equality. Their masses sum to 9/2 and each is below 9/4. The accepted centered interval formula gives the unique deepest point and normalized depth 7/18.",
+    "In the normalized nonvertical through-center cap, reflection gives the endpoint tail sum 2−[T_1(a)−T_{1/2}(a)]≥1. Equality requires capturing all of the two outside pieces, equivalent to a≤−1, and the opposite continuous orientation follows by reflection. Pure-base caps have strictly larger mass. Strictly containing nonvertical caps gain positive middle length and lose nothing elsewhere. Thus the menu, including the tangent threshold L=1, is exhaustive.",
+    "Exact rational recomputation gives cap arrays (1,3/4,0) for each H and (0,0,1) for each G. The cap pairs cover all three fibers and give obstacles (0,3/4,1). The objective bound 3h_0≥9/4 is attained at (1/2,3/4,1). At every optimum the endpoint sum 3/2 exceeds the obstacle sum 1, so at least one endpoint constraint is slack.",
+    "Stationarity gives endpoint multipliers 1−t and center multiplier 1+2t. Slackness fixes t=1. Only the center can send a balanced row, with equal unit transfers to the two endpoints and one terminal unit at the center. Thus the row is uniform for every optimum and KKT choice. Its critical residual mean is 11/12, exceeding 3/4 by 1/6, while its whole-fiber mean is 3/2 and own capture is one half."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c680a307d3f26cec",
+      "candidate_sha256": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0",
+      "fact_sha256": "4908e98c45bfa104a83c5437a691833104576ea0fd397ed655df40899326d24c",
+      "hypotheses": "Apply to the actual centered interval lengths a=1, b=2, U=3/2, shift zero. Its compatibility inequalities hold with equality. It gives middle maximum 7/4 at zero and endpoint maxima 1/2 and 1.",
+      "reviewed_proof_sha256": "fbd43a05d11b238754907f092d0f8e020febd4bd8e9ffd7e46960a59ae92b7c0",
+      "reviewed_statement_sha256": "b80774a2792eb75e78f6de3ec9e17c99d1724c565943d7ccacdfc5f9c6bdab93"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:33:43Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "95dab3d4efaa95c1",
+    "candidate_sha256": "664805c29fbbd95933e6e39b3faab6f098deb4a200503690785e99576483040a",
+    "checks": [
+      "The decoded statement uses `|z|le1`, `H_pm`, `pm x-Lzge0`, and `min ... ge`; the proof also has `cap`, `infty`, `ale-1` and `lambda` in place of mathematical commands.",
+      "Original 8426c7487ce19740:02 §5 (6)–(9) identifies the intended critical menu and KKT program. An exact rational check of the intended halfspace trace arrays recovers the obstacle vector (0,3/4,1), the critical residual array (0,3/4,2), and the mean 11/12. This arithmetic check cannot repair the frozen text."
+    ],
+    "dependencies": [
+      {
+        "fact_id": "c680a307d3f26cec",
+        "fact_sha256": "4908e98c45bfa104a83c5437a691833104576ea0fd397ed655df40899326d24c",
+        "mapping": "The intended input has exactly the consecutive centered intervals with lengths a=1,b=2,U=3/2 and shift zero. The accepted theorem gives the unique middle maximizer of raw depth 7/4 and endpoint maxima 1/2 and 1."
+      }
+    ],
+    "finished_utc": "2026-11-08T19:30:13Z",
+    "issues": [
+      {
+        "defect": "Mathematical operators, braces and symbols have lost the LaTeX backslashes, so the frozen candidate does not express the mathematical halfspaces, comparisons and KKT equations reliably.",
+        "locator": "Decoded statement and proof, throughout",
+        "repair": "Restore all mathematical markup from the intended draft and freeze the corrected candidate with new statement/proof and raw hashes.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its three-interval formula supplies the unique deepest point and value here, but it does not establish this complete attaining-cap menu or every optimal terminal residual row.",
+        "fact_id": "c680a307d3f26cec"
+      },
+      {
+        "comparison": "Uses q≥2 identical fibers and shows a volume obstruction when the residual-root row comparison is tight. Here dimension one has a strict original residual-root comparison failure.",
+        "fact_id": "9b4d47e78847bde9"
+      },
+      {
+        "comparison": "Has all-critical-cap original-row failure on a larger binary simplex family with d,n≥2. It does not cover this affine interval body and all KKT choices.",
+        "fact_id": "00cfe3743526c693"
+      }
+    ],
+    "readability": "The underlying interval arithmetic can be checked from the original note, but the exported candidate is not an exact readable proof.",
+    "reviewed_proof_sha256": "d33728cb4a46211996fcce51409741b084fc9ffdb3ea21f963531619cd2777c9",
+    "reviewed_statement_sha256": "a28d5952893a49b3bee1c588d905f698b4f5fa62fc681f503e133dd8486a8702",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:24:28Z",
+    "summary": "The frozen interval counterexample loses LaTeX operators throughout both math fields. The required exact review must be tied to repaired bytes.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the deepest-point and depth values at the specified interval parameters. It does not give this full attaining-cap characterization and terminal-row failure.",
+      "fact_id": "c680a307d3f26cec"
+    },
+    {
+      "comparison": "Uses equal higher-dimensional fibers and an obstruction to promoting tight root comparison to volume comparison. Here the unchanged residual-root inequality already fails strictly in dimension one.",
+      "fact_id": "9b4d47e78847bde9"
+    },
+    {
+      "comparison": "Gives all-critical-cap residual failure for a distinct higher-rank binary simplex example. It does not cover the affine interval model or all of its KKT choices.",
+      "fact_id": "00cfe3743526c693"
+    }
+  ],
+  "readability": "The terminal unit at the center and the two unit transfers together use the center's source multiplier three. The scope is this specified fixed cover and objective.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4f9ebf76d3589643439625cad9745a1ad25b3ecc2cc7a2b84a906fc961138cce",
+  "reviewed_statement_sha256": "8cca767817f00b56a1b8541055de212dc22f7ef10a6eb0dcf0f2b690428fc092",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "664805c29fbbd95933e6e39b3faab6f098deb4a200503690785e99576483040a",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:31:21Z",
+  "summary": "The repaired interval example gives the complete critical cap menu and the same uniform terminal row for every optimum and KKT choice.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

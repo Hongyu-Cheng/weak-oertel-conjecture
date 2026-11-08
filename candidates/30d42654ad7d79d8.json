@@ -1,0 +1,32 @@
+{
+  "advances": "An exclusion for the original equal-mass cap law once all original selected bases have the stated reserve. It leaves geometric rate support and aggregate payment open.",
+  "author": "PK-research-agent",
+  "candidate_id": "30d42654ad7d79d8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.205022+00:00",
+  "depends_on": [],
+  "draft_key": "positive-parallel-cap-exclusion-on-the-original-source-hull",
+  "kind": "lemma",
+  "proof": "Fix $p\\in P_+$. The base trace $\\ell(z)\\ge\\ell(p)$ contains $p$ and has weight at least $b(p)$. If $\\ell(p)\\ge0$, its entire mass belongs to $H$ since $A\\ge0$, contradicting $b(p)>Q$. Otherwise a missed point on a fiber of this trace has\n$$\n0\\le A(z,X)/c < -\\ell(z)/t\\le-\\ell(p)/t .\n$$\nSince $A(z,X)/c$ has unit continuous gradient $e$, these missed points occupy a slab of width at most $-\\ell(p)/t$ on each fiber. Fubini bounds the total missing mass there by $A_{\\rm sec}[-\\ell(p)/t]$. The missing mass is at least $b(p)-Q\\ge g_0$, proving the bound. The trace may be the full base, in which case the same bound follows from its full mass. Affinity extends the result to the convex hull. For $A/c<g_0/A_{\\rm sec}$ the entire margin is strictly negative, including for the original closed-cap convention.\n",
+  "source_candidate_ids": [
+    "db95f50a50308952",
+    "dbf59e16706aadc7"
+  ],
+  "source_candidate_sha256": {
+    "db95f50a50308952": "f277bd00d23a6d9b1d84e6e70f159fb341222ae692e9807e15e1d43bae0b9b94",
+    "dbf59e16706aadc7": "452d8d7ad7896ff6ad9ee0bf060527123a3e5d23ea97389e1444a21c1f840f49"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "db95f50a50308952",
+      "locator": "db95f50a50308952:05 §5, (7), uniform original source-hull exclusion"
+    },
+    {
+      "candidate_id": "dbf59e16706aadc7",
+      "locator": "dbf59e16706aadc7:04 §7, (12)–(14), one-base quantitative slab comparison"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let a finite family of compact positive $d$-volume fibers $K_z$ be placed over bases $z\\in P$ with summed fiber-volume measure $m$. Write $b(p)$ for the closed-halfspace depth of a base $p$ with weights $|K_z|$; in base rank zero set $b(p)=m(S)$. Let $e$ be a unit continuous covector and let an affine function $A$ have continuous gradient $ce$, $c>0$, and be nonnegative on the entire sampled family. Let a closed cap $H$ have raw mass $Q=m(H)$ and margin $(t/c)A+\\ell(z)$ with $t>0$ and affine $\\ell$. Suppose $A_{\\rm sec}>0$ bounds the sum of maximal areas of sections of the individual $K_z$ perpendicular to $e$, using counting measure on zero-dimensional sections for $d=1$. If $b(p)\\ge Q+g_0$ for all $p\\in P_+$ and $g_0>0$, then\n$$\n\\ell(z)\\le -t g_0/A_{\\rm sec}\\qquad (z\\in\\operatorname{conv}P_+).\n$$\nConsequently the same cap misses every point over that hull with $A/c<g_0/A_{\\rm sec}$, including its $A=0$ face.",
+  "subgoal_id": "pk-intake-positive-parallel-cap-exclusion-on-the-original-source-hull",
+  "title": "A uniform affine margin for positive-parallel caps on the original source hull"
+}

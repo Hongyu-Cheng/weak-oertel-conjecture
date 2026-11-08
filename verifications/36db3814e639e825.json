@@ -1,0 +1,147 @@
+{
+  "candidate_id": "f1b9f11ad90a1eb2",
+  "candidate_sha256": "0e20abc5b521565a1ee3f97105dd217f27323a5f24effd2d4a9ca6367fa92c45",
+  "checked_dependency_candidate_sha256": {
+    "7d1ee06fa4119930": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+    "82a8acc237f57498": "dd40963d7c18a0f8c7397b3f5a904737f3274c95df966b743adfd5d0c3d68e5d",
+    "ffdb2bc33d7a6750": "a9e9e895e580ec4e269b56c7cf68669ed6b394e934e2d34121443164c00d044a"
+  },
+  "checks": [
+    "Compared the full raw files byte for byte. The only difference is one dollar sign added to close the p(R) display. The display is correctly paired, all other statement text matches, and the proof and all metadata are byte-for-byte unchanged.",
+    "Verified that the proof still invokes the fixed-sector minimum, and that its statement and the quadrilateral use the same p(R). The unchanged conclusion provides one incident core at each target node for this feasible minimum at fixed positive W. The dependency record now binds the corrected exact candidate.",
+    "At a minimum one core edge meets each of nodes 1 and 4 by the same-batch fixed-area theorem; exactly two cores then forces the four stated pairs, and their endpoints are disjoint. The canonical determinants are one, so exactly the two core entries vanish and the other four off-diagonal edge entries are strictly negative.",
+    "Enumerated all components: (0,3) gives (1,2,3) and (4,5,0); (0,4) gives (1,2,3,4) and (5,0); (1,3) gives (2,3) and (4,5,0,1); (1,4) gives (2,3,4) and (5,0,1). Both target nodes are endpoints of their respective paths, possibly in the same path. The only two-node paths have no target node.",
+    "For a positive definite path of at least three nodes, an internal radius is outside the target chord and incident to two noncore edges. Decreasing it slightly keeps the exact core products, improves its adjacent product constraints, and changes only the selected block, which remains positive definite by continuity. The target chord stays fixed and exactly one other chord decreases, strictly decreasing p.",
+    "For the two-node path, either chosen radius is non-target, and its unique incident core edge leads to a target node in the other path. Replacing the selected radius R by R−δ and multiplying that target radius by R/(R−δ) keeps the crossing core product exactly fixed. The other core endpoints are disjoint, and all four strictly noncore products retain slack for sufficiently small δ.",
+    "In the last perturbation the decreased-radius block stays positive definite by continuity. The increased-radius block changes only a diagonal and an incident internal edge pair, both entrywise increasing, with nonpositive off-diagonals. Its PSD follows by comparing quadratic forms on |x|. The off-block core entries stay zero. By the exact criterion the perturbed vector is actually realized; the target chord grows and one other chord shrinks, both improving p strictly.",
+    "Both PSD blocks are singular after exclusion of positive definiteness. A nonzero kernel vector can be replaced by its absolute value without raising its form; PSD then makes that vector a null vector. A zero coordinate forces its adjacent coordinates to vanish because the internal off-diagonals are strictly negative. Connectivity makes the null vector strictly positive. Concatenating and using the same-batch rigidity theorem gives exactly four strict open-sector vertices and uniqueness of the body.",
+    "Verified the raw source digest of 50872e565640d12b and checked §3, including all four explicitly listed block patterns. The frozen argument compresses their perturbations by path size, which the full enumeration confirms."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7d1ee06fa4119930",
+      "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+      "mapping": "Use the canonical distinct rays and exact core products and PSD to realize both types of perturbation at the unchanged finite W.",
+      "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+      "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043",
+      "status": "accepted at reviewed repository base"
+    },
+    {
+      "candidate_id": "82a8acc237f57498",
+      "candidate_sha256": "dd40963d7c18a0f8c7397b3f5a904737f3274c95df966b743adfd5d0c3d68e5d",
+      "mapping": "The assumed feasible global minimizer with its fixed positive W satisfies the minimum theorem and therefore has an incident core at each target node. Together with exactly two cores this gives the four patterns.",
+      "reviewed_proof_sha256": "680eb5dc2c6c1159cab077051441757e15946bab54b333d7b49c68030668dc74",
+      "reviewed_statement_sha256": "5cedaf1336b84057302c18b3e79a6c87d5b2be7e37b987dd2c4da098aceeae91",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "ffdb2bc33d7a6750",
+      "candidate_sha256": "a9e9e895e580ec4e269b56c7cf68669ed6b394e934e2d34121443164c00d044a",
+      "mapping": "The original feasible datum has a vector w>0 in the kernel by block singularity. Exactly four positive-excess sectors then give exactly four vertices in the unique realizing body, with all prescribed endpoints in edge interiors.",
+      "reviewed_proof_sha256": "6987abe1cbd74acde09232b557d0ad1bf2cb8868a29aced746a8d4e99cebac6d",
+      "reviewed_statement_sha256": "15d68a185b7721fb5f4309fe9ee5dddd5d87c49532f3a8631eb02b1bcb26de0a",
+      "status": "same-batch independent approval required for admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:53:19Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "f1b9f11ad90a1eb2",
+    "candidate_sha256": "4a68fd771e2f159567e98d6767eb639659b0b0809ef112c95f0eb9e191e4aac6",
+    "checks": [
+      "At a minimum one core edge meets each of nodes 1 and 4 by the same-batch fixed-area theorem; exactly two cores then forces the four stated pairs, and their endpoints are disjoint. The canonical determinants are one, so exactly the two core entries vanish and the other four off-diagonal edge entries are strictly negative.",
+      "Enumerated all components: (0,3) gives (1,2,3) and (4,5,0); (0,4) gives (1,2,3,4) and (5,0); (1,3) gives (2,3) and (4,5,0,1); (1,4) gives (2,3,4) and (5,0,1). Both target nodes are endpoints of their respective paths, possibly in the same path. The only two-node paths have no target node.",
+      "For a positive definite path of at least three nodes, an internal radius is outside the target chord and incident to two noncore edges. Decreasing it slightly keeps the exact core products, improves its adjacent product constraints, and changes only the selected block, which remains positive definite by continuity. The target chord stays fixed and exactly one other chord decreases, strictly decreasing p.",
+      "For the two-node path, either chosen radius is non-target, and its unique incident core edge leads to a target node in the other path. Replacing the selected radius R by R−δ and multiplying that target radius by R/(R−δ) keeps the crossing core product exactly fixed. The other core endpoints are disjoint, and all four strictly noncore products retain slack for sufficiently small δ.",
+      "In the last perturbation the decreased-radius block stays positive definite by continuity. The increased-radius block changes only a diagonal and an incident internal edge pair, both entrywise increasing, with nonpositive off-diagonals. Its PSD follows by comparing quadratic forms on |x|. The off-block core entries stay zero. By the exact criterion the perturbed vector is actually realized; the target chord grows and one other chord shrinks, both improving p strictly.",
+      "Both PSD blocks are singular after exclusion of positive definiteness. A nonzero kernel vector can be replaced by its absolute value without raising its form; PSD then makes that vector a null vector. A zero coordinate forces its adjacent coordinates to vanish because the internal off-diagonals are strictly negative. Connectivity makes the null vector strictly positive. Concatenating and using the same-batch rigidity theorem gives exactly four strict open-sector vertices and uniqueness of the body.",
+      "Verified the raw source digest of 50872e565640d12b and checked §3, including all four explicitly listed block patterns. The frozen argument compresses their perturbations by path size, which the full enumeration confirms."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "7d1ee06fa4119930",
+        "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+        "mapping": "Use the canonical distinct rays and exact core products and PSD to realize both types of perturbation at the unchanged finite W.",
+        "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+        "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043",
+        "status": "accepted at reviewed repository base"
+      },
+      {
+        "candidate_id": "82a8acc237f57498",
+        "candidate_sha256": "0637b8ecf671d51dbaae73c90c7e10aa13c909439b27f687085f9769ca6399dc",
+        "mapping": "The assumed feasible global minimizer with its fixed positive W satisfies the minimum theorem and therefore has an incident core at each target node. Together with exactly two cores this gives the four patterns.",
+        "reviewed_proof_sha256": "680eb5dc2c6c1159cab077051441757e15946bab54b333d7b49c68030668dc74",
+        "reviewed_statement_sha256": "c790706b18fa8103563246d28bf5869e362f31e294ab13ec7080b7562c757da9",
+        "status": "same-batch independent approval required for admission"
+      },
+      {
+        "candidate_id": "ffdb2bc33d7a6750",
+        "candidate_sha256": "a9e9e895e580ec4e269b56c7cf68669ed6b394e934e2d34121443164c00d044a",
+        "mapping": "The original feasible datum has a vector w>0 in the kernel by block singularity. Exactly four positive-excess sectors then give exactly four vertices in the unique realizing body, with all prescribed endpoints in edge interiors.",
+        "reviewed_proof_sha256": "6987abe1cbd74acde09232b557d0ad1bf2cb8868a29aced746a8d4e99cebac6d",
+        "reviewed_statement_sha256": "15d68a185b7721fb5f4309fe9ee5dddd5d87c49532f3a8631eb02b1bcb26de0a",
+        "status": "same-batch independent approval required for admission"
+      }
+    ],
+    "finished_utc": "2026-11-08T11:51:37Z",
+    "issues": [
+      {
+        "defect": "The display is opened with $$ and closed with a single $, so the math delimiter pair is invalid.",
+        "proof_locator": "Statement, display defining p(R)",
+        "severity": "minor",
+        "smallest_repair": "Change the lone closing $ after the p(R) formula to $$. The formula and proof can stay as written."
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "The exact criterion gives a polygon and a general vertex bound. It does not force any path block to be singular at a minimum or reduce the actual body to a unique quadrilateral.",
+        "fact_id": "7d1ee06fa4119930"
+      },
+      {
+        "comparison": "Its positive least-eigenvector argument is applicable to connected PSD blocks, but it does not provide singularity for these minimizing endpoint data.",
+        "fact_id": "2fb8b0785692a5b4"
+      },
+      {
+        "comparison": "Exhibits an explicit four-vertex planar body with one designated unique core under balanced cap fractions. It has different hypotheses and gives no fixed-area minimizer classification or uniqueness.",
+        "fact_id": "848ee735fb55ee7b"
+      }
+    ],
+    "readability": "The path-size argument groups all four cases correctly. The p(R) display has the one delimiter issue listed below.",
+    "reviewed_proof_sha256": "f98f0c21bff23393929c603494bd6f65aec831369655a66e8f2491de5eef3770",
+    "reviewed_statement_sha256": "9537effae248dd2ca941a555cd7ff8bbc063fe5c6b67b5b0a2c7d9f50e5e0e2a",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T11:47:33Z",
+    "summary": "The two exact core equalities split the matrix into two path blocks. The perturbations force both to be singular, and positive-kernel rigidity gives the unique quadrilateral. The exact statement needs one display delimiter corrected.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The exact criterion gives a polygon and a general vertex bound. It does not force any path block to be singular at a minimum or reduce the actual body to a unique quadrilateral.",
+      "fact_id": "7d1ee06fa4119930"
+    },
+    {
+      "comparison": "Its positive least-eigenvector argument is applicable to connected PSD blocks, but it does not provide singularity for these minimizing endpoint data.",
+      "fact_id": "2fb8b0785692a5b4"
+    },
+    {
+      "comparison": "Exhibits an explicit four-vertex planar body with one designated unique core under balanced cap fractions. It has different hypotheses and gives no fixed-area minimizer classification or uniqueness.",
+      "fact_id": "848ee735fb55ee7b"
+    }
+  ],
+  "readability": "The path-size argument groups all four cases correctly. Its p(R) display is properly paired and matches the formula of the revised fixed-sector minimum.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "f98f0c21bff23393929c603494bd6f65aec831369655a66e8f2491de5eef3770",
+  "reviewed_statement_sha256": "fddd509449e34d61ae8e9bf36a98909e4010e40bf47907297bcccb0770027d97",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "4a68fd771e2f159567e98d6767eb639659b0b0809ef112c95f0eb9e191e4aac6",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:52:45Z",
+  "summary": "The corrected display now renders the exact inverse weight. The verified path perturbation and uniqueness proof is byte-for-byte unchanged, and its minimum dependency matches the independently reviewed revision.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

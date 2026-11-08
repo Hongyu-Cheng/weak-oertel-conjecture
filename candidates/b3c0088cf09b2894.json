@@ -1,0 +1,28 @@
+{
+  "advances": "Joint continuity includes arbitrary marks approaching the boundary of positive limiting bodies.",
+  "author": "PK-research-agent",
+  "candidate_id": "b3c0088cf09b2894",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:13:57.581837+00:00",
+  "depends_on": [
+    "d90ba05577427854"
+  ],
+  "draft_key": "marked-projective-energy-positive-hausdorff-continuity",
+  "kind": "theorem",
+  "proof": "If \\(\\delta>0\\), the affine denominator\n$$\n1-\\frac{u\\cdot(x-v)}{2\\delta}\n=\\frac12+\\frac{h_A(u)-u\\cdot x}{2\\delta}\n$$\nis positive on \\(A\\) and has value one at \\(v\\). Integrating along \\(t=h_A(u)-u\\cdot x\\ge0\\) bounds its objective by\n$$\nL\\int_0^\\infty\\left(\\frac12+\\frac{t}{2\\delta}\\right)^{-d-1}dt\n=\\frac{2^{d+1}}{d}L\\delta.\n$$\nIf \\(v\\in\\partial A\\), take an outward unit supporting direction at \\(v\\), with \\(\\delta=0\\). The admissible denominator \\(1+s(h_A(u)-u\\cdot x)\\) has its integrand bounded by one and tending to zero off the supporting plane as \\(s\\to\\infty\\). The plane has zero \\(d\\)-volume, so dominated convergence gives infimum zero.\n\nWhen \\(y\\in\\partial K\\), fix a unit supporting direction there. Its support gaps at \\(y_j\\) tend to zero by Hausdorff convergence. The bodies lie in a common ball, so the section bound is uniform. The preceding estimates, including zero gaps, give \\(E_{K_j}(y_j)\\to0\\).\n\nWhen \\(y\\in\\operatorname{int}K\\), write \\(A=K-y\\), \\(A_j=K_j-y_j\\), and let \\(\\eta_j=d_H(A_j,A)\\). Take \\(r>0\\) with \\(rB_2^d\\subseteq A\\), where \\(B_2^d\\) is the unit Euclidean ball. Since \\(h_A(u)\\ge r\\) on the unit sphere and \\(\\lvert h_{A_j}(u)-h_A(u)\\rvert\\le\\eta_j\\), for sufficiently large \\(j\\) the support-function criterion gives\n$$\n(1-\\eta_j/r)A\\subseteq A_j\\subseteq (1+\\eta_j/r)A.\n$$\nAll three bodies now have \\(0\\) in their interiors. Affine scaling and inclusion monotonicity from [d90ba05577427854](d90ba05577427854.md) squeeze \\(E_{A_j}(0)\\) between \\((1-\\eta_j/r)^dE_A(0)\\) and \\((1+\\eta_j/r)^dE_A(0)\\). Translation covariance gives the claim.\n",
+  "source_candidate_ids": [
+    "b096cc2ab4c584d9"
+  ],
+  "source_candidate_sha256": {
+    "b096cc2ab4c584d9": "5d218047a024e1d522b71c97a4b29f6ff4e2b2e46745c6efb03ba8002224d2ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b096cc2ab4c584d9",
+      "locator": "§1, marked energy continuity before (2)"
+    }
+  ],
+  "statement": "Let \\(d\\ge1\\) and let convex bodies \\(K_j\\subset\\mathbb R^d\\) converge in Hausdorff distance to a convex body \\(K\\). If \\(y_j\\in K_j\\) converges to \\(y\\in K\\), then \\(E_{K_j}(y_j)\\to E_K(y)\\), where\n$$\nE_A(v)=\\inf_{a:\\,1+a\\cdot(x-v)>0\\ \\forall x\\in A}\n\\int_A [1+a\\cdot(x-v)]^{-d-1}\\,dx.\n$$\nThis same infimum is zero at each boundary mark. In a common Euclidean ball, if \\(u\\) is a unit normal and \\(\\delta=h_A(u)-u\\cdot v>0\\), then \\(E_A(v)\\le 2^{d+1}L\\delta/d\\), where \\(L\\) bounds the \\((d-1)\\)-volumes of sections perpendicular to \\(u\\). For \\(d=1\\) the section bound can be taken as one.",
+  "subgoal_id": "pk-intake-marked-projective-energy-positive-hausdorff-continuity",
+  "title": "Marked projective energy at positive Hausdorff limits"
+}

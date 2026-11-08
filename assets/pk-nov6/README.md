@@ -2,6 +2,7 @@
 
 Start with [the short contribution guide](../../contributions-PK-nov-6-merge.md).
 The [complete submission index](INDEX.md) groups the mathematical notes by topic.
+The [intake crosswalk](CROSSWALK.md) tracks the disposition of claims extracted from those notes.
 
 ## How this batch fits the shared graph
 

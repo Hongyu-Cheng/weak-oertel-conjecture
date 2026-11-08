@@ -1,0 +1,63 @@
+{
+  "candidate_id": "0fcce2693924b4a3",
+  "candidate_sha256": "c93a638d177dcc5a6eb2ce6b584633e197133cb4e02e90a00455f4376353a0df",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+    "57fcea441fbf5d21": "14fe93ddaa06ad4f7b04e02f9de9c9f03a90d52efda65bdaf0d7a6b57f9a7311"
+  },
+  "checks": [
+    "Checked f5d111431879f6ef §2 (3), the repeated-top example and completion paragraph.",
+    "For 1/4<t<1 the perturbed top knot 1+ε gives a strict split with distinct heights, and the limiting row is nonconstant, making the threshold hyperplane volume-null. Thus the stated two-term CDF is exact, including the knots by continuity.",
+    "Recomputed the CDF polynomial and factored F−tF'/3. Its sign turns exactly at 3/8, since the other root 11/56 is below 1/4. The initial branch decreases and the final saturated branch increases.",
+    "At 3/8 the CDF is 1/6 and (3/8)^3/(1/6)=81/256. The comparison product at the 1/4 index is 19/64.",
+    "The two saturated columns force at least two zero entries in every other row. The remaining sole positive capacity is less than one and can be dominated by a row with every off-diagonal entry one, while using a different row for its own column."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1462fa9ce6ced54e",
+      "candidate_sha256": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+      "fact_sha256": "90c54522176a9bd2392576c6f61a0ae6c5f7dfca357cf8869ae656c987ddcda1",
+      "hypotheses": "The distinct-height formula applies for each perturbed row and 1/4<t<1; dominated convergence is justified by nullity of the limiting affine threshold.",
+      "reviewed_proof_sha256": "8de3c29eaf4b9ea31778296cf6c19010b1e74d947e37a33c223e812e662b921a",
+      "reviewed_statement_sha256": "bca7b2d2230b274880856fcf4ccd9e8239bbbebad59eed011d4c53736003028c"
+    },
+    {
+      "candidate_id": "57fcea441fbf5d21",
+      "candidate_sha256": "14fe93ddaa06ad4f7b04e02f9de9c9f03a90d52efda65bdaf0d7a6b57f9a7311",
+      "fact_sha256": "c6ad7dedd420b6e4194e11deb0ce4e6b290c0ff0856683582a992ca338eed568",
+      "hypotheses": "Invokes the multiple-zero row formula in the proof only. Every other row has at least two zero coordinates, while the stated completion is checked directly.",
+      "reviewed_proof_sha256": "36b0832acdd7aa00d61a8372d4d9cb8468b77e6af988ae7abd14f5d475922d98",
+      "reviewed_statement_sha256": "4e371492deeae1b80eb16a7d803f500cb36ac644d74b75e496a4b6db231494c3"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:23:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its full inclusion theorem needs a zero in every row and does not apply to this strictly positive row. Its proof supplies the multiple-zero formula used for the other rows.",
+      "fact_id": "57fcea441fbf5d21"
+    },
+    {
+      "comparison": "Two top ties in dimension three do not make the full threshold optimal. That classification provides neither this optimum nor the product-bound counterexample.",
+      "fact_id": "a00161dbb06b25c0"
+    }
+  ],
+  "readability": "The final paragraph is a scope check for this row's possible stochastic completions, not an application of the all-rows-have-a-zero theorem to the matrix.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "49916467e329a7b5923d8d99346292792c932814cc11ab79c142a112df225029",
+  "reviewed_statement_sha256": "56bd9b670f1aac23062c17d5caab306c335102e4bc581cda1bf706ad26dc5568",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "f5d111431879f6ef": "4d84cb8ac1b3e9c1263016629d972f1018ef16ef557d2e0fbdf1e1c0cfc11e95"
+  },
+  "started_utc": "2026-11-08T16:16:40Z",
+  "summary": "The repeated-top rational row has exact cubed capacity 81/256, exceeding the proposed product by 5/256. The particular stochastic completion remains inside the known downward set.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

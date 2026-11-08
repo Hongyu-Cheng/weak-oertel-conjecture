@@ -1,0 +1,26 @@
+{
+  "advances": "Actual mass-parametrized birth preserving old positive fibers, fixed positive outward width, and fixed nonvertical cap. The formula is a cap response.",
+  "author": "PK-research-agent",
+  "candidate_id": "d04c3eebefacee3a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.926197+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w33-compatible-birth-pooled-covariance-response",
+  "kind": "lemma",
+  "proof": "The centroid of a new fiber is $x_q+\\varepsilon^{1/d}g_{D_q}$, where $g_{D_q}$ is the centroid of $D_q$. Translation cancels in centering. Changing variables in that fiber gives a factor $\\varepsilon$ in volume and $\\varepsilon^{2/d}$ in the centered second moment. The old numerator is $M\\Sigma$, and the total is $M+\\varepsilon$, which proves the covariance identity and its derivative. The old positive-volume fibers give $\\Sigma$ positive definite, so Taylor expansion of the square root gives $\\Gamma_\\varepsilon(u)=\\Gamma_0(u)(1-\\varepsilon/(2M))+o(\\varepsilon)$ uniformly on the stated normal sets.\n\nThe old contribution is $\\int\\Psi(f/\\Gamma_\\varepsilon(u))\\,d\\mu$. On each old fiber the two kink planes $f=-1,0$ are volume-null because $u\\ne0$. The integrand difference quotients are bounded on the compact sampled support by Lipschitz continuity of $\\Psi$ and the width expansion. Dominated convergence yields $A/(2M)$. For the new contribution, pull the integrals back to the fixed sets $D_q$. On each such set the argument of $\\Psi$ differs from $f(q,x_q)$ by $O(\\varepsilon^{1/d}/h)+O(\\varepsilon)$ for fixed $h$, uniformly over the asserted menus and mark neighborhoods. The same Lipschitz bound therefore gives the claimed first-order mass. Adding the two contributions proves the formula.\n",
+  "source_candidate_ids": [
+    "8b9ef51c1503d49a"
+  ],
+  "source_candidate_sha256": {
+    "8b9ef51c1503d49a": "1e872a2dfabfa036cb27e56174df3973c752cb9e19e6bbebe4738e806b374729"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8b9ef51c1503d49a",
+      "locator": "8b9ef51c1503d49a:03 §§2–3, (3)–(7)"
+    }
+  ],
+  "statement": "Let an actual complete convex birth preserve a finite family of old positive-volume $d$-fibers of total mixed volume $M>0$ and measure $\\mu$, where $d\\ge1$. Assume the only additional sampled fibers are $x_q+\\varepsilon^{1/d}D_q$ at new bases $q$, with compact convex bodies $D_q$, $m_q=|D_q|$ and $\\sum_q m_q=1$. Let $\\nu=\\sum_q m_q\\delta_{(q,x_q)}$. Let $\\Sigma_\\varepsilon$ be the covariance pooled within individual fibers, i.e. the sum of their centered second moments divided by total mixed mass. With $\\Sigma=\\Sigma_0$, one has\n$$\n\\Sigma_\\varepsilon=\\frac{M\\Sigma+\\varepsilon^{1+2/d}\\sum_q m_q\\operatorname{Cov}(D_q)}{M+\\varepsilon},\n\\qquad\n\\Sigma'_+(0)=-\\frac{\\Sigma}{M}.\n$$\nIn particular $\\Gamma_\\varepsilon(u)=\\sqrt{u^{\\mathsf T}\\Sigma_\\varepsilon u}$ has right derivative $-\\Gamma_0(u)/(2M)$ at zero, uniformly on compact subsets of nonzero normals.\n\nFix a cap with margin $a\\cdot(z-p)+u\\cdot(x-y)$, $u\\ne0$, scaled so $\\Gamma_0(u)=1$, and a smoothing parameter $h>0$. Set $f(z,x)=[a\\cdot(z-p)+u\\cdot(x-y)]/h$, $\\Psi(s)=\\min(1,\\max(0,1+s))$ and $A=\\int f\\mathbf1_{\\{-1<f<0\\}}\\,d\\mu$. The right derivative of the actual raw mass of the cap with profile $\\Psi(f/\\Gamma_\\varepsilon(u))$ is $\\int\\Psi(f)\\,d\\nu+A/(2M)$, where $A\\le0$. The born-fiber contribution is $\\varepsilon\\int\\Psi(f)\\,d\\nu+o(\\varepsilon)$ uniformly on finite normal menus and compact neighborhoods of their continuous marks.",
+  "subgoal_id": "pk-intake-pk-w33-compatible-birth-pooled-covariance-response",
+  "title": "Exact covariance and smoothed-cap response to compatible mass birth"
+}

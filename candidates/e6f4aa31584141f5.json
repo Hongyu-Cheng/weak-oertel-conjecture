@@ -1,0 +1,28 @@
+{
+  "advances": "The actual normalized maximum is constant under this compatible max path even though both input paths strictly descend. The example is above the sharp target.",
+  "author": "PK-research-agent",
+  "candidate_id": "e6f4aa31584141f5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.172397+00:00",
+  "depends_on": [
+    "c680a307d3f26cec"
+  ],
+  "draft_key": "pk-w36-abnormal-max-merger-erases-actual-descent",
+  "kind": "counterexample",
+  "proof": "Increasing order with unit seed at the middle site and charging to the higher input in $0=(-1+1)/2$ gives $(0,1,2)$, and reversal gives $(2,1,0)$. All three speed sequences are convex, so piecewise linear interpolation of the positive radii is concave and gives actual compact convex bodies with these exact three integer fibers. Their endpoints are centered, and the middle length $U=2-2e$ is at least the mean of the endpoint lengths in each case. Thus the centered case $s=0$ of c680a307d3f26cec applies. For an individual path the smaller and larger endpoint lengths are $a=2-4e$, $b=2$, after reversal if needed. For the max path they are $a=b=2-4e$. In all cases the middle raw maximum is $U/2+a=3-5e$, and the endpoint maxima are at most $1$, strictly smaller for $e<1/4$. The original raw maximum is three by the same formula. Summed lengths are $6-6e$ for either individual path and $6-10e$ for their max path. These positive denominators give the asserted ratios, their comparison with $1/2$ and the derivative by direct calculation. The depth equality for the max path holds over every sampled point and every closed ambient halfspace by the predecessor's all-orientation formula.\n",
+  "source_candidate_ids": [
+    "709f4ee1b13a1688"
+  ],
+  "source_candidate_sha256": {
+    "709f4ee1b13a1688": "eec1833637052d3b25fd1f3670b45fa0d28b4b0c8ef2b99399e8773dba9ba9b6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "709f4ee1b13a1688",
+      "locator": "709f4ee1b13a1688:04 §6, (14)–(16), failure of max merging to preserve global descent"
+    }
+  ],
+  "statement": "At bases $-1,0,1$ start with $[-1,1]$ at each base. For $0<e<1/4$ consider the two compatible centered radius paths $1-eg_z$ given by $g=(0,1,2)$ and $g=(2,1,0)$. Their pointwise max speed $(2,1,2)$ also gives an actual compatible family. Each individual path has exact global normalized mixed closed-halfspace depth $(3-5e)/(6-6e)<1/2$ and derivative $-1/3$ at zero. Their max-speed path has normalized depth $(3-5e)/(6-10e)=1/2$ identically, equal to the original depth.",
+  "subgoal_id": "pk-intake-pk-w36-abnormal-max-merger-erases-actual-descent",
+  "title": "A pointwise max of two descending interval paths can erase descent"
+}

@@ -1,0 +1,87 @@
+{
+  "candidate_id": "c52f74c70376e3a4",
+  "candidate_sha256": "92f4384bf5833f50e92d48255649abb563446f2dabd9a49308b740e74a2045b1",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Exact field comparison found only the convexity adjective added to the statement. The proof, source locators and all constants are byte-identical.",
+    "Source 95f421513ee961a1 §2, (2), and the vertical-plane paragraph give the same projective construction and constants, within the source's convex-body setting.",
+    "For a convex D the positive-denominator projective map preserves segments and has the inverse b↦b/(1+k·b) on the image, so the base and the projective graph cover the whole sections as claimed. The ray parameter 2(1−k·x)/3 is strictly between zero and one under both stated bounds.",
+    "The graph-area factor yields S/||(-3k,1)||=4|D|/9, and the apex margin two gives pyramid volume 8|D|/27. Horizontal slices have volume element 3t²|B| dt; the total is |B| and mean t is 3/4. The raw centroid margin is −(1+9k·g_B)/4, yielding the displayed scalar.",
+    "The centered base chord and the apex give a triangular section with centroid zero. Homothetic horizontal sections preserve the planar cap fraction. The section-area multiplier 3/2 and centroid projection multiplier 3/4 give the scalar factor 9/8. At D=[−1,1]^2, k=(1/4,0), exact area and centroid are |B|=1024/225 and g_B=(16/45,0), giving p=25/96 and s=−45/256.",
+    "Under the revised hypothesis the segment-preserving projective map and its segment-preserving inverse b↦b/(1+k·b) show that B is convex and that the rational vertex set is carried bijectively onto the vertex set of B. Thus the stated convex hull K has actual base B, and at least four base vertices give at least five total vertices.",
+    "The former nonconvex reading permitted the rational cross with |D|=12 and |conv D|=14 at k=0, so the original volume formula could fail. Convexity removes exactly that defect, with all permitted k and both oblique and centered vertical calculations intact."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:12:36.789997+00:00",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "c52f74c70376e3a4",
+    "candidate_sha256": "62a559bc32a48181a53febaef89ee65e79c6f4adc0b504b5563b74a49f5f78e4",
+    "checks": [
+      "Source 95f421513ee961a1 §2, (2), and the vertical-plane paragraph give the same projective construction and constants, within the source's convex-body setting.",
+      "For a convex D the positive-denominator projective map preserves segments and has the inverse b↦b/(1+k·b) on the image, so the base and the projective graph cover the whole sections as claimed. The ray parameter 2(1−k·x)/3 is strictly between zero and one under both stated bounds.",
+      "The graph-area factor yields S/||(-3k,1)||=4|D|/9, and the apex margin two gives pyramid volume 8|D|/27. Horizontal slices have volume element 3t²|B| dt; the total is |B| and mean t is 3/4. The raw centroid margin is −(1+9k·g_B)/4, yielding the displayed scalar.",
+      "The centered base chord and the apex give a triangular section with centroid zero. Homothetic horizontal sections preserve the planar cap fraction. The section-area multiplier 3/2 and centroid projection multiplier 3/4 give the scalar factor 9/8. At D=[−1,1]^2, k=(1/4,0), exact area and centroid are |B|=1024/225 and g_B=(16/45,0), giving p=25/96 and s=−45/256.",
+      "For the allowed nonconvex D=([-2,2]×[-1,1])∪([-1,1]×[-2,2]), the centroid is zero and k=0 satisfies the hypotheses. Then B=D has area 12, but the base of K is the convex hull of D of area 14, and K has volume 14. The claimed volume and section graph over (2/3)D both fail."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T15:11:42.724949+00:00",
+    "issues": [
+      {
+        "defect": "An arbitrary rational polygon need not be convex. Its projective image then need not be convex, while the specified K has convex hull of B as its base. The rational cross witness in checks contradicts |K|=|B|.",
+        "locator": "Statement opening and proof first paragraph, from segment preservation to a convex base",
+        "repair": "Add convex to the hypothesis on D. The section and volume proof then uses the actual projective base.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Uses a centrally symmetric base and a truncated projective chart. It does not provide the nonsymmetric base obtained by projectively mapping a centroid-zero polygon.",
+        "fact_id": "2f58c412150dafaf"
+      },
+      {
+        "comparison": "Classifies centered sections for centrally symmetric pyramid bases. The actual projective base here need not be symmetric about zero, so its oblique examples have different hypotheses.",
+        "fact_id": "8d9bdf166eb599c3"
+      }
+    ],
+    "readability": "The quantity |K|=|B| uses volume in three dimensions and planar area, with cone height 3.",
+    "reviewed_proof_sha256": "72351e23ad97c936c91742ab5c7fc110aad7b2ea4be07ba2bccbb89eacaa1f78",
+    "reviewed_statement_sha256": "7ff1dcd0569f708041be139b337054450b726d56d1c95209c642c800291a4f5a",
+    "reviewer": "GPT-6.1 Sol high",
+    "source_candidate_sha256": {
+      "95f421513ee961a1": "b771c0f13bd1d95adeee5e4e3083ade6b305f8411863797e7e92e79605c94660"
+    },
+    "started_utc": "2026-11-08T15:06:47Z",
+    "summary": "The frozen theorem fails for nonconvex rational polygons, although its formulas and constants check for convex ones.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses a centrally symmetric base and a truncated projective chart. It does not provide the nonsymmetric base obtained by projectively mapping a centroid-zero polygon.",
+      "fact_id": "2f58c412150dafaf"
+    },
+    {
+      "comparison": "Classifies centered sections for centrally symmetric pyramid bases. The actual projective base here need not be symmetric about zero, so its oblique examples have different hypotheses.",
+      "fact_id": "8d9bdf166eb599c3"
+    }
+  ],
+  "readability": "The quantity |K|=|B| uses volume in three dimensions and planar area, with cone height 3.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "72351e23ad97c936c91742ab5c7fc110aad7b2ea4be07ba2bccbb89eacaa1f78",
+  "reviewed_statement_sha256": "fa51169d36b975282e213465d47daa7111e1ee8deb94cd687b6ce2b78261c5f6",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "62a559bc32a48181a53febaef89ee65e79c6f4adc0b504b5563b74a49f5f78e4",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "95f421513ee961a1": "b771c0f13bd1d95adeee5e4e3083ade6b305f8411863797e7e92e79605c94660"
+  },
+  "started_utc": "2026-11-08T15:11:57Z",
+  "summary": "The sole change specifies convexity of D. The projective image is now the actual cone base, and the section, volume, moment and vertical scalar identities are approved on these bytes.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

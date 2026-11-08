@@ -1,0 +1,32 @@
+{
+  "advances": "A pointwise necessary condition on weights and endpoint masses for an actual three-cap planar menu.",
+  "author": "PK-research-agent",
+  "candidate_id": "7844fbb9b48c10d9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:56:26.899402+00:00",
+  "depends_on": [
+    "d372e5eb0caea032"
+  ],
+  "draft_key": "actual-critical-weight-exclusion",
+  "kind": "theorem",
+  "proof": "Apply the section-scale theorem to these same bodies, supporting traces and depth-attaining caps. Its assumptions are the common setup of the statement. Choose the sector indexed by the smaller of $p_i,p_j$, so the area of that sector times $\\Lambda^2$ is less than $C=D/[8p_\\ell(p_\\ell-3p_*)]$. Write $L=DT_iT_j/(2p_ip_j)$, so $a\\Lambda^2>L>0$ and $L/C=X$. Since $q_r\\le Q$ on every middle cap, the chosen sector has area at least\n$$\nk-2Q\\ge k-\\frac{4(a+k+b)}9\\ge\\frac{k-8a}9.\n$$\nThis inequality applies also when $k-8a\\le0$. It yields $k\\Lambda^2<8a\\Lambda^2+9C$. Dividing by $a\\Lambda^2$ gives $k/a<8+9/X$, hence $a/k>X/(9+8X)$. Using $b\\le a+k$ also gives $b/a<9+9/X$, proving the bound on $a/b$.\n\nUnder the small-$A$ condition, $32a<b\\le a+k$ gives $a/k<1/31$, and $q_r\\le Q\\le4(a+k)/9<(128/279)k$. The scale ratio with $\\epsilon=23/279$ gives $a/k>(23/279)X$. Either this estimate or the lower bound on $a/b$ yields $X<9/23$. At $X=9/23$ the two rational lower bounds are $1/31$ and $1/32$, respectively, so equality in the open threshold also contradicts the small-$A$ assumption. The root arguments are in $(0,4)$ throughout the stated domain, and all displayed denominators are positive. The region specified by the strict inequalities is therefore open in the simplex.\n\nAt the displayed weight vector, $T_i=T_j=(1-1/\\sqrt5)/3$ and $X=96(3-\\sqrt5)/49$. With the small-$A$ cap ceiling the scales read\n$$\n\\frac{a\\Lambda^2}{D}>\\frac{1500-500\\sqrt5}{441},\\qquad\n\\frac{k\\Lambda^2}{D}<\\frac{3875}{552},\\qquad\n\\frac{a}{k}>\\frac{736(3-\\sqrt5)}{4557}>\\frac1{31}.\n$$\nThe last comparison follows from $\\sqrt5<5/2$ and $4557=31\\cdot147$. Independently of the small-$A$ condition, $\\sqrt5<9/4$ gives $X>72/49>9/7$, and $X/[9(1+X)]>1/16$ holds exactly when $X>9/7$.\n\nIn the rectangle, $7/10<p_\\ell<37/50$ and $p_\\ell-3p_i,p_\\ell-3p_j>1/4$. Each ratio in the roots is less than $(3/20)/(1/4)=3/5$, giving $T_i,T_j>3/25$ because $\\sqrt{8/5}<32/25$. These estimates put the rectangle in the required weight domain and give\n$$\nX>4\\frac{(7/40)(3/25)^2}{9/400}=\\frac{56}{125}>\\frac9{23}.\n$$\n\nOn the symmetric line for $2/3<P<3/4$, substitution gives\n$$\nX=\\frac{8P(5P-3)}{9(1-P)^2}\n \\left(1-\\sqrt{\\frac{3-4P}{5P-3}}\\right)^2.\n$$\nThe factors increase with $P$: the derivative of $(5P-3)/(1-P)^2$ is $(5P-1)/(1-P)^3>0$ and the derivative of $(3-4P)/(5P-3)$ is $-3/(5P-3)^2<0$. At $P=7/10$, use $\\sqrt{2/5}<19/30$ to get $X>(280/81)(11/30)^2=1694/3645>9/23$.\n\nIn the strip, write $P=p_\\ell$ and $p_i=1-P-p_j$. The denominator of $(1-P-p_j)/(P-3p_j)$ is positive. The partial derivative in $p_j$ has numerator $3-4P>0$, and that in $P$ has numerator $4p_j-1<0$. The ratio is at most its value at $P=11/15,\\ p_j=2/9$, which is $2/3$. This also bounds the ratio with $i,j$ interchanged and ensures the strict weight conditions. Hence $T_i,T_j>2/21$ by $\\sqrt2<10/7$. With $P-3p_*\\ge(5P-3)/2\\ge1/3$ and $p_ip_j\\le(1-P)^2/4\\le4/225$, we get\n$$\nX>4\\frac{(11/15)(1/3)(2/21)^2}{4/225}=\\frac{220}{441}>\\frac9{23}.\n$$\nThe strict $p_\\ell<3/4$ bound follows from the same section-scale theorem.\n",
+  "source_candidate_ids": [
+    "1a4f9cc73e4a014c"
+  ],
+  "source_candidate_sha256": {
+    "1a4f9cc73e4a014c": "137b8ac5b2dd7a19129951f53db663c7cb8b69f1cbbcfd054378677ae3f29ac3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1a4f9cc73e4a014c",
+      "locator": "§3, (12a), mass restrictions without a cap-fraction premise"
+    },
+    {
+      "candidate_id": "1a4f9cc73e4a014c",
+      "locator": "§§4–5, (13)–(18), small-A exclusion and its explicit subregions"
+    }
+  ],
+  "statement": "Let $A,K,B\\subset\\mathbb R^2$ be convex bodies at the only integer bases $-1,0,1$, respectively, with $(A+B)/2\\subseteq K$. Use planar area on each fiber. Fix $y\\in\\operatorname{int}K$ and nonzero spanning vectors $v_1,v_2,v_3$ with $\\sum_i v_i=0$. With $h_i=\\max_{x\\in B}v_i\\cdot x$, assume that each closed ambient cap\n$$\nv_i\\cdot(x-y)+(v_i\\cdot y-h_i)z\\ge0\n$$\nattains the actual mixed halfspace depth $Q$ at $(0,y)$ and that its cuts on $A$ and $K$ are proper, meaning that the cutting lines meet the interiors. Its trace on $B$ is a supporting face, so $Q=U_i+q_i$, where $U_i$ is the cap area on $A$ and $q_i=|K\\cap\\{x:v_i\\cdot(x-y)\\ge0\\}|$. Let $a=|A|$, $k=|K|$, $b=|B|$, $M=a+k+b$, and $D=|\\det(v_1,v_2)|$. Write $a_i,k_i$ for the lengths of the respective $A,K$ chords divided by $\\lVert v_i\\rVert$, and set $s_i=k_i+2a_i$, $\\lambda_i=1/s_i$, $\\Lambda=\\sum_i\\lambda_i$, $p_i=\\lambda_i/\\Lambda$, and $t_i=a_i/s_i$.\n\nFor distinct $i,j,\\ell$ satisfying $p_\\ell>p_i+3p_j$ and $p_\\ell>p_j+3p_i$, put $p_*=\\min(p_i,p_j)$ and\n$$\nT_i=\\frac{2-\\sqrt{6p_i/(p_\\ell-3p_j)-2}}6,\\qquad\nT_j=\\frac{2-\\sqrt{6p_j/(p_\\ell-3p_i)-2}}6,\\qquad\nX=\\frac{4p_\\ell(p_\\ell-3p_*)T_iT_j}{p_ip_j}.\n$$\n\nAssume $Q\\le 2M/9$ and $b\\le a+k$. Then\n$$\n\\frac{a}{k}>\\frac{X}{9+8X},\\qquad\n\\frac{a}{b}>\\frac{X}{9(1+X)}.\n$$\nFor $(p_i,p_j,p_\\ell)=(7/50,7/50,18/25)$ these give $a/b>1/16$.\n\nIf also $a<b/32$, every weight vector in the stated weight domain satisfies $X<9/23$. In particular the open subset of the positive probability simplex specified by $p_\\ell<3/4$, $p_\\ell>p_i+3p_j$, $p_\\ell>p_j+3p_i$, and $X>9/23$ is excluded, as is the level $X=9/23$ in that domain. Equivalently the open condition is $(23/279)X>1/31$. This open subset includes the following regions and their permutations.\n\n- $13/100<p_i,p_j<3/20$.\n- $p_i=p_j=(1-P)/2$ and $7/10\\le P=p_\\ell<3/4$.\n- $p_i,p_j\\le2/9$ and $11/15\\le p_\\ell<3/4$.\n\nThe point $(7/50,7/50,18/25)$ is in the first region. The boundary value $p_\\ell=3/4$ is impossible for the proper cuts of the statement.",
+  "subgoal_id": "pk-intake-actual-critical-weight-exclusion",
+  "title": "Mass bounds and excluded weights for three actual critical planar caps"
+}

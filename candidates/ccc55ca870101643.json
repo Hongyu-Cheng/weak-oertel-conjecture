@@ -1,0 +1,29 @@
+{
+  "advances": "An exact finite outside-only separator; no common separator over an existential family of inside branches.",
+  "author": "PK-research-agent",
+  "candidate_id": "ccc55ca870101643",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:54:32.071884+00:00",
+  "depends_on": [
+    "53fa213bc5d44a1e",
+    "2d939149b3777664"
+  ],
+  "draft_key": "buffered-exact-outside-branch-separator",
+  "kind": "theorem",
+  "proof": "By outside-only concavity and positive homogeneity, the set of vectors dominated coordinatewise by $(G_i(\\xi))_i$ for some common $\\xi\\in V$ is a convex cone. It is disjoint from the open strictly positive orthant. Separating the two cones gives a nonzero nonnegative vector, normalized as $(\\eta_i)$, with $\\sum_i\\eta_i G_i\\le0$ on $V$. The dominated set need not be closed.\n\nThe full-dimensional branch forms majorize each $G_i$, and $G_i=\\min_b g_{ib}$, by the same argument as the finite curvature test (full dimensionality is taken in the span of $V$; $V$ need not be polyhedral). Hence $\\sum_i\\eta_i G_i$ is the minimum of the finitely many linear forms $\\sum_i\\eta_i g_{ib_i}$. The compact convex hull of these forms meets the negative polar of $V$. Otherwise, strictly separating the hull from that closed cone gives a vector of the closure of $V$ on which every form is strictly positive, by the bipolar theorem. There would then be a vector of $V$ with every form positive, by approximation and finiteness, contradicting the bound. Expanding a point of the intersection as a convex combination and taking its marginals in the branch index yields the weights $\\lambda_{ib}$.\n\nEach $\\theta_{ijb}$ is strictly positive and sums to one over $j$. Therefore $w_{ij}>0$ on a positive group and its sum is $\\eta_i$. The effective selector is a convex combination with precisely these cap weights. Consequently\n$$\nw_{ij}T_{ij}=\\sum_b\\lambda_{ib}\\theta_{ijb}T_{ijb}\n=\\rho_{ij}\\sum_b\\lambda_{ib}/B_{ib}=\\rho_{ij}\\kappa_i .\n$$\nDivision and summation give the reciprocal-coarea identity. In each affine cap term its outside body coefficient is $\\int_l\\tau_{ijlb}v_l\\,dS$; taking the same weighted sum gives exactly the body term with $\\tau^{\\rm eff}_{ijl}$. The branch formula assigns coefficient $1/B_{ib}$ to the whole $\\alpha_i$, so averaging assigns it coefficient $\\kappa_i$. The dual average need not use a branch that is active for every direction.\n",
+  "source_candidate_ids": [
+    "4f875cf42fc6ba0a"
+  ],
+  "source_candidate_sha256": {
+    "4f875cf42fc6ba0a": "eb82b704ddea98b6fe3f820947f2856245e95bac7449cc17272077ec5a5da5ee"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4f875cf42fc6ba0a",
+      "locator": "4f875cf42fc6ba0a:03 §3, (5)–(7), common outside-only separator"
+    }
+  ],
+  "statement": "Take finitely many outside-only groups in the exact facet-constant buffered response, on one finite-dimensional convex cone $V$ of actual addable velocities, with singleton-linear exact budgets $\\alpha_i$. All caps have old mass $Q$ in total mass $M$, positive proper coarea, and positive weights $\\rho_{ij}$ summing to one in each group. Let $g_{ib}$ be the linear forms of the full-relative-dimensional realized branches of the normalized improvement numerators $G_i=\\ell_i-(Q/M)D$. If no $\\xi\\in V$ has every $G_i(\\xi)>0$, there are $\\eta_i\\ge0$ with $\\sum_i\\eta_i=1$ and $\\lambda_{ib}\\ge0$ with $\\sum_b\\lambda_{ib}=\\eta_i$ such that $\\sum_{ib}\\lambda_{ib}g_{ib}\\le0$ on $V$.\n\nFor each positive-weight group write $T_{ijb}$ for the branch's total coarea, $B_{ib}=\\sum_j\\rho_{ij}/T_{ijb}$, $\\theta_{ijb}=(\\rho_{ij}/T_{ijb})/B_{ib}$, and $\\tau_{ijlb}$ for its outside facet bits. Put\n$$\nw_{ij}=\\sum_b\\lambda_{ib}\\theta_{ijb},\\qquad\n\\kappa_i=\\sum_b\\lambda_{ib}/B_{ib},\\qquad\n\\tau^{\\rm eff}_{ijl}=\\frac{\\sum_b\\lambda_{ib}\\theta_{ijb}\\tau_{ijlb}}{w_{ij}} .\n$$\nThen $w_{ij}>0$, and using these same effective selectors in the outside body loss and the allocated coareas $T_{ij}=S_{ij}+\\sum_{l\\in O_{ij}}A_l\\tau^{\\rm eff}_{ijl}/b_{ij}$ gives\n$$\nw_{ij}T_{ij}=\\kappa_i\\rho_{ij},\\qquad\n\\sum_j w_{ij}=\\eta_i,\\qquad\n\\sum_j\\rho_{ij}/T_{ij}=\\eta_i/\\kappa_i .\n$$\nThe coefficient of the entire contact budget $\\alpha_i$ is $\\kappa_i$, including every constituent of the budget if it is expanded into body, mass, energy, covariance and parameter terms.",
+  "subgoal_id": "pk-intake-buffered-exact-outside-branch-separator",
+  "title": "A common separator using realized outside-support branches"
+}

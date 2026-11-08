@@ -1,0 +1,29 @@
+{
+  "advances": "Ordinary proper tetrahedral cuts with actual section centroid and individual cap volume.",
+  "author": "PK-research-agent",
+  "candidate_id": "ae5fd0716d158534",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.779432+00:00",
+  "depends_on": [
+    "baef4d408413a817",
+    "1462fa9ce6ced54e"
+  ],
+  "draft_key": "actual-tetrahedral-cap-variance-all-omissions",
+  "kind": "theorem",
+  "proof": "In a strict quadrilateral orient the cap so the omitted index belongs to the positive pair. This exchanges $F$ and $1-F$ if needed and preserves the actual centroid. If the two positive heights differ, apply the two-positive simplex variance theorem (baef4d408413a817) with $d=3$, two negative heights, and omission of the selected positive index. Its strict conclusion uses exactly the three actual centroid factors.\n\nFor a tie rescale to heights $(1,1,-r,-s)$ with $r,s>0$. Set $D=r+s+2rs$ and $\\theta=s(1+r)/D$. The raw-height part of tetrahedral-quadrilateral-section-calculus (1462fa9ce6ced54e) gives\n$$\n3b_1=\\frac{s}{1+s}+(1-\\theta)\\frac r{1+r},\\quad\n3b_2=\\frac{2-\\theta}{1+r},\\quad\n3b_3=\\frac{1+\\theta}{1+s},\\quad\nF=\\frac{1+2(r+s)+3rs}{(1+r)^2(1+s)^2}.\n$$\nThe first two centroid coordinates agree by exchange of the equal positive heights, so it suffices to omit index $0$. Multiply $(3b_1)(3b_2)(3b_3)-F(1-F)$ by $(1+r)^4(1+s)^4D^3$. With $M_{ij}=r^is^j+r^js^i$ for $i>j$ and $M_{ii}=r^is^i$, substitution and expansion gives\n$$\n\\begin{aligned}\n&2M_{40}+7M_{31}+9M_{22}\\\\\n&+3M_{50}+29M_{41}+64M_{32}\\\\\n&+27M_{51}+141M_{42}+220M_{33}\\\\\n&+96M_{52}+328M_{43}\\\\\n&+177M_{53}+376M_{44}\\\\\n&+2M_{63}+174M_{54}\\\\\n&+7M_{64}+78M_{55}+8M_{65}+3M_{66}.\n\\end{aligned}\n$$\nThis is strictly positive for $r,s>0$.\n\nFor every remaining proper incidence, at least one sign occurs at just one vertex $h$. Orient toward it. The section is the triangle on the three incident edge intercepts, at fractions $0<\\eta_i\\le1$ from $h$, $i\\ne h$. At least one fraction is below one. Determinants and the triangle centroid give $F=\\prod_{i\\ne h}\\eta_i$, $3b_i=\\eta_i$ for $i\\ne h$, and $3b_h=\\sum_{i\\ne h}(1-\\eta_i)$. Omitting $h$ gives the strictly larger bound $F$. Omitting $j\\ne h$ and dividing the desired inequality by $F/\\eta_j>0$ gives\n$$\n\\eta_j(1-\\textstyle\\prod_{i\\ne h}\\eta_i)\\le\\sum_{i\\ne h}(1-\\eta_i).\n$$\nThe product gap $1-abc=(1-a)+a(1-b)+ab(1-c)$ is at most the sum of the three deficits, with equality exactly when at most one deficit is positive. Since $F<1$, the extra factor requires $\\eta_j=1$ for equality. Thus there is equality exactly when two intercepts are vertices and the omitted index is one of them, equivalent to the stated edge condition. Taking intercepts $(z,1,1)$ with $0<z<1$ attains equality for either of those indices, proving sharpness. Proper section planes have volume-zero boundary, so cap reversal preserves $F(1-F)$ also for these incidences.\n",
+  "source_candidate_ids": [
+    "fa0b1651cc72d020"
+  ],
+  "source_candidate_sha256": {
+    "fa0b1651cc72d020": "e1f4103c91645071915d019991643378eb8c0aa10210ce41081b052025b3d8cd"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fa0b1651cc72d020",
+      "locator": "Opening (1), §§1–2, (2)–(4), triangular and sharpness paragraphs"
+    }
+  ],
+  "statement": "Let a plane meet the interior of a nondegenerate tetrahedron. Let $F$ be the relative three-dimensional volume of either closed cap and $b$ the barycentric centroid of the actual section with its uniform two-dimensional area measure. Then for every index $j$,\n$$\nF(1-F)\\le27\\prod_{i\\ne j}b_i.\n$$\nEquality holds precisely when the section contains a tetrahedral edge and $j$ is an endpoint of that edge. In particular every strict quadrilateral has strict inequality, and the constant $27$ is sharp.",
+  "subgoal_id": "pk-intake-actual-tetrahedral-cap-variance-all-omissions",
+  "title": "Sharp cap variance bound at the actual tetrahedral section centroid"
+}

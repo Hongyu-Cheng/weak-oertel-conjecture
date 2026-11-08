@@ -1,0 +1,26 @@
+{
+  "advances": "Actual ordinary simplex caps with strict distinct-vertex incidence, retaining the coarea scale and dimension.",
+  "author": "PK-research-agent",
+  "candidate_id": "be7fc2f8ef9af30d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.028159+00:00",
+  "depends_on": [],
+  "draft_key": "simplex-corner-cap-coareas-and-row-variance",
+  "kind": "lemma",
+  "proof": "The sign hypotheses and definition of $H$ give positivity and $\\sum_i a_i=1$. The equality $\\sum_i v_i=0$ gives $\\sum_{i\\ne j}b_{ij}=a_j$ by evaluation at $P_j-y$. The corner cut intersects the edge from $P_i$ to $P_j$ at fraction $a_i/(a_i+b_{ij})$ measured from $P_i$. Its volume fraction is the product of these factors by the simplex determinant formula. Its apex is $P_i$ and its base is the section, with height $Ha_i/\\|v_i\\|$. The pyramid volume identity gives the coarea formula, including $d=1$ where the section is one point. Thus $1/\\sigma_i=(H/(d^2|K|)) f_i/q_i^{(d-1)/d}$ with a common proportionality factor.\n\nWrite $x_j=a_i+b_{ij}$ for the $d$ entries of row $i$ other than its diagonal. Then $f_i=d(\\prod_j x_j)^{1/d}$ and $g_i=\\sum_jx_j$. Summing the column identities gives $\\sum_i g_i=d+1$. AM–GM on the square roots gives\n$$\n\\sum_jx_j-d\\left(\\prod_j x_j\\right)^{1/d}\n\\ge\\sum_jx_j-\\frac{(\\sum_j\\sqrt{x_j})^2}d\n=\\frac1d\\sum_{j<k}(\\sqrt{x_j}-\\sqrt{x_k})^2 .\n$$\nThis proves the individual inequality and the summed budget. When $d=1$ the only entry of each row is $a_i+b_{ij}=a_i+a_j=1$.\n",
+  "source_candidate_ids": [
+    "bbd1a18ecbb9d3f0"
+  ],
+  "source_candidate_sha256": {
+    "bbd1a18ecbb9d3f0": "6f3d4a4aa0d8649fa0c2f26391b9ce174226dc529f62677a42d64c573b300650"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "bbd1a18ecbb9d3f0",
+      "locator": "bbd1a18ecbb9d3f0:01 §§1–2, (1)–(4), and §6, d=1"
+    }
+  ],
+  "statement": "Let $K$ be a $d$-simplex, $d\\ge1$, with vertices $P_i$, $1\\le i\\le d+1$, and $y\\in\\operatorname{int}K$. Suppose nonzero spanning normals $v_i$ sum to zero and satisfy $v_i\\cdot(P_i-y)>0>v_i\\cdot(P_j-y)$ for every $j\\ne i$. Set\n$$\nH=\\sum_i v_i\\cdot(P_i-y),\\qquad\na_i=\\frac{v_i\\cdot(P_i-y)}H,\\qquad b_{ij}=-\\frac{v_i\\cdot(P_j-y)}H\\quad(j\\ne i).\n$$\nThen all these entries are positive, $\\sum_i a_i=1$ and $\\sum_{i\\ne j}b_{ij}=a_j$. If $q_i$ is the volume fraction of the cap with margin $v_i\\cdot(x-y)\\ge0$ and $\\sigma_i$ is the section's $(d-1)$-measure divided by $\\|v_i\\|$, then\n$$\nq_i=\\frac{a_i^d}{\\prod_{j\\ne i}(a_i+b_{ij})},\\qquad\n\\sigma_i=\\frac{d|K|q_i}{Ha_i}.\n$$\nWith $f_i=d a_i/q_i^{1/d}$ and $g_i=d a_i+\\sum_{j\\ne i}b_{ij}$, the inverse coareas are proportional to $f_i/q_i^{(d-1)/d}$, $f_i\\le g_i$, $\\sum_i g_i=d+1$, and\n$$\nd+1-\\sum_i f_i\\ge\\frac1d\\sum_i\\ \\sum_{\\substack{j<k\\\\j,k\\ne i}}\\!\n  \\left(\\sqrt{a_i+b_{ij}}-\\sqrt{a_i+b_{ik}}\\right)^2 .\n$$\nFor $d=1$ the two row values are $f_1=f_2=1$.",
+  "subgoal_id": "pk-intake-simplex-corner-cap-coareas-and-row-variance",
+  "title": "Exact simplex corner coareas and a row-variance budget"
+}

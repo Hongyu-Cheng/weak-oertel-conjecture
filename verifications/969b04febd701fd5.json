@@ -1,0 +1,53 @@
+{
+  "candidate_id": "9a8f32595450b6fe",
+  "candidate_sha256": "67d532a0e978d444c186974a5adb7cf2e388b98f869b9bd535b7924b9fcb4a9c",
+  "checked_dependency_candidate_sha256": {
+    "dcb05945476b6c35": "3c4156a8c1d6ac316d5fec9b0561282ba84751f89b68ee88687ee107e1777bfd"
+  },
+  "checks": [
+    "All stated sample points lie inside their named intervals. The successive pairs (lower slope, upper slope) are (-3,12),(2,4),(7,4) for A and (-9,3),(6,-3),(10,-7) for B. Endpoint addition gives D=([0,33],[-12,48],[-4,49],[13,46]), with slope pairs (-12,15),(8,1),(17,-3). The lower graph is convex and the upper graph concave in each array, so the interpolated strip is convex and its fibers agree with the hull of the placed intervals. Their totals are 94, 85 and 179.",
+    "Independent rational clipping for A at (2,14) gives slopes (-10,-8,1,7,17,18) with above masses (40,42,42,54,54,53) and below masses (54,52,52,40,40,41). The vertical masses are (68,55). The raw minimum is 40.",
+    "For B at (1,33/4) the slopes are (-51/4,-45/4,-5/8,23/8,33/4,51/4), the above masses are (187,193,193,165,165,147)/4 and the below masses are (153,147,147,175,175,193)/4. The vertical masses are (54,64). The raw minimum is 147/4.",
+    "For D at (1,18) the slopes are (-22,-15,-5/2,14,18,31), with above masses (116,109,109,76,76,63) and below masses (63,70,70,103,103,116). The vertical masses are (93,146). The raw minimum is 63. In all three calculations the extreme slopes already give the constant tails.",
+    "Evaluating both lines in each row at its base gives the same split, respectively 33/2, 18, 45/2, 59/2. Direct clipping gives the same contribution vector for either cap within each row: (33/2,0,0,0), (33,30,0,0), (0,0,53/2,33), (0,0,0,33/2). Thus every sampled point belongs to a closed cap of mass at most 63, including the split points, and (1,18) attains the bound.",
+    "The differences of 20/47 and 147/340 from 63/179 are respectively 619/8413 and 4893/60860, both positive. The endpoint-family point depths suffice as lower bounds on their maxima. An invertible positive height dilation bijects closed halfspaces and multiplies all raw masses by the same factor. Base-one lengths of A, B and D are 27, 33 and 60, and the stated positive weights sum to one and give D/60.",
+    "Verified the original source digest at snapshot 8d2dca690a1b7d6d745b3ab445cd841f3e22d13a. Pending source 94a1565e143d393e §2 has the same arrays, cover lines, exact ratios and normalization identity."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "dcb05945476b6c35",
+      "candidate_sha256": "3c4156a8c1d6ac316d5fec9b0561282ba84751f89b68ee88687ee107e1777bfd",
+      "mapping": "Apply the finite slope rule with P={0,1,2,3}, the specified bounded nonempty intervals in A, B or D, and the named placed point. For each point the three other bases give six candidate slopes; the two vertical orientations and complementary nonvertical masses are exactly those enumerated above.",
+      "reviewed_proof_sha256": "53c5ba3623e6feb300ac6fc147f7f4dbf54dba141c120580e143cb2e7cfbf3db",
+      "reviewed_statement_sha256": "f3f3c27fbba3e0449f2b4e16e6f3c4be3738baed94e501461436b8e69f1b9ffd",
+      "status": "Same batch. Admission requires independent approval of this exact dependency."
+    }
+  ],
+  "finished_utc": "2026-11-08T13:15:57Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted formula concerns exact depth of three consecutive interval fibers. It shares the closed cap convention and scalar clipping but neither treats these four fibers nor shows failure of quasiconcavity under normalized fiberwise Minkowski interpolation.",
+      "fact_id": "c680a307d3f26cec"
+    },
+    {
+      "comparison": "Its general compatibility and closed-halfspace depth framework covers the arrays here. It gives lift and restriction comparisons, rather than a comparison between depths of two arrays and their fiberwise Minkowski interpolation.",
+      "fact_id": "ba0f3db1bf4f62c6"
+    }
+  ],
+  "readability": "In the global upper certificate, either cap in each row is a fixed closed halfspace and covers the indicated portion of that row’s interval. Quasiconcavity concerns maximum depth as a function of the family.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4110956669aa260cd02eabd80866e63384b7dd7ed494554bc7fe4421a0b246cb",
+  "reviewed_statement_sha256": "fc37912d8a7ea7ce274a4e97e791f87e45ab240d8ceaceb362e29e260cb621dd",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:12:45Z",
+  "summary": "Exact rational clipping gives the three asserted point depths and verifies all eight covering caps for D. The strict comparisons persist after normalizing the length of the base-one interval.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

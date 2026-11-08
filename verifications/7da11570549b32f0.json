@@ -1,0 +1,49 @@
+{
+  "candidate_id": "53fe12b742a7608d",
+  "candidate_sha256": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Both original candidate byte hashes match the frozen source metadata. Candidate 1d1be0b22c707856 §1, (3)–(5) contains the reflected profile, positivity, affine invariance and coefficient-tail formula, and §4, (9) contains the planar minimization. Candidate e2c55c91458e1e8c §1 supplies the classical oriented apex-side equality case used in the source. The normalized proof rederives that equality case for simplices.",
+    "The support of the projected volume law is [ell,h]; full dimensionality makes hyperplanes null and every nonempty open subinterval of the support have positive measure. Thus F is continuous strictly decreasing from one to zero there and F(Y) is uniform. Convex combinations of upper caps give concavity of the dth root by Brunn–Minkowski, including the zero-volume top level by continuity. Jensen at the interior mean yields d/(d+1). Equality forces the supporting affine majorant to agree on the full support, so F(t)=((h-t)/(h-ell))^d.",
+    "If k vertices are above ell, Y at most ell+epsilon constrains their k barycentric coordinates to [0,epsilon/delta]. Omitting one minimizing coordinate leaves all k coordinates in the standard coordinate chart, with density d!, and the box bound is O(epsilon^k). The affine-root law gives a strictly positive linear coefficient d/(h-ell), forcing k=1. This yields precisely a positive multiple of one barycentric gradient and its apex-side cap. The homothetic volume calculation establishes the converse, including the interval case.",
+    "Cap fractions vary continuously over the unit sphere by nullity of each boundary, including supporting thresholds. The two nonnegative summands cannot simultaneously vanish for d at least two because every centroid equality direction has reflected tail ((d-1)/(d+1))^d, positive and strictly below Gamma_d. Its value is zero for d=1. The normalized coefficients parameterize all nonconstant affine directions, and both fractions are unchanged under positive affine functional rescaling and affine equivalences of simplices.",
+    "In the divided-difference argument the last-coordinate derivative gives the two opposing face integrals divided by r_d-r_0, the usual recursion. Coordinate measure has mass 1/d!, so the dth derivative of the mollified truncated power recovers the uniform barycentric probability in the limit. Repeated knots have multiplicity at most d because the coefficient vector is nonconstant, and all needed derivatives through order d-1 converge. The threshold level has zero coordinate volume.",
+    "For r at most 1/2, both thresholds lie at or above the middle level and at or below one, giving numerator (2-r)^2+(1-2r)^2-4(1-r)=5r^2-4r+1. For r at least 1/2, the reflected threshold is at least one and the own threshold is at or below r, giving (3-r-1/r)/9. The pieces meet at 1/18; both repeated-knot endpoints use nonzero denominators. In the first branch, v=1-r gives (5v+2/v-6)/9, with AM-GM equality only when v^2=2/5, strictly between 1/4 and 1. The second branch has derivative (r^(-2)-1)/9 and starts at 1/18. The first minimum is smaller since 10<169/16. Independent rational arithmetic reproduced both branches at 257 levels."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T13:15:11Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "At the centroid, all barycentric coordinates equal 1/(d+1) and satisfy its centrality condition. Its depth formula and minimizing edge intercepts give exactly the centroid bound and the oriented equality normals in the candidate. The accepted fact does not give the reflected profile or its planar minimum.",
+      "fact_id": "700febf4b7a92759"
+    },
+    {
+      "comparison": "Its classical centroid equality input also identifies an apex-side pyramid cap, which specializes to exactly the simplex equality directions. Its ordinary maximal-depth characterization and stability statements do not contain the reflected profile.",
+      "fact_id": "ea91e021ff1f4416"
+    },
+    {
+      "comparison": "Its normalized planar projection formula is the same piecewise triangle tail and its nested-triangle proof estimates other reflected thresholds. It does not state or minimize the sum of the tails at the mean and twice the mean in this candidate.",
+      "fact_id": "ec83eaa61a715c72"
+    },
+    {
+      "comparison": "Its coefficient-a tail formula after normalization gives the same planar cap pieces. Its conclusions are a directional envelope and restricted centroid bonus, not the compact reflected minimum or its minimizers.",
+      "fact_id": "b026600b8d8e369b"
+    }
+  ],
+  "readability": "The minimum uses normalized affine functional values, so even a planar coefficient tuple with the middle value repeated at an endpoint is admitted. The zero-volume top boundary is handled by continuity. No interpretive issue affects the proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1e85b289572563955be7b80c21339b8b799e57fa624f2527f26097c14e949b49",
+  "reviewed_statement_sha256": "e366513ae78549652332a52118bb60792388769ee765b4cc01dd53819fd3f98c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:12:10Z",
+  "summary": "The directional centroid bound and its oriented equality cases follow from the concavity and support argument. They give a strictly positive reflected profile in dimensions at least two. The coefficient description and exact planar minimum, including its minimizing levels, are correct.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,69 @@
+{
+  "candidate_id": "dd6c1a676be90d8a",
+  "candidate_sha256": "1c75a387ea12116e8094a060fa042e03c3fb040f242b032a38becd0fdebacf35",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+    "238906fb08a2b14c": "a3322d5a4d2ca023574d37729f2fe2f221ccd7f89b5eafe44190844154ee99ea"
+  },
+  "checks": [
+    "Checked the source locators in 45dc817a19bd7f21, 399ecacbb7812be2 and 1f9aa6ef8c94292a. The last supplies the reciprocal-denominator argument only.",
+    "Reconstructed the actual area centroid from the strict section coordinates in 1462fa9ce6ced54e. Normalization by S gives the correct homogeneous numerators, volume and oriented section moment.",
+    "Independently expanded the four central deficit numerators, denominator identity and pair-sum numerators. The allowed range of P,a,b gives two strictly positive real roots in each pair, even when a pair repeats.",
+    "Using the central-order lemma, enumerated the six interleavings and checked the exact cancellation in the two negative-middle comparisons. The smallest and largest deficits leave the displayed sum of the middle ratios at most one, so E≥3 and clearing 64DB preserves signs.",
+    "Reduced the positive-pair quadratic on the two negative-pair roots. The real sum/product sign test covers repeated roots and exactly gives the two polynomial constraints. Substitution verifies E=3B/N and the aggregate corrected fraction."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1462fa9ce6ced54e",
+      "candidate_sha256": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+      "fact_sha256": "90c54522176a9bd2392576c6f61a0ae6c5f7dfca357cf8869ae656c987ddcda1",
+      "hypotheses": "Positive normalized diagonal coordinates give exactly a strict 2+2 section; the raw-height normalization rescales all margins together. Its actual area centroid, cap probability and normalized section moment apply.",
+      "reviewed_proof_sha256": "8de3c29eaf4b9ea31778296cf6c19010b1e74d947e37a33c223e812e662b921a",
+      "reviewed_statement_sha256": "bca7b2d2230b274880856fcf4ccd9e8239bbbebad59eed011d4c53736003028c"
+    },
+    {
+      "candidate_id": "238906fb08a2b14c",
+      "candidate_sha256": "a3322d5a4d2ca023574d37729f2fe2f221ccd7f89b5eafe44190844154ee99ea",
+      "fact_sha256": "3a66153b97851e07e93c58cc48757d6499c5a55934908b13623071edf75ad4ae",
+      "hypotheses": "Every centroid coordinate is at most one third in the ordering step, so both separate pair hypotheses hold. Its conclusion includes equal heights and centroid-coordinate ties.",
+      "reviewed_proof_sha256": "f5103ccc2912c133a68afa4d7f8ecff7fafdcd2999a043bb86549936cbda2e69",
+      "reviewed_statement_sha256": "53c3175f98b9d2ddf6bca3903decb914c15452a62172c2c463fc119d4f4ce270"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:23:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Covers actual strict-quadrilateral geometry, uncorrected cap and oriented section moment. It does not encode the middle-pair correction or its aggregate polynomial domain.",
+      "fact_id": "1462fa9ce6ced54e"
+    },
+    {
+      "comparison": "Supplies within-pair central ordering. It gives neither the middle-order constraints between pairs nor the denominator-cleared tests.",
+      "fact_id": "238906fb08a2b14c"
+    },
+    {
+      "comparison": "Uses a correction to prove a balanced-cap bound on the median-line family. It does not assert the polynomial characterization for all central diagonal points.",
+      "fact_id": "d513dc5906083a4f"
+    }
+  ],
+  "readability": "The symbols B and B_jk' refer to different positive denominators in the aggregate and homogeneous formulations; the proof identifies each before clearing it.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "75a9b7d11950a611a27558cc845d3c7059022cae1a9a8944c569e1923b85a8ec",
+  "reviewed_statement_sha256": "dd5c807e5c62dbb7f0c2e023e6913d1bb6daff3c895852da07bcdf98ae091ac4",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "1f9aa6ef8c94292a": "9784a86eaff75ffaf1cf1a12f0b46bf2667bc41395081e18adb3055277d851d1",
+    "399ecacbb7812be2": "a740d52987b325f7652aa2c3a9abd4f1926f065e528c31883c5065449c628c6b",
+    "45dc817a19bd7f21": "59452628212247febe3d46bbdaa10d780b16daeb060f542236a17c3763968106"
+  },
+  "started_utc": "2026-11-08T16:16:40Z",
+  "summary": "The exact polynomial reduction is correct for the central strict-quadrilateral domain, including tied coordinates and repeated roots. It leaves the universal signs as a separate claim.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

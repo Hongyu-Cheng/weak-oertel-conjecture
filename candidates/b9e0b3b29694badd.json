@@ -1,0 +1,38 @@
+{
+  "advances": "This is a finite base transport. Its weights have no assumed identification with a physical separator or a continuous-fiber transport.",
+  "author": "PK-research-agent",
+  "candidate_id": "b9e0b3b29694badd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.025097+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "sampled-concave-parameter-volume-martingale",
+  "kind": "theorem",
+  "proof": "Separate the convex cone of vectors $(B_p(h))_{p\\in J}$ from the open strictly negative orthant. The cone contains zero, so the separating functional is nonnegative on it and has nonnegative coefficients on the coordinates, with at least one positive coefficient. Normalize the coefficients to obtain $\\sigma$. The separation inequality is precisely $\\langle\\mu-\\nu,h\\rangle\\ge0$ for all $h\\in T_\\ell$. Affine arrays and their negatives belong to $T_\\ell$, giving equal mass and first moment. The formulas for $\\mu,\\nu$ give the two $\\ell$ moments equal to one.\n\nBy finite Farkas duality write $\\mu-\\nu=\\sum_e\\tau_e(\\delta_{p_e}-\\lambda_e)$ with $\\tau_e\\ge0$ and $\\lambda_e$ the target probability of a tight extreme row from $p_e$. Put $o_p=\\sum_{e:p_e=p}\\tau_e$, $i_p=\\sum_e\\tau_e\\lambda_e(p)$ and $m_p=\\nu_p+o_p=\\mu_p+i_p>0$. At a visit to $p$, stop with probability $\\nu_p/m_p$ or choose row $e$ with probability $\\tau_e/m_p$ and jump according to $\\lambda_e$. The stop probabilities have a strictly positive minimum, so the process absorbs in finite time almost surely. Starting with mass $\\mu$, the total visit vector solves $v=\\mu+vT$, where $T$ is the substochastic transition matrix before stopping. This equation has a unique solution by the uniform strict row-sum bound, and $m$ solves it by $m_p=\\mu_p+i_p$. The absorbed target marginal is therefore $\\nu$. Every transition, with a stopped chain held at the stop site, preserves the base coordinate and the $\\ell$ coordinate in conditional mean. Both are bounded on $P$, so taking limits gives the two row moments. Conditional Jensen gives $\\mu\\preceq_{\\rm cx}\\nu$.\n\nFor an affine majorant $a$ of the roof touching at $p$, the two row equalities give $\\sum_z\\pi_{pz}(a(z)-\\ell_z)=0$ with each summand nonnegative. Thus every positive target lies on the contact. If all nonidentity rows at the sources have strict $\\ell$ Jensen inequality, the two row moments force each row to be the identity. Full target support then implies every base is a positive source, so $J=P$ and $\\sigma=w$. The tilted barycenter assertion follows from the equal mass and first moments with the source supported in $J$.\n\nIn the geometric setting, if all positive sources were vertices then their base barycenter conditions would also force identity rows. Full target support would make every sampled base a vertex. Lattice completeness prohibits two distinct vertices in the same parity class because their midpoint is a sampled nonvertex, so $k(P)=|P|$. The largest fiber has volume at least $M/k(P)$. The centroid bound in 6769574fc1bd9f8d, with its full-mass case and density one on that fiber, gives at least $\\gamma_d$ times this volume in every closed own halfspace containing the centroid. Every mixed cap through that mark contains either such a trace or the whole own fiber. Buffering only increases the depth, so $\\beta\\ge\\gamma_d/k(P)$, contradicting the stronger bound.\n",
+  "source_candidate_ids": [
+    "8027472c0c8717cd",
+    "cfe4a95984691190"
+  ],
+  "source_candidate_sha256": {
+    "8027472c0c8717cd": "d1013fd7b9af2911ce7da7e426cbb385eb7e7c4de40096a3fd1c581dae0623bd",
+    "cfe4a95984691190": "f6ef08fdde355ebc6c4abc4ce7837b58d9f01be284263e97b90d1d247877db79"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8027472c0c8717cd",
+      "locator": "8027472c0c8717cd:02 §§3–4 (4)–(8)"
+    },
+    {
+      "candidate_id": "8027472c0c8717cd",
+      "locator": "8027472c0c8717cd:03 §5 (9), vertex and strict-contact consequences"
+    },
+    {
+      "candidate_id": "cfe4a95984691190",
+      "locator": "cfe4a95984691190:06–08 §§3–5, tight-row absorption and contact consequences"
+    }
+  ],
+  "statement": "Let $P$ be a finite nonempty set of base points, $w_z>0$ with $\\sum_z w_z=1$, and $\\ell_z>0$ a sampled-concave array. Let $T_\\ell$ be the cone of arrays $h$ satisfying $h_p\\ge\\sum_z\\lambda_z h_z$ for each $\\ell$-tight extreme anchored representation $\\sum_z\\lambda_z z=p$ with convex weights. Fix $\\varnothing\\ne J\\subseteq P$ and suppose there is no $h\\in T_\\ell$ with $B_p(h)=h_p/\\ell_p-\\sum_z w_z h_z/\\ell_z<0$ for every $p\\in J$. There exist weights $\\sigma_p\\ge0$ on $J$ with sum one such that, for\n$$\n\\mu=\\sum_{p\\in J}\\frac{\\sigma_p}{\\ell_p}\\delta_p,\\qquad\n\\nu=\\sum_{z\\in P}\\frac{w_z}{\\ell_z}\\delta_z,\n$$\none has $\\mu\\preceq_{\\rm cx}\\nu$, both $\\ell$ moments are one, and there is a nonnegative coupling with these marginals and with $\\sum_z\\pi_{pz}z=\\mu_p p$ and $\\sum_z\\pi_{pz}\\ell_z=\\mu_p\\ell_p$ for every positive source row. Each positive target from $p$ is on every affine majorant of the concave roof touching the roof at $p$. The tilted barycenter $(\\sum_z w_z z/\\ell_z)/(\\sum_z w_z/\\ell_z)$ belongs to $\\operatorname{conv}(J)$. If all nonidentity anchored representations at each positive source have strict $\\ell$ Jensen inequality, then $J=P$ and $\\sigma=w$.\n\nIn the geometric setting in which $P$ is lattice-complete, $w_z$ are the normalized positive fiber volumes, and $J$ is a set of proper deepest bases for the unpenalized covariance-buffered depth, if its maximum satisfies $\\beta<\\gamma_d/k(P)$ with $\\gamma_d=(d/(d+1))^d$, at least one positively weighted source is a nonvertex of $\\operatorname{conv}(P)$.",
+  "subgoal_id": "pk-intake-sampled-concave-parameter-volume-martingale",
+  "title": "Tight base-volume martingale from sampled-concave parameter stationarity"
+}

@@ -1,0 +1,35 @@
+{
+  "advances": "Refutes width one even for saturated exclusive witnesses of an actual maximal lattice-free polyhedron.",
+  "author": "PK-research-agent",
+  "candidate_id": "efbf470a35041aac",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.077155+00:00",
+  "depends_on": [
+    "390b45541b0a46fc",
+    "abb6c0fd2ba74ca0"
+  ],
+  "draft_key": "saturated-width-two-maximal-lattice-free-realization",
+  "kind": "counterexample",
+  "proof": "Use the sixteen points $p_i$ and integer exposing functionals $n_i$ from the width-two hull predecessor. Put $Q=\\operatorname{conv}\\{p_i\\}$ and $L=\\{x:n_i\\cdot(x-p_i)\\le0\\text{ for every }i\\}$. The full-dimensional $Q$ is contained in $L$. For each $i$, $p_i$ is tight in row $i$ and strictly satisfies every other row by strict exposure. A neighborhood of $p_i$ inside its equality hyperplane therefore lies in $L$, while moving slightly along $n_i$ violates only row $i$. Each row is an irredundant facet inequality, and $p_i$ lies in its facet's relative interior. There are no other facets because a relative interior point of any facet must lie on an active defining hyperplane.\n\nLet $x\\in\\mathbb Z^4$ and let $p_{[x]}$ be the point of the same parity. Apply the termination conclusion of abb6c0fd2ba74ca0 to the compact convex source $\\operatorname{conv}(Q\\cup\\{x\\})\\times\\{0\\}\\subset\\mathbb R^4\\times\\mathbb R$, with roots $p_i$ and all anchors zero. Every parity is represented and the root hull has exactly these lattice points, so its hypotheses hold. The iterates $x_{j+1}=(x_j+p_{[x_j]})/2$, starting at $x_0=x$, terminate at some $p_s$. Rearranging the accepted terminal barycenter gives\n$$\nx-p_s=\\sum_{j<k}2^j(p_s-p_{[x_j]}).\n$$\nFor $x\\ne p_s$ at least one digit differs from $p_s$. Strict exposure then gives $n_s\\cdot(x-p_s)>0$. Thus every lattice point of $L$ is one of the witnesses, each on the boundary.\n\nIf $x\\notin L$, take a violated row $i$. For small $\\alpha>0$, the point $r=(p_i-\\alpha x)/(1-\\alpha)$ satisfies every row strictly: row $i$ becomes strict in the inward direction and all other strict slacks persist near $p_i$. An interior ball around $r$ in $L$ gives an interior ball around $p_i=(1-\\alpha)r+\\alpha x$ in $\\operatorname{conv}(L\\cup\\{x\\})$. Any convex proper enlargement of $L$ contains such an $x$ and therefore fails lattice-freeness. This proves maximality.\n",
+  "source_candidate_ids": [
+    "067c3a013000fe6d",
+    "98a6372650bd3579"
+  ],
+  "source_candidate_sha256": {
+    "067c3a013000fe6d": "d787984eb4261c913613c8432f99ef51c08fd6c2d955b3416b97fae21cff841c",
+    "98a6372650bd3579": "f4d30546b248e31fcf9390105d1e9906489d902de8dde49345f9ee1964d97aed"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "067c3a013000fe6d",
+      "locator": "067c3a013000fe6d:02 §4, lattice-free facet realization and maximality"
+    },
+    {
+      "candidate_id": "98a6372650bd3579",
+      "locator": "correction on width one for saturated exclusive facet witnesses"
+    }
+  ],
+  "statement": "There exists a full-dimensional maximal lattice-free polyhedron $L\\subset\\mathbb R^4$ with sixteen facets such that its only lattice points are sixteen distinct relative-interior facet witnesses, one on each facet. Their convex hull is a full-dimensional empty lattice polytope of lattice width two. Here lattice-free means that $\\operatorname{int} L$ contains no point of $\\mathbb Z^4$, and maximality is by inclusion among convex lattice-free sets.",
+  "subgoal_id": "pk-intake-saturated-width-two-maximal-lattice-free-realization",
+  "title": "A maximal lattice-free polyhedron with a saturated width-two witness hull"
+}

@@ -1,0 +1,63 @@
+{
+  "candidate_id": "607c120102a3d53f",
+  "candidate_sha256": "72fd4dddc45d61521d65457eceb599adf5a550b025545245af95aa1828044836",
+  "checked_dependency_candidate_sha256": {
+    "0a1a0e4d5c7ff3a3": "48e27d8f55e55d6902e527e102ded42608df0ae20bc7fc3c618354e0a7931f2e",
+    "18e7bdf54588779d": "147af10a15ccd0baaf7f740ad71979edbc9e7689171b8840b16a2520307819aa",
+    "f4be2679c83c2fd1": "f7af40d0ddef2d06e42343643b1e896508c69bb3b7842462b3324f46c0048977"
+  },
+  "checks": [
+    "Read ce4a362fe44872e9 §4 and ff46898305c5fc7e §3. The hypotheses require an individually centered nonzero cone slope and do not assert a reduction of arbitrary mixtures to it.",
+    "At T=s* the ratio −z/r(z) ranges from 1 to −s*, giving a full section since s*>1. The coarea moment at that section is proportional to ∫z r(z)^{d−2}dz and is zero by cone-to-frustum equality at the cutoff.",
+    "The auxiliary section density is positive and decreasing in z, including the constant d=2 case. The same-wave monotone tilt is applicable with multiplier r>0 and changes the axial density to r^{d−1}. Hence the horizontal frustum fraction (p−t*)/(1−t*) is at most one half.",
+    "The full-section identity P_f=V/2+M_f and the centered record P_f/V0=pe*+1−v*−t* give 2v*−1=2pe*−t*. Substituting this into 2γ(t*)−1 gives exactly e*(2p−1−t*) after multiplying by its positive denominator.",
+    "The cone energy bound implies e*≤v* and γ(0)≥v*²/(3v*−1)≥4/9. The difference γ(t)−γ(0) is the stated nonnegative increasing function. Finally B−κ=(1−t)(1−2γ) and B=1−v*+κe* give both bounds on B."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "18e7bdf54588779d",
+      "fact_sha256": "ec45d0b04a6a40e89e05a1c4a616bab8cc728617ec9fb8d7db4c127d89f29cc3",
+      "hypotheses": "Apply to the centered Dirac slope s*>1 in the same d-dimensional affine-cone density and normalization."
+    },
+    {
+      "fact_id": "f4be2679c83c2fd1",
+      "fact_sha256": "421b7e875d13b8abe8cebab8ea20da66845c3e0c1a5aff20c2e4c1d670d53408",
+      "hypotheses": "Use U*=Hs*/(H+1+s*) and T=s*≥1. Bounded record equality includes s=T and the full-section identity applies there."
+    },
+    {
+      "candidate_id": "0a1a0e4d5c7ff3a3",
+      "candidate_sha256": "48e27d8f55e55d6902e527e102ded42608df0ae20bc7fc3c618354e0a7931f2e",
+      "hypotheses": "The full-section coordinate z is supported on [−1,U*] with normalized positive continuous nonincreasing density proportional to r^{d−2} and has mean zero. Multiplication by r is positive nonincreasing and integrable. This pending same-wave lemma supplies both median and tilt steps.",
+      "pending_review": true,
+      "reviewed_proof_sha256": "1fba62b4961b4b97858ec2e74a9f972901b5b5029ea2e768096328758c4b70f1",
+      "reviewed_statement_sha256": "61a63066248cea1b3583dc1b1787e139b41bafa4b1160b836682a38723256594"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its energy band already gives the lower bound and monotonicity at a centered singleton. The actual full-section identities and γ≤1/2 are additional.",
+      "fact_id": "18e7bdf54588779d"
+    },
+    {
+      "comparison": "Supplies truncation and full-section identities in the actual measure. It does not give the section-to-volume tilt comparison or the stated range of γ.",
+      "fact_id": "f4be2679c83c2fd1"
+    }
+  ],
+  "readability": "There are two different axial laws. The section law is centered and proportional to r^{d−2}; the actual volume law is its tilt by r.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof and source-scope review of the frozen bytes, with predecessor applicability and exact arithmetic checked where relevant.",
+  "reviewed_proof_sha256": "870b0532dd98ba4126a720fc3170da65e58ef45312e72cde68a771c990c29599",
+  "reviewed_statement_sha256": "21887534d162287e30ead5dd1d4087e4a3d21898b694a5b335e9bd94bc9731c9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:21:50Z",
+  "summary": "The full-section geometry proves both endpoint identities and the complete correction-constant range under the stated individually centered layer assumption.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

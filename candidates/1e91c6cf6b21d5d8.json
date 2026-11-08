@@ -1,0 +1,26 @@
+{
+  "advances": "Auxiliary correction on one row with real boundary contacts and classical Brunn–Minkowski.",
+  "author": "PK-research-agent",
+  "candidate_id": "1e91c6cf6b21d5d8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:31:43.945956+00:00",
+  "depends_on": [],
+  "draft_key": "residual-projection-first-exit-row",
+  "kind": "lemma",
+  "proof": "Fix a segment to a destination with $f(z_j)=0$. Every section along it has positive volume by convexity of $C$ and the endpoint fibers. In such a section any point of strictly negative margin gives a positive-volume residual, by mixing it with a small interior ball. The parameters with strictly negative points form a convex subset of $[0,1]$. They include a right neighborhood of zero, by combining a strict point at zero with any point at the destination. They exclude one. Let $t_j$ be their supremum. Compactness gives a limit of strict points at $t_j$ with margin at most zero. If $t_j<1$ and there were any strict point at $t_j$, mixing with the destination would extend positivity past $t_j$. If $t_j=1$, the destination has zero residual by hypothesis. Thus $t_j$ is the first exit, all closed residual points there have zero margin, and their section has zero volume because the continuous normal is nonzero.\n\nThe weights sum to one and $\\sum_j\\widehat\\theta_j(b_j-p)=c^{-1}\\sum_j\\theta_j(z_j-p)=0$. The closed residual sections at the $b_j$ are nonempty and compact. Their weighted Minkowski sum lies in the closed residual at $p$, since $C\\cap\\lbrace\\ell\\le0\\rbrace$ is convex. Closed and strict sections have equal volumes since their difference lies in a hyperplane with nonzero continuous normal. Brunn–Minkowski, including for nonempty zero-volume summands by continuity, gives $f(p)\\ge\\sum_j\\widehat\\theta_jf(b_j)$. For the zero-residual destinations $f(b_j)=0$. For the others $b_j=z_j$ and $t_j=1$. Multiply by $c$ and use $\\sum_j\\theta_j=1$ to obtain the formula.\n",
+  "source_candidate_ids": [
+    "3f94bc936c5d4a14"
+  ],
+  "source_candidate_sha256": {
+    "3f94bc936c5d4a14": "0452e055ea445e584d8b51ad9ceefa1fa38b643b722fc1467f8e7ac8017a69f3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3f94bc936c5d4a14",
+      "locator": "§1, (1)–(4)"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, $d\\ge1$, and write $C_z$ for its fiber over $z$. Let $H=\\lbrace(z,x):\\ell(z,x)\\ge0\\rbrace$ be a closed affine halfspace whose continuous normal is nonzero, and set $f(z)=|C_z\\cap\\lbrace\\ell(z,x)<0\\rbrace|^{1/d}$. Suppose $p=\\sum_j\\theta_jz_j$ with finitely many $\\theta_j>0$, $\\sum_j\\theta_j=1$, positive $d$-volume fibers at $p,z_j$, and $f(p)>0$. If $f(z_j)>0$, set $t_j=1$ and $b_j=z_j$. Otherwise let $b_j=p+t_j(z_j-p)$ be the first exit from the positive residual projection on the segment to $z_j$. For each index with $f(z_j)=0$, one has $0<t_j\\le1$ and $C_{b_j}\\cap\\lbrace\\ell(b_j,x)\\le0\\rbrace$ is nonempty with volume zero. With $c=\\sum_j\\theta_j/t_j$, the weights $\\widehat\\theta_j=\\theta_j/(ct_j)$ form a probability row of mean $p$ on the $b_j$. Moreover\n$$\n\\sum_{j:f(z_j)>0}\\theta_jf(z_j)\n\\le c f(p)\n= f(p)+ f(p)\\sum_{j:f(z_j)=0}\\theta_j(1/t_j-1).\n$$",
+  "subgoal_id": "pk-intake-residual-projection-first-exit-row",
+  "title": "First-exit correction for a residual-root barycentric row"
+}

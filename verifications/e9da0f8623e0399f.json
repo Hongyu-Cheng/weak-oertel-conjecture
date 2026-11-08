@@ -1,0 +1,51 @@
+{
+  "candidate_id": "bd7eb3a822ed8729",
+  "candidate_sha256": "17fe12aaa39723a56d9885cdaa6cd42414601458f013e9a2835d86563ab17da4",
+  "checked_dependency_candidate_sha256": {
+    "8e9593a77c241bb2": "3c0aa3ea0f2293e8febdd78f4ec3c99158300d76aa6cfa6cbee11ebb5a3ddd7c"
+  },
+  "checks": [
+    "After integrating each monomial, (m+ℓ+1)B−(m+k)(m+ℓ)=A−ℓc. The ℓ=0 term has A² because its final factor is A, and every ℓ≥1 term already has that power.",
+    "Expanding S(t), splitting j=ℓ+r and taking s=q−ℓ−r gives the displayed two binomial factors. Holding A,B,c,p fixed during formal summation is legitimate because each target coefficient is finite.",
+    "The s and r geometric/binomial sums leave y=2Az/(1+2pBz). Substituting pB−A=−cC and pB−A−mc=−cB and reversing z gives the exact parity factor and generator. At p=1 its sole nonconstant factor is (1−2(m+k)z)^−2.",
+    "Each degree-q term has at most 2q p-degree. The cleared logarithmic derivative has degree at most 2k+3. The split integrals have bounded denominators on fixed-interval rescalings around p=1, so the exact J numerator has order at least k+1 there. F(1)>0 gives the claimed order k in L.",
+    "Independently reproduced the finite coefficient and J numerator in 24 rational cases. Source b2bd978e973816b6 §§4–5 preserves the same ranges and asserts the log derivative only where F>0."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "approval_required": true,
+      "candidate_id": "8e9593a77c241bb2",
+      "candidate_sha256": "3c0aa3ea0f2293e8febdd78f4ec3c99158300d76aa6cfa6cbee11ebb5a3ddd7c",
+      "hypotheses": "The exact same-wave primitive defines Q and J for the same independent Gamma/Exp variables and 0<p<1. The polynomial identity substitutes its upper primitive and lower-endpoint remainder; the unsimplified split J integral supplies analytic extension at p=1. Predecessor review is required before admission.",
+      "reviewed_proof_sha256": "9536c0a40034ba062777c49a4b0a30bc013518cf608486fb540f0ef21415a428",
+      "reviewed_statement_sha256": "893be0efb911f506176801a00a6cc3e6fb0e018991cc53f3a427171182798695"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:03:00Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "At k=2 its quadratic numerator factor matches this generator and its reduced logarithmic polynomial is the degree-five specialization. It has no arbitrary-index generator.",
+      "fact_id": "19dd15c9bce38f93"
+    },
+    {
+      "comparison": "At k=3 the earlier degree-six logarithmic polynomial and endpoint analysis use the same one-index primitive family. The present all-index factor follows from the analytic integral and carries no uniform coefficient sign or endpoint-minimum claim.",
+      "fact_id": "543052ab7fffab6a"
+    }
+  ],
+  "readability": "The letter F is a formal polynomial in this draft, while P is the probability. Freezing parameters during the generating step prevents an accidental variation with the formal index.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "286280426ce40230e07bec15536cab3920fc71f8fe05f46a27010c1859c7cca1",
+  "reviewed_statement_sha256": "c559b13980dfc40a289fdcac935c5a3c0f97fca0147b835533b8a4a1b4e3ce29",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:57:46Z",
+  "summary": "The exact formal generator and the derivative numerator follow from the primitive, and analyticity at p=1 proves the stated polynomial factor.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

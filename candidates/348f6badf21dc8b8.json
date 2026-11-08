@@ -1,0 +1,33 @@
+{
+  "advances": "A sufficient sharp-depth regime in terms of actual projection coefficients. The proof uses ordinary full dimension and positive ambient-fiber mixed mass.",
+  "author": "PK-research-agent",
+  "candidate_id": "348f6badf21dc8b8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:12:16.490785+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d",
+    "ccb572e264ee97be"
+  ],
+  "draft_key": "projection-coefficient-rounded-centroid",
+  "kind": "theorem",
+  "proof": "For a closed cap through $y$, start with the parallel cap through $c$. At full volume, accepted fact 6769574fc1bd9f8d gives its ordinary mass at least $\\Gamma_D V$. Move the boundary through the coordinate displacements one at a time. In direction $e_i$ the cap is unchanged if its normal coefficient is zero. Otherwise on each line parallel to $e_i$ the cutoff in the $i$-th coordinate shifts by exactly $\\delta_i$, with captured length loss at most $|\\delta_i|$. Integrating on the ordinary projection bounds this loss by $|\\delta_i|V_i$. A containing cap has at least the mass of its parallel through-$y$ cap. Apply the discrepancy lemma to $\\pi_{\\{i\\}}C$ with its remaining integer coordinates to bound $V_i$ by $\\sum_{I\\ni i}A_I(C)$. With no remaining integer coordinates the comparison is equality.\n\nThe discrepancy lemma on the whole body gives $V\\ge M-E$. On the containing cap it gives mixed mass at least ordinary volume minus $E$. Substitute these estimates and group the displacement costs to obtain $B_\\delta$. Strict separation of $y$ from $C$, or from the compact hull of $S$, would give a containing closed halfspace of zero sampled mass. Thus positivity proves the two membership conclusions, and $|\\delta_i|\\le1/2$ gives $B_\\delta\\ge B$.\n\nIndependently, choose a centroid of a largest positive-volume fiber. For $d\\ge1$, any containing ambient cap either restricts to a containing closed halfspace on that fiber or contains it all. The same accepted full-volume Grünbaum case gives at least $\\Gamma_d W$ from the fiber. For $d=0$, the selected point itself contributes $W=1$. The rounded bound contributes if positive, and otherwise its nonnegative part is zero. Divide by $M$.\n",
+  "source_candidate_ids": [
+    "d358c029b6047209"
+  ],
+  "source_candidate_sha256": {
+    "d358c029b6047209": "a5a8032c1fedf9aaeb62612e1af2c7f267ff490f7ddd59c4f208e78681cd4499"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d358c029b6047209",
+      "locator": "d358c029b6047209:03 §§3–4, (5)–(8)"
+    },
+    {
+      "candidate_id": "d358c029b6047209",
+      "locator": "d358c029b6047209:02 §2, (3)–(4)"
+    }
+  ],
+  "statement": "Let $n\\ge1,d\\ge0,D=n+d$ and let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a full-dimensional compact convex body. Work in fixed unimodular integer-base coordinates and use the actual projected mixed volumes $A_I(C)=\\mu_{n-|I|,d}(\\pi_I C)$. Put $M=\\mu_{n,d}(C)>0$, $V=\\operatorname{vol}_D(C)$, $E=\\sum_{I\\ne\\varnothing} A_I(C)$, $V_i=\\operatorname{vol}_{D-1}(\\pi_{\\{i\\}}C)$, and $\\Gamma_j=(j/(j+1))^j$ for $j\\ge1$, $\\Gamma_0=1$.\n\nFor the ordinary centroid $c$ and any real displacement $y=c+(\\delta,0)$, every containing closed halfspace $H$ has ordinary cap volume at least $\\Gamma_DV-\\sum_i|\\delta_i|V_i$, and $V_i\\le\\sum_{I\\ni i}A_I(C)$. In particular, round the integer coordinates of $c$ independently to nearest integers with deterministic ties, leaving the other coordinates fixed. At the resulting $y$ every containing closed halfspace has raw mixed mass at least\n$$\n\\Gamma_DV-E-\\sum_i|\\delta_i|V_i\\ \\ge\\\nB_\\delta:=\\Gamma_D M-\\sum_{I\\ne\\varnothing}\n(\\Gamma_D+1+\\sum_{i\\in I}|\\delta_i|)A_I(C).\n$$\nIf $B_\\delta>0$, this $y$ belongs to the actual mixed set $S$ and to its convex hull. Let $B$ be the same expression with $\\sum_{i\\in I}|\\delta_i|$ replaced by $|I|/2$. If $B\\ge2^{-n}\\Gamma_d M$, the rounded point attains at least $2^{-n}\\Gamma_d$ normalized depth. In all cases the maximum normalized depth on $S$ is at least\n$$\n\\max\\{\\Gamma_d W/M,\\ \\max(0,B)/M\\},\n\\qquad W=\\max_{z\\in\\mathbb Z^n}\\operatorname{vol}_d(C_z).\n$$",
+  "subgoal_id": "pk-intake-projection-coefficient-rounded-centroid",
+  "title": "An actual projection-coefficient criterion for a rounded centroid"
+}

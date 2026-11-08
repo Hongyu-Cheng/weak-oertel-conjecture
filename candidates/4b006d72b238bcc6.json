@@ -1,0 +1,30 @@
+{
+  "advances": "Finite simplex endpoint and scalar-vector identities at exact whole-body Brunn–Minkowski equality. Thresholds may lie outside the support.",
+  "author": "PK-research-agent",
+  "candidate_id": "4b006d72b238bcc6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.746173+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-shape-simplex-residual-envelope",
+  "kind": "lemma",
+  "proof": "The linear forms $\\ell_i$ sum to zero. Their map to $\\mathbb R^m$ is injective since barycentric coordinates determine a point, so it is an isomorphism onto the sum-zero subspace. At any given base, the convex hull of the two endpoint lifts has exactly the section given by the corresponding Minkowski interpolation. At zero this is the asserted $K$ because the two translations cancel and $aT+bT=(a+b)T$. Substituting $x=aX+\\delta$ or $x=bX-\\delta$ with $X\\in T$ gives the cutoffs and their shared identities. Conversely, every pair of vectors satisfying the displayed identities for a specified $B$ is actual: take $\\delta=0$ and $\\beta_i=a(q_i^A-1/m)$, whose sum is $B$; the paired identity then gives the other vector. On $T$, $\\lambda_i\\ge q$ has relative volume $(1-q)^d$ for $0\\le q\\le1$ by homothety at vertex $i$. The extremes and tangent sets follow from the range $[0,1]$ of $\\lambda_i$ on $T$. Hyperplane levels have zero $d$-volume, so either open or closed residual gives the same root. The middle trace has cutoff $1/m$ and its simplex is scaled by $(a+b)/2$, giving the source root and stated overshoots.\n\nOn $[0,\\infty)$, $\\phi$ is nondecreasing and concave, with $\\phi(0)=0$ and $\\phi(q)=1$ for $q\\ge1$. For $d=1$ it is the capped linear function there. For $d\\ge2$, on $(0,1)$ its derivative is $(1-q)^{d-1}[1-(1-q)^d]^{1/d-1}$ and its second derivative is\n$$\n-(d-1)(1-q)^{d-2}[1-(1-q)^d]^{1/d-2}<0.\n$$\nThe derivative tends to zero at the upper endpoint and $\\phi$ is continuous at both ends, so adjoining the constant part preserves concavity. If all $q_i\\ge0$, Jensen bounds their sum of values by $m\\phi(h/m)$. If at least one is negative, it contributes zero, and the others contribute at most $d$. The value $d$ is realized for every $h$ by taking $d$ entries at a common sufficiently large value $L\\ge1$ and the last entry $h-dL<0$. When the other branch dominates, its equal coordinates are nonnegative and realize that value. The branch equation follows from $\\phi(1-\\kappa)=r$.\n\nFor $d\\ge2$, $(1+1/d)^d>2$ gives $r^d<1/2$ and $\\kappa>r$, so $d<m\\kappa$. The negative-threshold branch then cannot attain the maximum at $h=1$. For the nonnegative vectors, the mean $1/m$ is strictly inside $(0,1)$, and strict concavity there makes Jensen strict for a nonconstant vector: its range contains a nonempty subinterval of $(0,1)$ and $\\phi$ is not affine on the range. In $d=1$, clipping gives $\\phi(q)+\\phi(1-q)=1$ for all real $q$ and $m\\kappa=1$.\n",
+  "source_candidate_ids": [
+    "d9b60e76f58eda77"
+  ],
+  "source_candidate_sha256": {
+    "d9b60e76f58eda77": "e935e0803b54dcffe81d8842a3405ffe10c513cfba74a4291409621dc1e3e5c2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d9b60e76f58eda77",
+      "locator": "d9b60e76f58eda77:02 §2, (6)–(9), scalar envelope and deficit"
+    },
+    {
+      "candidate_id": "d9b60e76f58eda77",
+      "locator": "d9b60e76f58eda77:01 §1, (1)–(5), actual endpoint fractions and vector constraints"
+    }
+  ],
+  "statement": "For $d\\ge1$, let $m=d+1$, $r=d/m$, $\\kappa=(1-r^d)^{1/d}$, $\\psi(q)=\\min\\{1,\\max\\{0,1-q\\}\\}$ and $\\phi(q)=(1-\\psi(q)^d)^{1/d}$.\n\nLet $T\\subset\\mathbb R^d$ be a full-dimensional simplex of centroid zero and volume $V>0$, with barycentric coordinates $\\lambda_i=1/m+\\ell_i$ for $1\\le i\\le m$. The convex hull of the lifts of $A=aT+\\delta$ at $-1$ and $D=bT-\\delta$ at $1$, with $a,b>0$, has actual midpoint fiber $K=((a+b)/2)T$. Take ambient halfspaces $H_i=\\{(z,x):\\ell_i(x)+\\beta_i z\\ge0\\}$, with $B=\\sum_i\\beta_i$. Their endpoint barycentric cutoffs on the reference $T$ are\n$$\nq_i^A=1/m-\\ell_i(\\delta)/a+\\beta_i/a,\\qquad\nq_i^D=1/m+\\ell_i(\\delta)/b-\\beta_i/b.\n$$\nThey satisfy\n$$\n\\sum_iq_i^A=1+B/a,\\qquad\\sum_iq_i^D=1-B/b,\\qquad\na q_i^A+b q_i^D=(a+b)/m.\n$$\nThe endpoint capture fractions are $\\psi(q)^d$. The actual volume roots of the residuals are $aV^{1/d}\\phi(q_i^A)$ and $bV^{1/d}\\phi(q_i^D)$. The closed residual is empty for $q<0$ and tangent for $q=0$, while the capture is tangent for $q=1$ and empty for $q>1$. For $0<q<1$ both have positive volume.\n\nThe source residual root is $V^{1/d}\\kappa(a+b)/2$ in each direction. The normalized root overshoots are $\\Delta_i=[a\\phi(q_i^A)+b\\phi(q_i^D)-\\kappa(a+b)]/2$, with actual root overshoots $V^{1/d}\\Delta_i$.\n\nFor every $h\\in\\mathbb R$ the attained maximum of $\\sum_{i=1}^m\\phi(q_i)$ over all real vectors with $\\sum_i q_i=h$ is\n$$\nE_d(h)=\\max\\{d,m\\phi(h/m)\\}.\n$$\nThe branches meet at $h_*=m(1-\\kappa)$. At $h=1$ the deficit $J(q)=m\\kappa-\\sum_i\\phi(q_i)$ is nonnegative. Equality holds precisely at the uniform vector if $d\\ge2$ and at every such vector if $d=1$.",
+  "subgoal_id": "pk-intake-pk-w36-shape-simplex-residual-envelope",
+  "title": "Exact scalar-sum envelope for simplex residual roots"
+}

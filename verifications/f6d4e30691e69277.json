@@ -1,0 +1,50 @@
+{
+  "candidate_id": "0ac722a34cfaa4f0",
+  "candidate_sha256": "e0b2829c09dd32edc956a679614c5f1f7fdd325bf14cb618b1555a01ae954d91",
+  "checked_dependency_candidate_sha256": {
+    "52ef8071d92df87c": "b003e3bf3d5471adf726364a88c4a81e55e194424da16c262a7164d3c17e891c"
+  },
+  "checks": [
+    "An equal-parity event has probability 1/2 because the class masses both equal half the current total. Counting ordered pairs explicitly gives a² at each extreme and b²+2ab at each inner base. Solving R_{k+1}+1=(R_k+1)² with R_0=1 gives R_k=2^(2^k)−1.",
+    "Conditional on the parity event, continuous endpoints remain independent of each other and of the base pair. Their recursive average has the law of the average of 2^k uniforms, whose support is all of [0,1] and which is symmetric and nonatomic. At k=1 scaling the convolution by two gives density 4 min(x,1−x).",
+    "The frozen four-fiber lemma applies with the exact ratio R_k and candidate set. Normalization simplifies to 1/4+2^(−2^k−2). Direct ordered enumeration for k=0 through 4 verifies the ratio and the depth arithmetic. At k=0 and 1 the values are 3/8 and 5/16.",
+    "Source ce37fc789d54689d:02 and :03 §§1–3 identify the same global conditioning operation and all output depths and retention probabilities."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "52ef8071d92df87c",
+      "candidate_sha256": "b003e3bf3d5471adf726364a88c4a81e55e194424da16c262a7164d3c17e891c",
+      "hypotheses": "Every step has symmetric weights (a,b,b,a) with b≥a>0, the same four-base candidate set and symmetric nonatomic common conditional law on [0,1]. The exact depth formula therefore applies. Same-wave predecessor independently reviewed on the pinned bytes.",
+      "kind": "same_batch",
+      "reviewed_proof_sha256": "ecebe6ece5aff0aa6465dbd802ea9dd2da15cc2050f044285f02d67fc7a0c15a",
+      "reviewed_statement_sha256": "55eb4e4b6fb05f308f6df7a1454f9ed01b8e05604a24ed9e5e713250a627a333"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:27:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its operation on the integer marginal is the same globally equal-parity-conditioned midpoint. It proves rigidity and Hellinger bounds, without the continuous product law, exact depth, or its trajectory.",
+      "fact_id": "3a28e7b649873797"
+    },
+    {
+      "comparison": "The operator there is also the global equal-parity-conditioned midpoint, but its example concerns a log-concavity obstruction on a different finite base and gives no depth sequence.",
+      "fact_id": "5f96fae4054d19ad"
+    }
+  ],
+  "readability": [],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ef1a5e6adfda9142c8a8aa351fd0bb3aa1598b1921cd4c7dffd8cd1c14e4ab3c",
+  "reviewed_statement_sha256": "8ea719dd9b563630ff37f9b7a3e2291bfc3985da82271c47f7776aee36668395",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:22:39Z",
+  "summary": "The exact recursion, continuous factor, and strictly decreasing depth formula follow for every step on the specified rectangle.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

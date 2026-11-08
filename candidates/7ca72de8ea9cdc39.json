@@ -1,0 +1,30 @@
+{
+  "advances": "Ordinary Lebesgue volume in dimension at least two, with exactly D+1 covering halfspaces and a positive profile level.",
+  "author": "PK-research-agent",
+  "candidate_id": "7ca72de8ea9cdc39",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.851111+00:00",
+  "depends_on": [
+    "ac7ba1e1e0ebc955",
+    "03bc771bddd39a8a",
+    "53fe12b742a7608d"
+  ],
+  "draft_key": "ordinary-distal-overlap-equality",
+  "kind": "theorem",
+  "proof": "The inequality is the ordinary-volume case of fact ac7ba1e1e0ebc955. Assume equality. Write $H_i=\\{x:u_i\\cdot x\\ge b_i\\}$ with $u_i\\ne0$. For each $i$ with $A_i>\\alpha$, select $t_i\\ge b_i$ so that the distal piece $R_i=K\\cap\\{u_i\\cdot x>t_i\\}$ has volume $A_i-\\alpha$. This is possible by continuity of cap volume, and the planes have zero volume. Let $K'$ be the body cut by all the inequalities $u_i\\cdot x\\le t_i$ for those $i$. The union bound gives $|K'|\\ge V-\\sum_i(A_i-\\alpha)_+=\\alpha/\\gamma>0$. Each original halfspace has $K'$-mass at most $\\alpha$. Since the halfspaces cover $K'$, its maximum normalized depth is at most $\\alpha/|K'|$. The ordinary maximal-depth lower bound and rigidity in fact 03bc771bddd39a8a imply $|K'|=\\alpha/\\gamma$ and that $K'$ is a simplex. Equality in the union bound also implies $|R_i\\cap R_j|=0$ for each distinct pair, by integrating the excess of the sum of the indicators over the union indicator.\n\nLet $g$ be the centroid of $K'$. Any original halfspace containing $g$ has $K'$-mass at least $\\alpha$ by the centroid cap bound in fact 53fe12b742a7608d and has mass at most $\\alpha$ by construction. Its boundary must pass through $g$: otherwise moving the plane to $g$ removes a positive-volume slab within an interior ball about $g$, while the through-centroid cap still has mass at least $\\alpha$. The equality-direction assertion of that fact now makes this halfspace one of the canonical barycentric halfspaces of $K'$. Caps missing $g$ miss a neighborhood of $g$ since the list is finite. All canonical directions are needed to cover that neighborhood, because for any nonempty proper subset of their indices, barycentric increments negative on that subset and positive on the complement with sum zero yield arbitrarily close interior points outside all chosen halfspaces. The empty subset covers nothing. With $D+1$ halfspaces, they are therefore all distinct and canonical for $K'$, each with $K'$-mass $\\alpha$.\n\nIf some distal piece has positive volume, choose $x\\in\\operatorname{int}K\\cap R_i$ off all other cutting planes. Pairwise null overlap implies $x$ strictly satisfies every other retained inequality, since otherwise the overlap would contain an interior ball. The centroid $g\\in\\operatorname{int}K'$ satisfies all retained inequalities strictly. The segment to $x$ crosses the $i$-th plane at an interior point of $K$ where the other retained inequalities are strict. A ball about the crossing shows that $u_i\\cdot x=t_i$ exposes a facet of $K'$. But $u_i$ is a positive multiple of a barycentric coordinate gradient of $K'$, whose maximizing face is one vertex. This is a contradiction in dimension $D\\ge2$. Thus no distal piece was cut, $K=K'$, and all cap masses equal $\\alpha=\\gamma V$.\n\nConversely these canonical caps cover because the barycentric coordinates sum to one. Each is a vertex homothet of volume fraction $\\gamma$, which gives equality. If $\\alpha=a>0$, the positive-part sum is $\\sum_i A_i-(D+1)a$, giving the overlap equality claim.\n",
+  "source_candidate_ids": [
+    "3bb0f1835a5838c5"
+  ],
+  "source_candidate_sha256": {
+    "3bb0f1835a5838c5": "9aa392a4232706c48c960aedd02b582b60e2e9311a253b8754fb4e6090aaeb30"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3bb0f1835a5838c5",
+      "locator": "3bb0f1835a5838c5:01 §§1–4, (1)–(4), and positive-part profile after §4"
+    }
+  ],
+  "statement": "Let $D\\ge2$ and let $D+1$ proper closed halfspaces $H_i$ cover a full-dimensional convex body $K\\subset\\mathbb R^D$ of volume $V$. Put $A_i=|K\\cap H_i|$ and $\\gamma=(D/(D+1))^D$. For each $\\alpha>0$,\n$$\n\\sum_i(A_i-\\alpha)_++\\alpha/\\gamma\\ge V .\n$$\nEquality holds exactly when $K$ is a simplex, the $H_i$ are its $D+1$ distinct canonical centroid vertex halfspaces $\\{\\lambda_i\\ge1/(D+1)\\}$ in some order, and $\\alpha=A_i=\\gamma V$ for every $i$. In particular, for $a=\\min_i A_i>0$, equality in $\\sum_i A_i-V\\ge(D+1-1/\\gamma)a$ has the same classification with $\\alpha=a$.",
+  "subgoal_id": "pk-intake-ordinary-distal-overlap-equality",
+  "title": "Equality in the distal overlap profile forces a simplex with its canonical caps"
+}

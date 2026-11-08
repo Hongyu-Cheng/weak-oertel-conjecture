@@ -1,0 +1,29 @@
+{
+  "advances": "Failure of balancing for an attainable but suboptimal median target. The example does not address balancing at a jointly optimal coupling.",
+  "author": "PK-research-agent",
+  "candidate_id": "383ee955161d5a6b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.934661+00:00",
+  "depends_on": [
+    "2f355ace664c0068",
+    "03bc771bddd39a8a"
+  ],
+  "draft_key": "atomic-median-target-unbalanced-cap-normals",
+  "kind": "counterexample",
+  "proof": "Set $a=(1,0)$, $b=(0,1)$, and $c=(3/4,3/4)$. The three parallelograms $[0,a]+[0,b]$, $a+[0,b]+[0,c]$, and $b+[0,a]+[0,c]$ lie in $Z$. The first is separated in interior from the second by $x=1$ and from the third by $y=1$. The last two lie on opposite sides of $x=y$ and have disjoint interiors. Their areas are $1,3/4,3/4$. The convex hull of the eight endpoint sums has vertices $(0,0),(1,0),(7/4,3/4),(7/4,7/4),(3/4,7/4),(0,1)$ in order, and the polygon area formula gives $5/2$. The three parallelograms thus cover $Z$ up to a Lebesgue-null set. Reflection about a tile's center preserves the uniform law within it. Its midpoint with the original point is precisely the tile center. Applying this coordinate pairing to the outer-outer part of mass $2/3$ and the central-central part of mass $1/3$ gives a coupling of the two prescribed marginals, since both parts preserve the common uniform continuous-coordinate law. Both types of median map take the arithmetic midpoint, producing the specified atoms and weights.\n\nThe three centers are affinely independent. At $A$ its atom gives a depth lower bound of $2/5$, and a cap through $A$ excluding both $B,C$ gives equality. At any other point in their triangle, at least one of the barycentric coordinates for $B,C$ is positive. The closed cap where that coordinate is at least its value at the point isolates the corresponding atom, giving depth at most $3/10$. Outside the triangle depth is zero by separation. At $A$, any closed cap of mass below $7/10$ must exclude both $B,C$, so its oriented inward normal $u$ has $u\\cdot(B-A)<0$ and $u\\cdot(C-A)<0$. In particular all those normals lie in the stated strict hemisphere. Finally replace the reflected coordinate by the same coordinate within each paired base type. The median law is then uniform on $Z$, with maximum at least $4/9$ by 03bc771bddd39a8a in dimension two.\n",
+  "source_candidate_ids": [
+    "641c5559a440bf48"
+  ],
+  "source_candidate_sha256": {
+    "641c5559a440bf48": "5448729b0e8cd524066515f2ecb277789107753008b36a5a8bd35fbbc8d0a046"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "641c5559a440bf48",
+      "locator": "641c5559a440bf48:05 §6, tile reflection, unique deepest point and failure of balancing"
+    }
+  ],
+  "statement": "Let $Z=[0,(1,0)]+[0,(0,1)]+[0,(3/4,3/4)]$ and let the three integer fibers of $[-1,1]\\times Z$ carry their normalized mixed-volume law. A median coupling at $0$ has target atoms of masses $2/5,3/10,3/10$ at\n$$\nA=(1/2,1/2),\\quad B=(11/8,7/8),\\quad C=(7/8,11/8).\n$$\nIts unique deepest point is $A$, of depth $2/5$. The normals of all closed through-$A$ caps of mass less than $7/10$ lie in a single strict hemisphere, so they cannot balance by any convex combination. The coupling is suboptimal for the joint target-depth problem, since the diagonal continuous-coordinate pairing gives the uniform law on $Z$ of maximum depth at least $4/9$.",
+  "subgoal_id": "pk-intake-atomic-median-target-unbalanced-cap-normals",
+  "title": "An atomic median target whose near-minimum cap normals cannot balance"
+}

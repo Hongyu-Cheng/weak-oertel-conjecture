@@ -1,0 +1,37 @@
+{
+  "candidate_id": "e51b30b2ba5896c9",
+  "candidate_sha256": "d1ac77001341f964d435860502f11e0026f7e1e860153208427753d8d7cd798f",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The span condition provides real a_i with the exact cancellation equation. For finite I, small signed t keeps all row scale factors positive. Only the selected strictly positive rows receive additive perturbations, so positivity is maintained there and all other supports stay fixed.",
+    "The column-sum vector changes by t times the cancellation equation and hence stays exactly equal to one. Feasibility of the rescaled row argument follows by dividing by its positive factor.",
+    "Each projective parameter s_i=t/(1+t a_i) has s_i=t+O(t²) and (1+t a_i)s_i=t exactly. Selected rows contribute the stated remainder plus the baseline scaling term and tℓ_i. The unselected active rows contribute only their affine scaling terms.",
+    "The sum of remainders is o(|t|) and the two signs of feasible t force the remaining linear coefficient to vanish. This yields an exact equality for all small signed t, including the empty selected set.",
+    "For a single selected row the inverse map is t=s_r/(1−a_r s_r) near zero, and the positive scale and positive weight preserve the sign of the capacity remainder. Dividing a second-order expansion by s_r²/2 yields Q ≤ 0.",
+    "Archived sources f62fe2e83b180bf3 §3 and 58f8bbb67f63ee23 §1 supply respectively the exact one-row identity and the simultaneous scaling argument. The frozen two-sided directional derivative assumption is sufficient for the joint remainder identity. Both archived raw digests match the frozen provenance."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T12:22:20Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted full-cut exclusion uses a particular two-row coordinate transfer and a one-sided derivative jump. It does not give the simultaneous proportional compensation identity for selected row directions with sum in the active span.",
+      "fact_id": "10916437d7f6301d"
+    }
+  ],
+  "readability": "The capacity specialization uses φ as a shorthand for the chosen row capacity. The proof only uses the stated equality f_r=ω_r φ and the directional derivative hypothesis.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "28191d78347627650d2299cf6d7f86acc46803cba41ea3b9bc94abf430fe5d8f",
+  "reviewed_statement_sha256": "5abc37cca66ef41b791e6f13c51f7a86bec3ae0573a80b158f64a51504978c2d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:19:08Z",
+  "summary": "An exact projective rescaling isolates the selected rows’ tangent remainders along a feasible two-sided line, with only directional differentiability on those rows.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

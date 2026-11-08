@@ -1,0 +1,94 @@
+{
+  "candidate_id": "156bfb331124ae75",
+  "candidate_sha256": "9c5274b98194ebb76e4bc43e61604cba375d162f183a4c59cf1e3dd1090f1c3d",
+  "checked_dependency_candidate_sha256": {
+    "08e57a9d5210184f": "3b3aeb0501b04b66879e9995631034301c50d97eab8e263f9eed946760e85141",
+    "099aa1c919dac117": "bc31b75adb89ce3d429764e5deebd2b3fbac99dd2e8b2012c6a20b0bdef6310e",
+    "5097879468363a7e": "b6026e29aef886843672e82b650c02392225de7bf979ad087ccd1b5f7a2139d4",
+    "643b08457d03e63b": "8f804d289dc7d801da532c05c681ec72e36c6be92021a4f4464587136e1dcd72",
+    "8bdcdcd6e2fa69d9": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86"
+  },
+  "checks": [
+    "At the given nonunit positive-weight local maximum, all full rows have actual proper thresholds and the same normalized multiplier centroid. Coarea and section volume give the same normalized centroid. Partial-zero exclusion and boundary multiplier identities give the exact one-hole restriction.",
+    "For each column the margins sum to zero by column stochasticity and sum of centroid coordinates one. Zero rows have margin zero. If there is no noncentral index every full row supplies the two captured coordinates.",
+    "For one noncentral column, all one-hole rows miss it and have positive margins there. If there are none, the proper full-row margin there cannot vanish. Both cases force a negative full-row margin.",
+    "For at least two noncentral indices, no one-hole rows survive. A negative full-row margin at any one of those columns forces negative margins at all of them by the same-side theorem. The required two strictly captured vertices are outside that set."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "8f804d289dc7d801da532c05c681ec72e36c6be92021a4f4464587136e1dcd72",
+      "fact_id": "643b08457d03e63b",
+      "fact_sha256": "e20bcd30a98d28241ca42fa60741e0753632d9e86e7fda22b818dbc04a5975c1",
+      "hypotheses": "Its positive weights, d≥2, square stochastic local maximum, full-row and nonunit hypotheses match exactly and give the common actual proper threshold data.",
+      "reviewed_proof_sha256": "ccff615025a8ca050d6291b09450ece71009148a399b85c8f9be2bf2221eaf75",
+      "reviewed_statement_sha256": "452306aac0ef1af44a8de524b38c5fcce04bfde7ba377e99fdc973257bb5322d"
+    },
+    {
+      "candidate_sha256": "bc31b75adb89ce3d429764e5deebd2b3fbac99dd2e8b2012c6a20b0bdef6310e",
+      "fact_id": "099aa1c919dac117",
+      "fact_sha256": "a87ae42a42d9d63aea1627e69ec9f12ce060ccfc205ab025a35b80c77d765b51",
+      "hypotheses": "Presence of a strictly positive funding row excludes every other nonzero row with two or more zeros at this local maximum.",
+      "reviewed_proof_sha256": "71cb28b51be5c29a67db5ae3a3f196ae9df0f479fac0f47f1015be480ca7a3fd",
+      "reviewed_statement_sha256": "3bf0e6ae32d7b16e930a4da6faf4795ea67e218575e50b52c686577cdb34e72d"
+    },
+    {
+      "candidate_sha256": "b6026e29aef886843672e82b650c02392225de7bf979ad087ccd1b5f7a2139d4",
+      "fact_id": "5097879468363a7e",
+      "fact_sha256": "43e219bccd2db464a70baa095590ce8ac46ddcdac0046c51deb122116801c719",
+      "hypotheses": "A proper full row funds the local transfers, and for each one-hole row the established multiplier inequality gives b_j≤1/d off its hole after normalization.",
+      "reviewed_proof_sha256": "3e5aeda84b32fa732ca5d4c5e6fee5c8eb4367a1f02004702ae4cc4f77a692b9",
+      "reviewed_statement_sha256": "9d7e56c11ad94dfe4eb4cd74150a32104553af0ce1cfb6fa23b215428f13a5be"
+    },
+    {
+      "candidate_sha256": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+      "fact_id": "8bdcdcd6e2fa69d9",
+      "fact_sha256": "b6b826a3e6a8e77bf027fc6db3d5a210aaf645644d9a18b27289fbad6ebab319",
+      "hypotheses": "Every full row has positive entries and a proper minimum, so each cap strictly captures at least two vertices, with other vertex margins allowed to vanish.",
+      "reviewed_proof_sha256": "3f10992a46b97286bfba42b813249fa659b3504118defeeae9510650608b52f7",
+      "reviewed_statement_sha256": "deba3f575be9d9f26f3af97154bc46e151f89c2cdb0be8bb5cb80bcbb484e157"
+    },
+    {
+      "candidate_sha256": "3b3aeb0501b04b66879e9995631034301c50d97eab8e263f9eed946760e85141",
+      "fact_id": "08e57a9d5210184f",
+      "fact_sha256": "a69e2d1c1ce5e01a310f0812ef4fd2fbf23f463b669beb9164ee7844ba29d263",
+      "hypotheses": "Its density hypothesis is guaranteed for each of these proper minimizing strictly positive rows. It gives strict same-side signs and rules out zero margin at a noncentral coordinate.",
+      "reviewed_proof_sha256": "593cb3ca6be9ee3903320b0ac5f67bd5a763fe301f5866c7d4f4b69697dea623",
+      "reviewed_statement_sha256": "9f3b1e4d9f0b1428f6991415eba159a4863c16c19d0bf22b275be7ffa84e8e55"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:22:30Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the common centroid and proper cuts, but does not identify a row that captures two central coordinates.",
+      "fact_id": "643b08457d03e63b"
+    },
+    {
+      "comparison": "Constrains the noncentral signs on one proper cut. The reviewed candidate adds the stochastic column balance across all rows to select a cut excluding every noncentral label.",
+      "fact_id": "08e57a9d5210184f"
+    }
+  ],
+  "readability": "A captured central pair means two strictly positive margins with centroid coordinates at most 1/d, including equality in the centroid bound.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "b687f5c5ca431a166e8963c397df0acec7ac5bbf2822051116601337fb8ca485",
+  "reviewed_statement_sha256": "6f3b668512a384506c8f556b2e9aca97982b0f9e2e1040494abc6a70a1a7dd49",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_bindings": [
+    {
+      "archived_original_source_sha256": "732065ea67d99d9a20b37d07e5a4d7c7b24ad51430c7c37b0d2299b9a996c440",
+      "candidate_id": "f9d097c4c244eb84",
+      "candidate_sha256": "62ae8b1335e7860eac27a8a10d97a64d2f67e996c2ae6b0ac2c90f421b09c553",
+      "locator": "§§1–2, (1), including the margin balance at noncentral indices"
+    }
+  ],
+  "started_utc": "2026-11-08T16:16:34Z",
+  "summary": "The column margin balance and the same-side condition guarantee a full row with two strictly captured central coordinates in every case, with the common centroid and support hypotheses matched.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

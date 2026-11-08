@@ -1,0 +1,26 @@
+{
+  "advances": "Exact derivatives of a signed exponential probability on the stated sign stratum, with first derivatives through zero margins and second derivatives in strictly positive coefficients.",
+  "author": "PK-research-agent",
+  "candidate_id": "511d89569241b0d6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:38:52.388462+00:00",
+  "depends_on": [],
+  "draft_key": "signed-exponential-cap-derivatives",
+  "kind": "lemma",
+  "proof": "The density of a nonzero scaled exponential is bounded and log-concave on its half-line support. The convolution theorem from Prékopa–Leindler gives log-concavity of $f$, and one phase of each sign already has a strictly positive density everywhere. The convolution of two positive phases vanishes at zero, and its derivative on $(0,\\infty)$ is bounded and integrable, as follows by integrating the two exponential densities. Its extension by zero is absolutely continuous and has that derivative as an $L^1$ weak derivative. Convolving this derivative with a bounded negative-phase density produces a bounded continuous derivative, by continuity of translations in $L^1$. Convolution with the other phase laws preserves these properties.\n\nTo differentiate in coordinate $i$, condition on $E_i$ and use the density $g_i$ of $\\sum_{k\\ne i}c_kE_k$. In a neighborhood preserving two strictly positive phases and one strictly negative phase, the remaining sum contains at least two fixed-sign phases with coefficients bounded away from zero. Their convolution density is bounded and uniformly continuous because their individual densities are bounded and in $L^1$. The two-phase density varies continuously in supremum norm with the coefficients: the individual densities vary in $L^1$ on each nonzero sign stratum, and the other factors are uniformly bounded. Couple the remaining phases using the same exponentials. Convolution with their laws preserves the bound and gives continuity of $g_i(x)$ jointly in $x$ and the nearby coefficients, even if a remaining coefficient becomes zero. Differentiating the conditional survival probability by dominated convergence gives $P_i(c)=\\mathbb E[E_i g_i(-c_iE_i)]$. Weighting the law of $E_i$ by $E_i$ replaces it by the law of two independent unit exponentials added together, proving the density formula and continuity. Positivity follows by convolving the positive density $f$ with the law of $c_iE'$.\n\nFor the second derivatives, write $V=A-B$, where $A=\\sum_{c_i>0}c_i E_i$ and $B=\\sum_{c_k<0}(-c_k)E_k$. Fix the nonpositive coefficients and write $p_B$ for the density of $B$ on $(0,\\infty)$. It is continuous and has bounded continuous derivative there. For one phase this is immediate. With several phases, convolving the density of the remaining phases with a phase of mean $b>0$ gives $bp_B'+p_B=p_{B-bE_k}$ on $(0,\\infty)$, where $b=-c_k$ and the right-hand density is continuous and bounded there. Since $A>0$ almost surely, differentiating $P=\\mathbb E[F_B(A)]$ twice uses the bounded derivatives and finite exponential moments and gives $P_{ij}=\\mathbb E[E_iE_jp_B'(A)]$, also for $i=j$. Likewise\n$$\nf(0)\\phi'(a)=\\mathbb E[E' p_B'(A+aE')]=\\mathbb E[p_B'(A+aE'+aE'')]\n$$\nfor independent unit exponentials $E',E''$. The density identity underlying the derivative is $f_{V+aE'}(0)=\\mathbb E[p_B(A+aE')]$. The density of $E_i$ weighted by $E_i^2$ is twice the density of the sum of three unit exponentials, proving the diagonal identity. Distinct-coordinate weighting gives\n$$\nP_{ij}=\\mathbb E[p_B'(A+c_iE'+c_jE'')].\n$$\nFor unequal positive $a,b$, the density of $aE'+bE''$ on $u>0$ is $(e^{-u/a}-e^{-u/b})/(a-b)$. It vanishes at zero and infinity, so integrating by parts against $p_B'(A+u)$ replaces it by the difference of the two one-phase densities divided by $a-b$. This gives $P_{ij}=f(0)(\\phi(a)-\\phi(b))/(a-b)$ for $(a,b)=(c_i,c_j)$. For $a=b$ the expectation already equals $f(0)\\phi'(a)$.\n",
+  "source_candidate_ids": [
+    "8704554a92158bfc"
+  ],
+  "source_candidate_sha256": {
+    "8704554a92158bfc": "0b0afbcdc9e7015af4a34cd69c28239696719dbd664966c288733efab0e78114"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8704554a92158bfc",
+      "locator": "§§2–3, (5)–(6) and (9)–(10), and §5 first paragraph"
+    }
+  ],
+  "statement": "Let $E_0,\\ldots,E_d$ be independent unit exponentials, $d\\ge2$, and set $V=\\sum_{i=0}^d c_iE_i$, $P(c)=\\Pr(V\\ge0)$. Suppose at least two $c_i$ are positive and at least one is negative. The density $f$ of $V$ is bounded, strictly positive, continuously differentiable and log-concave on $\\mathbb R$. The map $P$ is continuously differentiable in a neighborhood of $c$ even in coordinates with $c_i=0$. Its derivative is $P_i(c)=f_{V+c_iE'}(0)>0$ for an independent unit exponential $E'$, with $P_i(c)=f(0)$ when $c_i=0$.\n\nWith $f$ held fixed, put $\\phi(a)=f_{V+aE'}(0)/f(0)$ for $a>0$. Varying only the strictly positive coefficients, $P$ has continuous second derivatives, and for positive $c_i,c_j$ with $i\\ne j$,\n$$\nP_{ii}(c)=2f(0)\\phi'(c_i),\\qquad\nP_{ij}(c)=f(0)\\frac{\\phi(c_i)-\\phi(c_j)}{c_i-c_j},\n$$\nwhere the divided difference is $\\phi'(c_i)$ when $c_i=c_j$.",
+  "subgoal_id": "pk-intake-signed-exponential-cap-derivatives",
+  "title": "First derivatives and positive-coordinate Hessian of signed exponential caps"
+}

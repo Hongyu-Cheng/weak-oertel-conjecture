@@ -1,0 +1,30 @@
+{
+  "advances": "An actual mixed interval body defeating the free-source-mass common-boundary rule, including median restriction, with a separate exact deep point.",
+  "author": "PK-research-agent",
+  "candidate_id": "092bc61124ffc397",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:52:39.943319+00:00",
+  "depends_on": [],
+  "draft_key": "free-mass-common-boundary-selector-obstruction",
+  "kind": "counterexample",
+  "proof": "The successive width differences $40,40,40,-101$ are nonincreasing, so interpolation gives a concave width function and the body between its negative and zero is compact, convex and full-dimensional. Its prescribed fibers are actual. All have length below $M/2$. The prefix through base $2$ is $126<M/2$, the suffix from $4$ is $21<M/2$, and the two closed sides at $3$ have masses $248$ and $143$, so the weighted median is unique.\n\nFor fixed source fiber masses $p_i$ the largest raw moment is $-\\sum_i p_i^2/2$. For masses $q_i$ the negative of the smallest is $\\sum_i(w_iq_i-q_i^2/2)$. Indeed, exchange against the upper, respectively lower, interval of the same mass gives the sign inequality pointwise after subtracting that interval's threshold from $x$. The extremizing densities are the corresponding indicators up to null sets. Maximizing width over mass is therefore exactly maximizing\n$$\n\\Phi(p,q)=-\\tfrac12\\sum_i p_i^2+\\sum_i(w_iq_i-\\tfrac12q_i^2)\n$$\nunder $0\\le p_i,q_i\\le w_i$, $\\sum_i p_i=\\sum_i q_i$, and $\\sum_i(i-j)p_i=\\sum_i(i-j)q_i=0$. The compact feasible set may include mass zero, whose width is zero. At an extreme base all source mass is in its one fiber, so $w_jt-t^2$ gives the unique mass $w_j/2$ and width $w_j^2/4$.\n\nFor the interior bases the exact data are\n$$\n\\begin{array}{c|c|c|c|c}\nj&p&q&(\\lambda,\\nu,\\omega)&\\Phi(p,q)\\\\ \\hline\n1&(2,21,2,0,0)&(2,21,2,0,0)&(-21,19,59)&601\\\\\n2&(2,42,42,26,10)&(2,38,40,42,0)&(-42,16,38)&5444\\\\\n3&(0,0,21,183/4,21)&(0,0,23/4,305/4,23/4)&(-183/4,-99/4,-61/2)&43737/8 .\n\\end{array}\n$$\nAll rows satisfy the constraints. Subtract from the $p$ gradient the vector with entries $\\lambda+\\nu(i-j)$ and from the $q$ gradient the vector with entries $-\\lambda+\\omega(i-j)$. The resulting residuals are\n$$\n\\begin{array}{c|c|c}\nj&p\\text{ residual}&q\\text{ residual}\\\\ \\hline\n1&(38,0,0,-17,-36)&(38,0,0,-17,-177)\\\\\n2&(72,16,0,0,0)&(34,0,0,0,-97)\\\\\n3&(-57/2,-15/4,0,0,99/2)&(-541/4,-259/4,0,0,0).\n\\end{array}\n$$\nEvery positive residual occurs at an upper box bound and every negative one at zero, so their dot product with any feasible displacement is nonpositive. The subtracted multipliers cancel against the equality constraints. The exact quadratic expansion has a further strictly negative remainder $-(\\|p-p_*\\|^2+\\|q-q_*\\|^2)/2$ for any different pair, proving global uniqueness. The maximum at base $3$ exceeds that at base $2$ by $185/8$ and the other widths are smaller.\n\nSumming the base-$3$ row gives $t=351/4$. At each of the five bases the two displayed source caps are the upper and lower intervals of the respective row's masses, up to null boundaries. Their traces at $3$ are proper. Since the row determines those trace lengths, any halfspace representing either exposed source has the same anchor threshold, namely $-183/4$. The ambient cap $x+1000(z-3)\\ge-183/4$ contains the selected common boundary point, misses bases $0,1,2$, includes base $4$, and has length $183/4$ at base $3$. Its total is $267/4<269/4$.\n\nTo compute the depth at $(3,-101/2)$, tighten a containing cap through that point. A downward cap includes the own-fiber interval of length $122-101/2=143/2$. An upward cap includes the own-fiber upper length $101/2$. Its untruncated retained lengths at $2$ and $4$ sum to $101$ by the affine threshold. If either interval is full, it contributes at least $21$ on its own. If neither is full, the retained lengths are the positive parts of the untruncated ones, whose sum is at least $101$. The upward mass is therefore at least $101/2+21=143/2$. A pure-base containing cap has at least the smaller closed-side mass $143$. Finally $x+1000(z-3)\\ge-101/2$ attains mass $143/2$. Division by $269$ proves the exact depth.\n",
+  "source_candidate_ids": [
+    "a6507537ad7a06ab"
+  ],
+  "source_candidate_sha256": {
+    "a6507537ad7a06ab": "97bb8cb9a8594c3644176fcbff6b6f1c773d27d0f0483f9129509b1f0bbf50b1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a6507537ad7a06ab",
+      "locator": "a6507537ad7a06ab:01 §§1–4, (1), optimizer table, source-cap and first bad-cap displays"
+    },
+    {
+      "candidate_id": "a6507537ad7a06ab",
+      "locator": "a6507537ad7a06ab:02 §4, final paragraph beginning ‘The same body has’"
+    }
+  ],
+  "statement": "Let $w=(2,42,82,122,21)$, and take the convex interval-fiber body whose integer fibers at $i=0,\\ldots,4$ are $K_i=[-w_i,0]$, with piecewise affine width between integers. Its original mixed length is $M=269$, and its unique weighted marginal median is $3$. For feasible $t>0$ and integer $j$, let $Q_t(j)$ be the interval of raw first moments $\\int xf\\,d\\mu$ of densities $0\\le f\\le1$ of mass $t$ and base mean $j$. At the five bases the maxima over $t$ of the length of $Q_t(j)$ are, respectively,\n$$\n1,\\quad 601,\\quad 5444,\\quad 43737/8,\\quad 441/4.\n$$\nThe joint maximum occurs uniquely at $j=3$ and $t=351/4$, including when only median bases are allowed. The upper and lower extremizing sources there are the caps\n$$\nx+\\frac{99}{4}(z-3)\\ge-\\frac{183}{4},\n\\qquad\nx-\\frac{61}{2}(z-3)\\le-\\frac{183}{4}.\n$$\nTheir common anchor boundary point $(3,-183/4)$ has normalized original depth at most $267/1076<1/4$. By contrast the distinct point $(3,-101/2)$ has exact normalized original depth $143/538>1/4$.",
+  "subgoal_id": "pk-intake-free-mass-common-boundary-selector-obstruction",
+  "title": "The raw-width common-boundary selector fails at its unique maximizing base"
+}

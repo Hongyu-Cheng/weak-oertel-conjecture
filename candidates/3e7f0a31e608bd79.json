@@ -1,0 +1,35 @@
+{
+  "advances": "The moving-cover and gap test are for a fixed three-planar-fiber configuration. The numerical implication with a strict below-2/9 original global budget has no instances on this domain by accepted 2a8c2bc6d7992c5e.",
+  "author": "PK-research-agent",
+  "candidate_id": "3e7f0a31e608bd79",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:27:15.712374+00:00",
+  "depends_on": [
+    "ba445d671279810a",
+    "25cb17da7fc8ba32"
+  ],
+  "draft_key": "fixed-facet-moving-equal-budget-cover",
+  "kind": "theorem",
+  "proof": "Since $A_t\\subseteq A$, the deformed family still obeys midpoint compatibility. The three lifted bodies are the exact integer fibers of their convex hull: at base $0$ every mixture uses equal total weights on the two endpoints, so its continuous point lies in $K$ by convexity and midpoint compatibility. At the endpoint bases a mixture uses only its own fiber.\n\nFor variable $\\xi$ near $y$, the three cap masses are\n$$\nF_i(\\xi,t)=|K\\cap\\{v_i\\cdot x\\ge v_i\\cdot\\xi\\}|\n           +|A_t\\cap\\{v_i\\cdot x\\ge 2v_i\\cdot\\xi-h_i\\}|.\n$$\nThe traces on $B$ remain supported at $h_i$ and contribute zero area. The $K$ and pulled-back $A$ thresholds remain proper near $(y,0)$. Parallel section lengths are continuous at proper cuts by concavity. Fubini and the exact homothetic pullback, with threshold $(2v_i\\cdot\\xi-h_i-tv_i\\cdot p)/(1-t)$, make the functions $C^1$ on a neighborhood of $(y,0)$ and give $\\nabla_\\xi F_i(y,0)=-s_i v_i$ and $\\partial_t F_i(y,0)=-L_i(p)$. The derivative of $(F_i(\\xi,t)-q)_{i=1}^3$ in $(\\xi,q)$ is nonsingular. Indeed, a kernel vector $(\\dot \\xi,\\dot q)$ satisfies $-s_i v_i\\cdot\\dot \\xi-\\dot q=0$ for all $i$. Multiplying by $\\lambda_i$ and summing gives $\\dot q=0$, and spanning gives $\\dot \\xi=0$. The implicit function theorem gives $y(t),q(t)$. Differentiating $F_i(y(t),t)=q(t)$ and taking the same weighted sum gives $q'(0)=-\\overline L(p)$.\n\nThe middle trace margins sum to zero, so the caps cover the whole middle plane and bound each middle point's depth by $q(t)$. At either endpoint the mixed point depth equals ordinary point depth on that fiber: every containing ambient cap pays at least the ordinary depth there, and any prescribed ordinary endpoint cap extends to an ambient cap missing both other compact fibers by a finite integer tilt toward the endpoint. The ordinary endpoint maxima become $(1-t)^2m_A$ and $m_B$ under this contraction. Strict original gaps and continuity of $q(t)$ keep both below $q(t)$ for small $t$. Since $M'(0)=-2a$, the quotient derivative is as stated. When it is negative the certificate drops below the original normalized maximum.\n\nFor the last assertion, choose any interior point of $B$. Each $h_i$ strictly exceeds the corresponding normal evaluated there, so $\\sum_i b_i=-\\sum_i h_i<0$. The three $A$ traces cover the plane, since missing all three would imply $0<\\sum_i b_i<0$. With null singleton-capture regions they capture almost every point of $A$ at least twice. The actual chord-weight theorem applies to exactly these $A,K,B,y,v_i$, giving $\\max_i\\lambda_i\\le3\\Lambda/4$. Thus the load is at least $\\Lambda-\\max_i\\lambda_i\\ge\\Lambda/4$. The weighted shell lemma with $d=2$ and weights $\\lambda_i$ gives $\\overline L(p)\\ge a/2$. Substitution proves the final derivative bounds.\n",
+  "source_candidate_ids": [
+    "0e094dd9f76aefdd",
+    "86934b651b11f7d5"
+  ],
+  "source_candidate_sha256": {
+    "0e094dd9f76aefdd": "2d9387f9fff68939b4a3960a147193c69b704aeb4faf497d876d4cfe89c5b4cb",
+    "86934b651b11f7d5": "8254b89175df007bbd9d3d3bba466612eeb3e0a62050893049c0f6e7f9f008ec"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "86934b651b11f7d5",
+      "locator": "§§3–4, (5)–(7), no unique-capture regions and actual contraction"
+    },
+    {
+      "candidate_id": "0e094dd9f76aefdd",
+      "locator": "Actual finite-menu certificate, (1)–(7), fixed-facet implicit meeting point and endpoint isolation"
+    }
+  ],
+  "statement": "Let $A,K,B\\subset\\mathbb R^2$ be convex bodies at the only integer bases $-1,0,1$, with $(A+B)/2\\subseteq K$. Fix $y\\in\\operatorname{int}K$, and nonzero spanning normals $v_i$ for $1\\le i\\le3$ with $\\sum_i v_i=0$. Put $h_i=h_B(v_i)$ and $b_i=2v_i\\cdot y-h_i$. Suppose the caps $v_i\\cdot(x-y)+(v_i\\cdot y-h_i)z\\ge0$ have common raw mass $Q$ and proper $A,K$ cuts. Write $a=|A|$, $M=|A|+|K|+|B|$, $U_i=|A\\cap\\{v_i\\cdot x\\ge b_i\\}|$, and $a_i,k_i$ for the $A,K$ chord lengths divided by $\\lVert v_i\\rVert$. Put $s_i=2a_i+k_i$, $\\lambda_i=1/s_i$, $\\Lambda=\\sum_i\\lambda_i$, and\n$$\nL_i(p)=2U_i+(b_i-v_i\\cdot p)a_i,\\qquad\n\\overline L(p)=\\frac{\\sum_i\\lambda_i L_i(p)}{\\Lambda}.\n$$\n\nFor every $p\\in A$, contract $A$ to $A_t=p+(1-t)(A-p)$ and keep $K,B$ fixed. For all sufficiently small $t\\ge0$ there is a $C^1$ meeting point $y(t)$ with $y(0)=y$ and a common cap budget $q(t)$ with $q(0)=Q$, obtained by substituting $y(t)$ for $y$ in the same three ambient caps. They cover the full middle plane, and $q'(0)=-\\overline L(p)$. If $Q$ is the original global raw maximum and the two ordinary endpoint maxima are strictly below $Q$, the new global raw maximum is at most $q(t)$ for all sufficiently small $t\\ge0$. Writing $M(t)=|A_t|+|K|+|B|$,\n$$\n\\left.\\frac{d}{dt}\\frac{q(t)}{M(t)}\\right|_{t=0}\n=\\frac{-M\\overline L(p)+2aQ}{M^2}.\n$$\nIn particular the optimized normalized depth strictly decreases if $\\overline L(p)>2aQ/M$.\n\nIf the three original caps attain the true depth at $(0,y)$ and every singleton-capture region of the $A$ traces is null, then $\\overline L(p)\\ge a/2$ for every $p\\in A$. The derivative above is then at most $(-Ma/2+2aQ)/M^2$. At a budget ratio $Q/M<2/9$ this last expression is less than $-a/(18M)$.",
+  "subgoal_id": "pk-intake-fixed-facet-moving-equal-budget-cover",
+  "title": "Moving equal-budget cover under contraction of one planar endpoint"
+}

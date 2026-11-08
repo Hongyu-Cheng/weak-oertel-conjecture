@@ -1,0 +1,28 @@
+{
+  "advances": "Identifies the exact scalar source-normal slack; no target-volume or Brunn–Minkowski equality follows from it.",
+  "author": "PK-research-agent",
+  "candidate_id": "d15bfc2b20f0f553",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:56:22.860237+00:00",
+  "depends_on": [
+    "d1e5e0806e6e2abd"
+  ],
+  "draft_key": "source-area-mixed-volume-support-slack",
+  "kind": "lemma",
+  "proof": "Minkowski addition gives $h_{B_p}=\\sum_z\\alpha_{pz}h_{D_z}$. Integrate against $S_{D_p}$ and use the first mixed-volume formula $\\int h_A\\,dS_B=dV(A,B[d-1])$, with $V(B,B[d-1])=|B|$. The one-dimensional formula is the identity $h_A(1)+h_A(-1)=|A|$. Nonnegativity follows from the inclusion, and weighting uses $\\sigma_p\\alpha_{pz}=\\widehat\\pi_{pz}$. If the integral vanishes for a measure of full support, continuity and nonnegativity imply $s_p=0$ everywhere. Equality of support functions gives equality of bodies. Without full support, the zero integral alone tests only the normals in the support of the source area measure.\n",
+  "source_candidate_ids": [
+    "f08daa4b2ef3aa48"
+  ],
+  "source_candidate_sha256": {
+    "f08daa4b2ef3aa48": "e73b4323ba381d291cc78545a0d319b87059f2b94f35ee1319ecca8cad0873b4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f08daa4b2ef3aa48",
+      "locator": "f08daa4b2ef3aa48:02 §2, (6), exact integrated support slack"
+    }
+  ],
+  "statement": "For each positive row of the original-volume reweighting, put $B_p=\\sum_z\\alpha_{pz}D_z\\subset D_p$ and $s_p=h_{D_p}-h_{B_p}$. With $S_{D_p}$ the surface-area measure on unit normals,\n$$\n\\int s_p\\,dS_{D_p}\n=d\\left(|D_p|-\\sum_z\\alpha_{pz}V(D_z,D_p[d-1])\\right)\\ge0,\n$$\nwhere $V(A,B[d-1])$ is the first mixed volume. In $d=1$ use counting measure on the two endpoint normals and $V(A,B[0])=|A|$. When weighted by $\\sigma_p$, the mixed-volume term uses the same $\\widehat\\pi_{pz}$ and a separate source area measure for each $p$. If $S_{D_p}$ has full spherical support and its slack integral vanishes, then $B_p=D_p$.",
+  "subgoal_id": "pk-intake-source-area-mixed-volume-support-slack",
+  "title": "Integrated support slack uses source-area mixed volumes"
+}

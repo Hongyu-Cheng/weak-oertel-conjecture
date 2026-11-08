@@ -1,0 +1,28 @@
+{
+  "advances": "First moments for the original full d-volume fiber measure with one integer base coordinate.",
+  "author": "PK-research-agent",
+  "candidate_id": "70849509fa1b5d14",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.473299+00:00",
+  "depends_on": [
+    "64b0230d257f9b96"
+  ],
+  "draft_key": "ambient-simplex-duplicated-knot-moments",
+  "kind": "lemma",
+  "proof": "Merge two equal-height coordinates of a uniform barycentric vector with $N+1$ coordinates. Conditional on the merged vector, the splitting interval has length $\\lambda_i$ in independent simplex coordinates, with unit coordinate Jacobian. The density constants are $N!$ before merging and $(N-1)!$ for the original law. Thus the resulting merged density relative to the original is $N\\lambda_i$. Pushing forward under height and applying Fubini gives $J_i(s)=(V/N)f_{h^{(i)}}(s)$ almost everywhere. The closed-slice formula at dimension $m+1$ for the scalar height law on $N+1$ barycentric coordinates gives $f_{h^{(i)}}=N[h_0,\\ldots,h_{N-1},h_i](t-s)_+^m$ with the stated conventions. Any nonconstant height list of that length is realized by an affine height on an $(m+1)$-simplex. The actual moments are continuous on the height interval with inward endpoint limits: the fibers converge as in the closed-slice lemma, their indicators converge almost everywhere, and the affine integrands converge uniformly on a common compact ball. For a zero-volume limit the same assertion follows by vanishing volumes and bounded integrands. Hence the almost-everywhere identity holds at the stated pointwise values.\n\nThe sum identities follow by integrating $\\sum_i\\lambda_i=1$ and $\\sum_i h_i\\lambda_i=s$. Integrating the affine expansion $(s,x)=\\sum_i\\lambda_i(s,x)v_i$ yields the section centroid. Summing the unnormalized moments over integer $s$ yields the mixed centroid, which lies in $C$ by convexity and hence is admissible exactly when its base is an integer.\n",
+  "source_candidate_ids": [
+    "56a670ccbde263ec"
+  ],
+  "source_candidate_sha256": {
+    "56a670ccbde263ec": "d2859959d217e53e6092a93491b3a5fe32454083a08d3d6e7c661f04217ad2ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "56a670ccbde263ec",
+      "locator": "56a670ccbde263ec:04 §3, (10)–(12)"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R\\times\\mathbb R^d$ be a full-dimensional $(d+1)$-simplex of ambient volume $V$, with $d\\ge1$, $m=d+1$, $N=d+2$, vertices $v_i=(h_i,\\xi_i)$, barycentric coordinates $\\lambda_i$, and actual closed section volumes $w(s)=\\operatorname{vol}_d(C_s)$. Write $h^{(i)}$ for the height list $h=(h_0,\\ldots,h_{N-1})$ with one extra copy of $h_i$. Let $f_{h^{(i)}}$ be the scalar height density under uniform barycentrics with this duplicated list, with continuous values in the interior, zero outside, and inward values at the endpoints. Then the actual section moments satisfy\n$$\nJ_i(s):=\\int_{C_s}\\lambda_i(s,x)\\,dx\n =\\frac{V}{N} f_{h^{(i)}}(s)\n =V[h_0,\\ldots,h_{N-1},h_i](t-s)_+^m.\n$$\nThe same endpoint convention applies to the divided difference. One has $\\sum_iJ_i=w$ and $\\sum_ih_iJ_i=sw$. When $w(s)>0$ the centroid is $\\sum_iJ_i(s)v_i/w(s)$. When $M=\\sum_{j\\in\\mathbb Z}w(j)>0$, the mixed centroid is $M^{-1}\\sum_i v_i\\sum_{j\\in\\mathbb Z}J_i(j)$, and it belongs to the mixed trace exactly when its base is integral.",
+  "subgoal_id": "pk-intake-ambient-simplex-duplicated-knot-moments",
+  "title": "Duplicated-knot formulas for section centroids and sampled moments"
+}

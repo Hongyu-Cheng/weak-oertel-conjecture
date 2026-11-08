@@ -1,0 +1,29 @@
+{
+  "advances": "A global upper comparison that touches old depth; no hypothesis on the sharpness or uniqueness of old maximizers.",
+  "author": "PK-research-agent",
+  "candidate_id": "1fa8cb387c27b040",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.207606+00:00",
+  "depends_on": [
+    "0a03438ff4e94ff8",
+    "755cb08c379113cc"
+  ],
+  "draft_key": "deepest-circuit-quantile-comparison",
+  "kind": "lemma",
+  "proof": "For each selected deepest circuit, the anchored quantile lemma yields a closed whole-plane cover of mass $\\tau_{c_z}(p)$ with $\\tau_{c_z}(p_0)=Q$. There are finitely many deepest sites, so all roots are defined on a common neighborhood and approach $Q$. If a circuit is also supplied at a nondeep base, the same lemma gives a root tending to its old mass $q_z<Q$.\n\nFor a nondeep $z$ without such a circuit, each point $(z,x)$ with $x\\in K_z(p_0)$ is in a closed halfspace of old mass strictly less than $Q$, by the definition of depth. If its continuous normal vanishes, tilt it slightly to a nonzero continuous normal with threshold still passing through $(z,x)$. Every strictly excluded base stays excluded on its entire old bounded fiber, by the finite positive old margins. The new cap therefore has at most the old cap mass, since an old included base contributed at most its whole fiber. For a nonvertical cap, reducing the threshold slightly makes the point interior while keeping the mass less than $Q$; threshold continuity follows from Fubini. These interiors cover the compact old fiber, so a finite subcover suffices. Their union is open on the base plane and contains a neighborhood of the old compact fiber. By Hausdorff continuity it covers the nearby fiber. Each fixed cap mass is continuous by the symmetric-difference estimate, and the finite maximum of these old slack masses is strictly less than $Q$.\n\nTaking all bases together and shrinking the neighborhood, every nondeep cover has all its cap masses strictly below the largest of the deepest roots. This yields the bound pointwise by the definition of depth. At $p_0$ the left and right are both $Q/M(p_0)$. None of the arguments depends on which supplied deepest circuits were selected. For the availability statement apply the exact fiberwise critical-circuit theorem to the old finite compatible family of positive-volume bodies: it gives an interior maximizing mark on each fiber and a positive dependence of unit continuous normals of caps through it, all of mass $q_z$.\n",
+  "source_candidate_ids": [
+    "a0fdd477aa859374"
+  ],
+  "source_candidate_sha256": {
+    "a0fdd477aa859374": "9c2e01f74c84656a03f5f4cd4d999b2e17531c17af864a8c7739512539d55c07"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a0fdd477aa859374",
+      "locator": "a0fdd477aa859374:02 §2 after (1), (2), maximum-depth comparison and circuit availability"
+    }
+  ],
+  "statement": "Use the finite-fiber deformation and depth measure of the anchored cap-quantile lemma. At the old family let $q_z$ be the maximal raw depth on base $z$, let $Q=\\max_z q_z$, let $\\beta=Q/M(p_0)$, and let $Z=\\{z:q_z=Q\\}$. Suppose a circuit as in that lemma, of old mass $Q$, is supplied at every $z\\in Z$. For any such choices there is a neighborhood in which\n$$\n\\max_{(z,x):\\,z\\in P,\\ x\\in K_z(p)}\\frac{h_{\\mu_p}(z,x)}{M(p)}\n\\le \\max_{z\\in Z}\\frac{\\tau_{c_z}(p)}{M(p)}.\n$$\nEquality holds at the old parameter. A supplied exact circuit at a nondeep base gives a whole-plane cover of strictly lower mass near the old parameter. Without such circuits, finitely many fixed slack cap interiors on those old fibers suffice. When the old family is compatible, every positive-volume base, including every deepest base, has an active circuit with an interior anchor by the exact fiberwise critical-circuit theorem.",
+  "subgoal_id": "pk-intake-deepest-circuit-quantile-comparison",
+  "title": "Touching global depth bound from arbitrary deepest circuit choices"
+}

@@ -1,0 +1,34 @@
+{
+  "advances": "Exact original-measure depth under a body-tied affine buffer on one actual family, including the nonnegative completion. The affine parameter has arithmetic volume normalization.",
+  "author": "PK-research-agent",
+  "candidate_id": "d9f7ae5014309857",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:33:00.810714+00:00",
+  "depends_on": [
+    "2cedfd9dfe672cb5"
+  ],
+  "draft_key": "four-interval-affine-buffer-interior-minimax",
+  "kind": "theorem",
+  "proof": "The barycenter follows by summing $p|K_p|/M$. Every normalized affine function has value one at $\\bar g$ and hence the stated form. Nonnegativity on the whole interval of bases is equivalent to its endpoint inequalities, giving the stated interval for $b$. Both inner factors are positive on this closed parameter interval.\n\nFor any such $b$, normalization and nonnegativity give $\\ell_b(p)|K_p|\\le M$. Since $E_p(y)\\le|K_p|$ and $\\Sigma<1$, the shift is at most $\\varepsilon$. On the two inner neighborhoods from the calibration, $E_i>1$ and $|E_i'|<1$. There $|K_i|>1$, so\n$$\n|\\delta_i'|\n\\le \\frac{\\varepsilon\\sqrt{\\Sigma}}{2\\sqrt{|K_i|}}\\frac{|E_i'|}{\\sqrt{E_i}}<\\varepsilon/2.\n$$\nThus the calibration applies to every parameter, including both endpoints, and yields the formula and its complete maximizing mark set.\n\nThe first affine argument of the maximum strictly decreases in $b$, since $1<\\bar g$. The second strictly increases, since $2>\\bar g$. Their intersection is $14137/108948$ by solving the linear equality, and lies strictly between the two parameter endpoints. The maximum strictly decreases up to that intersection and increases afterwards, proving uniqueness. Substitution gives the four factors and the common product. The calibration then gives both and only the marked maximizers. Finally the weights on $1,2$ are $2-\\bar g$ and $\\bar g-1$, which evaluate to the stated values.\n",
+  "source_candidate_ids": [
+    "1298c8ea2c6ec3df",
+    "3101206ec4580190"
+  ],
+  "source_candidate_sha256": {
+    "1298c8ea2c6ec3df": "9adb3c1c654d09bb965e90c7bfb69abf371cc269abd64fe6cbf2a4d6b8423bad",
+    "3101206ec4580190": "a67cd30d84b6968e0beaf4f27cd8b4fae405ead2368d6b68d8967b272b5c7bef"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3101206ec4580190",
+      "locator": "§6, (13)–(15), exact two-parity affine minimax"
+    },
+    {
+      "candidate_id": "1298c8ea2c6ec3df",
+      "locator": "§§1–3, four-interval cap status proof generalized in the calibration predecessor"
+    }
+  ],
+  "statement": "Use the four actual intervals of the unweighted buffer power calibration, and retain their original mixed measure. Let $Q=11/10$, $M=211/50$, $\\Sigma=1937167/6330000$, and let $\\bar g=316/211$ be the length-weighted base barycenter. The nonnegative volume-normalized affine factors $\\ell_b(z)=1+b(z-\\bar g)$ range over $-211/317\\le b\\le211/316$. For every $0<\\varepsilon\\le1/10000$, use the shifts $\\delta_p(y)=\\varepsilon\\sqrt{\\Sigma/M}\\sqrt{\\ell_b(p)E_p(y)}$. The exact global raw maximum is\n$$\nQ_\\varepsilon(b)=Q+\\varepsilon\\sqrt{\\Sigma/M}\\,\n \\sqrt{\\max\\{(44/21)\\ell_b(1),(46/25)\\ell_b(2)\\}}.\n$$\nIt has unique minimizer $b=14137/108948$, strictly inside the domain, with $\\ell_b$ values\n$$\n(21944/27237,\\ 4853/5188,\\ 58025/54474,\\ 130187/108948)\n$$\nat bases $0,1,2,3$. The common product in the maximum is $53383/27237$, and the optimized raw depth is attained exactly at $(1,0),(2,0)$. The positive barycenter weights on bases $1,2$ are $106/211,105/211$.",
+  "subgoal_id": "pk-intake-four-interval-affine-buffer-interior-minimax",
+  "title": "Exact four-interval affine-buffer minimax"
+}

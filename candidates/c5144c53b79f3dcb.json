@@ -1,0 +1,33 @@
+{
+  "advances": "Planar ordinary cap stability and a finite mixed-area localization under an explicit budget deficit.",
+  "author": "PK-research-agent",
+  "candidate_id": "c5144c53b79f3dcb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:21.033546+00:00",
+  "depends_on": [
+    "ac7ba1e1e0ebc955",
+    "1c6088cbbbb3f688"
+  ],
+  "draft_key": "three-cap-surplus-local-stability",
+  "kind": "theorem",
+  "proof": "For planar ordinary area, apply ac7ba1e1e0ebc955 with $m=3$ and $\\alpha=\\min_i A_i$, obtaining $E\\ge0$. For $\\alpha>0$, equality in that profile is precisely $E=0$, and 1c6088cbbbb3f688 classifies it as a triangle and its three distinct canonical centroid vertex caps, each of area $4V/9$.\n\nA maximum-area inscribed triangle exists by compactness and has positive area. Affine normalization preserves all area ratios. Vertex replacement in the normalized triangle $T$ gives a triangle of area $|\\lambda_i(x)|/2$ when vertex $i$ is replaced by a body point of barycentrics $\\lambda_i(x)$. Hence $T\\subseteq L\\subseteq U=\\{|\\lambda_i|\\le1\\text{ for all }i\\}$, where $U$ is the triangle with vertices $(1,1),(1,-1),(-1,1)$. These bodies with maximum inscribed-triangle area $1/2$ form a compact Hausdorff class: compactness follows from boundedness and the equicontinuity of support functions on the unit circle. Limits still contain $T$, and any triangle in a limit can be approximated vertexwise in the approximants, giving the same upper area bound. All areas are at least $1/2$. The bodies lie in the radius-two ball, so a positive-area cap has $b_i<2$, and clipping $b_i<-2$ changes only the ambient representation of a full trace. The clipped parameters lie in the compact space $(\\mathbb S^1\\times[-2,2])^3$.\n\nHausdorff convergence of the bodies gives convergence of their indicators off the boundary of the limit, using support convergence and an interior ball for interior points. Convergence of cap parameters similarly gives indicator convergence off the limiting lines. Dominated convergence therefore gives continuity of each $A_i$, of $V$, and of $E/V$. Coverage is closed: approximate any limiting body point by body points in the sequence and pass to a subsequence with one fixed containing cap. The constraints $A_i\\ge\\tau V$ thus define a compact subclass. On it define distance as the maximum of the area-ratio distance, the Hausdorff distance to $T$, and the best permuted maximum parameter distance in the statement. Each is continuous. The closed bad subset where the distance is $\\ge\\eta$ is compact. At a zero of $E/V$ the limit body is a triangle by 1c6088cbbbb3f688, has area at most $1/2$ and contains $T$, and hence equals $T$. Its halfplanes are exactly the canonical ones, with no clipping change at these offsets. The bad subset thus has strictly positive attained minimum when nonempty. Taking half its minimum, or $1$ when empty, proves the assertions simultaneously for every maximal inscribed-triangle normalization.\n\nOn each owned fiber $z$, actual cap traces are closed planar halfplanes, full, or empty. The last two statuses can be represented by nonzero-normal halfplanes outside a bounded ball, retaining every area. Thus each local surplus $E_z\\ge0$. Summed owned areas across cap occurrences are at most $3kB$ and at least $M$ by covering. This proves $\\delta\\le1/9$. On a fiber passing both $\\min_i A_i(z)\\ge\\tau V_z$ and $E_z\\le\\epsilon V_z$, its average captured area is at least $(4/9-\\eta)V_z$ by the first part. Elsewhere it is at least $V_z/3$. The total area of failing fibers is at most $W_\\tau+E_{\\rm tot}/\\epsilon$: each failure outside the first set satisfies $\\epsilon V_z<E_z$. Summing the two area bounds and dividing the summed capture upper bound by three gives $kB\\ge(4/9-\\eta)M-(1/9-\\eta)(W_\\tau+E_{\\rm tot}/\\epsilon)$. The assumed deficit gives the displayed result.\n",
+  "source_candidate_ids": [
+    "40c46f71889ea6fc"
+  ],
+  "source_candidate_sha256": {
+    "40c46f71889ea6fc": "a249dd213296742810d41405099ee43eafebc655d3acf5609e7cf0ccf50b35c0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "40c46f71889ea6fc",
+      "locator": "40c46f71889ea6fc:02 §§1–4, (1)–(2), compact bad set C_τ and distance D"
+    },
+    {
+      "candidate_id": "40c46f71889ea6fc",
+      "locator": "40c46f71889ea6fc:04 §6, (4)–(5)"
+    }
+  ],
+  "statement": "Let a planar convex body $K$ of area $V$ be covered by three closed halfplanes of cap areas $A_i$. Put $E=\\sum_iA_i-V-(3/4)\\min_i A_i$. For all $\\tau,\\eta>0$ there is an $\\epsilon(\\tau,\\eta)>0$ such that $\\min_i A_i\\ge\\tau V$ and $E\\le\\epsilon V$ imply $\\max_i|A_i/V-4/9|<\\eta$. After mapping the vertices of any maximum-area inscribed triangle affinely onto $(0,0),(1,0),(0,1)$, the normalized body is within Hausdorff distance $\\eta$ of $T=\\operatorname{conv}(0,e_1,e_2)$. In that frame, express each halfplane as $\\{x:u_i\\cdot x\\ge b_i\\}$ with $\\|u_i\\|=1$ and replace offsets below $-2$ by $-2$. Up to permutation the resulting parameter pairs are within Euclidean distance $\\eta$ of $((1,0),1/3),((0,1),1/3),((-1,-1)/\\sqrt2,-2/(3\\sqrt2))$. One may take half the attained minimum of $E/V$ on the compact normalized bad set where at least one distance is $\\ge\\eta$, or $1$ when that set is empty.\n\nFor a finite family of positive planar fibers of total area $M$ partitioned among $k$ ownership groups, let each group use three actual ambient caps covering each of its owned fibers. Assume every selected cap has total mixed mass at most $B$. Write $E_{\\rm tot}$ for the sum of the owned-fiber surpluses and $W_\\tau$ for the summed area of fibers with least owned cap area $<\\tau V_z$. If $kB\\le(4/9-\\delta)M$ with $\\delta>0$, then $0<\\delta\\le1/9$ and, for each $0<\\eta<\\delta$,\n$$\nW_\\tau+\\frac{E_{\\rm tot}}{\\epsilon(\\tau,\\eta)}\n\\ge\\frac{\\delta-\\eta}{1/9-\\eta}M .\n$$",
+  "subgoal_id": "pk-intake-three-cap-surplus-local-stability",
+  "title": "Small three-cap overlap surplus forces near-canonical caps"
+}

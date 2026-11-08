@@ -1,0 +1,28 @@
+{
+  "advances": "Necessary ordinary-area restriction for one planar body with small original coordinate caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "4087c90731447cce",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.095622+00:00",
+  "depends_on": [
+    "1aa8cb39550cb9d1"
+  ],
+  "draft_key": "planar-common-slice-residual-height-constraint",
+  "kind": "lemma",
+  "proof": "The level $-1$ is proper because there is positive area below it and $h>2$. Apply the common-slice quantile and width lemma to this same $A,x,y,t$. Its final upper-tail estimate, together with the area-zero level at $2$, bounds the lower-cap area there above by $v+8a^2/H^2$.\n\nThe two convex lower caps $A\\cap\\{t\\le-1\\}$ and $A\\cap\\{t\\le h\\}=A$ have positive areas $e$ and $a$. Their Minkowski interpolation with weight $3/H\\in(0,1)$ on the latter is contained in $A\\cap\\{t\\le2\\}$. Planar Brunn–Minkowski therefore bounds the square root of this last area below by $\\sqrt e+(3/H)\\Delta$. Combine the two estimates and multiply by $H>0$ to obtain the first inequality. Both sides are nonnegative, so squaring and expanding gives exactly the second one. Since $\\Delta>0$, when $v\\le e$ and $8a^2<9\\Delta^2$ the constant term of the quadratic is strictly negative and its other two terms are nonpositive.\n",
+  "source_candidate_ids": [
+    "5dd0d34dec315bd7"
+  ],
+  "source_candidate_sha256": {
+    "5dd0d34dec315bd7": "e1171d3b9ff729967b938953543073e29491c535cd9db10ebbc8dbeabf8358d2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5dd0d34dec315bd7",
+      "locator": "§4, (5) and the subsequent excluded parameter range"
+    }
+  ],
+  "statement": "Let $A\\subset\\mathbb R^2$ be a convex body of area $a$. Write $u=|A\\cap\\{x\\ge-1\\}|$ and $v=|A\\cap\\{y\\ge-1\\}|$, with $u\\le v$ and $0<v<a/2$. Put $t=-x-y$, $h=\\max_A t>2$, $H=h+1$, $w=|A\\cap\\{t\\ge-1\\}|$, $e=a-w>0$, and $\\Delta=\\sqrt a-\\sqrt e$. Then\n$$\n\\sqrt{vH^2+8a^2}\\ \\ge\\ H\\sqrt e+3\\Delta,\n\\qquad\n(v-e)H^2-6\\sqrt e\\,\\Delta H+8a^2-9\\Delta^2\\ \\ge\\ 0.\n$$\nThe two inequalities are equivalent. In particular $v\\le e$ and $8a^2<9\\Delta^2$ cannot hold together.",
+  "subgoal_id": "pk-intake-planar-common-slice-residual-height-constraint",
+  "title": "A residual-area and height constraint for three planar cap directions"
+}

@@ -1,0 +1,30 @@
+{
+  "advances": "A finite set of real sampled bases with its mean included and a common uniform simplex fiber.",
+  "author": "PK-research-agent",
+  "candidate_id": "16a66c8ae1d8c423",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.927711+00:00",
+  "depends_on": [
+    "1ec728c26c11b368",
+    "755cb08c379113cc",
+    "6a7d56e450b3126f"
+  ],
+  "draft_key": "pk-w33-identical-simplex-product-strict-other-base-gaps",
+  "kind": "lemma",
+  "proof": "Let $\\lambda_j=1/(d+1)+l_j$ be the barycentric coordinates on $K$, with $l_j$ linear and $\\sum_j l_j=0$. A cap $\\lambda_j\\ge t$ in $K$ has volume $|K|(1-t)^d$ for $0\\le t\\le1$, by homothety about vertex $j$. At $(p,x)$ with $x\\ne0$, some $\\lambda_j(x)>1/(d+1)$, so its horizontal cap is strictly below $Q$. At $(p,0)$ with $p\\ne0$, choose a linear functional $a$ with $a(p)>0$. For small positive $t$ the cap $l_j(x)+t a(q-p)\\ge0$ through that mark has proper cuts in every fiber $q\\in P$. Writing $\\alpha=d/(d+1)$, its mass is $|K|\\sum_q(\\alpha+t a(q-p))^d$, whose derivative at zero is $-d|K|\\alpha^{d-1}|P|a(p)<0$ by the mean-zero condition. Thus all points other than $(0,0)$ have raw depth strictly below $Q$. By 1ec728c26c11b368 the depth is continuous on the compact fibers and attains its maximum. Hence only $(0,0)$ is deepest and the maximum on each other fiber is strictly below $Q$. Compatibility of $P\\times K$ follows because every anchored combination of copies of $K$ equals $K$. Applying 755cb08c379113cc gives finite whole-plane covers with that local budget.\n\nFor centrally symmetric $P$, a through-origin nonvertical cap has shifts paired at $q,-q$. The own centered continuous marginal satisfies the paired-tail inequality of 6a7d56e450b3126f, including at shift zero, so the total is at least $\\gamma M$. A pure-base cap through zero includes at least half of the uniform bases, and $\\gamma\\le1/2$ by $(1+1/d)^d\\ge2$. Moving a containing cap to pass through the origin can only reduce mass. The horizontal canonical caps give a universal upper bound $\\gamma$ on normalized depth since the largest barycentric coordinate at any mark is at least $1/(d+1)$. This proves the example hypothesis.\n",
+  "source_candidate_ids": [
+    "ad5c2c5e1c71ab38"
+  ],
+  "source_candidate_sha256": {
+    "ad5c2c5e1c71ab38": "dd4afa3af55bb0c8336c26ecd2d8911a6ec17c052a9c440572765982c2e49103"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ad5c2c5e1c71ab38",
+      "locator": "ad5c2c5e1c71ab38:01 §1, unique maximum and slack circuits"
+    }
+  ],
+  "statement": "Let $P$ be a finite set of at least two points in its affine span with arithmetic mean $0\\in P$, and let $K$ be a centroid-zero $d$-simplex, $d\\ge1$. Take the sum of uniform fiber volumes on $P\\times K$, write $M=|P||K|$ and $\\gamma=(d/(d+1))^d$, and suppose its maximum normalized ordinary ambient depth equals $\\gamma$. Then $(0,0)$ is its unique deepest point. Every other sampled plane has a finite cover by old nonvertical closed caps, each of mass strictly below $Q=\\gamma M$. The maximum-depth hypothesis holds in particular for centrally symmetric $P$ about zero.",
+  "subgoal_id": "pk-intake-pk-w33-identical-simplex-product-strict-other-base-gaps",
+  "title": "Unique deepest point and strict other-base covers in a simplex product"
+}

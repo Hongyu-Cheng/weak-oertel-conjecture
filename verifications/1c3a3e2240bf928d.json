@@ -1,0 +1,56 @@
+{
+  "candidate_id": "9e3dc271d831d032",
+  "candidate_sha256": "9025e2896bb5e75ae2d04b03f49271bdc06b07988957bdff77852998378e8ac9",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "Positive volume makes each compact convex fiber a convex body. For m equal to its full volume the density 1 is admissible in the parent’s trimmed barycenter set, giving the actual fiber centroid and raw own-fiber depth at least γ_d|K_u|_d for all containing closed halfspaces.",
+    "Every ambient cut containing the centroid restricts to a containing closed halfspace of the fiber plane or its entirety; other fibers add nonnegative mass. Thus the normalized maximum depth is at least γ_d|K_u|_d/M. Its strictly smaller bound than γ_d/k(U) gives the stated strict mass bound for every site. Summation and M>0 imply |U|>k(U).",
+    "The finite collection of distinct same-parity pairs is nonempty. For any globally shortest pair p,p+2v, v=mw with m≥2 would put p+2w in the lattice segment at parameter 1/m and hence in U. This is a distinct same-parity pair strictly shorter by norm homogeneity. Ties do not matter.",
+    "The integer midpoint p+v is in U by completeness, with parity distinct from the endpoints since v∉2L by primitivity. The coefficients 1/2 and 1/2 give exactly the stated Minkowski inclusion.",
+    "Checked source hash and all of 2086e4eaa4bce465 §7. The source imposes an attained minimum there, but the argument only uses the strict depth inequality and compatibility, so dropping attainment is justified. The chain yields neither a lower bound on its share of the global mass nor a sharp bound for the full family from this triple."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "mapping": "With K=K_u and m=a=|K_u|_d, apply its right metronoid inclusion to the barycenter of the admissible density 1. The closed-cut bound applies on the fiber; a whole-fiber trace is covered separately.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d",
+      "status": "accepted at reviewed snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:58:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the own-fiber centroid estimate but contains no lattice or primitive-chain assertion.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "Starts from three given fibers and midpoint inclusion and gives quantitative depth under additional nesting or translation conditions. It does not extract a primitive chain from an arbitrary complete base.",
+      "fact_id": "8812feca6c8a1e97"
+    },
+    {
+      "comparison": "Starts with a three-fiber support and gives a quantitative curve with the sharp conclusion for equal endpoint volumes. It does not establish existence of a primitive chain in a larger support; the present lemma has no equal-volume hypothesis.",
+      "fact_id": "3e766d73edff42b0"
+    }
+  ],
+  "readability": "The different parity is different from the common endpoint parity. The shortest pair is chosen over all distinct same-parity pairs, with no assumption of uniqueness.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0a0ba6f61ed59c251363ac91e51ac481d23b9889e044507239cdde61652f2cd2",
+  "reviewed_statement_sha256": "c057134c81f3b77ccda3cab0a59ebb88b38bdbe5bd71b8063ff0a40fa30d3ac1",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:52:43Z",
+  "summary": "Own-fiber centroid depth forces the strict individual mass bound and a repeated parity. Every shortest same-parity pair gives a primitive chain and the precise midpoint inclusion.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "The parity disjointness is for selected atomic witnesses. The outside-mass conclusion is conditional on strict quotas.",
+  "author": "PK-research-agent",
+  "candidate_id": "d357981acf53ed58",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.848722+00:00",
+  "depends_on": [
+    "2bf7e85dc467a1a1",
+    "efc6257ea1f83bc1"
+  ],
+  "draft_key": "mixed-atomic-proper-disjoint-parity-cover",
+  "kind": "theorem",
+  "proof": "For an integer base $r\\in P\\cap\\operatorname{conv}J$, form a deepest mark at $r$ from deepest marks over the chosen inputs in $J$. A closed base halfspace containing $r$ contains some input base of positive weight. The depth at each of the finitely many chosen input bases is strictly greater than $Q$, so their minimum is strictly greater than $Q$, and hence so is $b_{\\rm base}(r)$. Thus $r\\in J$. If instead $r\\in P\\cap\\operatorname{conv}A$, forming a deepest mark again yields $r\\in I$. Heredity excludes $r\\in J$ because every input of positive weight belongs to $A$. This proves completeness of both sets.\n\nFor nonempty $A$, apply efc6257ea1f83bc1 to its midpoint-closed set of sites of common atomic depth $Q\\in(0,M)$, using all weights on $P$. Its $m$ caps have exact mass $Q$ and their exclusive boundary witnesses have distinct parities by that lemma's proof. No cap contains any $t\\in J$, since its mass is below $b_{\\rm base}(t)$. If one witness $p_i$ shared a parity with such a $t$, their midpoint would be integer in $I$ by completeness. In every retained cap's defining inequality, $p_i$ is at equality in its own cap and strictly excluded in the others, and $t$ is strictly excluded everywhere. The midpoint is therefore strictly outside all caps. Since the caps cover $A$, it belongs to $J$, contradicting heredity with the atomic input $p_i$. This proves disjointness and the parity count, including the empty case.\n\nWhen both strata are nonempty, $V_A\\le mQ$ by the cover and $V_J<k(J)M/k(P)$ by the quota for the proper closed minor $J$. Subtracting from $M$ gives the strict bound. If $I=P$, $A\\ne\\varnothing$ and $Q/M<1/k(P)$, that bound has positive right side when $J\\ne\\varnothing$, by $m+k(J)\\le k(P)$. This contradicts $V_{P\\setminus I}=0$. If $J=\\varnothing$, the cover and $m\\le k(P)$ instead give $M\\le mQ<M$.\n",
+  "source_candidate_ids": [
+    "abd48c3f5afc0115"
+  ],
+  "source_candidate_sha256": {
+    "abd48c3f5afc0115": "7d4e420267925cfc65e4e6968eed32d9b63328799b2ba0b539b13cc40144f1a5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "abd48c3f5afc0115",
+      "locator": "abd48c3f5afc0115:03 §§4–5, (11)–(14a), closed minors, disjoint witness parities and conditional mass deficit"
+    }
+  ],
+  "statement": "Use the positive buffered mixed setting and $P,M,Q,I,J,A$ of proper buffered deepest-input heredity, and let $k(T)$ count the occupied parities of $T$ in the inherited affine lattice, with $k(\\varnothing)=0$. Both $J=P\\cap\\operatorname{conv}J$ and $A=P\\cap\\operatorname{conv}A$. There are $m$ closed pure-base halfspaces of raw weighted mass $Q$ covering $A$ and excluding $J$, each with an exclusive boundary witness in $A$. Their witness parities are distinct and disjoint from the parities of $J$, so $m+k(J)\\le k(I)$. Take $m=0$ if $A$ is empty.\n\nWrite $V_T=\\sum_{z\\in T}|K_z|$ and suppose every nonempty proper closed minor $T=P\\cap\\operatorname{conv}T$ satisfies $V_T<k(T)M/k(P)$. If $A$ and $J$ are nonempty, then $V_{P\\setminus I}>M[1-k(J)/k(P)-mQ/M]$. Under the quotas, $I=P$ and $Q/M<1/k(P)$ imply $A=\\varnothing$.",
+  "subgoal_id": "pk-intake-mixed-atomic-proper-disjoint-parity-cover",
+  "title": "Exact atomic cap budgets with parities disjoint from proper deepest bases"
+}

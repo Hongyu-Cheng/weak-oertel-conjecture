@@ -1,0 +1,26 @@
+{
+  "advances": "An exact quadratic funding cost and sign criterion. For actual three-full-row simplex capacities it applies only after verifying the common centroid, raw-margin balance and Schur-corrected feasible path. It does not assert the favorable sign for different splits.",
+  "author": "PK-research-agent",
+  "candidate_id": "a1792f9e61611562",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:42:34.572394+00:00",
+  "depends_on": [],
+  "draft_key": "tetrahedral-three-row-attained-schur-funding-cost",
+  "kind": "lemma",
+  "proof": "If either kernel has a vector outside $U$, that vector and the two independent kernel vectors $c_X,c_Z$ span $E$. Hence the two kernels sum to $E$ and a zero-cost decomposition exists for each $v$.\n\nOtherwise $\\ell$ annihilates both kernels. In Euclidean coordinates each positive semidefinite $A$ satisfies $A A^+\\ell=\\ell$. Cauchy–Schwarz on the quotient by its kernel gives\n$$\nA(u,u)\\ge \\frac{\\ell(u)^2}{\\ell^\\top A^+\\ell}.\n$$\nThe denominator is positive because $\\ell\\ne0$ and lies in the range of $A$. Equality for a prescribed value of $\\ell(u)$ is obtained at a multiple of $A^+\\ell$. Put $d_X=\\ell^\\top A_X^+\\ell$ and $d_Z=\\ell^\\top A_Z^+\\ell$. Minimizing $s^2/d_X+(\\ell(v)-s)^2/d_Z$ gives $\\ell(v)^2/(d_X+d_Z)$, at $s=d_X\\ell(v)/(d_X+d_Z)$. The corresponding equality vectors sum to $v$ modulo $U$. Adding appropriate multiples of $c_X,c_Z$ to their respective vectors fixes their sum without changing the costs. This proves attainment and the exact formula.\n\nSince both $Q_Y$ and $\\ell$ annihilate $c_Y$, the rank-one subtraction is well defined on the quotient. If $Q_Y$ has signature $(+,-)$ there, the determinant lemma gives\n$$\n\\det(Q_Y-\\ell\\ell^\\top/D)=\\det(Q_Y)\\bigl(1-\\ell^\\top Q_Y^{-1}\\ell/D\\bigr).\n$$\nThe subtraction leaves a strictly negative direction. A positive direction exists exactly when the determinant is negative, giving the strict comparison. In the stated quotient basis, the funded form on $(u,v)$ is $a u^2+2cuv+(b-1/D)v^2$. For $a>0$ choose $v=0$. If $a=0$ and $c\\ne0$ this form is indefinite, and if also $c=0$ its only possible positive coefficient is $b-1/D$. If $a<0$, completing the square gives $a(u+cv/a)^2+(b-1/D-c^2/a)v^2$, establishing the last equivalence.\n",
+  "source_candidate_ids": [
+    "0145a0829278406d"
+  ],
+  "source_candidate_sha256": {
+    "0145a0829278406d": "060578a3838a8c4bdd890a113dec4902304cf899cea47484ba933eaebbcba297"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0145a0829278406d",
+      "locator": "0145a0829278406d:03 §§3–4, (5)–(8), quotient determinant and degenerate cases"
+    }
+  ],
+  "statement": "Let $E$ be a three-dimensional real vector space, let $c_X,c_Z$ be independent, put $U=\\operatorname{span}\\{c_X,c_Z\\}$ and $c_Y=-c_X-c_Z$, and let $Q_X,Q_Y,Q_Z$ be symmetric bilinear forms on $E$ with respective kernel vectors $c_X,c_Y,c_Z$. Assume $Q_Y$ has a positive direction and $A_X=-Q_X,A_Z=-Q_Z$ are positive semidefinite. For each $v\\in E$ let the funding cost be the minimum of $A_X(u_X,u_X)+A_Z(u_Z,u_Z)$ over $u_X+u_Z=v$. If either $A$-kernel is not contained in $U$, the minimum is attained at zero for every $v$. Otherwise choose a nonzero functional $\\ell$ with kernel $U$, represent the forms and functional in Euclidean coordinates, and put\n$$\nD=\\ell^\\top A_X^+\\ell+\\ell^\\top A_Z^+\\ell>0,\n$$\nwhere $+$ denotes the Moore–Penrose inverse. The minimum is attained and equals $\\ell(v)^2/D$. Thus the maximum funded curvature for prescribed $v$ is $Q_Y(v,v)-\\ell(v)^2/D$.\n\nIn the latter case the funded form descends to $E/\\operatorname{span}\\{c_Y\\}$. If the descended $Q_Y$ has signature $(+,-)$, the funded form has a positive direction exactly when $D>\\ell^\\top Q_Y^{-1}\\ell$ on that quotient. In a quotient basis where $\\ell=(0,1)$ and $Q_Y=\\begin{pmatrix}a&c\\\\c&b\\end{pmatrix}$, it has a positive direction if $a>0$ or if $a=0$, $c\\ne0$; when $a=c=0$ this is equivalent to $bD>1$, and when $a<0$ it is equivalent to $b-c^2/a>1/D$.",
+  "subgoal_id": "pk-intake-tetrahedral-three-row-attained-schur-funding-cost",
+  "title": "Attained rank-one cost for simultaneous three-row Schur funding"
+}

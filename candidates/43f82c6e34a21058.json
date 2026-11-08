@@ -1,0 +1,37 @@
+{
+  "advances": "A prescribed cap menu on an actual body; this does not certify the minimizing perturbed normals or disprove the locked depth bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "43f82c6e34a21058",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.928523+00:00",
+  "depends_on": [
+    "cb254ea93a82679e",
+    "7559aec0ef3647a6"
+  ],
+  "draft_key": "w33-r4-actual-fixed-menu-perturbation",
+  "kind": "counterexample",
+  "proof": "The inequalities of $C_\\varepsilon$ are convex in the physical point. The convex $B$ has value 96 at each vertex of $D$, so $1-\\varepsilon B>0$. At a fixed $z$ subtract the three lower bounds and divide by $1-\\varepsilon B(z)$ to obtain the original barycentric simplex; this gives the area, centroid, positivity, and unchanged projection.\n\nThe R4 census in cb254ea93a82679e gives the three trace counts, the three zero-offset points and the base permutations. These apply here because $\\lambda_k\\in[0,1]$ and all lower bounds are less than $1/3$ on the zero slice for the two nonzero points. Explicitly, for $j=0$ one enumerates integer $x=-4,\\ldots,4$ and $\\lceil(x-4)/2\\rceil\\le y\\le\\min(4-x,2x+4)$. On $x+y<0$, the row triples $(\\#,\\sum B,\\sum B^2)$ for $x=-4,-3,-2,-1,0$ are $(1,96,9216),(2,96,4680),(4,108,3240),(3,30,396),(2,30,612)$; later rows are empty. Thus the sums are $12,360,18144$. The zero slice is $0,\\pm(1,-1)$; the squared offsets there are zero or $(0,9,9)$. Permuting the three primitive base vertices permutes the three forms and gives the same data for every $j$. The full traces give $12-720\\varepsilon+18144\\varepsilon^2$ in area units $V$. On the zero slice the proper cap at $\\lambda_k=1/3$ has area $V[2/3-\\varepsilon(B-\\ell_k^2)]^2$. Its sum in those units is $4/3-48\\varepsilon+648\\varepsilon^2$ on the diagonal, $4/3-24\\varepsilon+162\\varepsilon^2$ off it. Their difference $24\\varepsilon-486\\varepsilon^2$ is positive throughout the stated interval.\n\nFor diagonal cuts the two free barycentric lower bounds are equal; the midpoint has both free coordinates $1/3$ and is $g$. The two opposite nonzero bases have the same section length. For the displayed threshold the coarea of one section is its length divided by $\\|\\nabla\\lambda_j\\|$, which equals $2V$ times its barycentric width $2/3-\\varepsilon B$. The sum is $4V-72V\\varepsilon$. The strict full and empty offsets and proper crossings make these ordinary coarea slopes. The diagonal margins sum to zero, so the caps cover. The simultaneous permutations of the base vertices and the continuous vertices preserve the mixed measure and act by affine transformations. The average of every orbit is $(0,g)$; closed halfspace depth has convex superlevel sets, because any halfspace containing a convex combination contains at least one positive-weight input. This proves the maximizing claim.\n\nWrite $s=\\ell_0(z),t=\\ell_1(z)$, and on the actual lower $\\lambda_0$-facet define\n$\nL_\\varepsilon(z,x)=\\lambda_1(x)-2\\varepsilon\\ell_1(z)-6[\\lambda_0(x)+4\\varepsilon\\ell_0(z)+4\\varepsilon]-(1-7\\varepsilon).\n$\nThere $\\lambda_0=\\varepsilon s^2$, $\\lambda_1\\le1-\\varepsilon s^2-\\varepsilon(s+t)^2$. Substitution gives $L_\\varepsilon\\le\\varepsilon[6h-7h^2-(s+t+1)^2]$ with $h=s+2$. If $h\\ne0$ this is at most $-\\varepsilon$; if $h=0$, the integer square vanishes only at $s=-2,t=1$, or $z=(1,1)$. On the selected facet at that base $L_\\varepsilon=\\lambda_1-(1-5\\varepsilon)$ and $\\lambda_1\\in[\\varepsilon,1-5\\varepsilon]$. Thus $[L_\\varepsilon+\\varepsilon/2]_+$ is positive on a nontrivial segment only of that marked facet. Multiply it by a nonnegative continuous function of the unit normal taking value one at the lower $\\lambda_0$-normal and zero at the other two (e.g. the product of squared distances to the other normals, normalized at the first). This produces a jointly continuous finite physical field convex at every fixed normal. At $z=(1,1)$, the offsets are $(-2,1,1)$, so the actual profile is exactly $2/3$ everywhere on that fiber. Its ratio for the constructed field is $2/3$. At $\\varepsilon=0$ the bases, fibers, diagonal cap inequalities, profile and marked arclength are exactly those of 7559aec0ef3647a6; its upper bound and constant extremizer give $40/93$ also in the continuous class.\n",
+  "source_candidate_ids": [
+    "0f9b818b4c189a8f"
+  ],
+  "source_candidate_sha256": {
+    "0f9b818b4c189a8f": "261ca63f552ca0d64b3cc2c80db45c91e5ce0b956e0340ef59a6d83121de0099"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0f9b818b4c189a8f",
+      "locator": "0f9b818b4c189a8f:01 §§1–2, (1)–(5), diagonal coarea, and orbit averaging"
+    },
+    {
+      "candidate_id": "0f9b818b4c189a8f",
+      "locator": "0f9b818b4c189a8f:03 §3, (7)–(10), paying hinge"
+    },
+    {
+      "candidate_id": "0f9b818b4c189a8f",
+      "locator": "0f9b818b4c189a8f:04 §3 final paragraph and §4, comparison to ε=0"
+    }
+  ],
+  "statement": "Let $D=\\operatorname{conv}\\{(-4,-4),(4,0),(0,4)\\}$, $P=D\\cap\\mathbb Z^2$, $\\ell(z)=(-z_1-z_2,2z_1-z_2,2z_2-z_1)$, and $B(z)=\\sum_j\\ell_j(z)^2$. For a nondegenerate triangle $K$ with barycentric coordinates $\\lambda_j$, centroid $g$, and area $V$, set $C_\\varepsilon=\\{(z,x)\\in D\\times K:\\lambda_j(x)\\ge\\varepsilon\\ell_j(z)^2\\ \\forall j\\}$, $0\\le\\varepsilon<1/96$. It is an actual convex body with 31 positive integer fibers of areas $V(1-\\varepsilon B(z))^2$ and centroid coordinates $\\varepsilon\\ell_j(z)^2+(1-\\varepsilon B(z))/3$.\n\nFor $H_{jk}=\\{\\lambda_k(x)-1/3+\\ell_j(z)\\ge0\\}$, each cap has 12 strictly full, 16 strictly empty and three proper traces. The nine summed areas divided by $V$ are $40/3-768\\varepsilon+18792\\varepsilon^2$ on the diagonal and $40/3-744\\varepsilon+18306\\varepsilon^2$ off it, with a positive off-diagonal excess for $\\varepsilon>0$. The diagonal caps cover ambient space and have common mixed section centroid $(0,g)$ and common coarea $4V-72V\\varepsilon$ in their displayed margin units. The mark $(0,g)$ maximizes actual depth; the diagonal mass is an upper bound, and is not asserted to be the actual depth for $\\varepsilon>0$.\n\nLet $\\eta_\\varepsilon$ be the sum of actual fiber boundary lengths with their continuous outward normal labels, and $W=\\frac{1}{3}\\sum_j\\mathbf1_{H_{jj}}$. The supremum of $\\int\\Phi W\\,d\\eta_\\varepsilon/\\int\\Phi\\,d\\eta_\\varepsilon$ over finite nonnegative fields convex in $(z,x)$ for each normal with positive finite denominator equals $40/93$ at zero and is at least $2/3$ at every positive $\\varepsilon$ in the interval. The latter lower bound is realized as equality by an explicit jointly continuous field. The same failure of upper semicontinuity holds if the supremum is restricted to jointly continuous fields.",
+  "subgoal_id": "pk-intake-w33-r4-actual-fixed-menu-perturbation",
+  "title": "A shared-facet R4 deformation separates nine fixed caps and loses upper semicontinuity of potential efficiency"
+}

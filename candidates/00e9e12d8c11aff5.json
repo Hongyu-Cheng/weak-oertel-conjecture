@@ -1,0 +1,32 @@
+{
+  "advances": "Axis-parallel endpoint boxes, their exact Minkowski middle, and the universal-multiplier certificate only. The six-dimensional obstruction allows all templates and anchors but is repaired by exact middle own depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "00e9e12d8c11aff5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.211525+00:00",
+  "depends_on": [
+    "c4499e906cb816d8"
+  ],
+  "draft_key": "pk-w35-shell-box-optimization",
+  "kind": "theorem",
+  "proof": "The exact integer fibers follow by the base coordinate in the hull. For an endpoint anchor $D_p(w)=w_p$ and $R_p(w)=0$, so containment bounds the coefficient by its endpoint volume, attained by using that centered box as template and all other radii zero. At the middle $D_0(w)+R_0(w)=w_0+2\\min(w_-,w_+)$. This includes boundary atoms and zero weights.\n\nIf $r=\\min(r_-,r_+)>0$ and $r_0>0$, put $s=r_0/r$ and $T=rJ$. Translates of $T$ fit both endpoint boxes and a translate of $sT$ fits $K$. Hence the coordinate widths of $T$ are at most $\\min(c_i,m_i/s)$, and their product bounds its volume. This gives $V(w_0+2\\min(w_-,w_+))\\le G(s)$. For $r=0$ the coefficient is at most $|K|=\\prod_i m_i$, which is strictly below $G(\\max_i\\rho_i)$; for $r_0=0$ it is at most $2\\prod_i c_i<G(\\min_i\\rho_i)$. For each $s>0$, the centered box with sides $\\min(c_i,m_i/s)$ and radii $1,s,1$ attains $G(s)$, by coordinate containment and the affine placement through the actual box centers.\n\nBelow the first breakpoint $G(s)=(s^d+2)\\prod_i c_i$ increases, and beyond the last $G(s)=|K|(1+2s^{-d})$ decreases. On each interval between distinct consecutive breakpoints, put $x=\\log s$ and let $j$ be the number of coordinates already using $m_i/s$. There $G(e^x)=C[e^{(d-j)x}+2e^{-jx}]$ for a positive constant $C$, so convexity in $x$ puts a maximum at one of the two ends. This proves the exact finite optimization.\n\nThe universal-multiplier bound c4499e906cb816d8 applies to these same full-dimensional fibers and actual anchors, with raw certificate $\\Gamma_d V(D_p+R_p)$ and original mass $M=|A|+|K|+|B|$. In dimension six the middle sides are $3/2$ and $3/4$, each three times, so $|K|=729/512$. The common box has volume $1/8$, all breakpoints are $3/2$, and $G(3/2)=729/512+1/4=857/512>1$. The original target divided by $\\Gamma_6$ is $1753/1024$, giving the gap $39/1024$. Central symmetry gives exact ordinary depth $729/1024$ in the middle at its center, and subtracting $(46656/117649)(1753/1024)$ gives the stated positive difference.\n\nIn dimension two, scaling both bodies to common unit area followed by a determinant-one diagonal map turns $B$ into the unit box. The transformed side lengths of $A$ have product one, so interchanging coordinates gives $(R,1/R)$. These transformations preserve the relative certificate and the relative target because all volumes scale by the same factor and affine placements and homotheties are preserved. The common-box area is $1/R$, both breakpoints equal $(R+1)/2$, and the midpoint area is $k$. The middle coefficient is $k+2/R$, and subtraction of $(k+2)/2$ yields $(R^2-6R+17)/(8R)>0$.\n",
+  "source_candidate_ids": [
+    "55449f0b65f34c67"
+  ],
+  "source_candidate_sha256": {
+    "55449f0b65f34c67": "22d8ef1cec686a63f791367c852830fc57db842238ad0a7e608b879460956ac8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "55449f0b65f34c67",
+      "locator": "55449f0b65f34c67:01 §§1–2, (1)–(4)"
+    },
+    {
+      "candidate_id": "55449f0b65f34c67",
+      "locator": "55449f0b65f34c67:02 §§3–4, (5)–(8)"
+    }
+  ],
+  "statement": "Let $A,B$ be axis-parallel boxes in $\\mathbb R^d$, $d\\ge1$, with positive side lengths $a_i,b_i$ and arbitrary translations. The lifted hull over $-1,1$ has exact middle fiber $K=(A+B)/2$. For any centroid-zero full-dimensional convex template $J$ of volume $V$, choose an affine placement and radii $r_-,r_0,r_+\\ge0$, requiring containment of each positive-radius copy. Set $w_z=r_z^d$, let $D_p$ be closed-halfspace weighted depth on the base, and let $R_p$ be the sum of smaller weights in distinct unordered reflected pairs. Optimize over these choices and over actual anchors at $p\\in\\{-1,0,1\\}$. If $c_i=\\min(a_i,b_i)$, $m_i=(a_i+b_i)/2$, and $\\rho_i=m_i/c_i$, the attained maximum of $V[D_p(w)+R_p(w)]$ is\n$$\n\\max\\big\\{|A|,|B|,\\max_i G(\\rho_i)\\big\\},\\qquad\nG(s)=(s^d+2)\\prod_i\\min(c_i,m_i/s).\n$$\n\nIn dimension six, for centered endpoint boxes with side lists $(2,2,2,1/2,1/2,1/2)$ and $(1,1,1,1,1,1)$, the maximum is $857/512$ and the original mixed mass is $1753/512$. Thus the optimized raw certificate with the universal multiplier $\\Gamma_6=(6/7)^6$ falls short of $\\Gamma_6 M/2$ by $\\Gamma_6(39/1024)$. The exact middle ordinary depth at its center exceeds $\\Gamma_6 M/2$ by $3978153/120472576$. In dimension two, per unit common endpoint area, the side lists can be reduced to $(R,1/R),(1,1)$ with $R\\ge1$. The optimal coefficient at the middle is $k+2/R$ for $k=(R+2+1/R)/4$, exceeding the original target coefficient $(k+2)/2$ by $((R-3)^2+8)/(8R)$.",
+  "subgoal_id": "pk-intake-pk-w35-shell-box-optimization",
+  "title": "Exact single-template shell optimization for two boxes and their Minkowski middle"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "One-dimensional signed-measure lemma for actual nonatomic source support. Use in a stress argument requires an independently obtained stress annihilating all gluing-only tests.",
+  "author": "PK-research-agent",
+  "candidate_id": "887add153a7b936b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:13:03.027597+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w28-singular-curvature-potential-locality",
+  "kind": "lemma",
+  "proof": "The annihilation means the functional $\\psi\\mapsto\\int\\psi U\\,d\\nu$ factors through the image of the two moment maps. Extending a linear functional from that image to $\\mathbb R^2$ gives $U=A\\sin+B\\cos$ $\\nu$-almost everywhere. The kernel is continuous at $\\theta=s$ and bounded, so $U$ is continuous and this equality holds on $E$. For $F=U-A\\sin-B\\cos$, the distributional identity on $(a,b)$ is $F''+F\\,ds=\\mu$. Indeed $1_{s\\le\\theta}\\sin(\\theta-s)$ solves the homogeneous equation on either side and its first derivative has jump $+1$ at $\\theta$. The integral representation shows that $F$ is locally absolutely continuous with a locally BV derivative $g$.\n\nAt every continuity point of $g$ where $s\\in E$ is nonisolated, $F$ is differentiable with derivative $g(s)$. The zero values on $E$ then imply $g(s)=0$. Isolated points of $E$ and jumps of $g$ are countable. For clarity, the needed BV locality follows from the one-dimensional BV chain rule (Vol'pert, *The spaces BV and quasilinear equations*, DOI 10.1070/SM1967v002n02ABEH002340). Apply it to $T_\\epsilon(g)$ with $T_\\epsilon(x)=\\epsilon\\arctan(x/\\epsilon)$. Its atomless derivative is $T_\\epsilon'(g)D^{\\mathrm{diff}}g$ and its jumps are the differences at the two traces. The compositions converge uniformly to zero, and the jump measures converge to zero in variation on compact subintervals by domination by the summable old jump sizes. Since $0\\le T_\\epsilon'\\le1$ and $T_\\epsilon'(x)\\to\\mathbf1_{x=0}$, the atomless terms converge as measures on compact subintervals to $\\mathbf1_{\\{g=0\\}}D^{\\mathrm{diff}}g$. Their distributional limit is zero, so $D^{\\mathrm{diff}}g$ vanishes on $E$, including its absolutely continuous part. Also $F\\,ds|_E=0$. The Green identity now gives the assertion.\n",
+  "source_candidate_ids": [
+    "181e74b2f3c435dc"
+  ],
+  "source_candidate_sha256": {
+    "181e74b2f3c435dc": "9803db9f0e48226c3c9b4043dc711c48558ea88a34f0b8f241daa4b9bf45b596"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "181e74b2f3c435dc",
+      "locator": "§1, diffuse BV locality; §2, (2), the Green-potential test"
+    }
+  ],
+  "statement": "Let $\\mu$ be a finite signed measure on $[a,b]$ and let $\\nu$ be a nonzero finite nonatomic measure with support $E\\subset(a,b)$. Define $U(s)=\\int_{[s,b]}\\sin(\\theta-s)\\,d\\mu(\\theta)$. If $\\int\\psi U\\,d\\nu=0$ for every bounded measurable $\\psi$ with $\\int\\psi\\sin\\,d\\nu=\\int\\psi\\cos\\,d\\nu=0$, then the atomless part of $\\mu$ vanishes on $E$.",
+  "subgoal_id": "pk-intake-pk-w28-singular-curvature-potential-locality",
+  "title": "Diffuse curvature locality for annihilated Green potentials"
+}

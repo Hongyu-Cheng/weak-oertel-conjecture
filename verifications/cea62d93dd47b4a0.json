@@ -1,0 +1,93 @@
+{
+  "candidate_id": "fe056d23417c0942",
+  "candidate_sha256": "4e3a0a31724d8e011dbcd7eb7d5868e6413156e99b25677233f75cbbfffda45e",
+  "checked_dependency_candidate_sha256": {
+    "3b07eecf22960599": "b9f8cf017fd2df7bfaa969cbb5b4f6b3a90cbdd6e81deee69025f81e4d98fb8c"
+  },
+  "checks": [
+    "Compared the raw original and revised candidate bytes. The statement string is the only changed JSON field and the exact string diff contains only the two coefficient restrictions. Candidate ID, proof, source locators, source digests and dependency IDs are unchanged.",
+    "Verified the initial CHANGES_REQUESTED report against the original candidate byte hash and both decoded-field hashes, and recomputed all three hashes for the revision. The proof hash agrees with the initial review.",
+    "The new a∈L antecedent scopes the coefficient translation, the following both-sign compatible deformation and its nonzero-coefficient gain. The even-baseline gain separately requires a∈L∖{0}. The previously identified nonzero perpendicular coefficient therefore falls outside these assertions.",
+    "Adding a coefficient in L translates the minimization variable within L, so its unique optimizer moves by −a and the normalized base coefficient by −da. A nonzero coefficient in L has a nonzero sampled evaluation because P spans L. Strict convexity then gives the two-sign gain and evenness gives strict gain for each sign at baseline. Rank zero has no such nonzero coefficient.",
+    "An exact planar replay on a rank-one sample in two base coordinates gave unchanged optimal brackets and a positive squared-radius sum increment 1/32 for each sign of a coefficient of size 1/8 in L. A coefficient in L-perp evaluates identically to zero and is excluded by the repaired hypotheses.",
+    "Rechecked all original source bytes and the independently approved all-normal theorem, including its exact candidate, statement and proof hashes. The all-normal theorem retains its effective coefficient in L and positive residual chart, so the unchanged proof invocation still applies."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3b07eecf22960599",
+      "candidate_sha256": "b9f8cf017fd2df7bfaa969cbb5b4f6b3a90cbdd6e81deee69025f81e4d98fb8c",
+      "hypotheses": "The all-normal theorem supplies the exact local actual depth, the unique small stationary coefficient β∈L and positive brackets in the common validated neighborhood. Under β=da its gradient agrees with the strictly convex norm problem. The repaired affine shift stays in L and uses that same stationary branch.",
+      "reviewed_proof_sha256": "4fa22633a4ad3fb57fe4a9e249e11c887bcece6b56635ed2a754553be526047a",
+      "reviewed_statement_sha256": "cabb0bb87b3b093bea4f7d0f0f0e6da31513217afe9c4a19374c8eb8accbc977",
+      "same_batch": true
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:16Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "fe056d23417c0942",
+    "candidate_sha256": "2e71d03a26a4bb64f7faf9e57f65fc9fb217c495dfd18a0c5f60711615ae4b35",
+    "checks": [
+      "Cold read followed by comparison with 4e12bc9cd7731df3 §8, (7), (17)–(18), and 65cb1818e941a654 §§1 and 7. The general original states a∈L before the affine deformation and the mass improvement.",
+      "The linear evaluation map on L is injective. Strict convexity of the dth power norm for d≥2 and uniform coercivity imply a unique global optimizer. Its convergence to zero at the even sample and the positivity of every baseline radius put every residual in the positive-bracket chart.",
+      "For the minimization variable in L, the stationary condition matches the all-normal theorem after β=da. Translating that variable by a coefficient in L gives exact raw depth invariance and the coefficient shift.",
+      "Strict convexity of t^d on positive radii proves that at least one sign strictly increases total mass when a≠0 in L. Baseline evenness makes the two masses equal, so both gains are strict there. The cancellation of first parity-class variations follows from z↔−z and is exact.",
+      "Checked a rank-deficient actual base counterexample to the missing explicit restriction in the later statement: the width-narrow rectangle in the issue has sample arrays unchanged by a nonzero perpendicular coefficient. Both perturbed radii can be positive and concave with the same sampled array, while the claimed coefficient −da lies outside L."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "3b07eecf22960599",
+        "candidate_sha256": "b9f8cf017fd2df7bfaa969cbb5b4f6b3a90cbdd6e81deee69025f81e4d98fb8c",
+        "hypotheses": "Its unique small β∈L and positive bracket hypotheses identify the unconstrained array-norm optimizer, which was proved independently to converge to zero. Its global deepest-source result is needed for exact geometric, rather than formal polynomial, invariance.",
+        "reviewed_proof_sha256": "4fa22633a4ad3fb57fe4a9e249e11c887bcece6b56635ed2a754553be526047a",
+        "reviewed_statement_sha256": "cabb0bb87b3b093bea4f7d0f0f0e6da31513217afe9c4a19374c8eb8accbc977",
+        "same_batch": true
+      }
+    ],
+    "finished_utc": "2026-11-08T17:25:47Z",
+    "issues": [
+      {
+        "defect": "The occurrence of a∈L in the preceding minimization binds that minimization variable, but the later affine-perturbation assertion does not explicitly quantify its coefficient in L. For B=[−1/4,1/4]×[−1,1], P={(0,−1),(0,0),(0,1)}, L={0}×R, r^0≡1 and a=(ε,0)≠0, both signs give positive affine radii with the unchanged sample. The optimized coefficient remains β=0, rather than −da, and neither sign increases the sampled mass.",
+        "locator": "Statement, sentence beginning 'Whenever both compatible arrays lie in the validated neighborhood', through the ensuing both-sign and mass-gain claims",
+        "repair": "Write 'For every a∈L for which both compatible arrays lie in the validated neighborhood, replacing …' and keep the following small-perturbation and nonzero-coefficient clauses scoped to a∈L. No change to the proof or numerical statements is needed.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "This shows the exact planar affine mode in a five-base family. It does not give the ℓ_d quotient norm description or the no-local-maximum result for every nearby compatible radial simplex family.",
+        "fact_id": "cac3d3fe885660f5"
+      }
+    ],
+    "readability": "The coefficient restriction can be inferred from the original source and the final proof paragraph, but it needs to bind the later stated affine implication because the theorem expressly includes rank-deficient P.",
+    "review_method": "Independent cold mathematical review of the frozen bytes, original-source and dependency comparison, and exact rational or algebraic replay of the applicable calculations.",
+    "reviewed_proof_sha256": "0bb6a00feaa63e3751ed4cfc65e7ba4dc7fc636393a5da4c4db7c767a937d325",
+    "reviewed_statement_sha256": "e17508ba08b46849bc15fec000e961f8980be7ef6622e500a506e82d3c7abd7d",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T17:20:38Z",
+    "summary": "The norm representation and its affine consequence are sound for affine coefficients in the effective base span. The later statement needs that quantifier explicitly, since a nonzero invisible coefficient gives a false coefficient-shift formula and no mass improvement.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This shows the exact planar affine mode in a five-base family. It does not give the ℓ_d quotient norm description or the no-local-maximum result for every nearby compatible radial simplex family.",
+      "fact_id": "cac3d3fe885660f5"
+    }
+  ],
+  "readability": "The later affine assertions now carry their own effective-span restriction, including the even-baseline strict gain in the rank-deficient setting.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent linked revision review of the exact byte diff, recomputed original and revised hashes, proof and source consistency, and exact rank-deficient calibration.",
+  "reviewed_proof_sha256": "0bb6a00feaa63e3751ed4cfc65e7ba4dc7fc636393a5da4c4db7c767a937d325",
+  "reviewed_statement_sha256": "dc3ba66882f62f394b894094d5b48931e375699818617c07248f73d51bf406fc",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "2e71d03a26a4bb64f7faf9e57f65fc9fb217c495dfd18a0c5f60711615ae4b35",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:26:18Z",
+  "summary": "The revision explicitly scopes the affine shift and strict mass claims to the effective base span. It closes the initial quantifier defect and the unchanged proof applies with the same independently approved dependency.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,37 @@
+{
+  "candidate_id": "c88376a94a8fd722",
+  "candidate_sha256": "aab3d156d7fabafd5d73df18ce4684d9c5ce975d95f3e7db227f51dc8bc4708c",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Differentiated f(h) and checked the substitution y=x/(h-x), r=x/E. After multiplication by r^2(1+y)^(m+2) the cubic minus binomial has its degree-zero and degree-one terms cancel, with the stated degree-two and degree-three coefficients and strictly negative higher-degree tail.",
+    "At y_0=x/(1-x), f'(1)-1=Z/(1-x)>0 using E+1=(1-x)^(-m). Strict concavity of B in y>0 and its negative limit at infinity give exactly one later zero with the stated signs. Since y decreases with h, the sign of R_h gives an interior maximum.",
+    "When h_c>=1 the location is automatic. Otherwise Z>0 gives x<h_c<1 and y_c>y_0. The finite geometric sum for E gives mr<=1-x and y_c>=1/m. If 1-(m+1)x/2 is positive, the verified log derivative is positive on its interval and implies the upper bound y_c<=2/(m+1); otherwise that bound follows directly from mr>0.",
+    "At r=0, B=my-1>=0 on the target y interval. The r-quadratic coefficient is strictly negative for m>=2. At r=1/m the y-section is concave, so endpoint signs suffice; exact algebra verified the two resulting binomial inequalities.",
+    "For the endpoint signs, the lower right sides are 10/3 and 13, reached at m=2. The strict elementary exponential comparisons e<=87/32<11/4 and e^2(1+2/(m+1))<(121/16)(5/3)=605/48<13 check both inequalities uniformly. Concavity first in y and then in r yields B(r,y_c)>0.",
+    "Checked 31dd328861ee872c §§4–5 (9)–(15) and reproduced the endpoint and expansion arithmetic independently. The proof has no accepted or same-wave premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:44:08Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its local minimum is for the raw signed-sum cap probability on a linearly constrained coefficient box, not the function R(h) on this scalar interval. It provides neither a unique critical point nor h_c.",
+      "fact_id": "24e83be093cbd50e"
+    }
+  ],
+  "readability": "The inverse monotonicity of y in h reverses the location comparison. The proof uses positivity before the unique y-root, so h_c is above the h-critical point.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e73f0b4d68b3b99ec7947ba02f2b5d7b04737cecc1a743af9190da6795bb05f5",
+  "reviewed_statement_sha256": "b396cc710055b95eacf51a7799b5fa6b8d628e77d2037074bb0470bde713eb32",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:39:34Z",
+  "summary": "The critical point is unique on x<h<1, and the exact two-variable endpoint comparison places it strictly below h_c for every m>=2.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

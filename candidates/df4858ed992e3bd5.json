@@ -1,0 +1,26 @@
+{
+  "advances": "Exact incidence for one weighted affine cap sum. It does not invoke a depth or contact-location lower bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "df4858ed992e3bd5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:28:33.677269+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-circuits-strict-product-defect",
+  "kind": "lemma",
+  "proof": "The nonnegative weighted-sum event lies in the union of the nonnegative individual events, since all weights are positive. Independence gives the exact probability of this union, and subtracting the part outside the weighted-sum event gives the first formula. On the displayed rectangle the positive term is outweighed by the negative terms, so the rectangle lies in the defect event. Its measure factors by independence.\n\nIf $P>0$ some $p_i>0$. Nonconstant affine functionals have null level planes for the uniform full-dimensional laws. Since also $p_i<1$, the interior of $K_i$ has points on both sides of the cutting plane. The segment between two such points yields an interior point on the plane. An interior ball there gives positive mass in the positive strip for every $\\delta>0$. For each other index choose $h_l>0$ small enough to give a positive negative-tail probability, using $p_l<1$. There is at least one such index, so one can choose $\\delta$ small enough for the strict weighted inequality. The product lower bound is then positive.\n",
+  "source_candidate_ids": [
+    "203262a6491295f6"
+  ],
+  "source_candidate_sha256": {
+    "203262a6491295f6": "1d0dad6d4ee82bc85009780a286a7b3d549c9b719bd6ee9154ad9c34c816b0ec"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "203262a6491295f6",
+      "locator": "203262a6491295f6:02 §3, (8)–(10) and strictness paragraph"
+    }
+  ],
+  "statement": "Let $X_l$ be independent uniform points in positive-volume compact convex bodies $K_l\\subset\\mathbb R^d$. Let $L_l$ be nonconstant affine functions on these bodies and let $t_l>0$ for $1\\le l\\le k$. Put $p_l=\\Pr\\{L_l(X_l)\\ge0\\}$ and $P=\\Pr\\{\\sum_l t_lL_l(X_l)\\ge0\\}$. Then\n$$\nP=1-\\prod_l(1-p_l)-\\Delta,\\qquad\n\\Delta=\\Pr\\{\\exists l:L_l(X_l)\\ge0,\\ \\sum_l t_lL_l(X_l)<0\\}.\n$$\nFor an index $i$ and positive $\\delta,h_l$ with $t_i\\delta<\\sum_{l\\ne i}t_lh_l$, one has\n$$\n\\Delta\\ \\ge\\ \\Pr\\{0<L_i(X_i)<\\delta\\}\\prod_{l\\ne i}\\Pr\\{L_l(X_l)\\le-h_l\\}.\n$$\nIf $k\\ge2$, all $p_l<1$, and $P>0$, then $\\Delta>0$.",
+  "subgoal_id": "pk-intake-pk-w34-circuits-strict-product-defect",
+  "title": "Exact and strictly positive independent-union defect for affine cap sums"
+}

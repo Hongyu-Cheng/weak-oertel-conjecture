@@ -1,0 +1,26 @@
+{
+  "advances": "The equivalence applies to any specified anchored combination, including partial lists; actual hull equality additionally requires all anchored combinations and lattice completeness. The transfer concerns an exact pushforward of the represented law.",
+  "author": "PK-research-agent",
+  "candidate_id": "1ba6e128449fdd64",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:29:19.949296+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-lifts-cross-measure-ball-lift-equivalence",
+  "kind": "theorem",
+  "proof": "By Borell's characterization in [Fradelizi and Guédon, §2, p. 329](https://perso.math.u-pem.fr/fradelizi.matthieu/pdf/localizationDCG.pdf), for $r=m-q$ the roots $f_z^{1/r}$ have positive continuous concave representatives on the interiors of their convex supports. They are bounded with compact support: midpoint balls with a fixed interior ball of positive root lower bound would give disjoint balls of uniformly positive mass for escaping positive points, or arbitrarily large mass for unbounded roots. Use the upper-semicontinuous hypograph closures on the boundaries. The canonical lifts of radii $(f_z/\\kappa_r)^{1/r}$ are then compact full-dimensional convex bodies of volumes $\\nu_z(\\mathbb R^q)$ by Fubini.\n\nAssume the cross-measure inequality. Applying it to shrinking balls about support points proves support Minkowski inclusion. For interior source points $x_i$, their average $x=\\sum_i\\lambda_i x_i$ is interior to the target support, since the source support combination contains a ball about $x$. Apply the inequality to balls of radii $\\varepsilon a_i$ around the $x_i$ and divide by $\\kappa_q^{1/m}\\varepsilon^{q/m}$. Letting $\\varepsilon\\downarrow0$ yields\n$$\nf_j(x)^{1/m}\\Bigl(\\sum_i\\lambda_i a_i\\Bigr)^{q/m}\n\\ge\\sum_i\\lambda_i f_{z_i}(x_i)^{1/m}a_i^{q/m}.\n$$\nSet $b_i=f_{z_i}(x_i)^{1/r}$, $S=\\sum_i\\lambda_i b_i$, and choose $a_i=b_i/S$. The right side becomes $S^{r/m}$ and the factor on the left is one, so $f_j(x)^{1/r}\\ge S$. The triangle inequality now gives the lift inclusion over interior source points; approximating arbitrary lift points by interior points and using closedness gives the whole inclusion. Conversely intersect each lift with the cylinder over $E_i$, use its projected volume identity, and apply $m$-dimensional Brunn–Minkowski to the inclusions of these portions over $\\sum_i\\lambda_iE_i$. This proves the cross-measure inequality.\n\nFor prelimit compatible $m$-bodies, the same proof by portions over compact cylinders applies directly to the old bodies under the common projection; one common scaling factor cancels. To pass to finite weak limits, use open $\\varepsilon$-neighborhoods of the inputs and the closed $\\varepsilon$-neighborhood of the Minkowski sum on the output. Approximate open-set masses from within by compacts, apply lower Portmanteau to the inputs and upper Portmanteau to the output, and let $\\varepsilon$ decrease to zero. Positivity of the limit input masses guarantees positivity for large indices in this argument.\n\nWhen every anchored inclusion holds and the finite base equals the lattice points of its hull in the chosen base lattice, grouping any convex combination by its base shows that the hull has exactly the specified lifted integer fibers. Fubini and the affine inverse of the common projection on the sheared support plane recover the entire original labeled law, undoing the shear by an affine-in-base map. The inverse image of a closed halfspace containing a projected mark is either a closed halfspace through or containing the lifted mark, or the whole represented space. It has exactly the original cap mass; taking infima proves the depth comparison.\n",
+  "source_candidate_ids": [
+    "b9e8ea5c75ef1e0e"
+  ],
+  "source_candidate_sha256": {
+    "b9e8ea5c75ef1e0e": "c305246b822252da89f0aa0011de4aa59bf3c5e8797742da8b1626e612021c62"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b9e8ea5c75ef1e0e",
+      "locator": "b9e8ea5c75ef1e0e:05 §6, (13)–(16), common-support cross-measure equivalence and physical transfer"
+    }
+  ],
+  "statement": "Fix $1\\le q<m$ and let $\\nu_z=f_z\\,dx$ be finite positive $1/m$-concave measures of full affine support dimension $q$ in a common $\\mathbb R^q$. At any specified anchored combination $j=\\sum_i\\lambda_i z_i$ with $\\lambda_i>0$ and $\\sum_i\\lambda_i=1$, the inequality\n$$\n\\nu_j\\Bigl(\\sum_i\\lambda_i E_i\\Bigr)^{1/m}\\ge\\sum_i\\lambda_i\\nu_{z_i}(E_i)^{1/m}\n$$\nfor all compact positive-source-mass $E_i$ is equivalent to the corresponding Minkowski inclusion of the canonical centered $(m-q)$-ball lifts. The inclusions preserve the individual masses. The cross-measure inequality holds for common-scaled projected volume laws of compatible $m$-fibers and their finite weak limits. When a common affine-in-base shear identifies the projected limits with the full physical laws, and a finite base is lattice-complete with all anchored incidences, the mixed volume of the lifted hull projects to the full physical law and lifted depth is a lower bound for physical depth at the projected mark.",
+  "subgoal_id": "pk-intake-pk-w34-lifts-cross-measure-ball-lift-equivalence",
+  "title": "Cross-measure Brunn–Minkowski is equivalent to compatible common ball lifts"
+}

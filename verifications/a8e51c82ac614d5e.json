@@ -1,0 +1,70 @@
+{
+  "candidate_id": "18d3a5cf0b729f6d",
+  "candidate_sha256": "12da061e67d2ff638b98f29f2f0af7b8df519052446a5f7fbd9f78a7c86e744f",
+  "checked_dependency_candidate_sha256": {
+    "506e246f680da4b5": "e998f15ec065dc0a96a2729002676d298a57e43ff7c6d9a714f4060a9ba6f724",
+    "511d89569241b0d6": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc"
+  },
+  "checks": [
+    "Checked 9cac770b3cc82243 opening stationary family, equations (1)–(3) and concluding exclusion against the pinned SHA. The frozen proof makes the signed Hessian justification explicit and derives its own stationarity relation.",
+    "The coefficient pattern gives at least two positive and two negative phases. Along the two-sided feasible path the signed velocities are 1 and −1/m, so stationarity and negative-phase symmetry give a common transform q. The tangent inequality for log f selects the half-line whose normalized density is ≤1; integrability and continuity make it <1 on an interval, so q<1.",
+    "Both reflected normalized half-lines meet the reciprocal-transform lemma. Convexity and a strictly positive reciprocal derivative give A<0 and B<0 at the free magnitudes, and u<q, v<q at the unit magnitudes. In signed coordinates, Φ′(−b)=−B.",
+    "For each differentiation index j, keep one positive and one negative original phase distinct from j. Their convolution is the two-sided exponential density with denominator r+s; it is Lipschitz and its derivative jumps only at zero. The added independent nonzero phase removes the exceptional zero argument, also for continuity of nearby second derivatives. Differentiating the remaining signed sum gives the minus sign in −f_W′(0). Size-biasing E_j adds a same-scale phase and the second identical contribution when i=j gives the factor 2.",
+    "Checked the signed exponential ODE separately: for positive c the upper endpoint is x, for negative c the lower endpoint is x, and in either case f_U=f_W+c f_W′. Removing a_j and then a_i gives f_{V+a_iE′}−f_{V+a_jE′}=(a_j−a_i)f_W′; together with −f_W′ this fixes the sign of the divided difference. Direct size bias with f held fixed gives the equal-argument derivative, including negative coefficients.",
+    "Recomputed the Hessian contraction. The unit rows are (u−q)(1/(1−p)−1/(1+b)) and (v−q)(−1/(1+p)+1/(1−b)); the free mixed terms vanish and the free negative row is (m+1)B/m. Euler gives v−q=k(u−q); subtracting the two unit-row fractions over (1−p²)(1−b²) gives 2(p−b), yielding the displayed second variation after mb=k+p−1. Also checked both contractions by exact rational substitution across the feasible sign cases.",
+    "For p≤b and k≥2 the B term is strictly negative and the other term is nonpositive, also at p=b. Both signs of small t are feasible, ruling out a local minimum. For k=1, p≤b=p/m forces m=1; the opposing sums are independent copies of the same continuous law throughout the feasible path. Finally p>b is equivalent to (m−1)p>k−1 and p<1 forces m>k. A full-domain local minimum is a local minimum on the same path."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "511d89569241b0d6",
+      "candidate_sha256": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+      "fact_id": "511d89569241b0d6",
+      "fact_sha256": "d75e672e61cdd31510a3a7670e71711e49edd1b2805e5883e393e73e568cada6",
+      "mapping": "The k positive units and p give at least two positive phases; the fixed negative unit gives at least one negative. Invoke the density and first-derivative conclusions on the ambient neighborhood. The draft separately proves the signed second derivatives.",
+      "reviewed_proof_sha256": "de2812dbc5632f66b6800ec3d17e4a2fa4d439425feb37f623d693d06a842516",
+      "reviewed_statement_sha256": "5da49339a62c68ed1622a42d4d7d1c4bff3ac044a334dd512c679d389cf75c8b",
+      "status": "Accepted at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5."
+    },
+    {
+      "candidate_id": "506e246f680da4b5",
+      "candidate_sha256": "e998f15ec065dc0a96a2729002676d298a57e43ff7c6d9a714f4060a9ba6f724",
+      "fact_id": "506e246f680da4b5",
+      "fact_sha256": "d251e76ae5a778f9d27669bd636f28325ce1fba5f1e12fa798a557a850739ab4",
+      "mapping": "Apply to h(x)=f(−x)/f(0) and h(x)=f(x)/f(0) for x≥0. These are positive, continuous, integrable and log-concave with h(0)=1. Their reciprocal exponential averages equal 1/φ₊ and 1/φ₋; at the free magnitudes they exceed 1.",
+      "reviewed_proof_sha256": "5fec4c17b070afe8db47205756e1fdd8df014d4e956bc991241605fecb4a0c32",
+      "reviewed_statement_sha256": "a4e5b0aaf2e1cdd12c887515e2e02a477a8ec997a96439b16257801c4d348214",
+      "status": "Accepted at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:18:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted first derivatives and positive-coordinate Hessian do not supply the signed mixed or negative-coordinate Hessian contraction needed for this fractional family.",
+      "fact_id": "511d89569241b0d6"
+    },
+    {
+      "comparison": "The reciprocal-transform lemma gives the slope information, but it has no coefficient-domain stationarity or exclusion conclusion.",
+      "fact_id": "506e246f680da4b5"
+    },
+    {
+      "comparison": "The simplex proper-cap theorem concerns unrestricted oriented normals at a fixed barycentric point and different feasible variations. It does not exclude p≤b in the capped coefficient face with fixed units.",
+      "fact_id": "27d3881f8bfc290c"
+    }
+  ],
+  "readability": "The signs are clearest if one tracks b as a magnitude and −b as the signed coordinate; the table and its contraction are consistent with that distinction.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e81d8d37585d6a92dcf5f73f2556691d08acb6134bee20687c298038a09c3c37",
+  "reviewed_statement_sha256": "0959d1438dccd7cd7d74471bc1505b88bc449eb02b6da475e9d76ffe1cd7de1b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:15:15Z",
+  "summary": "The signed Hessian, Euler contraction and all boundary cases within the open fractional family support the stated exclusion, including equality p=b.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

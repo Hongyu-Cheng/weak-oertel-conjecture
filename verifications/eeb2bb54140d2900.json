@@ -1,0 +1,56 @@
+{
+  "candidate_id": "ce6f5ea7607bbbd2",
+  "candidate_sha256": "30e7f6149f5dd6c96bde1bebeacaf44ee2046a08c68c8c9200de0b4ad099f150",
+  "checked_dependency_candidate_sha256": {
+    "486fe778f838d99d": "eb812e3a5ade3090355718e597b223e24a4555370f325d3c8d02578086727de7"
+  },
+  "checks": [
+    "The accepted transport proof constructs a map from each positive-volume compact convex K_z to K_w, with the actual interpolation at t=1/2 bounded by ((a_z^(1/d)+a_w^(1/d))/2)^(−d)≤1/√(a_z a_w). It is a coupling of the uniform endpoint probabilities, not just a point with the desired mean.",
+    "Giving the ordered pair weight a_z a_w/M_r gives both joint marginals exactly μ_r. The base midpoint is integral by parity and the physical midpoint is in C by convexity. Its mass and first moment are exactly preserved.",
+    "A midpoint in a closed halfspace forces one endpoint in it because the open complement is convex, so the bound applies to the same coupling even for whole boundary fibers. No choice of coupling depending on H is needed.",
+    "At output base k, Cauchy–Schwarz on the reflected index set z↔2k−z bounds the total density by Σ a_z/M_r≤1. The supports lie inside the actual K_k and zero-volume fibers cannot receive positive mass, because a pair of positive endpoint bodies has a full-dimensional Minkowski midpoint. Summing gives pμ and factor-two pooled cap control.",
+    "Source 9af97e78b545b0b8:02 statement and §2 use the same original weights and ordered pairs. The frozen proof strengthens the pairwise premise by using the verified transport before taking the AM–GM bound."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "486fe778f838d99d",
+      "candidate_sha256": "eb812e3a5ade3090355718e597b223e24a4555370f325d3c8d02578086727de7",
+      "fact_sha256": "80eaa3594e79d476dc0e9e3ab5468b43971468ba3714c6b7d4eb85ae5252fc03",
+      "hypotheses": "Apply the actual triangular transport in its proof with A=K_z, B=K_w, t=1/2, and K=(A+B)/2. All three are compact full-dimensional convex bodies, because both endpoint volumes are positive. Its graph gives the conditional marginals and the stated Lebesgue density bound.",
+      "kind": "accepted",
+      "reviewed_proof_sha256": "453f008cf56304760f5997ca492aa0ab404452657ab00d0683afa09a8c9fea56",
+      "reviewed_statement_sha256": "ea2e7f929ac99fb0ae6f6ecaa81eba3faa570c8672ff234d5304b584278fef42"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:27:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It proves the actual density-capped pair coupling in the same continuous dimension, without class aggregation, independent base-pair weights, or the simultaneous halfspace conclusion.",
+      "fact_id": "486fe778f838d99d"
+    },
+    {
+      "comparison": "Its product-endpoint midpoint gives the same mass-normalized factor-two cap comparison. It imposes no unit per-class physical density bound, and the new coupling retains base independence while changing conditional continuous couplings.",
+      "fact_id": "3ac39fef94fcc0da"
+    },
+    {
+      "comparison": "It gives a unit per-class density ceiling for arbitrary equal-mass parity-compatible inputs, and the factor-two cap inequality follows for identical marginal inputs from midpoint incidence. Its conclusion does not prescribe independent original base pairs, which is substantive additional scope here.",
+      "fact_id": "ddfc030a763e6dbc"
+    }
+  ],
+  "readability": [],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7a09682c8d9860cdd796644fc6d0cfef16d3aa253b14a361eca4090ffc463cc9",
+  "reviewed_statement_sha256": "ce69c38d4d41a9faab15976799925e35b95cfeb56cb1ce07114c9b4423de2509",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:22:39Z",
+  "summary": "One coupling with the required independent ordered base law simultaneously gives unit class density, the original class first moment, and the factor-two closed-cap bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

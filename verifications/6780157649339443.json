@@ -1,0 +1,54 @@
+{
+  "candidate_id": "fedc8295acf7c867",
+  "candidate_sha256": "47f062ef2da527b5fac0660b5710adb6d1e170ea26967bd271b222575950817c",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "dfd25e72c1f45a4e": "236e9df0f68c5aac87deb48900907edd4a6b705edaa189bc1beaf07bbe3f959e"
+  },
+  "checks": [
+    "The extreme slices are the generating fibers; the two endpoint weights must agree in an anchored base-1 representation. Their midpoint fiber is contained in K_1. Thus the three actual volumes and centroids are the ones used.",
+    "Exact arithmetic gives total M=7/2, x_1 centroid 17/28, and respective signed coordinates −3/28,4/28,−3/28. An extreme integer mean forces support on its endpoint fiber and violates the sign condition. The only possible output base is 1.",
+    "At output base 1 the endpoint component masses are equal to m. Its sign requirement is 4m_1−6m≥0; summing these nonnegative excesses gives zero, so every component mass vector is m(1,3/2,1). Constancy of each density on each full fiber then proves μ_j=mμ.",
+    "Averaging positive-root graph points with weights b_z/m_σ uses the positive graph convexity, so it retains the positive metronoid height without any closure inference. The closed cap through the centroid uses the right metronoid inclusion. Its middle-trace numerical budget scales by c_j because the probabilities are unchanged.",
+    "The sum in the conclusion is explicitly of numerical budgets on one common output trace. The computation gives N_eff≥(7/2)/(3/2)=7/3 and N_eff=49/17 for d=1."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "dfd25e72c1f45a4e",
+      "fact_sha256": "b6c40364d9e5b0d168c2d0e86348d42af602caaa8b2cfe41c201884fef322232",
+      "mapping": "Use the positive-root graph G in the proof itself, which proves convexity before closure. Each nonzero conditional component has density between zero and the original fiber indicator and thus gives a valid metronoid point at its positive root height. Convex combinations have base 1."
+    },
+    {
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "mapping": "The middle original fiber is a full-dimensional convex body and the averaged metronoid height defines an admissible positive mass by the preceding graph membership. Its tested closed trace contains the conditional centroid. The right inclusion gives the claimed raw volume bound in the original middle fiber."
+    }
+  ],
+  "finished_utc": "2026-11-08T18:52:17Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "That balanced peeling theorem allows densities which vary within each endpoint fiber and uses outputs at both endpoints and the middle. It can obtain nontrivial endpoint selections precisely outside the frozen claim's constant-on-whole-fiber class.",
+      "fact_id": "1dcf9dca38346003"
+    },
+    {
+      "comparison": "That result supplies an effective-count root bound for feasible selected allocations, without forcing them to be proportional. The contribution here is the exact integer-centroid plus cap-sign rigidity of all whole-fiber components for the displayed actual source.",
+      "fact_id": "0a2b4c19d781e819"
+    }
+  ],
+  "readability": "The proof distinguishes summing numerical budgets on one common trace from an additive actual-volume argument.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0ba42c08519d444a08012d32e1f743172d9fefe0d1001114369fd44fe03b13e2",
+  "reviewed_statement_sha256": "90dbf5cbf3ed0d8e07d02b147b223c96f7577855edb36c3204f12170376b736e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:48:08Z",
+  "summary": "The integer-centered whole-fiber decomposition forces proportionality, and the effective-count and numerical Jensen conclusions follow for the same actual output trace.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

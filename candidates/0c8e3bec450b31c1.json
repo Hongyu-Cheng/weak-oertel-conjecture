@@ -1,0 +1,26 @@
+{
+  "advances": "A rank reduction for an attained homogeneous optimization on column-stochastic matrices.",
+  "author": "PK-research-agent",
+  "candidate_id": "0c8e3bec450b31c1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:18:08.119741+00:00",
+  "depends_on": [],
+  "draft_key": "least-active-stochastic-row-independence",
+  "kind": "lemma",
+  "proof": "Write $I=\\{i:X_i\\ne0\\}$ for the active rows of a least-active maximizer $X$. Suppose $\\sum_{i\\in I} a_iX_i=0$ for coefficients not all zero. The coefficients have both signs, since each $X_i$ is nonzero and nonnegative. For all $t$ with $1+t a_i\\ge0$ for every $i\\in I$, let $X_i(t)=(1+t a_i)X_i$ for $i\\in I$ and keep all other rows zero. This matrix is feasible, since its column-sum vector is $\\sum_iX_i+t\\sum_{i\\in I}a_iX_i=\\mathbf 1$. By homogeneity the objective on this interval is affine, with slope $\\sum_{i\\in I}a_i f_i(X_i)$. Both signs of $t$ are feasible near zero, so maximality makes the slope zero. At a finite endpoint one of the active rows vanishes, and the objective is still maximal. This contradicts the choice of $X$.\n",
+  "source_candidate_ids": [
+    "f62fe2e83b180bf3"
+  ],
+  "source_candidate_sha256": {
+    "f62fe2e83b180bf3": "b28b5be4b4b3ba5f853f544672c5ae965df29e2e883e66f9a4a712bced9e043e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f62fe2e83b180bf3",
+      "locator": "§2, exact row scaling and minimal active-row independence"
+    }
+  ],
+  "statement": "Let $m,N\\ge1$. For each row $i$ let $f_i:\\mathbb R_+^m\\to\\mathbb R$ satisfy $f_i(\\alpha x)=\\alpha f_i(x)$ for $\\alpha\\ge0$. Suppose that $\\sum_{i=1}^N f_i(X_i)$ attains its maximum over the nonnegative $N\\times m$ matrices with each column sum equal to one. At every maximizer with the fewest nonzero rows, the nonzero rows are linearly independent. In particular there are at most $m$ such rows.",
+  "subgoal_id": "pk-intake-least-active-stochastic-row-independence",
+  "title": "Independence of the rows of a least-active stochastic maximizer"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "Depth above a specified integer base of high marginal depth, with fixed base dimension one and all fibers of positive continuous volume.",
+  "author": "PK-research-agent",
+  "candidate_id": "1cc539e9d37a3eb0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.749764+00:00",
+  "depends_on": [
+    "875f3a93f59dd606"
+  ],
+  "draft_key": "pk-w36-line-univariate-simplex-marginal-lifting",
+  "kind": "counterexample",
+  "proof": "The lifted hull is compact and full-dimensional because the central fiber spans the continuous directions and an endpoint supplies a base difference. Its projection is $[-1,1]$, its extreme fibers equal $B_r$, and its center fiber equals $T$ since $B_r\\subset T$. In standard coordinates $B_r=rT$, of volume $r^dV$ where $V=|T|$. Thus the total mass is $(1+2r^d)V$. Any closed base halfspace containing zero pays the center plus at least one endpoint, and either closed through-zero ray attains $(1+r^d)V$. This proves the marginal formula and gives the raw lifting threshold $tV$ with $t=\\gamma_d(1+r^d)$.\n\nFor $d=4,r=1/10$, the body is exactly $D$ in the statement of 875f3a93f59dd606. Its product padding $C_{\\rm bin}=[0,1]\\times D$ has twice the old raw mass, and the padded marginal depth at $(0,0)$ is $\\beta/2$. By that fact its raw mixed depth at every $(0,0,x)$ is strictly below $\\gamma_4\\beta(1+2r^4)V=tV$. Restrict any containing padded halfspace to the old layer. Its trace contains $(0,x)$ and is a proper old halfspace or the whole old ambient space. Its old raw mass is at most the original padded mass. Taking infima gives that old raw depth is at most padded raw depth. This proves the fixed example at the same raw threshold $tV=(160016/390625)V$.\n\nFor the general case, choose $r>0$ small enough that $t<(1-r)^d$ and $t-2r^d>0$. These strict inequalities hold near $r=0$ since $0<\\gamma_d<1$. If a point $(0,x)$ paid at least $tV$ for every containing halfspace, test the $d+1$ caps $\\lambda_i(w)\\ge\\lambda_i(x)$. The central trace is a homothet of factor $1-\\lambda_i(x)$ about vertex $i$, with volume $(1-\\lambda_i(x))^dV$. For $i\\ge1$ the endpoint fibers have $\\lambda_i\\le r$. If $\\lambda_i(x)>r$, they do not contribute, so $\\lambda_i(x)\\le1-t^{1/d}$. If $\\lambda_i(x)\\le r$, this bound follows from $t<(1-r)^d$. The cap at $i=0$ can receive at most $2r^dV$ from the endpoints, so it forces $\\lambda_0(x)\\le1-(t-2r^d)^{1/d}$.\n\nPut $a=r^d$. The function $d[\\gamma_d(1+a)]^{1/d}+[\\gamma_d(1+a)-2a]^{1/d}$ equals $d$ at $a=0$. Its derivative there is $\\gamma_d^{1/d-1}[(d+1)\\gamma_d-2]/d>0$ under the stated hypothesis. The function exceeds $d$ for all sufficiently small positive $a$. Summing the forced barycentric bounds then gives a sum strictly below $1$, impossible. The condition at $d=4$ follows from $5(4/5)^4=256/125>2$. For $d\\ge5$, $(1+1/d)^d<e<3$ gives $(d+1)\\gamma_d>(d+1)/3\\ge2$.\n",
+  "source_candidate_ids": [
+    "8dd62757ee4f1859"
+  ],
+  "source_candidate_sha256": {
+    "8dd62757ee4f1859": "e40aa06db4c74712a00df5bd43c9de709d78d5b68f61e180a3d37b04fd907f75"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8dd62757ee4f1859",
+      "locator": "8dd62757ee4f1859:05 Marginal-depth lifting fails for n=1,d=4, exact certificate and small-r extension"
+    }
+  ],
+  "statement": "Let $d\\ge1$, let $T$ be the standard $d$-simplex, and for $0<r<1$ put $B_r=\\{x\\in T:\\lambda_0(x)\\ge1-r\\}$, where $\\lambda_0$ is the barycentric coordinate of its zero vertex. Form the lifted hull of $B_r,T,B_r$ at $-1,0,1$. The normalized marginal depth at zero is $\\beta=(1+r^d)/(1+2r^d)$. The normalized mixed depth of every point of the central fiber is strictly below $\\gamma_d\\beta$ when $d=4,r=1/10$, and whenever $(d+1)\\gamma_d>2$ and $r$ is sufficiently small and positive for the given $d$. Here $\\gamma_d=(d/(d+1))^d$, and the latter condition holds for all $d\\ge4$.",
+  "subgoal_id": "pk-intake-pk-w36-line-univariate-simplex-marginal-lifting",
+  "title": "Marginal-depth lifting fails over the central fiber of a symmetric simplex triple"
+}

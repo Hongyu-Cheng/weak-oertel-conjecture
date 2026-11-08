@@ -1,0 +1,37 @@
+{
+  "advances": "Unweighted area sampled at three arbitrary collinear bases. The image sample is not lattice-complete, although the projective preimage is.",
+  "author": "PK-research-agent",
+  "candidate_id": "5de825cd22c292f9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:00:27.631893+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d",
+    "26d27b0f77ea4ac9"
+  ],
+  "draft_key": "pk-w35-product-unequal-three-site-projective-counterexample",
+  "kind": "counterexample",
+  "proof": "The endpoint sections are exact by their exposed heights. In a convex combination at $t$, group by the three heights. If $\\eta$ is the middle coefficient, the endpoint coefficients are $(1-t)(1-\\eta)$ and $t(1-\\eta)$. In $(1-t)A+tD$ both coordinates are positive and their sum is at most $(99/100)(53/100)+(1/100)(21/20)=669/1250<1$. Therefore the midpoint contribution lies in $B$, making the actual middle section exactly $B$. The hull is compact and full dimensional, since a planar section has interior and there is a point at another height. The areas of $A,B,D$ are $13/200,1/2,441/800$. The traces of convex sets on $P$ are interval traces. In a finite collection of nonempty traces, the greatest first site and least last site determine emptiness, and disjoint singleton traces show that two can be necessary.\n\nLet $Q=49/200$. Use the three closed caps with the following inequalities for the plane $z=t$:\n$$\n-x-y-2(z-t)\\ge-3/5,\\qquad x-2(z-t)\\ge3/10,\\qquad y-2(z-t)\\ge3/10.\n$$\nTheir margins sum to zero on this plane, so they cover it. The first contains $A$, and the other two miss $A$ because their thresholds there are $7/25$. All miss $D$: the first requires $-x-y\\ge69/50$, and the others require $x$ or $y$ at least $57/25>21/20$. In $B$ the three areas are respectively $(3/5)^2/2=9/50$ and $(1-3/10)^2/2=49/200$ for each remaining cap. Including $A$ gives raw mass $Q$ for all three.\n\nAt $z=0$ the two caps $x-100z\\ge7/50$ and $-x-100z\\ge-7/50$ cover the plane and cut equal halves of $A$ at $x=7/50$. They miss $B$ since their left sides are at most $0$ and $-1$ at $z=t$, and miss $D$ since their left sides at $z=1$ are at most $21/20-100$ and $-100$. Each has mass $13/400<Q$. At $z=1$ use\n$$\n-x-y+2(z-1)\\ge-7/10,\\qquad x+2(z-1)\\ge7/20,\\qquad y+2(z-1)\\ge7/20.\n$$\nAgain the margins sum to zero there. At $z=t$ the first left side is at most $-198/100$ and the others are at most $1-198/100$. At $z=0$ the first is at most $-2$ and the others at most $27/100-2$. Thus all miss $A,B$. The traces in $D$ are three triangles of area $(7/10)^2/2=Q$: the first is $(7/10)B$ and the other two are translates of it by $7/20$ along their coordinate axis. All sampled points are covered by caps of mass at most $Q$. Conversely, every closed ambient halfspace through the centroid $(1,7/20,7/20)$ of the last fiber takes at least $(4/9)|D|=Q$ from it, by the full-mass $d=2$ centroid consequence of 6769574fc1bd9f8d. A constant restriction of a containing cap takes the whole fiber. The exact normalized maximum follows by dividing by $M$.\n\nThe adjacent gaps in $P$ have ratio $1:99$, whereas three consecutive sites of a rank-one affine lattice in an interval have equal gaps. Scaling the base by $100$ would produce sites $0,1,100$, but each intermediate integer between $1$ and $100$ has an actual positive-area section containing a Minkowski combination of the positive endpoint sections. For the complete source at $0,1,2$, the midpoint combination is $99A+D\\subset100B$ by the first calculation, so the sampled sections are exact. The source area is $198^2|A|+100^2|B|+4|D|=1510093/200<10000$. The middle area $5000$ exceeds half that mass, so its centroid has normalized mixed depth greater than $2/9$ by the same own-fiber bound.\n\nThe projective denominator $L(z)=198-98z$ is positive on $[0,2]$. For points $w_i$ of the source and convex weights $\\lambda_i$, the image of $\\sum_i\\lambda_i w_i$ is the convex combination of their images with weights $\\lambda_iL(z_i)/\\sum_j\\lambda_j L(z_j)$. Any nonnegative target weights summing to one arise by dividing them by $L(z_i)$ and renormalizing. Hence the image is exactly the hull of the images of the three generating fibers. Their new bases are $0,1/100,1$ and their new sections are $A,B,D$. The area factors are $198^{-2},100^{-2},2^{-2}$. Halfspace incidence on the hull is preserved because clearing the positive denominator in a cap inequality gives an affine inequality. The unweighted fiber area changes by different factors, as witnessed by the strict change in depth.\n\nFinally the anchored relation $t=(1-t)0+t\\cdot1$ forces every representation-preserving scalar function on $P$ to be affine. It also joins all three sites in one dependence component. Its canonical lift is affinely equivalent to $P$, since the space of such functions has basis $1,z$. Every nonempty proper closed minor has at most two sites and is affinely equivalent to its own lift. Its heaviest-fiber centroid gives a normalized depth at least $\\Gamma_2/m$ for $m$ sites, by the same planar own-fiber bound, and its Helly number is $m$ for $m\\in\\{1,2\\}$. Thus none of those minors can fail $\\Gamma_2/h$. Apply the finite-base Helly branch of 26d27b0f77ea4ac9 with $d=2$ and $\\tau=\\Gamma_2$ to the strict failure just proved. Its minimal bad canonical base must be the full three-site lift. Transport its positive minimizing family back to $P$ by the affine equivalence, which preserves the fiber areas and the corresponding closed halfspaces.\n",
+  "source_candidate_ids": [
+    "640d07cd1de2a423"
+  ],
+  "source_candidate_sha256": {
+    "640d07cd1de2a423": "b7d10fdbafc378345d23a27343df05c9712370dbf7131e16c2d8c7d2a7a1c7ac"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "640d07cd1de2a423",
+      "locator": "640d07cd1de2a423:01 §§1–4, (1)–(8)"
+    },
+    {
+      "candidate_id": "640d07cd1de2a423",
+      "locator": "640d07cd1de2a423:02 §5, lattice-completeness and final projective map"
+    },
+    {
+      "candidate_id": "640d07cd1de2a423",
+      "locator": "640d07cd1de2a423:03 §6, penultimate and last paragraphs"
+    }
+  ],
+  "statement": "Let $t=1/100$, $P=\\{0,t,1\\}$, and use the planar sets\n$$\nA=[1/100,27/100]\\times[1/100,26/100],\\qquad B=\\{x,y\\ge0:x+y\\le1\\},\\qquad D=(21/20)B.\n$$\nTheir placed hull at the respective heights $0,t,1$ has these exact sampled sections. The sum of their planar areas is $M=893/800$ and the relative Helly number of $P$ is two. With this measure on the three sampled fibers, the maximum normalized depth over the sampled union for closed ambient halfspaces is exactly $196/893=2/9-22/8037$.\n\nThe sample $P$ cannot be the complete trace of any affine rank-one lattice on an interval. The body and sample nevertheless arise from the complete standard integer family at $0,1,2$ with fibers $198A,100B,2D$ under the projective map $(z,x,y)\\mapsto(z,x,y)/(198-98z)$. The source has total mixed area $1510093/200$ and normalized maximum depth greater than $2/9$.\n\nOn the fixed base $P$, the infimum of normalized maximum depth over all compatible positive planar fiber families is attained by a positive family and is strictly less than $\\Gamma_2/h(P)=\\Gamma_2/(\\dim\\operatorname{aff}P+1)=2/9$, where $\\Gamma_2=4/9$.",
+  "subgoal_id": "pk-intake-pk-w35-product-unequal-three-site-projective-counterexample",
+  "title": "Unequally spaced three-site depth drops below two ninths under projective resampling"
+}

@@ -1,0 +1,50 @@
+{
+  "candidate_id": "cb6582375222243a",
+  "candidate_sha256": "954f702e8876042a8bbc2c87535b6bf4924af39dd90217fe26c072e0dfe21886",
+  "checked_dependency_candidate_sha256": {
+    "18ac4869642d018e": "169637ed41a336582f82124af5776665e5af598d16e834fdbcee453e013a1f6c"
+  },
+  "checks": [
+    "The original triangle has area 18 and in unit-Jacobian coordinates its section is t−3≤z≤3 on (0,6). The density is (6−t)/18, the mean is two, and both conditional means are t/2.",
+    "The tail numerator derivative is (2−t)f(t) and its terminal value is zero. Differentiating t(6−t)^2/54 verifies both facts, hence τ=t(6−t)/3. The derivative is greater than one for 0<t<3/2 and the density decreases already for 0<t<1.",
+    "Translation by (3,3) shifts the sum by six, sends the mean to eight, and makes all coordinates nonnegative. The two conditional means remain t/2 and the kernel derivative shifts without change. All asserted failures are strictly interior.",
+    "Checked the source sections in the original notes. Imported source and historical comment bytes agree with the pinned graph and archive digests. The frozen draft bytes agree with the wave digest."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "169637ed41a336582f82124af5776665e5af598d16e834fdbcee453e013a1f6c",
+      "fact_id": "18ac4869642d018e",
+      "fact_sha256": "d4d8a9fd6b4044ef5e61efab9765e2bc0ece26c00a0b9baae9137abef25657c6",
+      "hypotheses": "Use a single compact positive labeled scalar law and the identity projection. There are no graph edges and the denominator is the positive interior density. Its tail formula therefore gives exactly the kernel computed here.",
+      "reviewed_proof_sha256": "804059834768c6056ab9af8a2a43f6e81d7750cbb28ce8020f5ebc366d22768e",
+      "reviewed_statement_sha256": "ac049a564eaf3283ba10dd579f10589881b8d7ea2dceb4a639c65c4d264d8393"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:05:33Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the scalar closed-tail Stein identity used in the witness, without a bound on the kernel derivative.",
+      "fact_id": "18ac4869642d018e"
+    },
+    {
+      "comparison": "The signed-phase kernel formula and slope bound use independence and exponential integration by parts. This dependent uniform triangle has the scalar kernel but does not inherit that representation.",
+      "fact_id": "564e798ecec2b61f"
+    }
+  ],
+  "readability": "The argument and its scope are explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6723b05f6ed7513893d63e613757ee3a3a6258ebc8ba23ac0bb88fdfe24e47bc",
+  "reviewed_statement_sha256": "297f47ce61f582bf3a66872f72c04b43049c851f3e1d41bb3b4e3f02d1d5c179",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:57:29Z",
+  "summary": "The translated triangle has monotone unit-Lipschitz conditional means but violates the scalar Stein slope bound on an open interval.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

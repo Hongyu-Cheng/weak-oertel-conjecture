@@ -1,0 +1,52 @@
+{
+  "candidate_id": "3c834d813e7162f6",
+  "candidate_sha256": "61c62f6e36e728c59577f044703b5a64e21e6c49c4e33fd760dc298242af655f",
+  "checked_dependency_candidate_sha256": {
+    "82894b05233cbc9c": "d562b165305080b506d6306bfd911fed25491ff5cbdeef07f5ba87451e09c100"
+  },
+  "checks": [
+    "Matched 0d48b13f5ad2c2a1 §§2–4, (2)–(3). The example concerns a packing maximum over lattice targets and an initially positive weight table, not ordinary atomic depth.",
+    "The five given inequalities define the pentagon with the listed extreme points. The lattice census is the sixteen sites in the 4-by-4 grid and the unique extra site (4,2). There are twelve light sites, total weight 501/100, and maximum weight one below 501/400. The only repeated vertex parity is 00 at A,C.",
+    "Checked the six disjoint group witnesses using exact barycentric weights. The pair B,E uses weights 2/3 and 1/3, the singleton is m, and the four remaining pairs have midpoint m. Every used capacity is respected and the packing value is 2+4epsilon.",
+    "Parsed and independently recomputed all seventeen frozen closed-cap rows from the lattice census, using the inclusive inequality at zero. Each cap must meet every group whose convex hull contains the target, so summing group incidences gives an upper bound by its mass. Targets outside the hull have no group. The exact maximum is 601/300 at m.",
+    "For arbitrary 0<delta<=1, changing the A,C pair weight to 1-delta and the singleton weight to epsilon+2delta increases the lower packing value by exactly delta. The same-batch comparison bounds every target by this value. At delta=1 the deleted sites have zero capacity and no positive group uses them; the target m and attaining packing survive."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "82894b05233cbc9c",
+      "candidate_sha256": "d562b165305080b506d6306bfd911fed25491ff5cbdeef07f5ba87451e09c100",
+      "kind": "same-batch",
+      "mapping": "Use the first inequality with the fixed finite 17-site support, distinct endpoints A,C, their preexisting midpoint m, and 0<delta<=min(w_A,w_C)=1. It gives the upper bound at every real target and therefore on the required lattice.",
+      "review_status": "This exact predecessor has its own APPROVED review in Wave 27. Admission must record that predecessor first.",
+      "reviewed_proof_sha256": "758ff7db02d73cfda9cc8bbcd9793c2146904cf6c64a4cca36a9174ea46bf82d",
+      "reviewed_statement_sha256": "c6a3898ab500d5f43e9c8aa55a1a27f863ea62662f42f11f39203787a48360ae"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:52:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted example has ten unit-weight lattice sites and proves increase of ordinary atomic depth for a full merge. Here there are seventeen nonheavy sites, one eligible hull pair, and an exact additive increase for the fractional packing maximum at every positive merge size.",
+      "fact_id": "7b255d603cdbc585"
+    },
+    {
+      "comparison": "The packing model agrees on its overlap, but that affine-root family addresses a threshold-gluing ratio and has no unique eligible midpoint-merge example.",
+      "fact_id": "660d6d033fa0f21a"
+    }
+  ],
+  "readability": "The equal signs in the cap table count the target boundary. The pair B,E contains m with unequal convex coefficients, which is permitted by the packing definition.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold read of the exact frozen statement and proof, source-locator and dependency comparison, and exact arithmetic replay where applicable.",
+  "reviewed_proof_sha256": "5b56ccdadb8f8ffd04b7e6059a61f62a4d5fb75f39253540ab6e155d483fa130",
+  "reviewed_statement_sha256": "0056849ae48b39c651573afa0feece3da6e02d76df932dfc7313f65188aa8c01",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:48:09Z",
+  "summary": "The frozen pentagon attains the comparison bound for every positive merge size, with just one eligible pair of hull vertices and no heavy initial site.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

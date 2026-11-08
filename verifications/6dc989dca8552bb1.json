@@ -1,0 +1,53 @@
+{
+  "candidate_id": "62a9e6e70496bd17",
+  "candidate_sha256": "99d720828b11ef13df89cc6c07b806224162e6fe2c42e51e17173db55e6a908b",
+  "checked_dependency_candidate_sha256": {
+    "86609687edc6bef4": "b0f0b9b234ef573fa752787ac486eaa8f1a12cbf40364968873f28acc40d7453"
+  },
+  "checks": [
+    "Source c106b596b70bfd05 §5 (8) contracts an arbitrary positive combination with integral base, not just a midpoint. The frozen claim assumes exact mark and L-value interpolation and keeps the same reciprocal target.",
+    "The ±constant tests fix the total mass, giving compactness of the coefficient set after intersecting the closed cone-test halfspaces. Moving tθ_p off the distinct positive inputs preserves nonnegativity for small t, including if r was already in the list.",
+    "Concavity of h+cL and exact L interpolation give h(Y_r)≥Σθ_p h(Y_p) for each test in the entire cone. The strict objective decrement is tΣθ_p||Y_p−Y_r||²>0, since distinct bases give distinct points. A nonvertex lattice point is a positive combination of distinct vertices, and same-parity distinct vertices would have an integer midpoint.",
+    "Both signs of affine tests and L are valid, giving the first moments and L-moment one. The negative maximum of finitely many affine scores is a concave cone test, so the finite allocation image cannot separate from the requested rows. The exact sum of their Jensen upper bounds forces equality for each positive row."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "b0f0b9b234ef573fa752787ac486eaa8f1a12cbf40364968873f28acc40d7453",
+      "fact_id": "86609687edc6bef4",
+      "fact_sha256": "e4c5a8d57e44f9c486cc0c8ba05fc4b13906c498ac1c0fe0c3c6ca25aeb46cb9",
+      "mapping": "Use the proof of (5), specifically weak compactness of finite allocations of the given finite compactly supported ν and their mass/moment image. The cone contains the negative maximum of separating affine scores. This invokes the allocation argument rather than the theorem's log-normalized optimization setting.",
+      "reviewed_proof_sha256": "905cbd9bba22b6c2132432a763aaa37cc1e829e4ca5c19ffbd67948f6a8bef87",
+      "reviewed_statement_sha256": "3822e8d575b36e8e0defebf083dd6e2e7309b9e61b1d08037310948965e737d9"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:09:09Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its finite allocation method gives rows for given coefficients satisfying the full radial-cone inequality. It does not minimize a quadratic moment to select a lattice-empty positive support.",
+      "fact_id": "86609687edc6bef4"
+    },
+    {
+      "comparison": "Its parity equality characterizes a supplied complete lattice set at saturation. It does not change source weights while preserving a reciprocal target and all cone tests.",
+      "fact_id": "347dc8c30a1e79ad"
+    }
+  ],
+  "readability": "An empty lattice polytope here has no lattice points apart from its vertices, as stated explicitly. The conclusion provides new rows and does not preserve the original source coefficients.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7ea9baacf524b9ccecb7604e87389e09c1563595aff7faf2a6b59b2b9678bb1a",
+  "reviewed_statement_sha256": "150f3b139173443b33f16852187b6445a9e3fad2b97225faacc9fb19fb5ef11e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "c106b596b70bfd05": "41169de43a2799fc68e614d912ee04d523d43e19e5307798144cacdbd9c12a88"
+  },
+  "started_utc": "2026-11-08T15:05:45Z",
+  "summary": "A compact quadratic minimization preserves the full radial cone and forces a positive support consisting exactly of the lattice vertices of its hull. The finite allocation argument recovers rows for those new coefficients.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

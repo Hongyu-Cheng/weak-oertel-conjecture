@@ -1,0 +1,29 @@
+{
+  "advances": "A fixed-face continuation with the old norm and parameter held fixed, including whole-own buffered caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "cf4d0a09a3ae8831",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:30:44.669847+00:00",
+  "depends_on": [
+    "3dd858960f824a5d",
+    "d90ba05577427854"
+  ],
+  "draft_key": "pk-w34-buffered-fixed-face-with-full-own-caps",
+  "kind": "theorem",
+  "proof": "For each deepest base $q\\ne p$ choose a deepest mark $Y_q=(q,y_q)$ and choose $Y_p=(p,y)$. We first show $N_j\\cdot Y_q-\\varepsilon f(Y_q)\\le c_j$ for each selected cap. If the cap cuts its own fiber properly, increasing $c_j$ strictly removes own volume, so its right $Q$-quantile is $c_j$. The depth of $Y_q$ is $Q$, proving the inequality by the closed right-quantile criterion.\n\nOtherwise the cap contains the whole own fiber, since its threshold is at most $u_j\\cdot y$ and $y$ is interior. Use the proof of the whole-fiber part of 3dd858960f824a5d. The bases whose fibers are not wholly captured cannot have $p$ in their convex hull, since choosing a strictly missed point in each and taking an anchored combination would give a missed own point. Thus there is a pure-base halfspace through $p$ excluding all such bases strictly. If every fiber is captured, use the whole base, represented by the zero base covector. Denote its selected bases by $T$. Every fiber over $T$ is wholly captured. Since pure-base depth at $p$ is at least $Q$ and the ambient cap has mass $Q$, it follows that the mass of $T$ is $Q$, every wholly captured fiber lies over $T$, and all fibers off $T$ contribute zero cap volume.\n\nNo distinct deepest base $q$ can belong to $T$. Write the base separator as $a\\cdot(z-p)\\ge0$. If $a\\cdot(q-p)>0$, moving its boundary through $q$ excludes $p$ and still excludes the bases off $T$. If $a\\cdot(q-p)=0$, use the halfspace through $q$ with covector $a+\\eta(q-p)$ for sufficiently small $\\eta>0$. Its margin at $p$ is negative, and it retains strict exclusion of the finite set off $T$. This argument also applies if $T=P$ and $a=0$. Either choice gives a base cap through $q$ of mass less than $Q$, contradicting the depth of $Y_q$. Therefore every other deepest base has zero ambient cap mass. On its positive full-dimensional fiber, zero mass implies $N_j\\cdot(q,x)\\le c_j$ everywhere, since any strictly positive margin extends to a positive-volume subset by convexity. Nonnegativity of $f$ proves the desired shifted inequality. At $p$ it holds by the definition of the old thresholds.\n\nThe weighted shifted margin at any $w=(z,x)\\in C$ is\n$$\n\\ell\\cdot(z-p)+\\varepsilon\\bigl[f(p,y)+\\alpha\\cdot(z-p)+g\\cdot(x-y)-f(z,x)\\bigr].\n$$\nFor $\\varepsilon=0$ use the first term alone, by continuous balance. The bracket is nonnegative by the supergradient property. At the chosen deepest marks the weighted margin is nonpositive, so the corrected resultant supports their base hull and vanishes on the minimal face at $p$. On that face the weighted shifted margin is nonnegative, giving the old margin bound and the cover. With $f_t\\le f$, the same inequality gives a nonnegative weighted shifted margin on the smaller hull over $F$. Hence at each tested mark some current buffered threshold is at least its corresponding fixed old threshold. Its new cap lies in that old mass-$Q$ cap under the smaller fiber measure, giving the upper bound. Marked energy is inclusion-monotone in an interior point by d90ba05577427854, and its zero extension gives monotonicity also at a new boundary.\n",
+  "source_candidate_ids": [
+    "b7f23bb5dbdcb9ce"
+  ],
+  "source_candidate_sha256": {
+    "b7f23bb5dbdcb9ce": "9c7a19ce34b8e4b14e6afd2ea707a464e6f2f1ad1c3f073ba907c57f9a32bbd4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b7f23bb5dbdcb9ce",
+      "locator": "b7f23bb5dbdcb9ce:04 §3, corrected base face and frozen nested continuation"
+    }
+  ],
+  "statement": "Let $P$ be a finite lattice-complete base with positive compatible $d$-fibers, actual canonical hull $C$, and summed fiber measure $\\mu$. Let $f\\ge0$ be continuous and jointly concave on $C$, zero at each own-fiber boundary, and fix a norm $G$ on continuous covectors and $\\varepsilon\\ge0$. At a sampled global buffered maximizer $(p,y)$ with $y\\in\\operatorname{int}K_p$ and raw depth $Q$, choose finitely many $G$-unit cap directions $N_j=(a_j,u_j)$ with thresholds $c_j=N_j\\cdot(p,y)-\\varepsilon f(p,y)$ and actual masses $Q$. Suppose $\\rho_j>0$, $\\sum_j\\rho_j=1$, $\\sum_j\\rho_j u_j=\\varepsilon g$, and $(\\alpha,g)$ is a full supergradient at $(p,y)$ when $\\varepsilon>0$. Let $I$ be the sampled deepest bases and let $F$ be the minimal face of $\\operatorname{conv}I$ containing $p$. Then $\\ell=\\sum_j\\rho_j a_j-\\varepsilon\\alpha$ satisfies $\\ell\\cdot(z-p)\\le0$ on $\\operatorname{conv}I$ and vanishes in displacement from $p$ on $F$. Over $F$ the weighted old margins satisfy\n$$\n\\sum_j\\rho_j(N_j\\cdot(z,x)-c_j)\\ge\\varepsilon f(z,x)\\qquad(x\\in C_z),\n$$\nso the old closed caps cover the whole actual fibers there. If the family shrinks through positive compatible fibers on the same base and its updated buffer satisfies $f_t\\le f$ on the new hull, then with $G,\\varepsilon$ fixed the same old thresholds yield a buffered raw upper bound $Q$ over the fixed face. This includes the unnormalized marked energy power $E_{C_z}^{1/(d+1)}$.",
+  "subgoal_id": "pk-intake-pk-w34-buffered-fixed-face-with-full-own-caps",
+  "title": "A buffered fixed-face cover allowing whole own-fiber caps"
+}

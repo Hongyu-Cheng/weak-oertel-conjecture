@@ -1,0 +1,28 @@
+{
+  "advances": "Simultaneous canonical-direction residual-root comparison at exact simplex midpoint equality and zero total lattice-direction coefficient.",
+  "author": "PK-research-agent",
+  "candidate_id": "393a9cf6300bd3fd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.746392+00:00",
+  "depends_on": [
+    "4b006d72b238bcc6"
+  ],
+  "draft_key": "pk-w36-shape-simplex-zero-drift-compensation",
+  "kind": "theorem",
+  "proof": "The endpoint identities give both sums equal to one. The middle root in each canonical direction is $V^{1/d}\\kappa(a+b)/2$, and the definition of $J$ gives the exact signed-sum formula. The envelope lemma proves its sign and its equality cases.\n\nWhen both thresholds for a direction are nonnegative, concavity of $\\phi$ on the nonnegative half-line and the paired weighted mean $1/m$ give $a\\phi(q_i^A)+b\\phi(q_i^D)\\le\\kappa(a+b)$. Hence a positive overshoot requires a negative threshold. Since $\\kappa\\ge1/2$, at most one endpoint scale exceeds $\\kappa(a+b)$, and if neither does no positive overshoot is possible. Suppose the larger one is $b>\\kappa(a+b)$. For a positive overshoot the negative threshold must be $q_i^A$, since otherwise $\\phi(q_i^D)=0$ and the remaining term is at most $a\\le\\kappa(a+b)$. Its excess is at most $(b-\\kappa(a+b))/2$. There are at most $d$ such thresholds since $q^A$ sums to one. Each such direction fully captures $A$, of volume $a^dV$, so their number is also at most $C_A/(a^dV)$. Interchanging endpoints treats the other dominance case.\n\nFor attainment let the effective shifts be $t_i=br$ for the first $d$ indices and $t_m=-dbr$. These shifts sum to zero and the barycentric linear map realizes them by one translation with $\\beta_i=0$. Since $b>\\kappa(a+b)$ implies $b>a$ and thus $db>a$, the first $d$ thresholds have $q_i^A<0$ and $q_i^D=1$, while the last has $q_m^A>1$ and $q_m^D=1-d\\le0$. The endpoint residual-root vectors in units of $V^{1/d}$ are $(0,\\ldots,0,a)$ and $(b,\\ldots,b,0)$, and $C_A=d a^d V$. These give equality in both positive-part bounds. The last signed overshoot is $(a-\\kappa(a+b))/2$, and the signed sum is $-[(m\\kappa-1)a+(m\\kappa-d)b]/2$. If neither endpoint dominates, zero effective shifts attain the zero bound.\n",
+  "source_candidate_ids": [
+    "d9b60e76f58eda77"
+  ],
+  "source_candidate_sha256": {
+    "d9b60e76f58eda77": "e935e0803b54dcffe81d8842a3405ffe10c513cfba74a4291409621dc1e3e5c2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d9b60e76f58eda77",
+      "locator": "d9b60e76f58eda77:03 §3, (10)–(13), zero-drift compensation and positive part"
+    }
+  ],
+  "statement": "For $d\\ge1$, let $m=d+1$, $r=d/m$, $\\kappa=(1-r^d)^{1/d}$, $\\psi(q)=\\min\\{1,\\max\\{0,1-q\\}\\}$ and $\\phi(q)=(1-\\psi(q)^d)^{1/d}$.\n\nLet $T\\subset\\mathbb R^d$ be a full-dimensional simplex of centroid zero and volume $V>0$, with barycentric coordinates $\\lambda_i=1/m+\\ell_i$ for $1\\le i\\le m$. The convex hull of the lifts of $A=aT+\\delta$ at $-1$ and $D=bT-\\delta$ at $1$, with $a,b>0$, has actual midpoint fiber $K=((a+b)/2)T$. Take ambient halfspaces $H_i=\\{(z,x):\\ell_i(x)+\\beta_i z\\ge0\\}$, with $B=\\sum_i\\beta_i$. Their endpoint barycentric cutoffs on the reference $T$ are\n$$\nq_i^A=1/m-\\ell_i(\\delta)/a+\\beta_i/a,\\qquad\nq_i^D=1/m+\\ell_i(\\delta)/b-\\beta_i/b.\n$$\nThey satisfy\n$$\n\\sum_iq_i^A=1+B/a,\\qquad\\sum_iq_i^D=1-B/b,\\qquad\na q_i^A+b q_i^D=(a+b)/m.\n$$\nThe endpoint capture fractions are $\\psi(q)^d$. The actual volume roots of the residuals are $aV^{1/d}\\phi(q_i^A)$ and $bV^{1/d}\\phi(q_i^D)$. The closed residual is empty for $q<0$ and tangent for $q=0$, while the capture is tangent for $q=1$ and empty for $q>1$. For $0<q<1$ both have positive volume.\n\nDefine the normalized residual-root overshoots\n$$\n\\Delta_i=\\frac{a\\phi(q_i^A)+b\\phi(q_i^D)-\\kappa(a+b)}2,\n\\qquad \\widehat\\Delta_i=V^{1/d}\\Delta_i,\n$$\nwhere $\\widehat\\Delta_i$ is the actual overshoot in volume-root units.\n\nIf $B=0$, then\n$$\n\\sum_i\\Delta_i=-[aJ(q^A)+bJ(q^D)]/2\\le0,\n\\qquad\n\\sum_i(\\Delta_i)_+\\le\\frac d2[\\max(a,b)-\\kappa(a+b)]_+,\n$$\nwith $J(q)=m\\kappa-\\sum_i\\phi(q_i)$ for sum-one vectors. The first inequality is an equality for $d\\ge2$ exactly when $\\ell_i(\\delta)=\\beta_i$ for all $i$, and always for $d=1$. If $b>\\kappa(a+b)$, then with $C_A=\\sum_i|A\\cap(H_i)_{-1}|$ the positive-part bound improves to\n$$\n\\frac{b-\\kappa(a+b)}2\\min\\{d,C_A/(a^dV)\\}.\n$$\nThe symmetric improvement holds if $a>\\kappa(a+b)$. Both bounds for the positive part are attained, with effective shifts $\\ell_i(\\delta)-\\beta_i=(br,\\ldots,br,-dbr)_i$ when $b$ dominates.",
+  "subgoal_id": "pk-intake-pk-w36-shape-simplex-zero-drift-compensation",
+  "title": "Sharp zero-drift simplex residual-vector compensation"
+}

@@ -1,0 +1,35 @@
+{
+  "advances": "Failure of a directional mean rule for a derived capacity law. It does not compare the actual maximum depth with the sharp mixed target.",
+  "author": "PK-research-agent",
+  "candidate_id": "58fc20f01b498794",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.949568+00:00",
+  "depends_on": [
+    "0fcb7fa715e2af62",
+    "6574a94c3c5b0101"
+  ],
+  "draft_key": "directional-capacity-mean-mixed-budget-counterexample",
+  "kind": "counterexample",
+  "proof": "Use accepted fact 0fcb7fa715e2af62 with the same $B,D,r,q$ and the same scaled volume $\\mu(H)/|B|$ as $\\mu(H)$ here. It gives the three actual positive, strictly nonheavy simplex fibers, their masses, $(A+C)/2=D\\subseteq B$, and the cap\n$$\nH_1=\\{x_1+(1-q)rz\\ge1/6-(2/25)a\\}\n$$\nof mixed mass strictly less than $\\Gamma_5(1+a/2)$. Pair $(2-q)w$ with $qw$ for $w$ of law $a$ times uniform probability on $D$. The first marginal is the volume of $A$ in the common relative units because that body has mass $a$; the second is $a$ times uniform probability on $C$ and is dominated by its volume because $a<1=|C|/|B|$. The midpoint output is $a$ times uniform probability on $D$. Its centroid has first coordinate $5r/6$, since five vertices of $D$ have first coordinate $r$ and the apex has first coordinate zero.\n\nFor the point $y=(g_B+a g_D)/(1+a)$ in the directional-mean transfer lemma, one has\n$$\ny_1=\\frac16-\\frac{a}{1+a}\\frac{103}{3600}>\\frac16-\\frac{2}{25}a,\n$$\nbecause $1/6-5r/6=103/3600<2/25$. Hence $(0,y)\\in H_1$, and the lemma gives $V_{e_1}(h(e_1))\\le\\mu(H_1)<\\Gamma_5 M/2$. Dividing by $D_0$ gives the second inequality, since $M/(2D_0)=1-(D_0-M/2)/D_0$.\n",
+  "source_candidate_ids": [
+    "a26d4b26fb2a803f",
+    "e13ef2bc2dcc3baf"
+  ],
+  "source_candidate_sha256": {
+    "a26d4b26fb2a803f": "b0c82ddaa4ec1f988b3cde3c7cf9ce8db73f1df1a995ec708a55032576a7f966",
+    "e13ef2bc2dcc3baf": "268ffbe3b73cd752d2d1a0e7195d5d0bb69cf8075f798c19562d72f188be6d63"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a26d4b26fb2a803f",
+      "locator": "a26d4b26fb2a803f:03 §4, (10)–(13)"
+    },
+    {
+      "candidate_id": "e13ef2bc2dcc3baf",
+      "locator": "§§1–2, 4–5, (1)–(3), (5)–(6), first cap only (via accepted fact 0fcb7fa715e2af62)"
+    }
+  ],
+  "statement": "Let $B$ be the standard $5$-simplex, $r=497/3000$, $\\ell=11/12-(9/2)r$, and let $D$ have vertices $(0,11/12,0,0,0)$, $b_0=(r,\\ell,0,0,0)$, and $b_0+(3979/6000)e_i$ for $i=2,3,4,5$. Put $q=(|D|/|B|)^{-1/5}$, $A=(2-q)D$ and $C=qD$, and use the actual fibers $A,B,C$ at bases $-1,0,1$ of their lifted convex hull. In units of $|B|$ these have masses $a,1,1$ with $0<a<10^{-5}$. Use the same units in the optimized directional survival $V_u(t)=\\inf_v\\mu\\{u\\cdot x+vz\\ge t\\}$, and let $h(u)$ be the mean of its scalar law. With $u=e_1$, $\\Gamma_5=(5/6)^5$, original mass $M=2+a$ and capacity-law mass $D_0=1+a$,\n$$\nV_{e_1}(h(e_1))<\\Gamma_5 M/2,\\qquad\n\\frac{V_{e_1}(h(e_1))}{D_0}<\\Gamma_5\\left(1-\\frac{D_0-M/2}{D_0}\\right),\n\\qquad D_0-M/2=a/2>0.\n$$",
+  "subgoal_id": "pk-intake-directional-capacity-mean-mixed-budget-counterexample",
+  "title": "The optimized directional mean can fail the sharp mixed cap budget"
+}

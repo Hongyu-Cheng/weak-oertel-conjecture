@@ -1,0 +1,59 @@
+{
+  "candidate_id": "e1a87cecde4fb89d",
+  "candidate_sha256": "506fe8d0de7e28a85fc6a6b27391bfea104fcc41917cef5a68c07397cbbc06b0",
+  "checked_dependency_candidate_sha256": {
+    "669858b8fc253d7c": "c28efb8b3e7fea048a6997f4d8a01109917b5b8eea71e17303629e41e26b7135",
+    "efa4558174ce60cf": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3"
+  },
+  "checks": [
+    "For distinct interior marks both optimizers are indicators of positive-mass caps by efa4558174ce60cf. The rescaled densities stay in [0,1], keep their own barycenters, and have the same positive mass, so their mixture has the claimed target barycenter.",
+    "If its mass were optimal at the target, a strictly weighted convex combination of two [0,1] values would be an endpoint almost everywhere. Both original rescaled densities would therefore equal that same indicator almost everywhere. Equal positive masses would then give identical barycenters, a contradiction.",
+    "A one-base specialization of 669858b8fc253d7c yields continuity of the retained root on the entire fixed body. Raising to the dth power preserves continuity, so compactness gives existence and strict quasiconcavity gives uniqueness.",
+    "Original 38e8cdfda56d1d3d §3 states precisely the same strict inequality. It allows the root to be affine on some rays, which is compatible with strict comparison against the smaller endpoint."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "efa4558174ce60cf",
+      "candidate_sha256": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3",
+      "fact_sha256": "46fe81dabdb3dce217066cbdf0b03811e5f31600f47ff212687d11ef712b7b0e",
+      "hypotheses": "Each mark, including the strict interpolation, is interior to the same full-dimensional K, so the optimal physical density is positive and uniquely an indicator.",
+      "reviewed_proof_sha256": "3f02b0dc5890813c93ca758645cbc602e93b598f5e7b2d5e6ea6f5f983ecfca5",
+      "reviewed_statement_sha256": "930a2a913d290a108052291c9fbf63e5f9e4b67fcb18c94309504f165bdfa29e"
+    },
+    {
+      "candidate_id": "669858b8fc253d7c",
+      "candidate_sha256": "c28efb8b3e7fea048a6997f4d8a01109917b5b8eea71e17303629e41e26b7135",
+      "fact_sha256": "871076ec46b2f3f4ec3cf2e6767154c16a10a4bb86f34c88f7d02be65fbfc01a",
+      "hypotheses": "Take the finite base set to be a singleton with fiber K. Its continuous retained-volume root restricts to the fixed-body function used in the compactness argument.",
+      "reviewed_proof_sha256": "c54a09dbb73f439799f613275787953cfefd652943c649367da8c59dc88b1436",
+      "reviewed_statement_sha256": "81e91824e725eab0b81284b489eec17718b1cf4318b467eaeaaa578c639be4d8"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:53:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its one-body specialization proves continuity and ordinary concavity of the root. That concavity gives the weak min inequality, and the strict assertion here uses the uniqueness of the optimizing indicator.",
+      "fact_id": "669858b8fc253d7c"
+    },
+    {
+      "comparison": "Its fixed-body strict concavity concerns projective energy, a different invariant. It gives no strict concavity assertion for the retained root.",
+      "fact_id": "5aeb5916857f97a9"
+    }
+  ],
+  "readability": "The rescaling is what makes the mixture's barycenter have exactly the desired convex weights, even when the two optimal masses differ.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent frozen-proof and source comparison with exact arithmetic where applicable",
+  "reviewed_proof_sha256": "1416d74278dfdd9ec184f168556ea7f49bb2081dc38839d3f2887668e64d55b6",
+  "reviewed_statement_sha256": "d953072011dbb218a9bb0e72cc1d38ca20f46f22ddb45f78d3a3e8e13d279c51",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:47:53Z",
+  "summary": "Rescaling two optimizing indicators to the same positive mass proves strict quasiconcavity and uniqueness on each nonempty compact convex interior subset.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

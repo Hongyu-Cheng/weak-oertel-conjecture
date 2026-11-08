@@ -1,0 +1,28 @@
+{
+  "advances": "A scalar finite-sequence inequality used for truncation of concave profiles. It imposes no halfspace condition and makes no depth claim.",
+  "author": "PK-research-agent",
+  "candidate_id": "1c475f2afdd67f14",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:56:26.561747+00:00",
+  "depends_on": [
+    "4d628efe7673ce2d"
+  ],
+  "draft_key": "chosen-peak-concave-sequence-power-moments",
+  "kind": "lemma",
+  "proof": "Normalize the maximum to one. Consider a concave arm $u_0=1,u_1,\\ldots,u_h$ oriented outwards from a peak. It is nonnegative and nonincreasing. If $h\\ge1$, the fixed-length part of 4d628efe7673ce2d (5) applies to this arm and gives a nonnegative affine arm $v_i=1+\\eta i$ with the same square sum. The square sum is strictly increasing in the admissible slope, and the original square sum is at most $h+1$, so $\\eta\\le0$. The fixed-length proof of (5) shows that the differences $u_i^2-v_i^2$ have a nonnegative prefix and a nonpositive suffix. Their sum is zero. On indices where these differences are nonzero the denominators $u_i+v_i$ are positive and nonincreasing. Dividing by these denominators gives $\\sum_i(u_i-v_i)\\le0$. Indeed, when the differences are nonzero, replacing each denominator by the one at the last positive difference weakly increases every resulting quotient, and their modified sum is zero.\n\nThus $3\\sum_i u_i^2-2\\sum_i u_i$ is at least the corresponding affine expression. The latter is\n$$\nh+1+4\\eta\\sum_{i=0}^h i+3\\eta^2\\sum_{i=0}^h i^2.\n$$\nIts minimum is $(h+1)/(2h+1)$ at $\\eta=-2/(2h+1)$, whose endpoint is $1/(2h+1)>0$. When $h=0$ the arm contributes $1$, in agreement with the same minimum formula. Apply this to both outward arms of $g$ and subtract the duplicate peak term $1$. This proves the normalized quadratic bound with coefficient $\\kappa=\\frac12[(2j+1)^{-1}+(2(m-1-j)+1)^{-1}]$.\n\nFor $p>2$, write $x_+=\\max\\{x,0\\}$. For each $0<t<1$, the indices where $g_i>t$ are consecutive because concavity puts every intermediate value above the chord between any two such indices. On this block $g_i-t$ is concave, has maximum $1-t$, and has the same chosen peak with weakly shorter arms. The quadratic bound on the block therefore has coefficient at least $\\kappa$, since both reciprocal denominators weakly decrease as the arms shorten. Append zeros to the sums after applying the bound. This gives\n$$\n3\\sum_i(g_i-t)_+^2-2(1-t)\\sum_i(g_i-t)_+\\ge\\kappa(1-t)^2.\n$$\nMultiply by $t^{p-3}$ and integrate from $0$ to $1$. The finite sum and the bounded factors multiplying the integrable weight justify termwise integration. For each $x\\in[0,1]$, using $1-t=(1-x)+(x-t)$ on $0<t<x$ and integrating powers gives\n$$\n\\begin{aligned}\n\\int_0^1 t^{p-3}\\bigl[3(x-t)_+^2-2(1-t)(x-t)_+\\bigr]\\,dt\n &=\\frac{2[(p+1)x^p-px^{p-1}]}{(p-2)(p-1)p},\\\\\n\\int_0^1 t^{p-3}(1-t)^2\\,dt&=\\frac{2}{(p-2)(p-1)p}.\n\\end{aligned}\n$$\nThe first identity includes $x=0$, when both sides vanish. Cancel the common factor and restore the original maximum by homogeneity of degree $p$. This proves the stated inequality.\n",
+  "source_candidate_ids": [
+    "c3c2ca0e4dcbdc9d"
+  ],
+  "source_candidate_sha256": {
+    "c3c2ca0e4dcbdc9d": "9d4c4def91d56ae15edcf44f03bb11f7ab87cfc48231203984908c41df02ff07"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c3c2ca0e4dcbdc9d",
+      "locator": "Proof, (4)–(6), power moment with chosen peak"
+    }
+  ],
+  "statement": "Let $g_0,\\ldots,g_{m-1}$ be a nonnegative, nonzero concave sequence on consecutive indices, with $m\\ge1$. Concavity means that its successive differences are nonincreasing. Put $H=\\max_i g_i$ and choose any index $j$ with $g_j=H$. For every real $p\\ge2$,\n$$\n(p+1)\\sum_i g_i^p-pH\\sum_i g_i^{p-1}\n\\ge \\frac{H^p}{2}\\left(\\frac1{2j+1}+\\frac1{2(m-1-j)+1}\\right).\n$$\nThe bound allows zero endpoints, a peak at either endpoint, and an arbitrary choice of peak in a plateau.",
+  "subgoal_id": "pk-intake-chosen-peak-concave-sequence-power-moments",
+  "title": "A real-power moment inequality at a chosen peak"
+}

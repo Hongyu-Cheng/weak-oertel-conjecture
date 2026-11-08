@@ -1,0 +1,32 @@
+{
+  "advances": "Actual integer interval fibers, with an arbitrary finite number of reflected pairs and the center fixed at the own interval midpoint.",
+  "author": "PK-research-agent",
+  "candidate_id": "af8473f9cd095cf3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:18:43.796531+00:00",
+  "depends_on": [],
+  "draft_key": "interval-fiber-midpoint-reflection-bound",
+  "kind": "lemma",
+  "proof": "Fix a pair of positive endpoints $A=I_{j-k}=[a_0,a_0+a]$ and $D=I_{j+k}=[b_0,b_0+b]$, and write $I_j=[l,l+w_j]$. The inclusion $(A+D)/2\\subseteq I_j$ gives $a+b-w_j\\le s\\le w_j$ at $s=2m_j-a_0-b_0$. The overlap length is\n$$\n|A\\cap(2m_j-D)|=[\\min(a,s)-\\max(0,s-b)]_+=[\\min(a,b,s,a+b-s)]_+.\n$$\nThe first equality is interval intersection after subtracting $a_0$. The second follows from expanding the difference of the minimum and maximum as the minimum of the four differences. If $a+b>w_j$, both $s$ and $a+b-s$ are at least $a+b-w_j$, giving the required lower bound. If $a+b\\le w_j$, the lower bound is zero. Reflection gives the same contribution from the reversed ordered pair. The own interval contributes $w_j$ at its midpoint, and empty or null fibers contribute zero. Summing proves the bound.\n",
+  "source_candidate_ids": [
+    "1176a6cc970482b9",
+    "ad15334eed60c161"
+  ],
+  "source_candidate_sha256": {
+    "1176a6cc970482b9": "0cd99ced8e3becb7ba55b2a4df9e6a9dc22a4aba827dfe65403f36202eb98b82",
+    "ad15334eed60c161": "60c58ce8e8ef540a5ed4625e9a17e8978b265c37f9fbcbea42f8f53daf8a64d8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1176a6cc970482b9",
+      "locator": "1176a6cc970482b9:01 §1, (1), and §2, (2)"
+    },
+    {
+      "candidate_id": "ad15334eed60c161",
+      "locator": "ad15334eed60c161:01 §§1–2, (2)–(4), one reflected pair"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R\\times\\mathbb R$ be a compact convex body with integer interval fibers $I_z$, writing $w_z=|I_z|$ for their lengths and taking zero for empty or singleton fibers. Let $I_j$ have positive length, let $m_j$ be its midpoint, and let $R(j,m_j)$ be the original mixed length retained by central reflection about $(j,m_j)$. Then\n$$\nR(j,m_j)\\ge B_j\n=w_j+2\\sum_{k\\ge1}\\min\\{w_{j-k},w_{j+k},(w_{j-k}+w_{j+k}-w_j)_+\\},\n$$\nwhere $(x)_+=\\max\\{x,0\\}$.",
+  "subgoal_id": "pk-intake-interval-fiber-midpoint-reflection-bound",
+  "title": "Reflection bound at the midpoint of an actual interval fiber"
+}

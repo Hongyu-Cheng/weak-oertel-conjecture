@@ -1,0 +1,41 @@
+{
+  "candidate_id": "1aa8cb39550cb9d1",
+  "candidate_sha256": "c8f1ab7fced6a80ced3e4f5aa1953829d91006a2c776d52610ffc25ca6f5c17c",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Checked original note 5dd0d34dec315bd7, §§1–3, (1)–(4). The normalized quantile is v/a, the common cut threshold is -1, and the far-tail threshold is 2.",
+    "The height has a nondegenerate compact range because A is full-dimensional and the height is nonzero. The segment through two extreme-level points gives an affine selector in every actual section. The deviations in x and y have opposite signs and the same absolute value, at most the x-coordinate width W.",
+    "The height has an atomless strictly increasing distribution on its range. The interior quantile has lower area exactly v. If a selector has nonpositive slope and value strictly above -1+W there, a positive extra interval of captured sections pushes its cap area above v. If the slope is positive and the value is at least -1+W, every section above the quantile is captured and has area a-v>v. The arguments allow a zero slope and equality in the nonpositive-slope case. Using the smaller cap for X and the cap of area v for Y yields the same bound at one common level.",
+    "Adding the selector bounds gives t_*≥2-2W. This remains valid when the proposed lower-cap threshold is below the support. The width is attained by compactness of equal-height point pairs and is positive. Minkowski interpolation of the interval sections gives concavity. A triangular lower envelope based on the maximum integrates to W(h-ell)/2, with one triangular piece absent when the maximum occurs at an endpoint.",
+    "The coordinate change has absolute determinant one. The strip from 2-2W to 2 has length 2W and cross-width at most W, so its area is at most 2W². The boundary line at 2 has zero area. A proper t=-1 cut gives ell<-1<h and thus h-ell>H>0, making the width bound strict and yielding the coefficient 8 in the weakened tail estimate.",
+    "Checked all six ordered coordinate-pair determinants and the zero-sum relation exactly. As a rational test in coordinates x=s-t/2 and y=-s-t/2, the rectangle |s|≤1/2, -2≤t≤7 gives a=9, u=v=4, W=1, H=8 and actual upper tail 5 at level 2, consistent with all bounds."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:40:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its three-cap cover formula can be applied to x≥-1, y≥-1, t≥2 and gives a tail lower bound involving min(u, tail). This lemma gives a different width-dependent estimate and a common lower quantile for the actual sections, which are absent from that formula.",
+      "fact_id": "ac7ba1e1e0ebc955"
+    },
+    {
+      "comparison": "Uses the three-cap cover formula to control the far tail under a particular mixed-body hypothesis and a specified ordering of attained caps. It does not give the common-quantile bound or the dependence on a section width of an arbitrary planar body.",
+      "fact_id": "077e154ea4666171"
+    }
+  ],
+  "readability": "W is a coordinate width in the t sections, rather than Euclidean length along the line. The absolute determinant one is what makes its height integral the original area.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "98414fb375165cd90f3b49bce9976d9b8d4a90767756dc420c431298ec09da0f",
+  "reviewed_statement_sha256": "1ed390295f7e2c820a4abf090fcf32a85d9fd6e0bd453b57dbca66edaaca3986",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:36:34Z",
+  "summary": "The affine selector bounds both cap directions at one common height quantile. Concavity of the section width gives the claimed global width and explicit upper-tail estimates.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

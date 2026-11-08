@@ -1,0 +1,30 @@
+{
+  "advances": "Applies to an actual original cap and a row of positive strict residuals. The extremal allocation is exact for the scalar relaxation. A KKT source can use this only when the original active cap and row meet these hypotheses.",
+  "author": "PK-research-agent",
+  "candidate_id": "943f174ded471525",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:15:48.905190+00:00",
+  "depends_on": [],
+  "draft_key": "actual-small-budget-residual-root-depletion",
+  "kind": "lemma",
+  "proof": "Write $A_j=\\mathcal H_q(C_{z_j}\\cap H)$. Since the destinations are distinct, their captures sum to at most $B$, even if the source is also a destination. Every strict complement section at a destination has positive $q$-volume $V_j-A_j$. Express $H$ by an affine inequality $L\\ge0$. For $\\varepsilon>0$ sufficiently small, the compact destination subcuts with $L\\le-\\varepsilon$ have positive intrinsic $q$-volume. Their weighted Minkowski sum lies in the source strict complement by convexity and affinity of $L$. The direction space of the sum contains each destination direction space, by fixing all other summands. Since the source has dimension $q$ and the subcuts each span their own $q$-dimensional fiber, all these direction spaces agree. Translate to this common Euclidean space and apply Brunn–Minkowski. The subcuts increase to the strict complements as $\\varepsilon\\downarrow0$, so\n$$\nu\\ge\\sum_j\\theta_j(V_j-A_j)^{1/q}.\n$$\n\nFor $0\\le s\\le B$ let $F_j(s)=\\theta_j[v_j-(V_j-s)^{1/q}]$. It is increasing and convex with $F_j(0)=0$, so $F_j(A_j)\\le(A_j/B)F_j(B)$. Summing gives $\\sum_j F_j(A_j)\\le\\max_j F_j(B)$, and subtracting the Brunn–Minkowski inequality from the whole-root average gives the claim. The maximum over the relaxed allocation simplex is attained by spending all $B$ at a maximizing index. A given actual cap can impose additional constraints on its allocations.\n\nFor $\\delta>0$ choose a maximizing index in the scalar bound. As $B<V_j$, the remaining root is positive and hence $\\delta<\\theta_jv_j$. Rearrange and raise to the positive power $q$ to obtain the inverted budget test. Conversely a qualifying index with this budget inequality makes its scalar term at least $\\delta$, so the two necessary scalar tests agree under the same budget hypothesis. Substituting equal weights and volumes gives the stated equal-row bound.\n",
+  "source_candidate_ids": [
+    "02239b6c4bf9e8a6"
+  ],
+  "source_candidate_sha256": {
+    "02239b6c4bf9e8a6": "f20325037aec832e4f907a7a48c3953cde9a70f93731d48de50b98b2ec6904ad"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "02239b6c4bf9e8a6",
+      "locator": "02239b6c4bf9e8a6:01 §§1–3, (1)–(4), exact small-budget root depletion"
+    },
+    {
+      "candidate_id": "02239b6c4bf9e8a6",
+      "locator": "02239b6c4bf9e8a6:02 §2, exact relaxed simplex optimum"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, with mixed set measured by $\\mathcal H_q$ for its maximal integer fiber dimension $q\\ge1$. At distinct integer bases $z_j$ with positive $q$-volume put $V_j=\\mathcal H_q(C_{z_j})$ and $v_j=V_j^{1/q}$. Fix $\\theta_j>0$ summing to one, with $p=\\sum_j\\theta_jz_j$ an integer base whose section has dimension $q$. Let $H$ be one original closed ambient halfspace of total measured mixed mass at most $B$, where $0<B<\\min_j V_j$, and let $u=\\mathcal H_q(C_p\\cap H^c)^{1/q}$. Then\n$$\n\\sum_j\\theta_jv_j-u\\le\\max_j\\theta_j\\big[v_j-(V_j-B)^{1/q}\\big].\n$$\nIf $\\delta=\\sum_j\\theta_jv_j-u>0$, there is an index $j$ with $\\delta<\\theta_jv_j$ and $B\\ge V_j-(v_j-\\delta/\\theta_j)^q$. For equal destination volume $V$ and equal weights $1/N$, this gives $V^{1/q}-u\\le [V^{1/q}-(V-B)^{1/q}]/N$.",
+  "subgoal_id": "pk-intake-actual-small-budget-residual-root-depletion",
+  "title": "Exact scalar depletion bound for one actual small-budget cap"
+}

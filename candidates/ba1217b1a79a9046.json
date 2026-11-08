@@ -1,0 +1,33 @@
+{
+  "advances": "Necessary incidence at a least-active ordinary tetrahedral capacity maximum; it does not supply strict positivity of the jointly funded form.",
+  "author": "PK-research-agent",
+  "candidate_id": "ba1217b1a79a9046",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:42:34.572268+00:00",
+  "depends_on": [
+    "10916437d7f6301d",
+    "643b08457d03e63b",
+    "8bdcdcd6e2fa69d9",
+    "1cdceac089be44d8",
+    "63c38ebdb1d43777",
+    "1462fa9ce6ced54e"
+  ],
+  "draft_key": "tetrahedral-three-full-strict-quadrilateral-incidence",
+  "kind": "theorem",
+  "proof": "By 10916437d7f6301d no full row has a full-cut minimizing threshold, since that would saturate at least three columns and conflict with the other full rows. By 643b08457d03e63b the proper minimizing thresholds satisfy $t_i=b\\cdot X_i$ for their common actual area centroid $b$. The actual margins satisfy $\\sum_i c_i=0$, since $\\sum_i X_i=\\mathbf1$ and $b\\cdot\\mathbf1=1$. Fact 8bdcdcd6e2fa69d9 gives local $C^2$ capacity and at least two strictly captured vertices per row.\n\nA proper tetrahedral plane through vertex $h$ has a triangular section and the centroid coordinate at $h$ is at most $1/3$: one section vertex is $h$ and every other section vertex lies in the opposite facet. Thus $c_{ih}\\ne0$ for every $i$. The balance forces at least one positive and one negative $h$-entry. For each row excluding $h$, two strictly captured vertices have centroid coordinates at most $1/3$. By 1cdceac089be44d8 that row has a positive optimized-capacity direction (threshold normalization preserves its sign). Fact 63c38ebdb1d43777 allows total positive index at most $4-3=1$, so there is exactly one $h$-excluding row.\n\nFor any proper triangular section, orient toward a vertex isolated by the cut, allowing vertices on the plane. The three section vertices lie on the isolated vertex's incident edges, so the centroid coordinate of every other vertex is its edge intercept divided by three, at most $1/3$. This description includes proper planes through one or two vertices, by treating edge endpoints on the plane as intercepts. A triangular section here must therefore isolate $h$. A row capturing $h$ cannot have such a section because it would strictly capture only $h$.\n\nFor the remaining row, suppose its section is triangular and let $C$ be the reversed margin vector, so $C_h>0$ and $C_j\\le0$ off $h$. The vertex cap has fraction $V=C_h^3/\\prod_{j\\ne h}(C_h-C_j)$. Its first derivative is proportional to $b$ by coarea, so on the two-dimensional space $v_h=0$, $b\\cdot v=0$, the first logarithmic derivative vanishes. Differentiating twice there gives\n$$\nv^\\top\\nabla^2 V\\,v=V\\sum_{j\\ne h}\\frac{v_j^2}{(C_h-C_j)^2}>0\n\\quad(v\\ne0).\n$$\nIf a vertex margin off $h$ is zero, it is the only zero since the actual row strictly captures at least two vertices. The displayed vertex formula still gives the derivatives through order two: on the neighboring sign cell the additional volume term is $C_j^3/\\prod_{\\ell\\ne j}(C_j-C_\\ell)$, whose denominator is bounded away from zero near the knot. This follows from the tetrahedral divided-difference formula in 1462fa9ce6ced54e, first at distinct heights and then by continuity. The actual cap has probability $1-V$ evaluated at the sign-reversed margins; its Hessian has the opposite sign. Its cap Hessian is therefore negative definite on this two-dimensional tangent subspace. The corrected shift in 8bdcdcd6e2fa69d9 is injective on the tangent subspace because it adds only a multiple of $\\mathbf 1$ and $b\\cdot\\mathbf 1=1$. After threshold rescaling this gives two positive directions, contrary to 63c38ebdb1d43777. Thus this section is also a strict quadrilateral.\n\nIn the $h$-entry-one chart, $\\sum_i c_i=0$ expresses the excluding representative as the convex combination of the capturing representatives with coefficients proportional to their positive $h$-entries. Each oriented quadrilateral in the chart captures exactly one other vertex. If the two outer representatives capture the same other vertex, the signs of their combination give the same split. If they capture different vertices, the remaining central coordinate is negative at both endpoints, hence also negative in the middle. The middle must capture one of the two outer partners in the chart; undoing its orientation gives the stated actual pairs.\n",
+  "source_candidate_ids": [
+    "0145a0829278406d"
+  ],
+  "source_candidate_sha256": {
+    "0145a0829278406d": "060578a3838a8c4bdd890a113dec4902304cf899cea47484ba933eaebbcba297"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0145a0829278406d",
+      "locator": "0145a0829278406d:01 §1, (1), including two-dimensional triangular test"
+    }
+  ],
+  "statement": "On $\\Delta_3=\\{u\\in\\mathbb R_{\\ge0}^4:\\sum_j u_j=1\\}$ let $U$ be uniform, $F_x(t)=\\Pr(x\\cdot U\\le t)$, and $\\phi_3(x)=\\inf_{t>0:F_x(t)>0}t/F_x(t)^{1/3}$. For fixed weights $\\omega_i>0$, maximize $\\sum_{i=1}^4\\omega_i\\phi_3(X_i)$ over nonnegative $4\\times4$ matrices with column sums one, and take a maximizer with the fewest nonzero rows. Suppose exactly three rows are nonzero, each is strictly positive, and their common actual minimizing-section centroid has exactly one coordinate $b_h>1/3$. Then all three minimizing sections are strict quadrilaterals. Exactly two rows strictly capture vertex $h$ and one strictly excludes it, where capture for row $X_i$ means a positive margin in $c_i=t_i\\mathbf1-X_i$. If each normal is oriented toward $h$ and normalized to have $h$-entry one, the actual $h$-excluding row's representative is a strict convex combination of the other two. Either all three unoriented splits agree, or the actual captured pairs are, up to relabeling the central indices, $\\{h,i\\},\\{j,k\\},\\{h,j\\}$.",
+  "subgoal_id": "pk-intake-tetrahedral-three-full-strict-quadrilateral-incidence",
+  "title": "Incidence of three full rows with one noncentral tetrahedral section coordinate"
+}

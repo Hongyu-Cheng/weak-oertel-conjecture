@@ -1,0 +1,28 @@
+{
+  "advances": "A finite game of actual fixed-cap responses for the common fixed-source family. Strict positivity of the value is an additional condition.",
+  "author": "PK-research-agent",
+  "candidate_id": "0b513c1a53872f05",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.750254+00:00",
+  "depends_on": [
+    "682ac1340bfb8e09"
+  ],
+  "draft_key": "pk-w36-split-response-minimax",
+  "kind": "theorem",
+  "proof": "The uniform first variation for these mixtures gives each loss as a boundary integral of $\\mathbf1_{\\{\\Delta_z(n_z(x))=0\\}}V_\\nu(n_z(x),z,x)$ with either selector one or the fixed inward selector $\\kappa_{z,H_j}$. Thus boundedness and Fubini give exact averaging. The integral against each fixed bounded selector is continuous in the uniform field norm, so continuity in $\\theta$ follows from joint continuity on compact sets.\n\nThe barycenter of a probability on the compact image $R(\\Theta)$ lies in its compact convex hull by separation. Conversely every finite convex combination is obtained by using that discrete law in the actual convex cuts. Carathéodory gives the two stated cardinalities in $\\mathbb R^m$ and $\\mathbb R^{m+1}$, respectively. Write $r_*$ for the attained maximum of $\\min_j r_j$ on the signed hull. The hull and the open orthant $(r_*,\\infty)^m$ are disjoint convex sets. Separate them with a nonzero linear functional having its greater values on the orthant. Unboundedness in each positive coordinate forces all coefficients to be nonnegative. Normalize their sum to one. The infimum of this functional on the orthant is then $r_*$, so its maximum on the hull is at most $r_*$. For every probability vector $\\lambda$, its value at an attaining hull point is at least the minimum coordinate $r_*$. The maximum on the hull equals the maximum on the compact generating image, proving the identity and attainment. That maximum is a continuous function of $\\lambda$ because the image is bounded. On the compact probability simplex it has positive minimum exactly when it is positive at every $\\lambda$.\n",
+  "source_candidate_ids": [
+    "4c4db2dc9830c76a"
+  ],
+  "source_candidate_sha256": {
+    "4c4db2dc9830c76a": "eae8f4b7d1aa1f37dcb5198feeb14ebf7fa01074d4725090b51484a758294e87"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4c4db2dc9830c76a",
+      "locator": "4c4db2dc9830c76a:04 §5, (14)–(16), exact response hull and minimax"
+    }
+  ],
+  "statement": "Use the fixed-source convex cut mixture construction with one fixed ceiling $h_p(u)+A(u)\\cdot(z-p)$, compact nonempty parameter space $\\Theta$, jointly continuous nonnegative convex fields $V_\\theta$ with common source restriction, and averaging of the fields before the cuts. For a nonempty finite menu of $m$ fixed closed ambient caps $H_j$ and fixed $\\beta\\in\\mathbb R$, let $D(\\theta)$ be the first actual mixed-volume loss of the pure field, $C_j(\\theta)$ its first actual loss in $H_j$, and $R_j(\\theta)=C_j(\\theta)-\\beta D(\\theta)$. All these functions are continuous. For each Borel probability $\\nu$ the actual responses $(D,C_1,\\ldots,C_m)(\\nu)$ and $R(\\nu)$ are the corresponding $\\nu$-averages. The signed response set is exactly the compact convex hull of $R(\\Theta)$, attained by mixtures of at most $m+1$ fields. At most $m+2$ fields preserve all cost and capture coordinates simultaneously. The attained value is\n$$\n\\max_\\nu\\min_j R_j(\\nu)=\n\\min_{\\lambda\\ge0,\\;\\sum_j\\lambda_j=1}\\max_{\\theta\\in\\Theta}\\sum_j\\lambda_jR_j(\\theta).\n$$\nIt is strictly positive exactly when for every such $\\lambda$ some $\\theta$ has $\\sum_j\\lambda_jR_j(\\theta)>0$.",
+  "subgoal_id": "pk-intake-pk-w36-split-response-minimax",
+  "title": "Exact finite-menu minimax for fixed-source convex cut mixtures"
+}

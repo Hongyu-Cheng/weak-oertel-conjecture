@@ -1,0 +1,42 @@
+{
+  "advances": "Exact calculations for a fixed-label map and two cap or compatibility obstructions in the auxiliary chart model.",
+  "author": "PK-research-agent",
+  "candidate_id": "bafc15e78da71ec9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.949995+00:00",
+  "depends_on": [],
+  "draft_key": "affine-label-preserving-projective-fiber-criterion",
+  "kind": "lemma",
+  "proof": "Differentiation gives $D T_z=L^{-1}(I-Xc^{\\mathsf T}/L)$, so the determinant lemma gives $\\det D T_z=L^{-d}(1-c\\cdot X/L)=\\ell(z)L^{-d-1}$. The identity $1-c\\cdot Y=\\ell(z)/L$ gives the inverse whenever $\\ell(z)\\ne0$. Along a segment joining $X_0,X_1$, the image at parameter $t$ is the average of $T_z(X_0),T_z(X_1)$ with weights proportional to $(1-t)L(z,X_0),tL(z,X_1)$. The normalized second weight ranges from zero to one. This proves image convexity regardless of the sign of nonzero $\\ell(z)$. The example $K=[1,2]$, $L(X)=X$ has constant image $1$.\n\nFor the image combination $Y_* = \\sum_j\\lambda_j T_{z_j}(X_j)$, the identity just proved gives $1-c\\cdot Y_* = \\sum_j\\lambda_j\\ell(z_j)/L(z_j,X_j)>0$. Thus $Y_*\\in J_q$ precisely when its stated inverse belongs to $K_q$. For fixed $v$, the function $\\alpha\\mapsto\\max_{X\\in K_z}(v\\cdot X-\\alpha L(z,X))$ is continuous, decreases at least at rate $\\min_{K_z}L>0$, and has limits of opposite sign. Its unique zero is $\\max_{X\\in K_z}v\\cdot X/L(z,X)$, which is $h_{J_z}(v)$. Minkowski inclusion is equivalent to the support inequalities by separation. The inequalities are linear in the weights on the compact anchored representation polytope, so it suffices to check its vertices. On a polytopal fiber every image point is an average of images of vertices, using positive denominator weights just as on a segment, so a vertex maximizes each support. The homothetic assertion follows by substituting $X=\\ell(z)x$.\n\nSubstituting the inverse in the cap and multiplying by the positive factor $1-c\\cdot Y$ gives the claimed cap equation. The displayed matrix is its bilinear coefficient. A pure-base cap keeps its original trace by cancellation of this same positive factor.\n\nFor compatibility failure, take the actual hull $\\{(z,X):-1\\le z\\le1,\\ z+2\\le X\\le5\\}$ with sampled labels $-1,0,1$ and $L=1+X$. Its three fibers have masses $4,3,2$. For each nonempty proper closed minor $B=P\\cap\\operatorname{conv}(B)$ the quota is $M_B/9<k(B)/2$, where $k(B)$ counts inherited parities. The singletons have mass below $9/2$ and the adjacent pairs have masses $7,5<9$. These are all such minors. The images are $[1/2,5/6]$, $[2/3,5/6]$ and $[3/4,5/6]$. The endpoint lower points average to $5/8<2/3$ at the middle label. Common positive rescaling of $L$ scales both sides of this violated inequality by the same positive number.\n\nFor cap failure take the product $[0,1]\\times[0,1]$ and $L=1+X$. Its chart image is the product $[0,1]\\times[0,1/2]$. The cap $X\\ge z$ becomes $Y\\ge z/(1+z)$ within the product. This contains $(0,0)$ and $(1,1/2)$ but misses $(1/2,1/4)$. On the product over labels $0,1,2$ with the same fibers and denominator, the original cap $X\\ge(z+2)/8$ gives proper upper traces of thresholds $1/5,3/11,1/3$. An ambient halfspace with these proper upper traces must have positive continuous coefficient and affine thresholds in the base. Here $2(3/11)-1/5-1/3=2/165\\ne0$.\n\nFinally dividing the tilted density $1/L$ by the positive Jacobian gives $L^d/\\ell(z)$, which has the stated form by the inverse identity. Its largest-to-smallest ratio is the stated power. Taking $L=1+X$ on $[0,R]$ gives ratios $1+R$ for $d=1$, unbounded as $R$ increases. When $c=0$, substitution yields the asserted constant density.\n",
+  "source_candidate_ids": [
+    "bd4e19d78aaec9e1"
+  ],
+  "source_candidate_sha256": {
+    "bd4e19d78aaec9e1": "c1c508ddeeae6de737b8b82476439e389de001b518603003dcac464025ba63df"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "bd4e19d78aaec9e1",
+      "locator": "bd4e19d78aaec9e1:01 §1, (1)–(3)"
+    },
+    {
+      "candidate_id": "bd4e19d78aaec9e1",
+      "locator": "bd4e19d78aaec9e1:02 §2, (4)–(6) and homothetic subclass"
+    },
+    {
+      "candidate_id": "bd4e19d78aaec9e1",
+      "locator": "bd4e19d78aaec9e1:03 §3, (7)–(8)"
+    },
+    {
+      "candidate_id": "bd4e19d78aaec9e1",
+      "locator": "bd4e19d78aaec9e1:04 §3, (9) and following two cap examples"
+    },
+    {
+      "candidate_id": "bd4e19d78aaec9e1",
+      "locator": "bd4e19d78aaec9e1:05 §4, (10)"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite and let $K_z\\subset\\mathbb R^d$, $d\\ge1$, be nonempty compact convex fibers. Write $L(z,X)=\\ell(z)+c\\cdot X$, where $\\ell(z)=b+\\beta\\cdot z$ and $L>0$ on the placed fibers, hence on their convex hull. On the fixed fiber $z$, $T_z(X)=X/L(z,X)$ has signed Jacobian $\\ell(z)L(z,X)^{-d-1}$. If $\\ell(z)\\ne0$, its inverse on the image is $X=\\ell(z)Y/(1-c\\cdot Y)$ and its image is convex. Positivity of $L$ allows collapse when $\\ell(z)=0$.\n\nAssume now that $\\ell>0$ at every sampled base. The label-preserving images $J_z=T_z(K_z)$ are compatible, meaning $\\sum_j\\lambda_jJ_{z_j}\\subseteq J_q$ for each anchored relation $q=\\sum_j\\lambda_j z_j\\in P$, $\\lambda_j\\ge0$, $\\sum_j\\lambda_j=1$, if and only if for every such relation and $X_j\\in K_{z_j}$,\n$$\n\\frac{\\ell(q)\\sum_j\\lambda_j X_j/L(z_j,X_j)}{\\sum_j\\lambda_j\\ell(z_j)/L(z_j,X_j)}\\in K_q.\n$$\nEquivalently, for every $v\\in\\mathbb R^d$ the support $\\alpha_z(v)$ is the unique solution of $h_{K_z}(v-\\alpha c)=\\alpha\\ell(z)$, and compatibility holds exactly when $\\alpha_q(v)\\ge\\sum_j\\lambda_j\\alpha_{z_j}(v)$ for every extreme anchored representation and every $v$. For polytopes the maximum defining $\\alpha_z(v)$ occurs at an original vertex. If $K_z=\\ell(z)K$ with $1+c\\cdot X>0$ on $K$, then all $J_z$ coincide and are compatible.\n\nA closed cap $a\\cdot z+u\\cdot X\\ge h$ transforms on the positive chart into $a\\cdot z-h+[\\ell(z)u-(a\\cdot z-h)c]\\cdot Y\\ge0$. This expression is affine if $u\\beta^{\\mathsf T}-ca^{\\mathsf T}=0$. A positive denominator depending on $X$ can destroy compatibility even under strict proper closed-minor quotas, and it can send a cap to a nonconvex set or to traces that are not those of a single halfspace even for compatible image fibers. For a full-dimensional fiber, $T_z$ pushes $dX/L$ to $\\ell(z)^{d-1}(1-c\\cdot Y)^{-d}\\,dY$ on $J_z$, with density ratio $(\\max_{K_z}L/\\min_{K_z}L)^d$. This ratio is unbounded under positivity alone. For $c=0$ the density is $\\ell(z)^{d-1}$, equal across labels when $d=1$.",
+  "subgoal_id": "pk-intake-affine-label-preserving-projective-fiber-criterion",
+  "title": "Compatibility and cap tests for label-preserving affine projective fiber charts"
+}

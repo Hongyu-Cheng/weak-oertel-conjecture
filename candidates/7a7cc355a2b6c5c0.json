@@ -1,0 +1,28 @@
+{
+  "advances": "Assumes the exact ordinary normal-marginal equality for the shared body selectors. The result is a projection estimate on section area.",
+  "author": "PK-research-agent",
+  "candidate_id": "7a7cc355a2b6c5c0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.323557+00:00",
+  "depends_on": [
+    "4b999d8fee195882"
+  ],
+  "draft_key": "section-projection-zonotope",
+  "kind": "theorem",
+  "proof": "The constant test gives $\\beta\\in[0,1]$. Multiply the per-cap projection identity by $\\theta_j$ and sum. Use the normal-marginal equality with $b(n)=|e\\cdot n|$, then apply the full-body projection formula to obtain the stated equality. The weighted sum of the allocated shadows lies between $R(e)$ and $B(e)$ by the same per-cap result. Its lower and upper bounds give $R(e)\\le2\\beta B(e)$ and $R(e)\\le2(1-\\beta)B(e)$, respectively.\n\nThe projection body exists because its support function is the positive integral $\\tfrac12\\int |e\\cdot n|\\,dS$, extended homogeneously in $e$. The section zonotope has support function $R$. Comparing support functions proves the inclusion, and substituting the tied weights gives the group formula. If $e$ is uniform on the sphere, $\\mathbb E|e\\cdot u|=c_d\\|u\\|$ with the same $c_d>0$ for all $u$; the case $d=1$ uses the two unit directions. The full-body projection formula gives $\\mathbb E B(e)=(c_d/2)\\sum_z\\mathcal H^{d-1}(\\partial K_z)$. Average the directional inequality and cancel $c_d$.\n\nFor the probability law, the terms in the per-cap identity are jointly measurable by hypothesis, the boundary integrands and the allocated shadows have a fixed finite bound, and $T\\|u\\|$ is bounded. Integrate the identity and bounds, using Fubini for the shared body allocations. The integrated support function is finite, even, positively homogeneous and subadditive, hence is the support function of a compact convex body. The comparisons and the angular calculation are unchanged.\n",
+  "source_candidate_ids": [
+    "c2eb139e074f5fb3"
+  ],
+  "source_candidate_sha256": {
+    "c2eb139e074f5fb3": "e60bfc704a59c1043bf126af73d80a38beb8b17189098a89df37d23a21a47f1c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c2eb139e074f5fb3",
+      "locator": "c2eb139e074f5fb3:02 §§3–4, (5)–(8), including law extension"
+    }
+  ],
+  "statement": "Use the bodies, actual cap records and consistent coarea allocations of the per-cap projection identity. For a finite menu indexed by $j$, use weights $\\theta_j\\ge0$ with $\\sum_j\\theta_j=1$ and write $W=\\sum_j\\theta_j s_j$. Suppose $\\int(W-\\beta)b(n_z)\\,dS=0$ for every continuous function $b$ on the unit normal sphere. Set $R(e)=\\sum_j\\theta_j T_j|e\\cdot u_j|$. For every unit direction $e$,\n$$\n\\sum_j\\theta_j B_j(e)=\\beta B(e)+\\frac12R(e),\\qquad\nR(e)\\le2\\min(\\beta,1-\\beta)B(e).\n$$\nFor the projection body $\\Pi K_z$ with support function $|\\operatorname{proj}_{e^\\perp}K_z|_{d-1}$ on the unit sphere, this is the inclusion $\\sum_j\\theta_j T_j[-u_j,u_j]\\subseteq 2\\min(\\beta,1-\\beta)\\sum_z\\Pi K_z$. A group whose weights satisfy $\\theta_{ij}T_{ij}=\\kappa_i\\rho_{ij}$ contributes $\\kappa_i\\sum_j\\rho_{ij}[-u_{ij},u_{ij}]$. The scalar angular consequence is $\\sum_j\\theta_j\\|u_j\\|T_j\\le\\min(\\beta,1-\\beta)\\sum_z\\mathcal H^{d-1}(\\partial K_z)$. The same formulas with integrals hold for a probability law of jointly measurable actual cap records and consistent allocations with bounded total coarea and bounded continuous normals. For the law the section body's support function is the integral of the segment support functions.",
+  "subgoal_id": "pk-intake-section-projection-zonotope",
+  "title": "Directional shadow identity and projection-body bound for an allocated cap stress"
+}

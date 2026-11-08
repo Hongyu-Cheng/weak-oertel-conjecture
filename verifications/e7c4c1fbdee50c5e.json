@@ -1,0 +1,53 @@
+{
+  "candidate_id": "87b433dccd2ca6c6",
+  "candidate_sha256": "5cf0c2cc3c44fed107032d40bb1f52a3b60ce80511d92535ac7c9594a0758bda",
+  "checked_dependency_candidate_sha256": {
+    "2f355ace664c0068": "dae374484133925f51295d38c9f41cdc128f25f9e622327862fd0b5de5ef13dd"
+  },
+  "checks": [
+    "Source 8733324562b5a70b gives the same diamond, small diamond, square and ray coefficient. The frozen proof additionally verifies the exact proportional median marginals and gives an equivalent gauge proof of nonconvexity.",
+    "The endpoint midpoint is (5/8)A inside the square, so the hull gives the three exact fibers. Independently checked areas 2,4,1/8, total 49/8 and strict-side masses less than 49/16 at the unique median 0.",
+    "The independent strict-cross block has raw mass τ=49/528≤1/8. Subtracting the two opposite central blocks leaves the identical nonnegative mass 15/16+τ on each central marginal. Diagonal pairing exhausts it. The normalized weights are τ/m=b/(k+b) and (m−τ)/m=k/(k+b).",
+    "Under the determinant-two linear map, each diamond becomes a square with independent coordinates. The one-dimensional convolution plateau and shoulder integrate to one, and the raw density coefficient is (1/8)·2=4ε². Central symmetry, null lines and positive mass in every origin-adjacent open slab give depth 1/2 at zero and strict loss elsewhere.",
+    "Along (1,s) in the open sector, the square contributes 1/2 to the integral and the second convolution argument is within its plateau because R(1−s)/(1+s)<ℓ. Direct rational integration gives J=1/8+ε²/24 and c=8ε²J=49/768.",
+    "The nonunit radius multiplier is the radial radius divided by the Euclidean length of (1,s), by a change of variable. The gauge restriction is (1+s)/sqrt((1+s)²+c) with strictly negative second derivative. Convexity of the body would imply a convex gauge, so the restricted curvature disproves it."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "2f355ace664c0068",
+      "candidate_sha256": "dae374484133925f51295d38c9f41cdc128f25f9e622327862fd0b5de5ef13dd",
+      "fact_id": "2f355ace664c0068",
+      "fact_sha256": "63ca2fc8a40cbfc45f7a5659a71d0b04ae440c922898c1c301ac79fe50769858",
+      "hypotheses": "Use the actual compact convex three-fiber hull, selected median 0 and the prescribed proportional split. After normalizing the constructed raw half-coupling by 49/16, its two marginals are exactly 2μ_-,2μ_+. The strict equal-distance pair maps to the ordinary midpoint and mixed central pairs map to the central endpoint.",
+      "reviewed_proof_sha256": "2573a96392e092ba9356e4e46dd6409c95dfc54a1cf94a13505a8b0d3dfe58f5",
+      "reviewed_statement_sha256": "5249c398425410c4f37ea1f8fb8687cae08c2f6b1d99a09256bba57e8d6eafbb"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:24:41Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its radial convexity assumes a convex inverse power of the density. The median-pair density here has no such premise, and the computed gauge defeats convexity.",
+      "fact_id": "3919a4dbe7ace166"
+    },
+    {
+      "comparison": "Its radial representation is for strict inverse-power convex densities; the present example establishes failure of radial convexity for a realizable median target without that regularity.",
+      "fact_id": "8bc17121df970992"
+    }
+  ],
+  "readability": "The displayed formula for f fixes the density representative used in the radial integrals. The phrase independent strict-cross block means the selected block, with its stated submass, is independent.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof review with exact rational checks where applicable.",
+  "reviewed_proof_sha256": "913c48c2b1788b9224ef347d6e5e1d03ffeeb75fd11c84a3b573a92a9a1cc171",
+  "reviewed_statement_sha256": "830274e21effe67e42dbd0a961885327929a9a84c2ecbcbfc52af6c0492bc766",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:17:32Z",
+  "summary": "A legal partially independent median coupling realizes the stated density, with unique deepest point and a nonconvex radial body.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

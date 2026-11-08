@@ -1,0 +1,26 @@
+{
+  "advances": "Finite ordinary cap and section geometry; the ear may meet unique sectors, so its area is not treated as a pure double gain.",
+  "author": "PK-research-agent",
+  "candidate_id": "32f76dd9c09dcab2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:19:24.642380+00:00",
+  "depends_on": [],
+  "draft_key": "finite-planar-ear-cap-and-coarea",
+  "kind": "lemma",
+  "proof": "At threshold $s$ near zero, the part of the ear $\\operatorname{conv}(P_2,Q,P_3)$ with $v_2\\cdot x<s$ is the triangle at $P_3$. Its intercept fractions on the incident edges are $(w+s)/(w+p)$ and $(w+s)/(w+v)$, so its area is $E(w+s)^2/[(w+p)(w+v)]$. At $s=0$ the complement gives the cap increment, and differentiation at zero gives the ear's coarea chord. The ear and old triangle meet on $P_2P_3$, whose intersection with $v_2^\\perp$ is one point, so the two coareas add. The old cap is a triangle with scalar height $p$, so $2Q_2^{\\rm old}=p\\sigma_2^{\\rm old}$. Substituting the first two identities gives $2\\Delta Q_2-p\\Delta\\sigma_2=v(1+p/w)\\Delta\\sigma_2$ and the claimed ratio. The argument with cap $3$ uses its own positive vertex $P_3$ and negative vertex $P_2$. Every ear vertex is strictly negative for $v_1$, so that cap and chord miss the whole ear.\n",
+  "source_candidate_ids": [
+    "11020364891cd885"
+  ],
+  "source_candidate_sha256": {
+    "11020364891cd885": "b7b02e1118d57da2307e2fc0d3377682b03d911a4e0eb5c576b93f3bbd76231d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "11020364891cd885",
+      "locator": "11020364891cd885:01 §1, (1)–(2), ear clipping and virtual height"
+    }
+  ],
+  "statement": "Let $T$ be a triangle containing $0$ in its interior, with distinct vertices $P_i$ lying strictly in the unique sectors of caps $v_i\\cdot x\\ge0$ for $(v_1,v_2,v_3)=((1,0),(0,1),(-1,-1))$. Add a point $Q$ in the open double sector captured by caps $2,3$ beyond edge $P_2P_3$, with convex quadrilateral in cyclic order $P_1,P_2,Q,P_3$ and ear area $E>0$. For cap $2$, put $p=v_2\\cdot P_2>0$, $w=-v_2\\cdot P_3>0$, $v=v_2\\cdot Q>0$. If $Q_2$ is raw cap area and $\\sigma_2$ its chord length divided by $\\lVert v_2\\rVert$, then\n$$\n\\Delta Q_2=E\\left(1-\\frac{w^2}{(w+p)(w+v)}\\right),\\qquad\n\\Delta\\sigma_2=\\frac{2Ew}{(w+p)(w+v)},\\qquad\n\\frac{2Q_2^{\\rm new}}{\\sigma_2^{\\rm new}}\n=p+\\frac{\\Delta\\sigma_2}{\\sigma_2^{\\rm old}+\\Delta\\sigma_2}\\,v(1+p/w).\n$$\nThe analogous formulas hold for cap $3$ with the roles of $P_2,P_3$ exchanged. Cap $1$ and its chord are unchanged.",
+  "subgoal_id": "pk-intake-finite-planar-ear-cap-and-coarea",
+  "title": "Exact cap and coarea changes for an added planar ear"
+}

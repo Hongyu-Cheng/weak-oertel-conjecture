@@ -1,0 +1,55 @@
+{
+  "candidate_id": "f2ead43a963c7026",
+  "candidate_sha256": "ead19c95ab18533114ff130d45f18053d9ca1273503f0685709d5e70113c6205",
+  "checked_dependency_candidate_sha256": {
+    "b3c0088cf09b2894": "95733c6d03501de28c8a03360b0d951a008f5d2683daef0b0e9bacecfc23b0d5"
+  },
+  "checks": [
+    "An interior point of a limiting fiber lies in a positive centered ball in that fiber, so uniform support convergence implies eventual inclusion. Exterior points are eventually excluded, and the convex-body boundary is Lebesgue null. Bounded convergence on the common ball yields symmetric-difference convergence and convergence of raw moments through order two. Positive limiting masses allow division in the centroid and covariance formulas.",
+    "Each nonzero direction has positive within-fiber variance because its level hyperplanes have zero volume in a full-dimensional fiber. Uniform quadratic-form convergence on the unit sphere and uniform continuity of the square root yield uniform convergence of the induced norm. The covariance here has no between-fiber centroid term.",
+    "For any violating energy pairs, finiteness of P and compactness give a fixed base and a common limiting mark since ‖y_j−y‖≤δ_j→0. The predecessor applies both to the moving family and the constant limiting body, even when the common mark is on the boundary. Each j-mark has a counterpart, so the multiplier hypothesis and compactness of the limiting lifted union give a uniform bound on the multipliers. Energy and mass bounds then place the root arguments in a common compact interval including zero, where the root is uniformly continuous. The convergent ε_j and covariance norms give the asserted Δ_j→0.",
+    "For u≠0, divide a and u by ‖u‖, using positive homogeneity of the covariance norm. The threshold at measured base z is u·y−a·(z−p) minus the buffer for this normalized pair. Both comparisons keep p,z,a,u fixed, so the entire base term cancels without a bound on a. At a fixed threshold the cap mass change is at most V_j, and the remaining strip change is at most LΔ_j by slicing the limiting fibers. This includes supporting and saturated closed cuts. In d=1 the strip volume is at most its interval length per fiber.",
+    "For u=0, the tested nonzero a selects exactly the same bases in both families, including every base on the equality plane. The mass change is at most V_j. When n=0 this class of directions is absent and the nonzero continuous normals still give a nonempty comparison set. The uniform per-cap inequality yields the two-sided infimum inequality without assuming attainment in the direction variable.",
+    "At any fixed j the predecessor with a constant body gives continuity of the energy and thus of f_j on each fiber. The same within-family strip comparison gives uniform-in-normal continuity in the mark, so the infimum is continuous. Compactness gives attainment in the mark variable. Counterparts exist in both directions at the same base by Hausdorff distance; applying the uniform comparison at a maximizing mark on either side proves convergence of maxima, and M_j→M_0>0 gives the normalized claim.",
+    "The source digest matches b096cc2ab4c584d9. Its §1 (1)–(2) treats the unweighted field; §2 (3)–(6) gives this uniform all-tilt comparison, includes pure-base cuts and explicitly allows ε_j→ε_0. The arbitrary continuous multiplier is a valid extension under the frozen correspondence hypothesis. Actual mixed cap masses coincide when the sampled fibers are the complete positive integer support. Any additional nonempty zero-volume actual integer fiber is based outside conv P, since a convex combination of positive fibers contains a positive ball at every point of conv P. A pure-base cap through such an outside base can miss P entirely and has mass zero, so allowing such marks cannot raise the mixed maximum."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "b3c0088cf09b2894",
+      "candidate_sha256": "95733c6d03501de28c8a03360b0d951a008f5d2683daef0b0e9bacecfc23b0d5",
+      "hypotheses": "Same-batch predecessor, independently reviewed in this package and pending admission. Apply to each positive full-dimensional moving fiber and its feasible marks, and to each constant positive fiber for the comparison marks and fixed-family continuity. The predecessor explicitly admits boundary marks.",
+      "reviewed_proof_sha256": "3af5bfa3266b56011e1cec33a0b3b51f2135f23ca7ab46999a7d94935ed90ec5",
+      "reviewed_statement_sha256": "bbbcf14f109b39cff0dcba5e719ed2026e2b24a3c0b8c3a20f9289d5e1a63596"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:22:11Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its explicit bound Δ_j+|P|κ_(d−1)R^(d−1)‖y_j−y‖ already implies the ordinary uniform correspondence comparison at ε_j=ε_0=0. It has no covariance-shift or weighted-field term and does not prove the positive-buffer assertion.",
+      "fact_id": "43ed87d91b76249c"
+    },
+    {
+      "comparison": "Its ordinary fixed-fiber cap bound is uniform in the normal, including the pure-base case, and gives the fixed-family zero-buffer part of the argument. It has no moving positive-fiber covariance or buffered maxima comparison.",
+      "fact_id": "036e376d1bfeccb9"
+    }
+  ],
+  "readability": "The label b_0 in this candidate denotes the limiting family's depth at ε_0, which can be positive. The final actual-mixed clause uses the same weighted field and complete positive support. The zero-volume case follows from the pure-base observation in the checks if one also allows marks on those actual fibers.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "db59ec450f2f8eccda0b945ea270ef83cab6d68ff1057a73bc041dab22d2002a",
+  "reviewed_statement_sha256": "95324769632bf3f2eca82f88f26a2ef3ce73e1b9a41be5a7b3ac0981fc456a85",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "b096cc2ab4c584d9": "5d218047a024e1d522b71c97a4b29f6ff4e2b2e46745c6efb03ba8002224d2ae"
+  },
+  "started_utc": "2026-11-08T11:18:42Z",
+  "summary": "The per-cap comparison is uniform over all base tilts and continuous normals. It proves joint marked convergence, attainment, and convergence of raw and normalized maxima with uniformly corresponding nonnegative multiplier fields.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

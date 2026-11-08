@@ -1,0 +1,50 @@
+{
+  "candidate_id": "7b9f36899136c1e9",
+  "candidate_sha256": "1856a8417df4dc2689faf3a6d6b41e8f83318f8be3eb506169e7d1e797cb543b",
+  "checked_dependency_candidate_sha256": {
+    "2965bef6996cdba5": "e2e004fecdb9485e6cf7c85a9f82f008d41b303b6aabb438602b8177fee790b7"
+  },
+  "checks": [
+    "The actual cuts attain raw depth, are nonvertical and have positive proper endpoint traces. They must pass through the mark, since otherwise a sufficiently small upward threshold shift retains the mark and strictly reduces the endpoint captures. The root equality then supplies positive middle capture.",
+    "The first translated cap contains the complete original right edge, whose outward normal differs from that of the artificial cut. The second contains the complete original second edge with outer normal (-1,-2), also distinct from its artificial cut. The proper incidence pattern makes each corresponding length invariant.",
+    "At x=a_3 the second and fourth lines have ordinates -(a_2+a_3)/2 and a_4-a_3. The second edge joins abscissae -(2a_1+a_2)/7 and a_3, and its length is sqrt(5)/2 times the difference.",
+    "The two resulting linear equations solve to delta=(-3v_x+v_y,-v_x-2v_y,v_x,v_x+v_y), with v_x=delta_3 and v_y=delta_4-delta_3. Substitution checks the converse kernel and the full support translate. A convex body's midpoint with a translate is the same translate at half distance.",
+    "Verified original §§3–4, including independent actual integer cap tilts and the additional exact Minkowski-middle hypothesis for the last assertion."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "2965bef6996cdba5",
+      "fact_sha256": "ff533945f96f2bc224f953fca8ebbc3bca4e349b51e39c4313d6f4ac8b5058ef",
+      "hypotheses": "The two actual through-mark nonvertical caps each have proper positive endpoints and exact captured root equality with positive middle trace, so apply the three-fiber captured-translation lemma to each separately."
+    }
+  ],
+  "finished_utc": "2026-11-08T20:02:45Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Only gives translations of individual captured endpoint bodies; the two specified original-edge incidences are what force translation of the complete endpoint quadrilaterals.",
+      "fact_id": "2965bef6996cdba5"
+    },
+    {
+      "comparison": "Its nonhomothetic endpoint example has critical equality caps in a different normal fan and incidence pattern, so it does not contradict this two-edge kernel conclusion.",
+      "fact_id": "54209ffcf6adbb64"
+    }
+  ],
+  "readability": [
+    "Through-mark boundary is automatic by the proper-cut threshold argument; the original source makes it explicit."
+  ],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "41b6ceabc5dcdeec1e21db4384a2314f7c45f21866ae6d81d86f08541b1b7dac",
+  "reviewed_statement_sha256": "0955ff800ebd3c3be8c8232c551c6f6a329f11c8bed6cf365d6786fdba882a53",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:00:15Z",
+  "summary": "The two cap translations preserve distinct whole original edges. Equality of those two lengths leaves exactly the two-dimensional space of translation support changes.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

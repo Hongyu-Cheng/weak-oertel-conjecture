@@ -1,0 +1,28 @@
+{
+  "advances": "A structural extremality test for planar support families; it allows countably many curvature atoms and gives no depth monotonicity.",
+  "author": "PK-research-agent",
+  "candidate_id": "187b670a4dbbc093",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.856516+00:00",
+  "depends_on": [
+    "6ae2eb173ed91aee"
+  ],
+  "draft_key": "diffuse-curvature-nonextremality-of-planar-compatible-supports",
+  "kind": "lemma",
+  "proof": "Apply 6ae2eb173ed91aee with the empty cap list and its finite Jensen rows. Since $R=\\sum_z R_z^{\\rm diff}$ has positive mass, its guarded-source exhaustion gives a nonzero nonatomic measure $\\nu$ on a compact subinterval of a guard of length less than $\\pi$, dominated by every affected curvature measure $R_z$ with $z$ in the fixed positive-coordinate pattern $J$. The kernel of the active rows restricted to $J$ is nonzero, since the Radon–Nikodym density vector belongs to it almost everywhere on the pattern and its coordinates sum to one. Fix a nonzero vector $v$ in that kernel and restrict $\\nu$ further to a compact interval $[a,b]$ strictly inside the guard with positive measure.\n\nImpose $\\int\\psi(s)\\sin(s)\\,d\\nu(s)=\\int\\psi(s)\\cos(s)\\,d\\nu(s)=0$, and define $\\phi(\\theta)=\\int_{[a,\\theta]}\\sin(\\theta-s)\\psi(s)\\,d\\nu(s)$ on the interval and zero outside it. Those two equations give zero right endpoint value and derivative, and nonatomicity gives a $C^1$ extension satisfying $\\phi+\\phi''=\\psi\\nu$ distributionally on the circle. Each prescribed support functional applied to $(v_z\\phi)_z$ adds a homogeneous linear equation in $\\psi$. Use more disjoint positive-measure sets than the total number of equations and solve for their piecewise constant density values. There is a nonzero solution and hence a nonzero signed measure $\\psi\\nu$.\n\nSet $\\delta h_z=v_z\\phi$. The perturbed curvature measures $R_z\\pm t v_z\\psi\\nu$ are nonnegative for small $t$ by domination, so the functions are supports by the planar curvature characterization in 6ae2eb173ed91aee. Their bodies retain positive inballs by uniform closeness of supports. Every active-pattern row is unchanged, and the remaining rows keep their positive guard margins for small $t$. Outside the guard the perturbation is zero. This proves simultaneous feasibility and annihilation of the chosen functionals.\n\nFor any $z$ with $v_z\\ne0$, the nonzero measure $R_z$ cannot be supported inside an interval of length less than $\\pi$: integration by parts gives $\\int (\\cos\\theta,\\sin\\theta)\\,dR_z=0$, whereas all directions in that interval have strictly positive component along its midpoint direction. Thus there is old curvature mass outside the perturbation interval. If $\\delta h$ were a scalar multiple of $h$ modulo any linear translation family, applying $1+\\partial_\\theta^2$ would make the curvature variation the same scalar multiple of $R_z$; its vanishing on the outside mass forces that scalar to be zero. This contradicts $v_z\\psi\\nu\\ne0$. Hence the symmetric decomposition into the two perturbed supports is nontrivial even in the quotient.\n",
+  "source_candidate_ids": [
+    "ee45cff6caf4ae87"
+  ],
+  "source_candidate_sha256": {
+    "ee45cff6caf4ae87": "22a729e42b8c80020e6bb7296f390d58a4d1e4e21541f12eb7d5f23d1f8f042e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ee45cff6caf4ae87",
+      "locator": "ee45cff6caf4ae87:01 Cone and statement; Proof; Exact limit"
+    }
+  ],
+  "statement": "On a fixed finite base with finitely many extreme anchored Jensen inequalities, a compatible family h_z of positive planar convex support functions with any nonzero nonatomic curvature cannot span an extreme ray of the compatible support cone, even modulo translations. For any finite list of continuous linear support-function functionals there is a nonzero δh supported in a normal interval of length <π, annihilating all the listed functionals, with h±tδh still compatible convex support families for all sufficiently small t>0. The perturbation is not a scalar multiple of h modulo translations.",
+  "subgoal_id": "pk-intake-diffuse-curvature-nonextremality-of-planar-compatible-supports",
+  "title": "Nonatomic curvature rules out an extreme ray of compatible planar supports"
+}

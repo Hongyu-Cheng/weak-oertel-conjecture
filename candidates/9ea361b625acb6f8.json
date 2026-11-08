@@ -1,0 +1,26 @@
+{
+  "advances": "A diagnostic for one active cap under exact Minkowski equality and a complete simplex base with one interior lattice point.",
+  "author": "PK-research-agent",
+  "candidate_id": "9ea361b625acb6f8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.330890+00:00",
+  "depends_on": [],
+  "draft_key": "simplex-base-strip-saturation-alternative",
+  "kind": "lemma",
+  "proof": "For fixed $u$, the objective is differentiable in $a$. The two kernel breakplanes have zero $d$-volume in each fiber, and the difference quotients are bounded since the fibers and base set are compact. The derivative in direction $a'$ is $\\sum_z S_z\\,a'\\cdot(z-p)$. At a minimum it vanishes. The matrix with columns $v_j-p$ has rank $n$ and its kernel is spanned by the strictly positive $\\alpha$, proving the rank formula.\n\nIf all outside strips have volume zero, each outside capture is identically zero or identically one. Otherwise the interior of the full-dimensional convex fiber has a point whose margin lies in the open transition interval, giving positive strip volume. If every outside capture were zero, then $h_{K_{v_j}}(u)\\le c_{v_j}-h$ for all $j$, where $h_K$ denotes a support function. Averaging and using the exact Minkowski equality gives $h_{K_p}(u)\\le c_p-h=u\\cdot y-b-h$, impossible for the interior point $y$.\n\nFor a chosen vertex $v_i$, let $\\ell_i$ be its affine barycentric coordinate on the base simplex. The linear margin in $z-p$ given by $\\ell_i(z)-\\ell_i(p)$ is strictly positive at $v_i$ and strictly negative at every other vertex. A sufficiently large finite multiple dominates the bounded continuous margins and the strip width on every outside fiber. It therefore captures exactly that vertex fully, leaves the own contribution unchanged, and misses every other outside fiber. Choosing a minimum-volume vertex bounds every minimizing cap's outside mass by $V_{\\min}$. In the zero-strip case, at least one whole outside fiber is captured, so equality and exactly one cheapest captured vertex follow, with the stated retargeting.\n",
+  "source_candidate_ids": [
+    "185cda33ce4bd35f"
+  ],
+  "source_candidate_sha256": {
+    "185cda33ce4bd35f": "29713c99981a1ac95694aa7c8ecdd1e980a0282220c6c3bbf128913243a6826a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "185cda33ce4bd35f",
+      "locator": "185cda33ce4bd35f:01 §§1–2, (1)–(2) and saturation branch"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$. The complete integer base consists of affinely independent vertices $v_0,\\ldots,v_n$ and their strict convex combination $p=\\sum_j\\alpha_jv_j$, $\\alpha_j>0$, $\\sum_j\\alpha_j=1$. All fibers are positive-volume convex bodies, and $K_p=\\sum_j\\alpha_jK_{v_j}$. Fix a source $(p,y)$, $y\\in\\operatorname{int}K_p$, width $h>0$, buffer $b\\ge0$ and a nonzero continuous normal $u$ in the fixed width normalization. Consider an actual minimizing cap through this buffered source with base normal $a$ (it suffices to minimize over all $a$ at fixed $u$). Its threshold on $K_z$ is $c_z=u\\cdot y-a\\cdot(z-p)-b$. Outward uniform smoothing assigns capture $\\min(1,\\max(0,1+(u\\cdot x-c_z)/h))$ at $x\\in K_z$. Put $E_z=K_z\\cap\\{c_z-h<u\\cdot x<c_z\\}$ and $S_z=|E_z|/h$.\n\nThen $S_{v_j}=t\\alpha_j$ for some $t\\ge0$. If $t=0$, exactly one outside fiber of smallest volume $V_{\\min}=\\min_j|K_{v_j}|$ is fully captured, and all other outside captures vanish. Every minimizing cap has outside mass at most $V_{\\min}$. At $t=0$ the cap can be retargeted to any fixed minimum-volume vertex at finite base tilt without changing $u$, own capture, or total mass. Thus a positive deficit of actual outside mass from $V_{\\min}$ forces a positive strip on every outside fiber.",
+  "subgoal_id": "pk-intake-simplex-base-strip-saturation-alternative",
+  "title": "A simplex base with exact Minkowski fibers has an all-or-none outside strip pattern"
+}

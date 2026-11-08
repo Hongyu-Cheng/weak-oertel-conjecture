@@ -1,0 +1,28 @@
+{
+  "advances": "A conditional matrix bound, including the cap-plus-section measure and singular base or normal covariance.",
+  "author": "PK-research-agent",
+  "candidate_id": "6ce40cc1968713f9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:01:59.473521+00:00",
+  "depends_on": [
+    "93e0ccac55e8bca3"
+  ],
+  "draft_key": "pk-w35-normality-affine-residual-covariance",
+  "kind": "lemma",
+  "proof": "For a null vector $w$ of $G$, $w\\cdot q=0$ almost everywhere and hence $Bw=0$. Therefore the residual $R=x-BG^+q$ is orthogonal in second moments to $q$, and its second moment is $R_x$ by expanding the product. This also gives the least-squares affine regression. Its cross moment with $U$ is $Q$ by the assumed zero affine-base moment. For a null vector $w$ of $A$, $w\\cdot U=0$ almost everywhere and hence $Qw=0$. Now, for any $v$, minimizing the nonnegative integral $\\int(v\\cdot R-w\\cdot U)^2\\,d\\nu$ over $w$ gives $v^T(R_x-QA^+Q)v\\ge0$ by completing the square. Finally $\\operatorname{tr}Q=\\int R\\cdot U\\,d\\nu$, so Cauchy–Schwarz and $|U|=1$ give the trace inequality. For the labeled cap-plus-section measure the zero force and base force are exactly the zero cross moment with $q$, and the source tensor identity gives $Q$ and its trace.\n",
+  "source_candidate_ids": [
+    "da91e18223378a53"
+  ],
+  "source_candidate_sha256": {
+    "da91e18223378a53": "54e4b78fcec96c84a3a4253e4190b3b35ec30ca7caa40732b21c64edf68b1966"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "da91e18223378a53",
+      "locator": "da91e18223378a53:04 §6, (13)–(15), affine residual covariance"
+    }
+  ],
+  "statement": "Let $\\nu$ be a finite positive measure on labeled points $(i,z,x)$ with finite second moments, unit label vector $U=u_i$, and total mass $W$. Write $q=(1,z)$, and suppose $\\int qU^T\\,d\\nu=0$ and $\\int xU^T\\,d\\nu=Q$ with $Q=Q^T$. Put\n$$\nG=\\int qq^T\\,d\\nu,\\quad B=\\int xq^T\\,d\\nu,\\quad E=\\int xx^T\\,d\\nu,\\quad A=\\int UU^T\\,d\\nu,\\quad R_x=E-BG^+B^T\n$$\nwith Moore–Penrose inverses. Then $R_x\\succeq QA^+Q$ and $(\\operatorname{tr}Q)^2\\le W\\operatorname{tr}R_x$. In the unframed stress setting the measure with label contributions $\\mu|_{H_i}+r_i\\,d\\tau_i$ satisfies these hypotheses and $\\operatorname{tr}Q=v(\\tau)$.",
+  "subgoal_id": "pk-intake-pk-w35-normality-affine-residual-covariance",
+  "title": "Affine residual covariance controls a balanced cap tensor"
+}

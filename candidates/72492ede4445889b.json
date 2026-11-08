@@ -1,0 +1,30 @@
+{
+  "advances": "Refutes variance-cone generation and one-dimensional homothetic rigidity from algebraic positivity and a positive null vector alone. Actual smooth fibers realize the nullspace.",
+  "author": "PK-research-agent",
+  "candidate_id": "72492ede4445889b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.170030+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-psd-grid-jensen-variance-obstruction",
+  "kind": "counterexample",
+  "proof": "Coordinate-line midpoint equalities determine each row by its two endpoint values and each column by its two endpoint values. Consequently the grid values are the bilinear interpolation of the four corners, of the form $a+bx+cy+fxy$. The midpoint equality on the diagonal from $(-1,-1)$ to $(1,1)$ forces $f=0$. Conversely every affine array preserves every anchored convex combination.\n\nFor either weight row the total is zero, and the first moment is zero by opposite symmetry. The second moments in the order $x^2,xy,y^2$ are $(1+1-1,1+1,4+1-1)=(1,2,4)$ for $W$ and $(3-2,5/2-1/2,3+1)=(1,2,4)$ for $W'$. Expansion on $L$ gives $(b+2c)^2$ and the stated two-dimensional nullspace.\n\nFor a probability vector $\\alpha$ of mean $z$, the anchored variance on $L$ has the quadratic matrix $\\sum_w\\alpha_w(w-z)(w-z)^{\\mathsf T}$ in the slope variables $(b,c)$. Suppose nonnegative multiples of such matrices summed to the target rank-one matrix $(1,2)(1,2)^{\\mathsf T}$. Testing on the perpendicular vector $(2,-1)$ shows that every point carrying positive probability in every positively weighted term lies on the line $z+\\mathbb R(1,2)$. On the integer grid an increment parallel to $(1,2)$ is an integer multiple of $(1,2)$, so any such line contains at most two grid points by its vertical span. A mean equal to the anchor on that line can then put positive weight only at the anchor: if there were one other point the mean would move, and a nontrivial mean at the anchor would require points on both sides. Thus each contributing covariance is zero, contrary to the rank-one target. This argument excludes a decomposition of the form on $L$ even if diagonal coefficient identities vanishing on $L$ are permitted. Positive scaling preserves the same obstruction.\n\nFor the geometric realization write $u_\\theta=(\\cos\\theta,\\sin\\theta)$. At any base $(x,y)\\in[-1,1]^2$ the proposed $h$ has $h+h''=R-3\\varepsilon(2x-y)\\cos(2\\theta)>0$. To see explicitly that this gives a support function, use the curve $X(\\theta)=h(\\theta)u_\\theta+h'(\\theta)u_\\theta'$ whose derivative is $(h+h'')u_\\theta'$. For any $\\varphi$ the derivative of $u_\\varphi\\cdot X(\\theta)$ has sign $\\sin(\\varphi-\\theta)$, so the unique maximum in a period occurs at $\\theta=\\varphi$ and equals $h(\\varphi)$. The convex hull has that support function, its boundary is this smooth strictly convex curve, and its radius of curvature at normal $u_\\theta$ is $h+h''$. The support bounds are uniformly positive and uniformly bounded, so the body is full-dimensional and bounded. The intersection over $\\theta$ of the halfspaces $u_\\theta\\cdot X\\le R+\\varepsilon(2x-y)\\cos(2\\theta)$, restricted to the base square, is itself compact and convex and has exactly these bodies as fibers. At each angle $h$ is affine in $(x,y)$, so every anchored support relation holds with equality. The curvature array has the required nullspace form. If two fibers were related by a positive homothety and a translation, the constant Fourier coefficient $R$ would force scale one, and a translation contributes only a first harmonic. Distinct $2x-y$ give distinct second harmonics, ruling this out. This realizes the algebraic stress nullspace in actual fiber geometry.\n",
+  "source_candidate_ids": [
+    "d056b64d0007e48a"
+  ],
+  "source_candidate_sha256": {
+    "d056b64d0007e48a": "ee42718a3b6ee4f84845e2d7dd3be3ba0e583ac1374891f4518bb9eba9925cc1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d056b64d0007e48a",
+      "locator": "d056b64d0007e48a:01 §§1–2, (1), and the positive-extreme-weight variant"
+    },
+    {
+      "candidate_id": "d056b64d0007e48a",
+      "locator": "d056b64d0007e48a:02 §3, positive nullspace with nonhomothetic actual compatible arcs"
+    }
+  ],
+  "statement": "Let $P=\\{-1,0,1\\}^2$ and $L$ be the space of real arrays on $P$ that satisfy every anchored Jensen equality. Then $L$ consists of the arrays $v_{(x,y)}=a+bx+cy$. Give each of the two sites of a displayed opposite pair the listed weight:\n$$\n\\begin{array}{c|rrrrr}\n&(\\pm1,0)&(0,\\pm1)&(0,0)&(1,1),(-1,-1)&(1,-1),(-1,1)\\\\ \\hline\nW&1/2&2&-5&1/2&-1/2\\\\\nW'&-1&1/2&-2&5/4&1/4\n\\end{array}\n$$\nBoth diagonal quadratic forms on $L$ equal $(b+2c)^2$, hence are positive semidefinite and have the strictly positive null vector $v\\equiv1$. In the second assignment all extreme site weights are strictly positive. Neither form can be a nonnegative linear combination on $L$ of the variances $\\sum_w\\alpha_w v_w^2-v_z^2$ for probabilities $\\alpha$ on $P$ of mean $z\\in P$. The obstruction persists after any positive scaling, including $W/2$ or $4W'/5$ to enforce an upper weight bound of one.\n\nThe common nullspace on $L$ is $\\{v_{(x,y)}=a+t(2x-y)\\}$, of dimension two. For $R>9\\varepsilon>0$, the planar support functions $h_{(x,y)}(\\theta)=R+\\varepsilon(2x-y)\\cos(2\\theta)$ over the entire square $[-1,1]^2$ give actual compatible smooth strictly convex fibers. On $P$ their curvature vectors are strictly positive and lie in the fixed stress nullspace at every angle. Fibers with different $2x-y$ are not homothetic translates.",
+  "subgoal_id": "pk-intake-pk-w36-psd-grid-jensen-variance-obstruction",
+  "title": "A diagonal PSD Jensen stress outside the anchored variance cone"
+}

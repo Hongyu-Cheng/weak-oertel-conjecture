@@ -1,0 +1,30 @@
+{
+  "advances": "Intrinsic lower-dimensional transfer and maximal-stratum mass bound; the ratio of maximal-stratum mass to total mass remains for unequal fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "4e6a79b213537299",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:57:44.472294+00:00",
+  "depends_on": [
+    "8c184887a7947b64",
+    "f4547c4166b39683",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "maximal-intrinsic-stratum-centroid-depth",
+  "kind": "theorem",
+  "proof": "The nonempty integer fibers form a finite disjoint union. Thus $q$ is their maximum affine dimension and $M$ is their summed $\\mathcal H_q$-measure, positive and finite. By the maximal intrinsic-volume centroid graph lemma, the midpoint of any distinct same-base-parity centroid marks belongs to the graph. Give all marks weight one and use f4547c4166b39683 with the occupied base parity labels. There are at most $2^n$ labels, so the theorem selects one actual mark $y$ for which every containing closed ambient halfspace retains at least $|P_{\\max}|/2^n$ marks. The finite theorem includes the singleton case, hence also $n=0$.\n\nEach retained centroid mark gives at least $\\gamma_q a$ of intrinsic mass in its fiber. If $q>0$ and the ambient halfspace is nonconstant in the affine span of that fiber, apply 6769574fc1bd9f8d with continuous dimension $q$ and full mass $a$, identifying the affine span isometrically with $\\mathbb R^q$. Its full-mass metronoid is the centroid. A constant trace containing the centroid retains the whole fiber, including when the entire fiber is on the ambient boundary. When $q=0$ the corresponding contribution is exactly one. Sum these lower bounds over retained marks; all other contributions are nonnegative. This proves the raw bound.\n\nFinally $\\gamma_j$ decreases with $j\\ge1$, since $x\\log(1+1/x)$ is increasing for $x>0$ by $\\log(1+t)>t/(1+t)$ for $t>0$. Also $\\gamma_0=1\\ge\\gamma_1$. Divide by $M$ and use $q\\le d$. For $q=0$ all nonempty fibers are singletons, so $M=M_{\\max}$.\n",
+  "source_candidate_ids": [
+    "7abc09359a7966ea"
+  ],
+  "source_candidate_sha256": {
+    "7abc09359a7966ea": "b72738ab139c15d20eb6ad6773a8c50f8744586e07c204e4eec0b47eabb33025"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "7abc09359a7966ea",
+      "locator": "7abc09359a7966ea:04 §§6–7, (1)–(2), with §1 measure identities"
+    }
+  ],
+  "statement": "Use the maximal intrinsic-volume centroid graph setup: $C\\subset\\mathbb R^n\\times\\mathbb R^d$ is compact and convex with nonempty mixed trace $S$, $n,d\\ge0$, $n+d\\ge1$, $q=\\dim_H S$ is the maximum integer fiber dimension, and $a>0$ is the maximum fiber $\\mathcal H_q$-volume. Put $M=\\mathcal H_q(S)$ and $M_{\\max}=a|P_{\\max}|$, where $P_{\\max}$ is the set of bases attaining $a$. Write $\\gamma_0=1$ and $\\gamma_j=(j/(j+1))^j$ for $j\\ge1$. There is an actual centroid $y$ in a maximum-volume fiber such that every closed ambient halfspace $H$ containing $y$ satisfies $\\mathcal H_q(S\\cap H)\\ge 2^{-n}\\gamma_q M_{\\max}$. Consequently the normalized depth is at least $2^{-n}\\gamma_q M_{\\max}/M\\ge 2^{-n}\\gamma_d M_{\\max}/M$. If all positive intrinsic fiber volumes are equal this gives $2^{-n}\\gamma_q$. In particular for $q=0$, including $d=0$, it gives normalized counting depth $2^{-n}$.",
+  "subgoal_id": "pk-intake-maximal-intrinsic-stratum-centroid-depth",
+  "title": "Depth at a centroid in a maximal intrinsic-volume fiber"
+}

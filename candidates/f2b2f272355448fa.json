@@ -1,0 +1,35 @@
+{
+  "advances": "Conditional payment for prescribed closed traces on actual exposed fibers. It gives no automatic endpoint core or simultaneous decrease for unrestricted families.",
+  "author": "PK-research-agent",
+  "candidate_id": "f2b2f272355448fa",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:52:09.419706+00:00",
+  "depends_on": [
+    "d90ba05577427854",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "endpoint-trace-core-payments",
+  "kind": "theorem",
+  "proof": "Consider $K=K_p$ and $c=c_p$. By d90ba05577427854 choose the attained positive affine denominator $L(x)=1+a\\cdot(x-c)$ minimizing $\\int_KL^{-d-1}\\,dx$. The image $K'$ under $T(x)=(x-c)/L(x)$ is a compact convex body, since the positive fractional-linear map and its inverse send segments to segments. Its Jacobian is $L^{-d-1}$. The first-moment identity of that fact gives $\\int_{K'}u\\,du=\\int_K(x-c)L^{-d-2}\\,dx=0$. In particular, by 6769574fc1bd9f8d with $m=|K'|$, every closed halfspace containing its centroid $0$ captures at least $\\gamma_d|K'|$.\n\nLet $\\delta=\\min_K L>0$ and let $f(t)$ agree with $t^{-d}$ on $[\\delta,\\infty)$ and with its tangent at $\\delta$ on $(-\\infty,\\delta]$. This is finite, positive and convex on the real line. Define $\\Psi(n,x)=h_{K-c}(n)f(L(x))$. The support factor is strictly positive and continuous for unit $n$, so $\\Psi$ is finite continuous and convex in $x$ for each $n$. On $\\partial K$ it is the outward flux of $F(x)=(x-c)L(x)^{-d}$, whose divergence is $dL(x)^{-d-1}$. For a through-$c$ halfspace its cutting plane has zero flux since $x-c$ is tangent. The plane cuts the interior, and its intersection with the old boundary is the relative boundary of the section and is surface-null. Gauss–Green therefore gives weighted old-boundary mass $d|K'\\cap H'|$ for the corresponding central halfspace $H'$. The projective map preserves through-$c$ affine signs after translation since its denominator is positive. The whole-boundary mass is $d|K'|>0$. For $d=1$ this is the endpoint form of the same flux identity. Every closed halfspace containing $c$ contains its parallel through-$c$ halfspace, so the bound $\\gamma_d$ also holds for that original trace, including whole-fiber traces.\n\nFor $p=0$ let $\\ell(z)=-z$, and for $p=3$ let $\\ell(z)=z-3$. The field $[\\Psi(n,x)+B\\ell(z)]_+$ agrees with $\\Psi$ on the paying boundary and vanishes on the three others for a sufficiently large finite $B$, since their base gaps are strictly negative and $\\Psi$ is bounded on the compact collection of marked boundaries. This field is convex in $(z,x)$ and jointly continuous. Each cap trace receives the bound separately, hence so does each probability mixture. Normalize the two denominators to one and add; the cross contributions are nonnegative, giving both asserted ratios.\n",
+  "source_candidate_ids": [
+    "2d9458b5433d0a83",
+    "57984994edf4161f"
+  ],
+  "source_candidate_sha256": {
+    "2d9458b5433d0a83": "fbeb0469394bcf7badd652f7fd8c8babf029d3be90dfc6c9b5bc11a737430393",
+    "57984994edf4161f": "c1a9916e13d834b83c36cb67461b2e8b2503044b86370142fc5549e6942f14f8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "57984994edf4161f",
+      "locator": "57984994edf4161f:02 §2, endpoint cores and (1)"
+    },
+    {
+      "candidate_id": "2d9458b5433d0a83",
+      "locator": "2d9458b5433d0a83 §§2–4, arbitrary interior mark and inverse-power cap flux"
+    }
+  ],
+  "statement": "Let positive compact convex $d$-bodies $K_0,K_1,K_2,K_3$, $d\\ge1$, be actual sampled fibers over $0,1,2,3$. Take two finite nonempty ambient cap menus such that every trace of the first menu at $0$ contains one common point $c_0\\in\\operatorname{int}K_0$ and every trace of the second menu at $3$ contains one common point $c_3\\in\\operatorname{int}K_3$. The traces are closed and the chosen point can lie on their planes. Write $W_0,W_3$ for the probability-weighted closed-cap indicator profiles on the actual marked fiber boundaries, and let $\\eta$ be their summed surface measure with endpoint counting for $d=1$. Put $\\gamma_d=(d/(d+1))^d$.\n\nFor each $p\\in\\{0,3\\}$ there is a globally finite nonnegative continuous field $\\Phi_p(n,z,x)$, convex in the physical variables $(z,x)$ at each unit normal $n$, which vanishes on the other actual fiber boundaries and has $\\int\\Phi_p\\,d\\eta>0$. It satisfies $\\int W_p\\Phi_p\\,d\\eta\\ge\\gamma_d\\int\\Phi_p\\,d\\eta$ for every probability weighting of the relevant menu. After normalizing each denominator to one, their sum is one field of denominator two and pays at least $\\gamma_d/2$ in ratio against each menu simultaneously.",
+  "subgoal_id": "pk-intake-endpoint-trace-core-payments",
+  "title": "A common interior endpoint trace gives a simultaneous boundary payment"
+}

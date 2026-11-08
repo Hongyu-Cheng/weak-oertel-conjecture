@@ -1,0 +1,28 @@
+{
+  "advances": "A selected whole-space covering tuple with actual moving caps. Its budgets need not be maximum depth, and open actual compatibility is a separate hypothesis.",
+  "author": "PK-research-agent",
+  "candidate_id": "2f0c56ce3b16fda1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.934771+00:00",
+  "depends_on": [
+    "e42e4ad8eaa4f705"
+  ],
+  "draft_key": "actual-moving-cap-first-stress",
+  "kind": "lemma",
+  "proof": "The cap identity replaces just the selected fiber's old trace at the current parameter by its new trace. Lattice completeness and the assumed open compatibility chart keep the same actual fibers and no extra sampled bases. The volume and canonical physical derivative are those of e42e4ad8eaa4f705 on the selected fiber at $\\theta=0$. The sum of all row sums of a zero-column-sum matrix is zero, giving the trace identity. Writing $Z=\\sum_i z_i$, the displayed $\\mathcal R(y)$ has column sums zero, trace $Z$, and row sums $mz_i-Z$. Substitution verifies $f(\\mathcal R(y))=y$ and the asserted trace formula.\n\nChoose $\\eta$ with $\\ell\\cdot DG(0)[\\eta]<0$ and put $g=DG(0)[\\eta]$. The joint velocity $(\\mathcal R(-g),\\eta)$ has zero first cap derivative and positive mass derivative $-\\ell\\cdot g$. In the physical subspace $\\mathcal R(\\mathbb R^m)$ the derivative of $c(I+\\mathcal R(y),t\\eta)$ in $y$ at $(0,0)$ is the identity. The implicit function theorem gives $y(t)$ with $y'(0)=-g$ and all cap changes exactly zero. Alternatively take the straight velocity $(\\mathcal R(-g-\\varepsilon\\mathbf1),\\eta)$ with $0<\\varepsilon<-\\gamma\\,\\ell\\cdot g$. The individual cap derivatives are $-\\varepsilon$ and the mass derivative is $-\\ell\\cdot g-\\varepsilon/\\gamma>0$. For sufficiently small positive time this path lies in the actual compatible chart, keeps the cover, and gives the strict changes.\n",
+  "source_candidate_ids": [
+    "9040ddab36f28107"
+  ],
+  "source_candidate_sha256": {
+    "9040ddab36f28107": "a3393801ac6a366a69b7d2ac8cdb2f03b760aaea20f227be2dee91241e904d18"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9040ddab36f28107",
+      "locator": "9040ddab36f28107:01 §1, (1)–(4) and the nonzero first-stress paragraph"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $m=d+1$, and $\\gamma=(d/m)^d$. Take a finite, lattice-complete compatible family of positive $d$-dimensional compact convex fibers with an affine interior section. After translating the section to zero in each fiber, let the selected fiber $p$ be a simplex of volume $V$ centered at zero, with barycentric coordinates $\\xi_i$. Its canonical caps have traces $\\xi_i\\ge1/m$ at $p$ and the same continuous normals through the section at all bases. Let $H_i(\\theta)$ be a smooth finite-dimensional chart of ambient cap tuples covering the whole space for every $\\theta$ near zero, with the canonical tuple at zero. Write $F_i(W,\\theta)$ for the cap volume on the moving selected simplex with labeled barycentric vertex matrix $W$ near $I$ (column sums one), and $G_i(\\theta)$ for the sum of the $d$-volumes in $H_i(\\theta)$ on **all original fibers**. Assume these cap functions are $C^2$ near the reference configuration. If only the selected fiber moves, the change in the $i$th global cap budget is\n$$c_i(W,\\theta)=F_i(W,\\theta)-F_i(I,\\theta)+G_i(\\theta)-G_i(0),$$\nand total mixed mass changes by $V(\\det W-1)$.\n\nOn zero-column-sum matrices $B$ the physical cap derivative is $f_i(B)=V\\gamma[\\operatorname{tr}B+(B\\mathbf1)_i]$. It has the right inverse $\\mathcal R$ given, for $y\\in\\mathbb R^m$, by $z_i=y_i/(Vm\\gamma)$ and\n$$\\mathcal R(y)_{ii}=z_i,\\qquad \\mathcal R(y)_{ij}=z_i-\\frac{\\sum_k z_k}{d}\\quad(i\\ne j).$$\nSet $\\ell_i=1/(m\\gamma)$. Then $V\\operatorname{tr}B=\\ell\\cdot f(B)$ for every $B$ and $V\\operatorname{tr}\\mathcal R(y)=\\ell\\cdot y$. If the physical compatibility chart is open at $I$ and $\\ell\\cdot DG(0)$ is a nonzero functional, a local actual path increases total mixed mass and strictly decreases every selected global cap budget. There is also an increasing-mass path keeping all selected budgets exactly constant.",
+  "subgoal_id": "pk-intake-actual-moving-cap-first-stress",
+  "title": "First stress for an actual moving canonical cap tuple"
+}

@@ -1,0 +1,36 @@
+{
+  "candidate_id": "506e246f680da4b5",
+  "candidate_sha256": "e998f15ec065dc0a96a2729002676d298a57e43ff7c6d9a714f4060a9ba6f724",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For each s≥0, the increment log k(t+s)−log k(t) is nonincreasing on t>0. Integrating its exponential in s makes S/k nonincreasing, so the hazard is nondecreasing. Integrating from s to s+t and comparing with the integral from 0 to t gives S(s+t)≤S(s)S(t); endpoints follow from S(0)=1.",
+    "Integrability supplies a strictly descending secant of log k; concavity bounds the right tail by its affine continuation, so the moments are finite. Tonelli gives ∫∫S(s+t)dsdt=∫uS(u)du=E[X²]/2. Equality makes the continuous nonnegative deficit vanish pointwise; −log S is then continuous and additive, so the survival law is exponential with a strictly positive rate. Exponentials attain equality.",
+    "On every compact interval of positive a, the derivative integrands through order two are dominated by an integrable polynomial times an exponential. Differentiating ψ=a/M₀ cancels the two terms linear in M₁, giving (2M₁²−M₀M₂)/(a³M₀³). The normalized tilt is a positive log-concave probability density, so the numerator is nonnegative.",
+    "The substitution t=as and boundedness of h give M₀(a)/a→h(0)=1 by dominated convergence. If ψ″=0 at any a, equality for the tilted law makes h exponential on the entire half-line by continuity, and integrability forces a positive decay rate α. Then ψ′=α>0. Otherwise ψ″>0 everywhere; the endpoint limit and a strict secant comparison give ψ′(a)>(ψ(a)−1)/a, including when ψ(a)=1.",
+    "The exact pinned source candidate 8704554a92158bfc matches its declared digest. Section 1, (1)–(3), supplies the same hazard proof, equality, derivatives, and threshold. The candidate makes moment finiteness explicit; no subsequent signed-cap facts are used."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T08:43:59.505005Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof already establishes Var(X)≤(EX)² for a nonnegative variable with a log-concave density, which is precisely the non-strict moment inequality here. It also uses the reciprocal exponential-tilt differentiation in a specific budget model. In general, with R(θ)=1/∫e^{θt}h(t)dt, ψ(a)=aR(−1/a) has ψ″(a)=R″(−1/a)/a³, so the accepted moment bound implies convexity by the same mechanism. The exponential equality characterization and strict derivative conclusion from ψ(a)≥1 are not supplied by that fact.",
+      "fact_id": "5fa48a554f30f367"
+    }
+  ],
+  "readability": "The density need only be continuous in the interior for the survival argument; all endpoint use goes through S(0)=1. The possible linear case for ψ is handled separately and correctly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "5fec4c17b070afe8db47205756e1fdd8df014d4e956bc991241605fecb4a0c32",
+  "reviewed_statement_sha256": "a4e5b0aaf2e1cdd12c887515e2e02a477a8ec997a96439b16257801c4d348214",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:39:25Z",
+  "summary": "The hazard argument gives the half-line second-moment inequality with exponential equality. Differentiating the reciprocal transform gives the stated convexity, and the equality and strict-convexity alternatives both give the strict derivative test, including at ψ(a)=1.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

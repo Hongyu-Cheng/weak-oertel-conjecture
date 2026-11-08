@@ -1,0 +1,26 @@
+{
+  "advances": "Obstruction to a universal mass-only reduction through proper affine pieces of smaller integer rank.",
+  "author": "PK-research-agent",
+  "candidate_id": "f78a1c8059b14618",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:53:06.251518+00:00",
+  "depends_on": [],
+  "draft_key": "six-fiber-affine-piece-cover-cost",
+  "kind": "counterexample",
+  "proof": "The inequalities $z_1,z_2\\ge0$ and $z_1+z_2\\le2$ give exactly the three vertices and three edge midpoints as integer sites. A nonzero integer normal $(a,b)$ has range at least two on the values $0,2a,2b$, attained for $(a,b)=(1,0)$. The hull of the vertex fibers contains $Q\\times[-1/5,1/5]$, giving full dimension. At a vertex only generators over that vertex can enter a convex representation. At a midpoint, expose its edge. Only its own interval and the two vertex intervals on that edge can contribute, with equal coefficients on the vertices. The mean of the vertex intervals is $[-1/5,1/5]$, contained in every prescribed midpoint interval under either choice. This proves the exact fiber census. An affine centroid map vanishing on the three noncollinear vertices would vanish on the entire base plane, impossible for the shifted midpoint centers.\n\nThe total length is $3(2/5)+3=21/5$. For the line census, a line through two distinct vertices is an edge line. A line through two distinct midpoints is parallel to the third edge and has no vertex of $Q$, as is seen from the three equations $z_1=1$, $z_2=1$, $z_1+z_2=1$. Three midpoints are noncollinear. Thus a line containing three sites must be an edge line, with mass $2(2/5)+1=9/5$, whereas any other line contains at most two sites and has mass at most two. The midpoint lines attain two and a midpoint alone attains one. For each piece $A_i$ of rank $r_i$, its mass is therefore at most $2^{r_i}$. Multiplying the fractional coverage inequality at each base by that fiber's length and summing gives $21/5\\le\\sum_i c_i\\mu(A_i\\times\\mathbb R)\\le\\sum_i c_i2^{r_i}$. This also excludes any single rank-$r$ piece with mass at least $M2^{r-2}$.\n",
+  "source_candidate_ids": [
+    "a2d8387873f96488"
+  ],
+  "source_candidate_sha256": {
+    "a2d8387873f96488": "bedd9782021056c2524d0ba76d04337008fe6f0afef767bc1338c2006e028a87"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a2d8387873f96488",
+      "locator": "a2d8387873f96488:01 Main construction, lattice census, mass inequalities and fractional-cover paragraph; nonaffine variant"
+    }
+  ],
+  "statement": "Let $Q=\\operatorname{conv}\\lbrace(0,0),(2,0),(0,2)\\rbrace$. In $\\mathbb R^2\\times\\mathbb R$, form the convex hull of the three vertex intervals $[-1/5,1/5]$ and unit-length intervals at the three edge midpoints $(1,0),(0,1),(1,1)$. Take the midpoint interval centers to be either all zero or, respectively, $1/4,-1/4,0$. Both hulls are full-dimensional convex bodies with these exact six nonempty integer fibers, and the second has a nonaffine fiber-centroid map. The base hull $Q$ has lattice width two and no interior lattice point. The total mixed length is $M=21/5$. Every rank-zero base affine piece contains mass at most $1<M/4$, and every rank-one base affine piece contains mass at most $2<M/2$. Both maxima are attained.\n\nMore generally, for any finite fractional cover by proper base affine pieces of ranks $r_i\\in\\lbrace0,1\\rbrace$, with coefficients $c_i\\ge0$ summing to at least one over each sampled base, the cost obeys $\\sum_i c_i2^{r_i}\\ge21/5>4$.",
+  "subgoal_id": "pk-intake-six-fiber-affine-piece-cover-cost",
+  "title": "A six-fiber obstruction to the lower-rank affine-piece cover budget"
+}

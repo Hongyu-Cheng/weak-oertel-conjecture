@@ -1,0 +1,28 @@
+{
+  "advances": "Exact minimal mixed cover and a failure of arbitrary fixed-projected-margin section motion; no equal critical-depth budget is assumed.",
+  "author": "PK-research-agent",
+  "candidate_id": "430dc4f991e38889",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:55:51.876748+00:00",
+  "depends_on": [
+    "ae0c05d01cb1d8d2"
+  ],
+  "draft_key": "pk-w33-five-cap-shared-original-obstruction",
+  "kind": "counterexample",
+  "proof": "Each group has a positive dependence with all coefficients equal and has continuous rank two. Substitution of the stated $q_A,q_B$ makes all margins within each group equal to the stated $F_A,F_B$. Thus $A$ covers every plane at $z\\le0$ and $B$ covers every plane at $z\\ge1$. Set $e=1/20$. For the shared cap and the two private caps in $A$, respectively use\n$$\n(0,e,-e/2),\\qquad (0,-e,2e),\\qquad (0,-e,-e).\n$$\nFor the two private caps in $B$, respectively use $(1,-e,-2e)$ and $(1,-e,e)$. Substitution makes the named margin strictly positive and all four other original margins strictly negative in each case. These points lie in the interior of their square fibers, so each original is necessary even for coverage up to null sets.\n\nThe new continuous normal $(a,b)$ of the shared cap must satisfy the shared-coordinate identity for $A,B$. Since $q'_A-q'_B=(1-2z+t,0)$ and $F_A-F_B=1-2z$, it reads\n$$\na(1-2z+t)=1-2z\\quad\\text{for every real }z.\n$$\nComparing coefficients gives $a=1$ and then $t=0$. At zero the shared matrix has image spanned by $(-2,1)$ in coefficient order $(z,1)$, whereas the proposed motion has first-order right side $(0,-1)$. For the path with $t^2$ the first-order data are zero, but the same exact identity forces $t=0$.\n\nIf $F_A$ is allowed to change, keeping the shared cap fixed instead permits $F'_A=-z+t$. For $t\\ge0$ the original integer assignment persists. For $t<0$ small, at $(z,x,y)=(0,t,0)$ all three new $A$ margins are $t<0$ and the two private $B$ margins stay strictly negative when left fixed. The offset repair covers this loss by enlarging the originals.\n",
+  "source_candidate_ids": [
+    "004e194a6aeb29ff"
+  ],
+  "source_candidate_sha256": {
+    "004e194a6aeb29ff": "fcc04795f4204a01946a27a80ff84300de5a807b2b12c4a63667a73cf0d43bfa"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "004e194a6aeb29ff",
+      "locator": "004e194a6aeb29ff:03 §5, (10)–(12), actual five-cap shared-original obstruction"
+    }
+  ],
+  "statement": "In $[0,1]\\times[-1/4,1/4]^2$ with mixed coordinates $(z,x,y)$, the five labeled caps with the following two circuit groups form an inclusion-minimal cover of the mixed source and cover all of $\\mathbb Z\\times\\mathbb R^2$:\n$$\nA=(x,\\ y-z,\\ -x-y-2z),\\qquad\nB=(x,\\ -y+z-1,\\ -x+y+2z-2).\n$$\nHere the displayed entries are margins, with $x$ one shared original. Both groups have two private caps. Their equal-margin sections and margins are $q_A=(-z,0)$, $F_A=-z$, $q_B=(z-1,0)$, $F_B=z-1$. Keeping both projected margins and $q_B$ fixed, no nonzero translation $q'_A=q_A+t(1,0)$ is realizable by the same original labels, even if all cap coefficients may move. Replacing $t$ by $t^2$ gives a prescribed path with feasible zero linearization but no exact realization away from zero.",
+  "subgoal_id": "pk-intake-pk-w33-five-cap-shared-original-obstruction",
+  "title": "Five actual caps can obstruct fixed-margin motion with private normals"
+}

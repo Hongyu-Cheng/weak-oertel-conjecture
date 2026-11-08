@@ -1,0 +1,28 @@
+{
+  "advances": "One-direction exact cap equality on a prescribed homothetic convex family with proper endpoint cuts.",
+  "author": "PK-research-agent",
+  "candidate_id": "b1737542a85a4328",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.062336+00:00",
+  "depends_on": [
+    "9cf77d0f76fb9706"
+  ],
+  "draft_key": "one-direction-captured-bm-on-homothetic-bodies",
+  "kind": "theorem",
+  "proof": "The normalized source threshold is\n$$\nq_0=\\frac{b-u\\cdot v_0}{s}\n=\\sum_j\\frac{\\theta_j a_j}{s}q_j,\n$$\nand is proper. The sum of the actual endpoint caps lies in the source cap. Root equality forces volume equality in this inclusion and equality in ordinary Brunn–Minkowski. For positive weights and positive volumes the cap bodies are pairwise homothetic, since any strict pair bound would remain strict after adding the rest. Normalization by each $a_j,v_j$ preserves the homothety relation. [Brunn–Minkowski inequality for convex bodies, equations (3)–(4)](https://sites.stat.washington.edu/jaw/COURSES/520s/523/HO.523.20/Gardner.BullAMS.02.pdf). If there are unequal thresholds, apply the nested-truncation lemma to the minimum and maximum thresholds to obtain the cone. The normalized volume is strictly decreasing over the interior projection interval by positivity on every open intervening band.\n\nConversely, if the thresholds are all the same, then the normalized cap body is fixed and the weighted sum is exactly the source cap. Otherwise write the lowest cap as $L$ with apex $p$ and height maximum $h=\\max_Du\\cdot x$. For each threshold $q$ between the endpoints, the cap equals $p+\\rho(q)(L-p)$, where $\\rho(q)=(h-q)/(h-\\min_j q_j)$. Its scale is affine in $q$, so $s\\rho(q_0)=\\sum_j\\theta_j a_j\\rho(q_j)$. Along with the corresponding translation equality this gives equality of the actual Minkowski cap sets and of their volume roots.\n",
+  "source_candidate_ids": [
+    "d99f14f216938f2e"
+  ],
+  "source_candidate_sha256": {
+    "d99f14f216938f2e": "5489dc5104f0cf25997af5018a1201ab9516fbbe7af3725a07d115cf6f80e960"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d99f14f216938f2e",
+      "locator": "d99f14f216938f2e:02 §2, (4)–(5)"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $A_j=a_jD+v_j$ for $1\\le j\\le N$, where $D$ is a volume-one convex body, $a_j>0$, and $\\theta_j>0$ sum to one. Put $s=\\sum_j\\theta_j a_j$, $v_0=\\sum_j\\theta_jv_j$, and $K=\\sum_j\\theta_j A_j=sD+v_0$. Fix $H=\\{u\\cdot x\\ge b\\}$ with $u\\ne0$, and write $q_j=(b-u\\cdot v_j)/a_j$. Assume all endpoint cuts are proper, so $\\min_Du\\cdot x<q_j<\\max_Du\\cdot x$. Then\n$$\n|K\\cap H|^{1/d}=\\sum_j\\theta_j|A_j\\cap H|^{1/d}\n$$\nif and only if either all $q_j$ are equal, or they are unequal and the truncation $D\\cap\\{u\\cdot x\\ge\\min_j q_j\\}$ is a cone over its cut section with apex the unique exposed maximum of $u$ on $D$. In each case the actual source cap is the weighted Minkowski sum of the endpoint caps. The normalized endpoint cap fractions are unequal precisely when the thresholds are unequal.",
+  "subgoal_id": "pk-intake-one-direction-captured-bm-on-homothetic-bodies",
+  "title": "Captured-side Brunn–Minkowski equality on a homothetic family"
+}

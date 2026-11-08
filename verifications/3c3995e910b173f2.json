@@ -1,0 +1,61 @@
+{
+  "candidate_id": "b8c28d6d2c3a334a",
+  "candidate_sha256": "e55422672599b9f9ab0e6d836fa46141c75b1abed79b1b4b9bb363fd6ce835fa",
+  "checked_dependency_candidate_sha256": {
+    "0586b032c888ffb0": "043a7ca7161102c01efb1ff638765b756a0b6216ee88d1232a21eb4b6a4831bf",
+    "bb755603257fd80b": "9681d068ee82cc4403d26672176ee53a9126f038368e003f33ef96291f1f8d94"
+  },
+  "checks": [
+    "Matched fe4ccc381e7e406a §§3–4. An interior zero of a concave expression A, A−sv or A+sv with positive value at zero forces positive signs earlier and strictly negative signs later by secant slopes. A root at the top or an uncrossed top sign is retained as a nonnegative top sign. There are at most 2q+2 cells.",
+    "Adding a constant makes each original arm cell nonnegative without changing derivatives. The preserved first moment removes the cross term from the preserved shifted square integral, so all three unshifted records match. The internal one-sided slopes are finite, and nonincrease and a finite later secant bound the initial right slope. The terminal lemma allows an infinite final slope.",
+    "At every join the new left slope is at least the old left slope, and the new right slope is at most the old right slope, so the assembled arms are continuous, concave and nonincreasing. Internal roots stay fixed. Increasing terminal values preserves every uncrossed branch and keeps the sum at the top nonnegative.",
+    "The physical record kernels depend cellwise only on fixed level functions and the stated three weighted moments. For m=1 all coefficients m−1 vanish, eliminating negative powers. The zero sign partition preserves P(0), and retaining each arm’s positivity threshold preserves r(0), hence C(0) and M(0).",
+    "Checked an actual signed profile r(z)=2+z on [−1,1] at slope 1/4 using exact interior-node integration. The branch roots on the signed arm are 8/5, 2 and 8/3. The direct and inverse-record values (V,P,C,M) agree at (4,71/30,32/15,64/225) for m=1 and (26/3,4027/675,1024/225,8192/10125) for m=2. The zero-slope mass also matches.",
+    "The reconstructed nested-section polygon has the original axial interval and nonempty top. Compactness and the concavity chord bound give endpoint continuity even with zero outer heights or a plateau. At most eight curvature locations per cell and at most one extra join per cell give the conservative count."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "0586b032c888ffb0",
+      "candidate_sha256": "043a7ca7161102c01efb1ff638765b756a0b6216ee88d1232a21eb4b6a4831bf",
+      "fact_id": "0586b032c888ffb0",
+      "fact_sha256": "0febb17ea44f43776a949de720914b924c7bbb4888914ad5e68d595531e0cff3",
+      "kind": "accepted",
+      "mapping": "Supplies the exact signed inverse-arm formulas for the physical planar density on any continuous concave profile with positive interior source, including the m=1 and s=0 conventions.",
+      "reviewed_proof_sha256": "f545e4a07be3d67f3a02949d26732e0feb7b6a67364fe07faef20bd7fc6ef196",
+      "reviewed_statement_sha256": "851130219c23e68bd89a20723884379021ca95589847ddfeba7bec3a8a4857fe"
+    },
+    {
+      "candidate_id": "bb755603257fd80b",
+      "candidate_sha256": "9681d068ee82cc4403d26672176ee53a9126f038368e003f33ef96291f1f8d94",
+      "fact_id": "bb755603257fd80b",
+      "fact_sha256": "29458d64b3911f647c709405e00d363e4140ef61aaecf79ee213c6dae0a88e19",
+      "kind": "accepted",
+      "mapping": "After a cellwise constant shift the arm has the required nonnegative, nonincreasing concave form, the weight is continuous and positive in the cell interior, and the left slope is finite. Use internal or terminal endpoint control exactly as stated and undo the constant using the preserved linear integral.",
+      "reviewed_proof_sha256": "53fa482313b78b4f806ae529d0e11ec3df5c8ecb4fde3d2186d1d202212fd084",
+      "reviewed_statement_sha256": "b6179a7e6aa7057abbbbcecc74ad00dde9f66c3f2272fad78549146238d8cbe2"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:52:35Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Assumes r(0)=R, so both arms are nonnegative and each positive slope contributes only the A=sv partition. The frozen extension handles negative upper levels when r(0)<R, both signs of the slope threshold and the source-zero threshold, with the larger stated count.",
+      "fact_id": "17ecac9ec97a847f"
+    }
+  ],
+  "readability": "Curvature locations at the terminal endpoint may encode completed-value slack, so counting them and the joins gives a conservative bound.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the exact frozen statement and proof, original locator comparison, predecessor verification, and exact arithmetic where applicable.",
+  "reviewed_proof_sha256": "f879256133d21e3e536f86506275b2930c8f198599549c82ad5c916e708706cd",
+  "reviewed_statement_sha256": "2e66f9c1a8a798811a09864ab5b2993464bed8877aec8f830d8250c19f1a9296",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:46:44Z",
+  "summary": "The signed branch partition and cellwise exact moments preserve the selected physical cap and section records, including a source below the profile maximum.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

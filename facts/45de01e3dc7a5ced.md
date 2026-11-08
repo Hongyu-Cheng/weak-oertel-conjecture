@@ -1,0 +1,34 @@
+---
+fact_id: 45de01e3dc7a5ced
+kind: lemma
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-sharp-triangle-fixed-cap-edge-variation
+depends_on: ["55d7b41225e9153b"]
+verifier_run: 8ed03454d48a2b8c
+target_match: null
+---
+
+## Source
+
+- [c29c6aecdf35b1de](../candidates/c29c6aecdf35b1de.json), c29c6aecdf35b1de:03 §3, (7)–(14), sharp triangle edge kernel.
+
+## Statement
+
+Let $T$ be a triangle with affine barycentric coordinates $\lambda_i$. Fix $H_i=\{\lambda_i\ge1/3\}$ and set $E(K)=\frac13\sum_i|K\cap H_i|-\frac49|K|$. On any edge $F$ use the normalized linear parameter $s\in[0,1]$. Its boundary density $w$ is $-1/9$ on the outer thirds and $2/9$ on the middle third, up to endpoints and breakpoints, and it annihilates affine functions. Its Green potential is
+$$
+K(t)=\begin{cases}
+t^2/18&0\le t\le1/3,\\
+[6t(1-t)-1]/54&1/3\le t\le2/3,\\
+(1-t)^2/18&2/3\le t\le1 .
+\end{cases}
+$$
+For continuous concave $v$ the cost $\int_0^1wv$ is nonnegative, with equality precisely for affine $v$. For a Lipschitz concave $v$ vanishing at the edge ends, replace $F$ by its outward graph of height $\eta v$ while keeping the other edges. This yields a convex body $K_\eta$ for all sufficiently small $\eta>0$ and $E'(0+)=|F|\int_0^1wv$. For simultaneous realized edge speeds the first variations add, and affine speeds from moving endpoints give zero. No positive uniform coefficient times total curvature lower-bounds the response for concave Lipschitz tests.
+
+## Proof
+
+Each fixed cap has area $4|T|/9$ on $T$. On an edge the nonzero barycentrics are $s$ and $1-s$. One cap covers each outer third and two cover the middle, yielding the displayed $w$. Its integral is zero, and the symmetry about $1/2$ gives its zero first moment. Integrating the two linear pieces of $G(s,t)$ against the three constant pieces of $w$ yields the displayed quadratic formula. Equivalently this is the unique zero-endpoint, continuously differentiable piecewise quadratic solution of $-K''=w$, as direct differentiation and matching at $1/3,2/3$ verify. It is positive on $(0,1)$. The signed-measure Green criterion therefore gives nonnegativity for all continuous concave $v$.
+
+For strictness, if $v$ is nonaffine, its nonnegative distributional curvature has positive finite mass on some compact subinterval $I\subset(0,1)$. Subtract from $v$ the function $\int_I G(\cdot,t)\,d(-v'')(t)$, which leaves a continuous concave function because its remaining distributional curvature is nonnegative. The subtracted function has strictly positive cost by positivity of $K$ on $I$ and Fubini, and the remainder has nonnegative cost. An affine function has zero cost. For $v=G(\cdot,t)$, the curvature mass is one and the cost $K(t)$ tends to zero as $t\downarrow0$, proving the last assertion.
+
+For the shape path, the outward graph has a concave profile and endpoint slopes bounded in size by $\eta$ times the Lipschitz constant in physical edge coordinates. At small $\eta$ the two junctions retain the convex boundary turns of the original positive corner angles. The enclosed body is therefore convex, and the difference from $T$ is the strip of height $\eta v$ above $F$. Integrating the fixed signed indicator over that strip and dividing by $\eta$ yields the asserted derivative by dominated convergence. The cap boundary cuts only finitely many points of the original edge, so those points do not affect the limiting integral. In a simultaneous realized first variation the first-order strips add, with corner terms of second order for bounded speeds and fixed positive corner angles. An affine endpoint-induced component integrates to zero.

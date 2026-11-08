@@ -1,0 +1,57 @@
+{
+  "candidate_id": "2e54d4ccc87131a7",
+  "candidate_sha256": "4d6443470cfba5aae2e469875f91d8cd4d1c5129ab694fb570e79f29d7f5a686",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "6b5e429528a6d78f": "96ed0d523db771f36aef89f24f4041c68594992557fdb536bf7e743e750b927e"
+  },
+  "checks": [
+    "Reflection in z with the first-coordinate swap fixes the mixed base mean at 2. Convexity puts the centroid in the actual middle fiber.",
+    "The endpoint sum mean is the sum of the axis intercepts divided by d+1. For each omitted middle vertex cap the vertex coordinate sums are W once and one d times, so subtracting the two exact cap moments gives the stated middle mean.",
+    "Independent Fraction arithmetic gives a=25/798, W=20/21, M/|T_5|=135/133, q=310337/387828, and 10/19<q<20/21. Thus the cap keeps both endpoints and qT_5 at the middle. The exact positive comparison with 161/200 gives the quoted strict gap.",
+    "The actual middle-fiber centroid has at least Γ_5 times that fiber volume in every containing cap. Division by original total gives 59375/157464>Γ_5/2. Source §7 and exact simplex replay match."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "03bc771bddd39a8a",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "hypotheses": "Use its proof's ordinary Grünbaum inequality on the full-dimensional middle fiber in R^5, with the ordinary volume centroid. Any pure-base containing cap keeps the whole fiber.",
+      "status": "accepted at pinned graph base"
+    },
+    {
+      "candidate_id": "6b5e429528a6d78f",
+      "candidate_sha256": "96ed0d523db771f36aef89f24f4041c68594992557fdb536bf7e743e750b927e",
+      "hypotheses": "Specialize the original ambient simplex to d=5 and ε=1/10. The exact sampled shapes and relative volumes are the same as those used for the first moments and cap.",
+      "reviewed_proof_sha256": "a2a77299a121d94baa31bfafaf946855b98a14fabe5d33dbacb78858a6e9b887",
+      "reviewed_statement_sha256": "5c2724a53d70a766c913a605f99d8a618f328cc7689b2214d00f2a4244be40b5",
+      "status": "same-batch independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:54:59Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its mark is the arithmetic mean of two endpoint centroids in a different simplex and has an obstruction to a different target.",
+      "fact_id": "b52da8fc681e8d1e"
+    },
+    {
+      "comparison": "Its growing-integer-dimension roof is nonsimplicial; it does not cover this one-base ambient simplex and its exact centroid formulas.",
+      "fact_id": "44d417ab69032c1f"
+    }
+  ],
+  "readability": "The through-mixed-centroid upper bound and own-centroid lower bound are distinct and both use the same original total.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "b3b861052bdd79e33802b2c7d2d2af24535d592ff3c1e80862d33c14b40f82a5",
+  "reviewed_statement_sha256": "3d3058a57595f5b2809c9c1abd21ee254dcf144778deadd4e6e99ded71e463b3",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:49:27Z",
+  "summary": "The exact admissible mixed centroid cap lies strictly below the ordinary Grünbaum constant, while the middle-fiber centroid has the separate stated mixed lower bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

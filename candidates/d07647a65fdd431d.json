@@ -1,0 +1,28 @@
+{
+  "advances": "Sharp-product width value and explicit normal stress, including nonregular simplices.",
+  "author": "PK-research-agent",
+  "candidate_id": "d07647a65fdd431d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.075638+00:00",
+  "depends_on": [
+    "c3e79bc0190bfda3"
+  ],
+  "draft_key": "width-hinge-simplex-product-stress",
+  "kind": "theorem",
+  "proof": "Rescale each margin to Euclidean unit continuous normal, which leaves every cap and its mass unchanged. The exact-count product theorem gives one cap of each canonical type in each fiber, zero other-fiber masses and an explicit realization. If $\\beta_j$ is the barycentric coordinate of $v_j$, then $h_{K-K}(\\nabla\\beta_j)=1$ since the range of $\\beta_j$ on $K$ is $[0,1]$. Thus the width representative on its own fiber has margin $\\beta_j-1/(d+1)$. Integrating its barycentric tail yields $\\Psi_i=v d\\gamma_d/(d+1)^2$. Summing gives the stated value.\n\nEach own-fiber cap has mass $c_i=\\gamma_d v$ and base moment $c_i p$. Its continuous centroid is $g+(v_j-g)/(d+1)$ by homothety about $v_j$ of ratio $d/(d+1)$. Since $g=(v_j+d g_j)/(d+1)$, its continuous moment is $c_i g+\\Psi_i(v_j-g_j)$. The vector $R_j=v_j-g_j$ attains width one, because $v_j$ and $g_j$ realize the maximum and minimum of $\\beta_j$. The weights produce the cap masses and base moments and have resultant zero by $\\sum_j\\nabla\\beta_j=0$. Their averaged margin on the fiber is identically zero, while all local margins vanish at $g$ and all off-fiber cap margins there are strictly negative by zero volume and the interiority of $g$. Thus the weights attain the minimax value zero and the asserted identities hold with actual contacts and zero budget multipliers.\n",
+  "source_candidate_ids": [
+    "d233b11c4a70933f"
+  ],
+  "source_candidate_sha256": {
+    "d233b11c4a70933f": "30b56019e5ccb4f563f48f36e84f4d603470401a9f84bd6872fc2da110df8462"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d233b11c4a70933f",
+      "locator": "d233b11c4a70933f:05 §5, (11), including explicit stress"
+    }
+  ],
+  "statement": "Let $C=[0,1]^n\\times K$ with $n,d\\ge1$ and $K$ a $d$-simplex of volume $v$. Use $D=K-K$, which is both same-base difference bodies, and let $M=2^n v$, $\\gamma_d=(d/(d+1))^d$. At cap budget $\\gamma_d v$ and cap count $2^n(d+1)$, the exact width-normalized hinge value of every full cover is $M\\gamma_d d/(d+1)$, and it is attained.\n\nFor any such cover, in the normalization $h_D(u_i)=1$ there is a width contact stress with objective multiplier $\\alpha_0=1$ and all cap-budget multipliers zero. On each fiber $p$ use the simplex centroid $g$, probability weights $1/(d+1)$ on that fiber's canonical caps, and $\\eta_p=(d+1)\\gamma_d v$. For the cap of vertex $v_j$ take $R_j=v_j-g_j$ with $g_j$ the centroid of its opposite facet. If $c_i,P_i,m_i$ are raw cap mass and moments, the stress identities are\n$$\nc_i=\\sum_p\\eta_p\\lambda_{pi},\\qquad\nP_i=\\sum_p\\eta_p\\lambda_{pi}p,\\qquad\nm_i=\\sum_p\\eta_p\\lambda_{pi}g+\\Psi_iR_j,\n$$\nwhere $\\Psi_i=\\int_S(L_i)_+\\,d\\mu$ in the width representatives, $R_j$ maximizes $u_i\\cdot v$ over $D$, and the fiber weights give zero minimax margin with genuine contacts at $g$.",
+  "subgoal_id": "pk-intake-width-hinge-simplex-product-stress",
+  "title": "Exact width-normalized simplex-product hinge and explicit normal stress"
+}

@@ -1,0 +1,34 @@
+{
+  "advances": "Exact auxiliary continuous cap optimization at a prescribed weighted centroid. The charge includes one copy of the added measure; no mixed-integer allocation or center selection is asserted.",
+  "author": "PK-research-agent",
+  "candidate_id": "ec4f7e236aeff668",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:57:44.473336+00:00",
+  "depends_on": [
+    "03f650d1c4f1b86d"
+  ],
+  "draft_key": "fixed-mass-one-copy-source-cost",
+  "kind": "theorem",
+  "proof": "Work in volume units $|B|=1$. Move the cap boundary parallel to itself to pass through $g$; this can only decrease both charged masses. Let $X$ be the linear coordinate in the cap direction, $U(t)=|B\\cap\\{X\\ge t\\}|$, and $s=U(X(g))$. The centroid is interior because the density is at least one on the full-dimensional $B$, so $0<s<1$. Hyperplanes are null, and every open subinterval of the projection interval meets the projection of $\\operatorname{int} B$ and has a preimage of positive volume. Hence $U$ is continuous and strictly decreasing on the projection interval, with endpoint values $1,0$, and $U(X)$ is uniform on $[0,1]$ under volume on $B$. The image of $\\eta$ under $U(X)$ has density $h\\in[0,1]$, integral $\\alpha$, and mass $r=\\eta(H)$ on $[0,s]$. This implies all the displayed linear constraints.\n\nThe $d$-th volume root in the Brunn–Minkowski statement recorded in 03f650d1c4f1b86d applies to the nonempty compact convex caps of $B$; their Minkowski interpolation lies in the cap at the interpolated threshold. Thus $U^{1/d}$ is concave on the projection interval, including its endpoints. Jensen with the probability measure $(\\mathbf 1_B\\,dx+k\\eta)/(1+k\\alpha)$ gives\n$$\n(1+k\\alpha)s^{1/d}\\ge\\int_0^1 t^{1/d}(1+kh(t))\\,dt.\n$$\nOn each of $[0,s]$ and $[s,1]$, the indicator of the leftmost interval of the prescribed mass minimizes the integral against the increasing function $t^{1/d}$. To see this, subtract that indicator from $h$ and subtract the cutoff value from the integrand; the resulting product is pointwise nonnegative and the subtraction of a constant changes no integral. Integrating those two intervals and multiplying by $q$ proves the scalar inequality.\n\nThe scalar set is compact, with $s=0$ infeasible and $(s,r)=(1,\\alpha)$ strictly feasible in the last inequality: its slack is $q-1+k\\alpha(q-\\alpha^{1/d})>0$. If a minimizer had strict slack, lower both $s,r$ by the same small amount when $r>0$, or lower only $s$ when $r=0$. The linear constraints persist (in the first case $s-r$ is fixed); continuity preserves slack. This strictly reduces the objective. Thus every minimizer has equality, and $s=1$, which forces $r=\\alpha$, is excluded. In a simplex of volume one take $X$ to be a vertex barycentric coordinate. Then $U(X)=(1-X)^d$, so the Jensen step is an identity; choose the two bands for $\\eta$. The scalar equality puts the centroid at $X=1-s^{1/d}$, and the through-cap has masses exactly $s,r$. At $\\alpha=0$ one has $r=0$ and equality gives $s=q^{-d}$; at $\\alpha=1$ one has $r=s$ and equality gives the same $s$.\n\nFor fixed $r$, the left-minus-right slack at $s=0$ is negative. For $s>0$ its derivative is\n$$\nq(q-1)(1+k\\alpha)s^{q-2}-kq\\bigl[(s+\\alpha-r)^{q-1}-s^{q-1}\\bigr]\n\\ \\ge\\ q(q-1)(1+kr)s^{q-2}>0,\n$$\nusing concavity of the power $q-1\\in(0,1]$. The lower derivative bound has divergent integral up to infinity, so there is exactly one positive root. The least allowed $s$ for each $r$ is then $\\max\\{r,t(r)\\}$, provided it meets the upper bound $1-\\alpha+r\\le1$.\n",
+  "source_candidate_ids": [
+    "04fb8b3cc0275a7f",
+    "61e9db32fbeb3f83"
+  ],
+  "source_candidate_sha256": {
+    "04fb8b3cc0275a7f": "e7dbe5b9ae438a792b4960e01636ea19c1bc0933483f6ef12290a247de568898",
+    "61e9db32fbeb3f83": "e6620780e8c7daf6b468f9e9f5a52cce7148f6c4cee3b24c87c44870d19b15cc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "61e9db32fbeb3f83",
+      "locator": "61e9db32fbeb3f83:01 §1, (1)–(2)"
+    },
+    {
+      "candidate_id": "04fb8b3cc0275a7f",
+      "locator": "04fb8b3cc0275a7f:01 §2, (3)–(5), and §3, (6)–(7), exact scalar optimization"
+    }
+  ],
+  "statement": "Let $d\\ge1$ be an integer, $B\\subset\\mathbb R^d$ a compact convex body of positive $d$-volume, $0\\le\\eta\\le\\mathbf 1_B\\,dx$, and $\\alpha=\\eta(B)/|B|$. Let $g$ be the centroid of $\\mathbf 1_B\\,dx+k\\eta$. For a closed halfspace $H$ containing $g$, write $v=(|B\\cap H|+\\eta(H))/|B|$, $q=1+1/d$, and $\\gamma_d=q^{-d}$. For real $k\\ge1$ and fixed $\\alpha\\in[0,1]$, the sharp infimum of $v$ over $B,\\eta,H$ is the attained minimum of $s+r$ under\n$$\n0\\le s\\le1,\\quad 0\\le r\\le\\min(\\alpha,s),\\quad s+\\alpha-r\\le1,\\qquad\nq(1+k\\alpha)s^{q-1}\\ge1+k r^q+k(s+\\alpha-r)^q-k s^q.\n$$\nEvery minimizing pair has $0<s<1$ and equality in the last constraint. A simplex with $\\eta$ the volume restricted to its upper-tail quantile bands $[0,r]\\cup[s,s+\\alpha-r]$ attains every such pair. The endpoint optima at $\\alpha=0,1$ are $\\gamma_d,2\\gamma_d$. Equivalently, for $r\\in[0,\\alpha]$ let $t(r)$ be the unique positive root in $s$ of the last constraint taken at equality, ignoring the other constraints. Minimize $r+\\max\\{r,t(r)\\}$ over those $r$ with $\\max\\{r,t(r)\\}\\le1-\\alpha+r$.",
+  "subgoal_id": "pk-intake-fixed-mass-one-copy-source-cost",
+  "title": "The sharp fixed-mass one-copy source cost"
+}

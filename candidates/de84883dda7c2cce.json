@@ -1,0 +1,29 @@
+{
+  "advances": "Pointwise equality at arbitrary positive own-depth marks in real fibers. The conclusion is about the actual endpoint and target caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "de84883dda7c2cce",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:43:59.889140+00:00",
+  "depends_on": [
+    "4e868f774de77608",
+    "1269c554ca9a41b8"
+  ],
+  "draft_key": "pointwise-own-depth-root-equality-active-caps",
+  "kind": "lemma",
+  "proof": "Use 4e868f774de77608 for own-cap attainment and root concavity. For a compact convex $C$ outside its full-dimensional positive-base hypotheses, add a base coordinate $t$, place $C$ at $t=0$, and take the convex hull with a full-dimensional ball in the original coordinates at $t=1$. The entire $t=0$ face is $C$, so its fibers and through-point caps are unchanged.\n\nFor a unit $u$, write $A_i=C_{z_i}\\cap\\{y:u\\cdot(y-x_i)\\ge0\\}$, and similarly $A_t$ at $Y_t$. Convexity gives $(1-t)A_0+tA_1\\subseteq A_t$. At an attaining target $u$ we have\n$$\nF(Y_t)=|A_t|^{1/d}\\ge |(1-t)A_0+tA_1|^{1/d}\n\\ge (1-t)|A_0|^{1/d}+t|A_1|^{1/d}\n\\ge (1-t)F(Y_0)+tF(Y_1).\n$$\nEquality forces both endpoint caps active since the weights are positive. The endpoint caps are full dimensional by positivity. Equality in ordinary Brunn–Minkowski makes them positively homothetic, with ratio fixed by their volume roots. A proper inclusion of full-dimensional compact convex sets strictly increases volume, as the convex hull of an outside point and an interior ball contains a positive-volume piece beyond a separating plane. Thus the Minkowski sum equals $A_t$. This applies to every active target normal. Conversely, the three conditions yield a through-target cap with exactly the volume root on the right, hence the matching upper bound for $F(Y_t)$.\n\nEach endpoint mark is interior to its full-dimensional fiber, since a boundary supporting cap has zero volume. Its minimizing cap is a proper cut. For $d\\ge2$ apply the proper-trace derivative of 1269c554ca9a41b8 §2 on the single positive-volume fiber, with fixed base coefficient and variation $(u',b')=(w,w\\cdot x_i)$. The derivative at the minimum vanishes for every $w$, and is the positive section measure times $w\\cdot(g_i-x_i)$, where $g_i$ is the section centroid. Hence $g_i=x_i$. In $d=1$ the through-point section is the singleton $\\{x_i\\}$. The cap homothety preserves the parallel exposed bottom faces and sends their centroids to each other, so it sends $x_0$ to $x_1$.\n",
+  "source_candidate_ids": [
+    "9402605e47a1b4ef"
+  ],
+  "source_candidate_sha256": {
+    "9402605e47a1b4ef": "0fe099ce18be4bbc38ba3a0e230f00f46dd5dfe3dbfb13c46646031bb57ba9d7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9402605e47a1b4ef",
+      "locator": "9402605e47a1b4ef:03 §1, equality in joint concavity at positive endpoint depths"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, $d\\ge1$, and let $F(Y)$ be the $d$th root of the ordinary raw depth in the fiber of $Y=(z,x)\\in C$. Let $Y_t=(1-t)Y_0+tY_1$ with $0<t<1$ and $F(Y_i)>0$. Equality $F(Y_t)=(1-t)F(Y_0)+tF(Y_1)$ holds exactly when there is a common unit continuous normal for which the endpoint through-point caps attain own depth, the caps are positively homothetic with ratio $F(Y_1)/F(Y_0)$, and the full through-point target cap equals their weighted Minkowski sum. In the equality case every active target direction has these properties. The endpoint cap homothety maps $x_0$ to $x_1$.",
+  "subgoal_id": "pk-intake-pointwise-own-depth-root-equality-active-caps",
+  "title": "Equality of the pointwise own-depth root is determined by active caps"
+}

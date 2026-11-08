@@ -1,0 +1,49 @@
+{
+  "candidate_id": "d2ba4e3cbd6eb730",
+  "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+  "checked_dependency_candidate_sha256": {
+    "aef64d0fab6e1fa1": "1e9ae9fb4a25437b37411f626d5f6717251f986a14949e0ca66803bbdbe1a59b"
+  },
+  "checks": [
+    "The law has no atoms because a nonconstant affine height has null level sets for d-volume. With a=min x>0 the ratio diverges at a and rises as t beyond m=max x. It therefore attains a minimum in (a,m].",
+    "Brunn–Minkowski applies to the nested simplex caps and gives concavity of the dth root of the volume fraction. Two minimizing ratios force equality with the line through the origin joining the two normalized cap values, since minimality gives the upper bound by that line and concavity gives the reverse bound between the thresholds.",
+    "On a nonempty interval below m avoiding all vertex heights, the field e_j−u is tangent to the k-face and has divergence −k. Its flux is zero on facets containing j, equals −k times the face volume times the captured fraction on the opposite facet, and is (x_j−t) times the face volume times F_I'(t) on the cut. This includes k=1 using counting volume on the endpoints. Fully captured and missed faces give the identity with derivative zero.",
+    "If F_I(t)=A t^k, the divergence identity gives A x_j t^(k−1) on the opposite face. Iteration yields a positive value at every vertex because every x_j>0, contradicting the zero capture indicator at a maximum-height vertex for t<m.",
+    "For nearby positive rows the thresholds and optimal ratios are bounded above by the varying maxima. A limit at a would give a vanishing cap fraction by dominated convergence and hence a divergent ratio, since a>0. Every limit above a minimizes at x by continuity of the cap fraction and comparison with each fixed admissible threshold up to m. Properness is preserved for the nearby thresholds when the limit is strictly below m.",
+    "The two envelope comparisons use the same row increment at the old and new minimizing thresholds. Joint C^1 and convergence of these thresholds give the same first-order term. At the proper optimum, t∂_t F=dF, so ∂_{x_j}L=F^(−1/d)b_j with the sign and normalization as stated. The gradient is continuous near x.",
+    "Verified the raw source digest for 78b95c208ba2d374 and its §2, equations (2)–(4). The proof expands the original facet-flux argument and keeps the same strictly positive nonconstant scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "application": "The threshold for the envelope calculation and all sufficiently nearby minimizing thresholds are strictly between min x and max x. The uniform law and d≥2 agree exactly, and the joint C^1 first-variation formula with the actual section centroid applies.",
+      "candidate_id": "aef64d0fab6e1fa1",
+      "candidate_sha256": "1e9ae9fb4a25437b37411f626d5f6717251f986a14949e0ca66803bbdbe1a59b",
+      "reviewed_proof_sha256": "084cd35c57421b5d9756ad8bc5b25916d6430db1e8a75983ea0eb12720c1d3cb",
+      "reviewed_statement_sha256": "9e61967d5c7fb600921f04531c7273e178ff95c35aaec9a0fa7fca47e261d23d",
+      "status": "same-batch, pending predecessor admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:55:36Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The proper-section directional formula is shared by the input to the envelope calculation. The accepted result concerns projected mixed-depth contacts and gives neither uniqueness of a row threshold nor a simplex row-capacity envelope.",
+      "fact_id": "1269c554ca9a41b8"
+    }
+  ],
+  "readability": "The flux signs follow by orienting the cut normal toward increasing height and noting that e_j−u points inward along the opposite simplex facet.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+  "reviewed_statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:50:47Z",
+  "summary": "Attainment, uniqueness, proper-threshold continuity and the capacity envelope formula follow for every nonconstant strictly positive row.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

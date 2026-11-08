@@ -1,0 +1,29 @@
+{
+  "advances": "Borel reconstruction given the actual old source order and a repaired same-parameter tuple law with its prescribed marginals.",
+  "author": "PK-research-agent",
+  "candidate_id": "e9afb3fd167f7813",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:19:35.662859+00:00",
+  "depends_on": [
+    "ac53fe19fef9ec25",
+    "9d641a80a1b194d4"
+  ],
+  "draft_key": "borel-midpoint-tagged-martingale-reconstruction",
+  "kind": "theorem",
+  "proof": "By convex order and addition of the same measure on both sides, $\\nu_t\\preceq_{\\mathrm{cx}}\\eta_t+2\\rho_t$ almost everywhere. Both measures are finite, compactly supported and have equal mass there. The compact physical martingale coupling lemma therefore supplies for each such $t$ a coupling of $\\nu_t$ with $\\eta_t+2\\rho_t$ having mean $x$ conditional on its first coordinate. To choose it measurably, use the compact countable-constraint selector on measures of bounded mass on the fixed compact product of the source and intermediate target supports. Require the two marginals by dense continuous tests, and the moment equalities\n$$\n \\int f(x)(z_\\ell-x_\\ell)\\,d\\Pi_t(x,z)=0\n$$\nfor each coordinate $\\ell$ and a countable uniformly dense family of continuous source tests $f$. These are continuous in $\\Pi_t$ and Borel in $t$. The dense tests imply the same identity for all bounded Borel $f$, by uniqueness of the corresponding finite signed coordinate measures on the compact source space. This gives a Borel kernel $\\Pi_t$ with all constraints on a common full-measure set.\n\nIntegrate in $t$. Write $L=\\zeta(dt)\\Pi_t(dx,dz)$ and $\\beta=\\zeta(dt)(\\eta_t+2\\rho_t)(dz)$. Take joint Borel Radon–Nikodym densities of $\\zeta(dt)\\eta_t(dz)$ and $2\\zeta(dt)\\rho_t(dz)$ relative to $\\beta$. They sum to one $\\beta$-almost everywhere. Given $(t,x,z)$ under $L$, use the first density to send the corresponding share to $(0,z)$. For the second share use a regular conditional distribution of the joint tuple law $\\zeta(dt)\\pi_t(dx_-,dx_+)$ over $(t,b(x_-,x_+))$. It is a Borel probability kernel concentrated on tuples with $b=z$ for $\\zeta(dt)\\rho_t(dz)$-almost every $(t,z)$, by disintegration on standard Borel spaces. Draw this tuple and then send with probabilities $1/2,1/2$ to $(-,x_-)$ and $(+,x_+)$. Choose probability versions arbitrarily on null sets. If the joint tuple law is zero, the second share has zero mass and its kernel can be fixed arbitrarily.\n\nThe construction composes Borel kernels, keeping $t$ and $x$. Its joint source marginal is $\\zeta(dt)\\nu_t(dx)$. Integrating out the source yields branch-zero marginal $\\zeta(dt)\\eta_t$ and the two endpoint marginals $\\zeta(dt)\\gamma_{-,t},\\zeta(dt)\\gamma_{+,t}$, since the second share has twice the tuple mass and the endpoint probabilities are $1/2$. Equality of the joint measures gives the stated conditional marginal identities on one full-measure set, using countable determining tests on the fixed compact supports. The physical mean of each final branch, conditional on the intermediate $(t,x,z)$, is $z$ (for the split branch by its exact midpoint identity). The conditional mean of $z$ given $(t,x)$ is $x$ from the first martingale. The tower property proves the assertion.\n",
+  "source_candidate_ids": [
+    "5ea88513a25f2f4b"
+  ],
+  "source_candidate_sha256": {
+    "5ea88513a25f2f4b": "bfad18ce1192d29d7ff8dab744b2e6d7772b6907e7c93b55cfae7855747903f1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5ea88513a25f2f4b",
+      "locator": "§§1, 3"
+    }
+  ],
+  "statement": "Let $T$ be standard Borel with a finite Borel reference measure $\\zeta$, and let $\\nu_t,\\eta_t,\\rho_{\\mathrm{old},t}$ be Borel kernels of finite nonnegative measures in a common physical Euclidean space, with uniformly bounded masses and fixed compact supports. Let $\\pi_t$ be a bounded-mass Borel kernel of endpoint tuple measures on a fixed compact product, with marginals $\\gamma_{-,t},\\gamma_{+,t}$. Put $\\rho_t=b_\\#\\pi_t$, where $b(x_-,x_+)=(x_-+x_+)/2$ in the full physical space. Suppose on a full-measure set of $t$ that $\\nu_t\\preceq_{\\mathrm{cx}}\\eta_t+2\\rho_{\\mathrm{old},t}$ and $\\rho_{\\mathrm{old},t}\\preceq_{\\mathrm{cx}}\\rho_t$, where convex order tests every finite physical convex function and requires equal mass. Then there is a Borel kernel of finite joint measures from the physical source $x$ to a tagged target $(j,w)$, $j\\in\\{0,-,+\\}$, with source marginal $\\nu_t$ and branch marginals $\\eta_t,\\gamma_{-,t},\\gamma_{+,t}$ respectively for almost every $t$. Conditional on $(t,x)$, the mean of the physical target $w$ equals $x$ almost everywhere under the integrated source law.",
+  "subgoal_id": "pk-intake-borel-midpoint-tagged-martingale-reconstruction",
+  "title": "Normal-preserving tagged martingale reconstruction from repaired midpoint laws"
+}

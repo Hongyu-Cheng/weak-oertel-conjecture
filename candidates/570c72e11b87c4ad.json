@@ -1,0 +1,28 @@
+{
+  "advances": "Existence of a selected circuit under affine-centered common symmetry. The group and at least one regular nonvertical attaining row at the centered mark are explicit hypotheses.",
+  "author": "PK-research-agent",
+  "candidate_id": "570c72e11b87c4ad",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:17:06.637633+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "b1ef83513bdb0bcf:01",
+  "kind": "theorem",
+  "proof": "Every group element has absolute determinant one because it has finite order. The centroid of each invariant $L_z$ is fixed by all group elements and hence is zero. The maps $(z,x)\\mapsto(z,c(z)+A(x-c(z)))$, $A\\in G$, are ambient affine bijections preserving the measured fibers and mixed volume. The affine hypothesis on $c$ is used here. Depth superlevels are convex because a closed halfspace containing a convex combination contains at least one summand. Average the orbit of any deepest mark on the $p$ fiber to obtain the deepest mark $(p,c(p))$.\n\nFor the final assertion about a specified circuit, consider one of its caps through the original mark $Y$, with positive mixed section mass $S$. In full affine parameters the first variation in direction $(W,t)$ is $S(W\\cdot B-t)$ for section centroid $B$. Varying through $Y$ gives zero derivative in each direction at the depth-attaining orientation, so $B=Y$. A distinct deepest point strictly within the cap would remain after a small positive threshold increase, which removes mass by the positive derivative slope. If it lay on the cutting plane at $Y'\\ne Y$, varying through $Y'$ with $W=Y'-Y$ gives derivative $-S\\lVert Y'-Y\\rVert^2$, also impossible. Thus every other deepest point is strictly outside each row. On the same fiber this would imply all $u_j\\cdot(Y'-Y)<0$, contrary to their positive balance. The averaged deepest point is therefore the original mark.\n\nWrite the assumed cap through $(p,c(p))$ as $a\\cdot(z-p)+u\\cdot(x-c(z))\\ge0$. Its orbit caps have the same tilt $a$ and continuous normals $A^{-\\top}u$. They preserve mass, coarea differentiability and positivity by the ambient linear parameter change (threshold variation keeps its nonzero slope). Their mean continuous normal is zero because the average of the inverse group is zero. Carathéodory selects a list of at most $d+1$ with strictly positive balancing coefficients after zero weights are removed. The list covers the whole plane above $p$ since its positive weighted margin there vanishes.\n\nChoose an exposed vertex $e$ of the finite base hull maximizing $a\\cdot z$. Each orbit cap contains on $e$ its parallel through-centroid trace. Let $\\ell$ expose $e$, with $\\ell(e)=0$ and $\\ell(z)<0$ on the other measured bases. A sufficiently large finite $B_0$ makes\n$$\n\\Phi(n,z,x)=[n\\cdot(x-c(z))+B_0\\ell(z)]_+\n$$\nvanish on every other actual fiber boundary, uniformly in $n$ by boundedness. It is convex in $(z,x)$ at fixed $n$. At $e$ it equals the nonnegative radial flux of $x-c(e)$, with integral $d|K_e|$ by divergence. The radial flux on the planar cut of the parallel central cap vanishes; the original boundary integral of that trace is therefore $d$ times its ordinary volume, also in $d=1$ by endpoint subtraction. This volume is at least $\\Gamma_d|K_e|$ by 6769574fc1bd9f8d at full retained mass. Central symmetry makes it exactly $|K_e|/2$ in the stated special case. Nonnegativity and containment give the bound for every selected cap and hence every mixture.\n",
+  "source_candidate_ids": [
+    "b1ef83513bdb0bcf"
+  ],
+  "source_candidate_sha256": {
+    "b1ef83513bdb0bcf": "a5142e9ee8768f81bf6c30c104f3319c6e55170ad2fdbd06babd26862d955744"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b1ef83513bdb0bcf",
+      "locator": "b1ef83513bdb0bcf:01 §§1 and 4, (1)–(2), (9)–(12)"
+    }
+  ],
+  "statement": "Let finitely many positive actual fibers $K_z\\subset\\mathbb R^d$, $d\\ge1$, have $K_z=c(z)+L_z$, where $c(z)$ is affine and a finite group $G$ of linear maps preserves every $L_z$ and has average linear map zero. Depth is computed with the sum of actual fiber $d$-volumes. Suppose $(p,c(p))$ is globally deepest with a nonvertical depth-attaining cap through it whose mass is differentiable in the full affine hyperplane parameters by the usual coarea formula and whose total coarea is positive. Then there is a positive critical circuit of at most $d+1$ such regular caps and a single nonnegative continuous potential convex in the physical variables for each fixed outward unit normal, with efficiency at least $\\Gamma_d=(d/(d+1))^d$ for every probability mixture of that selected list on the summed marked fiber boundary. If $G=\\{I,-I\\}$ the guarantee is $1/2$. If a deepest mark on the $p$ fiber is initially given with any positive regular critical circuit whose rows have positive coarea, then that mark is $c(p)$.",
+  "subgoal_id": "pk-intake-b1ef83513bdb0bcf:01",
+  "title": "Critical-circuit selection under common affine fiber symmetries"
+}

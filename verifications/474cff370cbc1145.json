@@ -1,0 +1,62 @@
+{
+  "candidate_id": "8712af98d6b2c23e",
+  "candidate_sha256": "e0647dd41f2f9faf094f1614816cc2f557288e9a435ccc55ddda14e870466071",
+  "checked_dependency_candidate_sha256": {
+    "57557331147abd2a": "a2917b62a19dfa47f29975281e72dfb1e8d2874d478646ac897a7de9ab37fb6a",
+    "f0d6276552741806": "75beeb560b55b4e5e85c76741926a677b52b1b267e850b757eba02e95832707f"
+  },
+  "checks": [
+    "At every admissible a > 0 and β, the normalization v = β/(at) is defined and lies in the full closed interval [0,1]. The quartic and expansion hypotheses are therefore satisfied at both tilt endpoints as well as a = 1/(2d).",
+    "Since a > 0, the quadratic term is −v²/[4(d+1)a]. The expansion bounds −J_d by K_d v and the remainder by C_d a. Expanding the completed square gives a cross term +K_d v and constant −(d+1)aK_d² that cancels the added term outside the square. The square is nonpositive with its prefactor throughout the interval.",
+    "All constants are finite and positive for integer d ≥ 2. The first term in the minimum ensures applicability of the expansion, and the second gives [C_d+(d+1)K_d²]a ≤ 1/4, including equality in the slope constraint. Multiplication by Γ > 0 preserves the sign. At d = 2 the constants reduce exactly to V_2 = 21, T_2 = 4, B_2 = 1, C_2 = 17/2 and K_2 = 10/9, yielding cutoff 27/1318. The exact finite sums were checked at the stated cutoffs for d = 2, 3, 4 and v = 0, 1/5, 1/2, 1.",
+    "The historical candidate hash agrees at base 3220f79. Candidate c21aa22115d69526 §6, canonical claim :06, gives the same linear bound and explicit minimum. The associated mathematical discussion 1253f367cc2cd6f1 §§5.1–5.5 agrees on the expansion constants and completion of the square.",
+    "The linear bound also implies the upper-limit half of the companion frozen small-slope exclusion by taking the supremum over tilts and letting a decrease to zero. The companion is not a premise of this proof and its qualitative conclusion alone does not give the explicit cutoff."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "57557331147abd2a",
+      "candidate_sha256": "a2917b62a19dfa47f29975281e72dfb1e8d2874d478646ac897a7de9ab37fb6a",
+      "mapping": "The predecessor uses identical D, Γ and parameters and supplies the expansion uniformly for 0 < a ≤ 1/(2d) and 0 ≤ v ≤ 1 with the exact C_d and K_d used here. The estimates imply −J_d(v) ≤ K_d v and ρ_d(a,v) ≤ C_da directly.",
+      "reviewed_proof_sha256": "da5fc900f9d36e4a5c63ad6d2e5af1b41a4cb63203703ccaefb52b313bf1681c",
+      "reviewed_statement_sha256": "363ff70c64e5b8c4d6173f837521c5dd735c3856b74a64c7b9aeff7048beab07",
+      "status": "independently approved in wave06, admission pending"
+    },
+    {
+      "candidate_id": "f0d6276552741806",
+      "candidate_sha256": "75beeb560b55b4e5e85c76741926a677b52b1b267e850b757eba02e95832707f",
+      "fact_id": "f0d6276552741806",
+      "fact_sha256": "882e2535ed04e7bee323c282d1d043f88dcf4aa491f763c7c3d74fa145079e59",
+      "mapping": "For integer d ≥ 2 and v = β/(at) in [0,1], K_{−v} = L_v and K_v = R_{0,v} pointwise, including endpoints and zero extensions. Thus G_d(v) = A_d(v)−1/(d+1) ≥ v²/[4(d+1)], with G_d(0) = 0. The unshifted right kernel is the a = 0 specialization of the shifted one.",
+      "reviewed_proof_sha256": "3afdaf8c57ee023e7ba16c9f44e795452cfb567b93415d5ac5533dd60959b0e3",
+      "reviewed_statement_sha256": "2e23799ba5b7bf33821b2f69cacd76b06e7534361314c14b7285eeb1eb3594e8",
+      "status": "accepted at base 3220f79"
+    }
+  ],
+  "finished_utc": "2026-11-08T07:48:08Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted gain is the continuous unshifted integral estimate and is used directly as a premise. The present bound concerns the shifted finite sums with all real small slopes and admissible tilts.",
+      "fact_id": "f0d6276552741806"
+    },
+    {
+      "comparison": "Its D/Γ bound applies on the discrete subset of admissible double knots with positive right index. It does not bound the full continuous tilt interval for each small slope.",
+      "fact_id": "3da9e3745e7c7879"
+    }
+  ],
+  "readability": "The defining minimum and the displayed completed square give both endpoint inclusions explicitly. C_d and K_d are defined in the stated predecessor.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ed03cd1903f3ca47aea84a559bb041715f417e769b769390dfa58fc7d47a3f0f",
+  "reviewed_statement_sha256": "b882ae64a7a01924973362a7074ababd7e2483a7ce092f684601386e456a2085",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:44:19Z",
+  "summary": "The frozen argument gives the stated linear normalized upper bound throughout the small-slope rectangle and the exact closed cutoff range with D ≤ −Γ/4 for each fixed d ≥ 2.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

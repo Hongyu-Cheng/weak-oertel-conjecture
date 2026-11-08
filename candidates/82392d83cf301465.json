@@ -1,0 +1,35 @@
+{
+  "advances": "Finite nonnegative addition of actual global-cut speeds on one common family, with their fixed linear responses.",
+  "author": "PK-research-agent",
+  "candidate_id": "82392d83cf301465",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:33:30.159769+00:00",
+  "depends_on": [
+    "84cd8a85417b0d7a",
+    "155691fc3768c06f"
+  ],
+  "draft_key": "finite-global-cut-speed-addition",
+  "kind": "theorem",
+  "proof": "For each $p\\in P$, apply the continuous anchored support slope lemma to the finite set $P$ and compact convex bodies $K_z$. The hypothesis at $p$ is exactly the anchored inclusion imposed on this family for each convex representation of $p$. The lemma permits any affine rank. It gives a continuous $A_p(u)$ with $h_z(u)\\le h_p(u)+A_p(u)\\cdot(z-p)$ for each $z\\in P$ and $u\\in\\mathbb S^{d-1}$. Thus the affine plane $\\ell_{0p}(u,z)=h_p(u)+A_p(u)\\cdot(z-p)$ majorizes every measured support and touches it when $z=p$.\n\nAdd all of these planes to each action with zero fields. Their affine gaps are nonnegative throughout $C$ by convexity from the generating fibers. The added inequalities are therefore redundant for every $\\varepsilon\\ge0$. For every $z$ and $u$, the augmented set $I_a(z,u)=\\{i:\\ell_{ai}(u,z)=h_z(u)\\}$ is nonempty because it contains the new plane with $p=z$. At a regular point its maximum field value is the old speed, with the redundant zero field accounting for the case of no old active cut.\n\nFor each tuple $\\mathbf i=(i_1,\\ldots,i_N)$ of the augmented action indices, use the cut with\n$$\n\\ell_{\\mathbf i}(u,z)=\\frac1N\\sum_{a=1}^N\\ell_{a i_a}(u,z),\n\\qquad V_{\\mathbf i}(u,z,x)=\\sum_{a=1}^N\\alpha_a V_{a i_a}(u,z,x).\n$$\nThere are finitely many tuples. Each averaged plane still majorizes all measured supports, is affine in $z$, and is continuous in $u$. Each field is nonnegative and continuous and convex in the physical coordinates for fixed $u$. When all input fields have a larger common convex domain, the same sum is admissible on that domain. The strict positivity of the averaging weights is independent of the desired coefficients, including any zero coefficients. Every summand of $\\ell_{\\mathbf i}(u,z)-h_z(u)=N^{-1}\\sum_a[\\ell_{a i_a}(u,z)-h_z(u)]$ is nonnegative, so the active tuples at $(z,u)$ are precisely $\\prod_a I_a(z,u)$.\n\nThe radial lemma applies to the augmented original actions and the new action on the same family. For a regular $x\\in\\partial K_z$, take $u=\\nu_z(x)$. The maximum of $\\sum_a\\alpha_a V_{a i_a}(u,z,x)$ over the product of nonempty active sets equals the sum of their individual maxima with coefficients $\\alpha_a$. The upper bound follows by bounding every summand, and equality follows by independently choosing each maximizing index at this same point and normal. The radial lemma identifies this maximum with the new actual speed and gives the total and cap loss formulas, whose selectors depend only on the old fiber and the fixed halfspace. Integrating the speed equality also gives the equality for any fixed bounded Borel weight. If every $\\alpha_a=0$, the new fields vanish and all tuple-plane inequalities are valid throughout $C$ for all $\\varepsilon\\ge0$.\n",
+  "source_candidate_ids": [
+    "61c2a6c203bcade2",
+    "85a041ec649c5375"
+  ],
+  "source_candidate_sha256": {
+    "61c2a6c203bcade2": "4e39ddfbd84f7da9f2d330ac119a153e51df671dbc7a316754becd08b7ef30c3",
+    "85a041ec649c5375": "ed6536d2366e3c7e950fee8e5a45a943fff8a2c7d6ef71698907e1e139a40b55"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "85a041ec649c5375",
+      "locator": "§§2–5, (6)–(18)"
+    },
+    {
+      "candidate_id": "61c2a6c203bcade2",
+      "locator": "§6, first paragraph, exact speed addition and exact linear response equalities"
+    }
+  ],
+  "statement": "On one common family $P,(K_z)_{z\\in P},C$ as in the finite global-cut radial loss lemma, let $a=1,\\ldots,N$, $N\\ge1$, index finite global-cut actions with fields $V_{ai}$ and baselines $\\ell_{ai}$. For any fixed coefficients $\\alpha_a\\ge0$, one finite global-cut action on $C$ has inward speeds\n$$\nv_{\\alpha,z}(x)=\\sum_{a=1}^N\\alpha_a v_{a,z}(x)\n$$\nat every regular point $x$ of every original measured boundary $\\partial K_z$. It has first total loss $D_\\alpha=\\sum_a\\alpha_a D_a$ and, for every fixed closed ambient halfspace $H$, first cap loss $L_\\alpha(H)=\\sum_a\\alpha_a L_a(H)$, with uniform little-o remainders on each fixed finite cap list. In particular it gives exactly the same combination of the first response rows $L_a(H)-\\beta D_a$ for any fixed level $\\beta$, and of the integrals of the speeds against any fixed bounded Borel boundary weights. If every $\\alpha_a=0$, the constructed action is identically $C$ for all $\\varepsilon\\ge0$. All actions, including the constructed one, have zero-parameter body exactly $C$. The speeds and their finite linear response vectors therefore form algebraic cones under finite nonnegative combinations.",
+  "subgoal_id": "pk-intake-finite-global-cut-speed-addition",
+  "title": "Exact finite nonnegative addition of global-cut boundary speeds"
+}

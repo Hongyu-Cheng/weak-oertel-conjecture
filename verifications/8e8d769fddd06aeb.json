@@ -1,0 +1,50 @@
+{
+  "candidate_id": "e823c82617a0bc70",
+  "candidate_sha256": "dfbbf3fae8f0489581ea21192121a1c7161a862e208478d23041b67a6d1613b3",
+  "checked_dependency_candidate_sha256": {
+    "a839bfd22b7f11a2": "e1f447eb6aa06575e5fff46a1e5f11a4bfff678f1de1f85265bbbda7e75f26a8"
+  },
+  "checks": [
+    "The Hausdorff assumption gives h_K(u)≥h_T(u)−δ||u||₁, and T₋+[−δ,δ]^m⊂T because the perturbation changes each coordinate by at most δ and the sum by at most mδ. Support comparison gives T₋⊂K. Matching a K-point to a T-point within δ gives K⊂T₊. These are translates of (1−2mδ)T and (1+2mδ)T respectively, with positive scales. The outer simplex is feasible, so each minimizer satisfies the volume bound.",
+    "For δ=0 one has K=T. Any extra point in S violates a facet inequality of T and gives a positive-volume cone on that facet outside T, contradicting |S|≤|T|. Thus S=T and the vertex and centroid estimates hold with error zero.",
+    "For δ>0 put L=1−2mδ. Each coordinate facet of T₋ has area L^(m−1)/(m−1)!, and the top facet has √m times that area. Perpendicular height for the top facet divides its inequality deficit by √m. The volume of each violated-facet cone is therefore L^(m−1)|T| times its positive deficit. The cone lies in S by convexity and meets T₋ only on the facet, so its volume is bounded by |S|−|T₋|. The argument works for any convex body S under the volume cap; no cones for different facets are added. For m=1 the facet is a point and the cone length is exactly the deficit.",
+    "With a=2mδ≤1/(4m), the odd-binomial numerator of Δ is at least 2ma=4m²δ and its denominator at most one. By the mean-value theorem the numerator is at most 2ma(1+a)^(m−1); Bernoulli and termwise domination by the geometric series of ratio (m−1)a give a ratio of at most (4/3)/(3/4)=16/9<2. Hence 4m²δ≤Δ≤8m²δ and E=Δ−δ≥mδ since 4m²−1≥m. The top bound 1−mδ+Δ≤1+E holds for m≥1.",
+    "The facet bounds give S⊂−E1+[1+(m+1)E]T. Under this map each displacement coordinate is E((m+1)t_i−1)∈[−E,mE]. In the reverse direction each point of T is within δ of K⊂S. Since δ≤mE, the Hausdorff error is at most mE≤8m³δ.",
+    "The maximum of coordinate i over S occurs at a vertex, and approximation of e_i gives value at least 1−δ. The sum bound and other lower coordinate bounds give x_i≤1+mE and x_j≤δ+(m−1)E≤mE for j≠i. A vertex minimizing the sum has sum at most mδ by approximation of zero, hence each coordinate is at most mδ+(m−1)E≤mE. The radii mE≤1/8 give pairwise disjoint neighborhoods since the reference vertices have pairwise infinity distance one. The chosen m+1 vertices exhaust the simplex. Averaging matched vertices opposite each label retains the same error bound; the predecessor supplies membership in K.",
+    "Source 783495094e97ee67 at fd41e97ff0cf53c3b4a631a7fd42bb4b5ca56499 matches SHA-256 62853841490ba27f90342765d3daf6f5fd99a459a030b733641684f6360ff42d. §§4–5 and (2)–(3), (8)–(12) give the same constants and explicitly extend the cone argument to arbitrary volume-bounded enclosing convex bodies. The archive verifier passed 280 exact locality/cone and 123 matching cases. A separate rational check at the two cutoff radii and one smaller radius in dimensions 1–40 passed; in dimension one, K=[δ,1−δ] and S=[δ,1+3δ] realize the volume cap and error E=3δ."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "a839bfd22b7f11a2",
+      "candidate_sha256": "e1f447eb6aa06575e5fff46a1e5f11a4bfff678f1de1f85265bbbda7e75f26a8",
+      "mapping": "The exact Wave 08 predecessor uses the same full-dimensional convex body K and m≥1. Its attainment makes the minimum-volume application available, and its universal facet-centroid conclusion puts each matched facet average in K. The Hausdorff estimate and vertex matching use no contact theorem. Admission requires the predecessor's independent approval and admission first."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:45:28.639678+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives qualitative stability from a depth hypothesis after normalization by a maximum-volume inscribed simplex. It does not bound any enclosing S from a prescribed Hausdorff error and volume cap or match its vertices and contacts.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Constructs a particular enclosing simplex for a fixed roof perturbation and computes its volume expansion. It gives no locality estimate for every volume-bounded convex enclosure.",
+      "fact_id": "a8cbe3efd17354fb"
+    }
+  ],
+  "readability": "The last sentence follows the vertex labeling paragraph: corresponding facet centroids are those opposite matching labels, under the smaller δ cutoff. The unquantified contact membership alone holds for every minimizer by the predecessor.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bbf9034c11ae4665c02129376c38edd8343e60f2e3c1edd68c080dd62b123d5b",
+  "reviewed_statement_sha256": "e6554ff489aab5c9bc51a73a25574dbeb5e39d17d50bf3411bef2ae83f3e8fa5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:42:59+00:00",
+  "summary": "The Hausdorff estimate applies to every enclosing convex body with the stated volume bound. At the smaller scale, a minimizing simplex has distinct matched vertices and its matched facet centroids are actual K contacts.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

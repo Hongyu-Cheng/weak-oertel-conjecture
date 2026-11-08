@@ -1,0 +1,32 @@
+{
+  "advances": "An affine chart and equality case for the tied profile. The chart does not itself supply a boundary load.",
+  "author": "PK-research-agent",
+  "candidate_id": "df51254e978fb6a2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:19:53.443355+00:00",
+  "depends_on": [
+    "32418f8d50e792af",
+    "5aeb5916857f97a9",
+    "d7ff9f9aad2b6512",
+    "7227bbfcd12ad3d2",
+    "a56f8711406a3870"
+  ],
+  "draft_key": "tied-source-chart",
+  "kind": "lemma",
+  "proof": "The energy support at an own-interior sampled mark, including at a boundary base, is d7ff9f9aad2b6512, and extends to own boundaries by continuity. For the volume-root support, 7227bbfcd12ad3d2 gives a Hausdorff-Lipschitz family with common inradius $r>0$. Two fibers at Hausdorff distance $h<r$ fit within the factors $1+h/r$ about their respective inball centers, by their support inequalities. Thus $v$ is Lipschitz on the relative base hull. The negative convex function $-v$ on the base hull has a convex extension to its affine span by taking the infimum of $-v(q)+L|z-q|$ over $q$ in the hull, for a Lipschitz constant $L$. The extension is finite and agrees on the hull, so it has a subgradient at $p$, giving $T$.\n\nWeighted AM–GM gives the majorant, with $S\\ge0$ and $T\\ge v_{\\min}$ giving the floor. The gradient in the own fiber is $(1/N)\\nabla_y\\log E=a_Y$ by a56f8711406a3870, so the differentiable own-interior restriction of a touching affine chart has exactly this slope after normalization. The own-fiber denominator floor is the same accepted energy floor. If $Y$ is as in the last assertion, the strict increase of the weighted geometric mean at positive arguments forces equality in both concavity inequalities for $F$ and $v$. Equality in the concavity of the weighted geometric mean forces the positive pairs $(F(Y_i),v(p_i))$ to have constant ratio, by strict concavity of the one-variable power after normalizing by the second component. The marked homothety equality in 5aeb5916857f97a9 applies to the convex representation and the actual containing fiber at $p$. Finally the nonnegative affine-majorant gaps have zero weighted sum, so each is zero. The normalized charts at the other marks have the same required own derivatives.\n",
+  "source_candidate_ids": [
+    "26455afca6af9c16"
+  ],
+  "source_candidate_sha256": {
+    "26455afca6af9c16": "2356169cee151b89a5b7677499b2b978d8ac0823c7998f48ccb4d231e296c4c8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "26455afca6af9c16",
+      "locator": "§5 (10)–(12) and final paragraph"
+    }
+  ],
+  "statement": "In the setting of the body-tied buffer, fix an own-interior sampled mark $Y=(p,y)$. Write $F(z,x)=E_{C_z}(x)^{1/d}$, $v(z)=V(z)^{1/d}$, and let $a_Y$ minimize the energy at $Y$. There are affine upper supports $S\\ge F$ and $T\\ge v$ on $C$ and $\\operatorname{conv}(P)$ respectively, touching at $Y$ and $p$. The affine function\n$$\nR_Y=\\frac dN\\frac{S}{F(Y)}+\\frac1N\\frac{T}{v(p)}\n$$\nsatisfies $H\\le H(Y)R_Y$ on $C$ with equality at $Y$. It restricts on $K_p$ to $P_Y(X)=1+a_Y\\cdot(X-y)$, and $\\nabla_y\\log f(Y)=a_Y$. On $C$, $R_Y\\ge v_{\\min}/(Nv_{\\max})$, where $v_{\\min}=\\min v$ and $v_{\\max}=\\max v$ on the real base hull. With a common fiber inradius $r$ and outer radius $R$ this floor is at least $r/(NR)$. On $K_p$ one has $P_Y\\ge1/N$.\n\nIf a positive own-interior sampled mark $Y$ is a convex combination $\\sum_i\\lambda_i Y_i$ of own-interior sampled marks with $\\lambda_i>0$ and $H(Y)=\\sum_i\\lambda_i H(Y_i)$, then the centered fibers $K_{p_i}-y_i$ are positively homothetic and $F(Y_i)/v(p_i)$ is constant. The same majorant $H(Y)R_Y$ touches all these marks, and $R_Y/R_Y(Y_i)$ is a normalized positive affine majorant at $Y_i$, with own restriction $P_{Y_i}$.",
+  "subgoal_id": "pk-intake-tied-source-chart",
+  "title": "Positive affine charts for the body-tied buffer"
+}

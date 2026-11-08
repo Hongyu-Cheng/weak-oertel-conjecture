@@ -1,0 +1,41 @@
+{
+  "advances": "Exact feasibility of ordinary planar ray-endpoint and sector-area data; does not certify feasibility of an ambient mixed-integer family or establish a depth bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "7d1ee06fa4119930",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:15:09.178598+00:00",
+  "depends_on": [
+    "4b408a905c45b287",
+    "2fb8b0785692a5b4"
+  ],
+  "draft_key": "planar-prescribed-sector-area-psd",
+  "kind": "theorem",
+  "proof": "Every realizing body contains the core triangle with vertices $0,P_i,P_{i+1}$. Assume henceforth $A_i\\ge D_i/2$, and write $t_i=2A_i/D_i$ and $a_i=t_i-1$. First we show that realization is equivalent to a finite system with variables $u_i,v_i>0$ and $u_i+v_i=t_i$. In sector $i$ use the point $V_i=u_iP_i+v_iP_{i+1}$ and the piece $\\operatorname{conv}\\{0,P_i,V_i,P_{i+1}\\}$. If $t_i=1$ this is the core triangle and we may set $u_i=v_i=1/2$. Each piece has the specified radial endpoints and area $(u_i+v_i)D_i/2$.\n\nIf a realizing body exists, the support-preserving sector replacement theorem supplies pieces of precisely this form. Intersect its polygon with sector $i$. Clipping along the two rays adds at most $0,P_i,P_{i+1}$ as vertices, because the ray intersections are precisely the segments from $0$ to the prescribed endpoints. Any additional vertex is in the open sector and has two positive coefficients in the sector basis. If there is none, take the redundant core midpoint. Convexity of its polygon at $P_i$, traversed counterclockwise, requires $\\det(P_i-V_{i-1},V_i-P_i)\\ge0$. The determinant is\n$$\nu_{i-1}(1-u_i)D_{i-1}+v_i(1-v_{i-1})D_i-u_{i-1}v_i E_i.\n$$\nDivide by $u_{i-1}v_i>0$ and use $1-u_i=v_i-a_i$ and $1-v_{i-1}=u_{i-1}-a_{i-1}$. The result is the condition\n$$\nD_i\\frac{a_{i-1}}{u_{i-1}}+D_{i-1}\\frac{a_i}{v_i}\\le\\kappa_i. \\tag{1}\n$$\n\nFor sufficiency, take positive coefficients with the prescribed sums satisfying (1). Put $p_i=(1-u_i)/v_i$ and $q_i=(1-v_i)/u_i$. As in the sector replacement theorem, the piece has gauge $\\max\\{x+p_i y,q_i x+y\\}$ in the coordinates $xP_i+yP_{i+1}$ with $x,y\\ge0$. At a nonzero point of the ray through $P_i$, use these same coordinates on both sides of the ray. Since $P_{i-1}=(E_i/D_i)P_i-(D_{i-1}/D_i)P_{i+1}$, the gauge on the side $y<0$ near that point is $x+[(E_i-D_i q_{i-1})/D_{i-1}]y$, the form for the edge ending at $P_i$. On the side $y>0$ the gauge is $x+p_i y$, the form for the edge starting there. These forms are active near the ray: for a positive excess the other form is strictly smaller on the ray, and for a core sector the two coincide. Thus the change in slope with respect to $y$ is\n$$\np_i-\\frac{E_i-D_i q_{i-1}}{D_{i-1}}\n=\\frac{\\kappa_i-D_i a_{i-1}/u_{i-1}-D_{i-1}a_i/v_i}{D_{i-1}}\\ge0.\n$$\nOn any line crossing this ray the slope jump is this quantity times the absolute value of the transverse speed, so it is nonnegative in either direction. The positive gauges agree on all shared rays and are continuous. Along lines avoiding $0$ the slopes are nondecreasing both within sectors and across the rays; on lines through $0$ the two slopes are ordered by positivity and homogeneity. The joined gauge is convex. Its unit sublevel is the union of the pieces, bounded and containing a disk about $0$, giving the required convex polygon. This proof allows equality in (1), where the edges at the endpoint are collinear.\n\nNow divide (1) by $D_{i-1}D_i>0$. For $a_i>0$ put $r_i=a_i/(D_i u_i)$ and $s_i=a_i/(D_i v_i)$. Their harmonic value is $a_i/(D_i t_i)=h_i>0$; for $a_i=0$ put $r_i=s_i=0$. The divided inequalities become $r_{i-1}+s_i\\le b_i$. Conversely, from any feasible charges of the cyclic harmonic budget lemma, reconstruct $u_i=a_i/(D_i r_i)$ and $v_i=a_i/(D_i s_i)$ on positive edges, using $u_i=v_i=1/2$ on zero edges. Positivity and $u_i+v_i=t_i$ follow from the harmonic identity and the core choice. Thus no vanishing denominator occurs. By the budget lemma, feasibility is equivalent to positive semidefiniteness. In particular the positive block vector in that lemma gives $u_i=t_i w_{i+1}/(w_i+w_{i+1})$ and $v_i=t_i w_i/(w_i+w_{i+1})$ on positive edges. Negative $\\kappa_i$ is infeasible and a zero $\\kappa_i$ forces both adjacent excesses to vanish, since the terms of (1) are nonnegative. The argument also allows singular matrix blocks and collinear core sides. The vertex bound follows from the explicit union.\n",
+  "source_candidate_ids": [
+    "2e26c63010f03ffc",
+    "697de064a9368ba1",
+    "be9098c627b40217"
+  ],
+  "source_candidate_sha256": {
+    "2e26c63010f03ffc": "0b2ee4306252b9fb0b4ff7a0a4016c316a9ba6085f224b3466d620aabc8da8fc",
+    "697de064a9368ba1": "dadc4eba92d50c3b53cd84ff4c17530f0b1fb8224159a6cb678a934da9ca492d",
+    "be9098c627b40217": "67cf69e02111d630be4c050dbf6984100b2c3cf7de295de667357be6c1d90b29"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2e26c63010f03ffc",
+      "locator": "§§1–3 and §7, geometric data, matrix and explicit reconstruction"
+    },
+    {
+      "candidate_id": "be9098c627b40217",
+      "locator": "§§1–4, same endpoints and areas with strictly positive open-sector insertion coordinates"
+    },
+    {
+      "candidate_id": "697de064a9368ba1",
+      "locator": "§§1–3 and §5, exact determinant, gauge slope calculation, and harmonic reparametrization"
+    }
+  ],
+  "statement": "Let $m\\ge3$ and let $P_i\\in\\mathbb R^2\\setminus\\{0\\}$ lie on distinct rays in counterclockwise cyclic order with consecutive angular gaps strictly less than $\\pi$. Put $D_i=\\det(P_i,P_{i+1})>0$, $E_i=\\det(P_{i-1},P_{i+1})$, and $\\kappa_i=D_{i-1}+D_i-E_i$. Prescribe finite areas $A_i\\ge D_i/2$, set $h_i=1/D_i-1/(2A_i)$ and $b_i=\\kappa_i/(D_{i-1}D_i)$, and define $L$ by\n$$\nx^\\top Lx=\\sum_i b_i x_i^2-\\sum_i h_i(x_i+x_{i+1})^2.\n$$\nThere is a convex body containing $0$ in its interior whose boundary intersects the $i$th ray at exactly $P_i$ and whose area in $\\operatorname{cone}(P_i,P_{i+1})$ is exactly $A_i$ if and only if $L$ is positive semidefinite. If feasible, the body can be chosen to be a polygon with at most one vertex in each open sector and at most $2m$ vertices in total. If any prescribed area is below $D_i/2$, realization is impossible.",
+  "subgoal_id": "pk-intake-planar-prescribed-sector-area-psd",
+  "title": "Exact positive semidefinite test for prescribed planar sector areas"
+}

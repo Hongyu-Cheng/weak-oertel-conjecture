@@ -1,0 +1,59 @@
+# PK intake batch 15
+
+Seven groups screened 66 source notes in 11m 48s, extracting 304 source occurrences. Seven exact aliases point to canonical entries. An eighth matching locator is registered for a note still awaiting its first screen. The initial screen added 297 canonical rows, including 20 checked reuse mappings and 30 specific holds.
+
+All 39 submitted proofs passed independent review and entered the local fact graph. The initial review window was 10m 51s. Rechecks extended it to 12m 54s. They corrected the closing math delimiter in two sector statements, made compactness and actual sampled fibers explicit in the gradient statement, and corrected the scope metadata for the minimum on a canonical minor. All four proofs and all original review records were preserved. The dependent sector and shared-inequality reviews bind the revised parent candidates.
+
+| Source | Fact | Initial recorded review |
+| --- | --- | ---: |
+| c280bb0dcfd30f3d §§1–3, (1), (4)–(7), dbf3b23d25004153 §4, (6)–(7), and §6, (12) for zero shear | [Canonical lifts preserve anchored representations and transfer full-fiber depth](../../facts/ba0f3db1bf4f62c6.md) | 5m 41s |
+| 2086e4eaa4bce465 §§1–5, (1)–(7) | [A canonical lattice lift preserves completeness and every pairwise congruence](../../facts/e557f3071b96c191.md) | 5m 41s |
+| dbf3b23d25004153 §§1–2, (1)–(2), 2086e4eaa4bce465 §6, (8), before the attainment argument | [Dependence components split convex traces, Helly numbers and occupied parities](../../facts/3d5f56b513c21fc4.md) | 5m 41s |
+| dbf3b23d25004153 §3, (3)–(5), 2a5bf571e6159901 §§1–2, cone-volume and maximal-simplex estimates | [Positive compatible fibers propagate diameter bounds across a dependence component](../../facts/aa4df3d20ca63976.md) | 3m 44s |
+| dbf3b23d25004153 §§5–6, (8)–(13) | [Anchored affine translations give bounded residuals and transfer full-fiber depth](../../facts/89563f7ef7a4762f.md) | 3m 44s |
+| c280bb0dcfd30f3d §1, own-fiber lower bound, and §§4–8, (8)–(10) and theorem, 2086e4eaa4bce465 §6, (8) and parity-budget attainment | [A smallest bad canonical minor has an attained original-depth minimum](../../facts/26d27b0f77ea4ac9.md) | 3m 44s |
+| c280bb0dcfd30f3d §9, (11), shared representation and closure, d485228e666ca27b §1, positive-limit shared representation closure and coefficient variations | [A smallest bad canonical minor has a separate attained minimum with finitely many shared inequalities](../../facts/eeb5e5e319ad028c.md) | 3m 44s |
+| 2086e4eaa4bce465 §7, all paragraphs | [Every positive compatible family below the parity target has a primitive three-site chain](../../facts/9e3dc271d831d032.md) | 5m 41s |
+| 919c51f1d263878e §§1–3, (1)–(10) | [Signed rows and exact cap–chord deficits for a strict triangle circuit](../../facts/a19fb2ae234afb2a.md) | 3m 21s |
+| 919c51f1d263878e §§5 and 7, (13)–(22) and (25)–(26) | [A strict scalar lower bound for normalized reciprocal chord quantities](../../facts/677aa35a153cdf45.md) | 3m 21s |
+| 919c51f1d263878e §6, barycentric cap lower bound | [A lower cap floor under the strict triangle cap ceiling](../../facts/2e657e976221a74d.md) | 3m 21s |
+| 919c51f1d263878e §§6–7, (23)–(25) | [A strict reciprocal-chord bound for a triangle under the cap budget](../../facts/d4f185291093d4db.md) | 3m 21s |
+| d61c49578c90db6d §§1–4, (1)–(5), 919c51f1d263878e §§1–2, signed rows and actual chord–height relation | [The exact parameter image of a strict triangle cap circuit](../../facts/5f923438468803ac.md) | 2m 52s |
+| d61c49578c90db6d §4, (4)–(7) | [The exact cubic deficit of a strict triangle cap circuit](../../facts/33488d4938a6ee4a.md) | 2m 52s |
+| d61c49578c90db6d §§5–6 | [The closed PSD downward hull of strict triangle cap vectors](../../facts/e85ab5a80f874e71.md) | 2m 52s |
+| 83b3822a403eee2c §§1–4, canonical and general finite radius saturation and inverse weights | [Finite saturation of an ordinary central radius at fixed sector areas](../../facts/63f90fd70f747bd0.md) | 4m 04s |
+| 50872e565640d12b §1, fixed-area compactness and actual attainment | [Attained minimum of a normalized inverse chord weight at fixed planar sector areas](../../facts/82a8acc237f57498.md) | 4m 04s |
+| 50872e565640d12b §2, Gram identity and actual-body rigidity with zero excesses | [Rigidity of prescribed planar sector data with a positive null vector](../../facts/ffdb2bc33d7a6750.md) | 4m 04s |
+| 50872e565640d12b §3, all four exactly-two-core patterns | [Exactly two core sectors force a quadrilateral at a fixed-sector inverse-weight minimum](../../facts/f1b9f11ad90a1eb2.md) | 4m 04s |
+| 83b3822a403eee2c §5, cap differences, core product, and quantitative unique-sector restrictions | [Restrictions on saturated unique sectors under a strict planar cap ceiling](../../facts/36f62a71dc48885b.md) | 4m 04s |
+| f7c05b2c30c8cfcb §§3–6, (3)–(11), assuming the positive original-depth compact class from §2 | [Attainment of covariance-buffered energy depth from an original compact sublevel](../../facts/6e758d95a45b4dee.md) | 3m 26s |
+| c6bafe9ff5de0861 §1, (1)–(2), global witness groups and rigid contact marks, 8effe5eb4947ba88 §2, maximal occupied-face witnesses and midpoint count for the body-tied profile | [Parity-bounded rigid cap groups for the invariant energy-only buffer](../../facts/088f4667ef9ef0b0.md) | 3m 26s |
+| c6bafe9ff5de0861 §2, (3)–(8), exact Hausdorff continuation with updated covariance | [Exact contact budgets for a moving covariance-buffered energy cover](../../facts/2a193556744728c8.md) | 3m 26s |
+| c6bafe9ff5de0861 §§3–5, (9)–(15), signed shell, uniform optimizer estimate, and covariance, d750a370b2e831ee §§1–4, bounded signed radial marked-energy envelope | [Uniform marked energy and covariance derivatives on signed radial body paths](../../facts/da49875a9737b172.md) | 3m 35s |
+| c6bafe9ff5de0861 §5, (14)–(17), covariance and finite-contact coefficient; §6 final paragraph, fixed-norm variant | [Finite-contact derivative with updated covariance and total mass](../../facts/10622d8f953f3ff0.md) | 3m 35s |
+| c6bafe9ff5de0861 §§3,6, (11), (18)–(20), actual regular quantiles and sufficient strict inequalities | [Regular moving quantiles and the derivative of the normalized covering budget](../../facts/dc4933b776585ce0.md) | 3m 35s |
+| 78b95c208ba2d374 §1, (1), proper-cut derivatives | [First variation of a proper simplex cut](../../facts/aef64d0fab6e1fa1.md) | 4m 49s |
+| 78b95c208ba2d374 §2, (2)–(4), unique minimum and envelope | [Unique capacity threshold for a positive simplex row](../../facts/d2ba4e3cbd6eb730.md) | 4m 49s |
+| 78b95c208ba2d374 §3, full-cut classification | [Full-cut capacity minima of positive simplex rows](../../facts/a00161dbb06b25c0.md) | 4m 49s |
+| 78b95c208ba2d374 §4, (5)–(8), directional and coordinate jumps | [Coordinate derivative jumps at full-cut simplex capacities](../../facts/c80576b633835713.md) | 4m 49s |
+| 78b95c208ba2d374 §5, local transfer and saturated exception | [Full-cut rows at positive-weight stochastic capacity maxima](../../facts/10916437d7f6301d.md) | 4m 49s |
+| a5d3d44181ebed82 §1, (1)–(2), three-phase survival formulas | [Joint second derivatives for signed exponential cap probability](../../facts/3e6e1eb15d927db8.md) | 3m 35s |
+| a5d3d44181ebed82 §§2, 4, 4a, (3)–(7), (9)–(15) | [Nondegenerate proper thresholds and the optimized capacity Hessian](../../facts/8bdcdcd6e2fa69d9.md) | 3m 35s |
+| a5d3d44181ebed82 §§2–4, (6)–(8), (12), corrected direction | [Positive capacity curvature from a corrected central pair](../../facts/1cdceac089be44d8.md) | 3m 35s |
+| a5d3d44181ebed82 §6, density-tangent argument before (16) | [Noncentral section-centroid coordinates lie on one strict side](../../facts/08e57a9d5210184f.md) | 3m 35s |
+| a9fd9b4c832ea48f §2, (4)–(8), complete actual cap menu and feasible transport polytope | [Exact capacity transports for the nine critical R4 caps](../../facts/691142cf2fd43ce7.md) | 4m 58s |
+| a9fd9b4c832ea48f §3, (9)–(10), and §4 after (12a), (13)–(14) | [Positive quadratic and hinge defects throughout the R4 transport menu](../../facts/b1599d1da9be6bc6.md) | 4m 58s |
+| a9fd9b4c832ea48f §4, (11)–(12a), exact cap-signature criterion | [Zero active hinge defects force identity capacity transport](../../facts/0f055dd19e175ff1.md) | 4m 58s |
+| 50a9575831060dc5 §1, (1)–(2), all-source gradient classes, 3b257d8ddacb6167 §6a–b, (18c), gradient closure, parity and positive-volume label | [Gradient labels of proper deepest marks form parity-disjoint closed minors](../../facts/e7612d199c90e9c9.md) | 4m 58s |
+
+The canonical graph preserves exact anchored representations and inherited congruences. The Helly and occupied-parity budgets each split across dependence components under their respective hypotheses. On a least-cardinality bad canonical minor, the proper-minor depth comparisons bound the retained mass of each proper closed subset. Those inequalities force a uniform positive fiber volume in each strictly bad sublevel. Diameter propagation and an affine shear then give compact representatives and an attained minimum. The corresponding shared-inequality problem has a separate attained restricted minimum. The three-site chain pays only its own midpoint inclusion and does not estimate its share of the total mass.
+
+The ordinary triangle results give the strict cap floor, the reciprocal chord bound $223/1000$, and the exact strict-row image and PSD downward hull. The mixed endpoint transfer still requires the actual same-cut endpoint ratios. The ordinary prescribed-sector optimization keeps six positive sector budgets fixed. The unique quadrilateral conclusion requires exactly two core sectors. More core equalities, vanishing sector budgets and fixed-outer midpoint containment are tracked separately.
+
+The energy-only buffer now has fixed-group coverage and exact moving budgets with recomputed covariance. The regular descent test uses all group signs on a single actual compatible path. Existence of that path at a bad minimum and the independently varying weighted parameter remain separate. A different, conditional gradient-label lemma shows closed source minors and disjoint inherited parities using actual proper deepest marks. The transport identity for target label masses remains a separate input.
+
+The simplex row results give unique proper thresholds, exact full-cut classification, and joint and optimized second derivatives in their proper domains. A positive row with a full cut at the specified stochastic maximum falls into the saturated unit-capacity case. The corrected central-pair direction cancels the optimized threshold penalty, leaving the rank and simultaneous row compensation questions.
+
+For the actual R4 product, 6 of the 27 extreme balanced nine-cap profiles admit the full marked surface transport. Every feasible profile on a facet of length $L$ has projected quadratic displacement $193L/10$ and all nine hinge deficits at least $1129L/720$. The independent replay passed 2,719 exact menu checks, 732 rational facet checks and 525,779 exact all-normal checks. An alternate enumeration checked all 81 assignment/facet moment cases, all 18 feasible hinge matrices and all 18 transported matrices. The separate exact replays include the 13-site lattice calibration, the 672 truncated-triangle polynomial certificates, and all 17 integer cap counts for the sector group.
+
+The [crosswalk](../../assets/pk-nov6/crosswalk.json) records 988 screened notes and 229 awaiting their first screen. Of the screened notes, 149 have checked dispositions for all entries, including 26 with at least one precise hold, and 839 remain provisional. The 3,793 canonical entries comprise 257 admissions, 562 checked reuse mappings, 294 holds, 2,273 proposals awaiting normalization or proof review, and 407 supporting entries. Seventy-one additional source occurrences point to canonical entries.

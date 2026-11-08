@@ -1,0 +1,62 @@
+{
+  "candidate_id": "304db41371ea997a",
+  "candidate_sha256": "b273e831bb7130062b6b01d647b84952412a8dbcf6dd8a429e10f69379c8682d",
+  "checked_dependency_candidate_sha256": {
+    "73234f91aeecda16": "c1d4e47afa214bd112e97aba7e9b8aa21d436d2d73ef99bfa07078cf92e941f9"
+  },
+  "checks": [
+    "On each integer fiber the shear is a translation in the first continuous coordinate. It preserves volume and commutes with the normalized mixed centroid. The boundary through that centroid gives zero as the transformed first continuous centroid coordinate, regardless of the base coordinate.",
+    "Writing the transformed lower endpoint as U_i−r_i identifies the entire fiber as its translate of r_i times the standard simplex. Its first coordinate at the ordinary centroid is U_i−r_i+r_i/(d+1). Weighting by r_i^d/d! gives the displayed identity. A fiber of width zero contributes zero to the measure and its first moments.",
+    "After imposing x_1≥0 the lower endpoint inequality is redundant. For U_i<0 the cap fiber is empty, for U_i=0 it is the singleton at the origin of that continuous fiber, and for U_i>0 it is the standard simplex scaled by U_i. If U_i=r_i the entire fiber is retained. Thus the stated cap fraction follows after canceling 1/d!.",
+    "For d=1, Q/2≤∑r_i(U_i)_+≤mF. For d>1, the Hölder exponents d/(d−1) and d give the stated sum of powers. The exponent identity bounds that sum by m^(1/(d−1))Q. Raising to the dth power and dividing by mQ^(d−1)>0 gives F≥Γ_d Q/m.",
+    "The positive set of the nonnegative concave width function is an interval. Its integer points are consecutive and its midpoint inequalities give the requisite nonincreasing successive differences. For a single positive fiber concavity is vacuous and the finite-moment estimate is an equality, with exact cap fraction Γ_d.",
+    "Divide the finite inequality by (d+2)mM to obtain the displayed correction. Since m,M,N are positive, the bound also gives the source’s strict Γ_d(d+1)/(d+2) threshold, which exceeds Γ_d/2.",
+    "Source 4525b8c49b1ca492 opening (1)–(2), identities (3)–(5), and (6) match the same actual fibers, cap orientation and contact condition, centroid, moments and finite correction. The frozen proof uses the admitted finite-moment result 73234f91aeecda16 in place of the source reference to its pending precursor."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "c1d4e47afa214bd112e97aba7e9b8aa21d436d2d73ef99bfa07078cf92e941f9",
+      "fact_id": "73234f91aeecda16",
+      "fact_sha256": "41899df48f8261c1e4e8dd787c3d8587049d73e0a6e832861b32b4a8144a3b6f",
+      "hypotheses": "Use p=d≥1 and f_i=r_i on the N consecutive positive-width integer fibers. These widths are positive and concave on their block, and m is their maximum. The p and p+1 sums are M and Q, respectively."
+    }
+  ],
+  "finished_utc": "2026-11-08T10:01:13Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the scalar finite power-moment estimate used in the final step. The simplex geometry, actual centroid identity and cap estimate are additional conclusions.",
+      "fact_id": "73234f91aeecda16"
+    },
+    {
+      "comparison": "Uses the same power-moment correction with Jensen at an integer weighted mean, and bounds the volume of that fiber. Here the base mean may be nonintegral and the bound concerns a mixed cap.",
+      "fact_id": "c46a6b8335f94cab"
+    },
+    {
+      "comparison": "Estimates caps at the centroid of one central fiber of a symmetric paired chain, including its facet-normal special case. The frozen statement uses the centroid of the full mixed measure for asymmetric translated simplex tubes and gives the finite correction.",
+      "fact_id": "5adcdc64a058b8aa"
+    },
+    {
+      "comparison": "Bounds all halfspaces through a chosen integral point of a paired simplex chain. This does not yield the frozen cap bound through the true centroid of the general simplex tube.",
+      "fact_id": "fca4c60158080a5f"
+    }
+  ],
+  "readability": "The cap-radius sentence can be read directly by writing its fiber as x_j≥0 for all j and ∑x_j≤U_i. The zero-width omission and lower-facet equality are both explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0c393ba30235859a209786b832b13f66bd7f08c5ebf26a0660a332257b48e398",
+  "reviewed_statement_sha256": "686e17d8e2e85fb9c78cb60b413a6eeb7a97bef5bc278fff49bff7221a4c26c5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "4525b8c49b1ca492": "a3e72f526e0e274274167a7dd27f33389e43a38b75c090561e5dda449206feaa"
+  },
+  "started_utc": "2026-11-08T09:58:46Z",
+  "summary": "The shear gives the exact mixed-centroid identity and the exact captured mass. The Hölder bound and the accepted finite-moment correction apply for every stated dimension and every positive number of integer fibers.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

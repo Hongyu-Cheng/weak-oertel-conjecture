@@ -1,0 +1,35 @@
+{
+  "advances": "A sufficient two-direction isolation condition at one facet normal. Other normals and contact-constrained facets need no freedom assumption.",
+  "author": "PK-research-agent",
+  "candidate_id": "52437a185ed1fb32",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.940691+00:00",
+  "depends_on": [
+    "155691fc3768c06f",
+    "5d743dac7de8813b"
+  ],
+  "draft_key": "isolated-facet-signed-realization",
+  "kind": "theorem",
+  "proof": "For fixed $q,u$ write $V_w=w-q$, $c_w=h_{K_w}(u)-h_{K_q}(u)$, and take the nonempty feasible slope polyhedron $V_w\\cdot A\\ge c_w$ from 155691fc3768c06f. A tight anchored representation using $z$ positively forces equality in row $z$ at every feasible $A$, because the weighted sum of the row slacks is zero. Conversely, if a row $z$ is always tight, maximizing $V_z\\cdot A$ over the feasible polyhedron has value $c_z$. Finite linear programming duality gives $\\lambda_w\\ge0$ with $\\sum_w\\lambda_w V_w=-V_z$ and $-\\sum_w\\lambda_w c_w=c_z$. Normalizing the nonzero array $\\lambda+e_z$ gives a tight anchored representation with positive weight on $z$.\n\nAt $u_0$, for $q=p$ take one feasible slope strict at each other base in turn, and average these finitely many slopes. Every slack is nonnegative and the corresponding witness makes each desired slack strictly positive. If there are no other bases, take any slope. For $q\\ne p$ take one slope strict at row $p$. Call these fixed slopes $A_q^0$. For each $u$ choose the feasible slope nearest to $A_q^0$. The proof of 155691fc3768c06f supplies continuity of this projection by applying its minimum-norm construction to the translated right side $c(u)-V A_q^0$, since the matrix of rows $w-q$ is fixed. At $u_0$ the nearest slope is $A_q^0$. Thus all specified strict slacks persist in one open neighborhood of $u_0$.\n\nUse the complete family of planes $\\ell_q(u,z)=h_{K_q}(u)+A_q(u)\\cdot(z-q)$, which touches at each own base. Choose a continuous nonnegative cutoff $\\chi$ supported within that neighborhood, equal to one at $u_0$, and avoiding the other finitely many facet normals of $K_p$. Assign the field $\\chi(u)\\phi(X)$ to source $p$ and zero to the other sources. At $p$ in the support of $\\chi$ only the source-$p$ plane is active. At other bases in that neighborhood the source-$p$ plane is inactive and a zero-field own plane is active. At every normal outside the cutoff the fields all vanish. The signed active maximum therefore yields the asserted speed, since the nonfacet part of a polytopal boundary is surface-null.\n\nFor the tent when $d\\ge2$, write $F=\\{\\ell_r(X)\\le1\\text{ for all }r\\}$ in its affine hull with $\\ell_r(g_F)=0$ at its centroid. Then $T=1-\\max_r\\ell_r$ on $F$ and its superlevels are the centered homothets of $F$. Its negative extends as the convex function $\\max_r\\ell_r-1$ after orthogonal projection onto the facet plane. The two constant fields and this tent field use the same planes, and any nonnegative combination is convex, giving the three speeds and their finite nonnegative combinations.\n",
+  "source_candidate_ids": [
+    "2951c303a65db1e9",
+    "4bf40258fc44a4e6"
+  ],
+  "source_candidate_sha256": {
+    "2951c303a65db1e9": "2919b1dd1ac57c87c8734dc079ccf7f32b2cee0fe57c7fe2e20396b13f16437a",
+    "4bf40258fc44a4e6": "cc6aae2a7d849f8fe56017832cda39183f79d485fdffd6294fa2398fdd7c215d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2951c303a65db1e9",
+      "locator": "2951c303a65db1e9:04 §5, (9)–(10), isolated free-facet realization"
+    },
+    {
+      "candidate_id": "4bf40258fc44a4e6",
+      "locator": "4bf40258fc44a4e6:02 §§1–4, (6)–(8), tight anchored representation and forced-contact equivalence"
+    }
+  ],
+  "statement": "Use the compatible sampled family of the complete signed global-cut theorem. At a unit normal $u$, say that $z$ is forced for $q$ if an anchored convex representation $\\sum_w\\lambda_w w=q$ has $\\lambda_z>0$ and $\\sum_w\\lambda_w h_{K_w}(u)=h_{K_q}(u)$. Suppose $K_p$ is a polytope, $F$ is its facet of outward unit normal $u_0$, and at $u_0$ no $z\\ne p$ is forced for $p$ and $p$ is forced for no $q\\ne p$. Then for each finite continuous convex $\\phi:\\mathbb R^d\\to\\mathbb R$ an actual complete signed-cut path has signed inward speed $\\phi(X)$ on $\\operatorname{relint}F$ and zero surface-almost everywhere on all remaining sampled boundary. In particular the two parallel speeds $1,-1$ are realized. When $d\\ge2$, so is the outward centroid-pyramid speed $-T$. Their finite nonnegative combinations are also realized.",
+  "subgoal_id": "pk-intake-isolated-facet-signed-realization",
+  "title": "Signed realization of a facet isolated in the forced-contact relation"
+}

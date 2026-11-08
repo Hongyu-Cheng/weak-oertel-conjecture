@@ -1,0 +1,28 @@
+{
+  "advances": "Exact cubic slack for ordinary strict triangle data, with a separate equality description.",
+  "author": "PK-research-agent",
+  "candidate_id": "33488d4938a6ee4a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:49:19.105327+00:00",
+  "depends_on": [
+    "5f923438468803ac"
+  ],
+  "draft_key": "strict-triangle-cubic-deficit",
+  "kind": "lemma",
+  "proof": "The strict triangle row image theorem supplies the asserted $u$-coordinates. Set $P=\\prod_i u_i$ and $Q=\\prod_i(1-u_i)$. The cyclic formulas give $\\sum_i f_i^2/4=\\sum_i u_i-\\sum_{i<j}u_i u_j$, $f_1f_2f_3=8\\sqrt{PQ}$, and $P+Q=1-\\sum_i u_i+\\sum_{i<j}u_i u_j$. Substitution proves the cubic deficit formula.\n\nFor fixed $i$ put $g=f_j+f_k$. We have $0<f_i<2$ directly from $f_i=2\\sqrt{u_i(1-u_{i+1})}$. Since $f_jf_k\\le g^2/4$,\n$$\n4\\ge\\sum_\\ell f_\\ell^2+f_1f_2f_3\n=f_i^2+g^2-(2-f_i)f_jf_k\n\\ge f_i^2+(2+f_i)g^2/4 .\n$$\nRearrange and divide by $2+f_i>0$. Equality requires equality in both inequalities, which is exactly the claimed criterion.\n",
+  "source_candidate_ids": [
+    "d61c49578c90db6d"
+  ],
+  "source_candidate_sha256": {
+    "d61c49578c90db6d": "ee6d05e74a2ac993bcdfb6c2786d0f3b2c22fbb78f8492e3b76225145d4b99df"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d61c49578c90db6d",
+      "locator": "§4, (4)–(7)"
+    }
+  ],
+  "statement": "Let $K$ be a nondegenerate planar triangle with interior source $y$ and nonzero spanning normals $v_1,v_2,v_3$ that sum to zero. Suppose the through-source caps strictly capture three distinct vertices and strictly exclude the other vertices in each cap. Write $k=|K|$, $Q_i$ for the cap areas, $\\sigma_i$ for the chord lengths divided by the respective $\\lVert v_i\\rVert$, and $f_i=2\\sqrt{kQ_i}/(\\sigma_i\\sum_\\ell Q_\\ell/\\sigma_\\ell)$. In the exact parameterization $f_i=2\\sqrt{u_i(1-u_{i+1})}$ with $0<u_i<1$ and $1<\\sum_i u_i<2$, the cubic deficit satisfies\n$$\n4-\\sum_i f_i^2-f_1f_2f_3\n=4\\left(\\sqrt{\\prod_i u_i}-\\sqrt{\\prod_i(1-u_i)}\\right)^2\\ge0.\n$$\nConsequently each row satisfies $f_i+(f_j+f_k)^2/4\\le2$. Equality in this row holds exactly when the cubic deficit is zero and $f_j=f_k$, for $\\{i,j,k\\}=\\{1,2,3\\}$.",
+  "subgoal_id": "pk-intake-strict-triangle-cubic-deficit",
+  "title": "The exact cubic deficit of a strict triangle cap circuit"
+}

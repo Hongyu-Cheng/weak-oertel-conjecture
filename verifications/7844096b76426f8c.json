@@ -1,0 +1,65 @@
+{
+  "candidate_id": "8674753359aec113",
+  "candidate_sha256": "85459e92b5f90fb0e9aa3078a724cf74c7d3eac8638a4a13ff2080b603857d26",
+  "checked_dependency_candidate_sha256": {
+    "18e7bdf54588779d": "147af10a15ccd0baaf7f740ad71979edbc9e7689171b8840b16a2520307819aa",
+    "f26ba90707244e98": "8e74ac2035592c05d3324e7082caf435164f08e9d8dc8f090743c0406c88b3b9",
+    "f4be2679c83c2fd1": "f7af40d0ddef2d06e42343643b1e896508c69bb3b7842462b3324f46c0048977"
+  },
+  "checks": [
+    "Read d28e829ed5b07592 §§1–4. The frozen nontrivial claim retains 0<a<1/2 and T≥s*, and the other regimes of the source are outside its domain.",
+    "Direct integration and differentiation give both cone formulas, agreeing at s=1. The centered root s*=1/(1−2a), the displayed e*,v*, and t*=(1−2a)^2 were independently recomputed. The physical area and cap subtraction use density 1/2 in d=2.",
+    "For e<1, the denominator of J is positive and strictly increases in s, so T is in its same interval. Independent rational-function expansion verified both the derivative and the complete quartic factorization of J(T)−κ. The factors are nonnegative on x=(1−2a)T−1≥0.",
+    "Independent exact expansion verified the squared-centered-slope factorization and both endpoint cubics. All eight univariate Bernstein coefficients and all forty-two bivariate Bernstein coefficients agree with the printed lists. The denominators are positive in the interior parameter domain, and the nonnegative basis proves the inequalities also at s=0,1 and the finite cutoff.",
+    "Centering cancels the signed q multiplier after integration. β0−4/9 and β−β0 have the stated nonnegative forms. Multiplication by the positive denominator shows 1/2−β has the sign of 1−2a−t, nonnegative since t≤(1−2a)^2. This includes the infinity record in the correction interval.",
+    "The two-law inequality follows by combining corrected bounds and cancelling c. The lower residual at s=0 and upper at s=s* vanish, both slopes are centered, and both coareas are positive, so equality is attained. The accepted full-record normalization yields value and continuity at zero coarea."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "18e7bdf54588779d",
+      "fact_sha256": "ec45d0b04a6a40e89e05a1c4a616bab8cc728617ec9fb8d7db4c127d89f29cc3",
+      "hypotheses": "Use d=2 with density r^0/2=1/2 and a=1/(H+1), so the cone Dirac layers have C0=1−a, P/V0=pe+1−v and M/C0=−(1−a)∂a e/2."
+    },
+    {
+      "fact_id": "f4be2679c83c2fd1",
+      "fact_sha256": "421b7e875d13b8abe8cebab8ea20da66845c3e0c1a5aff20c2e4c1d670d53408",
+      "hypotheses": "The proper frustum has 0<U<H and T=U/r(U)≥s*>1. Apply exact unchanged coarea and moment for s≤T and replace the tail by T and infinity. The conditional finite law remains centered."
+    },
+    {
+      "fact_id": "f26ba90707244e98",
+      "fact_sha256": "7971ab291700dd8267cdd288cbc048ac0626554eeedc7eb01685d9c882119966",
+      "hypotheses": "For separately centered laws of the same frustum, T≥1 and finite positive coareas on [0,T] ensure the balanced quotient formula and its continuous extension as both coareas vanish."
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies record normalization and the bounded-tail representation, not the two-sided numerical correction in the nontrivial cutoff regime.",
+      "fact_id": "f4be2679c83c2fd1"
+    },
+    {
+      "comparison": "Transfers an available bounded-law interval and gives the zero-coarea conventions. The interval itself and the attaining slopes are proved here.",
+      "fact_id": "f26ba90707244e98"
+    },
+    {
+      "comparison": "Supplies a common two-law bound for the untruncated cone. The present positive truncation has a different correction and sharp parameter-dependent ratio.",
+      "fact_id": "f6c67d1728f45e6c"
+    }
+  ],
+  "readability": "The proof uses cone records inside the bounded layer computations and switches to frustum cap P only after subtracting tV0. The normalizer of the final ratio is V.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof and source-scope review of the frozen bytes, with predecessor applicability and exact arithmetic checked where relevant.",
+  "reviewed_proof_sha256": "4e9088e74404540eb1ad57ddec68ab9976a456083ec094160e7abf4b182f4292",
+  "reviewed_statement_sha256": "055c2ac7692c06403019e37071ccf280ce2de6eef9546fbcadb7a000e3f726cf",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:21:50Z",
+  "summary": "The finite-slope lower and upper certificates prove the exact common correction for the stated nontrivial planar frustum regime, and the specified two singleton laws attain the ratio.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

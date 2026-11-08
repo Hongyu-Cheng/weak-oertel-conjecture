@@ -1,0 +1,26 @@
+{
+  "advances": "Exact optimization of the compatible whole volumes under non-strict nonheaviness and endpoint floors. The construction realizes the volumes without prescribing a critical cap.",
+  "author": "PK-research-agent",
+  "candidate_id": "79ab8a7d556699a0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:15:48.904567+00:00",
+  "depends_on": [],
+  "draft_key": "nonheavy-three-fiber-whole-volume-frontier",
+  "kind": "theorem",
+  "proof": "The continuous function $x^d-(2-x)^d$ is strictly increasing on $[1,2]$ with endpoint values $0$ and $2^d$, so $B_d$ exists and is unique. Divide all volume roots by $|K|^{1/d}$ and exchange endpoints if necessary so that the resulting endpoint roots are $a\\le b$. Brunn–Minkowski and the midpoint inclusion give $a+b\\le2$. If $b\\le1$, then $a^d+b^d\\le2\\le L(h)^d+(2-L(h))^d$ by power convexity. If $b\\ge1$, then $b^d\\le1+a^d\\le1+(2-b)^d$ by nonheaviness and $b\\le2-h^{1/d}$ by the smaller endpoint floor. Thus $b\\le2-L(h)$. The function $x^d+(2-x)^d$ is nondecreasing on $[1,2]$, so $a^d+b^d\\le (2-b)^d+b^d\\le L(h)^d+(2-L(h))^d$.\n\nTake one volume-one convex body $K$ containing the origin in its interior and set $A=L(h)K$, $B=(2-L(h))K$. The midpoint is exactly $K$. Both endpoint floors hold, and the larger endpoint is nonheavy because $2-L(h)\\le B_d$. The smaller endpoint is nonheavy because it is no larger than the larger one. The middle is nonheavy because the sum of endpoint powers is at least $2$. These are actual sections at $-1,0,1$ in the hull of their lifts. Any convex combination at base zero has equal endpoint coefficients, so its continuous point is a mixture of a point of $K$ and a point of $(A+B)/2$.\n\nFor $h=0$, the larger endpoint power is $B_d^d=1+y_d$. Since $B_d(2-B_d)=1-(B_d-1)^2<1$, we have $y_d(1+y_d)=[B_d(2-B_d)]^d<1$. Hence $2(1+y_d)<1+\\sqrt5$. In dimension one the endpoint power sum at the maximizing triple is $2$.\n",
+  "source_candidate_ids": [
+    "b572b8df7e9b0f1c"
+  ],
+  "source_candidate_sha256": {
+    "b572b8df7e9b0f1c": "8d925ed463ba5e7204d9efb5c7d0696fb32d771d73c5657646250256a9044d35"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b572b8df7e9b0f1c",
+      "locator": "b572b8df7e9b0f1c:01 §§1–2, (1)–(2), sharp scalar whole-volume optimization"
+    }
+  ],
+  "statement": "Let $d\\ge1$ be an integer and let $A,K,B$ be compact convex bodies in $\\mathbb R^d$ with nonempty interiors and $(A+B)/2\\subseteq K$. Write $M=|A|+|K|+|B|$, using $d$-volume. Suppose all three volumes are at most $M/2$ and both endpoint volumes are at least $h|K|$, where $0\\le h\\le1$. Let $B_d\\in(1,2)$ be the unique solution of $B_d^d-(2-B_d)^d=1$, let $y_d=(2-B_d)^d$, and put $L(h)=\\max\\{2-B_d,h^{1/d}\\}$. Then the exact maximum of $M/|K|$ under these conditions is\n$$\n1+L(h)^d+(2-L(h))^d.\n$$\nIt is attained by compatible homothetic bodies with relative roots $(L(h),1,2-L(h))$. At $h=0$ the maximum is $2(1+y_d)<1+\\sqrt5$, and for $d=1$ it is $3$ for every $h$.",
+  "subgoal_id": "pk-intake-nonheavy-three-fiber-whole-volume-frontier",
+  "title": "Exact nonheavy three-fiber volume frontier with endpoint floors"
+}

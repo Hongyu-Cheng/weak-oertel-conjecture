@@ -1,0 +1,66 @@
+{
+  "candidate_id": "768c40baf99db4b5",
+  "candidate_sha256": "1f46b5cf78b34c3841a28610bd3801278ca2527143776c30b7d6903cd934ff82",
+  "checked_dependency_candidate_sha256": {
+    "6a7d56e450b3126f": "31613c33abc90e519463fe09c7ef143869666384d5d0ea9886a759b1ceb3f965",
+    "e108f5d53865d287": "e611c0fc1a9ec57c5ca190952b7af400568dc3ca6200530ebcd835b3b5824c3a"
+  },
+  "checks": [
+    "The maximum sampled dimension q makes all selected directions equal because the actual same-parity midpoint contains a sum of two q-direction spaces. Each intervening integer fiber contains a q-dimensional interpolation, so has that same direction. Projecting to it preserves the intrinsic volume of each fiber and permits all anchored root inequalities.",
+    "The even fibers fill their residue line interval because interpolation has positive volume. Same parity and primitivity identify the extremes as p_0 and p_0+2(N−1)v. Concavity gives an endpoint minimum and monotone descent along both paths from a maximum, including plateaux.",
+    "The binomial bound on each adjacent-even midpoint is c+2^(−q)(B−c). Different adjacent pairs have different odd midpoints. The child baseline is M_r−a, and telescoping gives a difference sum at least a−b. Thus ε=2^qη controls the lower volume of every even fiber, including both extremes.",
+    "For each odd j when N≥3, the even points j+1,j+3 or j−1,j−3 both exist on one side. The closer even point is 2/3 of the odd point plus 1/3 of the farther even point in the affine base chart. Concavity then gives f_j≤(3A−B_root)/2≤(1+ε/2)A. The choices give ε≤σ, η≤σ and (1+ε/2)^q≤1+σ. For N=2 the actual middle is outside the selected class and its volume is at most M−M_r≤(1+η)a.",
+    "The two endpoint inputs can be translated to a common q-space and scaled by a^(−1/q). Their normalized midpoint volume is at most the actual middle volume divided by a. The same-wave overlap produces ≥3a/4 in original units after undoing scale. The affine shear uses the full relative translation, including any perpendicular offset between endpoint planes. It fixes the lattice base and preserves intrinsic masses.",
+    "Convexity gives a common retained body at all intervening integer bases. The centroid mark is actual. With nonzero restriction to the q-direction, opposite shifts and the central trace pay (2N−1)Γ_q|K|. A transverse or pure base trace contains the whole middle and at least one per pair. Dividing by M≤(2N−1+η)a gives at least (3/5)Γ_q.",
+    "Original 25aee623d8e5a8b7 §§2–5 gives the exact same η and the rank-one conclusion. The frozen proof supplies its path estimate directly without relying on the original pending higher-rank argument."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "e108f5d53865d287",
+      "candidate_sha256": "e611c0fc1a9ec57c5ca190952b7af400568dc3ca6200530ebcd835b3b5824c3a",
+      "hypotheses": "Same-wave overlap lemma in dimension q with normalized volume interval [1−σ,1] and midpoint volume at most 1+σ. The original endpoint normalization meets both bounds, and relative translation gives the 3a/4 overlap upon unscaling. Final admission of this consumer requires independent approval of these predecessor bytes.",
+      "review_state": "same-wave, admission conditioned on independent approval",
+      "reviewed_proof_sha256": "c159ac1a0e56e92e01827ec567c6d94b7e05d5b41ffab0027931d986ddda0542",
+      "reviewed_statement_sha256": "8e6b6cc4734d2acc2c334826e0f2551c655fe7ee15df9876c2c5504fe715d00c"
+    },
+    {
+      "candidate_sha256": "31613c33abc90e519463fe09c7ef143869666384d5d0ea9886a759b1ceb3f965",
+      "fact_id": "6a7d56e450b3126f",
+      "fact_sha256": "30b7bafd79c7f5e4dbed86451e8dcc90311f6234575d9c443f3bcbbd961bdae4",
+      "hypotheses": "Apply in the Euclidean q-space of K, with the restriction of the ambient continuous normal nonzero. Use the paired tail bound at the absolute pair shift and its s=0 case at the central centroid. Constant restrictions on K are counted directly.",
+      "reviewed_proof_sha256": "d4e3d70c7d102455f4a824e9e403043780a9b4afdcf2d9e14d29518d1c8202c7",
+      "reviewed_statement_sha256": "3aa2cd99e74ada6c00320324633e761a3eab87ce39d9d24207ec7f18ae66ce3f"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:30:08Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Establishes the same intrinsic direction mechanism for midpoint combinations, but gives neither quantitative deficit control nor a retained chain and explicit depth mark.",
+      "fact_id": "01212b33858677e1"
+    },
+    {
+      "comparison": "Gives the centroid depth for a symmetric equal-fiber product. Here the original fibers may differ, and the quantitative retained product and normalization are new premises established by the proof.",
+      "fact_id": "6a7d56e450b3126f"
+    },
+    {
+      "comparison": "Its primitive three-site subchain needs a below-target hypothesis and only produces a shortest parity pair and midpoint. This theorem fills the entire specified parity line and aligns a large common fiber.",
+      "fact_id": "9e3dc271d831d032"
+    }
+  ],
+  "readability": "B in the adjacent midpoint calculation is a parent volume. The odd-site root bound is separate and uses the even-fiber interval.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold read of the frozen proof, then original-source and accepted-predecessor comparison.",
+  "reviewed_proof_sha256": "acc91158e78a6c999df839b79efee765d100e487d016d6ca9f6b530c39220d4a",
+  "reviewed_statement_sha256": "ad19043648b5b2bc346bd83e90018a6c979230bf22877aa2ee78336d00ce9790",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:24:47Z",
+  "summary": "The rank-one deficit controls both endpoint volumes and their midpoint volume. The overlap lemma then gives the retained product and the claimed normalized depth.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

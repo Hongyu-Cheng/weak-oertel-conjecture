@@ -1,0 +1,89 @@
+{
+  "candidate_id": "b380e7ea668df13d",
+  "candidate_sha256": "9f5e10b69fbfe193e119fd11d0e4013003f6aa3ad596ef8f407eef2930658a34",
+  "checked_dependency_candidate_sha256": {
+    "074a5bdf8c59720e": "4761c3725ebd2cf5d903ebe6767e8a6ca9586b2843eb5c18462c8a00e340c9fd",
+    "755cb08c379113cc": "333ebd70029e9411c1ac6f8bcf0d9484ab2fff8b378d4da40e25f8dade420a11",
+    "7a5ea4f8a4c5094c": "89f11b1e7ef80c2e94e166708fa4667224579293caf15f93bde975b15a374f7f",
+    "a367af5c0a8f6dc0": "cc0b8b39293c3f8e0d5ceeda3072ef27c1ff76c19b4247e26b8d836a437e94d7"
+  },
+  "checks": [
+    "The initial whole-plane cap menu bounds every point of any compatible competitor, even if its own geometry differs. A larger feasible mass contradicts the minimizing normalized depth after restoring central volume, since positive barycentric weights force central positivity.",
+    "Each original facet persists under small erosion by its relative interior slack. Candidate vertices vary affinely and incidence stabilizes on a sufficiently short open interval. Persistent vertex active rows are old active rows at their limiting vertex, giving a finer erosion fan with the original facet rays.",
+    "Linearity on each fiber's own erosion fan is a linear subspace of the common simplicial fan chart and prevents new facet rays. The accepted finite support cone gives actual radial feasibility there. Common erosion preserves anchored Minkowski inclusion and has affine supports on that fan.",
+    "The fixed cap reduces each coincident owner derivative to min(delta,0) or max(delta,0). The finitely many facet branches are uniformly negative under erosion for each positive-mass active cap. Farkas gives the objective-one identity with the correct minus sign on active feasibility rows, and homogeneous dilation excludes zero total cap weight.",
+    "On each proper trace the constant and radial divergence formulas give the translation and dilation coefficients with section normal -u. At coincident inside and outside traces the paired section weights yield the same identities. Affine translations kill the chart rows and total volume derivative; dilation keeps the cap fixed and retains the signed threshold offset.",
+    "Sources 21db6cba533d25dc:03 §3 and 21a9da879344205f:02–03 §§3–5 supply respectively the bounded-facet cone, Farkas stress, and both Euler and affine balances."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "a367af5c0a8f6dc0",
+      "fact_sha256": "90580edb24235c2201ba1f3fc957b157365407ebc2c05f60d7043659dbc0bd59",
+      "mapping": "Supplies the bounded-facet class and its fixed full-rank projection and relative interior normalization; this result assumes an all-positive minimizing family in that class."
+    },
+    {
+      "fact_id": "755cb08c379113cc",
+      "fact_sha256": "468e385f4995b6ea13fe7ae2e7b60334c7f6eec0ba2d176fb71fb2732c4d3c40",
+      "mapping": "Provides at most |P|(d+1) actual nonvertical caps of masses at most beta M covering every sampled plane."
+    },
+    {
+      "fact_id": "074a5bdf8c59720e",
+      "fact_sha256": "341a7d4293930860667bfe2b9eb0c928b178e36a3720fe920cce49fe54a233b4",
+      "mapping": "Apply the finite radial support and compatibility rows on a common complete simplicial refinement, then intersect with the linearity subspace for the individual erosion fans."
+    },
+    {
+      "candidate_id": "7a5ea4f8a4c5094c",
+      "candidate_sha256": "89f11b1e7ef80c2e94e166708fa4667224579293caf15f93bde975b15a374f7f",
+      "mapping": "Use the local strip calculation at one fiber at a time with unique owners and fixed cap normal and threshold. No simultaneous common-body representation is required for that local calculation.",
+      "reviewed_proof_sha256": "e7b94af7421a5b73055f5fecd94f92906370786c6a6f3a92fc630b036cfc2c78",
+      "reviewed_statement_sha256": "b836632ec3169000606c5330dc84b2eca2a2c3c93efc711414d11d5b48bbaddf",
+      "status": "Same-batch predecessor requires independent approval before admission."
+    }
+  ],
+  "finished_utc": "2026-11-08T16:54:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its whole-plane comparison is the same cap-bound mechanism, but the theorem assumes the minimum over the unrestricted compatible fixed-P class. The proof here reproduces that comparison inside the bounded-facet class and obtains a support stress there.",
+      "fact_id": "052e61fcdb0be10f"
+    },
+    {
+      "comparison": "Supplies attainment in a separately bounded per-fiber facet class, without a stress or a fan restriction for variations.",
+      "fact_id": "a367af5c0a8f6dc0"
+    }
+  ],
+  "readability": "The citation to 052e61fcdb0be10f names a comparison reproduced in the proof; it does not import that theorem's stronger unrestricted minimization hypothesis.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6be58a7961c3a3cfefa8c025e598e3fe6ae568814c4cd524d218f15071958217",
+  "reviewed_statement_sha256": "fe834689afeac3ac2bff56cdbb8816fcf38dab1b2359857c6cb1acf925d5b414",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidates": [
+    {
+      "candidate_id": "21a9da879344205f",
+      "candidate_sha256": "bc15de8255f8545a46d7349c838a63ae02bb3d709da478d39bbb2315b2da8afe",
+      "locators": [
+        "21a9da879344205f:02 §§3–4, fixed-cap derivative and Farkas stress",
+        "21a9da879344205f:03 §5, affine balances and fixed-cap Euler offset"
+      ],
+      "source_sha256": "eb9f4194e4d10bb9621674b061d4083cbcd65bb8dc4b3982ae68772aebcab6c4"
+    },
+    {
+      "candidate_id": "21db6cba533d25dc",
+      "candidate_sha256": "f39173bdc694efc40391d7d3f0b0938191c6b21226255bd522e70975a24c462c",
+      "locators": [
+        "21db6cba533d25dc:03 §3, bounded-facet fixed-cap reduction and each fiber's own fan"
+      ],
+      "source_sha256": "26f3ef97473c72827ed6778639162da21331a136cbe0ec209957a22ae3509e32"
+    }
+  ],
+  "started_utc": "2026-11-08T16:49:42Z",
+  "summary": "The fixed-cap comparison stays within the attained per-fiber facet bound, and the restricted support chart gives a valid normalized stress with the fixed-cap Euler offset.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

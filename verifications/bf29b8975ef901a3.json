@@ -1,0 +1,74 @@
+{
+  "candidate_id": "6aee64fca8ff3608",
+  "candidate_sha256": "41c644a64906e46e150faf9e8f1c29acfd51b01f0b20a5e8865f1fd9f508025b",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "b96c4c9a6a57340b": "190b9aba1e6323ca2d573a56023b22e6a0da44e27e1a9d8b52c4b11f07c2660a",
+    "f0399a8f0bae48c6": "cb51fece59b1702dca7fa45aa51b20aba59c666d24e67916e4f612b1af1bc3f4"
+  },
+  "checks": [
+    "The lift of the two endpoint bodies has only bases -1,0,1, and equal endpoint interpolation weights at zero give exactly M. The raw measure is the sum of three ordinary areas, with total a(r+2) and r>=1 by planar Brunn–Minkowski.",
+    "A containing ambient cap dominates its parallel cap through the mark. With a nonzero continuous normal the actual middle trace is a centroid cap and the endpoint shifts are opposite. The own payment is at least 4|M|/9, the width payment is a/9, and the residual payment is a max(0,F(r)). For r>=1 the positive part on 2 sqrt(5r/9)-1 is unnecessary and expanding its square gives the displayed F.",
+    "The integer-normal branch captures all of M and one endpoint. The paired term in the bound is at most a, since the residual lower formula is at most one in units of a, so this branch gives at least G(r) too.",
+    "F strictly decreases on [1,infinity). Squaring the two positive sides of F=1/9 gives 400r^2-680r+1=0 with only r_*=(17+12 sqrt(2))/20 in the domain. Below r_* the derivative numerator of G is 6 sqrt(5)(2-r)/sqrt(r)-32<0; above it the rational branch is strictly increasing.",
+    "Exact substitution at r_* gives 4(22+12 sqrt(2))/(9(57+12 sqrt(2))). Its difference from 2/9 has numerator 2(12 sqrt(2)-13)>0, certified by 288>169. The minimum is a guaranteed bound and does not assert sharpness of actual depth.",
+    "Matched f968b5a47e83bb95 §§3–4 with the preliminary estimates in §§1–2. The source's separate trapezoid obstruction is not a premise in this proof."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f0399a8f0bae48c6",
+      "candidate_sha256": "cb51fece59b1702dca7fa45aa51b20aba59c666d24e67916e4f612b1af1bc3f4",
+      "fact_sha256": "9fc20803da8b1ee77204d0d7f8758f89625f323d912e1920a0e2272e155025ba",
+      "hypotheses": "Apply the scalar lemma with d=2, equal area a endpoints, containing middle M, and the opposite shifts of the same linear margin around u·g_M. It yields the displayed residual payment after inserting the upper bound 5|M|/9.",
+      "reviewed_proof_sha256": "ed8e7f58c39a14ba9801fe9684fe5438bd920dac40798ae8378ce0909c46614c",
+      "reviewed_statement_sha256": "c455616ec57bafd2451adcc80045a6456e07b4088ae4f217d71f3028c18dbef3"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "Full mass |M| on the actual full-dimensional midpoint gives the ordinary centroid cap lower bound 4|M|/9, which also bounds the opposite residual from above because the cutting line is area-null.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    },
+    {
+      "candidate_id": "b96c4c9a6a57340b",
+      "candidate_sha256": "190b9aba1e6323ca2d573a56023b22e6a0da44e27e1a9d8b52c4b11f07c2660a",
+      "hypotheses": "Use the direction-free bound a/(d+1)^d for d=2, equal area endpoints and their true midpoint centroid. All shifts and both saturated cases are included. Admission requires independent approval of the frozen predecessor.",
+      "reviewed_proof_sha256": "1ddfec40147eb3f0653625cc7a89adbf02c53e9c44b1e3945953ed1328c1bfdf",
+      "reviewed_statement_sha256": "c7513b3a100869fe0d14d0db5b442f2326c115030b83c4b67e41e2c548cd13a1",
+      "same_batch": true
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted arbitrary planar three-fiber theorem gives existence of a point with depth at least 2/9. The frozen theorem gives a larger explicit constant and the curve G(r) at the prescribed ordinary centroid of the exact Minkowski midpoint for equal endpoint areas.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    },
+    {
+      "comparison": "The accepted equal-endpoint result uses the actual mixed centroid, which can differ from g_M even for K=M. The frozen statement concerns g_M and all halfspaces through that marked point.",
+      "fact_id": "da544e8fcada039b"
+    },
+    {
+      "comparison": "The accepted two-cut theorem gives a quantitative existential bound for compatible triples, but does not identify this marked ordinary midpoint centroid or the stated r-dependent curve.",
+      "fact_id": "3e766d73edff42b0"
+    }
+  ],
+  "readability": "The two lower endpoint estimates apply to the same cap pair, so their maximum is the permitted combination. The middle trace is exactly the midpoint cap.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the frozen statement and proof, followed by source and exact dependency comparison and exact rational checks where applicable.",
+  "reviewed_proof_sha256": "b4daba414841c77e87b38a5610843503723e3290f88dc0480ed23dcaf5886912",
+  "reviewed_statement_sha256": "b8db70f11fc3adfab7466dfc899dc8f03ed55a1cf3e4cb73d38a7c42224984ad",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:22:05Z",
+  "summary": "The exact midpoint fiber and two endpoint estimates give the displayed pointwise G(r), whose minimum is the claimed strict uniform depth guarantee at the ordinary centroid of M.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

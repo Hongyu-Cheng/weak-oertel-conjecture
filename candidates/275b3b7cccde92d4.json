@@ -1,0 +1,32 @@
+{
+  "advances": "Ordinary full-dimensional volume and convex functions on simplex facets. The bound applies to affine halfspaces with arbitrary thresholds within the stated margin tolerance.",
+  "author": "PK-research-agent",
+  "candidate_id": "275b3b7cccde92d4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:39:46.383096+00:00",
+  "depends_on": [],
+  "draft_key": "uniform-nearby-simplex-cap-loss",
+  "kind": "lemma",
+  "proof": "**Weighted strip.** On a $k$-simplex the uniform barycentric coordinate $t$ has density $k(1-t)^{k-1}$ on $[0,1]$, since the opposite sections scale by $(1-t)^{k-1}$ and the density integrates to one. At fixed $t$ the remaining coordinates are $(1-t)W$, with $W$ uniform on the opposite $(k-1)$-simplex. This is a point when $k=1$. Put $A(t)=\\mathbb E_W f(t,(1-t)W)$ in barycentric coordinates and $M=\\int_F f\\,d\\mu_F$. The conditional average $A$ is convex and nonnegative, since its argument for each $W$ is affine in $t$. Moreover $M=\\int_0^1 k(1-s)^{k-1}A(s)\\,ds$.\n\nIf $|t-b|\\le r$, the interval $[t-r,t+r]$ lies in $(0,1)$. Jensen's inequality on this interval and the lower bound $k(1-t-r)^{k-1}$ on the density give\n$$\nk(1-t)^{k-1}A(t)\n\\le \\frac{M}{2r}\\left(1-\\frac{r}{1-t}\\right)^{-(k-1)}\n\\le \\frac{M}{r}.\n$$\nFor the last step, $1-t\\ge 1-b-r$ and $r\\le(1-b)/(4k)$ give $r/(1-t)\\le 1/(4k-1)$. Bernoulli's inequality gives $(1-r/(1-t))^{k-1}\\ge1-(k-1)/(4k-1)>1/2$, also for $k=1$. Integrate over $|t-b|\\le\\eta$ to obtain the strip bound.\n\n**Radial loss.** Let $\\rho$ be the Minkowski gauge of $K-g$, with $\\rho(v)=\\inf\\{a>0:v\\in a(K-g)\\}$. The inner simplex contains $g$ in its interior, so the gauge is finite. It is positively homogeneous and subadditive by convexity of $K-g$. If $K-g$ contains a ball of radius $\\epsilon>0$ about zero, subadditivity and $\\rho(v)\\le |v|/\\epsilon$ show continuity. On the facet $F_j=\\{\\lambda_j=0\\}\\cap S$ set $f_j(z)=\\rho(z-g)-1$ and $w_j(z)=1-\\rho(z-g)^{-d}$. The inclusions give $1\\le \\rho(z-g)\\le(1-\\delta)^{-1}$, so each $f_j$ is continuous, convex and nonnegative. The exact identity\n$$\nw_j(z)=f_j(z)\\sum_{a=1}^d\\rho(z-g)^{-a}\n$$\ngives $d(1-\\delta)^d f_j(z)\\le w_j(z)\\le d f_j(z)$, including when $f_j(z)=0$.\n\nThe cones $\\operatorname{conv}(g,F_j)$ partition $S$ up to null interfaces and each has volume $|S|/m$, since its volume ratio to $S$ equals $\\lambda_j(g)=1/m$. On a cone the map $(a,z)\\mapsto g+a(z-g)$ has Jacobian $a^{d-1}\\operatorname{dist}(g,\\operatorname{aff}F_j)$ relative to $da$ and facet area. Thus uniform probability in the cone has independent uniform $z$ on $F_j$ and radial parameter $a$ with density $d\\cdot a^{d-1}$ on $[0,1]$. The part outside $K$ on this ray has $a>\\rho(z-g)^{-1}$. For measurable $E\\subset F_j$ the deleted volume over directions in $E$ is $(|S|/m)\\int_E w_j\\,d\\mu_{F_j}$. In particular $\\tau=m^{-1}\\sum_j\\int_{F_j}w_j\\,d\\mu_{F_j}$.\n\nAny point of $H\\mathbin{\\triangle}C_i$ in $S$ satisfies $|\\lambda_i(x)-b|\\le\\eta$. For a missing point written $x=g+a(z-g)$, one has $a\\ge1-\\delta$ and $\\lambda_i(x)-b=a(\\lambda_i(z)-b)$. Its endpoint therefore belongs to the strip $|\\lambda_i(z)-b|\\le\\eta/(1-\\delta)$. On $F_i$ this strip is empty, since $\\lambda_i=0$ there and its width is at most $1/(4m)<b$. On $F_j$ for $j\\ne i$, $\\lambda_i$ is a facet barycentric coordinate. The strip estimate with $k=d-1$, $b=1/m$ has $r=1/(4m)$ and coefficient $2/r=8m$. Apply it to $f_j$ and use both radial weight comparisons to obtain\n$$\n\\int_{\\{|\\lambda_i-b|\\le\\eta/(1-\\delta)\\}}w_j\\,d\\mu_{F_j}\n\\le 8m\\eta(1-\\delta)^{-d-1}\\int_{F_j}w_j\\,d\\mu_{F_j}.\n$$\nMultiply by the cone volume fraction $1/m$ and sum over $j$. This proves the symmetric-difference bound, and adding the canonical loss bounds the missing volume in $H$.\n",
+  "source_candidate_ids": [
+    "c62d1cc13c75171f",
+    "e499db59e12bfbe4"
+  ],
+  "source_candidate_sha256": {
+    "c62d1cc13c75171f": "0c45d96beb51a4c76eb188a6ce0e32b074e3407d4bc73b45fd94595608358931",
+    "e499db59e12bfbe4": "3e896d455ef55273692f92d316038df9b7d1e761091b373dd2354b40701c602e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c62d1cc13c75171f",
+      "locator": "§§2–4, (6)–(15)"
+    },
+    {
+      "candidate_id": "e499db59e12bfbe4",
+      "locator": "§§1–3, (1)–(17)"
+    }
+  ],
+  "statement": "Let $F$ be a $k$-dimensional simplex, $k\\ge1$, with normalized volume $\\mu_F$, and let $t$ be one of its barycentric coordinates. For $b\\in(0,1)$ put $r=\\frac14\\min\\{b,(1-b)/k\\}$. Every continuous nonnegative convex function $f$ on $F$ satisfies\n$$\n\\int_{\\{|t-b|\\le\\eta\\}} f\\,d\\mu_F\n\\le \\frac{2\\eta}{r}\\int_F f\\,d\\mu_F,\\qquad 0\\le\\eta\\le r.\n$$\n\nLet $S$ be a full-dimensional simplex in $\\mathbb R^d$, $d\\ge2$, with centroid $g$ and barycentric functions $\\lambda_0,\\ldots,\\lambda_d$. Put $m=d+1$, $b=1/m$, and $C_i=\\{x:\\lambda_i(x)\\ge b\\}$. Suppose $K$ is a compact convex body with $g+(1-\\delta)(S-g)\\subseteq K\\subseteq S$ for $0\\le\\delta<1$. Write $\\tau=1-|K|/|S|$ and $R_i=|(S\\setminus K)\\cap C_i|/|S|$, where $|\\cdot|$ is $d$-dimensional volume. For any affine margin $\\phi$ with $H=\\{x:\\phi(x)\\ge0\\}$, if $\\sup_{x\\in S}|\\phi(x)-(\\lambda_i(x)-b)|\\le\\eta\\le(1-\\delta)/(4m)$, then\n$$\n\\frac{|(S\\setminus K)\\cap(H\\mathbin{\\triangle}C_i)|}{|S|}\n\\le 8m\\eta(1-\\delta)^{-d-1}\\tau .\n$$\nIn particular, $|(S\\setminus K)\\cap H|/|S|\\le R_i+8m\\eta(1-\\delta)^{-d-1}\\tau$. The affine margin may have any threshold satisfying the stated bound.\n\nFor the radial formula used to obtain this bound, let $F_j=\\{\\lambda_j=0\\}\\cap S$, let $\\rho$ be the Minkowski gauge of $K-g$, and put $f_j(z)=\\rho(z-g)-1$ and $w_j(z)=1-\\rho(z-g)^{-d}$ on $F_j$. Each $f_j$ is continuous, convex and nonnegative, and $d(1-\\delta)^d f_j\\le w_j\\le d f_j$. For a measurable $A\\subset F_j$, the missing volume on rays from $g$ towards $A$ equals $(|S|/m)\\int_A w_j\\,d\\mu_{F_j}$. In particular $\\tau=m^{-1}\\sum_j\\int_{F_j} w_j\\,d\\mu_{F_j}$.",
+  "subgoal_id": "pk-intake-uniform-nearby-simplex-cap-loss",
+  "title": "Uniform convex facet strips and missing volume of nearby simplex caps"
+}

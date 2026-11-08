@@ -1,0 +1,26 @@
+{
+  "advances": "A finite signed-exponential obstruction to one endpoint payment of a tilted cap product.",
+  "author": "PK-research-agent",
+  "candidate_id": "0ce5103522b971ee",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:26:15.105137+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-payments-left-tilt-endpoint-phase-obstruction",
+  "kind": "counterexample",
+  "proof": "Under tilt the positive terms, including their coefficient scales, have rates $1-t$ and $2-t$. The sum $N$ of the forty absolute negative terms is a sum of exponentials with common rate $400+t$. At $s\\ge0$, the survival probability for the sum of the two positive terms is\n$(2-t)e^{-(1-t)s}-(1-t)e^{-(2-t)s}$, by convolution of their two exponential densities. Integrating this formula at $s=N$ gives\n$$\nF_t=(2-t)\\left(\\frac{400+t}{401}\\right)^{40}\n     -(1-t)\\left(\\frac{400+t}{402}\\right)^{40}.\n$$\nLet $X=(400/401)^{40}$ and $Y=(200/201)^{40}$. At $t=0$ this yields $F=2X-Y$. The product of tilt rates is $(1-t)(1-t/2)(1+t/400)^{40}$. Cancel $1-t$ in the scaled expression, substitute $F_t$, and cancel $(1+t/400)^{40}$. Since $F_t\\to0$ as $t\\downarrow-400$, the remaining expression has limit $D_-=2X-(401/201)Y$.\n\nAt zero tilt, condition first on $N$ and eliminate the first unit exponential from the signed-sum equation. If $s$ is the value of the second positive term, the first exponential is forced to $N-s$. The coefficient of the first exponential is one, so its Jacobian factor is one. The conditional density at zero of the signed sum given $N$ is $2e^{-N}\\int_0^N e^{-s}\\,ds=2(e^{-N}-e^{-2N})$, since the second term has rate two. Weighting the integral by the forced value $N-s$ gives $2[(N-1)e^{-N}+e^{-2N}]$. Averaging and using $\\mathbb E[Ne^{-N}]=(40/401)X$ gives section density $2(X-Y)$ and first-moment density $2[(40/401-1)X+Y]$. Thus $\\mu_1=(40/401)/(1-Y/X)-1$.\n\nThe following exact rational arithmetic verifies positivity of the denominator and the claimed two strict bounds.\n\n```python\nfrom fractions import Fraction\n\nX = Fraction(400, 401)**40\nY = Fraction(200, 201)**40\nF = 2*X - Y\nmu = Fraction(40, 401)/(1 - Y/X) - 1\nD = 2*X - Fraction(401, 201)*Y\nassert 0 < F < 1 and mu > 0 and D > 0\nassert 997*F*(1 - F) < 1000*mu*D < 998*F*(1 - F)\n```\n",
+  "source_candidate_ids": [
+    "754b83402da5303d"
+  ],
+  "source_candidate_sha256": {
+    "754b83402da5303d": "6b1ef83c698b4107e3d5929380e98097c4b35e66324aff3c8b7d7f611f6598e6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "754b83402da5303d",
+      "locator": "754b83402da5303d:01 Proof, unnumbered definitions X,Y,F,μ_p,D_− and exact ratio inequality"
+    }
+  ],
+  "statement": "Take independent unit exponentials with coefficients $(1,1/2,-1/400,\\ldots,-1/400)$, with forty negative coefficients. Let $F$ be the probability that the signed sum is nonnegative and $\\mu_1$ the conditional mean of the first exponential on the zero section, using the coarea conditional law. On $-400<t<1$ let $F_t$ denote the corresponding cap probability when each exponential has rate $1-tc_i$. Put $G(t)=F_t(1-F_t)/\\prod_i(1-tc_i)$ and $D_-=\\lim_{t\\downarrow-400}(1-t)G(t)$. Then\n$$\n\\frac{997}{1000}<\\frac{\\mu_1D_-}{F(1-F)}<\\frac{998}{1000}<1.\n$$\nThus the proposed universal payment $\\mu_1D_-\\ge F(1-F)$ from the left tilt endpoint fails for actual two-positive-phase coefficients.",
+  "subgoal_id": "pk-intake-pk-w34-payments-left-tilt-endpoint-phase-obstruction",
+  "title": "The left tilt endpoint can underpay in an actual two-positive-phase law"
+}

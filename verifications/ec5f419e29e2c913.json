@@ -1,0 +1,129 @@
+{
+  "candidate_id": "6195bae7db138d35",
+  "candidate_sha256": "dd6c7ce2db683772350883cf5a7154f1758a2338cb2e3ed0afd24f1fc40d3b1a",
+  "checked_dependency_candidate_sha256": {
+    "1a753eb623654f00": "eb8618628714592c0811ff7676faa5fbecfe52038680172720584c7364200f3b",
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "Only statement and proof differ from the original frozen candidate. The revision explicitly requires L_i=L(p_i,y_i) and a common own inball radius, which excludes the independent-scalar counterexample from the initial review.",
+    "For each 0<r′<r, the opposite-ray point is inside the given inball, giving coefficient r′/(r′+||X−y||)≥r′/(r′+2R). Taking r′ up to r and then the supremum over X gives the desired inequality without either a closed inball or attainment.",
+    "The revised row-tail bound supplies finite sup_S L≤L_*. Log normalization implies L_*≥1. Applying the pointwise log bounds on the one fiber and on its complement gives the exact exponent M_max/v after rearrangement.",
+    "For the ball energy, use each closed subball of radius r′<r and the marked-center equality of d90ba05577427854. Restrict any admissible own-fiber denominator to that subball, take its infimum and then let r′ increase to r. This verifies the stated κ_d r^d bound even when the given ball is open.",
+    "Set L_min=[r/(r+2R)]L_*^(−M_max/v) and E_min=κ_d r^d. For every marked occurrence the same-force coefficient is bounded below by (L_min E_min/M_max)^(1/N)/a^* and above by L_*^(1/N)/a_*. This establishes both inequalities σ_i versus κ_i, including zero rows.",
+    "The repair restores the source-value convention and the supremum conclusion of b4f092ee1bb5a205 §4 and crosswalk :4. The exact revised row-tail dependency is bound by its revised bytes and fields."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1a753eb623654f00",
+      "candidate_sha256": "eb8618628714592c0811ff7676faa5fbecfe52038680172720584c7364200f3b",
+      "hypotheses_mapping": "The revised row-tail proof applies to exactly the stated convex fibers and yields the pointwise upper bound sup_S L≤L_*. The source-core logarithmic estimate uses this numerical bound without requiring the supremum to be attained.",
+      "reviewed_proof_sha256": "8ccf707830806f49c1d35573f33b84c994ed5e0933f74bcaa28040aefdf25f88",
+      "reviewed_statement_sha256": "35127afd28a74190404c4fad9f8f1c7cf93c51e784e37e3d3a038d7da652aad4"
+    },
+    {
+      "candidate_id": "d90ba05577427854",
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "hypotheses_mapping": "For r′<r, the closed ball of radius r′ around the source lies in its own fiber. Its mark is its centroid, so its marked projective energy is its volume. Restricting each own-fiber denominator to this compact ball and taking r′ up to r gives the stated lower bound.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:44:59+00:00",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "6195bae7db138d35",
+    "candidate_sha256": "8006e0ddbdc939b2d00acdd7dd27528f968afe1ec25e75d2423bef5f52512b3c",
+    "checks": [
+      "At a point with an own inball, the coefficient of an arbitrary fiber point X in the opposite-ray representation of y is r/(r+||X−y||), at least r/(r+2R). For an open inball the representation can use any smaller radius and then pass to the endpoint in the numerical coefficient. For compact fibers the closed inball is contained.",
+      "Log normalization and the global upper bound give 0≤V_p log sup_{K_p} L+(M−V_p) log L_*, whence L_*≥1 and the claimed lower bound with exponent M_max/v. This uses only the original mixed volume and includes V_p=M.",
+      "For each actual marked energy every admissible denominator on its own fiber is admissible on the contained ball. The ball is a compact convex body with mark at its centroid, so d90ba05577427854 gives ball energy equal to κ_d r^d. The constant denominator gives E_i≤|K_{p_i}|≤M. If L_i equals L(p_i,y_i) and the marks have a common inball, these bounds give the required two-sided force coefficient and imply comparability even when κ_i=σ_i=0.",
+      "Read b4f092ee1bb5a205 §4 and crosswalk :4. Both put L_i at the source value and use the source's own inball. The core and force inequalities are conditional, and no source row means or boundary lower bound follow.",
+      "Checked every original candidate digest against the pinned file, and computed exact raw and UTF-8 field digests for the reviewed candidate and its declared predecessors."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "1a753eb623654f00",
+        "candidate_sha256": "61dbdf90bccd0b08af2c43163fd95b9439a7e515838dacc38f70e522ab50ff67",
+        "hypotheses_mapping": "The stated row-tail hypotheses and L_* supply a global upper bound for the original concave multiplier. The exact pinned row-tail statement needs the supremum/compactness correction identified in its separate review. The source-core proof only needs the corrected numerical upper bound.",
+        "reviewed_proof_sha256": "edf585f54cf9c103a7d6e0e96485489017b177f133b8a75daf867a5c9ef981ae",
+        "reviewed_statement_sha256": "f14b34f4f580a209d69b22977524a1f0b1674ec51361ca567c08f8a6058a05fc"
+      },
+      {
+        "candidate_id": "d90ba05577427854",
+        "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+        "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+        "hypotheses_mapping": "For the closed ball of radius r in each marked fiber, apply centroid equality at its center. Restrict any admissible denominator from the own fiber to this ball, giving E_i≥κ_d r^d. If the inball is open and its closure is not assumed contained, apply the same argument on radii r'<r and let r' increase to r.",
+        "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+        "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+      }
+    ],
+    "finished_utc": "2026-11-08T14:42:38+00:00",
+    "issues": [
+      {
+        "defect": "Row-tail defines L_i as positive scalars. The core estimate bounds L(p_i,y_i), so the last paragraph cannot bound L_i unless the source alias is explicit. On K=[0,1] set L(x)=c√x, c=exp(1/2), with mixed log integral zero. Take barρ_1,barρ_2 uniform on [0,δ] and [δ,1], with weights δ,1−δ and 0<δ<1/4. Their harmonic means are L_1=c√δ/2 and L_2=c(1+√δ)/2. With dρ_i=(L_i/L)dbarρ_i these are probabilities and A=2 bounds the likelihood. The weighted log mean is ≤0 by harmonic–geometric mean. Assign marked energies at y_1=1/2 and y_2=1/3, giving E_1=1 and E_2=8/9, with common radius 1/4. For M=N=Δ/ε=1 set κ_i=σ_i/(L_i E_i); then Σκ_i≤9/(4c), while σ_1/κ_1=L_1 tends to zero with every other bound fixed.",
+        "locator": "Statement, last sentence, and Proof, last paragraph",
+        "repair": "Explicitly index sources by marks (p_i,y_i) with a common own inball and impose L_i=L(p_i,y_i) and E_i=E_{K_{p_i}}(y_i) before the force comparison.",
+        "severity": "major"
+      },
+      {
+        "defect": "The inherited convex-fiber assumptions alone do not ensure that the individual fiber maxima exist. The source crosswalk states a supremum, and the concavity estimate already applies pointwise.",
+        "locator": "Statement, first display, and Proof, first paragraph",
+        "repair": "If row-tail is repaired by using suprema, use sup_{K_p} L in this candidate too. If it instead assumes compact fibers, retain max and make that inherited assumption explicit if needed.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its proof already gives the opposite-ray inequality for one fiber, with a diameter bound D and a marked inball radius r, in a concave roof convergence setting. It does not combine log normalization, the same-force upper bound, and the projective energy lower bound to compare the contact weights.",
+        "fact_id": "c42156e9c470da8e"
+      },
+      {
+        "comparison": "Its centroid equality for marked projective energy is used on the contained ball and does not control the independent row scalar L_i.",
+        "fact_id": "d90ba05577427854"
+      },
+      {
+        "comparison": "Its genuine contact derivative fixes the alias L_a=L(Y_ia), confirming the intended context. It treats differentiable log-normalized response, not this conditional inball and weight estimate.",
+        "fact_id": "5fa497a06b11cbcb"
+      }
+    ],
+    "readability": "The main lower bound applies to all inball centers. Only the final same-force comparison needs a particular marked center for each row.",
+    "reviewed_proof_sha256": "81f1cf3e37443e99c6f2c1ac5e146233563a007647a5cb2c6156b863f97897a2",
+    "reviewed_statement_sha256": "c182f825d4c80ee1e5042209337e8171ad7eba6840bfe55cc5ab0326315d8fcf",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T14:39:10+00:00",
+    "summary": "The inner-core estimate and the marked inball energy lower bound are correct. The frozen force comparison does not identify its row scalars with the values of L at the marked sources.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof already gives the opposite-ray inequality for one fiber, with a diameter bound D and a marked inball radius r, in a concave roof convergence setting. It does not combine log normalization, the same-force upper bound, and the projective energy lower bound to compare the contact weights.",
+      "fact_id": "c42156e9c470da8e"
+    },
+    {
+      "comparison": "Its centroid equality for marked projective energy is used on the contained ball and does not control the independent row scalar L_i.",
+      "fact_id": "d90ba05577427854"
+    },
+    {
+      "comparison": "Its genuine contact derivative fixes the alias L_a=L(Y_ia), confirming the intended context. It treats differentiable log-normalized response, not this conditional inball and weight estimate.",
+      "fact_id": "5fa497a06b11cbcb"
+    }
+  ],
+  "readability": "The last paragraph refers to the contained ball. If the originally given inball is open, use the compact subballs of radius r′<r from the previous paragraph, as detailed in the dependency map.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "b23bd97db78d538911beb3859e3ec0f9946d3fc9ddb8082c88e107322e4b3b8a",
+  "reviewed_statement_sha256": "c1b9d44f1fd7d845ebd5255079c5ce0c20a56620da86c73bc49aef595ae2066e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "8006e0ddbdc939b2d00acdd7dd27528f968afe1ec25e75d2423bef5f52512b3c",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:43:40+00:00",
+  "summary": "The revised core bound is valid with suprema and open own inballs. The explicit marked-value alias gives the claimed uniform two-sided force comparison.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

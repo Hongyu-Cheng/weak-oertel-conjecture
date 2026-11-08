@@ -1,0 +1,40 @@
+{
+  "candidate_id": "8e4bf44d920bc3f8",
+  "candidate_sha256": "e991b2050725e4dbd46a05c42e8d039f08c1f11773ce1c4508f540ea5058f826",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Cold-read the frozen statement and proof; source 111d4eb988c37817 §1, Lemma 1, (1) matches the scope and all bounds. The declared source byte digest matches.",
+    "For any interior x of B, each h_i-v_i·(x-y)>0. The balanced normals cancel the three evaluations, so W is their strictly positive sum even when individual h_i are negative.",
+    "Missing the other two closed cuts gives the strict inequality v_i·(x-y)>h_j+h_k=W-h_i. Any present residual point can be moved a short distance toward int A, preserving both strict inequalities, giving a positive-area ball. Thus T_i>=|R_i|>0 and subadditivity gives T_i>=max(0,a-U_j-U_k).",
+    "Properness gives an open ball in A meeting both sides of the original cut. A small positive-area portion lies above the original level but below the positive shift, giving T_i<U_i without needing smooth boundaries.",
+    "All interpolated caps are nonempty and have positive area because they contain the shifted cap. Convexity gives the Minkowski inclusion, planar Brunn–Minkowski gives square-root concavity, and Fubini with continuous parallel chord length at the proper threshold gives derivative -sigma_A,i. The tangent at 0 has the correct factor 1/(2 sqrt(U_i)); monotonicity in the lower bound for T_i gives the second estimate. Strictness of the last inequality uses T_i>0, not delta_i>0."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T12:21:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "A related root-tail concavity result for finite discrete sequences; no actual planar cut, support-width shift, or chord derivative.",
+      "fact_id": "108bf10461a9c6ff"
+    },
+    {
+      "comparison": "Uses actual critical cap chords and a middle-sector inclusion-exclusion bound, with genuine criticality and midpoint inclusion. It does not locate the endpoint residual corner beyond the support-width shift or compare that tail with the original chord.",
+      "fact_id": "d372e5eb0caea032"
+    }
+  ],
+  "readability": "The distinction between T_i, the actual shifted tail, and its possibly zero lower estimate delta_i is essential to the strict bound and is clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a62fa820c98508652b6ed0748cc869f0c3fad708ee0dc0e6a318f0723ea0ddf4",
+  "reviewed_statement_sha256": "98b84c46fb5594c9efaafee84bfeac7d561f0743ce836969e8bcb365bb339165",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:17:13Z",
+  "summary": "A present residual corner has positive area beyond the shifted cut. Concavity of the square root of the actual cap-area function bounds its original chord, with strictness even when the union-bound lower estimate is zero.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

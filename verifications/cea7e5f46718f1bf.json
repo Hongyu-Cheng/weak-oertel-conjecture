@@ -1,0 +1,47 @@
+{
+  "candidate_id": "61598d59aba2500d",
+  "candidate_sha256": "5fa377b064195924fe9bb5ca6f64c0daecfbc2bb1887cde0ff24962ff6ad5793",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Verified e25e172f74df55a2 §§1–2, (1)–(5) and the explicit Q_* formula. Its group index only labels fixed cap traces, so no group concurrency is needed.",
+    "For W near I exactly one vertex is captured. The intercept fraction on edge i to j is (W_ii-a)/(W_ii-W_ij); preserving the barycentric sum makes det W the physical Jacobian. Thus the formula is for actual cap volume.",
+    "Differentiating along I+tB gives the two displayed log derivatives. After eliminating b_j through the zero column sums, the A_ij coefficient in D(L/V) is -1+sum_l e_l-e_i+chi_j.",
+    "Given two rows, d>=2 gives a third common column, so equality of the coefficients forces all e_i equal. If e=0 nonnegative weights force every chi_i=0, violating stationarity. Since X>1, e>0 then yields chi_i>0 and e<1/d. This gives the stated effective threshold in (0,1).",
+    "With common mean, the squared first log derivative contributes +d^2 sigma_i^2 b_i^2 and the second log derivative contributes -d sigma_i^2 b_i^2 inside the cap Hessian. Subtracting e times their sum gives the stated negative correction and exact vanishing condition."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:48:14Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The single canonical threshold is one specialization, where all variances vanish. It gives neither the general stationary weights nor the arbitrary effective threshold.",
+      "id": "e42e4ad8eaa4f705"
+    },
+    {
+      "comparison": "Its proof uses the log-derivative and variance computation on an actual fixed critical star with specified concurrent thresholds and canonical effective mean. The present statement gives the full arbitrary fixed-cap stationarity equivalence and unequal per-vertex variances with possibly noncanonical effective mean.",
+      "id": "dad8b277ce2587c7"
+    }
+  ],
+  "readability": "The sign of the correction uses the minus sign of the cap terms in the objective-one Lagrangian.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "9f9cd81e3a69e76b53ed8bfa4a390b3bee46e34f0269740ca6b733e39898c5ca",
+  "reviewed_statement_sha256": "587bf1df18c1ff38394e0e544f288b678719435a3849a729903a434ab2b11aeb",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "sources_verified": [
+    {
+      "locator": "e25e172f74df55a2:01 §§1–2, (1)–(5) and the formula for Q_*",
+      "source_candidate_id": "e25e172f74df55a2",
+      "source_candidate_sha256": "984c6823d24ada64e76f5087d13cf783f7fef4294d74549d0e0a21487156a671"
+    }
+  ],
+  "started_utc": "2026-11-08T15:44:21Z",
+  "summary": "The fixed-threshold Lagrangian is stationary exactly at the stated equal weighted cap fractions and common reciprocal threshold mean. The variance correction is negative with coefficient d(d-1)e.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

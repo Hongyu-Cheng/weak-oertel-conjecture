@@ -1,0 +1,57 @@
+{
+  "candidate_id": "108bf10461a9c6ff",
+  "candidate_sha256": "745d31f422e8205d7bba1d1df79ac04d6b37e39d4f981175a636971642cca532",
+  "checked_dependency_candidate_sha256": {
+    "a0756c6751636340": "fee4e911da7d3bf05161e1e5251bc568347e1224896e7bf55cc63f3d4342b3e0"
+  },
+  "checks": [
+    "At each actual interior index, F+a_(i−1) and F−a_i are the neighboring positive tail sums. If a_(i−1)≤a_i, their mean is at most F, so scalar power concavity and monotonicity apply.",
+    "In the decreasing case δ>0 and all subsequent root increments are ≤−δ. Positivity at i+1 forces q>1, so the predecessor applies even when q is arbitrarily near one. The pointwise envelope includes a_i exactly and bounds every subsequent mass on the actual support, with zero actual mass thereafter.",
+    "Shifting the finite positive-part sum up by one adds (q+1)^d and shifting down removes q^d. The scaling δ^d identifies the two neighboring envelope tail values exactly. The parent midpoint inequality yields the envelope inequality after multiplying by δ^(dp).",
+    "H is concave and continuous up to 1/b with H(0)=0. For 0<u≤v≤1/b, concavity yields H(v)/v≤H(u)/u. Thus the nonpositive sign at u=1/F_max persists at v=1/F, and multiplying by F^p recovers the midpoint inequality at the actual tail.",
+    "Singletons and two-point supports have no tested midpoint. For longer support the actual endpoint r has F_r=a_r>0. Appending a zero would change the statement: at d=1, masses (4,1) would give the nonconcave triple (sqrt(5),1,0).",
+    "For the affine positive roots r+1−i, reversing the suffix gives the arithmetic sequence with ρ=1 exactly. A failed midpoint m≥1 for any exponent above 1/(d+1) maps to i=r−m with 0<i<r when r≥m+1.",
+    "Pinned source 821242aee5d2f3e1 §6 has SHA-256 5ead3b8be5c75043b6d82f1329efd279e4d32ac3d3bd6c9a4d4f95f0c6db55f1 and supplies the same two cases, envelope and secant comparison. The frozen text derives optimality via the reviewed predecessor."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "a0756c6751636340",
+      "candidate_sha256": "fee4e911da7d3bf05161e1e5251bc568347e1224896e7bf55cc63f3d4342b3e0",
+      "mapping": "The envelope supplies real d≥1 and q=b^(1/d)/δ>1, exactly the unit-step domain. The reviewed predecessor also proves the required optimality witness at ρ=1.",
+      "reviewed_proof_sha256": "dd132935dffb76fb1593bce15c22a7fd07ddb3e815125e26625715600b5ec48a",
+      "reviewed_statement_sha256": "c0556ca7025333d128db93e8ef428c385967d8812a0ac97678aded7ef67b056b",
+      "status": "Independently approved against these frozen bytes; admission pending."
+    }
+  ],
+  "finished_utc": "2026-11-08T06:36:08Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "candidate_id": "ad8324f468564d7c",
+      "comparison": "Pending source §2 proves the d=1 actual suffix square-root statement, with homogeneity removing centering or mass-scale requirements for that intermediate claim."
+    },
+    {
+      "candidate_id": "5dfdef886fd3ea86",
+      "comparison": "Pending statement (1) matches the actual-node assertion at d=1,2,3. The frozen theorem extends to arbitrary real d≥1 and identifies the largest exponent."
+    },
+    {
+      "comparison": "Proves log-concavity of the survival function for a continuous log-concave density. Continuous log-concavity does not supply the discrete power-concavity claim.",
+      "fact_id": "8bb84543f325a261"
+    }
+  ],
+  "readability": "The artificial zero terms enter only the termwise estimate. The proof specifies the last actual tail separately, so the interpolation domain is unambiguous.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "dd1a14ec592486a89b66088bfbb35719f2cd797c413d3bb8e616311f306729ec",
+  "reviewed_statement_sha256": "b397b189a3efeeab3a201805c4c5da7b0859c2d296f936cae50d726295b824ae",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:35:14Z",
+  "summary": "The arithmetic upper envelope and the reciprocal secant comparison prove the tail-power midpoint inequality on all actual indices. Affine-root masses reduce optimality to the arithmetic predecessor.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

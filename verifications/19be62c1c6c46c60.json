@@ -1,0 +1,49 @@
+{
+  "candidate_id": "262c14bf5874bcbe",
+  "candidate_sha256": "7abc98531ab5ebefeae56d7eba241b781ea97856c4471ea8b78961b470a86329",
+  "checked_dependency_candidate_sha256": {
+    "0dc087be3e05879c": "6d46b2a64aed18293f0309849fcacffa328b109890f59b63d9a6c5b11ac6509a"
+  },
+  "checks": [
+    "Checked source 6666351f7dbc3b14:02 against the frozen simplex, thresholds, collision quantity, finite error and all-parity requirement. The simplex's axes intercepts are N in each lattice direction and 1/2 in each continuous direction, so all vertices are mixed and all integer sections are the stated positive or zero-size simplices.",
+    "At any integer threshold q, z₁<q implies z₁≤q−1 and z₁+x₁≤q−1/2<q, while z₁≥q gives whole-fiber capture. The exact shift z₁↦z₁−q yields the displayed U masses for q=0,L,2L. Each 2Le₁+r satisfies sum≤N−1 and provides a genuinely positive t-trace in its parity.",
+    "Independently integrated the cone by iterating ∫₀ᴮ(B−y)^kdy=B^{k+1}/(k+1), giving d!B^(n+d)/(n+d)!. The cube comparison then gives the exact two-sided bounds for U, and the upper ratio simplifies using 2(L+2n+1)=N+(3n+1). Checked these identities and finite cube bounds for representative (n,d,L) by rational summation.",
+    "For Dx≤ε/2≤1/2, each binomial coefficient is at most D^k and the geometric sum is at most 1+2Dx. The same-batch lower and upper comparison 2^(−n)Ω≤Q≤G(L) squeezes both ratios, independently of the permitted lexicographic order."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "0dc087be3e05879c",
+      "candidate_sha256": "6d46b2a64aed18293f0309849fcacffa328b109890f59b63d9a6c5b11ac6509a",
+      "reviewed_proof_sha256": "2e411860ff461c044e8de9a17a638e920f9d13925bbd45f219049dc733d7b2a4",
+      "reviewed_statement_sha256": "42c4454a5981824c6133f7639c9882ca292d1c9335243cfbedcd09100f2a905a",
+      "verification": "Same-batch predecessor, pending its independent decision. Its hypotheses of a compact convex source with positive mixed volume, the same nonzero linear functional, s≤t and positive surviving cap arrays hold here. The collision formula yields Ω/2^n≤Q≤G(L) for each allowed lexicographic order. The predecessor's one-parity distinct-sum invocation agrees with accepted bff19d5abf55e3e2."
+    }
+  ],
+  "finished_utc": "2026-11-08T18:52:57Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the positive-array monotone-overlap transport for one parity, used through the same-batch collision lemma. It neither asserts a sharp universal coefficient across overlapping parities nor gives the actual oblique simplex family.",
+      "fact_id": "bff19d5abf55e3e2"
+    },
+    {
+      "comparison": "This accepted two-parity obstruction forces a density collision for two auxiliary endpoint marginals. It gives no asymptotic ratio for original cap volumes with one fixed normal, let alone the asserted dimension-dependent finite bound.",
+      "fact_id": "3be42e6ae57d7e8e"
+    }
+  ],
+  "readability": "G, G_r, Φ_d and Q are inherited from the exact collision predecessor. At integral thresholds, the fixed oblique normal acts as whole-fiber capture because the continuous coordinate lies in [0,1/2].",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2ec95eb57c1dec98438bceefc80364f29bc83c5796dc002468f1720048b1ae30",
+  "reviewed_statement_sha256": "6d825b56e64add4069d89a9dd3f6872c8eec9383a154bc32db5b039736485f92",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:49:57Z",
+  "summary": "The actual mixed cap masses realize the sharp universal surviving-parity coefficient, with all parities surviving and a fixed oblique functional. The collision ratio has the same limit.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

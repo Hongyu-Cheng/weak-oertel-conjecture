@@ -1,0 +1,26 @@
+{
+  "advances": "Continuity for a tracked mark at a fixed base under fiberwise perturbations. The base set and positive limit total mass are fixed in the assertion.",
+  "author": "PK-research-agent",
+  "candidate_id": "43ed87d91b76249c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:56:08.464777+00:00",
+  "depends_on": [],
+  "draft_key": "fixed-base-hausdorff-stability-of-marked-depth",
+  "kind": "lemma",
+  "proof": "All fibers lie in a common ball of radius $R$ after increasing $R$ to cover the finitely many initial terms. At each base the indicators of $K_z^{(j)}$ converge almost everywhere to that of $K_z$. An exterior point is eventually outside by Hausdorff convergence. If $x_0$ is an interior point, a ball of radius $r>0$ about $x_0$ lies in $K_z$. Thus every unit-direction support value of $K_z^{(j)}$ is at least the projection of $x_0$ plus $r-d_H(K_z^{(j)},K_z)$, and strict separation shows $x_0\\in K_z^{(j)}$ for large $j$. The boundary of $K_z$ has zero volume since the homothetic contractions about any interior point lie in its interior and their volumes tend to $|K_z|_d$. Dominated convergence therefore gives $\\Delta_j=\\sum_{z\\in P}|K_z^{(j)}\\mathbin{\\triangle}K_z|_d\\to0$. Every cap mass, and the total mass, change by at most $\\Delta_j$ at a fixed ambient point, so the same bound holds for the difference of the raw depth functions there. Here the depth formula makes sense at every ambient point.\n\nTo move the mark at fixed base, compute depth using only caps whose boundaries pass through the mark, by parallel inclusion. For a purely base normal, moving its continuous coordinate leaves all fiber cuts fixed. For any nonzero continuous coefficient, normalize it to a unit vector. Moving the mark from $x$ to $x_j$ shifts each cutoff by at most $\\|x_j-x\\|$, independently of the base coefficient. The volume of any such slab in the common ball is at most $\\kappa_{d-1}R^{d-1}\\|x_j-x\\|$, with $\\kappa_{d-1}$ the unit $(d-1)$-ball volume and $\\kappa_0=1$. Comparing the two infima over the same normals gives\n$$\n|h_{\\mu_j}((p,x_j))-h_\\mu((p,x))|\n\\le \\Delta_j+|P|\\kappa_{d-1}R^{d-1}\\|x_j-x\\|.\n$$\nThe right-hand side tends to zero, and the positive total mass converges by the same symmetric-difference bound. Feasible $x_j$ tending to $x$ exist by Hausdorff convergence. The strict normalized claim follows.\n",
+  "source_candidate_ids": [
+    "fc860651e80d6fd0"
+  ],
+  "source_candidate_sha256": {
+    "fc860651e80d6fd0": "d12133b91550b60abb24519d8a99fd2b3fdd887b96ff006e1f904c5a93c75a6b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fc860651e80d6fd0",
+      "locator": "§5"
+    }
+  ],
+  "statement": "Let $P$ be a nonempty finite subset of a Euclidean space $E$, and suppose $K_z^{(j)}$ and $K_z$ are compact convex bodies in $\\mathbb R^d$ of positive $d$-volume, $d\\ge1$, with $K_z^{(j)}\\to K_z$ in Hausdorff distance for every $z\\in P$. Let $\\mu_j$ and $\\mu$ be the corresponding mixed measures given by summing $d$-volume on the fibers over $P$. Fix $p\\in P$ and $x\\in K_p$. For any $x_j\\in K_p^{(j)}$ with $x_j\\to x$, the raw closed-halfspace depths satisfy $h_{\\mu_j}((p,x_j))\\to h_\\mu((p,x))$, and $\\mu_j(E\\times\\mathbb R^d)\\to\\mu(E\\times\\mathbb R^d)>0$. Therefore any strict normalized depth bound at a specified mark persists for sufficiently small fixed-base Hausdorff perturbations at feasible nearby marks, including a strict bound at a centroid of an original affine centroid graph.",
+  "subgoal_id": "pk-intake-fixed-base-hausdorff-stability-of-marked-depth",
+  "title": "Stability of halfspace depth at a fixed-base mark"
+}

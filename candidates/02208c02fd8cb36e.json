@@ -1,0 +1,26 @@
+{
+  "advances": "Conditional algebra for one common stress matrix. It neither supplies the interpolation signs from an attained depth minimum nor asserts one profile for a fiber row mixing components.",
+  "author": "PK-research-agent",
+  "candidate_id": "02208c02fd8cb36e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:02.040428+00:00",
+  "depends_on": [],
+  "draft_key": "conditional-jensen-stress-graph-components",
+  "kind": "lemma",
+  "proof": "For $i\\ne j$ the boundary rows contribute zero to $Q_{ij}$. Every other summand $W_zH_{zi}H_{zj}$ is nonpositive. Thus $L_{ij}\\le0$, and $L\\mathbf1=\\operatorname{diag}(t)Qt=0$ makes each diagonal equal to the sum of the incident $c_{ij}$. Expanding the edge squares gives the identity. Its value is zero exactly when all positive edges join equal coordinates, equivalently when the vector is constant on each component. Since the matrix is positive semidefinite, this is its kernel (also directly by the zero row sums). From $Qt(\\theta)=0$ we get $L\\operatorname{diag}(t)^{-1}t(\\theta)=0$, proving the ratio assertion. For a row $z$ supported in one component the common ratio factors out of $\\sum_i H_{zi}t_i(\\theta)$, with fixed coefficient $\\sum_i H_{zi}t_i$. If a row spans more than one component the formula instead gives a sum of component profiles.\n",
+  "source_candidate_ids": [
+    "39b8ab63b7707cf2"
+  ],
+  "source_candidate_sha256": {
+    "39b8ab63b7707cf2": "e390404ecff2c3a801f890f313c731e63ce6ebd2a66f5fa0401e360b34793801"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "39b8ab63b7707cf2",
+      "locator": "39b8ab63b7707cf2:04 §3, (2) and component conclusion"
+    }
+  ],
+  "statement": "Suppose a fixed finite active Jensen space is parametrized by $v=Ha$, where $a\\in\\mathbb R^k$ freely prescribes the $k$ boundary coordinates. Those boundary rows of $H$ are the respective standard basis rows and all other rows have nonnegative interpolation coefficients. Let $W_z\\le0$ on every nonboundary row. Suppose $Q=H^{\\mathsf T}\\operatorname{diag}(W)H$ is positive semidefinite and $Qt=0$ for a vector $t$ with all entries positive. Set $L=\\operatorname{diag}(t)Q\\operatorname{diag}(t)$ and $c_{ij}=-L_{ij}$ for $i<j$. Then $c_{ij}\\ge0$,\n$$\na^{\\mathsf T}La=\\sum_{i<j}c_{ij}(a_i-a_j)^2,\n$$\nand $\\ker L$ is the space of vectors constant on connected components of the graph with edges $c_{ij}>0$. If curvature arrays of the form $Ht(\\theta)$ satisfy $Qt(\\theta)=0$ for this same $Q$, then the ratios $t_i(\\theta)/t_i$ agree within each graph component. Each physical row supported on a single component inherits that component's scalar curvature profile with its fixed row coefficient.",
+  "subgoal_id": "pk-intake-conditional-jensen-stress-graph-components",
+  "title": "A sign condition gives graph components for an interpolated curvature stress"
+}

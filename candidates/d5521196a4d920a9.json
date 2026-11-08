@@ -1,0 +1,30 @@
+{
+  "advances": "An obstruction to single-site descent for an even interval chain whose initial normalized depth exceeds the sharp target $1/4$.",
+  "author": "PK-research-agent",
+  "candidate_id": "d5521196a4d920a9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.207524+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-trims-interval-chain-deletion",
+  "kind": "counterexample",
+  "proof": "For an interior site $i$ whose fiber is replaced, interpolation from its adjacent unchanged unit fibers forces the new interval to contain $[0,1]$. On at least one side there are two consecutive unchanged sites. Interpolation between the changed fiber and the farther of these at their midpoint, the nearer unchanged site, gives $(K_i+[0,1])/2\\subseteq[0,1]$. Testing $0$ and $1$ in the unchanged interval forces $K_i\\subseteq[0,1]$. For an endpoint that same midpoint inclusion forces containment, with no lower requirement on its size. Every contained nonempty interval is realized at one endpoint by the convex hull with the unchanged unit generators: the endpoint is exposed and the hull stays inside the original rectangle. Replacing it by a singleton or omitting its generator realizes zero length. Any additional zero-length fibers have no effect on cap masses, and marks outside the positive base hull have raw depth zero by pure-base separation. Every integer base in the positive hull has a positive interval by convexity.\n\nPut $j_L=m-1$ and $j_R=m$. The four ambient caps\n$$\n\\pm(x-1/2)-(z-j_L)\\ge0,\\qquad\n\\pm(x-1/2)+(z-j_R)\\ge0\n$$\ncover all the original integer points, since the two left caps together cover every left plane $z\\le j_L$ and the two right caps together cover every right plane $z\\ge j_R$. Each left cap is full at every integer base below $j_L$, halves the $j_L$ fiber, and is empty on the other positive fibers. Each right cap has the reflected statuses. Thus each old mass is $m-1/2$. For the left one-site shrink the right two masses stay $m-1/2$ and the left two are at most that. The unchanged odd block on bases $1,\\ldots,2m-1$ has mass $2m-1$ and is centrally symmetric about $(m,1/2)$. Each closed through-center cap captures at least half of that block, by reflection, proving the matching raw maximum. Reflection across $z=(2m-1)/2$ handles the right shrink. The same symmetric odd blocks give both central marks at the original body. At $m=2$ their own ordinary depth is $1/2$ by the interval median. A common invertible continuous affine transformation scales all cap masses by the same factor as total mass, so it leaves normalized depth unchanged.\n\nFor simultaneous centered shrink, the piecewise linear upper endpoints have successive slopes $(1-t)/2,0,\\ldots,0,-(1-t)/2$, and the lower endpoints have the opposite slopes. Their hypograph-epigraph intersection is compact convex with ambient interior and the indicated actual fibers. The four old caps still cover and now each has mass $m-3/2+t$. A symmetric submeasure about $(j_L,1/2)$ consists of copies of $J_t$ at $0$ and $2m-2$ and all full fibers at bases $1,\\ldots,2m-3$. Its mass is $2m-3+2t$. Reflection again gives the matching half-mass lower bound at that mark, including the limit $t=0$. Divide the raw values by the respective total lengths. The one-endpoint ratio is strictly decreasing in $t$, while the two-endpoint ratio is $1/2-1/[2(2m-2+2t)]$, strictly increasing in $t$.\n",
+  "source_candidate_ids": [
+    "fd2a9bc72f818ad3"
+  ],
+  "source_candidate_sha256": {
+    "fd2a9bc72f818ad3": "145ad10faa4ccc2467a3452da9b5b10710cc6b5cddcd45b830a83f9f492ddce2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fd2a9bc72f818ad3",
+      "locator": "fd2a9bc72f818ad3:04 §6, (6)–(9), arbitrarily many positive interval fibers"
+    },
+    {
+      "candidate_id": "fd2a9bc72f818ad3",
+      "locator": "fd2a9bc72f818ad3:01 §§1–3, (1)–(4), four-fiber single-site trap"
+    }
+  ],
+  "statement": "Let $m\\ge2$ and use summed interval length on the actual integer fibers of $[0,2m-1]\\times[0,1]$. Its raw maximum closed-halfspace depth is $m-1/2$ and its normalized maximum is $(2m-1)/(4m)$. Any feasible replacement of one fiber, keeping the other fibers and adding no positive sites, either leaves the mixed source unchanged or shrinks an endpoint to an interval of length $t<1$ contained in $[0,1]$ (length zero includes deletion). The raw maximum remains $m-1/2$, and the normalized maximum is\n$$\n\\frac{2m-1}{2(2m-1+t)}.\n$$\nThis strictly increases as $t$ decreases. In contrast, simultaneously shrinking both endpoint fibers to $J_t=[(1-t)/2,(1+t)/2]$, $0\\le t\\le1$, gives an actual convex body with raw maximum $m-3/2+t$ and normalized maximum\n$$\n\\frac{2m-3+2t}{2(2m-2+2t)}.\n$$\nThe latter strictly decreases as $t$ decreases and at zero the two endpoint fibers have vanished from the positive measure.",
+  "subgoal_id": "pk-intake-pk-w35-trims-interval-chain-deletion",
+  "title": "Exact single and paired endpoint deletion in even interval chains"
+}

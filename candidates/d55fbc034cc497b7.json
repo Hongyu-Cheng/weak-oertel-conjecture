@@ -1,0 +1,34 @@
+{
+  "advances": "A strict guarantee at a specified middle centroid for the stated near-equal endpoint areas.",
+  "author": "PK-research-agent",
+  "candidate_id": "d55fbc034cc497b7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:26:15.104289+00:00",
+  "depends_on": [
+    "f0399a8f0bae48c6",
+    "6769574fc1bd9f8d",
+    "8fca4a8d8a771d5b"
+  ],
+  "draft_key": "pk-w34-payments-near-equal-endpoint-strict-planar-depth",
+  "kind": "theorem",
+  "proof": "The lifted hull has exactly these fibers by the midpoint inclusion and the equality of the two endpoint weights at base zero. At $(0,g_K)$ the full-mass planar centroid bound of 6769574fc1bd9f8d gives raw depth at least $4k/9$, which is strictly larger than $2(k+a+b)/9$ when $k>a+b$.\n\nFor $k\\le a+b$, put $\\beta=b/a$, $M=(A+B)/2$ and $r=|M|/a$. Brunn–Minkowski gives $r\\ge r_{\\min}=(1+\\sqrt\\beta)^2/4\\ge1$, and $r\\le k/a\\le1+\\beta$. Tighten each containing halfspace through $(0,g_M)$. If its continuous normal is nonzero, it pays at least $4|M|/9$ from the actual subset $M$ by the same centroid bound. Its endpoints are paired caps with opposite shifts. Apply the complementary-cap estimate of f0399a8f0bae48c6 §1 with midpoint container $M$ and opposite middle area at most $5|M|/9$. Dividing by $a$ and expanding gives paired payment at least\n$$\nF_\\beta(r)=1-\\beta-20r/9+(4/3)\\sqrt{5\\beta r},\n$$\nbecause $2\\sqrt{5r/9}>\\sqrt\\beta$ and the outer positive part can only increase the bound. By pk-w34-payments-planar-section-width-credit, the same paired payment divided by $a$ is also at least $W(r)=2r/[9(2r-1)]$.\n\nIt suffices to show $4r/9+\\max\\{F_\\beta(r),W(r)\\}>4(1+\\beta)/9$. Use $r_s=(19\\beta+14)/20$, which satisfies $r_{\\min}\\le\\beta<r_s<1+\\beta$. Below $r_s$ the residual difference multiplied by nine is the concave function\n$$\n12\\sqrt{5\\beta r}-16r+5-13\\beta .\n$$\nAt $r_{\\min}$ it exceeds $132/5+5-29(21/20)=19/20$, using $r_{\\min}\\le\\beta\\le21/20$ and $\\sqrt{5\\beta r_{\\min}}\\ge\\sqrt5>11/5$. At $r_s$ positivity is equivalent to $6\\sqrt{\\beta(19\\beta+14)}>(141\\beta+31)/5$. Both sides are positive. The difference of their squares multiplied by $25$ is $-2781\\beta^2+3858\\beta-961$, a concave polynomial with positive endpoint values $116$ and $9539/400$. This proves strict positivity over the lower interval.\n\nFor $r\\ge r_s$, the derivative of $4r/9+W(r)$ is $4/9-2/[9(2r-1)^2]>0$. At $r_s$ its excess over $4(1+\\beta)/9$ is\n$$\n\\frac{46-23\\beta-19\\beta^2}{45(19\\beta+4)}>0,\n$$\nbecause the numerator decreases and equals $361/400$ at $\\beta=21/20$. Thus the nonvertical cap bound exceeds $4(a+b)/9$ by a fixed positive amount for the given bodies, uniformly in the cap. Purely base through-caps contain all of $K$ and an endpoint, giving at least $k+a\\ge2a>4(a+b)/9$. Since $4(a+b)/9\\ge2(k+a+b)/9$ when $k\\le a+b$, the infimum of all containing cap masses retains the strict inequality.\n",
+  "source_candidate_ids": [
+    "59cc2a7b6dcd2dbc"
+  ],
+  "source_candidate_sha256": {
+    "59cc2a7b6dcd2dbc": "6d6aa3f120fc863b03a0898c65e4f5a79ff242a87886adec01c41be690a70b8d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "59cc2a7b6dcd2dbc",
+      "locator": "59cc2a7b6dcd2dbc:04 §6, (12)–(16), strict near-equal area theorem"
+    },
+    {
+      "candidate_id": "59cc2a7b6dcd2dbc",
+      "locator": "59cc2a7b6dcd2dbc:01 §1 (4) and §6 (13), paired residual bounds at the true centroid g_M"
+    }
+  ],
+  "statement": "Let $A,K,B$ be planar convex bodies of areas $a,k,b$ with $(A+B)/2\\subseteq K$ and $1\\le b/a\\le21/20$. For their actual lifted hull at integer bases $-1,0,1$, some point of the middle fiber has normalized mixed closed-halfspace depth strictly greater than $2/9$. The point can be chosen as $g_K$ if $k>a+b$ and as the centroid of $(A+B)/2$ if $k\\le a+b$.",
+  "subgoal_id": "pk-intake-pk-w34-payments-near-equal-endpoint-strict-planar-depth",
+  "title": "Strict planar middle depth for endpoint-area ratio up to 21/20"
+}

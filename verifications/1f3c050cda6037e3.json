@@ -1,0 +1,50 @@
+{
+  "candidate_id": "7fe2238120000a41",
+  "candidate_sha256": "9b7667c7173b5a19b1046127054a72a8600e8b6e834de1a5df851947d0729e6c",
+  "checked_dependency_candidate_sha256": {
+    "c68f502f8530eb6e": "7c5413773635833654e1c70d9386b83662f769dc585cf0103b68cf13940c3607"
+  },
+  "checked_source_candidate_sha256": {
+    "8bc6ff090380166a": "6f46027336aeb6d5c66cc02fb115d71b16d4ad942b81c2faa12787ed207fadd2"
+  },
+  "checks": [
+    "The scaled argument has derivative ‖uₗ‖/hₗ in the continuous normal direction. Consequently Sₗ integrates 1 and Aₗ/hₗ integrates q over the occupied part of (−1,0), each with factor 1/‖uₗ‖ times tangential area.",
+    "A proper limiting cut gives full interval contributions 1 and −1/2. Uniform localization to the limiting projection bounds all strip levels, so null or empty limiting cuts vanish and the relative-boundary remainder on a supporting facet tends to zero.",
+    "The global primitive J₁=−Ψ+Ψ²/2 has derivative q on (−1,0), is zero below the ramp and is −1/2 above it. Outside the strip portion is below the roof, yielding −τ+τ²/2. Inside it is above the roof, yielding −τ²/2. Strong L¹ suffices for both squares because 0≤τ≤1.",
+    "Adding Sₗ/2 cancels proper contributions and gives −τ(1−τ)/2 outside and +τ(1−τ)/2 inside. Independent exact fraction checks cover points below, inside and above the ramp and both endpoints. The bound χ/4 uses χ=1 on 0<τ<1 and zero partial cost at saturation.",
+    "Source 8bc6ff090380166a §5 gives the same J₁ primitive and signed identity through Gauss–Green. The frozen column proof establishes the same cap-wise result and does not assign a sign to the final signed sum."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c68f502f8530eb6e",
+      "candidate_sha256": "7c5413773635833654e1c70d9386b83662f769dc585cf0103b68cf13940c3607",
+      "comparison": "Same-batch transition theorem supplies this common sequence, the inner-patch one-roof columns, strong L¹ of both selectors, and 1_{0<τ<1}≤χ. The strip proof only uses these pieces with the stated support orientations.",
+      "reviewed_proof_sha256": "c1ac4575df40aa6fb8a3147bbad307596cb87127a6c978c45602d7a17675209d",
+      "reviewed_statement_sha256": "94d68b95e190a19bee5292220c8ba6760b69f843c1db48e7ee76488da2368f71",
+      "status": "same-batch approval required for admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:39:29Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same outward smoothing model with a crude strip-volume bound. It has no signed first moment of the scaled strip and no limiting supporting-facet costs.",
+      "fact_id": "a2ca1f9d47cb1569"
+    }
+  ],
+  "readability": "The Aₗ/hₗ convention and the distinction between a signed sum and the nonnegative pointwise facet density are explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "cde94265c11ef522e323e67573753d0c80bb7e7cebd7cf055c4248570f9e9c16",
+  "reviewed_statement_sha256": "b44488acdcce5f51813270616daec513712c2442bd17568e7053b3bbf13c4203",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:35:48Z",
+  "summary": "Normal-column integration gives the two strip moments and the signed partial-capture cost, using the same strongly convergent actual selectors and transition densities.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

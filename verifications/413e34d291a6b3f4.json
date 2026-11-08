@@ -1,0 +1,76 @@
+{
+  "candidate_id": "69166b0fcb73425a",
+  "candidate_sha256": "0ea64135ebeaba5ebc6636534d4e7327e677098c89c848f4b7710c14e196e349",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "ba0f3db1bf4f62c6": "80c7786ec3487f6cf51ae119cff069de8d52bd18b8b3b3dbb05254f0b5d8c782"
+  },
+  "checks": [
+    "Verified a779c844eb8df3e4 §4 and 631839b23c1a0508 §3 in the original notes, with both source byte digests matching the frozen metadata. The first retains positive fibers on the chosen hyperplane. The second retains all nonempty sampled fibers on one rank-deficient level.",
+    "The compact base projection meets the lattice coset in finitely many points, so the placed generators form a compact finite union and their convex hull is compact. This hull stays inside Q and projects exactly to conv P, which lies in A and F.",
+    "For every lattice base in conv P, the hull fiber is nonempty. In the nonempty-retention case this and containment in Q force membership in P. In the positive-volume case fix any convex representation of the base and vary the fiber with a positive coefficient while holding all other input points fixed. The hull contains a translate of that fiber scaled by the coefficient, with positive volume. Thus membership in P follows even at boundary lattice bases. Outside conv P the hull fiber is empty. At a retained base the whole original fiber was included, so both set inclusions hold, including zero-volume retained fibers in the nonempty-retention case.",
+    "A positive-volume retained fiber yields every vertical direction. The linear directions of the hull project onto A-p0, so the hull has affine dimension t+s. The full lattice intersection in A is p0+(L intersect (A-p0)). The intersection is discrete, contains t independent lattice differences, and lies in a t-plane. It has rank t and is saturated because a real vector subspace is closed under division by a nonzero integer. The selected differences need not themselves generate the full intersection lattice.",
+    "In the chart the base lattice is counted by bijection and the continuous coordinates are unchanged. Each fiber and its intersection with a transported closed cap have unchanged s-volume, with no covolume factor.",
+    "A containing ambient closed halfspace restricts to a proper closed relative halfspace or the whole relative space. The latter has full retained mass, so it does not lower the infimum. Every proper relative halfspace extends by extending its affine functional. The same restriction works from the larger ambient space for a coarse slice, including the case of constant restriction on the slice. Original cap mass is at least retained cap mass at each fixed retained candidate, and null fibers contribute zero to every cap.",
+    "For t>0 the identified hull is full-dimensional and has exactly the sampled mass T_P, so multiplying the assumed normalized bound by T_P gives the asserted raw bound. For t=0, P has one positive fiber. The full-mass metronoid density is one almost everywhere, hence its point is the centroid and the accepted continuous bound gives Gamma_s T_P."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ba0f3db1bf4f62c6",
+      "candidate_sha256": "80c7786ec3487f6cf51ae119cff069de8d52bd18b8b3b3dbb05254f0b5d8c782",
+      "fact_sha256": "f7f8ae809e27523c5d6974c63908eda7ef090559751d622834091ec55fbc5378",
+      "mapping": "The placed fibers of a compact convex body form a finite compatible family. Use the predecessor's pointwise cap-restriction proof with P as the retained index set. In the larger source all nonempty sampled fibers form the original family. The proof uses nonnegative masses and also covers nonempty zero-volume fibers directly.",
+      "reviewed_proof_sha256": "85354cd7f177fc1a4428289f74f24904dcb3c5fe23b42984d39548c9be34c47d",
+      "reviewed_statement_sha256": "91a694f67248f20d6618a4ff011ab9d0cb5cc3dbac5828570bb138b15c0234b0",
+      "status": "Accepted at the reviewed snapshot."
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "mapping": "Take d=s, K the sole retained positive-volume fiber at rank zero, and m=a=T_P. This K is a full-dimensional compact convex body and the resulting metronoid is its centroid. The predecessor yields at least Gamma_s T_P in every closed continuous halfspace containing it.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d",
+      "status": "Accepted at the reviewed snapshot."
+    }
+  ],
+  "finished_utc": "2026-11-08T13:11:37Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides canonical compatibility at designated sites and the pointwise raw halfspace restriction argument. It does not give the census at every point of the induced affine lattice or the two retention modes.",
+      "fact_id": "ba0f3db1bf4f62c6"
+    },
+    {
+      "comparison": "Its proof gives completeness of the positive mixed base and canonical hull realization on a complete graph base. The candidate states the exact retained hull for an arbitrary affine subspace, including the alternative retaining every nonempty fiber, and preserves the induced-lattice chart and original raw depth.",
+      "fact_id": "26d27b0f77ea4ac9"
+    },
+    {
+      "comparison": "Its proof charts the saturated integer lattice of an occupied flat, keeps the actual slice fibers and transfers all cap masses. Its actual slice retains any nonempty zero-volume fibers and its theorem assumes a flat-cover budget for a weaker depth constant. It does not identify the exact sampled set of the positive-only canonical hull.",
+      "fact_id": "cf1c805642747934"
+    },
+    {
+      "comparison": "Gives stronger raw-depth equality when restricting to an exposed base face. An arbitrary affine subspace, including the hyperplane used by the downstream theorem, need not cut out an exposed face. The candidate uses raw domination on those slices.",
+      "fact_id": "dec855d1498a4e64"
+    },
+    {
+      "comparison": "At full mass it supplies exactly the continuous centroid inequality invoked for t=0. It has no sampled-lattice census or positive-rank conclusion.",
+      "fact_id": "6769574fc1bd9f8d"
+    }
+  ],
+  "readability": "The retained source uses the counted lattice sites of Q_P. In the positive-volume mode it excludes nonempty zero-volume fibers even though such fibers may occur in the original slice. The proof correctly establishes this stronger statement about sets.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d81c7e7f68b46e0400978357f1973a540b61429de5d0908bc146192467ef1b5c",
+  "reviewed_statement_sha256": "54e9ae4eef61b1b5ad47dd614dfd5b483764493d68a16e1409814de4a06bf633",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:07:51Z",
+  "summary": "The hull realizes exactly the retained lattice fibers, and the chart preserves raw sampled depth. The resulting rank-zero guarantee is unconditional. The positive-rank constant uses precisely the stated sharp lower-rank hypothesis.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

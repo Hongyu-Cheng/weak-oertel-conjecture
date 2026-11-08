@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary coarea at a proper signed exponential section and a one-sided transform.",
+  "author": "PK-research-agent",
+  "candidate_id": "2df557c1c98c03cf",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:58.130498+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w32-signed-exponential-selected-endpoint",
+  "kind": "lemma",
+  "proof": "Let $\\nu$ be the law of $W=V-pY_j$. Conditioning on $W$ gives\n$$\n f(v)=\\frac1p\\int_{w\\le v}e^{-(v-w)/p}\\,d\\nu(w).\n$$\nHere $W$ has at least one negative nonzero term, so it has no atoms, the formula is continuous and gives the actual density at zero. It is positive at zero because $\\Pr(W<0)>0$ by independence and the unbounded negative coordinate. Multiplication by $e^{v/p}$ shows the monotonicity. By Tonelli,\n$$\n B(1/p)=\\frac1p\\int_{w<0}(-w)e^{w/p}\\,d\\nu(w),\n$$\nwhich is finite since the integrand is bounded. The coarea first-moment integral at $V=0$ has the same exponential factor, raw Jacobian $1/p$, and forced value $Y_j=-w/p$, so it is $f(0)\\mu_j=p^{-2}\\int_{w<0}(-w)e^{w/p}\\,d\\nu(w)$. These two formulas give the endpoint identity even if this selected endpoint is outside the common open tilt interval.\n",
+  "source_candidate_ids": [
+    "68f98f207c8057eb"
+  ],
+  "source_candidate_sha256": {
+    "68f98f207c8057eb": "0397b5ee9ec3eb6ed711035fa262716383f667835cb02cb11cbc13068eb75c0c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "68f98f207c8057eb",
+      "locator": "68f98f207c8057eb:4 §3, (7) and following paragraph"
+    }
+  ],
+  "statement": "Let $Y_i$ be independent unit-rate exponentials and $V=\\sum_i c_iY_i$ have coefficients of both signs. Write $f$ for its continuous density, $\\mu_j$ for the coarea conditional mean of $Y_j$ at $V=0$, and $B(t)=\\int_{-\\infty}^0 e^{tv}f(v)\\,dv$. For every positive selected coefficient $c_j=p$, maximal or otherwise, $B(1/p)<\\infty$ and\n$$\n \\mu_j=\\frac{B(1/p)}{p f(0)}.\n$$\nAlso $v\\mapsto e^{v/p}f(v)$ is nondecreasing on $\\mathbb R$.",
+  "subgoal_id": "pk-intake-pk-w32-signed-exponential-selected-endpoint",
+  "title": "Exact endpoint transform for a selected exponential coordinate"
+}

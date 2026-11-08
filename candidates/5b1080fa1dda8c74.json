@@ -1,0 +1,34 @@
+{
+  "advances": "Full summed mixed-volume derivative for an original cap; proper sections are required and no multi-cap strict decrease is inferred.",
+  "author": "PK-research-agent",
+  "candidate_id": "5b1080fa1dda8c74",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:55:51.877038+00:00",
+  "depends_on": [
+    "ae0c05d01cb1d8d2",
+    "1269c554ca9a41b8",
+    "430dc4f991e38889"
+  ],
+  "draft_key": "pk-w33-shared-normal-kernel-cap-force",
+  "kind": "lemma",
+  "proof": "Apply the full ambient coarea derivative of 1269c554ca9a41b8 §2, since all positive sections are proper. Differentiating the represented margin on a section yields\n$$\n\\dot u_i\\cdot(x-q_{g_0}(z))+\\dot F_{g_0}(z)-u_i\\cdot\\dot q_{g_0}(z).\n$$\nThe shared equations ensure this is the same physical margin derivative from every occurrence. In particular $R_i^g-R_i^{g_0}=-(Q_g-Q_{g_0})\\sum_z(z,1)\\tau_z(K_z)$ lies in $\\operatorname{range}M_i^{\\mathsf T}$.\n\nTake $u_i(t)=u_i+tv$ and $c_i(t)=f_{g_0}-Q_{g_0}^{\\mathsf T}u_i(t)$. If $v\\in\\ker M_i$, the unchanged right sides of the shared systems give exact consistency for both signs of sufficiently small $t$. Every circuit persists and all projected cover inequalities are unchanged. The derivative formula now reads $v\\cdot R_i^{g_0}$. The negative projected force gives strictly negative derivative when nonzero; vanishing on the entire kernel is precisely membership of $R_i^{g_0}$ in $\\operatorname{range}M_i^{\\mathsf T}$. If the raw normal must also remain unit, its first-order velocities are restricted to the tangent intersection with $u_i^\\perp$, whose annihilator is $\\operatorname{range}M_i^{\\mathsf T}+\\operatorname{span}(u_i)$. Positive normalization after a physical motion keeps the halfspaces but may change the raw equal-margin data.\n\nIn the five-cap construction the shared cap $x\\ge0$ has sections of length $1/2$ at both bases and $\\|u_i\\|=1$. For reference $A$, the displacement in the $x$ coordinate is $z$, and the $y$ moments cancel individually by symmetry. Hence $R_i^A=(1/2,0)$ lies in the shared row space, with zero projection to the $y$ axis. Each exact kernel path $x+ty\\ge0$ bisects both centered squares. Thus stationarity of the full cap does not force zero unprojected reference displacement.\n",
+  "source_candidate_ids": [
+    "004e194a6aeb29ff"
+  ],
+  "source_candidate_sha256": {
+    "004e194a6aeb29ff": "fcc04795f4204a01946a27a80ff84300de5a807b2b12c4a63667a73cf0d43bfa"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "004e194a6aeb29ff",
+      "locator": "004e194a6aeb29ff:04 §6, (13)–(16), full-mass force projected to the shared kernel"
+    },
+    {
+      "candidate_id": "004e194a6aeb29ff",
+      "locator": "004e194a6aeb29ff:03 §5, (10)–(12), actual five-cap shared-original obstruction"
+    }
+  ],
+  "statement": "Use the shared original cap coordinates with finitely many actual positive compact convex fibers $K_z$. For one original cap $i$, assume its cuts are proper or strictly full or empty. For a reference group $g_0$ define its full mixed section force by\n$$\nR_i^{g_0}=\\sum_z\\int(x-q_{g_0}(z))\\,d\\tau_z,\\qquad\nd\\tau_z=\\|u_i\\|^{-1}d\\mathcal H^{d-1}\\big|_{K_z\\cap\\{u_i\\cdot x+c_i\\cdot(z,1)=0\\}},\n$$\nwith zero terms on strict full/empty fibers and counting measure for $d=1$. For a representable differentiable path the cap mass derivative is\n$$\n\\dot u_i\\cdot R_i^{g_0}+\n\\sum_z\\tau_z(K_z)\\bigl(\\dot F_{g_0}(z)-u_i\\cdot\\dot q_{g_0}(z)\\bigr).\n$$\nKeeping all group $Q_g,f_g$ fixed, every $v\\in\\ker M_i$ gives an exact cover-preserving path moving this original alone with derivative $v\\cdot R_i^{g_0}$. For a private cap take $\\ker M_i=\\mathbb R^d$. The projection of the force to $\\ker M_i$ is reference-independent. It is zero exactly when the cap is stationary under all these paths. Otherwise one such path strictly decreases its mass with all other originals fixed.",
+  "subgoal_id": "pk-intake-pk-w33-shared-normal-kernel-cap-force",
+  "title": "Full mixed cap force projected to the shared-normal kernel"
+}

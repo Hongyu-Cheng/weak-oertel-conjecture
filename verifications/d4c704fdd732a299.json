@@ -1,0 +1,38 @@
+{
+  "candidate_id": "3e203e154e297bd1",
+  "candidate_sha256": "6296019167683b6b742a6c3b01abfd2b498f627dafe81a37274be6364b84b1df",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The projection lies in [-1,1]^n. An integer base outside the binary cube has a coordinate equal to −1, forcing all convex weight onto v_−. With 0<ε<1 and 0∈T, A⊂T, so every cube fiber is exactly T, and their hull contains [0,1]^n×T. The base v_− has the parity of the all-ones vertex, so k=2^n, M=2^n+a, and max fiber volume 1 is strictly below M/k.",
+    "At 0, δ_0=0. At v_−, δ_0=−n so the threshold b−2n is below zero. On every other cube base δ_0≥1, making its threshold exceed one. For w≠0, δ_w vanishes only at w among cube bases, has value at least one at the others, and at v_− equals (2n+3)r−n≥n+3 for r≥1. Because 0≤λ_i≤1 on every fiber, the displayed trace assertions follow with strict exclusion where claimed.",
+    "Each canonical cap is a copy of T scaled by 1−b at its top vertex, giving volume Γ. The d+1 caps at each own fiber cover it since the coordinate average is b, and the source caps cover A. The cap budgets are Γ+a at 0 and Γ elsewhere. Taking the minimum strict-complement volume root over the cover gives e(v_−)=0 and e(w)=c at each cube base.",
+    "Summing the two support inequalities out of 0 to v_− and the all-ones vertex gives h(v_−)+h(1)≥2h(0)≥2c. Strict convexity of t^d for t≥0 forces h(v_−)=h(1)=c at equality. The remaining 2^n−1 cube terms each contribute at least c^d, with equality only at c. Constant heights with zero slopes attain the resulting lower bound.",
+    "The nonzero multipliers are μ(0,y)=s for y∈{v_−,u_1,…,u_n}, with s=dc^(d−1)>0. The slope derivative vanishes by v_−+Σ_j u_j=0. For height stationarity, s+out−in is (n+2)s at 0, zero at each destination, and s elsewhere. Every edge constraint is tight, and positive obstacle multipliers occur only at obstacle contacts. Thus all KKT equations hold.",
+    "The absorbing chain has outgoing normalization (n+2)s at 0 and s elsewhere. From 0 each destination edge and direct stop has probability 1/(n+2), and the destinations stop immediately. The row has barycenter 0, and multiplying by its obstacle mass gives terminal entry s at each support point. The residual roots of each source cap are 0 at v_−, c at 0, and 1 at all u_j. Their average exceeds c by [n−(n+1)c]/(n+2), strictly positive by hypothesis.",
+    "Checked source c323819a201d7580 at its recorded raw digest, §§1–4, (1)–(15), against the exact lift, cover, constraints, multipliers and row. The normalized finite statement makes the positive dilation explicit and needs no depth theorem. Also checked the source's absorbing-chain convention against its definition in candidate 99d50c87eb055f05. The one-transition computation is self-contained."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T13:38:18Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "For A⊂T and a≤ρ_d the accepted fact already gives this lift census and a canonical cap cover, by specializing q=0, v=1 and V=1. The finite draft drops the profile mass restriction for its cover and gives the new residual optimizer and explicit failing KKT row. The accepted fact does not imply the row claim.",
+      "fact_id": "a0223f71231de506"
+    }
+  ],
+  "readability": "The one-cap obstacle is the minimum of the strict-complement volume root over the displayed finite cover. The proof supplies the sampled support inequalities and the absorbing-chain normalization explicitly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "09f63ac7e1f5b4d30e57f413c3bf04681ba9a867d7703b5150bd0845acd63f09",
+  "reviewed_statement_sha256": "75fc00fe83cf5f44ddaddc3c0e4b7dd774c3db5c10cfdfb36640e129be7a6c16",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:34:30Z",
+  "summary": "The actual lift has the claimed integer fibers. The cap cover has the stated exact volumes, the constant heights are uniquely optimal, and the displayed KKT certificate yields the stated uniform row with a strictly positive residual-root gap.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "An exact threshold for two planar lower certificates over all compatible volume data. Lowering the prescribed ordinary depth need not lower the actual depth of a compatible geometry below target.",
+  "author": "PK-research-agent",
+  "candidate_id": "67d48384eeff4e3a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:44.510202+00:00",
+  "depends_on": [
+    "f0399a8f0bae48c6",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "w32-planar-endpoint-ratio-ordinary-depth-threshold",
+  "kind": "theorem",
+  "proof": "The layered hull has exactly the prescribed fibers, as convex combinations at base zero use equal endpoint weights. Ordinary midpoint Brunn–Minkowski and compatibility give $k\\ge v$. Conversely every $k\\ge v$ is an admissible area triple by using homothets of one centered area-one convex body in ratios $\\sqrt a,\\sqrt k,1$. The two lower bounds come from f0399a8f0bae48c6 §2 with the single reflected pair and ordinary middle depth at least $b\\sigma k$, and from 6769574fc1bd9f8d at the full mass $b$ on the larger endpoint. The middle certificate is nondecreasing in $\\sigma$, since increasing $\\sigma$ increases own depth and decreases the missed-area budget.\n\nIf $0<a\\le1/9$, put $\\sigma=4/[9(1-a)]$. The endpoint certificate covers $k\\le k_l=1-a$, and the own middle payment $\\sigma k$ covers $k\\ge k_l$: both pay exactly the target at $k_l$, with $\\sigma>2/9$ for the latter. Also $4(5/9-a)-(1+\\sqrt a)^2=(1-3\\sqrt a)(15\\sqrt a+11)/9\\ge0$. Thus at $\\sigma$ and $k_l$ the missed area is $5/9-a\\ge v$. If $\\sigma$ decreases, the residual credit is zero for $k$ just above $k_l$, the middle payment stays strictly below target there by continuity, and the endpoint payment also fails. These $k$ are admissible because $k_l>5/9-a\\ge v$.\n\nFor $x=\\sqrt a\\in[1/3,1]$, write $D=17+18x+17x^2$ and take $\\sigma=2(5+2x+5x^2)/D$. Direct subtraction gives $1-\\sigma=7(1+x)^2/D$, $1/2-\\sigma=(3x-1)(3-x)/(2D)$ and $\\sigma-4/9=2(11x^2-18x+11)/(9D)>0$, the last quadratic having negative discriminant and positive leading coefficient. The endpoint pays for $k\\le k_l=1-x^2$, and the own middle pays for $k\\ge k_u=D/28$, as follows from solving $\\sigma k=2(1+x^2+k)/9$. Their potential gap interval has length\n$$\nk_u-k_l=\\frac{(3x-1)(15x+11)}{28}\\ge0.\n$$\nAt $k_u$ the missed area is exactly $v$, the residual credit is zero, and the middle payment is the target. Throughout $[k_l,k_u]$ we have $(1-\\sigma)k\\le v$. Thus the middle certificate there equals $L(k)=\\sigma k+x^2-(2\\sqrt{(1-\\sigma)k}-1)_+^2$. The function subtracted is convex in $k$: the function $(2\\sqrt h-1)_+^2$ is zero up to $1/4$, then has increasing derivative $4-2/\\sqrt h$ starting at zero. Hence the gap between $L(k)$ and target is concave.\n\nAt the lower endpoint let $h_l=(1-\\sigma)k_l$. The identity\n$$\n4D-63(1+x)^2(1-x^2)=(3x-1)(21x^3+49x^2+39x-5)\\ge0\n$$\ngives $h_l\\le4/9$, since the cubic is increasing and positive at $x=1/3$. The target at $k_l$ is $4/9$. If $h_l\\le1/4$, $L(k_l)=1-h_l\\ge3/4$. Otherwise $L(k_l)=4\\sqrt{h_l}-5h_l$, and its excess above $4/9$ is $(2/3-\\sqrt{h_l})(5\\sqrt{h_l}-2/3)\\ge0$. This gives both endpoint signs, so the inequality holds for all $k$ in the potential gap, even if part of the gap lies below $v$.\n\nIf $x>1/3$ and $\\sigma$ is decreased from the displayed value, keep $k=k_u$. This is admissible since $(1-\\sigma_*)k_u=v<k_u$. Now the residual credit is zero and the own middle payment is strictly below target, while the endpoint also fails because $k_u>k_l$. The case $x=1/3$ was already handled by the first branch. The formulas agree at $1/9$ and the range and sample value follow by the displayed differences and substitution.\n",
+  "source_candidate_ids": [
+    "b13e43ee6ee1d8af"
+  ],
+  "source_candidate_sha256": {
+    "b13e43ee6ee1d8af": "d9d51095fc9b8d0224b8c85b88c3d6050c152a98b0b2e088018378208cb55c01"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b13e43ee6ee1d8af",
+      "locator": "b13e43ee6ee1d8af:06 §8, (14)–(16) and exact certificate threshold"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let positive $d$-volume convex bodies $A,K,B$ satisfy $(A+B)/2\\subseteq K$. Use the actual fibers at $-1,0,1$ of their layered convex hull, measured by the sum of their $d$-volumes. Put $b=|B|\\ge|A|>0$, $a=|A|/b$, $k=|K|/b$, $M=b(1+a+k)$, $\\Gamma=(d/(d+1))^d$, and $\\rho=((d-1)/(d+1))^d$. For $h\\ge0$ define $t(h)=(2h^{1/d}-1)_+^d$.\n\nFor $d=2$ and a fixed $0<a\\le1$, put $v=(1+\\sqrt a)^2/4$. Let $\\sigma_*(a)$ be the least $\\sigma\\in[0,1/2]$ for which\n$$\n\\max\\{4/9,\\ \\sigma k+[a-(2\\sqrt{(1-\\sigma)k}-1)_+^2]_+\\}\\ \\ge\\ \\frac29(1+a+k)\n$$\nfor every scalar $k\\ge v$. Then\n$$\n\\sigma_*(a)=\n\\begin{cases}\n4/[9(1-a)], &0<a\\le1/9,\\\\\n2(5+2\\sqrt a+5a)/(17+18\\sqrt a+17a), &1/9\\le a\\le1.\n\\end{cases}\n$$\nIt lies in $[4/9,1/2]$, equals $1/2$ only at $a=1/9$, and equals $330/673$ at $a=4/25$. Consequently if an actual middle point $c$ has ordinary normalized depth at least $\\sigma_*(a)$, one of $(0,c)$ and $(1,g_B)$ has raw mixed depth at least $2M/9$ for every compatible middle area. The algebraic necessity refers to the two certificates in the inequality.",
+  "subgoal_id": "pk-intake-w32-planar-endpoint-ratio-ordinary-depth-threshold",
+  "title": "Exact planar ordinary-depth threshold at a fixed endpoint ratio"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "This counterexample concerns the point chosen by maximizing actual reflection overlap. The target of the conjecture is existential.",
+  "author": "PK-research-agent",
+  "candidate_id": "ba858d80c598eb2c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:11.839058+00:00",
+  "depends_on": [],
+  "draft_key": "actual-trapezoid-reflection-selector-obstruction",
+  "kind": "counterexample",
+  "proof": "At $c=(\\xi,\\eta)$, the horizontal slices of $K$ and $2c-K$ at height $h$ have lengths $1+h$ and $1+2\\eta-h$ and centers $0$ and $2\\xi$. The common height interval is $[\\max(0,2\\eta-1),\\min(1,2\\eta)]$. Aligning the interval centers maximizes their overlap for fixed heights. Integrating the smaller length $1+\\eta-|h-\\eta|$ on that interval gives\n$$\nR_K(0,\\eta)=\n\\begin{cases}\n2\\eta+\\eta^2,&0\\le\\eta\\le1/2,\\\\\n1+2\\eta-3\\eta^2,&1/2\\le\\eta\\le1.\n\\end{cases}\n$$\nThe first branch increases strictly and the second decreases strictly. At $\\eta=1/2$, any fixed nonzero $\\xi$ strictly decreases the slice overlap on an interval about $h=1/2$, where the difference in the slice lengths tends to zero and their center separation is $2|\\xi|$. This proves the unique maximizer and its value.\n\nThe overlap is centrally symmetric about $c_*$. Each containing closed halfplane takes at least half its area, so the raw depth is at least $5/8$. The original $K$ has area $3/2$, and the halfplane $h\\le1/2$ takes exactly $\\int_0^{1/2}(1+h)\\,dh=5/8$, attaining the bound.\n\nFor binary bases, $z+w=2p$ forces $z=w=p$ coordinatewise, giving the ordinary overlap and exactly the stated maximizing set. Every containing ambient halfspace takes at least $5/8$ in the own fiber, whose trace is either a containing halfplane or the whole fiber. For the reverse inequality, put $\\ell_p(z)=\\sum_j(2p_j-1)(z_j-p_j)$. At $p$ it is zero, and at any other binary base it is at most $-1$. Thus the actual closed ambient halfspace $\\ell_p(z)+1/2-h\\ge0$ takes only the own downward cap. Dividing $5/8$ by the total mass $2^n(3/2)$ proves the result, including $n=0$.\n",
+  "source_candidate_ids": [
+    "84f22b883b24046f"
+  ],
+  "source_candidate_sha256": {
+    "84f22b883b24046f": "51b15e3ff06282c35d5ff6d54a57533b9c1c9c2a52ce86e284c7dc8bd48e1350"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "84f22b883b24046f",
+      "locator": "84f22b883b24046f:01 §§1–2 (1)–(4), actual reflection-selector obstruction"
+    }
+  ],
+  "statement": "For $K=\\{(s,h):0\\le h\\le1,\\ |s|\\le(1+h)/2\\}$, the function $R_K(c)=|K\\cap(2c-K)|$ on $K$ has the unique maximizer $c_*=(0,1/2)$ with value $5/4$. Its ordinary raw depth is $5/8$, or $5/12$ after normalization, below $\\Gamma_2=4/9$. For every integer $n\\ge0$, let $C=[0,1]^n\\times K$ and $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^2)$. The maximizers of $\\mathcal H_2(S\\cap(2Y-S))$ over $Y\\in S$ are exactly $(p,c_*)$ with $p\\in\\{0,1\\}^n$, and every such point has normalized actual mixed depth $5/(12\\cdot 2^n)<\\Gamma_2/2^n$.",
+  "subgoal_id": "pk-intake-actual-trapezoid-reflection-selector-obstruction",
+  "title": "Actual reflection-overlap maximizers can miss the mixed Grünbaum target"
+}

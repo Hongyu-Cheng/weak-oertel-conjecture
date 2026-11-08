@@ -1,0 +1,72 @@
+{
+  "candidate_id": "f25015adbdd1f87b",
+  "candidate_sha256": "36833a25bd960fe2ae412e254778fbad669f95e0f0ca743cdcde475a0c8c4231",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Read aadf3a80572ef300:02 §2 (4)–(6). The source's exact LP discretizes to a finite atom list and separately keeps a continuous dominated marginal version.",
+    "The affine margin average is the margin at Y. If Y belongs to the closed cap, at least one tuple occurrence has nonnegative margin, including when all margins are zero. A profile that is nonnegative and one there therefore pays one per tuple.",
+    "At distinct uniform physical fibers, original captured mass is the volume-weighted sum of captured probabilities and is at least the smallest original volume times their sum. Arbitrary base tilts are retained by the lifted affine identity.",
+    "Nonnegative incidence costs count repeated occurrences, so integrating against feasible tuple weights charges every physical atom at most its budget. The finite primal is bounded by total input mass, and finite LP duality gives the nonnegative cover and attainment. Empty tuple families give zero.",
+    "For the continuous lower-bound extension, summing the exact cap inequalities against the tuple measures and applying marginal domination controls the same original cap. There is no use of atomic approximations preserving an equality constraint.",
+    "The linked revision explicitly limits the LP to finitely supported atomic sources. Finitely many types and finitely many atoms give finitely many tuples, so the nonempty bounded closed primal polytope and finite duality apply as claimed. The continuous assertion retains only the integrated cap quota."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T20:29:26Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "f25015adbdd1f87b",
+    "candidate_sha256": "905a845bb92538eeccb2bf28066d7c1aaec13a3434f53b99295a479d6f126da2",
+    "checks": [
+      "Read aadf3a80572ef300:02 §2 (4)–(6). The source's exact LP discretizes to a finite atom list and separately keeps a continuous dominated marginal version.",
+      "The affine margin average is the margin at Y. If Y belongs to the closed cap, at least one tuple occurrence has nonnegative margin, including when all margins are zero. A profile that is nonnegative and one there therefore pays one per tuple.",
+      "At distinct uniform physical fibers, original captured mass is the volume-weighted sum of captured probabilities and is at least the smallest original volume times their sum. Arbitrary base tilts are retained by the lifted affine identity.",
+      "Nonnegative incidence costs count repeated occurrences, so integrating against feasible tuple weights charges every physical atom at most its budget. The finite primal is bounded by total input mass, and finite LP duality gives the nonnegative cover and attainment. Empty tuple families give zero.",
+      "For the continuous lower-bound extension, summing the exact cap inequalities against the tuple measures and applying marginal domination controls the same original cap. There is no use of atomic approximations preserving an equality constraint."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T20:28:53Z",
+    "issues": [
+      {
+        "defect": "Finite atomic measures can mean atomic measures of finite total mass, which may have infinitely many atoms. Then the exact formula is not the finite linear program whose strong duality and attainment are invoked. The continuous statement only supplies the cap lower bound and does not prove that countable dual.",
+        "locator": "Statement, second paragraph beginning “For finite atomic source measures” and proof, finite LP step",
+        "repair": "Specify “For finitely supported atomic source measures” or state that there are finitely many atoms across the source measures.",
+        "severity": "blocking"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "For unrestricted vertex subsets containing a fixed point in their convex hull, this gives the same incidence packing and cover dual with membership charges. The reviewed tuples have fixed types, specified coefficient relations, and multiplicities; the predecessor does not handle those constraints or their continuous cap credit.",
+        "fact_id": "c74ffab8666d5d3d"
+      }
+    ],
+    "readability": "The packed value is an exact optimization certificate and a lower bound for actual depth. The proof does not identify it with the exact depth.",
+    "reviewed_proof_sha256": "ae492b86ee621f8391fe06b3a1c486e66cf2b61ca8e2ee86abc7eaecd7a78452",
+    "reviewed_statement_sha256": "150f4d0ff9d798ff820eb23d1a8682bfabb35973add649c74753afc8f8ed30a1",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T20:23:56Z",
+    "summary": "The deterministic barycenter gives the simultaneous quota, and the exact LP dual is proved for a finite atom index. The statement should specify finite support.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "For unrestricted vertex subsets containing a fixed point in their convex hull, this gives the same incidence packing and cover dual with membership charges. The reviewed tuples have fixed types, specified coefficient relations, and multiplicities; the predecessor does not handle those constraints or their continuous cap credit.",
+      "fact_id": "c74ffab8666d5d3d"
+    }
+  ],
+  "readability": "The packed value is a certificate for depth. The exact dual equality applies to the packing value.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "5a1cda991b0596384c57946d71c32f661c3c425db3dbd50587b5ab097299890b",
+  "reviewed_statement_sha256": "712a5934cb59d7cf2d4d5ca1e4d2bcfe800035143931ef5103cf191e7de8d355",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "905a845bb92538eeccb2bf28066d7c1aaec13a3434f53b99295a479d6f126da2",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:29:05Z",
+  "summary": "The exact finite atomic packing and covering dual gives a simultaneous original cap quota, with the stated dominated continuous extension.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

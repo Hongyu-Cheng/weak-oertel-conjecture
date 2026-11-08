@@ -1,0 +1,32 @@
+{
+  "advances": "Exact component rule on arbitrary finite sets and a product obstruction on lattice-convex sets, with no Helly product assertion.",
+  "author": "PK-research-agent",
+  "candidate_id": "21e3f39c03b00949",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:53:57.533540+00:00",
+  "depends_on": [
+    "1124d408b8e60579"
+  ],
+  "draft_key": "pk-intake-cartesian-product-of-anchored-dependence-components",
+  "kind": "theorem",
+  "proof": "Project any anchored convex representation in $A\\times B$ onto the factors. In each projection either all positive sources equal the target, or the aggregate coefficient of sources equal to the target can be cancelled and the other coefficients renormalized. The remaining representation joins the target to all distinct projected sources in that factor. Hence every original hyperedge stays in a single product of factor components. Conversely every anchored representation in $A$ lifts at any fixed coordinate in $B$, and every one in $B$ lifts at any fixed coordinate in $A$. Moving first within $A_i$ at fixed second coordinate, and then within $B_j$ at fixed first coordinate, connects every pair in $A_i\\times B_j$. This proves the exact component formula.\n\nFor any two nonempty sets their product affine span is the product of their affine spans: differences from a fixed product point span each factor independently by holding the other coordinate fixed. The ranks therefore add, and summing the exponential cost gives multiplicativity. Convex hulls also commute with products: the reverse of the inclusion by projection follows by multiplying the coefficients of two independent convex representations. Intersecting with the product integer lattice proves lattice-convexity.\n\nThe explicit seed and its two component ranks are supplied by the nine-point dependence-rank counterexample. The lattice census in each block implies that the integer set of the corresponding product polytope is precisely $P^q$. Choosing the rank-three component in exactly $j$ blocks gives the stated multiplicity and rank, so the cost is $\\sum_j\\binom qj8^j=9^q$. The full affine rank is $3q$, and the ratio is unbounded. At $q=4$ the cost is $6561>6144=(3/2)2^{12}$, and at $q=6$ it is $531441>524288=2\\cdot2^{18}$. The strict gaps are 417 and 7153, respectively. This computation involves exponential affine ranks; it uses no product formula for relative Helly numbers.\n",
+  "source_candidate_ids": [
+    "1c9b145fd8b5be6f"
+  ],
+  "source_candidate_sha256": {
+    "1c9b145fd8b5be6f": "e3edb1ab1196c922f425073cf3a6f5ebcc3042851e81e5651ebc5a32fe847f0a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1c9b145fd8b5be6f",
+      "locator": "1c9b145fd8b5be6f:01 §1, (1)–(2)"
+    },
+    {
+      "candidate_id": "1c9b145fd8b5be6f",
+      "locator": "1c9b145fd8b5be6f:02 §§2–3, (3)–(4), seed amplification and exact constant failures"
+    }
+  ],
+  "statement": "Let $A,B$ be finite nonempty Euclidean point sets. Define a dependence component by joining the target of every nontrivial anchored convex representation to each of its positive sources. If their components are $A_i$ and $B_j$, then the components of $A\\times B$ are precisely $A_i\\times B_j$. Consequently the rank cost $R(A)=\\sum_i2^{\\dim\\operatorname{aff} A_i}$ satisfies $R(A\\times B)=R(A)R(B)$. Cartesian products of lattice-convex sets remain lattice-convex.\n\nLet $P$ be the lattice set of the convex hull of $(0,0,1),(0,0,3),(0,2,1),(1,2,0),(2,0,0)$. Its $q$-fold Cartesian power has $\\binom qj$ components of rank $3j$ for $0\\le j\\le q$, and\n$$\nR(P^q)=9^q,\\qquad \\frac{R(P^q)}{2^{3q}}=(9/8)^q.\n$$\nThere is therefore no dimension-independent finite constant $C$ such that every lattice-convex $P\\subset\\mathbb Z^k$ has $R(P)\\le C2^k$.",
+  "subgoal_id": "pk-intake-pk-intake-cartesian-product-of-anchored-dependence-components",
+  "title": "Cartesian dependence components and unbounded exponential rank cost"
+}

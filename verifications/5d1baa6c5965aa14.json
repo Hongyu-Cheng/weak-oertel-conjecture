@@ -1,0 +1,47 @@
+{
+  "candidate_id": "0575f5f7358f0850",
+  "candidate_sha256": "98aaa47f5626d18e60645d7d82a23baf62dd7c21e656bd3012363fb836e1c9f5",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "3d8aa8562dba80fc": "37d88784b92a853479b97807685ba0a387956b207d7afc42d12ff0c185fa5145",
+    "825f4248238fa3c9": "5e81129f39f37ad2a22fc18411c43e68ccfb668767d11f47534dc54a6a9f6222",
+    "e7b862fa9bf72057": "0875acbdc0735e57b32585129ccacffa2c0869bbeebf8c4823cb7a8dc5b0340f"
+  },
+  "checks": [
+    "Compactness leaves finitely many input bases. At normalized level q>0 the selected fibers have positive volume and each level set is nonempty. A selected weighted tuple has an integral output base by hypothesis, and ordinary Brunn–Minkowski on its compact continuous fibers gives at least q times the dth power of the weighted peak-root sum.",
+    "A generic linear functional orders any two finite nonempty sets injectively. Traversing one set with the other initial point fixed, then traversing the other while fixing the former's last point, gives |U|+|V|−1 strictly increasing sums. Iterate for scaled inputs. Each output is counted once, irrespective of collisions, and the volume of its union is at least one witnessing Minkowski volume.",
+    "Integrating only thresholds through L^d gives the peak bound, since ∫_0^1 N_i(q)dq=M_i/a_i. The prefactor is at least each effective count M_i/a_i, so its dth root times each weighted peak root dominates that input's weighted total root.",
+    "For a zero-mass input choose an actual point. Its translation of the remaining weighted sum preserves fiber volumes, and the stronger all-nonempty-base hypothesis guarantees integrality after translation. The positive-input proof uses the original coefficients and only the number of positive inputs. All-zero masses and zero coefficients are covered separately.",
+    "For equal weights and step k on a primitive integer line, the output index set is a full interval of ΣN_i−k+1 sites. Every output fiber is the same homothetic sum of the fixed convex fibers. Independently enumerated the sums and checked the integer volume numerator in 24 cases with k=1,…,6 and d=1,…,4. One common input base reduces the root equality to ordinary homothetic Brunn–Minkowski.",
+    "For d=0 no volume root is used and the same distinct-sum argument gives cardinality. Convexity and affinity put the actual weighted set in the asserted original closed cap, including a pure-base cut carrying a full fiber on its boundary.",
+    "Checked 3d8aa8562dba80fc (1)–(3) and its cap paragraph, e7b862fa9bf72057 §§1–5, and 825f4248238fa3c9's compact-fiber comparison. The normalized proof subsumes the positive peak and the stronger-integrality zero-mass root scopes without relying on their pending status."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:49:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses ordinary Brunn–Minkowski for compact portions of one compatible family at a fixed weighted output in a common-scale weak slice limit. It does not sum over distinct integral outputs or give an input peak correction.",
+      "fact_id": "d4cbefe418299993"
+    },
+    {
+      "comparison": "Counts off-diagonal midpoints within one same-parity set under rank-spread and quota conditions. It has a different restricted sum and does not give the multi-input peak law or the zero-mass extension.",
+      "fact_id": "75798cede16b89c5"
+    }
+  ],
+  "readability": "The hypotheses deliberately strengthen from positive-volume input bases for the peak law to all nonempty bases for the possibly zero-mass root law. The point-fixing argument explains the need for this distinction.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "80c5b2d00924ebcde5a14bd832c520a3a3b48e45a8eb0ebf392ca67cc6b91711",
+  "reviewed_statement_sha256": "3814f76f12d4c9d435dd3eb1aa63e52e08ca593fc9a16470d9dc80f9ef30fdb5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:44:38Z",
+  "summary": "The level-set proof gives the weighted peak refinement, its zero-mass and counting extensions, and the stated exact equality families on integral output bases.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "An equality condition for depth along a sampled segment, reusable for both flux and strict interpolation.",
+  "author": "PK-research-agent",
+  "candidate_id": "06476fb81821acf7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:43:58.559766+00:00",
+  "depends_on": [
+    "55a57b1cf55d0c87",
+    "1ec728c26c11b368"
+  ],
+  "draft_key": "common-minimizing-cap-at-interpolation-equality",
+  "kind": "lemma",
+  "proof": "The actual nonempty fibers at lattice bases form a finite compatible family, since convex combinations of their lifts remain in $C$. The positive-depth characterization of fact 55a57b1cf55d0c87 puts both endpoints in the interiors of their own positive-volume fibers.\n\nBy the nonvertical through-point attainment in fact 1ec728c26c11b368, let $H=\\{L\\ge0\\}$ be a minimizing nonvertical cap through $y$. The weighted average of $L(y_0),L(y_1)$ equals $L(y)=0$. If $L(y_e)>0$, the parallel cap $\\{L\\ge L(y_e)\\}$ still contains $y_e$. It removes strictly positive volume from $H$ in the interior ball about $y_e$ in its own fiber, since the continuous normal is nonzero and the positive-width slab $0\\le L<L(y_e)$ meets the interior of that ball. Its mass would be below $D(y)\\le D(y_e)$, a contradiction. Hence both margins are nonpositive and their zero average forces both to vanish. This cap has mass $D(y)$ and contains each endpoint, giving $D(y_e)\\le D(y)$. The equality hypothesis gives the reverse inequalities.\n",
+  "source_candidate_ids": [
+    "f2d1fbdd5a877f5b"
+  ],
+  "source_candidate_sha256": {
+    "f2d1fbdd5a877f5b": "4f0286a5d698c715b3b1356c29b7bfb1622a378038b4565bcf904fdb8cce4b1d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f2d1fbdd5a877f5b",
+      "locator": "§1, paragraphs from the segment point through equality of the endpoint depths"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$, let $C\\subset\\mathbb R^{n+d}$ be compact and convex, and let $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ carry the summed $d$-volume $\\mu$ of its fibers, with positive total mass. Write $D(w)=\\inf_{H\\ni w}\\mu(H)$ over closed ambient halfspaces. Let $y_0,y_1\\in S$ be distinct points of positive depth, and let $y=(1-t)y_0+ty_1\\in S$ for $0<t<1$. If $D(y)=\\min(D(y_0),D(y_1))$, every minimizing nonvertical cap through $y$ contains both endpoints on its boundary, and $D(y_0)=D(y_1)=D(y)$. The endpoints can have the same base.",
+  "subgoal_id": "pk-intake-common-minimizing-cap-at-interpolation-equality",
+  "title": "A minimizing cap at mixed-depth interpolation equality minimizes at both endpoints"
+}

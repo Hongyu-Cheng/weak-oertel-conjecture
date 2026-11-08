@@ -1,0 +1,64 @@
+{
+  "candidate_id": "2aa107103c1dbcb1",
+  "candidate_sha256": "38a6999eb6137043e8310337de83be4dcd4af0367c8db3c09d41742258a8703a",
+  "checked_dependency_candidate_sha256": {
+    "4e868f774de77608": "c20e69f71cfbaaac0ad0ad0b9d5de36166ee2609080d8f18008ec3696754bbb8",
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checked_source_candidate_sha256": {
+    "9dc053aa681e5ef6": "28ce80f959469aac6409235845b1934f8d062469d694a4140116ef4c98bccfb1"
+  },
+  "checks": [
+    "The compact hull of the two child bodies placed at auxiliary parameters 0 and 1 is full-dimensional in R^(1+d), since each child has full positive d-volume and their placements differ in the auxiliary coordinate. Its 0, 1 and 1/2 fibers are exactly the two bodies and their Minkowski average. The actual-fiber inclusion uses the original convex C and the integer midpoint condition.",
+    "Applying accepted absolute fiber-depth root concavity on the auxiliary hull at the two marked endpoint points gives the asserted midpoint lower bound in the parent body. The parent's mark lies in that body. Nonnegative k_i, including zero, are handled by monotonicity of the d-th root. Since the midpoint body is contained in its actual fiber, the same bound holds there.",
+    "Every containing ambient halfspace restricts on an included marked fiber either to a closed continuous halfspace through or containing the mark, or to the entire fiber for a pure-base normal. The entire fiber has volume at least its certified capacity. The parent mark is the ambient midpoint of the child marks, so closedness and affine margins place at least one child mark in the same halfspace.",
+    "The induction counts only the chosen child subtree and the current root fiber. Distinct node labels ensure these are disjoint original fibers and that their raw volumes add. Using the smaller child bound proves the unconditional recursion, including when either child bound is zero.",
+    "At an actual-fiber centroid, set m equal to the fiber's full volume in the metronoid theorem. Its only admissible density is one almost everywhere, so its sole barycenter is the required centroid and the claimed ordinary coefficient follows.",
+    "Source 9dc053aa681e5ef6 Lemma 4 contains the same local interpolation and subtree recursion, with arbitrary certified subbody marks. Its centroid-leaf example specifically uses full actual fibers. The draft does not assert that such a tree of any required strength must exist."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "c20e69f71cfbaaac0ad0ad0b9d5de36166ee2609080d8f18008ec3696754bbb8",
+      "fact_id": "4e868f774de77608",
+      "fact_sha256": "935cb537633be894947e0be1cc465c259ce4f5c0232f70d0423d6409b79f10b7",
+      "mapping": "Its compact full-dimensional convex body assumption holds for the auxiliary hull of the positive-volume child bodies over 0 and 1. Use the joint concavity of the 1/d power of absolute own-fiber depth at their midpoint, and then inclusion in the actual midpoint fiber."
+    },
+    {
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "mapping": "Apply the metronoid inclusion with the full mass m=|C_z| on the positive-volume actual leaf body. The full-mass metronoid is the singleton volume centroid, yielding the asserted closed-halfspace bound."
+    }
+  ],
+  "finished_utc": "2026-11-08T14:46:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its joint absolute fiber-depth root concavity gives the local capacity interpolation through the auxiliary hull. It has no integer subtree selection or additive mass from distinct original fibers.",
+      "fact_id": "4e868f774de77608"
+    },
+    {
+      "comparison": "Its atomic fresh-coordinate tree has a related minimum-child term in the exact depth recursion. This result concerns arbitrary actual mixed fibers at integral midpoints, with local capacities from convex bodies and without a fresh-coordinate embedding.",
+      "fact_id": "acece1c8039fd889"
+    },
+    {
+      "comparison": "Its midpoint capacity is a metronoid pooling bound for prescribed dyadic hard-branch contacts, including collisions at a single physical midpoint. It neither assumes nor proves the present general distinct-label tree recurrence.",
+      "fact_id": "6dc97cdb5ee6c6e2"
+    }
+  ],
+  "readability": "The recurrence gives a sufficient bound in raw mixed volume. The label distinction is precisely what allows root and child contributions to be added.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "cdae8879a976bf211b1fe32888faa5c1080d11ea4be4c8ddf8572f8dc8817256",
+  "reviewed_statement_sha256": "9523cf9c5f7ce8688ad41f1f97e7760f9e50ee64c3f076c8c4d55c09d61a0ddc",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:42:20Z",
+  "summary": "The two-child own-capacity interpolation and the distinct-label additive subtree bound hold for arbitrary certified leaf marks and nonnegative capacities.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

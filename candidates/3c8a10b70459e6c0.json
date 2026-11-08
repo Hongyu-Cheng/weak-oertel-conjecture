@@ -1,0 +1,33 @@
+{
+  "advances": "Integrated cap data are preserved exactly; individual fiber data need the fixed-base rule or a sign menu that already identifies the base.",
+  "author": "PK-research-agent",
+  "candidate_id": "3c8a10b70459e6c0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.742018+00:00",
+  "depends_on": [
+    "29f2ee400dd21ddb",
+    "90635d89643091d2"
+  ],
+  "draft_key": "pk-w36-menu-strict-sign-consensus",
+  "kind": "theorem",
+  "proof": "For a sign vector $s$ with positive mass $m_s$, let $E_s$ be its cell in $S$ and let $C_s$ be $C$ intersected with the corresponding weak inequalities and the equality constraints of $s$. The normalized restriction of $\\mu$ to $E_s$ is a probability on the compact mixed set $C_s\\cap(\\mathbb Z^n\\times\\mathbb R^d)$. Apply 29f2ee400dd21ddb to this probability separately for each $s$. At finite steps each prescribed strict sign is maintained under midpoint averaging. The accepted theorem gives full weak convergence, the $2^n$ atom bound, the covariance identity, and preservation of the full mean. It also compares convex integrals of each iterate to the source; by weak convergence this comparison holds at the limit for continuous convex tests. For each strict sign, apply pk-w36-menu-convex-order-boundary to the corresponding supporting halfspace of $C_s$ (negate the margin for a negative sign). The source puts no mass on that boundary, hence neither does the limit. The finite collection of equality constraints holds throughout $C_s$. Thus the limit is carried by $E_s$, and summing the cell probabilities with weights $m_s$ gives the stated invariants. Each Boolean set is a union of cells, and each hinge is either affine or identically zero on a cell.\n\nFor the fixed-base version, in each positive fiber-sign cell the midpoint operation preserves the mean and halves the covariance. After $k$ steps the integral of the squared distance from the mean is $2^{-k}$ times its initial value; compactness or Chebyshev's inequality gives convergence to that mean. The mean belongs to the closed convex fiber, and an affine margin with a strict sign almost surely has the same strict sign at the mean. Each joint strict complement at a fixed base is a union of these fiber-sign cells. It therefore keeps its mass and continuous first moment. The same covariance calculation gives the exact energy loss.\n\nFor a finite max-affine function, the signs of the pairwise affine differences determine a maximizing affine piece throughout each refined cell, including cells on ties. After adjoining all these differences to the partition, its integral is therefore an affine combination of the preserved cell masses and first moments. Neither refinement nor the fixed-base condition changes the midpoint covariance calculation.\n",
+  "source_candidate_ids": [
+    "bee6fd4790a9be39"
+  ],
+  "source_candidate_sha256": {
+    "bee6fd4790a9be39": "a13eb7325f61d2b30a86f883b4bc79c6c0f3e36c55b231db7adaa32357296483"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "bee6fd4790a9be39",
+      "locator": "bee6fd4790a9be39:02 §2, (2)–(4), and §3, parity variant and max-affine refinement"
+    },
+    {
+      "candidate_id": "bee6fd4790a9be39",
+      "locator": "bee6fd4790a9be39:03 §3, (5) and max-affine refinement, fixed-base variant"
+    }
+  ],
+  "statement": "Let $\\mu$ be a finite positive measure on $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ for compact convex $C$. Fix finitely many affine margins $L_i$, and partition $S$ by their complete signs in $\\{-1,0,1\\}$. In each positive-mass sign cell, independently iterate the midpoint operation that chooses a base parity with its current conditional probability and then averages two independent draws of that parity. The resulting full sequence converges weakly to a measure with at most $2^n$ atoms per positive cell, each in its original sign cell. Every cell retains its mass and full ambient first moment. Hence the same holds for all Boolean combinations of the closed caps and their strict complements, and all $\\int (L_i)_+\\,d\\mu$ are preserved.\n\nIf the averaging classes instead use exact integer bases within sign cells, the limiting atom in each positive fiber-sign cell is its ordinary centroid. This preserves the mass and continuous first moment of every intersection of strict complements at every integer base separately.\n\nFor either rule, any prescribed finite collection of finite max-affine functions can be preserved in integral by refining the sign partition by the pairwise differences of their affine pieces. At each step the squared-norm integral decreases by one half of the sum of the conditional covariance traces weighted by the current masses of the averaging classes; the decrease is strict unless each positive averaging class is a point mass.",
+  "subgoal_id": "pk-intake-pk-w36-menu-strict-sign-consensus",
+  "title": "Parity averaging that preserves an entire finite affine sign menu"
+}

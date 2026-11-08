@@ -1,0 +1,30 @@
+{
+  "advances": "Ordinary same-split section geometry for one noncentral coordinate.",
+  "author": "PK-research-agent",
+  "candidate_id": "72c93310dd3bb03d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.084268+00:00",
+  "depends_on": [
+    "1aa346b10594ee87",
+    "1462fa9ce6ced54e",
+    "238906fb08a2b14c"
+  ],
+  "draft_key": "tetrahedral-one-noncentral-same-split-independence",
+  "kind": "theorem",
+  "proof": "Orient toward the pair $\\{1,2\\}$ and normalize the fourth height to $-1$. In normalized reciprocal coordinates $(x,y,z,w)$, put $K=xy-zw$. The centroid formulas of 1462fa9ce6ced54e give\n$$\n3b_1-1=(Kx-zw)/(x-K),\\qquad\n3b_3-1=(-Kz-xy)/(z+K),\\qquad\n3b_4-1=(-Kw-xy)/(w+K).\n$$\nAll three denominators are positive products of adjacent pair sums. Thus $b_1>1/3$ gives $K>0$ and $b_3,b_4<1/3$. In the conic coordinates $A>0$, $-1<B\\le0$, and $GD>0\\ge AB$. If $G\\ne D$ its determinant is nonzero. Three linearly dependent normalized normals would give three distinct collinear $(p,r)$ points, since the fourth coordinate is fixed and $q$ is affine in $(p,r)$. A line through three points on this nondegenerate conic would be a factor of its homogeneous quadratic, which would make the matrix singular.\n\nIf $G=D$, fact 238906fb08a2b14c with the two equal central coordinates gives equal negative heights. Write the margins as $(p,q,-1,-1)$, put $u=(1+p)^{-1}$, $v=(1+q)^{-1}$, $t=2-u-v$, and let $B_0=b_3=b_4$. Substitution into the centroid formulas gives $3b_1=u(1+t-u)/t$ and $3b_2=v(1+t-v)/t$. Since $u,v<1$, the signs of $3b_1-1$ and $3b_2-1$ are the signs of $u-t$ and $v-t$, respectively. Consequently $u>t$ and $v\\le t$, so $1/2<t<1$ by $u+v=2-t$ and $u<1$. The sum and difference of the centroid equations give\n$$\nuv=t^2-(1+3B_0)t+1,\\qquad\n3(b_1-b_2)t=(u-v)(2t-1).\n$$\nSquaring the latter and substituting $(u-v)^2=(2-t)^2-4uv=3t(4B_0-t)$ yields $(4B_0-t)(2t-1)^2=3(b_1-b_2)^2t$. Distinct sections have distinct $t$, since the displayed formulas recover both $u+v$ and $u-v$. If there were three, their $t$ values would be the three roots of this cubic. Its leading coefficient is $-4$ and Vieta gives $\\sum_i t_i=1+4B_0$ and $\\prod_i t_i=B_0$, so\n$$\nt_3=\\frac{t_1+t_2-1}{4t_1t_2-1}<\\frac12.\n$$\nThe denominator is positive and the inequality is equivalent to $-(2t_1-1)(2t_2-1)<0$. This contradicts the range of actual roots and completes the same-split assertion, including $b_2=1/3$.\n",
+  "source_candidate_ids": [
+    "5db4787053e18091"
+  ],
+  "source_candidate_sha256": {
+    "5db4787053e18091": "21e050d47bb57d81e3f32fea30987ad5b6c09053c569a5c3997b7d68c1d006e2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5db4787053e18091",
+      "locator": "5db4787053e18091:04 §7, (14), same split with one noncentral coordinate"
+    }
+  ],
+  "statement": "Let $b$ be an interior barycentric point of a tetrahedron with $b_1>1/3$ and $b_2,b_3,b_4\\le1/3$. Any three distinct strict quadrilateral sections with actual area centroid $b$ and the common split $\\{1,2\\}\\mid\\{3,4\\}$ have linearly independent normals. If $b_3=b_4$, at most two such section planes exist.",
+  "subgoal_id": "pk-intake-tetrahedral-one-noncentral-same-split-independence",
+  "title": "Same-split independence with one noncentral tetrahedral centroid coordinate"
+}

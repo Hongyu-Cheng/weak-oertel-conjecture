@@ -1,0 +1,26 @@
+{
+  "advances": "This is a rank-three obstruction to replacing anchored dependence components by midpoint components; it concerns lattice closure and does not assert a mixed-depth failure.",
+  "author": "PK-research-agent",
+  "candidate_id": "da68924c83c56773",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:52:39.940797+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w31-midpoint-component-omits-interior-lattice-sites",
+  "kind": "counterexample",
+  "proof": "Call the five displayed generators $v_0,\\ldots,v_4$, in order. Substitution at these generators shows that all of $Q$ satisfies\n$$\n-8x-7y+5z\\le2,\\quad -3x-2y\\le2,\\quad -2x-3y-5z\\le8,\\quad -x+y\\le4,\\quad 2x+3y-z\\le4,\\quad 8x-3y+5z\\le-2 .\n$$\nIt lies in the coordinate box $[-2,1]\\times[-1,3]\\times[-2,3]$. Testing the six inequalities in order at each of the 120 integer triples in that box leaves the five generators and the eight rows below. The second column gives exact convex coefficients on $v_0,\\ldots,v_4$, so every surviving triple is in $Q$ and the list is exact.\n\n| Other site | Convex coefficients |\n| --- | --- |\n| $(-2,2,-1)$ | $(0,0,0,1/2,1/2)$ |\n| $(-1,1,-1)$ | $(1/3,2/15,1/15,7/15,0)$ |\n| $(-1,1,0)$ | $(7/20,3/20,1/20,0,9/20)$ |\n| $(-1,2,0)$ | $(0,2/5,1/5,2/5,0)$ |\n| $(-1,2,1)$ | $(1/6,17/30,1/30,7/30,0)$ |\n| $(0,0,-1)$ | $(1/2,1/10,3/10,1/10,0)$ |\n| $(0,1,-1)$ | $(0,1/5,3/5,1/5,0)$ |\n| $(0,1,0)$ | $(1/6,11/30,13/30,1/30,0)$ |\n\nReducing all thirteen sites modulo two gives just the following unordered pairs of distinct endpoints, with their midpoint in the third column.\n\n| First endpoint | Second endpoint | Midpoint |\n| --- | --- | --- |\n| $(-2,2,-2)$ | $(-2,2,0)$ | $(-2,2,-1)$ |\n| $(-2,2,-1)$ | $(0,0,-1)$ | $(-1,1,-1)$ |\n| $(-1,1,-1)$ | $(-1,3,3)$ | $(-1,2,1)$ |\n| $(-1,2,0)$ | $(1,0,-2)$ | $(0,1,-1)$ |\n| $(0,-1,-1)$ | $(0,1,-1)$ | $(0,0,-1)$ |\n\nThe edges connect eleven sites including all the generators. The two omitted sites appear in no edge and use two distinct parities absent from that component. Reading the residues gives six classes in the component. Their positive coefficient rows above use, respectively, the tetrahedra with vertex index sets $\\{0,1,2,4\\}$ and $\\{0,1,2,3\\}$. The determinants of the three edge vectors from $v_0$ in those two ordered tetrahedra are $20$ and $30$, respectively, so both omitted sites are strictly interior to $Q$. As the connected component contains all generators, its hull is $Q$ and it is not closed. More generally distinct midpoint components cannot share a parity: any such endpoints have their midpoint in the complete base, hence create one connecting hyperedge.\n",
+  "source_candidate_ids": [
+    "ec56eaaa968bf7c1"
+  ],
+  "source_candidate_sha256": {
+    "ec56eaaa968bf7c1": "950881d26459f198249bbf4a0b0acd90cbb0bc9fcd45ad4607a04923f9c0cdb8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ec56eaaa968bf7c1",
+      "locator": "ec56eaaa968bf7c1:01 Exact three-dimensional configuration; All midpoint relations; Consequence and verification"
+    }
+  ],
+  "statement": "Let $Q=\\operatorname{conv}\\{(0,-1,-1),(-1,3,3),(1,0,-2),(-2,2,-2),(-2,2,0)\\}$ and $P=Q\\cap\\mathbb Z^3$. Join each distinct same-parity pair in $P$ and its integer midpoint by a hyperedge. Then $P$ has thirteen points, all eight parity classes, and exactly five hyperedges. Its components have sizes $11,1,1$, with occupied parity counts $6,1,1$. The eleven-point component contains every vertex of $Q$ but omits the two interior lattice points $(-1,1,0)$ and $(0,1,0)$. Thus it is not a closed lattice minor despite the disjoint parity classes.",
+  "subgoal_id": "pk-intake-pk-w31-midpoint-component-omits-interior-lattice-sites",
+  "title": "A rank-three midpoint component can omit two interior lattice sites"
+}

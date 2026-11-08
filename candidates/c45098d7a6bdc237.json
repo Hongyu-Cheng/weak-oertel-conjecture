@@ -1,0 +1,29 @@
+{
+  "advances": "This is a particular contact-band continuation for an arbitrary interior middle mark. Its extra input costs have no asserted universal bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "c45098d7a6bdc237",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.321365+00:00",
+  "depends_on": [
+    "d90ba05577427854",
+    "84cd8a85417b0d7a"
+  ],
+  "draft_key": "contact-band-normal-center-projective-erosion",
+  "kind": "lemma",
+  "proof": "Use d90ba05577427854 for $a$. On the support of the nonzero $\\chi$ term, $s(n)>\\min H/2>0$, so these fields are jointly continuous, nonnegative and convex in $x$. On each singleton input use 84cd8a85417b0d7a with one ceiling $h_L$ for positivity, nesting and the stated boundary integrals. The same fact for the middle applies with field $H(n)f(1+a\\cdot(x-y))$, whose support inequalities are the gauge cut. These ordinary derivatives retain the full, zero and proper selectors for the literal cap traces.\n\nFor two eroded inputs let $m$ be their midpoint. It belongs to the old $M$. If $\\Delta(n)\\le\\eta$ then $\\chi=1$, and averaging the two cuts and using convexity of $f$ at the centers with midpoint $y$ gives $n\\cdot(m-y)+\\varepsilon s(n) f(1+a\\cdot(m-y))\\le s(n)$. The desired target left side with coefficient $H(n)$ is therefore at most $H(n)-\\Delta(n)[1-\\varepsilon f(1+a\\cdot(m-y))]\\le H(n)$ if $\\varepsilon\\max_M f(1+a\\cdot(m-y))\\le1$. If $\\Delta(n)>\\eta$, the old midpoint constraint leaves more than $\\eta$ of support gap in this direction. The desired target term is at most $\\varepsilon\\max H\\max_M f(1+a\\cdot(m-y))$, which can be made smaller than $\\eta$ uniformly. This checks every target inequality including the transition band. The lifted hull has exactly the three specified fibers, since the only nonself extreme anchored condition is the midpoint at the middle base.\n",
+  "source_candidate_ids": [
+    "c56743c8d6824a18"
+  ],
+  "source_candidate_sha256": {
+    "c56743c8d6824a18": "f7c1c1c5c680bd370f7ae8cf1285e55bbd15d1c0dfb9b9015fba6a27544992eb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c56743c8d6824a18",
+      "locator": "c56743c8d6824a18:06 §6, (20)–(23), normal-dependent centers without an interior midpoint"
+    }
+  ],
+  "statement": "Let $A,B,K$ be positive convex bodies in $\\mathbb R^d$, $d\\ge1$, with $M=(A+B)/2\\subseteq K$ and $y\\in\\operatorname{int}K$. Let $a$ be the projective centering parameter for $K-y$ from d90ba05577427854 and set $\\delta=\\min_{x\\in K}(1+a\\cdot(x-y))>0$. Define $f(q)=q^{-d}$ for $q\\ge\\delta$ and $f(q)=\\delta^{-d}-d\\delta^{-d-1}(q-\\delta)$ for $q<\\delta$. Write\n$$\nH(n)=h_K(n)-n\\cdot y,\\quad \\Delta(n)=h_K(n)-h_M(n),\\quad s(n)=H(n)-\\Delta(n),\\quad \\eta=\\min_n H(n)/4.\n$$\nTake continuous $0\\le\\chi\\le1$, equal to one on $\\{\\Delta\\le\\eta\\}$ and zero on $\\{\\Delta\\ge2\\eta\\}$, and let $c_A(n)=y+(h_A(n)-h_B(n))n/2$, $c_B(n)=2y-c_A(n)$. At each input $L=A,B$ take any $o_L\\in\\operatorname{int}L$ and use support cuts with field\n$$\nV_L(n,x)=\\chi(n)s(n) f(1+a\\cdot(x-c_L(n)))+(1-\\chi(n))h_{L-o_L}(n).\n$$\nFor small $\\varepsilon\\ge0$ the input erosions are positive, nested, and their midpoint is contained in the projective gauge erosion of $K$ about $y$. The claim allows $y\\notin M$. First total and original fixed-cap costs use the actual fields $V_L$ in the ordinary boundary loss integrals.",
+  "subgoal_id": "pk-intake-contact-band-normal-center-projective-erosion",
+  "title": "Contact-band normal-center projective erosion"
+}

@@ -1,0 +1,36 @@
+{
+  "advances": "Uniform sampled-boundary convergence conditional on exact entropy contact rows and own-interior source balls.",
+  "author": "PK-research-agent",
+  "candidate_id": "f2669205740a6406",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:07:51.863285+00:00",
+  "depends_on": [
+    "c42156e9c470da8e",
+    "155691fc3768c06f",
+    "86609687edc6bef4"
+  ],
+  "draft_key": "certified-bounded-finite-plane-limit",
+  "kind": "theorem",
+  "proof": "Choose an own-fiber supergradient $c_{j,p}$ of $h_j(p,\\cdot)$ at $y_{j,p}$. Positivity and the supergradient inequality on the ball in the statement give $\\lVert c_{j,p}\\rVert\\le h_j(Y_{j,p})/r$. To extend this to a sampled affine majorant, apply 155691fc3768c06f to the compact convex truncated hypographs $\\{(X,t):X\\in K_{j,z},\\ 0\\le t\\le h_j(z,X)\\}$, in continuous dimension $d+1$. Anchored inclusion holds by concavity of $h_j$ and actual fiber compatibility. In the covector $(-c_{j,p},1)$ the support heights are $\\phi_{j,z}=\\max_{K_{j,z}}(h_j(z,X)-c_{j,p}\\cdot X)$, with $\\phi_{j,p}=h_j(Y_{j,p})-c_{j,p}\\cdot y_{j,p}$. Rescale the unit-normal form of 155691fc3768c06f. The fixed-matrix formula in its proof bounds the resulting base slope by a constant times $\\max_z|\\phi_{j,z}-\\phi_{j,p}|$. The bound is uniform in $j$ by the common sampled upper bound, the bound on $c_{j,p}$, and bounded fiber coordinates. This gives an affine $A_{j,p}\\ge h_j$ on $S_j$ that touches at $Y_{j,p}$, with uniformly bounded coefficients.\n\nPut $V_j=\\min_{p\\in J}A_{j,p}$. Every plane is positive on $S_j$ and therefore on $C_j$, so $V_j$ is positive continuous concave on $C_j$. It majorizes $h_j$ on $S_j$ and equals it at every $Y_{j,p}$. Identify the relative affine lattice with integer coordinates. To apply 86609687edc6bef4, divide $h_j$ and $V_j$ by the positive number $\\exp(M_j^{-1}\\int\\log h_j\\,dm_j)$. This normalizes the first function, leaves all contact identities valid after common scaling, and leaves every ratio in (2) of that fact unchanged. Consequently\n$$\n0\\le\\frac1{M_j}\\int_{S_j}\\log(V_j/h_j)\\,dm_j\n\\le\\sum_{p\\in J}\\sigma_{j,p}\\log\\big(V_j(Y_{j,p})/h_j(Y_{j,p})\\big)=0.\n$$\nNonnegativity and continuity of the integrand on each positive closed fiber force equality there, including at its boundary. This proves the exact sampled representation.\n\nTake a further subsequence along which each of the finitely many indexed coefficient arrays converges. The minima converge uniformly on bounded sets. Their limit equals the locally uniform limits on the own interiors and, by continuity, their hypograph closures on the limiting closed fibers. It is nonnegative on $C$ because it is concave and is nonnegative on every limiting sampled fiber.\n\nFor $p\\in J\\cap Z$ the own-ball bound makes $c_{j,p}\\to0$, since $h_j(Y_{j,p})\\to0$. The limiting touching plane is base-affine, nonnegative on $\\operatorname{conv}P$ (it majorizes the nonnegative limiting minimum there), and zero at $p$. If $h$ is nonzero this plane is not identically zero on $\\operatorname{conv}P$, because its zero value everywhere would force the sampled restrictions of the minimum to be zero. Its zero set is therefore a proper exposed face containing $F_p$. The minimum vanishes on each fiber over that face, giving $P\\cap G_p\\subseteq Z$.\n",
+  "source_candidate_ids": [
+    "36607dd22d2fb045",
+    "87de5b3c068291f1"
+  ],
+  "source_candidate_sha256": {
+    "36607dd22d2fb045": "f5f33cf7e6a453d29d8d77f581246a0a60b7a9c9a56cfc37be47610c5803cfd6",
+    "87de5b3c068291f1": "03bef00f78428a764c0490f50c0822f71a0dbb60c5c397d7ef63117b43c9cd60"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "36607dd22d2fb045",
+      "locator": "§4a, (11a)–(11b)"
+    },
+    {
+      "candidate_id": "87de5b3c068291f1",
+      "locator": "§§1–3, (1)–(11)"
+    }
+  ],
+  "statement": "In the setting and subsequential limit of the sampled concave roof compactness lemma, assume $P$ is a complete affine-lattice base and $h_j>0$ on $C_j$. Put $S_j=\\bigcup_z(\\{z\\}\\times K_{j,z})$ and let $dm_j$ be its summed fiber volume, with total $M_j$. Fix a nonempty $J\\subseteq P$. For $p\\in J$ let $Y_{j,p}=(p,y_{j,p})\\to Y_p=(p,y_p)$, with a common radius $r>0$ such that $B(y_{j,p},r)\\subseteq K_{j,p}$. Suppose that for each $j$ there are weights $\\sigma_{j,p}\\ge0$ summing to one and probability rows $\\rho_{j,p}$ on $S_j$ for the positive weights, with\n$$\n\\int w\\,d\\rho_{j,p}=Y_{j,p},\\qquad\n\\int h_j\\,d\\rho_{j,p}=h_j(Y_{j,p}),\\qquad\n\\sum_{p:\\,\\sigma_{j,p}>0}\\frac{\\sigma_{j,p}}{h_j(Y_{j,p})}\\rho_{j,p}\n=\\frac{dm_j}{M_j h_j}.\n$$\nThen on every closed sampled fiber $h_j$ is the minimum of at most $|J|$ affine functions with uniformly bounded coefficients in the relative ambient space. After a further subsequence these minima converge uniformly on every bounded ambient set to a finite piecewise-affine concave function $\\widetilde h$. Its restrictions to the limiting sampled fibers equal the closed restrictions of $h$, and $\\sup_{S_j}|h_j-\\widetilde h|\\to0$.\n\nThe selected limiting plane for $p\\in J\\cap Z$ is independent of the continuous coordinate. If $h$ is nonzero, that plane has a proper exposed zero face $G_p$ of $\\operatorname{conv}P$, with $F_p\\subseteq G_p$ and $P\\cap G_p\\subseteq Z$.",
+  "subgoal_id": "pk-intake-certified-bounded-finite-plane-limit",
+  "title": "Uniform finite-plane convergence from exact contact certificates"
+}

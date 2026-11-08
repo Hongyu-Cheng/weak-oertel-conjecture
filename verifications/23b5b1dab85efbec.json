@@ -1,0 +1,61 @@
+{
+  "candidate_id": "f2e514218704e758",
+  "candidate_sha256": "28222a3bdac2e4066630ac45457ec71f3c5d7a19d5013b0eaa116474328f2469",
+  "checked_dependency_candidate_sha256": {
+    "1269c554ca9a41b8": "fabf34fbffac777cddba1d06ca55c7ce7fe766062a1a3bdeba86b3d9e5a391bf",
+    "baee8ddaa588aef0": "258b628564157ac1b6a9b7b9d65db4998e624980d7aef8a1d37a2b8a014d7b52"
+  },
+  "checks": [
+    "The proper barycentric section has centroid a_i at i and (1−a_i)/d in all other positions. Subtracting a gives zero i-coordinate, zero coordinate sum and delta_i·a=−||delta_i||².",
+    "Differentiate the exact corner-simplex volume in a_i to obtain the coarea S_i. The chosen margin velocity integrates to −S_i||delta_i||² at a fixed mark, and the centroid-zero condition at two indices forces the canonical vector for d≥2.",
+    "In both definitions of h and k, the sum of h is zero and h_i+k_i||delta_i||²=1. The initially proper cut therefore has derivative −S_i<0 under the combined cap and mark motion.",
+    "The perturbed margin vector is U_epsilon(λ−a(epsilon)). Its weighted sum is identically zero with positive weights U_epsilon^{-T}1 for small epsilon, preserving actual whole-affine-span coverage.",
+    "For canonical thresholds, some cap in any full cover contains the centroid and pays at least Γ_d V. The one-high mark is the centroid of the ratio-1/3 corner copy; its high cap exactly meets the lower bound Γ_d V/3^d and cannot decrease at that fixed mark.",
+    "Checked the explicit low-section displacement coordinates and squared norm, as well as the d=1 exchange of the two interval lengths. The source §§3–4 supports all of these scopes."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1269c554ca9a41b8",
+      "candidate_sha256": "fabf34fbffac777cddba1d06ca55c7ce7fe766062a1a3bdeba86b3d9e5a391bf",
+      "fact_sha256": "a6f5734326252e75bb5cf8d44fccbf13425413494ad77b814fbff53c64eff739",
+      "hypotheses": "The proper single-simplex sections obey its two-sided first variation, by using a single integer dummy base if desired. The nonlinear path has the displayed linear velocity and its O(t²) margin difference gives only o(t) volume by slicing.",
+      "reviewed_proof_sha256": "242e01aeddc55e141c2519daa3a4b1c5c269c327fb73c85d3fc9623d7784c0a1",
+      "reviewed_statement_sha256": "2128e7a0616c8d6b91156849a4fc0d57427da0b2059283fdcc6da72db00bcf24"
+    },
+    {
+      "candidate_id": "baee8ddaa588aef0",
+      "candidate_sha256": "258b628564157ac1b6a9b7b9d65db4998e624980d7aef8a1d37a2b8a014d7b52",
+      "fact_sha256": "f6c8174bf1343545e8816ad516dfbb0b26ef33f8d2cb06bc4e9d94c25c61024e",
+      "hypotheses": "Move any containing halfspace boundary to the simplex centroid, apply the Γ_q bound with q≤d, and use monotonicity of Γ_q. Apply the same bound to the ratio-1/3 simplex centered at the high mark.",
+      "reviewed_proof_sha256": "4b6112693fc85fafd94de7fa6359b9c13f93d0288f8e1930a994f00f68ab803a",
+      "reviewed_statement_sha256": "6da489bc5dd9b6cd51423c25056741ec58c6af8081e2cddcae5b9598a32c7a85"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:02:23Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It covers the centroid lower bounds used for canonical and one-high calibration, but says nothing about the explicit descent of all noncanonical concurrent caps.",
+      "fact_id": "baee8ddaa588aef0"
+    },
+    {
+      "comparison": "It constructs the same one-high patterns at the endpoint of an actual mixed star and freezes all cap parameters during a body motion. The present descent concerns an ordinary fixed simplex and moving cap parameters.",
+      "fact_id": "dad8b277ce2587c7"
+    }
+  ],
+  "readability": "The norm in the cap motion is the Euclidean norm of a barycentric coefficient vector. It is not used as a physical norm on K.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the frozen input, followed by original-source, pinned dependency and overlap comparison.",
+  "reviewed_proof_sha256": "e79ac214b0da626c9ef5074be1c9845c931765eafaadb9afe1c4351042307c46",
+  "reviewed_statement_sha256": "ce6d186a5a813c35459ccafc3fec47a1c2a4821c7efb4b61efe5199e64b49cd3",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:56:34Z",
+  "summary": "The explicit affine cap motion yields a strict simultaneous reduction for every noncanonical simplex group, with a positive exact cover certificate and the stated fixed-mark exception.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

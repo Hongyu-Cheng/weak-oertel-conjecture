@@ -1,0 +1,64 @@
+{
+  "candidate_id": "2eaf96d805cf614f",
+  "candidate_sha256": "e2573fa531ec47f7306615f1f23189d53a5de4fcc6df99c9825a1461e1513093",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Checked the statement for integer m≥1, p in [0,1], and independent shape-m scale-one gamma and unit-mean exponential variables. At m=1 the two independent continuous sides are identically distributed for every p, and the endpoint formula equals 1/2. At p=0 only E₁ and E₀ remain. Conditioning on all but E₁ removes ties at every limiting parameter, so coupling and bounded convergence prove continuity at both endpoints.",
+    "Independently integrated the survival function for 0<p<1: the integral over u≤x equals (e^(−x)−e^(−x/p))/(1−p), and adding the tail above x gives the stated coefficient p. Evaluating the independent negative-sum Laplace transform at 1 and 1/p gives the stated numerator: the second transform contributes p/(1+p), on top of the survival coefficient p.",
+    "At p=1, N(1)=0 and (p²/(1+p))′ at 1 is 3/4, yielding the stated value by the left limit. Independently, Gamma(2,1) survival is e^(−x)(1+x); if H(s)=(1+s)^−1(1+s/m)^−m then H(1)−H′(1)=A(3/4+m/(2(m+1))) gives the same endpoint. For m>1 the difference between the three-term binomial bound for A⁻¹ and (5m+3)/(2(m+1)) is (m−1)/(2m(m+1))>0. Thus P_m(0)>P_m(1) even when the three-term bound itself is exact at m=2.",
+    "Recomputed N″ using p²/(1+p)=p−1+1/(1+p). The two terms have positive magnitudes, so the sign of N″ is the sign of R−1. Combining 3/(1+p)−(m+2)/(m+p) gives the positive numerator (m−1)(2−p), and N″(1)=A[m/(2(m+1))−1/4]>0 for m>1. If R(0)≥1 take c=0, including equality at zero; otherwise continuity and strict increase give the unique c in (0,1) with R(c)=1.",
+    "Subtracting the affine term gives Q(1)=Q′(1)=0 and Q(0)>0. Integration from one twice yields the stated sign and kernel (t−p). For p≥c and p<1 the integrand is strictly positive in the open integration interval. If c>0, concavity on [0,c] gives a strictly positive chord lower bound. Division by 1−p is used only for p<1; the separately established p=0 and p=1 values complete the equality criterion.",
+    "Read archive a0a6a51e2d3624e9 at b9df7802ecad0edda8b411a145484010a4b7a695 and verified its SHA-256 against the frozen source mapping. Theorem (1), §§1–3 and equations (2)–(4) match the exact family, transform, curvature and tangent/chord argument. The frozen proof legitimately makes the archive's weak comparison strict when m>1 by making both the endpoint gap and final curvature strict. The pending structural note mentioned in the archive is context, not a premise of this proof."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T09:31:28Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "For k=1 the interior stationary exclusion concerns p≤b=p/m, which forces m=1. It shares the symmetry case, but leaves p>b for every interior p when m>1 and therefore gives neither the finite-m endpoint minimum nor its equality condition.",
+      "fact_id": "18d3a5cf0b729f6d"
+    },
+    {
+      "comparison": "Its classification of minimizers identifies the capped interior stratum with b=p/m for k=1. It does not compare the values of that stratum with its endpoints.",
+      "fact_id": "38821acd2e746146"
+    },
+    {
+      "comparison": "When p=1, k=2 saturated positives and q=m residual phases identify the same equal-negative law as the fixed-q saturated minimum. That theorem assumes saturated positives and does not compare p<1 to this law.",
+      "fact_id": "ad017d8380c3bf8d"
+    },
+    {
+      "comparison": "Its k=1 saturated case gives 1/2 for zero residual coefficients, as at p=0. Its k=2 fixed-q minimum is the p=1 law, but the result varies q within saturated laws, rather than comparing all p at fixed m.",
+      "fact_id": "3f633c7a06ebe428"
+    },
+    {
+      "comparison": "It describes the same finite signed family before taking a limit and computes an m→∞ limit at fixed k. A limit does not compare P_m(p) and P_m(1) at finite m.",
+      "fact_id": "f4bc58c878c5d61a"
+    },
+    {
+      "comparison": "The positive merge transfers weight at fixed positive and negative totals, whereas changing p here changes the total and residual negatives. Its generic lower bound cannot imply the sharp value even at p=1, where its first lower bound is strict for two positive phases.",
+      "fact_id": "564e798ecec2b61f"
+    },
+    {
+      "comparison": "The deterministic-threshold reduction yields a uniform lower bound from an all-k, all-p premise, not the finite-m endpoint value or a comparison to it.",
+      "fact_id": "65d374efd09b8c3d"
+    }
+  ],
+  "readability": "The argument is self-contained. The c=0 convention includes the boundary case R(0)=1 because the proof only uses strict positivity of N″ for p>c. No edit needed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2b13638422a4c2a4d6d7abe527f14f6b3f8049cde2c98c778254e1fd017cda6d",
+  "reviewed_statement_sha256": "a398ddb35c4ec79c0dde63f092be186d538156957c99ccfbdbc524f3437fd50e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "a0a6a51e2d3624e9": "8b68dfebfcf04a9d5bc40ce03c0d0a07743e90d2297691b8c564d88ba2d99e1e"
+  },
+  "started_utc": "2026-11-08T09:29:16Z",
+  "summary": "The proof establishes the exact finite-m endpoint minimum on the full interval. The inequality is strict for m>1 and p<1, and m=1 gives 1/2 throughout. No accepted fact already gives this full comparison.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

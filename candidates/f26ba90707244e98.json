@@ -1,0 +1,29 @@
+{
+  "advances": "An exact balanced-ratio identity for a continuous affine frustum. The sharp comparison for all bounded centered cone pairs remains a separate inequality.",
+  "author": "PK-research-agent",
+  "candidate_id": "f26ba90707244e98",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:12:12.024006+00:00",
+  "depends_on": [
+    "f4be2679c83c2fd1",
+    "1f86e3e352aa0225"
+  ],
+  "draft_key": "affine-frustum-truncation-compensation",
+  "kind": "theorem",
+  "proof": "For bounded laws, the record identities give $P_\\mu^f=P_\\mu^c-tV_0$, $P_\\nu^f=P_\\nu^c-tV_0$ and equal cone and frustum coareas, with $C_\\mu+C_\\nu>0$. Since $V=V_0-tV_0$, the second oriented term contains $V-P_\\nu^f=V_0-P_\\nu^c$. The first oriented term loses $tV_0C_\\nu$, and the denominator is multiplied by $1-t$. This gives the identity.\n\nFor general centered laws with $T\\ge1$, the bounded-law lemma preserves each average record and centers each conditional finite law whenever defined. The new average frustum cap and coarea for $\\mu$ are $\\lambda_\\mu P_\\mu^f+(1-\\lambda_\\mu)V/2$ and $\\lambda_\\mu C_\\mu$, respectively, with the corresponding expressions for $\\nu$. For any pair with positive total coarea, subtract $1/2$ from the balanced quotient by replacing its numerator with $C_\\nu(P_\\mu-V/2)-C_\\mu(P_\\nu-V/2)$, using the actual average records here. If both finite masses are positive, this centered numerator scales by $\\lambda_\\mu\\lambda_\\nu$ while the denominator becomes $V(\\lambda_\\mu C_\\mu+\\lambda_\\nu C_\\nu)$. This gives the displayed formula. If just one law has zero coarea, its cap mass is $V/2$, so the centered numerator is zero. The mixing coefficient in the displayed formula is a weighted average of $\\lambda_\\nu$ and $\\lambda_\\mu$, with respective weights $\\lambda_\\mu C_\\mu$ and $\\lambda_\\nu C_\\nu$. It tends to zero as both finite masses tend to zero, and $\\beta_f\\in[0,1]$ since each cap fraction is in $[0,1]$. This also gives continuity at zero total coarea in the record variables. Indeed, for $s\\le T$ and $b\\in[-T,1]$ the energy kernel is bounded below by $(1+T/B)^{-d}$ and each uniform layer puts at least half its mass in $b\\le1$. The conditional finite coareas are therefore bounded below by $C_0(1+T/B)^{-d}/2$ with $C_0=(H/B)^{d-1}$, so convergence to zero total coarea forces both finite masses to tend to zero.\n\nFor $T\\le1$, the bounded-law lemma gives $P_\\mu-V/2=cC_\\mu$ and $P_\\nu-V/2=cC_\\nu$ with the same $c$. The centered numerator cancels, giving the constant quotient when the denominator is positive. Positivity of finite coarea identifies the zero-denominator case with two pure infinity records. Finally, when a common $c$ works on the bounded centered laws, the infinity record has corrected cap $V/2$ in the same interval for $\\beta\\le1/2$. Averaging proves the extension.\n",
+  "source_candidate_ids": [
+    "0ab50bc17861492a"
+  ],
+  "source_candidate_sha256": {
+    "0ab50bc17861492a": "c0aebc7d38225e28738ff490fabc3bc649ed73e2609badc52ee519e4d41d89fd"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0ab50bc17861492a",
+      "locator": "§4, equation (5) and the paragraph on infinity atoms; §2, balanced ratio"
+    }
+  ],
+  "statement": "Fix an integer $d\\ge2$, $H>0$ and $0<U<H$. Put $B=H+1$ and $r(z)=(H-z)/B$. On $-1\\le z\\le U$, $|x|\\le r(z)$, use the measure of density $f(x,z)=r(z)^{d-2}/2$ with respect to $dx\\,dz$. Set $a=r(U)$, $T=U/a$, $t=a^d=[H/(B+T)]^d$, $V_0=B/d$, and $V=(1-t)V_0$. The associated cone has the same density formula on $-1\\le z\\le H$, $|x|\\le r(z)$, and mass $V_0$.\n\nFor a finite slope $s\\ge0$, let $P(s)$ be the mass of $z+sx\\ge0$. Let $C(s)$ and $M(s)$ be the integrals of $f$ and $zf$, respectively, over the section $z+sx=0$ inside the support, against $d\\mathcal H^1/\\sqrt{1+s^2}$. A law's record is the average of $(P,C,M)$, and a law is centered if its averaged $M$ is zero.\n\nFor $T\\ge1$, let $\\mu,\\nu$ be separately centered probability laws on cone slopes $[0,T]$. Use $P_\\mu^c,P_\\nu^c,C_\\mu,C_\\nu$ for their averaged cone cap and coarea records. If $P_\\mu^f,P_\\nu^f$ denote the corresponding frustum cap records, the coareas are the same, and\n\n$$\n\\begin{aligned}\n\\beta_c&=\\frac{C_\\nu P_\\mu^c+C_\\mu(V_0-P_\\nu^c)}{V_0(C_\\mu+C_\\nu)},&\n\\omega&=\\frac{C_\\nu}{C_\\mu+C_\\nu},\\\\\n\\beta_f&=\\frac{C_\\nu P_\\mu^f+C_\\mu(V-P_\\nu^f)}{V(C_\\mu+C_\\nu)}\n       =\\frac{\\beta_c-t\\omega}{1-t}.\n\\end{aligned}\n$$\n\nFor arbitrary separately centered frustum laws, use their record-preserving representatives on $[0,T]\\cup\\{\\infty\\}$ and write $\\lambda_\\mu,\\lambda_\\nu$ for their finite masses. If both are positive, let $\\beta_f$ in the next formula be the bounded frustum ratio of their conditional finite laws, and $C_\\mu,C_\\nu$ their conditional finite coareas. The ratio for the original pair is\n\n$$\n\\frac12+\\frac{\\lambda_\\mu\\lambda_\\nu(C_\\mu+C_\\nu)}\n{\\lambda_\\mu C_\\mu+\\lambda_\\nu C_\\nu}\\left(\\beta_f-\\frac12\\right).\n$$\n\nIf exactly one law has zero coarea, the ratio is $1/2$. If both have zero coarea, the literal quotient has zero denominator, and its continuous extension has value $1/2$. Each cap record in that case is $V/2$. For $T\\le1$ the positive-denominator ratio for any separately centered pair is $1/2$, with the same extension at zero total coarea.\n\nIn the $T\\ge1$ case, any common correction $c$ giving $P-cC\\in[\\beta V,(1-\\beta)V]$ on the centered bounded frustum laws extends to all centered laws when $\\beta\\le1/2$.",
+  "subgoal_id": "pk-intake-affine-frustum-truncation-compensation",
+  "title": "Directional truncation compensation for affine-frustum slope laws"
+}

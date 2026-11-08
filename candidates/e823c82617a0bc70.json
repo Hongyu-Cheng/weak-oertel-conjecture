@@ -1,0 +1,28 @@
+{
+  "advances": "Supplies an explicit Hausdorff and facet-contact normalization for near-simplex bodies.",
+  "author": "PK-research-agent",
+  "candidate_id": "e823c82617a0bc70",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:42:21.746596+00:00",
+  "depends_on": [
+    "a839bfd22b7f11a2"
+  ],
+  "draft_key": "minimum-enclosing-simplex-locality",
+  "kind": "theorem",
+  "proof": "Write\n$$\nT_-=\\{x_i\\ge\\delta,\\ \\textstyle\\sum_i x_i\\le1-m\\delta\\},\\qquad\nT_+=\\{x_i\\ge-\\delta,\\ \\textstyle\\sum_i x_i\\le1+m\\delta\\}.\n$$\nWe have $T_-\\subset K\\subset T_+$. In fact $T_-+[-\\delta,\\delta]^m\\subset T$ and $h_K(u)\\ge h_T(u)-\\delta\\lVert u\\rVert_1$, giving the inner inclusion by support-function comparison. The outer inclusion follows by applying the defining inequalities of $T$ to a point within $\\delta$ of each $x\\in K$. These inner and outer simplices have volumes $(1-2m\\delta)^m|T|$ and $(1+2m\\delta)^m|T|$, respectively. Every minimum-volume enclosing simplex has volume at most $|T_+|$.\n\nIf $\\delta=0$, then $K=T$. Any convex body containing $T$ and an additional point has a positive-volume cone beyond some facet of $T$, so the volume bound forces $S=T$. Take $\\delta>0$ and put\n$$\n\\Delta=\\frac{(1+2m\\delta)^m-(1-2m\\delta)^m}{(1-2m\\delta)^{m-1}},\\qquad E=\\Delta-\\delta.\n$$\nFor any $x\\in S$ outside a facet inequality of $T_-$, take the cone from $x$ over that facet. It lies in $S$ and is disjoint from the interior of $T_-$. Its volume is $(1-2m\\delta)^{m-1}|T|$ times the positive deficit $\\delta-x_i$ or $\\sum_i x_i-(1-m\\delta)$ of the violated inequality. For the latter facet the $\\sqrt m$ factor in its area cancels the inverse factor in the perpendicular height. The volume formula also holds in dimension one with the point facet. The volume budget $|S|-|T_-|$ bounds each positive deficit by $\\Delta$. Thus\n$$\nx_i\\ge -E,\\qquad \\sum_i x_i\\le 1-m\\delta+\\Delta\\le1+E.\n$$\nThe linear term in the odd-binomial expansion of the numerator gives $\\Delta\\ge4m^2\\delta$, so $E\\ge m\\delta$. Put $a=2m\\delta\\le1/(4m)$. The mean-value theorem bounds the numerator by $4m^2\\delta(1+a)^{m-1}$. Bernoulli's inequality gives $(1-a)^{m-1}\\ge3/4$. The binomial expansion is bounded by the geometric series with ratio $(m-1)a$, so $(1+a)^{m-1}\\le4/3$. Hence $\\Delta\\le8m^2\\delta$. The preceding inequalities give $S\\subset -E\\mathbf1+[1+(m+1)E]T$. Each point of that simplex differs from its corresponding point of $T$ by at most $mE$ in infinity norm. Each point of $T$ is within $\\delta$ of $K\\subset S$. This gives the Hausdorff bound.\n\nFor the vertex labeling suppose $S$ is a minimizing simplex and $\\delta\\le1/(64m^3)$. For $i\\ge1$ choose a vertex $a_i$ maximizing $x_i$. Then $x_i(a_i)\\ge1-\\delta$ since $K\\subset S$ approximates $e_i$. The inequalities on $S$ give $x_i(a_i)\\le1+mE$ and $-E\\le x_j(a_i)\\le\\delta+(m-1)E\\le mE$ for $j\\ne i$. Choose $a_0$ minimizing $\\sum_i x_i$, which there is at most $m\\delta$ because $K$ approximates zero. Then $-E\\le x_i(a_0)\\le m\\delta+(m-1)E\\le mE$ for all $i$. Each vertex lies within $mE\\le8m^3\\delta\\le1/8$ of its assigned reference vertex. These neighborhoods are disjoint, so the chosen vertices exhaust the $m+1$ vertices of $S$. Averaging the $m$ vertices of each facet preserves the same error bound, and the minimum-simplex facet-contact result places those averages in $K$.\n",
+  "source_candidate_ids": [
+    "783495094e97ee67"
+  ],
+  "source_candidate_sha256": {
+    "783495094e97ee67": "62853841490ba27f90342765d3daf6f5fd99a459a030b733641684f6360ff42d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "783495094e97ee67",
+      "locator": "§§4–5, (2)–(3), (8)–(12)"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}(0,e_1,\\ldots,e_m)$, $m\\ge1$, and let $K\\subset\\mathbb R^m$ be a convex body with $d_{H,\\infty}(K,T)\\le\\delta\\le 1/(8m^2)$. Here $d_{H,\\infty}$ denotes Hausdorff distance for the infinity norm. For every convex body $S$ containing $K$ with $|S|\\le(1+2m\\delta)^m|T|$,\n$$\nd_{H,\\infty}(S,T)\\le8m^3\\delta.\n$$\nIn particular the bound applies to every minimum-volume enclosing simplex $S$. If $\\delta\\le1/(64m^3)$, the vertices $a_0,\\ldots,a_m$ of every such simplex can be labeled to satisfy $\\max_i\\lVert a_i-v_i\\rVert_\\infty\\le8m^3\\delta$, where $v_0=0$ and $v_i=e_i$ for $i\\ge1$. The centroid of each facet of $S$ belongs to $K$ and lies within $8m^3\\delta$ of the corresponding facet centroid of $T$.",
+  "subgoal_id": "pk-intake-minimum-enclosing-simplex-locality",
+  "title": "Quantitative locality and vertex matching for minimum enclosing simplices"
+}

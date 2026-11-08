@@ -1,0 +1,30 @@
+{
+  "advances": "A conditional intrinsic surface law comparison, with no depth or cap order consequence.",
+  "author": "PK-research-agent",
+  "candidate_id": "baa841580f9a5438",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:21.032583+00:00",
+  "depends_on": [],
+  "draft_key": "unequal-radius-intrinsic-face-densities",
+  "kind": "theorem",
+  "proof": "For $m>0$ let $\\omega_m$ be unit $m$-ball volume. Apply the ball inequality with radii $\\varepsilon a,\\varepsilon b$, divide by $\\omega_m\\varepsilon^m$ and take an upper limit as $\\varepsilon\\downarrow0$. The endpoint densities converge. This gives\n$$\ng_0^+(x_0)((a+b)/2)^m\n\\ge\\left[\\frac{g_-^{1/\\delta}a^{m/\\delta}+g_+^{1/\\delta}b^{m/\\delta}}2\\right]^\\delta .\n$$\nThis holds for every positive choice $a,b$ at the same fixed endpoint pair. Set $a+b=2$. For $0<m<\\delta$ write $U=g_-^{1/(\\delta-m)}$ and $V=g_+^{1/(\\delta-m)}$. Differentiating the strictly concave sum in brackets shows it is maximized at $(a,b)=(2U/(U+V),2V/(U+V))$. The value in brackets is $2^{-(\\delta-m)/\\delta}(U+V)^{(\\delta-m)/\\delta}$, giving the claimed power. If $m=\\delta$, the sum is affine in $(a,b)$, and limits from positive radii to either endpoint of $a+b=2$ give the maximum bound. For $m=0$, the faces are points, so balls centered at them contain their whole atoms and the original inequality gives the stated formula.\n\nFor the self-triple write $O=\\operatorname{relint}F$ and identify its affine space isometrically with $\\mathbb R^m$. For each $\\varepsilon>0$ set $f_\\varepsilon(x)=\\mu(B(x,\\varepsilon))/(\\omega_m\\varepsilon^m)$ on this affine space and $h_\\varepsilon=f_\\varepsilon^{1/\\delta}$ on $O$. Convolution with the normalized ball indicator is continuous by $L^1$ translation continuity of the intrinsic density. Each value on $O$ is positive by equivalence to volume. The equal-radius self-triple gives midpoint concavity of $h_\\varepsilon$, and continuity gives concavity. If $B(x,2r)\\subset O$, then $h_\\varepsilon(y)\\ge h_\\varepsilon(x)/2$ for $y\\in B(x,r)$ by concavity between $x$ and $2y-x$ and nonnegativity. Fubini gives $\\int f_\\varepsilon=\\mu(F)$, so $\\omega_m r^m(h_\\varepsilon(x)/2)^\\delta\\le\\mu(F)$. On compact subsets choose $r$ uniformly. The concavity bounds imply local equicontinuity: on any small ball a chord between two points can be extended a fixed positive distance in both directions inside a slightly larger ball, so its secant slope is bounded by the corresponding outer secants and the uniform bounds. Compact exhaustion and Arzelà–Ascoli yield locally uniform subsequential limits as $\\varepsilon\\downarrow0$. Lebesgue differentiation identifies every limit with the original density's $1/\\delta$ power almost everywhere. Continuous limits on the open relative interior that agree almost everywhere agree everywhere, giving one limit and convergence there. That concave nonnegative limit is strictly positive on $O$, since a zero at an interior point forces its value at any other point to be zero by a chord extended past the interior point. Its $\\delta$ power is the desired continuous representative, so all points in $O$ are differentiation points and their upper densities equal it.\n\nApply the first part to the self-triple on these points. When $m<\\delta$ the sharper power is midpoint concave and continuous, hence concave. When $m=\\delta$, the midpoint density is at least the maximum of the two endpoint densities. Nearby points with both reflected points still inside $O$ give both inequalities between the two densities. Thus it is locally constant, and constant on connected $O$. For a cross-triple, small relative balls at the two interior endpoint points give a relative ball at their midpoint in $F_0$ because all direction spaces agree. Therefore the target point is interior and the same bounds use its finite representative.\n",
+  "source_candidate_ids": [
+    "1dcb5bc1e68b837f"
+  ],
+  "source_candidate_sha256": {
+    "1dcb5bc1e68b837f": "c330c12bca90f33d23b7ee5fab0b50d45fd5f1c09c4d4228666cdf5840e866c1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1dcb5bc1e68b837f",
+      "locator": "1dcb5bc1e68b837f:01 §2 (1)–(5), unequal-radius conditional bound"
+    },
+    {
+      "candidate_id": "1dcb5bc1e68b837f",
+      "locator": "1dcb5bc1e68b837f:02 §§3–4 (6)–(7), continuous densities and all interior tuples"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $\\delta=d-1$, and let $\\mu_-,\\mu_+,\\mu_0$ be finite positive measures supported on compact convex faces $F_-,F_+,F_0$ with common tangent space of dimension $0\\le m\\le\\delta$ and $(F_-+F_+)/2\\subset F_0$. Assume each measure is equivalent to intrinsic $\\mathcal H^m$ on its face, and the three are relative to a common normal reference when they arise by disintegration. For all open balls $B(x,a),B(y,b)$ with positive endpoint masses suppose\n$$\n\\mu_0(B((x+y)/2,(a+b)/2))\\ge\n\\left[\\frac{\\mu_-(B(x,a))^{1/\\delta}+\\mu_+(B(y,b))^{1/\\delta}}2\\right]^\\delta.\n$$\nFor $m>0$ write $g_0^+$ for upper intrinsic ball density. At every pair of endpoint differentiation points of finite positive density $g_-(x),g_+(y)$, put $x_0=(x+y)/2$. If $0<m<\\delta$, then $g_0^+(x_0)\\ge[(g_-(x)^{1/(\\delta-m)}+g_+(y)^{1/(\\delta-m)})/2]^{\\delta-m}$. For $m=\\delta$ the lower bound is $\\max(g_-(x),g_+(y))$. For $m=0$ the target atom mass is at least $[(g_-^{1/\\delta}+g_+^{1/\\delta})/2]^\\delta$, with $g_\\pm$ the endpoint atom masses.\n\nA measure satisfying the same ball inequality with itself in all three slots has a unique finite positive continuous density representative on the relative interior of its face if $m>0$. For $m<\\delta$ its $1/(\\delta-m)$ power is concave there, and for $m=\\delta$ it is constant there. When all three self-triples have the ball property, every relative-interior endpoint pair has a relative-interior midpoint and the bounds above apply with the finite continuous representatives there.",
+  "subgoal_id": "pk-intake-unequal-radius-intrinsic-face-densities",
+  "title": "Intrinsic density powers from unequal-radius conditional ball inequalities"
+}

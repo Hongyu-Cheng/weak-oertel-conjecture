@@ -1,0 +1,32 @@
+{
+  "advances": "An ordinary uniform-body self-coupling with prescribed marginals. The gained mass is measured in the midpoint law, and the atom does not give an extra contribution from original mixed source fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "1aa72020dc920d10",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.753843+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "pk-w36-localize-reflected-uniform-self-coupling",
+  "kind": "lemma",
+  "proof": "Reflection about $g$ preserves Lebesgue measure and maps $D$ onto itself, while $T$ fixes its complement in $K$. Thus $T$ preserves $\\mu$ and is an involution. The midpoint is $g$ on $D$ and equals $X$ off $D$, giving the stated law. Every proper through-$g$ halfspace contains exactly half the mass of $\\mu|_D$ by reflection and the null Lebesgue boundary, whereas it contains the new atom in full. Its gain is therefore $p/2$. The full-mass case of 6769574fc1bd9f8d, with the density one, gives $\\mu(H)\\ge\\gamma_d$ for each such halfspace. A closed halfspace containing $g$ contains the parallel through-$g$ halfspace, so the lower bound also holds there.\n\nTranslate $g$ to zero. The centroid is interior: otherwise a supporting linear functional through it is nonnegative throughout $K$ and strictly positive on a set of positive measure, contradicting zero mean. For a unit direction $u$, let $[-a,b]$ be the projection range of $K$ and choose $v\\in K$ with $u\\cdot v=b$. The set $v+s(K-v)$ lies in $K$ and above projection $b-s(a+b)$, for $0\\le s\\le1$, with relative volume $s^d$. Integrating this upper-tail lower bound and using the zero projection mean gives\n$$\n0=-a+\\int_{-a}^b\\Pr(u\\cdot X\\ge y)\\,dy\n\\ \\ge\\ -a+(a+b)\\int_0^1s^d\\,ds\n=-a+\\frac{a+b}{d+1}.\n$$\nHence $b\\le da$ in every direction, so the support function of $K/d$ is everywhere at most that of $-K$. Separation gives $K/d\\subseteq-K$, while convexity and $0\\in K$ give $K/d\\subseteq K$. Its volume is $d^{-d}|K|_d$, proving the overlap bound. In dimension one the uniform interval is centrally symmetric and $\\nu=\\delta_g$.\n",
+  "source_candidate_ids": [
+    "cfd324a051e95d1d"
+  ],
+  "source_candidate_sha256": {
+    "cfd324a051e95d1d": "494120da371bf3edb5b30f1bab2ed9bae9b522d7791d3ce0a63552033075b9ab"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cfd324a051e95d1d",
+      "locator": "cfd324a051e95d1d:01 Proposition and Construction and proof, lines 5–38, exact uniform self-coupling and depth gain"
+    },
+    {
+      "candidate_id": "cfd324a051e95d1d",
+      "locator": "cfd324a051e95d1d:02 Elementary quantitative bound, lines 40–62"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a full-dimensional convex body, $d\\ge1$, with uniform probability $\\mu$ and centroid $g$. Put $D=K\\cap(2g-K)$ and $p=|D|_d/|K|_d$. The map $T(x)=2g-x$ on $D$ and $T(x)=x$ on $K\\setminus D$ is a measure-preserving involution. For $X\\sim\\mu$, the joint law of $(X,T(X))$ has both marginals equal to $\\mu$, and its midpoint law is $\\nu=\\mu|_{K\\setminus D}+p\\delta_g$. For every proper closed halfspace $H$ through $g$, $\\nu(H)=\\mu(H)+p/2$. For every closed halfspace containing $g$,\n$$\n\\nu(H)\\ge\\gamma_d+p/2\\ge\\gamma_d+\\frac{1}{2d^d},\n\\qquad\\gamma_d=(d/(d+1))^d.\n$$\nIn fact $(K-g)/d\\subseteq(K-g)\\cap(g-K)$, so $p\\ge d^{-d}$. The displayed uniform lower bound equals one when $d=1$.",
+  "subgoal_id": "pk-intake-pk-w36-localize-reflected-uniform-self-coupling",
+  "title": "A reflected self-coupling raises every centroid-cap mass by the same amount"
+}

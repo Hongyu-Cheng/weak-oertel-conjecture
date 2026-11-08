@@ -1,0 +1,26 @@
+{
+  "advances": "Local two-endpoint obstruction with exact whole-body equality and a canonical centroid cut.",
+  "author": "PK-research-agent",
+  "candidate_id": "2ed123efde59eb53",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.331358+00:00",
+  "depends_on": [],
+  "draft_key": "canonical-simplex-residual-gap-with-vanishing-captured-endpoint",
+  "kind": "counterexample",
+  "proof": "Choose a unit-volume simplex $T$ with one vertex at height zero and the opposite facet at height one for a linear coordinate $t$. The centroid has height $q_*=d/(d+1)$ and the prefix at height $q\\in[0,1]$ is a homothetic simplex of volume $q^d$. Choose $q_A>1$ large enough that $q_B=((a+b)q_*-a q_A)/b<0$. If $e_t$ is a vector of height one, set $A=a(T-q_A e_t)$ and $B=b(T-q_B e_t)$. Their midpoint is $K=((a+b)/2)(T-q_* e_t)$. For the common cut $t\\le0$, the first endpoint lies strictly inside the captured side and the second lies strictly outside. The cut takes exactly a canonical vertex cap through the centroid of $K$, of fraction $q_*^d=\\gamma$. These are actual integer fibers at $-1,0,1$ by taking the hull of the two endpoint lifts. The residual roots of the endpoints are $0,b$, and the source residual root is $\\kappa(a+b)/2$. Taking their difference gives the formula and the claimed limit.\n",
+  "source_candidate_ids": [
+    "8426c7487ce19740"
+  ],
+  "source_candidate_sha256": {
+    "8426c7487ce19740": "63722f9b4e23d0046861a36c500bde04fdafaeac983fad840feee0879872bb35"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8426c7487ce19740",
+      "locator": "8426c7487ce19740:03 §6, canonical simplex cap and limiting residual-root gap"
+    }
+  ],
+  "statement": "For $d\\ge1$ put $\\gamma=(d/(d+1))^d$ and $\\kappa=(1-\\gamma)^{1/d}$. For every $a,b>0$, there are homothetic $d$-simplex endpoints of volume roots $a,b$, and their exact Minkowski midpoint $K$ of root $(a+b)/2$, with one common closed cut capturing all of the first endpoint and none of the second, with the two zero-volume endpoint sections empty. The same cut takes a canonical centroid cap of fraction $\\gamma$ on $K$. The mean of the endpoint residual roots minus the residual root at $K$ is $(b-\\kappa(a+b))/2$, positive exactly when $b/(a+b)>\\kappa$. At fixed $b=1$ as $a\\downarrow0$, it tends to $(1-\\kappa)/2>0$ although the fully captured endpoint volume $a^d$ tends to zero. Thus no universal local correction depending only on that volume and tending to zero with it bounds this residual-root loss even on the whole-body equality slice with a canonical source-centroid cut.",
+  "subgoal_id": "pk-intake-canonical-simplex-residual-gap-with-vanishing-captured-endpoint",
+  "title": "Canonical centroid caps retain a residual-root gap with vanishing captured endpoint volume"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "A scalar positive-sequence theorem on actual tail indices.",
+  "author": "PK-research-agent",
+  "candidate_id": "108bf10461a9c6ff",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:33:30.158816+00:00",
+  "depends_on": [
+    "a0756c6751636340"
+  ],
+  "draft_key": "concave-root-tail-concavity",
+  "kind": "theorem",
+  "proof": "Write $p=1/(d+1)$. At an interior index $\\ell<i<r$, put $F=F_i$, $A=a_{i-1}$ and $b=a_i$. Then $F_{i-1}=F+A$ and $F_{i+1}=F-b>0$. If $A\\le b$, their average is at most $F$, and monotonicity and concavity of the $p$th power give $(F+A)^p+(F-b)^p\\le 2F^p$.\n\nIf $A>b$, put $\\delta=A^{1/d}-b^{1/d}$ and $q=b^{1/d}/\\delta$. For each $0\\le k\\le r-i$, successive differences of the roots give $0<a_{i+k}^{1/d}\\le b^{1/d}-k\\delta$. Taking $k=1$ gives $q>1$. Thus $b\\le F\\le F_{\\max}=\\delta^d S_d(q)$ by termwise comparison with the positive-part sequence. Terms past $r$ are zero for this comparison. The identities\n$$\nF_{\\max}+A=\\delta^d S_d(q+1),\\qquad\nF_{\\max}-b=\\delta^d S_d(q-1)\n$$\nhold because $A=\\delta^d(q+1)^d$ and $b=\\delta^d q^d$. Applying arithmetic-power-sum-concavity with this $d$ and $q$ gives $(F_{\\max}+A)^p+(F_{\\max}-b)^p\\le2F_{\\max}^p$.\n\nThe function $H(s)=(1+As)^p+(1-bs)^p-2$ is concave on $[0,1/b]$ with $H(0)=0$. Its secant slope $H(s)/s$ is nonincreasing for $s>0$. The inequality at $F_{\\max}$ says $H(1/F_{\\max})\\le0$, so $1/F\\in[1/F_{\\max},1/b]$ gives $H(1/F)\\le0$. Multiplication by $F^p$ proves the desired midpoint inequality at $i$. This exhausts the actual interior indices. For one or two indices there is no midpoint condition. The sequence ends at $F_r=a_r$.\n\nFor exponent optimality, take $a_i=(r+1-i)^d$ on $i=0,\\ldots,r$. Its roots are affine and $F_i=A_{r-i}$ for the arithmetic sequence with $\\rho=1$. For any larger exponent choose an interior violation at $m$ in that sequence, whose existence was proved in arithmetic-power-sum-concavity, and take $r\\ge m+1$ and $i=r-m$. This places the violation at an actual interior tail index.\n",
+  "source_candidate_ids": [
+    "821242aee5d2f3e1"
+  ],
+  "source_candidate_sha256": {
+    "821242aee5d2f3e1": "5ead3b8be5c75043b6d82f1329efd279e4d32ac3d3bd6c9a4d4f95f0c6db55f1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "821242aee5d2f3e1",
+      "locator": "§6"
+    }
+  ],
+  "statement": "Let $d\\ge1$ be real, let $\\ell\\le r$ be integers, and let $a_\\ell,\\ldots,a_r>0$ have concave $d$th roots, meaning the successive differences of $a_i^{1/d}$ are nonincreasing. Set $F_i=\\sum_{j=i}^r a_j$. Then $(F_i^{1/(d+1)})_{i=\\ell}^r$ is concave on its actual indices. The exponent is the largest positive exponent that works for every such sequence at fixed $d$.",
+  "subgoal_id": "pk-intake-concave-root-tail-concavity",
+  "title": "Concavity of tails of a concave-root sequence"
+}

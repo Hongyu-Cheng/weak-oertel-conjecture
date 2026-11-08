@@ -1,0 +1,51 @@
+{
+  "candidate_id": "0e446f2a05b74fa2",
+  "candidate_sha256": "6ffd5555cc2768a713ba27643a37254e3e27a7e0cbfba173e89b7e955bf86858",
+  "checked_dependency_candidate_sha256": {
+    "074a5bdf8c59720e": "4761c3725ebd2cf5d903ebe6767e8a6ca9586b2843eb5c18462c8a00e340c9fd"
+  },
+  "checks": [
+    "The same-batch fixed-fan lemma applies to both nonempty polytope arrays on a common complete simplicial refinement and to their proposed reverse ray values. Feasibility is exactly rowwise nonnegativity, including if some fibers are lower-dimensional.",
+    "For each row its initial slack is A_a h≥0 and its slope is A_a h−A_a d. Active rows have nonpositive slope since d is feasible. A decreasing row gives a closed upper bound s≤A_a h/(A_a d−A_a h). Finiteness gives a positive step when all active slopes vanish, and handles both a zero bound and an empty set of decreasing rows.",
+    "The active-zero intersection is a face. If g is in it, h+epsilon(h−g) is feasible by the inactive slacks and has the same active zeros. Since h is strictly between those two feasible points unless g=h, every face containing h contains g. This also works if the cone has lineality or is not full-dimensional.",
+    "Containment uses D_z⊆K_z, hence (1+s)h−sd≥h pointwise. For a valid support this gives containment by separation, including at the finite endpoint and for degenerate original fibers.",
+    "On any original normal cone, support convexity of a positive reverse step with h_K linear forces h_D concave. It is already convex, and midpoint equality plus positive homogeneity yields additivity on that cone and a linear extension on its span, including cones with lineality. Conversely, each maximal refining cone lies in a vertex normal cone and an active ray for that piece is in the same vertex normal cone. Linearity of h_D on the whole vertex normal cone then makes its corresponding row zero. Singleton fibers have the whole ambient space as their vertex normal cone and are covered.",
+    "For an arbitrary anchored inequality, expand the direction into nonnegative ray coefficients of a common fan cone and the weights into convex combinations of extreme weights. Its h-slack is a nonnegative combination of tested slacks. When it is zero each positive-coefficient term is tight, so vanishing of the same rows on d preserves the equality. The converse follows by choosing a single ray and extreme weight.",
+    "Independently checked a finite positive endpoint on a one-site base: cut the unit square by x₁+x₂≤3/2 for K and x₁+x₂≤1 for D. Their four cardinal supports agree, and the reverse diagonal support is (3+s)/2. It is realized by the matching cut for 0≤s≤1 and exceeds the sum of the cardinal supports thereafter. The decreasing row comparing the (1,0),(1,1) piece at (0,1) starts at 1/2, equals 1 on D, and gives endpoint 1.",
+    "Independently separated the two tests on P={−1,0,1}, with all K_z=[0,1], D endpoints {0}, and D middle [0,1/2]. Every individual reversed interval exists for all s≥0, but the middle upward anchored gap is −s/2. An unbounded case is a one-site interval K=[−1,1] and D={0}.",
+    "Checked fbc069c3d3ebfebf §3, equations (4)–(6), at the recorded raw digest. The generic hypotheses and both compatibility tests match. The frozen containment conclusion correctly permits lower-dimensional K and D."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "074a5bdf8c59720e",
+      "candidate_sha256": "4761c3725ebd2cf5d903ebe6767e8a6ca9586b2843eb5c18462c8a00e340c9fd",
+      "mapping": "The finite base is lattice-complete, all arrays live on a common complete simplicial fan, and the predecessor permits lower-dimensional nonempty compact polytope supports. Its two row systems characterize feasibility of the entire ray, and its exact row descriptions identify the support and anchored tests. The predecessor is independently approved in this review batch and requires admission first.",
+      "reviewed_proof_sha256": "3b24c26058611dd2ecbf47ca512af062d1dace071a7ca78442c36b315cadbf96",
+      "reviewed_statement_sha256": "eedad939cc3021c0ba973b4915fb2e509a2d612b6ca911c571e145e5861dda4a",
+      "status": "same-batch approval required"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:12:46Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted criterion identifies when the sampled family associated to an array is compatible. It gives no test of normal-cone preservation under reverse Minkowski motion, no combined minimal-face criterion and no maximal step.",
+      "fact_id": "ba0f3db1bf4f62c6"
+    }
+  ],
+  "readability": "The phrase “on another ray” refers to any tested ray. Rows on generators of the chosen maximal cone vanish identically by interpolation and require no separate argument.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "41c1f2f5428296687a5bbeb97517af2d41c9c334f9bbe2a2747bc9d0ad5800c5",
+  "reviewed_statement_sha256": "f0ae6d2fba7f2fa7a4f7dde3793c0100d740569e68bf7b3439c6f2559ee75a9a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:09:46Z",
+  "summary": "Finite row slacks give the precise reversal interval, and the active rows are exactly the individual normal-cone linearity test together with preservation of all anchored equalities.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

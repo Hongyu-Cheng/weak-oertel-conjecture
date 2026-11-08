@@ -1,0 +1,26 @@
+{
+  "advances": "A scalar finite-sum comparison for reflected concave radii, used as one step in the common-vertex triangle-chain geometry.",
+  "author": "PK-research-agent",
+  "candidate_id": "f3c23b93423dfbb9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.781999+00:00",
+  "depends_on": [],
+  "draft_key": "symmetric-sampled-radius-quadrature",
+  "kind": "lemma",
+  "proof": "Interpolate the radii linearly on $[0,m]$, writing the interpolant $r(z)$ and its drops $\\delta_i=r_i-r_{i+1}$. Direct integration gives\n$$\n3\\int_0^1 k(v)\\,dv=A(1-c)^3-L(1-\\rho)^3=\\lambda.\n$$\nThe ratio $k(v)/v^2$ is zero up to $c$, increases on $[c,\\rho]$ by its formula $A(1-c/v)^2$, and is nondecreasing on $[\\rho,1]$ by the identity\n$$\nk(v)/v^2=\\tfrac12[1-(2/(3v)-a)^2/(a(2-3a))].\n$$\nIn the last interval $2/(3v)-a>0$, and the formulas agree at the joins. Thus $f(v)=k(v)-\\lambda v^2$ has nonnegative upper-tail integrals on $[0,1]$: it has total integral zero and can change sign only from negative to positive. Also $f(1)\\ge0$. A nonconstant cell contributes to $\\int_0^m f(r(z))\\,dz$ with density $1/\\delta_i$ on $(r_{i+1},r_i)$. Because the nonzero drops are nondecreasing outward, that density, extended by zero below $b$, is a nonnegative nondecreasing step function on $[0,1]$, hence a nonnegative linear combination of upper-interval indicators. Initial constant cells contribute only at radius $1$. It follows that $\\int_0^m k(r(z))\\,dz\\ge\\lambda\\int_0^m r(z)^2\\,dz$.\n\nSet $H(v)=(v-\\rho)_+^2$. Since $A-L+B=0$, the $C^1$ function $k+BH$ is convex, with second derivative $2A$ on $(c,\\rho)$ and zero elsewhere. On a unit cell whose radius runs from $u$ down to $w<u$, let $\\mathcal E(G;u,w)$ be the trapezoid estimate minus the exact integral of $G(r(z))$ over that cell. Convexity gives $\\mathcal E(k;u,w)\\ge -B\\mathcal E(H;u,w)$. Twice integrating by parts gives\n$$\n\\mathcal E(H;u,w)=\\frac1{2(u-w)}\\int_w^u (s-w)(u-s)H''(s)\\,ds .\n$$\nThe kernel $(s-w)(u-s)/(u-w)$ increases when $w$ decreases or $u$ increases, by its respective partial derivatives $-(u-s)^2/(u-w)^2$ and $(s-w)^2/(u-w)^2$. The radius intervals of the nonconstant cells have disjoint interiors. Since $H''\\ge0$, summing their errors gives at most $\\mathcal E(H;1,b)=E(b)$ for $b<1$, by integrating the clipped square. Constant cells have error zero, and $E(1)=0$.\n\nThe full sampled sum is twice the trapezoid sum plus the terminal value $k(b)$. The exact square error on each cell is $\\delta_i^2/6$, so\n$$\nM=2\\int_0^m r(z)^2\\,dz+b^2+\\frac13\\sum_i\\delta_i^2.\n$$\nHere $\\sum_i\\delta_i^2\\le(1-b)^2$. Also $\\lambda>0$, because $\\lambda-2/9=(2a-1)(6a^2-6a+1)/[27a^2(a-1)]>0$ on the stated interval. Combining the inequalities gives the claim.\n",
+  "source_candidate_ids": [
+    "9c420d2e51075e2c"
+  ],
+  "source_candidate_sha256": {
+    "9c420d2e51075e2c": "0ebeae0e0de45be0efb231f6297d628ddf410b65946dcd6501b0ad795ad90892"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9c420d2e51075e2c",
+      "locator": "§§2–3, (5)–(13), including the opening definitions (1)–(2)"
+    }
+  ],
+  "statement": "Let $m\\ge0$, $1=r_0\\ge r_1\\ge\\cdots\\ge r_m\\ge0$, with nondecreasing outward drops $r_j-r_{j+1}$, and set $r_{-j}=r_j$, $b=r_m$, and $M=\\sum_{j=-m}^{m}r_j^2$.\n\nFor $1/2<a<2/3$, set\n$$\n\\begin{gathered}\nc=1/(3a),\\quad \\rho=1/[3(1-a)],\\quad A=a/(2a-1),\\quad\nL=(1-a)^2/[(2a-1)(2-3a)],\\quad B=(2a-1)/(2-3a),\\\\\nk(r)=A(r-c)_+^2-L(r-\\rho)_+^2,\\qquad\n\\lambda=(18a^3-24a^2+8a-1)/[27a^2(a-1)],\\\\\nE(b)=\n\\begin{cases}\n(1-b)^2/6 & b\\ge \\rho,\\\\\n(1-\\rho)^2/2-(1-\\rho)^3/[3(1-b)] & b<\\rho ,\n\\end{cases}\n\\end{gathered}\n$$\nwhere $x_+=\\max(x,0)$.\n\nFor $m\\ge1$, including a constant radius leg and the endpoint cases $b=0,1$,\n$$\n\\sum_{j=-m}^m k(r_j)\\ \\ge\\\n\\lambda[M-b^2-(1-b)^2/3]+k(b)-2BE(b).\n$$",
+  "subgoal_id": "pk-intake-symmetric-sampled-radius-quadrature",
+  "title": "Finite quadrature for the symmetric triangular cap kernel"
+}

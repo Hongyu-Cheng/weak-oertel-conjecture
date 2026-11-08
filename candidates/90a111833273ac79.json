@@ -1,0 +1,35 @@
+{
+  "advances": "First variation of the local absolute depth maximum at the designated actual core fiber, retaining optimized proper tail allocations and every maximizing selection.",
+  "author": "PK-research-agent",
+  "candidate_id": "90a111833273ac79",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.113074+00:00",
+  "depends_on": [
+    "e6ed7f0a4aa574cd",
+    "53fe12b742a7608d"
+  ],
+  "draft_key": "six-base-partial-tail-first-variation",
+  "kind": "theorem",
+  "proof": "Use the six-base bounded-tilt formula $A_t(q,y)=\\min_u[F_T(y,u)+tJ_t(u,y)]$ with its compact shift interval $[-L,L]$. This gives attainment and $0\\le J_t\\le\\min(a,c)$ via saturated shifts. It follows that the maximal depth is at least $\\Gamma V$ by testing $g$, and at a maximizing point $y_t$ each canonical cap bounds it above by $V(1-\\lambda_i(y_t))^d+t\\min(a,c)$. Taking $d$th roots and using the zero sum of the coordinate deviations gives $y_t=g+O(t)$ uniformly over maximizers.\n\nLet $u_t\\to u_i=\\nabla\\lambda_i/\\lVert\\nabla\\lambda_i\\rVert$ and $z_t\\to g$. For any shifts $s_t\\to s$ in $[-L,L]$, both moving cap masses converge to the corresponding limiting tail masses. Their defining affine functions converge uniformly on compact $T$. Sandwiching by the two fixed open and closed caps with thresholds at offsets $\\pm\\delta$ and applying Portmanteau proves convergence as $\\delta\\downarrow0$, because both limiting marginals are atomless at the resulting levels. This holds for every converging sequence of shifts. Compactness and continuity of the limiting tails then imply uniform convergence in $s$ on $[-L,L]$, and hence $J_t(u_t,z_t)\\to J_i$. Indeed, the limiting shifts in barycentric coordinates are scaled by $\\lVert\\nabla\\lambda_i\\rVert$ relative to the continuous unit-normal shifts. Both restrictions on the shift contain values saturating each of the two tails in the corresponding units: $|u_i\\cdot(x-g)|\\le D<L$, and $\\lambda_i(x)\\in[0,1]$ on $T$. Thus the resulting minima agree.\n\nFact 53fe12b742a7608d gives the centroid lower bound and precisely the canonical equality directions. Near $(g,u_i)$, the own cap cuts a simplex at the single vertex $v_i$ with positive margin $a_i=u\\cdot(v_i-y)$, the other margins being negative. Multiplying the edge intercept ratios gives $F_T(y,u)=Va_i^d/\\prod_{j\\ne i}(a_i-a_j)$. It is smooth there, with $y$-derivative $-\\kappa\\ell_i$ at $(g,u_i)$ by the canonical cap volume. The barycentric linear map identifies $\\mathbb R^d$ with the zero-sum tuples, so the specified $v_*$ exists and is unique.\n\nTake $x_t=g+tv_*\\in T$ for small $t$. If the lower bound $A_t(q,x_t)\\ge\\Gamma V+t\\bar J-o(t)$ failed, take minimizing unit normals along a violating sequence and pass to a limit. By continuity, nonnegativity of $J_t$ forces the limit to be some $u_i$. Along this sequence smoothness gives $F_T(x_t,u_t)=F_T(g,u_t)-t\\kappa\\ell_i(v_*)+o(t)$, where $F_T(g,u_t)\\ge\\Gamma V$. Adding $tJ_t(u_t,x_t)=tJ_i+o(t)$ contradicts the assumed loss, since $J_i-\\kappa\\ell_i(v_*)=\\bar J$. The formula being minimized already accounts for pure-base caps.\n\nAt each maximizing $y_t$, the fixed canonical normal $u_i$ with optimized shift bounds $D_t^q$ above by $\\Gamma V-\\kappa\\ell_i(y_t-g)+tJ_i+o(t)$. The own remainder is $O(t^2)$ by localization and the added remainder is $o(t)$ by the moving-tail limit. Averaging over $i$ cancels the linear displacement and gives the matching upper bound. Each of the $m$ scores $J_i-\\kappa\\ell_i((y_t-g)/t)-\\bar J$ is bounded below by $-o(1)$ and their sum is zero, so each tends to zero. The barycentric isomorphism gives the asserted displacement. For the finite envelope, the mean of the scores $J_i-\\kappa\\ell_i(v)$ is $\\bar J$ for every $v$, so their minimum attains the largest possible value exactly when all scores equal $\\bar J$, which characterizes $v_*$.\n",
+  "source_candidate_ids": [
+    "1ec867c146e96dba",
+    "7ff8cebaefda7361"
+  ],
+  "source_candidate_sha256": {
+    "1ec867c146e96dba": "bf278912ffff1058702e843a2586f133e737696adb572ad107a623247e93a98a",
+    "7ff8cebaefda7361": "b80d38168e9904aa6f42b6dc3d23bd947ded8a347401d88cbcde066fa0d0e8d7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1ec867c146e96dba",
+      "locator": "1ec867c146e96dba:02, Statement, (1)–(5), and §§2–3, (8)–(11), all-normal first variation"
+    },
+    {
+      "candidate_id": "7ff8cebaefda7361",
+      "locator": "7ff8cebaefda7361:02, §3, (10)–(11), isolated-vertex cap formula"
+    }
+  ],
+  "statement": "Let $T\\subset\\mathbb R^d$ be a full-dimensional simplex, $d\\ge2$, of volume $V$ and centroid $g$. Put $m=d+1$, $b=1/m$, $h=d/m$, $\\Gamma=h^d$, and $\\kappa=dVh^{d-1}$. Write $\\lambda_i$ and $\\ell_i$ for the barycentric coordinates and their linear parts. Form the six-base hull by placing $T$ at the four binary bases and convex bodies $A_t,C_t\\subseteq T$ of volumes $ta,tc$ at $(-1,1),(1,-1)$ respectively, with $a,c>0$ fixed and $t\\downarrow0$. Suppose the respective normalized uniform laws $\\nu_t,\\omega_t$ converge weakly to $\\nu,\\omega$, and both limits give zero mass to every level set of every $\\lambda_i$. Define\n$$\nJ_i=\\min_{|s|\\le2}\\bigl[a\\nu\\{\\lambda_i\\ge b+s\\}+c\\omega\\{\\lambda_i\\ge b-s\\}\\bigr],\n\\qquad \\bar J=\\frac1m\\sum_i J_i.\n$$\nThe attained maximum raw mixed closed-halfspace depth on the fiber at $q=(0,0)$ is $D_t^q=\\Gamma V+t\\bar J+o(t)$. Every maximizing point on that fiber satisfies $y_t=g+tv_*+o(t)$, where the unique $v_*$ solves $\\ell_i(v_*)=(J_i-\\bar J)/\\kappa$ for all $i$. Equivalently $\\max_v\\min_i[J_i-\\kappa\\ell_i(v)]=\\bar J$, with unique maximizer $v_*$.",
+  "subgoal_id": "pk-intake-six-base-partial-tail-first-variation",
+  "title": "All-normal partial-tail first variation at the nonanchor six-base fiber"
+}

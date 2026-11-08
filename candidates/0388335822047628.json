@@ -1,0 +1,26 @@
+{
+  "advances": "An exact calculation for conditional volume rows. It supplies neither boundary response weights nor a depth payment.",
+  "author": "PK-research-agent",
+  "candidate_id": "0388335822047628",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.204098+00:00",
+  "depends_on": [],
+  "draft_key": "projective-whole-row-chart-covariance-drift",
+  "kind": "lemma",
+  "proof": "For each row, affinity and its barycenter give $\\int W\\,d\\nu_i=m_iW(Y_i)$. The same holds for $B$, and $L=B$ on that row almost everywhere. This gives the two equal masses. On the same row, $W-L=(W-B)(w)=b\\cdot(w-Y_i)$ almost everywhere. In $\\int w(W-L)\\,d\\nu_i$, the part with $w$ replaced by $Y_i$ vanishes by the barycenter identity. The remainder is $m_i\\operatorname{Cov}_i b$. Summing proves the full moment formula, including base coordinates. Its value is independent of the affine origin because the two masses agree.\n\nSince $\\widehat\\eta=g\\eta$, the displayed formulas follow from the definition $D(\\xi\\|\\zeta)=\\int\\log(d\\xi/d\\zeta)\\,d\\xi$ for equal masses. The ratio $g$ is bounded above and away from zero by positivity and compactness. The average of $g$ under $\\eta/s$ is one, so Jensen for $-\\log$ and for $t\\mapsto t\\log t$ gives both inequalities and the common equality condition by strict convexity.\n",
+  "source_candidate_ids": [
+    "2a206064c18d19c5"
+  ],
+  "source_candidate_sha256": {
+    "2a206064c18d19c5": "4b283dfaa3f66eac82586bf10dfea02d6d58f4319a534dc8df94a61e797a143b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2a206064c18d19c5",
+      "locator": "2a206064c18d19c5:06 §6, (12)–(15), new chart tilt mass, covariance drift, entropy"
+    }
+  ],
+  "statement": "Let $C$ be a compact convex subset of a finite-dimensional Euclidean affine space, and let $L:C\\to(0,\\infty)$ be continuous. Let $\\nu_i$ be finitely many positive measures on $C$ of masses $m_i>0$ and barycenters $Y_i$. In one group of these rows, suppose $B$ is affine, $B(Y_i)=L(Y_i)$ and $B=L$ almost everywhere for each grouped $\\nu_i$. Let $W$ be positive affine on $C$ with $W(Y_i)=L(Y_i)$ at all grouped marks. Define $\\eta=L\\sum_i\\nu_i$, $\\widehat\\eta=W\\sum_i\\nu_i$, $g=W/L$ and $s=\\sum_i m_iL(Y_i)$, where all sums run over the group. With $\\operatorname{Cov}_i$ the covariance of the probability $\\nu_i/m_i$ about $Y_i$ in the full affine space and $b=\\nabla(W-B)$, one has\n$$\n\\eta(C)=\\widehat\\eta(C)=s,\\qquad\n\\int w\\,d(\\widehat\\eta-\\eta)(w)=\\sum_i m_i\\operatorname{Cov}_i b.\n$$\nIf $s>0$, the finite equal-mass entropies are\n$$\nD(\\eta\\|\\widehat\\eta)=-\\int\\log g\\,d\\eta\\ge0,\\qquad\nD(\\widehat\\eta\\|\\eta)=\\int g\\log g\\,d\\eta\\ge0.\n$$\nEach equality holds exactly when $W=L$ almost everywhere for $\\eta$. For an empty group all measures and integrals are zero.",
+  "subgoal_id": "pk-intake-projective-whole-row-chart-covariance-drift",
+  "title": "Covariance drift and reverse entropy under an affine chart tilt of whole rows"
+}

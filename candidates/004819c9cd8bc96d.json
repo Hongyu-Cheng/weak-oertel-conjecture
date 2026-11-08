@@ -1,0 +1,30 @@
+{
+  "advances": "An ordinary planar obstruction to inferring the starting cap ceiling of a sector-transfer argument. It supplies no violation of the row bound or of mixed-integer depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "004819c9cd8bc96d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:17:06.632233+00:00",
+  "depends_on": [],
+  "draft_key": "actual-canonical-bridge-leaves-cap-band",
+  "kind": "counterexample",
+  "proof": "The two nonvertical edges of $T_a$ are $w=\\pm(1-x)/(1+a)$ in coordinates $(x,w)$; the third is $x=-a$. The three lines through zero cut the six ray endpoints\n$$\n(0,\\pm1/(1+a)),\\quad (a,\\pm(1-a)/(1+a)),\\quad (-a,\\pm(1-a)/(1+a)).\n$$\nIndeed the zero line of the second cap is $w=x/(2\\kappa)$ and the third is its reflection. The source is interior and all six endpoints are preserved by $x\\le c$. On each edge the two listed endpoints on that edge bound the double sector: on the top edge the two positive margins between endpoints are the first and second, on the bottom edge the first and third, and on the left edge the second and third. The lines joining the three respective endpoint pairs are therefore precisely the three original edges. The bridge halfplanes containing the source intersect in $T_a$.\n\nThe area of $T_a$ is $1+a$. The first raw cap area is $1/(1+a)$ by its similar tip triangle. The second cap isolates $(-a,1)$, with edge fractions $2a/(1+a)$ and $1/(1+a)$ from this vertex; its area is $2a/(1+a)$ and the third is its reflection. The removed tip has area $(1-c)^2/(1+a)$ and lies in the unique first sector: it has $x>c>a$, past the two intersections on the upper and lower edges, so both other margins are strictly negative. Thus subtract the tip only from the first cap and total area. The coareas are $2/(1+a)$ and $2a/\\kappa=4(1-a)/(1+a)$ for each reflected oblique section, the latter by writing its length divided by normal length in the $x$ coordinate. Substitution gives both sets of exact values and inequalities in the statement.\n\nFor the first instance, the ordinary row uses $M=\\sum_i Q_i/\\sigma_i=56/45$, $f_i=2\\sqrt{|K|Q_i}/(\\sigma_i M)$ for the raw cap area $Q_i$ and coarea $\\sigma_i$. Here $f_1=10\\sqrt5/21$ and $f_2=f_3=3\\sqrt5/7$. The first value $f_1+(f_2+f_3)^2/4=10\\sqrt5/21+45/49<195/98<2$; either other value is $3\\sqrt5/7+1805/1764<1753/882<2$, using $\\sqrt5<9/4$.\n",
+  "source_candidate_ids": [
+    "7e8028cfe84136c6"
+  ],
+  "source_candidate_sha256": {
+    "7e8028cfe84136c6": "b2960b5051ca10e57877db5e196d8354bec359db198c5b6cdb003693852c28dc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "7e8028cfe84136c6",
+      "locator": "7e8028cfe84136c6:01 Opening construction, exact cap/section profile and bridge endpoints"
+    },
+    {
+      "candidate_id": "7e8028cfe84136c6",
+      "locator": "7e8028cfe84136c6:02 The full sorted profile does not repair the implication"
+    }
+  ],
+  "statement": "For $0<a<1$ let $T_a=\\operatorname{conv}\\lbrace(1,0),(-a,1),(-a,-1)\\rbrace$, and use the balanced normals $(1,0),(-1/2,\\kappa),(-1/2,-\\kappa)$ through zero, where $\\kappa=a(1+a)/[2(1-a)]$. For $a<c<1$ put $K=T_a\\cap\\lbrace x\\le c\\rbrace$ and denote cap fractions by $q_i$.\n\nFor $(a,c)=(4/9,2/3)$ the actual canonical double-bridge triangle of $K$ is $T_a$ with identical full chords and ray endpoints. The fractions on $K$ are all $9/20<128/279$, whereas those on $T_a$ are $(81/169,72/169,72/169)$, with first excess $967/47151$ over $128/279$. The area of $K$ is $160/117$, its three cap areas are $8/13$, its threshold coareas are $(18/13,20/13,20/13)$, and all three ordinary Lorentz rows are strictly below two.\n\nFor $(a,c)=(9/20,37/50)$ the bridge triangle is again $T_a$, with fractions $(400/841,360/841,360/841)$ and first excess $3952/234639$ over $128/279$. The area of $K$ is $20349/14500$, its cap areas are $(2331/3625,18/29,18/29)$, and its fractions are $(1036/2261,1000/2261,1000/2261)$. Here $q_{\\min}>20/49$, $128/279-q_{\\max}=364/630819$, $q_{\\min}+q_{\\rm mid}+q_{\\max}/4=2259/2261<1$, and $\\sum_iq_i=3036/2261<125/93$. Thus even the full sorted constraints on $K$ do not imply the ceiling on its own bridge triangle.",
+  "subgoal_id": "pk-intake-actual-canonical-bridge-leaves-cap-band",
+  "title": "The actual canonical bridge triangle can leave the cap band"
+}

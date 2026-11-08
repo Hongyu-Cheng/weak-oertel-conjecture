@@ -1,0 +1,37 @@
+{
+  "advances": "Actual mixed-volume and allocated boundary identities under supplied section-stress hypotheses, including nonpolytopal full-dimensional fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "a0ad65510349fd4a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.169782+00:00",
+  "depends_on": [
+    "5f6214dfee4e0f7e",
+    "58728654330a1c61"
+  ],
+  "draft_key": "pk-w36-psd-arbitrary-fiber-mixed-flux",
+  "kind": "theorem",
+  "proof": "The full-dimensional positive fibers, physical convex order and regular normal-marked boundary area give exactly the hypotheses of the support-face variance theorem. Apply its disintegration to the source with the specified density. Each $\\alpha_j\\eta$ can be labeled by the same deterministic source selector, whereas the labeled target uses the transport-induced kernel. The cap allocations on the section planes do not depend on this labeling.\n\nUse the allocated cap identity in 58728654330a1c61, applied to the fixed fiber and cap data with normal norm one. Componentwise scalar tests, followed by summing the matching normal components, give the vector-field formula\n$$\n\\int_{H_j}\\operatorname{div}X\\,d\\mu=\\int\\alpha_j X\\cdot u\\,d\\eta-\\int X\\cdot v_j\\,d\\zeta_j .\n$$\nIndeed its proper section coarea is ordinary area at this normalization. Its inside support allocation is the complement of the selected body fraction, and the outside allocation equals that fraction. Those are exactly the assumed rules, including the counting convention for intervals. The same fiber Gauss–Green without a cut is the full-body formula. Both identities can be multiplied by the fixed base vector in each fiber.\n\nApply them to $X(x)=x$. Subtract the weighted cap identities from the full one, with multiplier $p$ at the corresponding base. The result is\n$$\nd\\left(m_p-\\sum_j\\lambda_jm_{pj}\\right)\n=\\int p(u\\cdot x)\\,d(\\eta-\\nu)+\\sum_j\\lambda_j\\int p(b_j-a_j\\cdot p)\\,d\\zeta_j.\n$$\nThe raw section term has positive sign. Under each label, $u\\cdot x=b(\\theta)-a(\\theta)\\cdot p$, and $W_\\theta$ has zero first moments. The first term therefore equals $-\\int Q_\\theta^{pp}a\\,d\\kappa$. For $S_j>0$, expansion of the section integrand about the centroid gives $S_j\\bar p_i(b_j-a_j\\cdot\\bar p_i)-V_j^{pp}a_j$. Its constant pieces cancel after weighting and summing in each group, by the stated centered height balance. This proves the base identity.\n\nFor an arbitrary constant vector $h$ use $X(x)=x(h\\cdot x)$, which has divergence $(d+1)h\\cdot x$. The same subtraction and centroid expansion, now with multiplier $x$ in the raw moment formula, give the continuous vector residual $-\\int (Q_\\theta^{px})^{\\mathsf T}a\\,d\\kappa-\\sum_j\\lambda_j(V_j^{px})^{\\mathsf T}a_j$. Every section is supported on its cap plane and so is its centroid. This proves the kernel and positivity of $V_j$ directly from the centered second moment. Its kernel and the support-face variance kernel transform the two terms into the stated continuous terms. When the base dimension is zero these kernels individually annihilate their continuous normals. All integrals are finite by the bounded geometry, support coefficients and conditional covariances.\n\nFor a sign check take the actual rectangle with the three unit intervals $[-1/2,1/2]$ at $p=-1,0,1$. At its center every nonvertical through-center cap has mass $3/2$ by central symmetry and a volume-null boundary. Every pure-base cap through the center contains at least two full fibers. Any mixed point belongs to a horizontal cap of mass at most $3/2$ by choosing the smaller side through its continuous coordinate. Thus the center has global maximum raw depth $3/2$. Take the genuine critical caps $x+p/4\\ge0$ and $-x\\ge0$. All cuts are proper and the section locations are respectively $x=-p/4$ and $x=0$ at the three bases. Both section measures have mass $3$ and centroid $(0,0)$, with group height balance zero. With $\\lambda_j=\\rho_j=1$ and $t_i=3$, the boundary selectors sum to one, so the identity coupling has $Q_\\theta=0$. The base cap moments are $\\sum_p p(1/2+p/4)=1/2$ and zero, while the continuous cap moments are $\\sum_p[(1/2)^2-(p/4)^2]/2=5/16$ and $-3/8$. The whole moments vanish. The two section $pp$ covariances are $2,2$, and their $xx$ covariances are $1/8,0$. Hence the base residual equals $-1/2$ and the continuous residual equals $1/8$, agreeing with the displayed identities. The formerly printed positive cap covariance sign in the base identity would give $+1/2$ in this example.\n",
+  "source_candidate_ids": [
+    "7127f9c7b67df7cb"
+  ],
+  "source_candidate_sha256": {
+    "7127f9c7b67df7cb": "280b05cc7092916d55a5b8420b14e5f5cf88bac0c4862b9935a18b885404c733"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "7127f9c7b67df7cb",
+      "locator": "7127f9c7b67df7cb:04 §5, (10)–(12), corrected mixed flux"
+    },
+    {
+      "candidate_id": "7127f9c7b67df7cb",
+      "locator": "7127f9c7b67df7cb:05 §6, rectangle sign check"
+    },
+    {
+      "candidate_id": "7127f9c7b67df7cb",
+      "locator": "7127f9c7b67df7cb:03 §4, (9), all supporting cap statuses"
+    }
+  ],
+  "statement": "Use the actual full-dimensional finite fibers, regular boundary area $\\eta$, and source-label covariance construction of the support-face variance theorem. Let $\\mu$ be the sum of ordinary $d$-volumes on these fibers. Take finitely many nonvertical caps $H_j=\\{a_j\\cdot p+v_j\\cdot x\\ge b_j\\}$, $|v_j|=1$, with actual body selectors $\\alpha_j$ and effective section measures $\\zeta_j$. On proper cuts $\\zeta_j$ is full section area and $\\alpha_j$ is the capture bit almost everywhere. On inside supports let the section fraction $\\sigma_j=1-\\alpha_j$, on outside supports let $\\sigma_j=\\alpha_j$, and use $\\sigma_j$ times section area. Strict full and empty fibers have zero section measure. Suppose $\\nu=(\\sum_j\\lambda_j\\alpha_j)\\eta$ for $\\lambda_j\\ge0$ and $\\nu$ is in equal-mass physical convex order below $\\eta$. Take its martingale coupling and resulting label law $\\kappa$ and matrices $Q_\\theta$ as in that theorem.\n\nGroup the caps with $S_j=\\zeta_j(\\mathrm{total})>0$ into groups $i$. Suppose within each group $\\lambda_j S_j=t_i\\rho_j$, all the $\\zeta_j$ have the same full physical centroid $\\bar w_i=(\\bar p_i,\\bar x_i)$, and $\\sum_{j\\in i}\\rho_j(b_j-a_j\\cdot\\bar p_i)=0$. Put $V_j=\\int(w-\\bar w_i)(w-\\bar w_i)^{\\mathsf T}\\,d\\zeta_j$ in those groups and $V_j=0$ for zero section measure. Then $V_j\\succeq0$, $V_j(a_j,v_j)^{\\mathsf T}=0$, and for full mixed first moments $m_p,m_x$ and captured moments $m_{pj},m_{xj}$,\n$$\n\\begin{aligned}\nd\\left(m_p-\\sum_j\\lambda_jm_{pj}\\right)&=-\\int Q_\\theta^{pp}a(\\theta)\\,d\\kappa(\\theta)-\\sum_j\\lambda_j V_j^{pp}a_j,\\\\\n(d+1)\\left(m_x-\\sum_j\\lambda_jm_{xj}\\right)&=\\int Q_\\theta^{xx}u(\\theta)\\,d\\kappa(\\theta)+\\sum_j\\lambda_j V_j^{xx}v_j .\n\\end{aligned}\n$$\nIn zero base dimension each continuous term on the right vanishes individually. The original allocated section measures are retained.",
+  "subgoal_id": "pk-intake-pk-w36-psd-arbitrary-fiber-mixed-flux",
+  "title": "Corrected mixed moment flux for arbitrary convex fibers"
+}

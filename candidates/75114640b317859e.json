@@ -1,0 +1,30 @@
+{
+  "advances": "Counterexample to a finite stable-contact subdivision and to homothetic classification of minimal longer tensor dependencies.",
+  "author": "PK-research-agent",
+  "candidate_id": "75114640b317859e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:47:32.363500+00:00",
+  "depends_on": [],
+  "draft_key": "smooth-five-fiber-nonhomothetic-minimal-tensor-circuit",
+  "kind": "counterexample",
+  "proof": "Choose a nondegenerate closed interval $J\\subset\\operatorname{int}I$ and a Smith–Volterra closed nowhere dense set $F\\subset J$ containing both endpoints. For each complementary interval $(a,b)$ of length $\\ell$ put $\\exp(-1/\\ell^2)\\eta((\\theta-a)/\\ell)$ on that interval and zero elsewhere, where $\\eta(s)=\\exp(-1/[s(1-s)])$ on $(0,1)$ and zero elsewhere. Sum these bumps to obtain $\\phi$, extended periodically by zero off $J$. For every fixed derivative order $k$, a term's supremum is bounded by $C_k\\ell^{-k}\\exp(-1/\\ell^2)$. The lengths tend to zero, and the open supports are disjoint, so the derivative series converge uniformly at every order. Thus $\\phi$ is smooth, nonnegative and has zero set $F$ within $J$.\n\nSet $A=\\max_\\theta|\\phi+\\phi''|$ and $\\epsilon=1/(1+4A)$. For each $z\\in[-2,2]$ set $h_z=1+\\epsilon(4-z^2)\\phi$. Then $h_z+h_z''\\ge1/(1+4A)>0$. To see these are support functions, put $u(\\theta)=(\\cos\\theta,\\sin\\theta)$ and use the curve $x_z=h_z u+h'_z u'$. For a fixed $\\alpha$ the derivative of $u(\\alpha)\\cdot x_z(\\theta)$ is $(h_z+h_z'')\\sin(\\alpha-\\theta)$, so its maximum is attained at $\\theta=\\alpha$ and equals $h_z(\\alpha)$. Its convex hull has this support. All fibers contain the unit disk because $h_z\\ge1$. The common body is the intersection of $-2\\le z\\le2$ and all inequalities $u(\\theta)\\cdot x+\\epsilon z^2\\phi(\\theta)\\le1+4\\epsilon\\phi(\\theta)$. Each left side is convex. The intersection is closed, bounded by the uniform support bound, contains $[-2,2]$ times the unit disk, and has exactly the declared sections and integer bases.\n\nFor anchored probability weights $p_w$ with $\\sum_w p_w w=z$ the gap is $\\epsilon(\\sum_w p_w w^2-z^2)\\phi$. The coefficient is positive for every nontrivial representation. The set $F$ has points interior to $J$ outside any finite set of subdivision endpoints, and each such point has points of $J\\setminus F$ arbitrarily near it. Thus the corresponding cell is neither an identity nor strictly positive throughout its interior for any such gap.\n\nSince $\\phi$ vanishes near the endpoints of $I$, all $B_z$ equal one function $B$. At $I=[a,b]$, $B(\\theta)=\\cos(\\theta-(a+b)/2)/\\cos((b-a)/2)>1$ in the interior, by the endpoint values one. The functions $1-B$ and $\\phi$ are independent, since $\\phi=0$ on an interior open segment where $1-B\\ne0$, while $\\phi$ is nonzero somewhere. The residuals $f_z=(1-B)+\\epsilon(4-z^2)\\phi$ therefore span dimension two. In any scalar lift that preserves each anchored representation, the neighboring midpoint representations force consecutive differences to be equal. Conversely every affine function preserves all such representations, proving the lift assertion. The tensor rows in the indicated product basis have coordinates $(1,4-z^2,z,4z-z^3)$, an invertible recombination of $(1,z,z^2,z^3)$. The Vandermonde determinant gives independence of every four rows, and the fourth finite difference gives the displayed nonzero dependence. Since translates and positive dilates change a support only by adding a homogeneous term and rescaling, respectively, a homothetic family would have proportional residuals. Rank two excludes that conclusion.\n",
+  "source_candidate_ids": [
+    "ef90ac5df3bb0da8"
+  ],
+  "source_candidate_sha256": {
+    "ef90ac5df3bb0da8": "db768e013c6df91eb23e29b6687aa3e04eab5fc44f473e54b416431b409327da"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ef90ac5df3bb0da8",
+      "locator": "ef90ac5df3bb0da8:02 Tensor circuit (3)–(4), minimal five-row dependence with rank-two residuals"
+    },
+    {
+      "candidate_id": "ef90ac5df3bb0da8",
+      "locator": "ef90ac5df3bb0da8:01 Construction (1)–(2), actual smooth family with no finite stable subdivision"
+    }
+  ],
+  "statement": "There is a full-dimensional compact convex body in $\\mathbb R\\times\\mathbb R^2$ with exactly five integer fibers indexed by $P=\\{-2,-1,0,1,2\\}$, all with smooth support functions $h_z$ and strictly positive curvature radii, with the following properties. On a closed normal arc $I$ of length in $(0,\\pi)$ let $B_z$ be the solution of $B_z''+B_z=0$ with the same endpoint values as $h_z$. The residuals $f_z=h_z-B_z$ span dimension two. The five tensors $(1,z)\\otimes f_z$ have rank four, every proper subset is independent, and their unique dependence up to scale has coefficients $(1,-4,6,-4,1)$ in base order. The lift $(1,z)$ spans all scalar coordinates preserving all anchored barycentric representations on $P$. In addition, no finite subdivision of $I$ into intervals on which each nontrivial Jensen gap vanishes identically or is strictly positive throughout the interior is possible.",
+  "subgoal_id": "pk-intake-smooth-five-fiber-nonhomothetic-minimal-tensor-circuit",
+  "title": "A smooth actual five-fiber minimal tensor circuit with rank-two residuals"
+}

@@ -1,0 +1,81 @@
+{
+  "candidate_id": "1bfd63d794648b5e",
+  "candidate_sha256": "8354fe053c13f2fb0172ad3e9ccbddc917e1cfb92e1722ef473bf6640b4baccc",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "7831e6cfc5f87556": "a3c827e31bd27d2a4d7787c876d0fb2d5581a39e97f5e0e98e7dd1a93c5d32fc",
+    "ac7ba1e1e0ebc955": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df"
+  },
+  "checks": [
+    "Original candidate 8b5860c585f8735a at its pinned digest, §1, (1)–(2) and its proof, contains this claim. Covering the positive interior is sufficient: the family is finite and closed, so its union also covers the closure, and the depth maximizer used in the proof lies in the positive interior.",
+    "For A_i>α>0, the continuous distal mass function starts at A_i at b_i and tends to zero, so A_i−α is attained at a finite t_i>b_i. The full original band between b_i and t_i has mass α, since the hyperplanes are null. Intersection with the other retained sides can only reduce that band mass. Untrimmed caps already have mass at most α.",
+    "The mass V′ of the restriction is at least α/γ_r>0, so its convex positive interior is full dimensional. Changing boundary values on a null set and taking the inverse power on this open convex interior gives the extended convex inverse power for every β>r+1. At its attained deepest point a containing cap from the cover has mass at most α, so γ_r ≤ D(f′) ≤ α/V′ ≤ γ_r.",
+    "The equalities give that the union of the removed tails has mass equal to the sum of their masses. The excess multiplicity Σ_i 1_{tail i} − 1_{union} is nonnegative and at least one on each pairwise intersection. Its zero integral implies each intersection is f-null.",
+    "For every unit ray u, the change of radius s=ρ_T(u)t contributes ρ_T(u)^r times a single positive finite radial integral, so all through-y halfspaces have the corresponding fractions on uniform T. Any original halfspace containing y has f′-mass at least α. If its boundary missed y, the parallel shift through y would remove a positive-volume subset of an interior ball with positive f′-mass, contradicting the same lower bound for the shifted cap. A cap through y at equality has the oriented simplex vertex normal by 03bc771bddd39a8a.",
+    "Caps missing y avoid a common neighborhood, since there are finitely many closed caps. If the vertex j halfspace is absent, then on y+ε(v_j−y) each other barycentric coordinate drops from 1/(r+1) to (1−ε)/(r+1), so for sufficiently small ε>0 this point in U avoids every cap. This proves that all r+1 distinct types occur and exhaust the original caps.",
+    "In a positively trimmed tail, choose x in U strictly past the selected plane and strictly below all other retained thresholds. Pairwise f-null overlaps and null planes guarantee that choice. At y all retained thresholds have positive slack. The selected crossing on the segment is in the open convex U and strictly satisfies all the other retained inequalities. Moving slightly toward the retained side shows that a relatively open (r−1)-dimensional patch lies in the closure of the positive support of f′ on the selected supporting plane.",
+    "For R=∞ this support closure is the entire ambient space and cannot satisfy a retained upper bound. For R<∞ it is y+RT, and the canonical cap normal maximizes its affine barycentric coordinate only at the corresponding vertex. Since r≥2, a relative hyperplane patch cannot be contained in that vertex. Thus no positive trim occurs.",
+    "Conversely the canonical caps cover the whole space since the affine barycentric coordinates sum to one. A canonical cap of the uniform simplex is a homothety of factor r/(r+1) about its vertex, so the angular identity makes every cap fraction γ_r for f as well; substitution at α=γ_r V yields equality."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ac7ba1e1e0ebc955",
+      "candidate_sha256": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+      "fact_id": "ac7ba1e1e0ebc955",
+      "fact_sha256": "9a7fcf050afaf6a170e1e9c222468d3d36986633f09439295647be2cc1b17fd7",
+      "mapping": "Use its distal quantile construction, retained-band upper bound and union lower bound. The measure is finite and absolutely continuous, so hyperplanes are null. The cap union covers the closed support by density of U. The needed lower depth for this trimmed measure is supplied by 7831e6cfc5f87556.",
+      "reviewed_proof_sha256": "76922090615d5ce7641a49c1ff447e454326f5634bc45eff19e5aa9daf91279f",
+      "reviewed_statement_sha256": "bc29bec04a379e95f5f6632e6ed13ef21f0726dfed029e01d071527d2787773a",
+      "status": "Accepted at d6689f9."
+    },
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "fact_id": "03bc771bddd39a8a",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "mapping": "Apply its oriented Grünbaum equality characterization to the uniform compact, full-dimensional simplex T at its centroid. The radial integral identity transfers normalized through-center cap masses exactly. The pyramid apex must be a simplex vertex, so the base contains all other vertices and the cut is the corresponding canonical halfspace.",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb",
+      "status": "Accepted at d6689f9."
+    },
+    {
+      "candidate_id": "7831e6cfc5f87556",
+      "candidate_sha256": "a3c827e31bd27d2a4d7787c876d0fb2d5581a39e97f5e0e98e7dd1a93c5d32fc",
+      "mapping": "For the trimmed positive-mass restriction, use the representative positive on U∩int L and zero elsewhere. Convexity of −log f′ there gives convexity of exp(−log f′/β), extended by +∞ on the complement, for any β>r+1. The theorem gives attainment in the positive interior, the γ_r bound, and the log-concave simplex profile about a deepest point at equality, with its exact radial positive support.",
+      "reviewed_proof_sha256": "add8c06bff0f2dbb715ee9c429350c6014127d724c4616971b25f56f41526a94",
+      "reviewed_statement_sha256": "0ba5bb7a530d0bf6e309d9d52b399c2c7b930e847289e63f4c742aaa4f4bd251",
+      "status": "Frozen wave07 candidate with exact independent approval; admission of that exact parent is required before admitting this child."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:17:54.519697Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It provides distal trimming and the inequality under a hereditary depth hypothesis, plus canonical simplex equality examples for ordinary volume. It gives no necessity of the gauge profile or the impossibility of trimming in equality.",
+      "fact_id": "ac7ba1e1e0ebc955"
+    },
+    {
+      "comparison": "It gives the ordinary centroid equality cap direction and ordinary maximal-depth rigidity. Its hypotheses are for a uniform compact convex body, not the covered arbitrary log-concave density.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "This is the uniform convex-body specialization with exactly r+1 caps in dimension r. That specialization cannot recover the theorem for nonuniform or unbounded log-concave densities.",
+      "fact_id": "1c6088cbbbb3f688"
+    }
+  ],
+  "readability": "At the inverse-power application the support-boundary representative is understood for the trimmed density as well as the original; the ignored boundary is null. The support closure in the last argument is the support of the density measure, so almost-everywhere profile equality suffices.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d385e1df96e8363cf879bfda4dca3d2adc6730e871e99bbdad219fb0592b51a2",
+  "reviewed_statement_sha256": "0c20770f4fbf3d567028741867c24dec2c9e35b28d19c01d5516f36f9f1fef5c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:15:36Z",
+  "summary": "Equality at positive α in an r+1 cap cover forces the distinct canonical vertex caps of a centroid-centered simplex gauge profile. Equality in the trim union bound provides the support patch that rules out any positive distal trim.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

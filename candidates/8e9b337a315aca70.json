@@ -1,0 +1,26 @@
+{
+  "advances": "Planar area estimate for arbitrary enclosing triangles and compact convex enlargements, used to measure the cost of convexifying separate fiber containers.",
+  "author": "PK-research-agent",
+  "candidate_id": "8e9b337a315aca70",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:57:44.476355+00:00",
+  "depends_on": [],
+  "draft_key": "planar-nested-triangle-container-excess",
+  "kind": "lemma",
+  "proof": "Write $\\Delta=|R|-|A|$. The conclusion holds if $\\Delta\\ge\\varepsilon/16$, so suppose $\\Delta<\\varepsilon/16$. Set $\\eta=2\\Delta/(1-\\varepsilon)<\\varepsilon/[8(1-\\varepsilon)]\\le2\\varepsilon/15<\\varepsilon/4$.\n\nFor a point $(x,y)\\in R$ with $x<0$, the triangle joining it to the edge from $(0,\\varepsilon)$ to $(0,1)$ is in $R$ and its interior is disjoint from $A$. Its area is $(1-\\varepsilon)(-x)/2\\le\\Delta$. The horizontal edge gives the corresponding bound when $y<0$. For $x+y>1$, the exterior triangle over the edge from $(1,0)$ to $(0,1)$ has area $(x+y-1)/2\\le\\Delta$. Thus every point of $R$ satisfies\n$$\nx,y\\ge-\\eta,\\qquad x+y\\le1+2\\Delta.\n$$\n\nLet $q_0$ be a vertex minimizing $x+y$. Since $(\\varepsilon,0)\\in R$, its coordinate sum is at most $\\varepsilon$ and each coordinate lies in $[-\\eta,\\varepsilon+\\eta]$. The points $(1,0),(0,1)\\in R$ give vertices $q_1,q_2$ with $q_{1x}\\ge1$ and $q_{2y}\\ge1$. They are different because $1+2\\Delta<2$, and both differ from $q_0$ because their coordinate sums are at least $1-\\eta>\\varepsilon$. The preceding bounds give $|q_{1y}|,|q_{2x}|\\le\\eta$, since $2\\Delta\\le\\eta$. These are all three vertices. The determinant of columns $q_1-q_0,q_2-q_0$ is at least\n$$\n(1-\\varepsilon-\\eta)^2-(\\varepsilon+2\\eta)^2=(1-2\\varepsilon-3\\eta)(1+\\eta)>0 .\n$$\nThe edge from $q_0$ to $q_1$ therefore keeps $(\\varepsilon,0)$ to its left, and the edge from $q_2$ to $q_0$ keeps $(0,\\varepsilon)$ to its left. Expanding the two determinants gives\n$$\nq_{0y}\\le\\frac{q_{1y}(q_{0x}-\\varepsilon)}{q_{1x}-\\varepsilon},\n\\qquad\nq_{0x}\\le\\frac{q_{2x}(q_{0y}-\\varepsilon)}{q_{2y}-\\varepsilon}.\n$$\nThe denominators are at least $1-\\varepsilon>0$. The absolute values of the numerators are bounded by $\\eta(\\varepsilon+\\eta)$, so\n$$\nq_{0x}+q_{0y}\\le \\frac{2\\eta(\\varepsilon+\\eta)}{1-\\varepsilon}\n\\le\\tfrac54\\varepsilon^2<\\varepsilon/2.\n$$\nHere $\\eta<\\varepsilon/4$ and $1/(1-\\varepsilon)\\le2$.\n\nThe lower edge $F=[(a,\\varepsilon-a),(\\varepsilon-a,a)]$ of $P$ lies on $x+y=\\varepsilon$. Since $q_0\\in R\\subseteq L$, the triangle $\\operatorname{conv}(F,q_0)$ lies in $L$. Its interior lies strictly below that line and is disjoint from $P$. Its area is $(2a-\\varepsilon)(\\varepsilon-q_{0x}-q_{0y})/2$. Consequently\n$$\n(|L|-|P|)/4>(2a-\\varepsilon)\\varepsilon/16\\ge31\\varepsilon/256>\\varepsilon/16.\n$$\nThis proves the bound for the second case and completes the proof.\n",
+  "source_candidate_ids": [
+    "159eef4ea58ca5da"
+  ],
+  "source_candidate_sha256": {
+    "159eef4ea58ca5da": "ad60fba2bec8cd79363179bd4e4ed1c27f17434a3ac657585688e5e0bc84a5a5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "159eef4ea58ca5da",
+      "locator": "159eef4ea58ca5da:01 §2, (6)–(13), including the truncated triangle and lower cut"
+    }
+  ],
+  "statement": "For $0<\\varepsilon\\le1/16$, set $a=1+\\varepsilon^2$ and\n$$\nA=\\{(x,y):x,y\\ge0,\\ \\varepsilon\\le x+y\\le1\\},\\qquad\nP=\\{(x,y):x,y\\le a,\\ x+y\\ge\\varepsilon\\}.\n$$\nFor every triangle $R\\supseteq A$ and compact convex set $L\\supseteq R\\cup P$, their planar areas satisfy\n$$\n(|R|-|A|)+\\tfrac14(|L|-|P|)\\ge\\varepsilon/16.\n$$",
+  "subgoal_id": "pk-intake-planar-nested-triangle-container-excess",
+  "title": "A truncated triangle forces a linear excess in nested enclosing bodies"
+}

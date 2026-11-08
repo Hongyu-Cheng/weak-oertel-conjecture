@@ -1,0 +1,32 @@
+{
+  "advances": "Refutes the nonnegative integer flux assertion for an actual balanced pair at a global maximum, with equal cap budgets and positive capture from both endpoints.",
+  "author": "PK-research-agent",
+  "candidate_id": "05514b3b9611f7d1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:14:38.731294+00:00",
+  "depends_on": [],
+  "draft_key": "balanced-active-opposite-caps-negative-integer-flux",
+  "kind": "counterexample",
+  "proof": "At real base $s$ the fiber is $((1-s)/2)(-K)+((1+s)/2)K$ for $-1\\le s\\le1$, since a convex combination must put exactly these total weights on the endpoint layers. This gives the integer census. The six vertices of the middle fiber are $(-13/8,-1/2),(0,-1),(13/8,-1/2),(13/8,1/2),(0,1),(-13/8,1/2)$, the nonzero pairwise half-differences of the triangle vertices. Its central rectangle and two outer triangles give area $39/8$. The triangle base and height give area $13/4$ and its centroid has $x$-coordinate $1/12$.\n\nThe body and measure are centrally symmetric. Each closed halfspace containing the origin covers the whole ambient space together with its reflection, and both caps have equal mass, so its mass is at least $M/2$. For every ambient mark, the two opposite caps through it with continuous normals along the $x$-axis have sum $M$, since every constant-$x$ slice has zero area. This supplies the upper bound at all marks, including the equality caps at the origin.\n\nAt $x=0$ the endpoint sections have length $18/13$ and the middle length is $2$. They are symmetric about $y=0$ and the outer lengths match at opposite bases, proving the full centroid and coarea statements. Their $x$-section lengths vary continuously near zero. Translating the cap center changes only its scalar threshold, so the center gradients are the two opposite normals multiplied by $-62/13$. These gradients and the normals have zero average.\n\nFor $|t|\\le1$, the endpoint lines in $K$ have vertical length $(18-8t)/13$ and reflection gives the other endpoint. In the middle hexagon the top and bottom slopes give length $2-8|t|/13$. Thus the total density is $(62-8|t|)/13$ and the conditional mean of $z$ is the endpoint-density difference divided by that total. The cap of $K$ with $x\\ge t$ is a triangle of height $9/4-t$ and the indicated section length. It gives the fraction $(9-4t)^2/169$, while the reflected fraction is $1-(9+4t)^2/169$. The three oriented means for $x$ are $-1/12,0,1/12$, and the global mean is zero. Substitution yields the displayed $J(t)$ and $R(t)$. Reversing the orientation reverses the two endpoint means and complements both fractions, leaving the same flux at zero. Dividing by $91/8$ gives the normalized value.\n",
+  "source_candidate_ids": [
+    "02ab05d91af31cbf",
+    "ae6d727221cffaef"
+  ],
+  "source_candidate_sha256": {
+    "02ab05d91af31cbf": "37cdc32714c05d374610d960f1f457171a43b4a194803643fa46a878bc053af5",
+    "ae6d727221cffaef": "f6bb2a74e846a341a064bbc1bddbf9bd7ab2b6256b081d39cb227f4a0cfb1610"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ae6d727221cffaef",
+      "locator": "§§1–5, (1)–(6) and the local flux profile"
+    },
+    {
+      "candidate_id": "02ab05d91af31cbf",
+      "locator": "the balanced opposite-cap construction cited in the discussion of flux sign"
+    }
+  ],
+  "statement": "Let $K=\\operatorname{conv}\\{(-1,-1),(9/4,0),(-1,1)\\}$ in continuous coordinates $(x,y)$ and let\n$$\nC=\\operatorname{conv}\\bigl((\\{-1\\}\\times(-K))\\cup(\\{1\\}\\times K)\\bigr).\n$$\nThe exact sampled fibers are $-K,(K-K)/2,K$ at $-1,0,1$, with areas $13/4,39/8,13/4$ and total mass $M=91/8$. The origin has maximal normalized closed-halfspace depth $1/2$. The caps $x\\ge0$ and $x\\le0$ attain it. Their sections are proper on every fiber, have common coarea $62/13$ and full ambient section centroid at the origin. The pair balances both its raw normals and its cap-center gradients with weights $1/2,1/2$.\n\nFor either orientation $\\ell=x$ or $\\ell=-x$, let $m_z$ be its fiber mean, $m$ the global mean, $P_z(t)$ the within-fiber fraction with $\\ell\\ge t$, and define\n$$\nJ(t)=\\sum_z |K_z|(m_z-m)P_z(t).\n$$\nEach cap at threshold zero has raw integer flux $-7/624$, or $-1/1014$ for the normalized measure. In orientation $\\ell=x$ the local representatives for $|t|\\le1$ are\n$$\nf_1(t)=(18-8t)/13,\\qquad f_{-1}(t)=(18+8t)/13,\\qquad f_0(t)=2-8|t|/13.\n$$\nThe conditional mean of the integer coordinate is $-16t/(62-8|t|)$, with derivative $-8/31$ at zero. On this interval $J(t)=(32t^2-7)/624$ and $R(t)=\\sum_z(m_z-m)f_z(t)=-4t/39$. The classical derivative identity $J'(t)=-R(t)$ holds on $|t|<1$, so the local correction vanishes at zero despite negative flux.",
+  "subgoal_id": "pk-intake-balanced-active-opposite-caps-negative-integer-flux",
+  "title": "Negative integer flux in both members of a balanced active cap pair"
+}

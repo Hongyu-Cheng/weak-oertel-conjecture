@@ -1,0 +1,26 @@
+{
+  "advances": "An exact contact test for compatible common-normal simplex fibers; no depth or selected-circuit lower bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "e425172eb9b048e3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.206361+00:00",
+  "depends_on": [],
+  "draft_key": "simplex-simultaneous-facet-contact",
+  "kind": "lemma",
+  "proof": "Convexity gives the inclusion $\\sum_r t_r K_{z_r}\\subset K_p$ for a convex representation of $p$ by sampled bases. Minimizing $\\lambda_l$ gives $b_l(p)\\le\\sum_r t_r b_l(z_r)$, because $\\lambda_l$ attains $b_l(z)$ on each sampled facet.\n\nEach $B_i$ is the hull of the finitely many lifted vertices on its constituent facets. If $X=(p,v_j(p))$ is not a vertex of one incident $B_i$, it is a positive convex combination of other generating points $(z_r,x_r)$. For each $l\\ne j$,\n\n$b_l(p)=\\sum_r t_r\\lambda_l(x_r)\\ge\\sum_r t_r b_l(z_r)\\ge b_l(p).$\n\nEquality at both steps forces $\\lambda_l(x_r)=b_l(z_r)$ for each term and each $l\\ne j$. These $d$ equations determine the single vertex $x_r=v_j(z_r)$; none can have base $p$ because the chosen generating points exclude $X$. This is the third condition. Conversely, the third condition gives $X=\\sum_r t_r(z_r,v_j(z_r))$, by the $d$ active coordinate equalities and the barycentric sum. Every term belongs to every incident $B_i$, and its base differs from $p$. Thus $X$ is not a vertex of any of them, proving the equivalence. In a finite polytope each vertex is exposed by a strict affine maximizer.\n\nFor the last assertion, let $f(z)=\\inf_{x\\in C_z}\\lambda_l(x)$. It obeys the convex inequality by taking fiber convex combinations and infima, and is finite at the sampled bases. On the hull of the selected bases it has finite upper bounds from the same combinations. If $y=\\sum_r s_r z_r$ with $s_r\\ge0$ and $\\sum_r s_r=1$, choose $0<\\epsilon<1$ with $t_r-\\epsilon s_r\\ge0$ for all $r$. Set $y'=\\sum_r(t_r-\\epsilon s_r)z_r/(1-\\epsilon)$. Then $p=\\epsilon y+(1-\\epsilon)y'$. The finite value at $p$ and the convex inequalities show that both $f(y)$ and $f(y')$ are finite, and\n\n$f(p)\\le\\epsilon f(y)+(1-\\epsilon)f(y')\\le\\sum_r t_r f(z_r)=f(p).$\n\nEquality gives $f(y)=\\sum_r s_r f(z_r)$ for every representation of every $y$ in this hull. Thus $f$ preserves all convex combinations there, as claimed.\n",
+  "source_candidate_ids": [
+    "810352ec6ea27062"
+  ],
+  "source_candidate_sha256": {
+    "810352ec6ea27062": "b400fdf33306c7fac26646cafdfccc697edaf5e702b299aac95570044b5cca2c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "810352ec6ea27062",
+      "locator": "810352ec6ea27062:01 §§1–2, (1)–(4), common contact equivalence"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be a nonempty finite set, and let the full-dimensional fibers $K_z$ at $z\\in P$ be the actual sampled fibers of a convex set $C$. Fix the affine barycentric coordinates $\\lambda_0,\\ldots,\\lambda_d$ of a nondegenerate simplex in $\\mathbb R^d$, $d\\ge1$, and assume\n\n$K_z=\\{x:\\lambda_i(x)\\ge b_i(z)\\ \\forall i\\},\\qquad 1-\\sum_i b_i(z)>0.$\n\nWrite $v_j(z)$ for the vertex opposite facet $F_j(z)$, and let $B_i=\\operatorname{conv}\\bigcup_{z\\in P}(\\{z\\}\\times F_i(z))$. For $p\\in P$, the following are equivalent:\n1. $(p,v_j(p))$ is not a vertex of some $B_i$ with $i\\ne j$.\n2. It is not a vertex of any $B_i$ with $i\\ne j$.\n3. There are other bases $z_r\\ne p$ and positive weights $t_r$ summing to one such that\n\n$p=\\sum_r t_r z_r,\\qquad b_l(p)=\\sum_r t_r b_l(z_r)\\quad\\text{for every }l\\ne j.$\n\nIn particular, the same representation works for all $d$ active offsets. For each $l\\ne j$, the continuous-projection offset $\\inf_{x\\in C_z}\\lambda_l(x)$ is affine on the convex hull of these $z_r$.",
+  "subgoal_id": "pk-intake-simplex-simultaneous-facet-contact",
+  "title": "Simultaneous incident facet contact in compatible simplex fibers"
+}

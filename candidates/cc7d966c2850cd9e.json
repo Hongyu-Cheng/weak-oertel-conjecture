@@ -1,0 +1,30 @@
+{
+  "advances": "The harmonic exponent is a facet-measure result in dimension $d-1$. Scalar sharpness is separate from geometric attainability.",
+  "author": "PK-research-agent",
+  "candidate_id": "cc7d966c2850cd9e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.322234+00:00",
+  "depends_on": [],
+  "draft_key": "projective-weighted-midpoint-facet-credit",
+  "kind": "theorem",
+  "proof": "The function $f^{-1/d}$ equals $t$ above $\\delta$ and equals $\\delta(d+1-dt/\\delta)^{-1/d}$ below. Its derivative on the lower interval is $(d+1-dt/\\delta)^{-(d+1)/d}$, increasing to one at the join. It is therefore convex on the entire real line. Identify the three parallel planes with common orthonormal tangent coordinates whose origins have the stated midpoint relation. For any pair $x_A,x_B$, the affine argument of the middle density at their midpoint is the mean of the two input arguments. Convexity of $f^{-1/d}$ implies that the middle density is at least the power mean of order $p=-1/d$ of the input densities. Apply the functional Borell–Brascamp–Lieb inequality in dimension $k$ to the densities restricted to $E_A,E_B$ and to their midpoint set. Its output exponent is $p/(1+kp)=-1$. The sets are measurable since they are convex, and the nonnegative densities are integrable on these bounded sets. The hypothesis is required only where both input densities are positive. A zero input integral yields the trivial lower bound. The standard functional form used is [Bobkov, Convex bodies and norms associated to convex measures, Lemma 2.3](https://www-users.cse.umn.edu/~bobko001/papers/2010_PTRF_Norms.pdf).\n\nUnder active support equality the endpoint midpoint face lies in the middle face. Every affine ambient cap margin at the middle of an endpoint pair is the average of the two endpoint margins. Consequently the midpoint of two captured points is captured and that of two missed points is missed. Apply the preceding inequality to the respective convex subsets. Intersections of finitely many events satisfy the same midpoint implication for each event. The same argument applies to empty or pure-base traces.\n\nFor inward traces, translate the abstract endpoint faces by $-\\tau v_A n,-\\tau v_B n$ for fixed positive $v_A,v_B$, and the middle face by $-\\tau(v_A+v_B)n/2$. The face inclusion and affine margin implications are preserved. Apply the preceding inequalities with the same densities evaluated at the translated points and then let $\\tau\\downarrow0$. Their densities converge uniformly on the old compact faces after pullback. For each cap a noncoincident cutting boundary inside a face is $\\mathcal H^k$-null. If the entire face coincides, the sign of the inward normal displacement gives exactly the inward bit. When the cap has zero continuous normal the bit is the original closed pure-base bit, since the displacement does not change its margin. Finite intersections preserve pointwise convergence outside the union of these null sets. Dominated convergence gives the claimed limits.\n\nFor the scalar formula set $s=a_0-U_A$, $t=b_0-U_B$, $S=s+t$. If $S\\le b_0$ the credit is at least $a_0$. Otherwise, for fixed $S$, the minimum product $st$ is $b_0(S-b_0)$ on the feasible interval $S-b_0\\le s\\le a_0$. In fact $s(S-s)$ is concave and $b_0(S-b_0)-a_0(S-a_0)=(b_0-a_0)(S-a_0-b_0)\\le0$. Thus $\\operatorname{Harm}(s,t)\\ge 2b_0(S-b_0)/S$. For $R<\\operatorname{Harm}(a_0,b_0)$ this implies $S\\le 2b_0^2/(2b_0-R)$, giving the stated credit. Equality is achieved as a scalar constraint by $t=b_0$, $s=Rb_0/(2b_0-R)$. In the zero branch choose $s=a_0,t=b_0$. These scalar witnesses need not occur for prescribed faces.\n",
+  "source_candidate_ids": [
+    "4283399302c56a21"
+  ],
+  "source_candidate_sha256": {
+    "4283399302c56a21": "9f674d169a9035eb5c2ef5dd87ffb839f3279c7bc0bcaf3cac1f3f1f15159206"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4283399302c56a21",
+      "locator": "4283399302c56a21:01 §§1–3, (1)–(2)"
+    },
+    {
+      "candidate_id": "4283399302c56a21",
+      "locator": "4283399302c56a21:02 §4, (3)"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $k=d-1$, and let $f$ be $t^{-d}$ above $\\delta>0$ with its affine tangent continuation below $\\delta$. Let $F_A,F_B$ be compact convex $k$-bodies in parallel planes and suppose $F_K$ in the midpoint plane contains $(F_A+F_B)/2$. For $c_K=(c_A+c_B)/2$ define measures $\\mu_i=f(1+a\\cdot(x-c_i))\\,d\\mathcal H^k(x)$ on their respective planes. For measurable convex subsets $E_A\\subseteq F_A$ and $E_B\\subseteq F_B$,\n$$\n\\mu_K((E_A+E_B)/2)\\ge\\operatorname{Harm}(\\mu_A(E_A),\\mu_B(E_B)),\n\\quad \\operatorname{Harm}(s,t)=2st/(s+t),\\quad \\operatorname{Harm}(0,0)=0.\n$$\nFor actual fibers $A,K,B$ over $-1,0,1$ with $(A+B)/2\\subseteq K$, let these faces be the exposed faces of a common active unit normal $n$ with $h_K(n)=(h_A(n)+h_B(n))/2$. Write $a_0,b_0,m_0$ for their total masses and $U_A,U_B,U_K$ for their captured masses in the same ambient cap. Then\n$$\nU_K\\ge\\operatorname{Harm}(U_A,U_B),\\qquad m_0-U_K\\ge\\operatorname{Harm}(a_0-U_A,b_0-U_B).\n$$\nBoth inequalities apply to closed face traces and to the inward trace at whole-face supporting coincidences. The captured inequality also holds for an intersection of any finite list of captured events, and the missed inequality for an intersection of missed events.\n\nAfter relabeling $0<a_0\\le b_0$, write $R=m_0-U_K$. The scalar residual constraint implies\n$$\nU_A+U_B\\ge \\operatorname{Credit}(R)=\n\\begin{cases}\na_0-Rb_0/(2b_0-R),&0\\le R<\\operatorname{Harm}(a_0,b_0),\\\\\n0,&R\\ge\\operatorname{Harm}(a_0,b_0).\n\\end{cases}\n$$\nThis is the exact minimum over scalar $U_A\\in[0,a_0]$, $U_B\\in[0,b_0]$ subject to $\\operatorname{Harm}(a_0-U_A,b_0-U_B)\\le R$.",
+  "subgoal_id": "pk-intake-projective-weighted-midpoint-facet-credit",
+  "title": "Harmonic projective cap credit on arbitrary endpoint faces"
+}

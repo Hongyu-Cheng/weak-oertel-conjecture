@@ -1,0 +1,30 @@
+{
+  "advances": "Obstructions to exact positive tilted-volume representation by uniform convex volume, either as a continuous marginal or at fixed integer labels.",
+  "author": "PK-research-agent",
+  "candidate_id": "daacd5f2d8b40058",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.950311+00:00",
+  "depends_on": [],
+  "draft_key": "positive-projective-tilt-finite-convex-lift-obstructions",
+  "kind": "counterexample",
+  "proof": "The inverse on the first interval is $X=Y/(1-Y)$ and $dX/dY=(1-Y)^{-2}$, which gives the stated density. Suppose uniform volume on $B\\subset\\mathbb R^{1+r}$ has this marginal up to a positive factor. Fubini identifies its density with $|B_Y|_r$ almost everywhere. The support of the marginal of a full-dimensional convex body is its projected interval. Indeed each relative open subinterval of the projection contains an interior image point, and its inverse image then has positive volume. Positive mass forces full dimension, so the projected interval here is $[0,1/2]$. Every interior projection value is reached by an interior point: interpolate a fixed interior point with a point whose projection lies beyond the given value, using positive weight on the interior point. Thus every interior section has positive $r$-volume. Its volume root is concave by Brunn–Minkowski, since weighted sums of sections lie in the interpolated section. In particular the root is continuous in the interior. It must agree there with a positive multiple of $(1-Y)^{-1/r}$ by almost-everywhere agreement. The latter function has strictly positive second derivative $(r+1)(1-Y)^{-1/r-2}/r^2$, a contradiction.\n\nFor the second assertion Brunn–Minkowski requires $W_0^{1/r}\\ge(W_{-1}^{1/r}+W_1^{1/r})/2$. Under exact realization, cancel the common factor. The map $t\\mapsto t^{-1/r}$ is strictly convex on the positive half-line, so its value at the mean of the unequal endpoint denominators is strictly below the mean of their powers, contradicting the required inequality. For approximate realization substitute $W_0\\le sD$ and $W_\\pm\\ge s\\nu_\\pm/D$ in the same inequality. Canceling $s^{1/r}$ yields $D^{2/r}\\ge(e^{-1/r}+(2-e)^{-1/r})/2$. The latter mean is at least $[e(2-e)]^{-1/(2r)}$ by AM–GM. Raising to $r/2$ gives the lower bound tending to infinity as $e\\downarrow0$ independently of $r$.\n",
+  "source_candidate_ids": [
+    "bd4e19d78aaec9e1"
+  ],
+  "source_candidate_sha256": {
+    "bd4e19d78aaec9e1": "c1c508ddeeae6de737b8b82476439e389de001b518603003dcac464025ba63df"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "bd4e19d78aaec9e1",
+      "locator": "bd4e19d78aaec9e1:06 §4, single-fiber finite convex lift obstruction after (10)"
+    },
+    {
+      "candidate_id": "bd4e19d78aaec9e1",
+      "locator": "bd4e19d78aaec9e1:07 §4, (11)–(12)"
+    }
+  ],
+  "statement": "The pushforward of $dX/(1+X)$ on $[0,1]$ under $X\\mapsto Y=X/(1+X)$ is the measure $(1-Y)^{-1}\\,dY$ on $[0,1/2]$. It cannot be the $Y$-marginal, up to a common positive factor, of uniform Lebesgue volume on a compact convex body in $\\mathbb R^{1+r}$ for any integer $r\\ge1$.\n\nEven requiring only preservation of total tilted masses at original integer labels can fail. Use the same volume-one convex fiber at $z=-1,0,1$ and $L(z)=1+z/2$, giving tilted masses $(2,1,2/3)$. No compact convex fibers $A_{-1},A_0,A_1\\subset\\mathbb R^r$ with $(A_{-1}+A_1)/2\\subset A_0$, $1\\le r<\\infty$, have these three volumes up to a common positive factor. More generally, set $L(-1)=e$, $L(0)=1$, $L(1)=2-e$ with $0<e<1$, extended affinely, and $\\nu_z=1/L(z)$. If such compatible fibers have $r$-volumes $W_z$ with $s\\nu_z/D\\le W_z\\le sD\\nu_z$ for some $s>0$ and $D\\ge1$, then\n$$\nD\\ge\\left(\\frac{e^{-1/r}+(2-e)^{-1/r}}2\\right)^{r/2}\\ge[e(2-e)]^{-1/4}.\n$$\nIn particular no uniform two-sided factor works even with the lift dimension freely chosen.",
+  "subgoal_id": "pk-intake-positive-projective-tilt-finite-convex-lift-obstructions",
+  "title": "Finite convex lift obstructions for positive projective tilts"
+}

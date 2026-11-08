@@ -1,0 +1,66 @@
+{
+  "candidate_id": "890c4a5b1a27a090",
+  "candidate_sha256": "b82f819869ab2a866e516ea58a4151f053f0064fe7cf50a003b04ad21c2e7194",
+  "checked_dependency_candidate_sha256": {
+    "08391b9c5139968a": "bfc86574d4897dad529b541eafed40156d4a8b5ff12567e98ce7cc68f008e039",
+    "84a98a39b38127f1": "afd0c83657f35bdd0e2fc1118f8de87f9a45557b851b217f08fce22f811265f0"
+  },
+  "checks": [
+    "Support comparison gives both initial enclosures. The selected three slice points admit supporting lines with the displayed orientations: each transversal has interior points on both sides, and the paired inner points give the slope bounds. This works without polygonal sides.",
+    "Independently derived the top-ray positivity, numerator and denominator deviations, inverse norm, transformed midpoint-contact deviation 44δ and area deficit ≤81δ from the stated slope/intercept bounds.",
+    "Every strict separating cap contains a strictly excluded vertex. If a second vertex were excluded or on the boundary, the actual retained contact on their edge would be strictly excluded. Thus every constituent is a proper one-vertex triangle, with two intercepts <501/1000 and at least one short by area ≤τ.",
+    "The strict exterior caps are relatively open. On a shared edge the same retained contact bounds the two incident intercepts from opposite ends. Adding the two resulting strict inequalities rules out overlap of distinct vertex groups pointwise, including the case of zero third coordinate.",
+    "The short-neighbor cap misses its orientation class, and the long-neighbor cap meets it only above 309/1000. The union bound handles possible overlaps within each orientation without charging individual triangles. This gives L_i≤τ and ∑L_i≤13τ/10.",
+    "The single shifted mark stays inside Q and within the localization window. AM–GM gives the retained bound for every low cap; higher caps lose at most τ. Independently verified the final difference τ(1−404τ)/[180(1−τ)] and the nested-law total variation. The δ=0 and τ=0 cases also follow from the explicit argument.",
+    "The source 94bf8f29da63e55b opening and §§1–7 prove these statements for arbitrary compact convex planar bodies and only the cap-distance upper bound."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "08391b9c5139968a",
+      "candidate_sha256": "bfc86574d4897dad529b541eafed40156d4a8b5ff12567e98ce7cc68f008e039",
+      "hypotheses": "Pending same-wave review. The mark's barycentric deviations are at most 3τ/4 with τ≤81×10⁻⁶, strictly within the 1/10000 window. Its cap fraction and coefficient hypotheses apply in the constructed S.",
+      "reviewed_proof_sha256": "638c318d412aff4ce4aeaac86111ba174442e8301d7b66b08795ee905f494887",
+      "reviewed_statement_sha256": "1b70790e2fbb414ae01d5d10dc8e14e9f476fce723d04a94d6b5bc10c9d29024",
+      "same_batch": true
+    },
+    {
+      "candidate_id": "84a98a39b38127f1",
+      "candidate_sha256": "afd0c83657f35bdd0e2fc1118f8de87f9a45557b851b217f08fce22f811265f0",
+      "hypotheses": "Pending same-wave review. In each orientation use u equal to the short barycentric coordinate and v equal to the other. The intercepts obey 0<a≤1/100 and 0<b≤501/1000. The same fixed barycentric area Jacobian applies to numerator and denominator, giving the required bound above v=309/1000.",
+      "reviewed_proof_sha256": "dfa71f1a152bf7f726819a0e1e717cc75529bf57a719022c0728b4a8866369f4",
+      "reviewed_statement_sha256": "6fc025ec36684fe82986d7c5973d236c04e05d82456d7693f6c830e9909e6a8a",
+      "same_batch": true
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:33Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Assumes exact facet-centroid contacts and a supplied nesting homothet. The new comparison triangle is constructed from actual nearby support contacts, with no exact midpoint assumption and a numerical starting Hausdorff radius.",
+      "fact_id": "c99394a395ea2399"
+    },
+    {
+      "comparison": "Uses radial strip estimates for a supplied nested simplex. Here the conditional estimates arise from arbitrary support-cap orientation unions and one common affine tail map.",
+      "fact_id": "275b3b7cccde92d4"
+    },
+    {
+      "comparison": "Requires missing mass confined to fixed small vertex neighborhoods. The current removed constituents may reach almost halfway along an edge and their orientation unions need not be a finite collection.",
+      "fact_id": "c5ff0ecd0befdd62"
+    }
+  ],
+  "readability": "The statement and proof are readable as written.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof and archived-source review, with a separate exact symbolic or rational check where applicable.",
+  "reviewed_proof_sha256": "d4949beb8407c031d3fb4892d45904e39d84dff654f531315a6ce4fde1159c0b",
+  "reviewed_statement_sha256": "4bb1289a371db86641c021fdc9794c1734c939eb8f8834cf4222700bac2691f6",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:19:44Z",
+  "summary": "The three-support construction and disjoint corner-union accounting prove the stated all-direction planar stability with explicit constants.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

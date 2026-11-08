@@ -1,0 +1,61 @@
+{
+  "candidate_id": "39f796c5a2993690",
+  "candidate_sha256": "b0ece244ec193d199d9f3217346d2082c1884d0db542176e90e92be49d434a96",
+  "checked_dependency_candidate_sha256": {
+    "155691fc3768c06f": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c"
+  },
+  "checks": [
+    "Verified both source digests. Source 04819028a2421217 §§1, 3–4 supplies the intrinsic bound and limiting argument; source 4e07416b95553009 §2, (3)–(6), supplies the full-dimensional quantile construction. The latter is source provenance, not an accepted premise in this proof.",
+    "Compactness gives finitely many nonempty fibers. A nonempty compact convex fiber has Hausdorff dimension equal to its affine dimension; the embedded fibers are isometric disjoint Borel copies. Hence the maximum q is the dimension of S and only the q-dimensional fibers contribute positive finite intrinsic measure. For q=0 there are N singleton atoms and the bound follows from total mass N; their relative boundaries are empty.",
+    "When q≥1 a generic u avoids the finite union of proper E_z^⊥. Every fiber level is null in the respective intrinsic measure. On a measured fiber every slab strictly between its support levels meets its relative interior, so its cap tail is continuous and strictly decreasing between full and zero. This gives all proper quantile thresholds at the chosen mass t.",
+    "For any anchored convex combination of constrained bases, the cap combination sits inside the source fiber above the averaged threshold. Keeping other summands fixed embeds a translated scaled copy of each positive-weight cap inside the source fiber. Those caps span their original q-planes; equality of dimensions then forces the direction of each contributing cap to equal E_p. This only uses parallelism for the current combination. Translation into E_p and q-dimensional Brunn–Minkowski give volume at least t, forcing the averaged threshold to be at most the source quantile s.",
+    "The intervals [L,h_z] are nonempty compact convex sets in auxiliary dimension one, and their anchored Minkowski combinations have common left endpoint L and right endpoint at most s. Fact 155691fc3768c06f applies even when the base rank is zero and produces a finite majorant slope. The actual ambient cap has nonzero u and retains at most t from every constrained fiber; omitted measured fibers have whole mass at most t and all other fibers have zero mass. Summing gives Nt.",
+    "In the source affine hull a minimizing through-point unit normal exists by compactness and null boundaries. Opposite caps show that own depth is at most half the source mass. Generic normals converging to the minimizer have containing through-point caps with eventually proper source masses if the limit is positive. If it is zero, shifting the thresholds down by ε_i>0 makes each source cap positive, and dominated convergence on the source gives eventual properness and masses tending to zero. Each lifted cap contains the same marked point; no convergence of the slopes or of ambient halfspaces is used.",
+    "A supporting through-point cap at any relative boundary point of a positive-dimensional measured fiber has zero intrinsic source mass, so the proved bound yields ambient depth zero. The rank-zero base and n=0 cases use the same anchored slope result, with no need for a base normal."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "155691fc3768c06f",
+      "candidate_sha256": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+      "mapping": "Use P_t as the finite base set, p as anchor, compact intervals J_z=[L,h_z] in auxiliary continuous dimension one, and unit normal +1. The established anchored interval inclusion is exactly (1); h_p=s and (2) gives the finite slope used in the ambient cap.",
+      "reviewed_proof_sha256": "2c027df5280f826f67575a9caf2fc48f86961afb4378d9b6cc9503c2e1aed953",
+      "reviewed_statement_sha256": "ae620bc47a6c7c8bd2eac230a3afeee4e3a8ca76a0eb43dcfa9603f6609fa787",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:06:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same intrinsic finite-fiber measure and generic continuous normals to realize prescribed total mass and first base moment. It does not control cap mass fiber by fiber through a prescribed source point.",
+      "fact_id": "b1274a369dfa9af7"
+    },
+    {
+      "comparison": "Gives zero depth on ordinary fiber boundaries under summed ambient d-volume, including the q=d special case of the boundary conclusion. It supplies neither the numerical N bound nor its extension to varying intrinsic affine directions.",
+      "fact_id": "55a57b1cf55d0c87"
+    },
+    {
+      "comparison": "Uses full-dimensional cap quantiles and Brunn–Minkowski in affinely independent source arrays. It does not give a single anchored cap bounding all measured-fiber masses for an arbitrary actual finite sampled base.",
+      "fact_id": "4fc403cf46f23e49"
+    },
+    {
+      "comparison": "Proves direction agreement for parity midpoints of measured fibers by dimension. The reviewed argument uses direction agreement only within each arbitrary anchored convex combination, then controls quantile slopes and cap mass.",
+      "fact_id": "01212b33858677e1"
+    }
+  ],
+  "readability": "The affine-direction argument is local to each positive-weight combination; the limit concerns source masses alone. These distinctions are explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "823b7c5943093d9e447f3f52d739b38468325c2ad5b34b1e3dae1dd5534104ff",
+  "reviewed_statement_sha256": "f1e1ab884b41e86691ebf81cee483b8b298d12e6056c45dfee82f69bc5ac95c3",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:00:57Z",
+  "summary": "The quantile lift proves the N-times-own-depth upper bound for intrinsic Hausdorff measure even when the measured fibers have different affine directions. It also proves zero relative-boundary depth without assuming an attaining ambient cap.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,30 @@
+{
+  "advances": "The critical cover is rank one in the continuous directions, with original normalized depth $2^{-n}$. The example rules out unconditional concavity and monotonicity for the distal comparison, including fixed positive-base intervals.",
+  "author": "PK-research-agent",
+  "candidate_id": "25eac7575a691161",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.480638+00:00",
+  "depends_on": [],
+  "draft_key": "actual-distal-quantile-potential-counterexample",
+  "kind": "counterexample",
+  "proof": "Start with the hexagon $|z|\\le1,\\ |x|\\le3/2-|z|/2$ and margins $\\ell_1=x+(5/4)z,\\ \\ell_2=x-(5/4)z,\\ \\ell_3=-x$. The integer intervals have lengths $2,3,2$ at $-1,0,1$. The cap planes pass through the origin and each cap has half the total length by central symmetry and boundary nullity. In fact every containing halfspace of the origin contains at least half the mixed measure by symmetry, including vertical cuts. The positive margin identity $\\ell_1+\\ell_2+2\\ell_3=0$ gives the whole ambient cover and hence bounds every depth above by $7/2$. The witnesses $(1,1/2),(-1,1/2),(0,-1/2)$ belong exclusively to caps 1, 2 and 3, respectively. At an endpoint base a vertical cap isolates its entire length 2. At any nonzero middle coordinate $x$, a horizontal half-mass cap can be shifted through $x$ and strictly loses mass. Thus the only deepest point has $z=x=0$.\n\nFor caps 1 and 2 the positive projected intervals contributing to the retained band of threshold $t$ are $[0,3/2]$ and $[1/4,9/4]$, each of density one. For cap 3 the threshold is $s$ and there are three upper intervals with lengths $3/2,1,1$. Thus\n$$\na=\\min(t,3/2)+\\min((t-1/4)_+,2),\\qquad\na=\\min(s,3/2)+2\\min(s,1).\n$$\nAt $0<a<B$ these determine the rightmost thresholds. The branches of $t$ are $a,(a+1/4)/2,a-5/4$ with knots $1/4,11/4$, and those of $s$ are $a/3,a-2$ with knot $3$. At the endpoint $B$ both are the corresponding maxima. The retained middle interval has length $s+\\min(3/2,t)$ and each endpoint length is $(t-5/4+\\min(1,s))_+$. Adding yields $m(a)$, with the extra knot at $3$ canceling. The upward derivative jumps occur from $5/6$ to $5/2$ at $27/20$ and from $5/2$ to $3$ at $11/4$. The latter occurs with all three fibers positive. Any strictly increasing differentiable transformation with positive derivative at these masses preserves the upward jump, including $\\log$ and every positive power. The jump down at $1/4$ excludes convexity. On the second branch $m(a)/a=5/6+1/(8a)$ strictly decreases; on the third and fourth it strictly increases, and the first branch is constant. Evaluating at $27/20$ gives $25/27$.\n\nFor $d>1$ multiply by any origin-symmetric convex body $L\\subset\\mathbb R^{d-1}$ of volume one, extending the normals by zero on the extra coordinates. For $d=1$ take the zero-dimensional product convention. Symmetry gives the same lower depth at the product origin, and the same cover and upper bound hold. At the endpoint bases the whole fiber is still too small to contain a deepest mark. Any deepest mark at the middle has $x=0$ by the shifted horizontal cap argument.\n\nFor $n>1$, also take the product with $[0,1]^{n-1}$ in the integer coordinates $b$. For each binary vector $v$, define $D_v(b)=\\sum_j[v_j+(1-2v_j)b_j]$ and use the three caps of margins $\\ell_i-4D_v(b)$. At binary sites $D_v(b)$ is Hamming distance, and $\\max_i\\max_C\\ell_i=9/4<4$, so these caps are confined to their own copy on the mixed set. Thus they cover and retain their irredundant witnesses. At the point $z=x=0$, $b=v$ with extra continuous coordinates zero, any containing halfspace captures at least $7/2$ from its own centrally symmetric copy, and the cover gives the matching upper bound. Endpoint fibers are exposed by a linear functional simultaneously maximizing the desired $z$ and $b$ vertex, so have depth at most 2. At a middle point with $x\\ne0$, shift its copy-isolating horizontal cap through that point. It remains absent in other copies and loses positive volume in its own copy, so such a point is not deepest. Hence all deepest marks satisfy the nonpositive margins of all original caps. The distal thresholds stay $t,t,s$ in each copy, because every other binary copy has negative margin and because the selected copy has the original cap distribution. Constraints from other copies are automatic on that copy. This gives exactly the claimed multiple of $m(a)$ and preserves the fixed-positive-base neighborhood of the second upward jump.\n",
+  "source_candidate_ids": [
+    "92c5cf1d847ad56c"
+  ],
+  "source_candidate_sha256": {
+    "92c5cf1d847ad56c": "b99400b0fb4ead94b6041b397979ec283cdce5593be17b58ef5201a3812c02b3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "92c5cf1d847ad56c",
+      "locator": "92c5cf1d847ad56c:05 §6, (12)–(14), exact genuine critical obstruction"
+    },
+    {
+      "candidate_id": "92c5cf1d847ad56c",
+      "locator": "92c5cf1d847ad56c:06 §§7–8, (15), continuous and binary padding"
+    }
+  ],
+  "statement": "For every $n,d\\ge1$ there is a full-dimensional mixed convex body and an irredundant cover of its entire mixed set by actual nonvertical caps of equal raw mass $B=7/2$, each minimizing at a global deepest point of depth $B$. Every fiber has volume strictly below $M/2^n$, where $M=7\\cdot2^{n-1}$ is the original mixed mass. The distal path retains the original band mass $a$ in each cap before simultaneous intersection. Its actual mixed mass is $2^{n-1}$ times\n$$\nm(a)=\n\\begin{cases}\n4a/3 & 0\\le a\\le1/4,\\\\\n5a/6+1/8 &1/4\\le a\\le27/20,\\\\\n5a/2-17/8 &27/20\\le a\\le11/4,\\\\\n3a-7/2 &11/4\\le a\\le7/2.\n\\end{cases}\n$$\nThus $M(a)/a$ is neither nondecreasing nor nonincreasing on $0<a\\le B$. The mass is neither convex nor concave. The mass, its logarithm and every positive power of the mass fail concavity even near the knot $a=11/4$, where the positive base set and occupied parities are constant. The minimum of $m(a)/a$ is $25/27$.",
+  "subgoal_id": "pk-intake-actual-distal-quantile-potential-counterexample",
+  "title": "A genuine critical cover with nonmonotone distal volume per cap mass"
+}

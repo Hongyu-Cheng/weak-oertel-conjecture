@@ -1,0 +1,63 @@
+{
+  "candidate_id": "63da83a5bf280d7c",
+  "candidate_sha256": "8d633a19f9b7af97460b415816806db8e50ee98d57ca9baf5dc9326ed6ac584d",
+  "checked_dependency_candidate_sha256": {
+    "0420e95025d90472": "7b29974c0989828a8604fd01d2ad3912446e56efc8a2f4fe5df2479a43484eb8"
+  },
+  "checks": [
+    "An affine transformation preserves each raw threshold after contragredient transport of normals. Its absolute determinant multiplies area and normalized slice measure by the same factor, the latter from the slice disintegration with continuous interior slice length. Common positive scaling of all normals multiplies sigma_i by the reciprocal scale and M by the direct scale. Thus the cap fractions and row values are invariant.",
+    "Failure of either the weak inequality or the nontriangle strictness permits the chosen sequence at ceilings 4/9+1/m. A maximum-area inscribed triangle exists with positive area. After normalization it forces every barycentric absolute coordinate to be at most one by single-vertex replacement, so the normalized bodies are uniformly bounded and contain the area-1/2 reference triangle. Their Hausdorff limit is nondegenerate. Any inscribed triangle of the limit is vertexwise approximated by inscribed triangles of the normalized sequence, so its maximal area is at most 1/2 and containment gives equality.",
+    "Unit directions, their relative norm weights, and the marks admit a common subsequence. Dominated convergence applies to each halfspace and body indicator off the null limiting boundary and cutting line, with denominators bounded below by 1/2. A one-weight limit cannot balance. A two-weight or collinear balanced limit has an opposite pair, whose cap fractions add to 1 although 2(4/9)=8/9. All limiting weights are therefore positive, the directions span, and any pair of weighted normals is independent.",
+    "If a limiting cap contains the centroid strictly, the parallel cut moved inward to the centroid removes a positive-area strip because the centroid is interior, contradicting the ceiling and the centroid bound. The three nonpositive centroid margins sum to zero with positive weights, hence vanish. Spanning forces the mark to the centroid and all three fractions to 4/9.",
+    "Checked the cited Grünbaum inequality and its fixed-direction equality case in the linked Marín Sola–Yepes Nicolás paper, (1.1) and Remark 3.1. In dimension two the equality cone is a triangle whose base is parallel to the cut. The centroid cap homothety ratio is 2/3, so the smaller apex-side fraction is 4/9 and the other is 5/9. Repeating one apex direction would force an opposite direction by positive balance. Therefore the three caps strictly isolate different vertices. As the limit triangle contains the reference triangle and has the same area, it equals the reference triangle.",
+    "The rows of L_m are the first two normals after a single common normalization, so L_m tends to an invertible limit. Translating the marks and applying L_m makes all three normals exactly (1,0),(0,1),(-1,-1) for each sufficiently late index. Convergence on the bounded body family yields the fixed-source strict triangle required by the exact local predecessor. Affine maps preserve being a triangle, so the local weak and strict conclusions rule out both counterexample types.",
+    "The frozen statement and proof match 5f923460093c970f §§1–2. No numerical width is asserted. In particular the proof provides no comparison with the exact gap 128/279-4/9=4/279, no mixed endpoint-ratio threshold, and no identification of mixed coareas."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "0420e95025d90472",
+      "candidate_sha256": "7b29974c0989828a8604fd01d2ad3912446e56efc8a2f4fe5df2479a43484eb8",
+      "draft_key": "local-planar-convex-body-lorentz-rows",
+      "hypotheses": "After the affine recentering the source and three normals are exactly fixed, and the Hausdorff limit is a strict distinct-vertex triangle, so the local theorem applies to the entire sufficiently late sequence with strictness for nontriangles.",
+      "reviewed_proof_sha256": "a9c1ce8f7aecdfd72c8b2ba434af37a91d2072590ce873b23d6fabe6e206962c",
+      "reviewed_statement_sha256": "83d4da01bd7e56449d6f3f2b88dca09fc7e71b3d7204dab81ddf01cdac5fd022",
+      "status": "requires independent approval of these exact bytes"
+    },
+    {
+      "hypotheses": "The limiting body is full-dimensional and convex, and the three cuts pass through its centroid. The oriented equality case gives a cone, which in the plane is a triangle with base parallel to the cutting line.",
+      "reference": "Marín Sola and Yepes Nicolás, On Grünbaum type inequalities, (1.1) and Remark 3.1",
+      "url": "https://webs.um.es/jesus.yepes/publicaciones_files/paper_grunbaum.pdf"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:40:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Covers maximum ordinary depth, simplex rigidity, and maximum-inscribed-simplex compactness. These recover compactness tools and the oriented centroid equality case but do not give exact three-row inequalities for caps of a prescribed circuit near the ceiling.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Gives sector area and core inequalities under an ordinary cap ceiling below one half, with no Lorentz-row conclusion.",
+      "fact_id": "36f62a71dc48885b"
+    },
+    {
+      "comparison": "Gives explicit row-area consequences at ceiling 128/279 for a strict triangle. Its simplex incidence hypotheses do not cover all planar convex bodies in a positive cap band.",
+      "fact_id": "e143ec3bc7a1b8e8"
+    }
+  ],
+  "readability": "The unit vectors are used only to extract compactness. Reconstructing the common-scale weighted normals before applying L_m is essential for row invariance. The proof does this explicitly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a84dccd6de83d7008a7b1db1abe8b04b2500d7b52eee40c6aec485901e230263",
+  "reviewed_statement_sha256": "d1744912f900c35f2807feb5ee2412205881ba215b9df553ab352ebd1fcbb905",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:35:38Z",
+  "summary": "The contradiction establishes a universal positive band and strictness on every nontriangle in it. The compactness limit reaches a strict centroid-cut triangle, and canonical affine normalization makes the local theorem apply at fixed normals. The width is existential. Admission requires independent approval of the exact local theorem named below.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

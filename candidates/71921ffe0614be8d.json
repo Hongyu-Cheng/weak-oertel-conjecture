@@ -1,0 +1,26 @@
+{
+  "advances": "Pointwise ordinary simplex depth deficit in one specified centroid coordinate.",
+  "author": "PK-research-agent",
+  "candidate_id": "71921ffe0614be8d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.930719+00:00",
+  "depends_on": [],
+  "draft_key": "simplex-local-depth-sum-coordinate-deficit",
+  "kind": "lemma",
+  "proof": "Let $m$ be the largest barycentric coordinate of $p$ in $sT$. It is at least $1/(d+1)$. The cap in which a coordinate attaining $m$ is at least $m$ is a copy of $sT$ contracted about its corresponding vertex by $1-m$, and contains $p$. Its volume is $s^dc(1-m)^d$, also when $m=1$. The concave function $m\\mapsto\\gamma_d-(1-m)^d$ on $[1/(d+1),1]$ lies above its endpoint chord, so it is at least $\\gamma_d(d+1)(m-1/(d+1))/d$.\n\nWrite $E=\\sum_i p_i-ds/(d+1)$. If $E\\ge0$, the mean of the $d$ barycentric coordinates $p_i/s$ is $1/(d+1)+E/(ds)$, hence one is at least this large. If $E<0$, the remaining coordinate $1-\\sum_i p_i/s$ is $1/(d+1)+|E|/s$. Thus $m-1/(d+1)\\ge |E|/(ds)$ in both cases. Multiplication by $s^dc$ gives the claimed bound.\n",
+  "source_candidate_ids": [
+    "6bb486f2aedd17ca"
+  ],
+  "source_candidate_sha256": {
+    "6bb486f2aedd17ca": "0eb41e5b75c9ecd159f7edbb8232c60778200e1a393e2bd95a5ec862e107d8c4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6bb486f2aedd17ca",
+      "locator": "6bb486f2aedd17ca:7 §3, simplex cap estimate, inequality (12); additional proof scope: §3, simplex cap estimate, inequalities (9)–(12)"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $T=\\{x\\in\\mathbb R^d:x_i\\ge0,\\ \\sum_i x_i\\le1\\}$, $c=|T|$, $\\gamma_d=(d/(d+1))^d$, and $s>0$. If $D_{sT}(p)$ denotes the unnormalized closed halfspace depth of $p\\in sT$ for ordinary $d$-volume, then\n$$\n\\gamma_d s^d c-D_{sT}(p)\\ \\ge\\\n\\frac{c\\gamma_d(d+1)}{d^2}s^{d-1}\n\\left|\\sum_i p_i-\\frac{ds}{d+1}\\right|.\n$$",
+  "subgoal_id": "pk-intake-simplex-local-depth-sum-coordinate-deficit",
+  "title": "A simplex depth deficit from displacement of the coordinate sum"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "Existence of a cover with bounded hinges without an imposed individual cap-mass budget; the statement is for interval fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "9ff99eb614bad497",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.740910+00:00",
+  "depends_on": [
+    "155691fc3768c06f",
+    "bee3cc8e50a0dcea"
+  ],
+  "draft_key": "pk-w36-menu-interval-support-strip-cover",
+  "kind": "theorem",
+  "proof": "For each $p\\in P$, compatibility gives the anchored Minkowski inclusion for every convex combination of bases with mean $p$. Apply 155691fc3768c06f at $p$ in the directions $1$ and $-1$. The support heights are $u_z$ and $-l_z$, respectively. The resulting affine majorants give an affine $b_p\\ge u_z$ and, after negating the second one, an affine $a_p\\le l_z$, both with equality at $p$. They support the sampled endpoint hull; no assertion about a nonvertical support at a boundary fiber of the original unsampled body is needed.\n\nThe base halfspaces $G_p=\\{z:b_p(z)-a_p(z)\\le W\\}$ cover $P$, since $p\\in G_p$. To select the pairs, apply the finite-set witness lemma in bee3cc8e50a0dcea to the open convex complements of the $G_p$. An empty vertex subset of $P$ contains at most one point per parity: two points of one parity have a midpoint in $P$ by lattice completeness, which lies in their convex hull without being a vertex. Thus at most $2^n$ of the complements still have common intersection disjoint from $P$; the corresponding $G_p$ cover $P$. This argument also permits a constant supporting width and $n=0$.\n\nFor each selected $p$ use $L_p^+=x-b_p(z)+W/2$ and $L_p^-=a_p(z)-x+W/2$. Their sum is $W-(b_p(z)-a_p(z))$, nonnegative on $G_p$. Consequently their closed caps cover the whole continuous line at every selected base in $G_p$, and in particular all endpoints of its sampled interval. The support inequalities give $L_p^+\\le W/2$ and $L_p^-\\le W/2$ throughout $S$. Each continuous coefficient is $1$ or $-1$, so its support denominator is $W$. Each hinge vanishes off its cap and is bounded by $1/2$ on the cap. Integration and the cap count give the two inequalities.\n",
+  "source_candidate_ids": [
+    "595eea8dbe136178"
+  ],
+  "source_candidate_sha256": {
+    "595eea8dbe136178": "562552d6b0531bf3bf005819e4eef8fb0515dfd356aa6ea27ccc1cc91fa50171"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "595eea8dbe136178",
+      "locator": "595eea8dbe136178:01 Theorem and Proof, supporting strips and full-cardinality bounded hinge"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be finite and nonempty, and let the positive-length intervals $K_z=[l_z,u_z]$ for $z\\in P$ be the actual fibers of a convex set. Let $S=\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$, $\\mu$ be the sum of interval lengths on $S$, $M=\\mu(S)$, $W=\\max_z(u_z-l_z)$, and $D=[-W,W]$. There is a cover of $S$ by at most $2^{n+1}$ nonvertical closed affine caps $H_i=\\{L_i\\ge0\\}$ such that $(L_i)_+/h_D(v_i)\\le1/2$ everywhere on $S$, where $v_i$ is the continuous coefficient of $L_i$ and $h_D$ is the support function of $D$. In particular\n$$\n\\sum_i\\int_S \\frac{(L_i)_+}{h_D(v_i)}\\,d\\mu\n\\le \\frac12\\sum_i\\mu(H_i)\\le 2^n M .\n$$",
+  "subgoal_id": "pk-intake-pk-w36-menu-interval-support-strip-cover",
+  "title": "Bounded normalized hinge for an actual interval-fiber cover"
+}

@@ -1,0 +1,34 @@
+{
+  "advances": "Compares two actual planar chains at the same central mark and tilt. The annular difference is separate from an absolute depth bound for either chain.",
+  "author": "PK-research-agent",
+  "candidate_id": "9930ef2c4185835a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.080958+00:00",
+  "depends_on": [
+    "700febf4b7a92759"
+  ],
+  "draft_key": "paired-triangle-annular-telescope-payment",
+  "kind": "lemma",
+  "proof": "The odd chain is also an actual integer-fiber trace, since its piecewise affine interpolated radius has the nonincreasing slopes given by the drops inward and their negatives outward. Its central mark and the shared tilt are the same as for the even chain. The terms from bases $-h$ are common to both sums, including the base-zero term. The remaining contributions are $\\sum_{h=0}^m F_{r_h}(t+\\beta(h+1))$ and $\\sum_{h=1}^m F_{r_h}(t+\\beta h)$, respectively. Their difference gives the displayed telescope. The differences are the cap areas of the disjoint annuli between successive nested triangles, and the last summand is the inner core. These pieces partition $RT$ up to null sets. All their thresholds are at most $t+\\beta(m+1)$, giving $E\\ge F_R(t+\\beta(m+1))$.\n\nFor $1/2<a<1$ the triangular sections give\n$$\nF_r(s)=\n\\begin{cases}\nr^2 & s\\le0,\\\\\nr^2-s^2/[a(1-a)] & 0\\le s\\le (1-a)r,\\\\\n(ar-s)^2/[a(2a-1)] & (1-a)r\\le s\\le ar,\\\\\n0 & ar\\le s.\n\\end{cases}\n$$\nThe lower nonconstant branch subtracts the similar corner triangle at zero, with intercepts $s/a$ and $s/(1-a)$. The upper nonconstant branch is a triangle at $re_1$, whose edge fractions are $(ar-s)/(ar)$ and $(ar-s)/[(2a-1)r]$. At $a=1/2$ the only proper branch is $r^2-4s^2$ up to $r/2$, and at $a=1$ it is $(r-s)^2$ up to $r$. Each is clipped to full area below zero and zero above its support. The resulting tail is continuous, and on every smooth piece its threshold derivative has magnitude at most $2r/a$. For the interior normals this bound follows by evaluating the two proper-branch derivative magnitudes at $(1-a)r$, where they agree. It holds by direct differentiation at both endpoints. Thus $F_R$ is $4R$-Lipschitz. The mark $(t,t)$ has all three barycentric coordinates $1/3$, so 700febf4b7a92759 gives $F_R(t)\\ge4R^2/9$.\n\nFor the refined bound, fix $s>0$ and $a\\in[2/3,1)$. As $r$ increases, the density $f_r(s)$ is zero up to $s/a$, then is $2(ar-s)/[a(2a-1)]$ up to $s/(1-a)$, and then equals the constant $2s/[a(1-a)]$. The values agree at the knots, giving the claimed difference bound. At $a=1$, $f_r(s)=2(r-s)_+$ gives the same bound. The annular tail differences are continuous and piecewise differentiable in the threshold. Therefore their losses from increasing the threshold from $t$ to $t+\\beta h$ are bounded by $2\\beta h(r_{h-1}-r_h)/(2a-1)$, and the core loss by $2\\beta(m+1)r_m/(2a-1)$ using $r=0$. At zero tilt the terms at $t$ telescope to $F_R(t)$. The identity $\\sum_{h=1}^m h(r_{h-1}-r_h)+(m+1)r_m=\\sum_{h=0}^m r_h$ gives the asserted bound, including $m=0$ and any zero terminal radii.\n",
+  "source_candidate_ids": [
+    "5e6e53a58ea7a59b",
+    "a6778097fd0174ca"
+  ],
+  "source_candidate_sha256": {
+    "5e6e53a58ea7a59b": "ec143e6264a63c86a4dfecc80403f8a65b6028855d23e00cb004543f709b1aa4",
+    "a6778097fd0174ca": "5fff8603647f33a3330ce9586c4efc11b2b35fc6df034274d077f298f6497284"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5e6e53a58ea7a59b",
+      "locator": "5e6e53a58ea7a59b:06 §6, (7)–(9)"
+    },
+    {
+      "candidate_id": "a6778097fd0174ca",
+      "locator": "a6778097fd0174ca:02 Lemmas 1–2, (2)–(4), first inequality in (4)"
+    }
+  ],
+  "statement": "Put $T=\\operatorname{conv}(0,e_1,e_2)$, $V=|T|=1/2$, and take radii $R=r_0\\ge r_1\\ge\\cdots\\ge r_m\\ge0$ with $R>0$ and nondecreasing drops $r_{h-1}-r_h$. At bases $-h,h+1$, for $0\\le h\\le m$, put the two fibers $r_hT$. Let $t=R/3$, and consider the cap $-\\beta z+aX_1+(1-a)X_2\\ge t$ through $(0,t,t)$, with $a\\in[1/2,1]$ and $\\beta\\ge0$. All masses are summed ordinary areas on the displayed integer fibers. Let $J$ be the cap area divided by $V$. Let $I$ be the same cap area divided by $V$ on the odd chain with the same radii at $\\pm h$ and only one central triangle. Define $F_r(s)=|rT\\cap\\{aX_1+(1-a)X_2\\ge s\\}|/V$. Then\n$$\n\\begin{aligned}\nE:=J-I\n&=\\sum_{h=1}^m\\left[F_{r_{h-1}}(t+\\beta h)-F_{r_h}(t+\\beta h)\\right]+F_{r_m}(t+\\beta(m+1))\\\\\n&\\ge F_R(t+\\beta(m+1))\\ge \\frac49R^2-4R\\beta(m+1).\n\\end{aligned}\n$$\nFor $2/3\\le a\\le1$ and $0\\le r\\le r'$, the section densities $f_r(s)=-\\partial_sF_r(s)$ satisfy\n$$\n0\\le f_{r'}(s)-f_r(s)\\le\\frac{2(r'-r)}{2a-1}\n$$\nfor almost every $s>0$, and consequently\n$$\nE\\ge F_R(t)-\\frac{2\\beta}{2a-1}\\sum_{h=0}^m r_h .\n$$",
+  "subgoal_id": "pk-intake-paired-triangle-annular-telescope-payment",
+  "title": "Annular comparison of paired and centered triangle-chain caps"
+}

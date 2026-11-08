@@ -1,0 +1,29 @@
+{
+  "advances": "Controls a single actual ordinary convex body under a common-contact whole-space cap cover.",
+  "author": "PK-research-agent",
+  "candidate_id": "d84ce6b83e9e30d2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:09:25.054606+00:00",
+  "depends_on": [
+    "6f5a2608fa056059",
+    "2eb9fc1dbf88b7c8"
+  ],
+  "draft_key": "near-grunbaum-common-contact-localization",
+  "kind": "theorem",
+  "proof": "The exterior-contact theorem 2eb9fc1dbf88b7c8 and the budget imply $y\\in\\operatorname{int}K$. Write $\\Delta=\\gamma_{d-1}-\\tau>0$. For $v\\in\\partial D$ one has $y-v\\notin\\operatorname{int}K$, since otherwise $v$ would belong to the open set $y-\\operatorname{int}K\\subset D$. Translate all the halfspaces by $-v$. They still cover the entire space and now have the common boundary point $y-v$. The threshold shift in cap $i$ is $-\\ell_i(v)$. The width-one section density bound gives a new mass fraction at most $\\tau+d(\\ell_i(v))_+$. The exterior-contact theorem supplies one translated cap with fraction at least $\\gamma_{d-1}$. Thus $\\max_i\\ell_i(v)\\ge\\Delta/d$.\n\nThe support function of the convex hull of the normalized functionals is $v\\mapsto\\max_i\\ell_i(v)$. The support function of $D^\\circ$ is $\\|\\cdot\\|_D$. Positive homogeneity extends the boundary estimate to all vectors, proving the polar inclusion.\n\nIf $y\\ne g$, use $v=(g-y)/\\|g-y\\|_D$ and choose the corresponding cap with $\\ell_i(v)\\ge\\Delta/d$. The centroid slab estimate for that cap gives\n$$\n\\tau\\ge\\gamma_d+\\ell_i(g-y)/d\n\\ge\\gamma_d+\\|g-y\\|_D\\Delta/d^2.\n$$\nAlso $g-y\\in D$ because $g,y\\in K$. These two bounds give the result, including $y=g$ and the half-gap estimate.\n",
+  "source_candidate_ids": [
+    "e81e0e86f9a482f3"
+  ],
+  "source_candidate_sha256": {
+    "e81e0e86f9a482f3": "a7bddaad96afa96f4b656161b59ff03d275ba8615e7b644212030500e5271047"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e81e0e86f9a482f3",
+      "locator": "Theorem (1) and §§3–4, (7) and polar inclusion"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a convex body, $d\\ge2$, with centroid $g$. Put $D=K-K$, let $\\|\\cdot\\|_D$ be its gauge, and write $\\gamma_j=(j/(j+1))^j$ for $j\\ge1$. Suppose finitely many closed halfspaces $H_i=\\{x:\\ell_i(x-y)\\ge0\\}$ cover $\\mathbb R^d$, where each $\\ell_i$ has width one on $K$. Assume $|K\\cap H_i|\\le\\tau|K|$ for every $i$, with $\\gamma_d\\le\\tau<\\gamma_{d-1}$. Then $y\\in\\operatorname{int}K$, and for every $v\\in\\partial D$,\n$$\n\\max_i\\ell_i(v)\\ge\\frac{\\gamma_{d-1}-\\tau}{d}.\n$$\nEquivalently, the convex hull of the $\\ell_i$ contains $(\\gamma_{d-1}-\\tau)D^\\circ/d$, where $D^\\circ$ is the polar. Moreover,\n$$\n\\|y-g\\|_D\n\\le\\min\\left\\{1,\\frac{d^2(\\tau-\\gamma_d)}{\\gamma_{d-1}-\\tau}\\right\\}.\n$$\nIn particular $\\tau=\\gamma_d$ forces $y=g$. If $0\\le\\epsilon=\\tau-\\gamma_d\\le(\\gamma_{d-1}-\\gamma_d)/2$, the bound is at most $2d^2\\epsilon/(\\gamma_{d-1}-\\gamma_d)$.",
+  "subgoal_id": "pk-intake-near-grunbaum-common-contact-localization",
+  "title": "Common contact localization under a near-Grünbaum cap budget"
+}

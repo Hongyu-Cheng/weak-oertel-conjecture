@@ -1,0 +1,30 @@
+{
+  "advances": "An atomic endpoint surface result for intervals. Its measure is marked endpoint counting with physical weights, rather than original mixed length.",
+  "author": "PK-research-agent",
+  "candidate_id": "335983f1bfed13a9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:21.032840+00:00",
+  "depends_on": [
+    "3f5e7ab6803eb38a",
+    "8103c38875770e55",
+    "ac53fe19fef9ec25"
+  ],
+  "draft_key": "weighted-interval-normal-parity-repair",
+  "kind": "theorem",
+  "proof": "Split the old coupling by its two normal values and original endpoint parity. Both endpoints have the same parity because the old midpoint base is integral. At a fixed normal and parity the restricted marginals have equal masses and are carried by finitely many physical endpoint points. All cross-pair midpoints have integral bases in $P$, by parity, convexity and lattice completeness. By compatibility the continuous coordinates of these midpoints lie in the actual interval at the midpoint base.\n\nUse the two-input weighted atom selection theorem 3f5e7ab6803eb38a for these physical endpoints, with equal barycentric weights. Each endpoint ceiling is its weight $H_+/L$ because the normal reference has unit endpoint atoms. At an output point on the actual normal support graph, use its actual weight as ceiling. If both input weights for a producing pair are positive, concavity and convexity give at their midpoint $H(u,w_0)_+/L(u,w_0)\\ge [H(u,w_-)+H(u,w_+)]/[L(u,w_-)+L(u,w_+)]$ at $w_0=(w_-+w_+)/2$. This ratio is at least the smaller input weight. A zero input weight gives a trivial bound. At any off-graph output use the largest of the minima of the input ceilings over its producing pairs. Every output ceiling therefore satisfies the product-envelope hypothesis of 3f5e7ab6803eb38a. It gives a same-marginal replacement with those capacities and full convex-order domination of the old midpoint law. The hypotheses of the finite support roof 8103c38875770e55 hold for the same $C$, normal and bases, so that order forces the new midpoint law onto the actual support graph. There is a single endpoint of this normal at each base, and its classwise output is bounded by its actual weight. Sum the at most $2^n$ class laws at either normal to obtain the asserted marked domination.\n\nFor the mark, in each of these finitely many strata apply ac53fe19fef9ec25 to the compact old and new midpoint laws, of equal mass and in full physical convex order. Attach to the old midpoint the original conditional law of the mark given it in that stratum, and draw the new midpoint by the martingale kernel. Draw the new endpoint tuple conditionally on that new midpoint from the selected coupling. The mark and stratum law are retained; the tower property gives the original conditional midpoint mean for each mark and stratum almost everywhere. The draw of tuples retains the selected endpoint marginals.\n\nFor sharpness take $P=[0,2]^n\\cap\\mathbb Z^n$ with one fixed interval at every base and $H=L=1$. At one normal take the entire endpoint measure on $\\{0,1\\}^n$ for the minus marginal and on $\\{1,2\\}^n$ for the plus marginal. Complementary bases $z,2-z$ give admissible pairs with the same continuous endpoint. Each parity has exactly one base on each side, so any admissible integer midpoint repair sends the whole mass $2^n$ to the single endpoint at base $(1,\\ldots,1)$, which has weight one.\n",
+  "source_candidate_ids": [
+    "1dcb5bc1e68b837f"
+  ],
+  "source_candidate_sha256": {
+    "1dcb5bc1e68b837f": "c330c12bca90f33d23b7ee5fab0b50d45fd5f1c09c4d4228666cdf5840e866c1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1dcb5bc1e68b837f",
+      "locator": "1dcb5bc1e68b837f:10 §§7–8, interval fibers"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be nonempty and finite and let $K_z$ be positive-length intervals whose lifts have exact sampled fibers in their convex hull $C$. Let $\\eta$ be the marked counting measure on the two outward endpoints of each interval, with the two normal labels $u=\\pm1$. For each $u$ choose one finite concave function $H(u,\\cdot)$ and one finite positive convex function $L(u,\\cdot)$ on $C$ and let $\\omega=(H_+/L)\\eta$. Suppose equal-mass endpoint measures $\\gamma_-,\\gamma_+\\le\\omega$ have a coupling with common endpoint normal and integer midpoints on the actual support graph of that normal. There is a same-marginal, same-normal coupling whose midpoints remain on that graph and whose marked midpoint law is dominated by $2^n\\omega$. At each normal and original endpoint parity the new midpoint law dominates the old in full physical convex order. A standard Borel source mark may retain its joint law with the normal and parity and its conditional midpoint mean given the mark, normal and parity. The uniform factor is sharp.",
+  "subgoal_id": "pk-intake-weighted-interval-normal-parity-repair",
+  "title": "Weighted normal-preserving parity repair for interval fibers"
+}

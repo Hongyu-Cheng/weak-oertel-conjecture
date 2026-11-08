@@ -1,0 +1,32 @@
+{
+  "advances": "Two exact counterexamples to identifying a selected proper chord with the full segment of a lower-dimensional limiting body. No mixed criticality or third-fiber compatibility is asserted.",
+  "author": "PK-research-agent",
+  "candidate_id": "ed978375f272e46c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.204765+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-sweeps-proper-chord-collapse",
+  "kind": "counterexample",
+  "proof": "For the first family the left vertex and the right vertical edge lie on opposite sides of $x=-1$. The chord there is a fraction $u/(u+w)$ of that edge, hence has length $L$. For sufficiently small $w$, the lower edge endpoint lies strictly below $y=-1$ and the left vertex and upper edge endpoint lie above. The length of the section at $y=-1$ is its horizontal range from the vertical edge to the lower sloping side. Linear interpolation gives $(u+w)(H+w-3)/(H+u+w)=w(H+w-3)/(H-L+w)$. The affine reflection $(x,y)\\mapsto(x,-x-y)$ fixes the triangle, interchanges $y=-1$ and $x+y=1$, and preserves the horizontal parameter along those sections. Horizontal width equals normalized chord length on either line. Thus the third cut is also proper and has the stated length. The area is $H(u+w)/2$. Taking limits of the vertices gives the segment, because convex hull of a fixed number of points is continuous in Hausdorff distance. The particular numeric example follows by substitution.\n\nFor the second triangle the area is half the vertical base $3+4e$ times the horizontal width $3e$. The cut $x=-1$ is one third of the way from the base to the apex and so has length $(2/3)(3+4e)$. At $y=-1$ the section runs from the base to the lower-apex edge at fraction $2e/(3/2+2e)$ of that edge. Its horizontal width is $3e$ times that fraction. For $x+y=1$ the upper base vertex is at level $1+e$, the apex at level $-1/2+2e<1$, and the lower base vertex is below the cut. The section runs from the base to the upper-apex edge at fraction $e/(3/2-e)$ of that edge; its horizontal width is again $3e$ times that fraction and equals the normalized length. The stated restrictions on $e$ give properness for all three cuts. Vertex convergence gives the segment $[(-1,-1),(-1,2)]$.\n",
+  "source_candidate_ids": [
+    "28c45f4fbd3dc45b",
+    "fcbc840f56d4b6b6"
+  ],
+  "source_candidate_sha256": {
+    "28c45f4fbd3dc45b": "7da187e84493e496db86de2c3c39b9d7ce1aae6ca1b2376cd6072b6dcef2f6a1",
+    "fcbc840f56d4b6b6": "35fcb2fa703e23bae90ab2167adc71277928a1c2150c70ee944e98a986c90cee"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fcbc840f56d4b6b6",
+      "locator": "fcbc840f56d4b6b6:02 §2, (1)–(2), collapsing actual triangles with prescribed surviving proper section"
+    },
+    {
+      "candidate_id": "28c45f4fbd3dc45b",
+      "locator": "28c45f4fbd3dc45b:03 §2, actual thin triangles and (1)"
+    }
+  ],
+  "statement": "Use the canonical planar normals $v_1=(1,0)$, $v_2=(0,1)$, $v_3=(-1,-1)$, cuts $v_i\\cdot x=-1$, and chord lengths divided by $\\lVert v_i\\rVert$. For every $H>3$ and $L\\in(0,H)$ and all sufficiently small $w>0$, put $u=Lw/(H-L)$. Take the triangle with right vertical edge of length $H$ at $x=-1+w$, centered at ordinate $(1-w)/2$, and left vertex $(-1-u,(1+u)/2)$. It has three proper cuts, chord lengths\n$$\n\\left(L,\\frac{w(H+w-3)}{H-L+w},\\frac{w(H+w-3)}{H-L+w}\\right)\n$$\nand area $H^2w/[2(H-L)]$. The bodies converge to the segment at $x=-1$ of length $H$ centered at ordinate $1/2$. The first chord keeps length $L$, the other two tend to zero. At $(H,L,w)=(6,1,1/100)$ the chord lengths are $(1,301/50100,301/50100)$ and the area is $9/250$. In a second family for $0<e<1/4$, the triangle with vertices $(-1-e,-1-2e)$, $(-1-e,2+2e)$, $(-1+2e,1/2)$ has three proper cuts, area $(9/2)e+6e^2$, and lengths $(2+8e/3,12e^2/(3+4e),6e^2/(3-2e))$. The first length tends to $2$ while the limiting segment at $x=-1$ has length $3$, and the other two lengths tend to zero.",
+  "subgoal_id": "pk-intake-pk-w35-sweeps-proper-chord-collapse",
+  "title": "Proper chords can keep a prescribed length while the bodies collapse to a longer segment"
+}

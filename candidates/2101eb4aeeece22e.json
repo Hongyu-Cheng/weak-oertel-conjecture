@@ -1,0 +1,29 @@
+{
+  "advances": "Localization inside one own fiber, using actual ambient symmetry and the same-point upper comparison. The own-fiber payment alone makes no assertion about the other fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "2101eb4aeeece22e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.080419+00:00",
+  "depends_on": [
+    "855dee75ae1183c5",
+    "700febf4b7a92759"
+  ],
+  "draft_key": "movable-simplex-lower-diagonal-maximizer",
+  "kind": "theorem",
+  "proof": "For fixed $j$, tighten containing halfspaces to pass through the point. For a nonvertical cap, normalize its continuous normal to Euclidean norm one. Moving the mark by $h\\in\\mathbb R^d$ changes each fiber threshold by at most $\\|h\\|_2$. All fibers lie in balls of radius $r_p$ about the origin. By slicing perpendicular to the normal, each resulting difference of cap volumes is at most $\\|h\\|_2$ times the $(d-1)$-volume of the corresponding ball of radius $r_p$, with the bound one on a zero-dimensional section when $d=1$. Vertical cap masses are constant in the continuous mark. The infimum of this uniformly Lipschitz family is Lipschitz, so a maximum is attained on the compact own fiber.\n\nEach raw-depth superlevel set is convex: a closed halfspace containing a convex combination contains at least one constituent point, so if all constituent depths are at least a level, its mass is at least that level. The permutations of the continuous coordinates are genuine ambient symmetries of the source. Averaging the orbit of a maximizing $y$ therefore gives a maximizer at $(\\sum_\\ell y_\\ell/d)\\mathbf1$. If the diagonal parameter is greater than $q$, the upper-diagonal comparison in movable-simplex-through-mark-positive-normal, applied under the given touching majorant, shows that $q$ has at least that depth. At $t=0$ the cap $X_1\\le0$ takes zero volume, while the own centroid is an interior point of a positive-volume fiber and hence has positive depth, using an inscribed ball for every nonvertical cap and the whole own fiber for every vertical cap. Thus a maximizing parameter can be taken positive.\n\nFor $0<t\\le q$ the simplex $((d+1)t)T_d$ lies in the own simplex and has centroid $t\\mathbf1$. Its barycentric coordinates are all $1/(d+1)\\le1/d$, so 700febf4b7a92759 supplies a lower bound of $(d/(d+1))^d$ times its volume in every containing cap. This is $|T_d|(dt)^d$. The cap $\\sum_\\ell X_\\ell\\le dt$ within $r_jT_d$ is exactly $(dt)T_d$, proving the matching ordinary upper bound. At $t=0$ this same cap gives zero. Any ambient cap through or containing $(j,t\\mathbf1)$ takes at least the stated amount in its own fiber, including when the own trace is the whole fiber.\n",
+  "source_candidate_ids": [
+    "44a12d13f3aabab3"
+  ],
+  "source_candidate_sha256": {
+    "44a12d13f3aabab3": "951ee94aabb2eaaa8aae8b8ebd9f8a65407ca23dac54e0417a771127046a771b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "44a12d13f3aabab3",
+      "locator": "44a12d13f3aabab3:04 §4, (6), (17) and (17a)"
+    }
+  ],
+  "statement": "Let $n\\ge0$ and $d\\ge1$, $P\\subset\\mathbb R^n$ nonempty and finite, $j\\in P$, and $r_p>0$. Let $T_d=\\operatorname{conv}(0,e_1,\\ldots,e_d)$ and give the fibers $\\{p\\}\\times r_pT_d$ their summed ordinary $d$-volume. Suppose $r_p\\le r_j+b\\cdot(p-j)$ for some $b\\in\\mathbb R^n$. Then a point maximizing raw mixed halfspace depth over the own fiber $\\{j\\}\\times r_jT_d$ can be chosen at $(j,t\\mathbf1)$ with $0<t\\le q=r_j/(d+1)$. For $0\\le t\\le q$, the ordinary raw halfspace depth of $t\\mathbf1$ in the own simplex equals $|T_d|(dt)^d$. This amount is also a lower bound for the raw mixed depth at $(j,t\\mathbf1)$.",
+  "subgoal_id": "pk-intake-movable-simplex-lower-diagonal-maximizer",
+  "title": "Lower-diagonal depth maximizers in common-vertex simplex fibers"
+}

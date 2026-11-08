@@ -1,0 +1,67 @@
+{
+  "candidate_id": "335983f1bfed13a9",
+  "candidate_sha256": "c8198eda5fc5b94b386a3e8d412cb1afa124bf69c3e6826e509eacdf425ff2d0",
+  "checked_dependency_candidate_sha256": {
+    "3f5e7ab6803eb38a": "a5fc1cfa5a5344a00a5d599779475748229235af7c860f85ced97fd0844aa250",
+    "8103c38875770e55": "76b739b118961de30230590983cc1c05925e519672cec271cbcb0722410661df",
+    "ac53fe19fef9ec25": "75e8fabddcad777362fe048035ac4ee187e544c7f8e2ca2e6a95d7d346ce40b9"
+  },
+  "checks": [
+    "Integer old midpoints imply same-parity endpoints. In each fixed normal and parity class the two submarginals have equal mass, and all their product midpoints have bases in P by lattice completeness and lie in C by convexity.",
+    "At a producing pair with positive weights, H_0≥(H_-+H_+)/2>0 and L_0≤(L_-+L_+)/2 give a lower bound by the ratio of sums. That ratio is at least the smaller input weight. Hence the literal weighted target endpoint ceiling suffices on the support graph.",
+    "Finite temporary ceilings off the graph bound every producing pair. The finite selection theorem gives convex-order domination with these ceilings. The globally finite convex roof-gap test is nonpositive throughout C and zero under the old law, so the new midpoint law is on the actual graph.",
+    "Each interval has one endpoint for each fixed normal. The output within a parity class is bounded by its actual weighted marked atom. At a fixed normal summing at most 2^n classes gives the claimed measure bound, without summing the two normal marks onto one unmarked ceiling.",
+    "Conditionally attaching the original mark to the old midpoint and using a martingale kernel to the new midpoint preserves the mark-stratum law and conditional midpoint mean. The subsequent tuple draw preserves the chosen new endpoint marginals.",
+    "In the cube calibration there is one compatible base on either side in each parity, and their midpoint is the all-ones base. Exactly 2^n units arrive at its single marked endpoint of reference weight one.",
+    "Source 1dcb5bc1e68b837f §§7–8 has the same old support assumption and common weight rule. The proof here concerns d=1. Values of the weights are finite on the finite collection of marked original endpoints and possible midpoint locations."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3f5e7ab6803eb38a",
+      "candidate_sha256": "a5fc1cfa5a5344a00a5d599779475748229235af7c860f85ced97fd0844aa250",
+      "fact_sha256": "afbb4aa1153841b4d306e2aecb12899910b230059e88cf1d9058c3e408b32e06",
+      "hypotheses": "Use two finite endpoint supports in the fixed normal and parity stratum with barycentric weights one half and equal submarginal masses. The original marked weights bound the input atoms. The actual on-graph weights and finite off-graph ceilings dominate the maximum of input minima over each producing tuple.",
+      "reviewed_proof_sha256": "b810e7cc06e5fe8a7db013fdb5c7857a57cace77f388f5cb47c741446dca9ddd",
+      "reviewed_statement_sha256": "3bbed612c8ccded34d60ec19d38775cce49c2380253c1b0266b6a66168121227"
+    },
+    {
+      "candidate_id": "8103c38875770e55",
+      "candidate_sha256": "76b739b118961de30230590983cc1c05925e519672cec271cbcb0722410661df",
+      "fact_sha256": "1a91030567babfe6fe3a87d092aa508b5fa0a35cbe24c5e322c7ff8800784a4a",
+      "hypotheses": "Use the actual interval hull with exact fibers, the fixed normal, and old and new midpoint measures on C with sampled bases P. The old law is on the actual support graph and the selection theorem gives full physical convex order.",
+      "reviewed_proof_sha256": "bcd447bb9b28401a49231c1bda96b45d47d80175e55295c2903b684fad734e4f",
+      "reviewed_statement_sha256": "3abb7e26821059d9f7903b0dc0f66ab6a3ae0521c42a443700142e5d0d28d493"
+    },
+    {
+      "candidate_id": "ac53fe19fef9ec25",
+      "candidate_sha256": "75e8fabddcad777362fe048035ac4ee187e544c7f8e2ca2e6a95d7d346ce40b9",
+      "fact_sha256": "b8c6989cf1e63945334a4f4bde02e6ee05e8c4df0319caab8f711867f9980465",
+      "hypotheses": "Within each stratum the two finite midpoint laws have equal mass and full physical convex order. Their martingale gives conditional mean equal to the old midpoint, and attaching the old mark first preserves its conditional mean by the tower property.",
+      "reviewed_proof_sha256": "47bff154d8ff10c38dfc68ecfc1711c6e7e888591014cd3852cfb3c6d51bf92c",
+      "reviewed_statement_sha256": "1644508bc17f2aaf69ff73cb54c355fe0d490da181eb023e68f487f6766aa75f"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:32:36Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It already gives the unweighted finite-fiber repair, the classwise order, and the same sharp example. It does not provide the arbitrary common H_+/L endpoint capacity bound or the tagged conditional mean reconstruction stated here.",
+      "fact_id": "a7921b5c00dfd102"
+    }
+  ],
+  "readability": "The repair is finite because both the normal and endpoint sets are finite. No measurable selection over higher-dimensional faces enters the proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "178ceec8b23c2411eb9232aa8510e66f1b63898ba2f9e38b8b5b43367f97db5b",
+  "reviewed_statement_sha256": "0a9d58c1e101e6e5f7384bf434a8624836c3e9fa207b04bb9a32919558ddc5fd",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:26:11Z",
+  "summary": "The interval repair uses actual marked endpoint capacities in each normal and parity class, and the cube example attains the sharp factor.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

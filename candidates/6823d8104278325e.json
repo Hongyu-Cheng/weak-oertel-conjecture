@@ -1,0 +1,26 @@
+{
+  "advances": "The attained budget is 1/2, whereas the sharp target for n=2,d=1 is 1/8. The example rules out guaranteed positive section mass for an arbitrary abnormal selection, with no below-target or forced-abnormality assertion.",
+  "author": "PK-research-agent",
+  "candidate_id": "6823d8104278325e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.171626+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-abnormal-zero-section-abnormal-endpoint",
+  "kind": "counterexample",
+  "proof": "All four bases are extreme points of the square, so no convex combination from another base can enlarge an interval there, and the square has no further integer bases. The hull is full-dimensional because the bases span the plane and each interval has positive length. The two displayed caps cover all lines and have mass two each. Every whole-space cover covers the original source, so two caps each of mass at most $\\tau M$ require $2\\tau M\\ge M$, giving the asserted endpoint.\n\nIn any two-cap whole-line cover with unit continuous normals the signs must be opposite. Write its margins as $x-a(z)$ and $b(z)-x$ for affine $a,b$, with $a(z)\\le b(z)$ at every sampled base. On the positive diagonal bound the first hinge below by $x-a(z)$, and on the negative diagonal bound the second below by $b(z)-x$. Discard the other nonnegative terms. Each interval has length one and center $\\epsilon_zL$, so the sum is at least\n$$\n4L+\\sum_{\\epsilon_z=-1}b(z)-\\sum_{\\epsilon_z=1}a(z)\\ge4L.\n$$\nThe last inequality follows because $b\\ge a$ on the negative diagonal and an affine $a$ has the same sum on the two diagonals. At the zero thresholds the respective positive terms integrate to $2L$ per cap, attaining the bound.\n\nAt these parameters each cap plane is separated by at least $L-1/2>0$ from all four intervals. In a sufficiently small neighborhood in the affine coefficients, all original capture statuses stay full or empty. The physical cap mass functions are therefore locally constant and have zero generalized gradients. Both budgets are active, so setting the objective and all coverage and sphere multipliers to zero and taking just the first budget multiplier equal to one is a nonzero consistent Fritz–John stress. Both selected coarea masses are zero because the sections are empty.\n\nFor the normal stress, use objective multiplier one, both budget multipliers zero, and at each base coverage multiplier one and the saddle feature $(x,\\lambda)=(0,(1/2,1/2))$. The cap mass and base moments equal the contact totals: each cap captures a diagonal of two unit intervals and both diagonals have the same base sum. The continuous normal has no sphere tangent direction in dimension one, and the unsimplified sphere multiplier can cancel the cap continuous moment $\\pm2L$ using its normal $\\pm1$. Thus all chart stationarity and complementarity conditions hold.\n",
+  "source_candidate_ids": [
+    "ce2469e6ba848252"
+  ],
+  "source_candidate_sha256": {
+    "ce2469e6ba848252": "e343afc15a16124b66dbb12c503ba3a173a6e1c031b19d78fd2ca6ebee8fa66d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ce2469e6ba848252",
+      "locator": "ce2469e6ba848252:05 §5, square-base opposite-interval endpoint"
+    }
+  ],
+  "statement": "Let $L>1/2$. At the four binary bases $P=\\{0,1\\}^2$ take the intervals $K_z=[\\epsilon_z L-1/2,\\epsilon_z L+1/2]$, with $\\epsilon_z=1$ on the main diagonal and $-1$ on the other diagonal. Their lifted convex hull has these exact integer fibers and mixed length $M=4$. Among two closed caps with unit continuous normals covering the whole line at each sampled base, the smallest feasible cap budget fraction is $1/2$. At that fraction the minimum of the sum of the two hinges, integrated against original mixed length, is $4L$ and is attained by $x\\ge0$ and $x\\le0$. These caps have empty sections in every sampled fiber and admit a genuine Fritz–John stress with objective multiplier zero, one budget multiplier equal to one, and all other multipliers zero. They also admit an objective-one stress.",
+  "subgoal_id": "pk-intake-pk-w36-abnormal-zero-section-abnormal-endpoint",
+  "title": "A whole-space hinge endpoint with a zero-section pure abnormal stress"
+}

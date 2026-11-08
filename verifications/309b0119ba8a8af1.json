@@ -1,0 +1,44 @@
+{
+  "candidate_id": "b1274a369dfa9af7",
+  "candidate_sha256": "d8950b8562ab05297514f2abdcfcb5a04730bd7fc7299869de0059d5b5fc5273",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Compactness makes the set of nonempty integer fibers finite. A q-dimensional compact convex fiber has positive finite Hausdorff q-measure in its affine hull, and lower-dimensional fibers have zero measure. Isometric embedding into the ambient space preserves that measure. Fiber masses give exactly the stated box image, with constant density s_z/w_z on each positive fiber establishing the converse.",
+    "For every positive fiber the inadmissible directions are exactly the orthogonal complement of its q-dimensional direction space. Their finite union is null since q is positive. Every admissible threshold slices each positive fiber in dimension at most q-1, and lower-dimensional fibers contribute zero even when they lie in the boundary. The fixed admissible normal is nonzero.",
+    "For every nonempty J, the affine hull of Z_J is U_J, since 0 and all positive endpoints w_z v_z lie in Z_J. Subtraction of one v_z from the others gives the stated affine-rank formula, and the empty family has only its zero target. The bounded coordinate difference quotients and a null threshold justify the hinge gradient by dominated convergence. Applying dominated convergence to the threshold indicators gives continuity and also verifies the use of the weak inequality in the gradient.",
+    "The support function is a sum of independent segment maxima. The 1-Lipschitz hinge yields the stated uniform error bound by the finite integral of |u·x|. A relative ball centered at the target gives the lower bound epsilon times the norm in U_J. Coercivity gives a finite minimizer, and the restricted derivative yields equality of the entire gradient with the target because both vectors are in U_J.",
+    "Every boundary target lies in the relative interior of its minimal face. Summing the supporting inequalities of facets containing that face exposes exactly their common equality set. Segment-wise maximization forces full mass on positive signs and zero mass on negative signs in every representation of that target. Translation identifies the remaining target with a relative-interior point of Z_J. A single T strictly greater than every compact-fiber bound divided by |e·v_z| preserves the free traces and saturates each fixed fiber with the correct strict sign. Vertices are covered by J empty. The mass coordinate exposes the zero and full vertices, and the separate compact-body bound also makes the cap empty or all of C exactly.",
+    "As a spot check with different intrinsic directions, take the tetrahedron with vertices (0,0,0), (0,1,0), (1,0,0), (1,0,1) in (z,x_1,x_2). The two integer fibers are unit segments in different directions, so q=1<d=2. For u=(1,1), the cap x_1+x_2+z>=1/2 retains length 1/2 at z=0 and length 1 at z=1. Its exact boundary-face target is (3/2,1), with real base centroid 2/3. This gives positive intrinsic mass although both two-dimensional fiber volumes vanish.",
+    "Positive mass and null boundary give a strict retained point, and density of the interior of C then gives a strict retained interior point. A positive retained q-measure fiber has affine dimension q, while no retained integer fiber exceeds q. Hausdorff measure restricted to the retained mixed set is exactly the source restriction. The barycenter belongs to compact convex D. For integer j, the weighted Minkowski average of the positive retained fibers lies in D_j and contains a translate of one positively scaled q-measure piece.",
+    "The balanced feasible box is compact and contains zero. A maximizing row with positive sum gives the single target (T_j,T_j j), and cap realization proves attainment. Any competing positive dominated submeasure with that base barycenter has a balanced box row, including a convex subbody measured at the source exponent q. Matching the aggregate moment vector suffices for attainment.",
+    "Verified archive 46f947c28385c3ea at SHA-256 e54e6491bfa10d8c2c3bdc4881bf1b0c54bef3deb992a611455992ab1c24143d. Sections 1–3 and equations (1)–(6) supply the moment zonotope, hinge construction and face saturation. Section 4 through (7) supplies ambient interior, integer centroid and mass optimality. Section 5 supplies the positive intrinsic scope. The normalized statement uses no assertion from the archived LP dual or the counting example."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T09:32:28Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "For q=d and r=(t,tj) with t>0 and integer j, the accepted theorem already gives the cap for every nonzero prescribed u, including targets on proper moment faces. Take the density of a feasible row, call its normalized barycenter y=(j,x_0), and apply the accepted fact at mass t with objective ell(z,x)=-u·x and halfspace through y. Its cap inequality is -u·x+lambda·(z-j)<=eta, so b=eta+lambda·j and a=-lambda. The accepted theorem additionally gives ell of the cap centroid at most ell(y). Its proof of the moment equations can also be adapted to real j by dropping the final integrality conclusion. Its stated theorem requires full d-volume with W>0 and an integer base of y. In particular it does not apply directly when q<d and the d-volume of every integer fiber is zero. The present statement covers those positive intrinsic cases as well as all feasible real base moments and the zero target.",
+      "fact_id": "a8cfba4caf85ff82"
+    },
+    {
+      "comparison": "This lemma supplies a feasible full-volume row at a prescribed integer base under a marginal halfspace-depth hypothesis. Its conclusion is a dominated submeasure given by fiberwise densities. The present theorem takes feasibility as input and realizes the moments by an actual closed cap, including positive intrinsic q<d and real targets.",
+      "fact_id": "725defc391f9d55d"
+    }
+  ],
+  "readability": "The fiber direction spaces can differ in the general cap theorem. In the integer-centroid paragraph, the proof does not need to compare the spaces. In fact they must coincide among positive contributors there, since their weighted Minkowski average lies in D_j and its affine dimension cannot exceed q. This observation is optional. The final paragraph correctly uses only the maximizing row's moment vector.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "70d9f45486ce49fa787862510796b96338590a6541289129f71a33159ecc8988",
+  "reviewed_statement_sha256": "871880ca6a07bd15a98e7fab8cdaa030ee4b47ae04bb3e094154784aa63a997a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:29:39Z",
+  "summary": "The proof realizes every feasible mass and real base first moment by a single closed cap with any prescribed admissible continuous normal. It proves exact attainment of the balanced box optimum by a convex subbody whenever that optimum is positive. Its positive intrinsic dimension and unrestricted feasible real target extend the stated scope of the accepted full-volume integer-base purification theorem.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

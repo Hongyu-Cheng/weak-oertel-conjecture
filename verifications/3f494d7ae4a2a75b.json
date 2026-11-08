@@ -1,0 +1,101 @@
+{
+  "candidate_id": "0420e95025d90472",
+  "candidate_sha256": "7b29974c0989828a8604fd01d2ad3912446e56efc8a2f4fe5df2479a43484eb8",
+  "checked_dependency_candidate_sha256": {
+    "4b408a905c45b287": "422e4649538c6870faa4eb09f695b2853979e12e5cc4718152e28a24472382dc",
+    "56b0987e853e0500": "5a1a63777a9bce913502e1954555b4c5e1875c82de9dad1f3b6d1c7a546349c3",
+    "a19fb2ae234afb2a": "a051c52f35db8b023a04403f7e58188c7fd2ef24845e229caf985eb8aa6922f6",
+    "a6b895b7e48e8037": "10a7b8ea13f7bd395f8d23c1051990bae3cb59404d0650a9e9c2dc0ec4dfad11",
+    "bd0a8fbcb2d1cc47": "3a98fb3261e38b87a085843741d0216c6099b86e80c1c80ddb77b1f61a95388c",
+    "fcb98a77224687d8": "23a1434e50216cec75d97f3615395e7786a3b2bfdf635e56b45fb50254ed5f44"
+  },
+  "checks": [
+    "The common raw vector is (k,Q_1,Q_2,Q_3,sigma_1,sigma_2,sigma_3). The corner altitude gives Q_i/sigma_i equal to half the positive vertex height, matching the accepted signed-row variables; a common invertible coordinate change scales both areas and normalized coareas by its absolute determinant.",
+    "The inball and Hausdorff support error give both claimed dilate inclusions. Dilation about the mark preserves all rays and sector inequalities, so the six endpoints, six areas, cap areas and lengths converge. The chosen normalized support forms are uniformly bounded by the inball and have the unique edge support as their only possible limit.",
+    "The three strict vertex signs select three unique-cap sectors. On an old edge the opposite cap is strictly negative, so the other two signs have a nonempty overlap between their two cut points. Those points bound a bridge strictly inside that edge. In the unique-sector wedge, the two positive coordinates of the old vertex give 1-pq>0, and the stated positive combination of the two supports exposes exactly its coordinate sum; this forces each auxiliary to converge to that vertex. The remaining auxiliaries can move along, but only near, the compact bridge segments.",
+    "The selected auxiliaries are exposed by a fixed positive gap, their triangle is interior-marked and strict, and no point of the replacement can have two negative barycentric coordinates: negativity of coordinates i,j would force both c a_j<delta a_i and c a_i<delta a_j. If an ear is nonempty, a base-line point outside the edge segment similarly yields a two-negative point by mixing with an exterior point. Hence the ear roof is a concave polygonal roof over that segment, with all nonzero slope jumps at interior parameters uniformly bounded away from 0 and 1.",
+    "The sign-mismatch strip for each captured area has width O(H_e) and height at most H_e. Along a cutting line the roof-height map has Lipschitz constant at most |b/Delta| H_e/kappa<1/2. Its unique fixed point is the chord endpoint and is h_e(s_0)+O(H_e^2), including at a roof knot. The unit-area edge chart gives coarea increment h_*/|Delta|, and the nonoverlapping ear contributions add. H_e/2<=E_e and H_e^2<=2 delta_0 E_e give the stated relative, rather than just absolute, error.",
+    "The opposite-edge double interval is exactly the point-height interval [0,x] in the canonical coordinates, with cap margins y and x-y at the base. For edge P_1 P_l the double interval is exactly [n_j/H,p/L], because the two incident base margins are H theta-n_j and p-L theta. Each dependency uses an outward transverse direction of positive area Jacobian and includes both endpoints. In the local proof the leading cap and chord coefficients depend on that direction only through its positive Jacobian, so the signs transfer to the unit-area tent chart.",
+    "Moving one edge vertex along its other incident edge leaves both other supporting lines fixed and makes a two-sided signed affine strip with profile 1-s or s, up to a positive Jacobian. The strict-triangle theorem on both sides of zero makes each affine-strip derivative zero. For t<=theta the difference T_t-(1-s)/(1-t) is supported in [0,t], integrates to -t/(2(1-t)), vanishes at both cut crossings, and only affects k and the cap of the starting vertex. This gives the claimed coefficient and negative sign, including t=theta. Reflection gives the right-end formula through t=psi. There is no uniform sign margin as t tends to an endpoint.",
+    "On the compact peak interval forced by the bridge geometry, continuity in the underlying triangle and the peak gives a uniform strict derivative margin. The downward slope jump of a unit tent is 1/[t(1-t)], so the positive tent coefficients have sum 2E_e. The quadratic Taylor remainder is O(E^2)=O(delta_0 E). Shrinking the neighborhood gives the asserted area margin.",
+    "If E=0 then the replacement is the inner triangle, and its retained supports at the six edge-interior ray endpoints constrain the original body inside that triangle. Exact area equality then forces equality of the convex bodies. This proves strictness for every nontriangle. Rows already strict at the reference remain strict by continuity.",
+    "Compared the original source bytes and locators with the frozen claims. The archived replacement convergence, roofs, clipping, margin and strictness in fed8703fd24ac57f §§1–6 are retained; the 8e1d01c76d1a2560 §§2–4 endpoint and unique-tip argument is reproduced by the signed-strip and tent subtraction. An independent rational replay of 24 tight parameter choices, all three edges, both affine endpoints and five interior or seam peaks reproduced the endpoint, seam and sign formulas in 1,226 checks including the band-constant arithmetic."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "a19fb2ae234afb2a",
+      "hypotheses": "Every nearby inner triangle has interior source, spanning balanced normals, and the same strict distinct-vertex signs. The corner area relation identifies the exact f_i of the accepted theorem."
+    },
+    {
+      "fact_id": "4b408a905c45b287",
+      "hypotheses": "The actual body contains the source in its interior. Three distinct cutting lines yield six distinct cyclic rays with angular gaps below pi. The chosen normalized forms are actual supports at the ray endpoints."
+    },
+    {
+      "candidate_id": "bd0a8fbcb2d1cc47",
+      "candidate_sha256": "3a98fb3261e38b87a085843741d0216c6099b86e80c1c80ddb77b1f61a95388c",
+      "draft_key": "tight-planar-lorentz-triangle-parametrization",
+      "hypotheses": "After relabeling the selected tight row as 1, the invertible map with the first two normals as rows makes the circuit canonical without changing Phi. The allowed exchange of caps 2 and 3 keeps row 1 and gives x,s,v>0 and w>=0.",
+      "reviewed_proof_sha256": "71e3bc56955b714dc8fa1236e408727a242e70cd3ab4e68ed92ce6705fcd75c7",
+      "reviewed_statement_sha256": "ffc5cc32166d8f1609d608b3beae99353ba029a7366f717e07b26c94ee95b1db",
+      "status": "requires independent approval of these exact bytes"
+    },
+    {
+      "candidate_id": "fcb98a77224687d8",
+      "candidate_sha256": "23a1434e50216cec75d97f3615395e7786a3b2bfdf635e56b45fb50254ed5f44",
+      "draft_key": "opposite-edge-lorentz-ear-first-variation",
+      "hypotheses": "At the canonical tight triangle, the whole opposite-edge double-signature interval corresponds exactly to base height in [0,x]. Its tip displacement is outward transverse and the lemma includes both ray crossings.",
+      "reviewed_proof_sha256": "fa0c900767a250dbc8b86c333d11b31b1f296e1cd1035814616beeb30ec2d35b",
+      "reviewed_statement_sha256": "b63f268ca3b95c874daa0c55ed68b3eaaaeff0d109685638fcc3b827d5cfd8dc",
+      "status": "requires independent approval of these exact bytes"
+    },
+    {
+      "candidate_id": "56b0987e853e0500",
+      "candidate_sha256": "5a1a63777a9bce913502e1954555b4c5e1875c82de9dad1f3b6d1c7a546349c3",
+      "draft_key": "adjacent-edge-lorentz-ear-first-variation",
+      "hypotheses": "On each of the two incident edges P_1 P_l, the double-signature range is exactly [n_j/H,p/L]. The movement away from the opposite vertex is transverse outward, and its negative derivative holds at both endpoints.",
+      "reviewed_proof_sha256": "e280e1894544002718cae5f1320627ca39cf9f2fb130fdabc9f66967c16e766e",
+      "reviewed_statement_sha256": "026f20b2b5ac25c7a1383c8207f6c7d0609f9291f3f01f2cca030a75ed41df85",
+      "status": "requires independent approval of these exact bytes"
+    },
+    {
+      "candidate_id": "a6b895b7e48e8037",
+      "candidate_sha256": "10a7b8ea13f7bd395f8d23c1051990bae3cb59404d0650a9e9c2dc0ec4dfad11",
+      "draft_key": "simplex-fixed-section-corner-loss-margin",
+      "hypotheses": "Use only alpha_ij(T)>0 at d=2, the positive derivative for adding the same amount to k and Q_j with sections fixed. The original triangle satisfies all strict-incidence and tight-row premises; no assumption of actual inner-body deletion is needed to use the raw partial derivative.",
+      "reviewed_proof_sha256": "74f74a39ad8619510c9b785b18ec7600414d04bc55dffd0c8d618e8632cfa1a1",
+      "reviewed_statement_sha256": "2bedd0cf0650826f73273b807be1c51d7db330884fe3face86ad5b4811721221",
+      "status": "requires independent approval of these exact bytes"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:40:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Covers strict distinct-vertex triangles and the exact tightness characterization. It does not cover an arbitrary convex body near one, especially the strictness implication for nontriangles.",
+      "fact_id": "a19fb2ae234afb2a"
+    },
+    {
+      "comparison": "Supplies exact area and ray data with support-preserving polygon replacement. It does not imply the signs or relative ear margin.",
+      "fact_id": "4b408a905c45b287"
+    },
+    {
+      "comparison": "Optimizes one row over bodies with prescribed six sector areas and realizes an extremizing triangle or quadrilateral. It does not supply a row bound or preserve the original six support lines needed for local strictness.",
+      "fact_id": "f56c82f24e66e60b"
+    }
+  ],
+  "readability": "The base parameter in the opposite-ear predecessor is the vertical coordinate, while the local tent parameter is a fraction along the edge. Their correspondence follows by evaluating the two incident margins on the base. The limiting unique sector is the part of the triangle in that cone and is a four-vertex polygon in the ray coordinates.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a9c1ce8f7aecdfd72c8b2ba434af37a91d2072590ce873b23d6fabe6e206962c",
+  "reviewed_statement_sha256": "83d4da01bd7e56449d6f3f2b88dca09fc7e71b3d7204dab81ddf01cdac5fd022",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:35:38Z",
+  "summary": "The fixed-source, fixed-normal neighborhood and the strict margin relative to the replacement's inner triangle follow on the frozen proof. Endpoint-affine profiles are used only to derive strict interior-peak signs, and the replacement keeps every roof knot uniformly away from the endpoint degeneracy. The four exact same-batch dependencies below require their own independent approval before admission.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

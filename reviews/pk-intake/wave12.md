@@ -1,0 +1,39 @@
+# PK intake batch 12
+
+Seven groups screened 66 source notes in a parallel window of 11m 31s, extracting 253 source occurrences. One exact duplicate links the same strict-incidence loss coefficients to their canonical record. The remaining 252 occurrences have distinct records.
+
+Nineteen frozen proofs entered the graph after independent review. The window from the first recorded start to the last finish was 20m 01s. Eighteen received an initial approval. One of those also received a metadata correction about sharpness. The cylinder proof received a clarification about which fiber pays the exact planar fraction. An additional TeX spacing edit received a 36s recheck, including the binding to the signed-mass predecessor. The original reviews accompany all three revisions. A 14s addendum records two same-batch predecessor hashes for the projected stationary theorem in the admission fields.
+
+| Source | Fact | Recorded review |
+| --- | --- | ---: |
+| cd9374750b11bd94 Opening (1)–(2), §§1–3, (3)–(13) | [Paired cap bounds for unequal homothetic sources](../../facts/e561372a5640eef8.md) | 2m 27s |
+| cd9374750b11bd94 §4, (14) | [A cap bound at the retained midpoint of homothetic endpoint fibers](../../facts/706ce1dc5b5b8d67.md) | 2m 27s |
+| 680d45e380747dc3 §1 (1)–(3), exact positive-normal envelope | [Exact positive-normal cap envelope of a triangle](../../facts/b39ecb342488b802.md) | 4m 45s |
+| 680d45e380747dc3 Opening and §§2–4 (4)–(11), with §1 as a separate dependency | [Prescribed centroid depth for four monotone triangle fibers](../../facts/d73af8faaea6933f.md) | 4m 45s |
+| 8c5bbb9eb6411d6e Opening (1)–(2), §§1–2 (3)–(5), exact shared-tilt minimization | [Exact shared-tilt cap minimum for symmetric integer-centered simplex fibers](../../facts/a158ab357a60f74c.md) | 3m 48s |
+| 8c5bbb9eb6411d6e §2 (6), positive finite-sequence correction, 8c5bbb9eb6411d6e §3 (7)–(8), explicit dominant-normal cone and strict chain bound | [Strict finite cap bound in an explicit cone for symmetric integer-centered simplex chains](../../facts/527354d0ce513200.md) | 3m 48s + 0m 43s |
+| 97eab0f821e54041 §1, Lemma 1, (1)–(2), open compatibility | [Strict anchored Minkowski inclusions preserve exact fibers under small Hausdorff changes](../../facts/ef28349cb1e27c5b.md) | 3m 36s + 0m 36s |
+| 97eab0f821e54041 §2 and §2.1, Lemmas 2–3, (3)–(5), exact own-fiber bump geometry | [Exact local volume and disjointness of single-apex hull additions](../../facts/b3dd5f87b2f6ec9e.md) | 3m 36s |
+| 97eab0f821e54041 §3, Theorem 4, (6)–(8), exact arbitrary signed local masses | [Exact signed local mass variations for strictly compatible mixed fibers](../../facts/fa420503475f57e1.md) | 3m 36s |
+| 97eab0f821e54041 §4, Theorem 5, (9)–(13), selected-circuit upper derivative and equality dual | [An upper derivative and equality dual for selected regular critical circuits](../../facts/ec5e140eb107957e.md) | 3m 36s |
+| 97eab0f821e54041 §5–§5.2, (14)–(17), exact actual nonlocal bump obstruction, 97eab0f821e54041 §5.1, (18)–(19), planar exact nonlocal fraction | [A smooth ball cylinder with nonlocal mass under an actual hull bump](../../facts/4ee3181ef8f1a39c.md) | 3m 36s + 0m 34s |
+| 86934b651b11f7d5 §§1–2, (1)–(4), actual B subinterval, chord center and section weights, 6ac02348e3ceb9a9 §§3–4, signed facet moment and actual planar interval inclusion, 568f7cf028ec23b6 §§1–2, fixed-mark first variation at a zero endpoint | [Actual critical planar chords bound the reciprocal section weights](../../facts/ba445d671279810a.md) | 4m 30s |
+| 86934b651b11f7d5 §5, general shell incidence lemma | [Weighted incidence bounds the first loss of a homothetic shell](../../facts/25cb17da7fc8ba32.md) | 4m 30s |
+| 86934b651b11f7d5 §§3–4, (5)–(7), no unique-capture regions and actual contraction, 0e094dd9f76aefdd Actual finite-menu certificate, (1)–(7), fixed-facet implicit meeting point and endpoint isolation | [Moving equal-budget cover under contraction of one planar endpoint](../../facts/3e7f0a31e608bd79.md) | 4m 30s |
+| 86934b651b11f7d5 §7, (12)–(14), exact removed-corner derivative and one attained reserve, 86934b651b11f7d5 §6, (8)–(11), one present deficient corner at its actual center | [Exact losses of planar singleton corners and an attained common contraction center](../../facts/6d1e0acd23043f7a.md) | 4m 30s |
+| 0f025bdf9a51573b Lemmas 1–2, local and exponential bounds and the normalized ray coupling | [Radial-integral convexity for subunit exponents](../../facts/5af5f275fa4c066e.md) | 3m 15s |
+| ceb2615ce03b7dbc Statement (1)–(2) and §§1–3, with the planar application in §4 | [Sharp centered-line mass versus radial chord length](../../facts/d49c8cc7c869ce29.md) | 2m 56s |
+| 3ed6256a0896f434 §§1–4, (1)–(4), including all finite multiplier patterns and boundary cases, c22519c29667168e Strict-triple geometry and half-weight case, as accepted in b82858197fd14145 | [Robust reweighting of balanced planar chords](../../facts/e0bd82357032b4ec.md) | 3m 11s |
+| e239a5fb0d0efe4d §1 definition of c_d and b_d; §2 projected stationary-section lemma and exact dimension comparisons, 3ed6256a0896f434 §5 (5), full-centroid and rank-one consequences | [Projected stationary sections with planar normals](../../facts/03ec0bc313e02df5.md) | 3m 11s |
+
+The unequal-scale bound uses the homogeneous two-source interpolation at the same mark and proves the exact full/empty plateau. The actual midpoint result counts the disjoint middle and endpoint contributions. The four-monotone-fiber proof identifies a specific actual centroid and verifies all shared tilts. The integer-centered finite correction is strict on the stated cone in dimension at least two. Its signed-normal transfer requires the replacement normal to lie in that cone, and dimension one has a marked equality example.
+
+The local signed perturbations use strict anchored rows and globally exposed singleton points. The upper dual uses fixed selected circuits, matching positive left and right slopes for each cap, and strict budgets at nondeep bases. In the cylinder construction the exact planar fraction is the share of added mass in the base-one fiber. For large bumps the total share at distance at least one from the old exposed point can exceed that fraction.
+
+The actual chord results separate section geometry from the moving equal-budget cover, and their common-center theorem optimizes one shell-loss bound. The moving-cover descent test requires strict gaps at both endpoint maxima. The below-$2/9$ specialization with an original global budget has empty hypotheses by the accepted three-fiber depth bound.
+
+The centered-line comparison and the robust reweighting give the exact projected-stationary bound when the relevant normals lie in a plane. The earlier accepted log-concave radial-body construction supplies its angular identity and convexity. The subunit exponent lemma handles a separate range. The earlier all-cover theorem already pays the ordinary rank-two overlap even without original stationarity. The conditional cross-fiber credit remains a separate entry.
+
+The archived replays passed for 629 unequal-scale checks, 420 four-fiber profiles with 324 exact nonheavy tilt minima and their scalar and envelope checks, 70,518 cone checks, 2,338 signed mass and cylinder checks, 1,291 fixed-facet checks, 9,446 true-facet checks from screening, and the symbolic robust chord identities and dimension comparisons.
+
+The [crosswalk](../../assets/pk-nov6/crosswalk.json) records 790 screened notes, with 101 having no open item and 689 provisional. The 2,976 canonical entries comprise 170 admissions, 462 checked reuse mappings, 244 explicit holds, 1,765 proposals awaiting normalization or review, and 335 supporting entries. Fifty-four additional source occurrences point to canonical entries. The remaining 427 notes await their first screen.

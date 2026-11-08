@@ -1,0 +1,30 @@
+{
+  "advances": "A finite orbit and volume inequality allowing missing parity classes and arbitrary maximal root geometry.",
+  "author": "PK-research-agent",
+  "candidate_id": "6c958b2e689fbf9f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:25:21.033079+00:00",
+  "depends_on": [],
+  "draft_key": "terminating-parity-volume-maximizer-forest",
+  "kind": "theorem",
+  "proof": "The midpoint has integer base by parity, and convexity gives the first inclusion. It contains a half-scale copy of a positive fiber, so $F(z)\\in P$. Brunn–Minkowski gives the volume-root inequality. If $w_z<m_{[z]}$, then $w_{F(z)}>w_z$. If $w_z=m_{[z]}$ and $z\\ne v_{[z]}$, then $|v_{[z]}|^2\\le |z|^2$ and\n$$\n|F(z)|^2=\\tfrac12(|z|^2+|v_{[z]}|^2)-\\tfrac14|z-v_{[z]}|^2<|z|^2.\n$$\nThe pair $(-w_z,|z|^2)$ strictly decreases lexicographically at every nonfixed point. Finiteness gives termination, and $F(z)=z$ is equivalent to $z=v_{[z]}$. In each class a preimage of $y$ must be $2y-v_c$, giving the multiplicity bound and in particular at most $2^n$ preimages. Repeatedly substituting the Minkowski inclusion gives the displayed dyadic inclusion.\n\nFor the absolute bound write $x=w_z^{1/d}$ and $t=m_{[z]}^{1/d}-x\\ge0$. The binomial formula gives $(2x+t)^d-(2x)^d\\ge(x+t)^d-x^d$ since each term in the difference is a nonnegative constant times a power of the initial argument. Combine with $w_{F(z)}\\ge (2x+t)^d/2^d$. For sharpness take one integer coordinate on $[0,2]$ and fibers $(s+(1-s)z/2)K$ with a fixed unit-volume $d$-body $K$ and $0<s<1$. The real family is convex because the positive scale is affine, and it is a compact full-dimensional body with exactly three positive integer fibers. The even maximizer is $2$ and the edge $0\\to1$ gives growth divided by the initial deficit equal to $(((1+s)/2)^d-s^d)/(1-s^d)$, which tends to $2^{-d}$ as $s\\downarrow0$. For any fixed larger integer dimension take the product with $[0,1/2]^{n-1}$ in the additional base coordinates, which adds no sampled sites.\n",
+  "source_candidate_ids": [
+    "59540588b70a065b"
+  ],
+  "source_candidate_sha256": {
+    "59540588b70a065b": "0e979c0b1d9d773b07656956a57665d4c98d557fe073ec20052a8b4ddbae9163"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "59540588b70a065b",
+      "locator": "59540588b70a065b:02 §2, (6)–(9), parity-volume forest with missing classes allowed"
+    },
+    {
+      "candidate_id": "59540588b70a065b",
+      "locator": "59540588b70a065b:03 §2, (10), sharp uniform absolute growth"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $P$ be the nonempty finite positive-fiber base set of a convex body in $\\mathbb R^n\\times\\mathbb R^d$. Write $K_z$ for its actual fibers and $w_z=|K_z|$. In each occupied coordinatewise parity $c$ choose a maximizer $v_c$ of $w_z$ minimizing $|v_c|^2$ among its maximizers, with remaining ties arbitrary, and put $m_c=w_{v_c}$. The map $F(z)=(z+v_{[z]})/2$ sends $P$ into itself, has at most one preimage per occupied class for every target, and every orbit terminates at a chosen $v_c$. Its edges satisfy\n$$\n(K_z+K_{v_{[z]}})/2\\subseteq K_{F(z)},\\quad\nw_{F(z)}^{1/d}\\ge(w_z^{1/d}+m_{[z]}^{1/d})/2,\\quad\nw_{F(z)}-w_z\\ge 2^{-d}(m_{[z]}-w_z).\n$$\nAlong $z_0=z,\\ldots,z_k=F^k(z)$ one has $2^{-k}K_z+\\sum_{j<k}2^{j-k}K_{v_{[z_j]}}\\subseteq K_{z_k}$. The absolute-growth coefficient $2^{-d}$ is sharp.",
+  "subgoal_id": "pk-intake-terminating-parity-volume-maximizer-forest",
+  "title": "Terminating midpoint forest for parity volume maximizers"
+}

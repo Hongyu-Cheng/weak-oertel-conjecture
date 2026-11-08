@@ -1,0 +1,26 @@
+{
+  "advances": "Invariance and sharp factor for finite-level hyperplane fractions of a pushed-forward measure, allowing level-dependent lattice offsets after a shear.",
+  "author": "PK-research-agent",
+  "candidate_id": "c001d85bec405949",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.205385+00:00",
+  "depends_on": [],
+  "draft_key": "sharp-coupled-fine-hyperplane-factor",
+  "kind": "lemma",
+  "proof": "The first family is the subfamily with $a=0$. On each fixed level $z$, a coupled hyperplane is contained in the corresponding fine-only hyperplane $b\\cdot u=c-a\\cdot z$. Its mass there is at most the mass on that fine-only hyperplane summed over all levels, bounded by $\\eta_u$ times the total mass. Summation proves the upper bound; probability also gives the bound one.\n\nFor completeness the suprema in these families are attained. Take a maximizing sequence and normalize $\\lVert b\\rVert=1$. Pass to a subsequence so the normals converge and the thresholds $c-a\\cdot z$ converge in the extended reals at each of the finitely many occupied levels. At a level with divergent threshold the indicators converge pointwise to zero. At a finite-limit level the limsup indicator is bounded by the indicator for the limiting normal and threshold. The vector of finite-limit thresholds remains in the closed finite-dimensional image of $(a,c)\\mapsto(c-a\\cdot z)_z$ on those levels, so it is realized by one coupled hyperplane. Reverse Fatou bounds the limiting masses by its mass. The same argument restricted to $a=0$ proves attainment for the fine-only family.\n\nPullback takes the fine coefficient $b$ of a coupled normal to $A^{\\mathsf T}b$. The inverse change has the same triangular form, so these hyperplanes correspond bijectively and their pushed-forward fractions agree. In particular, this statement allows changes that send a common lattice coset to different offsets on different coarse levels.\n\nFor sharpness use $k=r=1$, any positive-dimensional compact convex body $K$ with nonempty interior in the $x$-coordinates, and the full-dimensional convex body $0\\le z\\le J-1$, $|u-z|\\le\\varepsilon$, $x\\in K$, with $0<\\varepsilon<1/2$. At integer $(z,u)$ there are exactly $J$ equal positive fibers, at $(j,j)$ for $j=0,\\ldots,J-1$. Each fine-only hyperplane meets at most one of them, and $u-z=0$ contains all of them. Hence $\\eta_u=1/J$ and $\\eta_c=1$.\n",
+  "source_candidate_ids": [
+    "6f79052f99c749c4"
+  ],
+  "source_candidate_sha256": {
+    "6f79052f99c749c4": "de6f15ecf4ad78add37099a0361d8f29244032b66d0e0e595b56f54a40997c34"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6f79052f99c749c4",
+      "locator": "6f79052f99c749c4:03 §2.1, (2a), coupled normals and exact factor J"
+    }
+  ],
+  "statement": "Let a positive finite Borel measure on $(z,u,x)$ be supported on at most $J$ coarse levels $z$, with $u\\in\\mathbb R^r$, $r\\ge1$. Let $\\eta_u$ be the largest mass fraction on $b\\cdot u=c$ with $b\\ne0$, and let $\\eta_c$ be the largest on $a\\cdot z+b\\cdot u=c$ with $b\\ne0$. Then\n$$\n\\eta_u\\le\\eta_c\\le\\min(1,J\\eta_u).\n$$\nFor the pushed-forward normalized measure, $\\eta_c$ is invariant under invertible affine changes with $z'=Uz+z_0$ and $u'=Au+Bz+u_0$, where $U,A$ are invertible. With uniformly bounded $J$, either fraction tends to zero exactly when the other does. The factor $J$ is attained by a full-dimensional mixed body for each integer $J\\ge2$.",
+  "subgoal_id": "pk-intake-sharp-coupled-fine-hyperplane-factor",
+  "title": "Sharp coupled fine-hyperplane comparison on finitely many coarse levels"
+}

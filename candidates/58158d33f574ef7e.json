@@ -1,0 +1,34 @@
+{
+  "advances": "Finite compatible center graph and supplied local budgets. There is no general compatibility or total-budget assertion for arbitrary fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "58158d33f574ef7e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.930547+00:00",
+  "depends_on": [
+    "ba0f3db1bf4f62c6",
+    "6d6fcf377e68c79c",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "compatible-finite-center-graph-local-depth-budget",
+  "kind": "theorem",
+  "proof": "Every coordinate of $z$ and $c_z$ belongs to $L(P)$, the space of functions preserving the anchored convex representations of $P$. By ba0f3db1bf4f62c6 these coordinates are affine restrictions on the canonical lift of $P$. The affine image $G=\\{(z,c_z):z\\in P\\}$ therefore preserves all anchored representations of $P$, and projection onto the base shows that $G$ gains none. The two finite sets have the same closed convex traces under this bijection, since hull membership in any subset is equivalent to an anchored representation supported in it. Hence $G$ has relative Helly number $h(P)$. For a finite set every convex trace is also the trace of the closed hull of its captured points, so the same Helly number is valid for all convex traces. If $\\sum_z t_z=0$ the result is immediate. Otherwise apply the finite-measure $S$-Helly centerpoint bound of 6d6fcf377e68c79c to $S=G$ and the measure $\\sum_z t_z\\delta_{(z,c_z)}$. It selects a graph point $Y$ such that the graph weight captured by every closed ambient halfspace $H$ containing $Y$ is at least $\\sum_z t_z/h(P)$, with boundary atoms included.\n\nWhenever $(z,c_z)\\in H$, its trace at $z$ contains $c_z$. If the continuous component of the normal is nonzero it is a closed continuous halfspace and pays at least $t_z$. Otherwise the trace on that fiber is the whole continuous space, which pays $w_z\\ge t_z$. The sum of these disjoint fiber contributions proves the raw bound. Set $t_z=\\kappa w_z$ for the common-fraction version.\n\nFor the intrinsic statement, a $q$-dimensional compact convex fiber is a full-dimensional body in its $q$-dimensional affine hull. The full-mass centroid case of 6769574fc1bd9f8d in this affine space pays $\\gamma_q w_z$ in every proper closed containing halfspace. An ambient trace containing the centroid restricts to such a halfspace or to the entire affine hull, in which case it pays $w_z$. Lower-dimensional fibers have zero $\\mathcal H_q$ mass. When $q=0$, all nonempty fibers are singletons and each selected fiber pays its mass one. Apply the first part with $t_z=\\gamma_q w_z$ and divide by $W$. Finally $x\\log(1+1/x)$ increases for $x>0$, since $\\log(1+t)>t/(1+t)$ for $t>0$ by integrating $(1+s)^{-1}$ from $0$ to $t$. Thus $\\gamma_q\\ge\\gamma_d$, including $q=0$.\n",
+  "source_candidate_ids": [
+    "6bb486f2aedd17ca"
+  ],
+  "source_candidate_sha256": {
+    "6bb486f2aedd17ca": "0eb41e5b75c9ecd159f7edbb8232c60778200e1a393e2bd95a5ec862e107d8c4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6bb486f2aedd17ca",
+      "locator": "6bb486f2aedd17ca:3 §1, inequality (3), and §2, inequality (6); additional proof scope: §1, inequality (3), and §2, inequalities (5)–(6) and intrinsic-measure paragraph"
+    },
+    {
+      "candidate_id": "6bb486f2aedd17ca",
+      "locator": "6bb486f2aedd17ca:4 §2, inequality (5) and intrinsic-measure paragraph"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite and nonempty with relative closed-convex Helly number $h(P)$. At each $z\\in P$ let $\\sigma_z$ be a finite nonnegative Borel measure of mass $w_z$ on an allowed set $K_z\\subseteq\\mathbb R^d$, let $c_z\\in K_z$, and assume the center map respects every convex representation of a point of $P$ by points of $P$. Let $t_z\\ge0$ be a lower bound for $\\sigma_z(J)$ for every closed continuous halfspace $J$ containing $c_z$, also taking $t_z\\le w_z$. For $d=0$, only this latter constraint is needed. If $W=\\sum_z w_z>0$, there is one selected center $(z_*,c_{z_*})$ at which every closed ambient halfspace has raw mass at least $\\sum_z t_z/h(P)$ under $\\mu=\\sum_z\\delta_z\\otimes\\sigma_z$. In particular, a common local fraction $\\kappa\\in(0,1]$ gives $\\kappa W/h(P)$.\n\nFor uniform compact convex fibers of maximum dimension $q\\le d$, use $\\sigma_z=\\mathcal H_q|_{K_z}$ and choose the intrinsic centroid on each $q$-dimensional fiber and any allowed point on the other fibers. When these choices satisfy the same compatibility, some selected center has normalized intrinsic depth at least $\\gamma_q/h(P)$, where $\\gamma_j=(j/(j+1))^j$ for $j\\ge1$ and $\\gamma_0=1$. This is at least $\\gamma_d/h(P)$.",
+  "subgoal_id": "pk-intake-compatible-finite-center-graph-local-depth-budget",
+  "title": "Transfer of a finite compatible center graph's local depth budget"
+}

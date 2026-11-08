@@ -1,0 +1,75 @@
+{
+  "candidate_id": "ffdb2bc33d7a6750",
+  "candidate_sha256": "a9e9e895e580ec4e269b56c7cf68669ed6b394e934e2d34121443164c00d044a",
+  "checked_dependency_candidate_sha256": {
+    "2fb8b0785692a5b4": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+    "4b408a905c45b287": "422e4649538c6870faa4eb09f695b2853979e12e5cc4718152e28a24472382dc",
+    "7d1ee06fa4119930": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870"
+  },
+  "checks": [
+    "Apply the accepted replacement theorem to any realizing body and any chosen support at each radial endpoint. On a sector clipping adds only 0 or the two prescribed endpoints, so each positive-excess sector has its one genuine inserted vertex in the open cone. A zero-excess sector is the core triangle and its inserted midpoint is only a boundary subdivision.",
+    "The canonical determinants are one. Dividing the convex turn inequalities as in the accepted criterion gives r_{i−1}+s_i≤b_i; on a positive edge the harmonic value is a_i/(D_i t_i)=h_i, and both charges vanish at a zero edge. Thus the Gram identity applies with precisely the declared L and has no zero denominator.",
+    "Evaluation at w>0 forces every node slack to vanish and s_i/r_i=w_{i+1}/w_i on each positive edge. Together with h_i>0 this fixes both charges, and their reciprocal formulas fix u_i,v_i. The same fixed vector w can be used for every choice of realizing body and supports, so disconnected blocks do not create any choice of polygon.",
+    "Zero slack makes the adjacent inserted points and P_i collinear. The inserted points lie on strictly opposite sides of the line through 0 and P_i because their open cones are on opposite sides. Consequently P_i is strictly between them. The turn at a positive insertion equals D_i(t_i−1)>0; a core midpoint has zero turn. Hence every genuine edge between consecutive strict vertices contains at least one prescribed endpoint in its relative interior.",
+    "Each chosen support of the arbitrary original body is a support of Q at a relative-interior edge point and must therefore be that edge line. These supports include all edge lines, so their inward halfplanes yield K⊆Q. The sector areas give equal total areas. Any point of Q outside the closed K has a neighborhood disjoint from K with a positive-area intersection with Q, by joining that point toward an interior disk. Hence K=Q.",
+    "Checked an exact two-zero-edge datum: R_i=1, W=(1/2,3/4,3/4,1/2,3/4,3/4), w=(1,1,2,1,1,2). Then Lw=0, the four open-sector insertions are (−1/2,3/2),(−3/2,1/2),(1/2,−3/2),(3/2,−1/2), and the boundary turn at each prescribed endpoint is zero with the endpoint strictly between adjacent insertions.",
+    "Verified the raw source digest of 50872e565640d12b and checked §2, including midpoint treatment for zero edges, the charge ratio orientation, and the actual-body uniqueness argument using arbitrary endpoint supports."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7d1ee06fa4119930",
+      "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+      "mapping": "The canonical rays and actual sector data meet the hypotheses. Its sector reconstruction and turn inequality give the stated coordinates, charges, convexity slacks, and equality-to-collinearity implication.",
+      "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+      "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043",
+      "status": "accepted at reviewed repository base"
+    },
+    {
+      "candidate_id": "4b408a905c45b287",
+      "candidate_sha256": "422e4649538c6870faa4eb09f695b2853979e12e5cc4718152e28a24472382dc",
+      "mapping": "The actual body has interior origin and six distinct rays with consecutive gaps below π; the accepted theorem permits each endpoint support choice independently and preserves all areas and endpoints in the replacement.",
+      "reviewed_proof_sha256": "edc803d15759137767512932ef990b65cdf87dd709f1ba55deffced3f8e11f64",
+      "reviewed_statement_sha256": "4e6428c6c442d37d44ef572a6295870583bfab8da9e541b71e635af4ec4ea75c",
+      "status": "accepted at reviewed repository base"
+    },
+    {
+      "candidate_id": "2fb8b0785692a5b4",
+      "candidate_sha256": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+      "mapping": "On each positive edge the finite positive charges have harmonic value h_i; on a zero edge both are zero. The accepted node inequalities give nonnegative slacks and the identity for the same canonical matrix L.",
+      "reviewed_proof_sha256": "4748e8e25d1403e53bee831d62f59ea4e4ed213361d14c7d076ffa35e592aaf8",
+      "reviewed_statement_sha256": "ce8a642e0b42373e9cc4d8ed52bbbce8e9bea3b10a4fb272d1232bcf2a4f3592",
+      "status": "accepted at reviewed repository base"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:51:37Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its exact reconstruction yields some polygon, possibly with prescribed endpoints as vertices. It supplies no uniqueness of an arbitrary actual body and no edge-interior conclusion under a positive kernel hypothesis.",
+      "fact_id": "7d1ee06fa4119930"
+    },
+    {
+      "comparison": "Preserves arbitrary chosen endpoint supports in a polygonal replacement, but different support choices need not a priori produce the same polygon. The present kernel equality fixes the replacement and forces K to equal it.",
+      "fact_id": "4b408a905c45b287"
+    },
+    {
+      "comparison": "Already establishes charge rigidity and vanishing slacks on positive null blocks. The new conclusion identifies every actual realizing body as the unique replacement polygon and locates its vertices and prescribed endpoints.",
+      "fact_id": "2fb8b0785692a5b4"
+    }
+  ],
+  "readability": "The indexed excess t_i and charge r_i differ from the unindexed prescribed radii t and r. The midpoint on a core sector is a boundary subdivision and is never counted as a vertex.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6987abe1cbd74acde09232b557d0ad1bf2cb8868a29aced746a8d4e99cebac6d",
+  "reviewed_statement_sha256": "15d68a185b7721fb5f4309fe9ee5dddd5d87c49532f3a8631eb02b1bcb26de0a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:47:33Z",
+  "summary": "A positive kernel vector fixes the charges on every positive-excess edge and makes every endpoint slack zero. Preservation of arbitrary endpoint supports then gives uniqueness of the actual realizing body.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

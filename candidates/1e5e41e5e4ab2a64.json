@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary continuous probability density; no mixed or inverse-power escort claim.",
+  "author": "PK-research-agent",
+  "candidate_id": "1e5e41e5e4ab2a64",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:56:22.857544+00:00",
+  "depends_on": [],
+  "draft_key": "prescribed-mean-power-hinge-density",
+  "kind": "lemma",
+  "proof": "On the half of an inner ball at $x$ where $a\\cdot(z-x)\\ge0$, the objective is at least the integral of $[a\\cdot(z-x)]_+^p$, giving a coercive lower bound $c|a|^p$. The objective is continuous, and strict convexity holds for any two distinct parameters on a common neighborhood of $x$ where both affine factors are positive and differ off a null plane. This gives unique attainment. Differentiate the $C^1$ hinge power at the optimizer to obtain the first moment identity; dotting with $a_p$ and using $h^p=h^{p-1}(1+a_p\\cdot(z-x))$ gives the mass identity. For any competing probability density $\\sigma$ with the stated mean, Hölder gives\n$$\n1=\\int_F (1+a_p\\cdot(z-x))\\sigma\\,dz\n\\le\\int_F h\\sigma\\,dz\n\\le B^{1/p}\\left(\\int_F\\sigma^{p/(p-1)}\\,dz\\right)^{(p-1)/p}.\n$$\nThe asserted density satisfies both equalities, and equality in Hölder forces proportionality to $h^{p-1}$, hence uniqueness under normalization.\n",
+  "source_candidate_ids": [
+    "c8365ce16304e154"
+  ],
+  "source_candidate_sha256": {
+    "c8365ce16304e154": "687c2e1cd5c51e567beca5ce05bb0af7031dd5033b88dbf45323cc315bb442bf"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c8365ce16304e154",
+      "locator": "c8365ce16304e154:01 §1, (1)–(3)"
+    }
+  ],
+  "statement": "Let $F\\subset\\mathbb R^m$ be a compact convex body with $x\\in\\operatorname{int}F$ and $p>1$. The minimum\n$$\nB=\\min_a\\int_F[1+a\\cdot(z-x)]_+^p\\,dz\n$$\nhas a unique parameter $a_p$. For $h=[1+a_p\\cdot(z-x)]_+$ one has\n$$\n\\int_F(z-x)h^{p-1}\\,dz=0,\\qquad \\int_Fh^p\\,dz=\\int_Fh^{p-1}\\,dz=B>0.\n$$\nAmong nonnegative probability densities on $F$ of mean $x$, $h^{p-1}/B$ uniquely minimizes the integral of the power $p/(p-1)$, with minimum $B^{-1/(p-1)}$. In dimension zero use the unit counting measure on the tangent point, the empty parameter and $B=1$.",
+  "subgoal_id": "pk-intake-prescribed-mean-power-hinge-density",
+  "title": "The affine power hinge gives the unique minimum-power density of a prescribed mean"
+}

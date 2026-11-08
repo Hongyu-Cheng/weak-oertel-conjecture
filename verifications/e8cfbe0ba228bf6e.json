@@ -1,0 +1,49 @@
+{
+  "candidate_id": "dec855d1498a4e64",
+  "candidate_sha256": "e4db9ffc3a282004fb85fc58d6901fe36646dab1a45abfcb56fa66aa1291a752",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Verified cebc39c4f5ccbc96 §2 (2) and 25fed51eab0d77f0 §1 (1) in the committed source bytes. The former works over finite real bases and for volume; the latter uses arbitrary finite Borel measures over integer bases. The common geometric proof gives the combined frozen scope.",
+    "For a proper face of a finite polytope, choose a relative affine exposer vanishing on F and negative at every sampled point off F, then extend it to the ambient base. This works even if the hull is proper in the ambient base, and the extended linear part is nonzero because its restriction to the hull is nonconstant.",
+    "For a given cap A>=b and a nonempty off-face fiber at z, max A on that fiber is finite. Choose t large enough that this maximum plus t ell(z) is strictly less than b for every off-face fiber. Empty fibers impose no condition. Avoid the at most one t at which the tilted linear part vanishes. On F, including at boundary atoms, nothing changes because ell is zero there.",
+    "Measure restriction gives the lower bound for full depth by restricted depth. Trace isolation gives the reverse bound for each individual original cap and hence for infima, without assuming minimizers. If F is the full hull, S_F=S and the original cap works.",
+    "Each nonconstant relative cap functional extends to the ambient affine space with nonzero linear part. A containing ambient cap restricted to aff(F) times R^d is either a proper containing cap or the whole space, never empty. The whole trace has total restricted mass, so allowing it cannot lower the infimum; d>=1 guarantees proper relative caps exist even when F is a singleton. A whole trace can be realized by the exposer on a proper face, or by a sufficiently low continuous cutoff on the full compact support.",
+    "No volume positivity, fiber convexity, lattice closure or normalization is used. In particular a zero restricted measure is allowed, and any boundary mass is retained exactly."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T12:50:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The exposed-face identity in its proof treats finite atomic support and normalized conditional probability. The same geometric idea is used, but the accepted finite-support statement does not cover arbitrary compact fibers with a non-atomic finite Borel measure or exact realization of each of their traces.",
+      "fact_id": "1f002486f983941a"
+    },
+    {
+      "comparison": "Its depth identity preserves closed affine traces for finite positive weighted base points on minimal faces; it is an atomic special case. It does not handle arbitrary compact fibers or arbitrary Borel measure.",
+      "fact_id": "08b344179e054c1c"
+    },
+    {
+      "comparison": "Its depth restriction inequality applies to arbitrary retained subsets, and its proof identifies relative and ambient calculations for the restricted measure. It does not prove reverse comparison with the original full measure on every exposed-face cap.",
+      "fact_id": "ba0f3db1bf4f62c6"
+    },
+    {
+      "comparison": "It uses finite exposing tilt for a special zero-mass supporting cap with compatible volume fibers. It does not identify all cap traces and all marked raw depths for arbitrary finite Borel measures.",
+      "fact_id": "55a57b1cf55d0c87"
+    }
+  ],
+  "readability": "The inequality written as mu_F<=mu is measure domination; the resulting depth inequality is restricted depth <= original depth. The relative ambient space is aff(F) times the full continuous space, not the affine span of each individual fiber.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "094492b83ff5f0ca81e1aecbb45ea4c8b126e4a9d52219cc132977426656f6ac",
+  "reviewed_statement_sha256": "97991a749d7cb8345ae551f903e9a029c46d597b39196f22ee7e6eab18cb1bcc",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:46:29Z",
+  "summary": "Every containing closed face trace is exactly isolated by a finite exposing tilt; this proves equality of the two raw depths and respects lower-dimensional relative affine spaces.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,62 @@
+{
+  "candidate_id": "10916437d7f6301d",
+  "candidate_sha256": "ec83bbe10f1a0289573890e163a5cf7740f06b08448a4bddf113a701a251bfa8",
+  "checked_dependency_candidate_sha256": {
+    "a00161dbb06b25c0": "773041b223ec604c7bbbd71a7a70c17b4becf21991ca2c5ae7531c534f597d69",
+    "c80576b633835713": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729",
+    "d2ba4e3cbd6eb730": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0"
+  },
+  "checks": [
+    "Column sums and nonnegativity give m≤1. If m<1 and j is a maximal entry in row r, another row has positive mass in column j. Both changed entries are positive, so the signed transfer is feasible in both directions for sufficiently small magnitude and stays on fixed supports.",
+    "At the full-cut positive row the jump at a high coordinate is strictly positive, including constant rows. In the donor row the jump is nonnegative at the positive coordinate even when other coordinates vanish. Replacing the parameter by its negative swaps and negates the two one-sided derivatives, preserving their difference. The positive objective weights give a strictly positive jump.",
+    "For a local maximum on a two-sided feasible line, the left derivative is ≥0 and the right derivative is ≤0. These signs contradict the strictly positive right-minus-left jump, forcing m=1.",
+    "In the full-cut classification at least d coordinates attain m. When m=1 each such column has zero mass in all other rows. Each other row then has at most one positive coordinate, hence capacity zero by the verified boundary calculation for d≥2. Row r has full-cut capacity one, so the capacity vector is precisely e_r.",
+    "For the zero-diagonal realization, take every column except r to have its unit mass in row r, and place column r's mass in a different row i. All diagonal entries vanish and each column sums to one. Row r has exactly one zero and d ones, so its capacity is one. The other rows have at most one positive entry and zero capacity.",
+    "Outside the unit-vector case no strictly positive row can attain its minimum at m. A constant positive row always minimizes at m, so each remaining strictly positive row is nonconstant and the threshold and differentiability lemma applies with a proper minimum.",
+    "Verified the raw source digest for 78b95c208ba2d374 and its §5. The original conclusion concerns the unit capacity vector, which is the scope of the frozen statement. It applies at local maxima without imposing a count restriction on the positive rows."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "application": "A strictly positive full-cut row under the same capacity is either constant or has d maxima and one lower positive entry, with capacity equal to its maximum.",
+      "candidate_id": "a00161dbb06b25c0",
+      "candidate_sha256": "773041b223ec604c7bbbd71a7a70c17b4becf21991ca2c5ae7531c534f597d69",
+      "reviewed_proof_sha256": "b09fbc61ba03eea6c73d052bc662a03d57732f291857cb20900d6f7858c906a6",
+      "reviewed_statement_sha256": "188438168a0469ad000c40a82e4a1efb6af0220a2f547266780bff4beb96232e",
+      "status": "same-batch, pending predecessor admission"
+    },
+    {
+      "application": "The recipient is a positive constant or one-low row perturbed at a maximal coordinate. The donor is a nonnegative row perturbed at a positive coordinate, so its jump is nonnegative. The predecessor's final proof paragraph also explicitly computes the capacity with exactly one zero and with fewer than d positive entries. These proved values cover all rows of the saturated matrix and of the zero-diagonal witness.",
+      "candidate_id": "c80576b633835713",
+      "candidate_sha256": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729",
+      "reviewed_proof_sha256": "ec660ed58ec144de72b71ff2ad5d5658d53793955b55e9584645412d757a77e8",
+      "reviewed_statement_sha256": "7aa377887ba7f60185aa7c650f4da7a0e7b203a2e491c9071e11bb6a417a903b",
+      "status": "same-batch, pending predecessor admission"
+    },
+    {
+      "application": "A strictly positive row outside the unit-vector case cannot have a full minimum and is nonconstant. The same uniform law and d≥2 give a unique proper minimizing threshold and local C^1 capacity.",
+      "candidate_id": "d2ba4e3cbd6eb730",
+      "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+      "reviewed_proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+      "reviewed_statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc",
+      "status": "same-batch, pending predecessor admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:55:36Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [],
+  "readability": "The saturation condition classifies the capacity vector. The explicit zero-diagonal witness is a separate matrix with that same vector.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "506e222335dcc7049a17ce4c3562966da838201536403e83135fdfe080e6eefc",
+  "reviewed_statement_sha256": "e17b570fbbea86cbd22d853fb3dfd259689e49351143bd1ac2a1ff442ba1d49c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:50:47Z",
+  "summary": "A two-sided column transfer excludes unsaturated full-cut positive rows, and a saturated row gives exactly the asserted unit capacity vector with a zero-diagonal realization.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

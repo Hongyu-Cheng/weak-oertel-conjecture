@@ -1,0 +1,64 @@
+{
+  "candidate_id": "cb658c9938ab4d6c",
+  "candidate_sha256": "e4a59b31c5cdf829df1a284a273374c6f7bb9eb356d2f1191f8a097b98833af9",
+  "checked_dependency_candidate_sha256": {
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+    "dba5cdade881e9ee": "5228871c5939e902d56edf6906c3cacf03f8d78b7894e09e04307878661be185"
+  },
+  "checks": [
+    "Verified source 36607dd22d2fb045 §§1–2, (3)–(7). The extracted statement keeps positive limiting volumes, all closed minor quotas, and the strict b < 1/k condition. The proof uses no logarithmic normalization or minimizer hypothesis.",
+    "At any anchored convex combination, use the maximizers in the input fibers. The moving hull has precisely the stated target fiber, so its maximum is at least the weighted input maxima. An unbounded subsequence of sampled maxima yields a normalized nonnegative midpoint-concave limit of maximum one. The positive-set parity-center lemma gives a fixed p with positive limiting normalized value.",
+    "For t in [0,1], the homothety has volume (1−t)^d times the fiber volume. Integrating gives the factor 1/(d+1) exactly, and Jensen gives the lower bound at the moving centroid. Thus the weight there diverges while its energy is the positive own volume and M_j tends to V(P)>0.",
+    "A norm limit has a positive minimum on the unit sphere. After normalizing u, the shift eventually exceeds the common continuous diameter, uniformly in the base tilt. Each cap therefore captures the entire nonnegative base-drift trace, including its zero-drift fibers. Pure-base cuts give the matching upper bound. A zero tilt selects the whole base, including in rank zero.",
+    "Through-p pure-base traces form a finite family independent of j, and their masses are linear in the fiber weights. Their minimum converges. Its limiting value divided by V(P) is at least 1/k, contradicting the fixed b<1/k."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "dba5cdade881e9ee",
+      "candidate_sha256": "5228871c5939e902d56edf6906c3cacf03f8d78b7894e09e04307878661be185",
+      "mapping": "Use the stated complete affine-lattice base, V_z=|K_z|>0, and the nonnegative nonzero normalized limit a with midpoint concavity. The frozen quotas hold for all nonempty proper closed minors and hence for those contained in {a=0}, as required. The output uses the same closed trace and rank-zero conventions.",
+      "reviewed_proof_sha256": "18f32b2559d5a81960c6bbb1a2d6d80e4e33cb9f4df86ae074f23c8b72b906c1",
+      "reviewed_statement_sha256": "0452479336356b3fc92c3780510916846c87e844d3169b1f9ec32d169da5a353",
+      "status": "accepted at the reviewed snapshot"
+    },
+    {
+      "candidate_id": "d90ba05577427854",
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "mapping": "Each current own fiber is a compact positive convex d-body and its ordinary centroid is interior. The equality case gives E at that centroid equal to its volume.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d",
+      "status": "accepted at the reviewed snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:11:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof contains the same divergence exclusion for log-normalized vanishing-scale joint near-minimizers in a compact representative frame, with the covariance norm and a stronger sublevel. Its vanishing conclusion applies to that class. The frozen statement works for arbitrary positive concave physical weights and convergent norms and assumes only the stated quotas and strict 1/k bound.",
+      "fact_id": "352454c77cb6558d"
+    },
+    {
+      "comparison": "Its proof also captures an entire base trace when the shift diverges. It uses fixed epsilon, a single positive parameter per sampled base with weighted geometric normalization, and the covariance norm. The frozen physical weights can vary within a sampled fiber and require no normalization.",
+      "fact_id": "8b94712079a5d8f5"
+    },
+    {
+      "comparison": "Supplies the high-depth positive base from limiting weights and the normalized maxima. Its conclusion controls a finite weighted base depth and does not itself bound the original continuous-fiber weights.",
+      "fact_id": "dba5cdade881e9ee"
+    }
+  ],
+  "readability": "The displacement exceeding the common diameter refers to Euclidean-unit continuous normals. Positive rescaling of both normal coefficients preserves the cap because the displacement is homogeneous in u.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bb722de853a7c9e798ed8dbfc37e448f1b11b0a4c1b3c082737d8a3acd575418",
+  "reviewed_statement_sha256": "93d6201f46153ea267dde517721125ab84f4c5673c21368e319dba56bbd9126f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:08:13Z",
+  "summary": "The exact frozen proof gives a uniform sampled physical-weight bound on any positive Hausdorff-convergent compatible family with the stated minor quotas and strict pure-base sublevel.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

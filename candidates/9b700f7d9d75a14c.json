@@ -1,0 +1,26 @@
+{
+  "advances": "Constant or reflected affine auxiliary profiles with a fixed source and planar weighted measure.",
+  "author": "PK-research-agent",
+  "candidate_id": "9b700f7d9d75a14c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:59.919076+00:00",
+  "depends_on": [],
+  "draft_key": "constant-profile-centered-cap-and-reflection",
+  "kind": "lemma",
+  "proof": "For $s>0$, parametrize the section by $(x,z)=(-z/s,z)$, so the coarea weight is $dz/s$. The interval is $[-\\min(L,sr_0),\\min(U,sr_0)]$. Multiplying by $zr_0^{d-2}/2$ and integrating gives the stated moment. At $s=0$ the moment is zero and $C=r_0^{d-1}$.\n\nIf $U\\ne L$, all nonzero finite moments have the sign of $U-L$. Their finite zeros are exactly the slopes with $sr_0\\le\\min(L,U)$, including $0$. At each such slope, the section has $C=r_0^{d-1}$. The rectangular band $-sr_0\\le z\\le sr_0$ contributes half of its mass to the cap by central symmetry. Above this band all points are captured, and below it none are captured, so $P=r_0^{d-1}U$, also at $s=0$. Thus $P-cC=V/2$ there, and also at infinity, the limit obtained by integrating the full section once $sr_0\\ge\\max(L,U)$. Centering excludes every other slope because all nonzero moments have the same sign. If $U=L$, central symmetry gives $P=V/2$ at every finite slope and $c=0$.\n\nIn the reflection claim the map $(x,z)\\mapsto(-x,-z)$ preserves the original density after transport to the reflected profile, using evenness in $x$. It reverses the cap margin and preserves the section and its coarea weight under the isometry. Cap boundaries are area-null, and multiplication by $z$ changes sign. These facts give the record map, including infinity by its definition. Averaging preserves centering and sends $P-cC$ to $V-(P-cC)$ when the new correction is $-c$.\n",
+  "source_candidate_ids": [
+    "d28e829ed5b07592"
+  ],
+  "source_candidate_sha256": {
+    "d28e829ed5b07592": "1b8c790cd853862aa720ce33b1794d69ae8480fbaa12415396ef33f909955f77"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d28e829ed5b07592",
+      "locator": "d28e829ed5b07592:03 §5, constant-profile theorem and affine reflection"
+    }
+  ],
+  "statement": "Fix an integer $d\\ge2$ and $r_0,L,U>0$. On $-L\\le z\\le U$, $|x|\\le r_0$, use planar density $r_0^{d-2}/2$ and the cap and section records $P,C,M$ of $z+sx\\ge0$, with $C,M$ using $d\\mathcal H^1/\\sqrt{1+s^2}$ and $z$ in the first moment. Then for $s>0$,\n$$\nM(s)=\\frac{r_0^{d-2}}{4s}\\bigl[\\min(U,sr_0)^2-\\min(L,sr_0)^2\\bigr].\n$$\nWith total mass $V$ and the infinity record $(V/2,0,0)$, every centered slope law has corrected cap $P-cC=V/2$ on average for $c=(U-L)/2$.\n\nFor an affine radius $r(z)$ on $[-L,U]$ with the corresponding even transverse density $r(z)^{d-2}/2$, axial reflection replaces $r(z)$ by $r(-z)$ on $[-U,L]$ and sends each record to $(V-P,C,-M)$. In particular it transfers a common interval $[\\beta V,(1-\\beta)V]$ on the corrected caps of centered laws by replacing $c$ by $-c$.",
+  "subgoal_id": "pk-intake-constant-profile-centered-cap-and-reflection",
+  "title": "Centered cap records of a constant profile and axial reflection"
+}

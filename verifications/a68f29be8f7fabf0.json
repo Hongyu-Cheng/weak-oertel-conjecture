@@ -1,0 +1,104 @@
+{
+  "candidate_id": "f09c70cc05a8a384",
+  "candidate_sha256": "1b936633e435b6ff1543286cc855c1c0470f95da8a0842baa7edfc54799b6d42",
+  "checked_dependency_candidate_sha256": {
+    "ba7d50004292d433": "7bc5ccb1dd9cd7094322482ab1f2dba269b2d46d71b995cecf1270582fac80b8"
+  },
+  "checks": [
+    "Compared the revised statement and proof to the originally reviewed bytes. Only the representation scope in the statement and its affine-cutoff justification in the proof changed. The sheared product, cap geometry, normalwise roof test and all constants are preserved.",
+    "A horizontal second divergence of a finite matrix-valued measure on the compact lifted faces is supported on those faces. Test a base-coordinate affine function times a smooth compactly supported cutoff equal to one near the tensor support. The horizontal Hessian is zero on that support, so the tensor divergence has zero base moment. For anchored charges each finite affine moment vanishes by the barycenter identity. If a charge is treated through compactly supported tests, cutoffs tending to one recover its affine moment by finite first-moment integrability. Therefore the proposed sum has zero base first moment, contradicting −ε(2,1)/12 for 0<ε<1.",
+    "The applicable predecessor ba7d50004292d433 and original source locators are unchanged. The same barycentric alignment and affine shear preserve the measured cap traces, normalized depth and proper coareas.",
+    "Reran the exact rational height-dipole check. It passes the lattice census, strict cap statuses, critical masses, normalwise base moment, global affine cancellation, opposite signs of the quadratic tests and scalar divergence budgets."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ba7d50004292d433",
+      "candidate_sha256": "7bc5ccb1dd9cd7094322482ab1f2dba269b2d46d71b995cecf1270582fac80b8",
+      "fact_sha256": "f64ac112fe7a16d14d2abfea9c57124b43441edc5a46e28a330849244ffc2985",
+      "hypotheses": "Take K=T of area 9/2 and centroid zero at the four specified lattice sites, and use the permutation aligning λ_i=(1+u_i·x)/3 with the own outer base. The altered saturation and volume-preserving shear preserve precisely its closed cap mass and depth conclusions.",
+      "reviewed_proof_sha256": "329e4011101a9cac26f44ea87a0d4162e375da4f0355ca1e52bab848a5346a33",
+      "reviewed_statement_sha256": "d12baa75bae6351e59bb0f8a4c5dfdb028dc13b9426bc4f8e2175626b2797123"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:01:19Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "f09c70cc05a8a384",
+    "candidate_sha256": "7f5913efa77ebec1328591a91c33a00d52d4e47a48800942cabb1126ef07f114",
+    "checks": [
+      "Checked 7030d072151a686b §§2–6. Relabel the three barycentric coordinates in ba7d50004292d433 to match p₁,p₂,p₃. Multiplying its cap margin by three and raising the base coefficient from three to ten preserves every sampled trace because u_i·x∈[−1,2] and the other-base values of ℓ_i are 2 or −1. The affine shear preserves every sampled cap measure and depth. The new margins sum to zero and cover ambient space.",
+      "Each actual cap has strict full and empty outer traces and one proper central trace. The three lengths 2,2,2√2 give coarea two after dividing by the corresponding norm, and their midpoint is the center. Outer boundary load 1/3 and central loads 1/3,2/3,1/3 give the stated normalwise signed density. Decomposing it into the ternary edge density and the anchored Jensen term proves roof positivity, and both signs of every affine test are allowable.",
+      "On the diagonal edge, L/||v||=3 and the base translations sum to zero. Height multiplication retains zero mass, while the coefficient of the affine base vector is −ε(2,1)/12. The normal-summed distribution has the stated positive divergence sign because div_x(b 1_K)=−(b·n)dS. A linear continuous test gives −V Σb/36=0; the two squared tests give −Vε(1+ε)/9 and Vε(1−ε)/9.",
+      "Reran the independent exact rational witness, which passed the lattice census, strict caps, diagonal dipole, affine cancellation, opposite quadratic signs and scalar budgets. The proper section term has factor s−u·c=0 for both reference fields at the central base, and the constant test budget is 2(Q−βM)=0."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "ba7d50004292d433",
+        "candidate_sha256": "7bc5ccb1dd9cd7094322482ab1f2dba269b2d46d71b995cecf1270582fac80b8",
+        "hypotheses": "Take K=T of area 9/2 and centroid zero at the four specified lattice sites, and use the permutation aligning λ_i=(1+u_i·x)/3 with the own outer base. The altered saturation and volume-preserving shear preserve precisely its closed cap mass and depth conclusions.",
+        "reviewed_proof_sha256": "329e4011101a9cac26f44ea87a0d4162e375da4f0355ca1e52bab848a5346a33",
+        "reviewed_statement_sha256": "d12baa75bae6351e59bb0f8a4c5dfdb028dc13b9426bc4f8e2175626b2797123"
+      }
+    ],
+    "finished_utc": "2026-11-08T19:00:05Z",
+    "issues": [
+      {
+        "defect": "The statement does not restrict the tensor distributions to the finite compactly supported setting in which their second divergence annihilates affine tests. A smooth compactly supported test is required in the distributional definition. For any compactly supported signed measure μ, convolution along one continuous coordinate with t↦t_+ yields a generally noncompact tensor distribution A=−(e₁⊗e₁)(t_+*₁μ) with −div_x div_x A=μ, since ∂₁₁ t_+=δ₀. Thus the bare exclusion of all such distributions is false; the checked nonzero affine moment only excludes the intended finite face-supported decomposition.",
+        "locator": "Statement second paragraph and proof third paragraph, the exclusion of a sum of horizontal second divergences and anchored Jensen charges",
+        "repair": "State the exclusion for horizontal second divergences of finite matrix-valued measures supported on the compact lifted faces, and anchored sums or integrals with defined finite first moments. Test affine functions using a smooth cutoff equal to one around the compact tensor and charge supports. The Hessian then vanishes there and the original first-moment contradiction applies.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "The sheared body and retuned cap margins carry exactly the predecessor's actual critical trace pattern. The fixed-origin height multiplication, diagonal first moment and signed normal-summed residue are additional claims.",
+        "fact_id": "ba7d50004292d433"
+      },
+      {
+        "comparison": "The normalized central-edge thirds give its exact triangle Green density. The present charge also includes an actual cross-base anchored term and multiplies the whole charge by a varying physical height.",
+        "fact_id": "45de01e3dc7a5ced"
+      },
+      {
+        "comparison": "Its signed radial flux covers the constant-test scalar identity under proper-section centroid balance. The directionwise first-moment failure and nonzero quadratic tests are not scalar flux consequences.",
+        "fact_id": "c0415ec9d9ad0fa8"
+      }
+    ],
+    "readability": "The intended decomposition is clear from the source's horizontal face-supported PSD term. That setting needs to appear in the normalized obstruction.",
+    "reviewed_proof_sha256": "b8467ccd9e7155581e67fc92d6a6b2176aa9c57eec061ca70bd22798f5088c64",
+    "reviewed_statement_sha256": "05ef85afde3cd961892a4bdca8e648718c94a95515be5f4e6ff749315c36d7d7",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T18:51:43Z",
+    "summary": "The actual cap construction and all moment values check. The representation obstruction needs the finite, face-supported tensor scope used by the affine-test proof.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The sheared body and retuned cap margins carry exactly the predecessor's actual critical trace pattern. The fixed-origin height multiplication, diagonal first moment and signed normal-summed residue are additional claims.",
+      "fact_id": "ba7d50004292d433"
+    },
+    {
+      "comparison": "The normalized central-edge thirds give its exact triangle Green density. The present charge also includes an actual cross-base anchored term and multiplies the whole charge by a varying physical height.",
+      "fact_id": "45de01e3dc7a5ced"
+    },
+    {
+      "comparison": "Its signed radial flux covers the constant-test scalar identity under proper-section centroid balance. The directionwise first-moment failure and nonzero quadratic tests are not scalar flux consequences.",
+      "fact_id": "c0415ec9d9ad0fa8"
+    }
+  ],
+  "readability": "The revised formulation identifies the precise tensor and charge classes used in the affine-moment argument.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "59e9aba18b00cf5611ad1361658cb8ed1c9a28be672405eee3c85906408dcc60",
+  "reviewed_statement_sha256": "bb2d62dc3cf521e39476fe290793df648039270b78d938c6e803f3c9dc933a8c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "7f5913efa77ebec1328591a91c33a00d52d4e47a48800942cabb1126ef07f114",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:00:27Z",
+  "summary": "The revised obstruction is correctly restricted to compact face-supported tensor divergences and anchored charges with finite first moments. The nonzero base first moment excludes that decomposition.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

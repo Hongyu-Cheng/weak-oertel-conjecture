@@ -1,0 +1,56 @@
+{
+  "candidate_id": "77d36834ea2179e7",
+  "candidate_sha256": "a8d2a2e30796e1998148e99061b6832d2ffd41d1f4057f78c0900359e255320d",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651"
+  },
+  "checked_source_candidate_sha256": {
+    "7cb4b1bb7928127e": "09a00009106acc41e8a0ff69e8a668bc524386b1cd49d254a40552451ab95d2c"
+  },
+  "checks": [
+    "In dimension N the maximum-simplex normalization places the simplex and body between conv(0,e₁,…,e_N) and [−1,1]^N. The centroid is (1/(N+1),…,1/(N+1)); its coordinate-facet distances are 1/(N+1) and its slant-facet distance is 1/((N+1)√N). Thus the ball of this radius lies in the simplex.",
+    "After subtracting the centroid, the coordinate bound (N+2)/(N+1) gives Euclidean outer radius √N(N+2)/(N+1). Dilating by the reciprocal of the inner radius gives N(N+2), including N=1.",
+    "An orthogonal map sends the image of the d-dimensional vertical subspace onto the original vertical subspace and preserves both Euclidean balls. The resulting linear part is block triangular, with T invertible by the vertical restriction and A invertible by the quotient. For d=0 the vertical space is zero.",
+    "For a Borel E, the sampled fiber over λ=Az+t of K∩F(E) is the image under x↦Tx+Bz+c of the fiber over z of C∩E. The fiber Jacobian is |det T|, so multiplying by |det A| gives the full determinant |det DF|. An exact check with a negative base determinant and a nonzero vertical shear gives the same factor; the shear contributes a translation on each fiber.",
+    "Affine images give a bijection of all containing closed halfspaces, not only those of a fixed orientation, so the determinant cancels on normalization. Counting d=0 and the positive-total condition are preserved.",
+    "The construction and measure identity match 7cb4b1bb7928127e §§1–2 (1)–(4)."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "comparison": "Its maximum-inscribed-simplex normalization applies in ordinary dimension N to any full-dimensional compact convex body. The proof uses just the simplex/cube sandwich after that normalization.",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb",
+      "status": "accepted predecessor at pinned snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:44:22Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the ordinary simplex-to-cube sandwich under unrestricted affine normalization. It supplies the preliminary map but has no vertical-subspace restriction or transformed-lattice/fiber-measure conclusion.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Gives an affine identification of a rank-reduced retained lattice fiber set, preserving its continuous fiber volumes. It does not simultaneously normalize an arbitrary full-dimensional body between Euclidean balls or identify its full affine Jacobian.",
+      "fact_id": "69166b0fcb73425a"
+    }
+  ],
+  "readability": "The inner ball is centered at the simplex centroid before translation, and the covolume factor is kept separate from the vertical Jacobian.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "dc4e1bfa9342e945daa602d9807f85d092f04d680c852426c01d2b8d3b1bc52d",
+  "reviewed_statement_sha256": "4cb0a819c8a753d4ec6f8f1a67255511ffb9507300e5150eb49cfe777de0b97d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:41:45Z",
+  "summary": "The simplex normalization can be made vertical-preserving by an orthogonal postcomposition, and the covolume-weighted transformed fiber measure has the exact full affine Jacobian.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,39 @@
+{
+  "candidate_id": "7e6679911d185bd9",
+  "candidate_sha256": "d4e50c05ef75f17bd105c49bfda66ec09fb6cef44c69d32211ca5b991c63e73a",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The ramp is the minimum of two affine functions, so is concave and continuous; its values are between 1/2 and one before the positive normalization factor.",
+    "Independently integrate with the primitive s log s−s between 1/2 and one. Multiplication by 2t gives t(log 2−1). The log shift ct cancels this over [0,1], but contributes only ct² on the removed interval [0,t], giving −ct+ct² and scaled limit −c≠0.",
+    "The log is bounded uniformly on the shell of length t and is ct outside it, so it converges in L¹ and the parameter converges uniformly on each fixed interior core. On the retained interval the parameter is exactly e^(ct), which cancels in the new geometric normalization.",
+    "Original source b2439018eaa1681d:03 §3 has the identical normalized boundary profile and endpoint behavior. Source c72585e587868cec:06 §5, (20)–(21) adds the exact shell integral and retained normalization. The symbolic replay included both the primitive and shell limit."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:47:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Proves a quantitative interior estimate and includes the same source note for earlier interior bounds. Its accepted statement does not contain the first-order shell mismatch or the retained normalization computation.",
+      "fact_id": "852beac8bb7bd861"
+    },
+    {
+      "comparison": "Also constructs a shrinking affine interval layer, but uses inverse-power normalization and a vanishing endpoint value. It neither gives the logarithmic shell limit nor maintains the uniform positive lower bound.",
+      "fact_id": "12875b54a4e5ae18"
+    }
+  ],
+  "readability": "The example concerns continuity of a family of parameters on the old interval and its exact removal integral. There is no claim that the displayed old parameters are actual moving-body optimizers.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "52b24e7ea8cda92f30b36b7138cf976332d171931edd06003c95ae530aebca11",
+  "reviewed_statement_sha256": "37b1c8afc1b2eac0bb1ba6f37e61a6b79e9657c30a7047068af472a36b97eec7",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:43:11Z",
+  "summary": "The explicit normalized positive concave interval family gives a first-order shell mismatch with its limit despite the stated convergence and common positive floor.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

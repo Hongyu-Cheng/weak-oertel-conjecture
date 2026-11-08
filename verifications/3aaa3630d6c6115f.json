@@ -1,0 +1,58 @@
+{
+  "candidate_id": "63f90fd70f747bd0",
+  "candidate_sha256": "ea4707e62235adb0158946fcd0761d23fdf840c7f11ad7b4f119b5386f301d88",
+  "checked_dependency_candidate_sha256": {
+    "7d1ee06fa4119930": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870"
+  },
+  "checks": [
+    "Central symmetry repeats the positive gaps after N steps. The sum of two adjacent gaps is at most π, with equality at N=2; the next-neighbor determinant is therefore nonnegative. All adjacent determinants are strictly positive and there are at least four rays.",
+    "Expand the accepted quadratic form: b_i−h_{i−1}−h_i equals 1/(2W_{i−1})+1/(2W_i)−E_i/(D_{i−1}D_i), and the adjacent matrix coefficient is −h_i. The latter is nonpositive under the core inequalities; E_i/(D_{i−1}D_i)=c_i/R_i².",
+    "Increasing R_i weakly increases its diagonal, strictly increases the two incident off-diagonal entries for a positive increment, and changes no other matrix entry. The interval preserves the two core inequalities, so the new Z-matrix remains PSD by applying its quadratic form to |x| and then using entrywise order on the nonnegative orthant. This covers a singular initial matrix and a zero off-diagonal entry at the upper bound.",
+    "The original core constraints make the interval nonempty. Outside it a core triangle exceeds its prescribed sector area. Equality with a core triangle forces equality of the closed convex sector pieces because a proper compact convex enlargement of a positive-area triangle adds positive area. The exact criterion gives the 4N vertex bound.",
+    "Opposite nodes are nonadjacent even for N=2; their incident edge sets are disjoint and neither node occurs in the other upper bound. A concrete N=2 boundary check uses the unit coordinate rays, square [−1,1]² with sector areas 1 and all radii 1, and independently saturates the horizontal endpoints at 2, giving the diamond with unchanged vertical endpoints and sector areas.",
+    "Every cap on a fixed line is a union of its sector interiors up to null rays. Other chord endpoints and lengths stay fixed. The target chord length is a fixed positive multiple of the sum of its opposite radii; its normalized inverse weight decreases strictly because at least one other chord exists and has positive finite length.",
+    "All six consecutive direction determinants are 1. In cyclic order the sectors have cap memberships {1,2},{2},{2,3},{3},{1,3},{1}, giving the claimed W order. Saturation at nodes 1 and 4 gives the Cartesian product of incident core choices {0,1} and {3,4}; arbitrarily small changes suffice to exclude an unsaturated endpoint at a finite-data local or global minimum under area-only constraints.",
+    "Verified the raw source digest of 83b3822a403eee2c and checked §§1–4. The canonical formulas, ordinary-body scope, PSD entry monotonicity, independent endpoint changes, and central-line extension match the normalized claim."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7d1ee06fa4119930",
+      "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+      "mapping": "Use both directions with m=2N≥4, distinct ray endpoints and gaps below π, and finite areas above their core bounds. The result first gives the original PSD matrix and then supplies an actual polygon with at most 4N vertices for each perturbed endpoint list.",
+      "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+      "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043",
+      "status": "accepted at reviewed repository base"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:51:37Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The criterion gives existence at a prescribed endpoint list and the polygon vertex bound. It does not state the entrywise radius comparison, the full interval, or the saturation of two radii in an inverse-weight optimization.",
+      "fact_id": "7d1ee06fa4119930"
+    },
+    {
+      "comparison": "Replaces a body with one preserving its original endpoints and chosen supports. Here one or two endpoints move and the fixed data are the other endpoints and sector areas.",
+      "fact_id": "4b408a905c45b287"
+    },
+    {
+      "comparison": "Its sharp upper envelope concerns one sector and two fixed actual radial endpoints. It does not yield a simultaneous realization while varying a radius at fixed areas.",
+      "fact_id": "ebea5ab33e39407b"
+    }
+  ],
+  "readability": "The canonical target is the chord on x=0. In the general statement the radius is the scalar multiplying the fixed vector e_i, which need not be unit length.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "089b6726eb49ff7e50bec43037a3d237a394867ab79ebd6b505775606dcc4513",
+  "reviewed_statement_sha256": "bee64ecd4f214c229dfca7eea3f2cb5bd2c8c1665a368dcaf59dfc9d415cc609",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:47:33Z",
+  "summary": "The exact PSD criterion gives the entire closed interval for increasing one radius. Opposite-endpoint saturation and strict weight improvement yield the ordinary planar finite-data reduction.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

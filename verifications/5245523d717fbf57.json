@@ -1,0 +1,104 @@
+{
+  "candidate_id": "9cf4bf4f237be818",
+  "candidate_sha256": "4e9bda7b1600f507ab99121d1c0a10fe35561fd4ff814ae4963299689bbf325f",
+  "checked_dependency_candidate_sha256": {
+    "f47790a5ad162036": "fb2cf4c755a2b07f45eed96a629f162a6284612503720da810469c8de959c520"
+  },
+  "checks": [
+    "Affine sampled value vectors form a closed finite-dimensional linear subspace. The coordinate floors are positive. The constant maximum root is feasible, and any bounded objective sublevel supplies upper coordinate bounds, so compactness gives attainment.",
+    "For q>1 the sum of powers is strictly convex on the positive orthant. Two distinct attaining vectors would have a feasible midpoint of strictly smaller objective. No uniqueness is asserted for q=1.",
+    "Each feasible coordinate contributes at least V_z. Equality in the sum holds exactly when all coordinates equal their roots, including q=1, so A_q=1 exactly for affine sampled roots. The constant maximum root gives the stated upper bound.",
+    "For an attaining L, ell=τ^(1/q)L is nonnegative on conv(P) because it is nonnegative on the generators. This includes τ=0. It is finite and convex, and its q-power at every sampled base dominates τV_z, so the same original cap family satisfies the predecessor's local hypothesis.",
+    "The predecessor gives at most kt caps and total allowance τΣL(z)^q=τA_qM. For nonnegative B, its budget gives (1−τA_q)M/(kt). If t=2 and q=d, the condition τA_d≤1−2γ_d yields the claimed bound. Equal-volume planar roots are constant and give A_2=1, so τ≤1/9.",
+    "The pinned source locator 2623b39acd3d4a1d:03, §4 (5)–(7) and the final paragraph of §7, supports the optimization and its intrinsic extension. The converse to A_q=1 is immediate from the independently checked coordinatewise equality argument.",
+    "Compared original and revised raw JSON. The sole change is an explicit nonnegative assumption on the optional common cap mass bound in the statement. The proof field, source metadata and dependency IDs are byte-identical.",
+    "When the cap family is empty, the selected union has zero covered mass and 0≤ktB for B≥0. The initial counterexample now gives the valid inequality B≥0. For a nonempty family, the original common-bound premise already implies nonnegativity.",
+    "Checked the final revised predecessor's exact bytes and its approved linked review. The common cap bound is explicitly nonnegative here as well, so the predecessor applies to the same original family, intrinsic parameters and stated threshold."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f47790a5ad162036",
+      "candidate_sha256": "fb2cf4c755a2b07f45eed96a629f162a6284612503720da810469c8de959c520",
+      "mapping": "Apply to the identical intrinsic P,q,k,M, original finite cap family and t. The threshold ell=τ^(1/q)L is finite, nonnegative and affine on conv(P), and its sampled power bounds τV_z. The selected subcover and its total residual follow for these inputs. Admission requires an approved exact predecessor, with its optional common bound B≥0.",
+      "reviewed_proof_sha256": "f198518a08787bfd3cd964fc7240f9da59881538d22e38c1bc68f4259e951d59",
+      "reviewed_statement_sha256": "6820d17aaa922d73f21a940333f43b4260ba31ac5180832e0913350c67b2f4ac",
+      "status": "pending_admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:44:45Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "9cf4bf4f237be818",
+    "candidate_sha256": "cd25527351fcc59bdb141dceb97cde3f57a085f58b3f20c8fe46780b7932a26e",
+    "checks": [
+      "Affine sampled value vectors form a closed finite-dimensional linear subspace. The coordinate floors are positive. The constant maximum root is feasible, and any bounded objective sublevel supplies upper coordinate bounds, so compactness gives attainment.",
+      "For q>1 the sum of powers is strictly convex on the positive orthant. Two distinct attaining vectors would have a feasible midpoint of strictly smaller objective. No uniqueness is asserted for q=1.",
+      "Each feasible coordinate contributes at least V_z. Equality in the sum holds exactly when all coordinates equal their roots, including q=1, so A_q=1 exactly for affine sampled roots. The constant maximum root gives the stated upper bound.",
+      "For an attaining L, ell=τ^(1/q)L is nonnegative on conv(P) because it is nonnegative on the generators. This includes τ=0. It is finite and convex, and its q-power at every sampled base dominates τV_z, so the same original cap family satisfies the predecessor's local hypothesis.",
+      "The predecessor gives at most kt caps and total allowance τΣL(z)^q=τA_qM. For nonnegative B, its budget gives (1−τA_q)M/(kt). If t=2 and q=d, the condition τA_d≤1−2γ_d yields the claimed bound. Equal-volume planar roots are constant and give A_2=1, so τ≤1/9.",
+      "The pinned source locator 2623b39acd3d4a1d:03, §4 (5)–(7) and the final paragraph of §7, supports the optimization and its intrinsic extension. The converse to A_q=1 is immediate from the independently checked coordinatewise equality argument."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "f47790a5ad162036",
+        "candidate_sha256": "edeb1083194bc82c0bd7991a10a08148ce56eff773d89a06619bb40fe05fabdf",
+        "mapping": "Apply to the identical intrinsic P,q,k,M, original finite cap family and t. The threshold ell=τ^(1/q)L is finite, nonnegative and affine on conv(P), and its sampled power bounds τV_z. The selected subcover and its total residual follow for these inputs. Admission requires an approved exact predecessor, with its optional common bound B≥0.",
+        "reviewed_proof_sha256": "f198518a08787bfd3cd964fc7240f9da59881538d22e38c1bc68f4259e951d59",
+        "reviewed_statement_sha256": "73d6f3d7a39be4ad902db6dc0b878db504880568ce1b491d1d5d07717498d1a8",
+        "status": "pending_admission"
+      }
+    ],
+    "finished_utc": "2026-11-08T14:43:54Z",
+    "issues": [
+      {
+        "defect": "For an empty original cap family a negative B is a vacuous common upper bound. With C=[−1/4,1/4]×[0,1], no caps, t=1 and τ=1, one has q=k=M=A_q=1 and the local premise holds with the empty list. B=−1 violates the asserted lower bound zero.",
+        "locator": "Statement, 'Any common cap mass bound B satisfies...'; proof, final sentence",
+        "severity": "edge_case",
+        "smallest_repair": "State that B≥0 is the common cap mass bound. Keep the subcover and optimization unchanged."
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Covers the zero-residual limit of the subcover conclusion by exact coverage. It has no affine root majorant objective, relative residual allocation, or value characterization.",
+        "fact_id": "0f6ca72852c286b2"
+      },
+      {
+        "comparison": "Its exact 2k-cap budget assumes a constant positive cover intensity within each fiber. It does not optimize an affine majorant or treat a prescribed positive relative residual.",
+        "fact_id": "dc2f64b066063869"
+      }
+    ],
+    "readability": "The value vector formulation supplies the needed compactness directly and also handles a singleton base.",
+    "reviewed_proof_sha256": "e7d3463e85768beda1dee1ad7b6a85b74cbc521831c2929f25ae3ed5acf3fc22",
+    "reviewed_statement_sha256": "9943ae454fdc7baff83026faf6aea87c400e146f1dbcc37fec59d49f208cf053",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T14:38:07Z",
+    "summary": "The attained affine majorant, equality criterion, and subcover reduction check. The optional cap-budget statement needs a nonnegative bound for the empty original family.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Covers the zero-residual limit of the subcover conclusion by exact coverage. It has no affine root majorant objective, relative residual allocation, or value characterization.",
+      "fact_id": "0f6ca72852c286b2"
+    },
+    {
+      "comparison": "Its exact 2k-cap budget assumes a constant positive cover intensity within each fiber. It does not optimize an affine majorant or treat a prescribed positive relative residual.",
+      "fact_id": "dc2f64b066063869"
+    }
+  ],
+  "readability": "The value vector formulation supplies the needed compactness directly and also handles a singleton base.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e7d3463e85768beda1dee1ad7b6a85b74cbc521831c2929f25ae3ed5acf3fc22",
+  "reviewed_statement_sha256": "af32e09f86f6e208f2e774cf1d39cd68f6d1132870e935352141cccd367fb5ab",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "cd25527351fcc59bdb141dceb97cde3f57a085f58b3f20c8fe46780b7932a26e",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:44:02Z",
+  "summary": "The nonnegative common cap mass bound fixes the empty-family edge case. The pointwise subcover result and previously checked proof apply with this explicit assumption.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

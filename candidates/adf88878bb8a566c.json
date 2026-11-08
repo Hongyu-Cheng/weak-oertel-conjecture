@@ -1,0 +1,30 @@
+{
+  "advances": "A fixed four-dimensional positive-width regime with three actual nearly canonical active cuts and zero outside coarea.",
+  "author": "PK-research-agent",
+  "candidate_id": "adf88878bb8a566c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:53:06.251071+00:00",
+  "depends_on": [
+    "b5d53d637e045f65",
+    "a2ca1f9d47cb1569",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "four-simplex-thin-edge-source-vacancy",
+  "kind": "theorem",
+  "proof": "Every facet of $T$ meets $D_\\delta$ since this guard contains the edge with vertex indices zero and one. The facet-contact part of b5d53d637e045f65 puts every real fiber of nonnegative base in $T$. For $R=\\lambda_2+\\lambda_3+\\lambda_4$, the fiber minimum is convex in the real base and the maximum concave, by averaging fiber extremizers. At $-1,0$ the minima are zero and the maxima $\\delta,1$. At $-2$ these imply a nonnegative minimum and maximum at most $2\\delta-1<0$, so there is no fiber at $-2$ or any farther left. Integrating the simplex section density $12r^2(1-r)$ of $R$ from zero to $\\delta$ gives $|D_\\delta|/V=4\\delta^3-3\\delta^4<4/125$. The section density follows by allocating the mass $r$ among the three specified coordinates and mass $1-r$ among the other two, giving factors $r^2$ and $1-r$, normalized on $[0,1]$. The ordinary middle centroid pays at least $\\gamma_4V=(4/5)^4V$ from its own fiber by 6769574fc1bd9f8d at full volume. Outward smoothing adds only nonnegative mass, and a pure-base cap contains its own fiber. The exposed left fiber has a pure-base cap of mass $|D_\\delta|<\\gamma_4V$, so it cannot be deepest.\n\nIf there is a deepest mark at any positive integer base, interpolate with $(0,y_0)$ to base one. The resulting mark is feasible and deepest: for each fixed normal its threshold is between the two endpoint thresholds and the cap mass is nonincreasing in that threshold. The same holds for each pure-base orientation with its closed boundary.\n\nAt a putative deepest mark at base one, b5d53d637e045f65 gives strict negative margins for each selected active cap because the central interior mark gives positive own strip volume, the base normal is free and the widths are fixed at fixed continuous direction. Its zero-strip argument makes the ramps identically zero on $K_1$. Write $w_i=h\\Gamma(\\nabla f_i)$. The two misses give\n$$\n\\max_{D_\\delta}f_i-a_i\\le-w_i,\\qquad \\max_{K_1}f_i+a_i\\le-w_i.\n$$\nAt the vertex of index zero, $f_i\\ge-1/5-1/200$, so $\\max_{K_1}f_i\\le1/5+1/200-2w_i$. As $K_1\\subset T$, the lower approximation for $f_i$ gives $\\lambda_i\\le 41/100-2w_i\\le41/100$ there. The maximum of $\\lambda_2$ at base zero equals one, so a fiber at base two has maximum at most $2(41/100)-1<0$, incompatible with containment in $T$. Thus no sampled base beyond one exists.\n\nTake $B=\\lbrace x\\in T:\\lambda_i(x)\\le b,\\ i=2,3,4\\rbrace$ with $b=41/100$. One coordinate exceeding $b$ costs fraction $(1-b)^4$ of $V$, and two cost fraction $(1-2b)^4$, by translation and dilation of the simplex. Three cannot exceed $b$ together. Inclusion-exclusion gives $|B|/V=1-3(1-b)^4+3(1-2b)^4=63962845/100000000<2/3$. Every sampled fiber is contained in $T$, hence its $\\lambda_2$ variance is at most $1/4$ and so is the pooled within-fiber variance. The $\\lambda_2$ marginal of $T$ has density $4V(1-s)^3$ on $[0,1]$, by differentiating the tail $V(1-s)^4$. Apply a2ca1f9d47cb1569 with $K=T$, this $B$, $\\ell=\\nabla\\lambda_2$, $G_\\ell=1/2$ and $C_\\ell=4V$. It bounds depth at every mark of $K_1$ by $|B|/2+2hV<V/3+V/50<(4/5)^4V$, a contradiction.\n",
+  "source_candidate_ids": [
+    "ac5edf6664902ea2"
+  ],
+  "source_candidate_sha256": {
+    "ac5edf6664902ea2": "ede8d9f9b7935d470438f7e22bb1ff330ed1e13b5de5aa9e3489d6c87fbc9d51"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ac5edf6664902ea2",
+      "locator": "ac5edf6664902ea2:01 §§1–4, (1)–(3)"
+    }
+  ],
+  "statement": "Let $T$ be a $4$-simplex of volume $V$ with barycentric coordinates $\\lambda_0,\\ldots,\\lambda_4$, and let $D_\\delta=\\lbrace x\\in T:\\lambda_2+\\lambda_3+\\lambda_4\\le\\delta\\rbrace$ with $0<\\delta<1/5$. Let $C\\subset\\mathbb R\\times\\mathbb R^4$ be a compact convex body with integer fibers $K_{-1}=D_\\delta$, $K_0=T$, all nonempty sampled fibers of positive volume. Use raw uniform outward-smoothed depth with ramp $\\varphi_w(s)=\\min(1,\\max(0,1+s/w))$, $w=h\\Gamma(u)$ for the actual pooled within-fiber covariance norm $\\Gamma$, $0<h<1/100$, and ordinary closed pure-base caps. Suppose $(0,y_0)$ is deepest and $y_0\\in\\operatorname{int}T$. Suppose three active caps with affine margins $a_i z+f_i(x)$, $i=2,3,4$, have $f_i(y_0)=0$, satisfy $\\sup_T|f_i-(\\lambda_i-1/5)|\\le1/200$, and have zero ramp on $D_\\delta$ and zero transition-strip volume on every other sampled fiber outside base zero.\n\nThen zero is the only deepest integer base. A putative deepest fiber at base one would be exposed, have $\\lambda_i\\le41/100$ for $i=2,3,4$, and have volume at most $(63962845/100000000)V<2V/3$.",
+  "subgoal_id": "pk-intake-four-simplex-thin-edge-source-vacancy",
+  "title": "An active thin-edge cap bundle excludes the other deepest parity in four dimensions"
+}

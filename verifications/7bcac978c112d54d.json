@@ -1,0 +1,39 @@
+{
+  "candidate_id": "ae4e01ead61ea9c3",
+  "candidate_sha256": "29b42aa50b7da228ca79560031a7a6cd5d3a874f8d00a48773e9905fbfebd992",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Enumerated the bounding-box lattice points against the four stated side inequalities and independently against the four polygon edges by integer determinants. Both methods give rows of second coordinates (−2,−1,0), (0,1,2), (2), and (3) at first coordinates −1,0,1,2.",
+    "Evaluating all three affine functions at every sampled base gives minimum heights (8,11,14,16,12,8,10,8) and equality sets 0123, 234567, and 037. Independently enumerating all noncollinear triples of lifts and testing both exact cross-product normals gives exactly the positive-height facets 0123, 037, and 234567. The other facets are the lower facets 0125 and 057.",
+    "The three facet projections tile Q by the interior fan at p_3. Each contact plane bounds all lifts above and attains the upper height across its entire projection. The plane is no larger than the other two planes throughout that projection by affine vertex testing. The absolute doubled areas are 2, 6, 1 with sum 9, and separate determinant tests against each polygon’s oriented sides give exactly the claimed projected lattice sets.",
+    "Modulo-two computation gives classes {0,2,6}, {1}, {3,5}, and {4,7}; comparing heights gives unique maxima 2,1,3,4. Intersecting all supporting facets through roots 1,2,3,4 gives 012, 2, 3, and 234567. Root 1 is in the open edge between lifts 0 and 2 and root 4 is in the relative interior of the planar facet, by the intersecting projected diagonals. Their two inclusion-maximal faces intersect at 2 and cover the eight lifts.",
+    "A singleton has relative Helly number one. Ordered convex traces on E are intervals and require at most two traces to certify emptiness, with disjoint singletons showing equality. Affine projection preserves the relative Helly numbers because convex traces restrict to the face affine span and can be pulled back there.",
+    "A minimal empty family on F produces a distinct deletion witness for each member. Every witness is outside the convex hull of the other witnesses because its omitted set contains them. Exact segment and triangle membership tests on all subsets of F produce 6,15,15,2,0,0 convex-position subsets of sizes 1 through 6. The only four-sets are {2,3,5,6} and {2,3,5,7}; their deletion kernels intersect F exactly in {4}. Thus four or more witnesses are impossible, while the three pairwise sides of triangle {2,3,4} give the minimal empty family of size three.",
+    "For W ordered as 0,1,3,4,6 the five exposing minimum gaps are exactly 1,7,8,7,1. The three listed exclusion inequalities have maximum slack zero on W, and points 2,5,7 respectively violate them by 7,7,1. Hence the five deletion hulls miss the sampled graph together, while any four contain the remaining witness. The union bound is 2+3.",
+    "Verified both source hashes and locators. Section 1 of f1f97e5764053b3f contains the three upper facets, root faces, projected lattice sets and exact Helly counts. Sections 1 and 3 of 588eabf65d9a1440 contain the original base/profile data and the explicitly exposed five-point witness."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T13:39:22Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its general centerpoint theorem takes the relative Helly number as input and does not determine the finite graph’s Helly number or any of the facet incidence data.",
+      "fact_id": "6d6fcf377e68c79c"
+    }
+  ],
+  "readability": "The facet sets and root sets are lists of sampled indices, while the geometric faces are their convex hulls. The term upper facet uses a normal with strictly positive height coefficient. The three listed graphs meet that convention, and the proof also checks the vertical support used at roots 1 and 2.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2b941b42abd74e376199aac6de717a57f983b67426f7c1b97611b0e0cfc669b1",
+  "reviewed_statement_sha256": "e75a014da869d95c904410e33e54bfaf1e6c7dccb5f8e98727be58633b44cf6d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:34:47Z",
+  "summary": "The exact original eight-base lattice census, three upper facets, four root faces, and relative Helly numbers 2, 1, 1, 3, and 5 for the union all check.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

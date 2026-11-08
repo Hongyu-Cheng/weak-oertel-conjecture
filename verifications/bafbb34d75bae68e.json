@@ -1,0 +1,77 @@
+{
+  "candidate_id": "516f003a68a38c3f",
+  "candidate_sha256": "4ec83180fa86c9995eba0829ccf348835706f0fa05b656136e3d8a429f4e5f12",
+  "checked_dependency_candidate_sha256": {
+    "0366ccb8fa1881a1": "af849afa09e2b7dfdff638c1fb8ad815073e324fbbf148b83db022aa2feb08a3",
+    "828211a20fa24681": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558",
+    "c343c9f3dc96957e": "a952e2f742c093432567f048e9ae11aadc72b04ebc5f5bc3ef2cd369f1e20a9d"
+  },
+  "checks": [
+    "The frozen ranges and constants match 6521ec5aae22f16f §§1–5. All four bases are exposed in the square and there are no other integer bases. Varying height in one fiber and using three affinely independent base points proves full ambient dimension.",
+    "A covering cap that is full on a length-two interval has hinge at least two. Any two covering caps have sum at least one there: same signs force a full cap, an opposite-sign gap also forces a full cap, and overlapping opposing cuts dominate |x-t| for any t between their thresholds. Thus a full fiber costs at least five overall, strictly above 17/4.",
+    "For proper opposing cuts, coverage and the two mass budgets force zero overlap and equal local thresholds. Their affine trace t_z gives 17/4+Σt_z² because h has vanishing affine base moments. All four trace values vanish only at the stated geometric pair. Each hinge is 17/8 and each mass is four.",
+    "At that pair each primal contact is x=0 and the dual weights must be (1/2,1/2). Proper section coarea is W for |u|=1/W. The cap and contact offset and base first moments give r_+=r_-, and the remaining zero-mass, zero-first-moment kernel is exactly the checkerboard array. This includes α=0 and all |s|≤A.",
+    "Continuous raw moments are ±17/8 and section/contact moments are zero. In the full width-equality formulation the derivative of W|u| is ±W and the equality multiplier −α17/(8W) gives continuous stationarity. The cover-weight conditions use both margins zero at x=0.",
+    "The convex positive part of one minus the affine Hamming expression is the indicator of the corresponding vertex on the square. The sum of pointwise source minima is 4A−α, so some vertex has gap at least α/4. At α=0 and s=0 the marginals coincide. The full height spread 5/2 is attained over one real base, while integer widths are all two. The read-only exact arithmetic verifier passed."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "828211a20fa24681",
+      "candidate_sha256": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558",
+      "fact_id": "828211a20fa24681",
+      "fact_sha256": "7b05183f5850aa4c0caba911f7e82624e596238e84e3c0cde2c135208bd5f6ab",
+      "hypotheses": "Use the exact minimax formula on each length-two interval and the two margins ±x/W. Interior zero forces the only balanced dual weights to be equal.",
+      "reviewed_proof_sha256": "93725456fe067e71e1b890b2febcade19ef334360d13d743a01dd5dbb9ef0a0c",
+      "reviewed_statement_sha256": "be2e0225a338b79b0ce1cbc618a06460b3076262265172b1970e4f053bd2b70b"
+    },
+    {
+      "candidate_id": "0366ccb8fa1881a1",
+      "candidate_sha256": "af849afa09e2b7dfdff638c1fb8ad815073e324fbbf148b83db022aa2feb08a3",
+      "fact_id": "0366ccb8fa1881a1",
+      "fact_sha256": "1933df6766559d1a947ffe60d97143d770b27ec2fc429736e48b8d1116bc1962",
+      "hypotheses": "The hinge derivative proof uses null proper boundaries and dominated convergence, unchanged when the fixed continuous normal has magnitude 1/W. Its fixed-offset stress theorem is not needed.",
+      "reviewed_proof_sha256": "cb558d21879fba66e183b9e74a8d78ee183aa0e4478f79915c43e6ee461c293b",
+      "reviewed_statement_sha256": "11bc039a5034bc23802d9fec5b2254ba753a7d8a337415a833043b046667ce15"
+    },
+    {
+      "candidate_id": "c343c9f3dc96957e",
+      "candidate_sha256": "a952e2f742c093432567f048e9ae11aadc72b04ebc5f5bc3ef2cd369f1e20a9d",
+      "fact_id": "c343c9f3dc96957e",
+      "fact_sha256": "79a5b588885b1b3363d55c0fbd4397c3c794c0cd0ed865fab33776a265285296",
+      "hypotheses": "Use its joint budget, contact, base and offset balances in the unit case. For fixed general W the proof separately computes coarea W and the derivative of the width equality on each sign branch, so it does not assume a general width-normalized existence theorem.",
+      "reviewed_proof_sha256": "76f73c8ae10dac73b01968669f5361c27d89aaa25c3caa13777dbb5307a16283",
+      "reviewed_statement_sha256": "d87ccc328c4d45f48ffeae14e3ab7c64867ea7a0b9b1ddc68b1d43324ce72d13"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:23:13Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This supplies existence of a normal stress for the interval setting under unit normals. It does not classify the minimum or all its stresses, or compare source and contact by convex tests.",
+      "fact_id": "3465a789a74f1b1b"
+    },
+    {
+      "comparison": "It gives the exact width-normalization convention and affine covariance, but does not imply the normal-stress obstruction.",
+      "fact_id": "dd2450ce12bcd272"
+    },
+    {
+      "comparison": "The accepted constraints give the unit-normal first-moment balances. The example shows that even their actual joint stresses need not satisfy the proposed stronger convex order.",
+      "fact_id": "c343c9f3dc96957e"
+    }
+  ],
+  "readability": "The abnormal equal-marginal choice does not use any objective-cap mass. The counterexample addresses the asserted transport upgrade for every normal stress.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "cf9337982b3d4e3fb37ece5c5573912b045c9abde24507f17f149466593a561e",
+  "reviewed_statement_sha256": "bf0359bb9f9dd7c39cde7e3c63e9ef551cf5536be9d89d8cd7bd08512217bf10",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:16:29Z",
+  "summary": "The actual two-cap minimum and every normal stress are determined. A vertex-indicator convex function witnesses the failure by at least α/4 for each normal stress, uniformly over width normalization.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

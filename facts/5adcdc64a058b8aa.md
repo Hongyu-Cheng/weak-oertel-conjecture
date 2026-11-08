@@ -1,0 +1,67 @@
+---
+fact_id: 5adcdc64a058b8aa
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-large-maximum-normal-simplex-chain-cap
+depends_on: ["29a6150872e2ef85", "6769574fc1bd9f8d", "9cef204c64b1bff8", "ea91e021ff1f4416"]
+verifier_run: ec939ba252a22993
+target_match: null
+---
+
+## Source
+
+- [0722a9c9ad369925](../candidates/0722a9c9ad369925.json), Theorem (1) and §§1–4, including (2)–(5) and transfer.
+
+## Statement
+
+Let $d\ge1$ and $m\ge0$ be integers. Put $T_d=\operatorname{conv}(0,e_1,\ldots,e_d)$, $V_d=1/d!$, $\tau=1/(d+1)$ and $\Gamma_d=(d/(d+1))^d$. Take radii $R=r_0\ge r_1\ge\cdots\ge r_m\ge0$ with $R>0$ and nondecreasing drops $r_{h-1}-r_h$. The actual integer fibers at $-h$ and $h+1$ are $r_hT_d$, for $0\le h\le m$, with no other integer fibers. Let $\mu$ be the sum of their $d$-dimensional volumes, so the total mass is $2V_d\sum_{h=0}^m r_h^d$.
+
+Fix $u\in[0,\infty)^d$ with $\sum_i u_i=1$ and $M=\max_i u_i\ge2\tau$. For every $\beta\ge0$, the closed halfspace
+$$
+H=\{(z,x):-\beta z+u\cdot x\ge R\tau\}
+$$
+through the actual centroid $(0,R\tau,\ldots,R\tau)$ at base zero captures at least $\Gamma_d V_d\sum_{h=0}^m r_h^d$, a fraction $\Gamma_d/2$ of the total mass. Equality holds exactly when every outer radius $r_h$, $h\ge1$, is zero, $u=e_i$ for some $i$, and $\beta\ge R(1-\tau)$. The condition on outer radii is vacuous when $m=0$.
+
+## Proof
+
+Write $t=R\tau$ and $F_r(s)=\operatorname{vol}_d(rT_d\cap\{u\cdot x\ge s\})/V_d$. At the actual bases $-h$ and $h+1$, the respective thresholds for the one fixed halfspace are $t-\beta h$ and $t+\beta(h+1)$. The cap mass divided by $V_d$ is the sum of the corresponding $F_{r_h}$ values. In each positive-radius fiber the boundary has zero $d$-volume because $u\ne0$. Radius-zero fibers have zero mass for every threshold.
+
+**Conditional simplex law.** Relabel so that $u_1=M$. A uniform point $X$ of $T_d$ can be written $X=(W,(1-W)Y)$, where $W$ has density $d(1-w)^{d-1}$ on $[0,1]$ and $Y$ is independent and uniform on $T_{d-1}$. The change of variables has Jacobian $(1-w)^{d-1}$ and $V_{d-1}=dV_d$. When $d=1$, take $W=X_1$ uniform on $[0,1]$ and $Y$ the zero-dimensional point. Set $Z=\sum_{j=2}^d u_jY_j$, with $Z=0$ if $d=1$. We have $0\le Z<M$ almost surely. Indeed, for $d\ge2$ equality with $M$ requires $\sum_{j=2}^dY_j=1$, a null face even if several $u_j$ equal $M$. The conditional projection is $MW+(1-W)Z$. For every real $v$, integration of the density of $W$ gives
+$$
+\mathbb P(u\cdot X\ge v\mid Z)=
+\min\left\{1,\left(\frac{(M-v)_+}{M-Z}\right)^d\right\}.
+$$
+For $v\le Z$ the probability is one, for $Z<v<M$ it is the upper tail at $(v-Z)/(M-Z)$, and for $v\ge M$ it is zero, including the null endpoint $W=1$ at $v=M$.
+
+**Affine radii.** First suppose $r_h=R-\alpha h\ge0$ for $0\le h\le m$ and $\alpha\ge0$. If $\beta\ge\alpha\tau$, the left threshold satisfies $t-\beta h\le\tau r_h$. For each $r_h>0$ the level $\tau r_h$ is the projection of the actual centroid of $r_hT_d$. The full-mass case of 6769574fc1bd9f8d gives $F_{r_h}(\tau r_h)\ge\Gamma_d r_h^d$. Thus the left caps alone pay the target. This includes $\alpha=0$ and $\beta=\alpha\tau$. For $m=0$ the same argument uses only the unchanged left threshold $t$ and requires no slope condition.
+
+It remains to prove the affine bound for $m\ge1$, $\alpha>0$ and $0\le\beta<\alpha\tau$. Put
+$$
+a=\alpha/R,\qquad \theta=1-\tau/M,\qquad b=\beta/(M\alpha),\qquad \rho_h=r_h/R=1-ah.
+$$
+Then $1/2\le\theta<1$, $0\le b<1-\theta$, and $am\le1$. With $L_h,B_h$ from finite-prefix-two-list-counting, $(L_h)_+\le\rho_h$ and $(B_h)_+\le\rho_h$. Indeed $1-b\ge\theta$ and $1+b\ge\theta$, and $B_0\le1$. For almost every $Z$ let $C_Z=(M-\tau)/(M-Z)>0$. The identities
+$$
+M\rho_h-(t-\beta h)/R=(M-\tau)L_h,\qquad
+M\rho_h-(t+\beta(h+1))/R=(M-\tau)B_h
+$$
+and the conditional law give
+$$
+\begin{aligned}
+F_{r_h}(t-\beta h)/R^d &= \mathbb E\min\{\rho_h^d,C_Z^d(L_h)_+^d\},\\
+F_{r_h}(t+\beta(h+1))/R^d &= \mathbb E\min\{\rho_h^d,C_Z^d(B_h)_+^d\}.
+\end{aligned}
+$$
+For $r_h>0$ these are obtained by taking $v$ to be the actual threshold divided by $r_h$ and multiplying the probability by $\rho_h^d$. When $r_h=0$ both clipped terms and both cap volumes are zero without dividing by $r_h$.
+
+If $C_Z\le1$, the minima are their second terms, and finite-prefix-two-list-counting with exponent $d$ gives the conditional lower bound $C_Z^d\sum_h\rho_h^d$. If $C_Z\ge1$, each minimum is at least the corresponding $(L_h)_+^d$ or $(B_h)_+^d$ since each is bounded by $\rho_h^d$. The lemma now gives $\sum_h\rho_h^d$. In either case the lower bound is strict because $m\ge1$ and $b<1-\theta$ exclude scalar equality. Averaging the finite bounded sums gives a strict lower bound by $F_1(\tau)\sum_h r_h^d$, since the same conditional law at $v=\tau$ gives $\mathbb E\min\{1,C_Z^d\}=F_1(\tau)$. The full-mass centroid bound gives $F_1(\tau)\ge\Gamma_d$. This also checks $M=2\tau$ and $\beta=0$ directly.
+
+**General radii and equality.** For $m\ge1$, the hypotheses of 9cef204c64b1bff8 hold for this original chain and its fixed $H$. That fact gives nonnegative affine radii on the same finite base list with the same $R,u,\beta$. It decreases the signed surplus
+$$
+V_d\sum_{h=0}^m\big[F_{r_h}(t-\beta h)+F_{r_h}(t+\beta(h+1))-\Gamma_d r_h^d\big]
+$$
+and does so strictly if any radius changes in its between-radii construction. The affine bound makes the new surplus nonnegative, so the original is nonnegative. For a nonaffine original sequence at least one radius changes, giving strictness.
+
+For an affine sequence with $m\ge1$, the strict range $0\le\beta<\alpha\tau$ with $\alpha>0$ was already treated. In the other range, the left caps alone pay the target. If $\beta<R(M-\tau)$, the central right cap has positive volume, so the bound is strict. If instead $\beta\ge R(M-\tau)$ and $r_1>0$, then $\alpha<R$ and $\beta\ge R\tau>\alpha\tau$. Thus the left cap at $h=1$ has threshold strictly below the projection of the interior fiber centroid. The slab up to that projection has positive volume, so this left cap contributes strictly more than the centroid bound. This proves that equality is possible only if every outer radius is zero.
+
+When there are only the two positive central fibers, the left cap mass divided by $V_d$ is $R^d F_1(\tau)$ and the right cap is null exactly when $\beta\ge R(M-\tau)$. In dimension $d\ge2$, the ordinary centroid-cap equality case recorded in §1 of ea91e021ff1f4416 requires an apex-side cap parallel to its opposite facet. In $T_d$, the possible apexes are its vertices. The apex $0$ would require a normal proportional to $-(1,\ldots,1)$, excluded by $u\ge0$ and $\sum_i u_i=1$. The other apexes give exactly $u=e_i$. Conversely each coordinate cap has fraction $(1-\tau)^d=\Gamma_d$ by scaling the simplex. In $d=1$ the normalization already forces $u=e_1$ and its centroid cap has fraction $1/2=\Gamma_1$. Thus in every case equality is exactly the one stated.

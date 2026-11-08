@@ -1,0 +1,29 @@
+{
+  "advances": "Counterexample to extension of the vertex-only envelope in a continuous tetrahedral model. The displayed mean remains above the target for that model.",
+  "author": "PK-research-agent",
+  "candidate_id": "d21edcf7186b877c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:01:39.479137+00:00",
+  "depends_on": [
+    "1462fa9ce6ced54e",
+    "d05c848f0195905f"
+  ],
+  "draft_key": "tetrahedral-vertex-envelope-counterexample",
+  "kind": "counterexample",
+  "proof": "Choose the raw signed heights $(6,7,-24,-6)$. The formulas of tetrahedral-quadrilateral-section-calculus yield the displayed $\\lambda$, normalized coarea $261/4030$ and cap fraction $506/2015$. Use the complementary cap and the three vertex-side caps at vertices $0,1,2$ supplied by tetrahedral-vertex-cap-affine-envelope. Give them weights with common denominator $N=52425025485892802$ and respective numerators\n$$\n23097356755453943,\\quad13014678602879811,\\quad15094034160118200,\\quad1218955967440848.\n$$\nThese are positive and sum to $N$. For the complement the section area vector divided by tetrahedron volume is $-S(7-6,-24-6,-6-6)$. For vertex cap $i$ it is $f_i$ times the gradient of $3-\\sum_{j\\ne i}\\xi_j/\\lambda_j$. In the same order as the four weights, this gives\n$$\n\\begin{aligned}\n&( -261/4030,\\ 783/403,\\ 1566/2015),\\\\\n&( -7548997/10167690,\\ -9092189/4405999,\\ -52242226/52533065),\\\\\n&( 7548997/10167690,\\ -9221869/6778460,\\ -79169/292175),\\\\\n&( -10395473/264359940,\\ 9092189/4405999,\\ -572118/759655).\n\\end{aligned}\n$$\nMultiplying by the listed numerators and summing gives zero in all three coordinates. The fractions $1-F,f_0,f_1,f_2$ are $1509/2015$, $42342324173/178244689545$, $6424196447/26537670900$, and $7737452839/11499657390$. Their weighted sum gives the stated mean, whose difference from $27/64$ is $87877814537051013/1677600815548569664>0$.\n\nIn the notation of tetrahedral-vertex-cap-affine-envelope, substitution gives $R=36033317871223/75836660403033$ and the complement's affine slack after multiplying by $D$ is $-76232299376/232609319856225$. Each vertex cap has affine equality, and the four area vectors balance, so the menu's mean minus $R$ is the complementary slack times its positive weight divided by $D>0$. This proves the strict comparison.\n",
+  "source_candidate_ids": [
+    "d9c0dfe42c7f1e42"
+  ],
+  "source_candidate_sha256": {
+    "d9c0dfe42c7f1e42": "e93e690848fd6165c3be13eb15be0455e1e0cdddd137154c0529ca90776d87f7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d9c0dfe42c7f1e42",
+      "locator": "§3, (7)–(8), rational cap and balanced weights"
+    }
+  ],
+  "statement": "In the standard tetrahedron, at the common actual section centroid\n$\\lambda=(851/2610,11218/35061,4657/40455,1621/6786)$, a section-normal balanced menu that allows a quadrilateral cap has relative mean $12431494665571935/26212512742946401$. It is strictly less than the all-vertex-side balanced mean $36033317871223/75836660403033$ at $\\lambda$ and strictly greater than $27/64$. All coordinates of $\\lambda$ are in $(0,1/3)$.",
+  "subgoal_id": "pk-intake-tetrahedral-vertex-envelope-counterexample",
+  "title": "A balanced quadrilateral extension below the tetrahedral vertex-only mean"
+}

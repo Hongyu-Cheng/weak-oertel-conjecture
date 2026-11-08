@@ -1,0 +1,53 @@
+{
+  "candidate_id": "3d5f56b513c21fc4",
+  "candidate_sha256": "ef3ab81ce0e282a0bbda069677de721a69b5056faab8969726fffd9e88e90282",
+  "checked_dependency_candidate_sha256": {
+    "bee3cc8e50a0dcea": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa"
+  },
+  "checks": [
+    "All positive sources of a representation at z lie in its minimal face by its supporting equalities. If z is not a vertex, the other sites include every vertex of that face and their hull is the face. Assign each other site a small positive weight, subtract, and normalize: the residual stays in a relative-interior neighborhood and has a convex representation there. This constructs a single hyperedge containing the entire face trace, including z as anchor.",
+    "For any site in conv(A), a nontrivial representation uses only sources from its component. A trivial representation has the site already in A. The reverse inclusion uses monotonicity of convex hulls. Taking A to be a component shows it is closed, hence lattice-complete if P is.",
+    "For Helly upper additivity choose a certificate on each component and take their union. For the reverse, the finite definition supplies a minimal empty family of size h(P_i) on each component (including h=1). Each trace extends by the other components to a closed trace by the split formula. All extended traces have empty intersection, and deleting any one retains that trace’s own component witness. The deletion witnesses also rule out duplicate extended traces.",
+    "Distinct components cannot meet the same occupied parity class: the midpoint of such a pair is a site by completeness and its nontrivial representation connects the endpoints. This proves exact additivity of the occupied counts in the common affine lattice.",
+    "The ambient cap uses one mark 0 in R per site. Complete P supplies every same-parity graph midpoint, and C×R has exactly the trace of C on the zero graph. The accepted graph theorem thus gives h(P)≤2^n. The exact Helly split converts this into the claimed cap on the sum.",
+    "Checked original source hashes and locators dbf3b23d25004153 §§1–2, (1)–(2), and 2086e4eaa4bce465 §6, (8) before the attainment argument."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa",
+      "fact_id": "bee3cc8e50a0dcea",
+      "fact_sha256": "d7fb8bf1055406ebcaa03906c37ae5c346a791238bfc82ab445225504cc670e3",
+      "mapping": "Take D=P, d=1 and b_z=0 at every site. The graph midpoint condition follows from completeness and includes coincident pairs. Apply the Helly conclusion to C×R; no weight or centroid assertion is used.",
+      "reviewed_proof_sha256": "5f71717b77abc881a8566e239b260d568886b9968e0805f252142523621e3ddb",
+      "reviewed_statement_sha256": "b35d11bb8b5672e290f57d665efd27927629b295e5ae5d1e0655b22288a2bd12",
+      "status": "accepted at reviewed snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:58:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its zero-mark specialization already implies the numerical 2^n cap; it does not imply either exact component sum.",
+      "fact_id": "bee3cc8e50a0dcea"
+    },
+    {
+      "comparison": "Its finite-set witness argument already yields the stronger cap h(P)≤k(P) under midpoint closure of each label. Completeness supplies this for parity labels. It does not imply the component trace formula, exact Helly split or disjoint occupied classes.",
+      "fact_id": "f4547c4166b39683"
+    }
+  ],
+  "readability": "The k(P_i) counts are all in the same affine lattice, and the 2^n cap in the statement is for the Helly sum.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "42414300b26b7d83cc52cd4df2c41561b5b48474e6088deadcb3a53e78851253",
+  "reviewed_statement_sha256": "d12d8603f519b58d81dff2ff058216c90b2702dec128713a328f0d230c1cf349",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:52:43Z",
+  "summary": "Full anchored dependence splits the convex traces, Helly numbers and occupied parity counts exactly. The stated ambient Helly cap follows from the declared zero-mark graph specialization.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

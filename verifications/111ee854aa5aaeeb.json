@@ -1,0 +1,57 @@
+{
+  "candidate_id": "5969e97329ff52ae",
+  "candidate_sha256": "e8b3d74bb0e1bd75e2909c61d941af63b612a9be70466d8e3f120bbacd42c29c",
+  "checked_dependency_candidate_sha256": {
+    "095440dfdf5f6eab": "bed15102c9f62a8a154b838a1f77c01b6888cb5cea3de9a861ed051c6f92db10"
+  },
+  "checks": [
+    "At each row witness, all other inequalities stay strict on a sufficiently small neighborhood. Moving in the direction of the nonzero row normal proves irredundancy, and the relative neighborhood on the row hyperplane proves relative-interior facet contact. This gives exactly 2^n facets and verifies the witness theorem's hypotheses with A as the convex domain.",
+    "Parity completeness gives one integral midpoint partner in every class. Solving R(z)=y separately in each class gives exactly one integer 2y−p_r of that class; convexity gives preservation of P for a start in A.",
+    "Even outside A the orbit stays in conv({z}∪W), a compact set with finitely many lattice points. Midpoint convexity contracts distance to W by 1/2 at each step, so no orbit can stay at positive distance; W∩Z^n consists of fixed witnesses. No affine-rank premise on W is used.",
+    "Induction on the recurrence gives z−p_s=Σ_j 2^j(p_s−p_[z_j]), including the empty root path. Every term has nonnegative a_s-margin, and a nonroot requires at least one distinct digit, which gives strict exposure and excludes it from L.",
+    "On P the potential has the claimed zero set. Taking a maximum of the rowwise half-contractions is legitimate. If nonroots exist, their least positive value δ exists by finiteness; with k=1+ceil(log₂(V/δ)), V/2^k≤δ/2. If P consists only of roots the logarithmic estimate is vacuous.",
+    "Read 668ad0ef7a63372e §§2–3 and d0f838592db846be's exact orbit passage (1). The first has the full-lattice termination and exact inverse census, the second supplies the distance proof, and their combination justifies the rewritten argument. The extension from L∩P to L∩Z^n uses the same strict exposed margin on the now-proved full-lattice orbit.",
+    "Recomputed the frozen candidate and its UTF-8 statement/proof digests, checked every cited source digest against the pinned original candidate file, and checked each exact declared predecessor."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "095440dfdf5f6eab",
+      "candidate_sha256": "bed15102c9f62a8a154b838a1f77c01b6888cb5cea3de9a861ed051c6f92db10",
+      "fact_sha256": "e2b8c6a06a8fb8da8ee3be04909d7cbedf3f7e3adf0265242cab020dded22d7b",
+      "hypotheses_mapping": "The supplied full-dimensional L and strict exclusive contacts yield one irredundant facet per nonzero row, with p_r in its relative interior. Use A unchanged, P=A∩Z^n, and the stated avoidance. The fact gives W∩Z^n equal to the roots and their parity classes exhaustive.",
+      "reviewed_proof_sha256": "3b6fe1d8e6c04b08a22cd6ea51f36eb8d8d6d32f9e9164050258e7bc26d52d86",
+      "reviewed_statement_sha256": "e534c1223182735196f5178c7317f60443eee5d28f3adeced3a92a22d45df344"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:38:26+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Exact antecedent for the empty witness hull and complete parity census with A unchanged. Its statement stops before the midpoint map, inverse census, exterior basins and potential.",
+      "fact_id": "095440dfdf5f6eab"
+    },
+    {
+      "comparison": "The proof already contains termination by distance contraction on a finite lattice projection with an empty representative hull. Applying its argument on conv({z}∪W) also gives arbitrary starts. It does not give the exact inverse census, the exposed-facet exterior/semigroup conclusion or the row potential and its hitting-time bound.",
+      "fact_id": "abb6c0fd2ba74ca0"
+    },
+    {
+      "comparison": "Contains the four-witness midpoint map and one basin for a specific planar six-fiber source. It does not treat general full-parity row data.",
+      "fact_id": "ff8dd8bb1c333bbf"
+    }
+  ],
+  "readability": "The compact hull controlling a full-lattice start is distinct from A; the proof uses A only to obtain the initial witness hull and to show R(P)⊆P.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "be30be74753c3c29d05747088a436035aa3ccfb6885a06a30108a2807e75282e",
+  "reviewed_statement_sha256": "4329e068568366025a502271e30c08815a5e45e2758c45d8c0ef83a486e92f32",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:34:20+00:00",
+  "summary": "The exact frozen proof establishes parity completeness, termination on the full lattice, the terminal basin exposure, and the finite-domain potential bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

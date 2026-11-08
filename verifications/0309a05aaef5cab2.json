@@ -1,0 +1,51 @@
+{
+  "candidate_id": "5baa70f433599cdb",
+  "candidate_sha256": "7c98522b160aab037243f135a988c6377a0dff0382e33735d39ae156819d994e",
+  "checked_dependency_candidate_sha256": {
+    "75020cedc7e94bfd": "51c436465427b6d8f69dae9dbcda95aedfea6042d39e25776e1b8118b8c15806"
+  },
+  "checks": [
+    "For interior s the common fan keeps support normals fixed and makes vertex coordinates affine. An isolated incidence is a zero of an affine function, while persistent vertex incidence is retained without forcing a support cut.",
+    "Where a clipping intersection exists off a coincident supporting line its two equations have fixed independent normals, so the clipped vertices are affine and the shoelace area is quadratic.",
+    "Re-derived the edge-velocity identity from the CCW shoelace derivative, with outward edge integral ½det(w_i+w_{i+1},v_{i+1}−v_i). The outward cut normal is −u/|u|, producing the negative cutoff term.",
+    "For unit u at an upper-edge event, the width is (h'−q')(s−s_0), and each contributing section has length L+O(|s−s_0|). This gives the right max and left min signs, with zero first-order contribution at a vertex.",
+    "Checked closed complementary cap identities fiberwise because every cutting line has zero planar area. Empty and full chambers use their correct raw volume derivatives. The original locator ac652e84a5ae457b:02 has all these cases."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "75020cedc7e94bfd",
+      "candidate_sha256": "51c436465427b6d8f69dae9dbcda95aedfea6042d39e25776e1b8118b8c15806",
+      "hypotheses": "Same-batch frozen predecessor. Both endpoints are full-dimensional planar polygons, hence satisfy its convex-body hypotheses. The exact three fibers, fixed middle body, and total mass M_s apply throughout the flow. Predecessor admission remains required.",
+      "review_status": "pending coordinator admission",
+      "reviewed_proof_sha256": "864bf168b2f38df7b840ca4fee33359b3d7403ee005e5b7737d129677d7fc078",
+      "reviewed_statement_sha256": "cae4746ed67cb3bd8b73f3c9b22e7188b9bf27c229ac1f17ebe50f14833760e4"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:56:11Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted coincident-facet first variation yields the same upper supporting positive-part law at constant facet speed, but does not give the full finite shoelace chambers or complementary opposed-flow second derivatives.",
+      "fact_id": "43567b84e915c6be"
+    },
+    {
+      "comparison": "The accepted ambient coefficient variation has a general first-order flux bound with coincidence allocations. It does not give exact finite quadratic cap masses for this common-fan interpolation.",
+      "fact_id": "7a5ea4f8a4c5094c"
+    }
+  ],
+  "readability": "The support-edge law uses unit u as specified. I read the full and empty handling separately from the proper cap chord formula.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1c376fcc40918fdb53f5416f23cc29f82b14f668a13e6ac32ed472569d2d3097",
+  "reviewed_statement_sha256": "9270ef259734b73311abca41835e2484584bcf85f2de81d4fcd33f692c1cc78f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:51:25Z",
+  "summary": "Approved. The polygonal chambers and one-sided supporting-edge laws give the exact raw cap variation for the stated continued normal and threshold.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

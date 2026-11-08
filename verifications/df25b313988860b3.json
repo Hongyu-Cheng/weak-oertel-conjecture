@@ -1,0 +1,52 @@
+{
+  "candidate_id": "3f1bdc64081509fc",
+  "candidate_sha256": "97d72266099999c34af8fc72adbfac0d4c3d9a32db9c8977d7852c6a19303b1f",
+  "checked_dependency_candidate_sha256": {
+    "f96beff4bebe6a19": "37417a4d6fe38e79dbbe2a1bf5168ad4f9080c8b9f98211fbdc0c404fb85f19f"
+  },
+  "checks": [
+    "Widths have successive slopes 66,65,60,−175, making the lower piecewise-affine boundary convex. Exactly the five integer intervals are sampled. The prefix through two and suffix from four fail the half-mass test, while the closed base-three sides have masses 424 and 225. Base balance limits each side to 25 and the middle to 200, with mass 250 attained, so t=449/2 is feasible with slack.",
+    "Independent rational arithmetic verifies the allocation (0,0,25,349/2,25), both equality constraints and the exact residual gradients. For any feasible displacement the equality multiplier vanishes and empty/full signs make the residual term nonpositive. The strict negative quadratic difference proves uniqueness for each of the two moment optimizations.",
+    "The interval endpoints recompute to −185399/1796 and −126801/1796. Their difference is 29299/898 and their midpoint −39025/449. Convex interpolation of the extremizing densities fills the interval.",
+    "For each displayed v, the own downward cap pays at least 200+v≥25−v. The upward neighboring thresholds at bases 2 and 4 sum to 2v, so either a full trace pays at least 25 or their positive-part sum pays at least −2v>25. The own upward trace contributes −v. The pure-base caps each pay at least 225. The explicit coefficient 100 realizes the upper bound by taking exactly the own upper trace and the entire right endpoint fiber.",
+    "Independently evaluated every rational slope breakpoint and both oriented cap masses at both marks, recovering raw depths 50250/449 and 225/2, and confirmed the normalized inequalities and gap 601/1796 in raw units. Both source locators in b69bd5bdfa7fa03d match. The selected-mark depth lower bound extends the source’s displayed bad-cap upper bound by the same neighbor argument used for the separate mark."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f96beff4bebe6a19",
+      "candidate_sha256": "37417a4d6fe38e79dbbe2a1bf5168ad4f9080c8b9f98211fbdc0c404fb85f19f",
+      "fact_id": "f96beff4bebe6a19",
+      "fact_sha256": "d45161d20949282ededfe4e94fb9614629786d5342de9771198efee05516b8ff",
+      "hypotheses": "The actual compact convex polygon has positive interval fibers at consecutive integers, and t lies in (0,T_3] with T_3=250. Its endpoint objectives Q_u and Q_{−l} therefore use precisely u=0, −l=w, the original interval lengths and the two stated mass and base-moment equalities.",
+      "reviewed_proof_sha256": "c3b3f6947c99164e4dd0a41e028fe732eec1bf776c53b145a31a6dc7076e0564",
+      "reviewed_statement_sha256": "1c92cd481faa69b830ebc7eec02ac4915778d6704549cf61dba9f957707d8cca"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:53:10Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the exact moment path and all-slope evaluation machinery for any feasible mass. It does not give these widths or the failure at the fixed mass M/2.",
+      "fact_id": "f96beff4bebe6a19"
+    },
+    {
+      "comparison": "Concerns a planar-fiber log-concave extraction under a prescribed midpoint pushforward and its mass ceiling. The present one-dimensional example concerns the depth of a specific selector using dominated-source moments.",
+      "fact_id": "58b3743f5ff1021e"
+    }
+  ],
+  "readability": "The selector uses M/2, not a fraction of its particular base’s marginal depth. The successful mark is a separate point on the same fiber.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read followed by source, predecessor and exact arithmetic checks.",
+  "reviewed_proof_sha256": "b509029c1882a159e4f5db5a795c6210a491d37ae6c4145484c76bd71e21d486",
+  "reviewed_statement_sha256": "1af1af745cdca0887e72d5f0d4598adef758ad377c6fbcdc77fc6e72e780e9d8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:48:02Z",
+  "summary": "The fixed half-total-mass midpoint selector fails at the unique weighted-median base. Both displayed depths are exact on the same actual body.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

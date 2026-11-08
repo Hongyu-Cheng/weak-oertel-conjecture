@@ -1,0 +1,26 @@
+{
+  "advances": "The direct Jensen bound holds for supplied mean-one ratios on the original volume allocation. The optional derivative proof is conditional on the logarithmic comparison along the specified one-sided path. Neither argument relates this allocation to actual cap selectors or their physical response.",
+  "author": "PK-research-agent",
+  "candidate_id": "de5f82aecae55792",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:59:02.108396+00:00",
+  "depends_on": [],
+  "draft_key": "conditional-projective-row-inverse-moments",
+  "kind": "lemma",
+  "proof": "On a row of positive mass $s_Q$, write $g_Q=W_Q/L$. Since $U\\le b_QW_Q$, convexity of $x\\mapsto x^{-p}$ and the unit mean of $g_Q$ under $\\eta_Q/s_Q$ give\n$$\n\\int (L/U)^p\\,d\\eta_Q\\ge b_Q^{-p}\\int g_Q^{-p}\\,d\\eta_Q\n\\ge b_Q^{-p}s_Q.\n$$\nZero rows contribute zero. Sum the inequality using $\\sum_Q\\eta_Q=dm/M$ and $b_Q=\\Psi(Y_i)/L(Y_i)$ at every positive source assigned to $Q$.\n\nFor the path assertion let $A(x,y)=(x^{-p}+t y^{-p})^{-1/p}$ on positive arguments and write $S=x^{-p}+t y^{-p}$. The first partial derivatives are $S^{-1/p-1}x^{-p-1}$ and $tS^{-1/p-1}y^{-p-1}$, both nonnegative. Its Hessian is\n$$\n-(p+1)t\\,S^{-1/p-2}x^{-p-2}y^{-p-2}\n\\begin{pmatrix}y^2&-xy\\\\-xy&x^2\\end{pmatrix}.\n$$\nThe matrix in parentheses is the outer product of $(y,-x)$ with itself. Thus $A$ is concave and nondecreasing in each argument, so composing with the positive concave $L,U$ gives a positive concave $V_t$.\n\nThe source-minus-target logarithmic comparison has value zero at $t=0$ and is assumed nonnegative for small $t\\ge0$. On the compact hull $L/U$ is bounded, and\n$$\n\\log(V_t/L)=-p^{-1}\\log(1+t(L/U)^p).\n$$\nIts right derivative is $-(L/U)^p/p$, with a bounded difference quotient for small $t$. The derivative of the comparison is therefore nonnegative, giving the same inequality upon evaluating $U(Y_i)=\\Psi(Y_i)$.\n",
+  "source_candidate_ids": [
+    "f29d64ab4f68c3cc"
+  ],
+  "source_candidate_sha256": {
+    "f29d64ab4f68c3cc": "a1a16a425af192270b809a61f6c59311dea7217c030708e12ada7ce3a60a813b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f29d64ab4f68c3cc",
+      "locator": "f29d64ab4f68c3cc:05 §4 equations (11)–(12)"
+    }
+  ],
+  "statement": "Let $dm$ be the sum of Lebesgue volume on the finitely many sampled positive fibers of a compact canonical hull $C$, with $M=\\int dm>0$. Let $L$ be continuous and strictly positive on the compact hull. For finitely many positive affine charts $W_Q$ and constants $b_Q>0$, put $G_Q=b_QW_Q$ and $U=\\min_Q G_Q$. Let nonnegative source weights $\\sigma_i$ at marks $Y_i$ be assigned once each to groups $Q$. Assume finite nonnegative whole-row measures $\\eta_Q=L\\nu_Q$ satisfy $\\sum_Q\\eta_Q=dm/M$ and\n$$\ns_Q=\\eta_Q(C)=\\sum_{i\\ {\\rm assigned\\ to}\\ Q}\\sigma_i,\\qquad\n\\int (W_Q/L)\\,d\\eta_Q=s_Q.\n$$ Assume further that $U(Y_i)=b_QL(Y_i)=\\Psi(Y_i)$ for each positive source assigned to $Q$, where $\\Psi(Y_i)>0$ is the prescribed profile value. Then for every $p>0$,\n$$\n\\int (L/U)^p\\,\\frac{dm}{M}\\ge\\sum_{i:\\sigma_i>0}\\sigma_i[L(Y_i)/\\Psi(Y_i)]^p.\n$$\nIf $L$ is also concave, the path $V_t=(L^{-p}+tU^{-p})^{-1/p}$ is positive and concave for every $t\\ge0$. If the fixed-row logarithmic comparison $\\sum_i\\sigma_i\\log(V_t(Y_i)/L(Y_i))\\ge\\int\\log(V_t/L)\\,dm/M$ holds for all small $t\\ge0$, its right derivative at zero yields the same inverse-moment inequality.",
+  "subgoal_id": "pk-intake-conditional-projective-row-inverse-moments",
+  "title": "Inverse moments for a lower envelope of tilted whole rows"
+}

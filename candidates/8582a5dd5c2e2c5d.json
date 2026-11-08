@@ -1,0 +1,40 @@
+{
+  "advances": "Boundary response efficiency for a prescribed regular circuit in a common-fiber product interval with another deepest base, and the singleton case.",
+  "author": "PK-research-agent",
+  "candidate_id": "8582a5dd5c2e2c5d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:47:32.363410+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "prescribed-regular-product-interval-circuit-payment",
+  "kind": "theorem",
+  "proof": "A deepest point lies in the interior of its own common fiber: an ordinary supporting cap at a boundary point has zero mass in every fiber, whereas a ball centered at any interior point in its own fiber gives positive volume in every halfspace through that point. Thus each listed cap has a proper own trace and strictly positive total coarea. For a cap through $Y=(p,y)$ with full normal $A=(a,u)$, let $\\sigma$ be the sum of its trace $\\mathcal H^{d-1}$ measures divided by $\\lVert u\\rVert$, with total $S>0$ and centroid $B$. The assumed derivative of cap mass under $(A,b)\\mapsto(A+\\tau W,b+\\tau c)$ is $S(W\\cdot B-c)$. Through $Y$, take $c=W\\cdot Y$. Every such cap has mass at least $Q$, and the two-sided derivative at zero vanishes. This gives $B=Y$. If another deepest mark $Y'$ is strictly in the cap, increasing its threshold a little retains $Y'$ and loses positive mass from the proper own trace. If $Y'\\ne Y$ lies on the cap boundary, use $c=W\\cdot Y'$ and $W=Y'-Y$. The derivative is then $-S\\lVert Y'-Y\\rVert^2<0$, contradicting deepestness. Thus every other deepest mark is strictly outside each prescribed cap.\n\nThe ambient depth superlevels are convex since a halfspace containing a convex combination contains at least one summand. Affine symmetries preserve every ambient cap mass and act only on $K$. Hence orbit averaging shows that $(q,g)$ is deepest at every deepest base $q$. On base $p$, a distinct deepest mark would have $u_j\\cdot(x-y)<0$ for each $j$, contradicting their positive balance. Therefore $y=g$. If $q\\ne p$ is another deepest base, strict exclusion of $(q,g)$ gives $a_j(q-p)<0$ for all $j$. For $q>p$ choose $e=m$, and for $q<p$ choose $e=M$. Then $a_j(e-p)\\ge0$ for all $j$. For the singleton take $e=p$, giving the same weak inequalities.\n\nIn fact the following localization works for any finite base with a common fiber and any exposed base $e$ with $a_j\\cdot(e-p)\\ge0$ for caps through $(p,g)$. Choose an affine exposer $\\ell$ with $\\ell(e)=0$ and $\\ell<0$ on the remaining bases. In the singleton case take $\\ell=0$. Choose $B_0\\ge0$ so $-B_0\\ell(z)\\ge\\max_{x\\in K}\\lVert x-g\\rVert$ at each other base. Then $\\Phi(n,z,x)=[n\\cdot(x-g)+B_0\\ell(z)]_+$ has the stated continuity, convexity and support. On $\\partial K$ at $e$ it equals the nonnegative radial flux density $n(x)\\cdot(x-g)$. Its integral there is $dV$ by Gauss–Green applied to the vector field $x-g$. The actual $j$th trace over $e$ contains the through-centroid cap $K\\cap\\{u_j\\cdot(x-g)\\ge0\\}$. Apply Gauss–Green to this proper cut. Its cut plane has zero radial flux, so the part of its flux on $\\partial K$ is $d$ times its volume. The cut is through the interior, so the intersection of its cut plane with $\\partial K$ has zero $\\mathcal H^{d-1}$ measure. In $d=1$ the two divergence identities are the corresponding endpoint identities. By 6769574fc1bd9f8d with retained mass $m=V$ and density one, the through-centroid volume is at least $V(d/(d+1))^d$. Nonnegativity of radial flux gives at least that payment times $d$ for every actual row, and summing with the given weights proves the result. A nonsingleton integer interval occupies both parities, so meeting both supplies a second deepest base.\n",
+  "source_candidate_ids": [
+    "567aa083fc8ee3ab"
+  ],
+  "source_candidate_sha256": {
+    "567aa083fc8ee3ab": "aa176fefd54674a8adda05964ef79fadfab9ba3565e967769173527004bc9e2b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "567aa083fc8ee3ab",
+      "locator": "567aa083fc8ee3ab:04 §1 theorem (3), §§2–6, arbitrary prescribed regular interval circuit"
+    },
+    {
+      "candidate_id": "567aa083fc8ee3ab",
+      "locator": "567aa083fc8ee3ab:01 §2, (4), regular strict contact"
+    },
+    {
+      "candidate_id": "567aa083fc8ee3ab",
+      "locator": "567aa083fc8ee3ab:02 §3, centroid identification and same-fiber uniqueness"
+    },
+    {
+      "candidate_id": "567aa083fc8ee3ab",
+      "locator": "567aa083fc8ee3ab:03 §§4–6, (6)–(9), exposed-fiber localization"
+    }
+  ],
+  "statement": "Let $P=\\{m,m+1,\\ldots,M\\}\\subset\\mathbb Z$ be nonempty and let $K\\subset\\mathbb R^d$ be a convex body of volume $V>0$ and centroid $g$, with $d\\ge1$. Assume $K$ has a finite volume-preserving affine symmetry group whose average orbit is $g$, as for a simplex. Use the sum of fiber volumes on $P\\times K$ and let $Q$ be the maximum raw closed-halfspace depth on that set.\n\nFix an actual deepest point $(p,y)$ and a prescribed finite list of caps $H_j=\\{a_j(z-p)+u_j\\cdot(x-y)\\ge0\\}$ of mass $Q$, with $u_j\\ne0$ and positive $\\rho_j$ satisfying $\\sum_j\\rho_ju_j=0$. For each cap assume differentiability in the full hyperplane parameters with the usual mixed coarea derivative. If there is a deepest point at a different base, or if $P$ is a singleton, there is one exposed endpoint $e$ and one continuous nonnegative potential $\\Phi(n,z,x)$, convex in $(z,x)$ for each fixed unit $n$, supported on the actual boundary bundle over $e$. With $\\eta$ the sum of boundary $\\mathcal H^{d-1}$ lifted by the outward continuous unit normal, its integral is $dV$ and\n$\\int\\Phi\\sum_j\\theta_j\\mathbf 1_{H_j}\\,d\\eta\\ge dV(d/(d+1))^d$ for every $\\theta_j\\ge0$ with $\\sum_j\\theta_j=1$. In particular the conclusion holds if the deepest bases meet every parity class occupied by $P$.\n\nMore generally, in any finite base dimension with a common fiber, the same localization conclusion holds for any finite list of nonvertical caps through $(p,g)$ if an exposed base $e$ satisfies $a_j\\cdot(e-p)\\ge0$ for every row. In that implication the list need not be critical or balanced.",
+  "subgoal_id": "pk-intake-prescribed-regular-product-interval-circuit-payment",
+  "title": "A second deepest base pays every prescribed regular product-interval circuit"
+}

@@ -1,0 +1,37 @@
+{
+  "candidate_id": "3a5bf9df95c246b2",
+  "candidate_sha256": "2535bbb6631c11f0809ef03be4c8b286adee2296c4201c9eebd9ded3b7e6884c",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The width at height y is 2−y, hence total area 3/2. The defining root satisfies 3t²−8t+3=0 and 4/9<t<1/2 by 5/2<√7<8/3, giving the claimed upper horizontal mass D and D=(1+2√7)/9.",
+    "For s≤s_1 the width is untruncated and integrates to 3/4−s(1/2−t). For s_1≤s≤1/t the bottom width is 1+st and the positive triangle ends at (1+st)/(s+1/2), giving the stated formula.",
+    "I differentiated the middle formula: A'=(1+st)(st+t−1)/(2(s+1/2)²). Its zero is s_*=1/t−1; (1−t)²−t/2=(t−1/2)(t−2)>0 ensures it is in the middle regime. Substitution gives t(2−t).",
+    "In the last regime the full and empty slice transitions match their partial widths. Differentiation leaves the negative integral of y−t between y_0 and y_1, positive since the lower relative endpoint has larger absolute value. The limit is D_b=2t−t²/2>64/81>3/4.",
+    "Reflection complements the area off its null cut line, and 3/2−D_b=D, so every containing halfplane at the mark has mass ≥D. The two sloping inward normals and the upper normal have positive relation (1,1,2s_*); the three closed equal caps cover every point and yield the global upper bound.",
+    "Matched 3121a9d11f167d7d §4 (11) and reran the exact symbolic/rational verification of the center equation, clipping transitions and active cap areas."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T18:57:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The change h=1−y and s=x sends this trapezoid to the reflection-selector example. That accepted statement computes depth at the unique overlap maximizer, which corresponds to y=1/2 and has depth 5/8. It does not give the all-angle deepest value at t<1/2.",
+      "fact_id": "ba858d80c598eb2c"
+    }
+  ],
+  "readability": "A right-hand cap representation uses every nonhorizontal line. Reflection exchanges the complementary oriented caps on the symmetric trapezoid.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the frozen candidate, with original-source, dependency and scope checks.",
+  "reviewed_proof_sha256": "65a47e51ebef1540236aa983fc2467918598f65203975d3a8df882eee9bbd606",
+  "reviewed_statement_sha256": "eb830efa7937da91da62950b0ba4a428c62631bb3be6557bf8c1446ebf2ec492",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:51:21Z",
+  "summary": "The three clipping regimes exhaust all right-hand slopes, reflection supplies both orientations, and the three equal caps give the global depth upper bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

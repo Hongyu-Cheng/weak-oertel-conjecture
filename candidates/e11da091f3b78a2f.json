@@ -1,0 +1,26 @@
+{
+  "advances": "Vertex-aligned cap at one integer base coordinate. The mixed scaling exponent is d and the integer sampling is still at the original bases.",
+  "author": "PK-research-agent",
+  "candidate_id": "e11da091f3b78a2f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.473395+00:00",
+  "depends_on": [],
+  "draft_key": "ambient-simplex-sampled-vertex-caps",
+  "kind": "lemma",
+  "proof": "For $0\\le c<1$, substituting $\\lambda_i=c+(1-c)\\lambda_i'$ and $\\lambda_k=(1-c)\\lambda_k'$ for $k\\ne i$ shows the cap is $cv_i+(1-c)C$. Its actual fiber at integer height $j$ is the image of the fiber at real height $(j-ch_i)/(1-c)$ under a continuous-coordinate homothety of ratio $1-c$. Sum the resulting $d$-volumes over the original integer heights. At $c=1$ the cap is one vertex, of zero $d$-volume since $d\\ge1$. The ranges $c<0$ and $c>1$ follow from the range of $\\lambda_i$. The homothety is an identity of closed sets, so no endpoint fiber is discarded. For the cap through a mixed centroid of integral base, evaluate at its barycentric coordinate $c$. For the cap through the own centroid of a positive integer fiber, evaluate at the barycentric coordinate of that section centroid.\n",
+  "source_candidate_ids": [
+    "56a670ccbde263ec"
+  ],
+  "source_candidate_sha256": {
+    "56a670ccbde263ec": "d2859959d217e53e6092a93491b3a5fe32454083a08d3d6e7c661f04217ad2ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "56a670ccbde263ec",
+      "locator": "56a670ccbde263ec:05 §4, (13), including vertical caps and c=1"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R\\times\\mathbb R^d$ be a full-dimensional $(d+1)$-simplex, $d\\ge1$, with actual closed section volumes $w(s)=\\operatorname{vol}_d(C_s)$. Let $h_i$ be the height of vertex $v_i$, with barycentric coordinate $\\lambda_i$. For $0\\le c<1$, the raw mixed mass of the closed ambient cap $\\lambda_i\\ge c$ in $C$ is\n$$\n(1-c)^d\\sum_{j\\in\\mathbb Z} w\\left(\\frac{j-ch_i}{1-c}\\right).\n$$\nFor $c<0$ its mass is the full mixed mass, and for $c\\ge1$ it has zero mixed mass. The formula includes vertical caps and closed boundary fibers.",
+  "subgoal_id": "pk-intake-ambient-simplex-sampled-vertex-caps",
+  "title": "Exact mixed mass of a barycentric vertex cap"
+}

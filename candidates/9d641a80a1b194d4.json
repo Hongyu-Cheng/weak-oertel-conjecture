@@ -1,0 +1,26 @@
+{
+  "advances": "A compact Borel selection lemma for transport kernels and other countable constraint systems.",
+  "author": "PK-research-agent",
+  "candidate_id": "9d641a80a1b194d4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:19:35.662508+00:00",
+  "depends_on": [],
+  "draft_key": "compact-countable-constraint-borel-selector",
+  "kind": "lemma",
+  "proof": "Fix a countable dense sequence $(z_\\ell)$ in $X$. The existence of $x\\in F(t)$ implies that for each $k$ there is $\\ell$ with $\\max_{j\\le k} f_j(t,z_\\ell)<1/k$, by continuity. Conversely, if such points exist for every $k$, any cluster point as $k\\to\\infty$ lies in $F(t)$. This countable characterization makes $T_0$ Borel and the least-index approximants $x_k(t)$ Borel on $T_0$.\n\nFor each $m$ fix a finite closed cover of $X$ by sets of diameter at most $2^{-m}$. Inductively intersect the previously chosen compact set (initially $X$) with the first member of the $m$th cover for which the intersection contains infinitely many terms $x_k(t)$. Such a member exists by finiteness. The choices are Borel because infinitely many occurrences means that for every integer $N$ there is $k\\ge N$ meeting the selected finite intersection. The resulting compact sets are nested with diameters tending to zero. For each $m$ choose the first index $k\\ge m$ with $x_k(t)$ in the $m$th intersection. These points converge to the unique point in the nested intersection. Their Borel limit lies in $F(t)$ by the cluster-point property. Extend it by a fixed point on the Borel complement.\n",
+  "source_candidate_ids": [
+    "5ea88513a25f2f4b"
+  ],
+  "source_candidate_sha256": {
+    "5ea88513a25f2f4b": "bfad18ce1192d29d7ff8dab744b2e6d7772b6907e7c93b55cfae7855747903f1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5ea88513a25f2f4b",
+      "locator": "§1"
+    }
+  ],
+  "statement": "Let $T$ be standard Borel and $X$ a nonempty compact metric space. Let $f_j:T\\times X\\to\\mathbb R$, $j\\ge1$, be jointly Borel and continuous in $x$ for each fixed $t$. Then the set $T_0$ of parameters for which $F(t)=\\{x\\in X:f_j(t,x)\\le0\\ \\forall j\\}$ is nonempty is Borel. There exists a Borel map $x:T\\to X$ with $x(t)\\in F(t)$ for all $t\\in T_0$. Any fixed value may be used off $T_0$.",
+  "subgoal_id": "pk-intake-compact-countable-constraint-borel-selector",
+  "title": "Borel selection for countably many continuous constraints on a compact space"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "Weighted atomic closed-halfspace depth with centers restricted to the graph. This quantity is separate from the graph's Helly number and the mass of mixed caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "d557cd6b7667308b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.849821+00:00",
+  "depends_on": [
+    "280a179b646688e0"
+  ],
+  "draft_key": "thirteen-site-weighted-centroid-graph-depth",
+  "kind": "theorem",
+  "proof": "Use the tight-support table of the strict-quota graph obstruction, and put $g_i=(p_i,w_i)$. If a closed halfspace contains $g_i$, the atoms it excludes have a convex hull missing $g_i$, because its strict complementary affine inequality is preserved by finite convex combinations. Conversely any subset of atoms whose hull misses $g_i$ can be strictly separated from $g_i$ by a closed halfspace containing $g_i$ and excluding the subset. The empty subset causes no exception. Thus the depth is one minus the maximum mass of a subset whose hull misses $g_i$. This is an exact equivalence with a finite maximum and retains all closed boundary atoms.\n\nFor target $i$, enumerate integer masks $0\\le m<8192$. Reject a mask containing $i$ or containing any of its tight-support masks, and otherwise sum the corresponding integer weight numerators. The graph convex-hull test in the preceding fact proves that precisely these masks are admissible. The depth numerators with denominator $43680$ and attaining exclusion masks are as follows, with least-significant bit corresponding to index zero.\n\n| $i$ | depth numerator | maximizing exclusion mask |\n| --- | ---: | ---: |\n| 0 | 936 | 8190 |\n| 1 | 3537 | 8189 |\n| 2 | 6645 | 8185 |\n| 3 | 5865 | 8166 |\n| 4 | 3186 | 8174 |\n| 5 | 5580 | 7135 |\n| 6 | 4014 | 8126 |\n| 7 | 5568 | 8063 |\n| 8 | 5140 | 7934 |\n| 9 | 3380 | 7679 |\n| 10 | 2016 | 7167 |\n| 11 | 5808 | 5119 |\n| 12 | 5568 | 4095 |\n\nThe table is obtained by initializing each largest excluded numerator to zero and replacing it with the larger of its current value and the sum on each admissible mask. Subtract the final value from $43680$. The largest depth numerator is $6645$, attained at index $2$, with $6645/43680=443/2912$. Since $6645>6240$, the maximum exceeds $1/7$.\n",
+  "source_candidate_ids": [
+    "0d8bbef2b08d8158"
+  ],
+  "source_candidate_sha256": {
+    "0d8bbef2b08d8158": "df229de0411158e75c4442721fa6c4319f49e4c932023bac3f59bd096f8feedc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0d8bbef2b08d8158",
+      "locator": "§5 final paragraph, exact weighted graph depth"
+    }
+  ],
+  "statement": "For $G=\\{(p_i,w_i):0\\le i\\le12\\}$ with the thirteen-site base and weights of the strict-quota centroid graph obstruction, place atom $w_i$ at each $(p_i,w_i)$. The maximum closed-halfspace raw depth over the graph points is exactly $443/2912>1/7$, attained at index $2$.",
+  "subgoal_id": "pk-intake-thirteen-site-weighted-centroid-graph-depth",
+  "title": "Exact atomic depth of the thirteen-site weighted graph"
+}

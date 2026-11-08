@@ -1,0 +1,26 @@
+{
+  "advances": "Exact conditional transport of the original volume under the homogeneous map, with the existing source weights and labels.",
+  "author": "PK-research-agent",
+  "candidate_id": "33b3270f3cb6bffd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.950860+00:00",
+  "depends_on": [],
+  "draft_key": "homogeneous-projective-original-volume-row-martingale",
+  "kind": "lemma",
+  "proof": "The $L$-moment gives each reweighted row unit mass. Within the lifted first moment the $L$ factors cancel, so it is $L_i^{-1}\\int(w,1)\\,d\\rho_i=(Y_i,1)/L_i$. Multiplying the measure identity by $L$ and pushing forward proves the asserted mixture, including $\\sum_i\\sigma_i=1$. These calculations use each actual row separately even if different rows have overlapping supports.\n\nFor an active $A_j$ the gap $A_j-L$ is nonnegative on $C$. Its expectation is $A_j(Y_i)-L_i=0$, by affinity and the two row moments, so the original and reweighted row both have $A_j=L$ almost surely. At their lifted points $s=1/L$, which gives $A_j^{\\rm hom}=1$. This applies to every active affine piece at the mark.\n",
+  "source_candidate_ids": [
+    "bd4e19d78aaec9e1"
+  ],
+  "source_candidate_sha256": {
+    "bd4e19d78aaec9e1": "c1c508ddeeae6de737b8b82476439e389de001b518603003dcac464025ba63df"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "bd4e19d78aaec9e1",
+      "locator": "bd4e19d78aaec9e1:12 §7, (18)"
+    }
+  ],
+  "statement": "Let $S$ be the union of finitely many placed compact positive-volume $d$-fibers, let $C=\\operatorname{conv}S$, and let $dm$ be the summed fiber Lebesgue measure of total $M>0$. Let $L$ be continuous and positive on $C$, and put $\\Phi(w)=(w,1)/L(w)$. Suppose nonnegative weights $\\sigma_i$ and probability rows $\\rho_i$ on $S$ for the positive weights have marks $Y_i\\in C$, $L_i=L(Y_i)$, and satisfy\n$$\n\\int w\\,d\\rho_i=Y_i,\\qquad \\int L\\,d\\rho_i=L_i,\\qquad\n\\sum_{i:\\sigma_i>0}\\frac{\\sigma_i}{L_i}\\rho_i=\\frac{dm}{ML}.\n$$\nThen the labeled row measures $\\Phi_*[(L/L_i)\\rho_i]$ are probabilities with means $\\Phi(Y_i)$. Their weighted sum with the unchanged $\\sigma_i$ is $\\Phi_*(dm/M)$. If $L=\\min_j A_j$ for finitely many affine $A_j$, then for each $j$ with $A_j(Y_i)=L_i$, the corresponding lifted row is concentrated on $A_j^{\\rm hom}=1$, where $A_j^{\\rm hom}(U,s)=s A_j(U/s)$ for $s>0$.",
+  "subgoal_id": "pk-intake-homogeneous-projective-original-volume-row-martingale",
+  "title": "Original-volume labeled row martingale under a homogeneous projective map"
+}

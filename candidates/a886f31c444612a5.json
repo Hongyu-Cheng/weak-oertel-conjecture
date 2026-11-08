@@ -1,0 +1,50 @@
+{
+  "advances": "Prescribes the actual centroid at base zero for half-integer-reflected chains of homothetic common-vertex triangles with concave radii. The sector surplus is additive in units of R²V. The all-cap fraction is sharp within this restricted class.",
+  "author": "PK-research-agent",
+  "candidate_id": "a886f31c444612a5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:04:54.973942+00:00",
+  "depends_on": [
+    "b026600b8d8e369b",
+    "700febf4b7a92759",
+    "0beb1b53b181c0e7",
+    "9cef204c64b1bff8",
+    "5adcdc64a058b8aa"
+  ],
+  "draft_key": "planar-paired-simplex-central-own-centroid",
+  "kind": "theorem",
+  "proof": "Interpolate the radius linearly between the given integer bases on $[-m,m+1]$. Its slopes are the successive drops in reverse order, zero across $[0,1]$, then the negatives of the drops in forward order. These slopes are nonincreasing. The set defined by $z\\in[-m,m+1]$, $x\\ge0$ and $x_1+x_2$ at most the interpolated radius is compact and convex, with nonempty interior since the central radius is $R>0$. Its integer fibers are exactly $S$. Null fibers contribute zero to every cap.\n\n**Normal and tilt.** Tighten a containing halfspace to pass through $y$. A halfspace with zero continuous normal then contains at least one whole fiber from each pair and has mass at least $VW$. For a nonzero continuous normal write its margin as $b z+v\\cdot x-t\\sum_j v_j$. If $v$ has a negative entry, choose $i$ with $v_i=\\min_j v_j<0$. On the fiber $rT$, use the area-preserving interchange of barycentric coordinates $x_i$ and $r-x_1-x_2$. In the new coordinates $x'$ the original margin is $bz+w\\cdot x'+v_i r-t\\sum_jv_j$, with $w_i=-v_i$ and $w_j=v_j-v_i$ for $j\\ne i$. Since $\\sum_j w_j=\\sum_j v_j-3v_i$, the through-$y$ margin $bz+w\\cdot x'-t\\sum_j w_j$ differs from this by $v_i(R-r)\\le0$. It gives one ambient cap of no larger mass on each fiber. If $v\\ge0$, take $w=v$ directly. Divide by the positive sum of the coordinates and relabel the continuous coordinates if needed to obtain $u=(a,1-a)$ with $a\\in[1/2,1]$.\n\nFor this normal write $F_r(s)=|rT\\cap\\{u\\cdot x\\ge s\\}|/V$. At a fixed $\\beta\\ge0$, the positive-tilt cap minus the negative-tilt cap, in units of $V$, has paired difference\n$$\n\\big[F_{r_h}(t-\\beta(h+1))-F_{r_h}(t-\\beta h)\\big]\n+\\big[F_{r_h}(t+\\beta h)-F_{r_h}(t+\\beta(h+1))\\big]\\ge0,\n$$\nby monotonicity of $F_{r_h}$. Hence it suffices to bound the cap with margin $-\\beta z+u\\cdot x-t$. For $a\\ge2/3$, apply accepted fact 5adcdc64a058b8aa with $d=2$, $\\tau=1/3$ and maximum coordinate $M=a$. Its hypotheses on the radii, actual fibers, and fixed cap are exactly those here.\n\n**Low-normal sector and affine reduction.** Take $a\\in[1/2,2/3]$, put $\\gamma=4/9$, and define\n$$\nG_h(r)=F_r(t-\\beta h)+F_r(t+\\beta(h+1))-\\gamma r^2 .\n$$\nThe cap surplus over $V\\gamma W$, divided by $V$, is $\\sum_{h=0}^m G_h(r_h)$. Accepted fact 9cef204c64b1bff8 applies with $d=2$, this same nonnegative normalized $u$, this $\\beta$, and the given concave paired radii. For $m\\ge1$ it gives $\\ell_h=R-\\alpha h\\ge0$ for $0\\le h\\le m$ with $0\\le\\alpha\\le R/m$ and $G_h(r_h)\\ge G_h(\\ell_h)$ at every index. It preserves $R$ and compares surpluses relative to the two respective total masses. It suffices to bound the affine profile. The own-cap lemma gives $G_0(R)\\ge R^2/18$ and handles $m=0$.\n\nIf $\\beta\\ge\\alpha/3$, then $t-\\beta h\\le\\ell_h/3$. For every positive $\\ell_h$, the left cap contains that fiber's centroid. Its normalized area is at least $\\gamma\\ell_h^2$ by accepted fact 700febf4b7a92759 with barycentrics $(1/3,1/3,1/3)$. Thus $G_h(\\ell_h)\\ge0$ for every outer pair, and the own contribution gives surplus at least $R^2/18$. This includes zero slope and the tilt boundary.\n\n**Full affine leg.** In the remaining case $0\\le\\beta<\\alpha/3$, scale the continuous coordinates by $1/R$, dividing the tilt and all thresholds by $R$ and all planar areas by $R^2$. In the resulting coordinates write $t=1/3$, $k=\\alpha/R\\in(0,1]$, use $\\beta$ for the scaled tilt, and use $r_h=(1-kh)_+$ on the full affine leg. At each positive radius its two thresholds satisfy\n$$\nq_h=t-\\beta h\\ge r_h/3>0,\\qquad p_h=t+\\beta(h+1)\\ge r_h/3>0 .\n$$\nFor any $q\\in[r/3,r/2)$ with $r>0$, the point $(q,q)$ lies on the cap line and has barycentrics $(1-2q/r,q/r,q/r)$, each at most $1/2$. The first coordinate is the smallest. Accepted fact 700febf4b7a92759 therefore gives $F_r(q)\\ge 4q(r-2q)$. For $q\\ge r/2$, the positive-part version $F_r(q)\\ge 4q(r-2q)_+$ is automatic. The envelope term at the own fiber is $\\gamma$, while the own-cap lemma gives $F_1(t)\\ge\\gamma+1/18$ there.\n\nUse accepted fact 0beb1b53b181c0e7 at $d=2$ and slope $k$. Its deficit subtracts exactly the two envelopes $4q_h(r_h-2q_h)_+$ and $4p_h(r_h-2p_h)_+$ at every positive radius, with $0\\le\\beta<k/3$. At its first knot, $k=2/3$, the squared-radius sum is $10/9$ and the normalized kernel sum $K_{2,1}$ is $1$. At its second knot, $k=1/2$, both the squared-radius sum and $K_{2,2}$ equal $5/4$. Thus the deficit is at most $\\gamma/9=4/81$. Adding the bonus once, at base zero, gives full-leg surplus at least $1/18-4/81=1/162$ in the scaled units.\n\n**Finite prefixes.** On the positive-radius leg, the ratios $(t-\\beta h)/(1-kh)$ and $(t+\\beta(h+1))/(1-kh)$ increase with $h$. Their derivative numerators over $(1-kh)^2$ are $kt-\\beta>0$ and $\\beta+k(t+\\beta)>0$. Homogeneity gives $F_{r_h}(s)=r_h^2F_1(s/r_h)$, so the sequence of normalized paired surpluses $G_h(r_h)/r_h^2$ is nonincreasing over its positive radii. If the last positive-radius normalized surplus of the original affine prefix is nonnegative, every preceding outer pair has nonnegative surplus and its own contribution is at least $1/18$. If that last normalized surplus is negative, every appended positive-radius term has negative surplus, so the prefix's total surplus is at least the full-leg surplus $1/162$. Zero radii give zero surplus. Scaling back and using the pointwise affine comparison proves the claimed additive $R^2/162$ in units of $V$ on the original low-normal sector, with the positive-tilt sign handled by the paired difference.\n\nThe preceding reductions now give the bound for every closed ambient halfspace through or containing $y$. When $m=0$, the cap $-\\beta z+x_1\\ge R/3$ with $\\beta\\ge2R/3$ has area $V(4/9)R^2$ at base zero and zero area at base one, giving the stated sharpness.\n",
+  "source_candidate_ids": [
+    "5e6e53a58ea7a59b",
+    "77cefa95257c7b19",
+    "94deeb29e28b3cbd",
+    "dd382d5b121a0508"
+  ],
+  "source_candidate_sha256": {
+    "5e6e53a58ea7a59b": "ec143e6264a63c86a4dfecc80403f8a65b6028855d23e00cb004543f709b1aa4",
+    "77cefa95257c7b19": "022cee83d00ab72f0eebf6ba682a554065be770c17fe767cff04860517534542",
+    "94deeb29e28b3cbd": "696c7af2478da18755fa7901e8fa46d3f2400f0ead075e8cb17cea7d07466385",
+    "dd382d5b121a0508": "d71a2417456b9d33a5a4ad1d7ff2eb7bfe657265a68fc107e1c561e6dd94650e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "dd382d5b121a0508",
+      "locator": "§3, (14), finite-prefix transfer and final assembly"
+    },
+    {
+      "candidate_id": "77cefa95257c7b19",
+      "locator": "Step 2, easy affine tilts and monotone normalized affine prefix"
+    },
+    {
+      "candidate_id": "94deeb29e28b3cbd",
+      "locator": "§§1–2, barycentric swap and tilt sign; theorem sharpness paragraph"
+    },
+    {
+      "candidate_id": "5e6e53a58ea7a59b",
+      "locator": "§2 (1), paired tilt-sign comparison"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}(0,e_1,e_2)$, $V=|T|=1/2$, and $m\\ge0$ be an integer. Take $R=r_0\\ge r_1\\ge\\cdots\\ge r_m\\ge0$ with $R>0$ and nondecreasing drops $r_{h-1}-r_h$. Let $S$ have the two fibers $r_hT$ at integer bases $-h$ and $h+1$ for each $0\\le h\\le m$, and no other fibers. Write $\\mu=\\mathcal H_2|_S$, $W=\\sum_{h=0}^m r_h^2$, $t=R/3$, and $y=(0,t,t)$. Thus $\\mu(S)=2VW$. The set $S$ is realized by a compact convex body with nonempty interior. Every closed ambient halfspace containing $y$ has mass at least $(2/9)\\mu(S)$. The fraction $2/9$ is attained within this class when $m=0$. For every $a\\in[1/2,2/3]$ and every real $b$, the through-$y$ halfspace $\\{bz+ax_1+(1-a)x_2\\ge t\\}$ has mass at least $V((4/9)W+R^2/162)$.",
+  "subgoal_id": "pk-intake-planar-paired-simplex-central-own-centroid",
+  "title": "Sharp depth at the prescribed centroid of paired triangle chains"
+}

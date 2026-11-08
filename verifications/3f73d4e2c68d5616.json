@@ -1,0 +1,71 @@
+{
+  "candidate_id": "baee8ddaa588aef0",
+  "candidate_sha256": "258b628564157ac1b6a9b7b9d65db4998e624980d7aef8a1d37a2b8a014d7b52",
+  "checked_dependency_candidate_sha256": {
+    "564e798ecec2b61f": "fc8db5030613da42de7dd5b974d44db1714f5ad252f1dbbc80a6bd89b926ae28",
+    "aa5cc178125ac2d3": "8c8318f95a17dec38d1c4af3814fcb8bd310e2f36f6cdd9c8d4c5d674a658c7d"
+  },
+  "checks": [
+    "Since the centroid is the average of the d+1 vertices, the margins sum to zero. They cannot all vanish for a nonconstant affine height on aff(T), so both signs occur.",
+    "The affine map from barycentric coordinates to T has constant nonzero intrinsic Jacobian. The normalized uniform law transfers, and the positive common denominator in the exponential representation cancels from the sign event. The positive and negative coefficient totals are equal. Zero margins contribute neither a term nor a phase count. The zero set of h in aff(T) has dimension d-1 and zero intrinsic d-volume.",
+    "For every allowed d,q, the prescribed q negative margins -1/q and one positive margin 1 balance, and d-q zeros complete the d+1 vertices. Affine interpolation exists and is unique. For fixed p>1, 0<epsilon<1/(p-1) gives the requested positive coefficients and the remaining d+1-p-q zero margins. Applying the scalar infimum yields convergence, and strict first-bound equality excludes attainment.",
+    "A proper closed cap contains exactly d+1-q original vertices, including boundary vertices. At least two thus implies q<=d-1. The derivative of log Gamma_r equals -log(1+1/r)+1/(r+1), strictly negative by integrating 1/(1+t)>1/(1+x) for 0<=t<x with x=1/r. Equality at Gamma_(d-1) requires q=d-1, exactly one positive vertex, equal strictly negative margins, and therefore exactly one zero vertex.",
+    "For d=1 the two vertex margins are opposite and nonzero. Each orientation cuts the segment at its midpoint and includes one vertex. The two-vertex inequality is stated only for d>=2.",
+    "Checked source candidate 191a0eb2244ea4a9, §5, at SHA-256 6b642bc8d4183f64a958f0fd6bf408fce5b242842f48f0ae291dc2f2030a84c9. The source contains the cap representation and both bounds. The exact frozen proof extends it with the equality classifications, attainment and fixed-count infima."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "aa5cc178125ac2d3",
+      "candidate_sha256": "8c8318f95a17dec38d1c4af3814fcb8bd310e2f36f6cdd9c8d4c5d674a658c7d",
+      "fact_id": "aa5cc178125ac2d3",
+      "fact_sha256": "d9fa776265538b15a7add4b92da81ead92453094e4fa170675d331b4e556b151",
+      "mapping": "Use only the uniform barycentric representation before (1), with n=d+1>=2 and independent mean-one exponentials. The coordinate change E_i=t u_i gives the constant-in-u density after integrating t. Affine equivalence carries it to normalized intrinsic volume on T. No entropy-tilted estimate is invoked.",
+      "reviewed_proof_sha256": "94e4bca8a9377f1e416da9e6f6a8029ba52395ad5da959d52eee3e438d8b3650",
+      "reviewed_statement_sha256": "dad4d606d647643a6223a407e96676e50b703ac535c7ab4aa32ee829c0a2cf0e",
+      "status": "Accepted at fd41e97, verification ef5dc870b6af41fd."
+    },
+    {
+      "candidate_id": "564e798ecec2b61f",
+      "candidate_sha256": "fc8db5030613da42de7dd5b974d44db1714f5ad252f1dbbc80a6bd89b926ae28",
+      "mapping": "Use the scalar tail bound, equality criterion and fixed-(p,q) infimum with a_i the strictly positive margins and b_j the absolute strictly negative margins. The centroid gives equal positive totals, and independent exponential phases persist after omitting zero margins.",
+      "reviewed_proof_sha256": "bdd23ecfc045e446fb9995ff21a276a9fff0c3b6311bc9ccdad3020692821895",
+      "reviewed_statement_sha256": "8480e71d550ee7b922ac6e6b72ffbe9cf3434358e50d77f9b75ba7ed1f982fbb",
+      "status": "Frozen same-wave predecessor independently approved in this review batch. Admit before this corollary."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:44:02Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof records the ordinary Gamma_d bound and oriented apex-facet equality. This agrees in the q=d case and yields qualitative strictness above Gamma_d for caps containing two vertices, but gives neither the sharp Gamma_(d-1) gap nor the full q-dependent bounds and equality patterns.",
+      "fact_id": "ea91e021ff1f4416"
+    },
+    {
+      "comparison": "Its one-cut product computes the largest contained simplex, with a different general centroid-cut lower bound. The p=1 cap is itself a simplex and the product specializes to its volume, but with more positive heights the contained simplex need not exhaust the cap.",
+      "fact_id": "6fbefd0eb6914aa9"
+    },
+    {
+      "comparison": "Exact beta probabilities apply to two-group normals. In particular the singleton group supplies the all-other-heights-equal extremizer without zero margins. It does not compare arbitrary vertex margins with a fixed negative count.",
+      "fact_id": "290ddd8516d76865"
+    },
+    {
+      "comparison": "Its Gamma_(d-1) estimate is the largest cap of a whole-space cover with common contact exterior to the body's interior. It has no individual centroid-cap conclusion.",
+      "fact_id": "2eb9fc1dbf88b7c8"
+    }
+  ],
+  "readability": "Properness in the last paragraph is relative to aff(T), as fixed by the opening nonconstant affine height.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4b6112693fc85fafd94de7fa6359b9c13f93d0288f8e1930a994f00f68ab803a",
+  "reviewed_statement_sha256": "6da489bc5dd9b6cd51423c25056741ec58c6af8081e2cddcae5b9598a32c7a85",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:42:49Z",
+  "summary": "The frozen proof gives the sharp lower bound indexed by the negative vertex count, its full equality and fixed-count infimum statements, and the sharp two-contained-vertices gap. Admit the signed-exponential predecessor first.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

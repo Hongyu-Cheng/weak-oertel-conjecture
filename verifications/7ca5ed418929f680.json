@@ -1,0 +1,65 @@
+{
+  "candidate_id": "0926041b101b02ee",
+  "candidate_sha256": "ca9a784b72afc1efe8bb82b022cffe38218996b993571bbdb9ca21c0ba1e2a75",
+  "checked_dependency_candidate_sha256": {
+    "7d1ee06fa4119930": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+    "ffdb2bc33d7a6750": "a9e9e895e580ec4e269b56c7cf68669ed6b394e934e2d34121443164c00d044a"
+  },
+  "checks": [
+    "Independently computed all six consecutive and six next-neighbor unit-direction determinants as one. Substitution in the exact feasibility matrix gives each stated diagonal and adjacent entry, with positive determinant products and all consecutive gaps below pi.",
+    "Core equality zeroes exactly edges (0,1) and (4,5). The two blocks are {5,0} and {1,2,3,4}. Their internal edges are strictly negative by the four positive excesses.",
+    "Decreasing A and increasing B keeps the first core product and all areas fixed. The short block would remain PD if initially PD. The other block's changed diagonal and adjacent entry both increase, so its preserved nonpositive off-diagonals and the absolute-value comparison retain PSD. The objective strictly decreases.",
+    "Decreasing t changes only the long block, preserves positivity and weakens both affected core products. If the long block were PD, its openness would give feasible nearby data and a strictly decreased objective with the other chords fixed.",
+    "A nonnegative kernel vector on each connected block follows from the absolute-value argument. A zero entry would propagate along its strictly negative edges, so each block has a positive kernel vector. Their concatenation meets the exact rigidity theorem for this actual datum.",
+    "Source 91fb6de21f312a49 Theorem (1)–(3) and §§1–3 use the same finite-data local topology and unchanged-area perturbations. The application of the accepted positive-kernel theorem identifies the original convex body, including its straight joins, rather than a chosen surrogate polygon."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7d1ee06fa4119930",
+      "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+      "fact_sha256": "e587b22c4c52f76df19679e8e61f467cd4e013f0efd5266a66f42c7265772ab0",
+      "hypotheses": "The six rays are cyclic and distinct with gaps less than pi. Areas are finite and the core inequalities hold initially and after each small deformation. Its PSD equivalence gives actual bodies with exactly the deformed endpoint and fixed area data.",
+      "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+      "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043"
+    },
+    {
+      "candidate_id": "ffdb2bc33d7a6750",
+      "candidate_sha256": "a9e9e895e580ec4e269b56c7cf68669ed6b394e934e2d34121443164c00d044a",
+      "fact_sha256": "5c601d83ba66a6126364de9fe3f2fce6be69ccd19c07142eaa2c4508e451f6f6",
+      "hypotheses": "The canonical six endpoint radii and sector areas are exactly its data. They are actual by hypothesis, and the block proof yields Lw=0 with w>0. Its four positive-excess sectors give one strict vertex each and all prescribed ray endpoints lie in relative edge interiors.",
+      "reviewed_proof_sha256": "6987abe1cbd74acde09232b557d0ad1bf2cb8868a29aced746a8d4e99cebac6d",
+      "reviewed_statement_sha256": "15d68a185b7721fb5f4309fe9ee5dddd5d87c49532f3a8631eb02b1bcb26de0a"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:09Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Covers this pattern at a global fixed-area optimum and additionally classifies other patterns. Global optimality does not imply coverage of arbitrary local minima. The present theorem uses the arbitrarily small perturbations to give the local result for (0,4).",
+      "fact_id": "f1b9f11ad90a1eb2"
+    },
+    {
+      "comparison": "Once a strictly positive kernel is supplied, the uniqueness and vertex conclusion are exactly its statement. Establishing the kernel from this local optimality is the added step.",
+      "fact_id": "ffdb2bc33d7a6750"
+    },
+    {
+      "comparison": "Controls an attained maximum of a different Lorentz row objective and cannot substitute for the local inverse-chord argument.",
+      "fact_id": "f56c82f24e66e60b"
+    }
+  ],
+  "readability": "The local minimum is taken in the twelve-dimensional finite data topology. The proof fixes all W coordinates, so any constraints depending only on W persist.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof review with exact symbolic and rational checks where applicable.",
+  "reviewed_proof_sha256": "82c8e7a8bb2c1d9b52e27e9c834cdf931b7cd90e566247946f4f7ee730e0c514",
+  "reviewed_statement_sha256": "864beb8b9197583782d7140069c5cde18ac2127a60b23eadca16ce16949a6630",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:19:01Z",
+  "summary": "Local perturbations force both prescribed blocks to be singular, and the positive kernel gives uniqueness of the actual realizing quadrilateral.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

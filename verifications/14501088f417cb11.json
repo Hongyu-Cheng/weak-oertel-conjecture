@@ -1,0 +1,61 @@
+{
+  "candidate_id": "d6a3cbae1da72277",
+  "candidate_sha256": "da5ab5696cdd4c30f7d0ee3977c4b5a54a8f21a7ae0b3083b2bfb5516fd1519e",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "3919a4dbe7ace166": "79174b3ef5c6911f4a741f855824553827e7be073a637b941f8855d6c505f33d"
+  },
+  "checks": [
+    "The positive set is convex with nonempty interior, and its closure has the same interior. Compactness and boundedness give a finite integral, positive by positivity on an open set. Normalization changes the inverse power by a positive factor and rescales all masses back by the original integral. For fixed y any containing halfspace has a parallel subhalfspace through y; limiting hyperplanes are Lebesgue-null for r≥1, so dominated convergence proves joint continuity of the through-point masses.",
+    "At an exterior point a separating halfspace has zero mass; at a boundary point an outward supporting halfspace meets the support only in its Lebesgue-null hyperplane. At an interior point the local positive lower bound gives every through-point cap at least half the lower-bound ball mass. Continuity of the compact-sphere minimum therefore attains the positive global maximum in the interior of the compact support.",
+    "The active normal set is compact, as is its convex hull in finite dimension. Separation gives u·v≥δ>0 there. The shift to y*−εv changes the threshold to −εu·v; for u·v>δ/2 the added slab has the asserted thickness and offsets bounded by R/2. Its ball section actually has radius at least √3R/2, so R/2 is a valid weaker radius, and ω₀=1 makes the r=1 argument valid. The gain is at least mεδω₍ᵣ₋₁₎(R/2)ʳ⁻¹/2. Compactness of the complementary set gives a fixed gap retained under small shifts. Hence the balance holds, and deleting any zero Carathéodory coefficients yields positive weights among at most r+1 normals.",
+    "Translation preserves the hypotheses of 3919a4dbe7ace166, and p=r≥1. Since the translate is positive near zero, the parent gives a full-dimensional body with the origin interior. Dilation by r^(1/r) multiplies its radial rth power by r, which cancels the 1/r in the polar volume integral. The resulting volume is one, and integrating over each closed hemisphere gives exactly the corresponding cap probability. For r=1 the polar formula is the sum over the two directions with counting measure.",
+    "A positive balancing relation ensures at least one nonnegative scalar product for every ambient point, even if the selected normals span a proper subspace: a point orthogonal to their span is in every closed cap. Thus the same caps of mass α show that every point has depth ≤α in U, while all through-origin masses agree and give depth α there. The lower bound from 03bc771bddd39a8a applies in dimension r to U itself, without identifying the origin with its centroid.",
+    "For a closed full-dimensional simplex, the uniform density is upper semicontinuous, and the inverse power is a positive constant on the simplex and +∞ outside. Some barycentric coordinate is ≥1/(r+1) at each simplex point. Its apex cap fraction is (1−λ)^r≤(r/(r+1))^r by homothety, including zero at the apex. This independently checks the sharpness arithmetic and agrees with 03bc771bddd39a8a; r=1 gives 1/2. The uniform-body bound agrees with the original Grünbaum Theorem 2 and §3 (https://msp.org/pjm/1960/10-4/pjm-v10-n4-p18-s.pdf).",
+    "Verified pending source f9c635ce5abe9f17 at 27bf01c against its declared byte hash. Its §2, (5) and the polar mass identity give the same balance, through-point cap transfer and sharp lower bound using Grünbaum. The normalized proof states sharpness explicitly via the uniform simplex permitted by the hypotheses."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3919a4dbe7ace166",
+      "candidate_sha256": "79174b3ef5c6911f4a741f855824553827e7be073a637b941f8855d6c505f33d",
+      "comparison": "With p=r and the translated density, all parent hypotheses hold; positivity near the new origin gives an interior-origin convex body and the gauge supplies the radial formula. This new predecessor received a separate approval of the exact frozen bytes and must be admitted before this theorem."
+    },
+    {
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "comparison": "Accepted at 27bf01c. Taking d=r, the compact convex body U has nonempty interior and volume one, so its maximum normalized depth is ≥Γ_r=γ_r. The same fact gives equality for the uniform simplex.",
+      "fact_id": "03bc771bddd39a8a",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37"
+    }
+  ],
+  "finished_utc": "2026-11-08T07:00:48Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Exact constant and sharp simplex specialization for uniform convex bodies. Its uniformity hypothesis excludes nonconstant inverse-power-convex densities, which are covered here by a cap-preserving reduction. This is a strict extension, not an exact duplicate.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Ordinary maximum depth and simplex rigidity for uniform full-dimensional bodies, again only the uniform specialization.",
+      "fact_id": "ea91e021ff1f4416"
+    },
+    {
+      "comparison": "Its Helly centerpoint argument gives the dimension-only 1/(r+1) guarantee for continuous cube-mixture marginals, without the inverse-power density condition or the sharper gamma_r bound in dimension r≥2.",
+      "fact_id": "347548daa8f1f4e7"
+    }
+  ],
+  "readability": "The covering assertion refers to the ambient closed halfspaces defining the active caps; their intersections with U consequently cover U. The radial direction and a cap normal are both denoted u in separate formulas.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "dbe7d70cca96ad061d8258948835444a49bd83cea6a283c16f21f3ea9ae31b6d",
+  "reviewed_statement_sha256": "aa7f80306ba1f7a09897cb0aafa89293694d3b04ec2249999f98c1d7ec9b6691",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:59:24Z",
+  "summary": "Balancing the minimizing normals transfers the maximum depth to a full-dimensional uniform convex body with exactly the same maximal normalized depth. The ordinary sharp bound then gives the full inverse-power density statement, with uniform simplices attaining it.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

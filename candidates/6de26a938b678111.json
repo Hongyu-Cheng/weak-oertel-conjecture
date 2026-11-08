@@ -1,0 +1,46 @@
+{
+  "advances": "Exact ordered, independent same-parity product law for compact convex mixed traces, including counting and varying intrinsic directions across parities.",
+  "author": "PK-research-agent",
+  "candidate_id": "6de26a938b678111",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:18:43.796320+00:00",
+  "depends_on": [],
+  "draft_key": "intrinsic-parity-reflection-correlation",
+  "kind": "theorem",
+  "proof": "Write $K_z=\\{x:(z,x)\\in C\\}$ and let $P$ be the bases of its $q$-dimensional integer fibers. There are finitely many nonempty fibers, and $q$ is their maximum affine dimension. Fibers outside $P$ have zero $\\mathcal H_q$-mass. For $z,w\\in P$ of the same parity, $j=(z+w)/2$ is integer and $(K_z+K_w)/2\\subseteq K_j$. The direction of this Minkowski midpoint is the sum of the two $q$-dimensional directions. Since $K_j$ has dimension at most $q$, all three directions coincide, and $\\operatorname{aff}(K_j)=(\\operatorname{aff}K_z+\\operatorname{aff}K_w)/2$. In particular $j\\in P$. At an actual center $(j,x)$, reflection preserves the base parity of every endpoint, and any positively contributing ordered pair has $z,w\\in P$ and $z+w=2j$. Its overlap is $\\mathcal H_q(K_z\\cap(2x-K_w))$. Thus $R_r$ is the sum of these overlaps within parity $r$, $R=\\sum_r R_r$, and $R$ vanishes at centers whose fibers lie outside $P$. These functions are Borel by integrating the Borel indicator of reflected membership over the finite source measures.\n\nFor each ordered pair in parity $r$, translate $K_z=a+U$ and $K_w=b+V$ to the common Euclidean direction space $L$. Write $x=(a+b)/2+\\xi$ in the actual center fiber. Its pair contribution to $R_r(j,x)$ is $\\int_U\\mathbf1_V(2\\xi-u)\\,d\\mathcal H_q(u)$. This vanishes outside $(U+V)/2$, which lies in the translated actual fiber. Integrate against a nonnegative Borel test of $(j,x)$, extended by zero off $S$. Tonelli and the substitution $v=2\\xi-u$ in $L$ give the factor $2^{-q}$ and the integral of that test over the ordered endpoint product at its midpoint. Sum the ordered pairs for each parity and then the parities. Bounded signed tests follow by decomposition. For $q=0$, each nonempty fiber is a singleton, and each ordered pair contributes one unit at its actual midpoint, giving the same formula with factor one.\n\nTests $1$, $y$, and $yy^{\\mathsf T}$ give the three moments, since an ordered pair from $\\mu_r\\otimes\\mu_r$ has midpoint first moment $M_rm_r$ and second moment $(M_rQ_r+m_rm_r^{\\mathsf T})/2$. The normalized law therefore has the claimed conditional sampling description. The law $\\nu$ chooses the same class with probability $M_r^2/A$ and takes a single draw from $\\mu_r/M_r$. The conditional means agree, and Jensen on each endpoint pair proves the comparison with $\\nu$. The conditional covariance under $\\eta$ is half the conditional covariance under $\\nu$, which is $V_r/M_r$. Their between-class covariance contributions agree, giving the stated difference.\n\nFor a concrete varying-direction example, take the convex hull of $\\{0\\}\\times([0,2]\\times\\{0\\})$ and $\\{1\\}\\times(\\{0\\}\\times[1,5])$. Their four endpoints are affinely independent: two within-fiber differences are independent continuous vectors, and a cross-fiber difference has nonzero base coordinate. The hull is an ambient tetrahedron, the two integer fibers are the two original perpendicular segments, and $q=1$. The parity masses are $2,4$ and their first moments are $(0,2,0),(4,0,12)$. The correlation mass is $10$ and its first moment is $(8,2,24)$. The normalized base centroid is $8/10$ under $\\eta$ and $4/6$ under $\\mu/M$.\n",
+  "source_candidate_ids": [
+    "93cf42ea22bcd767"
+  ],
+  "source_candidate_sha256": {
+    "93cf42ea22bcd767": "be6b8938cfc397a870c0a0f3a09e15f44cbf9a9477b547c6dbdd154e76d83c77"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "93cf42ea22bcd767",
+      "locator": "93cf42ea22bcd767:2 §2, (5)"
+    },
+    {
+      "candidate_id": "93cf42ea22bcd767",
+      "locator": "93cf42ea22bcd767:1 §1, (2)–(4)"
+    },
+    {
+      "candidate_id": "93cf42ea22bcd767",
+      "locator": "93cf42ea22bcd767:3 §3, (6)–(9)"
+    },
+    {
+      "candidate_id": "93cf42ea22bcd767",
+      "locator": "93cf42ea22bcd767:7 §5, (12)"
+    },
+    {
+      "candidate_id": "93cf42ea22bcd767",
+      "locator": "93cf42ea22bcd767:8 §5, (13)–(14)"
+    },
+    {
+      "candidate_id": "93cf42ea22bcd767",
+      "locator": "93cf42ea22bcd767:9 §6, perpendicular segments"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact and convex with nonempty $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$, $q=\\dim_H S$, $\\mu=\\mathcal H_q|_S$ and $M=\\mu(S)>0$. For each represented positive-mass base parity $r$, let $S_r$ be the trace in that parity and let $\\mu_r=\\mu|_{S_r}$, $M_r=\\mu_r(S)$, $m_r=\\int y\\,d\\mu_r$, $g_r=m_r/M_r$, and $Q_r=\\int yy^{\\mathsf T}\\,d\\mu_r$. All coordinates are full ambient coordinates. Let $T(a,b)=(a+b)/2$, $R(y)=\\mathcal H_q(S\\cap(2y-S))$ and $R_r(y)=\\mathcal H_q(S_r\\cap(2y-S_r))$ for actual $y\\in S$. Then\n$$\nR_r\\mu=2^{-q}T_\\#(\\mu_r\\otimes\\mu_r),\\qquad\nR\\mu=2^{-q}\\sum_r T_\\#(\\mu_r\\otimes\\mu_r).\n$$\nThese are finite Borel measure identities, including counting measure at $q=0$. For any two $q$-dimensional integer fibers of the same base parity, their directions coincide with that of the actual midpoint fiber, and its affine hull is the midpoint of their affine hulls. At an actual center with base $j$, $R$ is the sum of the overlaps over ordered $q$-dimensional fiber pairs with bases adding to $2j$. In particular $R$ vanishes at centers on smaller-dimensional fibers.\n\nWrite $A=\\sum_r M_r^2$. The full moments satisfy\n$$\n\\begin{aligned}\n\\int R\\,d\\mu&=2^{-q}A,\\\\\n\\int yR(y)\\,d\\mu(y)&=2^{-q}\\sum_r M_r m_r,\\\\\n\\int yy^{\\mathsf T}R(y)\\,d\\mu(y)\n&=2^{-q-1}\\sum_r(M_r Q_r+m_r m_r^{\\mathsf T}).\n\\end{aligned}\n$$\nThe probability law $\\eta=(2^q/A)R\\mu$ selects parity $r$ with probability $M_r^2/A$ and takes the midpoint of two independent draws from $\\mu_r/M_r$. It has centroid $\\sum_r M_r^2g_r/A$, which can differ from the centroid of $\\mu/M$. It has the same centroid as $\\nu=A^{-1}\\sum_r M_r\\mu_r$, and $\\int\\varphi\\,d\\eta\\le\\int\\varphi\\,d\\nu$ for convex Borel $\\varphi$ on $\\operatorname{conv}(S)$ with both integrals defined. With $V_r=\\int(y-g_r)(y-g_r)^{\\mathsf T}\\,d\\mu_r(y)$, the covariance difference is $\\operatorname{Cov}(\\nu)-\\operatorname{Cov}(\\eta)=(2A)^{-1}\\sum_r M_rV_r\\succeq0$.",
+  "subgoal_id": "pk-intake-intrinsic-parity-reflection-correlation",
+  "title": "Intrinsic reflection correlation as a parity midpoint law"
+}

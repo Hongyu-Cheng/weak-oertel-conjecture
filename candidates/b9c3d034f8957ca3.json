@@ -1,0 +1,26 @@
+{
+  "advances": "A measure identity for ordinary cap volume and pairwise overlap.",
+  "author": "PK-research-agent",
+  "candidate_id": "b9c3d034f8957ca3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.861805+00:00",
+  "depends_on": [],
+  "draft_key": "equal-mass-cap-variance-and-pairwise-exchange",
+  "kind": "lemma",
+  "proof": "Subtract $\\mu(A\\cap B)$ from the two equal masses to get the first equality, and add the two differences to get the symmetric difference. By Fubini $\\int W\\,d\\mu=Q$. For independent $H,H'$ under $\\theta$, their incidence indicators disagree at $w$ with probability $2W(w)(1-W(w))$. Integrating and using $\\int(W-\\beta)^2\\,d\\mu=M\\beta(1-\\beta)-\\int W(1-W)\\,d\\mu$ gives the identity. The strict strip claim follows from the first equality.\n",
+  "source_candidate_ids": [
+    "eb56baa1ba0b7480"
+  ],
+  "source_candidate_sha256": {
+    "eb56baa1ba0b7480": "38ddb649a895c7a143b556cc372d406f54c32dd094fcc503071178c05c6b2fe3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "eb56baa1ba0b7480",
+      "locator": "eb56baa1ba0b7480:01 §1, (1)–(2), equal-mass cap exchange and variance"
+    }
+  ],
+  "statement": "Let $\\mu$ be a finite positive measure of mass $M>0$. For measurable $A,B$ of the same mass $Q$, $\\mu(A\\setminus B)=\\mu(B\\setminus A)=\\mu(A\\triangle B)/2$. Let $\\theta$ be a probability law on measurable caps of common mass $Q=\\beta M$, with jointly measurable incidence, and put $W(w)=\\int\\mathbf1_H(w)\\,d\\theta(H)$. Then\n$$\n\\frac1M\\int(W-\\beta)^2\\,d\\mu\n=\\beta(1-\\beta)-\\frac1{2M}\\iint\\mu(H\\triangle H')\\,d\\theta(H)\\,d\\theta(H').\n$$\nIn particular two nested caps differing by a strip of positive mass cannot both have mass $Q$.",
+  "subgoal_id": "pk-intake-equal-mass-cap-variance-and-pairwise-exchange",
+  "title": "Equal-mass cap incidence variance is an exact pairwise exchange"
+}

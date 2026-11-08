@@ -1,0 +1,34 @@
+{
+  "advances": "Exact invariance for compatible affine motions in the validated radial simplex class.",
+  "author": "PK-research-agent",
+  "candidate_id": "fe056d23417c0942",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:11.840420+00:00",
+  "depends_on": [
+    "3b07eecf22960599"
+  ],
+  "draft_key": "radial-simplex-affine-depth-invariance",
+  "kind": "theorem",
+  "proof": "The map $a\\mapsto(a\\cdot z)_{z\\in P}$ is injective on $L$. Thus $\\sum_z|r_z+a\\cdot z|^d$ is strictly convex for $d\\ge2$, and is coercive by the reverse triangle inequality for the $\\ell_d$ norm and norm equivalence on the fixed finite-dimensional image. This coercivity is uniform over bounded nearby radius arrays. At the even baseline, the gradient at $a=0$ vanishes by pairing $z$ with $-z$, so zero is the unique minimizer. For samples tending to the baseline, their minimizing coefficients stay bounded and every subsequential limit minimizes the baseline functional by joint continuity and comparison with every fixed competitor. Thus the coefficients tend to zero. In a sufficiently small neighborhood all residuals are positive and the minimizing coefficient lies in the small stationary chart of the all-normal theorem. There the gradient equation agrees with the radial depth equation under $\\beta=da$, giving the exact norm representation.\n\nTranslation of the unrestricted minimization variable proves invariance under every stated affine change, including the shift of its unique minimizer and hence of $\\beta$. The sample array neighborhood may be shrunk to make the norm formula and all-normal theorem hold simultaneously. Adding or subtracting a sufficiently small linear function on the entire compact $B$ preserves concavity and the positive minimum radius. For $a\\ne0$ in $L$, some $a\\cdot z\\ne0$, and strict convexity of $t\\mapsto t^d$ for positive $t$ gives\n$$\nV_d\\sum_z[(r_z+a\\cdot z)^d+(r_z-a\\cdot z)^d]>2V_d\\sum_z r_z^d.\n$$\nThis proves the two-sided mass improvement assertion and hence the local escape at fixed depth. At the even baseline the two perturbed masses agree by exchanging $z$ and $-z$, so each is strictly larger than the baseline, and their common depth is $Q_0$. The first variation within any parity class is $V_dd\\sum_z(r_z^0)^{d-1}a\\cdot z$ with the sum restricted to that class. It vanishes because $z$ and $-z$ belong to the same class and have equal radii. Rank zero has no nonzero affine directions and the norm formula reduces to the single radius.\n",
+  "source_candidate_ids": [
+    "4e12bc9cd7731df3",
+    "65cb1818e941a654"
+  ],
+  "source_candidate_sha256": {
+    "4e12bc9cd7731df3": "f89a52b83db25391673a6b45440f7e7ef6f73871f3b1ed8f6f507b28f0951553",
+    "65cb1818e941a654": "9b260edffd0f77bb74efa3b29e91560b5bc53cf823616683ea161590b87bc5f7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4e12bc9cd7731df3",
+      "locator": "4e12bc9cd7731df3:05 §8, (7), (17)–(18), affine invariance and ℓ_d distance"
+    },
+    {
+      "candidate_id": "65cb1818e941a654",
+      "locator": "65cb1818e941a654:04 §§1 and 7, (4)–(5), (16)–(19), planar affine-radius specialization"
+    }
+  ],
+  "statement": "Let $n\\ge0$, $d\\ge2$, and let $B\\subset\\mathbb R^n$ be a compact convex body whose complete integer sample $P=B\\cap\\mathbb Z^n$ contains $0$ and is centrally symmetric. Let $r^0:B\\to(0,\\infty)$ be continuous and concave with $r^0(z)=r^0(-z)$ at the sampled bases. Put $L=\\operatorname{span}P$, $v_0=(-1,\\ldots,-1)$, $v_i=v_0+(d+1)e_i$ for $1\\le i\\le d$, $T_d=\\operatorname{conv}\\{v_0,\\ldots,v_d\\}$, $V_d=(d+1)^d/d!$, and $c_d=d^d/d!$. For positive continuous concave $r$ on $B$ write $r_z=r(z)$ and take $C_r=\\{(z,x):z\\in B,\\ x\\in r(z)T_d\\}$ with actual mixed set $S_r=C_r\\cap(\\mathbb Z^n\\times\\mathbb R^d)$. Use summed fiber $d$-volume $\\mu_r$, and let $h_r(y)$ be its infimum over closed ambient halfspaces containing $y$. Work in the validated neighborhood of the even sample from the all-normal radial simplex theorem. Its unique deepest point is $Y=(0,0)$, of depth $\\tau(r)=F_r(\\beta(r))$, where $F_r(\\beta)=\\sum_z(d r_z+\\beta\\cdot z)^d/d!$ and $\\beta(r)$ is its unique small critical coefficient in $L$. Put $R_0=\\sum_z(r_z^0)^d$ and $Q_0=c_dR_0$. Then\n$$\n\\tau(r)=c_d\\min_{a\\in L}\\sum_z |r_z+a\\cdot z|^d.\n$$\nThe minimum is attained uniquely. This is $c_d$ times the $d$th power of the $\\ell_d$ distance of the sampled array from the subspace of functions $z\\mapsto a\\cdot z$, with no fitted constant. For $a\\in L$ such that both compatible arrays lie in the validated neighborhood, replacing $r(z)$ by $r(z)+a\\cdot z$ gives $\\beta(r+a\\cdot z)=\\beta(r)-da$ and preserves $\\tau(r)$ exactly. Both signs of sufficiently small $a$ are compatible on all of $B$. For nonzero such $a$, at least one sign gives strictly greater total mass at the same actual global raw depth, so if $\\dim L>0$ no member of this local class is a local fixed-depth mass maximum. At the even baseline, every sufficiently small affine perturbation with $a\\in L\\setminus\\{0\\}$ has depth $Q_0$ and strictly increases mass above $V_dR_0$. The first mass derivative of any affine velocity vanishes separately in each parity class at baseline.",
+  "subgoal_id": "pk-intake-radial-simplex-affine-depth-invariance",
+  "title": "Affine radius invariance and the exact local norm formula for depth"
+}

@@ -1,0 +1,36 @@
+{
+  "candidate_id": "8e9b337a315aca70",
+  "candidate_sha256": "30c70c8bdf6dab2aaa65dae8b2dda8edc2dc4091be87c006e9a7227f72866f64",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The original digest matches. Section 2, equations (6)–(13) of 159eef4ea58ca5da contain the same A, P, range of ε, arbitrary enclosing R, compact convex L, and ε/16 target.",
+    "Containments imply both excesses are nonnegative, so the Δ≥ε/16 branch closes immediately. In the other branch the outside triangles over the vertical, horizontal, and diagonal edges lie in R and are interior-disjoint from A. Their areas are respectively (1−ε)(−x)/2, (1−ε)(−y)/2, and (x+y−1)/2 when the corresponding supporting inequality is violated. Thus x,y≥−η and x+y≤1+2Δ for every point of R, with 2Δ≤η<ε/4.",
+    "The minimizing-sum vertex has both coordinates in [−η,ε+η]. Coordinate-maximizing vertices have q₁x≥1 and q₂y≥1, and satisfy |q₁y|,|q₂x|≤η. The sum bound 1+2Δ<2 makes q₁ and q₂ distinct, while their sums at least 1−η>ε distinguish both from q₀. This also handles ties in choosing maximizing or minimizing vertices.",
+    "The determinant lower bound expands to (1−2ε−3η)(1+η)>0. The left-side tests are exactly −(q₁x−ε)q₀y+q₁y(q₀x−ε)≥0 and −(q₂y−ε)q₀x+q₂x(q₀y−ε)≥0. Both denominators are positive. Each numerator has absolute value at most η(ε+η), giving q₀x+q₀y≤5ε²/4≤5ε/64<ε/2.",
+    "The lower edge of P has Euclidean length √2(2a−ε), and its distance from q₀ is (ε−q₀x−q₀y)/√2. Convexity puts their triangle inside L, with its interior on the opposite side of the support line from P. Dividing its area by four yields a strict bound above (2a−ε)ε/16≥31ε/256>ε/16. The argument does not assume L is triangular."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:04:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its exterior-cone method bounds Hausdorff distance to a standard simplex under a volume budget, and labels vertices of a minimum container. It gives no strict side-of-cut conclusion for q₀ and no joint excess estimate for an arbitrary R and the prescribed P inside L.",
+      "fact_id": "e823c82617a0bc70"
+    }
+  ],
+  "readability": "The q₁ and q₂ labels can be chosen to maximize the corresponding coordinates. Pending source a585520b0a2a14db gives the same A and P at d=2 but its coefficient c₂|T| is 1/128, weaker than the frozen 1/16.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e9688c19a361a6af0c743ab4223ccd586d46237904d05ea98b49f0d6d8f6c955",
+  "reviewed_statement_sha256": "a8e9d20309e2c733d847a94d9b03646a601c0dc565a94aa7e0709c5fe2d8b5b4",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:01:10Z",
+  "summary": "Every enclosing triangle either pays the stated endpoint area excess or has a vertex whose convex hull with the lower edge of P forces the stated scaled excess in L.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

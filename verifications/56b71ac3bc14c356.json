@@ -1,0 +1,47 @@
+{
+  "candidate_id": "0d017e6c3c14b846",
+  "candidate_sha256": "c8cae60599d45c62e8e4df34ab6f2af4fcb482c1ccd4cc25a8b22e798c2c91e5",
+  "checked_dependency_candidate_sha256": {
+    "bccdb8f5f289a4b4": "c6ecb9c1d03e1dfd1a0ccfbd211c55f7bff8080321dd63fb5444de22f4b13e2a"
+  },
+  "checks": [
+    "On the compact product, the mean-value bound for φ on the convex hull of tuple averages gives the separate cost bounds λ_i sup|∇φ|. Every maximizing coupling uses equality for the same chosen dual tuple.",
+    "The fixed-other-coordinate maximum defining U_i is finite and continuous by compactness; subtracting (ελ_i²/2)|v|² leaves a maximum of convex functions. On K_i the maximum is at most u_i. At an equality tuple the other coordinates realize the maximum, so the touching smooth term supports U_i with subgradient +λ_i∇φ(b(x)). The extensions are separate and do not need to be jointly feasible off the compact product. For k=1, U_1=φ.",
+    "Finite strong convexity gives a quadratic lower bound from a subgradient at the origin; subtracting p·v preserves coercivity and strong convexity. Strong monotonicity yields |T(p)−T(q)|≤|p−q|/κ, and the two optimizing-point bounds have error at most |h|²/κ around h·T(p). Thus V_i=U_i* is finite, convex, C¹ with global gradient bound 1/(ελ_i²).",
+    "The subgradient condition identifies x_i uniquely as T_i(λ_i∇φ(b(x))). The composition is locally Lipschitz because ∇φ is C¹. Pushing forward an optimizer by b transfers the endpoint identities to the exact marginal laws, and substituting the endpoint identities back into b gives the weighted sum identity almost everywhere.",
+    "Verified both raw source digests and the locators 9c4bb3ca1bcd69e1 §3 (5)–(10) and 1bc960743a4bce34 §2 (3)–(4). No density assumption from the continuous source is used in this step."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bccdb8f5f289a4b4",
+      "candidate_sha256": "c6ecb9c1d03e1dfd1a0ccfbd211c55f7bff8080321dd63fb5444de22f4b13e2a",
+      "mapping": "K_i=supp γ_i are nonempty compact, their masses agree and are positive, and φ∘b is separately Lipschitz by the compact mean-value estimate. The predecessor supplies an optimal dual tuple and equality under every optimizer.",
+      "reviewed_proof_sha256": "17e3be57114dc49f528a422fade72eba1a07d62e555a18ee71aba6d825408870",
+      "reviewed_statement_sha256": "b04fbf027efd0f260f47d976759b66f43d61482e48a7ebb849759344370c1718",
+      "status": "same-batch independent approval required for admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:23:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The McCann input in this proof has a forward endpoint-to-endpoint gradient map for two absolutely continuous marginals. It does not recover each endpoint from the barycenter for a common family of maximizers of arbitrary strongly convex surplus, including singular marginals.",
+      "fact_id": "dfd25e72c1f45a4e"
+    }
+  ],
+  "readability": "The uniform claim over every maximizing coupling follows from the nonnegative duality gap for the same dual tuple.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c3f004696c1e377a56fff093a18cc71aa04312e896bb44863acc440136e66ab4",
+  "reviewed_statement_sha256": "3afcc1c1b36b082be2d3e63664040d88a2f220422fc22d4e41e1842c21a7c36e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:20:07Z",
+  "summary": "A single optimal compact dual tuple yields global strongly convex extensions and Lipschitz conjugate gradients that recover the endpoints for every maximizing coupling, with no absolute continuity premise.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

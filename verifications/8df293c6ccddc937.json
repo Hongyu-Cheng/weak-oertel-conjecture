@@ -1,0 +1,73 @@
+{
+  "candidate_id": "e561372a5640eef8",
+  "candidate_sha256": "209461ce88005712c0200d0a1b82b32b3fcef7704188229a35c777b3b8bbecf3",
+  "checked_dependency_candidate_sha256": {
+    "0255a3c283c1a796": "d4b05d8aac999689c3612c849dbd180180f6737e7040eea475c3e64f62a43b06",
+    "4fc403cf46f23e49": "9c0a919525ace8d169953e039646142cfc406a9c0be3420e64fbed541809edc2",
+    "6a7d56e450b3126f": "31613c33abc90e519463fe09c7ef143869666384d5d0ea9886a759b1ceb3f965"
+  },
+  "checks": [
+    "Parallel tightening reduces captured mass. The margin tz+u·x gives thresholds t at −1 and −t at +1, and positive dilations supply the factors r^d and s^d and divide those thresholds by the corresponding scale. Every pair (u,t) with u nonzero gives a proper closed halfspace. A pure base normal through the mark captures one whole endpoint source.",
+    "The equal-scale tail comparison applies at |t|, since exchanging the two thresholds leaves the sum unchanged. The binomial expansion of (1+1/d)^d has its first two terms summing to two and a positive term of order two when d≥2. Hence 2Γ_d≤1 for the pure base case, with strict inequality when d≥2.",
+    "For the support interval [−a,b], the centroid estimate gives a,b≤d(a+b)/(d+1), which rearranges to a≤db and b≤da. In particular h_{−K}(u)=a≤d h_K(u), so −K⊆dK. The origin belongs to K, hence −rK⊆drK⊆sK for s≥dr. At these ratios reflection converts the retained cap on −rK into the lower cap at threshold t on rK. Together with the upper cap its mass equals r^d V because the shared hyperplane has zero d-volume.",
+    "At each fixed nonzero u, the negative threshold tail is the constant r^d and the positive threshold tail is the constant s^d in normalized scalar units. The closed supporting slice has zero d-volume. In particular t≤min(r min_K u·x,−s max_K u·x) gives exactly r^d at a finite threshold. Continuity and the constant tails give attainment for every scale pair. The reflected-copy lower bound proves equality in the stated plateau, and the pure base cap isolating rK proves the corresponding depth upper bound. In d=1 a centered interval is symmetric and s≥r covers all cases.",
+    "For r≤s≤dr the proposed coefficients have α+β=r and α+dβ=s, with both nonnegative. The componentwise Minkowski identity follows from aK+bK=(a+b)K for nonnegative a,b. The endpoint depths bound the d-th root at the shared mark below by V^(1/d)(αc_d+β), which equals the stated interpolation root times V^(1/d). The zero-coefficient cases are admitted by the cited homogeneous inequality.",
+    "The root is r c_d at s=r and r at s=dr. Its increment from r c_d is (s−r)(1−c_d)/(d−1), positive in the open unequal-scale interpolation range and at its upper end. Taking the d-th power preserves strictness. The large-ratio branch has r^d>2Γ_d r^d when d≥2. The depth inequality bounds every scalar cap because the depth is the infimum over all containing halfspaces.",
+    "Checked source cd9374750b11bd94 at SHA-256 943b8ffd8ef0d871017adf8b83393f5f2d0b518edb9a3dd4a3877163cebc89e9. Opening (1)–(2) and Sections 1–3, (3)–(13), contain the formula, support argument, plateau and interpolation. The frozen proof obtains the support asymmetry from the equivalent accepted centroid estimate and uses the accepted homogeneous interpolation directly."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "d4b05d8aac999689c3612c849dbd180180f6737e7040eea475c3e64f62a43b06",
+      "fact_id": "0255a3c283c1a796",
+      "fact_sha256": "29bef9db437b57aa61f10cfa33c78d2978da20049198369f090b95f398012619",
+      "hypotheses": "The proof's support-mean estimate applies to the uniform distribution on B=K. The product [−1/2,1/2]×K is a full-dimensional compact convex body with sole integer fiber B=K at 0, and the one-term representation there has weight one and positive volume. The width of u·K is positive for nonzero u."
+    },
+    {
+      "candidate_sha256": "31613c33abc90e519463fe09c7ef143869666384d5d0ea9886a759b1ceb3f965",
+      "fact_id": "6a7d56e450b3126f",
+      "fact_sha256": "30b7bafd79c7f5e4dbed86451e8dcc90311f6234575d9c443f3bcbbd961bdae4",
+      "hypotheses": "Use its convex-body case in dimension d with the uniform probability law on K, centroid zero, nonzero u and shift |t|≥0. Multiplication by V converts the two probability tails to absolute cap volume."
+    },
+    {
+      "candidate_sha256": "9c0a919525ace8d169953e039646142cfc406a9c0be3420e64fbed541809edc2",
+      "fact_id": "4fc403cf46f23e49",
+      "fact_sha256": "19efe539dc436e5dc6e7fbd0d7c74eec31974e8577f22bfaa8c6a163f2273f64",
+      "hypotheses": "The common bases −1 and +1 in R are affinely independent, with positive weights 1/2 and base mark 0. The input arrays (K,K) and (K,dK) have full-dimensional compact convex entries and continuous marks 0 in both weighted Minkowski sections. The coefficients α and β are nonnegative with positive sum r. Use the homogeneous pointwise inequality, including the single-array cases."
+    }
+  ],
+  "finished_utc": "2026-11-08T10:27:11Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It gives the equal-scale case by scaling, with common shape, centroid and paired opposite thresholds. Its bound gives no explicit unequal-scale gain or large-ratio plateau.",
+      "fact_id": "6a7d56e450b3126f"
+    },
+    {
+      "comparison": "It gives strictness for nonzero opposite shifts at equal scale in d≥3. The frozen gain is strict for unequal scales even at zero tilt and in d=2, with an explicit uniform bound.",
+      "fact_id": "37a5fc541beb1708"
+    },
+    {
+      "comparison": "It supplies pointwise root interpolation for general source arrays. The present conclusion also identifies a reflected-copy endpoint with exact cap cost and evaluates the resulting homothetic profile.",
+      "fact_id": "4fc403cf46f23e49"
+    },
+    {
+      "comparison": "Its support-mean estimate implies the centroid asymmetry used in the plateau. Its conclusion concerns centroid shifts and directional widths, with no cap-cost conclusion.",
+      "fact_id": "0255a3c283c1a796"
+    }
+  ],
+  "readability": "The large-ratio paragraph establishes the finite-threshold upper bound for all r≤s. Its matching lower bound requires the plateau condition.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0adb2622f80d23cc02dab358b4fd195e0159da8f956a359a6ac5ecdea4309e61",
+  "reviewed_statement_sha256": "d29c930bbacdc8a207640c29074197a9af533bbe4d5313c3efc9b019bbeed9ec",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:24:44Z",
+  "summary": "The equal-scale paired-tail bound and the exact reflected-copy plateau are valid inputs to homogeneous depth interpolation. They give the stated absolute bound for each direction and threshold, with a strict gain over the smaller-copy bound when d≥2 and s>r.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "An exact directional minimum at the actual central fiber for one symmetric one-integer-coordinate simplex chain and one fixed positive-normal cone condition.",
+  "author": "PK-research-agent",
+  "candidate_id": "a158ab357a60f74c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:24:47.918237+00:00",
+  "depends_on": [
+    "f75e1f526e17ab44"
+  ],
+  "draft_key": "integer-centered-shared-tilt",
+  "kind": "theorem",
+  "proof": "Normalization gives $a\\ge1/d>t$. Since $q<1$, the ratio condition gives $b<t$, and hence $0<c<R$.\n\nFor $X$ uniform on $T$ write $X=(W,(1-W)Y)$ with $Y$ uniform on the standard $(d-1)$-simplex and independent of $W$. The change of variables has Jacobian $(1-W)^{d-1}$, so the density of $W$ on $[0,1]$ is $d(1-W)^{d-1}$. With $Z=\\sum_{j=2}^d u_jY_j\\in[0,b]$, the conditional projection is $aW+(1-W)Z$. Thus at any real threshold $w$, the conditional cap fraction given $Z=z_0$ is\n$$\nG_{z_0}(w)=\\min\\left\\lbrace 1,\\left(\\frac{(a-w)_+}{a-z_0}\\right)^d\\right\\rbrace.\n$$\nIn particular it is one at and below $z_0$, and zero at and above $a$. At $w=a$ only $W=1$ can lie in the closed cap, an event of zero probability.\n\nFor a reflected pair at $\\pm k$ of common radius $r>0$, the two normalized thresholds for the original common tilt are $v-s$ and $v+s$, where $v=Rt/r\\ge t$ and $s=|\\beta|k/r$. If $v\\ge a$, then $G_{z_0}(v)=0$ and the pair has nonnegative mass. Otherwise $z_0\\le b<t\\le v<a$, and\n$$\nG_{z_0}(v)\\le\\left(\\frac{a-t}{a-b}\\right)^d\\le\\frac12.\n$$\nIf $v-s\\ge z_0$, all three tails agree with the convex function $(a-w)_+^d/(a-z_0)^d$, so $G_{z_0}(v-s)+G_{z_0}(v+s)\\ge2G_{z_0}(v)$. If $v-s<z_0$, the first term equals one and gives the same inequality by itself. At $v-s=z_0$ the power equals one. At $v+s=a$ it equals zero. In particular the full/empty plateau, when $s\\ge\\max\\lbrace v-z_0,a-v\\rbrace$, has pair fraction one and satisfies the bound, including its endpoints. Averaging over $Z$ and multiplying by $Vr^d$ proves the pair comparison. Every pair attains its zero-shift mass simultaneously at $\\beta=0$, and the own fiber at zero is independent of $\\beta$. For a positive-radius pair the original halfspace takes one full and one null cap whenever $|\\beta|k\\ge\\max\\lbrace Rt,ar-Rt\\rbrace$. This pair then contributes exactly $Vr^d$, including the endpoint when a closed cap consists of a highest vertex. Zero-radius fibers are singletons of zero $d$-volume for all tilts. The own fiber and the $N$ reflected pairs exhaust the census.\n\nAt zero tilt, $r b\\le Rb<Rt$ and $0<Rt$, so every vertex other than $r e_1$ is strictly below the cutting level when $r>0$. If $ar<Rt$ the cap is empty, and if $ar=Rt$ it is a single vertex of zero mass. If $ar>Rt$, the edge fractions from $r e_1$ toward $0$ and toward $r e_j$, respectively, are\n$$\n\\frac{ar-Rt}{ar},\\qquad \\frac{ar-Rt}{r(a-u_j)}\\quad (j\\ge2).\n$$\nMultiplying these fractions by $Vr^d$ gives the volume by the one-vertex simplex determinant formula in accepted fact f75e1f526e17ab44. The resulting volume is $V(ar-Rt)_+^d/[a\\prod_{j=2}^d(a-u_j)]=VC_u(r-c)_+^d$, also zero for $r=0$. Each factor $a-u_j$ belongs to $(0,a]$, so $C_u\\ge1$, with equality for a coordinate normal. The boundary of a cap with $u\\ne0$ has zero $d$-volume in each positive-radius fiber, so the two closed sides have masses adding to $M$. Summing the zero-tilt volumes proves the formula. When $N=0$ the same identity comes from the own fiber alone, and every tilt has the same mass.\n",
+  "source_candidate_ids": [
+    "8c5bbb9eb6411d6e"
+  ],
+  "source_candidate_sha256": {
+    "8c5bbb9eb6411d6e": "fbdc17a913aeb7c489fc1f6401ab5b50c915d0ca218f7451006e850fa2987169"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8c5bbb9eb6411d6e",
+      "locator": "Opening (1)–(2), §§1–2 (3)–(5), exact shared-tilt minimization"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and $N\\ge0$ be integers. Put $T=\\operatorname{conv}(0,e_1,\\ldots,e_d)$ and $V=\\operatorname{vol}_d(T)$. Let the complete integer fibers of $S\\subset\\mathbb Z\\times\\mathbb R^d$ be $r_kT$ at $k=-N,\\ldots,N$, with $0\\le r_{-k}=r_k\\le r_0=R$ and $R>0$. Write $\\mu$ for the sum of $d$-volume on these fibers, $M=V\\sum_k r_k^d$ and $y=(0,Rt,\\ldots,Rt)$, where $t=1/(d+1)$. Fix a nonnegative continuous normal $u$ with $\\sum_i u_i=1$. After relabeling, put $a=u_1=\\max_i u_i$, $b=\\max_{j\\ge2}u_j$ and $q=2^{-1/d}$. For $\\beta\\in\\mathbb R$ write $H_\\beta=\\lbrace(z,x):\\beta z+u\\cdot x\\ge Rt\\rbrace$. Suppose $a>b$ and $(a-t)/(a-b)\\le q$. Put $c=Rt/a$ and $C_u=a^{d-1}/\\prod_{j=2}^d(a-u_j)\\ge1$.\n\nThe infimum over $\\beta\\in\\mathbb R$ is attained at $\\beta=0$ and equals\n$$\n\\min_{\\beta\\in\\mathbb R}\\mu(S\\cap H_\\beta)\n=V C_u\\sum_{k=-N}^N(r_k-c)_+^d.\n$$",
+  "subgoal_id": "pk-intake-integer-centered-shared-tilt",
+  "title": "Exact shared-tilt cap minimum for symmetric integer-centered simplex fibers"
+}

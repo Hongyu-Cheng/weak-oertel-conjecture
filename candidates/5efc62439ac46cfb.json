@@ -1,0 +1,44 @@
+{
+  "advances": "Exact first response and continuation under actual signed radial hypotheses on a fixed finite cover.",
+  "author": "PK-research-agent",
+  "candidate_id": "5efc62439ac46cfb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:19:53.444378+00:00",
+  "depends_on": [
+    "6621b23e5d3f30bb",
+    "32418f8d50e792af",
+    "8820984cf6a6942e",
+    "a56f8711406a3870",
+    "d90ba05577427854"
+  ],
+  "draft_key": "tied-contact-continuation",
+  "kind": "theorem",
+  "proof": "For one fiber the oriented radial shell formula, with $H_X=n(X)\\cdot(X-o)>0$, reads\n$$\n\\int_K G-\\int_{K(t)}G\n=\\int_{\\partial K}\\int_0^{s_t(X)}G(o+(1-r)(X-o))H_X(1-r)^{d-1}\\,dr\\,dS(X).\n$$\nThis is radial change of variables about $o$, with signed orientation for outward shells and counting measure in dimension one. The shell bound and dominated convergence give derivative $\\int_{\\partial K}Gv\\,dS$. The expansion is uniform for a bounded equi-Lipschitz family of integrands on a fixed neighborhood: replacing the integrand and Jacobian factor by their boundary values costs $O(t^2)$ and $H_Xs_t/t\\to v$ in $L^1(dS)$.\n\nOn a compact own-interior neighborhood of an old contact, common balls bound the old and moving optimizing parameters, and a56f8711406a3870 gives denominator floor $1/N$ on their own bodies. The $O(t)$ motion then gives a common positive floor on both bodies and a neighborhood, so the shell expansion applies uniformly to their projective integrands. The moving optimizers converge uniformly there to the old ones by compactness, convergence of the objectives and uniqueness: any convergent subsequence at convergent marks limits to the corresponding old minimizer, by comparison with that old minimizer. Comparing the objectives at both old and new optimizers yields $E_{K(t)}(y)=E_K(y)-t\\int_{\\partial K}P_Y^{-N}v\\,dS+o(t)$ uniformly on these neighborhoods. Energy positivity and continuity there give the logarithmic expansion\n$$\n\\dot{\\log f}(Y)=-\\frac{C_Y}{NE_Y}-\\frac{D_p}{dNV_p}+\\frac{D}{dM}.\n$$\nAt fixed $u$ with $\\Gamma(u)=1$, the pooled covariance has $\\dot\\Gamma(u)=(D-J(u))/(2M)$, where $J(u)=\\sum_z\\int_{\\partial K_z}[u\\cdot(X-g_z)]^2v_z\\,dS$. This follows by the same shell derivative, differentiation of the total mass, and the old centered first moment on each fiber, which cancels the centroid derivative. Normal and scale motion give the remaining linear terms. Substituting in the contact expression yields the displayed coefficient at each old contact, with a uniform expansion and continuous coefficient on its compact interior neighborhood.\n\nAll old contacts stay in their own new fibers and test the minimum with value $O(t)$. Every subsequential limit of minimizing marks is an old contact by compactness, profile continuity up to the own boundary, and positivity of the old contact function off its zeros. Using its nonnegativity in the uniform interior expansion gives the lower derivative bound, while testing each old contact gives the upper bound. This proves the finite minimum formula. The proper own sections persist in a fixed threshold neighborhood of each $c_{ij}$, with coarea bounded below because the old plane crosses an interior ball and the nearby bodies retain a smaller such ball. The cap tails are continuous and uniformly strictly decreasing in that neighborhood; continuity at the old mass and the intermediate value theorem give the local inverses and the scalar solution near $Q$. At any current assigned point its weighted buffered thresholds sum to at least $h_i+\\alpha_i(t)$, so at least one threshold is no smaller than the corresponding inverse and captures mass at most $q_i(t)$. Finally, off $I$ the maximum on each of finitely many bases is strictly below $Q$ at $t=0$. Uniform all-normal continuity by the slab and symmetric-difference estimate preserves a strict gap for small $t$.\n",
+  "source_candidate_ids": [
+    "26455afca6af9c16",
+    "8effe5eb4947ba88",
+    "d750a370b2e831ee"
+  ],
+  "source_candidate_sha256": {
+    "26455afca6af9c16": "2356169cee151b89a5b7677499b2b978d8ac0823c7998f48ccb4d231e296c4c8",
+    "8effe5eb4947ba88": "b60c227edb670cb87d8a5651fb4380dfb71d7a2c8c041486dedaabbbe498f7d1",
+    "d750a370b2e831ee": "4f0f540aa37cfebb6dedfc0d61b15b1d000a9bd5f10945bd8fc48db726fa2ff7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8effe5eb4947ba88",
+      "locator": "§4 (4)–(6)"
+    },
+    {
+      "candidate_id": "26455afca6af9c16",
+      "locator": "§6 (13)–(16)"
+    },
+    {
+      "candidate_id": "d750a370b2e831ee",
+      "locator": "§§1–4 signed radial energy envelope and contact localization"
+    }
+  ],
+  "statement": "Take a finite cover as in the body-tied cover theorem, with old deepest contacts $Y_{ia}=(p_{ia},y_{ia})$ in the assigned bases $J_i$. Consider an actual compatible signed radial path through the old bodies as in the signed physical cone lemma, or any compatible path satisfying its uniform $O(t)$ radial bound and almost-everywhere radial derivative for a bounded inward speed $v_z$. Let $N_{ij}(t)=N_{ij}+t\\nu_{ij}$ with continuous velocity component $\\dot u_{ij}$, and $\\varepsilon(t)=\\varepsilon e^{st}$. Use subscript $t$ for the recomputed profile and covariance. Put $h_i=\\sum_j\\rho_{ij}c_{ij}$ and let\n$$\n\\alpha_i(t)=\\min_{z\\in J_i,\\ X\\in K_z(t)}\n\\left[\\sum_j\\rho_{ij}N_{ij}(t)\\cdot(z,X)-h_i\n-\\varepsilon(t)f_t(z,X)\\sum_j\\rho_{ij}\\Gamma_t(u_{ij}(t))\\right].\n$$\nWrite $D_z=\\int_{\\partial K_z}v_z\\,dS$, $D=\\sum_z D_z$, $E_a=E_{K_{p_{ia}}}(y_{ia})$, $P_a(X)=1+a_{Y_{ia}}\\cdot(X-y_{ia})$, $C_a=\\int_{\\partial K_{p_{ia}}}P_a^{-N}v_{p_{ia}}\\,dS$, $\\delta_a=\\varepsilon f(Y_{ia})$ and\n$$\nJ_i^{\\mathrm{cov}}=\\sum_j\\rho_{ij}\\sum_z\\int_{\\partial K_z}[u_{ij}\\cdot(X-g_z)]^2v_z\\,dS.\n$$\nThen $\\alpha_i(t)=t\\min_a A_{ia}+o(t)$, where\n$$\nA_{ia}=\\sum_j\\rho_{ij}\\nu_{ij}\\cdot Y_{ia}\n-\\delta_a\\sum_j\\rho_{ij}\\nabla\\Gamma(u_{ij})\\cdot\\dot u_{ij}\n+\\delta_a\\left[\\frac{C_a}{N E_a}+\\frac{D_{p_{ia}}}{d N V_{p_{ia}}}\n+\\frac{J_i^{\\mathrm{cov}}}{2M}-\\frac{(d+2)D}{2dM}-s\\right].\n$$\nIf $c_{ij}(t,q)$ are the local inverse thresholds of the moving cap tails, the equation $\\sum_j\\rho_{ij}c_{ij}(t,q_i(t))=h_i+\\alpha_i(t)$ has a unique solution near $Q$ for small $t$. The selected moving caps of that mass cover every point of the assigned current whole fibers in the buffered sense. At bases outside $I$ the old strict depth gap persists.",
+  "subgoal_id": "pk-intake-tied-contact-continuation",
+  "title": "Exact contact budgets and whole-fiber continuation for the tied buffer"
+}

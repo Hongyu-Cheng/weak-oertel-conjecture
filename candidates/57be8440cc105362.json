@@ -1,0 +1,30 @@
+{
+  "advances": "Conditional on the exact common separator and jointly retained compact log measures. Positive-rate endpoints are included; the actual directional kernel and positive capture are separate.",
+  "author": "PK-research-agent",
+  "candidate_id": "57be8440cc105362",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.025772+00:00",
+  "depends_on": [],
+  "draft_key": "exponential-hinge-positive-rate-tails",
+  "kind": "theorem",
+  "proof": "For a fixed $R>0$, use $\\Phi_j(n,w)=\\psi(n)p_j(w)$, where $p_j=[f-\\exp(R/\\lambda_j)L_j]_+$. The negative of $L_j$ is a finite maximum of affine functions, so $p_j$ is globally finite, continuous, nonnegative and convex. Thus this test uses the same exact separator. If the separator comes from physical normal cuts, any fixed $j$ gives one admissible field, and no common time interval for the paths is required.\n\nLet $F=\\max_C f$. When $F=0$ the desired inequality is trivial. Otherwise on the current support $0\\le p_j\\le F$ and $p_j>0$ implies $r_j\\ge R-\\lambda_j\\log F\\ge R/2$ for large $j$. On this support $L_j=\\exp(-r_j/\\lambda_j)$, and integration against $\\eta_j/\\lambda_j$ can be rewritten as integration against $B_j/r_j$. Dividing the separator by $\\lambda_j$ gives\n$$\n\\int\\psi p_j/r_j\\,dA_j+\\int\\psi p_j\\,dB_j\n-\\beta_j\\int\\psi p_j/r_j\\,dB_j+o(1)\\le0.\n$$\nIndeed the remainder is bounded in absolute value by $C_0\\int\\psi p_j\\,d\\eta_j\\le C_0\\lambda_j(2F/R)\\|\\psi\\|_\\infty B_j(\\mathcal N\\times C\\times\\mathbb R)$, which tends to zero. Quotients are taken to be zero where $p_j=0$.\n\nAt a continuity threshold for the limiting $B_j$ measure, the variable test $p_j$ converges uniformly to $f$ on rates bounded away above $R$ and is eventually zero on rates bounded away below $R$. These facts follow from $\\exp(R/\\lambda_j)L_j=\\exp((R-r_j)/\\lambda_j)$ at positive rate and from $L_j\\ge1$ at zero rate. The quotients are uniformly bounded by $2F/R$. By weak convergence after a continuous cutoff around $R$, the integrals converge away from that strip, and the strip error tends to zero as the strip shrinks by the null rate slice and $A_j\\le B_j$. Thus the open-tail inequality holds at all continuity thresholds. They exclude at most countably many positive rates. Choose them decreasing to $R$ to obtain $\\{r>R\\}$ and increasing to $R$ to obtain $\\{r\\ge R\\}$. In both cases the weights are bounded on the relevant positive-rate region and the limiting measures are finite, so convergence holds separately for all terms. At $R=\\beta>0$, the closed tail is the top slice and the two terms with $\\widehat b$ cancel when $\\psi=f=1$. This leaves the positive top $\\widehat a$ mass equal to zero.\n\nFor face restriction, if the common compact physical hull is supported where affine $A\\ge0$, use the tests $f_m=(f-mA)_+$, each globally finite, continuous, nonnegative and convex. They are dominated by $f$ on the common support and decrease to $f\\mathbf1_{\\{A=0\\}}$. Dominated convergence gives the inequalities on the whole zero face. On the already restricted support, the same argument applies to any new affine function nonnegative there. A finite intersection of zero faces of nonnegative affine functions can also be obtained with their sum. This proof applies to the conditional inverse-measure formulas of the source whenever the required finite-measure identities and bounds are available. It uses the same physical measures and does not allow extraction of one source label from overlapping faces.\n",
+  "source_candidate_ids": [
+    "06f3c3316a88c7ba"
+  ],
+  "source_candidate_sha256": {
+    "06f3c3316a88c7ba": "ec71747877c96a60f7973c03cae2296dc760db9da42c2189a05d19adfe2a38c7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "06f3c3316a88c7ba",
+      "locator": "06f3c3316a88c7ba:01 §§1–3 (1)–(6)"
+    },
+    {
+      "candidate_id": "06f3c3316a88c7ba",
+      "locator": "06f3c3316a88c7ba:04 §6, exposed zero faces"
+    }
+  ],
+  "statement": "Let $\\eta_j$ be finite positive measures on a common compact normal-position space $\\mathcal N\\times C$ with $C$ contained in a Euclidean physical space. Let $L_j$ be a finite minimum of ambient affine functions, positive on the physical support of $\\eta_j$, and let $0\\le W_j\\le1$. Take $\\lambda_j>0$ with $\\lambda_j\\to0$, $\\beta_j\\to\\beta$, and set $s_j=(-\\log L_j)_+$, $r_j=\\lambda_j s_j$, $\\Xi_j=W_j-\\beta_j+r_j+R_j$, with $|R_j|\\le C_0\\lambda_j$. Suppose\n$$\n\\int\\Xi_j\\Phi\\,d\\eta_j\\le0\n$$\nfor every nonnegative continuous field $\\Phi(n,w)$ globally finite and convex in the physical coordinate for each normal. The measures $B_j=s_j\\eta_j\\,\\delta_{r_j}$ and $A_j=W_jB_j$ are assumed to have bounded masses, a common compact rate range, and joint weak limits with positive-rate parts $\\widehat b,\\widehat a$ supported in rates at most $\\beta$. For every $R>0$, nonnegative continuous normal weight $\\psi$, and globally finite nonnegative convex physical $f$, for either $T=\\{r>R\\}$ or $T=\\{r\\ge R\\}$ one has\n$$\n\\int_T\\psi f/r\\,d\\widehat a+\\int_T\\psi f\\,d\\widehat b\n\\ \\le\\ \\beta\\int_T\\psi f/r\\,d\\widehat b.\n$$\nIf $\\beta>0$, then $\\widehat a(\\{r=\\beta\\})=0$.\n\nEach of these inequalities, and any inequality of the same type valid for all such $f$ with finite physical measures and bounded weights on its rate region, remains true with all measures restricted to the whole exposed zero face of an affine function nonnegative on their common compact convex physical support. This restriction can be repeated on successive exposed zero faces. It also applies to finite moment tests without reciprocal factors whenever their measures are finite after weighting.",
+  "subgoal_id": "pk-intake-exponential-hinge-positive-rate-tails",
+  "title": "Open and closed reciprocal-rate tail bounds from an exponential hinge"
+}

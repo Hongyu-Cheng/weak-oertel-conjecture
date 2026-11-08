@@ -1,0 +1,29 @@
+{
+  "advances": "An exact pointwise closed-sublevel law with real bases, actual caps and a signed margin.",
+  "author": "PK-research-agent",
+  "candidate_id": "e217e1ce3b4500a7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:30:44.669046+00:00",
+  "depends_on": [
+    "3dd858960f824a5d",
+    "1e4c633936160af0"
+  ],
+  "draft_key": "pk-w34-buffered-left-quantile-radius",
+  "kind": "theorem",
+  "proof": "The nonzero continuous normal makes every projection level fiber-volume null. Thus $F_{a,u}$ is continuous, nonincreasing and has limiting values $M,0$. Its $Q$-level is a compact interval, with left and right endpoints as stated, and $F_{a,u}(c)\\le Q$ is equivalent to $c\\ge c_Q^-$ while $F_{a,u}(c)\\ge Q$ is equivalent to $c\\le c_Q^+$. The supremum of the affine functions defining $r_Q$ is convex and lower semicontinuous.\n\nIf $b_{\\rm base}(z)>Q$, all fibers with $a\\cdot(p-z)\\ge0$ have total mass greater than $Q$. They are wholly captured at threshold $a\\cdot z+m(u)$ for $m(u)=\\min_{p,X\\in K_p}u\\cdot X$. Hence $c_Q^->a\\cdot z+m(u)$ and $r_Q(z,y)\\le\\max_{\\Gamma(u)=1}(u\\cdot y-m(u))<\\infty$. If $b_{\\rm base}(z)\\le Q$, a minimizing closed base cap is realized since there are finitely many traces. Shift its boundary through $z$, so its trace still minimizes and has the form $a_0\\cdot(p-z)\\ge0$. Its excluded bases have $a_0\\cdot(p-z)\\le-\\gamma<0$ for some $\\gamma>0$, since their set is nonempty and finite. For any fixed $\\Gamma$-unit $u$ and all large $k$, the cap with tilt $ka_0$ and threshold $ka_0\\cdot z-k\\gamma/2$ captures exactly the full fibers in the base cap. Its mass is at most $Q$, so $r_Q(z,y)\\ge u\\cdot y+k\\gamma/2$. This proves the exact domain including atomic equality.\n\nAt a finite radius, take a maximizing sequence of left-quantile caps with mass $Q$. Their signed margins $\\delta_k=a_k\\cdot z+u_k\\cdot y-c_Q^-(a_k,u_k)$ tend to $r_Q$ and can be taken in a bounded interval. The fixed-real-mark clamping lemma keeps the masses and the prescribed displacements exactly. On a convergent subsequence of clamped tilts and unit covectors the limit cap has mass $Q$ at threshold $a_*\\cdot z+u_*\\cdot y-r_Q$ by dominated convergence. The new left quantile can only be lower than that threshold, so its signed margin is at least $r_Q$. The supremum bounds it from above by $r_Q$, proving attainment.\n\nIf the pure-base depth is at most $Q$, both sides of the scalar equivalence hold. Otherwise, for fixed $\\delta$ the clamping lemma attains the nonvertical infimum. A cap has mass at most $Q$ exactly when its signed left-quantile margin is at least $\\delta$, proving the equivalence with the attained supremum. For the additional sampled assertion, the maximizing cap at $\\delta=r_Q\\ge0$ contains the interior source. If it captured the whole own fiber, the whole-fiber part of 3dd858960f824a5d would give mass at least $b_{\\rm base}(p)>Q$. Thus it cuts its own fiber properly. A reduction of the displacement then strictly reduces its own cap volume and cannot increase other volumes, giving the strict inequality. At $\\delta=r_Q$, a cap of mass strictly less than $Q$ would have threshold strictly above its left quantile by continuity, giving a larger signed margin. This is impossible and the attained cap at the radius has mass $Q$.\n",
+  "source_candidate_ids": [
+    "b12ff19e04f5fad1"
+  ],
+  "source_candidate_sha256": {
+    "b12ff19e04f5fad1": "729dfdc540431371351959f7642e6ef288e7ab0607c8cdae2442c5658b7e6706"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b12ff19e04f5fad1",
+      "locator": "b12ff19e04f5fad1:02 §§1, 3–4, (1), (3)–(5), exact signed left-quantile radius"
+    }
+  ],
+  "statement": "Let $P$ be a finite nonempty set of sampled bases with positive compact convex $d$-fibers $K_p$, $d\\ge1$, actual in their canonical hull $C$. Give them summed fiber measure $\\mu$ of total mass $M$. Let $b_{\\rm base}(z)$ be the closed atomic base depth with weights $|K_p|$, using $M$ in rank zero. Fix $0<Q<M$ and a norm $\\Gamma$. For $\\Gamma(u)=1$ write $F_{a,u}(c)=\\mu\\{a\\cdot Z+u\\cdot X\\ge c\\}$ and let $c_Q^-(a,u)=\\min\\{c:F_{a,u}(c)\\le Q\\}$ and $c_Q^+(a,u)=\\max\\{c:F_{a,u}(c)\\ge Q\\}$. Set\n$$\nr_Q(z,y)=\\sup_{a,\\Gamma(u)=1}[a\\cdot z+u\\cdot y-c_Q^-(a,u)].\n$$\nThis is convex and lower semicontinuous, finite exactly when $b_{\\rm base}(z)>Q$, with the supremum attained at every finite value. For an actual mark $w=(z,y)$ and $\\delta\\ge0$, let $B(w,\\delta)$ be the minimum of the pure-base depth and the infimum of cap masses with thresholds $a\\cdot z+u\\cdot y-\\delta$. Then $B(w,\\delta)\\le Q$ exactly when $\\delta\\le r_Q(w)$. At a sampled interior mark $w=(p,y)$ with $b_{\\rm base}(p)>Q$ and $r_Q(w)\\ge0$, one additionally has $B(w,r_Q(w))=Q$ and $B(w,\\delta)<Q$ for $0\\le\\delta<r_Q(w)$.",
+  "subgoal_id": "pk-intake-pk-w34-buffered-left-quantile-radius",
+  "title": "Attained signed left-quantile radius for actual buffered sublevels"
+}

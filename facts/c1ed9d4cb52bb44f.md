@@ -1,0 +1,43 @@
+---
+fact_id: c1ed9d4cb52bb44f
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-movable-simplex-compact-linked-roof-depth
+depends_on: []
+verifier_run: f7892d995c845b51
+target_match: null
+---
+
+## Source
+
+- [44a12d13f3aabab3](../candidates/44a12d13f3aabab3.json), 44a12d13f3aabab3:03 §§2–3 and §6, (11)–(16), (21).
+- [42889f299dc055c9](../candidates/42889f299dc055c9.json), §§4–5, (11)–(15), finite trace active-row proof.
+
+## Statement
+
+Let $n\ge0$, $d\ge1$, $P\subset\mathbb R^n$ nonempty and finite, $j\in P$, and $r_p>0$ for all $p\in P$. Put $T_d=\operatorname{conv}(0,e_1,\ldots,e_d)$, $\Delta_p=p-j$, and let $G_j(t\mathbf1)$ denote raw depth at $(j,t\mathbf1)$ for summed ordinary $d$-volume on the fibers $\{p\}\times r_pT_d$. For $0\le t\le r_j/d$, $a\in\mathbb R^n$, $w\ge0$ with $\sum_\ell w_\ell=1$, define $F_i(t;a,w)$ as the sum of the fiber volumes cut by $a\cdot\Delta_p+w\cdot X\ge\tau_{p,i}$, where
+$$
+\tau_{p,0}=t,\qquad \tau_{p,i}=t+w_i[r_p-(d+1)t]\quad(1\le i\le d).
+$$
+Then $G_j(t\mathbf1)=\min_{i\in\{0,1\}}\min_{a,w}F_i(t;a,w)$. The tilt can be restricted to one compact set uniformly in $i,t,w$. Specifically, let $m=\dim L$ with $L=\operatorname{span}\{\Delta_p:p\in P\}$, let $E:\mathbb R^m\to L$ be an orthonormal coordinate map, and write $v_p=E^{\mathsf T}\Delta_p$. When $m>0$, take $a=E\xi$ with
+$$
+\|\xi\|_\infty\le \left(\max_{p\in P}\max\{r_p,r_j\}\right)\max_I\|V_I^{-1}\|_\infty,
+$$
+where the rows of $V_I$ are any $m$ independent rows $v_p^{\mathsf T}$ and the matrix norm is the maximum absolute row sum. When $m=0$ take $a=0$. The depth is continuous in $t$.
+
+If $n=1$ and $r_p=r_j+s_-(p-j)$ on $p\le j$ and $r_p=r_j+s_+(p-j)$ on $p\ge j$, with $s_-\ge s_+$, the roof branch $i\ge1$ can instead use threshold $t+w_i[r_j-(d+1)t]$ and left and right tilts $a_\pm=a-w_i s_\pm$. They obey $a_+-a_-=w_i(s_--s_+)$, with $w_i$ the coefficient of the same continuous normal $w$.
+
+## Proof
+
+A containing halfspace can be tightened to pass through $(j,t\mathbf1)$. Write its margin as $a_0\cdot\Delta_p+u\cdot(X-t\mathbf1)$. For $u\ge0$ and $u\ne0$, dividing by $\sum_\ell u_\ell$ gives branch zero. If $u=0$, replacing its margin by $R a_0\cdot\Delta_p+X_1-t$ for sufficiently large finite $R$ preserves strict full and empty base traces and takes a subset at each zero trace. Its mass is no larger.
+
+If $u_i=\min_\ell u_\ell<0$, interchange $X_i$ with the slack $r_p-\sum_\ell X_\ell$ in each fiber, a volume-preserving permutation of simplex vertices. Define $v_i=-u_i$ and $v_\ell=u_\ell-u_i$ for $\ell\ne i$, and set $S=\sum_\ell v_\ell>0$, $w=v/S$, $a=a_0/S$. Since $\sum_\ell u_\ell=S+(d+1)u_i$, the transformed margin divided by $S$ is
+$$
+a\cdot\Delta_p+w\cdot X-t-w_i[r_p-(d+1)t].
+$$
+Conversely, for any allowed $a,w$ and $i\ge1$, use the nonzero continuous normal $u=w-w_i\mathbf1$ with its $i$th coordinate replaced by $-w_i$. The same swap transforms the original cap with this $u$ and shared $a$ into branch $i$, including $w_i=0$. Branch zero is itself a through-point cap. Thus the depth is the infimum over these branches. A simultaneous permutation of the $w$ and $X$ coordinates leaves all fibers and the diagonal mark invariant and identifies the optimized values of branches $1,\ldots,d$.
+
+Fix $i,t,w$. In each branch, $\tau_{p,i}$ is a convex combination of $t$ and $r_p-dt$, so both $|\tau_{p,i}|$ and $|\tau_{p,i}-r_p|$ are bounded by $C=\max_p\max\{r_p,r_j\}$. Project $a$ to $L$, which leaves its offsets unchanged. In rank zero all offsets vanish. Otherwise, for a replacement coordinate vector $\xi$, preserve the exact offset $a\cdot\Delta_p$ when it belongs to $[\tau_{p,i}-r_p,\tau_{p,i}]$. For larger offsets impose $v_p\cdot\xi\ge\tau_{p,i}$ and for smaller offsets impose $v_p\cdot\xi\le\tau_{p,i}-r_p$. The resulting finite system is feasible by the original tilt. It has no feasible line because the $v_p$ span $\mathbb R^m$. To get a feasible point with $m$ independent tight rows, start at any feasible point. If the tight rows, including the equality rows, do not span, move in their common nullspace along a nonzero direction until a new inequality becomes tight. Some sign of the direction reaches a new row in finite distance because there is no feasible line. The new row pairs nontrivially with the direction and increases the rank. The final point solves $V_I\xi=c_I$ with $\|c_I\|_\infty\le C$ and therefore obeys the stated bound.
+
+These constraints preserve every fiber mass since $0\le w\cdot X\le r_p$. At the empty endpoint only a null supporting face can appear, as $w\ne0$. Each branch objective is jointly continuous on the uniform compact domain by dominated convergence on the fibers, since the limiting boundary in each fiber has zero volume. This gives both attainment and continuity in $t$. The compactification uses the finite active-row argument in 42889f299dc055c9, §§4–5, with the varying roof thresholds verified here. For the two affine legs, inserting $r_p=r_j+s_\pm(p-j)$ into $\tau_{p,i}$ gives the stated common threshold and the two linked tilts.

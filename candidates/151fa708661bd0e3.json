@@ -1,0 +1,29 @@
+{
+  "advances": "A relative Helly bound for compact mixed traces and a same-measure Borel center. It uses the individual fiber dimensions and occupied parity count.",
+  "author": "PK-research-agent",
+  "candidate_id": "151fa708661bd0e3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:36:03.338544+00:00",
+  "depends_on": [
+    "bee3cc8e50a0dcea",
+    "6d6fcf377e68c79c"
+  ],
+  "draft_key": "intrinsic-fiber-helly-with-occupied-parity",
+  "kind": "theorem",
+  "proof": "Take a finite family $C_i$ of ambient convex sets whose intersection misses $S$. At each integer base $z$, intersect the fibers of the $C_i$ with $S_z$ and work in $\\operatorname{aff}(S_z)$. Ordinary Helly gives at most $q+1$ indices for which the intersection in $S_z$ is empty. In dimension zero this follows by choosing one set missing its unique point. For every nonempty index set $J$ of size at most $q+1$, let $E_J$ be the projection to the base of $D\\cap\\bigcap_{i\\in J}C_i$. Each $E_J$ is convex and for every $z\\in P$ at least one $E_J$ misses $z$.\n\nThe finite-set witness lemma in the proof of accepted fact bee3cc8e50a0dcea bounds the Helly number on $P$ by the largest cardinality of a subset of $P$ that is precisely the $P$-trace of its hull and consists entirely of vertices of that hull. Two different points of the same parity in such a subset would have a midpoint in $P$ in the hull but outside its vertex set. The cardinality is thus at most $k$. At most $k$ of the projected sets $E_J$ already miss $P$ jointly. The union of their index sets has at most $(q+1)k$ members. A point in $S$ satisfying all corresponding $C_i$ would project into each selected $E_J$, a contradiction.\n\nThe set $S$ is compact and carries exactly the original measure $\\nu$. Apply the general closed-set Borel centerpoint theorem of accepted fact 6d6fcf377e68c79c with location set $S$ and measure $\\nu$. Its finite $S$-Helly number is at most $(q+1)k$ by the preceding proof. Its bound concerns closed ambient halfspaces, including any atoms and hyperplane boundary mass.\n",
+  "source_candidate_ids": [
+    "237f4727836ebab9"
+  ],
+  "source_candidate_sha256": {
+    "237f4727836ebab9": "64394f656e03ec2f8ca1bdf54b8cca230c3f46c1265184505da2207854c5f87e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "237f4727836ebab9",
+      "locator": "§3, (6)–(7)"
+    }
+  ],
+  "statement": "Let $D\\subset\\mathbb R^n\\times\\mathbb R^m$ be compact and convex, with nonempty integer fibers $S_z$ over a finite nonempty $P\\subset\\mathbb Z^n$. Suppose each $S_z$ has affine dimension at most $q$, with $q\\ge0$, and that the midpoint of every distinct same-parity pair in $P$ belongs to $P$. Write $k$ for the number of occupied parities and $S=\\bigcup_{z\\in P}(\\{z\\}\\times S_z)$. For every finite family of ambient convex sets whose intersection misses $S$, a subfamily of at most $(q+1)k$ already misses $S$. Consequently, for every nonzero finite positive Borel measure $\\nu$ carried by $S$, some $y\\in S$ satisfies $\\nu(H)\\ge\\nu(S)/[(q+1)k]$ in every closed ambient halfspace $H$ containing $y$.",
+  "subgoal_id": "pk-intake-intrinsic-fiber-helly-with-occupied-parity",
+  "title": "Helly and centerpoint bounds from integer fiber dimensions and occupied parities"
+}

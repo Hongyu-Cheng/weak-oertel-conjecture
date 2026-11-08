@@ -1,0 +1,43 @@
+{
+  "candidate_id": "7822334375482bff",
+  "candidate_sha256": "ec1b09a5e8f055b2e7d7c878c40c46aad3a3d7eec98305b1966ed9fb77f8d87e",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Checked original 64f65a59b216d00b:02 §§2–4 against the frozen coordinates. Solving the five coefficients gives t between max(0,(x+y+z−2)/2) and min(x/2,y,z). Eliminating t gives the six base inequalities. They force y+z≤2, so no integer interior point exists. Exact enumeration of x,y,z in {0,1,2} gives the ten old simplex sites and the two new sites, with all eight parities. The t interval is a singleton at each of these sites, with the stated height, and has length 1/4 over (1/2,1/2,1/2).",
+    "Checked the six facet planes by their affine-independent vertex triples and the face incidences. The relative interior of y+z=2 contains a, whose facet barycentrics are (1/4,1/4,1/2). The remaining five facets have no interior lattice sites by the strict sum bounds in the proof. The three new edges incident to r have primitive difference vectors and the old edge [2e₂,2e₃] is already in F. The five other old edges are occupied and connect at 0,2e₁,2e₂,2e₃. The heights are affine on each selected face but fail the affine-basis test on P.",
+    "Adding the zero-base rectangle leaves the sampled census exact and expands the four-dimensional lifted D to full dimension five. Each area is 2ε_j², giving M_j=24ε_j²=1/(6j²). The exponential level is strictly positive and below ε_j because e^j>12j for j≥12. The gradient has unit continuous norm and each normalized horizontal segment has mass (6j)(2ε_j)=1. These identities and all singleton t endpoints were checked by rational arithmetic.",
+    "Every positive-weight integer-output combination of the placed support points remains in D and hence equals its unique output point. For the joint measure Brunn–Minkowski condition on compact positive-mass input sets, each input contains its unit atom, so the Minkowski combination contains the unit output atom and the exponent-one bound is equality."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T18:56:46Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its affine support graph theorem assumes an integer point in the relative interior of the base hull and compact positive-mass input sets. Here the exact hollow census excludes that anchor and constructs a nonaffine graph as an actual simultaneous slice limit.",
+      "fact_id": "2d22b036b3e5353c"
+    },
+    {
+      "comparison": "The compatible rank-zero atoms fit its canonical integer-base lift, whose placement can increase rank and whose projection recovers the original base. That theorem does not make the offsets affine over the original base or construct this one-cell slice sequence.",
+      "fact_id": "04c4009af6a7a76c"
+    },
+    {
+      "comparison": "Its different eleven-site hollow projection and integral-height subtrace give an exact Helly obstruction. It has neither this connected twelve-site geometry nor a simultaneous normalized horizontal-slice realization.",
+      "fact_id": "bc5a8b26a83fc327"
+    }
+  ],
+  "readability": "Joint measure Brunn–Minkowski uses compact input sets of positive mass, as in the source's joint-slice convention and the last proof paragraph. The single affine cut is on the entire cell; the slice rank is computed after taking the simultaneous weak limit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "5d9c6a394616128cc2089bf0542a95c14d8daa4de87123eafe1c06b461c4c249",
+  "reviewed_statement_sha256": "622b40e2b2febf7229083a713cbae2cb1af60684788dfaf43876e4e378b3d68f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:49:57Z",
+  "summary": "The exact twelve-site hollow body has a connected occupied-face cover and nonaffine singleton heights. One full-dimensional convex cell per index j yields the stated simultaneous normalized rank-zero slice limit.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

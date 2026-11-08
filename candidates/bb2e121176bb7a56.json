@@ -1,0 +1,30 @@
+{
+  "advances": "Fixed-cap cover feasibility, independent of the cap-mass budget or the locked depth target.",
+  "author": "PK-research-agent",
+  "candidate_id": "bb2e121176bb7a56",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:01:59.465729+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-homothetic-all-scale-dilation",
+  "kind": "theorem",
+  "proof": "The ambient dilation is invertible affine and fixes the base. In one fiber,\n$$\n\\bigcup_{s\\ge1}\\bigl(c+s(K-c)\\bigr)=K+\\operatorname{cone}(K-c).\n$$\nIndeed $c+s(x-c)=x+(s-1)(x-c)$. Conversely $x+t(y-c)=c+(1+t)(k-c)$ for $k=(x+ty)/(1+t)\\in K$. Thus a fixed cap cover persists precisely when this union misses the complementary section in every fiber. With $c\\in\\operatorname{relint}K$ the dilates of a relative ball about $c$ exhaust $\\operatorname{aff}K$ and all dilates stay in that affine space.\n\nIn the polytopal case the separating inequalities suffice, since a dilate has support $s h_K(\\xi)+(1-s)\\xi\\cdot c\\le h_K(\\xi)$. For necessity write $K=\\{x:Bx\\le d_0\\}$ and $Q=\\{x:Ex\\le f\\}$. A hit at a finite $s\\ge1$ is equivalent to feasibility of\n$$\nEx\\le f,\\qquad Bx-s(d_0-Bc)\\le Bc,\\qquad -s\\le-1.\n$$\nIndeed the second inequality tests $c+(x-c)/s\\in K$. If infeasible, the finite-dimensional Farkas alternative gives row multipliers $\\lambda,\\eta\\ge0$ and a scalar $\\theta\\ge0$ with $\\lambda E+\\eta B=0$, $\\eta(Bc-d_0)=\\theta$, and $\\lambda f+\\eta Bc-\\theta=\\lambda f+\\eta d_0<0$. Put $\\xi=\\eta B=-\\lambda E$ as a linear functional. Then $h_K(\\xi)\\le\\eta d_0\\le\\xi\\cdot c$, and $\\inf_Q\\xi\\cdot q\\ge-\\lambda f>\\eta d_0$. The inequalities and nonemptiness of both sets exclude $\\xi=0$.\n\nFor failure take the closed unit disk centered at $(1,0)$, $c=(0,0)$, and $Q=\\{(0,1)\\}$. Its dilate has center $(s,0)$ and radius $s$, so the sole point of $Q$ is outside. However $h_K(\\xi)=\\xi_1+\\|\\xi\\|$ and $\\xi\\cdot c=0$, so a nonzero candidate $\\xi$ must be $(-a,0)$ for $a>0$. It has value zero on $Q$, which equals $h_K(\\xi)$. Indeed $x=(x_1,x_2)$ belongs to a finite dilate precisely when $x_1^2+x_2^2\\le2s x_1$ for some $s\\ge1$, so the union contains exactly the open right halfplane and the origin. Its closure would incorrectly obstruct this dilation.\n",
+  "source_candidate_ids": [
+    "7e247486f83d7d21"
+  ],
+  "source_candidate_sha256": {
+    "7e247486f83d7d21": "a84b3fb28d397da97123f8fa959541290ab701093d3c83a6b6cbe5e921b23aea"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "7e247486f83d7d21",
+      "locator": "7e247486f83d7d21:01 §1, (1)–(2), all-scale cover obstruction by an actual cone"
+    },
+    {
+      "candidate_id": "7e247486f83d7d21",
+      "locator": "7e247486f83d7d21:02 §2, (3), polytopal separator and sharp failure without polyhedral K"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a compact convex body and let finitely many open halfspaces $U_i=\\{(z,x):u_i\\cdot z+v_i\\cdot x>b_i\\}$ cover $C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$. Write $K_z=C_z$ and $Q_z=\\{x:v_i\\cdot x\\le b_i-u_i\\cdot z\\text{ for all }i\\}$. For an affine map $c:\\mathbb R^n\\to\\mathbb R^d$ and $s\\ge1$, let $C_s$ be the image of $C$ under $(z,x)\\mapsto(z,c(z)+s(x-c(z)))$. The same caps cover $C_s\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ for every $s\\ge1$ exactly when\n$$\n\\bigl(K_z+\\operatorname{cone}(K_z-c(z))\\bigr)\\cap Q_z=\\varnothing\n$$\nat every nonempty integer fiber, including fibers of zero $d$-volume. Here the cone consists of the nonnegative multiples of points of $K_z-c(z)$. If $c(z)$ is in the relative interior of $K_z$, the obstruction is exactly $Q_z\\cap\\operatorname{aff}K_z\\ne\\varnothing$. In particular, at an interior center of a full-dimensional fiber, indefinite coverage at that fiber is equivalent to $Q_z=\\varnothing$.\n\nFor any nonempty polytope $K\\subset\\mathbb R^d$, nonempty polyhedron $Q$ disjoint from $K$, and $c\\in\\mathbb R^d$, the dilates $c+s(K-c)$, $s\\ge1$, all miss $Q$ exactly when some $\\xi\\ne0$ satisfies\n$$\n\\xi\\cdot c\\ge h_K(\\xi),\\qquad \\inf_{q\\in Q}\\xi\\cdot q>h_K(\\xi).\n$$\nThe separating condition can fail for a general compact convex $K$ whose every finite dilate misses $Q$.",
+  "subgoal_id": "pk-intake-pk-w35-homothetic-all-scale-dilation",
+  "title": "Exact obstruction to preserving fixed caps under coordinated dilation"
+}

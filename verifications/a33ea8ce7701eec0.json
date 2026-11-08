@@ -1,0 +1,66 @@
+{
+  "candidate_id": "c46a6b8335f94cab",
+  "candidate_sha256": "371d40e7b08c772efbf64c761b1fc26cedf8089ca3103ce909c9f8a068761635",
+  "checked_dependency_candidate_sha256": {
+    "4d24a4fbd205befd": "8075c295bd316ffb4bae29880db8969b4e9ff82c6487ed87113a224841dc3416",
+    "73234f91aeecda16": "c1d4e47afa214bd112e97aba7e9b8aa21d436d2d73ef99bfa07078cf92e941f9"
+  },
+  "checks": [
+    "W is positive, and the piecewise affine interpolant of a finite concave sequence is concave on its index interval. The weighted mean lies in this interval and, being integer, equals an actual sampled index. Jensen with weights f_i^d/W gives f_j≥Σ f_i^(d+1)/W. Zero weights drop out and a singleton satisfies equality in Jensen.",
+    "At p=d the parent moment inequality gives (d+2)Σ f_i^(d+1)≥(d+1)mW+m^(d+1)/N. Division by the positive (d+2)W yields the displayed correction. Monotonicity of the positive real d-power gives the strict ratio with maximum weight m^d.",
+    "For L>1 the positive support is exactly the integer interval 0≤i<L, including i=0,1. The locally finite sums make the mean μ(L) continuous at integer support changes. Between them differentiation gives d times the covariance of i and (L−i)^(-1) under the positive normalized weights. Pairing terms makes it strictly positive, since both functions strictly increase on that support. Continuity across finitely many transitions in any bounded subinterval yields strict monotonicity throughout.",
+    "As L decreases to 1 the mass concentrates at i=0. The Riemann-sum limits for μ(L)/L are numerator 1/((d+1)(d+2)) and denominator 1/(d+1). Hence μ tends to infinity and takes every positive integer k. The strict support bound yields k<L_k and so L_k tends to infinity, with k/L_k→1/(d+2). At the exact mean, w_k/w_0=(1−k/L_k)^d, establishing the sharp limiting ratio. For d=1 independently checked the centered family L=3k+1 by exact rational summation for k=1,…,9.",
+    "For integer d the Minkowski inclusion of fibers yields positivity between positive fibers and concavity of the dth roots by Brunn–Minkowski. Thus translating the finite consecutive positive support matches the scalar indices. The actual base centroid is the weighted mean with exactly these fiber volumes and no contribution from zero-volume fibers. The cone inequality defines a compact convex body with interior, and its fiber-volume scale factor is the positive unit-ball volume; this factor leaves the mean and the weight ratio invariant.",
+    "The pinned source 273393b2aa6803aa hash matches. Its §§5–6, equations (6)–(7), give precisely the corrected center-root inequality, its powered bound, and exact centering and cone sharpness on the stated domains."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "73234f91aeecda16",
+      "candidate_sha256": "c1d4e47afa214bd112e97aba7e9b8aa21d436d2d73ef99bfa07078cf92e941f9",
+      "mapping": "Set p=d≥1 on exactly the scalar sequence in the statement. Divide its inequality by (d+2)W after Jensen.",
+      "reviewed_proof_sha256": "cee5b2a3b010b77d7b255de92e2f819081c9857532df89029a927c4bc4efcd64",
+      "reviewed_statement_sha256": "4866c4fff4d1b101441438aa82be9772887ba651cd06ba6cc860863509583bcd",
+      "status": "Same-wave frozen parent. Its independent review is APPROVED on these hashes. Admit it first."
+    },
+    {
+      "candidate_id": "4d24a4fbd205befd",
+      "candidate_sha256": "8075c295bd316ffb4bae29880db8969b4e9ff82c6487ed87113a224841dc3416",
+      "fact_id": "4d24a4fbd205befd",
+      "fact_sha256": "7ff80c3dc50a3eabc40b7d9dd539984f62f7d9743d5ee2cba07c5f480f0e631f",
+      "mapping": "Its exact integer-centering construction is proved for all real d≥1 with the same positive affine support; use continuity, monotonicity, and the μ(L)/L limit. Its geometric proof supplies consecutive positive support, dth-root concavity, and the ball-fiber cones for positive integer d. No cumulative tail bound is needed.",
+      "reviewed_proof_sha256": "ea3d181540a4ee76bb1e1b801bd9898a6c2f1da083b859e42e7614ae16593362",
+      "reviewed_statement_sha256": "6a68e0ff79eb5e087428b7547ad06937eafadc2e5ee87510f5dbffebbebb56e8",
+      "status": "Accepted at b9df7802ecad0edda8b411a145484010a4b7a695."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:43:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same centered concave-root profiles and same extremizing cones, but bounds cumulative masses in the two closed tails relative to W. The present result bounds the single marked fiber relative to the peak and adds a finite root correction. Lower bounds for the two closed tails do not isolate the mass of their shared atom.",
+      "fact_id": "4d24a4fbd205befd"
+    },
+    {
+      "comparison": "Same real-degree concave-root regime and integer mean, but bounds the two open tails outside a slab using W and the maximum weight. It provides no lower bound for the weight at the mean.",
+      "fact_id": "a45a11441b7d073a"
+    }
+  ],
+  "readability": "The symbol j in the scalar statement denotes the translated index when the actual positive integer-fiber interval starts elsewhere. The mean and its marked fiber translate together. The same accepted source provides two separate proof ingredients, exact centering and the geometric realization.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "37bce37568935d26f4422b1a3dcb410b625e2555f511cab527599cf3dfa0427b",
+  "reviewed_statement_sha256": "a8d790dc8eb914396969029f543b3d1f49c947543d78ebca7b8ff47ab3c360f3",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "273393b2aa6803aa": "ec1d8d947be58204ffd68bd05d7ef7739931a981e7ca89d092fc479ca18ef13e"
+  },
+  "started_utc": "2026-11-08T09:39:57Z",
+  "summary": "The powered-weight bound with its finite correction follows by Jensen at the integer mean. The sharp sequence and actual-body limits preserve exactly integer centering.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

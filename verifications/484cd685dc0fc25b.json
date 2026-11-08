@@ -1,0 +1,57 @@
+{
+  "candidate_id": "4b9225de716d7c79",
+  "candidate_sha256": "dea0d7b8397de004695f0ec8a716819ea2e67f317405c53a251af252bca6a7bd",
+  "checked_dependency_candidate_sha256": {
+    "bee3cc8e50a0dcea": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa"
+  },
+  "checks": [
+    "The seven inequalities bound the integer census to 36 triples in {0,1,2}×{0,1,2}×{0,1,2,3}. Exact substitution gives the thirteen printed sites, all on a supporting plane. The rational point (1/2,1/2,1) is strictly feasible and the four printed basis sites have affine rank three. Convexity of the defining region makes the lattice census complete in its own hull.",
+    "Independently read the frozen coordinate and coefficient tables and used exact Fraction row elimination on all two- and three-source choices. This reproduces all eleven rows including coefficients. Any nontrivial anchored representation can remove its target coefficient and renormalize the remaining sources. Its supports lie in a supporting plane, and taking extreme coefficient vectors reduces to affinely independent supports of size at most three. Thus no anchored relation is missed.",
+    "The eleven relation rows have rank eight. Each preserves the displayed g_0, and the homogeneous base columns with g_0 have rank five. The hypergraph formed by the eleven target-and-source sets is connected. This independently verifies the claimed entire Jensen space and the dependence-connected property.",
+    "Exact checking of all 715 nine-subsets gives the four printed convex-position subsets. Every one contains {1,2,3,5,6} and omits 4. The two disjoint midpoint pairs both give A_4, so after any single deletion one pair remains. The integer vector identity A_4=A_3+A_2−A_1 holds in all five coordinates and forces g(p_4) integral whenever the nine heights are integral.",
+    "If the chosen nine bases are not in convex position, Jensen preservation lifts a redundant point into the hull of the others. If they are in convex position, the forced extra point over p_4 defeats emptiness. A subset of a larger empty vertex set is again empty and in convex position. Thus the accepted finite-set lemma bounds the Helly number by eight, and the empty case is covered by the stated convention.",
+    "The archived verifier passes independently. The source sections 11867665f48c887c §§3–4 and e3932c47b953f7cd §§1–3 use the same coordinates, hollow census, feature values and kernel identity. No premise from the pending original thirteen-site note is needed because the frozen proof verifies them directly."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bee3cc8e50a0dcea",
+      "candidate_sha256": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa",
+      "fact_sha256": "d7fb8bf1055406ebcaa03906c37ae5c346a791238bfc82ab445225504cc670e3",
+      "mapping": "Use only the finite-set lemma from its proof, which bounds the convex-trace Helly number of any nonempty finite Euclidean set by its largest empty vertex set. Apply it to T_g⊂ℝ⁴ after ruling out all empty vertex sets of size at least nine. The separate same-parity midpoint hypothesis for the theorem's rank bound is not invoked.",
+      "reviewed_proof_sha256": "5f71717b77abc881a8566e239b260d568886b9968e0805f252142523621e3ddb",
+      "reviewed_statement_sha256": "b35d11bb8b5672e290f57d665efd27927629b295e5ae5d1e0655b22288a2bd12",
+      "status": "accepted fact at repository snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:42:07Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its general finite-set empty-vertex bound is the final tool. Its rank-three midpoint-closed graph theorem alone cannot be invoked for all filtered heights. For example g=g_0/2 retains p_0 and p_6 of the same coarse parity but excludes their midpoint p_3 of height 3/2. The retained graph has affine rank four, using four independent height-zero sites p_0,p_1,p_7,p_9 and p_6 of height 3.",
+      "fact_id": "bee3cc8e50a0dcea"
+    },
+    {
+      "comparison": "Its component and Helly bounds apply to the complete unfiltered rank-three base. The integrality condition changes the closed traces after filtering. The new certificate forces a particular kernel site to remain integral for each possible nine-point witness.",
+      "fact_id": "3d5f56b513c21fc4"
+    },
+    {
+      "comparison": "Its full integer canonical lift contains all thirteen sites and preserves base congruences. It gives no uniform Helly estimate for the proper rational-height filter considered here.",
+      "fact_id": "e557f3071b96c191"
+    }
+  ],
+  "readability": "The two disjoint midpoint pairs give a deletion-kernel witness, although for the accepted empty-vertex criterion only membership in the full nine-point hull is needed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a299ae27aa047bdad0161a7eb93691f3f5c64614582bec60cfe0ffd15f012698",
+  "reviewed_statement_sha256": "56c2ba3497334d9d518fd1918680fd946a4ad82756045a10d6c0f66c585fae43",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:37:37Z",
+  "summary": "The exact thirteen-point certificate exhausts all possible nine-point empty vertex sets and gives the bound for every rational Jensen height on this specific connected support.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

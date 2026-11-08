@@ -1,0 +1,38 @@
+{
+  "advances": "Ordinary simplex section with two unequal positive heights. The identities preserve the original section's coarea means and compare its two exact variance gaps.",
+  "author": "PK-research-agent",
+  "candidate_id": "7cae55c49007d765",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:38:34.554233+00:00",
+  "depends_on": [],
+  "draft_key": "two-positive-simplex-section-variance-identities",
+  "kind": "lemma",
+  "proof": "Let $G=\\sum_iY_i$ for the independent unit-rate exponentials and $U_i=Y_i/G$. The Jacobian factor $G^d$ makes $U$ uniform on the barycentric simplex, independent of $G$, which has the gamma density with shape $d+1$ and rate one. Write $L_0=\\sum_i c_iU_i$, so $V=G L_0$ and $F=\\Pr(V\\ge0)$. By coarea the density of $L_0$ at zero is the positive $(d-1)$-volume of its proper section divided by the full volume and by the height-gradient norm. The weighted density with weight $U_i$ at zero is $b_i$ times that density. These density functions are bounded and continuous at zero: the parallel slices, translated into one hyperplane, lie in a fixed bounded region and converge pointwise off the relative boundary of the section, a null set. Independence yields $f_V(0)=f_{L_0}(0)\\mathbb E(1/G)=f_{L_0}(0)/d$. The corresponding density weighted by $Y_i$ at zero is $f_{L_0}(0)b_i$, since $Y_i=GU_i$ cancels the conditional Jacobian $1/G$. Thus the coarea conditional mean equals $\\mu_i=d b_i$ in the original dimension. If a coefficient is zero, its independent phase has conditional mean one, and deletion leaves the other conditional means and $F$ unchanged.\n\nPut $A_0=pY_p+qY_q$ and $N_0=\\sum_j r_jY_j$. The density of $A_0$ at $u>0$ is $(e^{-u/p}-e^{-u/q})/(p-q)$ by convolution, and its survival probability is $(p e^{-u/p}-q e^{-u/q})/(p-q)$. Put $t_j=q/(q+r_j)$ and $Y=\\prod_j t_j$. Conditioning on $N_0$ and using the exponential Laplace transforms gives $F=(pX-qY)/(p-q)$ and $f_V(0)=(X-Y)/(p-q)$. The ratios $t_j/s_j=1-x_j$ and $1-x_j/h=t_j$ give the stated $F$ and $f_V(0)$.\n\nThe coefficient derivative of $F$ at a nonzero height $c_i$ is $f_V(0)\\mu_i$. For a positive height, condition on the positive phases and differentiate the distribution function of $N_0$ at $A_0>0$; the derivative is the expectation of $Y_i$ times the density of $N_0$ at $A_0$. That density is bounded and continuous on $(0,\\infty)$, so dominated convergence applies using the first moment of $Y_i$. The expectation is the coarea density weighted by $Y_i$ at zero, by conditioning and continuity at zero. For a negative height condition on the negative phases and differentiate the survival of $A_0$ at $N_0>0$, again using bounded density and finite first moments. The derivative in $c_i=-r_i$ has the opposite sign from the $r_i$ derivative. These arguments allow repeated negative heights.\n\nUsing $X_p/X=\\sum_j r_j/[p(p+r_j)]$, $Y_q/Y=\\sum_j r_j/[q(q+r_j)]$, and $X_{r_j}/X=-1/(p+r_j)$, $Y_{r_j}/Y=-1/(q+r_j)$, differentiation gives\n$$\n\\mu_q=\\frac1h-\\frac{\\rho}{1-\\rho}\\sum_j\\frac{r_j}{q+r_j},\\quad\n\\mu_p=-\\frac{1-h}h+\\frac{\\sum_j r_j/(p+r_j)}{1-\\rho},\\quad\n\\mu_j=\\frac{s_j-\\rho t_j}{1-\\rho}.\n$$\nThe identity $r_j/(p+r_j)=(1-h)x_j/[h(1-x_j)]$ and $1/E=\\rho/(1-\\rho)$ give the desired formulas for the means. Multiplying the negative means gives $XQ$ and every zero mean contributes one. Since $F(1-F)=XR/h$, both gap identities follow.\n\nFor the pair motion write $u=1-x_i$, $v=1-x_j$, so $uv=k$ and $u+v=T_0$. The pair's contribution to $B$ is $T_0/k-2$ and its contribution to $E^2Q$ apart from the fixed other factors is $(E+1)^2-(E+1)T_0+k$. Thus $W$ is a positive constant times the product of two affine factors, one with strictly positive slope and one with strictly negative slope. The corresponding product in $R$ is $(h-1)^2+(h-1)T_0+k$, so $R$ is affine and the asserted strict concavity follows.\n",
+  "source_candidate_ids": [
+    "16db32a020dc6379",
+    "f942bc6e02fdf1dd",
+    "fdab4307532951f8"
+  ],
+  "source_candidate_sha256": {
+    "16db32a020dc6379": "725f1daca30057db81769b3ff79098fcd9d8097068e806cfc41fa519dc57408a",
+    "f942bc6e02fdf1dd": "cef1735df99bbf1753a8c33ec0c46b4f33501430fc91dc93fb1605c3340c2e83",
+    "fdab4307532951f8": "6b377c41f6ebba4cc44d3facb911cb63f660afb16c6bfa8a23e6ff6ca824a9f8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fdab4307532951f8",
+      "locator": "§1, (2); §2, (3)–(4); §4, (5)–(6) and pair-motion paragraph"
+    },
+    {
+      "candidate_id": "f942bc6e02fdf1dd",
+      "locator": "§§1–2, (2)–(4) and §3, zero phases"
+    },
+    {
+      "candidate_id": "16db32a020dc6379",
+      "locator": "§2, exact omitted-$p$ scalar identity (4)"
+    }
+  ],
+  "statement": "For an integer $m\\ge1$ and $0\\le x_j\\le h<1$ with some $x_j>0$, put $\\rho=\\prod_j(1-x_j)$, $E=\\rho^{-1}-1$, and\n$$\nL=\\left(1-\\frac{\\sum_j x_j}{E}\\right)\\prod_j(1+x_j/E),\\qquad\nR=\\rho(E+h)\\left[1-\\frac{(E+h)\\prod_j(h-x_j)}{h^{m+1}}\\right].\n$$\n\nLet $T$ be a $d$-simplex, $d\\ge2$, with affine vertex heights $p>q>0$ at two vertices, $-r_j<0$ at $m\\ge1$ other vertices, and arbitrary remaining zero heights. Let $F$ be the volume fraction on the closed nonnegative side, $b_i$ the barycentric coordinates of the uniform section centroid, and $V$ the signed sum of independent unit-rate exponentials with these coefficients. Put\n$$\nh=1-q/p,\\quad x_j=\\frac{hr_j}{q+r_j},\\quad s_j=\\frac{p}{p+r_j},\n\\quad X=\\prod_j s_j,\\quad \\rho=\\prod_j(1-x_j),\\quad E=\\rho^{-1}-1.\n$$\nUse these $L,R$ at this vector and threshold, let $Q=\\prod_j(1+x_j/E)$, $B=\\sum_jx_j/(1-x_j)$, $C=B/(1-\\rho)-1$, and $W=(1-h)CQ$. Write $\\mu_i=d b_i$ and use $p,q$ to denote the two positive indices. Then\n$$\n\\begin{aligned}\nF&=\\frac{X\\rho(E+h)}h=\\frac{(E+h)\\prod_j(h-x_j)}{h^{m+1}},\n& f_V(0)&=\\frac{X(1-\\rho)}{p-q},\\\\\n\\mu_q&=\\frac{1-\\sum_j x_j/E}{h},\n&\\mu_p&=\\frac{(1-h)C}{h},\\\\\n\\mu_j&=s_j(1+x_j/E)\\quad(c_j=-r_j),\n&\\mu_i&=1\\quad(c_i=0),\\\\\n\\prod_{i\\ne p}\\mu_i-F(1-F)&=\\frac Xh(L-R),\n&\\prod_{i\\ne q}\\mu_i-F(1-F)&=\\frac Xh(W-R).\n\\end{aligned}\n$$\nFor any two negative indices $i,j$, with $h,E$, the other coordinates and $k=(1-x_i)(1-x_j)$ fixed, $W-R$ is a quadratic with strictly negative second derivative in $T_0=(1-x_i)+(1-x_j)$ on its feasible range.",
+  "subgoal_id": "pk-intake-two-positive-simplex-section-variance-identities",
+  "title": "Exact scalar formulas for the two positive omissions in a simplex section"
+}

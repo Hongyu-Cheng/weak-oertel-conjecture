@@ -1,0 +1,66 @@
+{
+  "candidate_id": "e3f83ba0d435a3a1",
+  "candidate_sha256": "22aac28e60965995e6a01b978c2fe64b4031af64a27175ff3ea4e5075dfe547e",
+  "checked_dependency_candidate_sha256": {
+    "03c59c70402b66a2": "203caca1aca221a0e3f86726b39424a44b99975d4c854d90d5c0381351f1796d",
+    "77b0317d0fcdcb0b": "4d9fbfca8407c8131c5d0ffd35ea48f52e46ffa54c632b7afa0fd1d26b5da343"
+  },
+  "checks": [
+    "Containment of -T in A gives every captured A mass at least |T|, hence at least b. Each critical cap has mass U_i+q_i since the B capture is null.",
+    "Exact finite-tilt equalization supplies U_i at most 2q_i without requiring captured-root equality, so U_i at most 2Q/3 and q_i at most Q-b.",
+    "Each cap family covers its respective continuous space by the zero sum of normals. Applying the ordinary centroid bound to one cap per fiber yields Gamma times |A| at most 2Q/3 and Gamma times |K| at most Q-b. The positive B mass gives the strict total inequality and 3/5 exceeds 1/2.",
+    "The original Grünbaum paper §3, proof of Theorem 2, supplies the centroid inequality with the exact dimension constant. A centroid-containing cap can be tightened parallel to the centroid if its boundary does not already contain it.",
+    "For an empty closed corner the compact coordinate image and the closed negative orthant have a positive attained distance. The closest-pair supporting vector is nonnegative and orthogonal to the closest orthant point by testing its rays, zero and twice that point. It therefore gives a uniform positive functional margin, and independence of the retained d normals gives a nonzero averaged normal.",
+    "The frozen cap chart and strict separator agree with 5dd69a77cceb0773 §5 and the closed case of 2adcc478e651c9c4 §1."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "203caca1aca221a0e3f86726b39424a44b99975d4c854d90d5c0381351f1796d",
+      "fact_id": "03c59c70402b66a2",
+      "fact_sha256": "56d4db67e145bd6b17cf364fed0702b117334f9a71047ec44d0ceb2e5b25d871",
+      "hypotheses": "Each original cap has nonzero continuous normal and attains the actual depth in the three compatible bodies. Substituting its B capture zero into U+V<=2q gives exactly the required inequality. No exact captured-root hypothesis is invoked.",
+      "reviewed_proof_sha256": "ce7915b177cf2f87db9d25474ff558393c7199bc470f631bec47c03537880dcb",
+      "reviewed_statement_sha256": "92fa5c45367bf4a6d69d23cc4551080f958177c0d9dbb97467e13fd83e046f1b"
+    },
+    {
+      "candidate_id": "77b0317d0fcdcb0b",
+      "candidate_sha256": "4d9fbfca8407c8131c5d0ffd35ea48f52e46ffa54c632b7afa0fd1d26b5da343",
+      "hypotheses": "The same spanning zero-sum normals define T and every closed corner is assumed nonempty in the first implication. Apply the reflected containment to A.",
+      "reviewed_proof_sha256": "baffc49be19ccbdec88744d7ea198b7f30a5977dad7adda6238892291d68fa2a",
+      "reviewed_statement_sha256": "d12bc124eae1334726a98d93ae6cf7adef74160acd18089cde312ecbc344af7f",
+      "status": "Independent same-wave parent approval required for admission."
+    },
+    {
+      "hypotheses": "Each selected cap contains the ordinary centroid of a full-dimensional convex d-body. Parallel tightening reduces to the through-centroid case with the exact factor (d/(d+1))^d.",
+      "reference": "Branko Grünbaum, Partitions of mass-distributions and of convex bodies by hyperplanes, Theorem 2 and §3",
+      "url": "https://msp.org/pjm/1960/10-4/pjm-v10-n4-p18-s.pdf"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:03:37Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Obtains a depth margin from a quantified captured-root deficit and middle cover. Exact captured-root equality is impossible here with B capture zero and Q>0 in d>1, and the needed small deficit is not assumed. The new statement uses actual closed-corner containment and derives strict separation.",
+      "fact_id": "dfffa3e70be598b6"
+    },
+    {
+      "comparison": "Requires a small A contained in T and two other identical simplex fibers. It does not cover the null B traces, proper A traces and residual corners of this statement.",
+      "fact_id": "98603e266680b22d"
+    }
+  ],
+  "readability": "The definitions, scope, and proof order are clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1ecf4ecbaf296be80996cf8c41a667586e7dd80fdd15a7189a43e09b10479cd1",
+  "reviewed_statement_sha256": "5ab1b2b8333882a6efc80ee873a93014dba96c5d70c0c851c42a7f29e0efba58",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:00:38Z",
+  "summary": "The genuine critical cap assumptions imply the strict depth margin when all closed corners occur, and an empty closed corner yields a strict averaged-normal separator.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

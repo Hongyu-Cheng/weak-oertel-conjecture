@@ -1,0 +1,64 @@
+{
+  "candidate_id": "2b5f8afe26027493",
+  "candidate_sha256": "8b23fda7388ad1947d2f3920988a7e2fae6ce3800d9f0a21ec279c152acd9faa",
+  "checked_dependency_candidate_sha256": {
+    "6d6fcf377e68c79c": "d5b251e75567aff3da9f0767d89121ad75927a3913df28543a8b5083e25ae135",
+    "c74ffab8666d5d3d": "55fd735512fdd8431877054d2a5a6680814d898370b565362274f119f01a4270"
+  },
+  "checks": [
+    "Sections 2–3 of 81d3a9207b6b68f5 match the raw depth, full-occurrence convention and separate own atom.",
+    "Every qualifying group meets every containing halfspace, giving the upper bound. In an optimal minimal-support packing any available singleton is saturated and no other minimal group uses its vertex.",
+    "Unused positive-capacity sites cannot contain z in their convex hull, since a small additional qualifying group would fit. Strict separation permits a through-z halfspace avoiding all of them, and a small generic perturbation avoids all other sources on the cutting plane. Thus every source in the halfspace is saturated.",
+    "A minimal nonsingleton group has a convex representation of z with every coefficient positive and must meet both sides of the generic cut. The predecessor bounds its total number of vertices by n+1, so at most n of its charges are counted there. The own atom is counted once, giving the exact additive coefficient (n−1)w_z.",
+    "For lattice-complete P the atomic center has positive depth and hence lies in the support hull, so it is a candidate in P. Unit weights give the integer ceiling and own mass one. In n=1 the opposite rays yield the equality and the weighted median source, and n=0 charges the single available atom."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c74ffab8666d5d3d",
+      "candidate_sha256": "55fd735512fdd8431877054d2a5a6680814d898370b565362274f119f01a4270",
+      "hypotheses": "The same real sites, mark and nonnegative capacities meet the finite incidence predecessor. Its attained optimum on inclusion-minimal groups and its n+1 arity bound are used exactly. Admission requires the pinned same-batch predecessor's separate approval.",
+      "reviewed_proof_sha256": "c5f27b20b6f5638a52904642f2533c397d8f64d1caba504fb6ba129a8731616f",
+      "reviewed_statement_sha256": "9df86a80b42e9ec7acd2ace16ea8a493d879e13d290fdf67e58c4a99dcd00dd8"
+    },
+    {
+      "candidate_id": "6d6fcf377e68c79c",
+      "candidate_sha256": "d5b251e75567aff3da9f0767d89121ad75927a3913df28543a8b5083e25ae135",
+      "fact_id": "6d6fcf377e68c79c",
+      "fact_sha256": "4d94a57facfebf6c82ff6ff9114186ef0d95d819e68e571362b809791b3cbd49",
+      "hypotheses": "Its atomic lattice specialization allows continuous dimension zero, so the finite Borel law supported on Z^n has a lattice mark of raw halfspace depth at least M/2^n.",
+      "reviewed_proof_sha256": "7b1c76f7e78b71fdef6d5a75876ba714d998cee6a393ffb48aa08960ed54c0e1",
+      "reviewed_statement_sha256": "b2bc93a951e05e00ca3866e069596a76bf19c112204a2e97726cd7db8c449ae4"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:57:45Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Compares a root-cost incidence packing to an integral hitting set by the arity factor n+1. Its threshold-priced dual does not give the generic saturated halfspace bound or the own-atom improvement.",
+      "fact_id": "7fa5a28fe1ac6893"
+    },
+    {
+      "comparison": "Its affine-potential complete line tables give the same line formula when all costs vanish. The reviewed pointwise statement is for arbitrary real weights and targets and adds the higher-dimensional bound.",
+      "fact_id": "4f506516705b9961"
+    },
+    {
+      "comparison": "Gives atomic lattice halfspace depth directly. A separate capacity argument is needed to compare fractional packing with that depth.",
+      "fact_id": "6d6fcf377e68c79c"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, pinned source and dependency check, scope comparison and applicable exact arithmetic",
+  "reviewed_proof_sha256": "9ac5ce0c7391b24d0abaf65a0ed3e4cde3987f0b3ccaf862c5eb6dd09d86f3ae",
+  "reviewed_statement_sha256": "cadeb8c797ca6f10e905e28a8bdc4f2e3890796673c586c09ca583e939bc4046",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:52:23Z",
+  "summary": "The chosen separating halfspace counts at most n vertices of each nonsingleton group and gives the own-atom improvement. The lattice and exact line conclusions have the stated scope.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

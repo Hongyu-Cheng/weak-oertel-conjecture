@@ -1,0 +1,34 @@
+{
+  "advances": "A compatible finite path for one original-measure, four-fiber two-source tie. Equal endpoint losses fail there; the result uses a specific relative rate.",
+  "author": "PK-research-agent",
+  "candidate_id": "9f46f560e73c988f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.783612+00:00",
+  "depends_on": [
+    "60c79c3888d7b2b1"
+  ],
+  "draft_key": "four-interval-shared-endpoint-tie-path",
+  "kind": "theorem",
+  "proof": "The lower endpoint sequence is convex and the upper endpoint sequence concave at $u=v=0$ by their successive differences. Shrinking either extreme raises its lower endpoint and lowers its upper endpoint, preserving the corresponding second-difference signs. Linear interpolation of the two roofs gives a convex body with exactly the specified integer fibers, even at the singleton parameters. Summing lengths gives $M$.\n\nThe following four actual caps bound the depth everywhere:\n$$\nx-(z-1)\\ge-u/2,\\quad -x-(93/100)(z-1)\\ge u/2,\\quad\nx+2(z-2)\\ge0,\\quad -x+2(z-2)\\ge0.\n$$\nFor the first cap, the included pieces are all of $K_0$ and the upper part of $K_1$ cut at $-u/2$. For the second, the included piece is the lower part of $K_1$ at that mark. Substitution of the endpoints over the whole rectangle gives these same statuses (in particular, the second cap excludes $K_2$ since its threshold on $x$ is at most $-93/100<-23/25$). The two masses are $Q_1$, and the caps together cover every line with $z\\le1$, since their two margins sum to $-(193/100)(z-1)$. The last two caps each cut $K_2$ in half and include $K_3$, excluding $K_0,K_1$, giving mass $Q_2$. Their margins sum to $4(z-2)$, so they cover every line at $z\\ge2$.\n\nFor all-normal lower bounds at the two marks, write the endpoints as $l_i,h_i$. The upper cap through $(p,x)$ with slope $t$ has mass\n$$\nF_p(t)=\\sum_i \\min\\{h_i-l_i,\\max(0,h_i-x-t(i-p))\\}.\n$$\nThe lower cap has mass $M-F_p(t)$ because its boundary has zero length in every fiber. The only knots are the two endpoint slopes at each $i\\ne p$. The tails are constant and the function is affine between knots. Substitution gives the following tables in nondecreasing slope order:\n\n| $t$ at $(1,-u/2)$ | $F_1(t)$ |\n|---|---:|\n| $-26/25$ | $151/50+u/2-v$ |\n| $-47/50-u$ | $78/25-u/2-v$ |\n| $-23/25+u/2$ | $78/25-u/2-v$ |\n| $(u+v)/4-9/200$ | $449/200-u/4-5v/4$ |\n| $(u-v)/4+9/200$ | $79/40-u/4+v/4$ |\n| $23/25+u/2$ | $11/10-u/2$ |\n\n| $t$ at $(2,0)$ | $F_2(t)$ |\n|---|---:|\n| $-1$ | $11/10-v$ |\n| $-13/25+u/4$ | $79/50+u/4-v$ |\n| $-47/100-u/4$ | $173/100-5u/4-v$ |\n| $-9/100+v/2$ | $211/100-u-v/2$ |\n| $9/100-v/2$ | $211/100-u-v/2$ |\n| $11/10$ | $78/25-u$ |\n\nThe order and $Q_p\\le F_p(t)\\le M-Q_p$ in each row follow by testing the four vertices of the parameter rectangle, since each adjacent slope difference and each slack is affine. Coincident knots at a collapsed endpoint agree. The lower and upper bounds are attained. Pure base caps through either mark contain its whole own interval, whose length exceeds $Q_p$. Any containing cap can be tightened to a through-point cap. This proves the restricted lower bounds, and the full-set cover proves equality and the global formula.\n\nThe condition $Q/M\\le55/211$ is equivalent to the two linear comparisons obtained by substituting $Q_1$ and $Q_2$ separately. Simplifying gives $101u\\ge110v$, $156v\\ge55u$. On the positive diagonal the maximum is $Q_1$, giving the claimed increase after subtracting $55/211$. On $v=u/2$ the two branches are equal. Differentiating $(11/10-u/2)/(211/50-3u/2)$ gives the stated negative derivative and the terminal values. During this piece the left endpoint has raw depth at most $(1/10-u)/2$, since a sufficiently tilted cap excludes the other fibers and bisects its own interval at its midpoint (for any other candidate choose the shorter side through that candidate). It is never deepest.\n\nThe endpoint locations vary affinely, so their lifted convex hull is Hausdorff-continuous, including at collapse. At collapse the zero-length extreme has depth zero, by $z\\le0$. Intersect the terminal body with $z\\ge t$, $0\\le t\\le1$, preserving all positive fibers and all cap masses. This is continuous in Hausdorff distance: if a point is lost as the threshold increases, it can be moved to the new plane along the segment to a fixed point at base 3, by a proportion at most the threshold change divided by 2. The remaining positive widths are $21/10,46/25,13/100$ at consecutive bases 1, 2, 3, which are now the only nonempty integer fibers. Apply accepted fact 60c79c3888d7b2b1 to the pruned body. It gives the last continuous nonincreasing segment and the stated endpoint.\n",
+  "source_candidate_ids": [
+    "75dd33535e246a34",
+    "942427a6ff06c7e1"
+  ],
+  "source_candidate_sha256": {
+    "75dd33535e246a34": "eb3ef24f18414db17f608d53037ce4355a2db196f537768b1e31b7aafebca47b",
+    "942427a6ff06c7e1": "0c4d6131b1ff5bdfc3e2ddbc9efe705d6df305e0cf84f30d8280d3fd79d1b44e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "942427a6ff06c7e1",
+      "locator": "Proof §§1–4, (1)–(9), including the terminal pruning paragraph"
+    },
+    {
+      "candidate_id": "75dd33535e246a34",
+      "locator": "§§1–3, initial four-fiber body and zero-loss clipping calculation"
+    }
+  ],
+  "statement": "At integer bases $0,1,2,3$, use the actual intervals\n$$\n[47/50+u/2,26/25-u/2],\\quad[-11/10,1],\\quad[-23/25,23/25],\\quad[-9/100+v/2,9/100-v/2],\n$$\nwhere $0\\le u\\le1/10$ and $0\\le v\\le9/50$. They are compatible, including when an endpoint becomes a singleton. The total mixed length is $M=211/50-u-v$, and the maximum raw closed-halfspace depth is $Q=\\max(Q_1,Q_2)$, where the restricted maxima at bases 1 and 2 are $Q_1=11/10-u/2$ and $Q_2=11/10-v$, attained at $(1,-u/2)$ and $(2,0)$, respectively. The normalized depth $Q/M$ is at most $55/211$ exactly when $101u\\ge110v$ and $156v\\ge55u$. Equal positive losses $u=v=t$ increase it by $(9t/100)/[(211/50)(211/50-2t)]$. The path $v=u/2$ strictly decreases it, with derivative $-(23/50)/(211/50-3u/2)^2$ in $u$, to mass $407/100$, raw depth $21/20$, and normalized depth $105/407$ at $u=1/10$. This path extends continuously and with nonincreasing normalized depth to two equal positive adjacent intervals and a third singleton, with normalized depth $1/4$.",
+  "subgoal_id": "pk-intake-four-interval-shared-endpoint-tie-path",
+  "title": "Exact endpoint rates and a monotone path for four interval fibers"
+}

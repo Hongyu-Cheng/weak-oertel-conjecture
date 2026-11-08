@@ -1,0 +1,33 @@
+{
+  "advances": "Local section-centroid rigidity in an ordinary tetrahedron under an explicit strict stiffness condition, with one verified rational reference.",
+  "author": "PK-research-agent",
+  "candidate_id": "43c87300b078e14e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:01:39.479871+00:00",
+  "depends_on": [
+    "1462fa9ce6ced54e",
+    "238906fb08a2b14c"
+  ],
+  "draft_key": "tetrahedral-balanced-triple-local-rigidity",
+  "kind": "theorem",
+  "proof": "Let $g(t)$ be the difference between the third and fourth barycentric coordinates of the actual section centroid of row $t$. It is smooth on each strict sign cell by the reciprocal centroid formula of tetrahedral-quadrilateral-section-calculus. That lemma gives $g=(P_3-P_4)/S$. At $C_i$ the numerator vanishes by exchange symmetry, so the derivative of $g$ in direction $e$ is $J_i$. The same section is obtained under sign reversal and nonzero scaling. Consequently the derivative of $g$ at $\\lambda_i C_i$ is $J_i/\\lambda_i$ in direction $e$, and the derivative at $-\\lambda_i C_i$ is $-J_i/\\lambda_i$ in that direction.\n\nIn a nearby balanced triple, write the third and fourth entries of row $i$ as $m_i+\\varepsilon_i$ and $m_i-\\varepsilon_i$. Balance is equivalent to the sums of the two first-coordinate columns, the means $m_i$ and the differences $\\varepsilon_i$ each vanishing. Thus take the first two columns and the means, subject to these linear constraints, as remaining parameters, and set $\\varepsilon_2=-\\varepsilon_1-\\varepsilon_3$. Let $g_i$ be $g$ evaluated on row $i$. With $k_1=J_1/\\lambda_1$, $k_3=J_3/\\lambda_3$ and $k_2=-J_2/\\lambda_2$, the derivative of $(g_1-g_2,g_3-g_2)$ with respect to $(\\varepsilon_1,\\varepsilon_3)$ at the base triple is\n$$\n\\begin{pmatrix}k_1+k_2&k_2\\\\k_2&k_3+k_2\\end{pmatrix}.\n$$\nIts determinant is $k_1k_3[1+k_2(1/k_1+1/k_3)]<0$ by the assumed strict inequality. For every nearby choice of the remaining parameters, $\\varepsilon_1=\\varepsilon_3=0$ solves the two equations because each section then has equal third and fourth centroid coordinates by symmetry. The implicit-function theorem makes it the only nearby solution. A common actual centroid necessarily solves these two equations, giving the claimed rigidity. Reversing all margins preserves centroids and balance.\n\nFor the reference triple, order the positive representatives by $p_i$ and move the negatively oriented row to the middle. Then $(p_i,q_i)$ are $(1/5,1/2),(7/20,7/20),(1/2,1/5)$ and $(\\lambda_1,\\lambda_2,\\lambda_3)=(1,2,1)$. The reciprocal diagonal coordinates are respectively $(5,2,1,1)/9$, $(10/27,10/27,7/54,7/54)$ and $(2,5,1,1)/9$. The centroid formula gives the stated common centroid, and direct addition gives the required balance.\n\nTo evaluate $J_i$ from the actual centroid derivative, put $L=1/p_i+1/q_i+2$ and let $(x,y,z,w)$ denote the diagonal point at $C_i$. Under the perturbation $C_i+\\varepsilon e$, the unnormalized last two reciprocal heights are $1/(1-\\varepsilon)$ and $1/(1+\\varepsilon)$, so $(z-w)'=2/L$ at zero. Applying the exact difference identity of tetrahedral-section-within-pair-ordering (with indices shifted from zero to one) gives\n$$\nJ_i=\\frac{2[xy-(xy-zw)^2]}{3L(x+z)(x+w)(y+z)(y+w)}.\n$$\nThe three rational diagonal points give $J_1=J_3=1/6$ and $J_2=371/2187$. Thus $\\lambda_1/J_1+\\lambda_3/J_3=12>4374/371=\\lambda_2/J_2$. The reference triple satisfies the same conditional result, whose neighborhood can be intersected with the normalization slice.\n",
+  "source_candidate_ids": [
+    "10adf9a7fb0db7a1"
+  ],
+  "source_candidate_sha256": {
+    "10adf9a7fb0db7a1": "f10db1a3d4b6ec0b0c1de4652b9f5c24b3260b016b65291579b63b1244e1fb52"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "10adf9a7fb0db7a1",
+      "locator": "§§1–2, reference (1) and its local conclusion"
+    },
+    {
+      "candidate_id": "10adf9a7fb0db7a1",
+      "locator": "§3, (6)–(8), antisymmetric Jacobian under the strict stiffness inequality"
+    }
+  ],
+  "statement": "Let three strict quadrilateral section margins of a tetrahedron sum to zero and have the form $c_1=\\lambda_1 C_1$, $c_2=-\\lambda_2 C_2$, $c_3=\\lambda_3 C_3$, where $C_i=(p_i,q_i,-1,-1)$ with $p_i,q_i>0$, $p_1<p_2<p_3$, $\\lambda_i>0$, and $\\lambda_2=\\lambda_1+\\lambda_3$. Suppose their actual section centroids are a common $(a,c,B,B)$ with $a,c>1/3$. For signed height vector $t$, write $P(t)=\\Pr(t\\cdot\\Xi\\ge0)$ for uniform tetrahedral barycentrics $\\Xi$. Let $S(C_i)$ be the normalized coarea at $C_i$, let $e=(0,0,1,-1)$, and set $J_i=e^{\\mathsf T}\\nabla^2 P(C_i)e/S(C_i)$. Assume $J_i>0$ and $\\lambda_1/J_1+\\lambda_3/J_3>\\lambda_2/J_2$. In a neighborhood of this triple, every balanced triple of raw margins whose actual section centroids coincide has equal third and fourth entries in each row, and equal third and fourth common centroid coordinates. The conclusion persists under simultaneous orientation reversal.\n\nIn particular, this conclusion applies in a neighborhood of the ordered reference rows $(1/5,1/2,-1,-1),(1/2,1/5,-1,-1),(-7/10,-7/10,2,2)$, whose common section centroid is $(10/27,10/27,7/54,7/54)$. It also applies in the slice that normalizes the fourth entry of the first row to $-1$.",
+  "subgoal_id": "pk-intake-tetrahedral-balanced-triple-local-rigidity",
+  "title": "Local equal-height rigidity for a balanced tetrahedral triple under a stiffness inequality"
+}

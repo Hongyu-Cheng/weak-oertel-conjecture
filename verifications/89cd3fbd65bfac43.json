@@ -1,0 +1,111 @@
+{
+  "candidate_id": "88f06d5537aba0ae",
+  "candidate_sha256": "f41ba7eadf13bea08f62143bc45b97cfca61df4bc48425785b955f08613dbdba",
+  "checked_dependency_candidate_sha256": {
+    "32418f8d50e792af": "3c39c9106a90d8a9377a683bd67087e1cce357770bc10e2434af93eacbd5e2fc",
+    "a83339dae406ffd6": "1a4d61b480ab4c8f241bfe73e31d6c92966d5ebaf5a6f0776a9060dd7c267cd7"
+  },
+  "checks": [
+    "The first variation over all nonvertical normal parameters is feasible before positive normalization. The width derivative is the covariance-norm differential and the fixed mark buffer does not vary. Using m_0=hq−b(Y) gives the two stated moment equations with the correct sign of A.",
+    "Every fixed normal tail is continuous and nonincreasing. At an attaining positive-strip threshold its derivative is negative, excluding any other threshold of the same mass. The right-quantile inequalities are convex on the hull because b is concave. A pure-base cap containing a convex combination contains at least one positive-weight input, and a parallel cap through that input is contained in it. Thus integer-base combinations of deepest marks are deepest.",
+    "Equality in the weighted quantile inequalities fixes exactly the same geometric cap, positive S, and moments at all inputs. Its base moment makes their bases coincide. The strip barycenter Z is in C at that base and has A/S<0 because the uniform ramp derivative is supported on the open negative strip and S>0.",
+    "The continuous moments put every input at Z+t∇Γ(u) with t=b(Y)−A/S>0 and b(Y)=t+A/S. If 0<t_1<t_2, concavity at the first point between Z and the second yields (1−t_1/t_2)b(Z)≤(1−t_1/t_2)A/S. This contradicts b(Z)≥0. The factor is positive, and no strict concavity of b or compact active set is needed.",
+    "Source 0fa64553cd01d7ae §3 gives the same cap moments and integer-base argument, and 6e754f2bf13bdbd1 §2 provides the zero-buffer singleton case. The revised strip argument proves the broader same-base claim. Singleton fibers, empty lattice hull, and distinct occupied parities follow from the no-combination result."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "a83339dae406ffd6",
+      "candidate_sha256": "1a4d61b480ab4c8f241bfe73e31d6c92966d5ebaf5a6f0776a9060dd7c267cd7",
+      "fact_sha256": "d9101c496733d0f2d099adc50b64afadd337af780b21e67b9674538e90ce8e56",
+      "kind": "accepted",
+      "mapping": "Use its first normal stationarity calculation for the same uniform ramp, finite positive d-volume fibers, positive covariance norm, locally minimizing nonvertical normal, and scalar b=b(Y) fixed at the mark.",
+      "reviewed_proof_sha256": "d1478f25beb122a249c550caf3c146f38cd1e9cf73aad7e704beccab30ac2d99",
+      "reviewed_statement_sha256": "6fa14d8402527bc9f9233fdf7de948f34f48792376b9379e95e14552efe79f1b"
+    },
+    {
+      "candidate_id": "32418f8d50e792af",
+      "candidate_sha256": "3c39c9106a90d8a9377a683bd67087e1cce357770bc10e2434af93eacbd5e2fc",
+      "fact_sha256": "8dc1682478d2f8ba9351b02e52b1a3c7bf20f946f761764a98147935cad967ed",
+      "kind": "accepted",
+      "mapping": "For compatible positive fibers on the finite complete base its tied profile f is continuous, nonnegative and jointly concave on the same canonical hull. Hence both b=εf and b=0 satisfy the buffer hypotheses.",
+      "reviewed_proof_sha256": "b79b088456e923173d9dd3c455bf8602b9878b59df803e4d6e3437c1d44fbcd7",
+      "reviewed_statement_sha256": "39556181f84fa46dccef6c3ad49aeb0ff2c9fa7337f3cf9d07a89c014574c2f6"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:54:12Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "88f06d5537aba0ae",
+    "candidate_sha256": "176af33aa0d757b5bd8c47d69fc35dcb5f90c20e66d27589ddd256f607c7944b",
+    "checks": [
+      "Fixed-mark full-normal differentiation gives S times the mark minus the effective strip moment. With m_0=hq−b and Γ=1, the sign is m_cont/S=y−(b−A/S)∇Γ. Base derivatives give m_base=Sp exactly.",
+      "A positive S makes the tail locally strictly decreasing and forces its global Q threshold to be unique by monotonicity. All nonvertical Q-level mark inequalities are convex and pure-base constraints pass to a convex combination by the contained translate through a captured input mark.",
+      "Equality of the weighted through-mark thresholds gives the same actual cap at all contributing deepest marks. Its fixed positive S and m_base force all their bases equal. Therefore the base hull is empty and has distinct parities even before settling same-fiber uniqueness.",
+      "For same-base marks the written formula only gives y_1−y_0=(b_1−b_0)∇Γ. The strip barycenter lies in the canonical hull at the same base. Applying concavity along the resulting line supplies the missing contradiction using A/S<0.",
+      "The frozen source-candidate hashes match the original source bytes on the pinned repository snapshot."
+    ],
+    "dependencies": [
+      {
+        "fact_id": "a83339dae406ffd6",
+        "kind": "accepted",
+        "mapping": "Use the accepted first normal derivative for the same uniform ramp, fixed b(Y), positive covariance and locally minimizing nonvertical normal. All normal variations remain feasible at u≠0."
+      }
+    ],
+    "finished_utc": "2026-11-08T15:50:59Z",
+    "issues": [
+      {
+        "defect": "For a general nonnegative concave b, the continuous moment equality directly fixes only y−b(Y)∇Γ, so equal strip data do not by themselves establish equal marks on one base.",
+        "proof_locator": "Last proof paragraph, sentence asserting the moment equations force all contributing marks to coincide",
+        "severity": "substantive",
+        "smallest_repair": "If two marks are distinct, reorder them so y_1=y_0+t∇Γ with t=b_1−b_0>0. The strip barycenter Z=m/S belongs to the canonical hull at base p and equals y_0+t_0∇Γ with t_0=A/S−b_0<0. Concavity on the line through Z,y_0,y_1 puts b(Z) below the secant extrapolation b_0+t_0=A/S<0, contradicting b≥0. This closes the general result. Alternatively narrow same-base uniqueness to zero buffer or strict own-fiber concavity. Declare the accepted tied-profile fact 32418f8d50e792af if retaining the final specialization by explicit reference."
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its first-derivative computation already implies the displayed moments; it does not establish this source hull and singleton statement.",
+        "fact_id": "a83339dae406ffd6"
+      },
+      {
+        "comparison": "The zero-width buffered interpolation can retain several anchored maximizing bases. It has different hypotheses and does not rule them out by one actual positive-width strip centroid.",
+        "fact_id": "e8e124ecdebead25"
+      }
+    ],
+    "readability": "The original positive-buffer source uses strict own concavity for same-base uniqueness; its companion uses the exact b=0 moments. The draft's larger scope has the short repair above.",
+    "reviewed_proof_sha256": "05d5a59b363a689372855b05c00bd80d84222a8a9eb8c62b6a96b33e142c4ca7",
+    "reviewed_statement_sha256": "053b2cf4a257cd7f7555e6f60220d97d7c06660112c333a3b12134d93502383b",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T15:44:33Z",
+    "summary": "The full cap moments and distinct-base obstruction are correct. The frozen proof of singleton marks for a general concave nonnegative buffer skips the necessary same-base strip-barycenter argument.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its first-variation proof implies the individual cap moments, but gives no positive-width source hull or general concave-buffer singleton theorem.",
+      "fact_id": "a83339dae406ffd6"
+    },
+    {
+      "comparison": "Uses strict-gap right quantiles in a different zero-width buffered model, where anchored combinations of deepest bases can persist.",
+      "fact_id": "e8e124ecdebead25"
+    },
+    {
+      "comparison": "Obtains an empty maximizing hull for ordinary depth under null supporting sections. The present result uses positive uniform smoothing and exact strip moments under different hypotheses.",
+      "fact_id": "286b2220d4bcff4f"
+    }
+  ],
+  "readability": "The ray starts at the actual strip barycenter. This supplies the nonnegative buffer value needed for the secant comparison and avoids assuming the ordinary mark is the strip barycenter.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ffa0af850062e8a522397d1d1c10fa7b8a3d83ed338a1160df510c73049ca1f0",
+  "reviewed_statement_sha256": "053b2cf4a257cd7f7555e6f60220d97d7c06660112c333a3b12134d93502383b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "176af33aa0d757b5bd8c47d69fc35dcb5f90c20e66d27589ddd256f607c7944b",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:50:18Z",
+  "summary": "The revised proof establishes the full active-cap moments and singleton deepest sources for every nonnegative continuous concave buffer in the stated uniform-ramp setting.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

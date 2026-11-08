@@ -1,0 +1,70 @@
+{
+  "candidate_id": "9ea361b625acb6f8",
+  "candidate_sha256": "93bd2f302e6ff1e501cacdc3eceec45d22e71878bcaa00c063e1e8d76a08ef9e",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The candidate ID, source hashes, dependencies and other metadata match the original. Both mathematical fields now display the nonnegative hypotheses, the actual ramp and open strip, the derivative, the proportional rank relation, and the finite-retargeting formulas with proper TeX.",
+    "For fixed nonzero u and positive h, the two breakplanes are d-volume-null in each positive fiber, so bounded difference quotients give the derivative ∑_z S_z a′·(z−p). The actual minimizing a makes it zero. The simplex columns span the n-dimensional base and have kernel spanned by the strictly positive barycentric vector, so the outside strip vector is tα with t≥0.",
+    "When t=0, absence of a positive-volume open strip forces each continuous affine range to lie in a single saturated branch, since an open strip intersecting a full-dimensional convex body also intersects its interior. Missing all outer fibers would give h_Kp(u)≤u·y−b−h by weighted thresholds and Minkowski equality, contradicting the interior mark.",
+    "For each chosen outer vertex the centered barycentric functional has strictly positive sign there and strictly negative sign at the other outer vertices. Its finite large multiple captures only the chosen outer vertex fully and leaves the p contribution unchanged. Thus minimizing a gives outside mass at most V_min. If t=0 some positive outer fiber is fully captured, forcing exactly one least-volume vertex and allowing finite retargeting. The assumed complete base consists only of these vertices and p.",
+    "An independent exact interval check on the complete bases −1,0,1, all fibers [−1,1], and u=1, y=b=0, h=1/4 gives zero outside strip and outside mass 2 at tilt 2. At every tilt the opposite thresholds at the unshifted level sum to capture 2, and each outward shift increases their sum weakly. The tilt-2 cap is therefore minimizing at fixed u."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T19:32:33Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "9ea361b625acb6f8",
+    "candidate_sha256": "6c6f090c1eb23165df5f5cecc23926a8c5b424e496c3ab58ee3df71cfb250a32",
+    "checks": [
+      "Compared 185cda33ce4bd35f §§1–2, (1)–(2). Under fixed u and width, differentiating the bounded ramp away from the two d-volume-null breakplanes gives sum_z S_z a′·(z−p). At the actual tilt minimum this is zero. The simplex columns have rank n and unique positive kernel ray spanned by α.",
+      "When all outside transition volumes vanish, every full-dimensional convex outer fiber is entirely captured or entirely missed. The linear functional takes an interval of values; an open ramp value would occur at an interior point and have positive volume. Exact Minkowski equality and the weighted threshold identity exclude all fibers missed, since then h_Kp(u)≤u·y−b−h, contrary to own interiority.",
+      "The base barycentric affine functional minus its value at p is positive at the chosen vertex and negative at all others. A finite large coefficient isolates precisely that vertex without changing own contribution. At the tilt minimum this gives the outside bound V_min. A zero-strip cap must therefore capture exactly one cheapest vertex. The assumed complete base census consists of precisely the vertices and p, so no unseen outside fiber enters.",
+      "Independently inspected the frozen bytes. The displayed scalar conditions, strip definition and linear derivative contain visible text such as 'dge1', 'sum_jalpha_j', 'K_zcap{...}', and 'a′cdot', where the source contains mathematical commands."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T19:29:52Z",
+    "issues": [
+      {
+        "defect": "The frozen export strips LaTeX commands for dimension and sign inequalities, barycentric weights and summations, the source interior and strip membership, the dot product, and the minimum and barycentric functional. The literal strip braces and derivative expression are not renderable as the intended formulas.",
+        "locator": "Statement, both paragraphs; Proof, first through last paragraphs",
+        "repair": "Restore the backslashes and set braces in both fields, preserving the mathematical text, and verify the decoded JSON renders the original formulas before refreezing.",
+        "severity": "blocking"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "The accepted four-fiber triangle construction has explicit saturated outside patterns. It uses different base geometry and does not imply this simplex-base positive-kernel dichotomy or retargeting of every zero-strip cap.",
+        "fact_id": "9e1d1c1a0869031a"
+      }
+    ],
+    "readability": "Restore the statement and proof math commands from the source and review the corrected bytes. The intended proof needs no new mathematical premise.",
+    "reviewed_proof_sha256": "30f008b221a82fc8b9bbbe053c774d72dec4b97459d80849d9924b7904551382",
+    "reviewed_statement_sha256": "eb012dd8884757e270cc885b0ad3163ebc1c4de98683eeda3868b5cdb23c4298",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:24:54Z",
+    "summary": "The intended rank and saturation argument is valid, but the frozen statement and proof have stripped math commands and malformed set notation.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This accepted four-fiber triangle example has explicit saturated outer patterns. It does not give the simplex-base rank formula or the retargeting conclusion.",
+      "fact_id": "9e1d1c1a0869031a"
+    }
+  ],
+  "readability": "The revised derivative, support contradiction, and outside set census are explicit. The revision resolves the exact-input export issue without changing the mathematical argument.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2223ec96e0750edf95354007410403813337f84066622ae5ec52079f0e703e69",
+  "reviewed_statement_sha256": "fb3d8d2623cd2328f9e13ce710f9f4b404e19df1e9660ee45377c513f7664e33",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "6c6f090c1eb23165df5f5cecc23926a8c5b424e496c3ab58ee3df71cfb250a32",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:31:12Z",
+  "summary": "The linked revision restores the malformed mathematical export. The complete simplex-base rank, zero-strip saturation and finite retargeting proof is correct on the stated fixed-width cap class.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

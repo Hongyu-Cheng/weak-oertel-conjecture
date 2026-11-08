@@ -1,0 +1,26 @@
+{
+  "advances": "Geometric envelope contact for one sampled integer coordinate under the pushforward of original fiber volumes. It assumes no actual deepest-source or critical-cap equations.",
+  "author": "PK-research-agent",
+  "candidate_id": "b6b303900dccfd66",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:33:00.811285+00:00",
+  "depends_on": [],
+  "draft_key": "original-volume-affine-scale-continuous-minorant-obstruction",
+  "kind": "counterexample",
+  "proof": "Concavity of $r$, homothetic Minkowski addition, and nesting of positive multiples of $D$ prove convexity. Between consecutive integer bases $r$ is affine, so its fiber is the Minkowski interpolation of the two integer fibers. This gives equality with their canonical hull. The scales at the four bases are $1,2,3,3$, so the original masses are $|D|,2^d|D|,3^d|D|,3^d|D|$. Each is strictly less than half their sum.\n\nAfter division by $\\ell(z)$ the supports are $D,D,D,(3/4)D$. The change from pointed coordinates back to original coordinates has Jacobian $\\ell(z)^d$ on each sampled fiber, giving the formula. Put $S=1+2^d+3^d$. At $d=2$, $4^d>S$. For larger $d$, division by $4^d$ makes each summand of $S/4^d$ strictly decrease. At any $\\xi_0\\in\\partial((3/4)D)$, which lies in $\\operatorname{int}D$, the open parts on both sides approach $\\xi_0$. By continuity the almost-everywhere bounds hold throughout the respective open parts. Their limits would imply $(S+4^d)/2\\le g(\\xi_0)\\le S$, a contradiction. A finite convex function is continuous on the interior of its domain. Apply this to $-\\log g$ for a positive log-concave density and to the stated finite convex inverse power in the other case.\n",
+  "source_candidate_ids": [
+    "89dc7cfe0bc71908"
+  ],
+  "source_candidate_sha256": {
+    "89dc7cfe0bc71908": "020686f52d29f10012cdea3c25506de0fb132a84889d7f01201b76c3b46f26cb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "89dc7cfe0bc71908",
+      "locator": "Proof §§1–2 (1)–(3), §4 dichotomy"
+    }
+  ],
+  "statement": "Let $d\\ge2$ be an integer and let $D\\subset\\mathbb R^d$ be a convex body with $0\\in\\operatorname{int}D$. Define $\\ell(z)=z+1$ for $0\\le z\\le3$ and $r(z)=\\min\\{z+1,3\\}$ there. The compact convex set\n$$\nC=\\{(z,x):0\\le z\\le3,\\ x\\in r(z)D\\}\n$$\nis the canonical hull of its positive integer fibers at $0,1,2,3$. The affine envelope $\\ell(z)D$ equals the actual fiber throughout $[0,2]$, which contains the interior integer $1$, and every integer fiber has strictly less than half the original total mixed volume. Under $(z,x)\\mapsto x/\\ell(z)$, the original mixed volume has density\n$$\nf=(1+2^d+3^d)\\mathbf 1_D+4^d\\mathbf 1_{(3/4)D}.\n$$\nThere is no positive continuous $g$ on $\\operatorname{int}D$ with $f/2\\le g\\le f$ almost everywhere there. In particular there is no such bounded positive log-concave $g$, or such positive $g$ with a finite convex inverse power on $\\operatorname{int}D$.",
+  "subgoal_id": "pk-intake-original-volume-affine-scale-continuous-minorant-obstruction",
+  "title": "Original-volume affine-scale obstruction to a factor-two continuous minorant"
+}

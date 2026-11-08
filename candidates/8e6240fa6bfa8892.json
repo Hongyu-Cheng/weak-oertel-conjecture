@@ -1,0 +1,36 @@
+{
+  "advances": "Intrinsic original mixed mass and actual closed cap covers. The label count concerns active cap indices and fractional integer-mean sources. It supplies no response-weight payment or bound on the number of distinct centroid bases.",
+  "author": "PK-research-agent",
+  "candidate_id": "8e6240fa6bfa8892",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:21:26.817261+00:00",
+  "depends_on": [
+    "01212b33858677e1"
+  ],
+  "draft_key": "original-marginal-parity-cap-table",
+  "kind": "theorem",
+  "proof": "The parity-class product divided by $M_r$ has both marginals $\\mu_r$. Convexity and the congruence of the two input bases make every midpoint actual. For $q>0$, a positive input fiber has dimension $q$, and the alignment in 01212b33858677e1 applies with the two input measures both $\\mu_r$. The same alignment argument applies if $C$ lacks ambient interior: the Minkowski average of two positive fibers has direction equal to the sum of their directions and lies in an actual midpoint fiber of dimension at most $q$. This forces both directions to agree and their midpoint to have exactly that common direction. On the resulting common $q$-direction in each class, use $B=2Y-A$ for each fixed $A$ in the product integral. The Jacobian on the actual midpoint fiber is $2^q$. For fixed $Y$, summing over all ordered base pairs gives the $\\mathcal H^q$-mass of exactly those $A\\in S_r$ for which $2Y-A\\in S_r$. Zero-measure input fibers add nothing to this density almost everywhere. Indeed if one input fiber has dimension less than $q$, its reflection intersection with any fixed $q$-fiber is null. For $q=0$ every nonempty fiber is a point and the substitution counts ordered pairs with determinant factor one. Thus the stated formula holds with no normalization by the sum of squared class masses.\n\nFinite least-index tie-breaking gives a symmetric Borel assignment. For the common-endpoint option take the least cap containing both endpoints whenever possible. Its convexity places the midpoint in the cap too. Each restriction is swap-symmetric, so its midpoint mean equals the common marginal mean. The base of every assigned midpoint is $j$. Its conditional mean lies in the closed convex fiber of $C\\cap H_i$ at $j$, proving the centroid claim. Affinity gives the margin integral, and pointwise maximizing selection gives the strict-margin variant.\n\nA pair assigned to a cap in $I$ cannot have both endpoints outside $U$. Otherwise the strict complement of its assigned closed halfspace would contain both endpoints and their midpoint. If the double-capture mass is $\\kappa_T$, the two mixed inside-outside statuses have a common mass $s$ by symmetry, so $t_T=\\kappa_T+2s$ and $\\nu_T(U)=\\kappa_T+s$. Domination by $\\mu$ proves the exact union identity and both inequalities. The same proof with one cap index proves its aggregate bound. Some cap covers positive mass in a represented parity because the cover is finite and exhaustive. Its within-parity endpoint square has positive $\\pi$-mass. Common-endpoint priority assigns every such pair to a cap containing both, so the sum of double-capture terms is positive. Summing over active indices gives the strict count and also $B>0$. The binomial theorem gives $(1+1/d)^d\\ge2$, which supplies the last comparison.\n",
+  "source_candidate_ids": [
+    "0351f9b590ad4c95"
+  ],
+  "source_candidate_sha256": {
+    "0351f9b590ad4c95": "568085efc0167b9fda46a9cdc1ce6fb0b54ecfd41909cc3c130be27073edaa26"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0351f9b590ad4c95",
+      "locator": "0351f9b590ad4c95:01 §1 (1)–(2)"
+    },
+    {
+      "candidate_id": "0351f9b590ad4c95",
+      "locator": "0351f9b590ad4c95:02 §2 (3)–(5)"
+    },
+    {
+      "candidate_id": "0351f9b590ad4c95",
+      "locator": "0351f9b590ad4c95:04 §3 (6)–(9)"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$, let $C\\subseteq\\mathbb R^n\\times\\mathbb R^d$ be compact and convex, and let $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ be nonempty. Put $q=\\dim_{\\mathrm H}S$, $\\mu=\\mathcal H^q|_S$ and $M=\\mu(S)>0$. Write $\\mu_r$ for the restriction to base parity $r$ and use only $r$ with $M_r=\\mu_r(S)>0$. The measure $\\pi=\\sum_r(\\mu_r\\otimes\\mu_r)/M_r$ has mass $M$, both marginals $\\mu$, swap symmetry, and actual integer-base midpoints. Its midpoint pushforward has density $2^q\\sum_r\\mathcal H^q(S_r\\cap(2Y-S_r))/M_r$ relative to $\\mu$, where $S_r$ is the parity-$r$ trace.\n\nFor any finite cover of $S$ by closed ambient halfspaces $H_i$, assign each ordered pair symmetrically and measurably to a cap containing its midpoint, and refine by the midpoint base $j$. Let $\\pi_{ij}$ be the resulting pair submeasures, $\\nu_{ij}$ their common marginal and $t_{ij}$ their mass. Then $\\sum_{ij}\\nu_{ij}=\\mu$, each $\\nu_{ij}\\le\\mu$, and $\\int(z-j)\\,d\\nu_{ij}=0$. For $t_{ij}>0$ the centroid $Y_{ij}$ of $\\nu_{ij}$ belongs to $S\\cap H_i$. For any affine margin $L_i$ defining $H_i$,\n$t_{ij}L_i(Y_{ij})=\\int L_i((A+B)/2)\\,d\\pi_{ij}\\ge0$. If $\\max_i L_i\\ge\\varepsilon>0$ on $S$, assignment by a largest margin ensures the stronger bound $\\varepsilon t_{ij}$.\n\nFor any subset $T$ of positive table labels, write $I$ for its cap indices, $U=\\bigcup_{i\\in I}H_i$, and $\\pi_T,\\nu_T,t_T$ for the corresponding sums. Put $\\kappa_T=\\pi_T(U\\times U)$, $c_i=\\mu(H_i)$, and $D_I=\\sum_{i\\in I}c_i-\\mu(U)$. Then\n$$\nt_T+\\kappa_T=2\\nu_T(U)\\le2\\mu(U),\\qquad\nt_T+\\kappa_T+2D_I\\le2\\sum_{i\\in I}c_i.\n$$\nIn particular the single-index aggregates satisfy $t_i+\\kappa_i\\le2c_i$. Under assignment prioritizing any common endpoint cap, $\\sum_i\\kappa_i>0$. If $c_i\\le B$ for all $i$ and $K$ indices are active, then $M+\\sum_i\\kappa_i\\le2KB$ and $K>M/(2B)$. With $\\gamma_d=(d/(d+1))^d$, $B<\\gamma_d M/2^n$ implies $K>2^n/(2\\gamma_d)\\ge2^n$.",
+  "subgoal_id": "pk-intake-original-marginal-parity-cap-table",
+  "title": "Integer-mean parity sources and simultaneous cap-union capacities"
+}

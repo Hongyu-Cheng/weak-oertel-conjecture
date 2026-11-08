@@ -1,0 +1,30 @@
+{
+  "advances": "A conditional result for differentiable cap masses and an arbitrary fixed continuous-direction scale, concerned with the deepest set rather than a numerical mass bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "f4922e16ad054bba",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:53:06.249661+00:00",
+  "depends_on": [],
+  "draft_key": "smooth-buffer-abstract-base-parity",
+  "kind": "lemma",
+  "proof": "Let deepest marks $Y_0,Y_1$ have bases of the same parity. Their midpoint $Y_m$ is feasible. For fixed $N$, concavity gives $b_N(Y_m)\\le[b_N(Y_0)+b_N(Y_1)]/2$, and both endpoint masses for that normal are at least $Q$. Since $F_N$ is nonincreasing, the midpoint mass is at least $Q$. For every allowed pure-base orientation, the closed tail through the midpoint contains the parallel tail through the endpoint having larger threshold in that orientation. It too has mass at least $Q$. Thus $Y_m$ is deepest.\n\nChoose the indicated attaining normal $N$ at $Y_m$ and put $b=b_N(Y_m)$. Since $F_N(b)=Q$ and $F_N'(b)<0$, monotonicity gives $F_N(s)<Q$ for all $s>b$. Therefore $b_N(Y_i)\\le b$ for both endpoints. The midpoint inequality forces equality at both endpoints, so the same normal and threshold attain their depths.\n\nDifferentiate the cap mass through $Y_i=(p_i,y_i)$ in the unrestricted $a$. The minimum gives $\\int(z-p_i)\\,d\\nu=0$, where $d\\nu$ on each fiber equals $\\Psi'((a\\cdot z+u\\cdot x-b)/[\\delta G(u)])\\,dx/[\\delta G(u)]$. The two endpoint equations use the same nonnegative measure of positive mass $-F_N'(b)$, so $p_0=p_1$. If the two marks in this fiber differ and the strict concavity and positive buffer-factor hypotheses hold, the threshold midpoint inequality for this normal would be strict, contradicting the equalities.\n",
+  "source_candidate_ids": [
+    "f32b13bc6996e859"
+  ],
+  "source_candidate_sha256": {
+    "f32b13bc6996e859": "047d6642a9b51da0c2248a11192d71418acb124a1b46047074a2cd5de7d753d3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f32b13bc6996e859",
+      "locator": "f32b13bc6996e859:1 Lemma and Proof, equal-parity argument"
+    },
+    {
+      "candidate_id": "f32b13bc6996e859",
+      "locator": "f32b13bc6996e859:2 Lemma and Proof, final paragraph"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be convex, with sampled set $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ and fibers $C_z$. Let $f:C\\to\\mathbb R$ be concave, $\\varepsilon\\ge0$, $\\delta>0$, $G(u)>0$ for $u\\ne0$, and let $\\Psi$ be nondecreasing and $C^1$. For $N=(a,u)$ with unrestricted $a\\in\\mathbb R^n$ and $u\\ne0$, define\n$$\nF_N(b)=\\sum_z\\int_{C_z}\\Psi\\!\\left(\\frac{a\\cdot z+u\\cdot x-b}{\\delta G(u)}\\right)dx,\\qquad b_N(p,y)=a\\cdot p+u\\cdot y-\\varepsilon f(p,y)G(u).\n$$\nDefine raw depth at $(p,y)\\in S$ as the infimum of $F_N(b_N(p,y))$ over these normals, optionally also using ordinary closed pure-base caps of fixed base orientations. Assume the integrals are finite and the threshold and base-normal derivatives exist by differentiation under the integral. Suppose the maximum $Q$ is attained and each deepest point has a finite attaining nonvertical normal with $-\\partial_bF_N(b_N)>0$.\n\nDistinct deepest bases have distinct coordinate parities, hence there are at most $2^n$ deepest bases. If $\\varepsilon>0$ and $f$ is strictly concave on every positive-dimensional fiber, each deepest base has one deepest mark, so there are at most $2^n$ deepest marks.",
+  "subgoal_id": "pk-intake-smooth-buffer-abstract-base-parity",
+  "title": "Parity separation for differentiable buffered cap depths"
+}

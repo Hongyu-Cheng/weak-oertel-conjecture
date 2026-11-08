@@ -1,0 +1,54 @@
+{
+  "candidate_id": "716fa7580a098deb",
+  "candidate_sha256": "2b26b82b1bf0d9be9ff07cc68200eeb782c10cab685f67656840635803d1f34b",
+  "checked_dependency_candidate_sha256": {
+    "efa4558174ce60cf": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3"
+  },
+  "checks": [
+    "Checked 16db32a020dc6379 §1, (1)–(3) and the omitted-product portion of (3a), and 8ed6312acad01c6f in the positive-omission, nonpositive-omission and ordinary simplex sections. They concern the cap conditional law rather than conditioning on its boundary section.",
+    "All Y_i are positive almost surely with finite mean, so conditioning on an event of positive probability gives positive finite coordinate means. For c_j>0, integration of Y_j uses exactly the exponential upper tail at max(0,-sum(c_i/c_j)z_i), yielding the positive density on the full remaining orthant.",
+    "The exponent is positively homogeneous and lies between the sum of coordinates and a finite constant times that sum. Change of variables in its integral gives s^-d P. Differentiation is dominated on an interval about one and gives E psi=d. In the logarithmic density ratio, the fitted product exponential contributes the same sum of d normalized means, so the remaining integral is the displayed logarithm. The inequality log x≤x-1 gives nonnegativity with equality exactly when the densities agree almost everywhere.",
+    "With one sign or no remaining nonzero coefficients, the exponent is linear on the orthant with positive coordinate slopes. Its normalized density is the corresponding product exponential. With both signs, there are two nonempty relatively open parts of the positive orthant where the linear formulas have distinct gradients, so equality with one product density is impossible. This includes zero coefficients and the full event, and mixed signs among the remaining coefficients require d≥2.",
+    "The change to total G and normalized barycentrics U has radial Jacobian G^d, yielding a uniform simplex factor and independent Gamma(d+1,1) factor. The event is homogeneous, so conditioning leaves G independent of the conditional U and preserves E G=d+1. The positive-volume cap centroid is interior since the boundary of the simplex is volume-null and every barycentric coordinate is positive in its interior.",
+    "The cap indicator satisfies the retained-volume moment constraint at that centroid. The accepted bound gives P≤E_K/|K|=product_i nu_i. For c_j≤0, the conditional success probability g(t) is nonincreasing, including constant g when c_j=0. The independent-copy covariance identity implies nu_j≤1. Division by this positive factor proves the omitted-product bound.",
+    "An arbitrary affine simplex cap has coefficients equal to the defining affine functional evaluated at the vertices. Affine change of variables preserves the cap fraction and the centroid's barycentrics. The d retained factors give exactly (d+1)^d.",
+    "Independently checked the positive-omission equality with coefficients (2,-3), where P=2/5 and the remaining conditional exponential mean is 2/5. For coefficients (1,1,-1), exact Laplace moments give P=3/4 and retained means 7/6 and 2/3 when a positive coordinate is omitted. Their product is 7/9>3/4, in line with strictness for both remaining signs."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "efa4558174ce60cf",
+      "candidate_sha256": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3",
+      "fact_sha256": "46fe81dabdb3dce217066cbdf0b03811e5f31600f47ff212687d11ef712b7b0e",
+      "hypotheses_mapping": "Use the full-dimensional ordinary d-simplex and its interior cap centroid. The cap indicator is feasible for T_K, whose mass is at least P|K|. T_K≤E_K and the accepted barycentric energy identity give the full conditional product lower bound.",
+      "reviewed_proof_sha256": "3f02b0dc5890813c93ca758645cbc602e93b598f5e7b2d5e6ea6f5f983ecfca5",
+      "reviewed_statement_sha256": "930a2a913d290a108052291c9fbf63e5f9e4b67fcb18c94309504f165bdfa29e"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:40:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its simplex energy formula and feasible cap indicator imply the full-product bound. Combined with the elementary nonpositive-coefficient covariance step it gives that omission branch. Its inequality alone does not justify removing a positive-coefficient mean, which can exceed one, and it does not give the stated positive-omission equality classification.",
+      "fact_id": "efa4558174ce60cf"
+    },
+    {
+      "comparison": "Gives omitted-coordinate bounds for the coarea conditional law on a zero section under paired coefficients, with a different radial mean and right-hand side. The present inequality uses positive-probability caps and arbitrary coefficient signs.",
+      "fact_id": "a5e572c99d30c71a"
+    }
+  ],
+  "readability": "The equality classification is attached to c_j>0. The covariance step for c_j≤0 only needs the weak full-product inequality.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "11b44886995aeaae7882b0a0b9d85dc6c67b0bba1fe33992315782db860ddb16",
+  "reviewed_statement_sha256": "5b6d3faa8e44cef37832700016cd263aafb013e2a948683a72965d04e0658d5c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:36:34Z",
+  "summary": "The marginal entropy calculation proves the positive-omission inequality and exact equality cases. Monotonicity and the accepted full-product bound handle nonpositive omission, and the exponential representation gives the simplex normalization.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

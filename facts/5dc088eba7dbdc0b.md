@@ -1,0 +1,49 @@
+---
+fact_id: 5dc088eba7dbdc0b
+kind: counterexample
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-w33-sampled-ball-dilation-lower-bound
+depends_on: ["f35472644bdd7a6c"]
+verifier_run: 6af8f4962d438042
+target_match: null
+---
+
+## Source
+
+- [8e4d516f7549d7b5](../candidates/8e4d516f7549d7b5.json), 8e4d516f7549d7b5:01 §1, (1)–(2), supporting ray identity and exact fibers.
+- [8e4d516f7549d7b5](../candidates/8e4d516f7549d7b5.json), 8e4d516f7549d7b5:02 §§1–2, (1)–(3).
+- [8e4d516f7549d7b5](../candidates/8e4d516f7549d7b5.json), 8e4d516f7549d7b5:03 §3, explicit planar factor-two certificate.
+- [8e4d516f7549d7b5](../candidates/8e4d516f7549d7b5.json), 8e4d516f7549d7b5:04 §4, radial endpoint, witnesses and limiting gauge.
+
+## Statement
+
+For a body with actual positive-volume fibers $K_0,K_1,K_2$ at bases $0,1,2$ and with $0$ interior to each fiber, use the strict positive-side slope density at $(0,0)$,
+$$
+f(v)=\mathbf1_{K_1}(v)+2^d\mathbf1_{K_2/2}(v).
+$$
+Its Ball radial body $B$ is defined by $\rho_B(e)^d=d\int_0^\infty t^{d-1}f(te)\,dt$ for unit $e$.
+
+For every $d\ge2$, the lift of $K_0=\varepsilon[-1,1]^d$, $K_1=[-1,1]^d$, and $K_2=[-\varepsilon,\varepsilon]^{d-1}\times[-(2-\varepsilon),2-\varepsilon]$ with $\varepsilon=1/16$ gives $\operatorname{conv}(B)\nsubseteq 2^{1/d}B$. The midpoint $p=e_1/2+(47/32)e_d$ of $e_1+e_d$ and $(31/16)e_d$ belongs to the convex hull and has radial integral $I(p)=(32/47)^d+(1/8)^d\le67745/141376<1/2$, where $I(v)=d\int_0^\infty t^{d-1}f(tv)\,dt$ for nonzero, possibly nonunit $v$.
+
+For each fixed $d\ge2$, any $c_d>0$ for which $\operatorname{conv}(B)\subseteq c_dB$ holds uniformly for the above three-fiber class must satisfy $c_d\ge(1+2^d)^{1/d}$. In the same box family, set $R_\varepsilon=(1+(2-\varepsilon)^d)^{1/d}$. The gauge at $\sqrt\varepsilon(e_1+e_d)+(1-\sqrt\varepsilon)R_\varepsilon e_d\in\operatorname{conv}(B)$ converges to $(1+2^d)^{1/d}$. In the planar box family with $\varepsilon=1/100$, the factor two already fails by a finite rational certificate.
+
+## Proof
+
+For $0<\varepsilon<1$, the lifted hull is compact, convex and full-dimensional because the middle fiber contains a $d$-dimensional box and a point lies at a distinct base. The real projection is $[0,2]$, with the endpoint fibers exactly the given bodies. At base one the two endpoint coefficients of any convex representation must be equal. Their midpoint is
+$$
+(K_0+K_2)/2=[-\varepsilon,\varepsilon]^{d-1}\times[-1,1]\subseteq K_1,
+$$
+so such a representation stays in $K_1$ and these are all the integer fibers. All are positive-volume with $0$ interior. The slope law follows from accepted fact f35472644bdd7a6c at $z_0=0,x_0=0$ using the two strict-side indices $1,2$. The density is with respect to slope-space volume and its total mass equals the sum of the two positive-base volumes.
+
+For nonzero $v$ put $r_K(v)=\max\{t\ge0:tv\in K\}$. The $k$th contribution to the radial integral is $k^d\int_0^{r_{K_k}(v)/k} d\,t^{d-1}\,dt=r_{K_k}(v)^d$. Thus
+$$
+I(v)=r_{K_1}(v)^d+r_{K_2}(v)^d,\qquad g_B(v)=I(v)^{-1/d}.
+$$
+The gauge formula follows by rescaling $v$ to unit length. In particular $v\in aB$ exactly when $a^d I(v)\ge1$ for $a>0$. Both $K_1$ and $K_2$ lie in $B$ since their own ray parameter at each nonzero member is at least one. Multiplying the density by a positive constant dilates $B$ by that constant to the power $1/d$ and preserves the proposed comparison.
+
+For $\varepsilon=1/16$, the two stated endpoints therefore belong to $B$. At their midpoint, the limiting coordinate for the cube is the last coordinate, giving $r_{K_1}(p)=32/47$. In the thinner box the transverse constraint gives $r_{K_2}(p)=1/8$, smaller than its last-coordinate constraint $62/47$. Both parameters lie in $(0,1)$, so the $d=2$ value $67745/141376<1/2$ bounds every $d\ge2$ from above. This excludes the midpoint from $2^{1/d}B$.
+
+For the additional planar certificate take $\varepsilon=1/100$, $a=(1,1)$ and $b=(0,11/5)$. We have $a\in K_1\subseteq B$ and $I(b)=(1+(199/100)^2)/(11/5)^2=49601/48400>1$. At $p=a/10+9b/10=(1/10,52/25)$ the ray parameters are $25/52$ and $1/10$. This gives $I(p)=16301/67600<1/4$, excluding $p$ from $2B$.
+
+For the limit, $R_\varepsilon e_d$ lies on the radial boundary since its ray integral equals one. Take the stated convex combination with $e_1+e_d$. Its last coordinate $y_\varepsilon$ tends to $R_0=(1+2^d)^{1/d}>2$ and its first is $\sqrt\varepsilon$. For small $\varepsilon$, the cube ray parameter is $1/y_\varepsilon$, since the last coordinate exceeds the transverse one. The thin-box ray parameter is $\sqrt\varepsilon$, smaller than $(2-\varepsilon)/y_\varepsilon$, which tends to $2/R_0>0$. Hence $I(p_\varepsilon)=y_\varepsilon^{-d}+\varepsilon^{d/2}$ and $g_B(p_\varepsilon)\to R_0$. Any uniform $c_d$ bounds each of these gauges and hence is at least $R_0$.

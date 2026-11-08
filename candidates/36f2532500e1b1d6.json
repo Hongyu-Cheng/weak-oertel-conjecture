@@ -1,0 +1,28 @@
+{
+  "advances": "The comparison runs over all couplings of the same two marginal measures. The witness is realized on the same-parity endpoints of an actual three-fiber body.",
+  "author": "PK-research-agent",
+  "candidate_id": "36f2532500e1b1d6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.049155+00:00",
+  "depends_on": [
+    "f2fe66ae10bde961"
+  ],
+  "draft_key": "no-greatest-convex-order-midpoint-law",
+  "kind": "counterexample",
+  "proof": "Accepted fact f2fe66ae10bde961 proves that these bodies have equal area, and that the unique coupling maximizing the Euclidean quadratic moment of the midpoint is the graph of $T(x,t)=(x/t,t^2/2-x^2/(2t^2))$. Let $\\rho_T$ be its midpoint law. A greatest midpoint law must maximize the convex test $|y|^2$, so uniqueness forces it to be $\\rho_T$.\n\nTake a nonzero smooth nonnegative function $\\eta$ compactly supported in the open ball of radius $1/100$ about $(1/8,2)$. To check that the ball lies in $\\operatorname{int} K$, observe that all its points satisfy $0<x<0.135$, $1.99<t<2.01$, $\\sqrt{1+\\sqrt{1+x^2}}<1.42<t$, and $x<t/4$. The smooth compactly supported vector field $v=(\\partial_t\\eta,-\\partial_x\\eta)$ has zero divergence. Its flow $\\psi_\\varepsilon$ preserves area by the determinant equation for the flow derivative, and preserves $K$ because it fixes the complement of the support, which lies strictly inside $K$. Therefore the coupling on the graph of $T\\circ\\psi_\\varepsilon$ has the same two marginals as the graph of $T$.\n\nFor $Q=\\operatorname{diag}(1,2)$, let $A(\\varepsilon)=\\int_K X^{\\mathsf T}QT(\\psi_\\varepsilon(X))\\,dX$. Smoothness and compact support of the motion justify differentiation inside the integral. Write $T=(p,q)$ as functions of $(x,t)$. Integration by parts, with support in the interior of $K$, gives\n$$\n\\begin{aligned}\nA'(0)\n&=\\int_K X^{\\mathsf T}Q\\,DT(X)v(X)\\,dX\n=-\\int_K v(X)^{\\mathsf T}QT(X)\\,dX\\\\\n&=-\\int_K\\eta(\\partial_x(2q)-\\partial_t p)\\,dX\n=\\int_K\\eta\\,x/t^2\\,dX>0.\n\\end{aligned}\n$$\nThe first integration by parts uses $\\operatorname{div}v=0$. For the last equality, $\\partial_x q=\\partial_t p=-x/t^2$. The midpoint convex test $y\\mapsto y^{\\mathsf T}Qy$ has integral equal to fixed marginal terms plus $A(\\varepsilon)/2$, so it is larger than the value at $\\rho_T$ for sufficiently small positive $\\varepsilon$. Thus $\\rho_T$ does not dominate that feasible midpoint law.\n\nThe lifted hull has exactly $K,(K+L)/2,L$ at bases $0,1,2$, as established in f2fe66ae10bde961. All midpoints of the endpoint fibers lie at base one. The same convex tests, extended independently of the base coordinate, give the physical obstruction.\n",
+  "source_candidate_ids": [
+    "2439d77d03fde920"
+  ],
+  "source_candidate_sha256": {
+    "2439d77d03fde920": "b1c47f9273d5c7855f3af191d3b6ff12c31c2a9ee9859f4e68f306bf027e1b5a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2439d77d03fde920",
+      "locator": "2439d77d03fde920:02 Proof §4 through the greatest-law contradiction, Q=diag(1,2), variation derivative; §5"
+    }
+  ],
+  "statement": "Let\n$$\nK=\\{(x,t):\\sqrt{1+\\sqrt{1+x^2}}\\le t\\le3,\\ |x|\\le t/4\\},\n\\qquad\nL=\\{(p,q):|p|\\le1/4,\\ 1\\le q\\le9/2-p^2/2\\}.\n$$\nUse unnormalized uniform area on $K,L$ as the two marginals. There is no feasible midpoint law that dominates the midpoint law of every coupling of these marginals in convex order, meaning comparison of integrals of every finite convex function at equal mass. The same obstruction holds for the physical midpoint laws of these two endpoint fibers lifted to bases $0,2$ in their actual mixed-integer convex hull.",
+  "subgoal_id": "pk-intake-no-greatest-convex-order-midpoint-law",
+  "title": "Uniform planar convex-body marginals can have no greatest midpoint law in convex order"
+}

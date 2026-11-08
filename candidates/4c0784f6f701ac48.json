@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary depth for an actual single-facet enlargement, conditional on regular cap circuits and complete assigned covers.",
+  "author": "PK-research-agent",
+  "candidate_id": "4c0784f6f701ac48",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.926911+00:00",
+  "depends_on": [
+    "7a5ea4f8a4c5094c"
+  ],
+  "draft_key": "pk-w33-facet-reserve-regular-circuit-descent",
+  "kind": "theorem",
+  "proof": "Write $A_{ij}=\\int_G\\mathbf1_{H_{ij}}(p,x)\\,d\\mathcal H^{d-1}(x)$, equal to the outward trace coefficient by the null-intersection assumption. Set $T_i=A\\sigma_i$ and shift the $ij$-th threshold by $t\\dot b_{ij}$ with $\\dot b_{ij}=(A_{ij}-T_i)/S_{ij}$. The definition of $\\kappa_{ij}$ gives $\\sum_j\\rho_{ij}\\dot b_{ij}=0$. The shifted signed margins therefore still sum with the positive weights to zero at every point in the plane over $p_i$, so at least one cap contains each point there.\n\nAt the moved threshold the old measure contributes $Q-tS_{ij}\\dot b_{ij}+o(t)$. In the one-moving-facet specialization of the strip proof of 7a5ea4f8a4c5094c on the changed fiber, adding $t\\dot b_{ij}$ to the threshold does not affect the limiting indicator off the cap plane on $G$. The exceptional set there is null, so the added measure is $tA_{ij}+o(t)$ by the same domination. Thus each shifted cap in group $i$ has mass $Q+tT_i+o(t)$. The unchanged covers on all other planes keep their strict gaps since the full added volume is $O(t)$. A point in a containing closed cap has raw depth at most that cap's mass. Taking the finite maximum over critical groups and dividing by $M+tA+o(t)$ yields the estimate and descent assertion.\n",
+  "source_candidate_ids": [
+    "be4d9f84e764ef2a"
+  ],
+  "source_candidate_sha256": {
+    "be4d9f84e764ef2a": "09129d76f145f095eb373843a2c14d2b09387606cef4822ba913cfaadf6e5b9a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "be4d9f84e764ef2a",
+      "locator": "be4d9f84e764ef2a:05 §5, (9)–(11), regular critical-circuit descent"
+    }
+  ],
+  "statement": "Let $\\mu_t$ be the mixed measure of an actual compatible outward shift of just one facet $G$ of a sampled polytope by distance $t\\ge0$, at base $p$, in a fixed finite positive sampled family. Put $M=\\mu_0(\\mathbb R^{n+d})$, $A=\\mathcal H^{d-1}(G)$, and let $Q=\\beta M$ be the old global raw maximum. At each old deepest base $p_i$, select finitely many old mass-$Q$ caps $H_{ij}=\\{a_{ij}\\cdot z+v_{ij}\\cdot x\\ge b_{ij}\\}$ with unit continuous normals and weights $\\rho_{ij}>0$ satisfying\n$$\n\\sum_j\\rho_{ij}v_{ij}=0,\\qquad\n\\sum_j\\rho_{ij}(b_{ij}-a_{ij}\\cdot p_i)=0.\n$$\nAt every other base assume a fixed finite whole-plane cover with each cap of mass strictly below $Q$. For each critical cap assume the old cap mass as a function of threshold has two-sided derivative $-S_{ij}$ at $b_{ij}$, with $S_{ij}>0$, and its cap plane meets the lifted $G$ in $\\mathcal H^{d-1}$-measure zero. Set $\\kappa_{ij}=(\\rho_{ij}/S_{ij})/\\sum_l(\\rho_{il}/S_{il})$ and $\\sigma_i=A^{-1}\\sum_j\\kappa_{ij}\\int_G\\mathbf1_{H_{ij}}(p,x)\\,d\\mathcal H^{d-1}(x)$. For the actual normalized maximum $D(t)$,\n$$\n\\limsup_{t\\downarrow0}\\frac{D(t)-\\beta}{t}\n\\le\\frac{A}{M}\\max_i(\\sigma_i-\\beta).\n$$\nThus $\\sigma_i<\\beta$ for all chosen groups gives strict descent. At a local minimum every eligible facet and selected system of circuits has some group with $\\sigma_i\\ge\\beta$.",
+  "subgoal_id": "pk-intake-pk-w33-facet-reserve-regular-circuit-descent",
+  "title": "Regular critical-circuit descent from an actual reserve facet"
+}

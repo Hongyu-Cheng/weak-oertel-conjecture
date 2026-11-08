@@ -1,0 +1,62 @@
+{
+  "candidate_id": "3ae39f34b6819016",
+  "candidate_sha256": "c5475c43d00824dc1a7e2baf50c390a6fcb4482c42db8fda0253b8df81559e70",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "61598d59aba2500d": "5fa377b064195924fe9bb5ca6f64c0daecfbc2bb1887cde0ff24962ff6ad5793"
+  },
+  "checks": [
+    "Verified e25e172f74df55a2 §5, (8)–(10) and final scope paragraphs. The six caps are fixed throughout. The low-threshold triple covers each integer base, which is the claimed cover domain.",
+    "The two traces at each cap give V(81/100+1/25)=17V/20. The lifted convex hull projects to [0,1] and its two integer fibers are exactly the chosen triangles, including after arbitrary nearby independent triangle changes.",
+    "Each vertex at either base sees one low and one high cap. Exact weights from multipliers 5/11 give e=17/44, mean 22/17, variance 196/289, and chi=1-2e. Hence the independent physical blocks are stationary.",
+    "Independently expanded the actual cap intercept formula to order t^2 and differentiated its Lagrangian coefficient. The exact normalized Hessian matrix, polynomial and denominator 1771561 match. The matrix multiplied by -22 is strictly diagonally dominant with positive diagonal. The alternating matchings yield squared off-diagonal singular values 1,61,61, confirming the factorization.",
+    "All six constraints are active at the reference and the multipliers are positive, so the strict Lagrangian decrease implies a strict feasible volume decrease on the nonreference neighborhood. A sufficiently large signed finite base tilt isolates either sampled triangle, so its own-fiber maximum 4V/9 is the actual maximum. Division by 2V gives 2/9 versus 17/40."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "61598d59aba2500d",
+      "candidate_sha256": "5fa377b064195924fe9bb5ca6f64c0daecfbc2bb1887cde0ff24962ff6ad5793",
+      "id": "61598d59aba2500d",
+      "mapping": "Set d=2 and use exactly the two proper fixed thresholds 1/10 and 4/5 in each direction of each triangle, with both multipliers 5/11. The verified equal e and reciprocal mean meet the stationary conditions and give the specified Hessian.",
+      "proof_sha256": "9f9cd81e3a69e76b53ed8bfa4a390b3bee46e34f0269740ca6b733e39898c5ca",
+      "review_status": "Separate independent approval required before admission.",
+      "same_batch_key": "fixed-simplex-cap-threshold-variance",
+      "statement_sha256": "587bf1df18c1ff38394e0e544f288b678719435a3849a729903a434ab2b11aeb"
+    },
+    {
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "id": "03bc771bddd39a8a",
+      "mapping": "The two full-dimensional triangles are ordinary 2-simplexes, so the normalized ordinary maximum is gamma_2=4/9. The actual fiber isolation argument supplies the mixed correspondence."
+    }
+  ],
+  "finished_utc": "2026-11-08T15:48:14Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It gives a different strict fixed-cap maximum in one endpoint block of a three-fiber centrally symmetric actual source, with critical global budgets. This draft has two free physical blocks, six equal noncritical budgets, and the specified exact block spectrum.",
+      "id": "dad8b277ce2587c7"
+    }
+  ],
+  "readability": "The characteristic polynomial is normalized per block by area V. The six-cap budget is a selected cover budget; it is strictly above the separate actual maximum depth.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "97bb5aad9f2d6387e2537721e5783cf9f45f0f1a88ba66cb18bb3a5ca6dc33d5",
+  "reviewed_statement_sha256": "adb317393155972d9e2f5de4c923b68830561f7241373a879247ef3e959da000",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "sources_verified": [
+    {
+      "locator": "e25e172f74df55a2:04 §5, (8)–(10), final scope paragraphs",
+      "source_candidate_id": "e25e172f74df55a2",
+      "source_candidate_sha256": "984c6823d24ada64e76f5087d13cf783f7fef4294d74549d0e0a21487156a671"
+    }
+  ],
+  "started_utc": "2026-11-08T15:44:21Z",
+  "summary": "The six equal fixed actual cap budgets give a strict local physical maximum. The exact matrix, characteristic polynomial, cap fractions, and distinct actual depth value check.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

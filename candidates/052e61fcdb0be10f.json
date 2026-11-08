@@ -1,0 +1,33 @@
+{
+  "advances": "A variational consequence conditional on an attained minimum in one fixed lattice projection class.",
+  "author": "PK-research-agent",
+  "candidate_id": "052e61fcdb0be10f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:31:51.182789+00:00",
+  "depends_on": [
+    "c073357d2abdba9f",
+    "755cb08c379113cc"
+  ],
+  "draft_key": "fixed-cap-volume-from-fixed-projection-depth",
+  "kind": "theorem",
+  "proof": "Put $Q=\\beta M_*$. A ball in any positive fiber gives positive depth at its center, so $Q>0$. Take a fixed closed cap cover as in part 1, with existence at the indicated cardinality given by the exact mixed Helly cover. At $z\\in P$ the uncovered subset $Q_z$ of $\\mathbb R^d$ is the open convex intersection of the strict cap complements. If it is empty, no restriction is needed there. Otherwise, weakly separate the compact convex $K_{*,z}$ from the disjoint nonempty open convex $Q_z$. Orient the nonzero functional $b_z$ so that $b_z\\cdot x\\le b_z\\cdot y$ for all $x\\in K_{*,z}$ and $y\\in Q_z$. Openness of $Q_z$ gives $b_z\\cdot y>\\sup_{x\\in K_{*,z}}b_z\\cdot x$ for all $y\\in Q_z$: equality would give a nearby point in $Q_z$ with strictly smaller value. Hence the closed supporting halfspace $E_z=\\{x:b_z\\cdot x\\le\\sup_{K_{*,z}}b_z\\cdot x\\}$ is entirely covered by the original traces. This gives the stated single support constraint at each relevant site.\n\nFor part 2 use the whole-plane cover of the exact fiberwise circuit theorem at $S_*$, with original masses at most $Q$. The traces already cover each plane and hence any new fiber at that site. In either formulation the original family is feasible. For a feasible $S'$ every point of $S'$ belongs to a fixed cap of $\\mu_{S'}$-mass at most $Q$. If $M(S')>M_*$ then its maximum normalized depth is at most $Q/M(S')<\\beta$, contradicting the hypothesized minimum over the same projection class. This proves both global assertions and the description of tight budgets.\n\nIf the original depth minimization was formulated with unit volume in a specified relative-interior fiber of $P$, it is equivalent to minimization over the stated class. Positive barycentric weights at that site make its fiber full-dimensional in every compatible family of positive total mass. Common scaling in the continuous coordinates normalizes its volume while preserving all normalized depths. The scaling is only used to compare depth values; the fixed budgets of the volume problem are evaluated before scaling.\n",
+  "source_candidate_ids": [
+    "b989614dc4f86228"
+  ],
+  "source_candidate_sha256": {
+    "b989614dc4f86228": "894c65b9f729ca59cff24bfa23226e047632ef3d245722c2da9e64fe620690e1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b989614dc4f86228",
+      "locator": "§§3–4, bounded closed cover and per-fiber support constraints"
+    },
+    {
+      "candidate_id": "b989614dc4f86228",
+      "locator": "§7, whole-plane cover and cap budgets alone"
+    }
+  ],
+  "statement": "Fix $n,d\\ge1$ and a finite nonempty lattice-convex projection $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$. Consider compatible families of nonempty compact convex fibers over exactly $P$, with positive total mixed $d$-volume. Compatibility means that the convex hull of the lifted fibers has the specified fiber at every site of $P$. For a family $S$, write $\\mu_S$ for summed $d$-volume on its fibers, $M(S)=\\mu_S(S)$, and $h_{\\mu_S}$ for raw closed-halfspace depth. Suppose $S_*$ attains the minimum of $\\max_{y\\in S}h_{\\mu_S}(y)/M(S)$ in this fixed-$P$ class, with value $\\beta$ and total mass $M_*>0$.\n\nThere are two fixed-cap volume formulations of this attained minimum.\n\n1. For any finite nonvertical closed cap cover $(H_j)$ of $S_*$ with $\\mu_{S_*}(H_j)\\le\\beta M_*$, at each $z\\in P$ whose plane is not entirely covered there is one closed supporting halfspace $E_z$ containing $K_{*,z}$, entirely covered by the cap traces at $z$. Then $S_*$ globally maximizes $M(S')$ over compatible families $S'$ on $P$ with $K'_z\\subset E_z$ where imposed and $\\mu_{S'}(H_j)\\le\\beta M_*$ for each $j$. In particular such a cover can be chosen with at most $2^n(d+1)$ caps.\n2. There is a fixed cover by at most $|P|(d+1)$ nonvertical closed caps such that $S_*$ globally maximizes $M(S')$ subject solely to the budgets $\\mu_{S'}(H_j)\\le\\beta M_*$ in the same class. In each formulation, the tight budget inequalities at $S_*$ are exactly those with cap mass $\\beta M_*$.",
+  "subgoal_id": "pk-intake-fixed-cap-volume-from-fixed-projection-depth",
+  "title": "Fixed cap budgets at an attained fixed-projection depth minimum"
+}

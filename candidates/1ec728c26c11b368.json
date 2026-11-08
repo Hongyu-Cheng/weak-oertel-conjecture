@@ -1,0 +1,28 @@
+{
+  "advances": "Applies to arbitrary finite real base sets, including null fibers. Gives attainment of a cap and of the deepest point of a fixed family.",
+  "author": "PK-research-agent",
+  "candidate_id": "1ec728c26c11b368",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:31:51.181151+00:00",
+  "depends_on": [
+    "0a73ba4a9c7b24d1"
+  ],
+  "draft_key": "finite-fiber-anchored-capacity",
+  "kind": "theorem",
+  "proof": "For fixed $(u,t)$ apply the finite affine-threshold compactification to a minimizing sequence with thresholds $t-a_j\\cdot(w-z)$ on a ball containing all fibers. The evaluation at $z$ stays equal to $t$. The realizing affine threshold has that same value at $z$, hence has the form $t-a\\cdot(w-z)$ for some finite $a$. Its mass equals the infimum. For $(u_j,t_j)\\to(u,t)$, restrict to a subsequence realizing the lower limit of the capacities and take attaining $a_j$. Compactification keeps the finite limiting evaluation $t$ at $z$ and gives an admissible cap of limiting mass $\\liminf_j c_z(u_j,t_j)$. Thus $c_z(u,t)\\le\\liminf_j c_z(u_j,t_j)$. For the upper limit, use an attaining $a$ for $(u,t)$ as a test at every $(u_j,t_j)$ and apply dominated convergence, since a nonvertical cap has $d$-volume-null boundaries within the fibers.\n\nMoving a containing closed halfspace inward to pass through $(z,x)$ can only reduce its mass. A vertical through-point halfspace has the form $a_0\\cdot(w-z)\\ge0$ for some nonzero $a_0$. Fix a unit $u$. For a sufficiently large finite $L>0$, the nonvertical cap\n$$\nL a_0\\cdot(w-z)+u\\cdot(y-x)\\ge0\n$$\nincludes every strictly included original fiber and excludes every strictly excluded one. At bases where $a_0\\cdot(w-z)=0$ it contains only a subset of the original vertical cap, and it passes through $(z,x)$. Thus its mass is at most that of the vertical cap. This comparison handles whole fibers on a vertical boundary. A nonvertical through-point cap has threshold $u\\cdot x$ and some slope $a$. This proves the depth formula, with a minimum by compactness of the unit sphere and the established continuity. The continuous function $(u,x)\\mapsto c_z(u,u\\cdot x)$ is uniformly continuous on $\\mathbb S^{d-1}\\times K_z$, so its minimum over $u$ is continuous in $x$. Finitely many compact fibers give a global maximizing point.\n",
+  "source_candidate_ids": [
+    "b989614dc4f86228"
+  ],
+  "source_candidate_sha256": {
+    "b989614dc4f86228": "894c65b9f729ca59cff24bfa23226e047632ef3d245722c2da9e64fe620690e1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b989614dc4f86228",
+      "locator": "§6, definition of directional capacity through the depth formula; opening maximum statement"
+    }
+  ],
+  "statement": "Fix $n,d\\ge 1$, a finite nonempty $P\\subset\\mathbb R^n$, and nonempty compact convex sets $K_z\\subset\\mathbb R^d$ for $z\\in P$. Write $S=\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$, $\\mu=\\sum_{z\\in P}\\delta_z\\otimes(\\mathcal L^d|_{K_z})$, and $M=\\mu(S)$. Let $h_\\mu(z,x)$ be the infimum of $\\mu(H)$ over closed ambient halfspaces $H$ containing $(z,x)$. For each $z\\in P$ and $(u,t)\\in\\mathbb S^{d-1}\\times\\mathbb R$ define\n$$\nc_z(u,t)=\\inf_{a\\in\\mathbb R^n}\\mu\\{(w,y):a\\cdot(w-z)+u\\cdot y\\ge t\\}.\n$$\nThe infimum is attained by a finite $a$, and $c_z$ is continuous on its entire parameter space. For every $x\\in K_z$,\n$$\nh_\\mu(z,x)=\\min_{\\|u\\|=1}c_z(u,u\\cdot x).\n$$\nIn particular, the depth is continuous on each fiber, is attained by a nonvertical closed halfspace through the point, and attains its maximum over $S$.",
+  "subgoal_id": "pk-intake-finite-fiber-anchored-capacity",
+  "title": "Finite attained directional capacity and same-fiber depth"
+}

@@ -1,0 +1,60 @@
+{
+  "candidate_id": "d21edcf7186b877c",
+  "candidate_sha256": "a8a9390d0f71bae833185a241f30a08664d3e278b7656fc5998fc1950f97ef83",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+    "d05c848f0195905f": "eea1f281a89ed91c01fefc727a60e24ae7a23255cdf582cfe8afc8b720a3cc27"
+  },
+  "checks": [
+    "Read original d9c0dfe42c7f1e42 at its declared SHA-256, §3 (7)–(8), including the preceding cap formulas and the source scope. This is a counterexample to the vertex-only comparison at a single point of an ordinary tetrahedron. The 27/64 bound survives this witness.",
+    "Constructed the four edge intersections directly for heights (6,7,-24,-6), used the two exact cross products and triangle means to obtain the centroid and normalized coarea, and used three absolute determinants to obtain the cap fraction. They give the stated centroid, 261/4030 and 506/2015. All four coordinates are strictly between zero and one third.",
+    "Reconstructed the three triangular volume fractions by edge-parameter products and their normalized section vectors as the cap fractions times the raw gradients. Checked the complementary vector by reversing the sign. All four printed vectors and fractions agree.",
+    "Verified in exact rational arithmetic that the four numerators are positive, sum to 52425025485892802, and annihilate each coordinate of the four section vectors. Recomputed both means, their strict comparison, the positive gap to 27/64 and the complementary affine slack -76232299376/232609319856225. D is positive and the weighted slack has the required negative sign."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1462fa9ce6ced54e",
+      "candidate_sha256": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+      "mapping": "The signed tuple (6,7,-24,-6) is a strict 2+2 split in the standard tetrahedron. The raw centroid, coarea and volume formulas apply and its section normal is the raw gradient times S. The complement has the same centroid and area and the opposite oriented gradient.",
+      "reviewed_proof_sha256": "8de3c29eaf4b9ea31778296cf6c19010b1e74d947e37a33c223e812e662b921a",
+      "reviewed_statement_sha256": "bca7b2d2230b274880856fcf4ccd9e8239bbbebad59eed011d4c53736003028c",
+      "status": "same-wave draft, independent approval required before admission"
+    },
+    {
+      "candidate_id": "d05c848f0195905f",
+      "candidate_sha256": "eea1f281a89ed91c01fefc727a60e24ae7a23255cdf582cfe8afc8b720a3cc27",
+      "mapping": "The rational common centroid satisfies every coordinate restriction. The first three vertex-side cuts are consequently available. The lemma supplies the balanced mean R of all four vertex-side cuts, the exact affine equality on those cuts, and the complementary quadrilateral slack formula.",
+      "reviewed_proof_sha256": "2cb72f7915d6660521733a497ae9a98d70fd3fa6343d6379801f08ad132d7e7c",
+      "reviewed_statement_sha256": "e558b21c0acde74094ac2a94e647f45dd642695a225a7d8ddacb4145d304e55e",
+      "status": "same-wave draft, independent approval required before admission"
+    }
+  ],
+  "elapsed_seconds": 334,
+  "finished_utc": "2026-11-08T14:11:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This is a rank obstruction using the ordinary centroid of a regular tetrahedron and the four equal vertex-side caps. It gives neither the off-centroid vertex-only comparison nor a quadrilateral extension with a smaller mean.",
+      "fact_id": "9b0e9cc6d713be2c"
+    },
+    {
+      "comparison": "The accepted lower bound concerns projected stationary menus of normal rank at most two. The three vertex-cap vectors in the present witness are independent, since the four barycentric gradients have just the all-positive weighted relation after forming the vertex vectors. The lower bound does not yield the exact comparison.",
+      "fact_id": "03ec0bc313e02df5"
+    }
+  ],
+  "readability": "The slack is the fraction minus the affine value after multiplication by D. Its weighted contribution is the mean minus R after division by D.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c41f59a348908d93f103cc8f6a9980a36e48a827a16fc08f0864b244a38ca356",
+  "reviewed_statement_sha256": "c8623bfbbbced20fc867b3f680fbe2761e26e85ec187ce492e6164f18bbbfb25",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:05:57Z",
+  "summary": "The complementary quadrilateral and three vertex caps give the exact balanced witness. Its mean lies strictly between 27/64 and the all-vertex-side mean. Admission requires both same-wave predecessors.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

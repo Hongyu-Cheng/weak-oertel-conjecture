@@ -1,0 +1,40 @@
+{
+  "advances": "Proves a lower response for actual moving caps and identifies which supporting allocations enter it.",
+  "author": "PK-research-agent",
+  "candidate_id": "9ee0d9a1e9f65259",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:19:53.444624+00:00",
+  "depends_on": [
+    "5efc62439ac46cfb"
+  ],
+  "draft_key": "conservative-cap-branches",
+  "kind": "lemma",
+  "proof": "Decompose loss into motion of the plane on each old fiber and the oriented body shell against the moving cap indicator. In the old body take vertical columns parallel to $u_j/b_j$. On the old plane the continuous-coordinate threshold displacement has first speed $(r-\\nu_j\\cdot w)/b_j$, since the new plane coefficient in the vertical direction is $b_j+O(t)$. For almost every column through a proper section its crossing point is interior to the body, giving loss equal to that speed. The exception is in the relative boundary of the plane section and has zero section area. For a supporting section the columns through its relative interior extend to the body side, giving fixed-body loss $[(r-\\nu_j\\cdot w)/b_j]_+$ at inside support and fixed-body loss $-[(\\nu_j\\cdot w-r)/b_j]_+$ at outside support. This follows by measuring the truncated interval on each column and dominated convergence, since column losses have uniform size $O(t)$. Supporting sections of dimension less than $d-1$ contribute zero. The same column calculation in $d=1$ uses counting measure on a zero-dimensional section.\n\nIn the shell integral use signed inward normal coordinate at a regular old boundary point, rescaling the radial coordinate by $n(X)\\cdot(X-o)$ and by $t$. The new shell endpoints tend to $0$ and $v$, with their signed orientation. Off the old plane the cap indicator is constant in the limit. On a proper old plane its intersection with the old boundary has surface measure zero, being contained in the relative boundary of the plane section. At an outside supporting face $n=u_j/b_j$ and the limiting shell indicator at inward coordinate $s$ is $\\mathbf1_{\\{s\\le A\\}}$, where $A=(\\nu_j\\cdot w-r)/b_j$. Adding the fixed-body term $-A_+$ to the shell integral $\\int_0^v\\mathbf1_{\\{s\\le A\\}}\\,ds$ gives $-(A-v)_+$. At an inside supporting face $n=-u_j/b_j$, set $A=(r-\\nu_j\\cdot w)/b_j$. The corresponding sum is $A_++\\int_0^v\\mathbf1_{\\{s\\ge A\\}}\\,ds=v+(A-v)_+$. The other contributions are exactly $B_j$ and the proper plane terms in the statement. Dominated convergence in these column and shell calculations also applies along every sequence $t\\downarrow0$, $r_t\\to r$ with bounded $r_t$, since the limiting indicator switch is a single coordinate value on each signed radial segment. Continuity of the displayed loss in $r$ then gives uniformity on compact intervals.\n\nBoth $R_j$ and $R_j^0$ are continuous and strictly increasing onto $\\mathbb R$ as functions of $r$, with slope bounded below by $S_j$ in the sense of difference quotients. To identify the exact first continuation, the old thresholds have mass $Q+O(t)$ under the moving cap and bodies, and the inverse has a uniform local Lipschitz bound from the proper coarea. Thus $c_j(t,Q)=c_j+O(t)$. The common outer ball gives a fixed upper bound on coarea, so the weighted inverse equation and $\\alpha_i(t)=O(t)$ imply $q_i(t)=Q+O(t)$ and each new threshold is $c_j+O(t)$. Apply the uniform expansion to any convergent subsequence of their rescaled displacements. The limiting thresholds equalize all $R_j$ with the prescribed weighted budget, a unique solution since the weighted sum of inverses is strictly increasing onto $\\mathbb R$. The inequality $R_j^0\\le R_j$ and monotonic inversion give the lower bound on the actual equalized loss.\n\nThe identity $-[x]_+=\\min_{0\\le\\theta\\le1}(-\\theta x)$ represents $R_j^0$ as the infimum of the linear branches $b_j^\\theta(v)+T_j r-m_j^\\theta\\cdot\\nu_j$. Equalizing a fixed branch tuple gives the displayed quotient. It is at least the conservative equalized loss for the same contact budget by monotonic inversion. At the actual conservative equalization thresholds choose the outside sign selectors pointwise, giving equality for every cap simultaneously. The common loss is increasing in the scalar budget, which permits taking the minimum over contacts as well.\n",
+  "source_candidate_ids": [
+    "1a7cfa3d1047cbae",
+    "4f875cf42fc6ba0a",
+    "8effe5eb4947ba88"
+  ],
+  "source_candidate_sha256": {
+    "1a7cfa3d1047cbae": "104bd373d90aa199529ed8433492010269233b30279e5364a50695a4f9e79b66",
+    "4f875cf42fc6ba0a": "eb82b704ddea98b6fe3f820947f2856245e95bac7449cc17272077ec5a5da5ee",
+    "8effe5eb4947ba88": "b60c227edb670cb87d8a5651fb4380dfb71d7a2c8c041486dedaabbbe498f7d1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8effe5eb4947ba88",
+      "locator": "§5 (7)–(8)"
+    },
+    {
+      "candidate_id": "4f875cf42fc6ba0a",
+      "locator": "§7 (16)–(18), moving-plane and conservative outside-selector response"
+    },
+    {
+      "candidate_id": "1a7cfa3d1047cbae",
+      "locator": "§§1–2, finite contact conservative inverse"
+    }
+  ],
+  "statement": "Use the setting of the body-tied contact-continuation theorem. For a selected old cap $j$ in a group, let $b_j=|u_j|$, and let $S_j>0$ be total coarea of the proper sections, with full ambient first moment $m_j$. Here each proper plane section has area measure divided by $b_j$. Let $B_j(v)$ be the captured old-boundary speed integral on proper fibers and the whole-boundary speed integral on strict full and inside-supporting fibers. An inside support means that the old cap contains the whole fiber with a supporting plane at its minimum. An outside support means that its old plane is at the fiber maximum. With threshold $c_j+tr$ and normal $N_j+t\\nu_j$, the first loss of actual mixed cap mass is\n$$\nR_j(v,\\nu_j,r)=B_j(v)+S_jr-m_j\\cdot\\nu_j\n+\\int_{\\rm in}\\left[\\frac{r-\\nu_j\\cdot w}{b_j}-v\\right]_+dS\n-\\int_{\\rm out}\\left[\\frac{\\nu_j\\cdot w-r}{b_j}-v\\right]_+dS.\n$$\nThe expansion is uniform for $r$ in compact sets at fixed actual direction. Write $R_j^0$ for the conservative loss obtained by deleting only the nonnegative inside hinge. Given the group budget $\\min_a A_{ia}$, the common cap loss obtained by equalizing the $R_j^0$ with $\\sum_j\\rho_{ij}r_j=\\min_a A_{ia}$ is\n$$\n\\ell_i^0=\\inf_{a,\\theta}\\frac{A_{ia}+\\sum_j\\rho_{ij}b_j^\\theta(v)/T_j-\\sum_j\\rho_{ij}(m_j^\\theta/T_j)\\cdot\\nu_j}{\\sum_j\\rho_{ij}/T_j}.\n$$\nHere $\\theta_j$ ranges over all measurable $[0,1]$ selectors on the outside supporting faces,\n$$\nT_j=S_j+\\int_{\\rm out}\\theta_j\\,dS/b_j,\\quad b_j^\\theta(v)=B_j(v)+\\int_{\\rm out}\\theta_j v\\,dS,\\quad\nm_j^\\theta=m_j+\\int_{\\rm out}\\theta_j w\\,dS/b_j.\n$$\nThe same selector is used in all three expressions. If $q_i(t)$ is the actual continued mass from the contact-continuation theorem, then $q_i(t)=Q-t\\ell_i+o(t)$, where $\\ell_i$ is the common loss for the actual $R_j$ and satisfies $\\ell_i\\ge\\ell_i^0$.",
+  "subgoal_id": "pk-intake-conservative-cap-branches",
+  "title": "Moving-cap response and conservative equalization on actual signed paths"
+}

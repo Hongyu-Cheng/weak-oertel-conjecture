@@ -1,0 +1,72 @@
+{
+  "candidate_id": "24e83be093cbd50e",
+  "candidate_sha256": "45cef6cd8cad482adb32904088fa8e0e2e1c39f0db6f2d733c1d86f810b8289a",
+  "checked_dependency_candidate_sha256": {
+    "506e246f680da4b5": "e998f15ec065dc0a96a2729002676d298a57e43ff7c6d9a714f4060a9ba6f724",
+    "511d89569241b0d6": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc"
+  },
+  "checks": [
+    "The feasible set contains the vector with a_0=−1, a_1=1 and all other coordinates zero, including d=1. Coupling proves almost sure convergence; the independent fixed phase −E_0 rules out a zero atom in every limit, so the indicators converge almost surely and bounded convergence gives continuity.",
+    "Under the contradiction hypothesis there are at least two positive phases and one negative phase. All nonzero free-coordinate pairs admit two-sided sum-preserving variations with a_0 fixed, so their partial derivatives agree and are positive. Conditioning the added positive or negative phase gives the stated transform on the correct half-line.",
+    "The supporting tangent to log f at zero bounds f by f(0) on the nonpositive half-line if the tangent slope is nonnegative, and on the nonnegative half-line if the slope is nonpositive. Integrability and continuity force strict inequality on a nonempty interval of the chosen half-line. Since one free coefficient of each sign is available, the relevant transform gives the common value 0<q<1 even when the tangent slope is zero.",
+    "The reciprocal derivative is positive at both free positive scales; differentiating 1/φ gives φ′=−ψ′/ψ²<0. For unequal scales the Hessian mixed entry vanishes by equality of the transform values, and the second derivative along (+1,−1) is 2f(0)(φ′(p_i)+φ′(p_j)). At equality the mixed entry is f(0)φ′(p), leaving 2f(0)φ′(p), still negative. The direction stays in the cap box for small steps of either sign.",
+    "Source 9dace055ddbb6578 at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5 matches SHA-256 793d931e0e3a4600d32eb5144b37e6c5da57305359f7ba04329288e0af8e121a. The free-sign theorem, its regularity, and equations (1)–(3) match the statement and scope. Saturated or zero coordinates outside the varying pair are permitted."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "511d89569241b0d6",
+      "candidate_sha256": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+      "fact_id": "511d89569241b0d6",
+      "fact_sha256": "d75e672e61cdd31510a3a7670e71711e49edd1b2805e5883e393e73e568cada6",
+      "mapping": "Two free positive phases and −E_0 ensure all sign-count and dimension requirements. Apply both the density/first-derivative assertions and the positive-pair Hessian, keeping the base density fixed in the scale derivative.",
+      "reviewed_proof_sha256": "de2812dbc5632f66b6800ec3d17e4a2fa4d439425feb37f623d693d06a842516",
+      "reviewed_statement_sha256": "5da49339a62c68ed1622a42d4d7d1c4bff3ac044a334dd512c679d389cf75c8b",
+      "status": "Accepted at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5."
+    },
+    {
+      "candidate_id": "506e246f680da4b5",
+      "candidate_sha256": "e998f15ec065dc0a96a2729002676d298a57e43ff7c6d9a714f4060a9ba6f724",
+      "fact_id": "506e246f680da4b5",
+      "fact_sha256": "d251e76ae5a778f9d27669bd636f28325ce1fba5f1e12fa798a557a850739ab4",
+      "mapping": "Use h(t)=f(−t)/f(0) on t≥0. It is continuous, positive, integrable, log-concave and h(0)=1; ψ=1/φ_+. At each of the free positive scales, ψ=1/q>1.",
+      "reviewed_proof_sha256": "5fec4c17b070afe8db47205756e1fdd8df014d4e956bc991241605fecb4a0c32",
+      "reviewed_statement_sha256": "a4e5b0aaf2e1cdd12c887515e2e02a477a8ec997a96439b16257801c4d348214",
+      "status": "Accepted at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:11:03.227743+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same Hessian and reciprocal transform for a stationary simplex cap. Its statement assumes stationarity on the full barycentric margin hyperplane and bounds the selected barycentric coordinates by 1/d; a local minimum on the capped face need not have full stationarity for the uniform barycentric coordinates. Its Hessian calculation can be reused after deriving the free derivative ratio q<1 and identifying the pair direction that is feasible within the box, but it does not state this capped result.",
+      "fact_id": "27d3881f8bfc290c"
+    },
+    {
+      "comparison": "Gives decrease for transfers into a largest positive coefficient. It rules out the pair if a receiving free positive is largest, but saturated positives may be present and transferring into them is then infeasible.",
+      "fact_id": "564e798ecec2b61f"
+    },
+    {
+      "comparison": "Provides the local first and second derivatives, without an optimization assertion on the capped face.",
+      "fact_id": "511d89569241b0d6"
+    },
+    {
+      "comparison": "Provides the reciprocal-transform slope and convexity, without deriving the common free-coordinate derivative or its bound.",
+      "fact_id": "506e246f680da4b5"
+    }
+  ],
+  "readability": "The distinction between differentiation in the coefficient vector and differentiation of the scale transform at a fixed base density is explicit. The d=1 case is covered by the continuity argument and has no free-sign pair.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d9aef324dfb61fe00b7a475aedfb0606e781bb6735dbb164aad402d0b9e5a52c",
+  "reviewed_statement_sha256": "d3a7a57efc151a26c61ff0c4768334f58b56235104d27e86492d1bb2b4f584e6",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:08:04Z",
+  "summary": "The capped domain is compact and the probability is continuous. In the presence of a free negative coefficient, two free positives yield a feasible direction with strictly negative second derivative at any putative local minimum.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

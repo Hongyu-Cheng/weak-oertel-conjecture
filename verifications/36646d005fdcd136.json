@@ -1,0 +1,61 @@
+{
+  "candidate_id": "e1fa78bad6ed2180",
+  "candidate_sha256": "019d2a6724042f2e5dd9ae9cf6585c174c17dea25e06f1311373e625d4a8a5a0",
+  "checked_dependency_candidate_sha256": {
+    "33488d4938a6ee4a": "4cf5340cd24a87299f2b841763b116fe73283de907888c2f936ace54c818ba6a"
+  },
+  "checks": [
+    "Derived the normalized moment identity, boundary parametrization F=3-(z-1)^2 and C=2+z^2, and the exact z range. The companion-entry bounds use both row inequalities and the fixed sum 2z.",
+    "Recomputed the two loss-polynomial endpoint values and the derivative signs. Completing each loss square is strict at the common feasible boundary, including the selected entry x in (0,2).",
+    "Checked the lower companion-entry bounds, the moment bound sqrt(q_s)>3/5 and the upper sqrt(q_s)<7/10, so every T_s is in (10/7,5/3). For gains the relevant summands are convex in T_s, and the included companion multiplier is negative.",
+    "Independently recomputed all twelve Bernstein minima with exact rational arithmetic. Every entry is strictly above 1/2, yielding beta_s<-1/(4k).",
+    "Endpoint positivity gives a positive affine path; cap ratios are fractional-linear and stay in the endpoint band. A first subsequent contact, including at t=1, is impossible because every tight row has strictly negative derivative for a nonzero transfer.",
+    "The sector identities give exactly G-G_i-E_i for cap i; common full chords fix coarea factors. A proper convex inner body of a strict-incidence triangle loses positive area only in the three unique corners.",
+    "Checked the proof against its pinned source locator: c9c719c799483463:01 §§1–6, (2)–(20), planar finite transfer."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "33488d4938a6ee4a",
+      "candidate_sha256": "4cf5340cd24a87299f2b841763b116fe73283de907888c2f936ace54c818ba6a",
+      "fact_sha256": "f8984683c74029e46b557b60af5120ad1efc62edd5e0e1b9470d2ba2f9023b41",
+      "hypotheses": "In the geometric specialization T is a strict distinct-vertex triangle with balanced spanning normals. Its cubic bound supplies all initial Lorentz rows.",
+      "reviewed_proof_sha256": "97c560ebf4ac7a967d9c6749e620fd6fcf49bb7ff5f2604b3dc582c3c35b3d02",
+      "reviewed_statement_sha256": "2627a0768145e660338b8f307735ca8df6e5e86b2d1dad065733f3adc9dcc79e"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:21:46Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "A local actual-body result near a strict triangle with fixed normals. It does not give a finite transfer for arbitrary positive row data in the explicit cap band.",
+      "fact_id": "0420e95025d90472"
+    },
+    {
+      "comparison": "Local fixed-section losses from nearby simplices; no finite common boundary for simultaneous losses and gains.",
+      "fact_id": "a6b895b7e48e8037"
+    },
+    {
+      "comparison": "An ordinary cap band with unspecified epsilon around 4/9, not this fixed explicit band and finite raw-data transfer.",
+      "fact_id": "63da83a5bf280d7c"
+    },
+    {
+      "comparison": "One local actual ear variation, rather than the uniform coefficient for all three double gains at the common boundary.",
+      "fact_id": "fcb98a77224687d8"
+    }
+  ],
+  "readability": "The statement and proof are readable as frozen.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "24a16c1c81305f64e9c933138a915f915180d0cbfe448beeaee5363c08316123",
+  "reviewed_statement_sha256": "6748d69050bba7693d92dc10898b7e8a1b8d78f1a5c2b97d21ed1a82a38d12cf",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:17:13Z",
+  "summary": "The cap-band boundary derivatives and first-contact argument certify finite simultaneous unique losses and double gains.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

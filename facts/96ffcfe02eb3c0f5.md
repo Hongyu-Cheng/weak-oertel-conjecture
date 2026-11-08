@@ -1,0 +1,39 @@
+---
+fact_id: 96ffcfe02eb3c0f5
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-four-interval-centroid-three-eighths
+depends_on: []
+verifier_run: f89c7b465a39ec3d
+target_match: null
+---
+
+## Source
+
+- [b9d705e0e5ad374f](../candidates/b9d705e0e5ad374f.json), b9d705e0e5ad374f:01 Theorem (1), §§1–6.
+
+## Statement
+
+Let a planar convex body have exactly four nonempty integer fibers, each a positive-length interval. If its true mixed length centroid has integer base, that centroid is a sampled point and every closed ambient halfspace containing it captures at least $3/8$ of the total mixed length.
+
+## Proof
+
+The bases are consecutive by convexity and the positive weights put their mean strictly between the extreme bases. Translate and reflect the base to take the sites to $-1,0,1,2$ and the centroid to base zero. Any containing cap can be tightened through the centroid. For a nonzero continuous normal, an affine height shear, translation and if necessary reflection put the cap in the form $x\ge0$ and the centroid at $(0,0)$. Scale lengths so $w_1=1$. The base moment and concavity of the widths give
+$$
+(w_{-1},w_0,w_1,w_2)=(1+2t,s,1,t),\qquad
+0<t\le1/2,\quad 1+t\le s\le2-t.
+$$
+Write $M=s+2+3t$, $Q=s^2+2+4t+5t^2$, and $A,B,C,D$ for the upper endpoints at the four sites. If $l_i$ are the lower endpoints, the true height moment gives $\sum_i w_i r_i=Q/2$ and $\sum_i w_i l_i=-Q/2$, where $r_i$ denotes the upper endpoint. Convexity makes the upper endpoints concave and the lower endpoints convex. Jensen with weights $w_i/M$ of mean base zero gives $B\ge Q/(2M)>0$ and $l_0\le-Q/(2M)<0$. The central interval is therefore properly cut in every transformed cap.
+
+Let $m=\max(s,1+2t)$. Then $4Q\ge3mM$. If $m=s$, the difference is $s^2-(6+9t)s+8+16t+20t^2$, decreasing on the allowed range in $s$ and equal to $30t^2$ at $s=2-t$. If $m=1+2t$, the difference is $4s^2-(3+6t)s+2-5t+2t^2$, increasing there and equal to $3-6t$ at $s=1+t$.
+
+Classify the fully captured fibers by $l_i\ge0$, including equality for a closed cap. If none is fully captured, the cap mass is $\sum_i(r_i)_+$, and $Q/2=\sum_iw_i r_i\le m\sum_i(r_i)_+$ gives the claimed bound. If fiber $-1$ is fully captured, it contributes $1+2t\ge M/4$ by $s\le2-t$. If fiber $1$ is fully captured, convexity gives $l_2\ge2l_1-l_0>0$, and fibers $1,2$ contribute $1+t\ge M/4$ by the same width constraint. In either case the disjoint central contribution is $B\ge Q/(2M)\ge M/8$, by Cauchy over four lengths.
+
+Only fiber $2$ remains as a possible lone fully captured interval. Then $D\ge t$ and $D\le2C-B$ by concavity, so $C>0$. The exact cap mass is $F=(A)_++B+C+t$. In the height moment, discard a possible negative $A$ and use the bound on $D$ to get
+$$
+Q/2\le(1+2t)((A)_++C)+(s-t)B\le K(F-t),\quad K=\max(1+2t,s-t).
+$$
+Here $K>0$. The desired $F\ge3M/8$ follows from $4Q+8Kt-3KM\ge0$. For $K=1+2t$ this expression is $4s^2-3s-6st+2+3t+18t^2$. It increases in $s$ on the feasible range and has value $3+2t+16t^2$ at $s=1+t$. For $K=s-t$ the expression is $(s-2)(s-4)+2st+22t+21t^2$, nonnegative since $1<s<2$ and $t>0$.
+
+For a pure base normal the two through-centroid caps have masses $s+1+t$ and $1+2t+s$, each greater than $M/2$ and including the entire boundary fiber. Nonvertical boundaries intersect each interval in a length-null set. This covers all orientations and endpoint equalities. The centroid belongs to the body by convexity and has integer base by hypothesis.

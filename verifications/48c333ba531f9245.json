@@ -1,0 +1,45 @@
+{
+  "candidate_id": "12b88d92b390d9db",
+  "candidate_sha256": "5dbd7aba7fe6f4d213efeaf6fea5d942cd4ebe98610782a43e463eb24406cbd4",
+  "checked_dependency_candidate_sha256": {
+    "c343c9f3dc96957e": "a952e2f742c093432567f048e9ae11aadc72b04ebc5f5bc3ef2cd369f1e20a9d"
+  },
+  "checks": [
+    "If v is in the base covariance kernel, the centered scalar v·Z is zero almost surely, so the cross covariance kills v. The pseudoinverse solves the normal equation and differences of solutions annihilate the centered random base in mean square.",
+    "Conditional covariance of a uniform positive full-dimensional fiber is positive in every nonzero direction. Total covariance then makes the residual covariance positive definite, including a zero-dimensional base.",
+    "Recomputed the transformed covariance normal equation with V'=UVUᵀ and cross covariance (A Cov(X,Z)+DV)Uᵀ. The proposed transformed regression is valid and leaves residual AR. Substituting both affine coordinate maps gives the claimed coefficients and invariant margin.",
+    "The surface Jacobian for an invertible A is Δ||A^−ᵀu||/||u||. Dividing by the transformed normal length gives exact Δ scaling of the coarea measure, with one common pushed-forward density and proper sections still at density one.",
+    "Using the exact cap and contact masses, shear and translation terms cancel from continuous stationarity by the base and mass equations. The objective and budget multipliers stay fixed, while raw scaling sends the coverage and sphere multipliers to Δ times their values.",
+    "Contracting the covariance-sphere equation with u cancels both base and offset terms and leaves σ_i=−α_0Ψ_i. For an integrated contact the same identity is linear in its contact measure; no factorization is used. Source a5bd7e36a76479fe §§1–2 matches."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "c343c9f3dc96957e",
+      "kind": "accepted",
+      "mapping": "Apply to the fixed-source cap cover in the predecessor's finite compact convex positive-fiber setting after whitening by Σ^−1/2. The pointwise cover, exact normalized budget, and attainment are transported bijectively, and the raw hinge objective changes by one positive constant."
+    }
+  ],
+  "finished_utc": "2026-11-08T16:22:06Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It gives joint Euclidean actual-fiber Fritz–John and consistent coarea/contact moments. It does not define regression covariance or establish its behavior under base shears and whitening.",
+      "fact_id": "c343c9f3dc96957e"
+    }
+  ],
+  "readability": "The covariance definition only needs the positive volume law. The later hinge balance invokes the convex-fiber setting and attainment hypotheses of the named predecessor.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "69063d1e0953d02e8d329088096ef2d632a00eca6724d89a61755aae53429e71",
+  "reviewed_statement_sha256": "1c96f335d2c537641bec401695b1389a69faa2e5e5816596f01ad7fca9e10522",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:16:17Z",
+  "summary": "Residual covariance is well defined even for singular base covariance, and whitening transports the joint actual-cap stress with the stated normalization, coarea factors and multiplier scalings.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

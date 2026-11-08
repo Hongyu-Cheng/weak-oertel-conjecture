@@ -1,0 +1,61 @@
+{
+  "candidate_id": "d84ce6b83e9e30d2",
+  "candidate_sha256": "402de6566c50e2ed405c2dfbbc23a9c18e934024e9cfa995ed5cfbb6e460507e",
+  "checked_dependency_candidate_sha256": {
+    "2eb9fc1dbf88b7c8": "a1f20ee7abbdda515c1f1d55165ada7d6aa429eb9bf003b1861d659a38670616",
+    "6f5a2608fa056059": "9c24b404d885c57d14a3e02245fd4b98bfcffd028a4660b69bf9b08262c8d1cd"
+  },
+  "checks": [
+    "A width-one functional is nonzero, so each halfspace is proper. The original finite whole-space cover and its common boundary point meet the exterior-contact theorem's hypotheses if y is outside the interior. Its cap fraction lower bound then contradicts τ<γ_(d−1), proving y∈int K.",
+    "If v lies on ∂D, then y−v cannot lie in int K: otherwise v lies in y−int K, an open subset of K−K since y∈K. A simultaneous translation by −v preserves the whole-space cover, properness and finiteness, with every boundary passing through y−v. The dimension-drop theorem includes both strictly exterior and boundary contacts.",
+    "The translated inequality is ℓ_i(x)≥ℓ_i(y)−ℓ_i(v). If ℓ_i(v)≤0 the new cap is contained in the old one; otherwise the lowered threshold gains at most dℓ_i(v), since K and ℓ_i stay fixed and width remains one. Thus each new fraction is at most τ+d(ℓ_i(v))_+. The translated exterior lower bound gives an index with ℓ_i(v)≥(γ_(d−1)−τ)/d, including equality.",
+    "D is a compact centrally symmetric convex body with zero in its interior. Each nonzero vector scales by its positive D-gauge to a boundary point. At a boundary point v every ℓ∈D° satisfies ℓ(v)≤1, while a supporting functional normalized to h_D=1 attains equality. Hence h_(D°)=∥·∥_D, including zero by homogeneity. The normal hull is compact convex with support max_i ℓ_i(v); support comparison in both directions proves the equivalence with the claimed inclusion.",
+    "If g≠y the scaled vector (g−y)/∥g−y∥_D has a cap with strictly positive displacement. The original cap satisfies both the slab theorem and the assumed upper budget, so ∥g−y∥_D(γ_(d−1)−τ)≤d²(τ−γ_d). Symmetry of D gives the displayed gauge of y−g. Also g,y∈K gives g−y∈D and gauge at most one. For g=y all bounds hold directly. The strict denominator implies rigidity at τ=γ_d, and the half-gap hypothesis bounds the denominator below by half the dimensional gap.",
+    "The archived e81e0e86f9a482f3 bytes match the declared SHA-256. Its theorem (1), §§3–4, equation (7) and following polar argument give the same finite-cover result; the normalized statement includes the width normalization used in §3."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "6f5a2608fa056059",
+      "candidate_sha256": "9c24b404d885c57d14a3e02245fd4b98bfcffd028a4660b69bf9b08262c8d1cd",
+      "hypotheses_mapping": "Use the same d≥2 convex body K and width-one ℓ_i. The density upper bound applies to every translated threshold. For the final original cap, y∈int K and the polar estimate supplies ℓ_i(g−y)≥0, so the one-sided centroid gain applies. Independent exact-byte approval is recorded separately; admit the slab candidate first.",
+      "status_at_graph_base": "pending admission in wave07"
+    },
+    {
+      "candidate_sha256": "a1f20ee7abbdda515c1f1d55165ada7d6aa429eb9bf003b1861d659a38670616",
+      "fact_id": "2eb9fc1dbf88b7c8",
+      "hypotheses_mapping": "The same full-dimensional compact body and finite proper closed halfspaces cover the whole space. In the first invocation apply the contrapositive to the original common point y. In the second, the simultaneous translation gives common point y−v outside int K, including a point on ∂K. In dimension d both uses give the threshold γ_(d−1)."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:16:32.701499+00:00",
+  "gaps": [],
+  "graph_base": "d6689f94f84cf94208b9a1aa2e346be032dc0299",
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its contrapositive gives the interior-membership conclusion directly and applies to every translated cover used here. The accepted theorem gives no quantitative polar containment or centroid displacement bound.",
+      "fact_id": "2eb9fc1dbf88b7c8"
+    },
+    {
+      "comparison": "Gives a scalar mass profile for covers of K, sensitive to the number and rank of selected normals. It gives neither a width-normalized lower bound on the support of the normal hull nor a bound on a common boundary point's displacement.",
+      "fact_id": "23a563a735c07c25"
+    },
+    {
+      "comparison": "Its ordinary centroid depth case gives the budget baseline by testing any cap of the cover containing g. It does not bound the location of a common contact at or above that baseline.",
+      "fact_id": "6769574fc1bd9f8d"
+    }
+  ],
+  "readability": "The sign of the translated threshold follows by writing the new inequality as ℓ_i(x)≥ℓ_i(y)−ℓ_i(v). In the polar paragraph the support comparison is in the dual space and uses its pairing with v in the original space.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7a1b5ab1def5e8a6c216b8b7c2fa0abb25b1ebcb65aa5097ec88aa6d2477a7c1",
+  "reviewed_statement_sha256": "0ae3aa586c803313d9bfe72695a69857ebc46fedfef7a810c42e2c864be4868d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:13:52+00:00",
+  "summary": "The strict exterior-contact gap gives the stated polar containment after translation. Applying the centroid slab gain in the displacement direction gives the claimed localization and its endpoint consequences.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

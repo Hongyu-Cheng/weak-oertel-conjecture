@@ -1,0 +1,52 @@
+---
+fact_id: 29e5cd7ec3d5baef
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-pk-w29-nonatomic-fixed-cover-common-curvature-stress
+depends_on: ["6ae2eb173ed91aee"]
+verifier_run: d156e2c0c6d022ad
+target_match: null
+---
+
+## Source
+
+- [ed7be0e1efdfe13b](../candidates/ed7be0e1efdfe13b.json), ed7be0e1efdfe13b:02 §§4–5, (6)–(7), normalized common stress and full-support measure identity.
+
+## Statement
+
+Let a finite compatible family of positive planar convex fibers at fixed sampled bases locally minimize maximum normalized closed-halfspace depth in the fiberwise Hausdorff topology. Write $M>0$ for the total mixed area and $\beta>0$ for the minimum value at this family. Choose a finite collection of fixed nonvertical closed ambient caps whose traces cover every sampled continuous plane. Each cap has mixed area at most $\beta M$. Denote by $j$ the caps with equality, and assume all remaining caps are strictly slack. In particular the choice may consist of one exact critical circuit at each deepest base and a strict slack circuit at every other base.
+
+Let $I$ be an open normal interval on which the same finite Jensen rows for the support functions $h_z$ are active identically, with common coefficient kernel $L$, and all other rows have positive gaps on compact subintervals used for changes. Write $R_z=h_z+h_z''$ for the curvature measures. Let a nonzero finite nonatomic measure $\nu$ on $I$ be dominated by every $R_z$ for $z$ in a set $J$. Put $L_J=L\cap\{v:v_z=0\text{ for }z\notin J\}$. For each selected cap and each $z\in J$, assume the entire exposed face at every angle in $I$ is on the same strict side of the cap line on that fiber, with a positive uniform gap on compact subintervals. For the equality caps denote the resulting inside bits by $I_{jz}$, assigning arbitrary bits outside $J$.
+
+On a compact subinterval $[a,b]\subset I$ of length less than $\pi$, the admissible scalar Green potentials are the extensions by zero of
+$$
+\phi(\theta)=\int_{[a,\theta]}\sin(\theta-s)\psi(s)\,d\nu(s),\qquad
+\int_{[a,b]}\sin(s)\psi(s)\,d\nu(s)=\int_{[a,b]}\cos(s)\psi(s)\,d\nu(s)=0,
+$$
+for bounded measurable $\psi$. There is one vector $\lambda_j\ge0$, with $\sum_j\lambda_j=1/\beta$, such that with $W_z=1-\sum_j\lambda_j I_{jz}$,
+$$
+\sum_z W_zv_z^2\ge0\quad(v\in L_J),\qquad
+\sum_z W_z\int_I \delta h_z\,dR_z=0
+$$
+for every admissible compact Green-potential acceleration $\delta h$, meaning every finite linear combination of $v\phi$ with $v\in L_J$ and $\phi$ as above. If $\nu$ has full support on $I$, then $\sum_z W_zv_z R_z=0$ on $I$ for every $v\in L_J$. In this case the density vector of the $R_z$ with respect to $\sum_zR_z$ belongs almost everywhere to the nullspace of the restricted positive semidefinite form wherever it belongs to $L_J$. If $J$ is the whole index set, it belongs to $L_J$ almost everywhere by the active relations.
+
+## Proof
+
+A finite linear combination $G$ of the admissible changes is compactly supported in $I$, is $L_J$-valued, and has $G_z+G_z''$ of bounded density with respect to $\nu$ on its compact support. The two moment conditions and nonatomicity give the $C^1$ extension by zero. By domination, $h_z+\varepsilon G_z$ are support functions for small signed $\varepsilon$, remain close to the original ones, and preserve compatibility by the active equalities and the inactive strict guards. In particular they define actual fibers on the same bases. This uses the planar support and guard argument in 6ae2eb173ed91aee. The planar quadratic area formula there gives first area change $\int G_z\,dR_z$ on fiber $z$. Exact cap localization from the same proof makes every cap area difference on that fiber its inside bit times the full area difference: the changed boundary arcs, including any exposed segment endpoints, remain strictly on one side of the cap line, and the boundaries coincide outside the guard. This works for any finite sum on a compact union of guards with the same side. Thus every fixed cap area has an exact quadratic formula along these signed directions and requires no threshold differentiation.
+
+For each $v\in L_J$ the same Green construction, with the extra linear constraints $\int\phi\,dR_z=0$ for every $z$, realizes a signed support direction $v\phi$ with zero first fiber and cap areas and second mixed area and cap areas
+$$
+B_0(v)=-\sum_z v_z^2,\qquad B_j(v)=-\sum_z I_{jz}v_z^2 .
+$$
+Indeed the normalization is $\int(\phi^2-\phi'^2)=-1$. For a finite conic combination of these vectors choose pairwise disjoint compact short intervals inside $I$ with positive $\nu$ mass, possible by nonatomicity. Scale the potentials by the square roots of the conic coefficients. Their sum $G$ is admissible and realizes the conic combination, since the mixed terms in the area quadratic vanish on disjoint supports.
+
+For any admissible acceleration $A$ write $L_0(A)=\sum_z\int A_z\,dR_z$ and $L_j(A)=\sum_z I_{jz}\int A_z\,dR_z$. For the support path $h+tG+t^2 A/2$, curvature domination and the strict guards give feasibility for small $t$. Along it the second coefficient of the area in cap $j$ minus $\beta$ times total area, in units of $t^2/2$, is
+$$
+B_j-\beta B_0+L_j(A)-\beta L_0(A).
+$$
+Here the original difference is zero and the linear term is zero, so if all these coefficients were negative every equality cap would have normalized mass less than $\beta$ for small nonzero $t$. Strict slack persists for the other finitely many caps. The same ambient caps still cover every sampled plane, hence every competing point belongs to a cap of normalized mass below $\beta$. This contradicts local minimality.
+
+Consequently the convex cone generated by the vectors $(B_j(v)-\beta B_0(v))_j$ plus the linear image $(L_j(A)-\beta L_0(A))_j$ avoids the open negative orthant. There is at least one equality cap by the original coverage and the definition of $\beta$. Separating gives a nonzero nonnegative functional on the cone. The linear image occurs with both signs, so the functional vanishes on it. Normalize the functional to a probability vector $\pi_j$ and set $\lambda_j=\pi_j/\beta$. Its nonnegative value on each generator is $\beta\sum_z W_zv_z^2\ge0$. Vanishing on every acceleration gives $-\beta\sum_zW_z\int A_z\,dR_z=0$. This proves that the same multipliers work for all directions and accelerations.
+
+If $\nu$ has full support, fix $v\in L_J$ and a compact interval $[a,b]\subset I$ of length less than $\pi$. Set $\mu=\sum_z W_zv_z R_z$. For every bounded $\psi$ with the two endpoint moments zero, the already proved annihilation gives $\int_{[a,b]}\phi\,d\mu=0$. By Fubini this is $\int_{[a,b]}\psi(s)U(s)\,d\nu(s)=0$ for $U(s)=\int_{[s,b]}\sin(\theta-s)\,d\mu(\theta)$. The linear functional with kernel $U$ therefore factors through the two moment maps, so $U$ agrees $\nu$-almost everywhere with a linear combination of sine and cosine. The kernel is continuous in $s$, including at $\theta=s$, so $U$ is continuous and full support implies equality on $(a,b)$. Distributionally $U''+U=\mu$ there, by the unit jump of the first derivative of $1_{s\le\theta}\sin(\theta-s)$ at $\theta$. Hence $\mu|_{(a,b)}=0$. Exhausting $I$ yields the measure identity. Taking densities for a finite basis of $L_J$ gives $\sum_z W_z v_z (dR_z/d\sum_w R_w)=0$ simultaneously for all $v\in L_J$ almost everywhere. When the density vector lies in $L_J$ these are exactly the nullspace equations for the restricted form. For $J$ the full index set, apply $1+\partial_\theta^2$ to the active rows to get that membership.

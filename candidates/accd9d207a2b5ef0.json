@@ -1,0 +1,36 @@
+{
+  "advances": "The upper bound is for every real ambient mark and the normalized positive d-volume, after thickening. The intrinsic model before thickening uses D-volume. The construction excludes a factor c>1 over the sharp proposed constant and gives no counterexample at that constant.",
+  "author": "PK-research-agent",
+  "candidate_id": "accd9d207a2b5ef0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:11.341676+00:00",
+  "depends_on": [
+    "451434b30b8b01b3"
+  ],
+  "draft_key": "w32-binary-join-all-ambient-factor-obstruction",
+  "kind": "counterexample",
+  "proof": "The base-and-first-block points $(z_i,c_i)$ are affinely independent: the differences from $(z_1,c_1)=(0,0)$ for $i=2,\\ldots,n+1$ give the $n$ base axes, and each other difference has a distinct standard axis in the $k$-block. The remaining vertex differences, taken within each group from its copy of $0$, give the $rD$ independent continuous block axes. This produces $n+d=r(D+1)-1$ independent directions among the vertices, so the hull is an ambient simplex. Its projection is $[0,1]^n$, whose integer points are the $z_i$. Extremality of $z_i$ forces every generator in a representation above $z_i$ to have that same base. Thus each integer fiber is exactly the stated simplex, and each is an isometric copy of $\\Delta_D$. The finite disjoint union has intrinsic Hausdorff dimension $D$, and its normalized intrinsic measure is exactly the equal face mixture of w32-disjoint-simplex-face-join-depth.\n\nThe thickening adds only continuous coordinates. Consequently each actual integer fiber is the product of $\\Delta_D+[-\\varepsilon,\\varepsilon]^D$ in its active block and translated intervals of length $2\\varepsilon$ in the other $d-D$ coordinates. The positive volumes are identical. For a bounded continuous test function on a common compact set, replacing the shrinking interval coordinates by their centers changes the fiberwise integral against uniform probability by a uniformly vanishing amount. The active sets decrease to the compact simplex as $\\varepsilon\\downarrow0$, and their volumes converge to its positive volume by continuity from above. Thus their uniform probabilities converge to the uniform simplex law. Each layer has mass $1/r$ for every $\\varepsilon>0$, so the resulting finite sum converges weakly to $\\nu$. For $0<\\varepsilon\\le1$ all these supports lie in the compact convex set $C_1$.\n\nFor the depth comparison, suppose probability measures $\\mu_j\\rightharpoonup\\mu$ and $y_j\\to y$. Through-mark halfspaces suffice since translating the threshold of a containing halfspace to the mark only shrinks it. Fix a nonzero normal $a$ and $\\eta>0$. Eventually $\\{w:a\\cdot(w-y_j)\\ge0\\}$ is contained in the fixed closed set $H_\\eta=\\{w:a\\cdot(w-y)\\ge-\\eta\\}$. The closed-set upper bound for weak convergence gives $\\limsup_j\\operatorname{depth}_{\\mu_j}(y_j)\\le\\mu(H_\\eta)$. Equivalently one can bound $\\mathbf1_{H_\\eta}$ from above by bounded continuous functions decreasing to it using distance to $H_\\eta$. Let $\\eta\\downarrow0$ and infimize over $a$ to obtain\n$$\n\\limsup_j\\operatorname{depth}_{\\mu_j}(y_j)\\le\\operatorname{depth}_{\\mu}(y).\n$$\nContinuity from above retains the entire limiting cap boundary. This also gives upper semicontinuity in the mark for a fixed law. Depth vanishes outside the convex hull of a compact support by strict separation, so the maximum for each $\\nu_\\varepsilon$ is attained on $C_1$. Take a sequence $\\varepsilon_j\\downarrow0$ realizing the limsup and a convergent subsequence of maximizers in $C_1$. The comparison bounds that limsup by $\\max_y\\operatorname{depth}_\\nu(y)=\\gamma_D/r$.\n\nFor fixed $n$, both $\\gamma_D$ and $\\gamma_{rD+r-n-1}$ tend to $1/e$ as $D\\to\\infty$, using $j\\log(1+1/j)\\to1$. For the specified $c>1$, choose $D$ with $\\gamma_D<c\\gamma_d$. The limsup inequality and the strict margin give the required bound at every sufficiently small positive $\\varepsilon$.\n",
+  "source_candidate_ids": [
+    "2e4e1c1707f69b33"
+  ],
+  "source_candidate_sha256": {
+    "2e4e1c1707f69b33": "e24b1bba0c920a7c30776e0303a82daefbf36159f768223eea5d9735a34ee9c1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2e4e1c1707f69b33",
+      "locator": "2e4e1c1707f69b33:04 §5, exact uniform-factor obstruction"
+    },
+    {
+      "candidate_id": "2e4e1c1707f69b33",
+      "locator": "2e4e1c1707f69b33:02 §2, binary mixed realization; §3, thickening"
+    },
+    {
+      "candidate_id": "2e4e1c1707f69b33",
+      "locator": "2e4e1c1707f69b33:03 §4, (2)–(3)"
+    }
+  ],
+  "statement": "Fix integers $n,D\\ge1$, set $r=2^n$, $k=r-n-1$, and $d=k+rD$. Enumerate $z_1,\\ldots,z_r\\in\\{0,1\\}^n$ with $0,e_1,\\ldots,e_n$ first. Decompose $\\mathbb R^d=\\mathbb R^k\\times(\\mathbb R^D)^r$, let $c_i=0$ for $i\\le n+1$ and use the distinct standard vectors of $\\mathbb R^k$ for the other $c_i$. Place the simplex $T_i$ at $z_i$ with first continuous block fixed at $c_i$, its $i$th $D$-block equal to $\\Delta_D=\\operatorname{conv}(0,e_1,\\ldots,e_D)$ and all other blocks zero. Their lifted hull $J$ is a full-dimensional simplex, with integer fibers exactly $T_i$ and no other integer bases. Its normalized intrinsic $\\mathcal H^D$ probability $\\nu$ on the integer trace has unrestricted depth maximum $\\gamma_D/r$.\n\nFor $\\varepsilon>0$ the body $C_\\varepsilon=J+(\\{0\\}^n\\times[-\\varepsilon,\\varepsilon]^d)$ has exactly the same bases, with equal positive $d$-volume fibers $T_i+[-\\varepsilon,\\varepsilon]^d$. Its normalized mixed $d$-volume $\\nu_\\varepsilon$ converges weakly to $\\nu$, and\n$$\n\\limsup_{\\varepsilon\\downarrow0}\\max_{y\\in\\mathbb R^{n+d}}\\operatorname{depth}_{\\nu_\\varepsilon}(y)\\le\\frac{\\gamma_D}{r}.\n$$\nHere depth uses proper closed halfspaces and $\\gamma_j=(j/(j+1))^j$. In particular, for each fixed $n\\ge1$ and every $c>1$, some finite $D$ and all sufficiently small $\\varepsilon>0$ give $\\max_y\\operatorname{depth}_{\\nu_\\varepsilon}(y)<c\\,2^{-n}\\gamma_d$.",
+  "subgoal_id": "pk-intake-w32-binary-join-all-ambient-factor-obstruction",
+  "title": "Binary join bodies rule out a uniform improvement even over all ambient marks"
+}

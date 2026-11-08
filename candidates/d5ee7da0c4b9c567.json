@@ -1,0 +1,28 @@
+{
+  "advances": "Facet measure forces volume in a simplex, with sharp area for the planar problem. The actual application requires local minimizing caps and common zero capture at B.",
+  "author": "PK-research-agent",
+  "candidate_id": "d5ee7da0c4b9c567",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.203878+00:00",
+  "depends_on": [
+    "8434262e4a64f66c"
+  ],
+  "draft_key": "simplex-facet-contact-volume-and-sharp-planar-edge-bound",
+  "kind": "theorem",
+  "proof": "For $p\\in B$, each pyramid with apex $p$ and base $B\\cap G_i$ lies in $B$. The pyramids of positive volume have disjoint interiors because the larger pyramids from $p$ to the full facets of $T$ do. The height of the $i$th pyramid is $\\lambda_i(p)$ times the altitude of the corresponding vertex of $T$. Thus its volume divided by $|T|$ is exactly $f_i\\lambda_i(p)$. Summing proves the first assertion.\n\nIn a triangle, replace $B$ by the convex hull of its three closed edge intervals. This hull is contained in $B$ and has the same edge intervals. Its omitted region consists of the three corner triangles, with null corners allowed. On edge $i$, the two omitted lengths as fractions of that edge have sum $1-f_i$. Each corner's omitted area as a fraction of $|T|$ is the product of its two incident omitted edge fractions. For fixed $f_i$, the sum of the three products is affine in the split on any one edge when the other splits are fixed. Its maximum is attained at endpoints of all three split intervals, by successively moving each split to an endpoint that does not decrease the sum. Then each edge allocates all of its omitted fraction to one endpoint. At most one corner receives allocations from both incident edges. The sum is therefore at most $\\max_{i\\ne j}(1-f_i)(1-f_j)\\le\\max_{i\\ne j}(1-a_i)(1-a_j)$. Cutting the corner shared by the two edges of smallest $a_i$ with exactly those omitted fractions attains equality, while leaving the third edge intact. When their product of omitted fractions is zero take the full triangle.\n\nIn the actual circuit, 8434262e4a64f66c gives the common normalization and the facet area inequality for every proper $A$ trace. It applies to the same actual bodies, since the middle mark is interior, the selected normals span with positive balance, and the $B$ captures all vanish. Thus $B\\subset T$ and $f_i\\ge a_i$ at every proper cut. The other entries have $a_i=0$. Substitute in the pyramid bound and, when all three cuts are proper, the planar bound.\n",
+  "source_candidate_ids": [
+    "f5833eb86e30876b"
+  ],
+  "source_candidate_sha256": {
+    "f5833eb86e30876b": "c59795d8e4ed6fcad7c6d2e583bd1d5a9886ca12427b8785c277ba3c27dc80c6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f5833eb86e30876b",
+      "locator": "pyramid estimate, sharp planar side contacts, and application to the actual zero-endpoint critical circuit"
+    }
+  ],
+  "statement": "Let $B$ be a convex body in a full-dimensional $d$-simplex $T$, $d\\ge2$. For its facets $G_i=\\{\\lambda_i=0\\}\\cap T$ put $f_i=\\mathcal H_{d-1}(B\\cap G_i)/\\mathcal H_{d-1}(G_i)$, where $\\lambda_i$ are the barycentric coordinates. For every $p\\in B$,\n$$\n|B|/|T|\\ge\\sum_i f_i\\lambda_i(p)\\ge\\min_i f_i.\n$$\nFor $d=2$, given $a_i\\in(0,1]$ with $f_i\\ge a_i$ on all three edges, the least possible area fraction is $a_{(1)}+a_{(2)}-a_{(1)}a_{(2)}$, where $a_{(1)},a_{(2)}$ are the two smallest. A single corner cut attains the minimum, with $B=T$ when that fraction is one.\n\nIn the compatible three-fiber setting at $-1,0,1$, suppose $d+1$ through-source locally minimizing caps at an interior middle mark have continuous normals forming a full-rank positive circuit and all have zero $B$ volume. Normalize to $v_i\\cdot x\\ge z$, $\\sum_i v_i=0$, so $B\\subset T=\\{v_i\\cdot x\\le1\\}$. For each proper $A$ cut define $a_i=\\mathcal H_{d-1}(A\\cap\\{v_i\\cdot x=-1\\})/\\mathcal H_{d-1}(G_i)$, and otherwise put $a_i=0$. The first bound holds with $a_i$ in place of $f_i$. If $d=2$ and all three $A$ cuts are proper, the displayed sharp triangular lower bound with these $a_i$ applies.",
+  "subgoal_id": "pk-intake-simplex-facet-contact-volume-and-sharp-planar-edge-bound",
+  "title": "Volume forced by simplex facet contacts and the sharp triangular edge bound"
+}

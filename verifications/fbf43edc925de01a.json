@@ -1,0 +1,78 @@
+{
+  "candidate_id": "55e009cbf80ce2e6",
+  "candidate_sha256": "17a2384f91415dc95ede60277f3bb8bb550079da355118e9062510ebcbd5794b",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Only the cap-margin hypothesis in the statement changed. The proof, candidate ID, source binding, and empty dependency list are byte-for-byte unchanged as decoded fields.",
+    "Linearity gives ℓ(T_k(w)−y)=2^{-k}ℓ(w−y). Thus T_k^{-1}(H_s)=H_{2^k s} for every real threshold, with equality cases retained in the closed trace. This includes pure-base normals.",
+    "Every proper closed halfspace can be written in the stated centered form with a nonzero linear functional. The restriction restores the precise source convention without losing any closed cap.",
+    "The previous affine-intercept witness is outside the repaired hypothesis. The reindexing, first-moment factors, summable mixture, and finite-lattice limit keep their previously checked scopes."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T19:00:30Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "55e009cbf80ce2e6",
+    "candidate_sha256": "7994952e8acb8a40bf4f53661b33d60e53552ea648c55a1a9917a3d4f7c31768",
+    "checks": [
+      "Solving the base equation gives q=p+2^{-k}(z-p); integrality is equivalent to congruence modulo 2^k, and the only Jacobian is the continuous factor 2^{-kd}.",
+      "Nestedness follows by further homothety about an actual point. The original integer bases form a finite set, so the renormalized masses eventually equal the p-fiber's volume, including if that fiber is null.",
+      "For a linear margin the inverse threshold is 2^k s and pure-base boundary fibers are retained. The displacement moment has the additional factor 2^{-k}; division by a positive mass gives the centroid.",
+      "Termwise measure domination follows from actual inclusion C_k⊂C. Tonelli for mass and absolute convergence by bounded support for moments give the two distinct generating-sum exponents.",
+      "Original source §§1–2 uses the centered linear margin explicitly and includes the same arbitrary summable extension."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T18:53:51Z",
+    "issues": [
+      {
+        "defect": "The margin ℓ is never declared linear or normalized by ℓ(0)=0. For affine ℓ(v)=L(v)+b the inverse threshold is b+2^k(s−b). On C=[0,1]×[0,1], y=(0,0), k=1, ℓ(z,x)=1+x, s=5/4, the contracted cap has length 1/4 at base zero, while the displayed right side is zero.",
+        "locator": "Statement, definition of the affine closed cap H_s; proof, first paragraph threshold-preimage sentence.",
+        "repair": "Insert ‘where ℓ is a nonzero linear functional’ when defining H_s. This recovers the exact source convention.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "That ray chart in one integer dimension represents original cap masses and moments under a true-centroid assumption. It neither filters the lattice modulo 2^k nor gives exact mixture weights for an arbitrary anchor.",
+        "fact_id": "e7256a1fe689b95a"
+      },
+      {
+        "comparison": "That fact calculates optimal depth after each parity decimation of a finite lattice polygon. The present claim concerns exact measures and moments under successive actual contractions.",
+        "fact_id": "b55aafdaa99f446c"
+      }
+    ],
+    "readability": "The moment and mass scalings are clear. The affine-versus-linear wording is the only ambiguity.",
+    "reviewed_proof_sha256": "2344a413c7b551cb2ddf04f5379cbce3dc0759fc15e453779154966b20a3eca2",
+    "reviewed_statement_sha256": "cea38730d5111ebe99d81403b8ae4d376b1b5de07d47a31fb91bf0a7883c3d52",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T18:49:51Z",
+    "summary": "The dyadic fiber, measure, and moment formulas are correct for a linear cap margin. The statement should make that condition explicit to exclude an affine intercept from the threshold dilation.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "That ray chart in one integer dimension represents original cap masses and moments under a true-centroid assumption. It neither filters the lattice modulo 2^k nor gives exact mixture weights for an arbitrary anchor.",
+      "fact_id": "e7256a1fe689b95a"
+    },
+    {
+      "comparison": "That fact calculates optimal depth after each parity decimation of a finite lattice polygon. The present claim concerns exact measures and moments under successive actual contractions.",
+      "fact_id": "b55aafdaa99f446c"
+    }
+  ],
+  "readability": "The distinction between the affine cap and its linear margin is explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2344a413c7b551cb2ddf04f5379cbce3dc0759fc15e453779154966b20a3eca2",
+  "reviewed_statement_sha256": "0534d404e53721fcf474ddbf5a1fa2fd3a4352a11bd70ed477e6ac16188d3308",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "7994952e8acb8a40bf4f53661b33d60e53552ea648c55a1a9917a3d4f7c31768",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:59:54Z",
+  "summary": "The revised statement specifies a nonzero linear cap margin, closing the exact threshold-dilation issue. The original proof applies to every stated cap.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

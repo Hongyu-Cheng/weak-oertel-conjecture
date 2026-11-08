@@ -1,0 +1,34 @@
+{
+  "advances": "Conditional bounds for an actual midpoint and actual mixed slabs of attaining caps. The envelope gap remains in the distinct-cost bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "2eb3bb6a04e423ef",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:31:51.395504+00:00",
+  "depends_on": [
+    "4e868f774de77608",
+    "1ec728c26c11b368",
+    "43d100cebc13ba84"
+  ],
+  "draft_key": "pk-w36-coarse-vector-midpoint-charges",
+  "kind": "theorem",
+  "proof": "The own-depth root concavity of 4e868f774de77608 applies to the actual fibers of the convex body and gives $\\Delta\\ge0$. It also gives $F(Y_m)>0$ since the endpoints are interior to positive fibers. By 1ec728c26c11b368 there is an attaining nonvertical closed cap through $Y_m$. In any such cap the endpoint margins are opposite because $L$ is affine. If $s_e=L(Y_e)\\ge0$, the parallel cap $\\{L\\ge s_e\\}$ contains $Y_e$ and is a subset of $H$. Their exact difference in original mixed mass is $T_e$, because their set difference is $\\{0\\le L<s_e\\}$. Therefore $D(Y_m)\\ge D_e+T_e$. If $s_e>0$, the nonzero continuous normal and a ball around $Y_e$ in its own fiber give a positive-volume portion with $0<L<s_e$, so $T_e>0$.\n\nAt a common $\\theta$, average the equal endpoint objective values and compare with the midpoint value. The affine term cancels, giving $D(Y_m)\\le (D_0+D_1)/2-\\lambda\\Delta$. Equality of endpoint objectives gives the formula for $A$. If $A>0$, the upper bound is strictly below $D_0$, so an attaining cap cannot contain $Y_0$ even on its boundary. The opposite margins then give $s_1>0$, and the shift estimate gives $T+\\lambda\\Delta\\le A/2$. For $A=0$, every containing halfspace at the midpoint contains at least one endpoint, so its mass is at least $D_0$. This forces equality in the depth upper bound and $\\Delta=0$ because $\\lambda>0$. A positive margin would force the critical cap mass above $D_0$ by the shift estimate. The opposite margins are therefore both zero.\n\nFor two parameter values, the vector exchange from pk-w36-coarse-vector-envelope-work puts $A$ between $\\theta_0\\cdot\\delta w$ and $\\theta_1\\cdot\\delta w$. On the joining segment write $\\ell_i(t)=D_i+[\\theta_0+t(\\theta_1-\\theta_0)]\\cdot w(Y_i)$. Their difference $\\ell_1(t)-\\ell_0(t)$ equals $B_0(t-t_*)$. The envelope is convex on this segment as a maximum of affine functions and equals $\\ell_0(0)$ at zero and $\\ell_1(1)$ at one. Subtracting $\\ell_0(t_*)$ from the chord joining those endpoint values gives $t_*(1-t_*)B_0$. This bounds $B$ from above, and $B\\ge0$ since both lines are available. At the crossing the common value equals the average of the endpoint objectives at $\\theta_*$. The affine $p$ terms again cancel when comparing to the midpoint. This gives $D(Y_m)\\le (D_0+D_1)/2+B-\\lambda_*\\Delta$. Combining with $D(Y_m)\\ge D_e+T_e$ proves the signed budget and its absolute-value bound.\n",
+  "source_candidate_ids": [
+    "e0478eebc433b0f6"
+  ],
+  "source_candidate_sha256": {
+    "e0478eebc433b0f6": "d30346581060f5d38b709d63a7808faa41c3d266015da194046ae40f6468fa4c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e0478eebc433b0f6",
+      "locator": "e0478eebc433b0f6:02 §2, (5)–(6), tied vector midpoint slab"
+    },
+    {
+      "candidate_id": "e0478eebc433b0f6",
+      "locator": "e0478eebc433b0f6:03 §2, (7)–(8), distinct-cost midpoint envelope gap"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a compact convex body, $n,d\\ge1$, with positive summed $d$-volume $\\mu$ on $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$. Let $D(Y)$ be its raw closed-halfspace depth and $F(Y)$ the $d$th root of raw ordinary depth in the actual fiber of $Y=(z,x)$, using zero on null fibers. Fix either $p(Y)=z$ or $p(Y)=Y$. Put $w(Y)=(F(Y),p(Y))$ and $E(\\theta)=\\max_{Y\\in S}[D(Y)+\\theta\\cdot w(Y)]$ for $\\theta=(\\lambda,b)$ with $\\lambda\\ge0$. Suppose $Y_0,Y_1$ are two selected sources in the interiors of their positive fibers and their midpoint $Y_m$ belongs to $S$. Write $D_i=D(Y_i)$, $F_i=F(Y_i)$ and $\\Delta=F(Y_m)-(F_0+F_1)/2\\ge0$.\n\nIf both are active at the same $\\theta=(\\lambda,b)$ with $\\lambda>0$, label $D_0\\ge D_1$ and put $A=D_0-D_1$. Then $D(Y_m)\\le(D_0+D_1)/2-\\lambda\\Delta$ and $A=\\lambda(F_1-F_0)+b\\cdot[p(Y_1)-p(Y_0)]$. If $A>0$, every nonvertical attaining closed cap $H=\\{L\\ge0\\}$ through $Y_m$ excludes $Y_0$ and strictly contains $Y_1$. Its slab $T=\\mu\\{0\\le L<L(Y_1)\\}$ is positive and satisfies $T+\\lambda\\Delta\\le A/2$. If $A=0$, then $D(Y_m)=D_0$, $\\Delta=0$, and both endpoints lie on each such critical plane.\n\nIf $Y_i$ is active at $\\theta_i$, let $A=D_0-D_1$, $\\delta w=w(Y_1)-w(Y_0)$ and suppose $B_0=(\\theta_1-\\theta_0)\\cdot\\delta w>0$. Put $t_*=(A-\\theta_0\\cdot\\delta w)/B_0\\in[0,1]$ and $\\theta_*=\\theta_0+t_*(\\theta_1-\\theta_0)$. At this parameter the endpoint objective lines meet. The gap $B$ between the envelope and their common value satisfies $0\\le B\\le t_*(1-t_*)B_0\\le B_0/4$. For any nonvertical attaining cap through $Y_m$ containing endpoint $Y_e$, where $e\\in\\{0,1\\}$, let $T_e=\\mu\\{0\\le L<L(Y_e)\\}$. Then\n$$\nT_e+\\lambda_*\\Delta\\le\\frac{D_{1-e}-D_e}{2}+B\\le\\frac{|A|}{2}+B,\n$$\nwhere $\\lambda_*$ is the first coordinate of $\\theta_*$.",
+  "subgoal_id": "pk-intake-pk-w36-coarse-vector-midpoint-charges",
+  "title": "Actual midpoint slab charges for affine depth costs"
+}

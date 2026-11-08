@@ -1,0 +1,28 @@
+{
+  "advances": "One integer coordinate, one continuous coordinate, and a closed nonvertical cap through the true integral-base centroid that contains no whole positive interval.",
+  "author": "PK-research-agent",
+  "candidate_id": "1d56946d90d684b0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:39:29.219224+00:00",
+  "depends_on": [
+    "73234f91aeecda16"
+  ],
+  "draft_key": "interval-centroid-cap-with-no-full-fiber",
+  "kind": "theorem",
+  "proof": "Write the true mixed centroid as $(j,y)$, so $j\\in\\mathbb Z$, and write $H=\\{a(z-j)+b(x-y)\\ge0\\}$ with $b\\ne0$. Apply the affine map $(z,x)\\mapsto(z-j,(a(z-j)+b(x-y))/|b|)$. It maps the mixed lattice onto itself, preserves length on each fiber, sends the centroid to $(0,0)$ by affinity, and sends the halfspace to $x\\ge0$. We now use the transformed coordinates.\n\nThe positive integer fibers are intervals $[l_i,r_i]$ at consecutive indices. In fact the convex combination of any two positive intervals is a positive interval in the intervening real fiber, so there can be no missing positive integer index between them. Convexity also places the interpolated lower endpoint above the actual lower endpoint and the interpolated upper endpoint below the actual upper endpoint. Thus the lower endpoint sequence is convex, the upper one is concave, and the lengths $w_i=r_i-l_i$ are concave. Zero-length fibers contribute no mass or moment.\n\nSince the halfspace is closed and contains no entire positive interval, $l_i<0$ for each positive fiber. Therefore its mass is $A=\\sum_i(r_i)_+$, where a fiber with $r_i=0$ contributes zero. The zero continuous first moment gives $\\sum_iw_i(r_i+l_i)=0$ by integrating the coordinate over each interval. Substituting $l_i=r_i-w_i$ yields\n$$\n\\frac12\\sum_iw_i^2=\\sum_i w_i r_i\n\\le\\sum_i w_i(r_i)_+\\le mA.\n$$\nThe finite power-moment theorem at $p=1$ gives $\\sum_iw_i^2>(2/3)m\\sum_iw_i=(2/3)mW$, proving the strict lower bound.\n",
+  "source_candidate_ids": [
+    "efcef1959b4a9d5f"
+  ],
+  "source_candidate_sha256": {
+    "efcef1959b4a9d5f": "996035fe12af8f382bfefb1a33d7c2c4ed7c6b23480ea48c08feb192ee488d34"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "efcef1959b4a9d5f",
+      "locator": "§3, (4), actual through-centroid cap with no whole positive interval."
+    }
+  ],
+  "statement": "Let $C\\subseteq\\mathbb R\\times\\mathbb R$ be a convex body with positive mixed length $W$, and suppose its mixed-length centroid has integer base. Let $w_i$ denote the lengths of its positive integer fibers and let $m=\\max_iw_i$. For every closed halfspace $H$ whose boundary contains that centroid and whose continuous normal component is nonzero, assume $H$ contains no entire positive-length integer fiber. Its mixed length $A$ then satisfies\n$$\nA\\ge\\frac{\\sum_iw_i^2}{2m}>\\frac W3.\n$$\nThe halfspace may miss some positive-length fibers or meet them only in a boundary endpoint.",
+  "subgoal_id": "pk-intake-interval-centroid-cap-with-no-full-fiber",
+  "title": "A through-centroid interval cap with no full fiber has more than one third of the mass"
+}

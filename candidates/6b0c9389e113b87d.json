@@ -1,0 +1,32 @@
+{
+  "advances": "Refutes these monotone reduction rules for the balanced capped signed-exponential model, with unit anchors and admissible merged lists.",
+  "author": "PK-research-agent",
+  "candidate_id": "6b0c9389e113b87d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:06:28.267282+00:00",
+  "depends_on": [
+    "6eda2f91067422d6"
+  ],
+  "draft_key": "pk-w35-reserves-capped-merge-obstructions",
+  "kind": "counterexample",
+  "proof": "Every coefficient is positive and at most one, both replacements stay below one, and adding the numerators on each side with denominator $40$ verifies balance. Use the exact descending recursion of the signed-phase resolvent lemma with the displayed input lists. For specificity, the complete rational computation for the first value and the changed list is the following procedure: start each run with $k$ ones followed by a permanent zero, loop through the displayed negative magnitudes in order, and for $i=k,k-1,\\ldots,1$ replace coordinate $i$ by $(p_i v_i+b_jv_{i+1})/(p_i+b_j)$. Apply the identical procedure to both lists in the second case. For the changed positive lists use $(9/10,1,3/40,1/2)$ and $(1,1,1,3/20)$. The four resulting first coordinates, paired before and after, are\n$$\n\\begin{aligned}\n&\\frac{44654803616666020420209277}{90424914060963166702617600},\n&&\\frac{15380294780653175263}{31144717777833976680},\\\\\n&\\frac{2707328154118677286425321717654449}{5529271691908209942614085489921600},\n&&\\frac{1060866680607737867294402281}{2166639116517141016477280400}.\n\\end{aligned}\n$$\nSubtracting the left coordinate from the right in each row gives the stated positive differences. In the first case neither merged positive is globally largest or largest unsaturated. In the second case the receiver is largest only among the subunit positives; each coefficient equal to one is prohibited from receiving the merge by the cap.\n",
+  "source_candidate_ids": [
+    "9c4cc37531230a2a"
+  ],
+  "source_candidate_sha256": {
+    "9c4cc37531230a2a": "11a3b28aa72ee3f9d9ec93f957e5c90b6fa7b64c57745614ac2a5cfb3cb1103c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9c4cc37531230a2a",
+      "locator": "9c4cc37531230a2a:03 Merging into the largest unsaturated positive also fails"
+    },
+    {
+      "candidate_id": "9c4cc37531230a2a",
+      "locator": "9c4cc37531230a2a:02 Arbitrary small-pair merging fails"
+    }
+  ],
+  "statement": "For independent mean-one exponentials let $P(p,b)=\\Pr(\\sum_i p_iE_i\\ge\\sum_j b_jF_j)$. The following balanced lists have all coefficients at most one and retain a positive and negative unit anchor after merging.\n\nFor $p=(9/10,1,1/40,1/2,1/20)$ and $b=(1,31/40,9/20,7/40,3/40)$, the total on each side is $99/40$. Merging the two smallest positives $1/40,1/20$ to $3/40$ increases $P$ by $45047868558815635573/219603362719481976277785600$.\n\nFor $p=(1,1,1,1/8,1/40)$ and $b=(1,1/10,39/40,1/20,21/40,1/20,9/20)$, the total on each side is $63/20$. Merging the largest unsaturated positive $1/8$ with $1/40$ to obtain $3/20$ increases $P$ by $314330359687274458483242667/221170867676328397704563419596864$.",
+  "subgoal_id": "pk-intake-pk-w35-reserves-capped-merge-obstructions",
+  "title": "Two capped positive merges can increase the signed exponential tail"
+}

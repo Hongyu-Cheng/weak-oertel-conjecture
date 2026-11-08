@@ -1,0 +1,76 @@
+{
+  "candidate_id": "2ed123efde59eb53",
+  "candidate_sha256": "68f1ebee19fb99e21643cd32df308883748a69b22422f675ca40027356e282cb",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Compared the original and revised fields. The repaired markup restores the dimension, cap threshold, constants and limit. Original 8426c7487ce19740:03 §6 gives the same prescribed endpoint statuses and canonical centroid cut.",
+    "A unit-volume simplex with height zero at a vertex and one at the opposite facet has prefix volume q^d by homothety and centroid height q_*=d/(d+1). This also applies when d=1.",
+    "For every a,b>0 choose q_A larger than both 1 and (a+b)q_*/a. The forced q_B is then strictly negative, placing the two entire simplex endpoints on opposite strict sides of the plane. Their homothetic midpoint has exact scale (a+b)/2 and averaged shift q_*. The lifted hull at −1 and 1 yields precisely the designated three integer fibers.",
+    "The midpoint prefix at zero has fraction γ and the complementary residual root is κ(a+b)/2. The endpoint residual roots are 0,b. Their mean gives the claimed sign equivalence after division by a+b, and at fixed b=1 the gap tends to (1−κ)/2>0 as the captured volume a^d vanishes. This disproves a uniform vanishing correction based on that volume alone."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T19:33:43Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "2ed123efde59eb53",
+    "candidate_sha256": "2fbcb597b36dc01e21dbc5d110fbe47122434666e8e7feb4f53190306b011288",
+    "checks": [
+      "The decoded statement begins with `dge1`, `gamma` and `kappa`, contains `adownarrow0` in the limiting assertion, and uses unresolved math tokens rather than the claimed mathematical symbols.",
+      "The proof retains the intended unit-volume simplex construction in outline but uses damaged `qin[0,1]`, `tle0` and `q_*^d=gamma` in essential threshold and cap-fraction assertions.",
+      "The source locator 8426c7487ce19740:03 §6 specifies the strict empty endpoint statuses, canonical centroid cap and limiting gap. It confirms what the revised export must retain."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T19:30:13Z",
+    "issues": [
+      {
+        "defect": "Backslash removal corrupts the dimension, simplex threshold, constants and limit in the exact frozen fields.",
+        "locator": "Decoded statement and proof, throughout",
+        "repair": "Restore the literal math commands and submit a linked frozen revision for independent review.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its vanishing captured endpoint limits a reciprocal first-exit correction in an actual globally critical tiny simplex chain, whose whole-body midpoint comparison is not the equality slice here.",
+        "fact_id": "99653a71aa1b5ae7"
+      },
+      {
+        "comparison": "Gives residual-root failure with a vanishing captured simplex endpoint on a different, higher-rank binary configuration. The frozen candidate targets the exact homothetic whole-body midpoint and a canonical local cut.",
+        "fact_id": "00cfe3743526c693"
+      }
+    ],
+    "readability": "Several symbols can be inferred from the source, but proof review must bind the actual corrected bytes.",
+    "reviewed_proof_sha256": "2e5886e242608e9f2832ca70ecf68384436cc6ac41c46eec4b9341444ba76800",
+    "reviewed_statement_sha256": "84bc34179c2d0034fb1c1e4628ed220347a88ad0cbcda7d587d45adae5300f1b",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:24:28Z",
+    "summary": "The frozen simplex limit argument has missing LaTeX backslashes in its hypotheses, claimed formula and construction. It requires a linked repaired input.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses a vanishing captured endpoint in a globally critical tiny-simplex chain to obstruct a reciprocal first-exit cost bound. It does not give this exact homothetic midpoint residual-root loss.",
+      "fact_id": "99653a71aa1b5ae7"
+    },
+    {
+      "comparison": "Shows an unchanged residual-row obstruction in a higher-rank binary family. It does not provide this midpoint equality construction for every d≥1 and endpoint root pair.",
+      "fact_id": "00cfe3743526c693"
+    }
+  ],
+  "readability": "The obstruction concerns the original common local cut and a correction depending only on one endpoint volume. It makes no global criticality claim.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "61772fde7c9ed0edd98cf7d209e7804b3ad690837f0c0ce26d1deadd8577e4fd",
+  "reviewed_statement_sha256": "986510a31d63061295f1d31c8826c50bd17a9667bdc26c2fa9dd18a682e7d2b4",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "2fbcb597b36dc01e21dbc5d110fbe47122434666e8e7feb4f53190306b011288",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:31:21Z",
+  "summary": "The repaired simplex construction proves the exact homothetic midpoint residual-root gap with both zero-volume endpoint traces genuinely empty.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

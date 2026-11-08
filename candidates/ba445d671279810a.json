@@ -1,0 +1,38 @@
+{
+  "advances": "A local structural statement for a specified triple of actual critical caps on three planar fibers, without a global maximum or an orbit-minimality premise.",
+  "author": "PK-research-agent",
+  "candidate_id": "ba445d671279810a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:27:15.711470+00:00",
+  "depends_on": [],
+  "draft_key": "actual-critical-planar-chord-weights",
+  "kind": "theorem",
+  "proof": "Fix $i$ and suppress its subscript. In the stated coordinates the planar area element is $dr\\,du$, since the coordinate basis has determinant of absolute value one. The original cut thresholds in $r$ are $v\\cdot y-h,0,h-v\\cdot y$ on $A,K,B$, respectively. The origins on the endpoint lines average to $y$. Let $I_B$ be the $u$-interval of the $B$ support face.\n\nAdd $\\varepsilon(\\eta u+\\beta z)$ to the cap margin for arbitrary real $\\eta,\\beta$ and take $\\varepsilon\\downarrow0$. The function $u$ is the linear coordinate of $x-y$, so the perturbed affine cap passes through $(0,y)$ and its mass is at least the original mass. On each line with $u$ fixed, the $r$-threshold moves by $-\\varepsilon(\\eta u+\\beta z)$. The retained length on a nonempty $r$-slice $[l,m]$ with cutoff $s$ is $[m-\\max(l,s)]_+$. At a proper cut its derivative is the signed margin velocity wherever the original cutoff lies in the interior of the slice. At the upper endpoint of a nondegenerate slice it is the positive part of the velocity. For almost every $u$ on a proper section the cutoff is interior, since the relative interior of a proper chord lies in the body interior. For almost every $u$ on a positive-length support face of $B$ the normal slice is nondegenerate: the interior of the projection of a convex body is the projection of its interior, as follows by projecting a segment from an interior point past the projected point in question. Outside the original section the derivative is zero. The bounded difference quotients on the compact $u$-projections allow integration. Thus\n$$\n0\\le a(\\eta c_A-\\beta)+k\\eta c+\\int_{I_B}(\\eta u+\\beta)_+\\,du.\n$$\nTaking $\\eta=0,\\beta=1$ gives $|I_B|\\ge a>0$. For each $\\eta\\in\\{1,-1\\}$ choose $\\beta$ so that the top length-$a$ subinterval of $I_B$ in the direction $\\eta$ is $\\{\\eta u+\\beta\\ge0\\}\\cap I_B$. If $|I_B|=a$ use the whole interval. The $\\beta$ terms cancel, giving\n$$\n0\\le \\eta\\left(ac_A+kc+\\int_{\\{\\eta u+\\beta\\ge0\\}\\cap I_B}u\\,du\\right).\n$$\nThe two signs put $-c_A-(k/a)c$ between the centers of the leftmost and rightmost length-$a$ subintervals. Every center between them is attained by translating a length-$a$ subinterval inside $I_B$. Its midpoint sum with the actual $A$ chord is an interval of length $a$ with center $-(k/(2a))c$. By compatibility this interval lies in the actual $K$ chord, giving $(1+k/(2a))|c|\\le(k-a)/2$ and $k\\ge a$.\n\nSince $y$ is interior, the symmetric core is a convex body containing $0$ in its interior, and its gauge is a norm by symmetry and convexity. Along $Jv_i$ its positive radial parameter is the nearer of the two endpoint distances in the $u$-coordinate:\n$$\n\\frac{k_i+2a_i}{6}\\le\n\\frac{k_i^2+2a_i^2}{2(k_i+2a_i)}\n\\le \\frac{k_i}{2}-|c_i|\n\\le \\frac{k_i+2a_i}{2}.\n$$\nThe first inequality is $3(k_i^2+2a_i^2)-(k_i+2a_i)^2=2(k_i-a_i)^2\\ge0$, and the second is the chord bound. Taking reciprocals gives the two gauge comparisons. Finally $Jv_i=-\\sum_{j\\ne i}Jv_j$, so $2\\lambda_i\\le N(Jv_i)\\le\\sum_{j\\ne i}N(Jv_j)\\le6\\sum_{j\\ne i}\\lambda_j$. This gives the remaining bounds.\n",
+  "source_candidate_ids": [
+    "568f7cf028ec23b6",
+    "6ac02348e3ceb9a9",
+    "86934b651b11f7d5"
+  ],
+  "source_candidate_sha256": {
+    "568f7cf028ec23b6": "bcb5d825d97ccf3fd5ea91bc5db9a975e904f097c9c5c2fcdd5ae8a50c730d1e",
+    "6ac02348e3ceb9a9": "28a7130eeec37132194cf15d45d685440920f1dd6bd539fef8ff903d70c07016",
+    "86934b651b11f7d5": "8254b89175df007bbd9d3d3bba466612eeb3e0a62050893049c0f6e7f9f008ec"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "86934b651b11f7d5",
+      "locator": "§§1–2, (1)–(4), actual B subinterval, chord center and section weights"
+    },
+    {
+      "candidate_id": "6ac02348e3ceb9a9",
+      "locator": "§§3–4, signed facet moment and actual planar interval inclusion"
+    },
+    {
+      "candidate_id": "568f7cf028ec23b6",
+      "locator": "§§1–2, fixed-mark first variation at a zero endpoint"
+    }
+  ],
+  "statement": "Let $A,K,B\\subset\\mathbb R^2$ be convex bodies at the only integer bases $-1,0,1$, respectively, with $(A+B)/2\\subseteq K$. Use planar area on each fiber. Fix $y\\in\\operatorname{int}K$ and nonzero spanning vectors $v_1,v_2,v_3$ with $\\sum_i v_i=0$. Set $h_i=h_B(v_i)$, where $h_B(v)=\\max_{x\\in B}v\\cdot x$, and $b_i=2v_i\\cdot y-h_i$. Assume each of the three closed ambient caps\n$$\nv_i\\cdot(x-y)+(v_i\\cdot y-h_i)z\\ge0\n$$\nattains the actual mixed depth at $(0,y)$, and cuts both $A$ and $K$ properly. The trace on $B$ is the supporting face $F_i=B\\cap\\{v_i\\cdot x=h_i\\}$. Let $a_i,k_i$ be the lengths of the $A,K$ cutting chords, respectively, divided by $\\lVert v_i\\rVert$. Put $\\lambda_i=1/(2a_i+k_i)$ and $\\Lambda=\\sum_i\\lambda_i$.\n\nLet $J$ be rotation through a right angle. Give the three cutting lines compatible coordinates by writing $x=y+r v_i/\\lVert v_i\\rVert^2+uJv_i$, using the appropriate constant $r$ on each line. Let $c_{A,i}$ and $c_i$ be the $u$-centers of the $A,K$ chords. Then $F_i$ contains a $u$-interval of length $a_i$ centered at $-c_{A,i}-(k_i/a_i)c_i$. In particular,\n$$\nk_i\\ge a_i,\\qquad\n|c_i|\\le \\frac{a_i(k_i-a_i)}{k_i+2a_i}.\n$$\nFor the single centrally symmetric body $(K-y)\\cap(y-K)$, its Minkowski gauge $N$ satisfies\n$$\n2\\lambda_i\\le N(Jv_i)\\le 6\\lambda_i,\\qquad\n\\lambda_i\\le3\\sum_{j\\ne i}\\lambda_j,\\qquad\n\\frac{\\lambda_i}{\\Lambda}\\le\\frac34.\n$$",
+  "subgoal_id": "pk-intake-actual-critical-planar-chord-weights",
+  "title": "Actual critical planar chords bound the reciprocal section weights"
+}

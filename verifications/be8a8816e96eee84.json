@@ -1,0 +1,62 @@
+{
+  "candidate_id": "a59c6410e8061c9e",
+  "candidate_sha256": "e3d7cdca8ec67e52981852215c196e51c27a63df6ee86945d88dcb48718a3de0",
+  "checked_dependency_candidate_sha256": {
+    "452f0ad1dec40904": "2da0711619f5ef4c93d2965a59841a55790d898ac3285eb0d109ee932d4cf484",
+    "b1737542a85a4328": "632b69e3231eec519d9a9438e3e303cdde5f08d60362b261eb168614d1ec0d1a"
+  },
+  "checks": [
+    "Strict containment of full-dimensional convex bodies has a strict volume gap, by taking a positive-volume ball near an exterior point of the larger body. The positive-volume Brunn–Minkowski equality case and positivity of all weights force pairwise positive homothety.",
+    "Normalize D=(K−y)/s and a_j=|A_j|^(1/d). All bodies then use the same unit-volume shape and the weighted translation is y. The normalized thresholds average to zero using weights θ_j a_j/s, all positive.",
+    "Varying fractions imply varying proper thresholds in each direction. Their strictly negative minimum gives an actual cone cap extending beyond zero by the one-direction classification. Positive balance and the cone-apex parent imply both the simplex shape and full normal rank.",
+    "Checked d99f14f216938f2e §§4–5 and the cited Brunn–Minkowski statements, equations (3)–(4) and the equality characterization immediately following."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "b1737542a85a4328",
+      "candidate_sha256": "632b69e3231eec519d9a9438e3e303cdde5f08d60362b261eb168614d1ec0d1a",
+      "hypotheses": "With K exactly the Minkowski sum, every endpoint is a positive homothet of the unit-volume D. The given cuts are proper and the actual root equality is assumed. Nonconstant normalized fractions put every direction in the parent’s unequal-threshold cone branch. Same-wave admission depends on the parent’s independent approval.",
+      "reviewed_proof_sha256": "131ca8bc8d3a81eaef79fb15fca27f0f60535586e8da10588da4712733575e30",
+      "reviewed_statement_sha256": "e1998da0e906024705a320530ed1993a4c9570d135fb4af1ceaf0ca05cb41abf"
+    },
+    {
+      "candidate_id": "452f0ad1dec40904",
+      "candidate_sha256": "2da0711619f5ef4c93d2965a59841a55790d898ac3285eb0d109ee932d4cf484",
+      "hypotheses": "The cut level min_j q_ij is strictly negative, D has interior zero, the family is finite, and the same positive normal weights balance. This is the positive-balance branch of the cone-apex parent. Same-wave admission depends on the separate parent approval.",
+      "reviewed_proof_sha256": "d4fc96ed188a609c19ff129721f02e3273f662598d53cf52df675f6b495afc96",
+      "reviewed_statement_sha256": "306393d6c7b51eaff711e9bdf3f1ff7b91884fec996b497735cf2bfbbc2dc94a"
+    },
+    {
+      "hypotheses": "Every pair of endpoint bodies has positive full-dimensional volume and is given positive weights. Any strict weighted pair inequality survives addition of the remaining bodies.",
+      "reference": "R. J. Gardner, The Brunn–Minkowski inequality, equations (3)–(4) and following equality paragraph",
+      "url": "https://sites.stat.washington.edu/jaw/COURSES/520s/523/HO.523.20/Gardner.BullAMS.02.pdf"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:03:09Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Identifies bodies at equality in an ordinary maximal-depth bound, using centroid equality. This proof instead assumes exact whole-body and proper captured-side Brunn–Minkowski equalities and need not use the centroid.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Derives simplex rigidity from a different ordinary cap profile equality. It does not treat the endpoint family or the normalized-threshold averaging.",
+      "fact_id": "1c6088cbbbb3f688"
+    }
+  ],
+  "readability": "The phrase unequal across the family explicitly means nonconstant, which is enough to make the minimum threshold strictly negative.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a4707a6a3190db2c647fb9c43b16455b80c7f05029375a2083b92a3acdb309d1",
+  "reviewed_statement_sha256": "c56adce5d2b99130d42f2ab78c3c7ac194f4f4221d952962c15d2545a860c487",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:00:24Z",
+  "summary": "Whole-body equality gives an actual homothetic family. The normalized proper varying thresholds have a strictly negative minimum in every balancing direction, so the exact cone-cap rigidity applies.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,34 @@
+{
+  "advances": "Uses true original cap and intersection masses for given covers. It neither forces positive overlap nor promotes the bound to the conjectured sharp constant in arbitrary dimension.",
+  "author": "PK-research-agent",
+  "candidate_id": "f5574b51f3609687",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.743556+00:00",
+  "depends_on": [
+    "0f6ca72852c286b2"
+  ],
+  "draft_key": "pk-w36-menu-overlap-budget",
+  "kind": "theorem",
+  "proof": "An almost-everywhere finite closed cover covers every point of each positive fiber, since a missed point gives a relatively open missed set of positive intrinsic measure. Ordinary Helly in each fiber's affine hull, applied to the strict complements intersected with its relative interior, gives a local list of at most $q+1$ original caps covering the whole fiber after closure. For a singleton one cap suffices. Apply the list selection in the proof of 0f6ca72852c286b2 with $t=q+1$. The selected unions cover all measured mass, so $\\sum_j B_{I_j}\\ge M$. At any point the count of active caps in a group is at least its union indicator, and their difference integrates to $D_j$. Substituting $B_{I_j}=\\sum_{i\\in I_j}\\mu(H_i)-D_j$ gives the first bound. The total count $K$ counts repeated caps with their occurrences; multiplying their individual budget by $K$ gives the two normalized inequalities.\n\nFor the tree inequality, if no cap is active, all terms vanish. If $h\\ge1$ are active, the subgraph induced by those $h$ indices is a forest with at most $h-1$ edges. Thus the right side is at least one. Integrating gives $B_I\\le\\sum_{i\\in I}\\mu(H_i)-\\max_T\\sum_{\\{i,l\\}\\in T}\\mu(H_i\\cap H_l)$. Under the pairwise hypothesis a group of $s$ caps has $B_I\\le sB-(s-1)\\delta\\le(q+1)B-q\\delta$, since $s\\le q+1$ and $B\\ge\\delta$. At least one selected union has $B_I\\ge M/m$. Combining and rearranging yields the bound. In the interval calibration $q=1$, $m=1$, $M=2$, the caps have length $1+\\varepsilon$ and overlap of length $2\\varepsilon$, so the lower bound is attained, including the endpoints of the parameter interval.\n\nFor the circuit clause, the nonnegative weighted sum of margins at an assigned base implies that at least one cap contains every point of the continuous space. Inside the intersection all $r_i+1$ caps contain the point. Pointwise, the cap count is thus at least $1+r_i\\mathbf1_{A_i(z)}$, including all boundaries. Integrate on each assigned actual fiber and sum. Since the assigned sets partition the bases, the unit term contributes $M$. The original cap-occurrence masses may include other fibers, which contribute nonnegatively. The strict bound follows from the finite nonempty count and the strict individual budget.\n",
+  "source_candidate_ids": [
+    "ebf5465656e86ce1",
+    "fd71224e218c86d2"
+  ],
+  "source_candidate_sha256": {
+    "ebf5465656e86ce1": "8bc1c683ceca606bd967570388b179c184d11a2110ed6ed12173198ef7059cc2",
+    "fd71224e218c86d2": "16ac75da2864496f4c1cd5be15a907120b8b51f042b0eebc47d29d6c3fe607d2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fd71224e218c86d2",
+      "locator": "fd71224e218c86d2:05 §4, (4)–(7) and interval calibration, overlap-sensitive budgets"
+    },
+    {
+      "candidate_id": "ebf5465656e86ce1",
+      "locator": "ebf5465656e86ce1:04 §3, (5)–(8), fiberwise multiplicity and mixed charge"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ nonempty, $q=\\dim_H S$, $\\mu=\\mathcal H_q|_S$, and $P$ the bases of the positive $\\mathcal H_q$-measure fibers $K_z$, with $w_z=\\mathcal H_q(K_z)$, $M=\\sum_{z\\in P}w_z$ and $m=2^n$. For a finite list of original closed ambient halfspaces $H_i$ and a nonempty group $I$ of their indices, write $U_I=\\bigcup_{i\\in I}H_i$, $e_I(z)=\\mathcal H_q(K_z\\setminus (U_I)_z)$, and $B_I=\\mu(U_I)$.\n\nIf the original caps cover $S$ almost everywhere, choose at most $m$ groups $I_j$ of at most $q+1$ caps so that each positive fiber is wholly covered by at least one group. Put $K=\\sum_j|I_j|$ and $D_j=\\sum_{i\\in I_j}\\mu(H_i)-B_{I_j}$. Then $D_j\\ge0$ and\n$$\nM+\\sum_j D_j\\le \\sum_j\\sum_{i\\in I_j}\\mu(H_i).\n$$\nFor a common individual budget $B$, this yields $B\\ge(M+\\sum_jD_j)/K\\ge(M+\\sum_jD_j)/[m(q+1)]$. For any spanning tree $T$ on the indices of a group $I$,\n$$\n\\mathbf1_{U_I}\\le \\sum_{i\\in I}\\mathbf1_{H_i}-\\sum_{\\{i,l\\}\\in T}\\mathbf1_{H_i\\cap H_l}.\n$$\nIn particular, if every pair of distinct original caps has overlap mass at least $\\delta$, with $0\\le\\delta\\le B$, then $B\\ge M/[m(q+1)]+q\\delta/(q+1)$. For the interval $[-1,1]$ at a single base with $n=0$, the two caps $x\\ge-\\varepsilon$, $x\\le\\varepsilon$, $0\\le\\varepsilon\\le1$, attain the last bound with $B=1+\\varepsilon$ and $\\delta=2\\varepsilon$.\n\nMore generally, for actual full $d$-dimensional mixed fibers partitioned into assigned base sets $B_i$ of positive continuous circuits, let circuit $i$ have $r_i+1$ caps of rank $r_i$ and nonnegative weighted margin on its assigned bases. If $A_i(z)$ is the full intersection of its closed cap traces, then the sum of original cap-occurrence masses is at least\n$$\nM+\\sum_i r_i\\sum_{z\\in B_i}|K_z\\cap A_i(z)|.\n$$\nIf every individual cap has mass $<T_0$, this expression is strictly less than $T_0\\sum_i(r_i+1)$.",
+  "subgoal_id": "pk-intake-pk-w36-menu-overlap-budget",
+  "title": "Overlap-sensitive budgets for unchanged groups of closed caps"
+}

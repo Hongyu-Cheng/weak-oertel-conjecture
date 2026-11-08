@@ -1,0 +1,65 @@
+{
+  "candidate_id": "a68ba73ab76495b6",
+  "candidate_sha256": "e9dc7bfd8a01a86b8c5bff449d041a09fe2b713c1754b994592ea88eda0eeaef",
+  "checked_dependency_candidate_sha256": {
+    "2eb9fc1dbf88b7c8": "a1f20ee7abbdda515c1f1d55165ada7d6aa429eb9bf003b1861d659a38670616",
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "A strict separating vector would violate every cap if zero were outside the convex hull of the normals. A minimal subset containing zero has strictly positive weights and still gives a whole-space cover.",
+    "If its normals fail to span, a common boundary line contains an exterior point of bounded K. The dimension-drop theorem would then give at least gamma_(d-1), strictly above gamma_d.",
+    "The centroid lies in the interior and has through-centroid cap volume at least gamma_d times the body volume. If a selected margin at the centroid were positive, the parallel shift would discard a positive-volume slab adjacent to the centroid interior ball.",
+    "The selected margins are all nonpositive and their positive weighted sum is zero. Spanning forces equality of the contact with the centroid. The centroid lower bound and the original budget then force both equalities.",
+    "Read the original source sections recorded by the frozen input. Recomputed each archived candidate hash from pinned bytes and matched the frozen digest and intake records."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "2eb9fc1dbf88b7c8",
+      "candidate_sha256": "a1f20ee7abbdda515c1f1d55165ada7d6aa429eb9bf003b1861d659a38670616",
+      "fact_sha256": "346e19e8c333de9ade44c74cec61ac76bbbcaeac4865e23dae1afdbd1dc7af0b",
+      "hypotheses": "If normals do not span, all chosen boundaries contain a common exterior point, and their strictly positive balanced cover still covers the ambient space. This is exactly the accepted exterior-contact setting.",
+      "reviewed_proof_sha256": "3084e084a045d2629f8d3df37ae8eeb5b79daa3279f3edfe15aa75e7c475a19a",
+      "reviewed_statement_sha256": "5896c0b1937323bbf71ef01f29e0c7a58ec6c6644a82a6c9c89d5884a56cbf9f"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "Use m=|K|, where the only selector is one almost everywhere, so the full-volume metronoid is the centroid. The closed parallel-through-centroid cap has at least the stated volume.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:17:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The full-volume metronoid singleton gives the centroid cap bound, but alone does not identify an arbitrary cover's contact.",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16"
+    },
+    {
+      "comparison": "The exterior/contact lower bound rules out a rank-deficient subcover. The centroid conclusion follows by the additional slab and balancing argument.",
+      "fact_id": "2eb9fc1dbf88b7c8",
+      "fact_sha256": "346e19e8c333de9ade44c74cec61ac76bbbcaeac4865e23dae1afdbd1dc7af0b"
+    }
+  ],
+  "readability": "The statement and proof are readable without additional conventions.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "339181e35a38a4eb22bc71753d37bbec30e9c6ba257801a22fe1adcbf179aa54",
+  "reviewed_statement_sha256": "f128b75f87fdc314afa7836160adb45d6b7827ee813c892564a4ce9a2f4979e6",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "a20765b75f4bd3ee": "247e01778ac8376595d29bc262b249d49b64bd41aa61831bfae8f799983ecf11"
+  },
+  "started_utc": "2026-11-08T16:12:31Z",
+  "summary": "The least cover budget forces the common contact to be the centroid, with both normalized depth and largest cap fraction equal to gamma_d.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,60 @@
+{
+  "candidate_id": "0e767aa2752e2eb8",
+  "candidate_sha256": "242463ade8ce5beb49d59cc52694fae4e01dd2b9e86f3c9d50fe3ca908c0cfd0",
+  "checked_dependency_candidate_sha256": {
+    "6b95f0c8b9aeccaa": "8ff9ed45eec4425db468d3952001a47b4f776a09b848892847334459364d1328",
+    "77cb0f80a93d0415": "ad57d05bd3cb4fd7d4d5f2f5a4c2c8e45976363e41358b2797b7cd2b2600fac1"
+  },
+  "checks": [
+    "Verified the raw digest and source locator 61e9db32fbeb3f83:03 §4 (9)–(12). The proof replaces the original direct scalar lower-bound argument by the exact all-mass one-band reduction for the same ordinary-volume objective.",
+    "Substitution of E=u^d and v=(1+E)t^d gives the claimed A(E), since t^(d+1)=(v/(1+E))^q. Differentiating gives sign 1−E^(q−1)−(q−1)E, strictly decreasing with the unique zero E=u_*^d. Its value A_d is positive, and E=E_* is admissible and realizes R_+.",
+    "The scalar left sides are continuous and strictly increasing from zero to infinity. Both roots obey the stated bracket; after k^(1/q) rescaling the rescaled root is bounded by C_d, the first term vanishes and the qth power tends to 1/A_d. The exponent 1/q is d/(d+1). Exact arithmetic at E_*=1/2 gives A_1=1/3.",
+    "The linear budget ensures 1+alpha≤1−1/k+v/gamma_d, a positive denominator. The resulting function of v has derivative (1−1/k)/(1−1/k+v/gamma_d)^2>0. Taking infima and then substituting R proves both normalized finite inequalities.",
+    "For the matching normalized upper bound, the simplex at u_* has alpha=E_* R_+/(1+E_*)→0. Its normalized cost and the lower bound thus have the same leading coefficient. The obstruction is at the specified weighted centroid, for each fixed d, with no conclusion about choosing a different center or feasible ambient grouping."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "77cb0f80a93d0415",
+      "candidate_sha256": "ad57d05bd3cb4fd7d4d5f2f5a4c2c8e45976363e41358b2797b7cd2b2600fac1",
+      "mapping": "Use the equality one-band minimization for all d≥1 and real k≥2, and the simplex realization for the admissible u_*. It uses the same ordinary-volume denominator and provides alpha=u^d t_k(u)^d for the normalized upper example.",
+      "reviewed_proof_sha256": "1ab58599dab77893841eaf66fa828ba88c8b8b51518c86d73e5d729f8bb3a759",
+      "reviewed_statement_sha256": "951dde7a16fe6b3dc442ce224ddb5d2003c1b3d601d0dddcd36a6c260788ca79",
+      "status": "same wave; independent approval required before admission"
+    },
+    {
+      "candidate_id": "6b95f0c8b9aeccaa",
+      "candidate_sha256": "8ff9ed45eec4425db468d3952001a47b4f776a09b848892847334459364d1328",
+      "mapping": "Use the pointwise continuous bound v≥gamma_d(1/k+alpha) for every tested cap with the same weighted centroid and real k≥2, then rearrange to bound alpha. The ambient transfer is unnecessary here.",
+      "reviewed_proof_sha256": "0f75a4933e8045c1c71e7b6ddef114ecba911034478f350f7a66109ca680edbc",
+      "reviewed_statement_sha256": "b65c1abc6884a2e8a3860a5248821bc2172c2298e87a512159c5443dcc26faed",
+      "status": "same wave; independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:02:40Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted depth inclusion for a metronoid applies to the weighted centroid after dividing its density by k+1. It gives v at least gamma_d(1+k alpha)/(k+1), with the weaker coefficient 1/(k+1) on 1+k alpha. It supplies neither the exact optimization nor the strengthened linear bound.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "The accepted weighted three-tail inequality uses the centroid of uniform volume and shifted tails on the same body. Here the added measure changes the tested centroid, and the objective charges ordinary volume plus one copy of the added mass in a single cap.",
+      "fact_id": "7ad3d72ee6061cf3"
+    }
+  ],
+  "readability": "The one-band reduction is used for Xi and the upper example only. The normalized lower bound uses the separate pointwise inequality for arbitrary added mass.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "b8ccf533027fe093a84b5c99d014d9161a494360fe9b3694d5a318d59e026ef9",
+  "reviewed_statement_sha256": "4a90bf347b2413a3620af66f12ed6f75d0dede3fddaa62a7e1d4b39d0e0e0398",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:58:16Z",
+  "summary": "The two finite root bounds and the common sharp fixed-dimension asymptotic follow from the one-band formula and the linear budget.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

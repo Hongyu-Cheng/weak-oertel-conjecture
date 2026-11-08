@@ -1,0 +1,26 @@
+{
+  "advances": "Finite fractional convex-hull packing with fixed geometric source sites. The comparison controls packing value; it does not assert mixed halfspace depth monotonicity.",
+  "author": "PK-research-agent",
+  "candidate_id": "82894b05233cbc9c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:47:32.362004+00:00",
+  "depends_on": [],
+  "draft_key": "midpoint-compression-packing-additive-comparison",
+  "kind": "lemma",
+  "proof": "Take an optimal packing for the merged capacities, which exists because the finitely many group weights range over a closed bounded feasible set. In the $2\\delta$ merge, split groups using $m$ so that selected pieces of total weight $t\\le2\\delta$ pay just for the usage of $m$ above $w_m$. After removing those pieces the unselected groups fit capacities $w-\\delta e_u-\\delta e_v$. For each selected piece on $G$, use half its weight on $(G\\setminus\\{m\\})\\cup\\{u,v\\}$. This group still contains $z$ in its convex hull because $m\\in[u,v]$. The new pieces use at most $t/2\\le\\delta$ at each endpoint, use nothing at $m$, and elsewhere use no more than the removed pieces. The resulting packing fits $w$ and has value equal to the optimum after the merge minus $t/2$. For the $\\delta$ merge, select weight $t\\le\\delta$ in the same way and make the substitution at full weight, which still fits both endpoint budgets and loses no packing value. The total capacity of the latter system is the old total minus $\\delta$; a nominal $M/2^n$ threshold on an integer $n$-base thus loses $\\delta/2^n$.\n",
+  "source_candidate_ids": [
+    "0d48b13f5ad2c2a1"
+  ],
+  "source_candidate_sha256": {
+    "0d48b13f5ad2c2a1": "020d28bd06d0876316756558ee2828d8c9b240e5a6b2aa2204c1ce99dd914817"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0d48b13f5ad2c2a1",
+      "locator": "0d48b13f5ad2c2a1:01 §1, (1), and lower-mass comparison"
+    }
+  ],
+  "statement": "For a finite source set $S\\subset\\mathbb R^n$ with nonnegative capacities $w$, let $f_w(z)$ be the largest total weight of a fractional packing of nonempty groups $G\\subseteq S$ with $z\\in\\operatorname{conv}G$, where the sum of the weights of groups using a site $p$ is at most $w_p$. Let $u,v\\in S$ be distinct with $m=(u+v)/2\\in S$, and let $0\\le\\delta\\le\\min(w_u,w_v)$. For every target $z$,\n$$\n f_{w-\\delta e_u-\\delta e_v+2\\delta e_m}(z)\\le f_w(z)+\\delta,\\qquad\n f_{w-\\delta e_u-\\delta e_v+\\delta e_m}(z)\\le f_w(z),\n$$\nwhere $e_p$ is the coordinate unit capacity at $p$. The latter compression loses total capacity $\\delta$.",
+  "subgoal_id": "pk-intake-midpoint-compression-packing-additive-comparison",
+  "title": "Additive comparison for fractional convex-hull packing under a midpoint merge"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary continuous volumes on finite arrays with a common sum-indexed target. The estimate uses one collision-free path and does not count the same target twice.",
+  "author": "PK-research-agent",
+  "candidate_id": "bff19d5abf55e3e2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:17:06.631506+00:00",
+  "depends_on": [],
+  "draft_key": "collision-free-two-family-midpoint-volume",
+  "kind": "lemma",
+  "proof": "Order the two index lists lexicographically. Give each list its consecutive partition of $[0,1]$ using the stated lengths. In the order of their positive overlap intervals, neither index decreases and at least one increases at every change of pair. Lexicographic order is translation invariant, so the sums increase strictly. The overlap lengths sum to one. Since $\\pi_{uv}\\le |A_u|/A$ and $\\pi_{uv}\\le|B_v|/B$, Brunn--Minkowski and homogeneity give\n$$\n|C_{u+v}|\\ge 2^{-d}(|A_u|^{1/d}+|B_v|^{1/d})^d\\ge\\pi_{uv}\\Phi_d(A,B).\n$$\nSum over the distinct targets. The positive-volume hypotheses are essential for the two normalized partitions.\n",
+  "source_candidate_ids": [
+    "87fbc7e80b2767d9"
+  ],
+  "source_candidate_sha256": {
+    "87fbc7e80b2767d9": "e1257ab5ba61f65f34b80f9818754aa13dba7bf2b383d08e1d2ecfea6452f5c1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "87fbc7e80b2767d9",
+      "locator": "87fbc7e80b2767d9:01 §1, (1), monotone overlap path"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$. Take finite families of measurable sets $A_u,B_v\\subseteq\\mathbb R^d$ indexed by $u,v\\in\\mathbb Z^n$, with positive finite volumes and totals $A=\\sum_u|A_u|$ and $B=\\sum_v|B_v|$. Suppose each $(A_u+B_v)/2$ is measurable, satisfies Brunn--Minkowski, and lies in a measurable set $C_{u+v}$. Then $\\sum_w|C_w|\\ge\\Phi_d(A,B)$, where $\\Phi_d(A,B)=2^{-d}(A^{1/d}+B^{1/d})^d$. More precisely, the positive overlaps $\\pi_{uv}$ of the consecutive partitions of $[0,1]$ with lengths $|A_u|/A$ and $|B_v|/B$ in lexicographic index order have distinct index sums $u+v$, and $|C_{u+v}|\\ge\\pi_{uv}\\Phi_d(A,B)$ for each positive overlap.",
+  "subgoal_id": "pk-intake-collision-free-two-family-midpoint-volume",
+  "title": "A collision-free midpoint volume bound for two finite fiber families"
+}

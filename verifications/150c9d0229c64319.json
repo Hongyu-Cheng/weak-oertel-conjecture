@@ -1,0 +1,73 @@
+{
+  "candidate_id": "08e57a9d5210184f",
+  "candidate_sha256": "3b3aeb0501b04b66879e9995631034301c50d97eab8e263f9eed946760e85141",
+  "checked_dependency_candidate_sha256": {
+    "3e6e1eb15d927db8": "356c4ff2da696c29949b653e0a2dd2941dfa210be5f2a5c1371d7fde3a5ca463",
+    "511d89569241b0d6": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+    "8bdcdcd6e2fa69d9": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86"
+  },
+  "checks": [
+    "A proper section gives at least one coefficient of each sign. If these were the only two nonzero coefficients, the asymmetric two-sided exponential density would have left derivative 1/[r(a+r)] and right derivative −1/[a(a+r)] at zero, violating C¹. Hence one orientation has at least two positive phases and one negative. Zero phases cannot change the density in this check.",
+    "In that orientation the centroid identity and accepted size bias apply for every index. Convolving f_V with the distribution of c_jE′, including negative c_j and the point mass when c_j=0, gives d b_j=∫₀∞ exp(−s) f_V(−c_js)/f_V(0) ds.",
+    "The tangent inequality for log f_V is valid at −c_js for either sign. If ℓc_j≥0 the ratio is at most one on the integration range, so b_j>1/d implies ℓc_j<0. When ℓ=0 the set of indices above 1/d is empty. For c_j=0 the ratio is identically one. Reversing orientation leaves the centroid fixed, flips the sign of every nonzero margin together, and preserves positivity, C¹ regularity and log-concavity of the reflected density.",
+    "For a strictly positive capacity row with a proper minimum, normalize by its positive threshold. The Schur theorem gives the two-positive phase count, properness gives a negative phase, and the accepted density fact supplies the hypotheses. The same section and margin signs persist under the positive scaling to the original threshold.",
+    "Verified the raw source digest and checked a5d3d44181ebed82 §6 before (16). The frozen proof packages its two one-sided arguments into the sign of ℓc_j and preserves the general density hypothesis."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3e6e1eb15d927db8",
+      "candidate_sha256": "356c4ff2da696c29949b653e0a2dd2941dfa210be5f2a5c1371d7fde3a5ca463",
+      "mapping": "The C¹ density hypothesis excludes exactly two nonzero phases. Orienting a proper section toward a side with at least two strictly positive margins satisfies the lemma and gives g_j=d f_V(0)b_j.",
+      "reviewed_proof_sha256": "25d949ef6fa241b3d18c2c32cf19f9ac1a0318aef6a19ac93a7cf58edc78d4b2",
+      "reviewed_statement_sha256": "0b69be9c183ac54f44ac540cf3cd01ed728938689e4e176bd501148269c397ca",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "8bdcdcd6e2fa69d9",
+      "candidate_sha256": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+      "mapping": "A strictly positive row with proper minimizing threshold can be normalized to one. Its cut has at least two positive and one negative margin by the theorem, so the signed density fact applies.",
+      "reviewed_proof_sha256": "3f10992a46b97286bfba42b813249fa659b3504118defeeae9510650608b52f7",
+      "reviewed_statement_sha256": "deba3f575be9d9f26f3af97154bc46e151f89c2cdb0be8bb5cb80bcbb484e157",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "511d89569241b0d6",
+      "candidate_sha256": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+      "mapping": "The chosen orientation has the required phase counts. Its all-coordinate size-bias derivative holds at positive, negative and zero margins, and its regularity proves the density assumption in the capacity specialization.",
+      "reviewed_proof_sha256": "de2812dbc5632f66b6800ec3d17e4a2fa4d439425feb37f623d693d06a842516",
+      "reviewed_statement_sha256": "5da49339a62c68ed1622a42d4d7d1c4bff3ac044a334dd512c679d389cf75c8b",
+      "status": "accepted at reviewed repository base"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:55:27Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its zero-margin conclusion for stationary proper caps with at least three nonzero margins applies once the cut is viewed through its own centroid. The accepted statement does not compare the sides of all coordinates exceeding 1/d.",
+      "fact_id": "27d3881f8bfc290c"
+    },
+    {
+      "comparison": "Its proof uses this log-density tangent bound on opposite sign phases to control a common normalized derivative at a stationary capped coefficient vector. The same bound underlies the frozen conclusion, which concerns each actual section-centroid coordinate and does not assume coefficient caps, balance, or equality of derivatives.",
+      "fact_id": "24e83be093cbd50e"
+    },
+    {
+      "comparison": "Provides the density formula and P_j=f_V(0) at zero margins, and thus the zero-margin centroid value once the geometric centroid relation is supplied. It has no statement about the sides of all coordinates above 1/d.",
+      "fact_id": "511d89569241b0d6"
+    }
+  ],
+  "readability": "The phrase same strict sign allows the set above 1/d to be empty. In particular ℓ=0 forces that case.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "593cb3ca6be9ee3903320b0ac5f67bd5a763fe301f5866c7d4f4b69697dea623",
+  "reviewed_statement_sha256": "9f3b1e4d9f0b1428f6991415eba159a4863c16c19d0bf22b275be7ffa84e8e55",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:51:52Z",
+  "summary": "The normalized size-biased density gives the required sign restriction on every coordinate above 1/d and the exact value at zero margins.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

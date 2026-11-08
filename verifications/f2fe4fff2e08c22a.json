@@ -1,0 +1,66 @@
+{
+  "candidate_id": "8185884fb3e30ecb",
+  "candidate_sha256": "c4eabc31234a5fe18904805f7afa83a75e86c01fd2f0f84f996c39a2063d4fd7",
+  "checked_dependency_candidate_sha256": {
+    "2acc8bc803acf1c0": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232",
+    "c3835529a10c63ef": "1e99b384e4af419556f141227de46be304f40b1ad44cdc34df807e16e6b2dfaa"
+  },
+  "checks": [
+    "The simplex centroid bound and vertex caps give the ordinary maximum β. Each cap is an exact homothet of ratio r and its cut section centroid is g by barycentric symmetry.",
+    "The inward gradients have one positive dependence and rank d. Positive rescaling to unit normals preserves minimality. The uniform cap probabilities used in the surface sum need not coincide with the normalized circuit coefficients.",
+    "Each original facet receives d scaled pieces of fraction r^{d-1}, with weight 1/(d+1), giving β S_B. The new section atoms have outward normals opposite the inward cap normals and subtract to r^{d-1}S_B/(d+1), yielding J=sB.",
+    "At p=(d-1)/d both lower bounds equal r^{d-1}|B|^p, since β+s^{d-1}=r^{d-1}. All bodies reconstructed are positive, and the two summands and all cap bodies are homothetic.",
+    "In standard simplex coordinates q and q-se_i fit in tB exactly when q_i≥s and ∑q_i≤t, hence t≥ds. The tested scale ratio is d^{1/(d-1)}, strictly below d for d≥3. In d=3 the displayed scales are 9/8 and 3√3/8.",
+    "Original 455c254ad09b8374 §§1–2, (1)–(8), gives the same shape, measure split and containment threshold."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232",
+      "fact_id": "2acc8bc803acf1c0",
+      "fact_sha256": "d723a90d8b085a401f611b136903b3e751c05bbebed3219fd24588e89ed96ce4",
+      "hypotheses": "Use only (12) and its centroid proof for the full-dimensional simplex; the ambient mixed-integer theorem is unnecessary.",
+      "reviewed_proof_sha256": "985b3dbdcc98c63b1ba63f236c11170d9714cc5a6cdba6af26568d2f9e370fcf",
+      "reviewed_statement_sha256": "8222b1c3268f5a4fb65d04c6e4e448ab1a57a3a2e33b9855b7c92748ff4b2dfa"
+    },
+    {
+      "candidate_sha256": "1e99b384e4af419556f141227de46be304f40b1ad44cdc34df807e16e6b2dfaa",
+      "fact_id": "c3835529a10c63ef",
+      "fact_sha256": "6cca7f287b57f6b3c879a9e951ce72b2c78ca212ff83184be0e72eb02cb89679",
+      "hypotheses": "Use the proper-cut area identity with one positive body, a finite probability law, and the verified β normal marginal. The aggregate bodies are reconstructed as positive homothets in dimension d, without invoking the planar containment.",
+      "reviewed_proof_sha256": "e8b2e70ffa12f0f4397bcf97ef6585e613ce5687157b8d928542155d3c91551f",
+      "reviewed_statement_sha256": "60251148280faeb01e09c94d76cdef5d55eb6089b3302f80d5e1ef013d665d45"
+    },
+    {
+      "hypotheses": "The reconstructed bodies rB and sB have the stated positive surface measures. Translation uniqueness identifies them with the aggregate and section body. Homothetic positive summands and the homothetic cap probability mixture realize equality in Kneser–Süss, §18.2 (77).",
+      "reference": "Minkowski surface-area uniqueness and Blaschke addition, Gardner, The Brunn–Minkowski inequality, §§6 and 18.2",
+      "url": "https://fileserver-az.core.ac.uk/download/pdf/232702483.pdf"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:01:48Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its area decomposition holds in all d, but oriented containment is proved only in d=2. It gives the matching planar triangle calibration, while the higher-dimensional counterexample and Kneser–Süss equalities are additional.",
+      "fact_id": "c3835529a10c63ef"
+    },
+    {
+      "comparison": "Gives sharp ordinary simplex depth, with no section-body containment conclusion.",
+      "fact_id": "2acc8bc803acf1c0"
+    }
+  ],
+  "readability": "The final pair of three-dimensional scales is the minimal reflected containment scale followed by the proposed β^{1/(d-1)} scale.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, exact arithmetic where applicable, and pinned source/dependency comparison",
+  "reviewed_proof_sha256": "65a8f0ba7560e6a6510a89fd82bb040a5014c9ed5dc691e4180e38c3ed805a88",
+  "reviewed_statement_sha256": "987e5f13e39059252706475e186cecbcf285d885a4be50d8d9f81ec8de50189b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:56:22Z",
+  "summary": "The sharp simplex cap law has the stated aggregate and section body, and the reflected containment fails in every dimension d≥3.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

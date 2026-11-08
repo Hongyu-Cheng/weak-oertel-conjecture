@@ -1,0 +1,51 @@
+{
+  "candidate_id": "30a57e053db12155",
+  "candidate_sha256": "0655facd8e2d5a33afaa211572cd4e03649101ed0861db22d664cfb0100e4d31",
+  "checked_dependency_candidate_sha256": {
+    "6a7d56e450b3126f": "31613c33abc90e519463fe09c7ef143869666384d5d0ea9886a759b1ceb3f965"
+  },
+  "checks": [
+    "Source af4e7610828e864b:04, equations (11)–(12), uses the same centered rescaling of the true midpoint and the same half-sum of aligned symmetric differences.",
+    "The dilation ratio is positive and makes |K|=a while preserving centroid g. For translated A−h the original threshold is u·g+t+u·h and for B+h it is u·g−t−u·h, so the pair infimum is invariant for each fixed u.",
+    "For a fixed cap H, |K∩H|−|(A−h)∩H|≤|K\\(A−h)|. Equal volumes make this one-sided loss exactly half the symmetric difference, and the sum of the two K caps is controlled at the same centroid and opposite shifts.",
+    "The alignment objective is continuous by L¹ translation continuity. When both translated bodies are disjoint from K its value is 2a. This holds outside a sufficiently large ball and gives global attainment by compactness, including the case of no improvement over 2a.",
+    "The nonnegative-part operation is justified by nonnegative cap volumes and is independent of the alignment choice."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "31613c33abc90e519463fe09c7ef143869666384d5d0ea9886a759b1ceb3f965",
+      "fact_id": "6a7d56e450b3126f",
+      "fact_sha256": "30b7bafd79c7f5e4dbed86451e8dcc90311f6234575d9c443f3bcbbd961bdae4",
+      "mapping": "Apply to the uniform probability on full-dimensional K of volume a and centroid g, with nonzero u and |t|. Reordering the two shifts handles any sign, then multiply its normalized bound by a.",
+      "reviewed_proof_sha256": "d4e3d70c7d102455f4a824e9e403043780a9b4afdcf2d9e14d29518d1c8202c7",
+      "reviewed_statement_sha256": "3aa2cd99e74ada6c00320324633e761a3eab87ce39d9d24207ec7f18ae66ce3f"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:57:13Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The predecessor pays paired tails in one ordinary body at its own centroid. This bound compares two distinct aligned shapes with an explicit optimized symmetric-difference loss and reduces to that predecessor at zero loss.",
+      "fact_id": "6a7d56e450b3126f"
+    },
+    {
+      "comparison": "Its obstruction addresses a payment from the volume excess alone, whereas the error here is the actual symmetric difference after opposite translations.",
+      "fact_id": "55810cac8cf0765a"
+    }
+  ],
+  "readability": "Each half-symmetric-difference is one missing-volume term, and the outer average in E is exactly the sum of those two terms.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "df22e9a728dd1a55464d0470e18be070fc083e87ae106f552ff867f062cf39e2",
+  "reviewed_statement_sha256": "e1e86103af826e4797c72a469ba52b81edb8dc2e189dc98aa7ce2bbf6b498b95",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:51:36Z",
+  "summary": "The opposite translation invariance, paired centroid application and attained optimized shape error give the stated quantitative two-body bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

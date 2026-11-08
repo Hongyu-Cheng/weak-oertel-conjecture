@@ -1,0 +1,28 @@
+{
+  "advances": "A calibration for one three-integer-coordinate product, with continuous dimension D≥4 and unrestricted ambient cap normals.",
+  "author": "PK-research-agent",
+  "candidate_id": "9b80c98b9a04bc5d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.288453+00:00",
+  "depends_on": [
+    "6a7d56e450b3126f"
+  ],
+  "draft_key": "tetrahedron-product-exact-mixed-depth",
+  "kind": "theorem",
+  "proof": "The barycentric coordinates on $T$ satisfy $\\alpha_4(z)=(1-z_1-z_2-z_3)/4$ and $\\alpha_i(z)=z_i+\\alpha_4(z)$ for $1\\le i\\le3$. For an integer point with nonnegative coordinates, nonnegative $\\alpha_4$ forces their sum at most one. Otherwise the least coordinate is $-h$ for integer $h\\ge1$. Then $\\alpha_4\\ge h$ and $\\sum_i z_i\\le1-4h$, whereas $\\sum_i z_i\\ge-3h$. Thus $h=1$ and all three coordinates equal $-1$. This proves the stated integer support. The volume of $T$ is $A=2/3$ from the determinant of the three edge vectors at $p_4$. Its centroid is zero. Every fiber has mass $V=A|B|_k$, so total mass is $5V$. The product has at least $4(k+1)>D+1$ vertices, so it is not a simplex.\n\nFor independent uniform $X\\in T$ and $W\\in B$, any halfspace through $(0,0)$ with normal $(u,v)$, $u\\ne0$, has probability at least $\\gamma_3$ by 6a7d56e450b3126f: condition on $v\\cdot W$ and pair its symmetric values to apply the paired tail inequality for the volume centroid of $T$. If $u=0$ and $v\\ne0$, the probability is $1/2$ by symmetry and absolute continuity in the nonzero projection. A halfspace through $(0,0)$ with zero continuous restriction includes the entire fiber. Conversely every $(x,w)\\in T\\times B$ has $\\alpha_j(x)\\ge1/4$ for some $j$, and the cap $\\alpha_j(X)\\ge\\alpha_j(x)$ through it has probability $(1-\\alpha_j(x))^3\\le\\gamma_3$. This proves exact ordinary depth.\n\nFor an arbitrary ambient halfspace through $(0,0,0)$, the central contribution is at least $\\gamma_3 V$ by this argument. To bound the four outer contributions, take the linear map $R$ cycling the four vertices of $T$. It preserves $T$ and uniform volume, and $\\sum_{\\ell=0}^3 R^\\ell x=0$ for every $x$, because the sum of vertex vectors is zero and they span. Couple the uniform outer-fiber points as $(p_1,X,W),(p_2,RX,-W),(p_3,R^2X,W),(p_4,R^3X,-W)$. Each is uniform in its respective fiber and their ambient sum is zero. At least one lies in every closed halfspace through zero, so their total outer mass contribution is at least $V$. Moving any containing halfspace parallel to pass through the mark can only decrease its mass. This proves the mixed lower bound at that mark.\n\nFor the upper bounds use the continuous cap above at any given mark. The exposing form $u_i\\cdot z$ with $u_i$ the linear part of $4\\alpha_i(z)$ has values $3$ at $p_i$ and $-1$ at the other vertices, and value zero at the center. At a central mark, add a sufficiently large positive multiple of this form to the continuous cap margin, preserving the central trace, including one whole outer fiber and excluding the other three. This costs at most $(1+\\gamma_3)V$. At an outer mark above $p_i$, add a sufficiently large multiple of $u_i\\cdot(z-p_i)$, preserving that cap trace while excluding every other fiber, for cost at most $\\gamma_3 V$. Finite slopes suffice by boundedness of the continuous cap margin and the strict discrete gaps. Division by $5V$ proves both the exact mixed depth and the uniqueness of the deepest base.\n",
+  "source_candidate_ids": [
+    "e500aa8a70b96d55"
+  ],
+  "source_candidate_sha256": {
+    "e500aa8a70b96d55": "2240a31b707765c3dcd4164a265bf65e310efd669be011a04a690c6484b1a701"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e500aa8a70b96d55",
+      "locator": "e500aa8a70b96d55:02 §§2–4, exact integer support and ordinary and mixed depths"
+    }
+  ],
+  "statement": "Let $p_1=e_1,p_2=e_2,p_3=e_3,p_4=-(1,1,1)$ and $T=\\operatorname{conv}(p_1,p_2,p_3,p_4)$. Let $B\\subset\\mathbb R^k$ be a full-dimensional compact convex polytope centrally symmetric about zero, with $k\\ge1$ and $D=3+k$. The actual mixed set of $C=T\\times T\\times B$ in $\\mathbb Z^3\\times\\mathbb R^D$ is $\\{0,p_1,p_2,p_3,p_4\\}\\times T\\times B$. The ordinary maximum normalized closed-halfspace depth of its nonsimplex fiber $T\\times B$ equals $\\gamma_3=27/64$ and is attained at $(0,0)$. The exact mixed maximum normalized closed-halfspace depth, allowing all ambient halfspaces, is $(1+\\gamma_3)/5=91/320$, attained at $(0,0,0)$, with unique deepest integer base zero.",
+  "subgoal_id": "pk-intake-tetrahedron-product-exact-mixed-depth",
+  "title": "Exact all-halfspace depth of a tetrahedral lattice product"
+}

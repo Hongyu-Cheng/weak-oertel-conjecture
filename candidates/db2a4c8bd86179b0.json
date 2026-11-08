@@ -1,0 +1,26 @@
+{
+  "advances": "Algebraic implication for labeled moment laws with the specified equations. It applies to affine shears of a single common flat.",
+  "author": "PK-research-agent",
+  "candidate_id": "db2a4c8bd86179b0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:56:08.917165+00:00",
+  "depends_on": [],
+  "draft_key": "w33-affine-support-tensor-rank",
+  "kind": "lemma",
+  "proof": "Write $r=x-c-Bz$. By the zero force and base first-moment assumptions, $Q=\\int rU^\\top\\,d\\nu$. If $P_{L^\\perp}$ denotes orthogonal projection onto $L^\\perp$, then $P_{L^\\perp}r=0$ almost everywhere, so $P_{L^\\perp}Q=0$. This puts every column of $Q$ in $L$.\n\nFor the stated positive semidefinite representation, $v^\\top Qv=\\sum_i\\Psi_i(v\\cdot u_i)^2$. Its vanishing is equivalent to $v$ being perpendicular to all $u_i$ with $\\Psi_i>0$, and it is also equivalent to $Qv=0$. Hence the range of the symmetric $Q$ is precisely that span.\n",
+  "source_candidate_ids": [
+    "2961bff576f5c43e"
+  ],
+  "source_candidate_sha256": {
+    "2961bff576f5c43e": "55a8ec77402616b7bced3a72303c403e70e261dbdcb21dd36c9d81289cc8c46c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2961bff576f5c43e",
+      "locator": "2961bff576f5c43e:01 §1, (1)–(2)"
+    }
+  ],
+  "statement": "Let $\\nu$ be a finite nonnegative measure on labeled points $(i,z,x)$ with $z\\in\\mathbb R^n$, $x\\in\\mathbb R^d$, and with label vector $U=u_i\\in\\mathbb R^d$. Assume the moments below exist and $\\int U\\,d\\nu=0$, $\\int zU^\\top\\,d\\nu=0$, $\\int xU^\\top\\,d\\nu=Q$. If $x\\in c+Bz+L$ almost everywhere for a fixed vector $c$, linear map $B$, and linear space $L$, then $\\operatorname{range}Q\\subseteq L$. In particular, if $Q=\\sum_i\\Psi_i u_i u_i^\\top$ for finitely many $\\Psi_i\\ge0$, then $\\dim L\\ge\\dim\\operatorname{span}\\{u_i:\\Psi_i>0\\}$.",
+  "subgoal_id": "pk-intake-w33-affine-support-tensor-rank",
+  "title": "Rank obstruction for one common affine support preserving the source tensor"
+}

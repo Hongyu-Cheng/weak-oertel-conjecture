@@ -1,0 +1,51 @@
+{
+  "candidate_id": "099aa1c919dac117",
+  "candidate_sha256": "bc31b75adb89ce3d429764e5deebd2b3fbac99dd2e8b2012c6a20b0bdef6310e",
+  "checked_dependency_candidate_sha256": {
+    "c80576b633835713": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729"
+  },
+  "checks": [
+    "Checked 6a014eb26413a72b §2 and 8095e181b6be7bf1 §4 against the frozen source hashes. The perturbation in §2 uses only arbitrarily small transfers, so it applies to a local maximum.",
+    "For d=1 a nonzero row has at most one zero. For d≥2, a nonzero row with r≥2 zeros has r≤d and exactly d+1−r positive entries. Filling r−1 zeros produces exactly d positive entries and a capacity equal to their geometric mean. The original capacity is zero.",
+    "Each modified donor entry stays nonnegative for 0<ε<a, where a is its minimum entry, and every affected column sum is unchanged. The modified donor dominates (1−ε/a) times its original row entrywise, including in the changed columns. Monotonicity follows by cap inclusion and homogeneity by the threshold substitution.",
+    "The recipient gain has a fixed strictly positive coefficient times ε^((r−1)/d), with (r−1)/d≤(d−1)/d<1. With positive objective weights, the gain dominates the donor loss bound and the perturbed matrices approach the original matrix."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "application": "For d≥2, the accepted proof computes zero capacity at every row with fewer than d positive entries, and the geometric mean for a row with exactly one zero. The donor and perturbed recipient have the same uniform-simplex capacity as in that calculation.",
+      "candidate_id": "c80576b633835713",
+      "candidate_sha256": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729",
+      "fact_sha256": "370ea6c3991b1d6a95daede2fd8d3d9517c62e8f3c5edb298ef4bee8352eaed5",
+      "reviewed_proof_sha256": "ec660ed58ec144de72b71ff2ad5d5658d53793955b55e9584645412d757a77e8",
+      "reviewed_statement_sha256": "7aa377887ba7f60185aa7c650f4da7a0e7b203a2e491c9071e11bb6a417a903b",
+      "status": "accepted at reviewed snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:22:13Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The final proof paragraph gives the geometric-mean value for one zero and the zero value for at least two zeros when d≥2. The stated derivative assertions vary strictly positive entries with their zero pattern fixed.",
+      "fact_id": "c80576b633835713"
+    },
+    {
+      "comparison": "The same optimization domain is used. The accepted saturated-unit case restricts other row supports when a positive row has a full cut, while the candidate excludes intermediate nonzero supports whenever there is a strictly positive row.",
+      "fact_id": "10916437d7f6301d"
+    }
+  ],
+  "readability": "The exclusion concerns nonzero recipient rows. An identically zero row is outside the range 2≤r≤d.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "71cb28b51be5c29a67db5ae3a3f196ae9df0f479fac0f47f1015be480ca7a3fd",
+  "reviewed_statement_sha256": "3bf0e6ae32d7b16e930a4da6faf4795ea67e218575e50b52c686577cdb34e72d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:19:09Z",
+  "summary": "A columnwise transfer from the strictly positive row creates a one-zero row with a fractional-power gain that exceeds the funding row’s linear loss at a local maximum.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

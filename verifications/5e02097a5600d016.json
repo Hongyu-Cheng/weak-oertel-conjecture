@@ -1,0 +1,70 @@
+{
+  "candidate_id": "38449953e3498635",
+  "candidate_sha256": "f8ef3fc25d490aa412ec274fc708684cb4759d1304960c50dd05d86800c013f1",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The atomic depth statement and both exact tail arguments are unchanged. The central two sites give a half-line lower bound, while a finite exposing tilt isolates a tail of at most half of one line at each site.",
+    "Concavity of the original positive profile gives nonincreasing adjacent differences on the integer grid. Piecewise linear interpolation therefore gives concavity, and reflection symmetry of the samples gives symmetry of the interpolant. The interpolant is continuous and has positive minimum.",
+    "For two radius dilates of K, a convex combination is in the dilate with the weighted average radius by convexity of K. Since 0 belongs to K, this is nested in the fiber at the average height by concavity of the interpolant.",
+    "The body is the continuous image of the compact base box times K under (v,s,x) ↦ (v,s,tilde r(s)x). It contains the base box times the positive minimum-radius dilate of K, so it is full dimensional, including n=1 and when 0 is on the boundary of K.",
+    "The interpolant equals r(j) at every integer j. Thus fiber volumes are r(j)^d|K|, all sampled bases stay present, and the previous endpoint-jump witness produces a compact constant-radius body after interpolation. The equal-weight product, fiber count and last-coordinate span are unchanged."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T20:00:01Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "38449953e3498635",
+    "candidate_sha256": "ddf1ed4c3907a20fceb466b887366805f126511ab9dcc3c6e6251a3b429c5a6c",
+    "checks": [
+      "Matched cfa919169cf469f3:01 through the equal-weight realization and :02 for the reflection-symmetric extension.",
+      "Both central half-lines on a fixed binary line weigh half its total. Any containing tail through L or L+1 therefore has at least half the line weight. The finite exposing coefficient isolates a tail no heavier than half for each candidate. The n=1 case needs no exposing coefficient.",
+      "Checked finite instances with positive nonconstant reflection-symmetric weights at n=1,…,4 and L=1,…,5 by direct exact enumeration of all proposed isolating cap traces.",
+      "Concavity and nesting of dilates prove convexity. The linear interpolant through the integer samples has nonincreasing slopes, inherits symmetry, is continuous, and realizes all claimed positive sampled volumes. The original profile itself can fail compactness."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T19:59:02Z",
+    "issues": [
+      {
+        "defect": "The frozen statement asserts compactness with the original real profile r(s). Positive finite concavity and symmetry do not ensure endpoint continuity. At L=1 and d=1 take r(1)=r(2)=1, r(s)=2 for 1<s<2, and K=[0,1]. The body with real fibers r(s)K excludes the limit (s,x)=(1,2) of points with s decreasing to 1 from above and x=2.",
+        "locator": "Statement, second paragraph, variable-radius compact convex body",
+        "repair": "State that the real fibers are the dilates with the piecewise-linear interpolant through the integer values r(j). This preserves every required sampled volume and matches the existing proof.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its general lower bound gives the same depth floor when all 2^n parity labels are present. Its strict minimal-face weight does not give strict depth. It does not give the exposing upper bound on these specific reflection-symmetric products.",
+        "fact_id": "f4547c4166b39683"
+      }
+    ],
+    "readability": "The proof explicitly says to replace the profile, whereas the statement still names the unmodified profile for all real fibers.",
+    "reviewed_proof_sha256": "dbb9f7c41e162a6372e89ada581cee11b0bca2616008311dbff923219d92b4cc",
+    "reviewed_statement_sha256": "c2b433b54773dab056ae5671eaa2b32e3417178ce8fa1d9d7c47b0e9849eecc4",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:56:34Z",
+    "summary": "The exact atomic depth and equal-weight product claims hold. The variable-radius realization needs the interpolated profile already used in the proof.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its general lower bound gives the same depth floor when all 2^n parity labels are present. Its strict minimal-face weight does not give strict depth. It does not give the exposing upper bound on these specific reflection-symmetric products.",
+      "fact_id": "f4547c4166b39683"
+    }
+  ],
+  "readability": "The real interpolation and the integer volume formula now use separate, consistently defined profiles.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2cb4aae27d336556b512e94894dd4f1610149b809e4966c297ed66db10e776d5",
+  "reviewed_statement_sha256": "2279581374a06c7d465e0ec7ebdf741d6f867e32c0ffbc344bf06cb0b1042789",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "ddf1ed4c3907a20fceb466b887366805f126511ab9dcc3c6e6251a3b429c5a6c",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:59:30Z",
+  "summary": "The revised statement and proof both use the interpolated radius. This repairs compactness and preserves the exact sampled weights and marginal depth.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

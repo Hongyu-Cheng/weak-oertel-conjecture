@@ -1,0 +1,28 @@
+{
+  "advances": "Two axial orientations of a particular equal-area planar three-fiber family and all tilts in each orientation.",
+  "author": "PK-research-agent",
+  "candidate_id": "730117323ddd6c61",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:50:42.857610+00:00",
+  "depends_on": [
+    "034d186c817230ed"
+  ],
+  "draft_key": "axial-triangle-whole-cap-calibration",
+  "kind": "theorem",
+  "proof": "Each triangle has area one and centroid zero, with centered vertical section of length $2(2w/3-s)/w^2$ on $[-w/3,2w/3]$. In each midpoint section the longest interval is obtained by allocating axial displacement to the flatter profile first. Thus the roof has breakpoints $-(R+1)/6,(2R-1)/6,(R+1)/3$ and heights $1+1/R,1,0$. Integrating the two trapezoids gives total area $(R+1)/2$. The zero cut is in the first segment and its left-side trapezoid has area $Q_-$ as displayed.\n\nFor the positive orientation, translate the cone at $d=2$, $Q=[-1,1]$, axially by its centroid. It becomes $T_1$, and the centered image of its volume-preserving dilation with $k=R$ is $T_R$. The same-batch axial cone calibration gives $P_+$ at tilt $2R(R-1)/(3(R^2+1))$, with both cuts proper. The middle contribution $Q_+$ is independent of tilt.\n\nFor the reverse orientation, each proper upper tail is concave in its reverse axial threshold because the reverse section profile increases. The sum on each cell is concave or constant, so only support transitions and the far plateau need to be checked. A full cap costs at least one. Both empty is impossible because the two reverse upper supports are positive and the thresholds sum to zero. At the transition where the narrow endpoint is empty, its threshold is $1/3$ and the other threshold is $-1/3$. Integration gives $1-(2R-1)^2/(9R^2)$. Emptying the wider endpoint gives $1-(2-R)^2/9$ for $1\\le R\\le2$ and one for $R\\ge2$. In the first range $2-R\\le 2-1/R$, so the narrow-endpoint transition attains the minimum $P_-$. Adding $Q_\\pm$ and subtracting $4/3$ gives the two factorizations. In the first numerator the quartic in $R=1+x$ is $12x^4+35x^3+60x^2+66x+28$. In the second the quadratic has negative discriminant and positive leading coefficient. Enlarging the middle body only adds mass to each cap.\n",
+  "source_candidate_ids": [
+    "443fb78ca8dd4f80"
+  ],
+  "source_candidate_sha256": {
+    "443fb78ca8dd4f80": "833f44dbf30c224b12c50241b124fba6dedcec71150495b397e75b242293daa8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "443fb78ca8dd4f80",
+      "locator": "443fb78ca8dd4f80:02 §§2–4 (3)–(8), axial family"
+    }
+  ],
+  "statement": "Let $T_w=\\operatorname{conv}\\{(-w/3,-1/w),(-w/3,1/w),(2w/3,0)\\}$ for $w>0$. Put $T_1,T_R$ at bases $-1,1$, with $R\\ge1$, and $M=(T_1+T_R)/2$ at base zero. The exact minimum raw mixed areas over all tilts at $(0,0)$ in the positive and negative axial orientations, respectively, are $Q_++P_+$ and $Q_-+P_-$, where\n$$\nQ_-=\\frac{(R+1)^2(6R-1)}{36R^2},\\quad Q_+=\\frac{R+1}{2}-Q_-,\\quad\nP_+=\\frac{4(R+1)^2}{9(R^2+1)},\\quad P_-=1-\\frac{(2R-1)^2}{9R^2}.\n$$\nTheir respective excesses over $4/3$ are $(R-1)(12R^4-13R^3+27R^2+3R-1)/(36R^2(R^2+1))$, zero exactly at $R=1$, and $(3R-1)(2R^2-5R+5)/(36R^2)>0$. The same expressions lower-bound the corresponding directional minima for any containing middle body.",
+  "subgoal_id": "pk-intake-axial-triangle-whole-cap-calibration",
+  "title": "Exact whole-cap axial minima for reciprocal-width triangle endpoints"
+}

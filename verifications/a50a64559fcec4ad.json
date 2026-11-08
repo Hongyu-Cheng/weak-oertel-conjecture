@@ -1,0 +1,40 @@
+{
+  "candidate_id": "6df0487380ed701a",
+  "candidate_sha256": "d18f48edd7f29413b235aa99cd474ae7f471d495b1798bf07f1d4255ff7622b8",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Elimination of a nonzero c_j contributes inverse Jacobian 1/|c_j|. An opposite-sign coefficient makes the feasible cone interior nonempty, and e^(−Σz_i) dominates the feasible density and its first moments. The moving indicator converges off a null plane, which gives the continuous density value.",
+    "Radial coarea imposes 1/g at c·ξ=0 and changes the shape-(d+1) independent gamma radius to shape d while retaining uniform section measure. This also applies to the single angular point when d=1.",
+    "Scaling the cone by s gives s^(−d) and β·μ=d. The product exponential log-density calculation then gives the exact logarithm of the product over Z, with every integral finite.",
+    "A second same-sign coefficient creates a nonempty open omitted set in the orthant, so q(C)<1 and the elementary log bound is strict. With no second coefficient of that sign, the law is exactly the product density.",
+    "Checked the source c324e86ba3893a31 §§1–3 including its separate cap-variance diagnostic. Direct fractions at R=10 give F(1−F)=2100/14641 and f=1210/14641 for either positive index."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T20:03:00Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This uses product exponential entropy for conditioning on a positive-volume cap, with normalizer P and radius of shape d+1. The present law conditions on the zero section, has a cone domain and uses |c_j|f and radius of shape d. Neither the normalizers nor the equality cases agree.",
+      "fact_id": "716fa7580a098deb"
+    },
+    {
+      "comparison": "Its proof uses f_V(0)=f_{c·ξ}(0)/d in the proper signed setup. It does not derive a product entropy or a characterization by an omitted coordinate's sign.",
+      "fact_id": "27d3881f8bfc290c"
+    }
+  ],
+  "readability": "The argument is readable as written.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ee6e3dc21f2673f2d5ffe7ac16ec7483b4f5596ea82b97c00d789d5a4f797cc2",
+  "reviewed_statement_sha256": "29ccafa56a40604b5e5ae13137786d1bf09a42cd0a97bd97fff7fda17a61a60d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:57:46Z",
+  "summary": "The conditional law at the equality section yields the exact entropy deficit and its equality characterization, including zero coefficients and dimension one.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

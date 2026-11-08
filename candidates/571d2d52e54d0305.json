@@ -1,0 +1,28 @@
+{
+  "advances": "A packing inequality for specified inputs and an existing cover, with a common parity hypothesis.",
+  "author": "PK-research-agent",
+  "candidate_id": "571d2d52e54d0305",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:13:09.526221+00:00",
+  "depends_on": [
+    "0575f5f7358f0850"
+  ],
+  "draft_key": "two-residue-midpoint-packing-open-cap-cover",
+  "kind": "lemma",
+  "proof": "Every midpoint has integral base by common parity and lies in $C$ by convexity. Write each open cap as $U_j=\\{\\ell_j>t_j\\}$ for an affine functional. For $j\\notin I\\cup J$, both endpoint values are at most $t_j$, so the midpoint also avoids $U_j$. The cover places every midpoint in $\\bigcup_{j\\in I\\cup J}U_j$. It also places $A$ and $B$ in this union, because each point of either input avoids the caps outside its own index set. By subadditivity and containment in the corresponding closed caps, the selected union has mixed mass at most $|I\\cup J|\\tau W$.\n\nApply the root estimate of 0575f5f7358f0850 with two compact inputs and weights $1/2,1/2$. The common parity makes every combination of nonempty bases integral. Thus $\\mu((A+B)/2)$ is at least the displayed root expression. For the second assertion, choose representatives $r,s$ of the two mod-four classes with $r\\equiv s\\pmod2$. The midpoint parity is $(r+s)/2\\pmod2$, which differs from $r\\pmod2$ because $s-r$ has a coordinate equal to two modulo four. The two inputs are disjoint by their distinct mod-four classes, and their midpoint set is disjoint from both by parity. The three masses can therefore be added inside the same selected open union. All mass comparisons use the closed cap budget even if a boundary carries positive mixed mass.\n",
+  "source_candidate_ids": [
+    "825f4248238fa3c9"
+  ],
+  "source_candidate_sha256": {
+    "825f4248238fa3c9": "5e81129f39f37ad2a22fc18411c43e68ccfb668767d11f47534dc54a6a9f6222"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "825f4248238fa3c9",
+      "locator": "825f4248238fa3c9:02 Application to a strict small-cap cover, (AP)"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ for compact convex $C$, with positive mixed $d$-volume $W=\\mu(S)$. Let finitely many open ambient halfspaces $U_j$ cover $S$, and suppose their closed versions each have mixed cap mass at most $\\tau W$. For nonempty index sets $I,J$, let $A,B$ be compact positive-mass subsets of $S$ such that $A$ avoids every $U_j$ outside $I$ and $B$ avoids every $U_j$ outside $J$. Suppose both inputs lie in one common base parity class. Write $a=\\mu(A)$ and $b=\\mu(B)$. Then\n$$\n\\left(\\frac{a^{1/d}+b^{1/d}}2\\right)^d\\le |I\\cup J|\\tau W.\n$$\nIf $A$ and $B$ are respectively in distinct classes modulo four, still with common parity, then\n$$\na+b+\\left(\\frac{a^{1/d}+b^{1/d}}2\\right)^d\\le |I\\cup J|\\tau W.\n$$",
+  "subgoal_id": "pk-intake-two-residue-midpoint-packing-open-cap-cover",
+  "title": "Midpoint mass and disjoint residue classes in an open cap cover"
+}

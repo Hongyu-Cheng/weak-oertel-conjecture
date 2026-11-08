@@ -1,0 +1,28 @@
+{
+  "advances": "An exact cap-wise strip cost with both supporting orientations and no inferred sign from the covariance comparison.",
+  "author": "PK-research-agent",
+  "candidate_id": "7fe2238120000a41",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:34:26.401269+00:00",
+  "depends_on": [
+    "c68f502f8530eb6e"
+  ],
+  "draft_key": "signed-uniform-strip-partial-capture-cost",
+  "kind": "lemma",
+  "proof": "On each fiber integrate normal columns in the physical direction $u_l/\\|u_l\\|$. The change of variables to the scaled argument gives $dx/h_l=dq_l\\,d\\xi/\\|u_l\\|$, with $d\\xi$ tangential area (counting when $d=1$). On a proper limiting cut both ends of the scaled strip occur on almost every column through the proper section. Equivalently, every intermediate plane in the shrinking strip has the same limiting proper section measure, by the proper-section convergence argument in the transition theorem. The strip integrals of $1$ and $q$ over $(-1,0)$ give factors $1$ and $-1/2$. Empty or null limiting cuts contribute zero by the projected area estimate of that theorem; it applies uniformly to every strip level because all those levels converge to the same plane.\n\nOn each inner supporting facet patch use the same moving roof columns. The integrals of $1$ over the truncated strip are $\\Psi(q_l^F)=\\tau_l$ at an outside roof and $1-\\Psi(q_l^F)=\\tau_l$ at an inside roof. A primitive of $q\\mathbf1_{(-1,0)}$ is\n$$\nJ_1(q)=-\\Psi(q)+\\tfrac12\\Psi(q)^2,\n$$\nequal to $0$ below the strip and $-1/2$ above it. Thus the $q$-integrals are $J_1(q_l^F)=-\\tau_l+\\tau_l^2/2$ outside and $-1/2-J_1(q_l^F)=-\\tau_l^2/2$ inside. Strong $L^1$ convergence of the actual selectors gives the integrals of both $\\tau_l$ and $\\tau_l^2$ since $0\\le\\tau_l\\le1$. Exhaust the facet by the inner patches: remaining strip contributions are bounded by their projected area, since the scaled integrands have absolute value at most one and strip length is one. Compactness localizes all such projections to a shrinking neighborhood of the limiting section, and its relative boundary is null. Division by the limiting $\\|u\\|$ gives the two limits. Combining them yields the signed identity. The bound follows from $\\mathbf1_{0<\\tau_z<1}\\le\\chi_z$ and $\\tau_z(1-\\tau_z)\\le1/4$.\n",
+  "source_candidate_ids": [
+    "8bc6ff090380166a"
+  ],
+  "source_candidate_sha256": {
+    "8bc6ff090380166a": "6f46027336aeb6d5c66cc02fb115d71b16d4ad942b81c2faa12787ed207fadd2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8bc6ff090380166a",
+      "locator": "8bc6ff090380166a:03 §5, J_1 primitive and (8)"
+    }
+  ],
+  "statement": "For the common uniform outward cap sequence and facet selectors $\\tau_z$ of the transition-facet covariance theorem, write $S_l=\\int\\psi(q_l)d\\mu_l/h_l$ and $A_l=\\int q_l\\psi(q_l)d\\mu_l$, with $\\psi=\\mathbf1_{(-1,0)}$. Let $S_{\\rm prop}$ be the summed proper limiting coarea and use $dS=d\\mathcal H^{d-1}$ on the limiting supporting facets. Then\n$$\n\\begin{aligned}\nS_l&\\longrightarrow S_{\\rm prop}+\\frac1{\\|u\\|}\\sum_{\\rm supp}\\int_{F_z}\\tau_z\\,dS,\\\\\nA_l/h_l&\\longrightarrow-\\frac{S_{\\rm prop}}2\n+\\frac1{\\|u\\|}\\sum_{\\rm out}\\int_{F_z}(-\\tau_z+\\tau_z^2/2)\\,dS\n-\\frac1{2\\|u\\|}\\sum_{\\rm in}\\int_{F_z}\\tau_z^2\\,dS,\\\\\nA_l/h_l+S_l/2&\\longrightarrow\n\\frac{\\sum_{\\rm in}\\int_{F_z}\\tau_z(1-\\tau_z)\\,dS-\\sum_{\\rm out}\\int_{F_z}\\tau_z(1-\\tau_z)\\,dS}{2\\|u\\|}.\n\\end{aligned}\n$$\nThe nonnegative unsigned facet density satisfies $\\tau_z(1-\\tau_z)\\le\\chi_z/4$ for the actual transition density from that theorem.",
+  "subgoal_id": "pk-intake-signed-uniform-strip-partial-capture-cost",
+  "title": "Signed partial-capture cost from the uniform strip moment"
+}

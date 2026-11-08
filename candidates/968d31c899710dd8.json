@@ -1,0 +1,34 @@
+{
+  "advances": "Actual integer fibers and projected, unweighted continuous volume in prescribed simplex-vertex neighborhoods. Same-parity endpoints force an integer midpoint, with no addition across different parities for one pair.",
+  "author": "PK-research-agent",
+  "candidate_id": "968d31c899710dd8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:17:06.631782+00:00",
+  "depends_on": [
+    "bff19d5abf55e3e2"
+  ],
+  "draft_key": "actual-simplex-vertex-cluster-parity-bridge",
+  "kind": "theorem",
+  "proof": "Write $\\lambda_i$ for the barycentric coordinate of vertex $v_i$. In $Q_i$, coordinate $\\lambda_i$ is at least $1-\\delta/(d+1)$ and every other coordinate is at most $d\\delta/(d+1)$. Thus the clusters are disjoint. The pair region equals $(v_i+v_j)/2+\\delta(T-g)$. Every coordinate in it is at most $1/2+d\\delta/(d+1)<1-\\delta/(d+1)$, so it misses every cluster. For two distinct unordered pairs choose a label in one and outside the other. Its coordinate is at least $1/2-\\delta/(d+1)$ in the first and at most $d\\delta/(d+1)$ in the second. The strict gap $1/2-\\delta$ proves pair-region disjointness.\n\nFix a parity $r$ with positive masses in labels $i,j$. The compact convex positive-volume traces indexed at $r+2u$ and $r+2v$ have their midpoint inside the actual trace $K_{r+u+v}\\cap R_{ij}$ by convexity. Apply the collision-free two-family midpoint volume bound to this single parity, relabeling target index $u+v$ as base $r+u+v$. It gives the expression in $L_{ij}$ for this parity. Taking the maximum protects against overlaps between different parity constructions of the same pair. Summing over label pairs is legitimate since their continuous regions are disjoint, even if target bases coincide. The two weaker lower bounds follow from AM--GM on the $d$th roots and from dropping the smaller root. For a nonempty null trace, fix one point of it and midpoint it with each positive trace of the other label in the parity. The target base is distinct for each partner base, and the midpoint volume is $2^{-d}$ times the partner volume. Summation gives the claimed null-trace bound. If the first trace is empty this argument supplies no mass.\n\nFor sharpness take $n=1$ and the hull of the lifts of $Q_i$ at $-1$ and $Q_j$ at $1$. Its complete integer fibers are the two chosen clusters and $R_{ij}$ at zero. Each has volume $\\delta^d|T|$, and the endpoint labels are in the same parity, so the bridge inequality is an equality. The hull is full-dimensional since a positive-volume fiber and a point at a different base span the ambient space.\n\nEach positive nonleading mass in class $r$ is at most $E$ by the geometric-mean lower bound with $A_{\\ell_r r}\\ge A_{ir}$. There are at most $k-1$ such masses per occupied parity. Summing yields the two displayed estimates, and taking $d$th roots of the sharper pair bound gives the individual estimate. If $A_{\\ell_r r}\\ge2^dE$, its root already consumes the whole upper bound $2E^{1/d}$, so no other positive root can occur. The zero-outside consequence also follows directly: each positive-mass parity has exactly one positive label and there are at most $2^n$ parities.\n",
+  "source_candidate_ids": [
+    "32c90486ff8c59d7",
+    "87fbc7e80b2767d9"
+  ],
+  "source_candidate_sha256": {
+    "32c90486ff8c59d7": "16ef48371a38763d9b02a63349e3e5edbc0ee7333578e03642fc4a42ce6595ec",
+    "87fbc7e80b2767d9": "e1257ab5ba61f65f34b80f9818754aa13dba7bf2b383d08e1d2ecfea6452f5c1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "87fbc7e80b2767d9",
+      "locator": "87fbc7e80b2767d9:02 §§2–3, (2)–(4a), sharp actual example, and (5)–(6)"
+    },
+    {
+      "candidate_id": "32c90486ff8c59d7",
+      "locator": "32c90486ff8c59d7:02 §§2–3, (11), exact zero-outside support obstruction"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$ and let $C\\subseteq\\mathbb R^n\\times\\mathbb R^d$ be a compact convex body with actual integer fibers $K_z$. Around $k\\ge1$ selected distinct vertices $v_i$ of a $d$-simplex $T$ of centroid $g$, put $Q_i=v_i+\\delta(T-g)$ with $0<\\delta<1/2$. Define $U=\\bigcup_iQ_i$, $A_{ir}=\\sum_{z\\equiv r\\bmod2}|K_z\\cap Q_i|$, $M_i=\\sum_r A_{ir}$, $E=\\sum_z|K_z\\setminus U|$, $M=E+\\sum_i M_i$, and $R_{ij}=(Q_i+Q_j)/2$ for $i\\ne j$. Put\n$$\nL_{ij}=\\max_{r:A_{ir}A_{jr}>0} 2^{-d}(A_{ir}^{1/d}+A_{jr}^{1/d})^d\n$$\nwith empty maximum zero. The unordered pair regions are mutually disjoint and outside $U$. They satisfy $\\sum_z|K_z\\cap R_{ij}|\\ge L_{ij}$ and $E\\ge\\sum_{i<j}L_{ij}$. In a parity with two positive masses, $E\\ge\\sqrt{A_{ir}A_{jr}}$ and $E\\ge2^{-d}\\max(A_{ir},A_{jr})$. If a single trace $K_z\\cap Q_i$ is nonempty in class $r$ and $A_{jr}>0$, then $\\sum_v|K_v\\cap R_{ij}|\\ge2^{-d}A_{jr}$ even when the first trace is null. The positive-pair bound is sharp.\n\nLet $m$ be the number of parities with positive cluster mass and choose a maximizing label $\\ell_r$ for each such parity. Their union $L$ has cardinality at most $m\\le2^n$, and\n$$\n\\sum_{i\\notin L}M_i\\le m(k-1)E,\\qquad\n\\sum_{i\\in L}M_i\\ge M-[1+m(k-1)]E.\n$$\nFor a positive nonleading mass $A_{ir}$, one also has $A_{ir}^{1/d}\\le2E^{1/d}-A_{\\ell_r r}^{1/d}$. A leading mass at least $2^dE$ therefore excludes any other positive label of the same parity. At $E=0$, at most $2^n$ labels have positive projected mixed mass.",
+  "subgoal_id": "pk-intake-actual-simplex-vertex-cluster-parity-bridge",
+  "title": "Parity forces volume between actual simplex-vertex clusters"
+}

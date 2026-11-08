@@ -1,0 +1,36 @@
+{
+  "candidate_id": "e9da2489a6c65517",
+  "candidate_sha256": "63eea93ab2e487cc239be340df3e4aab00c6429b32cbf756db625dada9e7b2b9",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "At fixed b the inactive derivative is negative. The active ratio (sb+2c-2)/c has derivative (2-sb)/c²>0, so the only possible interior minimizer solves sb+2c-2=qc, with q^(d-1)=1/2.",
+    "Substituted c_*=(2-sb)/(2-q) using q^d=q/2. Its value is concave in b, and feasibility b≤c_*≤1 is exactly the displayed closed interval. Either endpoint is on c=b, c=1, or b=1/2.",
+    "At c=1, s^d≥2 and (2b-1)≤b. At c=b, division by b^d is valid and the binomial difference contributes at least 2du. Bernoulli gives the remaining lower bound when v≤d+1, including the vanishing positive part at equality.",
+    "At b=1/2, q>s/2 for d≥3 implies nonincrease through c=1. For d=2 the inactive edge is bounded by 23/64, and expansion of the active square gives constant 11/48. Independently checked 2,312 rational grid pairs in dimensions 2 through 18 as a supplement to the exact all-dimensional proof.",
+    "Matched the exact inequality and proof domain to 8f194c2219f76d2a §2, (6) and (8)–(10)."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T18:23:48Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted scalar tail analysis uses affine-power profiles to obtain a centroid-tail bound. It has no inequality in the two ordered peak radii b,c with the displayed positive part.",
+      "fact_id": "7ad3d72ee6061cf3"
+    }
+  ],
+  "readability": "The stationary-branch concavity concerns its value as a function of b, after minimizing in c.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the exact frozen statement and proof, comparison to original locators and accepted facts, exact dependency binding, and independent rational arithmetic where applicable.",
+  "reviewed_proof_sha256": "4bdb8a2ac8ce77ea0105be9b2642f8dc2f6323da9cdf5dc4c0a35d16dbaaefb5",
+  "reviewed_statement_sha256": "badce0b6e37f37e3c191ef97f2bf68dd1ac4457c2bf9e25470eff223af5d1dca",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:17:25Z",
+  "summary": "The fixed-b minimization and concavity on the feasible stationary branch reduce the whole domain to three edges, all of which satisfy the inequality including their endpoints.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

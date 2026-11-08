@@ -1,0 +1,26 @@
+{
+  "advances": "Physical surface reserve for a given martingale and prescribed marked pair. The tuple discount, domination and weighted repair selection are separate.",
+  "author": "PK-research-agent",
+  "candidate_id": "eb31b56c79b36fd4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.286626+00:00",
+  "depends_on": [],
+  "draft_key": "affine-weighted-physical-row-entropy-reserve",
+  "kind": "lemma",
+  "proof": "The affine martingale identity and positivity make both tilted laws probabilities. Their density ratio is $q(t)V_s/(q_s L(t))$. Expanding its logarithm, multiplying by $q_s$, and subtracting $q_s\\log(q_s/L(s))$ from the original row integral gives the displayed identity. Both terms in brackets are nonnegative by concavity of $L$ and positivity of relative entropy. For the pair claim, $F_q$ is convex by the representation $F_q(w)=\\sup_{\\alpha\\in\\mathbb R}\\{\\alpha q(w)-e^{\\alpha-1}L(w)\\}$, since the displayed supremum is attained at $1+\\log(q(w)/L(w))$. Apply Jensen along the source-to-midpoint martingale and within the two-endpoint pair, then use the two corresponding affine equalities for $q$. All integrands are bounded on the compact domain, and the total assertions also hold when the flow is zero.\n",
+  "source_candidate_ids": [
+    "1fa84e1f531e54da"
+  ],
+  "source_candidate_sha256": {
+    "1fa84e1f531e54da": "c9245d2a96e6ec0a79258305f1ceb71fa9479c76a6547a803a6cfe0c4e3e1d0d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1fa84e1f531e54da",
+      "locator": "1fa84e1f531e54da:07 §10 (16), exact row reserve and fixed affine mass"
+    }
+  ],
+  "statement": "Let $\\nu(ds,du)P_{s,u}(dt)$ be a finite physical martingale with actual marked surface source and target marginals $\\nu,\\eta$ on a compact convex physical domain $C$. Let $q$ be positive affine on $C$, let $L$ be continuous, positive and concave there, and set $F_q=q\\log(q/L)$. At a source row put $q_s=q(s)$, $V_s=\\int L(t)\\,dP_{s,u}(t)$, $Q_s=qP_{s,u}/q_s$, and $T_s=LP_{s,u}/V_s$. Then\n$$\n\\int F_q(t)\\,dP_{s,u}(t)-F_q(s)\n=q_s\\left[\\log\\frac{L(s)}{V_s}+D(Q_s\\|T_s)\\right]\\ge0.\n$$\nFor any prescribed marked pair of endpoint-average marginal $\\eta$ with midpoint law $\\rho$ and source-to-midpoint martingale from $\\nu$, one has $0\\le\\int F_q\\,d(\\eta-\\rho)\\le\\int F_q\\,d(\\eta-\\nu)$, and $\\int q\\,d\\nu=\\int q\\,d\\rho=\\int q\\,d\\eta$.",
+  "subgoal_id": "pk-intake-affine-weighted-physical-row-entropy-reserve",
+  "title": "Exact affine-weighted entropy reserve of a physical surface row"
+}

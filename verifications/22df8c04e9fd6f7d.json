@@ -1,0 +1,61 @@
+{
+  "candidate_id": "b7881bda414edee7",
+  "candidate_sha256": "a7164e4a9fd4e9a166d9a97b777ce0a59bc40e5bc9b47793323dbee5e1c7246d",
+  "checked_dependency_candidate_sha256": {
+    "ea91e021ff1f4416": "67cec4d3ae5456e06c3b53232ee13354100ead48f99fb462585f60af561b6bfd"
+  },
+  "checks": [
+    "Every generator is affine in the same vertical direction, including the two stationary ones. The fixed segment at first coordinate −1 and any right generator at first coordinate 1 are noncollinear, so the hull has area even at the collision.",
+    "The same square occurs at both endpoints. Opposing through-point halfplanes have total normalized area one because the common boundary is null; at the center each has mass one half by central symmetry.",
+    "At t=1/2 the two right vertices coincide at (1,0); the two fixed vertices and this one are a nondegenerate triangle, so the simplex depth formula gives 4/9. This is strictly below both endpoint values."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ea91e021ff1f4416",
+      "candidate_sha256": "67cec4d3ae5456e06c3b53232ee13354100ead48f99fb462585f60af561b6bfd",
+      "fact_sha256": "7df0ab466517c08027b19984c8fcc99e925534ad6c1ec7c6905b698e7122a204",
+      "hypotheses": "The midpoint hull is a full-dimensional compact planar simplex. The simplex direction of the accepted equivalence gives normalized maximal ordinary depth (2/3)^2=4/9 for it.",
+      "reviewed_proof_sha256": "7f96240a7f6daadfa378ed87c324d38ae1d8192f0e6c9d3418ee841b28dc8215",
+      "reviewed_statement_sha256": "a0e387ad13f0b77b65c3e51862237d9404bd7d3c38c854810a68f8abdc3185c1"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:33:51Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted failure of quasiconcavity concerns compatible interval fibers and ambient mixed length. It does not provide an ordinary planar full-dimensional four-generator shadow system.",
+      "fact_id": "9a8f32595450b6fe",
+      "fact_sha256": "2dd38a7eb2f38a9afef9165f9d0701510d06e918e556af4391696472cf491938"
+    },
+    {
+      "comparison": "It supplies the midpoint's depth, not the common-direction vertex path or comparison with its endpoint hulls.",
+      "fact_id": "ea91e021ff1f4416",
+      "fact_sha256": "7df0ab466517c08027b19984c8fcc99e925534ad6c1ec7c6905b698e7122a204"
+    }
+  ],
+  "readability": "The proof and its scope are clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent proof read, source-scope and graph dependency checks, and exact arithmetic where applicable",
+  "reviewed_proof_sha256": "fbe8e502dd019555a034fa216fd0ea43e64879f838f548f51ed359b70213069e",
+  "reviewed_statement_sha256": "5d29adf91b10422da0441b5b96c9893c74f32950726286a51fc8aa6f3c78a125",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "sources_verified": [
+    {
+      "candidate_id": "8bccfe18db0ced3d",
+      "candidate_sha256": "496872113f5cd94d60a1f050ba474c41eaf04a891370d6765e44832b48421183",
+      "locator": "8bccfe18db0ced3d:01 Proof §1, continuous four-vertex shadow system",
+      "reviewed_proof_sha256": "1618d870c5fc04f7be0a223f003280c907b1de8fbea577f4226630e8c57f3979",
+      "reviewed_statement_sha256": "17750c624350709c72d19e4ce7ba75d0c45fc3bf16a79f9010533b7537c05965",
+      "scope_verified": "Section 1 is the displayed continuous moving-vertex construction and its exact depths. Section 2 uses a separate fixed-integer interval construction outside this proof."
+    }
+  ],
+  "started_utc": "2026-11-08T21:28:49Z",
+  "summary": "The affine motion is a full-dimensional shadow system, and the square and midpoint triangle give the exact normalized ordinary depths claimed.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

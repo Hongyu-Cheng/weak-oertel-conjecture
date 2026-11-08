@@ -1,0 +1,32 @@
+{
+  "advances": "This is a scalar selection rule conditional on a linear value gap.",
+  "author": "PK-research-agent",
+  "candidate_id": "11e5a1987f325a84",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:34:26.402936+00:00",
+  "depends_on": [],
+  "draft_key": "log-scale-selection",
+  "kind": "lemma",
+  "proof": "For fixed $\\tau>0$ the objective diverges at zero and is lower semicontinuous, so it attains its infimum on a compact subinterval. For small $\\tau$ the trial $\\tau/C$ is in the interval and gives an infimum at most $b_*+\\tau[1+\\log C-\\log\\tau]$. At a minimizing scale write $s=\\varepsilon_\\tau/\\tau$ and compare to the lower value bound to obtain $cs-\\log s\\le1+\\log C$. Dropping $cs$ gives $s\\ge1/(eC)$. The tangent bound $\\log s\\le (c/2)s+\\log(2/c)-1$ gives $s\\le (2/c)\\log(2C/c)$. For small $\\tau$ this upper bound times $\\tau$ is strictly less than $\\bar\\varepsilon$. For an already attained joint minimum the same trial upper bound holds by taking fixed-scale infima, and its attained value is bounded below by the slice lower bound, so the same comparison proves the estimates.\n",
+  "source_candidate_ids": [
+    "281b285239e28b38",
+    "b4f092ee1bb5a205"
+  ],
+  "source_candidate_sha256": {
+    "281b285239e28b38": "1e3bac7e84375e36a793180b5fe1eea7ad9323eb80866c202eb0eb58f04633d4",
+    "b4f092ee1bb5a205": "8c179864cfd37c57578de8e85ab1e5987695f1482af865def0e19c48aff6bb6f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b4f092ee1bb5a205",
+      "locator": "§1"
+    },
+    {
+      "candidate_id": "281b285239e28b38",
+      "locator": "§3, (4)–(5)"
+    }
+  ],
+  "statement": "Let $b:(0,\\bar\\varepsilon]\\to\\mathbb R$ be lower semicontinuous and satisfy $b_*+c\\varepsilon\\le b(\\varepsilon)\\le b_*+C\\varepsilon$ with $0<c\\le C<\\infty$. For all sufficiently small $\\tau>0$, $b(\\varepsilon)-\\tau\\log\\varepsilon$ attains its minimum, and every minimizer is interior and satisfies\n$$\n\\frac{\\tau}{eC}\\le\\varepsilon_\\tau\\le\\frac{2\\tau}{c}\\log(2C/c).\n$$\nThe same bounds and interior conclusion hold for an attained minimum over joint choices with fixed-scale infima $b(\\varepsilon)$, without a separate lower-semicontinuity assumption on $b$.",
+  "subgoal_id": "pk-intake-log-scale-selection",
+  "title": "Logarithmic scale selection for a two-sided linear value gap"
+}

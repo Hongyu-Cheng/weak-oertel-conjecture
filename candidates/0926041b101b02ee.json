@@ -1,0 +1,29 @@
+{
+  "advances": "The specified two-core branch at a local minimum in actual finite data. Other core patterns and higher-saturation branches are separate.",
+  "author": "PK-research-agent",
+  "candidate_id": "0926041b101b02ee",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:18:43.798316+00:00",
+  "depends_on": [
+    "7d1ee06fa4119930",
+    "ffdb2bc33d7a6750"
+  ],
+  "draft_key": "ordinary-two-double-cores-local-inverse-weight-rigidity",
+  "kind": "theorem",
+  "proof": "The six canonical ray directions have both consecutive and next-neighbor determinants one and consecutive gaps less than $\\pi$. Thus the actual feasibility criterion [7d1ee06fa4119930](../facts/7d1ee06fa4119930.md) specializes to the core inequalities $R_iR_{i+1}\\le2W_i$ and positive semidefiniteness of the cyclic matrix with diagonal entries $c_{i-1}+c_i-R_i^{-2}$ and adjacent entries $c_i-1/(R_iR_{i+1})$, where $c_i=1/(2W_i)$. With exactly the two specified core edges $0,4$, its PSD blocks lie on $\\{5,0\\}$ and $\\{1,2,3,4\\}$. Internal off-diagonal entries are strictly negative.\n\nIf the short block is positive definite, decrease $A$ slightly and increase $B$ to keep $AB=2W_0$, fixing all other radii and all areas. This retains both separating zero edges and all other core inequalities by their strict slack. The short block remains positive definite by openness. In the other block its changed entries, the $B$ diagonal and the adjacent internal off-diagonal, increase and the off-diagonal remains negative. The changed block $C'$ is still PSD since $x^{\\mathsf T}C'x\\ge |x|^{\\mathsf T}C'|x|\\ge |x|^{\\mathsf T}C|x|\\ge0$ for the old block $C$. The resulting data are feasible by the exact criterion and arbitrarily close. Their numerator chord $B+b$ increases, and $A+a$ decreases, so $p$ strictly decreases, contradicting local minimality.\n\nIf the long block is positive definite, decrease $t$ slightly with all other radii and areas fixed. The changed block remains positive definite by openness, the short block is unchanged, and both affected core products $Bt,at$ decrease. The actual feasible perturbation decreases $r+t$ while keeping both other chords fixed and hence again strictly decreases $p$. Thus both blocks are singular.\n\nIn each singular block take a nonzero null vector. Replacing its coordinates by absolute values cannot increase the quadratic form because the off-diagonal entries are nonpositive. Positive semidefiniteness gives a nonnegative null vector. A zero coordinate in it would force both neighboring coordinates to vanish where present, by the null equation and strict negativity of the edge entries. Connectivity would make the entire vector zero. Concatenating the positive null vectors yields $Lw=0$ with $w>0$ for the matrix of this actual datum. Apply [ffdb2bc33d7a6750](../facts/ffdb2bc33d7a6750.md), which uses these same six radii and sector areas. It gives uniqueness of the actual realizing body and exactly one open-sector vertex per positive excess, with the ray endpoints strictly interior to the corresponding edges. The four strict excesses give the claimed quadrilateral.\n",
+  "source_candidate_ids": [
+    "91fb6de21f312a49"
+  ],
+  "source_candidate_sha256": {
+    "91fb6de21f312a49": "648ccf2c272d6ac1fd2aabf7708e846a5ba0787a5d0369a9e0c67a7a7934a766"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "91fb6de21f312a49",
+      "locator": "Theorem (1)–(3) and §§1–3, two singular blocks and actual-body rigidity"
+    }
+  ],
+  "statement": "Use canonical ray endpoints $(P_0,\\ldots,P_5)=((A,0),(0,B),(-t,t),(-a,0),(0,-b),(r,-r))$ with positive radii $R=(A,B,t,a,b,r)$, and let $W_i$ be the ordinary area between successive rays $P_i,P_{i+1}$, with cyclic indices. For the caps $x\\ge0$, $y\\ge0$, $x+y\\le0$, write $W=(Y_3,X_2,Y_1,X_3,Y_2,X_1)$, with $X_j$ the cap-$j$-only area and $Y_j$ the area in the two other caps. Consider the objective $p=[1+(B+b)/(A+a)+(B+b)/(r+t)]^{-1}$ among actual feasible endpoint/area tuples for bodies with $0$ interior, under any constraints depending only on $W$.\n\nAt a local minimum in the finite-data topology, suppose $W_0=AB/2$, $W_4=br/2$, and $W_i>R_iR_{i+1}/2$ for $i=1,2,3,5$. Then the data have a unique actual realizing body. It is a quadrilateral with one vertex strictly inside each of sectors $1,2,3,5$ and all six prescribed endpoints in the relative interiors of its edges. This includes an attained global minimum in the indicated branch.",
+  "subgoal_id": "pk-intake-ordinary-two-double-cores-local-inverse-weight-rigidity",
+  "title": "Two double cores force a unique quadrilateral at a local inverse-weight minimum"
+}

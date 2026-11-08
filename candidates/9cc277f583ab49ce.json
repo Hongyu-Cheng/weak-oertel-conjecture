@@ -1,0 +1,26 @@
+{
+  "advances": "One added fiber in an identical centrally symmetric binary core. The lower bound uses a symmetric retained triple, which need not be the entire source.",
+  "author": "PK-research-agent",
+  "candidate_id": "9cc277f583ab49ce",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:11:33.637910+00:00",
+  "depends_on": [],
+  "draft_key": "contained-endpoint-symmetric-binary-core",
+  "kind": "theorem",
+  "proof": "Coordinate flips preserving the lattice and fiber volumes allow $q=0$, $v=\\mathbf1_I$, $p=-\\mathbf1_I$, with $I$ nonempty and $k=|I|$. The base projection has all coordinates in $[-1,1]$, nonnegative outside $I$. Any integer base outside the cube has a coordinate $-1$, forcing weight one on $p$ in the hull representation. Thus the only added base is $p$ and its fiber is exactly $A$. All continuous coordinates lie in $K$, so the cube fibers remain exactly $K$. The hull contains $[0,1]^n\\times K$ and is full dimensional.\n\nFor the lower bound, retain just $A,K,2g-A$ in the actual fibers at $p,q,v$, respectively. The last body is contained in $K$ by symmetry. This submeasure of mass $V+2a$ is invariant under $(z,x)\\mapsto(2q-z,2g-x)$, which interchanges opposite closed halfspaces through $(q,g)$. Each such halfspace has at least half the retained mass, including if its boundary contains an entire fiber. The same lower bound applies to every containing halfspace by passing to its parallel through-point cap.\n\nDefine $\\delta_q(z)=\\sum_i z_i$, which is zero at $q$, at most $-1$ at $p$, and at least one at all other cube vertices. For $w\\ne q$ a cube vertex, set\n$$\n\\delta_w(z)=(k+1)\\sum_{i:w_i=1}(1-z_i)+\\sum_{i:w_i=0}z_i.\n$$\nThis vanishes at $w$, is at least one at the other cube vertices, and is at least one at $p$: if $j=|I\\cap\\operatorname{supp} w|$ and $s=|\\operatorname{supp} w\\setminus I|$, its value there is $(2k+3)j+(k+1)s-k$, with $j+s\\ge1$.\n\nFor each direction in a fixed finite set of $d$ independent directions and their negatives, normalize the affine functional $\\phi$ to have range $[0,1]$ on $K$. Then $\\phi(g)=1/2$ and $\\lbrace\\phi\\ge1/2\\rbrace$ has half the volume of $K$, by reflection and nullity of the boundary. The own caps cover $K$ because they include opposite directions. Lift these as $\\lbrace\\phi(x)-2\\delta_w(z)\\ge1/2\\rbrace$ for each cube vertex $w$. For $w=q$ they contain all of $A$, isolate the own cap from the other cube fibers, and have mass $V/2+a$. For $w\\ne q$ they isolate the own cap from all other fibers, and have mass $V/2$. This gives a finite cover and the matching global upper bound.\n\nIf $y\\in K$ differs from $g$, choose a nonzero direction with strictly larger value at $y$ than at $g$, and normalize it in the same way. The cap at threshold $\\phi(y)>1/2$ has volume strictly less than $V/2$: the intervening slab intersects a ball around $g$ inside $K$ in positive volume. The same $q$ tilt with this threshold, which is at most one, still includes $A$ and excludes the other cube fibers. Hence $(q,y)$ has strictly smaller depth. Every other cube point has a containing cap of mass $V/2$, and the vertical cap $\\sum_{i\\in I}z_i\\le-k$ isolates the added fiber and has mass $a$. This proves uniqueness. Divide the exact raw maximum by $2^nV+a$ for the normalized formula. Every full-dimensional one-dimensional compact convex body is a centrally symmetric interval, so that case requires no smallness restriction.\n",
+  "source_candidate_ids": [
+    "1d1be0b22c707856"
+  ],
+  "source_candidate_sha256": {
+    "1d1be0b22c707856": "84cce1b95e65b1af02c6bf8b51df541e56e272710c57bf6cab37bfbb6e110cab"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1d1be0b22c707856",
+      "locator": "§§6, 8, (12), using the base calculations in §7"
+    }
+  ],
+  "statement": "Let $d,n\\ge1$, and let $K\\subseteq\\mathbb R^d$ be a full-dimensional centrally symmetric compact convex body with volume $V$ and center $g$. Let $A\\subseteq K$ be compact convex with $0<a=|A|\\le V$. For distinct $q,v\\in\\lbrace0,1\\rbrace^n$, put $p=2q-v$ and take the convex hull of $\\lbrace z\\rbrace\\times K$ at all binary vertices and $\\lbrace p\\rbrace\\times A$. Its exact integer support is the cube vertices and $p$, with the assigned fibers. With the sum of their $d$-volumes and all closed ambient halfspaces, the raw maximum over the mixed-integer points in the hull is $V/2+a$, attained only at $(q,g)$. Its normalized maximum is $(1/2+a/V)/(2^n+a/V)$. In particular, in continuous dimension one the formula holds for any positive interval $A$ contained in the common core interval.",
+  "subgoal_id": "pk-intake-contained-endpoint-symmetric-binary-core",
+  "title": "Exact mixed depth after one addition to a symmetric binary core"
+}

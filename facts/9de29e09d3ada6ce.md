@@ -1,0 +1,43 @@
+---
+fact_id: 9de29e09d3ada6ce
+kind: lemma
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-translated-triangle-physical-normal-curvature
+depends_on: ["c4ebd085f1b2ab31", "269d96bcbbe3370f"]
+verifier_run: bcec4a70bededadc
+target_match: null
+---
+
+## Source
+
+- [0e4cb84a76d46e82](../candidates/0e4cb84a76d46e82.json), 0e4cb84a76d46e82:04 §3, (6)–(9), exact one-vertex chart and reduced Hessian.
+- [0e4cb84a76d46e82](../candidates/0e4cb84a76d46e82.json), 0e4cb84a76d46e82:05 §4, (10)–(13), affine radii, exact branch and curvature cancellation.
+
+## Statement
+
+Put $T=\operatorname{conv}\{(-1,-1),(2,-1),(-1,2)\}$. At the three identical fibers $T$ over $j=-1,0,1$, the middle centroid has raw depth $6$, with exactly the three through-mark minimizing normal rays $x_1\ge0$, $x_2\ge0$, $-x_1-x_2\ge0$. The global raw depth maximum is $6$.
+
+For nearby actual aligned fibers $(p_j,q_j)+r_j T$ with $r_j>0$, fix the source at the middle origin. In the open proper chamber near the first canonical cap, the mass of $x_1+\alpha j+\theta x_2\ge0$ is
+$$
+\Phi=\frac{\sum_{j=-1}^1 (2r_j+p_j+\alpha j+\theta(q_j-r_j))^2}{2(1-\theta)}.
+$$
+At the identical family the normal Hessian in $(\alpha,\theta)$ is $\operatorname{diag}(2,3)$. For a two-sided compatible linear velocity $(\rho_j,P_j,Q_j)_j$ of $(r_j,p_j,q_j)_j$, set $A_j=2\rho_j+P_j$. The reduced branch Hessian on this velocity is
+$$
+\sum_j A_j^2-\frac{(\sum_j j A_j)^2}{2}-\frac{(\sum_j(P_j+2Q_j))^2}{3}.
+$$
+For the affine radii $r_j=1+aj$ and zero translations the same chamber formula is
+$$
+6+\frac{3\theta^2}{2(1-\theta)}+\frac{(2a+\alpha-a\theta)^2}{1-\theta}.
+$$
+At $(\alpha,\theta)=(-2a,0)$ the branch value is $6$ and its normal Hessian has entries $2,-2a,3+2a^2$ (in the order $\alpha\alpha,\alpha\theta,\theta\theta$), of determinant $6$. At $a=0$ the two-sided velocity $\rho_j=j$ preserves the first-order volume in each base parity class and has frozen curvature $8$ and reduced curvature $0$.
+
+## Proof
+
+The centered three-triangle depth theorem c4ebd085f1b2ab31 applies to $T$ itself and equal radii one at all three bases. The only minimizing continuous directions are canonical and the own cap has area $2$. At either endpoint in the same chart the retained area is $f_1(\pm\alpha)$ in that theorem's notation. For $|\alpha|\le1$ their sum is $4+\alpha^2$; for $|\alpha|\ge1$ one trace is full, of area $9/2$. Thus the unique tilt for each canonical direction is zero. Its global depth formula gives the maximum $6$.
+
+In the nearby open chamber the retained vertex in fiber $j$ is $(p_j,q_j)+r_j(2,-1)$, with margin $m_j=2r_j+p_j+\alpha j+\theta(q_j-r_j)$. The other two vertices have strictly negative margins. Their respective margin differences from the first vertex are $3r_j$ and $3r_j(1-\theta)$. The retained triangle has area $(9/2)r_j^2$ multiplied by the two edge ratios $m_j/(3r_j)$ and $m_j/(3r_j(1-\theta))$. Summing gives the formula for $\Phi$.
+
+At the base $m_j=2$ and $\sum_jj=0$, $\sum_jj^2=2$. Differentiating the chart formula gives zero first normal derivatives and $K=\operatorname{diag}(2,3)$. The frozen body second derivative along the stated velocity is $\sum_j A_j^2$. The two mixed derivatives along this velocity are $\sum_j j A_j$ and $\sum_j[A_j+2(Q_j-\rho_j)]=\sum_j(P_j+2Q_j)$. The implicit normal branch lemma then subtracts exactly the two squared terms divided by $2$ and $3$. The chart calculation takes an ambient derivative and then restricts it to compatible directions; it does not assert independent feasible fiber motions.
+
+For the affine radii, compatibility is exact because positive dilates of $T$ add by adding their radii, and the middle radius is their arithmetic mean. Substitute into the chart formula to get $m_j=2-\theta+j(2a+\alpha-a\theta)$; summing its squares gives the specialized expression. Its two square terms are minimized together at $(\alpha,\theta)=(-2a,0)$ in the chamber. Differentiating there gives the stated Hessian and determinant. At zero the volume derivative in fiber $j$ is $9j$, which sums to zero on each parity. With $\rho_j=j$ the frozen derivative is $\sum_j(2j)^2=8$ and the tilt correction is $(\sum_j2j^2)^2/2=8$.

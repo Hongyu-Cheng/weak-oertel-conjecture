@@ -1,0 +1,44 @@
+{
+  "advances": "Geometry and cardinality of deepest marks in the null-supporting-section subclass, including strictly convex positive fibers in dimension at least two.",
+  "author": "PK-research-agent",
+  "candidate_id": "286b2220d4bcff4f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:43:58.560520+00:00",
+  "depends_on": [
+    "1ec728c26c11b368",
+    "55a57b1cf55d0c87",
+    "1269c554ca9a41b8",
+    "eb59598e64f94c2d",
+    "755cb08c379113cc"
+  ],
+  "draft_key": "null-supporting-sections-strict-interpolation-and-maximizing-hull",
+  "kind": "theorem",
+  "proof": "The actual finite fibers are compatible by convexity of $C$. By facts 1ec728c26c11b368 and 55a57b1cf55d0c87, a maximum exists and is positive, all positive-depth marks are interior to positive fibers, and every sampled point has a minimizing nonvertical through-cap.\n\nFix a positive-depth point $Y=(p,x)$ and an attaining cap through $Y$. It cannot be vertical. A vertical cap would have margin $a\\cdot(z-p)$ for some $a\\ne0$. Add $\\varepsilon u\\cdot(X-x)$ with a unit continuous $u$ and sufficiently small $\\varepsilon>0$. The finitely many bounded fibers at bases with strict old margin keep their original inclusion or exclusion, and the zero-margin bases only lose mass. The positive-volume own fiber loses a positive-volume part of an interior ball at $x$. This would strictly lower the mass of a cap through $Y$.\n\nEvery such nonvertical cap has a proper own trace. To check the differentiability required by fact eb59598e64f94c2d, apply the full-parameter first variation in §2 of fact 1269c554ca9a41b8 to the positive-volume fibers. Proper traces give the signed two-sided derivative, disjoint traces are unchanged locally, and the other supporting traces have zero $(d-1)$-measure by hypothesis. Thus the derivative exists for every ambient normal perturbation through $Y$, with the threshold varied by the perturbing normal evaluated at $Y$. Fact eb59598e64f94c2d gives $H\\cap\\{D\\ge D(Y)\\}=\\{Y\\}$ for any such attaining cap $H$. This immediately gives strict exclusion at global maxima.\n\nDepth is quasiconcave since a halfspace containing a point on a segment contains at least one endpoint. Thus the sampled intermediate point $y$ has positive depth. If its depth equaled the smaller endpoint depth, an attaining through-cap at $y$ would contain an endpoint of at least that depth, violating the strict contact just proved. This gives the asserted interpolation. In particular two distinct global maxima with equal base parity would have a sampled midpoint by convexity of $C$ and integrality of its base. The interpolation would increase depth above the global maximum. This proves the finite bound and distinctness of the bases.\n\nLet $p'$ be an integer point in $\\operatorname{conv}(I)$, and lift a convex representation of it to the same combination of the associated maximizing points. The lift $y'$ is sampled by convexity and integrality, and quasiconcavity gives maximum depth there. Hence $p'\\in I$. If a convex representation of $p'$ uses any other base with positive weight, an attaining cap through $y'$ has strictly negative margin at every participating mark distinct from $y'$ and margin zero at $y'$. This contradicts its zero margin at the convex combination $y'$. Thus every member of $I$ is a vertex, and the finite hull has no lattice points beyond $I$.\n\nFinally fact 755cb08c379113cc supplies a positive circuit through any maximizing point, since that point also maximizes on its own positive-volume fiber. Every circuit cap has strictly negative margin at every different maximizing point. Summing with the positive coefficients cancels the continuous component. The resulting base functional has a strictly smaller value at each other base and therefore strictly exposes $p$ in the hull. The singleton hull has its only point as an exposed vertex.\n",
+  "source_candidate_ids": [
+    "4c405e76fb81c248",
+    "e81d0f726880ea4a",
+    "f2d1fbdd5a877f5b"
+  ],
+  "source_candidate_sha256": {
+    "4c405e76fb81c248": "3dbfc4e4c6e5198d6c7d90d4a327cfec5eac2fec6f938b58896fd6e93fa7dc25",
+    "e81d0f726880ea4a": "bd9abab86477ed6cf54e6275dabef3eca81ab926a0f346c2479d6139b76d3a4e",
+    "f2d1fbdd5a877f5b": "4f0286a5d698c715b3b1356c29b7bfb1622a378038b4565bcf904fdb8cce4b1d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e81d0f726880ea4a",
+      "locator": "§4(a)–(b), strict exclusion and exposed hull"
+    },
+    {
+      "candidate_id": "f2d1fbdd5a877f5b",
+      "locator": "§3, first strict-interpolation and parity consequence"
+    },
+    {
+      "candidate_id": "4c405e76fb81c248",
+      "locator": "§§8–10, alternative strict-contact derivation of the parity consequence"
+    }
+  ],
+  "statement": "Let $n\\ge1,d\\ge2$ and $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ for compact convex $C\\subset\\mathbb R^{n+d}$. Let $\\mu$ sum the $d$-volume of its fibers, with $\\mu(S)>0$, and let $D$ be raw closed ambient halfspace depth. Suppose every supporting hyperplane of every positive-volume fiber meets that fiber in a set of zero $\\mathcal H^{d-1}$ measure.\n\nFor distinct $y_0,y_1\\in S$ of positive depth and every $y=(1-t)y_0+ty_1\\in S$ with $0<t<1$, one has $D(y)>\\min(D(y_0),D(y_1))$. This includes endpoints in the same fiber.\n\nEvery attaining cap through a global maximizing point strictly excludes all other maximizing points. There is at most one maximizing point per parity class of the integer base, hence at most $2^n$ in total, with distinct bases. Their base set $I$ satisfies $I=\\operatorname{conv}(I)\\cap\\mathbb Z^n$, and every $p\\in I$ is an exposed vertex of $\\operatorname{conv}(I)$. In particular, at a maximizing point $(p,x)$ take any positive circuit of attaining nonvertical through-caps with margins $a_j\\cdot(z-p)+u_j\\cdot(X-x)$ and coefficients $\\lambda_j>0$ with $\\sum_j\\lambda_j u_j=0$. Then $\\sum_j\\lambda_j a_j$ strictly exposes $p$ among the maximizing bases when $I$ contains more than one point.",
+  "subgoal_id": "pk-intake-null-supporting-sections-strict-interpolation-and-maximizing-hull",
+  "title": "Null supporting sections give strict interpolation and an empty exposed hull of maximizing bases"
+}

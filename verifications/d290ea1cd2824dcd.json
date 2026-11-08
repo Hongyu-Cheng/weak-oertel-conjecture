@@ -1,0 +1,53 @@
+{
+  "candidate_id": "ecdacd6349c968ba",
+  "candidate_sha256": "d489239785fc4db22eb1eec7d8c46b75bbe2f243584c331ab44ee3c22dd2db10",
+  "checked_dependency_candidate_sha256": {
+    "6d669cc80ae962ed": "2e43ddb56f06c1b97839ab6ae4cec8b470f4ca2b44555a6608fdb255e5fcd6f7"
+  },
+  "checks": [
+    "Assume no limit affine component vanishes identically on the limiting plane. A nonzero tangential gradient keeps a positive lower norm after projection to the moving planes. Because the component is positive on the sections, its sublevel portion lies in a slab of width ≤t/γ_r, with bounded cross-sectional area inside the common outer ball. This gives O(t), including an interval when d=2.",
+    "A component with zero tangential gradient is constant on the limit plane. If infinitely many sections are nonempty, convergence of bounded section points and positivity give a nonnegative constant. Under the assumed absence of a zero restriction it is positive; coefficient and plane convergence make the current restrictions uniformly positive on all late nonempty sections. If the sequence is eventually empty, no defect remains.",
+    "Union over the fixed finite list gives the same O(t) sublevel rate for the minimum. The anchor lemma's layer-cake/truncation argument applies to that bound, so its contrapositive yields a zero component on the whole plane. Since L is positive inside K the component is nonconstant when it vanishes on the plane; its zero set equals the plane and its gradient is parallel to u.",
+    "The nonzero measure defect is supported on the limiting fiber and plane. Each component is nonnegative on K; the exposed face in the plane is entirely in L=0, and the predecessor's inverse-integral criterion bounds its dimension. Positive versus negative proportionality makes the captured halfspace include all of K versus only that face.",
+    "In the example, s=x+y has fiber length in x equal to s and Jacobian one. Integrating s/(s−a+η)=1+(a−η)/(s−a+η) gives the printed inverse bound since 0≤a−η≤1/m and the logarithm is at most m·log 2. For m≥2 the cut is proper, has raw coarea a+η², and L_m=η(1+η) there.",
+    "The weighted mass is (a+η²)[m log 2−log(1+η)]. The leading coefficient is 1+m4^(−m), and log(1+η)≤η, giving convergence to log 2. The supports converge to the zero vertex. Reversing the normal changes neither coarea nor weight; rescaling the parameter by bounded-log factors changes the integral by at most a constant times the vanishing coarea. Fraction arithmetic checked the exact rational ranges and coefficients for m=2 through 100.",
+    "Checked source 53c44db9ae559bfe:02 §§4–6, equations (9)–(12), and 4dd22db8fd75566e §6. The latter supplies the truncated-triangle geometry; the former changes the calibration to a strictly proper offset and verifies its rate."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "6d669cc80ae962ed",
+      "candidate_sha256": "2e43ddb56f06c1b97839ab6ae4cec8b470f4ca2b44555a6608fdb255e5fcd6f7",
+      "mapping": "Use the frozen moving-section lemma for layer-cake and weak-limit identification from a linear sublevel bound, and for the codimension of zero faces. Its hypotheses are met by the same moving planes, the uniform inverse-integral bound, and the fixed finite coefficientwise affine limit.",
+      "reviewed_proof_sha256": "4e4889201d61d2c04857973252e9b74b7e471abad6ecfc5786bef059f0f0882d",
+      "reviewed_statement_sha256": "31cfcf4997c725089fa94dcaeb0ac8601848dc8a2c974620b157aa391e4f17e4",
+      "status": "same-batch, separately reviewed and subject to admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:10:20Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Assumes the limit plane is proper and proves ordinary coarea continuity. This example has a supporting limit, and the conclusion concerns a logarithmically weighted defect.",
+      "fact_id": "d4e455a28be6cde4"
+    },
+    {
+      "comparison": "The nonnegative residual there compares ordinary coarea to a supporting affine expression in a homothetic-profile model. It has no logarithmic blow-up or zero-plane classification.",
+      "fact_id": "3ec747d231ccb2d6"
+    }
+  ],
+  "readability": "The displayed calibration uses m≥2, as permitted by the statement's sufficiently-late qualification. At m=1 its first polygon is degenerate. The layer-cake argument uses the new slab bound directly, without needing to assume a positive anchor in the supporting limit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2d18a48af12397b0eb59621658cb1805a4d57d016a3fd8ee1984670cd5e78b17",
+  "reviewed_statement_sha256": "3d0c950b7ca1e9c20b8382ee9c9308df1d5d34bc39a0a54390bb834d25c9d815",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:06:50Z",
+  "summary": "The transverse slab test yields the zero-plane restriction, including the two orientations. The explicit proper-section sequence has bounded inverse integrals and positive weighted limit despite vanishing ordinary coarea.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

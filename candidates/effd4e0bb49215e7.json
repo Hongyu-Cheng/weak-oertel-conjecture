@@ -1,0 +1,35 @@
+{
+  "advances": "The bound concerns the full boundary cost of a convex continuation of the source weight. It does not bound the additional cap credit carried by the other weighted boundaries.",
+  "author": "PK-research-agent",
+  "candidate_id": "effd4e0bb49215e7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:23:11.343443+00:00",
+  "depends_on": [
+    "08b344179e054c1c",
+    "2f0f0c8da9a51a01",
+    "f2b2f272355448fa",
+    "d90ba05577427854"
+  ],
+  "draft_key": "w32-product-base-convex-continuation-capacity",
+  "kind": "theorem",
+  "proof": "A maximizing balanced vector exists by compactness of the constrained box, and $T(P,p)\\ge1$ by taking the unit weight at $p$. For each regular boundary point fix its continuous coordinate $x$ and normal $u=n_K(x)$. By the balance equation $(p,x)$ is the convex combination of $(z,x)$ with weights $w_z/T(P,p)$. Therefore\n$$\n\\sum_{z\\in P}\\Psi(u,z,x)\n \\ge\\sum_{z\\in P}w_z\\Psi(u,z,x)\n \\ge T(P,p)\\Psi(u,p,x)\n \\ge T(P,p)\\phi(u,x).\n$$\nThe first inequality uses nonnegativity and $w_z\\le1$. The identical product boundaries allow integration against the same measure and normal map, giving the cost bound.\n\nIn 08b344179e054c1c take $m_z=1$ for each of these same bases and the same $p\\in\\operatorname{conv}P$. The balanced maximum there is $T(P,p)$ and its formula gives $\\inf_a\\sum_z[1+a\\cdot(z-p)]_+=T(P,p)$. This infimum is attained. Indeed, the projection onto the $t$ variables of the finite polyhedron $t_z\\ge0$, $t_z\\ge1+a\\cdot(z-p)$ is a closed polyhedron by linear elimination. A nonempty objective sublevel $\\sum_z t_z\\le L$ in that projection is compact, so the minimum of the sum is attained. A lifted optimizer $a$ gives the hinge minimum since for fixed $a$ the smallest admissible $t_z$ is the displayed positive part. Now $\\Psi(u,z,x)=h(u)[1+a\\cdot(z-p)]_+$ is convex in $(z,x)$ for each fixed $u$, matches $h(u)$ at $p$, and integrates to $T(P,p)D$. For general nonconstant $\\phi$ only the Jensen lower bound applies at an arbitrary $p$.\n\nIf $p=|P|^{-1}\\sum_z z$, the all-one balanced vector gives $T(P,p)=|P|$. When a globally convex-in-$x$ extension as in the statement is available, use that extension as the base-independent $\\Psi$ to attain the bound. In the projective example, the attained positive denominator is $L(x)=1+a\\cdot(x-y)$ at an interior source $y$ by d90ba05577427854. As in the first part of the proof of f2b2f272355448fa, $\\phi(u,x)=h_{K-y}(u)f(L(x))$, where $h_{K-y}$ is the support function and $f$ is the positive convex tangent extension of $t^{-d}$ from $[\\min_K L,\\infty)$, is finite, positive, jointly continuous and convex in $x$ for fixed $u$. Its own cost is finite and positive since the centered support is positive and the measured boundary is compact with finite positive surface area. At the ordinary centroid, d90ba05577427854 gives $a=0$, so the weight is independent of $x$. If $p$ is an exposed base, the balance condition and a strict exposing functional imply $w_z=0$ at every $z\\ne p$, so $T(P,p)=1$.\n\nThe two examples are complete lattice bases of the indicated base polytope times $K$, hence all measured boundaries are actual sampled boundaries. The interval's arithmetic mean is zero by symmetry. For the triangle, 2f0f0c8da9a51a01 gives exactly $31$ integer points with counts $10,7,7,7$ in the four parity classes. The integer linear map $(x,y)\\mapsto(-y,x-y)$ cycles its three vertices, permutes its integer points, and has only the zero fixed point. Their average is therefore zero, an occupied base. This gives the claimed two costs and unbounded ratio at fixed integer dimension one.\n",
+  "source_candidate_ids": [
+    "22d923b6274e7758"
+  ],
+  "source_candidate_sha256": {
+    "22d923b6274e7758": "9a284174d7afe5ef663ee41179f8ebfc26acf4f6cb77bd32ba30cfff61f754ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "22d923b6274e7758",
+      "locator": "22d923b6274e7758:04 §3, pointwise continuation bound and constant-in-x attainment"
+    },
+    {
+      "candidate_id": "22d923b6274e7758",
+      "locator": "22d923b6274e7758:01 §1, (1), arithmetic-centroid product and actual examples"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb Z^n$ be finite and nonempty, let $p\\in P$, and place the same compact convex $d$-body $K$, $d\\ge1$, at every base. Let $\\phi(u,x)$ be a finite nonnegative Borel weight on the unit normal sphere times $\\partial K$. Assume the own boundary cost is\n$$\nD=\\int_{\\partial K}\\phi(n_K(x),x)\\,d\\mathcal H^{d-1}(x)\\in(0,\\infty),\n$$\nwhere $n_K$ denotes the outward unit normal at almost every boundary point. In dimension one use the two endpoints with their outward signs and counting measure. An admissible continuation is a finite nonnegative Borel function $\\Psi(u,z,x)$ convex in $(z,x)$ for fixed $u$, satisfying $\\Psi(n_K(x),p,x)\\ge\\phi(n_K(x),x)$ on the measured source boundary. Its total cost is the sum of the same boundary integrals at all $z\\in P$.\n\nDefine\n$$\nT(P,p)=\\max_{\\substack{0\\le w_z\\le1\\\\\\sum_z w_z(z-p)=0}}\\sum_z w_z .\n$$\nEvery continuation costs at least $T(P,p)D$. If $\\phi(u,x)=h(u)$ is independent of $x$, the minimum is $T(P,p)D$. This includes the projective boundary weight when its source is the ordinary centroid. If $p$ is the arithmetic centroid of $P$, every continuation costs at least $|P|D$. This minimum is attained whenever $\\phi$ has a finite nonnegative Borel extension convex in $x\\in\\mathbb R^d$ for each $u$, including nonconstant projective weights. On actual convex products this factor is $2m+1$ for the bases $\\{-m,\\ldots,m\\}$, $m\\ge1$, and $31$ for the integer points of $\\operatorname{conv}\\{(-4,-4),(4,0),(0,4)\\}$, whose arithmetic centroid is zero and which has four occupied parities.",
+  "subgoal_id": "pk-intake-w32-product-base-convex-continuation-capacity",
+  "title": "Exact convex continuation costs on a product boundary"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "A local common-homothety replacement; it does not establish common arcs or gaps for extremizers.",
+  "author": "PK-research-agent",
+  "candidate_id": "2a5a1298865902d7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:52:09.422154+00:00",
+  "depends_on": [
+    "fc26da8acb9bbb96",
+    "3cfb0507fa8f9657"
+  ],
+  "draft_key": "nonsmooth-common-homothetic-arc-polygonization",
+  "kind": "theorem",
+  "proof": "If all $c_z=0$ the original faces on the interval already reduce to fixed vertices. Otherwise use any index with $c_z>0$ to extend $h$ to a global support by translating and scaling that body's support. Apply the single-arc lemma to this body, obtaining a support $\\widetilde h$ equal to $h$ off $\\operatorname{int}I$. Replace each $h_z$ on $I$ by $c_z\\widetilde h+b_z\\cdot u$ and retain $h_z$ elsewhere. This defines an actual support: on the original open common interval the new function is exactly $c_z\\widetilde h+b_z\\cdot u$, including neighborhoods of both joins because $\\widetilde h=h$ off $\\operatorname{int}I$. Its distributional curvature there is $c_z(\\widetilde h''+\\widetilde h)\\ge0$; elsewhere the original nonnegative curvature is unchanged. The planar distributional support criterion proved in fc26da8acb9bbb96, which in that proof applies to every continuous periodic candidate with nonnegative curvature measure, now gives an actual convex body. Uniform support convergence preserves a positive interior ball in each fiber. The exposed faces on $I$ are precisely the corresponding homothetic copies by the one-sided support-derivative formula, also at the joins. Zero coefficients give unchanged vertices.\n\nThe change in signed area relative to the chord multiplies by $c_z^2$ under the corresponding homothety and translation, so every fiber area is preserved. The changed regions in each fiber approach its original exposed arc uniformly: if a point is in the new body but outside the old one, its nearest point in the old body is supported in an interior direction of $I$, since the support in that direction strictly increases. The symmetric argument for a lost point projects to a new exposed face with normal in $I$. Compactness and uniform support convergence force every limit of such face points to lie on the old exposed arc over the closed interval $I$. Thus, with finitely many caps and positive gaps, the entire changed region lies on the original strict side of each cap line. The cap-area change is either zero or the full fiber-area change, hence zero in both cases. A cap with zero continuous normal takes all or none of the fiber and also keeps its mass.\n\nOn $I$, substituting the same new $h$ leaves coefficientwise zero support gaps zero, and uniform approximation keeps the strictly positive ones positive. Outside $I$ nothing changes. For each anchored Jensen condition at a sampled base, the allowed weights form a compact polytope; linearity shows it suffices to check the extreme weights. Its support inequality is exactly the required weighted Minkowski containment. Grouping a lifted convex combination by base then gives that no sampled fiber of the new hull is larger than the corresponding replacement, and the reverse inclusion follows from the construction. Lattice completeness leaves no other sampled bases.\n",
+  "source_candidate_ids": [
+    "3bf99e512cb9551a"
+  ],
+  "source_candidate_sha256": {
+    "3bf99e512cb9551a": "84012b0e18b853ab524ae22cb88a2f471dda634183b4ddf5c4e59ec4d2f44a56"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3bf99e512cb9551a",
+      "locator": "3bf99e512cb9551a:02 Common-arc consequence; Algebraic check of the area scaling"
+    }
+  ],
+  "statement": "Let a finite family of planar convex bodies have support functions $h_z(\\theta)=c_z h(\\theta)+b_z\\cdot u(\\theta)$ on an open normal interval, with fixed $c_z\\ge0$ and $b_z\\in\\mathbb R^2$. Choose a smaller closed subinterval $I$ of length less than $\\pi$ on which the common arc is nontrivial if some $c_z>0$. Suppose the exposed arc of each affected body over $I$ has positive separation from the boundary of each of its finitely many specified caps and lies on one side of that boundary. Assume that the original supports satisfy every prescribed compatibility inequality in every direction. Suppose each of the prescribed finite linear support compatibility inequalities is either an equality on $I$ respected separately by the $c_z$ and $b_z$, or has uniformly positive gap on $I$. Then one arbitrarily close simultaneous replacement polygonizes the arcs over $I$, fixes every support outside $\\operatorname{int}I$, and preserves each fiber area, every specified cap area and all prescribed compatibility inequalities. For a finite lattice-complete base and the full list of extreme anchored Jensen constraints, the new lifted hull has precisely the replacement bodies at its sampled bases.",
+  "subgoal_id": "pk-intake-nonsmooth-common-homothetic-arc-polygonization",
+  "title": "Simultaneous exact polygonization on a common homothetic planar arc"
+}

@@ -1,0 +1,80 @@
+{
+  "candidate_id": "4ee3181ef8f1a39c",
+  "candidate_sha256": "01be74caaffdfb53cb531aa6a148d33c30e634c544cbb36030f8334301aa85d5",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Verified both frozen file digests and confirmed by exact decoded-field comparison that only the two sentences identifying the planar fraction changed. All other text and candidate metadata are identical.",
+    "The previously reviewed construction changes only the zero and one fibers in the all-zero binary layer. The first-coordinate-one fiber in that layer is the only changed fiber with first coordinate one, so its share is precisely Δ_1/(Δ_0+Δ_1). Both revised sentences now identify that share explicitly.",
+    "The planar area and perimeter calculation is unchanged. For every t>0, the area increment Δ_0 is positive and Steiner scaling gives Δ_1=(3/4)Δ_0. Exact fraction arithmetic gives (3/4)/(1+3/4)=3/7.",
+    "The lower bound 1/(2^d+1) on the total fraction at distance at least one and the weak nonconvergence assertion are unchanged. The revised exact identity only counts the base-one fiber, so it is consistent with large bumps for which some base-zero addition is also at distance greater than one.",
+    "Reconfirmed the retained n≥1, d≥2, t>0 scope, the Brunn–Minkowski and containment bounds, the locality at base zero, and the unchanged small-bump threshold Δ_0<V/4. The quantitative statements and the source locators §5–§5.2, (14)–(19) are unchanged."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T10:30:30Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "4ee3181ef8f1a39c",
+    "candidate_sha256": "0b5cfe849afba33e7ff68ff416b083aeb4588ded71256a0d7b5958fd9fb0e9df",
+    "checks": [
+      "The displayed linear functional has value one only at (0,e_1) on the original cylinder. At any base whose binary coordinate is one, all components of a representing combination have that coordinate one, excluding the apex. At the all-zero layer all components must have those coordinates zero. Grouping by the first-coordinate endpoints gives the exact interpolated fiber; the interpolation contains the original B_d at every first coordinate.",
+      "Brunn–Minkowski and the binomial expansion give Δ_1/V≥Δ_0/(2^d V) since the highest term increases by exactly x/2^d and all other increases are nonnegative. Convexity and B_d⊂K(t) give Δ_1≤Δ_0. Only the zero and one fibers gain mass, so the base-one share is at least 1/(2^d+1). A bounded continuous test zero near w and one on the set at distance at least one rules out a point-mass weak limit.",
+      "On the base-zero addition the separator ν has ν·y>1, with (1+t)ν·e_1>1 and ||y||≤1+t. Thus ||y−ν||²<(1+t)²−1 and ||ν−e_1||²<2t/(1+t), proving uniform locality.",
+      "The tangent points in the plane are (1/a, ±s/a) by orthogonality of the tangents and radii. Direct cap-area subtraction gives s³/a² + s/a² − θ = s−θ since s²+1=a². The perimeter replaces arc length 2θ by segments of total length 2s. The parallel-body area is 4π+3Δ_0, and area scales by 1/4 at factor 1/2. Therefore Δ_1=3Δ_0/4 and its fraction is exactly 3/7 for every t>0.",
+      "The count of original fibers is 3·2^(n−1), yielding original threshold 3V/2. The perturbed total is at least the original, while each new fiber has mass at most V+Δ_0<5V/4 under the stated assumption.",
+      "Checked source 97eab0f821e54041 at SHA-256 6fd053c8eaa203602363a7b90aa8383c0b8298506059ea381ff71a80d405853e, §5–§5.2 and (14)–(19). Immediately before the planar subsection the source identifies the nonlocal share specifically as the portion in the base-one fiber, which the area computation preserves."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T10:29:22Z",
+    "issues": [
+      {
+        "defect": "“The nonlocal proportion is exactly 3/7 for every t>0” can refer back to the total fraction at ambient distance at least one. The computed fraction is only the share in the base-one fiber. For t=2, the base-zero hull contains the radius-1/6 ball centered at (5/2)e_1, from combining the old unit ball with weight 1/6 and the apex 3e_1 with weight 5/6. That entire ball is outside the old unit ball and at distance greater than one from e_1. Its positive added mass makes the total share at distance at least one strictly larger than 3/7.",
+        "proof_locator": "Statement, exact planar-fraction sentence, and proof, last sentence of the planar computation.",
+        "repair": "In both locations replace “the nonlocal proportion” by “the proportion of all added mixed mass in the fiber at base (1,0,…,0)”. Keep the general lower bound stated in terms of ambient distance.",
+        "severity": "minor"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "The fixed-family compatibility equivalence describes the active midpoint row here but gives no conclusion on an apex perturbation, on nonlocal mass, or on a planar ratio.",
+        "fact_id": "55a57b1cf55d0c87"
+      },
+      {
+        "comparison": "The accepted statement proves localization for a specified one-body support-function deformation. It does not control the actual hull of a lattice cylinder after adjoining one apex.",
+        "fact_id": "baa0b304f8ca0521"
+      }
+    ],
+    "readability": "The proof computes the base-one fiber share explicitly, which also agrees with the source’s defined share. The exact-fraction sentence in the statement should use that explicit fiber rather than leave its referent to the preceding distance assertion.",
+    "reviewed_proof_sha256": "e86bc2f538e2c067bd7042d0c1af9ec634444ab42530b4bdf8ffde86b9e71710",
+    "reviewed_statement_sha256": "b57cf56e4c3dbe0f695d2988111d941566334675bb8245d3c7c9e5a4074fb652",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T10:25:46Z",
+    "summary": "The cross-fiber obstruction and exact planar base-one share of 3/7 are correct. Name that share explicitly because the neighboring distance assertion can otherwise overstate the planar identity for large bumps.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The fixed-family compatibility equivalence describes the active midpoint row here but gives no conclusion on an apex perturbation, on nonlocal mass, or on a planar ratio.",
+      "fact_id": "55a57b1cf55d0c87"
+    },
+    {
+      "comparison": "The accepted statement proves localization for a specified one-body support-function deformation. It does not control the actual hull of a lattice cylinder after adjoining one apex.",
+      "fact_id": "baa0b304f8ca0521"
+    }
+  ],
+  "readability": "The all-zero binary layer specified earlier in the statement identifies the changed first-coordinate-one fiber in every integer dimension. The fraction is now stated with its numerator and denominator.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "28bdbb2177f30c7e5625192a5c5516c598fa9839beb01d14bee01982368c12bf",
+  "reviewed_statement_sha256": "f46430f9aa4038ed18f085109820df79d29c4fac64b647e12b941df42e4c755b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "0b5cfe849afba33e7ff68ff416b083aeb4588ded71256a0d7b5958fd9fb0e9df",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:29:56Z",
+  "summary": "The exact planar fraction now explicitly refers to the changed base-one fiber, resolving the ambiguity in the frozen original. Its calculation and all hypotheses remain intact.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

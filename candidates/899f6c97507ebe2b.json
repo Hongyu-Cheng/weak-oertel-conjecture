@@ -1,0 +1,31 @@
+{
+  "advances": "Pointwise ordering and actual slab accounting along the integral trace of one tied segment.",
+  "author": "PK-research-agent",
+  "candidate_id": "899f6c97507ebe2b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:43:59.891515+00:00",
+  "depends_on": [
+    "eba0d0c59b328385",
+    "4e868f774de77608",
+    "1ec728c26c11b368",
+    "c680a307d3f26cec"
+  ],
+  "draft_key": "strict-order-on-actual-tied-source-segment",
+  "kind": "theorem",
+  "proof": "Use actual-mixed-own-depth-envelope-work for interior positivity of the endpoint sources. Tie of their objectives gives $A=\\lambda(F_1-F_0)$. Real-segment root concavity from 4e868f774de77608 gives $\\Delta_t\\ge0$, hence positive own depth and interiority in the fiber along the segment. If $n=0$, the dummy base from the work fact allows the same use of the accepted facts. Only at the retained integral bases does $P_\\lambda(Y_t)\\le E(\\lambda)$ apply. There it gives $D(Y_t)\\le D_0-tA-\\lambda\\Delta_t<D_0$ for $0<t<1$. The finite anchored-cap theorem 1ec728c26c11b368 applies to the original integer trace and gives a nonvertical through-point depth cap. Any such cap at $Y_t$ excludes $Y_0$ because its mass is less than $D_0$. By affine interpolation of its margins through $Y_t$, it strictly contains $Y_1$ and every later point $Y_s$ of the segment.\n\nFor a retained $s>t$, shift the same cap to $Y_s$. The exact lost mass is $T_{t,s}$, and the shifted cap contains $Y_s$, so this loss is at most $D(Y_t)-D(Y_s)$. It is positive because the positive margin at $Y_s$ removes a nonzero portion of its centered own-fiber interior ball. Thus $D(Y_t)>D_1$. The tied objective comparison with $Y_1$ now gives $F(Y_t)<F_1$, while root concavity gives $F(Y_t)>F_0$. The left-endpoint depth comparison follows from the upper bound on $D(Y_t)$. If $F(Y_s)\\le F(Y_t)$ for two retained interior parameters $t<s$, concavity would give\n$$\n\\frac{F_1-F(Y_s)}{1-s}\\le\n\\frac{F(Y_s)-F(Y_t)}{s-t}\\le0,\n$$\ncontradicting $F(Y_s)<F_1$. The endpoint root comparisons complete strict increase. When the bases agree, interior parameters have arbitrarily close earlier points in the same fiber with strictly larger $D$, ruling out a local maximum.\n\nTaking $s=1$ and using $D(Y_t)\\le D_0-tA-\\lambda\\Delta_t$ gives the remaining-segment budget. Summing adjacent shifts telescopes the depth losses. The calculation uses the original measure for each cap and allows the normal to change between edges. As an explicit calibration, in the original interval family $C=\\{(z,x):-1\\le z\\le1,\\ 0\\le x\\le3-2|z|\\}$ at $\\lambda=1$, take $Y_t=(0,1+t/2)$. On this segment $D(Y_t)=2-t/2$, $F(Y_t)=1+t/2$ and the cap $x\\ge1+t/2$ loses precisely $(s-t)/2$ when shifted to $Y_s$. These values follow by substituting $a=b=1$, $U=3$, $s=1$ into c680a307d3f26cec after translating height by $-1/2$, and maximizing the resulting middle profile plus its own depth. Thus each shift and the remaining-segment budget attain equality. For $t_0>0$, the adjacent sum equals the indicated difference of endpoint depths, which is strictly below $A$.\n",
+  "source_candidate_ids": [
+    "8280d34e5808dfad"
+  ],
+  "source_candidate_sha256": {
+    "8280d34e5808dfad": "b85da706684229bdbdc9262240c053d060e85905a92205377bb03e410402674f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8280d34e5808dfad",
+      "locator": "8280d34e5808dfad:07 §9, (19)–(23), ordered actual tied segment"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a compact convex body, $d\\ge1$, with positive total summed $d$-volume $\\mu$ on $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$. Let $D(Y)=\\inf_{H\\ni Y}\\mu(H)$ use closed ambient halfspaces, and let $F(Y)$ be the $d$th root of raw ordinary depth in the actual fiber at $Y$. Put $P_\\lambda(Y)=D(Y)+\\lambda F(Y)$ and $E(\\lambda)=\\max_{Y\\in S}P_\\lambda(Y)$ for $\\lambda\\ge0$. Fix $\\lambda>0$ and two $P_\\lambda$ maximizers $Y_0,Y_1$ with $F_1>F_0$, and put $A=D_0-D_1=\\lambda(F_1-F_0)>0$. Set $Y_t=(1-t)Y_0+tY_1$ and retain $t\\in[0,1]$ whose base is integral. For each retained $0<t<1$, put $\\Delta_t=F(Y_t)-(1-t)F_0-tF_1$. For every nonvertical depth-attaining through-$Y_t$ cap $H_t=\\{L_t\\ge0\\}$,\n$$\nL_t(Y_0)<0<L_t(Y_1),\\qquad D_1<D(Y_t)<D_0,\\qquad F_0<F(Y_t)<F_1 .\n$$\nAlong all retained parameters the actual depth is strictly decreasing and the own-depth root strictly increasing. For $0<t<s\\le1$ both retained, the original slab $T_{t,s}=\\mu\\{0\\le L_t<L_t(Y_s)\\}$ satisfies\n$$\n0<T_{t,s}\\le D(Y_t)-D(Y_s),\\qquad\nT_{t,1}+\\lambda\\Delta_t\\le (1-t)A .\n$$\nAny finite increasing list of retained parameters $0<t_0<\\cdots<t_N\\le1$ has total adjacent slab charge at most $D(Y_{t_0})-D(Y_{t_N})\\le A$. If the endpoint bases agree, each real $t$ is retained and no interior point of the segment is a local maximum of actual depth in that fiber.",
+  "subgoal_id": "pk-intake-strict-order-on-actual-tied-source-segment",
+  "title": "Actual points on a tied potential segment are strictly ordered by depth"
+}

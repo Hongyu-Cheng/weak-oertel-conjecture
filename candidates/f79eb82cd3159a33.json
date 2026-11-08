@@ -1,0 +1,32 @@
+{
+  "advances": "The obstruction concerns an actual cap-incidence surface law and physical martingale. It is not an example of selected logarithmic or ordinary mixed depth stationarity.",
+  "author": "PK-research-agent",
+  "candidate_id": "f79eb82cd3159a33",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:21:26.823192+00:00",
+  "depends_on": [],
+  "draft_key": "three-square-positive-physical-contact-dissipation",
+  "kind": "counterexample",
+  "proof": "The body is the product $[-1,1]\\times[-1,1]^2$, so the stated fibers are actual. At either endpoint base exactly half the caps contain the entire square. On a middle edge write $X=n+te$ with outward coordinate normal $n$ and unit tangent $e$, $-1\\le t\\le1$. The normal cap includes the edge, its opposite misses it, and among the two tangent caps both include the central interval $|t|<1/3$ and only one includes either outside interval. The two base-slope choices coincide at this base, so $W=3/4$ in the central interval and $W=1/2$ elsewhere, up to finitely many area-null points.\n\nThe source density is therefore $18/19$ on all edges, plus $9/19$ in the central third of each middle edge. Send the common $18/19$ portion identically. Split the remaining middle source at tangent $t$ into equal thirds and send them to $(0,n+3te),(-1,n+3te),(1,n-3te)$. The full physical barycenter is $(0,n+te)$ and all endpoints retain the same normal. Each branch contributes density $1/19$ on its full target edge by the linear change of variables. This gives the prescribed target $\\eta$.\n\nAfter summing over the three bases at any fixed normal, the tangent density difference is $[-3/19+(9/19)\\mathbf1_{\\{|t|<1/3\\}}]\\,dt$ and has total mass zero. At normals $\\pm e_2$, $L=1-\\varepsilon|t|$. The integrals of $|t|$ on $[-1,1]$ and $[-1/3,1/3]$ are $1$ and $1/9$. Substituting gives $2\\varepsilon/19$. At normals $\\pm e_1$, $L$ is constant, giving zero. Multiplication by $\\beta$ yields the two scaled claims. Each of the eight caps has volume $4+2(4/3)=20/3$ out of $12$, so the surface normalization $19/36$ differs from their raw mixed volume fraction $5/9$.\n",
+  "source_candidate_ids": [
+    "229cbb48c7fa3080",
+    "e6ba532e542af929"
+  ],
+  "source_candidate_sha256": {
+    "229cbb48c7fa3080": "8d9af21f442975780400f11f8a3b3974b2aee114c57bf26d0a67a5143a9adc6a",
+    "e6ba532e542af929": "47a7a1126b9d61f314a33ab68b8c342fe7ea62464a0937a930e64e0e67365faf"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e6ba532e542af929",
+      "locator": "e6ba532e542af929:03 §8, three-square diagnostic after (6)"
+    },
+    {
+      "candidate_id": "229cbb48c7fa3080",
+      "locator": "229cbb48c7fa3080:05 §4, (16)–(20), square cap law with forced atomic midpoint and an alternative diffuse law"
+    }
+  ],
+  "statement": "Take the three actual integer fibers $K_z=[-1,1]^2$ at $z=-1,0,1$, with summed boundary area $\\eta$ marked by the outer normal. Let $W$ be the mean boundary incidence of the eight equally weighted closed ambient caps $az+v\\cdot X\\ge-1/3$, where $a=\\pm2$ and $v\\in\\{\\pm e_1,\\pm e_2\\}$. Set $\\beta=19/36$. There is a physical same-normal martingale from $\\nu=(W/\\beta)\\eta$ to $\\eta$. For $L(z,X)=1-\\varepsilon|X_1|$, $0<\\varepsilon<1$, the dissipation $\\int L\\,d(\\nu-\\eta)$ is $2\\varepsilon/19$ on each of the two horizontal faces with normals $\\pm e_2$, and zero on the vertical faces with normals $\\pm e_1$. The corresponding $\\int L(W-\\beta)\\,d\\eta$ is $\\varepsilon/18$ on each horizontal face and $\\varepsilon/9$ in total.",
+  "subgoal_id": "pk-intake-three-square-positive-physical-contact-dissipation",
+  "title": "Positive contact dissipation for an actual three-square cap law"
+}

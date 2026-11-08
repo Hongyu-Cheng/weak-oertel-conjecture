@@ -1,0 +1,29 @@
+{
+  "advances": "Downward hull of the strict triangle image. Positive data have single-triangle dominators and nonnegative boundary data are treated by closure.",
+  "author": "PK-research-agent",
+  "candidate_id": "e85ab5a80f874e71",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:49:19.105508+00:00",
+  "depends_on": [
+    "5f923438468803ac",
+    "33488d4938a6ee4a"
+  ],
+  "draft_key": "strict-triangle-psd-downward-hull",
+  "kind": "theorem",
+  "proof": "The determinant of $I-B(f)$ is $1-(\\sum_i f_i^2+f_1f_2f_3)/4$. For $f\\ge0$, the cubic bound forces $f_i\\le2$, so the two-by-two principal minors $1-f_i^2/4$ are nonnegative. With diagonal entries one, the principal-minor criterion proves the PSD equivalence including zero coordinates. The region is closed and convex by the affine matrix condition. It is downward closed in the nonnegative orthant: if $0\\le h\\le f\\in D$, then for every $x\\in\\mathbb R^3$ the nonpositive off-diagonal entries give\n$$\nx^{\\mathsf T}(I-B(h))x\\ge |x|^{\\mathsf T}(I-B(h))|x|\\ge |x|^{\\mathsf T}(I-B(f))|x|\\ge0,\n$$\nwith $|x|$ taken coordinatewise. The strict triangle cubic deficit gives $\\mathcal T\\subseteq D$.\n\nFor $f>0$ in $D$, a unit vector maximizing the Rayleigh quotient of $B(f)$ can be taken nonnegative by replacing its coordinates with absolute values. The resulting maximizing eigenvector $w$ is strictly positive: a zero coordinate would force the other two to vanish by the eigenvector equation and positive edge weights. Its eigenvalue $\\rho$ is positive by testing the all-ones vector and is at most one because $I-B(f)$ is PSD. Put $f'=f/\\rho$ and $c_i=f'_i/2$. Then $B(f')w=w$. Define $u_i=c_iw_{i+1}/w_i$. The two positive summands in each eigenvector equation give $0<u_i<1$ and $1-u_{i+1}=c_iw_i/w_{i+1}$. Hence $u_i(1-u_{i+1})=c_i^2$ and $\\prod_i u_i=\\prod_i c_i=\\prod_i(1-u_i)$.\n\nExpanding the last product equality gives $\\sum_i u_i=1+\\sum_{i<j}u_i u_j-2\\prod_i u_i>1$, since each pair product exceeds the triple product. Applying the same argument to the complements yields $\\sum_i u_i<2$. The exact triangle image theorem now realizes $f'$ by a single strict triangle. Since $\\rho\\le1$, this vector dominates $f$.\n\nFor a nonnegative $f\\in D$, the positive vectors $(1-\\varepsilon)f+\\varepsilon(1/2,1/2,1/2)$ belong to $D$ for $0<\\varepsilon<1$ by convexity, since $(1/2,1/2,1/2)$ satisfies the cubic bound. Each has a strict triangle dominator by the positive case. They converge to $f$, so $D$ is contained in the closed coordinatewise downward hull. Equivalently a subsequence of their dominators converges in the compact closed triangle image and its limit dominates $f$. The other inclusion follows from $\\mathcal T\\subseteq D$ and closed downwardness. As $D$ is convex, the closed downward convex hull also equals $D$. For example, $(2,0,0)$ cannot have a strictly positive actual triangle dominator, since such a dominator violates the cubic bound.\n",
+  "source_candidate_ids": [
+    "d61c49578c90db6d"
+  ],
+  "source_candidate_sha256": {
+    "d61c49578c90db6d": "ee6d05e74a2ac993bcdfb6c2786d0f3b2c22fbb78f8492e3b76225145d4b99df"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d61c49578c90db6d",
+      "locator": "§§5–6"
+    }
+  ],
+  "statement": "Let $\\mathcal T$ be the ordinary strict triangle row image, equivalently the set of $f$ with $f_i=2\\sqrt{u_i(1-u_{i+1})}$ for cyclic indices, $0<u_i<1$, and $1<\\sum_i u_i<2$. For $f\\in\\mathbb R_{\\ge0}^3$ define $B(f)$ to have zero diagonal and symmetric cyclic entries $B(f)_{i,i+1}=B(f)_{i+1,i}=f_i/2$. Then\n$$\nD:=\\{f\\ge0:I-B(f)\\succeq0\\}=\\left\\{f\\ge0:\\sum_i f_i^2+f_1f_2f_3\\le4\\right\\}\n$$\nis both the closed coordinatewise downward hull and the closed downward convex hull of $\\mathcal T$, taken in the nonnegative orthant. Every strictly positive $f\\in D$ has an attained single strict triangle dominator $f'=f/\\rho\\in\\mathcal T$, where $\\rho=\\lambda_{\\max}(B(f))\\in(0,1]$.",
+  "subgoal_id": "pk-intake-strict-triangle-psd-downward-hull",
+  "title": "The closed PSD downward hull of strict triangle cap vectors"
+}

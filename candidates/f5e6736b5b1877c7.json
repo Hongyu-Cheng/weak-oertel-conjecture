@@ -1,0 +1,44 @@
+{
+  "advances": "Fixed positive scale, unpenalized objective, and every maximizing base bound by its pure-base depth. The normalized multiplier varies only through a common factor. No claim about mixed atomic/proper caps or an arithmetic penalty.",
+  "author": "PK-research-agent",
+  "candidate_id": "f5e6736b5b1877c7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.024451+00:00",
+  "depends_on": [
+    "7227bbfcd12ad3d2",
+    "0b2fbdaf8d3134a0",
+    "efc6257ea1f83bc1",
+    "2fe966187abc0788",
+    "f2ead43a963c7026"
+  ],
+  "draft_key": "all-atomic-buffered-hinge-descent",
+  "kind": "theorem",
+  "proof": "The least concave roof $\\widehat\\ell$ on $\\operatorname{conv}(P)$ is the maximum of $\\sum_z\\lambda_z\\ell_z$ over convex representations of the argument. It agrees with $\\ell$ at sampled bases and is positive and continuous there and throughout the hull (the finite piecewise-affine roof construction in 7227bbfcd12ad3d2, applied to interval fibers with one fixed lower endpoint). On the canonical hull the jointly concave energy root $E^{1/d}$ is continuous with its zero own-boundary value, as used in 0b2fbdaf8d3134a0. The product in the form $M^{-1/(d+1)}\\widehat\\ell^{1/(d+1)}(E^{1/d})^{d/(d+1)}$ is continuous and concave by the monotone concave weighted geometric mean. Since $G_K$ is a positive definite norm from the positive fibers, an invertible continuous-coordinate change makes it Euclidean. Equivalently one divides by $\\|u\\|$ and uses the fixed positive direction-dependent coefficient $\\varepsilon G_K(u/\\|u\\|)$ in each closed-quantile inequality of 0b2fbdaf8d3134a0. Each inequality has a convex left side and the pure-base quantile constraints are closed halfspaces. Thus the real superlevel at $Q$ is convex. The same formula with the whole-base condition applies if the base rank is zero.\n\nThe midpoint of sampled maximizing marks over same-parity sites $p,p'$ belongs to this superlevel, and its base lies in $P$ by completeness. Compatibility identifies its fiber with the actual fiber. By maximality the midpoint base is in $I$. More generally, the same argument for any convex combination of these lifts over a sampled base gives $I=P\\cap\\operatorname{conv}(I)$. The parity-compression-exact-atomic-caps lemma now applies to $I$ with the old volume weights and common pure-base depth $Q$: there are $1\\le m\\le k(I)$ fixed closed mass-$Q$ caps covering it.\n\nThe common erosion of atomic-closed-cap-hinge-budget applies. Since $\\beta m\\le\\beta k(I)<1$ for $\\beta=Q/M$, all retained normalized masses fall strictly below $\\beta$ for sufficiently small positive $t$. Every point in every deformed fiber with base in $I$ is bounded by the raw mass of one of these same pure-base caps. Normalize $\\ell$ by multiplying all its values by $\\exp[-\\sum_z V_z(t)\\log\\ell_z/M(t)]$. This factor tends to one and preserves positivity, sampled concavity and affineness when present. The values are constant within each fiber and converge at each sampled base. Thus the matched-mark uniform continuity of f2ead43a963c7026 applies to the energy, updated covariance and multiplier at fixed scale, in particular to the maximum on each fiber. For every base outside $I$ its old maximum is strictly below $Q$, so all such maxima stay below the largest retained cap mass, which tends to $Q$, for small $t$. If $I=P$ this comparison is unnecessary. The new global normalized maximum is bounded by the largest retained cap ratio and is therefore strictly smaller.\n",
+  "source_candidate_ids": [
+    "27d482de82ed9f88",
+    "8027472c0c8717cd",
+    "f324bc23ceb65e89"
+  ],
+  "source_candidate_sha256": {
+    "27d482de82ed9f88": "9c0ae7ebf0675654489ac7eeab8b63f0d5a0d5011cdb53ac5a9b48474dd8e774",
+    "8027472c0c8717cd": "d1013fd7b9af2911ce7da7e426cbb385eb7e7c4de40096a3fd1c581dae0623bd",
+    "f324bc23ceb65e89": "3eeb98e082a94bc54a73b347ae8c1f45d446b3d8b8d300f3a812f8e26edd1f72"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f324bc23ceb65e89",
+      "locator": "f324bc23ceb65e89:04 §§1–6, actual all-atomic descent"
+    },
+    {
+      "candidate_id": "27d482de82ed9f88",
+      "locator": "27d482de82ed9f88:01–02 §§1–2, sampled concave roof and joint aligned buffer"
+    },
+    {
+      "candidate_id": "8027472c0c8717cd",
+      "locator": "8027472c0c8717cd:01 §§1–2, sampled-concave use of all-atomic cleanup"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\Lambda$ be a finite nonempty complete base in an affine lattice, and let $K_z$ be positive compact convex $d$-fibers with $d\\ge1$, satisfying the anchored Minkowski inclusions. Write $V_z=|K_z|$, $M=\\sum_zV_z$, $g_z$ for the fiber centroids and\n$$\nG_K(u)^2=M^{-1}\\sum_z\\int_{K_z}[u\\cdot(X-g_z)]^2\\,dX.\n$$\nTake $\\varepsilon>0$ and a positive sampled-concave array $\\ell$, meaning $\\ell_p\\ge\\sum_z\\lambda_z\\ell_z$ for every anchored convex representation of $p\\in P$, with $\\sum_z V_z\\log\\ell_z=0$. This includes positive affine multipliers. For a sampled mark $(p,y)$, take the infimum of the raw summed fiber masses of the caps with margin\n$$\na\\cdot(z-p)+u\\cdot(X-y)+\\varepsilon(\\ell_p E_{K_p}(y)/M)^{1/(d+1)}G_K(u)\\ge0\n$$\nfor $u\\ne0$ and of the unchanged closed pure-base caps through $p$, including the whole-base trace in rank zero. Here $E$ is marked projective energy, extended by zero on the own boundary. Write $b_{\\rm base}(p)$ for closed pure-base depth, $Q>0$ for the maximum buffered raw depth and $I$ for the bases carrying a maximizing mark. For $T\\subseteq P$, let $k(T)$ count the classes modulo twice the direction lattice occupied by $T$.\n\nIf $b_{\\rm base}(p)=Q$ for every $p\\in I$ and $Q/M<1/k(I)$, there are arbitrarily close actual positive compatible families on $P$ and scalar renormalizations of the same array $\\ell$ with respect to the new volumes, at the same $\\varepsilon$, whose unpenalized normalized buffered maximum is strictly below $Q/M$. If the initial multiplier is affine, its renormalizations are affine.",
+  "subgoal_id": "pk-intake-all-atomic-buffered-hinge-descent",
+  "title": "Actual compatible hinge descent from a purely atomic buffered maximum"
+}

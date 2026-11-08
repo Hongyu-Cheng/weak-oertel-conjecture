@@ -1,0 +1,61 @@
+{
+  "candidate_id": "0e7a1809245e1aee",
+  "candidate_sha256": "048422d2cc020722e82fe6fcf4c3c2f5bc4b9b7109c7007eb41e0414dee16699",
+  "checked_dependency_candidate_sha256": {
+    "3919a4dbe7ace166": "79174b3ef5c6911f4a741f855824553827e7be073a637b941f8855d6c505f33d",
+    "660889fc37886419": "9bc28e740cc3ea29128381175522c7a90fa793e0a20311e1db9a317fdab448b9"
+  },
+  "checks": [
+    "Discarding support boundary values changes no radial integral from an interior anchor. Compact convex exhaustions lie in the positive interior and have upper-semicontinuous bounded densities of the exact inverse power required by 3919a4dbe7ace166. The gauges decrease to a finite convex gauge and the envelope supplies its two uniform radial bounds.",
+    "For a facet segment the three ray CDFs are normalized to one. Direct differentiation of the harmonic mean gives the stated T' with positive weights. The two inequalities integrate to one on the target ray, forcing equality everywhere by continuity and R_z=T.",
+    "Weighted Hölder equality gives g(R_i x_i)/R_i independent of i. Hence reciprocal differences are constant. The one-sided small-ray expansion gives 1/R_x=1/t_0−L(x)+o(1); the harmonic identity makes L affine on each facet. Intersecting simplex facets and the positive barycentric row determine the unique linear functional and c≥0.",
+    "On all boundary rays q(v)>max_B ℓ. In particular R max_B ℓ≤1 at finite R, and R=∞ forces ℓ=0. The ray-wise bijection has positive denominators across the entire open domains, even if the finite endpoint attains the pole.",
+    "Rank-one determinant gives the r+1 exponent, the positive perspective gives convexity in both directions, and the transformed ray mass fixes the exact normalization. The inverse potential is nondecreasing because sB lies in the convex hull of ∂(tB) for s<t.",
+    "Checked 0da12d076aef855c §§1–5 and §8. Independently recomputed the example's gauge planes, image inequalities, triangle area 3/2, normalized CDF derivative and endpoint limits, including the ray a=1."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3919a4dbe7ace166",
+      "candidate_sha256": "79174b3ef5c6911f4a741f855824553827e7be073a637b941f8855d6c505f33d",
+      "fact_sha256": "02d44dcdccfada550aeb144bb9d5e8c41fa86e25467846afc82d699cc9a2a0a1",
+      "hypotheses": "Each compact truncation is bounded, upper semicontinuous and positive near the origin, with convex extended inverse (r+1)st root. Apply with p=r and include the scalar factor r^(1/r) in the radial body.",
+      "reviewed_proof_sha256": "2488638a77a744fcb4c012ef10616ec1e3c0df4fbee4ba72d2435249e2475008",
+      "reviewed_statement_sha256": "590950529760b1b9025ee8c06c6da6d68621c244baa9628591e691b7acf1921c"
+    },
+    {
+      "candidate_id": "660889fc37886419",
+      "candidate_sha256": "9bc28e740cc3ea29128381175522c7a90fa793e0a20311e1db9a317fdab448b9",
+      "hypotheses": "Apply at the interior anchor with β=r+1. Its positivity and uniform finite ray integrals justify the truncation limit and the positive finite radial body.",
+      "reviewed_proof_sha256": "ec48c22c61664855c58046634325a699c3669fff1e9ccee2db34c95006faa437",
+      "reviewed_statement_sha256": "7431d5aeb131af9b16a410b67da60774f316e38d13098655ed6582573581257d",
+      "same_batch": true
+    }
+  ],
+  "finished_utc": "2026-11-08T16:54:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies only the convex radial body for bounded compactly supported data. The new assertion passes to full critical support and classifies the equality geometry.",
+      "fact_id": "3919a4dbe7ace166"
+    },
+    {
+      "comparison": "The strict exponent β>r+1 forces identical facet ray quantiles by a strict concavity step. At β=r+1 this step is equality and reciprocal shifts give the projective family, including nonzero ℓ.",
+      "fact_id": "8bc17121df970992"
+    }
+  ],
+  "readability": "The three arguments of the ray laws are points on the same Ball-body facet, so their radial distributions each have mass one, even at an infinite support endpoint.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold mathematical proof review with exact symbolic and rational replays where applicable.",
+  "reviewed_proof_sha256": "80fe1a56bdcd70b0027ea119c4375acff312f092209b08b4de08ab5046bfcd4d",
+  "reviewed_statement_sha256": "d69f7bc8d9b79616c79846e7b79b22f9e0e7f4f86912b5de02ef94c42016059c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:49:19Z",
+  "summary": "The critical Hölder equality gives a common reciprocal-quantile profile modulo a unique linear chart, and the converse remains valid when a finite profile endpoint reaches the pole.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

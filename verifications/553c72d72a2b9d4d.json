@@ -1,0 +1,42 @@
+{
+  "candidate_id": "a839bfd22b7f11a2",
+  "candidate_sha256": "e1f447eb6aa06575e5fff46a1e5f11a4bfff678f1de1f85265bbbda7e75f26a8",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For v distinct from the inball center, the equatorial disk has (m−1)-volume κ_(m−1)r^(m−1), and v has perpendicular height ||v−x0||₂. The convex hull of the disk and v lies in the enclosing simplex and has the stated volume after division by m. In dimension one this is an interval of length ||v−x0||₂ with κ₀=1. At v=x0 the bound is immediate. This argument uses only enclosure and the volume bound, not optimality.",
+    "Boundedness of K supplies at least one enclosing simplex. A bounded-volume minimizing sequence has bounded vertex tuples by the fixed inball. A matched convex combination moves at most the maximum displacement of its vertices, giving two-sided Hausdorff convergence; the limiting hull contains K and is full-dimensional. With m+1 limiting vertices, full dimension forces affine independence. Determinant continuity gives the infimum as its volume.",
+    "Choose an arbitrary minimizing simplex and facet, mapping that facet to the top facet of the standard simplex. If its contact set is empty, the maximum of the coordinate sum on K is strictly less than one. A sufficiently small parallel inward move retains K and scales the volume by a factor strictly below one. For m=1 a nonempty contact set already contains the point facet and its centroid.",
+    "If the compact convex contact set misses the centroid, strict separation gives max_C v·x < s < v·g. For feasibility of the tilt, any sequence of K-points with top slack tending to zero and v·x−s nonnegative would have a subsequence converging to a point of C violating separation. Off that top strip the slack is at least η>0, so boundedness of v·x−s gives one positive allowable step size for all K.",
+    "Positive intercepts preserve the simplex with the other facets fixed. Differentiating the volume ratio at zero gives ms−∑v_i=m(s−v·g)<0. A small positive feasible tilt therefore reduces volume. Affine normalization preserves centroids and scales both compared volumes by the same factor, so the conclusion applies to every facet of every minimizer.",
+    "Source 783495094e97ee67 at fd41e97ff0cf53c3b4a631a7fd42bb4b5ca56499 matches SHA-256 62853841490ba27f90342765d3daf6f5fd99a459a030b733641684f6360ff42d; §§1–3 and (1), (4)–(7) contain precisely the inball cone bound, attainment, support and feasible tilt. The source is provenance, not a mathematical predecessor. The archive verifier passed its 95 exact full-dimensional facet-tilt instances.",
+    "Checked Victor Klee, Facet-centroids and volume minimization, Studia Sci. Math. Hungar. 21 (1986), p. 143, Corollary (i), against the journal archive. A minimum among enclosing simplices is a local minimum among enclosing polytopes with m+1 facets because such full-dimensional bounded polytopes are simplices. Klee is credited for the contact property; the proof derives it by separation and a tilt and does not invoke Klee for any inference."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T08:45:28.639164+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives an explicit enclosing simplex using a fixed supporting affine majorant for a special roof family. It does not prove existence of a minimizer for arbitrary K or contacts at every facet of every minimizer.",
+      "fact_id": "a8cbe3efd17354fb"
+    },
+    {
+      "comparison": "Concerns maximum-volume inscribed simplices and depth stability. The optimization and containment are reversed; it does not imply the enclosing-simplex attainment or contact conclusions.",
+      "fact_id": "03bc771bddd39a8a"
+    }
+  ],
+  "readability": "The inball is available by the convex-body hypothesis. For m=1 the cone and contact arguments reduce to length and endpoints. No accepted fact duplicates the result; the facet-contact conclusion is classical and is explicitly attributed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "812e459296673e7f00e7a9ca5f8a94f738a993776e4d978db79de42b4992c58d",
+  "reviewed_statement_sha256": "817910b8ac7ab91a70e825ee451fa27153dbe12a17fe5989dfec2d9b942ade77",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:42:59+00:00",
+  "summary": "A cone over the inball's equator bounds every vertex in a bounded volume level set and yields attainment. A feasible tilt proves the classical facet-centroid contact property for every minimizer, with no regularity assumption on K.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

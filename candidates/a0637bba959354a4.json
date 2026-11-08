@@ -1,0 +1,29 @@
+{
+  "advances": "A certificate under a prescribed strict upper bound on maximum depth, for the positive full d-volume fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "a0637bba959354a4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.474072+00:00",
+  "depends_on": [
+    "55a57b1cf55d0c87",
+    "6d6fcf377e68c79c"
+  ],
+  "draft_key": "strict-equal-mass-mixed-helly-cap-certificate",
+  "kind": "theorem",
+  "proof": "By 55a57b1cf55d0c87 the positive bases $P$ are lattice-complete, their union of fibers $S_+$ is the trace of the compact convex set $C\\cap(\\operatorname{conv}P\\times\\mathbb R^d)$, and deletion of the null fibers preserves the measure and maximum depth. To apply that fact, the original actual nonempty integer base set is lattice-complete because it is the integer trace of a compact convex projection. Its fibers are compatible by convexity, since their convex hull lies in $C$ and contains each original sampled fiber.\n\nChoose $F<\\alpha_0<\\alpha$. At each point of $S_+$, some containing closed cap has mass less than $\\alpha_0$. Moving its threshold outward slightly retains this strict mass bound by continuity from above and places the point in its interior. The normal can be perturbed to have nonzero continuous component while preserving both strict conditions: on the bounded $S_+$ the perturbed cap stays inside a further outward enlargement of the original with mass less than $\\alpha_0$. Compactness yields a finite open cover. For a fixed nonvertical normal, the tail $f(b)=\\mu\\{a\\cdot w\\ge b\\}$ is continuous since each fiber hyperplane has zero full $d$-volume. It takes values from one to zero. Enlarge each cap by replacing its threshold by the smallest threshold giving $\\alpha_0$. This threshold exists since $0<\\alpha_0<1$ and the support is bounded. Select an inclusion-minimal closed subcover of the resulting closed cover.\n\nIts size is at most $2^n(d+1)$ by the mixed-integer Helly number documented in 6d6fcf377e68c79c, applied to the open complementary halfspaces and the compact convex set inducing $S_+$. Their whole family has empty integer-trace intersection. The Helly subfamily's caps already cover $S_+$, so every retained cap is in the subfamily. For each retained cap choose a point of $S_+$ missed by all other closed caps. This gives strict exclusion margins from all other caps. Move within its full-dimensional fiber to an interior point maintaining those margins. A small ball there stays outside all other closed caps and must lie in the retained cap. Its nonzero continuous normal then gives a point strictly inside the retained cap with all the other strict exclusions.\n\nFinally choose a common mass $\\tau$ slightly above $\\alpha_0$ and below $\\alpha$. For each normal take the smallest threshold $b(\\tau)$ attaining $\\tau$. These thresholds are strictly below the previous thresholds $b(\\alpha_0)$. As $\\tau\\downarrow\\alpha_0$, monotonicity gives a limit at most $b(\\alpha_0)$, and continuity gives that its mass is $\\alpha_0$. By minimality of $b(\\alpha_0)$ the limit equals it. There are only finitely many witnesses and strict exclusion margins, so one sufficiently small common enlargement preserves every witness's strict inequalities. Each original closed cap is now in the corresponding open cap, giving the claimed open cover.\n",
+  "source_candidate_ids": [
+    "b25c81940a686cf0"
+  ],
+  "source_candidate_sha256": {
+    "b25c81940a686cf0": "07ee375641e8baf1f7f73faf111426d43fc8b1d03671ecb8070277e6b5f6eb05"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b25c81940a686cf0",
+      "locator": "b25c81940a686cf0:02 Strict equal-mass cap certificate, assertions 1–4"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$, let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex and let $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ have positive mixed $d$-volume $M$. Write $\\mu$ for the normalized mixed $d$-volume, $F$ for the maximum closed-halfspace depth over $S$, and $S_+$ for the union of all positive-volume integer fibers. If $F<\\alpha<1$, there exist $m\\le2^n(d+1)$ closed ambient halfspaces $H_i=\\{w:a_i\\cdot w\\ge b_i\\}$ whose continuous normal components are nonzero, and a number $\\tau<\\alpha$, with $\\mu(H_i)=\\tau$ for every $i$. Their open interiors cover $S_+$. Each $H_i$ has a witness $p_i=(z_i,x_i)$ with $x_i\\in\\operatorname{int}(C_{z_i})$ and\n$$\na_i\\cdot p_i>b_i,qquad a_j\\cdot p_i<b_j\\quad(j\\ne i).\n$$\nIts exclusive region thus contains a positive-volume ball in that witness fiber.",
+  "subgoal_id": "pk-intake-strict-equal-mass-mixed-helly-cap-certificate",
+  "title": "A strict equal-mass cap cover with exclusive interior witnesses"
+}

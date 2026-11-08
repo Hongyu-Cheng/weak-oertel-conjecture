@@ -1,0 +1,26 @@
+{
+  "advances": "Exact mixed measure identities for a prescribed anchor and dyadic contractions.",
+  "author": "PK-research-agent",
+  "candidate_id": "55e009cbf80ce2e6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:49:23.770317+00:00",
+  "depends_on": [],
+  "draft_key": "dyadic-source-filtration",
+  "kind": "lemma",
+  "proof": "Convexity and $y\\in C$ give $C_{k+1}\\subseteq C_k\\subseteq C$. Solving $q=p+2^{-k}(z-p)$ at an integer $q$ reindexes exactly the congruent integer bases. Changing continuous variables at each such base has Jacobian $2^{-kd}$, proving the fiber and measure equalities. The preimage of $H_s$ is exactly $H_{2^ks}$, with both inequalities closed. For $s\\le0$ the latter contains $H_s$. The displacement vector itself scales by $2^{-k}$, proving the moment formula and, on dividing by the mass, the centroid formula. There are finitely many nonempty original integer fibers by compactness. Every base other than $p$ is excluded eventually, so the rescaled total masses decrease to $|C_p|$.\n\nThe measure domination follows from nesting and nonnegative coefficients. Sum the exact through-$y$ masses and the exact moments, grouping terms at each original base by its allowed $k$. Tonelli applies to the masses. The moment series is absolutely convergent in each coordinate because $C$ is bounded and $\\sum_k a_k\\mu(C)<\\infty$. The resulting grouped weights give the displayed expressions. The geometric specialization sums to $1/(1-\\tau)$ at the anchor in the domination bound.\n",
+  "source_candidate_ids": [
+    "9f68cd8c98117884"
+  ],
+  "source_candidate_sha256": {
+    "9f68cd8c98117884": "c59bd0e51daa1b7f6ae32d187b20436bd36a915c8f007c8d13914cc10d450e9f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9f68cd8c98117884",
+      "locator": "9f68cd8c98117884:01 §§1–2, (1)–(9) and summable-coefficient extension"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$, $d\\ge1$, be a compact convex body of positive mixed $d$-volume $\\mu$. Fix an actual point $y=(p,x)$ with $p\\in\\mathbb Z^n$. For $k\\ge0$, put $T_k(w)=y+2^{-k}(w-y)$, $C_k=T_k(C)$, and write $\\mu^{[k]}$ for the restriction to bases congruent to $p$ modulo $2^k$. The $C_k$ are nested, and their fibers and mixed measures satisfy\n$$\n(C_k)_q=x+2^{-k}\\big(C_{p+2^k(q-p)}-x\\big),\\qquad\n\\mu_{C_k}=2^{-kd}(T_k)_\\#\\mu^{[k]}.\n$$\nFor every affine closed cap $H_s=\\{w:\\ell(w-y)\\ge s\\}$ with $\\ell$ a nonzero linear functional, $\\mu_{C_k}(H_s)=2^{-kd}\\mu^{[k]}(H_{2^ks})$, including pure-base normals. If $s\\le0$ this is at least $2^{-kd}\\mu^{[k]}(H_s)$, with equality at $s=0$. The moment about $y$ is $2^{-k(d+1)}\\int(w-y)\\,d\\mu^{[k]}(w)$. When the filtered mass is positive the centroid is $T_k(g^{[k]})$, where $g^{[k]}$ is the filtered centroid. The masses $2^{kd}\\mu_{C_k}(C_k)$ decrease to $|C_p|$.\n\nFor nonnegative summable $a_k$, let $R=\\sum_{k\\ge0}a_k\\mu_{C_k}$. Write $\\nu_p(z)=\\max\\{k:z-p\\in2^k\\mathbb Z^n\\}$ with $\\nu_p(p)=\\infty$. Then $R\\le(\\sum_k a_k)\\mu$, and for every through-$y$ closed halfspace $H$,\n$$\nR(H)=\\sum_z |C_z\\cap H_z|\\sum_{k\\le\\nu_p(z)}a_k2^{-kd},\\qquad\n\\int(w-y)\\,dR(w)=\\sum_z\\left[\\int_{C_z}((z,v)-y)\\,dv\\right]\\sum_{k\\le\\nu_p(z)}a_k2^{-k(d+1)} .\n$$\nFor $a_k=\\tau^k$, $0<\\tau<1$, these weights are the truncated geometric sums at $\\tau2^{-d}$ and $\\tau2^{-d-1}$, respectively, and $R\\le\\mu/(1-\\tau)$.",
+  "subgoal_id": "pk-intake-dyadic-source-filtration",
+  "title": "Exact dyadic filtration of mixed caps and first moments about an actual point"
+}

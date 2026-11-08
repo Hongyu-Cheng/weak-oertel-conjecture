@@ -1,0 +1,29 @@
+{
+  "advances": "Sufficient raw mixed-depth certificate for a given distinct-label tree, with no universal existence guarantee.",
+  "author": "PK-research-agent",
+  "candidate_id": "2aa107103c1dbcb1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:33:00.809123+00:00",
+  "depends_on": [
+    "4e868f774de77608",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "distinct-label-binary-midpoint-certificate",
+  "kind": "lemma",
+  "proof": "The parent body and mark lie in the parent fiber by convexity. For the own-fiber bound apply 4e868f774de77608 to the convex hull in $\\mathbb R\\times\\mathbb R^d$ of the two child bodies at auxiliary real parameters $0,1$. This is a full-dimensional convex body whose endpoint fibers are the child bodies and whose midpoint fiber is exactly their Minkowski average. The accepted concavity of own-depth to power $1/d$ gives the stated parent capacity at the averaged mark. The two capacities are lower bounds on those endpoint own depths, so the implication also permits a zero capacity. At a centroid leaf the full-mass metronoid of 6769574fc1bd9f8d consists of its volume centroid, giving the stated ordinary bound.\n\nInduct on the subtree rooted at the current mark. A closed ambient halfspace containing it captures at least its certified capacity in its own actual fiber. If the halfspace normal is pure-base and that fiber lies in the boundary, it includes the entire fiber, whose volume is at least the capacity. At an internal node the root mark is the ambient midpoint of the two child marks, so the halfspace contains at least one child mark. Its volume from the corresponding child's subtree is at least that child's bound, by induction, and the root label is distinct from every label in that subtree. These two actual mass contributions add. The smaller child bound works for either choice and proves the claimed recursion.\n",
+  "source_candidate_ids": [
+    "9dc053aa681e5ef6"
+  ],
+  "source_candidate_sha256": {
+    "9dc053aa681e5ef6": "28ce80f959469aac6409235845b1934f8d062469d694a4140116ef4c98bccfb1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9dc053aa681e5ef6",
+      "locator": "9dc053aa681e5ef6:03 Lemma 4, local capacity interpolation and distinct-label subtree recurrence"
+    }
+  ],
+  "statement": "Let $C\\subseteq\\mathbb R^n\\times\\mathbb R^d$ be compact and convex with $n,d\\ge1$. A leaf of a finite rooted binary tree has an integer base $z$, a positive-volume compact convex body $D_z\\subseteq C_z$, a mark $c_z\\in D_z$, and a certified raw own-fiber capacity $k_z\\ge0$ in $D_z$, meaning every closed continuous halfspace containing $c_z$ captures at least $k_z$ volume from $D_z$. For two children $\\ell,r$ assign their parent the midpoint of their integer bases (required to be integral), the Minkowski average of their bodies, the average of their marks, and capacity\n$$\nk_z=\\left(\\frac{k_\\ell^{1/d}+k_r^{1/d}}2\\right)^d.\n$$\nEvery parent body lies in its actual fiber, and its assigned capacity is valid there and in the parent body. Assume all node bases are distinct. Set $b_z=k_z$ at leaves and $b_z=k_z+\\min(b_\\ell,b_r)$ at an internal node. Then every closed ambient halfspace containing the root mark captures raw mixed volume at least $b_{\\rm root}$ from the original fibers labeling the tree. At a leaf with $D_z=C_z$ and centroid mark, the choice $k_z=\\gamma_d|C_z|_d$ is valid for $\\gamma_d=(d/(d+1))^d$.",
+  "subgoal_id": "pk-intake-distinct-label-binary-midpoint-certificate",
+  "title": "Distinct-label binary midpoint certificates for actual mixed depth"
+}

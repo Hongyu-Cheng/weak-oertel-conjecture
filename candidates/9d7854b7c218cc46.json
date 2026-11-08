@@ -1,0 +1,32 @@
+{
+  "advances": "An exact one-dimensional calculation at the weighted centroid for each fixed input mass and multiplicity, including the fixed-dimension obstruction scale.",
+  "author": "PK-research-agent",
+  "candidate_id": "9d7854b7c218cc46",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:57:44.473551+00:00",
+  "depends_on": [
+    "ec4f7e236aeff668"
+  ],
+  "draft_key": "exact-fixed-mass-interval-source-cost",
+  "kind": "theorem",
+  "proof": "Apply the fixed-mass one-copy program with $d=1$ and $q=2$. Its volume-one simplex is an interval, and the cost and containing-cap convention are exactly those of this statement. The scalar inequality is $s\\ge S(r)$, where\n$$\nS(r)=\\frac{1+k\\alpha^2-2k\\alpha r+2kr^2}{2(1+kr)}.\n$$\nThe upper constraint $S(r)\\le1-\\alpha+r$ is equivalent to $r\\ge r_0=(k\\alpha^2+2\\alpha-1)/(2(k+1))$. Thus every feasible cost is at least $F(r)=S(r)+r$ for some $r\\in[\\max(0,r_0),\\alpha]$. This interval is nonempty because $r_0\\le\\alpha$, as $k\\alpha^2-2k\\alpha-1<0$. For $D=(1+k\\alpha)^2+k+1$,\n$$\nF'(r)=\\frac{4(1+kr)^2-D}{2(1+kr)^2},\n$$\nso the minimum of $F$ on that interval is at the projection of $r_*=(\\sqrt D-2)/(2k)$ onto it.\n\nFor $k\\ge2$, $r_*\\ge0$. With $A=1+k\\alpha$, the inequality $r_*\\le\\alpha$ is $\\sqrt D\\le2A$, equivalent to $\\alpha\\ge L_k$. Also $1+kr_0=D/[2(k+1)]$, so $r_*\\ge r_0$ is equivalent to $\\sqrt D\\le k+1$, or $\\alpha\\le U_k$. The zero of $r_0$ is $A_k=(\\sqrt{k+1}-1)/k$ and $0\\le L_k\\le A_k\\le U_k<1$, with $L_k<U_k$. Hence the choices are $r=\\alpha,r_*,r_0$ in the three ranges. To verify feasibility of $s=S(r)$, its numerator is $1+k(\\alpha-r)^2+kr^2>0$ and the upper bound is already checked. In the first range $S(\\alpha)\\ge\\alpha$ is $1-2\\alpha-k\\alpha^2\\ge0$, true as $\\alpha\\le A_k$. In the middle range $S(r)\\ge r$ is $r\\le(1+k\\alpha^2)/(2A)$, and the latter upper bound has $1+k(1+k\\alpha^2)/(2A)=D/(2A)>\\sqrt D/2=1+kr_*$. In the last range $S(r_0)=1-\\alpha+r_0\\ge r_0$. The scalar construction thus realizes the projected minima. With $y=1+kr$, one has $F(r)=(D/y+4y-6-2k\\alpha)/(2k)$. Evaluating at $\\alpha,r_*,r_0$ gives the three expressions, with agreement since the choices of $r$ coincide at both junctions.\n\nFor $k=1$ the signs of $r_0$ and $r_*$ change at $\\sqrt2-1$. Below it the projection is $0$; at or above it the projection is $r_0$ by the same comparison $\\sqrt D\\le k+1$. Both are feasible: $S(0)\\le1-\\alpha$ when $r_0\\le0$, and $S(r_0)=1-\\alpha+r_0$. The two substitutions both give $(1+\\alpha^2)/2$.\n\nFor $k\\ge2$ the derivative of the first branch has the sign of $3(1+k\\alpha)^2-(k+1)$, so that branch is decreasing until $L_k$ whenever it is not a singleton. The derivative of the middle branch is $2(1+k\\alpha)/\\sqrt D-1$, positive beyond $L_k$. The last branch has derivative $(2k\\alpha-(k-1))/(k+1)>0$ for $\\alpha\\ge U_k$, because $\\sqrt{k(k+1)}>(k+1)/2$. At $L_k$ put $m=\\sqrt{(k+1)/3}$; the minimizing $r=L_k=(m-1)/k$ and $s=(2m-1)/k$ give the asserted minimum. The entire added band is the upper-end band because $r=\\alpha$ in the attaining construction. For $k=1$ uniqueness in $\\alpha$ follows from the single quadratic formula.\n",
+  "source_candidate_ids": [
+    "04fb8b3cc0275a7f"
+  ],
+  "source_candidate_sha256": {
+    "04fb8b3cc0275a7f": "e7dbe5b9ae438a792b4960e01636ea19c1bc0933483f6ef12290a247de568898"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "04fb8b3cc0275a7f",
+      "locator": "04fb8b3cc0275a7f:02 §1, (1)–(2), and §3, (6)–(11), exact fixed-mass formulas"
+    },
+    {
+      "candidate_id": "04fb8b3cc0275a7f",
+      "locator": "04fb8b3cc0275a7f:03 §4, (12), global absolute minimum and unique mass"
+    }
+  ],
+  "statement": "Let $B$ be a positive-length interval, $k\\ge1$ an integer, $0\\le\\eta\\le\\mathbf1_B\\,dx$, and $\\eta(B)=\\alpha|B|$ with $\\alpha\\in[0,1]$. Let $g$ be the centroid of $\\mathbf1_B\\,dx+k\\eta$. Denote by $\\Psi_k(\\alpha)$ the infimum of $(|B\\cap H|+\\eta(H))/|B|$ over all such $B,\\eta$ and all closed line halfspaces $H\\ni g$. Then $\\Psi_1(\\alpha)=(1+\\alpha^2)/2$. For $k\\ge2$ set $L_k=(\\sqrt{(k+1)/3}-1)/k$ and $U_k=(\\sqrt{k(k+1)}-1)/k$. Then\n$$\n\\Psi_k(\\alpha)=\n\\begin{cases}\n\\displaystyle \\alpha+\\frac{1+k\\alpha^2}{2(1+k\\alpha)},&0\\le\\alpha\\le L_k,\\\\\n\\displaystyle \\frac{2\\sqrt{(1+k\\alpha)^2+k+1}-3-k\\alpha}{k},&L_k\\le\\alpha\\le U_k,\\\\\n\\displaystyle \\frac{k\\alpha^2-(k-1)\\alpha+k}{k+1},&U_k\\le\\alpha\\le1.\n\\end{cases}\n$$\nThe branches agree at the junctions and indicator bands attain the values. The endpoint values are $\\Psi_k(0)=1/2$ and $\\Psi_k(1)=1$. The minimum over $\\alpha$ is $1/2$ uniquely at $\\alpha=0$ for $k=1$, and $(\\sqrt{3(k+1)}-2)/k$ uniquely at $\\alpha=L_k$ for $k\\ge2$. For $k\\ge2$ an upper-end band of relative mass $L_k$ attains this minimum.",
+  "subgoal_id": "pk-intake-exact-fixed-mass-interval-source-cost",
+  "title": "Exact fixed-mass interval source cost for every multiplicity"
+}

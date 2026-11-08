@@ -1,0 +1,65 @@
+{
+  "candidate_id": "1cdceac089be44d8",
+  "candidate_sha256": "ddafa09c9e491977cfde7bc9bd1b4fea84f5836f5b425a5f9dad329565c8c1dd",
+  "checked_dependency_candidate_sha256": {
+    "27d3881f8bfc290c": "9a382480eb7fdedbe7306bbed9e353f6e1b0a30b8704de907efb2a4c1afba45e",
+    "3e6e1eb15d927db8": "356c4ff2da696c29949b653e0a2dd2941dfa210be5f2a5c1371d7fde3a5ca463",
+    "8bdcdcd6e2fa69d9": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86"
+  },
+  "checks": [
+    "Properness puts the cut centroid in the simplex interior, since the section meets the interior in positive section measure. The equality b·c=0 makes the cut a through-centroid plane and ∇P=dP b annihilates every perturbation in b·δc=0, proving stationarity in the accepted fact’s parametrization.",
+    "With q_i=d b_i and q_j=d b_j, the vector q_j e_i−q_i e_j is exactly the accepted stationary-cap pair direction. The strict captured signs persist under small variations, and margins at all other indices are fixed, including zeros. An excluded nonzero margin also makes the variation nonradial.",
+    "Independently checked the accepted curvature bracket: the diagonal terms use φ′(c_l)=−q_l²ψ′(c_l), and the mixed term uses Dφ=−q_iq_j Dψ. Their sum is 2 f_V(0)q_i²q_j²[Dψ−ψ′(c_i)−ψ′(c_j)]. Positivity of q_i,q_j and the bound q_i,q_j≤1 give positive endpoint derivatives of ψ. Convexity bounds Dψ by the larger endpoint derivative, including the derivative limit at equal heights, giving strict negativity.",
+    "The joint Hessian identifies the accepted second directional derivative with vᵀHv. Since η·v=1ᵀHv, the specified s sets the Schur square to zero and the remaining coefficient is −P^(−1/d)/(dP). The common-shift value is strictly negative, as claimed in the proof.",
+    "Verified the raw source digest and matched a5d3d44181ebed82 §§2–4, especially (6)–(8) and (12). The frozen conclusion transfers the raw calculation and keeps the two central-coordinate hypotheses."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3e6e1eb15d927db8",
+      "candidate_sha256": "356c4ff2da696c29949b653e0a2dd2941dfa210be5f2a5c1371d7fde3a5ca463",
+      "mapping": "Two selected positive margins and a negative margin from properness give the joint Hessian and the centroid gradient. Threshold stationarity from the Schur theorem normalizes that gradient to dP b.",
+      "reviewed_proof_sha256": "25d949ef6fa241b3d18c2c32cf19f9ac1a0318aef6a19ac93a7cf58edc78d4b2",
+      "reviewed_statement_sha256": "0b69be9c183ac54f44ac540cf3cd01ed728938689e4e176bd501148269c397ca",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "8bdcdcd6e2fa69d9",
+      "candidate_sha256": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+      "mapping": "The normalized positive-row proper minimum satisfies the Schur theorem. Its square identity applies to v because g·v=0, and the given shift cancels the square.",
+      "reviewed_proof_sha256": "3f10992a46b97286bfba42b813249fa659b3504118defeeae9510650608b52f7",
+      "reviewed_statement_sha256": "deba3f575be9d9f26f3af97154bc46e151f89c2cdb0be8bb5cb80bcbb484e157",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "27d3881f8bfc290c",
+      "candidate_sha256": "9a382480eb7fdedbe7306bbed9e353f6e1b0a30b8704de907efb2a4c1afba45e",
+      "mapping": "Use the oriented cap through its interior actual centroid b with strict included indices i,j and b_i,b_j≤1/d. The proof gives precisely the vector in the frozen statement and its strict negative cap curvature, including equal positive margins and other zero margins.",
+      "reviewed_proof_sha256": "b42c48bff18ae512e45f0e1ed501ebeeccd7601437aca724561a9416271f95c2",
+      "reviewed_statement_sha256": "d70c918e678e1728c63a256f14675fa6053879bc3bd3d6d7e9442ccb0b78bb4d",
+      "status": "accepted at reviewed repository base"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:55:27Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the same raw negative cap curvature for the same pair at a stationary proper through-point cut. Applying it at the actual centroid checks this component exactly. The optimized-capacity direction, which includes the common shift from the Schur identity, is the additional conclusion.",
+      "fact_id": "27d3881f8bfc290c"
+    }
+  ],
+  "readability": "The accepted fact’s proof identifies the explicit vector. Its statement is phrased as existence of a variation, so the proof is necessary to verify this exact invocation.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "662efa98774b132ac1b36b9ffbf550af384affea7733acb7b862df681d164201",
+  "reviewed_statement_sha256": "4a28e0cb09d18a0e13eb5d8dc3aaaa4a99f9b1053c9be2cfcb133b1f808e2107",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:51:52Z",
+  "summary": "The raw central-pair descent direction gives a strictly positive optimized-capacity direction after the specified common shift.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

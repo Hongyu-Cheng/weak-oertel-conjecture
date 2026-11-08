@@ -1,0 +1,56 @@
+{
+  "candidate_id": "451434b30b8b01b3",
+  "candidate_sha256": "d6e3d2f3ec7e447a89b6dcc750dca4d08b552518eef25f2931e1d0271ff0eea2",
+  "checked_dependency_candidate_sha256": {
+    "baee8ddaa588aef0": "258b628564157ac1b6a9b7b9d65db4998e624980d7aef8a1d37a2b8a014d7b52"
+  },
+  "checks": [
+    "The average of the face centroids is a containing mark. Any affine margin nonnegative at that average is nonnegative at at least one face centroid. A whole-face trace contributes 1/r, and a proper trace can be tightened through that centroid without increasing mass.",
+    "For any mark in J choose a positive group total t and a relative barycentric coordinate b at least 1/(D+1). The proposed margin at the mark is t b minus t b plus tδ minus η(1−t), exactly zero, while on all other faces it is −η.",
+    "The face trace is a homothetic vertex cap of volume fraction (1−b+δ)^D. Small positive η keeps the threshold positive and at most one. If t=1 then δ=0, including the zero-volume vertex trace when b=1. Nonconstancy on the chosen face makes the extended ambient halfspace proper. A mark outside the compact simplex has a strictly separating halfspace.",
+    "Compared the full proof to candidate 2e4e1c1707f69b33 §1, (1). The frozen lower bound uses an accepted simplex-cap theorem in place of the original ordinary-centroid citation. The positive-η limiting argument retains the original closed-cap scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "baee8ddaa588aef0",
+      "candidate_sha256": "258b628564157ac1b6a9b7b9d65db4998e624980d7aef8a1d37a2b8a014d7b52",
+      "fact_sha256": "f6c8174bf1343545e8816ad516dfbb0b26ef33f8d2cb06bc4e9d94c25c61024e",
+      "hypotheses": "Identify the intrinsic affine span of the chosen D-face isometrically with R^D. The tightened margin is nonconstant and zero at that centroid, so there are between 1 and D negative vertex margins and the accepted fraction Γ_q is at least Γ_D by its proved monotonicity.",
+      "reviewed_proof_sha256": "4b6112693fc85fafd94de7fa6359b9c13f93d0288f8e1930a994f00f68ab803a",
+      "reviewed_statement_sha256": "6da489bc5dd9b6cd51423c25056741ec58c6af8081e2cddcae5b9598a32c7a85"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:29:29Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the centroid lower bound within each one full-dimensional intrinsic simplex, but no control of the other mixture components or the ambient maximum.",
+      "fact_id": "baee8ddaa588aef0"
+    },
+    {
+      "comparison": "For one simplex, the singleton barycentric tail gives the vertex cap fraction. It gives neither strict exclusion of the other components nor a mixture depth theorem.",
+      "fact_id": "290ddd8516d76865"
+    },
+    {
+      "comparison": "An exact unrestricted result for six full-dimensional vertex clusters in a shared space, with constant 1/6. Here the supported components are faces with mutually disjoint vertex groups in an affine join.",
+      "fact_id": "75ae6d35bd902b35"
+    }
+  ],
+  "readability": [
+    "The limiting halfspace at η=0 is unnecessary and could include other faces in its closed boundary. The proof explicitly takes the infimum of positive-η cap masses."
+  ],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "29e8e6e481a821903cd43205a6e65c5ab388e8eb5d4f5ca0a39143ba505cd718",
+  "reviewed_statement_sha256": "d38b220fe8e88169165acf587e4eb286e3db093c2d7841623d22fa164ece5f35",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:24:16Z",
+  "summary": "The unrestricted depth maximum is exactly the simplex centroid constant divided by the number of faces. The upper witnesses exclude every other component strictly before taking the infimum.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

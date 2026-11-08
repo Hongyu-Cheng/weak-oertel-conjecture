@@ -1,0 +1,41 @@
+{
+  "candidate_id": "be7fc2f8ef9af30d",
+  "candidate_sha256": "bed34af218b6ab6690cef570a217b895ff9891569df579bc2e2cb50c655f2c28",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The strict signs make all diagonal/off-diagonal magnitudes positive. Summing the balanced normal evaluations at each vertex gives exactly the asserted column identity.",
+    "The cap is the simplex cut off at the unique included vertex. Along each edge from that vertex the zero margin occurs at a_i/(a_i+b_ij). Taking the determinant of the scaled edge columns gives the product formula for the actual cap volume fraction.",
+    "The cap pyramid height is H a_i/||v_i||, so the physical section measure divided by ||v_i|| is d|K|q_i/(Ha_i). Consequently the inverse coarea has common multiplier H/(d²|K|) times f_i/q_i^((d−1)/d). This keeps the scale of the balanced normals.",
+    "After the substitution x_j=a_i+b_ij, f_i is d times the geometric mean and g_i their sum. The column sums give total d+1. AM–GM on the square roots gives the variance bound; the pairwise square identity yields exactly the factor 1/d.",
+    "In d=1 the section is one point and its 0-dimensional measure is one. The only off-diagonal channel equals a_i+a_j=1, so both f_i equal one, the row deficit is zero, and the pair sum is empty.",
+    "The original source digest matches. §§1–2 contain the geometric normalization and variance argument, and §6 supplies the d=1 case."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:16:58Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same determinant product for edge intercepts but optimizes the cap of an individual vertex with a given mark. It does not give the coarea scale or a multirow balanced-normal variance budget.",
+      "fact_id": "f75e1f526e17ab44"
+    },
+    {
+      "comparison": "Gives coarea continuity and an explicit barycentric cut at the simplex centroid. It does not derive the exact coarea for all strictly isolated vertex cuts with a common normal-balance scale.",
+      "fact_id": "d4e455a28be6cde4"
+    }
+  ],
+  "readability": "Here the volume fractions and section coareas refer only to the actual given simplex, with no mixing of sections from other fibers.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "da04a6845c9c4c80d0326080cdd679ca3c254334fca58a48ff663cbb3e0c8d61",
+  "reviewed_statement_sha256": "6a16042dd6579a83a05cc92fdc0d0a540027e0fff1c48fd7116c3372518418e8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:13:22Z",
+  "summary": "The cap fractions and coareas are exact for the given simplex, and the row variance deficit has the stated constant in every dimension.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

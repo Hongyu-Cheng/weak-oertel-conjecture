@@ -1,0 +1,31 @@
+{
+  "advances": "A named source on three actual planar fibers, for three true minimizing cuts with zero area on the same endpoint.",
+  "author": "PK-research-agent",
+  "candidate_id": "30309d81a867776b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:16:52.939460+00:00",
+  "depends_on": [
+    "ac7ba1e1e0ebc955",
+    "6769574fc1bd9f8d",
+    "03c59c70402b66a2",
+    "f987a3d8c699565a"
+  ],
+  "draft_key": "planar-marked-depth-aligned-middle-credit",
+  "kind": "theorem",
+  "proof": "The three sampled fibers are disjoint isometric copies of the planar bodies, so their ordinary areas sum to the mixed mass. Convexity of the source gives $(A+B)/2\\subseteq K$. A positive-area body with zero area captured by $v_i\\cdot x\\ge1$ lies in $v_i\\cdot x\\le1$, since a point strictly beyond that line would give interior points there by convexity. Thus $B\\subseteq T$.\n\nThe $A$ traces at thresholds $-1$ and the middle traces at zero each cover the plane because the normals sum to zero. The three middle areas are $Q-u,Q-v,Q-w$ and are positive by interiority of the mark. Apply the ordinary $d=2$ three-cap profile of ac7ba1e1e0ebc955 to $A$ and $K$ separately. The coefficient on the smallest capture is $1/\\gamma_2-2=1/4$, giving exactly the first two bounds. At least one middle trace contains the centroid of $K$. Fact 6769574fc1bd9f8d at full mass on $K$ gives at least $4k/9$ in this trace and its whole ambient cap attains $Q$, proving $Q\\ge4k/9$.\n\nApply 03c59c70402b66a2 in dimension two to the actual cap with $A$ area $w$, middle area $Q-w$, and $B$ area zero. Its continuous normal is nonzero, the whole endpoints are compatible, and the cap genuinely attains depth at the specified mark. Equalizing the two endpoint captures at fixed continuous normal gives $w\\le2(Q-w)$, proving the upper bound on $w$.\n\nAdding the ordinary profiles gives $M\\le b+9Q/4+3(w-u)/4\\le b+11Q/4$. Since $Q/(b+11Q/4)$ is increasing for $Q>0$ and $b>0$, $Q\\ge4k/9$ gives $Q/M\\ge4k/(11k+9b)$ and the stated sufficient ratio condition. If $Q\\le2M/9$, then $9Q/2\\le b+11Q/4$, whence $Q\\le4b/7$ and $k\\le9b/7$. In the aligned case the preceding geometric credit applies to the actual $A,K,B$ and the three proper cuts. It gives $k>3b/2$ and then $b<3Q/2$. Thus $M<17Q/4$ and the strict marked-depth bound follows.\n",
+  "source_candidate_ids": [
+    "cce182d75ffe5c52"
+  ],
+  "source_candidate_sha256": {
+    "cce182d75ffe5c52": "53515b5be50ba4abc1f352247d2a3d9fec7f8058f3f586adeaabbbe5d1216334"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cce182d75ffe5c52",
+      "locator": "cce182d75ffe5c52:04 §§4–5, (7)–(11), actual profile and marked-depth ratio for arbitrary and aligned K"
+    }
+  ],
+  "statement": "Let the only nonempty integer fibers of a convex body in $\\mathbb R\\times\\mathbb R^2$ be full planar convex bodies $A,K,B$ at $-1,0,1$. Use $v_1=(1,0)$, $v_2=(0,1)$, $v_3=(-1,-1)$, and put $T=\\{x:v_i\\cdot x\\le1\\ \\forall i\\}$. Assume $0\\in\\operatorname{int}K$, each $A$ cut $v_i\\cdot x=-1$ is proper, and each ambient cap $v_i\\cdot x\\ge z$ captures zero area in $B$ and attains the genuine raw depth $Q$ at $(0,0)$, computed over all containing closed ambient halfspaces. Write $a=|A|$, $k=|K|$, $b=|B|$, $M=a+k+b$, and let $u\\le v\\le w$ be the three sorted $A$ cap areas. Then $B\\subseteq T$, and\n$$\na\\le w+v+u/4,\\qquad k\\le9Q/4-u-v-w/4,\\qquad\nw\\le2Q/3,\\qquad Q\\ge4k/9.\n$$\nConsequently $Q/M\\ge4k/(11k+9b)$, so $k\\ge9b/7$ suffices for $Q/M\\ge2/9$. If $Q\\le2M/9$, then $Q\\le4b/7$ and $k\\le9b/7$. If $K=\\{x:v_i\\cdot x\\ge-t_i\\ \\forall i\\}$ is the aligned triangle, then $Q/M>4/17>2/9$.",
+  "subgoal_id": "pk-intake-planar-marked-depth-aligned-middle-credit",
+  "title": "Planar marked-depth bounds for a critical three-cap family missing one endpoint"
+}

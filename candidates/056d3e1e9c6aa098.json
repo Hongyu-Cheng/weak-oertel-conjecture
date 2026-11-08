@@ -1,0 +1,36 @@
+{
+  "advances": "Actual local minimum of the unpenalized objective at a fixed scale. This is a parameter stationarity input, with no claim of a common physical and parameter separator.",
+  "author": "PK-research-agent",
+  "candidate_id": "056d3e1e9c6aa098",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.024790+00:00",
+  "depends_on": [
+    "f5e6736b5b1877c7",
+    "20210aa9d661295a",
+    "f2ead43a963c7026"
+  ],
+  "draft_key": "buffered-concave-parameter-no-improvement",
+  "kind": "theorem",
+  "proof": "The anchored representation polytope of a fixed $p$ has finitely many vertices, and its linear concavity inequalities are equivalent to those at its vertices. Thus any $h\\in T_\\ell$ makes $\\ell+t h$ positive and sampled-concave for small $t\\ge0$: every tight inequality has a nonnegative slope and every remaining one has positive initial slack. All-atomic-buffered-hinge-descent, using $\\beta<1/k(P)\\le1/k(I)$, rules out $J=\\varnothing$ at the minimum.\n\nAssume $B_p(h)<0$ at all $p\\in J$. Keep the fibers fixed and divide the raw array $\\ell+t h$ by its $w$-weighted geometric mean. The resulting normalized positive array $\\ell(t)$ has logarithmic derivative $B_p(h)$ at $p$, so its values at all $p\\in J$ strictly decrease for small $t>0$.\n\nFor a fixed family, depth at $(p,y)$ depends on the parameter only through $\\ell_p$, monotonically nondecreasing in that value, because every nonvertical cap expands and the pure-base caps are fixed. If after lowering $\\ell_p$ the fiber maximum for $p\\in J$ still equaled $Q$, choose an attaining mark. By monotonicity its old depth was also $Q$. Its mark is interior since an own-boundary mark has zero depth (the supporting-slope argument in 20210aa9d661295a); thus its old buffer is positive. The strict old gap to $b_{\\rm base}(p)$ supplies an attained old active nonvertical cap with proper own trace by 20210aa9d661295a. Decreasing $\\ell_p$ raises that same cap's own continuous threshold by a positive amount. The old proper threshold is strictly between the support levels and each intervening interior slab of positive thickness has positive volume, so the cap loses positive own mass. No other fiber gains mass. The new depth at this mark is strictly below $Q$, a contradiction. Hence the new whole-fiber maximum is strictly below $Q$ at every $p\\in J$.\n\nFor $p\\in I\\setminus J$, the old closed pure-base cap of mass $Q$ bounds the entire unchanged fiber independently of the new array. At $p\\notin I$ the old strict gaps persist by the uniform marked continuity of f2ead43a963c7026 for the finitely many continuous array values. If the new global maximum is below $Q$, the parameter change contradicts local minimality. Otherwise it equals $Q$, and every new maximizing base belongs to $I\\setminus J$ and has unchanged pure-base depth $Q$. Apply all-atomic-buffered-hinge-descent at this equal-value pair, using $k(I_{\\rm new})\\le k(P)$ and unchanged initial $M$ in this second step. It gives arbitrarily small actual compatible erosions with scalar-renormalized sampled-concave multipliers and strictly smaller normalized maximum. The first parameter change can be made inside the given local-minimum neighborhood and the second arbitrarily small inside it. This again contradicts the original local minimum.\n",
+  "source_candidate_ids": [
+    "5f79e6103cd27dac",
+    "8027472c0c8717cd"
+  ],
+  "source_candidate_sha256": {
+    "5f79e6103cd27dac": "f0efb5c4b7c9f08a0da2a7783d4b3248b2487c20b2250ce85eea89948af3f4bf",
+    "8027472c0c8717cd": "d1013fd7b9af2911ce7da7e426cbb385eb7e7c4de40096a3fd1c581dae0623bd"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8027472c0c8717cd",
+      "locator": "8027472c0c8717cd:01 §§1–2 (1)–(3)"
+    },
+    {
+      "candidate_id": "5f79e6103cd27dac",
+      "locator": "5f79e6103cd27dac:03 §3, attained proper cap under a strict atomic gap"
+    }
+  ],
+  "statement": "Use the compatible positive $d$-fibers, fixed $\\varepsilon>0$, positive normalized sampled-concave $\\ell$ and actual buffered maximum $Q$ of all-atomic-buffered-hinge-descent. Put $w_z=|K_z|/M$, let $I$ be the set of deepest bases, and put $J=\\{p\\in I:b_{\\rm base}(p)>Q\\}$. Suppose the pair is a joint local minimum of the unpenalized normalized maximum $\\beta=Q/M$, over positive compatible families on this fixed lattice base and positive sampled-concave arrays with volume-weighted geometric mean one. Assume $\\beta<1/k(P)$, where $k(P)$ counts occupied parities. Let $T_\\ell$ consist of arrays $h$ satisfying $h_p\\ge\\sum_z\\lambda_z h_z$ for every $\\ell$-tight extreme anchored representation of each $p$. Then $J\\ne\\varnothing$ and there is no $h\\in T_\\ell$ for which\n$$\nB_p(h)=h_p/\\ell_p-\\sum_z w_z h_z/\\ell_z<0\n$$\nat every $p\\in J$. No differentiability of a cap selector or depth maximum is assumed.",
+  "subgoal_id": "pk-intake-buffered-concave-parameter-no-improvement",
+  "title": "No strictly improving proper-base parameter direction at an unpenalized buffered local minimum"
+}

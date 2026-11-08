@@ -1,0 +1,32 @@
+{
+  "advances": "Local derivative formulas for convex potentials of an ordinary uniform convex body at a proper central cut. Separate cap masses index separate fixed-mass barycenter regions.",
+  "author": "PK-research-agent",
+  "candidate_id": "6d4fda353a2353ab",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:13:03.027772+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "pk-w28-lifted-cap-and-fixed-mass-hessians",
+  "kind": "lemma",
+  "proof": "For any nonzero $v$, the cap plane has zero volume. By dominated convergence the gradient of $Z$ is $\\int_{v\\cdot x+b\\ge0}(x,1)\\,d\\mu$. More generally a cap integral with continuous weight $a(x)$ has derivative at $(u,0)$ in direction $(D,\\delta)$ equal to\n$$\n\\frac1{|K|}\\int_L a(x)(D\\cdot x+\\delta)\\,d\\mathcal H^{d-1}(x).\n$$\nUse coordinates $x=\\xi+su$ and solve the perturbed plane for $s$. On each normal column the signed interval change, divided by the perturbation size, tends to the displayed increment times the section weight when $\\xi\\in\\operatorname{relint}L$, where the section point lies in $\\operatorname{int}K$. It tends to zero off $L$. The relative boundary of $L$ has zero tangential measure, and compactness gives a common bounded projection and a uniform strip bound for bounded parameter directions. Dominated convergence works also along every converging sequence of unit parameter directions, which proves Fréchet differentiability. The same argument at nearby proper cuts gives continuous derivative there: identify the section planes by rigid motions tending to the identity and integrate the weights off the null relative boundary of the limiting section. Apply this with $a=(x,1)$ to get the block Hessian. The section contains a relative ball about zero, so its second moment has exactly the indicated kernel.\n\nFor the barycenter region use 6769574fc1bd9f8d with $m=\\tau|K|$. The fixed-mass upper cap at threshold $q_\\tau(v)$ gives its maximizing barycenter. The threshold is unique since the projected measure is atomless and every open slab between its support endpoints has positive mass. Equality in the bathtub comparison forces the maximizing density to be this cap indicator up to a null set, so the support gradient at nonzero $v$ is its normalized cap first moment. The implicit mass equation has strictly negative threshold derivative, and the cap mass is $C^1$ at proper cuts by the preceding coarea calculation. For a tangent increment $D$, the mass equation gives $Dq_\\tau(u)[D]=\\int_L D\\cdot x\\,d\\mathcal H^{d-1}/\\mathcal H^{d-1}(L)$, which vanishes under the section-centroid hypothesis. Differentiate the first-moment gradient by the same cap formula to obtain the asserted tangent Hessian.\n",
+  "source_candidate_ids": [
+    "9287833963d276a6"
+  ],
+  "source_candidate_sha256": {
+    "9287833963d276a6": "300dfbb8fbdf3eb0fa1bbcd910aa6f386bc4c30a5aace8c8ac4bfa4301287c1d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9287833963d276a6",
+      "locator": "9287833963d276a6:3 §2, (4), coarea block Hessian"
+    },
+    {
+      "candidate_id": "9287833963d276a6",
+      "locator": "9287833963d276a6:5 §3, (5), fixed-mass support Hessian"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a convex body with $0\\in\\operatorname{int}K$, $\\mu$ its normalized volume, $u$ a unit vector, and $L=K\\cap u^\\perp$. For the lifted potential $Z(v,b)=\\int(v\\cdot x+b)_+\\,d\\mu(x)$,\n$$\nD^2 Z(u,0)=\\frac1{|K|}\\int_L\n\\begin{pmatrix}xx^{\\mathsf T}&x\\\\ x^{\\mathsf T}&1\\end{pmatrix}\nd\\mathcal H^{d-1}(x).\n$$\nIts mixed normal-offset block vanishes exactly when the section centroid is zero; its normal-normal block has kernel $\\mathbb R u$ and is positive definite on $u^\\perp$.\n\nLet $\\tau=\\mu\\{u\\cdot x\\ge0\\}$ and let $h_\\tau$ be the support function of the barycenter region of the densities $0\\le f\\le1$ with $\\int f\\,d\\mu=\\tau$, normalized by $\\tau$. If the section centroid is zero, the Euclidean Hessian of $h_\\tau$ on $u^\\perp$ is\n$$\nD^2 h_\\tau(u)|_{u^\\perp}=\\frac1{\\tau|K|}\\int_L xx^{\\mathsf T}\\,d\\mathcal H^{d-1}(x)\\Big|_{u^\\perp}.\n$$\nHere $\\mathcal H^0$ is counting measure if $d=1$.",
+  "subgoal_id": "pk-intake-pk-w28-lifted-cap-and-fixed-mass-hessians",
+  "title": "Hessians of the lifted cap potential and the fixed-mass barycenter support"
+}

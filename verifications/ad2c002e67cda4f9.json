@@ -1,0 +1,50 @@
+{
+  "candidate_id": "393a9cf6300bd3fd",
+  "candidate_sha256": "6f324882e92b518bcfa643a7da59229795a4577c6120e88f8658d20705d6f2b3",
+  "checked_dependency_candidate_sha256": {
+    "4b006d72b238bcc6": "0eb210c39c2e3f0735264426bd66bbc40d6986f7b4d9fc6e9a2b3c4b2597204b"
+  },
+  "checks": [
+    "Original d9b60e76f58eda77 §3 fixes B=0, so the two actual endpoint sums are one. The signed-sum identity follows from the frozen envelope at one, and the equality rule follows from its strict Jensen case or its exact interval identity.",
+    "When both thresholds are nonnegative, weighted Jensen with their fixed mean 1/m excludes a positive overshoot. With one negative threshold the other endpoint alone supplies residual, and kappa≥1/2 means at most one endpoint can dominate. A direction with positive overshoot fully captures the smaller endpoint, so the number of such directions is at most d and at most C_A/(a^d V), counting true cap occurrences.",
+    "The shifts br in d coordinates and −dbr in the last coordinate sum to zero, so one actual translation realizes them while all beta_i vanish. The first d left thresholds are negative and right thresholds equal one, and the last left threshold exceeds one while the last right equals 1−d. This gives the stated root vectors and equality in both bounds, with the same argument also valid for d=1. Exact rational threshold checks and the archived interval replay passed."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "4b006d72b238bcc6",
+      "candidate_sha256": "0eb210c39c2e3f0735264426bd66bbc40d6986f7b4d9fc6e9a2b3c4b2597204b",
+      "hypotheses": "Use its actual paired threshold identities, clipped residual roots, concavity on the nonnegative half-line, and complete equality rule for J at total threshold one. These are the same d-simplex and d+1 directions. Admission requires independent approval of the exact same-wave input.",
+      "reviewed_proof_sha256": "dc2fc811a629da34e6f3837b8a76be9424c3b64813e8a32b373358121e513812",
+      "reviewed_statement_sha256": "e7b6899bb3c9f0621735844a0b2f19f99d5582fb7c61186463887e913b6bb5fb"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:40:57Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Shows a positive loss in one canonical direction even as the full captured endpoint shrinks, using actual homothetic endpoints. It does not retain all directions with B=0 or prove their compensating negative signed terms and positive-part budget.",
+      "fact_id": "2ed123efde59eb53",
+      "fact_sha256": "0290537ba2c821903c6cf69385c1744b5ca77df6e385e1e9662eb3dc59e534e7"
+    },
+    {
+      "comparison": "Controls a single original cap from a small individual budget below every participating endpoint volume. The frozen compensation includes full capture and counts the actual sum of captured volume over all canonical cap occurrences.",
+      "fact_id": "943f174ded471525",
+      "fact_sha256": "00e3abfd0ec997acd264f7a0fbcc07b57fe9fe3beadbb3ec3d1db7cc8d333983"
+    }
+  ],
+  "readability": "The improved positive-part bound depends on the observed cap-occurrence sum C_A. Its attainment is exhibited by the particular translated family, without prescribing C_A separately.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, comparison with pinned source and accepted proofs, and exact arithmetic checks",
+  "reviewed_proof_sha256": "b869e8694b6921d92393cf31b9ac178af44b14b4b44865aecda71a8d4e546a6c",
+  "reviewed_statement_sha256": "520879ac045fec93576b043aeaeda7b770509b74e5e46606922b828a1642014c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:33:32Z",
+  "summary": "Correct zero total drift compensation with exact equality classification and sharp positive-part and captured-volume bounds.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

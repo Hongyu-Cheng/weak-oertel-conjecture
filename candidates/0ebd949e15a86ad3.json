@@ -1,0 +1,26 @@
+{
+  "advances": "A test for the planar cap statistic or arbitrary positive scalar inputs.",
+  "author": "PK-research-agent",
+  "candidate_id": "0ebd949e15a86ad3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:53:47.675322+00:00",
+  "depends_on": [],
+  "draft_key": "positive-three-edge-spectral-level-test",
+  "kind": "lemma",
+  "proof": "The determinant of $B$ is twice the product of its three positive off-diagonal entries, and its trace is zero. Thus it has one positive and two negative eigenvalues. For $r>0$, $\\det(rI-B)$ has the sign of $r-J$. Direct expansion gives\n$$M^3\\det(rI-B)=rME_r-2k^{3/2}\\sqrt U.$$\nSince $U>0$, taking the nonnegative branch $E_r\\ge0$ makes squaring equivalent, including strict signs. At equality the rightmost radical is positive, so $E_r>0$. For a clipping edge from $a$ to $b$ and normal $v$, the intersection with $v\\cdot x=0$ is $a+[v\\cdot a/(v\\cdot(a-b))](b-a)$. On a fixed strict-incidence interval this expression is rational in the path parameter, as is the area by shoelace. A chord lies on a fixed line, so its length divided by $\\lVert v\\rVert$ is the absolute value of a rational signed displacement along a fixed perpendicular to $v$ divided by its squared norm. Its sign can be fixed on the interval because the chord is nondegenerate. This yields the rational tests, and continuity gives the crossing assertion.\n",
+  "source_candidate_ids": [
+    "e917eba155dec2d6"
+  ],
+  "source_candidate_sha256": {
+    "e917eba155dec2d6": "117fdcea7e27584070f7908d105ec3974522e77f84fe60b755410cf0fca63c71"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e917eba155dec2d6",
+      "locator": "e917eba155dec2d6:01 §1, (1)–(3), radical-free level test"
+    }
+  ],
+  "statement": "Let $k,Q_i,\\sigma_i>0$ for $1\\le i\\le3$, and put $M=\\sum_iQ_i/\\sigma_i$, $T=\\sum_iQ_i/\\sigma_i^2$, $U=\\prod_i Q_i/\\sigma_i^2$, and $f_i=2\\sqrt{kQ_i}/(\\sigma_i M)$. Let $B$ be symmetric with zero diagonal and cyclic off-diagonal entries $f_i/2$, and let $J=\\lambda_{\\max}(B)$. For $r>0$ put $E_r=r^2M^2-kT$ and $R_r=r^2M^2E_r^2-4k^3U$. Then $J\\le r$ exactly when $E_r\\ge0$ and $R_r\\ge0$, and $J<r$ exactly when both are positive.\n\nFor actual planar cap data from fixed nonzero normals through an interior point, along a quadrilateral path with one vertex moving affinely and all other vertices fixed, the two expressions are rational functions on each strict-incidence interval. On such intervals a fixed positive spectral level can be tested by polynomial inequalities after clearing denominators of known positive sign. Along a continuous positive-data path the boundary at level $r$ lies on $R_r=0$ with $E_r>0$.",
+  "subgoal_id": "pk-intake-positive-three-edge-spectral-level-test",
+  "title": "A radical-free level test for the positive three-edge spectral statistic"
+}

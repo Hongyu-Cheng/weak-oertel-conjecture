@@ -1,0 +1,40 @@
+---
+fact_id: ae8f94d7d0e2ab8a
+kind: lemma
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-one-fine-coordinate-projection-length-relative-cap-sampling
+depends_on: ["d96502a3b8baff9b"]
+verifier_run: 727720d00cbc4897
+target_match: null
+---
+
+## Source
+
+- [f525b2b4bb53c54e](../candidates/f525b2b4bb53c54e.json), f525b2b4bb53c54e:3 §2, (3)–(5).
+- [f525b2b4bb53c54e](../candidates/f525b2b4bb53c54e.json), f525b2b4bb53c54e:5 §2, block affine scaling.
+
+## Statement
+
+Let $s\ge1$ and let $Q\subset\mathbb R_u\times\mathbb R^s$ be nonempty, compact and convex. Let its base projection have length $L>0$, and put $W=\sup_u |Q_u|_s>0$ and $A=|Q|_{s+1}$. On the grid $G=t+h\mathbb Z$, $h>0$, let $A_h(H)=h\sum_{u\in G}|(Q\cap H)_u|_s$, $A(H)=|Q\cap H|_{s+1}$, and $A_h=A_h(\mathbb R^{s+1})$. Then
+$$
+\frac{LW}{s+1}\le A\le LW,\qquad
+\sup_H\frac{|A_h(H)-A(H)|}{A}\le\eta:=\frac{hW}{A}\le\frac{(s+1)h}{L},
+$$
+where the supremum is over closed halfspaces and the whole space. The lower peak-to-total bound is sharp. If $\eta<1$, then $A_h>0$ and
+$$
+\sup_H\left|\frac{A_h(H)}{A_h}-\frac{A(H)}A\right|\le\frac{2\eta}{1-\eta}.
+$$
+For fixed $s$, $L/h\to\infty$ gives uniform normalized cap convergence. If the discrepancy stays bounded below by a positive constant along a sequence with positive sampled totals, $L/h$ is bounded along it. Under $u'=au+c$, $x'=Tx+bu+d$, with $a\ne0$ and $T$ invertible, use the actual grid $aG+c$. Both $\eta$ and $h/L$ are invariant.
+
+## Proof
+
+Write $[\alpha,\beta]$ for the projection. Choose $u_0$ with $|Q_{u_0}|_s$ arbitrarily close to $W$ and fix a point in each endpoint fiber. Convexity puts a translate of $((u-\alpha)/(u_0-\alpha))Q_{u_0}$ in $Q_u$ on $[\alpha,u_0]$ when $u_0>\alpha$, and one scaled by $(\beta-u)/(\beta-u_0)$ on $[u_0,\beta]$ when $u_0<\beta$. A zero-length side has zero integral. Integrating the two $s$th powers gives $A\ge L|Q_{u_0}|_s/(s+1)$. Taking the supremum gives the lower bound. The upper bound follows by integrating $|Q_u|_s\le W$. A full section at one endpoint and a singleton at the other give equality in the lower bound for their convex hull.
+
+For a closed cap, $g(u)=|(Q\cap H)_u|_s$ is compactly supported and upper semicontinuous by reverse Fatou on a fixed bounding box, using closedness. Brunn–Minkowski makes its $1/s$ power concave between positive sections, hence $g$ is log-concave on its positive support and is log-concave when extended by zero. The whole source has the same property. Apply scalar estimate (4) of d96502a3b8baff9b with sampling density $1/h$ and phase $-t/h$, then multiply by $h$. This gives $|A_h(H)-A(H)|\le h\sup g\le hW$. The identically zero case is immediate, and a section profile supported at one base gives the bound directly from its one possible sampled value. In particular $A_h\ge(1-\eta)A$. For $\eta<1$ the ratio error is at most
+$$
+\frac{|A_h(H)-A(H)|}{A_h}+\frac{A(H)|A_h-A|}{AA_h}\le\frac{2\eta}{1-\eta}.
+$$
+If the discrepancy is at least $b>0$, then either $\eta\ge1$ or this forces $\eta\ge b/(b+2)$. The upper bound on $\eta$ then bounds $L/h$.
+
+The map scales $h,L$ by $|a|$, $W$ by $|\det T|$, and ambient and covolume-weighted sampled volumes by $|a\det T|$. Its grid is $aG+c$, proving invariance.

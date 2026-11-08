@@ -1,0 +1,79 @@
+{
+  "candidate_id": "1a753eb623654f00",
+  "candidate_sha256": "eb8618628714592c0811ff7676faa5fbecfe52038680172720584c7364200f3b",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Only statement and proof differ from the original frozen candidate. The scalar force estimate and strict Markov tail calculation are unchanged and valid, as checked in the first review.",
+    "Integrating the bounded likelihood ratio under a probability row gives 1≤A. This follows because barρ_i is itself a probability and has that likelihood ratio under ρ_i.",
+    "For arbitrary X₀ in K_z, convexity puts the half-size copy (X₀+K_z)/2 in K_z and its volume is at least 2^{-d}v, regardless of closedness. Nonnegative concavity gives L≥L(X₀)/2 there.",
+    "For 1<T<L(X₀)/(2A), every point in the copy lies in the strict tail. Rearranging 2^{-d}v/M≤B_*/log T and letting T increase gives log(L(X₀)/(2A))≤2^d M B_*/v. If L(X₀)≤2A the bound is immediate. It holds pointwise, so the conclusion takes a supremum without invoking attainment.",
+    "The open interval from the initial review now falls within the statement and satisfies the corrected supremum conclusion. The correction matches the canonical source scope in b4f092ee1bb5a205 §3 and crosswalk :3."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:44:59+00:00",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "1a753eb623654f00",
+    "candidate_sha256": "61dbdf90bccd0b08af2c43163fd95b9439a7e515838dacc38f70e522ab50ff67",
+    "checks": [
+      "From the same-force relation all row weights are nonnegative, and total mass of the mixture gives sum of weights one. For l≤1 maximize x exp(−x/N) with x=−log l, giving N/e; for l>1 the negative-log contribution vanishes. Using E_i/M≤1 and the lower bound on Δ/ε gives B_* exactly.",
+      "The nonpositive row log mean bounds the positive-log sum by the negative-log sum. Strict L_i>T permits the displayed Markov bound with denominator log T. When L_i≤T, the bound L≤A L_i holds also under barρ_i by absolute continuity, so such a row contributes zero to the strict target tail. Probability normalization also forces A≥1.",
+      "For any point X₀ of any fiber, the half-size homothetic fiber lies in the same convex fiber, has volume at least 2^{-d}v, and satisfies L≥L(X₀)/2. If L(X₀)>2A, take 1<T<L(X₀)/(2A) so the whole copy lies in {L>AT}; the limit in T gives log(L(X₀)/(2A))≤2^d M B_*/v. The same bound is immediate at other points. Taking the supremum proves the intended conclusion without any attainment assumption.",
+      "Read b4f092ee1bb5a205 §3 and its crosswalk :3. The source has the exact force/tail inequalities and an upper bound conditional on a maximizer. The canonical claim explicitly uses sup L and calls for the arbitrary-point argument. No pending actual separator is treated as an input beyond the displayed abstract row assumptions.",
+      "Checked every original candidate digest against the pinned file, and computed exact raw and UTF-8 field digests for the reviewed candidate and its declared predecessors."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T14:42:38+00:00",
+    "issues": [
+      {
+        "defect": "The hypotheses only specify convex sampled fibers. Upper semicontinuity on a convex nonclosed fiber does not give attainment. For K=(0,1), dm the length measure, and L(x)=(1+x)/2, take M=M_max=v=1, barρ=dm, L_i=1/(2 log 2), dρ=(L_i/L)dm, A=2 log 2, and σ=N=E_i=Δ/ε=a_*=1. Set κ_i=K_*=2 log 2. Then ρ is a probability, L_i<1 so the log-row bound holds, the likelihood and force identities hold, and L has supremum 1 without a maximum.",
+        "locator": "Statement, final display, and Proof, second paragraph",
+        "repair": "Use sup_S L in the conclusion and the homothetic-copy argument at an arbitrary point X₀ with L(X₀)>2A, then take the supremum. If the intended scope is only compact convex fibers, explicitly assume compactness instead.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its proof uses the same homothetic superlevel construction on one compact positive body to bound an integral of log L and exclude all-positive limits after scale collapse. It does not transfer a row likelihood/log budget to a uniform upper bound.",
+        "fact_id": "eb06823f8e7b896a"
+      },
+      {
+        "comparison": "Uses projective mixtures on a compact hull to derive a lower inverse-moment comparison by Jensen. It lacks the same-force relation and the upper likelihood bound used for the reviewed target tail.",
+        "fact_id": "de5f82aecae55792"
+      }
+    ],
+    "readability": "The row symbols L_i are scalars here; equality with the value of L at a marked point is not needed for this tail estimate.",
+    "reviewed_proof_sha256": "edf585f54cf9c103a7d6e0e96485489017b177f133b8a75daf867a5c9ef981ae",
+    "reviewed_statement_sha256": "f14b34f4f580a209d69b22977524a1f0b1674ec51361ca567c08f8a6058a05fc",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T14:39:10+00:00",
+    "summary": "The same-force tail estimate and the claimed constant for the supremum are correct. The frozen statement asks for a maximum without assuming compact fibers.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof uses the same homothetic superlevel construction on one compact positive body to bound an integral of log L and exclude all-positive limits after scale collapse. It does not transfer a row likelihood/log budget to a uniform upper bound.",
+      "fact_id": "eb06823f8e7b896a"
+    },
+    {
+      "comparison": "Uses projective mixtures on a compact hull to derive a lower inverse-moment comparison by Jensen. It lacks the same-force relation and the upper likelihood bound used for the reviewed target tail.",
+      "fact_id": "de5f82aecae55792"
+    }
+  ],
+  "readability": "The title uses maximum informally. The revised mathematical conclusion explicitly uses a supremum and makes no attainment claim.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "8ccf707830806f49c1d35573f33b84c994ed5e0933f74bcaa28040aefdf25f88",
+  "reviewed_statement_sha256": "35127afd28a74190404c4fad9f8f1c7cf93c51e784e37e3d3a038d7da652aad4",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "61dbdf90bccd0b08af2c43163fd95b9439a7e515838dacc38f70e522ab50ff67",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:43:40+00:00",
+  "summary": "The revised statement and proof establish the tail and supremum bounds on all stated convex fibers, including nonclosed ones.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,32 @@
+{
+  "advances": "Ordinary planar sector feasibility at prescribed actual radial endpoints. The chord-directed test keeps all six areas. It does not supply the separate general lower bound for the inverse weight of the longest chord under a cap ceiling and a sorted area constraint.",
+  "author": "PK-research-agent",
+  "candidate_id": "2d946dd0fa59daf3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.214692+00:00",
+  "depends_on": [
+    "7d1ee06fa4119930"
+  ],
+  "draft_key": "pk-w35-shell-ordinary-sector-chord-schur",
+  "kind": "lemma",
+  "proof": "The consecutive and next-neighbor determinants of the listed unit-scale canonical directions are one. Thus the determinants of consecutive endpoints are $R_iR_{i+1}$ and the determinants of $P_{i-1},P_{i+1}$ are $R_{i-1}R_{i+1}$. The consecutive angular gaps are strictly less than $\\pi$, so the exact prescribed-sector criterion 7d1ee06fa4119930 applies. Its core conditions are exactly the given lower area bounds, and its diagonal coefficient $b_i-h_{i-1}-h_i$ simplifies to $\\ell_i$ by substituting these determinants. Therefore feasibility of these exact endpoints and areas is equivalent to $L\\succeq0$.\n\nWith $x_1=z,x_4=w$ fixed, the variables split into the two paths. The terms involving $(x_2,x_3)$ have positive-definite quadratic block with diagonal $(\\ell_2,\\ell_3)$ and off-diagonal $-h_2$, and their linear term is $-2(h_1 z,h_3 w)\\cdot(x_2,x_3)$. The terms involving $(x_0,x_5)$ have the block with diagonal $(\\ell_0,\\ell_5)$ and off-diagonal $-h_5$, and their linear term is $-2(h_0z,h_4w)\\cdot(x_0,x_5)$. Inverting the two blocks gives\n$$\n\\begin{aligned}\n(x_2,x_3)&=\\frac{(\\ell_3 h_1z+h_2 h_3w,\\ h_2h_1z+\\ell_2h_3w)}{\\Delta_{23}},\\\\\n(x_0,x_5)&=\\frac{(\\ell_5 h_0z+h_5 h_4w,\\ h_5h_0z+\\ell_0h_4w)}{\\Delta_{05}}.\n\\end{aligned}\n$$\nCompleting the two block squares leaves the asserted endpoint quadratic form with the stated coefficients. The two-by-two PSD test gives the exact feasibility inequalities. Since $\\gamma\\ge0$, replacing $z,w$ by their absolute values cannot increase the endpoint form. Each minimizing path vector is then nonnegative by the displayed expressions, proving the witness claim. In particular if all $h_i>0$ and the whole $L$ is PSD, the two path blocks are positive definite. Otherwise a nonzero null vector of a singular path block, extended by zero, would have zero full quadratic form and therefore lie in the kernel of $L$. The two outside neighbors each have a strictly positive incident edge coefficient to one of its entries and no other edge into that path, forcing both entries to vanish.\n\nFor a feasible datum the two path determinants are nonnegative by positive semidefiniteness. For positive-definite paths, multiplying the Schur matrix by $P$ gives the entries $F,-J,G$. Its diagonal and determinant inequalities give the polynomial test, and its evaluation at $(z,w)=(B,b)$ gives the last inequality. In a feasible datum with singular paths, apply the algebraic calculation to the fixed matrix $L+\\eta I$, which is positive definite for $\\eta>0$ with the same $h_i$. The displayed polynomials are continuous in its entries, so all inequalities persist as $\\eta\\downarrow0$. This limit concerns matrices with the given data fixed and requires no realizability of a perturbed body. A zero determinant does not justify inverting a singular path, and the exact PSD criterion remains the feasibility test there.\n",
+  "source_candidate_ids": [
+    "915016d15b315b1b"
+  ],
+  "source_candidate_sha256": {
+    "915016d15b315b1b": "9a958c04e76e920a097276a01b5959c1bde7bb916fc334e8833bcc2a5822a4b9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "915016d15b315b1b",
+      "locator": "915016d15b315b1b:01 §§1–3, (1)–(6), Schur complement at one chosen chord"
+    },
+    {
+      "candidate_id": "915016d15b315b1b",
+      "locator": "915016d15b315b1b:02 §4, (7)–(9), degenerate polynomial tests"
+    }
+  ],
+  "statement": "Let the prescribed cyclic ray endpoints for an ordinary planar body with interior mark zero be\n$$\n(P_0,\\ldots,P_5)=((A,0),(0,B),(-t,t),(-a,0),(0,-b),(r,-r)),\n\\qquad (R_0,\\ldots,R_5)=(A,B,t,a,b,r)>0.\n$$\nWrite $W_i$ for the sector area from $P_i$ to $P_{i+1}$, with cyclic indices, and assume $W_i\\ge R_iR_{i+1}/2$. Put\n$$\nh_i=\\frac1{R_iR_{i+1}}-\\frac1{2W_i},\\qquad\n\\ell_i=\\frac1{2W_{i-1}}+\\frac1{2W_i}-\\frac1{R_i^2}.\n$$\nLet $L$ have diagonal $\\ell_i$, entries $-h_i$ on cyclic adjacent positions, and zero elsewhere off diagonal. Write $\\Delta_{23}=\\ell_2\\ell_3-h_2^2$ and $\\Delta_{05}=\\ell_0\\ell_5-h_5^2$. When the two path blocks $\\{2,3\\}$ and $\\{0,5\\}$ are positive definite, define\n$$\n\\begin{aligned}\n\\alpha&=\\ell_1-h_1^2\\ell_3/\\Delta_{23}-h_0^2\\ell_5/\\Delta_{05},\\\\\n\\delta&=\\ell_4-h_3^2\\ell_2/\\Delta_{23}-h_4^2\\ell_0/\\Delta_{05},\\\\\n\\gamma&=h_1h_2h_3/\\Delta_{23}+h_0h_5h_4/\\Delta_{05}.\n\\end{aligned}\n$$\nWith $x_1=z,x_4=w$ fixed, the minimum of $x^{\\mathsf T}Lx$ is $\\alpha z^2-2\\gamma zw+\\delta w^2$. The sector datum is feasible exactly when $\\alpha,\\delta\\ge0$ and $\\alpha\\delta\\ge\\gamma^2$. If these inequalities fail there is a nonnegative witness vector with negative quadratic form.\n\nIn every actual feasible datum, including when one of the determinants vanishes, put\n$$\n\\begin{aligned}\nP&=\\Delta_{23}\\Delta_{05},\\\\\nF&=\\ell_1P-h_1^2\\ell_3\\Delta_{05}-h_0^2\\ell_5\\Delta_{23},\\\\\nG&=\\ell_4P-h_3^2\\ell_2\\Delta_{05}-h_4^2\\ell_0\\Delta_{23},\\\\\nJ&=h_1h_2h_3\\Delta_{05}+h_0h_5h_4\\Delta_{23}.\n\\end{aligned}\n$$\nThen $\\Delta_{23},\\Delta_{05},F,G\\ge0$, $FG\\ge J^2$, and $FB^2-2JBb+Gb^2\\ge0$. At a zero determinant these are necessary conditions.",
+  "subgoal_id": "pk-intake-pk-w35-shell-ordinary-sector-chord-schur",
+  "title": "Two-endpoint Schur test for actual planar sector areas"
+}

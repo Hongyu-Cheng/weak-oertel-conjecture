@@ -1,0 +1,34 @@
+{
+  "advances": "Conditional on an actual fixed-normal physical martingale. The decomposition uses actual paired points and no conjectured conversion into original volume payment.",
+  "author": "PK-research-agent",
+  "candidate_id": "aa850303430695ed",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.925823+00:00",
+  "depends_on": [],
+  "draft_key": "w33-three-layer-horizontal-psd-and-midpoint-valuation",
+  "kind": "theorem",
+  "proof": "Disintegrate the given coupling on its compact source space. At base $\\pm1$ the conditional target base stays there by its extreme mean. At a middle input the endpoint branch probabilities are equal, say $a$, so the middle branch has probability $1-2a$. On this middle branch draw the original middle output, and on an endpoint branch of total mass $2a$ draw a pair from the two conditional endpoint laws using their independent product, then use its midpoint as the intermediate point. At endpoint sources the original target is the intermediate point. All kernels are Borel, and zero-probability branches are immaterial. The intermediate base stays fixed and the continuous mean equals the original input by the original row mean. The normal moment at a middle input gives $a(h_-+h_+-2h_0)=0$. When $a>0$, actual inclusion and this equality place every pair midpoint on $F_0$. Let $\\nu'$ be the intermediate law and $\\kappa$ the tuple law counting the full $2a$ branch. Splitting each tuple midpoint with probabilities $1/2,1/2$ gives precisely the original endpoint marginals, and all other intermediate mass stays fixed. Thus $\\nu'-\\eta$ is the displayed midpoint integral.\n\nFor the first coupling $\\gamma_1$ from $\\nu$ to $\\nu'$, let $\\Delta=x'-x$. Define $A$ by integrating the pushforward of $(1-t)\\Delta\\Delta^{\\mathsf T}\\,dt\\,d\\gamma_1$ along $(p,x,x',t)\\mapsto(p,x+t\\Delta)$ for $0\\le t\\le1$. The matrix measure is finite and PSD by compactness and nonnegative rank-one integrands. The segment stays on the actual face at its original base by convexity. Test against a smooth compactly supported function $\\phi$ of the ambient coordinates. The continuous Taylor formula has linear term $\\nabla_x\\phi(p,x)\\cdot\\Delta$, which integrates to zero by the first-stage conditional mean. Its remainder is exactly $\\int\\operatorname{Hess}_x\\phi:dA$. Thus $\\nu'-\\nu=\\operatorname{div}_x\\operatorname{div}_x A$ distributionally, proving the claimed signed formula without differentiation across base layers. For $C^2$ concave tests the negative Hessian and midpoint Jensen terms give the nonnegative sign of $\\int\\phi\\,d(\\nu-\\eta)$. For nonsmooth finite concave tests on the physical convex hull the sign follows by conditional Jensen when the integrals are finite.\n\nThe first stage fixes $p$ and each full split branch raises its mean $p^2$ by one, giving the first variance identity. The first-stage continuous variance is $\\int|\\Delta|^2\\,d\\gamma_1$, since the linear term vanishes; it equals twice the trace because $\\int_0^1(1-t)\\,dt=1/2$. The continuous increment of a split tuple is\n$$\n\\frac{|y_-|^2+|y_+|^2}{2}-\\left|\\frac{y_-+y_+}{2}\\right|^2\n=\\frac{|y_+-y_-|^2}{4}.\n$$\nThis proves the remaining formulas and the vanishing conclusion by positivity.\n\nFor necessity take an actual product $[-1,1]\\times T$ with a planar triangle $T$ and a common unit edge parametrized by $s\\in[0,1]$. Use the source $\\delta_{(0,3/8)}$ and target $\\tfrac12\\delta_{(-1,0)}+\\tfrac14\\delta_{(1,1/2)}+\\tfrac14\\delta_{(1,1)}$. Their means agree. The pairing sends its two pairs through intermediate tangent points $1/4$ and $1/2$ with equal masses. Here $\\kappa$ assigns mass $1/2$ to each pair $(0,1/2)$ and $(0,1)$. The horizontal measure along the edge at base zero has tangent density\n$$\nK(s)=\\tfrac12\\min\\{s-1/4,1/2-s\\}\\quad(1/4\\le s\\le1/2),\n$$\nand is zero elsewhere. Indeed $K''=\\tfrac12\\delta_{1/4}-\\delta_{3/8}+\\tfrac12\\delta_{1/2}$. Its peak is $1/16$ and its integral is $1/128$, giving $|\\kappa|=1$, $2\\operatorname{tr}A=1/64$, and pair variance $5/32$, totaling $11/64$. If $A=0$, the middle-base part of the identity forces the midpoint law to be concentrated at $3/8$. The negative endpoint target forces each negative tangent to be zero, so the positive tangent would have to be $3/4$, absent from the target. Thus a pure nonnegative midpoint representation is impossible.\n",
+  "source_candidate_ids": [
+    "d5b32c15d5673f71"
+  ],
+  "source_candidate_sha256": {
+    "d5b32c15d5673f71": "41160a46038a8cecb3c5082bcb94edf11eaa8bf7bb3da5044de14ee2628b758e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d5b32c15d5673f71",
+      "locator": "d5b32c15d5673f71:01 §§1–4, (1)–(4), three-layer pair and PSD decomposition"
+    },
+    {
+      "candidate_id": "d5b32c15d5673f71",
+      "locator": "d5b32c15d5673f71:02 §5, (5)–(7), exact variances"
+    },
+    {
+      "candidate_id": "d5b32c15d5673f71",
+      "locator": "d5b32c15d5673f71:03 §6, (8)–(11), actual-face witness"
+    }
+  ],
+  "statement": "Let nonempty compact convex $K_-,K_0,K_+\\subset\\mathbb R^d$ at bases $-1,0,1$ satisfy $(K_-+K_+)/2\\subset K_0$. At a fixed unit normal $u$ use their actual support faces $F_p$. Suppose finite nonnegative measures $\\nu,\\eta$ on the three lifted faces admit a physical martingale coupling. There are a finite PSD matrix-valued measure $A$ on those faces, acting only in the continuous coordinates, and a finite nonnegative measure $\\kappa$ on endpoint face pairs $(y_-,y_+)$ whose actual midpoint $m=(y_-+y_+)/2$ belongs to $F_0$, with\n$$\n\\nu-\\eta=-\\operatorname{div}_x\\operatorname{div}_x A\n+\\int\\bigl[\\delta_{(0,m)}-\\tfrac12\\delta_{(-1,y_-)}-\\tfrac12\\delta_{(1,y_+)}\\bigr]\\,d\\kappa .\n$$\nThere is a same-base martingale intermediate law $\\nu'$ for which\n$$\n\\begin{aligned}\n|\\kappa|&=\\int p^2\\,d(\\eta-\\nu),\\\\\n2\\operatorname{tr}A(\\mathrm{total})&=\\int |x|^2\\,d(\\nu'-\\nu),\\\\\n\\int |x|^2\\,d(\\eta-\\nu)&=2\\operatorname{tr}A(\\mathrm{total})\n+\\tfrac14\\int |y_+-y_-|^2\\,d\\kappa .\n\\end{aligned}\n$$\nFor $C^2$ concave physical tests the formula is a sum of nonnegative Hessian and midpoint contributions. In particular $\\nu=\\eta$ forces both nonnegative measures to vanish. The horizontal term cannot in general be omitted, even on actual equal triangle faces.",
+  "subgoal_id": "pk-intake-w33-three-layer-horizontal-psd-and-midpoint-valuation",
+  "title": "A three-layer boundary martingale splits into horizontal PSD divergence and actual midpoint terms"
+}

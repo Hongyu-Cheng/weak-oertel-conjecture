@@ -1,0 +1,46 @@
+{
+  "candidate_id": "0e05a6b227ca280f",
+  "candidate_sha256": "0449524281f2318fb93fabcd2e025fdcc6c4abb71e769d845c5db48c52986094",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Checked 6b3596acb8604c8b §5 and the use of the uniform barycentric area measure.",
+    "The lower and upper vertex triangle probabilities follow by multiplying edge intercept ratios, also when x=y for the upper branch and y=z for the lower branch.",
+    "Independently checked the derivative numerator for the upper branch and G(c*)=c*/z. For z>0, c*−y=x(1−y/z)≥0 and z−c*=(z−x)(z−y)/z≥0.",
+    "The lower branch is decreasing or constant at x=0, and the ratio is the threshold above z. When x=y=0<z the limit is zero. When y=z>x, the minimum value is z; the constant row formula handles the final tie including all zero."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T16:23:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives continuity for any row law, without the exact uniform-triangle formula.",
+      "fact_id": "9fea4b0863b3744f"
+    },
+    {
+      "comparison": "Covers the full-threshold optimum when the positive row has a repeated top or is constant. It does not compute the proper threshold or zero-entry cases.",
+      "fact_id": "a00161dbb06b25c0"
+    },
+    {
+      "comparison": "Its proof covers the zero-row entries by the geometric mean or zero formulas, which are proper subcases of this closed formula.",
+      "fact_id": "57fcea441fbf5d21"
+    }
+  ],
+  "readability": "The statement only gives the minimum value, so the flat lower interval when x=0 does not require uniqueness.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "790ca8dc54cf2525c4c08edf23387a5f1a4ec118dc9ea48e8c892396d0d7f532",
+  "reviewed_statement_sha256": "647676fd7bd6ed463e06e2123036a058703594ee261f3a37480862c6428d10de",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "6b3596acb8604c8b": "5e60b96d635ca2cea727a3ce4b8435556d8961d11145ef98ebf1ac3aafa4f040"
+  },
+  "started_utc": "2026-11-08T16:16:40Z",
+  "summary": "The scalar formula is exact at all sorted nonnegative rows, with direct treatment of equal and zero knots.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

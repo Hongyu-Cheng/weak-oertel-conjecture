@@ -1,0 +1,26 @@
+{
+  "advances": "This is a uniform bound conditional on same-force contact rows and their likelihood and force estimates.",
+  "author": "PK-research-agent",
+  "candidate_id": "1a753eb623654f00",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:34:26.403107+00:00",
+  "depends_on": [],
+  "draft_key": "log-buffer-row-tail",
+  "kind": "lemma",
+  "proof": "For $0<l\\le1$, $l^{1/N}(-\\log l)\\le N/e$ by maximizing $x\\exp(-x/N)$ for $x\\ge0$. Thus the same-force formula and $E_i\\le M$ imply $\\sum_i\\sigma_i(-\\log L_i)_+\\le B_*$. The nonpositive logarithmic mean of the source values gives $\\sum_i\\sigma_i(\\log L_i)_+\\le B_*$. Hence $\\sum_{L_i>T}\\sigma_i\\le B_*/\\log T$. For each $L_i\\le T$ the likelihood bound and absolute continuity give $\\bar\\rho_i\\{L>AT\\}=0$. The target mixture proves the tail estimate.\n\nThe likelihood bound and the probability normalization give $A\\ge1$. Take any $X_0$ in a fiber $K_z$. Concavity and nonnegativity give $L\\ge L(X_0)/2$ on $(X_0+K_z)/2$, of volume at least $2^{-d}v$. If $L(X_0)>2A$, apply the tail estimate for every $1<T<L(X_0)/(2A)$ and let $T\\uparrow L(X_0)/(2A)$. It follows that $\\log(L(X_0)/(2A))\\le 2^dM B_*/v$. The bound holds also if $L(X_0)\\le2A$, and taking the supremum proves the result.\n",
+  "source_candidate_ids": [
+    "b4f092ee1bb5a205"
+  ],
+  "source_candidate_sha256": {
+    "b4f092ee1bb5a205": "8c179864cfd37c57578de8e85ab1e5987695f1482af865def0e19c48aff6bb6f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b4f092ee1bb5a205",
+      "locator": "§3, (1)"
+    }
+  ],
+  "statement": "Let $S$ be a finite union of sampled convex $d$-fibers with $d$-dimensional volume at least $v>0$ in each fiber, summed measure $dm$ and $M\\le M_{\\max}$. Let $L>0$ on sampled interiors be nonnegative, upper semicontinuous and concave on each fiber. For finitely many source values $L_i>0$ assume probabilities $\\rho_i,\\bar\\rho_i$ and weights $\\sigma_i$ satisfy\n$$\n\\frac{dm}{M}=\\sum_i\\sigma_i\\bar\\rho_i,\\quad\nd\\bar\\rho_i=(L/L_i)\\,d\\rho_i,\\quad L/L_i\\le A\\ \\rho_i\\text{-a.e.},\\qquad\n\\sum_i\\sigma_i\\log L_i\\le0.\n$$\nAssume $N>0$, $0\\le E_i\\le M$, $\\kappa_i\\ge0$, $\\sum_i\\kappa_i\\le K_*$, and\n$$\n\\sigma_i=\\frac{\\kappa_i (L_i E_i/M)^{1/N}}{\\Delta/\\varepsilon},\n\\qquad \\Delta/\\varepsilon\\ge a_*>0.\n$$\nPut $B_*=K_*N/(e a_*)$. Then for $T>1$,\n$$\nm\\{L>AT\\}/M\\le B_*/\\log T,\\qquad\n\\sup_S L\\le 2A\\exp(2^dM_{\\max}B_*/v)=:L_*.\n$$",
+  "subgoal_id": "pk-intake-log-buffer-row-tail",
+  "title": "Same-force logarithmic contact rows bound the parameter maximum"
+}

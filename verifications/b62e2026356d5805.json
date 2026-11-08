@@ -1,0 +1,61 @@
+{
+  "candidate_id": "028fa638d6c396d9",
+  "candidate_sha256": "20b44cbbce8e51e1f7d3cc9391951538472192822d3a7d6ec52873c8397900a3",
+  "checked_dependency_candidate_sha256": {
+    "8c6a53dd27e5c125": "b0ad38a189b298edb2725b4082811faacf9a2e8a55e38a912789602e0fa82fe5",
+    "c9b7d48527d3d6a1": "a2309dd629f61c01d6132c4d235cc7d33c3d1e003c4bfa8594cff33ed0714394"
+  },
+  "checks": [
+    "Read the source contact decomposition and hinge calculations in 0ca1f875b898090e §§2–3, its interval calibration in §5, and the covariance and strict-mass scope in e40a05fd5546debc §6. The frozen draft adds no unsupported assertion of finite cap tilts at the upper endpoint.",
+    "Trace-one generators make the contact cone closed. Strict separation, a small negative scalar shape correction, and uniform support control inside and outside a contact neighborhood contradict maximality. The cone dimension gives d+d(d+1)/2 contacts, and the trace gives total weight d.",
+    "The direction A^{-1}v supports the contact c+Av. Mixing the original dominated laws with weights λ/d keeps mass and base mean, and the between-source covariance contributes only A²/d in the continuous block. The within-source blocks remain in the full covariance.",
+    "At strict mass, a finite supergradient of the raw support along the balanced mass line exists. The prescribed-slope theorem applies at the supported raw moment t(c+Av), giving an actual finite cap. For a common source density factor one can divide the entire raw graph by that factor, apply the same support plane with unchanged slope, and scale back.",
+    "Each normalized hinge integrates to t(u·c+1−b). Continuous balance cancels u·c, and testing the aggregate positive part on an attained mass-T balanced source gives −BT without any sign assumption on B. Rearrangement gives B≥−dt/(T−t) and the claimed upper bound.",
+    "For identical unit intervals the balanced fills are upper and lower intervals of length t/M on every fiber. The radius is (M−t)/(2M), so each hinge integral is t²/(M−t), with ratio t/M to the upper bound."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "8c6a53dd27e5c125",
+      "candidate_sha256": "b0ad38a189b298edb2725b4082811faacf9a2e8a55e38a912789602e0fa82fe5",
+      "fact_sha256": "5bf2f6e44d40ffeb86d947c7916b8a5a1a4a14dcc0a54803ef36faeaa7081f0a",
+      "hypotheses": "Its compact raw graph at (t,tj), strict interpolation between (0,0) and (T,Tj), and indicator support-optimizer uniqueness apply to these finite positive fibers. A common scaling preserves feasibility after dividing all raw coordinates.",
+      "reviewed_proof_sha256": "575700ce2b9bef6c366fac3503a095ef1e0ee3933556a986196391a6bf1c8a78",
+      "reviewed_statement_sha256": "69cacb2bd38cf7aa5bbabbe69a7c2ce1ea6de2280d15f8d34f9efe115714df68"
+    },
+    {
+      "candidate_id": "c9b7d48527d3d6a1",
+      "candidate_sha256": "a2309dd629f61c01d6132c4d235cc7d33c3d1e003c4bfa8594cff33ed0714394",
+      "fact_sha256": "73a948213926820240215b1651a729cb3ce08c3ff1e7a5de976a7d2193338659",
+      "hypotheses": "Use its prescribed-slope theorem on the actual raw support plane through t(c+Av), at a strict interior balanced mass and u=A^{-1}v nonzero. The theorem handles the original off-face fiber traces as well.",
+      "reviewed_proof_sha256": "a630950bec318043b6ca36fbd96be2f448e648bc9ec6f63ad2fc2cef505d1e50",
+      "reviewed_statement_sha256": "5126b6a32d37404d443fe1cbf53cbf45603f3de220ca349758629b431a545612"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:29:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This concerns a free-mass maximizer of the raw moment ellipsoid and produces a zero weighted mass-slope condition at that optimizer. It gives no general centroid-scale bound at arbitrary positive strict mass.",
+      "fact_id": "52b1c0ed5583eacd"
+    },
+    {
+      "comparison": "Gives a lower hinge bound for prescribed cover weights using a known inball. It gives no John contact covariance or upper bound from maximum balanced mass.",
+      "fact_id": "39373c1978a1f4d2"
+    }
+  ],
+  "readability": "The letter h is used for both a support function and a small step in one paragraph. The arguments distinguish them, and the proof remains unambiguous.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, exact original-source and predecessor comparison, and exact arithmetic replay for numerical certificates.",
+  "reviewed_proof_sha256": "867e46130d1bb60179da5450d6e276596689df4005a164e908701921a6136217",
+  "reviewed_statement_sha256": "3bae08adee2c2992e6258cf70053d5068819164fb0752e196ba16e6c4dc7fd67",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:25:49Z",
+  "summary": "The finite John contact decomposition, actual balanced cap witnesses, full covariance, and hinge bound follow with the stated mass conventions.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

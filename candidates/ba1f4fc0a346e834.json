@@ -1,0 +1,30 @@
+{
+  "advances": "The certificate is finite and applies to actual occupied parities or midpoint-closed labels, with closed boundary atoms retained. The arbitrary-threshold implication allows an empty trace.",
+  "author": "PK-research-agent",
+  "candidate_id": "ba1f4fc0a346e834",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:17:06.635733+00:00",
+  "depends_on": [],
+  "draft_key": "face-local-parity-surviving-trace-certificate",
+  "kind": "lemma",
+  "proof": "Choose one closed halfspace $\\{a_i\\ge b_i\\}$ of mass below $\\tau$ containing each outside point. For each index choose $U_i>\\max(b_i,\\max_P a_i)$. In the compact threshold box $b_i\\le c_i\\le U_i$, impose that every outside point satisfies some $a_i(p)\\ge c_i$. This condition is closed by finiteness, and the original thresholds are feasible. Maximize $\\sum_i c_i$ over this set. Each nonsaturated index $i$ then has a witness $p_i$ outside $F$ with $a_i(p_i)=c_i$ and $a_j(p_i)<c_j$ for all $j\\ne i$. Otherwise every outside point satisfying the other strict inequalities has a positive $i$th gap, or there is no such point. By finiteness $c_i$ could be increased a little without losing feasibility.\n\nThe trace $T=\\{p\\in P:a_i(p)<c_i\\text{ for every }i\\}$ lies in $F$. It is closed as a subset of $P$ under taking the convex hull, because the strict region is convex. Saturated indices have empty closed cap traces. The $r$ nonsaturated closed caps cover $P\\setminus T$, each has mass below $\\tau$ since $c_i\\ge b_i$, and $r\\ge1$ since there is an outside point.\n\nTwo distinct witnesses of the same label would have a midpoint in $P$ satisfying all inequalities strictly, by their exclusive equality patterns. That midpoint is outside $F$ since an interior segment point in a face forces both endpoints into the face. The same contradiction holds for a witness paired with a point of $T$ of its label. The $r$ witness labels are therefore distinct and disjoint from those of $T$. Summing the masses of the closed caps gives $M-V(T)<r\\tau$, proving both bounds and $k(T)<k$. At $\\tau=M/k$, the inequality rules out empty $T$ and violates the stated quota on nonempty $T$. This proves the face conclusion.\n\nFor a complete base $P=\\operatorname{conv}(P)\\cap(c+L)$, same-parity endpoints have midpoint in $c+L$ and in the convex hull, hence in $P$. A retained difference lies in $2L$ if and only if it belongs to twice the direction lattice of the inherited affine lattice, since its half already lies in the direction space of the minor. Thus the count in the proof equals the actual inherited count. With quotas on every proper face, the center set is contained in no proper face. If its convex hull missed the relative interior, a relative supporting hyperplane at a point in the relative interior of that smaller convex hull would put the entire smaller hull in a proper face. This is impossible. In rank zero the face statements are vacuous and the unique point has depth $M$.\n",
+  "source_candidate_ids": [
+    "9ae432ab1b731d70"
+  ],
+  "source_candidate_sha256": {
+    "9ae432ab1b731d70": "26e4c5df5049bcbc231e3fc1fb2cc6b1a30d9b73bf5f462b930b05af2e7d341a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9ae432ab1b731d70",
+      "locator": "9ae432ab1b731d70:03 §5, (10)–(11) and §§2–3 witness proof"
+    },
+    {
+      "candidate_id": "9ae432ab1b731d70",
+      "locator": "9ae432ab1b731d70:01 §§1–4, (1)–(9); §6, midpoint-label and relative-interior consequences"
+    }
+  ],
+  "statement": "Let $P$ be a finite nonempty set in a real affine space with $k$ occupied labels, and assume the geometric midpoint of every pair of distinct same-label points belongs to $P$. Give the points positive weights with total $M$. For $T\\subset P$, let $V(T)$ and $k(T)$ be its weight and occupied-label count, both zero for the empty set. Fix a nonempty proper face $F$ of $\\operatorname{conv}P$ and $\\tau>0$. If every $p\\in P\\setminus F$ has raw closed-halfspace depth below $\\tau$, there are a possibly empty trace $T\\subseteq P\\cap F$ with $T=P\\cap\\operatorname{conv}(T)$ when nonempty and $r\\ge1$ outside witnesses such that\n$$\nr+k(T)\\le k,\\qquad M-V(T)<r\\tau\\le (k-k(T))\\tau.\n$$\nIn particular $k(T)<k$ and $V(T)>M-(k-k(T))\\tau$. At $\\tau=M/k$, if every nonempty closed $T$ in $F$ satisfies $V(T)\\le k(T)M/k$, some outside point has depth at least $M/k$. These statements apply to a complete finite affine-lattice base with labels modulo twice its direction lattice and counts inherited on each minor. Under the face-local quotas on every proper face, the convex hull of points of depth at least $M/k$ meets the relative interior of $\\operatorname{conv}P$.",
+  "subgoal_id": "pk-intake-face-local-parity-surviving-trace-certificate",
+  "title": "A surviving-trace certificate for depth outside a face"
+}

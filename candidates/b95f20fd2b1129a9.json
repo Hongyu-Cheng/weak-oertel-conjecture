@@ -1,0 +1,30 @@
+{
+  "advances": "Proves the exact restricted capped-normal ingredient for symmetric simplex chains.",
+  "author": "PK-research-agent",
+  "candidate_id": "b95f20fd2b1129a9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:28:54.158174+00:00",
+  "depends_on": [
+    "27ae4680f7a92708",
+    "65d374efd09b8c3d",
+    "870ad0085472647d"
+  ],
+  "draft_key": "capped-normal-simplex-angular-surplus",
+  "kind": "theorem",
+  "proof": "For $3\\le d\\le9$ apply the exact finite capped-minimum theorem. For $d\\ge10$, set $c=9/20$ in the accepted capped escape theorem 65d374efd09b8c3d. The accepted fractional gamma theorem 870ad0085472647d gives the strict scalar premise for every positive integer shape and every $p\\in[0,1]$. The resulting sign probability is strictly greater than $9/20$. The sequence $\\Gamma_d=(d/(d+1))^d$ is decreasing because the derivative of $x\\log(x/(x+1))$ for $x>0$ is $-\\log(1+1/x)+1/(x+1)<0$. The sign follows from $\\log(1+t)>t/(1+t)$ for $t>0$, by differentiating the difference. The exact comparison is\n$$\n\\frac9{20}-\\frac76\\left(\\frac{10}{11}\\right)^{10}\n=\\frac{310464227}{1556245476060}>0.\n$$\n\nFor the geometric equivalence let $G=\\sum_{i=0}^d E_i$. The change to $G$ and the barycentric ratios has Jacobian $G^d$, and the joint density factors into a gamma density and a constant simplex density. Thus $(E_1/G,\\ldots,E_d/G)$ is uniform on $T_d$. Set $a_0=-1$ and $a_i=(d+1)u_i-1$ for $i\\ge1$. The coefficient and normal constraints correspond in both directions, and the cap condition becomes $\\sum_i a_i E_i\\ge0$ after multiplying by the positive $G(d+1)$. Its boundary has zero simplex volume, and the signed sum has no atom at zero since the fixed negative unit phase has a continuous law.\n",
+  "source_candidate_ids": [
+    "3f7ae72f2c829951"
+  ],
+  "source_candidate_sha256": {
+    "3f7ae72f2c829951": "1580187607cd85870e7cc1d843203c303d40c08e360ac9ecbefdb3755563ed18"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3f7ae72f2c829951",
+      "locator": "Precise statement (1)–(2); All d≥10; Equivalence with the simplex cap statement"
+    }
+  ],
+  "statement": "Let $d\\ge3$. For independent unit exponentials $E_0,\\ldots,E_d$, if $a_0=-1$, $a_i\\in[-1,1]$ and $\\sum_i a_i=0$, then\n$$\n\\Pr\\Bigl(\\sum_i a_iE_i\\ge0\\Bigr)>\\frac76\\left(\\frac d{d+1}\\right)^d.\n$$\nEquivalently, for $T_d=\\operatorname{conv}(0,e_1,\\ldots,e_d)$ and any $u\\in[0,\\infty)^d$ with $\\sum_i u_i=1$ and $\\max_i u_i\\le2/(d+1)$, the cap $T_d\\cap\\{x:u\\cdot x\\ge1/(d+1)\\}$ has relative volume strictly greater than $\\tfrac76(d/(d+1))^d$.",
+  "subgoal_id": "pk-intake-capped-normal-simplex-angular-surplus",
+  "title": "Capped-normal angular surplus for simplex centroid caps"
+}

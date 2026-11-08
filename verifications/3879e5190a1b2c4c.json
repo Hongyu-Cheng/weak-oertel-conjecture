@@ -1,0 +1,36 @@
+{
+  "candidate_id": "ebea5ab33e39407b",
+  "candidate_sha256": "b4ac73764be75e8dcaec5672c90e824f11b1cff85c862bbf8cfc16dc2684f995",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For u,v>0 the point (u+v,−u) has x+y=v and (0,−β) has x+y=−β. Their convex segment crosses x+y=0 at interpolation fraction β/(β+v) from (0,−β), with positive x-coordinate β(u+v)/(β+v). The positive diagonal chord endpoint bounds this by ρ. Multiplication by β+v>0 gives βu+(β−ρ)v≤βρ.",
+    "The coordinate change has absolute determinant one. For β>ρ the two positive intercepts are ρ and βρ/(β−ρ), so the closed triangle has area βρ²/[2(β−ρ)]. If the closed sector is a proper closed subset of that triangle, its relatively open complement meets the interior and has positive area. Conversely, the closed sector can differ from the original sector only on the two coordinate axes by closedness of K.",
+    "For the attaining disk intersection, the defining halfplane contains a neighborhood of zero. Substitution of v=−u on the negative y-axis gives ρu≤βρ, and substitution of v=0 gives u≤ρ. A centered disk containing both endpoints preserves both cutoffs. For β>ρ choose a disk containing the triangle as well, which makes the sector closure that triangle.",
+    "For β=ρ or β<ρ the halfplane contains every (u,v) with 0<u<ρ and v>0. The disk intersections contain rectangles of arbitrarily large area in that strip as the radius grows. Each intersection is a compact convex body with the same fixed endpoint pair.",
+    "Verified the source hash and checked 1a4f9cc73e4a014c §2, (4)–(5) for the endpoint construction and area bound. The exact equality and sharpness extensions are proved by the frozen argument."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T10:59:55Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same unique-cap planar sector under a positive fan and bounds ratios of alternating sector areas. It gives no containment or sharp area in terms of the two specified chord endpoints, no characterization of equality for those endpoints, and no unboundedness when β≤ρ.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    }
+  ],
+  "readability": "Here closure refers to the open-sign sector inside the body, with the two axis boundaries restored when present. The proof handles the critical β=ρ case in its strip argument.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "f4847eb5664beb4d78057975a0376ae64b19fed9e2e7a054d82411808f935fac",
+  "reviewed_statement_sha256": "11f2b81a332ad26b99ead33bf6309e1d20dd9eb6fb63e13cb2c0d19f3ca0997b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:56:53Z",
+  "summary": "The actual negative-axis endpoint and diagonal endpoint force the full sector into the stated triangle when its second intercept is finite. The closure characterization and the constructions for every parameter range are correct.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

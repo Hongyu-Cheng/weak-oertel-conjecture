@@ -1,0 +1,31 @@
+{
+  "advances": "All d≥2 for least-active positive-weight square stochastic maxima with a nonunit capacity vector. No exclusion of every lower-rank case.",
+  "author": "PK-research-agent",
+  "candidate_id": "39e474bb51b8daba",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.776869+00:00",
+  "depends_on": [
+    "156bfb331124ae75",
+    "1cdceac089be44d8",
+    "63c38ebdb1d43777",
+    "8bdcdcd6e2fa69d9"
+  ],
+  "draft_key": "simplex-stochastic-full-row-excludes-full-active-rank",
+  "kind": "theorem",
+  "proof": "The central-pair selection lemma applies to this nonunit positive-weight square stochastic maximum. It gives a full row with a proper minimizing cut capturing two vertices whose actual section-centroid coordinates are at most $1/d$. Apply the accepted corrected central-pair curvature theorem to that row with threshold normalized to one. It gives a direction of strictly positive optimized capacity Hessian; properness supplies local $C^2$ regularity in that theorem's setting. Positive homogeneity rescales the Hessian at the actual row by the inverse of its positive threshold, so the same direction is positive there. Its span is a one-dimensional positive-definite subspace for that row's positively weighted capacity. All row objectives are finite and positively homogeneous, as follows from the definition by testing the maximum height and rescaling the threshold. The accepted joint funded-index bound therefore applies with $m=d+1$ columns and the selected full row, yielding $k+1\\le d+1$.\n\nThe unit-vector exception used in the source is covered by the full-cut classification incorporated in the central-pair input: if a strictly positive row has a full-cut minimizing threshold at a maximum, it saturates at least $d$ columns and the capacity vector is already realized by a zero-diagonal column-stochastic matrix.\n\nThe latter clause is a direct consequence of the same accepted funded-index theorem: each proper full-row minimizing cap captures at least two vertices, and they are central when all $b_j\\le1/d$. Thus each of the $f$ full rows supplies a one-dimensional positive-definite subspace by the accepted corrected curvature theorem, giving $k+f\\le d+1$ jointly.\n",
+  "source_candidate_ids": [
+    "f9d097c4c244eb84"
+  ],
+  "source_candidate_sha256": {
+    "f9d097c4c244eb84": "62ae8b1335e7860eac27a8a10d97a64d2f67e996c2ae6b0ac2c90f421b09c553"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f9d097c4c244eb84",
+      "locator": "Statement and §3, full active rank and proportional funding"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and $m=d+1$. For uniform barycentric $U$ on $\\Delta_d=\\{u\\ge0:\\sum_j u_j=1\\}$ define the row capacity $\\phi_d(x)=\\inf_{t>0:\\Pr(x\\cdot U\\le t)>0}t/\\Pr(x\\cdot U\\le t)^{1/d}$. Fix positive weights $c_i$ on the $m$ rows of nonnegative $m$-square column-stochastic matrices and let $H(X)=\\sum_i c_i\\phi_d(X_i)$. Let $X$ be a global maximizer of $H$ with the fewest nonzero rows, and suppose its capacity vector is not a standard unit vector. If $X$ has a strictly positive row, then its number $k$ of nonzero rows is at most $d$. If the full rows' common actual centroid satisfies $b_j\\le1/d$ for every $j$, and there are $f$ strictly positive rows, then $k+f\\le d+1$.",
+  "subgoal_id": "pk-intake-simplex-stochastic-full-row-excludes-full-active-rank",
+  "title": "A full row forces a deficient active rank at a least-active simplex-capacity maximum"
+}

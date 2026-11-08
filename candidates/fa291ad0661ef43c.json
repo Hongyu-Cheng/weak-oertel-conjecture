@@ -1,0 +1,45 @@
+{
+  "advances": "Exact one-sided body derivative on the realized cone at positive width and stationarity at unrestricted minima. A separator is attached to a fixed complete selection.",
+  "author": "PK-research-agent",
+  "candidate_id": "fa291ad0661ef43c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.945187+00:00",
+  "depends_on": [
+    "580ce39d736a2d9e",
+    "d12441923715ac68",
+    "828211a20fa24681",
+    "8820984cf6a6942e"
+  ],
+  "draft_key": "outward-smoothed-full-menu-envelope-and-separator",
+  "kind": "theorem",
+  "proof": "The compact representative set retains every original active tilt's $u,S,A$, boundary ramp, and through-source first response by clipping. Since these data are continuous on the compact representative set and $S$ is positive and bounded away from zero, the weakly closed balance condition defines a compact convex probability class, with nonemptiness from the finite mark-balance argument of the quantile cover. The two displayed positive reweightings follow by substitution and are inverse to one another.\n\nFor fixed $\\Phi$ abbreviate the continuous response function by $L_N$. Apply 828211a20fa24681 to an increasing sequence of finite nets in $\\mathcal A_i$ and the ball $\\{|z|\\le R\\}$ of trial mark velocities. Its finite dual is the maximum of $\\int L_Nd\\nu-R|\\int g_Nd\\nu|$, with a maximizing tuple of at most $d+1$ cap atoms. The primal maxima converge uniformly on the fixed ball by joint continuity. The sparse tuples have convergent subsequences in the product of the compact cap set and simplex. Any Borel probability gives a lower bound for the primal by taking its affine average, so the limit sparse tuple attains the penalized dual over the full compact cap set. Let $R\\to\\infty$. Balanced probabilities are feasible, so the penalty of an optimizing tuple stays bounded by the oscillation of $L_N$. Another converging sparse subsequence then has zero $g$-moment and proves\n$$\n\\inf_z\\max_{N\\in\\mathcal A_i}[L_N+g_N\\cdot z]\n=\\max_{\\nu\\in\\mathcal M_i}\\int L_N\\,d\\nu.\n$$\nThis only requires finite approximate minimizing velocities on the left.\n\nFor each fixed finite $z$, the trial mark $Y_i+t(0,z)$ is feasible for small positive $t$. On the common clipped parameter domain, the cap masses there have a uniform first expansion. In fact the old-domain ramp integrals have continuous plane derivatives near the compact domain by dominated convergence at fiber-null kink planes, and the signed shell integrands are uniformly bounded and equi-Lipschitz at fixed $h>0$. The first shell formula in the quantile cover then gives a uniform $o(t)$ along the chosen path, as do its uniform interior energy and covariance expansions. Pure-base caps stay separated by a gap. The first expansion of the compact cap infimum is the minimum of the first coefficients among old active caps: testing old active caps gives the upper bound, while every limit of minimizers as $t\\downarrow0$ is old active and yields the lower bound. The trial depth is therefore $Q-t\\max_N[L_N+g_N\\cdot z]+o(t)$. Approximate minimizing finite velocities prove a lower bound on the optimized depth's right derivative.\n\nFor the upper bound take a maximizing sparse response menu and convert it to its quantile weights. The exact quantile cover theorem applies to this specific finite balanced selection, with fixed normals and fixed $\\varepsilon,h$. Its equalized cap loss is $\\int L_Nd\\nu=\\mathcal L_i(\\Phi)$ and it bounds all marks on the entire current own fiber. This gives the matching upper derivative without assuming a bounded velocity for the maximizing mark. At $\\varepsilon=0$ this step uses only the frozen cover, where the contact function stays identically zero. The finite off-source gaps persist, so the maximum across the old source bases gives the derivative of global raw depth. Division by $M-tD+o(t)$ gives the claimed normalized derivative.\n\nActual minimality yields the necessary improvement inequality. For a fixed field, each source can independently choose a menu attaining its maximum, so the inequality for every complete selection is equivalent. For a fixed complete selection the improvements are linear in the speeds by the through-source formula. Their image over the realizable convex cone is a convex cone disjoint from the open positive orthant. Finite-dimensional separation gives a nonzero separating vector, nonnegative because the positive orthant is unbounded in each positive coordinate. The cone includes zero and is positively scalable, so the vector's pairing is nonpositive on the entire image cone. Normalize it to a probability $\\lambda$. With two coefficient sets $[1,2]$ and $[-2,-1]$ on the signed field line, every pair $(a,b)$ can be balanced by $\\lambda_1=-b/(a-b)$, but the pairs $(1,-1)$ and $(2,-1)$ require different values. Hence the abstract quantifiers alone cannot yield one universal $\\lambda$.\n\nAt $\\varepsilon=0$, the fixed-normal response of the quantile cover becomes $B_{ij}+A_{ij}(D-J_{ij})/(2M)$. Substituting it into the separating inequality and using $D=\\int\\Phi\\,d\\sigma$, $J_{ij}=\\int [u_{ij}\\cdot(X-g_z)]^2\\Phi\\,d\\sigma$ gives exactly $\\Xi_h$. The sign uses $A_{ij}\\le0$ from the ramp's one-sided strip.\n",
+  "source_candidate_ids": [
+    "26e4bc3a75ffef69",
+    "6e754f2bf13bdbd1"
+  ],
+  "source_candidate_sha256": {
+    "26e4bc3a75ffef69": "b50552baf45dca12cd583bd788a2f3e4acece1c95c5bf5c539a9c78a7310fe2a",
+    "6e754f2bf13bdbd1": "f5115f555eee74019b9bb9d2da9b9ddba3ba09c3eb3ff307aa6e67871271a55e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "26e4bc3a75ffef69",
+      "locator": "26e4bc3a75ffef69:01 §1 (1), compact menu and change of weights"
+    },
+    {
+      "candidate_id": "26e4bc3a75ffef69",
+      "locator": "26e4bc3a75ffef69:05 §4 (7)–(8), menu selection and separator quantifiers"
+    },
+    {
+      "candidate_id": "6e754f2bf13bdbd1",
+      "locator": "6e754f2bf13bdbd1:05 §4, (7)–(10), conditional body response and common separator"
+    },
+    {
+      "candidate_id": "26e4bc3a75ffef69",
+      "locator": "26e4bc3a75ffef69:04 §3, (5)–(6), whole-fiber upper comparison and the actual value derivative"
+    }
+  ],
+  "statement": "Use the uniform outward model and actual singleton sources $Y_i=(p_i,y_i)$ with proper positive coarea, compact response-preserving clipping and pure-base reserve of the finite quantile cover theorem. Let $\\mathcal A_i$ be the compact active set in the common clipped parameter domain, including all old capture and response data of unrestricted active tilts. For each cap $N\\in\\mathcal A_i$ write $g_N=S_N(u-\\varepsilon\\nabla_x f(Y_i))$, with the $\\Gamma$-unit convention and $\\varepsilon\\ge0$. A response menu is a probability $\\nu$ on $\\mathcal A_i$ with $\\int g_N\\,d\\nu=0$. These form a nonempty compact convex class $\\mathcal M_i$. Quantile probabilities $\\rho$ with $\\int u\\,d\\rho=\\varepsilon\\nabla_x f(Y_i)$ correspond by $d\\nu=S_N^{-1}d\\rho/\\int S_N^{-1}d\\rho$ and $d\\rho=S_Nd\\nu/\\int S_Nd\\nu$.\n\nFor a continuous normal-dependent physical field $\\Phi$ convex in the full physical coordinates for each normal, take its actual compatible inward path of 8820984cf6a6942e. Let $D$ be its total inward boundary integral, $\\beta=Q/M$ the old normalized maximum, and $L_{i,N}(\\Phi)$ the raw through-source loss in the quantile cover theorem at fixed normal and fixed $\\varepsilon,h$. Set $\\mathcal L_i(\\Phi)=\\max_{\\nu\\in\\mathcal M_i}\\int L_{i,N}(\\Phi)\\,d\\nu$. This maximum has a menu with at most $d+1$ caps. The one-sided derivative of the optimized raw depth on $p_i$ is $-\\mathcal L_i(\\Phi)$, and the normalized global maximum has derivative $-M^{-1}\\min_i(\\mathcal L_i(\\Phi)-\\beta D)$.\n\nAt an actual minimum over compatible bodies, $\\min_i\\max_{\\nu\\in\\mathcal M_i}(\\int L_{i,N}(\\Phi)d\\nu-\\beta D)\\le0$ for every field. This is equivalent to $\\min_i(\\int L_{i,N}(\\Phi)d\\nu_i-\\beta D)\\le0$ for every complete menu selection $(\\nu_i)_i$ and every field. For each fixed selection there is one probability $\\lambda$ on the sources such that the weighted sum of these improvements is nonpositive on every field. A menu-independent $\\lambda$ need not exist for these abstract quantifiers.\n\nIn particular, if $\\varepsilon=0$ and the selected menus are finite with weights $\\nu_{ij}=(\\rho_{ij}/S_{ij})/\\sum_k\\rho_{ik}/S_{ik}$, put $\\omega_{ij}=\\lambda_i\\nu_{ij}$, $\\bar A=\\sum_{ij}\\omega_{ij} A_{ij}$, $W=\\sum_{ij}\\omega_{ij}\\Psi(q_{ij})$. On the actual regular boundary bundle with summed surface measure $\\sigma$, the separator for that selection satisfies\n$$\n\\int \\Xi_h\\Phi\\,d\\sigma\\le0,\\qquad\n\\Xi_h=W-\\beta+\\frac{\\sum_{ij}\\omega_{ij}(-A_{ij})[u_{ij}\\cdot(X-g_z)]^2+\\bar A}{2M},\n$$\nwhere $g_z$ is the old centroid of fiber $z$. The covariance coefficient of each squared term is nonnegative.",
+  "subgoal_id": "pk-intake-outward-smoothed-full-menu-envelope-and-separator",
+  "title": "Full active-menu derivative and selection-dependent physical separators"
+}

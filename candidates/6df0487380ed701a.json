@@ -1,0 +1,30 @@
+{
+  "advances": "Ordinary simplex section density and conditional entropy for arbitrary signed coefficients. The variance comparison requires the additional quantitative comparison identified by the explicit example.",
+  "author": "PK-research-agent",
+  "candidate_id": "6df0487380ed701a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.059384+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w31-exponential-section-product-entropy",
+  "kind": "theorem",
+  "proof": "Change coordinates from $(Y_i)$ to $(z,v)$ with $z=(Y_i)_{i\\ne j}$ and $v=c\\cdot Y$. Then $Y_j=(v-\\sum_{i\\ne j}c_i z_i)/c_j$ and the absolute inverse Jacobian is $1/|c_j|$. At $v=0$ the positivity constraints give $C$ and the exponent is $\\beta\\cdot z=\\sum_iY_i\\ge\\sum_{i\\ne j}z_i$. An opposite-sign coordinate ensures that $C$ has interior in the orthant. Thus $0<Z<\\infty$ and all coordinate means are finite and positive. The projected density value is continuous at zero by dominated convergence in the elimination formula. Indeed the exponential on the feasible domain is bounded by $e^{-\\sum z_i}$, and the moving indicator converges away from the hyperplane $\\sum_{i\\ne j}c_i z_i=0$, which is null because there is an opposite-sign coordinate.\n\nFor the means, use $Y=g\\xi$ with $g=\\sum_iY_i>0$. The joint density of $g,\\xi$ is proportional to $g^de^{-g}$ against radial Lebesgue measure and uniform measure on $\\Delta_d$. On a fixed radial shell, $v=g(c\\cdot\\xi)$, so the coarea factor for the $v$ constraint at zero is $1/g$ times the constant coarea factor for $c\\cdot\\xi$ on the affine hull of $\\Delta_d$. This latter factor is finite because the coefficients have both signs. Hence the conditional density factors into the $\\operatorname{Gamma}(d,1)$ radial law and the uniform angular section law. This gives $\\mu_i=db_i$, including $d=1$ where the angular section is a point.\n\nCone scaling gives $\\int_C e^{-s\\beta\\cdot z}\\,dz=s^{-d}Z$ for $s>0$. Differentiation at $1$ is justified by the exponential bound on $C$ and yields $\\sum_{i\\ne j}\\beta_i\\mu_i=d$. Therefore\n$$\n\\int_C p\\log(p/q)\n=\\log\\frac{\\prod_{i\\ne j}\\mu_i}{Z}\n -\\sum_{i\\ne j}\\beta_i\\mu_i+\\sum_{i\\ne j}\\frac{\\mathbb E_p z_i}{\\mu_i}\n=\\log\\frac{\\prod_{i\\ne j}\\mu_i}{Z}.\n$$\nThe terms are integrable, and $-\\int_Cp\\log(p/q)\\le\\int_Cq-1$ by $\\log u\\le u-1$. If some other $c_i$ has the same sign as $c_j$, the complement of $C$ contains an open subset of the orthant, so $\\int_Cq<1$ and the deficit is strictly positive. Otherwise $C$ is the full orthant and $p$ itself is the product of exponentials of rates $\\beta_i>0$, so $p=q$.\n\nFor comparison with cap variance, take $c=(1,1,-R)$ with $R>0$ and put $F=\\Pr(V\\ge0)$. Given $Y_0+Y_1$, the event has probability $1-e^{-(Y_0+Y_1)/R}$. Its expectation is $F=(2R+1)/(R+1)^2$. The same conditioning in the density at zero gives $f=R^{-1}\\mathbb E[e^{-(Y_0+Y_1)/R}]=R/(R+1)^2$. At $R=10$ for either positive index, $F(1-F)=2100/14641$ while $|c_j|f=1210/14641$.\n",
+  "source_candidate_ids": [
+    "c324e86ba3893a31"
+  ],
+  "source_candidate_sha256": {
+    "c324e86ba3893a31": "fe80f98f13b7addf881441c09df9e15e7d8f384fda884fbd5c7b10c57601320c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c324e86ba3893a31",
+      "locator": "c324e86ba3893a31:01 §§1–3, (1)–(6), entropy identity and equality"
+    },
+    {
+      "candidate_id": "c324e86ba3893a31",
+      "locator": "c324e86ba3893a31:02 §3, c=(1,1,−R), cap-variance comparison"
+    }
+  ],
+  "statement": "Let $d\\ge1$, let $Y_0,\\dots,Y_d$ be independent unit-rate exponentials, and let the real vector $c$ have both signs. Put $V=\\sum_{i=0}^d c_iY_i$, let $f=f_V(0)$ be the continuous density value, and let $b$ be the barycentric centroid of the section $\\{\\xi\\in\\Delta_d:c\\cdot\\xi=0\\}$ of the standard barycentric simplex, with its uniform $(d-1)$-dimensional measure. For any $j$ with $c_j\\ne0$, define\n$$\nC=\\{z\\in\\mathbb R_+^d:\\textstyle\\sum_{i\\ne j}(c_i/c_j)z_i\\le0\\},\\quad\n\\beta_i=1-c_i/c_j,\\quad Z=|c_j|f .\n$$\nThe coarea conditional density of $(Y_i)_{i\\ne j}$ at $V=0$ is $p(z)=e^{-\\beta\\cdot z}\\mathbf 1_C(z)/Z$. Its coordinate means are $\\mu_i=db_i$. With $q$ the product of exponential densities of means $\\mu_i$ on the orthant,\n$$\n\\log\\frac{d^d\\prod_{i\\ne j}b_i}{|c_j|f}=D_{\\rm KL}(p\\Vert q)\\ge0.\n$$\nEquality holds precisely when $c_j$ is the only coefficient of its sign.",
+  "subgoal_id": "pk-intake-pk-w31-exponential-section-product-entropy",
+  "title": "An exact entropy deficit for the simplex section product"
+}

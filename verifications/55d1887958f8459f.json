@@ -1,0 +1,60 @@
+{
+  "candidate_id": "ee91760a8d1f988b",
+  "candidate_sha256": "064d205c1a3b70de9877df8d41c32a7096438fc05002067f770daa7422f92dda",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "77d36834ea2179e7": "a8d2a2e30796e1998148e99061b6832d2ffd41d1f4057f78c0900359e255320d"
+  },
+  "checks": [
+    "Use the linear part of the ordinary ball normalization and its preimage p of zero, which belongs to K. Apply exactly the same affine map to L. Translating the Minkowski sum commutes with the determinant-volume calculation.",
+    "A unit-ball capsule along a diametral segment has volume κ_m+κ_(m−1) diam(L′), including the interval case. Its containment in the Minkowski sum proves the stated bound H.",
+    "Maximum simplex normalization yields volume ≥ |L′|/(2^m m!). Hadamard bounds each opposite facet area by H^(m−1)/(m−1)!, so the altitude is ≥ aκ_m/(2^m H^(m−1)) and the centroid distance is that altitude divided by m+1.",
+    "Combining the two ball sandwiches and pulling back gives the exact constants c and H. Difference bodies preserve these bounds, and fixed constants imply equality of the zero-width directions in every Hausdorff limit, also for point limits.",
+    "Source c0cb4d49afb99df3 §§1–2 supplies the same constants and scopes the map to ordinary Euclidean geometry."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "77d36834ea2179e7",
+      "candidate_sha256": "a8d2a2e30796e1998148e99061b6832d2ffd41d1f4057f78c0900359e255320d",
+      "fact_sha256": "832f092ce6a9928c87a06af950db24ec80a83b0c73b3e36478f3dc4544e3b2ca",
+      "hypotheses": "Set n=m≥1 and d=0 in the ordinary affine ball sandwich for the full-dimensional K. Factor F(x)=T(x−p) with invertible linear T and p=F^{-1}(0); the radius is m(m+2). No mixed-volume assertion is invoked.",
+      "reviewed_proof_sha256": "dc4e1bfa9342e945daa602d9807f85d092f04d680c852426c01d2b8d3b1bc52d",
+      "reviewed_statement_sha256": "4cb0a819c8a753d4ec6f8f1a67255511ffb9507300e5150eb49cfe777de0b97d"
+    },
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "hypotheses": "In ordinary dimension m, map a maximum inscribed simplex of the full-dimensional L′ to the standard simplex. Containment in the side-two cube gives the bound with factor 2^m m!.",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:57:21Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its d=0 affine map supplies the first ball sandwich. It does not constrain a second body through the volume of a Minkowski sum or identify the two limiting direction spaces.",
+      "fact_id": "77d36834ea2179e7"
+    },
+    {
+      "comparison": "Its maximum-simplex normalization supplies the simplex-volume bound. The new conclusion compares two arbitrary bodies and their widths.",
+      "fact_id": "03bc771bddd39a8a"
+    }
+  ],
+  "readability": "The notation T(K−p) uses T for the linear part of the affine normalization; this follows from the representation and the final pullback.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3c106728b68501161b6ac2df5915eb6119757d7bd0a025ac0431a232490314b9",
+  "reviewed_statement_sha256": "b88c450fd061a2e36458a086267415ffc1071181dcc5a4c5c88fd715599cf6e1",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:53:03Z",
+  "summary": "The common affine normalization, capsule diameter estimate and inscribed-simplex altitude bound give both stated inclusions and preserve the common direction space under Hausdorff limits.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

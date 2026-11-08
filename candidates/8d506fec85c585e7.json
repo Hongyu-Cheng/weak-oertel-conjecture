@@ -1,0 +1,34 @@
+{
+  "advances": "The product bound is uniform in fixed credits. The mixed mass conclusion concerns only the common oriented neighborhoods of the actual three-fiber cuts.",
+  "author": "PK-research-agent",
+  "candidate_id": "8d506fec85c585e7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:53:47.677094+00:00",
+  "depends_on": [
+    "f75e1f526e17ab44",
+    "af4f4e8d8dbeb0ba",
+    "d835962fccfaca7e"
+  ],
+  "draft_key": "credit-dependent-simplex-cap-quadratic-remainder",
+  "kind": "lemma",
+  "proof": "Put $s_i=(c_i-\\bar c)/(\\Gamma V)$ and $\\eta=a/(\\Gamma V)$. Then $\\sum_i s_i=0$ and $|s_i|\\le\\eta\\le1$. More precisely $s_i\\ge-(N-1)\\eta/N>-1$, so the prescribed coordinates sum to one and are positive. The product equals $\\Gamma V\\prod_{j\\ne i}(1+s_j)$. Its first-order term inside the product is $-s_i$, and the total absolute contribution of terms of degree at least two is at most\n$$\\sum_{k=2}^d\\binom dk\\eta^k\\le(2^d-d-1)\\eta^2.$$\nAdding $c_i$ cancels the first-order term up to $\\bar c$, proving the estimate. In dimension one the remainder vanishes. The one-vertex cap lower bound is the intercept calculation in accepted f75e1f526e17ab44: the through-point relation is $\\sum_{j\\ne i}\\lambda_j(y)/t_j=1$, so AM–GM bounds $\\prod_{j\\ne i} t_j\\ge d^d\\prod_{j\\ne i}\\lambda_j(y)$ and the cap volume is $V\\prod_{j\\ne i}t_j$.\n\nThe credit sum bounds $\\bar c$ from below by $Ja/N$, and the stated bound on $a/V$ yields the desired mass. For the actual local conclusion, $\\eta\\le1/2$ gives the center hypothesis of the strict-sign neighborhood. The minimum angular radius simultaneously ensures the strict incidence for the middle cut and the fixed endpoint credit for the same normal and arbitrary tilt. Adding these three actual cap volumes proves the assertion.\n",
+  "source_candidate_ids": [
+    "c71e38de38f9f3c8"
+  ],
+  "source_candidate_sha256": {
+    "c71e38de38f9f3c8": "2f49878a161e088c8c68554ec4bb717518d050b968cffbb3adff91ab00208ef7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c71e38de38f9f3c8",
+      "locator": "c71e38de38f9f3c8:03 §3, (7)–(9)"
+    },
+    {
+      "candidate_id": "c71e38de38f9f3c8",
+      "locator": "c71e38de38f9f3c8:02 §2, (6), intersection of the two orientation neighborhoods"
+    }
+  ],
+  "statement": "Let $B$ be a $d$-simplex of volume $V>0$, $d\\ge1$, with barycentric coordinates $\\lambda_i$, and let $N=d+1$ and $\\Gamma=(d/N)^d$. Given credits $0\\le c_i\\le a$ with $0\\le a/(\\Gamma V)\\le1$, put $\\bar c=N^{-1}\\sum_i c_i$ and choose $y$ with $\\lambda_i(y)=1/N+(c_i-\\bar c)/(N\\Gamma V)$. Then $y$ is interior and\n$$Vd^d\\prod_{j\\ne i}\\lambda_j(y)+c_i\\ge\\Gamma V+\\bar c-\\frac{2^d-d-1}{\\Gamma}\\frac{a^2}{V}.$$\nEvery through-$y$ cap that isolates vertex $i$ on its positive side has volume at least the displayed product term. The inequality is equality in dimension one.\n\nIn dimension $d\\ge2$, if $\\sum_i c_i\\ge Ja$ for $J=\\lceil N/2\\rceil$, $0\\le\\kappa<J/N$, and $a/V\\le\\Gamma(J/N-\\kappa)/(2^d-d-1)$, this lower bound with credit is at least $\\Gamma V+\\kappa a$. In the standard frame of the uniform endpoint-credit theorem, use its credits and mass conditions, and also require $a/(\\Gamma V)\\le1/2$. The actual three-fiber mass is then at least $\\Gamma V+\\kappa a$ in the common oriented neighborhoods of unit radius $\\min\\{\\delta/(24R),1/(8N)\\}/\\sqrt d$ about each vertex-side facet normal, for every real tilt.",
+  "subgoal_id": "pk-intake-credit-dependent-simplex-cap-quadratic-remainder",
+  "title": "A finite quadratic remainder for credit-dependent simplex cuts"
+}

@@ -1,0 +1,38 @@
+{
+  "candidate_id": "016f66171cd5beb0",
+  "candidate_sha256": "f25857b615e07b7e789a90129208c84aae5d3b354c27d53f51e26c73e45fdcb9",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Matched 53a240dfcf446f5a:03, §5 equation (6), without importing the separate smooth-cap or signed-response assertions.",
+    "For each z, its chosen same-parity representative is in the proposed affine hull, and the midpoint is in P. After translating the affine hull to a linear space the orthogonal projection of the representative is zero, so the normal distance of the midpoint is exactly half the old distance.",
+    "Iteration is legitimate because every new midpoint belongs to P and has an available representative. Any positive distance would give infinitely many distinct values among finitely many sites. This also handles rank zero and proves the asserted affine-function consequence."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T19:59:02Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It derives Helly and weighted depth bounds from a midpoint-closed graph, rather than a spanning result for an arbitrary subset meeting each occupied parity.",
+      "fact_id": "bee3cc8e50a0dcea"
+    },
+    {
+      "comparison": "It uses same-parity midpoint transport to compare measures and preserve their barycenter. It does not assert this affine span for each parity representative set.",
+      "fact_id": "3ac39fef94fcc0da"
+    }
+  ],
+  "readability": "Distances are measured to one fixed affine hull, so it is irrelevant that the parity can change along the iteration.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3ae7e667af329e14721bd6d47fc1e39d2a07729895f26d485791c5ab08b615f3",
+  "reviewed_statement_sha256": "46c204c0cee9460b1382812af657debe35d5ea07ce72c93736e8f17fae3a6b4f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:56:34Z",
+  "summary": "Midpoint closure and finiteness give the full affine span of any set meeting every occupied parity.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

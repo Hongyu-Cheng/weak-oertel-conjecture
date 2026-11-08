@@ -1,0 +1,26 @@
+{
+  "advances": "This rules out a contradiction from the stated one-cap geometry and stationarity alone. It supplies no common covering menu, global cap minimality, or assertion that the marks are deepest.",
+  "author": "PK-research-agent",
+  "candidate_id": "48dd59b9e7959aff",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:52:39.941656+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w31-full-rank-one-cap-trimmed-core",
+  "kind": "counterexample",
+  "proof": "The roof is a minimum of finitely many affine functions, hence concave. The bounded source is closed, convex and contains an open set. At the $3^4=81$ inner sites the fiber is $[-1,1]$; at the $5^4-3^4=544$ outer sites it is $[-1,0]$. A one-dimensional section by $x=0$ has counting coarea one, giving the stated sections and both masses. The full-dimensional crosspolytope $B$ lies in the real cube where the envelope is exactly $[-1,1]$, has zero in its interior, and has sampled vertices.\n\nFor $J_+=\\{z\\in J:z_1>0\\}$, its cardinality is $2\\cdot5^3-3^3=223$ and its first-coordinate sum is $(1+2)5^3-3^3=348$. All other coordinate sums vanish by sign symmetry. The inner sites also sum to zero. Use selector $\\tau_z=81/125$ on $J_+$ and zero elsewhere. Its weighted centroid has first coordinate $(81/125)348/[81+(81/125)223]=1$ and all other coordinates zero. Permuting and changing coordinate signs gives all $\\pm e_i$; taking all selectors zero gives zero. The centroid region is convex: mix the probability laws of any two selected weight systems, and rescale by their common weight on $I$. The new outer-to-inner weight at each site is a weighted average of the two original selectors, so remains in $[0,1]$. Thus the entire hull $B$ lies in the region.\n\nFor $p$ among these marks the cap of positive normalized continuous normal with tilt $a\\in\\mathbb R^4$ is $x+a\\cdot(z-p)\\ge0$. For $a$ small enough that all absolute shifts are less than one, its actual mixed mass is\n$$\nF_p(a)=81-81a\\cdot p+\\sum_{z\\in J}[a\\cdot(z-p)]_+.\n$$\nIndeed each inner interval contributes $1+a\\cdot(z-p)$ and each outer interval contributes $[a\\cdot(z-p)]_+$. A selector law of centroid $p$ satisfies $\\sum_{z\\in J}\\tau_z(z-p)=81p$. Therefore $[a\\cdot(z-p)]_+\\ge\\tau_z a\\cdot(z-p)$ gives $F_p(a)\\ge81=F_p(0)$. The cap has one continuous coordinate, so positive continuous-normal normalization leaves only these base tilts. This proves exact local minimality at each stated mark.\n",
+  "source_candidate_ids": [
+    "8ff58a06b1cc46aa"
+  ],
+  "source_candidate_sha256": {
+    "8ff58a06b1cc46aa": "04525d1001632a74390985576e108ae090c6609e224237e35de8d5c462e1fb4a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8ff58a06b1cc46aa",
+      "locator": "8ff58a06b1cc46aa:01 Main construction, section-envelope and outside-trimmed centroid calculations"
+    }
+  ],
+  "statement": "Let\n$$\nC=\\{(z,x):z\\in[-2,2]^4,\\ -1\\le x\\le\\min(1,2-\\lVert z\\rVert_\\infty)\\}.\n$$\nThe cap $x\\ge0$ has mixed mass $81$ out of $706$, proper sections at $I=\\{-1,0,1\\}^4$ and outside supporting sections at the other sampled bases $J=\\{-2,-1,0,1,2\\}^4\\setminus I$, all with section coarea one. All fibers lie in $[-1,1]$ and agree with that envelope over the entire real cube $[-1,1]^4$. The occupied full-rank core $B=\\operatorname{conv}\\{\\pm e_i:1\\le i\\le4\\}$ has the interior lattice point zero and lies in the centroid region of the laws with weight one on $I$ and any weights $\\tau_z\\in[0,1]$ on $J$. At every $p\\in\\{0,\\pm e_1,\\ldots,\\pm e_4\\}$, the cap $x\\ge0$ is a local minimum over base tilts through $(p,0)$ with positive continuous normal.",
+  "subgoal_id": "pk-intake-pk-w31-full-rank-one-cap-trimmed-core",
+  "title": "A full-rank occupied core survives local one-cap trimming"
+}

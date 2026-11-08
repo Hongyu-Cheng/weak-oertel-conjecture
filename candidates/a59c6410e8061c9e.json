@@ -1,0 +1,29 @@
+{
+  "advances": "Simultaneous rigidity for proper varying actual cuts at simultaneous whole-body and captured-side Brunn–Minkowski equalities.",
+  "author": "PK-research-agent",
+  "candidate_id": "a59c6410e8061c9e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.062687+00:00",
+  "depends_on": [
+    "b1737542a85a4328",
+    "452f0ad1dec40904"
+  ],
+  "draft_key": "balanced-varying-cap-bm-simplex-rigidity",
+  "kind": "theorem",
+  "proof": "Whole-body equality and Brunn–Minkowski give $K=\\sum_j\\theta_j A_j$ and positive homothety of all $A_j$. For the inclusion, a point of the larger body outside the compact smaller one gives positive volume outside it by taking a sufficiently small convex combination with an interior ball of the larger body. For homothety, any strict pair inequality would stay strict in the full sum. [Brunn–Minkowski inequality for convex bodies, equations (3)–(4)](https://sites.stat.washington.edu/jaw/COURSES/520s/523/HO.523.20/Gardner.BullAMS.02.pdf).\n\nSet $a_j=|A_j|^{1/d}$, $s=\\sum_j\\theta_j a_j$, and $D=(K-y)/s$. Then $|D|=1$ and $0\\in\\operatorname{int}D$. There are $v_j$ with $A_j=a_jD+v_j$ and $\\sum_j\\theta_jv_j=y$, by the equality of the Minkowski sum and the boundedness of $D$. For each $i$, the normalized threshold $q_{ij}=u_i\\cdot(y-v_j)/a_j$ has weighted mean zero with weights $\\theta_j a_j/s$. The normalized fractions are nonconstant, so the thresholds are nonconstant. In particular $\\min_j q_{ij}<0$.\n\nApply the one-direction classification in each actual halfspace. Its lowest truncation of $D$ is a cone, with cut at the strictly negative $\\min_j q_{ij}$. The same positive balance now applies to these cones, so the finite-apex theorem gives that $D$ is a $d$-simplex and the normals span all of $\\mathbb R^d$. The stated representations give the conclusion for the actual bodies.\n",
+  "source_candidate_ids": [
+    "d99f14f216938f2e"
+  ],
+  "source_candidate_sha256": {
+    "d99f14f216938f2e": "5489dc5104f0cf25997af5018a1201ab9516fbbe7af3725a07d115cf6f80e960"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d99f14f216938f2e",
+      "locator": "d99f14f216938f2e:04 §§4–5, (9)–(12)"
+    }
+  ],
+  "statement": "Let $d\\ge2$, let $A_1,\\ldots,A_N\\subset\\mathbb R^d$ be convex bodies and let $\\theta_j>0$ sum to one. Suppose a convex body $K\\supseteq\\sum_j\\theta_j A_j$ satisfies $|K|^{1/d}=\\sum_j\\theta_j|A_j|^{1/d}$. At $y\\in\\operatorname{int}K$, take a finite nonempty family of halfspaces $H_i=\\{u_i\\cdot(x-y)\\ge0\\}$ with $u_i\\ne0$ and positive balance $\\sum_i\\beta_i u_i=0$, $\\beta_i>0$. For each $i$, assume every endpoint cut is proper, the normalized endpoint fractions $|A_j\\cap H_i|/|A_j|$ are unequal across the family in the sense of being nonconstant, and\n$$\n|K\\cap H_i|^{1/d}=\\sum_j\\theta_j|A_j\\cap H_i|^{1/d}.\n$$\nThen $K$ and all the $A_j$ are positively homothetic $d$-simplices, and the $u_i$ span $\\mathbb R^d$.",
+  "subgoal_id": "pk-intake-balanced-varying-cap-bm-simplex-rigidity",
+  "title": "Balanced varying cap equalities at whole-body equality force simplices"
+}

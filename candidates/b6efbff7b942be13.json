@@ -1,0 +1,28 @@
+{
+  "advances": "Simultaneous normal approach; no claim about iterated nonsimplicial flags.",
+  "author": "PK-research-agent",
+  "candidate_id": "b6efbff7b942be13",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:56:22.858984+00:00",
+  "depends_on": [
+    "d73a38134e47a4d2"
+  ],
+  "draft_key": "square-cone-facet-distance-obstruction",
+  "kind": "counterexample",
+  "proof": "Reflection in $Y$ and uniqueness of the normalized minimum force the $Y$-coefficient to be zero. For a remaining normal $(b,0,a)$ with $a>|b|$, slicing at height $T$ and integrating gives\n$$\nJ_Q(b,0,a)=\\int_0^\\infty 2T e^{-aT}\\int_{-T}^T e^{-bX}\\,dX\\,dT\n=\\frac{8a}{(a^2-b^2)^2}.\n$$\nFor $b\\ne0$ evaluate the two exponential integrals separately; at $b=0$ the formula is continuous. Set $t=b/a$; normalization gives $a=1/(1+st)$. The resulting objective diverges at both endpoints. Its logarithmic derivative vanishes when $s t^2+4t+3s=0$. At $s=0$ the minimum is $t=0$; at $s=8/13$ the only critical point in $(-1,1)$ is $t=-1/2$, yielding the stated values. The four fixed facet-distance ratios are $1-s,1+s,1,1$; multiplying any three and inserting $s=8/13$ gives the three listed rational values.\n",
+  "source_candidate_ids": [
+    "e70b63e0e6efe01c"
+  ],
+  "source_candidate_sha256": {
+    "e70b63e0e6efe01c": "92959dd38d71f724eff0dd4eb4c260fcbf25d8ecc8805f23829ca9b3b6be062d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e70b63e0e6efe01c",
+      "locator": "e70b63e0e6efe01c:05 §6, (16)–(18), nonsimplicial path calibration"
+    }
+  ],
+  "statement": "Let $Q=\\{(X,Y,T):T\\ge|X|,\\ T\\ge|Y|\\}$ and $v_s=(s,0,1)$, $|s|<1$. For the normalized cone Laplace minimum $J_*$,\n$$\nJ_*(v_s)=\\min_{-1<t<1}\\frac{8(1+st)^3}{(1-t^2)^2},\\qquad\nJ_*(v_0)=8,\\qquad J_*(v_{8/13})=\\frac{10368}{2197}.\n$$\nThe ratio between the last two path values is $1296/2197$. Any product of distances to three distinct facets has ratio in $\\{1365/2197,845/2197,3549/2197\\}$ along the same two marks. Thus no fixed proportionality to such a product holds.",
+  "subgoal_id": "pk-intake-square-cone-facet-distance-obstruction",
+  "title": "Three facet distances do not encode the square-cone constant"
+}

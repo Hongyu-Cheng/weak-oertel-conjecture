@@ -1,0 +1,47 @@
+{
+  "advances": "Actual four consecutive integer fibers with common simplex shape, restricted opposite endpoint order, and a sufficient near-equal-middle range. No all-order claim.",
+  "author": "PK-research-agent",
+  "candidate_id": "6f4c270b955d991b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:53:47.677615+00:00",
+  "depends_on": [
+    "4b772ae7fa6b3293",
+    "7ad3d72ee6061cf3",
+    "155691fc3768c06f",
+    "8c454d290be841c2"
+  ],
+  "draft_key": "opposite-order-actual-simplex-centroid-payments",
+  "kind": "theorem",
+  "proof": "A common invertible continuous affine change allows $T$ to be the standard simplex, with all masses changing by the same Jacobian. Write $g$ for its centroid, $K=T-g$, and first consider the common-vertex model. At base $1$ use the triple $aT,bT,T$. With $\\zeta=z-1$, the shear $x'=x-bg-\\zeta(1-b)g$ centers both the middle and the right endpoint, giving $bK$ and $K$. Its left endpoint lies inside $bK$: after adding $bg$ it is $aT+(1-b)g$, all coordinates nonnegative and coordinate sum at most $a+d(1-b)/(d+1)\\le b$. Keep $bK$ on the right and the whole left endpoint as its subset. A nonvertical through-centroid cap has opposite real thresholds at the two endpoints. Apply 4b772ae7fa6b3293 on $bK$ to give the first payment.\n\nAt base $2$ use the triple $bT,T,cT$. With $\\zeta=z-2$, use $x'=x-g-\\zeta(1-b)g$ to center the left endpoint and the middle as $bK,K$. After adding $bg$ to the transformed right endpoint and to $bK$, the two bodies become $cT-2(1-b)g$ and $bT$. Their intersection has nonnegative coordinates and coordinate sum at most $c-2d(1-b)/(d+1)\\le b$. Conversely these inequalities suffice for the intersection, so it is $hT$ when $h>0$, or is null or empty when $h=0$. Keep its inverse translate as the right subset (use the empty subset if $h=0$). Apply 4b772ae7fa6b3293 with the two copies of $bK$ on the middle and left, reversing the endpoint roles. The remaining middle shell contributes exactly $(1-b^d)$ times the through-centroid cap volume of $K$, which is at least $\\Gamma(1-b^d)V$ by the empty-subset case of the same fact, choosing the endpoint threshold past the support. This gives the second payment. Discarded fiber mass is nonnegative. Pure-base through-caps at bases $1,2$ contain at least $(b^d+a^d)V$ and $(1+c^d)V$, respectively, which suffice since $\\Gamma,\\lambda\\le1$ and $h\\le c$. Every closed containing cap contains its parallel through-cap.\n\nFor translated fibers $m_z+r_z K$, fix one anchor $j=1$ or $2$ and one nonzero continuous normal $u$. Let $v$ be a minimizing vertex for $u$ on $K$ and $L=-u\\cdot v>0$. Actual compatibility implies the anchored Minkowski inclusions at $j$. Apply 155691fc3768c06f at $-u/\\lVert u\\rVert$, multiply by $-\\lVert u\\rVert$, and get a slope $s$ such that $u\\cdot(m_z-m_j)\\ge L(r_z-r_j)+s(z-j)$. For $X\\in K$, the original through-cap margin at $m_z+r_zX$ is therefore at least the margin with adjusted base tilt $\\beta+s$ at the comparison point $r_jv+r_z(X-v)$. The two maps have identical volume Jacobian. A linear simplex vertex permutation $P$ of $K$ takes $-g$ to $v$ and has absolute determinant one. The affine map $x'\\mapsto P^{-1}(x'-r_jv)$ sends the comparison fibers to $r_zT$ and the mark to $r_jg$, preserving the summed cap volumes. Thus the common-vertex through-cap payments hold in every original direction. Pure-base caps have identical masses under comparison.\n\nThe sharpness assertion of 4b772ae7fa6b3293 and the coefficient-$1/2$ inequality of 7ad3d72ee6061cf3 imply $\\lambda\\ge1/2>\\Gamma$ for $d\\ge2$, where the last strict inequality follows from $(1+1/d)^d>2$. Thus $t>1$. Subtracting $\\Gamma M/2$ from the maximum of the two payments and dividing by $\\Gamma V$ gives precisely the scalar certificate with $A=a^d$. Its weighted-gap bound, clipped loss and uniform sufficient condition give the remaining claims. For $d=2$, $\\lambda=7/9$, $t=7/4$, $R=5/2$, and the right-hand threshold is $81/280$, equivalent to the stated cutoff.\n",
+  "source_candidate_ids": [
+    "03cc52bdd22fe702",
+    "24467ade6f021ae8",
+    "8f194c2219f76d2a"
+  ],
+  "source_candidate_sha256": {
+    "03cc52bdd22fe702": "132bfa292e85e91a863c479f45ee3c5444e9185f78276bb81f3edaaaf392d006",
+    "24467ade6f021ae8": "a57f36270122119439e7d5e218c019abb7d090d522c0543d95cb2c2affb13cd6",
+    "8f194c2219f76d2a": "37672b75a5f6e62978e2c4af7cb6d6da56e8adfef77302fdc6b2ea7f45d4fe14"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "03cc52bdd22fe702",
+      "locator": "03cc52bdd22fe702:01 Opening (1)–(5); §1 (6)–(7), actual opposite-order payments and near-plateau implication"
+    },
+    {
+      "candidate_id": "03cc52bdd22fe702",
+      "locator": "03cc52bdd22fe702:02 §§2–3, near-plateau certificate"
+    },
+    {
+      "candidate_id": "8f194c2219f76d2a",
+      "locator": "8f194c2219f76d2a:01 §1, concentric shell and common-vertex intersection"
+    },
+    {
+      "candidate_id": "24467ade6f021ae8",
+      "locator": "24467ade6f021ae8:03 §4 (12)–(14), fixed simplex comparison at own centroids"
+    }
+  ],
+  "statement": "Let $d\\ge2$, let $T$ be a $d$-simplex of volume $V$, and suppose the only positive-volume integer fibers of an actual convex body in $\\mathbb R\\times\\mathbb R^d$ are translates of $aT,bT,T,cT$ at $0,1,2,3$, where $0<a\\le2b-1$, $1/2<b\\le1$, and $0<c\\le b$. Write $y_1,y_2$ for the actual own-fiber centroids at bases $1,2$, and use raw mixed depth $D$ given by the infimum of sums of fiber volumes over all closed containing ambient halfspaces. Set $\\Gamma=(d/(d+1))^d$, $\\lambda=[(2d/(d+1))^{d/(d-1)}-1]^{d-1}$, $t=\\lambda/\\Gamma$, $R=2t-1$, $p=d-1$, $x=2d(1-b)/(d+1)$, and $h=[c-x]_+$. Then\n$$D(y_1)\\ge V(\\Gamma b^d+\\lambda a^d),\\qquad D(y_2)\\ge V(\\Gamma+\\lambda h^d).$$\nFor $M=V(a^d+b^d+1+c^d)$ and $J=(1-R^{-1/p})^{-p}$,\n$$\\max\\{D(y_1),D(y_2)\\}\\ge\\Gamma M/2+\\frac{\\Gamma V}{2t}[(t-1)(1-b^d)-tJx^d].$$\nThe sharper clipped loss over $0\\le v\\le b$ in the scalar certificate can replace $Jx^d$. In particular one of these two centroids reaches normalized depth $\\Gamma/2$ whenever\n$$\\frac{1-b}{b}\\le(1-R^{-1/p})\\left[\\frac{d(t-1)}{t(2d/(d+1))^d}\\right]^{1/p}.$$\nFor $d=2$ this last sufficient condition is $b\\ge280/361$.",
+  "subgoal_id": "pk-intake-opposite-order-actual-simplex-centroid-payments",
+  "title": "Sharp subset payments at both centroids of an opposite-order simplex peak"
+}

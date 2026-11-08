@@ -1,0 +1,65 @@
+{
+  "candidate_id": "8d506fec85c585e7",
+  "candidate_sha256": "2bac3e3bce1182debdd081ea442f951c43f166e5e9fcd3945df2ed9bb6dd1c0e",
+  "checked_dependency_candidate_sha256": {
+    "af4f4e8d8dbeb0ba": "25c05aa92cbad5648aedcd20fea7c8625b00b78a3d03df59091478f359cabf13",
+    "d835962fccfaca7e": "ca7691446f47e5afb6b2c891d0e4a848fd8d978f1bb30405505e07545de1cc85",
+    "f75e1f526e17ab44": "b6ac622bead0bb726820f47395448f1453977d676af1b5bb70df6a65092ca09f"
+  },
+  "checks": [
+    "For every i, c_i minus its mean is at least minus (N−1)a/N, so even at a/(ΓV)=1 all barycentric coordinates stay positive and sum to one.",
+    "The linear term of the product excluding i is −s_i. The absolute sum of the remaining terms is at most (2^d−d−1)η² for η∈[0,1]. After multiplying by ΓV and adding c_i, this gives the claimed scale a²/(ΓV). For d=1 the higher terms are absent.",
+    "The one-vertex cap intercepts satisfy the required relation by affine evaluation at y and AM–GM supplies the product lower bound without an assumption that the equality intercepts are feasible.",
+    "The credit sum gives the asserted gain because the quadratic loss is at most (J/N−κ)a. The endpoint mass bounds imply the endpoint center and radius bounds. The additional η≤1/2 implies the strict middle sign criterion. Taking the minimum angular radius invokes both lemmas in the same direction and the actual arbitrary tilt remains unrestricted.",
+    "The original §§2–3, (6)–(9), retain exactly this oriented local scope. The extension from η≤1/2 to η≤1 is only for the algebraic product statement and has its own positivity proof."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "f75e1f526e17ab44",
+      "mapping": "The positive barycentric coordinates place y in the relative interior and the isolated vertex yields the required edge-intercept cap with actual volume V times the product."
+    },
+    {
+      "candidate_id": "af4f4e8d8dbeb0ba",
+      "candidate_sha256": "25c05aa92cbad5648aedcd20fea7c8625b00b78a3d03df59091478f359cabf13",
+      "mapping": "In the same standard simplex, η≤1/2 gives absolute coordinate deviations ≤1/(2N). The angular radius is at most 1/(8N√d), so the middle trace has one positive vertex.",
+      "reviewed_proof_sha256": "39f884dc8145143df368c29de242f544e769bd4acf07f63ec987143d3c26128f",
+      "reviewed_statement_sha256": "ddf6cf0cc22dbb19a836f743bf44c4ebb9176395f191aac38ca1c64ff14d9bf5",
+      "status": "same-wave, independent approval pending"
+    },
+    {
+      "candidate_id": "d835962fccfaca7e",
+      "candidate_sha256": "ca7691446f47e5afb6b2c891d0e4a848fd8d978f1bb30405505e07545de1cc85",
+      "mapping": "Use the parent's fixed c_i, the same credit-defined y, all its mass/center bounds and the oriented radius ≤δ/(24R√d). Its two endpoint thresholds are the opposite shifts of the same through-y cap.",
+      "reviewed_proof_sha256": "2057a442468f0efcf6260d2f806721a93c1ce0d0e0adbf1d2be98d02cd5aaabc",
+      "reviewed_statement_sha256": "7c07f5de1ee59624c8ed8a75ce181d8f406e359ca195e5a9920fb1f0a64b98bc",
+      "status": "same-wave, independent approval pending"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:57:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides the affine-invariant one-vertex cap product; it does not select the credit-dependent mark or give the quadratic remainder.",
+      "fact_id": "f75e1f526e17ab44"
+    },
+    {
+      "comparison": "Pays endpoint mass by one actual fixed-direction subset. It supplies no credit-balanced simplex product or common angular sign regime.",
+      "fact_id": "67ecf7db6692fe65"
+    }
+  ],
+  "readability": "The phrase 'unit radius' is read as a Euclidean distance bound on unit continuous normals in the stated normalized frame. The two exact parent statements specify the required endpoint mass bounds.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a016121428715e636ec1d15169e5f57f91a56895500f8b6313bb7837bc23a208",
+  "reviewed_statement_sha256": "29a4fd80e059f6cdeee2fa7d8b7e90c5d1ce7a8be9f8edcae78b2ce28c9c15d2",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:55:18Z",
+  "summary": "The product expansion gives the uniform fixed-credit bound, and the two oriented parents apply to the same actual middle and endpoint cuts after positive normalization of the continuous normal.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

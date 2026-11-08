@@ -1,0 +1,32 @@
+{
+  "advances": "Exact accounting for two groups of original planar mixed-area caps with equal global mass. The five-cap reserve is conditional on the stated credit inequality.",
+  "author": "PK-research-agent",
+  "candidate_id": "86a2e959cae30755",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.059816+00:00",
+  "depends_on": [
+    "23a563a735c07c25"
+  ],
+  "draft_key": "pk-w31-planar-two-group-cap-reserve",
+  "kind": "lemma",
+  "proof": "In each triple's owned fiber, apply 23a563a735c07c25 with $D=2$, $m=3$, ordinary area, $s=2$, and $\\gamma_2=4/9$. Its overlap inequality is $\\sum_i a_{ji}(z)-w_z\\ge(3-9/4)\\min_i a_{ji}(z)$. For any constant full or empty trace, replace it in this application by a proper halfplane containing or disjoint from the compact fiber, respectively. This keeps both the cover and each trace area. Thus $E_j\\ge0$. The minimum on each fiber is at most the trace area of any fixed member, so $L_j\\le B$ even if all the minimizing labels change across fibers. In a pair, the sum minus the fiber area is exactly the area in both traces.\n\nThe sum of all owned trace areas is $6B-X$ for two triples, by the original halfspace mass condition, and the definitions give that same sum as $M+\\frac34(L_0+L_1)+E_0+E_1$. This yields the first identity. The two outside-owned sums for any shared label partition the mixed area of that one cap. With at least two shared labels the covering union has at most four distinct caps, so the ordinary union bound over mixed area applies.\n\nFor a triple and a pair the two expressions for the sum of owned trace areas are $5B-X$ and $M+\\frac34 L_3+E_3+E_2$. Rearranging gives the second identity and criterion. If $L_3\\ge2B/3$, then $\\frac34\\Delta_3\\le B/4$ and the other credits are nonnegative. A shared label leaves at most four distinct caps in this covering union as well.\n",
+  "source_candidate_ids": [
+    "398b9c9f084b81b8"
+  ],
+  "source_candidate_sha256": {
+    "398b9c9f084b81b8": "9c906ec76e3a3c464695cdfd200752641a869419f68dde8b1489588d6d024030"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "398b9c9f084b81b8",
+      "locator": "398b9c9f084b81b8:01 §§1–2, (1)–(3) and shared labels"
+    },
+    {
+      "candidate_id": "398b9c9f084b81b8",
+      "locator": "398b9c9f084b81b8:02 §3, (4)–(5), triple-plus-pair reserve"
+    }
+  ],
+  "statement": "Let finitely many positive planar convex integer fibers $K_z$ of areas $w_z$ have total mixed area $M=\\sum_z w_z$. Partition their bases into two ownership sets $P_0,P_1$. On each owned fiber the corresponding group of distinct original closed ambient halfspaces covers the entire fiber. Every original halfspace in either group has global mixed mass $B>0$. Write $a_{ji}(z)=|K_z\\cap H_{ji}(z)|$ for its trace area and let $X_j=\\sum_i\\sum_{z\\notin P_j}a_{ji}(z)$, $X=X_0+X_1$, with sums by group occurrence.\nFor each triple group set\n$$\nL_j=\\sum_{z\\in P_j}\\min_i a_{ji}(z),\\quad\n\\Delta_j=B-L_j,\\quad\nE_j=\\sum_{z\\in P_j}\\left[\\sum_i a_{ji}(z)-w_z-\\frac34\\min_i a_{ji}(z)\\right].\n$$\nThen $\\Delta_j,E_j\\ge0$. For a pair group set $E_j=\\sum_{z\\in P_j}[\\sum_i a_{ji}(z)-w_z]\\ge0$.\n\nFor two triples,\n$$\nM=\\frac92B-X+\\frac34(\\Delta_0+\\Delta_1)-E_0-E_1.\n$$\nA shared original label contributes exactly $B$ to $X$ over its two occurrences, so with exactly one shared label $X=B+X_{\\rm unique}$ for the remaining occurrences. With at least two shared labels, $M\\le4B$.\n\nFor a triple and a pair, use subscripts $3$ and $2$ for their respective quantities. With five distinct labels,\n$$\nM=\\frac{17}4 B-X+\\frac34\\Delta_3-E_3-E_2,\\qquad\nM\\le\\frac92 B\\ \\Longleftrightarrow\\quad\nX+E_3+E_2+\\frac B4\\ge\\frac34\\Delta_3 .\n$$\nIn particular $L_3\\ge2B/3$ suffices. If the groups share a label, $M\\le4B$.",
+  "subgoal_id": "pk-intake-pk-w31-planar-two-group-cap-reserve",
+  "title": "Two planar cap groups and the exact five-cap reserve"
+}

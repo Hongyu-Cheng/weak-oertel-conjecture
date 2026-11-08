@@ -1,0 +1,28 @@
+{
+  "advances": "Actual fixed-cap maximizer at cap fraction one half with unbounded neutral raw-area index, leaving open conclusions that use a strict below-target ratio.",
+  "author": "PK-research-agent",
+  "candidate_id": "c5b7326ffd845b4b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:54:35.362371+00:00",
+  "depends_on": [
+    "074a5bdf8c59720e"
+  ],
+  "draft_key": "pk-w31-critical-fixed-cap-neutral-area-index",
+  "kind": "counterexample",
+  "proof": "The piecewise affine interpolation $r(z)$ through the given $r_j$ is positive concave, with strict slope decrease at each interior integer. Thus the compact convex polytope defined by $|x|,|y|\\le r(z)$ and $-m\\le z\\le m$ has exactly the specified integer fibers. For an anchored convex combination of distinct integer bases with integer barycenter, positive weights must straddle that barycenter unless the combination is trivial. In the nontrivial case the interpolant has a strict kink between the extreme active bases, at the barycenter, so Jensen's inequality is strict. It follows that each nontrivial anchored support inequality at the four cardinal normals is strict. There are only finitely many anchored vertices to check by 074a5bdf8c59720e, and all own square side lengths are positive. Hence an open neighborhood of independent four-normal support values has actual compatible positive rectangles. Since $r_j\\in[3/4,1]$, each fiber area is at most $4<(9/8)(2m+1)\\le M/2$.\n\nThe normals $u_i$ sum to zero and span the continuous plane. Their positive halfspaces cover each plane, with a positive circuit using weights $\\lVert u_i\\rVert$ if the normals are normalized. None of the six cap boundaries meets a square vertex, since the absolute values of each vector's coordinates differ. All cuts are proper and bisect every original square. The mixed measure is centrally symmetric, and every containing closed cap at the central origin has mass at least $M/2$ by reflection. An opposite pair of nonvertical caps through the origin has null mixed boundary and covers the source at masses $M/2$. Thus the actual maximum is $Q=M/2$ and all six displayed caps are critical. For every competing compatible family on $P$, the same opposite cap pair partitions mixed area up to a null boundary, so imposing its two budgets already gives $M'\\le2Q=M$. This proves global maximality even for arbitrary changed shapes.\n\nNow vary radii independently as $r_j+t a_j$, retaining exact compatibility on a small two-sided interval. Each cap still bisects each fiber. Thus $M(t)=4\\sum_j(r_j+t a_j)^2$ and each cap mass is $M(t)/2$. The $2m$-dimensional subspace $\\sum_jr_j a_j=0$ annihilates the area derivative and all cap derivatives, yet the raw area Hessian there is $8\\sum_j a_j^2>0$ for nonzero $a$. For the opposite pair, the objective-one Lagrangian using two multipliers equal to one is identically zero on all competing arrays by the partition identity. In particular a positive raw Hessian gives no positive constrained Lagrangian mode. Here $Q/M=1/2$, above the proposed sharp $n=1,d=2$ fraction $2/9$.\n",
+  "source_candidate_ids": [
+    "b2ef0078a048f038"
+  ],
+  "source_candidate_sha256": {
+    "b2ef0078a048f038": "ee91c49591bcc68a307bf25184b4f6b17057b41b5c3dc5d37dd968df1349a54b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b2ef0078a048f038",
+      "locator": "b2ef0078a048f038:03 §§4–5, (9)–(15), unbounded positive index at actual critical budgets"
+    }
+  ],
+  "statement": "For every integer $m\\ge2$, the actual planar-fiber source with bases $P=\\{-m,\\ldots,m\\}$ and fibers $r_j[-1,1]^2$, $r_j=1-j^2/(4m^2)$, has strict local compatibility in its four-normal support coordinates. Every fiber is strictly smaller than half its total mixed area $M$. The six fixed closed cylindrical caps with margins $\\pm u_i\\cdot(x,y)$, where $u_1=(1,2)$, $u_2=(-2,1)$, $u_3=(1,-3)$, are all critical at its central maximizing point with mass $Q=M/2$. They include a full-rank positive circuit, and their fixed upper budgets $Q$ make the source a global area maximizer over all actual compatible competitors on $P$.\n\nThe actual first-order cap-neutral tangent space contains a $2m$-dimensional subspace on which the Hessian of raw mixed area is positive definite. Consequently the number of parity classes cannot bound this index under the displayed assumptions. The exact fixed-cap Lagrangian for a pair of opposite caps is identically zero.",
+  "subgoal_id": "pk-intake-pk-w31-critical-fixed-cap-neutral-area-index",
+  "title": "Actual critical fixed budgets allow unbounded neutral raw-area index"
+}

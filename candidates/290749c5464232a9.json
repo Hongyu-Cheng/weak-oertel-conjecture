@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary planar area with an interior reflection-fixed source and fixed cap directions. It applies without endpoint compatibility.",
+  "author": "PK-research-agent",
+  "candidate_id": "290749c5464232a9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:54:35.361033+00:00",
+  "depends_on": [],
+  "draft_key": "symmetric-triangle-cap-profile-thin-parameter-exclusion",
+  "kind": "lemma",
+  "proof": "Set $R=(2-x)/3\\in(0,1)$. The first cap is homothetic to the triangle with scale $R$, so $q_1/k=R^2$. Since $128/279<(17/25)^2$, $R<17/25$. Reflection $(x_1,x_2)\\mapsto(x_1,-x_1-x_2)$ preserves the triangle and source and interchanges caps two and three.\n\nThe horizontal cut is at $-1+3R/2$. If $R\\le1-L/3$, the cut misses only a triangle at the bottom vertex $(2,-1)$, with relative area $9R^2/(9-L^2)$ from its two edge ratios. This case implies $L\\le3(1-R)<3$. Its cap fraction is at least the fraction at $L=3(1-R)$, namely $2(1-R)/(2-R)>16/33>128/279$, a contradiction. Hence the cut lies strictly above the lower base vertex and below the upper one, and the upper tip formula gives\n$$\nz:=q_2/k=q_3/k=\\frac{(L+3-3R)^2}{2L(L+3)}.\n$$\nAssume $L\\le8/5$. If $z\\ge R^2$, the profile divided by $k$ is $R^2+5z/4$. Minimizing this quadratic in $R$ over the whole line gives $5(L+3)^2/[8L(L+3)+45]=1+3L(2-L)/[8L(L+3)+45]>1$.\n\nIf $z\\le R^2$, the normalized profile is $2z+R^2/4$. Its derivative in $R$ is $-6(L+3-3R)/[L(L+3)]+R/2<0$ throughout $0<R\\le17/25$, $0<L\\le8/5$: use $L+3-3R\\ge24/25$, $L(L+3)\\le184/25$, and $R/2\\le17/50$. The derivative of $z$ in $L$ has the sign of $R(2L+3)-(L+3)$, which is at most $(9/25)L-24/25<0$ on the same rectangle. The profile is therefore bounded below by its value at $(L,R)=(8/5,17/25)$, namely $2(256/575)+289/2500=57847/57500>1$. Both orders contradict the stated profile bound.\n",
+  "source_candidate_ids": [
+    "3f10007d0abab8f7"
+  ],
+  "source_candidate_sha256": {
+    "3f10007d0abab8f7": "fb6c08b232bbbbf8b77f6a8af67d3a162f27e27dd40c96e12f08a347e2ae2a69"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3f10007d0abab8f7",
+      "locator": "3f10007d0abab8f7:02 §2, Lemma 2, (8) and both ordered profile cases"
+    }
+  ],
+  "statement": "For $0<L\\le3$ let $K_L=\\operatorname{conv}\\{(2,-1),(-1,(1+L)/2),(-1,(1-L)/2)\\}$, $k=3L/2$, and $y=(x,-x/2)\\in\\operatorname{int}K_L$. Use the three normals $(1,0),(0,1),(-1,-1)$ and let $q_i$ be the areas of their through-$y$ upper caps. If every $q_i\\le(128/279)k$ and $q_{\\min}+q_{\\rm mid}+q_{\\max}/4\\le k$, then $L>8/5$.",
+  "subgoal_id": "pk-intake-symmetric-triangle-cap-profile-thin-parameter-exclusion",
+  "title": "The symmetric triangle cap profile excludes the thin parameters"
+}

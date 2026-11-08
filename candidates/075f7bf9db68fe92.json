@@ -1,0 +1,29 @@
+{
+  "advances": "Selected caps must themselves cover both entire endpoint planes. An actual complete cover may instead use slack groups at the endpoints.",
+  "author": "PK-research-agent",
+  "candidate_id": "075f7bf9db68fe92",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:55:29.874290+00:00",
+  "depends_on": [
+    "d192c5d880bad772",
+    "9de29e09d3ada6ce"
+  ],
+  "draft_key": "triangle-selected-circuit-coverage-cost",
+  "kind": "theorem",
+  "proof": "Equal-weight continuous balance is $\\sum_i\\theta_i u_{i+1}=0$, which holds exactly when all $\\theta_i$ are equal since the sole linear dependence among the three $u_i$ has equal coefficients. Near zero the three normals have rank two, so their positive dependence is minimal. With equal weights, d192c5d880bad772 applies and gives whole-plane closed-cap coverage over $j$ exactly when $j\\sum_i\\alpha_i\\ge0$. Equivalently, the three margins fill the affine plane in $\\mathbb R^3$ with coordinate sum $j\\sum_i\\alpha_i$; a negative sum allows all three margins to be negative. Both endpoint requirements are therefore equivalent to the stated zero-sum condition.\n\nThe cyclic permutation of the three vertex coordinates of $T$ preserves its area and cycles $u_i$. Apply the affine-radius formula from the moving-triangle chart to each cap. With the common $\\theta$, its mass is $6+3\\theta^2/[2(1-\\theta)]+(2a+\\alpha_i-a\\theta)^2/(1-\\theta)$. Average the squares using $\\sum_i\\alpha_i=0$; their mean is at least $a^2(2-\\theta)^2$. Hence the largest cap mass is at least\n$$\n(3/2+a^2)\\frac{(2-\\theta)^2}{1-\\theta}\n=6+4a^2+(3/2+a^2)\\frac{\\theta^2}{1-\\theta}.\n$$\nThe lower bound is achieved at the stated zero tilts and angles, which lie in the chamber for small $|a|$. Independent branch optimization instead gives all $\\alpha_i=-2a,\\theta_i=0$. At the centroid $0$ of the endpoint with $aj>0$ each margin is $-2aj<0$, and the centroid is interior, so an actual positive-area neighborhood is missed.\n\nFor variable positive balancing weights $\\lambda_i$ near one, the same minimal-circuit criterion gives $\\sum_i\\lambda_i\\alpha_i=0$ if both endpoint planes are covered. Differentiating at the original zero tilts gives $\\sum_i\\alpha_i'=0$. The exact chart expansion gives the second derivative of the cap sum as $2\\sum_i(2A+\\alpha_i')^2+3\\sum_i(\\theta_i')^2$ at zero. The unconstrained minimum is zero. The tilt constraint makes the first sum at least $24A^2$ after its factor $2$, and the angular term is nonnegative. Constant weights and identically zero tilt and angle paths attain equality, so further continuous-balance conditions cannot change this minimum. The fixed factor $3/4$ yields $18A^2$, the second derivative of $27/2+9a(\\varepsilon)^2$.\n",
+  "source_candidate_ids": [
+    "0e4cb84a76d46e82"
+  ],
+  "source_candidate_sha256": {
+    "0e4cb84a76d46e82": "d3bd8aa219fa9b26700338874115e231dbca3aed1eb94bb31c75da34a25712b2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0e4cb84a76d46e82",
+      "locator": "0e4cb84a76d46e82:06 §5, (14)–(18), exact selected-circuit whole-plane cost and variable-weight curvature"
+    }
+  ],
+  "statement": "Take $K_j(a)=(1+aj)T$, $j=-1,0,1$, with $T=\\operatorname{conv}\\{(-1,-1),(2,-1),(-1,2)\\}$. Let $u_1=(1,0),u_2=(0,1),u_3=(-1,-1)$ in cyclic order and consider the three through-origin caps with margins $(u_i+\\theta_i u_{i+1})\\cdot x+\\alpha_i j$. In their common open one-vertex chamber around $a=\\theta_i=\\alpha_i=0$, impose equal-weight continuous balance and require the selected caps to cover both entire endpoint planes. These conditions are exactly $\\theta_1=\\theta_2=\\theta_3$ and $\\sum_i\\alpha_i=0$. The optimal largest selected cap mass is $6+4a^2=(4/9)(27/2+9a^2)$ for sufficiently small $|a|$, attained at all $\\theta_i=\\alpha_i=0$. The independently optimizing caps miss an actual neighborhood of the endpoint centroid with $aj>0$ whenever $a\\ne0$ is sufficiently small.\n\nAt the origin, along $a(\\varepsilon)=A\\varepsilon$, allow smooth positive continuous balancing weights, each initially one, and retain whole-plane coverage at both endpoints. The extra minimum second-derivative cost for the sum of selected cap masses is $24A^2$ relative to independent normal optimization, or $18A^2$ after multiplying the cap sum by the fixed stress $3/4$.",
+  "subgoal_id": "pk-intake-triangle-selected-circuit-coverage-cost",
+  "title": "Exact cost of preserving the selected triangle circuit's endpoint cover"
+}

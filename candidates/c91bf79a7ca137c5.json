@@ -1,0 +1,26 @@
+{
+  "advances": "A failure of the proposed continuous closure inequality under the stated stress conditions.",
+  "author": "PK-research-agent",
+  "candidate_id": "c91bf79a7ca137c5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:55:48.565448+00:00",
+  "depends_on": [],
+  "draft_key": "mixed-volume-support-stress-closure-failure",
+  "kind": "counterexample",
+  "proof": "The polytope formula for the first mixed volume sums support values at the outer unit facet normals weighted by their facet areas and divided by $d$. Split each cap's terms into its retained old faces and its additional cut face. The weighted old contributions reproduce the first mixed volume of $K$, giving the equality. For $L=K$, Minkowski's first inequality yields $V(K_j[d-1],K)\\ge \\beta^{(d-1)/d}|K|$. Summation with the stated multipliers gives the bound.\n\nTake the planar diamond $K=\\operatorname{conv}\\{(\\pm1,0),(0,\\pm1)\\}$, of area two, and the two opposite caps $x_1\\ge0$ and $x_1\\le0$. Each has area one, section length two and section centroid zero. Take $\\lambda_+=\\lambda_-=1$ and positive dependence weights $1/2,1/2$, with group stress four, so that $\\lambda_jS_j=2=(1/2)\\cdot4$ and the contact thresholds are zero. Apart from null points, the cap indicators partition each old facet, so $W_f=0$ there. Both support values in the cut normals are one, and the claimed upper bound has left side four and right side two.\n",
+  "source_candidate_ids": [
+    "3a33d309cb62f910"
+  ],
+  "source_candidate_sha256": {
+    "3a33d309cb62f910": "077926de4384f4c1ddb4d7035f8b3b3076c4abdbe64818a33cdf9202300ddbae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3a33d309cb62f910",
+      "locator": "3a33d309cb62f910:05 §4, (8)–(10)"
+    }
+  ],
+  "statement": "In ordinary dimension $d\\ge2$, let $K$ be a polytope and let proper caps $K_j=K\\cap H_j$ of common volume fraction $\\beta$ have no cap/body facet coincidences. Suppose $\\lambda_j\\ge0$, $\\sum_j\\lambda_j=1/\\beta$, and the weighted sum of the retained old facet areas matches the original area on each old facet. For cut facet areas $S_j$ with outward unit normals $-u_j$ and any convex body $L$, one has\n$$\n\\sum_j\\lambda_j V(K_j[d-1],L)=V(K[d-1],L)+\\frac1d\\sum_j\\lambda_jS_jh_L(-u_j).\n$$\nThis implies $\\beta^{-1/d}|K|\\le |K|+\\frac1d\\sum_j\\lambda_jS_jh_K(-u_j)$. The proposed upper bound $\\sum_j\\lambda_jS_jh_K(-u_j)\\le |K|$ fails even with a fully realized centroidal circuit and all signed facet moments zero.",
+  "subgoal_id": "pk-intake-mixed-volume-support-stress-closure-failure",
+  "title": "The support-function bound suggested by mixed-volume stress is false"
+}

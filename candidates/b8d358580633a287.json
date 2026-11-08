@@ -1,0 +1,28 @@
+{
+  "advances": "Geometric contact classification for a compatible matched triangle, with no assumption of a critical or common-budget cap menu.",
+  "author": "PK-research-agent",
+  "candidate_id": "b8d358580633a287",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:54:35.361136+00:00",
+  "depends_on": [
+    "dc74d781ac84a1fe"
+  ],
+  "draft_key": "matched-triangle-small-endpoint-forces-near-corner",
+  "kind": "theorem",
+  "proof": "The true-facet erosion and matched-support shape bound apply with the reference triangle $K$, unit scale and zero translation. In the original coordinates they give $A\\subseteq p+hK$, $B\\subseteq -p+\\rho K$, $h=2-\\rho$ and $0<\\rho<1$. Since $b\\le\\rho^2 k<k$ and $a<b/32$, we have $a/k<1/32$. Also $k\\le a+b<(33/32)b$, so $\\rho>\\sqrt{32/33}>63/64$. Hence $1<h<65/64$.\n\nEach outer edge contacts $K$ because its support is matched. If no vertex of $-T$ lies in $K$, each vertex of $K$ can lie on at most one outer edge, and each of the three outer edges contains at least one vertex of $K$. Thus the contacts label the three vertices distinctly and all off-diagonal entries are positive.\n\nFor each $i$ select an actual point $a_i\\in A$ strictly below its proper cut. Pull it back to $X_i=(a_i-p)/h\\in K$ and let $\\epsilon_i=(2v_i\\cdot y-v_i\\cdot p+h-1)/(3h)$. Then $0\\le\\lambda_i(X_i)<\\epsilon_i$ and $\\sum_i\\epsilon_i=(h-1)/h$. Write $X_i=\\sum_jQ_{ji}P_j$ with a nonnegative column-stochastic matrix $Q$. We have $m(1-Q_{ii})\\le\\lambda_i(X_i)<\\epsilon_i$. Set $L=I-Q$. Its columns sum to zero, so $\\det L=0$. Each principal two-by-two minor of $L$ is nonnegative because $1-Q_{ii}\\ge Q_{ji}$ and $1-Q_{jj}\\ge Q_{ij}$. In dimension three expansion of $\\det(I-L)$ gives\n$$\n\\det Q\\ge 1-\\operatorname{tr}L>1-\\frac{\\sum_i\\epsilon_i}{m}.\n$$\nThe triangle with vertices $X_i$ has area $|\\det Q|k$ and lies in $(A-p)/h$. Consequently $a/(h^2k)\\ge|\\det Q|\\ge\\det Q$, proving the first strict bound. Substitution of $a/k<1/32$ gives the second. The function $32h(h-1)/(32h^2-1)$ increases for $h>1$ by differentiation, and at $65/64$ is $65/4097<1/63$. The two positive coordinates at a contact vertex sum to one.\n",
+  "source_candidate_ids": [
+    "3f10007d0abab8f7"
+  ],
+  "source_candidate_sha256": {
+    "3f10007d0abab8f7": "fb6c08b232bbbbf8b77f6a8af67d3a162f27e27dd40c96e12f08a347e2ae2a69"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3f10007d0abab8f7",
+      "locator": "3f10007d0abab8f7:07 §6, Theorem 5, (15)–(18), near-corner contact classification"
+    }
+  ],
+  "statement": "In $\\mathbb R^2$ put $v_1=(1,0)$, $v_2=(0,1)$, $v_3=(-1,-1)$ and $T=\\{x:v_i\\cdot x\\le1\\ \\forall i\\}$. Let $K$ be a triangle, and $A,B$ convex bodies with $B\\subseteq T$ and $(A+B)/2\\subseteq K$. Suppose for one $y$ all three lines $v_i\\cdot x=2v_i\\cdot y-1$ meet $\\operatorname{int}A$. Write $a=|A|$, $k=|K|$, and $b=|B|$. Assume $h_K(-v_i)=1$ for all $i$, $a<b/32$ and $k\\le a+b$. Let $\\rho$ be the actual $B$-enclosure scale in the true facets of $K$, and put $h=2-\\rho$ and $\\lambda_i(x)=(v_i\\cdot x+1)/3$. Either $K$ contains a vertex of $-T$, or its vertices can be labeled $P_i$ with $\\lambda_i(P_i)=0$ and all off-diagonal $\\lambda_i(P_j)>0$. In the second case, for $m=\\min_{i\\ne j}\\lambda_i(P_j)$,\n$$\nm<\\frac{(h-1)/h}{1-a/(h^2 k)}\n <\\frac{32h(h-1)}{32h^2-1}<\\frac{65}{4097}<\\frac1{63}.\n$$\nIn particular a vertex of $K$ on an outer edge has one outer barycentric coordinate below $1/63$ and another above $62/63$.",
+  "subgoal_id": "pk-intake-matched-triangle-small-endpoint-forces-near-corner",
+  "title": "A small endpoint forces near-corner contact for a matched middle triangle"
+}

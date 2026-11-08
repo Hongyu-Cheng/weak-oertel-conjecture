@@ -1,0 +1,26 @@
+{
+  "advances": "An ordinary planar triangle calculation for a single affine coordinate, with both vertex incidences and repeated endpoint values.",
+  "author": "PK-research-agent",
+  "candidate_id": "d5889d7689ef08a5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:54:35.361253+00:00",
+  "depends_on": [],
+  "draft_key": "triangle-cap-quantile-and-affine-minorant",
+  "kind": "lemma",
+  "proof": "Rescale the affine coordinate by $m$ and write $x=z/m$. On $t\\le x\\le1$ with $t<1$, the cap is the tip at the top vertex with relative area $(1-x)^2/(1-t)$. On $0\\le x\\le t$ with $t>0$, its complement is the tip at the low vertex with relative area $x^2/t$. These formulas are products of two edge ratios and agree for the cap area at $x=t$, where that area fraction is $1-t$. They apply at $t=0,1$ by using the available interval, and a threshold outside $[0,1]$ either violates the cap hypothesis or satisfies the bound trivially. Inversion gives $\\phi_c$ including its transition.\n\nFor the first branch, set $u=1-t$. The minorant is equivalent to $(1-b_0)+(1+b_0)u/4\\ge\\sqrt{(1-b_0^2)u}$, which is AM–GM. For the second let $w=\\sqrt t\\ge b_0$, $A=(3b_0-1)/4$, and $B=(1+b_0)/4$. Then $b_0=A+B$ and $b_0w-A-Bw^2=(1-w)(Bw-A)\\ge0$, since $Bb_0-A=(1-b_0)^2/4$. Squaring proves $b_0>147/200$, and substitution in both minorant coefficients gives the rational bound.\n",
+  "source_candidate_ids": [
+    "3f10007d0abab8f7"
+  ],
+  "source_candidate_sha256": {
+    "3f10007d0abab8f7": "fb6c08b232bbbbf8b77f6a8af67d3a162f27e27dd40c96e12f08a347e2ae2a69"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3f10007d0abab8f7",
+      "locator": "3f10007d0abab8f7:09 §7.2, (22)–(24), exact triangular cap quantile and affine lower minorant"
+    }
+  ],
+  "statement": "Let an affine coordinate on a full-dimensional triangle have vertex values $0,l,m$ with $0\\le l\\le m$ and $m>0$. Put $t=l/m$ and $c=128/279$. If the cap at threshold $z$ has area at most $c$ times the triangle area, then $z/m\\ge\\phi_c(t)$, where\n$$\n\\phi_c(t)=\n\\begin{cases}\n1-\\sqrt{c(1-t)}, & t\\le1-c,\\\\\n\\sqrt{(1-c)t}, & t\\ge1-c.\n\\end{cases}\n$$\nFor $b_0=\\sqrt{151/279}$ one has $\\phi_c(t)\\ge (3b_0-1)/4+(1+b_0)t/4$. In particular $z\\ge(241/800)m+(347/800)l$.",
+  "subgoal_id": "pk-intake-triangle-cap-quantile-and-affine-minorant",
+  "title": "An exact triangular cap quantile and its affine minorant"
+}

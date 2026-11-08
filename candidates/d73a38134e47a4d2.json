@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary Lebesgue law on one pointed cone.",
+  "author": "PK-research-agent",
+  "candidate_id": "d73a38134e47a4d2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:56:22.858652+00:00",
+  "depends_on": [],
+  "draft_key": "normalized-cone-laplace-mean",
+  "kind": "lemma",
+  "proof": "Zero does not belong to the compact convex hull of $Q\\cap S^{k-1}$: a convex combination giving zero would imply that both a nonzero cone vector and its negative belong to $Q$. The nearest point of that hull to zero therefore gives a linear functional strictly positive on $Q\\cap S^{k-1}$. For every $b\\in\\operatorname{int}Q^*$ this strict positivity gives $b\\cdot q\\ge c|q|$ on $Q$ for some $c>0$, hence finite positive $J_Q(b)$. Rescaling such a $b$ makes $b\\cdot v=1$.\n\nChoose $r>0$ with $v+rB_k\\subset Q$. On the closed normalized dual slice $1=b\\cdot v\\ge r|b|$, so it is compact. At a dual boundary point there is a nonzero $w\\in Q$ with $b\\cdot w=0$. Disjoint translates of any fixed interior ball by spaced positive multiples of $w$ stay in $Q$ and give equal positive integrals. Thus $J_Q(b)=\\infty$ there, and Fatou excludes such a point as a finite minimizing-sequence limit. Interior continuity and strict convexity follow by differentiating under a locally uniform exponential bound; the Hessian is $\\int_Q qq^{\\mathsf T}e^{-b\\cdot q}\\,dq$, positive definite by full dimension. This proves unique attainment. Homogeneity gives $J_Q(tb)=t^{-k}J_Q(b)$. At $n_v$, constrained stationarity makes $-\\nabla\\log J_Q(n_v)$ a multiple of $v$, and homogeneity gives its dot product with $n_v$ as $k$. This gradient is the claimed mean.\n",
+  "source_candidate_ids": [
+    "e70b63e0e6efe01c"
+  ],
+  "source_candidate_sha256": {
+    "e70b63e0e6efe01c": "92959dd38d71f724eff0dd4eb4c260fcbf25d8ecc8805f23829ca9b3b6be062d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e70b63e0e6efe01c",
+      "locator": "e70b63e0e6efe01c:01 §1, (1)–(2), dual-cone minimization and exponential mean"
+    }
+  ],
+  "statement": "Let $Q\\subset\\mathbb R^k$ be a closed pointed full-dimensional convex cone, $k\\ge1$, and $v\\in\\operatorname{int} Q$. Write $Q^*=\\{b:b\\cdot q\\ge0\\ (q\\in Q)\\}$ and $J_Q(b)=\\int_Q e^{-b\\cdot q}\\,dq$. The minimum $J_*(v)=\\min_{b\\in\\operatorname{int}Q^*,\\, b\\cdot v=1}J_Q(b)$ is positive, finite, and uniquely attained at $n_v$. The probability with density $e^{-n_v\\cdot q}/J_*(v)$ on $Q$ has mean $kv$.",
+  "subgoal_id": "pk-intake-normalized-cone-laplace-mean",
+  "title": "The normalized cone Laplace minimum has mean on its marked ray"
+}

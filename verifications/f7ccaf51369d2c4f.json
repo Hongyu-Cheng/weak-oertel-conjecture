@@ -1,0 +1,57 @@
+{
+  "candidate_id": "d6e28c710623b1e1",
+  "candidate_sha256": "3f4d7fa5d4666da4d82592a1efd929fb787c27c9ea93cafa80033b43b52ff2c1",
+  "checked_dependency_candidate_sha256": {
+    "1e5e41e5e4ab2a64": "5ae217806724247f95eacd6617b55326a6e9deb3d964a415a888570125006510",
+    "d73a38134e47a4d2": "8c07791918a751eb6bae3f2395ce901e2eab37064dba67da231d512e96cb08e6"
+  },
+  "checks": [
+    "A dual ray with nonpositive b·w translates disjoint positive-volume pieces without decreasing the hinge. A strict dual coefficient controls the entire normal radius.",
+    "The truncated cone volume is J_Q(b)t^k/k!. Integrating in threshold gives J_Q(b)[A]_+^{k+1}/(k+1)!, and normalizing b by b·v separates all three parameters.",
+    "Differentiating the scale factor gives (beta-k)/(beta(1+beta)) for its logarithmic derivative, so the minimizer beta=k produces (k+1)^k/(k!k^k).",
+    "Cone homogeneity makes the radial variable independent of the angular slice law. Its mean is k under the normalized exponential and kR/(k+1) under truncated uniform volume. This gives the cap conditional mean h(z)v; the hinge moment identities give both required full moments.",
+    "The affine margin integrates to the competitor mass at the prescribed centroid. Equality in the pointwise hinge bound forces the closed cap indicator away from its null plane. The proof and bounds also cover a singleton F.",
+    "Checked c8365ce16304e154:02, (4)–(9), against the frozen result."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d73a38134e47a4d2",
+      "candidate_sha256": "8c07791918a751eb6bae3f2395ce901e2eab37064dba67da231d512e96cb08e6",
+      "hypotheses": "The cone is closed, pointed and full dimensional, and v is interior. Use the exact normalized Laplace minimizer with mean kv and its degree -k homogeneity; the latter is also immediate by change of variables.",
+      "reviewed_proof_sha256": "af5a5ae08d828ad788d1b8a092ac47778d2f66a2585c838d58eb2b61cd9af96e",
+      "reviewed_statement_sha256": "5c107c74afe78cd29d0a206328e2d914b96ef42806a6faef631003a0513706ea",
+      "status": "same-wave independent approval required before admission"
+    },
+    {
+      "candidate_id": "1e5e41e5e4ab2a64",
+      "candidate_sha256": "5ae217806724247f95eacd6617b55326a6e9deb3d964a415a888570125006510",
+      "hypotheses": "The tangential source is a compact convex body with interior mark x, or the allowed singleton. Invoke p=k+1>1 for unique a, the h^k and h^{k+1} identities, and the minimum-power marginal.",
+      "reviewed_proof_sha256": "648e3d10aa9c19020c39aa00a8c7218496badb78e8c11e62f01fbba77bda7780",
+      "reviewed_statement_sha256": "74e4ce5059baaa5aecd759c81aa0633fd2198e95b2db2423d12b2de8a6f2c339",
+      "status": "same-wave independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:00:26Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Compact retained-cap duality has the same affine test but does not give this unbounded product-cone minimizer, parameter constants or conditional laws.",
+      "fact_id": "efa4558174ce60cf"
+    }
+  ],
+  "readability": "The separation of the three strictly positive factors uses the unique minimizing scale beta=k.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent read of frozen proof, then source and predecessor comparison",
+  "reviewed_proof_sha256": "7ffeb6e8b9124c8e2e2f81aea4d7a842f27b5db412205359833e48872e3c06c8",
+  "reviewed_statement_sha256": "10c52e3c5b2cbdd606c7e6f93e797e42cb0487a3f2afb21eed423c59289c2f54",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:56:45Z",
+  "summary": "The product cap is a uniquely optimal dominated density and the two component conditional laws have the asserted normalization.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

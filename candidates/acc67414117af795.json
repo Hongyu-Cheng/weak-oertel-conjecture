@@ -1,0 +1,29 @@
+{
+  "advances": "Section measure for a regular marked cap. The result does not transfer a section fraction to the cap at one level.",
+  "author": "PK-research-agent",
+  "candidate_id": "acc67414117af795",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:55:48.564117+00:00",
+  "depends_on": [
+    "1269c554ca9a41b8",
+    "4d24a4fbd205befd"
+  ],
+  "draft_key": "stationary-oblique-section-tails",
+  "kind": "theorem",
+  "proof": "The derivative formula in 1269c554ca9a41b8 §2 applies to the finite positive $d$-volume fibers. The stated regularity gives zero measure for nonproper traces, and varying $a$ and the absolute offset by $1$ and $m$, respectively, gives $\\sum_z(z-m)s_z=0$. The proper central trace gives $s_m>0$.\n\nWrite $e=u/|u|$ and choose an isometry $Q:\\mathbb R^{d-1}\\to u^\\perp$. The affine parametrization $(z,\\xi)\\mapsto(z,x_0-a(z-m)e/|u|+Q\\xi)$ identifies the section with a convex set and is isometric on each fixed base. Its positive-volume section fibers are an interval of real bases by Brunn–Minkowski, and the positive original $d$-volume fibers also form an interval by Brunn–Minkowski. Intersecting the two intervals and sampling at integers leaves consecutive positive indices and preserves the concavity of the $(d-1)$st roots of $s_z$. Normalizing the masses, their mean is exactly $m$. Apply the scalar theorem 4d24a4fbd205befd with exponent $d-1$. Multiplication by $1/|u|$ leaves both tail fractions unchanged.\n\nFor sharpness take the scalar sharpness profiles $s_j=(L-j)_+^{d-1}$ for $j\\ge0$ with integral means $m$ from 4d24a4fbd205befd, and choose a $(d-1)$-body $T$ of volume one centered at zero. Let $C=\\{(z,\\xi,t):0\\le z\\le L,\\ \\xi\\in(L-z)T,\\ |t|\\le1\\}$. This is convex and full dimensional. The cut $t=0$ has proper regular sections on every positive integer fiber; the lifted section centroid is $(m,0,0)$ by the weighted mean and the centers of $T$. The same derivative formula gives full-normal stationarity. The section tails are exactly the scalar ones. A shear $t\\mapsto t-c(z-m)$ with $c\\ne0$ makes the cut oblique and preserves the measured fibers and the full-normal stationarity, since it is an invertible base-preserving affine map with unit fiber determinant. Reflection reverses the two sides.\n",
+  "source_candidate_ids": [
+    "87728f667e65240d"
+  ],
+  "source_candidate_sha256": {
+    "87728f667e65240d": "347b4548748ae4074527432dfff45e908ab0284bb12e62fc7a99ba9c35541f15"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "87728f667e65240d",
+      "locator": "87728f667e65240d:02 §1, (4), (6)–(7), zero-fiber truncation and sharpness"
+    }
+  ],
+  "statement": "Let $d\\ge2$, let $C\\subset\\mathbb R\\times\\mathbb R^d$ be a convex body, and let $m\\in\\mathbb Z$, $x_0\\in\\operatorname{int}K_m$, with $K_z=C_z$. For $u\\ne0$ let $Q_z=K_z\\cap\\{a(z-m)+u\\cdot(x-x_0)=0\\}$. Put $s_z=\\mathcal H_{d-1}(Q_z)$ on positive $d$-volume integer fibers and zero elsewhere. Assume $\\mathcal H_{d-1}(Q_z\\cap\\partial K_z)=0$ on those positive fibers and that the cap with this margin is stationary in the integer tilt $a$. Then each closed side $z\\le m$ and $z\\ge m$ carries more than $\\gamma_d=(d/(d+1))^d$ of the total section mass, also for the derivative weights $s_z/|u|$. The constant is the infimum, even among regular sections stationary in the full ambient normal.",
+  "subgoal_id": "pk-intake-stationary-oblique-section-tails",
+  "title": "Sharp integer tails of a stationary oblique section"
+}

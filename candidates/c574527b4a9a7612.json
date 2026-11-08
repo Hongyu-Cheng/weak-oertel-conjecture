@@ -1,0 +1,33 @@
+{
+  "advances": "Two actual sources at one integer coordinate, with a unique base satisfying the marginal filter, refuting sharp depth at the continuous entropy escort.",
+  "author": "PK-research-agent",
+  "candidate_id": "c574527b4a9a7612",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:52:39.944133+00:00",
+  "depends_on": [
+    "750432756479bf6a",
+    "a93e9443922f47dc"
+  ],
+  "draft_key": "weighted-centerpoint-filtered-entropy-escort-obstruction",
+  "kind": "counterexample",
+  "proof": "The lifted hull has the indicated fibers and no others by 750432756479bf6a, with its three named fibers relabeled to $A,K,B$ here. In particular the midpoint of the endpoint boxes is $[(1-a)/2,1]\\times Q\\subseteq K$ and the individual masses are $a,1,1$. The extreme bases have weighted depths $a$ and $1$, by isolating them with closed base halfspaces. Base zero has depth $\\min(a+1,2)=a+1>M/2$, hence it is the only eligible base.\n\nFor a probability with fixed fiber masses, strict Jensen for $q=(D-1)/D\\in(0,1)$ shows that the maximizing density is constant on each positive-mass fiber and gives the finite objective $(\\sum_z v_z^{1/D}\\pi_z^q)^D$ with $v_z=|K_z|$. Base mean zero forces equal endpoint probabilities $u$, so the objective before the power is\n$$\n(a^{1/D}+1)u^q+(1-2u)^q,\\qquad 0\\le u\\le 1/2.\n$$\nIt is strictly concave. Its derivative vanishes at the unique interior solution of $u/(1-2u)=((a^{1/D}+1)/2)^D=w$. Thus $u=w/(1+2w)$ and the maximum value after raising to $D$ is $1+2w$. The continuous mean follows by weighting the fiber centroids, whose first coordinates are $k,1/2,k$ and whose other coordinates are all $1/2$.\n\nSince $1/2<y<k<1$, the cap $x_1-z\\ge y$ includes all of $A$: the threshold there is $y-1<0$, below $(3-3a)/4$. Its threshold at the other endpoint is $y+1>3/2$, above $(5-a)/4$, so it misses $B$. Its middle trace has mass $1-y$. In particular the exact substitutions are\n$$\n\\begin{array}{c|c|c|c|c|c|c}\n(d,a)&k&w&1+2w&y&M&\\mu\\{x_1-z\\ge y\\}\\\\ \\hline\n(1,1/8)&23/32&27/64&59/32&1133/1888&17/8&991/1888\\\\\n(2,1/81)&121/162&16/81&113/81&10433/18306&163/81&8099/18306.\n\\end{array}\n$$\nThe two normalized cap masses are $1/4-3/1003$ and $2/9-785/331542$, respectively. For comparison the separate mark at the center of the middle unit box has normalized depth at least $(1+2a)/(2(2+a))$ by a93e9443922f47dc §1: the reflected first-coordinate interval of $A$ is $[(1-a)/4,(1+3a)/4]\\subseteq [k-1/2,k+1/2]$, giving overlap $a$, and the middle box contributes half its unit volume. This gives $5/17$ and $83/326$ for the two examples.\n",
+  "source_candidate_ids": [
+    "9a6be4fc7a226f55"
+  ],
+  "source_candidate_sha256": {
+    "9a6be4fc7a226f55": "ad571d3f73da3925ad026def1bdcb58366d8b36ded62b9ebb1e13fcce614fbfc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9a6be4fc7a226f55",
+      "locator": "9a6be4fc7a226f55:01 §§1–2, (1)–(6)"
+    },
+    {
+      "candidate_id": "9a6be4fc7a226f55",
+      "locator": "9a6be4fc7a226f55:02 §§3–4, (7)–(8)"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $0<a<1$, $Q=[0,1]^{d-1}$ (a singleton transverse factor when $d=1$), and $k=(3-a)/4$. At bases $-1,0,1$ take the actual fibers of the lifted hull\n$$\nA=[k-a/2,k+a/2]\\times Q,\\qquad K=[0,1]\\times Q,\\qquad B=[k-1/2,k+1/2]\\times Q.\n$$\nTheir original mixed volume measure $\\mu$ has mass $M=2+a$. Base $0$ is the unique integer base of weighted closed halfspace depth at least $M/2$. For $D=d+2$, the escort maximizes $(\\int\\rho^{(D-1)/D}\\,d\\mu)^D$ over probability densities with base mean zero. Its mass on each endpoint is $w/(1+2w)$ and on the middle fiber $1/(1+2w)$, where $w=((a^{1/D}+1)/2)^D$. Its continuous mean is $(y,1/2,\\ldots,1/2)$ with\n$$\ny=\\frac{1/2+2wk}{1+2w}.\n$$\nThe actual cap $x_1-z\\ge y$ through this point has original raw mass $a+1-y$. The normalized depth of the selected point is therefore at most $991/4012<1/4$ for $(d,a)=(1,1/8)$ and at most $8099/36838<2/9$ for $(d,a)=(2,1/81)$. In particular both filtered escort rules fail the sharp depth target at their unique qualifying base.",
+  "subgoal_id": "pk-intake-weighted-centerpoint-filtered-entropy-escort-obstruction",
+  "title": "Weighted base-centerpoint filtering still permits shallow entropy escort points"
+}

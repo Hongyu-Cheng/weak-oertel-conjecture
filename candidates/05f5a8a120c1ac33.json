@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary sharp prescribed-volume projection inside a simplex for a fixed direction.",
+  "author": "PK-research-agent",
+  "candidate_id": "05f5a8a120c1ac33",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.060813+00:00",
+  "depends_on": [
+    "c7cca0d28978bab7"
+  ],
+  "draft_key": "pk-w31-simplex-sharp-prescribed-volume-projection",
+  "kind": "theorem",
+  "proof": "The arbitrary-direction chord distribution lemma applies in the same coordinate system and measure. The displayed polynomial is strictly increasing on $(0,1)$ because its derivative is $d(d-1)\\eta^{d-2}(1-\\eta)>0$, with limits zero and one. If $b<V$, set $v_0=L(1-\\eta)>0$ and $E_0=\\{y\\in\\pi_eT:\\ell(y)\\ge v_0\\}$. Integrating the chord density of that lemma gives\n$$\n\\nu(E_0)=P\\eta^{d-1},\\qquad\n\\int_{E_0}\\ell\\,d\\nu=PL(d-1)\\int_0^\\eta (1-u)u^{d-2}\\,du\n=V[d\\eta^{d-1}-(d-1)\\eta^d]=b.\n$$\nFor any $E\\subseteq\\pi_eT$, $\\int(\\mathbf1_{E_0}-\\mathbf1_E)(\\ell-v_0)\\,d\\nu\\ge0$ by the threshold definition. Thus if $\\nu(E)<\\nu(E_0)$, then $\\int_E\\ell\\,d\\nu<\\int_{E_0}\\ell\\,d\\nu=b$. For $E=\\pi_eB$, the section lengths of $B$ are at most $\\ell$ and give $b\\le\\int_E\\ell\\,d\\nu$, proving the bound. If $b=V$, equality of the total integrals implies that the section lengths of $B$ equal those of $T$ almost everywhere. Since $\\ell>0$ almost everywhere in the projection of $T$, this gives $\\nu(\\pi_eB)=P$.\n\nOn $\\pi_eT$ the chord length is concave: the interval section at an interpolated projected point contains the corresponding Minkowski interpolation of the two interval sections, and interval lengths add with the interpolation weights. Thus $E_0$ is convex, and taking all the chords over it gives a convex compact subset of $T$. Compactness follows also because the projected points admitting a chord of length at least $v_0$ form the projection of the compact overlap $T\\cap(T-v_0e)$. This subbody has positive volume $b$ by the integral and projects onto $E_0$, attaining the bound. At $b=V$ the displayed optimizer is $T$.\n",
+  "source_candidate_ids": [
+    "588e75e8ff86db2e"
+  ],
+  "source_candidate_sha256": {
+    "588e75e8ff86db2e": "b447121113f0c583216c7f85fcb0e831b9b905c1c0e0a07acb22ac85f34e3c00"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "588e75e8ff86db2e",
+      "locator": "588e75e8ff86db2e:02 §3, (6)–(8), sharp prescribed-volume transverse projection"
+    }
+  ],
+  "statement": "Use the simplex and direction conventions of the arbitrary-direction chord distribution lemma. For every convex subbody $B\\subseteq T$ with $0<b=|B|\\le V$, let $\\eta\\in(0,1]$ be the unique solution of\n$$\nb/V=d\\eta^{d-1}-(d-1)\\eta^d .\n$$\nThen $\\nu(\\pi_eB)\\ge P\\eta^{d-1}$. For every permitted direction and $b$ this bound is attained by $T\\cap\\pi_e^{-1}(\\{y\\in\\pi_eT:\\ell(y)\\ge L(1-\\eta)\\})$.",
+  "subgoal_id": "pk-intake-pk-w31-simplex-sharp-prescribed-volume-projection",
+  "title": "The sharp transverse projection of a simplex subbody of prescribed volume"
+}

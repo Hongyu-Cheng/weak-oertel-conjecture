@@ -1,0 +1,28 @@
+{
+  "advances": "Exact finite identities for the fractional exponential family. The polynomial divisibility alone leaves the all-index coefficient-sign question open.",
+  "author": "PK-research-agent",
+  "candidate_id": "bd7eb3a822ed8729",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:57:09.059060+00:00",
+  "depends_on": [
+    "8e9593a77c241bb2"
+  ],
+  "draft_key": "pk-w31-all-index-exponential-coefficient-generator",
+  "kind": "lemma",
+  "proof": "The all-index primitive lemma applies with the same independent variables and the same positive parameter interval. Write $S(t)=\\sum_{\\ell=0}^q S_\\ell t^\\ell$ for the polynomial there. Integrating $[A-(m+k)t]t^{m+\\ell-1}$ gives\n$$\nQ(A/B)=\\sum_{\\ell=0}^q\n \\frac{S_\\ell A^{\\ell+1}(A-\\ell c)}\n {B^{\\ell+1}(m+\\ell)(m+\\ell+1)},\n$$\nsince $(m+\\ell+1)B-(m+k)(m+\\ell)=A-\\ell c$. For $\\ell=0$ the numerator has $A^2$ explicitly, and for $\\ell\\ge1$ this factor is in $A^{\\ell+1}$.\n\nExpand $(t-p)^j$ in $S$ and put $j=\\ell+r$, $s=q-\\ell-r$. Multiplying the last expression by $m(m+1)B^k/A^2$ yields\n$$\n\\sum_{\\ell+r+s=q}\\binom{m+\\ell-1}{\\ell}\\binom{m+\\ell+r+1}{r}\n (2A)^\\ell(1-\\ell c/A)(-2pB)^r(Bc)^s .\n$$\nThis follows by canceling factorials in $\\binom{m+\\ell+r+1}{\\ell+r}\\binom{\\ell+r}{\\ell}$. Hold $A,B,c,p$ fixed and sum this expression against $z^q$ over $q\\ge0$. The $s$ sum gives $(1-Bcz)^{-1}$. The $r$ sum gives $(1+2pBz)^{-m-\\ell-2}$. With $y=2Az/(1+2pBz)$, the remaining $\\ell$ sum is\n$$\n(1-y)^{-m}-(mc/A)y(1-y)^{-m-1}.\n$$\nThe resulting rational series is\n$$\n\\frac{1+2(pB-A-mc)z}{(1-Bcz)(1+2pBz)^2(1+2(pB-A)z)^{m+1}}.\n$$\nAll coefficient sums at fixed degree are finite. Substituting $pB-A=-cC$ and $pB-A-mc=-cB$, then replacing $z$ by $-z$, proves $F=(-1)^q m(m+1)B^kQ(A/B)/A^2$. Every term of $[z^q]$ is a product of $q$ factors from $Bc,pB,cC$ counting multiplicities, so its degree is at most $2q$. At $p=1$ the series is $(1-2(m+k)z)^{-2}$, giving the claimed value. Substituting for $Q$ in the primitive proves the formula for $J$.\n\nLogarithmic differentiation and multiplication by $p(1+p)BADF$ give the displayed $L$. The degree bound follows from $\\deg D=2$, $\\deg F\\le2q$ and the displayed terms. To obtain the divisibility, use the integral for $J$ split at zero. Each piece is analytic near $p=1$: parametrizing its interval by a fixed interval leaves a rational integrand whose denominators stay away from zero uniformly in that interval for $p$ in a small complex neighborhood of $1$. Thus the numerator of the formula for $J$ has a zero of order at least $k+1$ at $p=1$. The denominator defining $R$ is nonzero there since $A(1),F(1)>0$. It follows that $R-1$ vanishes to order at least $k+1$ and $R'/R$ to order at least $k$. The factor clearing this logarithmic derivative is nonzero at $1$, proving the polynomial divisibility.\n",
+  "source_candidate_ids": [
+    "b2bd978e973816b6"
+  ],
+  "source_candidate_sha256": {
+    "b2bd978e973816b6": "888676a0b10573e6dcaafdb448882e77a4a9e4daf27c82abe3a7b30d7920bba0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b2bd978e973816b6",
+      "locator": "b2bd978e973816b6:02 Scope (2); §§4–5, (12)–(20), generator and logarithmic numerator"
+    }
+  ],
+  "statement": "Use the independent signed-exponential probability $P$ and $m,k,p,q,c,A,B,D,J$ of the all-index primitive lemma. Put $C=p+q$ and\n$$\nF=[z^q]\\frac{1+2Bcz}{(1+Bcz)(1-2pBz)^2(1+2cCz)^{m+1}}.\n$$\nThen $F$ is a polynomial in $p$ of degree at most $2q$, with $F(1)=k2^{k-1}(m+k)^{k-1}$, and\n$$\nJ(p)=(-1)^k\\frac{2^kp^{m+k}B^{m+k}D-(1+p)^2A^{m+2}F}\n                    {2^k m c^{k+1}(1+p)^2B^{m+k}}\n\\quad(0<p<1).\n$$\nWhere $F>0$ in this interval put $R=2^kp^{m+k}B^{m+k}D/[(1+p)^2A^{m+2}F]$. Its logarithmic derivative is $L/[p(1+p)BADF]$, where\n$$\n\\begin{aligned}\nL={}&DF\\bigl[(m+k)(1+p)BA+(m+k)p(1+p)A\\\\\n&\\hspace{20mm}-(m+2)(m+1)p(1+p)B-2pBA\\bigr]+p(1+p)BA(D'F-DF').\n\\end{aligned}\n$$\nThe degree of $L$ is at most $2k+3$ and $(p-1)^k$ divides $L$, so $L/(p-1)^k$ is a polynomial of degree at most $k+3$.",
+  "subgoal_id": "pk-intake-pk-w31-all-index-exponential-coefficient-generator",
+  "title": "An all-index coefficient generator and logarithmic derivative factor"
+}

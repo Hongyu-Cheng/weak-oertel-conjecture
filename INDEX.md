@@ -4,6 +4,11 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 0 | lemma | pk-intake-sharp-scalar-trimming | [c491d0092a879187](facts/c491d0092a879187.md) |
+| 2 | theorem | pk-intake-homothetic-middle-centroid-surplus | [a2427fccbd085fb5](facts/a2427fccbd085fb5.md) |
+| 3 | theorem | pk-intake-three-homothetic-fibers-centroid-selection | [1a7377b8dcb5b16b](facts/1a7377b8dcb5b16b.md) |
+| 2 | counterexample | pk-intake-single-parity-depth-retention | [b2ed420326b36abe](facts/b2ed420326b36abe.md) |
+| 1 | theorem | pk-intake-hereditary-depth-distal-cap-trimming | [ac7ba1e1e0ebc955](facts/ac7ba1e1e0ebc955.md) |
 | 1 | theorem | pk-intake-centroid-graph-surplus-first-order-sharpness | [0255a3c283c1a796](facts/0255a3c283c1a796.md) |
 | 0 | lemma | pk-intake-section-preserving-support-bump | [baa0b304f8ca0521](facts/baa0b304f8ca0521.md) |
 | 1 | theorem | pk-intake-ordinary-depth-descent-by-support-bump | [11c2f4875e5c3035](facts/11c2f4875e5c3035.md) |

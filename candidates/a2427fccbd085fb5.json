@@ -1,0 +1,30 @@
+{
+  "advances": "A pointwise result for one integer coordinate and three actual homothetic positive fibers in the stated radius strip.",
+  "author": "PK-research-agent",
+  "candidate_id": "a2427fccbd085fb5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:16:04.459054+00:00",
+  "depends_on": [
+    "7ad3d72ee6061cf3",
+    "6769574fc1bd9f8d",
+    "c491d0092a879187"
+  ],
+  "draft_key": "homothetic-middle-centroid-surplus",
+  "kind": "theorem",
+  "proof": "The shear $(z,x)\\mapsto(z,x-b-z(c-b))$ preserves all integer bases, all fiber volumes and all closed ambient halfspaces. It sends the middle centroid to $(0,0)$ and gives $B=RK$, $C=sK$, and $A=a'+rK$ with $a'=a+c-2b$. Since $K$ is convex, midpoint compatibility becomes $a'+(r+s)K\\subseteq2RK$. Comparing widths gives $2R\\ge r+s$. Subtracting the support functions of $(r+s)K$ from those of $2RK$ in the support inequalities gives\n$$\na'\\in(2R-r-s)K.\n$$\nThis includes $a'=0$ when $2R=r+s$.\n\nPut $\\varepsilon=R-s$. We have $2\\varepsilon<r$: otherwise, since $s\\ge r$ and $d\\ge2$,\n$$\nR^d-s^d\\ge(s+r/2)^d-s^d\n\\ge(3r/2)^d-r^d>r^d,\n$$\ncontradicting the strict upper bound on $R^d$. The copy $A_0=a'+(r-2\\varepsilon)K$ lies in $A$ because $0\\in K$. It also lies in $sK$, since\n$$\n(2R-r-s)K+(r-2\\varepsilon)K=sK.\n$$\nIn particular $|A_0|=V(r-2\\varepsilon)^d$, with the original offset $a'$ retained.\n\nIt suffices to bound each closed halfspace through $(0,0)$. Any containing halfspace contains the parallel one through that point. With nonzero continuous normal, write the halfspace as $u\\cdot x+tz\\ge0$, where $u\\ne0$. Its thresholds at the three bases are $t,0,-t$. Apply the measurable-subset conclusion of 7ad3d72ee6061cf3 with convex body $sK$ (centroid zero) and subset $A_0$. Its three terms are the cap masses on $A_0,sK,sK$, respectively, with the two copies of $sK$ at the middle and larger endpoint. They sum to at least $\\gamma_d s^dV+|A_0|/2$. The additional mass from the actual middle $RK$ in that very halfspace is exactly\n$$\n|RK\\cap\\{u\\cdot x\\ge0\\}|-|sK\\cap\\{u\\cdot x\\ge0\\}|\n=(R^d-s^d)|K\\cap\\{u\\cdot x\\ge0\\}|\n\\ge \\gamma_d(R^d-s^d)V.\n$$\nThe last inequality is the full-volume centroid case of 6769574fc1bd9f8d. Adding gives the first stated bound. A purely base-normal through-point halfspace contains the whole middle and at least one whole endpoint, so its mass is at least $V(R^d+r^d)$, which also gives the bound. Fibers of zero volume contribute nothing.\n\nFinally the scalar trimming lemma gives $(r-2\\varepsilon)^d\\ge(r^d+s^d-R^d)/2$. Inserting this estimate and subtracting $\\gamma_dM/2$ gives at least $(1-2\\gamma_d)V(r^d+s^d-R^d)/4$. This is positive: the bracket is positive by hypothesis, and $\\gamma_d<1/2$ by the binomial theorem for $d\\ge2$.\n",
+  "source_candidate_ids": [
+    "aae24573a37976a6"
+  ],
+  "source_candidate_sha256": {
+    "aae24573a37976a6": "e3e0d877407349229c82159894336684ccce60975772526a51f1283386a4b52d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "aae24573a37976a6",
+      "locator": "§§1–4 (2), (5)–(9), (13)–(16)"
+    }
+  ],
+  "statement": "Let $d\\ge 2$ and let $K\\subseteq\\mathbb R^d$ be a full-dimensional compact convex body of volume $V$ and centroid zero. The only positive-volume integer fibers of a convex body in $\\mathbb R\\times\\mathbb R^d$ are $A=a+rK$, $B=b+RK$, and $C=c+sK$ at bases $-1,0,1$, respectively, with $r,R,s>0$ and $(A+C)/2\\subseteq B$. Write $\\gamma_d=(d/(d+1))^d$ and $M=V(r^d+R^d+s^d)$. Raw mass means the sum of the $d$-dimensional volumes of the traces on the actual integer fibers. Label the endpoints so that $r\\le s$, and assume $s<R$ and $R^d<r^d+s^d$. For every closed ambient halfspace $H$ containing $(0,b)$, its raw mass satisfies\n$$\n\\mu(H)\\ge V\\left[\\gamma_dR^d+\\frac{(r-2(R-s))^d}{2}\\right]\n\\ge \\frac{\\gamma_d M}{2}+\\frac{1-2\\gamma_d}{4}V(r^d+s^d-R^d)\n>\\frac{\\gamma_d M}{2}.\n$$",
+  "subgoal_id": "pk-intake-homothetic-middle-centroid-surplus",
+  "title": "Quantitative depth at the middle centroid of three homothetic fibers"
+}

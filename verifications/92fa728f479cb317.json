@@ -1,0 +1,45 @@
+{
+  "candidate_id": "c491d0092a879187",
+  "candidate_sha256": "2e68003301ac7636a74011841af7bc2990f0465fc4b97c5a6c7664bbe5ecf8cd",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For fixed epsilon, the derivative of the increment with respect to s is d[(s+epsilon)^(d-1)-s^(d-1)] >= 0, so the bracket is maximized at s=r, including the constant-in-s case epsilon=0. Dividing by r^d is valid for every r>0 and leaves t in [0,1/2]. This reduction needs no positivity hypothesis on the bracket.",
+    "On the closed interval both affine arguments of the two powers are nonnegative. Their weighted sum is convex, with derivative d[(1+t)^(d-1)-4(1-2t)^(d-1)]. For d>=2, k=4^(-1/(d-1)) lies strictly between zero and one, so t=(1-k)/(2+k) lies strictly between 0 and 1/2 and gives the global minimum. Substitution gives 1+t=3/(2+k), 1-2t=3k/(2+k), and 1+2k^d=(2+k)/2, yielding the displayed minimum.",
+    "Jensen with weights 2/3 at 1 and 1/3 at k gives ((2+k)/3)^(d-1) <= (2+k^(d-1))/3=3/4, equivalently (2+k)^(d-1)<=3^d/4. This gives the lower bound 2, strictly for d>2. At epsilon=0 the two sides are r^d and r^d/2. At epsilon=r/2 the left side is zero and the bracket is at most r^d[2-(3/2)^d]<0.",
+    "Independent expansion for d=2 and s=r gives 2(1-2t)^2+(1+t)^2-2=9(t-1/3)^2. At t=1/3, exact rational substitution gives retained mass r^2/9 and bracket 2r^2/9, so every coefficient larger than 1/2 fails at that admissible point.",
+    "The committed pending source aae24573a37976a6 has the declared SHA-256 e3e0d877407349229c82159894336684ccce60975772526a51f1283386a4b52d. Section 3, equations (9)–(11) and their surrounding text, gives the same dimensions, radii, inclusive trimming interval, inequality, sharp example, and minimum proof. The frozen claim correctly does not require the separate strict nonheavy-strip hypothesis used for equation (12).",
+    "Searched the accepted facts and index at 8d10c1e by the source ID, trimming and radius terminology, nearby three-fiber results, and both scalar expressions. No accepted statement proves the radius inequality or its sharp coefficient."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T06:18:08Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives a mixed-depth bound for a common-core inclusion and a nested-fiber theorem. It starts with the included small fiber and an actual convex core; it does not bound the retained volume after changing a radius by 2 epsilon or give a uniform coefficient for two radii.",
+      "fact_id": "8812feca6c8a1e97"
+    },
+    {
+      "comparison": "Gives a lower bound on lost endpoint volume from upper bounds on actual middle remainder volume and its midpoint inclusion, followed by a two-cut depth bound. That geometric inequality uses a power of 2 times a middle volume root minus an endpoint volume root, rather than the retained copy at radius r-2 epsilon and the sharp volume-increment comparison.",
+      "fact_id": "3e766d73edff42b0"
+    },
+    {
+      "comparison": "The related complementary-cap transfer uses the same volume-root expression as the two-cut theorem for actual paired caps. It does not assert the unconditional scalar radius comparison or its optimal coefficient.",
+      "fact_id": "f0399a8f0bae48c6"
+    }
+  ],
+  "readability": "Clear. The last use of “the bracket” refers to the numerator of the right-hand side; the positive example makes the direction of sharpness unambiguous.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "06807f64cd4602758db385b0bcfd568a8f3e64054134f538e6bac61f84806ff0",
+  "reviewed_statement_sha256": "59aaa3da8182e253d68f35924ea60dc477844b7dddf7059626abcd77ba65ad0a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:16:32Z",
+  "summary": "The scalar estimate holds for every stated radius pair and the full closed trimming interval. The coefficient 1/2 is attained against a strictly positive bracket and cannot be increased uniformly. The source locator matches, and no accepted duplicate or proof dependency was found.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

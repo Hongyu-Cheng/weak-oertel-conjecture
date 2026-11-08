@@ -17,7 +17,7 @@
 
 Use `equivalent`, `covered`, `specialization`, `extension`, `distinct`, or `unresolved` for the relation. Explain what changes in the hypotheses or conclusion. A similar title or lexical match can motivate a comparison and belongs in `related_facts` until the mathematical implication is checked.
 
-The [pilot report](../../reviews/pk-intake/pilot.md) and [first batch report](../../reviews/pk-intake/wave01.md) record independent proof reviews, timing, and rework. Commit checked batches separately on the intake branch and submit the completed intake in one PR.
+The [pilot report](../../reviews/pk-intake/pilot.md) and the [first](../../reviews/pk-intake/wave01.md) and [second batch reports](../../reviews/pk-intake/wave02.md) record independent proof reviews, timing, and rework. Commit checked batches separately on the intake branch and submit the completed intake in one PR.
 
 The [contribution rules](../../CONTRIBUTING.md) govern admission. The original candidate files and historical reviews are preserved. Normalize a new result in a separate candidate and link its sources. Before committing a batch, run:
 

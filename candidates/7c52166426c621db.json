@@ -1,0 +1,32 @@
+{
+  "advances": "Ordinary midpoint volume and actual widths in a fixed continuous direction. No projected cap mass or independent choice of section profile is used.",
+  "author": "PK-research-agent",
+  "candidate_id": "7c52166426c621db",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:21:26.821372+00:00",
+  "depends_on": [],
+  "draft_key": "equal-endpoint-sectional-minkowski-width-ratio",
+  "kind": "lemma",
+  "proof": "Normalize $u$ to a unit vector, which leaves $R$ and the product in the first inequality invariant. Write $\\alpha,\\beta$ for the minimum $u$-coordinates of $A,B$. For $s\\in(0,1)$ let $f(s),g(s)$ be their $(d-1)$-dimensional section volumes at heights $\\alpha+w_As$ and $\\beta+w_Bs$. These sections have nonempty relative interiors because the bodies are full-dimensional and the heights are interior. Their section sum lies in the section of $A+B$ at height $\\alpha+\\beta+(w_A+w_B)s$. Brunn–Minkowski in the parallel $(d-1)$-space bounds its volume below by\n$$\n \\bigl(f(s)^{1/(d-1)}+g(s)^{1/(d-1)}\\bigr)^{d-1}\\ge f(s)+g(s).\n$$\nFor $d=2$ the last inequality is equality. Fubini in the $u$-coordinate gives $\\int_0^1f(s)\\,ds=a/w_A$, $\\int_0^1g(s)\\,ds=a/w_B$, and the section measure on $A+B$ integrates with differential $(w_A+w_B)\\,ds$. The resulting first bound gives $2^d r\\ge2+R+R^{-1}$. This implies the two separate comparisons for $d\\ge2$. In $d=1$, $A,B$ are intervals of equal length, so $r=R=1$ and both comparisons hold with equality.\n",
+  "source_candidate_ids": [
+    "8407bedf6b42ff39",
+    "f968b5a47e83bb95"
+  ],
+  "source_candidate_sha256": {
+    "8407bedf6b42ff39": "7757fd6d317e0f474556464e59a1b8bf448b7c7c23f00123f0e625f5a861c1df",
+    "f968b5a47e83bb95": "c5a7320db0e73e24865ce5818c3c0abb1d3aa0119f49110bcdbfd6178fde2b5b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8407bedf6b42ff39",
+      "locator": "8407bedf6b42ff39:05 §4, (9), section-addition width comparison"
+    },
+    {
+      "candidate_id": "f968b5a47e83bb95",
+      "locator": "f968b5a47e83bb95:03 §1, (5), oblique-segment width-ratio comparison"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let $A,B\\subset\\mathbb R^d$ be convex bodies of equal $d$-volume $a>0$. Set $M=(A+B)/2$, $r=|M|/a$, and for any nonzero $u$ put $w_A=h_A(u)+h_A(-u)$, $w_B=h_B(u)+h_B(-u)$ and $R=w_A/w_B$. Then\n$$\n |A+B|\\ge(w_A+w_B)(a/w_A+a/w_B),\n \\qquad R+R^{-1}\\le 2^d r-2 .\n$$\nIn all $d\\ge1$ one consequently has both $1+R\\le 2^d r$ and $1+R^{-1}\\le 2^d r$.",
+  "subgoal_id": "pk-intake-equal-endpoint-sectional-minkowski-width-ratio",
+  "title": "Minkowski volume bounds the actual directional width ratio"
+}

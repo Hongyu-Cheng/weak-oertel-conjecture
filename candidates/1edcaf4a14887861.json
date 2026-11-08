@@ -1,0 +1,34 @@
+{
+  "advances": "Fixed true maximum raw depth on the radial simplex class, with a Hessian on sampled velocities and actual compatible affine changes in the plane.",
+  "author": "PK-research-agent",
+  "candidate_id": "1edcaf4a14887861",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:11.840297+00:00",
+  "depends_on": [
+    "3b07eecf22960599"
+  ],
+  "draft_key": "radial-simplex-fixed-depth-mass-hessian",
+  "kind": "theorem",
+  "proof": "By the all-normal radial theorem, the local minimum of the strictly convex polynomial $F_r$ on a common proper-cut neighborhood occurs at $\\beta(r)$, and $0$ is feasible. Hence $\\tau(r)\\le F_r(0)=c_d\\sum_z r_z^d$, with equality exactly when the gradient at zero vanishes, equivalent to the stated moment condition. The map $(z,x)\\mapsto(z,cx)$ with $c=(Q_0/\\tau(r))^{1/d}$ maps the actual mixed set bijectively to the scaled family, sends ambient halfspaces to ambient halfspaces, and multiplies every raw cap mass by $c^d$. A cap margin $u\\cdot(x-x_0)+\\alpha\\cdot(z-z_0)$ is transported by replacing $x_0$ with $cx_0$ and $\\alpha$ with $c\\alpha$. Thus depth and all slack budgets and incidences scale as asserted, and the exact ratio gives the mass and equality condition.\n\nAll array derivatives are taken using the smooth local stationary branch defined also for nearby positive abstract arrays. At $r^0,\\beta=0$ the integer Hessian, mixed derivative along $v$, and unoptimized radius second derivative of $F$ are\n$$\nK=c_d(d-1)G_w/d,\\qquad\nB(v)=c_d(d-1)m(v),\\qquad\nA[v,v]=c_dd(d-1)\\sum_z w_zv_z^2 .\n$$\nAll weights are positive, so $G_w$ is positive definite on $L$. Differentiating the stationary equation gives $\\beta'[v]=-dG_w^\\dagger m(v)$. Substituting it into the second derivative yields\n$$\n\\tau''[v,v]=A[v,v]-c_dd(d-1)m(v)^{\\mathsf T}G_w^\\dagger m(v).\n$$\nThe rank-zero case is the same formula with zero integer contribution. Write $M=V_d\\sum_z r_z^d$ and $\\Gamma_d=c_d/V_d$. At baseline, $M=Q_0/\\Gamma_d$ and $M'=\\tau'/\\Gamma_d$, since the normal derivative vanishes. The first derivative of $\\widetilde M=M Q_0/\\tau$ is therefore zero and its second derivative is $M''-\\tau''/\\Gamma_d$. Substitution proves the displayed Hessian. The linear map $v\\mapsto m(v)$ is onto $L$ since $v_z=a\\cdot z$ gives $m(v)=G_w a$. Positivity on $L$ gives the rank and kernel. The vanishing first derivative eliminates acceleration terms along compatible paths.\n\nIn the plane $\\tau=2E$ and $Q_0=2R_0$, giving both explicit ratios. The affine change on all of $B$ preserves concavity and remains positive for small $a$ by compactness and positivity of $r^0$. By evenness, its sampled moments give $b=Ga$ and $R=R_0+a^{\\mathsf T}Ga$, hence $E=R_0$. Its unscaled depth is therefore $Q_0$ and the area gain is as claimed. On every parity class, the first derivatives of paired terms at $z,-z$ cancel, as they have the same baseline radius and parity, and the derivative at $0$ is zero.\n",
+  "source_candidate_ids": [
+    "4e12bc9cd7731df3",
+    "65cb1818e941a654"
+  ],
+  "source_candidate_sha256": {
+    "4e12bc9cd7731df3": "f89a52b83db25391673a6b45440f7e7ef6f73871f3b1ed8f6f507b28f0951553",
+    "65cb1818e941a654": "9b260edffd0f77bb74efa3b29e91560b5bc53cf823616683ea161590b87bc5f7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4e12bc9cd7731df3",
+      "locator": "4e12bc9cd7731df3:04 §§6–7, (4)–(6) and (14)–(16), fixed-depth mass and physical Hessian"
+    },
+    {
+      "candidate_id": "65cb1818e941a654",
+      "locator": "65cb1818e941a654:04 §§1 and 7, (4)–(5), (16)–(19)"
+    }
+  ],
+  "statement": "Let $n\\ge0$, $d\\ge2$, and let $B\\subset\\mathbb R^n$ be a compact convex body whose complete integer sample $P=B\\cap\\mathbb Z^n$ contains $0$ and is centrally symmetric. Let $r^0:B\\to(0,\\infty)$ be continuous and concave with $r^0(z)=r^0(-z)$ at the sampled bases. Put $L=\\operatorname{span}P$, $v_0=(-1,\\ldots,-1)$, $v_i=v_0+(d+1)e_i$ for $1\\le i\\le d$, $T_d=\\operatorname{conv}\\{v_0,\\ldots,v_d\\}$, $V_d=(d+1)^d/d!$, and $c_d=d^d/d!$. For positive continuous concave $r$ on $B$ write $r_z=r(z)$ and take $C_r=\\{(z,x):z\\in B,\\ x\\in r(z)T_d\\}$ with actual mixed set $S_r=C_r\\cap(\\mathbb Z^n\\times\\mathbb R^d)$. Use summed fiber $d$-volume $\\mu_r$, and let $h_r(y)$ be its infimum over closed ambient halfspaces containing $y$. Work in the validated neighborhood of the even sample from the all-normal radial simplex theorem. Its unique deepest point is $Y=(0,0)$, of depth $\\tau(r)=F_r(\\beta(r))$, where $F_r(\\beta)=\\sum_z(d r_z+\\beta\\cdot z)^d/d!$ and $\\beta(r)$ is its unique small critical coefficient in $L$. Put $R_0=\\sum_z(r_z^0)^d$ and $Q_0=c_dR_0$. Continuous homothety by $(Q_0/\\tau(r))^{1/d}$ gives true global raw depth $Q_0$ and total mass $\\widetilde M(r)=V_d Q_0\\sum_z r_z^d/\\tau(r)\\ge V_dR_0$, with equality precisely when $\\sum_z r_z^{d-1}z=0$. It transports any strict-slack cap families and their ownership. Put $w_z=(r_z^0)^{d-2}$, $G_w=\\sum_z w_z zz^{\\mathsf T}$ and $m(v)=\\sum_z w_zv_z z$ for a sampled velocity $v$. The first derivative of $\\widetilde M$ at $r^0$ vanishes. Its Hessian on sampled velocities is $V_d d(d-1)m(v)^{\\mathsf T}G_w^\\dagger m(v)$, of rank $\\dim L$ with kernel $m(v)=0$. Here the inverse is on $L$ and is zero on $L^\\perp$. This gives the second derivative along each $C^2$ compatible sampled path with that velocity.\n\nFor $d=2$, write $G,b,R,E$ as in the radial depth theorem, and $W=b^{\\mathsf T}G^\\dagger b$. Then $\\widetilde M=V_2R_0+V_2R_0W/E$, and the normalized depth before or after homothety is $(4/9)(1-W/R)$. At the even baseline the compatible affine variation $r_a(z)=r^0(z)+a\\cdot z$, for small $a\\in L$, has $b=Ga$, $E=R_0$ and unscaled raw depth $Q_0$. Its area gain is $V_2a^{\\mathsf T}Ga$, and the first area variation vanishes separately in each lattice parity class.",
+  "subgoal_id": "pk-intake-radial-simplex-fixed-depth-mass-hessian",
+  "title": "Exact fixed-depth mass and its Hessian for radial simplex fibers"
+}

@@ -1,0 +1,36 @@
+{
+  "advances": "Paired continuous cap volumes centered at the true Minkowski midpoint centroid. An arbitrary superbody centroid cannot be substituted in the argument.",
+  "author": "PK-research-agent",
+  "candidate_id": "b96c4c9a6a57340b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:21:26.821268+00:00",
+  "depends_on": [],
+  "draft_key": "equal-endpoint-centroid-directional-width",
+  "kind": "lemma",
+  "proof": "Normalize the $u$-projection of $M$ to $[0,1]$. For $s\\in[0,1]$, the homothet of $M$ of ratio $s$ about a point at its minimum support is contained in the lower projection region with coordinate at most $s$. The probability of that region under uniform volume is therefore at least $s^d$. Integrating the complementary probability gives normalized centroid coordinate at most $\\int_0^1(1-s^d)\\,ds=d/(d+1)$. Thus the upper support distance is at least $w_M/(d+1)$, and the Minkowski support identity gives $w_M=(w_A+w_B)/2$.\n\nLet $\\Delta_A=h_A(u)-u\\cdot g_M-t$ and $\\Delta_B=h_B(u)-u\\cdot g_M+t$ be the two cap heights. Their sum is at least $(w_A+w_B)/(d+1)$, so at least one height-to-width ratio is at least $1/(d+1)$. A homothet of that body about a point at its upper support, with linear ratio $1/(d+1)$, lies in the captured cap. Its volume is $a/(d+1)^d$. This proves the direction-free bound for every $d$.\n\nFor the sharper bound take $d\\ge2$ and $p=d/(d-1)$. Hölder's inequality gives $(w_A+w_B)^d/(w_A^p+w_B^p)^{d-1}\\le2$, so a full endpoint already supplies at least the desired bound. If neither height-to-width ratio is at least one, put $x_A=(\\Delta_A/w_A)_+$ and $x_B=(\\Delta_B/w_B)_+$. The respective upper-support homothets, or the trivial bound zero when a height is negative, give $P/a\\ge x_A^d+x_B^d$. Their weighted sum satisfies $w_Ax_A+w_Bx_B\\ge(w_A+w_B)/(d+1)$. Hölder gives\n$$\n (w_Ax_A+w_Bx_B)^d\\le (w_A^p+w_B^p)^{d-1}(x_A^d+x_B^d).\n$$\nCombining and dividing by $w_B^d$ in the width expression proves the stated result. The homothets and full-cap comparison include the threshold equality cases.\n",
+  "source_candidate_ids": [
+    "8407bedf6b42ff39",
+    "f968b5a47e83bb95"
+  ],
+  "source_candidate_sha256": {
+    "8407bedf6b42ff39": "7757fd6d317e0f474556464e59a1b8bf448b7c7c23f00123f0e625f5a861c1df",
+    "f968b5a47e83bb95": "c5a7320db0e73e24865ce5818c3c0abb1d3aa0119f49110bcdbfd6178fde2b5b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8407bedf6b42ff39",
+      "locator": "8407bedf6b42ff39:04 §4, (8), direction-specific Hölder width bound"
+    },
+    {
+      "candidate_id": "f968b5a47e83bb95",
+      "locator": "f968b5a47e83bb95:01 §1, (2)–(3), direction-free supporting-height bound"
+    },
+    {
+      "candidate_id": "f968b5a47e83bb95",
+      "locator": "§1, (4), direction-specific Hölder width bound, exact second occurrence of 8407bedf6b42ff39:04"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $A,B$ be $d$-dimensional convex bodies of the same volume $a>0$. Let $M=(A+B)/2$ and let $g_M$ be its ordinary centroid. For $u\\ne0$, put $w_D=h_D(u)+h_D(-u)$ for each body $D$, with $h_D$ its support function. For $t\\in\\mathbb R$ let $P$ denote the sum of the ordinary volumes captured on $A,B$ by $u\\cdot x\\ge u\\cdot g_M+t$ and $u\\cdot x\\ge u\\cdot g_M-t$, respectively. Then\n$$\n h_M(u)-u\\cdot g_M\\ge\\frac{w_A+w_B}{2(d+1)},\n \\qquad P/a\\ge\\frac1{(d+1)^d}.\n$$\nIf $d\\ge2$, then for $R=w_A/w_B$,\n$$\n P/a\\ge W_d(R):=\\frac{(R+1)^d}{(d+1)^d(R^{d/(d-1)}+1)^{d-1}} .\n$$\nThe bounds hold for every such $u,t$, including supporting, full and empty endpoint traces.",
+  "subgoal_id": "pk-intake-equal-endpoint-centroid-directional-width",
+  "title": "Support-height and directional width bounds for paired endpoint caps"
+}

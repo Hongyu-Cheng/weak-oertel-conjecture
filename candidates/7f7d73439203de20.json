@@ -1,0 +1,33 @@
+{
+  "advances": "Equal endpoint volumes and a restricted volume of their true Minkowski midpoint. The actual middle fiber may be larger, and it remains in the mixed denominator.",
+  "author": "PK-research-agent",
+  "candidate_id": "7f7d73439203de20",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:21:26.821149+00:00",
+  "depends_on": [
+    "f0399a8f0bae48c6",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "equal-endpoint-minkowski-volume-surplus-window",
+  "kind": "theorem",
+  "proof": "The ordinary centroid of $M$ belongs to $M$. By fact 6769574fc1bd9f8d with the full mass $m$, its centroid cap in direction $u$ has volume at least $\\Gamma m$. Use the scalar complementary-cap lemma in f0399a8f0bae48c6 with endpoint volumes both $a$, middle body exactly $M$, $f(x)=u\\cdot x$, $\\tau=u\\cdot g_M$, and opposite threshold shifts $\\pm t$. The residual volume in $M$ is at most $(1-\\Gamma)m$. Its lower bound on captured endpoint mass is nonincreasing in that residual. Dividing by $a$ gives\n$$\n P/a\\ge[1-(2[(1-\\Gamma)r]^{1/d}-1)_+^d]_+ .\n$$\n\nThe binomial theorem gives $(1+1/d)^d\\ge2$ and the logarithm inequality $\\log(1+x)<x$ for $x>0$ gives $(1+1/d)^d<e$. The exponential series through degree three and a geometric bound on the subsequent terms give $e<8/3+(1/24)/(1-1/5)=87/32<11/4$. Hence $4/11<\\Gamma\\le1/2$. Put $x=[(1-\\Gamma)r]^{1/d}$. Since $1/2\\le(1-\\Gamma)r<7/8$, we have $1/2\\le x<1$ and $0\\le2x-1\\le x^2$. The preceding residual bound is therefore at least $1-x^{2d}=1-(1-\\Gamma)^2r^2$.\n\nThe difference between this last bound and $\\Gamma(2-r)$ is concave in $r$. Its values at $1$ and $11/8$ are $\\Gamma(1-\\Gamma)$ and $\\delta_d$. The difference $64[\\delta_d-\\Gamma(1-\\Gamma)]=-57+138\\Gamma-57\\Gamma^2$ is increasing on $[4/11,1/2]$ and is $-9/4$ at the right endpoint, so the smaller endpoint in $r$ is $11/8$. The concave polynomial $64\\delta_d$ takes values $55/121$ and $55/4$ at $\\Gamma=4/11$ and $\\Gamma=1/2$, proving the positive lower bound. It is increasing on that interval, so $\\delta_d\\le55/256$ and $c_d<2$.\n\nIn the lifted hull, any representation of a point at base zero uses equal weights on the two endpoints. Grouping each fiber's summands by convexity, its continuous coordinate is a mixture of a point in $K$ and a point in $M$. Thus the middle fiber is exactly $K$. The extreme bases give exactly $A,B$ and there are no other integer bases. The total mixed volume is $k+2a$. Any containing halfspace includes its parallel halfspace through the selected point. Through $(0,g_M)$ a nonzero continuous normal gives exactly the two shifts used above and an own cap in $K$ containing the corresponding centroid cap in $M$. The raw mass is at least $\\Gamma m+P\\ge c_da$. For a purely integer normal the closed cap contains all of $K$ and one whole endpoint. Its mass is $k+a\\ge2a>c_da$. Through $(0,g_K)$ the full-mass centroid bound on $K$ alone gives at least $\\Gamma k$ in every continuous direction, and a purely integer normal includes all of $K$.\n\nThe first guaranteed fraction $c_da/(k+2a)$ decreases in $k/a$ and the second $\\Gamma k/(k+2a)$ increases. They agree at $k/a=c_d/\\Gamma$, where the common value is $\\Gamma c_d/(c_d+2\\Gamma)$. The choice in the statement takes their maximum, whose minimum is that value. Since $c_d>2\\Gamma$, it is strictly greater than $\\Gamma/2$.\n",
+  "source_candidate_ids": [
+    "8407bedf6b42ff39"
+  ],
+  "source_candidate_sha256": {
+    "8407bedf6b42ff39": "7757fd6d317e0f474556464e59a1b8bf448b7c7c23f00123f0e625f5a861c1df"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8407bedf6b42ff39",
+      "locator": "8407bedf6b42ff39:02 §2, (4)–(6), quantitative residual surplus window"
+    },
+    {
+      "candidate_id": "8407bedf6b42ff39",
+      "locator": "8407bedf6b42ff39:03 §§1 and 3, (1)–(2), (7), two actual centers in the volume window"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $A,K,B$ be $d$-dimensional convex bodies with $|A|=|B|=a>0$ and $M=(A+B)/2\\subseteq K$. Write $m=|M|$, $k=|K|$, $r=m/a$, $\\Gamma=(d/(d+1))^d$ and let $g_M,g_K$ denote their ordinary centroids. Suppose $1\\le r\\le11/8$. Set\n$$\n \\delta_d=\\frac{-57+202\\Gamma-121\\Gamma^2}{64}\\ge\\frac{55}{7744}>0,\n \\qquad c_d=2\\Gamma+\\delta_d.\n$$\nFor every $u\\ne0$ and real $t$, let $P$ be the sum of the $A$ and $B$ cap volumes for the inequalities $u\\cdot x\\ge u\\cdot g_M+t$ and $u\\cdot x\\ge u\\cdot g_M-t$, respectively. Then\n$$\n P/a\\ge 1-(1-\\Gamma)^2r^2\\ge\\Gamma(2-r)+\\delta_d.\n$$\n\nPlace $A,K,B$ at bases $-1,0,1$ in their lifted convex hull, and measure the resulting three integer fibers by the sum of their ordinary volumes. At $(0,g_M)$ and $(0,g_K)$ the raw depths are at least $c_da$ and $\\Gamma k$, respectively. Choose $(0,g_M)$ if $k/a\\le c_d/\\Gamma$, and $(0,g_K)$ otherwise. The selected point has normalized depth at least $\\Gamma c_d/(c_d+2\\Gamma)>\\Gamma/2$ over all closed ambient halfspaces containing it.",
+  "subgoal_id": "pk-intake-equal-endpoint-minkowski-volume-surplus-window",
+  "title": "A Minkowski-volume surplus window for two specified middle centroids"
+}

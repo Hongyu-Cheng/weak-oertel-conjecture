@@ -1,0 +1,33 @@
+{
+  "advances": "A small-endpoint-mass planar exclusion based on actual supports and area. The cap implication uses only the stated common budget and ordinary centroid bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "bc6cb7089fc565fa",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:21:26.822594+00:00",
+  "depends_on": [
+    "1b712e5e8b760dc8",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "actual-planar-middle-simplex-neighborhood-exclusion",
+  "kind": "theorem",
+  "proof": "Properness gives $\\alpha_i=h_A(-v_i)>1$, hence each upper barycentric bound from exact-actual-simplex-support-erosion is strictly below $c_*=(2+2\\eta)/3$. The upper bounds $c_*$ in all three coordinates remove disjoint corner regions because $c_*\\ge2/3$, giving relative volume $1-3(1-c_*)^2=f(\\eta)$. The actual enclosure has strictly smaller area: take one coordinate strictly between $\\max(0,c_i)$ and $c_*$, sufficiently near $c_*$, with the other two equal to half the remainder. This point and a relative open neighborhood lie in the reference enclosure and outside the actual one. This works at $c_*=1$ by choosing the first coordinate strictly below one. Nonpositive bounds already preclude a full-dimensional $B$. Thus $b<f(\\eta)V$.\n\nThe area hypotheses give $k<(33/32)b$, so $1-\\xi<(33/32)f(\\eta)$. Expanding gives the asserted strict deficit. In the sandwich case $k\\ge(1-\\eta)^2V$ and the upper sandwich implies the support bounds. Combining the two area bounds would require $(32/33)(1-\\eta)^2<f(\\eta)$, equivalent to $5-54\\eta+38\\eta^2<0$. Its smaller root is $(27-\\sqrt{539})/38\\in(0,1/2)$, and the polynomial is nonnegative from zero through that root.\n\nIn the cap configuration the three closed traces at $z=0$ cover the plane by balance, so one contains the centroid of $K$. Fact 6769574fc1bd9f8d at the full middle mass gives that middle cap area at least $4k/9$. Its mixed cap includes that area and has mass $Q$, so $4k/9\\le Q\\le2(a+k+b)/9$ yields $k\\le a+b$.\n",
+  "source_candidate_ids": [
+    "cbd731cd19c40abd"
+  ],
+  "source_candidate_sha256": {
+    "cbd731cd19c40abd": "78ad3b2cfb0152b6df29f32c6a38eb0031eaff27d31c0ca8adb21aced5788442"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cbd731cd19c40abd",
+      "locator": "cbd731cd19c40abd:02 §2 (4)–(5), small planar support excess"
+    },
+    {
+      "candidate_id": "cbd731cd19c40abd",
+      "locator": "cbd731cd19c40abd:03 §3 (6)–(9), sandwich and area deficit"
+    }
+  ],
+  "statement": "Let $v_1,v_2,v_3$ span $\\mathbb R^2$ and sum to zero, and put $T=\\{x:v_i\\cdot x\\le1\\ \\forall i\\}$. Let $A,K,B$ be planar convex bodies with $B\\subseteq T$, $(A+B)/2\\subseteq K$, and each line $v_i\\cdot x=-1$ meeting $\\operatorname{int}A$. Write $V=|T|$, $a=|A|$, $b=|B|$, $k=|K|$ and assume $h_K(-v_i)\\le1+\\eta$ for all $i$, $0\\le\\eta\\le1/2$. Then\n$\nb/V<f(\\eta)=1-(1-2\\eta)^2/3.\n$\nIf also $a<b/32$, $k\\le a+b$ and $k\\ge(1-\\xi)V$, then $\\xi>5/16-(11/8)\\eta+(11/8)\\eta^2$. In particular the sandwich $(1-\\eta)(-T)\\subseteq K\\subseteq(1+\\eta)(-T)$ cannot hold together with $a<b/32$ and $k\\le a+b$ when $0\\le\\eta\\le(27-\\sqrt{539})/38$.\n\nIf the three bodies are the measured fibers over $-1,0,1$ and the three caps $v_i\\cdot x\\ge z$ have a common mixed mass $Q\\le2(a+k+b)/9$, then $k\\le a+b$ is automatic.",
+  "subgoal_id": "pk-intake-actual-planar-middle-simplex-neighborhood-exclusion",
+  "title": "A support and area neighborhood excluded for an actual planar middle fiber"
+}

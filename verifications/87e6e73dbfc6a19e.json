@@ -1,0 +1,54 @@
+{
+  "candidate_id": "0f434bd2af4ec1b8",
+  "candidate_sha256": "96653e9d96437e28e2637e0811c0f061ec42cc40f362742f914b84e7bb5df5f2",
+  "checked_dependency_candidate_sha256": {
+    "18e7bdf54588779d": "147af10a15ccd0baaf7f740ad71979edbc9e7689171b8840b16a2520307819aa",
+    "f4be2679c83c2fd1": "f7af40d0ddef2d06e42343643b1e896508c69bb3b7842462b3324f46c0048977"
+  },
+  "checks": [
+    "Read ce4a362fe44872e9 §4 (1) and checked its sign claims at the s=1 transition and finite cutoff.",
+    "On (0,1] pairing b with −b gives a positive derivative integral; the common endpoint b=1 has no atom. For s≥1 differentiate the explicit antiderivative at fixed s using ∂a q=s. Combining terms gives the displayed numerator F(q)−(1−da)(1−a)^{−d}.",
+    "F(q) is positive, strictly decreasing for q>1 and tends to zero. The numerator starts positive at q=1+a; if a<1/d it ends negative, giving one root. The boundary a=1/d stays positive at every finite slope.",
+    "The proper cutoff U has T=U/r(U). When T≥1 the frustum moment equals the cone moment through T and is T/s times its value at T above T. The condition T<s* is strict, so it excludes a root at the cutoff and a zero tail there.",
+    "At s=0 the coarea is positive and the correction is defined. Both that record and the optional infinity record have corrected mass V/2."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "18e7bdf54588779d",
+      "fact_sha256": "ec45d0b04a6a40e89e05a1c4a616bab8cc728617ec9fb8d7db4c127d89f29cc3",
+      "hypotheses": "Use the same affine cone and Dirac laws on finite nonnegative slopes, with a=1/(H+1) and M/C0=−(1−a)m/d."
+    },
+    {
+      "fact_id": "f4be2679c83c2fd1",
+      "fact_sha256": "421b7e875d13b8abe8cebab8ea20da66845c3e0c1a5aff20c2e4c1d670d53408",
+      "hypotheses": "For U=HT/(H+1+T) and T≥1, the tail decomposition and bounded unchanged moments apply. Infinity has cap V/2 and both coarea and moment zero."
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The cone energy formulas identify the moment, but their centered inequalities do not analyze the unique nonzero zero of the pointwise moment.",
+      "fact_id": "18e7bdf54588779d"
+    },
+    {
+      "comparison": "Already proves the support claim for T≤1. The present sign calculation proves the indicated larger-cutoff regimes and identifies the unique cone root.",
+      "fact_id": "f4be2679c83c2fd1"
+    }
+  ],
+  "readability": "The inequality T<s* is necessary for this support conclusion. At T=s* the whole tail has zero moment and is not covered by the one-sign clause.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof and source-scope review of the frozen bytes, with predecessor applicability and exact arithmetic checked where relevant.",
+  "reviewed_proof_sha256": "c3778c55194700ebb935d345f88077271ba686fde22fdab9ce73861489d0aa60",
+  "reviewed_statement_sha256": "adcc3320529ba11bf942fd7c8795c8218db64c598b129f6488dfc1f4b40967ac",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:21:50Z",
+  "summary": "The differentiated cone integral has exactly the stated signs. Under either one-sign cutoff hypothesis only zero and infinity can occur in a centered frustum law.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

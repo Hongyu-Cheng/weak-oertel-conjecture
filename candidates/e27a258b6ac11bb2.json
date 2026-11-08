@@ -1,0 +1,26 @@
+{
+  "advances": "Scalar inequality used in the first variation of ordinary triangle ears.",
+  "author": "PK-research-agent",
+  "candidate_id": "e27a258b6ac11bb2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:18:43.797838+00:00",
+  "depends_on": [],
+  "draft_key": "ordinary-cubic-ear-disk-inequality",
+  "kind": "lemma",
+  "proof": "The gap is concave as a function of $r$. Its only nonaffine term is $2(1-U)(1-V)\\sqrt{AB}$, and the second derivative of $\\sqrt{(a+br)(c+dr)}$ where both factors are positive is $-(ad-bc)^2/(4[(a+br)(c+dr)]^{3/2})$. Continuity gives concavity through a zero endpoint. It suffices to prove positivity at both endpoints.\n\nAt $r=F(1-F)$ write $Z=(1-V)^2A+(1-U)^2B-L^2(A+B-1)$. Substituting $A=1-2F/U+F/U^2$ and $B=1-2(1-F)/V+(1-F)/V^2$ gives\n$$\n\\begin{aligned}\nZ&=-\\frac{2(U-1)(V-1)(FU-FV+UV-U)}{UV},\\\\\nZ^2-4(1-U)^2(1-V)^2AB\n&=-\\frac{4F(1-F)(1-U)^2(1-V)^2L^2}{U^2V^2}<0.\n\\end{aligned}\n$$\nThus $Z+2(1-U)(1-V)\\sqrt{AB}>0$.\n\nAt $r=0$ write $z_1=(U-F)/U$, $z_2=(V-1+F)/V$. Their weighted sum $Uz_1+Vz_2=L$ is positive. If both are nonnegative, then $1=U(1-z_1)+V(1-z_2)<2-z_1-z_2$ since $U,V<1$, $z_1,z_2\\le1$, and the nonnegative summands are not both zero. Hence $z_1^2+z_2^2<1$, proving the desired strict inequality. Otherwise exchange $U,V$ and replace $F$ by $1-F$ if necessary so that $z_1=-t<0$ and $z_2=b>0$. Then $L/V\\le b\\le1$ and $t=(Vb-L)/U$. The affine expression $(1-V)t+(1-U)b-Lt$ is $(1-U)L/V>0$ at $b=L/V$ and $2(1-U)(1-V)/U>0$ at $b=1$. Thus the left square root exceeds $Lt$, and $t^2+b^2-1\\le t^2$ proves the desired strict inequality. Concavity now proves it for the entire interval.\n",
+  "source_candidate_ids": [
+    "3d7872ba08080216"
+  ],
+  "source_candidate_sha256": {
+    "3d7872ba08080216": "002b0df7360dc6678a23e82cb89de873ff074cc22e7ebd7065cdac05201bca22"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3d7872ba08080216",
+      "locator": "§4, (7)–(8), strict disk inequality"
+    }
+  ],
+  "statement": "Let $0<U,V,F<1$, $L=U+V-1>0$ and $0\\le r\\le F(1-F)$. Set $A=((U-F)^2+r)/U^2$ and $B=((V-1+F)^2+r)/V^2$. Then\n$$\n\\bigl((1-V)\\sqrt A+(1-U)\\sqrt B\\bigr)^2>L^2(A+B-1).\n$$",
+  "subgoal_id": "pk-intake-ordinary-cubic-ear-disk-inequality",
+  "title": "A strict scalar inequality for the cubic ear potential"
+}

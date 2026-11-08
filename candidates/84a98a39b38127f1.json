@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary planar Lebesgue area, arbitrary overlapping unions; serves as a finite-angle cap-loss estimate after an affine barycentric change.",
+  "author": "PK-research-agent",
+  "candidate_id": "84a98a39b38127f1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:19:24.642883+00:00",
+  "depends_on": [],
+  "draft_key": "planar-vertex-cap-union-tail",
+  "kind": "lemma",
+  "proof": "The union is relatively open in the closed first quadrant, hence Borel, and it is bounded by the intercept limits. On $v\\ge s$, use the injective affine map $(u,v)\\mapsto(u/r,(v-s)/r)$. A point in one constituent with $v\\ge s$ has $b>s$; its image has nonnegative coordinates and normalized sum\n$$\n\\frac{u/a+v/b-s/b}{r}<\\frac{1-s/b}{r}\\le1 .\n$$\nThus the map takes the tail into the same constituent and hence the whole union into itself on that tail, without splitting the overlaps. Its area Jacobian is $r^{-2}$, which gives the bound. The inverse maps the entire single constituent with $b=B$ onto its own tail because then $r+s/b=1$. This proves sharpness; $20\\cdot64^2<3\\cdot167^2$ gives the numerical bound.\n",
+  "source_candidate_ids": [
+    "94bf8f29da63e55b"
+  ],
+  "source_candidate_sha256": {
+    "94bf8f29da63e55b": "bb827d54219c04b477c6a42d418b10f04e15882e118f6dc98e7fcd05593ca3f1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "94bf8f29da63e55b",
+      "locator": "94bf8f29da63e55b:02 §3 (16)–(18), affine union-tail bound"
+    }
+  ],
+  "statement": "Let $U\\subseteq\\mathbb R^2$ be any union of triangles $\\{(u,v):u,v\\ge0,\\ u/a+v/b<1\\}$, where $0<a\\le1/100$ and $0<b\\le B=501/1000$. Then, with $s=309/1000$ and $r=64/167=1-s/B$,\n$$\n|U\\cap\\{v\\ge s\\}|\\le r^2 |U|,\n$$\nwhere $r^2<3/20$. The factor $r^2$ is attained for one constituent triangle with $b=B$.",
+  "subgoal_id": "pk-intake-planar-vertex-cap-union-tail",
+  "title": "An exact tail bound for a union of planar vertex triangles"
+}

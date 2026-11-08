@@ -1,0 +1,70 @@
+{
+  "candidate_id": "2783fdded34f9afe",
+  "candidate_sha256": "7afc512a0c5bf05dd69b44c47963b7e9f9a7d978c00aafb924889d8f71eb65c3",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "a83339dae406ffd6": "1a4d61b480ab4c8f241bfe73e31d6c92966d5ebaf5a6f0776a9060dd7c267cd7"
+  },
+  "checks": [
+    "Cold-read the exact frozen proof and checked b02f449107e522a5:01 §§1–4. Every barycentric minimum is zero on D_δ and T, so convexity of the fiber minima forces all later fibers into T. The convex minimum and concave maximum of R=Σ_{i≥2}λ_i contradict an actual section at −2, hence exclude all smaller sampled bases. The simplex section integral gives |D_δ|/V=dδ^(d−1)−(d−1)δ^d<4/125.",
+    "The full-mass middle simplex centroid guarantees at least γ_d V for every containing ordinary own cap, and outward smoothing cannot decrease this. Closed pure-base caps retain the whole own fiber; the exposed cap at −1 has mass below γ_d V. The elementary exponential bounds used in this comparison are strict.",
+    "If a positive deepest base exists, convexity of actual fibers puts an interpolated mark at base one. Each through-mark threshold at that interpolation is at most the larger endpoint threshold for the same normal, so every cap, including pure-base caps with boundary mass, pays the common deepest value. This argument requires no regularity of the interpolated mark.",
+    "Each named active cap has positive own strip. This follows also from the explicit closeness bound, which gives strictly positive and negative margin on vertices of T and thus a proper crossing. Negative threshold derivative rules out a greater threshold at a second mark; equal threshold would give the same exact full-normal moments and therefore the same mark. A connected positive-volume fiber with zero strip and a point of strictly negative margin has its ramp identically zero, so all three caps wholly miss the putative K_1.",
+    "Adding the two whole-miss inequalities eliminates the base tilt. The vertex in D_δ and the error bound give λ_i≤21/[10(d+1)] on K_1 for i=2,3,4. The concave maximum of λ_2 would be negative at 2, making base one exposed. The three simplex volume caps and pair intersections give the claimed Bonferroni upper bound, with the signs of the triple term and all scales correct.",
+    "Checked the logarithmic derivative and nonnegative power series for c≥2. Independently computed 1−3(29/50)^4+3/50=4503157/6250000 and 4/11−4503157/12500000=465273/137500000>1/2000. The strict e-bound used in the squared-log estimate is verified by the factorial series.",
+    "The pooled coordinate variance is at most 1/4 because every actual sampled fiber lies in T. The opposite ramp masses add at most the own mass plus its slab in T, whose volume is at most d h V by the bounded coordinate density. An exposing tilt misses all other finite fibers even after smoothing. The resulting strict upper bound contradicts the original middle depth."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "a83339dae406ffd6",
+      "candidate_sha256": "1a4d61b480ab4c8f241bfe73e31d6c92966d5ebaf5a6f0776a9060dd7c267cd7",
+      "fact_id": "a83339dae406ffd6",
+      "fact_sha256": "d9101c496733d0f2d099adc50b64afadd337af780b21e67b9674538e90ce8e56",
+      "kind": "accepted",
+      "mapping": "Use the uniform outward ramp, fixed positive-definite pooled covariance, h>0, buffer zero, and a nonvertical active cap minimizing over the full normal chart through the mark. Its first-variation identity with Γ(u)=1 gives m−SY=A(0,∇Γ(u)). The coarea S is positive by the proper own strip, and for an identical normalized cap the same quantities appear at both putative marks.",
+      "reviewed_proof_sha256": "d1478f25beb122a249c550caf3c146f38cd1e9cf73aad7e704beccab30ac2d99",
+      "reviewed_statement_sha256": "6fa14d8402527bc9f9233fdf7de948f34f48792376b9379e95e14552efe79f1b"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "kind": "accepted",
+      "mapping": "Take the actual full middle simplex T of volume V and select full metronoid mass V. The ordinary uniform centroid has every own closed-cap volume ≥γ_d V, which transfers to raw smoothed mixed mass because the outward ramp adds and pure-base caps keep the whole middle fiber.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:30:42Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Covers exposed-fiber isolation for ordinary mixed depth, not the three smoothed cap misses and covariance-slab calculation establishing that the putative right fiber is exposed and too shallow.",
+      "fact_id": "2acc8bc803acf1c0"
+    },
+    {
+      "comparison": "Its width-one projection estimate supplies the same scale for a one-coordinate slab in a simplex. It gives no exclusion of a second deepest base.",
+      "fact_id": "6f5a2608fa056059"
+    },
+    {
+      "comparison": "Uses an edge-near simplex tube to bound ordinary cap multiplicity in a tetrahedron. Its dimension and cap-union observable differ from this d≥4 smoothed source vacancy.",
+      "fact_id": "fe24406f9ab601e9"
+    }
+  ],
+  "readability": "The hypothesis is a concrete condition on three named active cap directions. The d=4 source predecessor ac5edf6664902ea2 is a pending comparison with different tolerances; it is not an assumed premise.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "fa27414d930fb4e3285e8cabc8d604740ca7a373489111ea804da7131ba12c0b",
+  "reviewed_statement_sha256": "5e4a4c1961956e4497efe216ddc9d937bb64201a9867c2346d44559317a596be",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:21:45Z",
+  "summary": "The three actual active caps force a volume deficit on a putative second deepest base. The convex fiber census, full-normal identity, and strict smoothed depth bound close the argument for every d≥4.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

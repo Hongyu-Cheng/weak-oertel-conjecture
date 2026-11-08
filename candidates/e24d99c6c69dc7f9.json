@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary planar quadrilaterals in the explicit affine Hausdorff neighborhood; exact cap-distance equality for the constructed enclosing triangle.",
+  "author": "PK-research-agent",
+  "candidate_id": "e24d99c6c69dc7f9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:19:24.642799+00:00",
+  "depends_on": [
+    "a1775cf33bf68cee"
+  ],
+  "draft_key": "near-triangle-quadrilateral-enclosing-cap-stability",
+  "kind": "theorem",
+  "proof": "Work in the stated affine frame, with Hausdorff distance $\\delta\\le1/240000$. Every $Q$ point has coordinates at least $-\\delta$ and sum at most $1+2\\delta$. Select vertices $p_1,p_2$ maximizing respectively the first and second coordinate, and a vertex $p_0$ minimizing coordinate sum. Approximation of $e_1,e_2,0$ gives $x_1(p_1),x_2(p_2)\\ge1-\\delta$ and $x_1(p_0)+x_2(p_0)\\le2\\delta$. The coordinate and sum bounds give $\\lVert p_i-e_i\\rVert_\\infty\\le3\\delta$ for $i=1,2$ and $\\lVert p_0\\rVert_\\infty\\le3\\delta$. Thus the vertices are distinct. The diagonal entries of $(p_1-p_0,p_2-p_0)$ are at least $1-6\\delta$, and its off-diagonal entries have absolute values at most $6\\delta$. The triangle they span has area at least $[(1-6\\delta)^2-(6\\delta)^2]/2=(1-12\\delta)/2$. Meanwhile $Q$ lies in $\\{x_i\\ge-\\delta,\\ x_1+x_2\\le1+2\\delta\\}$ of area $(1+4\\delta)^2/2$. The excess area ratio $h$ over the inscribed triangle obeys\n$$\n0<h\\le\\frac{20\\delta+16\\delta^2}{1-12\\delta}\\le24\\delta\\le1/10000.\n$$\nThe fourth extreme vertex lies beyond exactly one edge of the selected triangle: the two diagonal segments of the quadrilateral meet strictly inside, so the fourth vertex is strictly on the opposite side of the one triangle edge that is a quadrilateral diagonal, and strictly inside the halfplanes of the other two edges, which are quadrilateral edges. Label that one edge $e_1e_2$ after an affine map and the opposite vertex $0$. The fourth vertex has positive coordinates of sum $1+h$, since the excess area ratio is precisely the height of the extra triangle relative to the old height along the shared edge. Exchange the two edge vertices if necessary to make its second coordinate $k\\le(1+h)/2$. This is exactly the bump lemma's chart and all its hypotheses hold. Its enclosing triangle has the claimed volume and cap-distance bounds. Transport it back: normalized ordinary depth, area ratios and halfspace-cap distance are invariant under invertible affine maps.\n",
+  "source_candidate_ids": [
+    "39f4da3e2b2dd7eb"
+  ],
+  "source_candidate_sha256": {
+    "39f4da3e2b2dd7eb": "5f4e1e6e400a09bfe06d9d343f77af4db3597df7f0efd3c89a33bbac5e81b37c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "39f4da3e2b2dd7eb",
+      "locator": "39f4da3e2b2dd7eb:02 Opening (1), §§4–5 and (11)"
+    }
+  ],
+  "statement": "Let $Q$ be a full-dimensional convex quadrilateral and suppose that some invertible affine map $A$ makes $d_{H,\\infty}(AQ,\\operatorname{conv}(0,e_1,e_2))\\le1/240000$. Then there is an enclosing triangle $S\\supseteq Q$ with\n$$\n\\tau=1-|Q|/|S|\\le45\\bigl[D(Q)-4/9\\bigr],\\qquad\nd_{\\rm cap}(\\mu_Q,\\mu_S)=\\tau .\n$$\nHere $D(Q)$ is maximal normalized ordinary halfspace depth, $\\mu_Q,\\mu_S$ are uniform probability measures, and $d_{\\rm cap}$ is the supremum of their absolute mass difference over closed halfspaces. Consequently $D(Q)-4/9\\ge(1/45)\\inf_{S'}d_{\\rm cap}(\\mu_Q,\\mu_{S'})$ over all full-dimensional triangles $S'$.",
+  "subgoal_id": "pk-intake-near-triangle-quadrilateral-enclosing-cap-stability",
+  "title": "Enclosing-triangle cap stability for near-triangle quadrilaterals"
+}

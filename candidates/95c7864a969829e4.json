@@ -1,0 +1,32 @@
+{
+  "advances": "Gives an actual sharp local half-depth extraction for one body and the exact first-order loss of local half-depth under a base-balanced positive enlargement.",
+  "author": "PK-research-agent",
+  "candidate_id": "95c7864a969829e4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:18:43.798398+00:00",
+  "depends_on": [
+    "80dd0bae888ab885"
+  ],
+  "draft_key": "maximal-reflection-extraction-and-balanced-enlargement-obstruction",
+  "kind": "theorem",
+  "proof": "The lower boundary of $C$ is zero and its upper boundary is piecewise affine between $(0,2),(2,10),(3,3)$. Evaluation at the four integer bases gives the stated census.\n\nAt an actual center $(j,c)$ put $s=2c$. Two intervals $[0,A]$ and $[0,B]$ contribute the overlap $\\max\\{0,\\min(A,s)-\\max(0,s-B)\\}$ when one is reflected at $c$. Count both orders for different bases. At bases $0$ and $3$ only the own interval contributes, so retention is at most $2$ and $3$, respectively. At base $1$ the own interval contributes at most $6$, and the paired intervals at $0$ and $2$ contribute at most $2$ each, giving at most $10$. At base $2$ the paired widths are $6$ and $3$, and its own width is $10$. Over $0\\le s\\le20$ the total retention is\n$$\n\\begin{cases}\n3s&0\\le s\\le3,\\\\\ns+6&3\\le s\\le6,\\\\\n18-s&6\\le s\\le9,\\\\\ns&9\\le s\\le10,\\\\\n20-s&10\\le s\\le20 .\n\\end{cases}\n$$\nIts unique maximum is $12$ at $s=6$, and the three resulting reflection intersections are exactly the stated fibers of $D$. Those fibers give a full-dimensional hull and their lengths and first moments are invariant under reflection about $(2,3)$. Reflection symmetry gives true centroid $(2,3)$ and local normalized depth at least $1/2$. The intrinsic extraction equivalence bounds the mass of every eligible subbody by the maximum reflection retention of $C$, so $D$ attains the optimum.\n\nThe lower endpoint sequence $(3,0,0)$ on bases $1,2,3$ is convex and the upper sequence $(6,6+t,3)$ is concave, also for $t=0$. Thus their hull has exactly the specified sampled fibers. They are contained in the corresponding fibers of $C$, so convexity gives $D_t\\subseteq C$. The lengths $3,6+t,3$ give mass $12+t$ and base centroid $2$. The vertical first moment is $18+(6+t)^2/2$, giving the asserted $c_t$. For $0<t\\le1$ we have $3<c_t<4$, so the cap thresholds $c_t+1,c_t,c_t-1$ are proper cuts of all three fibers. The respective cap lengths are $5-c_t,6+t-c_t,4-c_t$. Their sum subtracted from $(12+t)/2$ is $t(3+t)/(12+t)$, which is positive and has derivative $1/4$ at zero.\n",
+  "source_candidate_ids": [
+    "97b12ef4ecc6c56e"
+  ],
+  "source_candidate_sha256": {
+    "97b12ef4ecc6c56e": "fa536fbb666ef21ee45efa0f1bc7b7a539120a4b0ea97a8e73d321a85ada8aeb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "97b12ef4ecc6c56e",
+      "locator": "97b12ef4ecc6c56e:01 Proof §§1–2, actual maximal extraction and unique reflection center"
+    },
+    {
+      "candidate_id": "97b12ef4ecc6c56e",
+      "locator": "97b12ef4ecc6c56e:02 Proof §3, balanced middle enlargement and exact cap deficit"
+    }
+  ],
+  "statement": "Let $C=\\operatorname{conv}\\{(0,0),(3,0),(3,3),(2,10),(0,2)\\}$. Its integer fibers are $[0,2],[0,6],[0,10],[0,3]$ and its total mixed length is $21$. The unique reflection center of maximum mixed retention is $(2,3)$, with retained length $12$. The convex hull $D$ of the three fibers $[3,6],[0,6],[0,3]$ at bases $1,2,3$ attains the maximum mixed length among full-dimensional convex subbodies of $C$ with true integer-base centroid and local normalized depth at least $1/2$.\n\nFor $0<t\\le1$, enlarge just the middle fiber to $[0,6+t]$ and take the corresponding hull $D_t$. Then $D_t\\subseteq C$ has exactly these three integer fibers, mass $12+t$, and true centroid $(2,c_t)$ with $c_t=3+(3t+t^2/2)/(12+t)$. The closed cap $x+z-2\\ge c_t$ through this centroid has mass $15+t-3c_t$, below half the mass of $D_t$ by $t(3+t)/(12+t)$. This deficit is $t/4+O(t^2)$ as $t\\downarrow0$.",
+  "subgoal_id": "pk-intake-maximal-reflection-extraction-and-balanced-enlargement-obstruction",
+  "title": "A maximal half-depth interval extraction fails after a balanced enlargement"
+}

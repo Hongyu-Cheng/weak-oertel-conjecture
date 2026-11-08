@@ -1,0 +1,48 @@
+{
+  "candidate_id": "09fbd9bbcb53252b",
+  "candidate_sha256": "94c7d52a1775f400f25e14465e96c618965b6d4ed6d54f97e87f441d1a6079a8",
+  "checked_dependency_candidate_sha256": {
+    "1b712e5e8b760dc8": "caae890e5aecaa1faf8919d8e43ad234f4e4ea5ffc6a7b0c911421aeed369e1d"
+  },
+  "checks": [
+    "Conditional on one coordinate x, the remaining uniform section is an affine copy of the lower-dimensional simplex scaled by 1-x. This includes the deterministic remaining coordinate for N=2. The original marginal is continuous, so the unused endpoint x=1 is harmless.",
+    "The condition probability is nondecreasing in x because c/(1-x) is nondecreasing for c in [0,1]. Its covariance with the decreasing event X_i<=c is nonpositive by the independent-copy identity. Iteration takes smaller index sets under the same original law and never assumes coordinate independence.",
+    "The affine barycentric description gives lambda_i(-x)=2/(d+1)-lambda_i(x), so x lies in -T exactly when all original lambda_i(x) are at most 2/(d+1). The single-coordinate tail is the volume ratio (1-c)^(N-1) of a scaled simplex, with the endpoints c=0,1 valid.",
+    "The derivative of (x-1)log(1-2/x) is -log y+(y-1/y)/2 with y=x/(x-2). This expression is positive for y>1 by its derivative in y. For N>=9 the bound is therefore at most (7/8)^9, and exact integers give 3*7^9<8^9.",
+    "With actual A=K=-T and B=T intersect -T, the erosion cutoff is 2/(d+1) for every coordinate and the enclosure is exactly B. Exact finite inclusion-exclusion gives 1, 2/3, 1/2, 46/125, 22/81, 3364/16807 and 151/1024; d=5,6,7 and N>=9 exhaust d>=5.",
+    "Matched eb88c1c4c388daab §4.1 (10)–(11) and §2 (4)–(5)."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1b712e5e8b760dc8",
+      "candidate_sha256": "caae890e5aecaa1faf8919d8e43ad234f4e4ea5ffc6a7b0c911421aeed369e1d",
+      "hypotheses": "Set A=K=-T and B=T intersect -T in the frozen theorem. These are full-dimensional, B lies in T and -T, and midpoint compatibility follows. The two actual opposite supports are 1, hence every c_i=2/(d+1); the resulting enclosure is B. The finite exact formula is therefore an admissible specialization. Admission depends on the independent approval of the frozen erosion proof.",
+      "reviewed_proof_sha256": "7121913e7413b4b218aafbeaba0dc64d3ab333526b1f2e03caca7ce70de2d5c0",
+      "reviewed_statement_sha256": "6055da4f81f582ecc09482267b4d5bd91e80fb757e2290dcad06c2c5cd37ddc4",
+      "same_batch": true
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted planar intersection area gives rho_2=2/3 by m=1 in its canonical formula. It has neither the N-coordinate probability bound nor the strict bound for d>=5.",
+      "fact_id": "909e13cc5d1371df"
+    }
+  ],
+  "readability": "The finite values include d=7 (N=8), the last case before the uniform estimate applies.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the frozen statement and proof, followed by source and exact dependency comparison and exact rational checks where applicable.",
+  "reviewed_proof_sha256": "f0d88170f3c1a656405486ff4a38bb47fe7bba6898e3e9c8aed5dfe9e6d14d6e",
+  "reviewed_statement_sha256": "c8b1731b4751a9f75a7783502f4050751d025db1faa3de42af8cc49ef3031f7c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:22:05Z",
+  "summary": "The conditional monotonicity proof gives the stated all-threshold simplex probability inequality. The exact erosion formula and the marginal-tail estimate yield the listed finite constants and the strict bound in every dimension at least five.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

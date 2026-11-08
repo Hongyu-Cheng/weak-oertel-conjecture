@@ -1,0 +1,36 @@
+{
+  "advances": "Comparison of exponential capacity at a prescribed base with true unweighted mixed-centroid cap retention at the same base. The examples hold at fixed integer dimension while the continuous dimension varies.",
+  "author": "PK-research-agent",
+  "candidate_id": "541bce4f7d823d41",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:18:43.797574+00:00",
+  "depends_on": [
+    "b1274a369dfa9af7"
+  ],
+  "draft_key": "fixed-anchor-exponential-capacity-retention-gap",
+  "kind": "counterexample",
+  "proof": "Each example is an actual full-dimensional compact convex body: impose the stated closed real base interval and the inequalities $x_i\\ge0$, $\\sum_i x_i\\le r(z)$ for the specified positive affine radius $r(z)$. Its integer weights are $r(z)^d$.\n\nAny positive-mass convex subbody whose centroid base is $j$ has retained masses $0\\le t_z\\le w_z$ satisfying $\\sum_z(z-j)t_z=0$. For every real $b$, the balance identity gives the upper bound\n$$\n\\sum_z t_z=\\sum_z[1+b(z-j)]t_z\\le\\sum_z w_z[1+b(z-j)]_+ .\n$$\nThe maximum over the feasible mass box equals $T_j$ when positive by b1274a369dfa9af7, applied with intrinsic dimension $d$ to the unweighted measure on the actual source. The accepted theorem realizes its total mass and base moment by a single cap and puts the full centroid in the retained mixed set. Dividing all masses and moments by $|T_d|$ leaves the balance and the assertion unchanged. In the first two examples explicit caps also verify attainment directly.\n\nFor any balanced positive probability row $\\lambda_z$ with $\\sum_z z\\lambda_z=j$, weighted arithmetic-geometric mean applied to $w_z e^{\\alpha(z-j)}/\\lambda_z$ gives $E_j\\ge\\prod_z(w_z/\\lambda_z)^{\\lambda_z}$, since the tilt cancels in the product.\n\nFor the five-fiber example, use $b=-1$ in the upper bound to get $T_3\\le3+2(16)+81=116$. The cap $\\sum_i x_i+3(z-4)\\le18^{1/4}$ retains masses $(1,16,81,18,0)$. In fact $2<18^{1/4}<3$ ensures full capture at $z\\le3$, zero at $z=5$, and radius $18^{1/4}$ at $z=4$. The row balances by $-2-16+18=0$, and its sum is 116. For $\\lambda=(1,4,6,4,1)/16$, its mean is 3 and the weighted product gives\n$$\nE_3^{16}\\ge\\prod_{z=1}^5\n\\left(\\frac{16z^4}{\\binom4{z-1}}\\right)^{\\binom4{z-1}}\n=2^{90}3^{18}5^4.\n$$\nDividing by $2^{48}$ reduces the strict comparison with $232^{16}$ to $2^{42}3^{18}5^4>29^{16}$. The two integers are $1064933331235409756160000$ and $250246473680347348787521$.\n\nIn the three-fiber example the endpoint retained masses must be equal. Their common value is at most $(9/10)^{40}$ and the middle mass is at most one. The closed cap $\\sum_i x_i\\le 1-z/10$ attains both bounds. Minimizing the exponential endpoint pair gives twice the geometric mean of its weights, so $E_0=1+2(99/100)^{20}$. Bernoulli gives $(99/100)^{20}\\ge4/5$, and $8\\cdot9^{20}=97261323672455430408<10^{20}$ implies $(9/10)^{40}<(9/10)^{20}<1/8$. Thus $E_0\\ge13/5>5/2>2T_0$.\n\nIn the family in item 3, $L>N$ and the radii are positive. Use the uniform balanced probability row. Pairing the opposite weights gives\n$$\nE_0\\ge K\\left[\\prod_{k=1}^N (1-k^2/L^4)^{L^3}\\right]^{1/K}\n\\ge K(1-S_2/L)^{1/K}.\n$$\nFor the last step use $\\prod(1-t_k)\\ge1-\\sum t_k$ for $0\\le t_k\\le1$, then Bernoulli to bound $(1-S_2/L^4)^{L^3}$. At tilt $\\alpha=-L$ all terms are at most one, by $\\log(1+z/L^2)\\le z/L^2$, proving $E_0\\le K$.\n\nThe feasible balanced row retaining only the central fiber has mass one and ensures $T_0\\ge1$ by the accepted cap realization. Taking $b=-1$ gives\n$$\nT_0\\le1+\\sum_{k=1}^N(k+1)(1-k/L^2)^{L^3}.\n$$\nFor $t=k/L^2\\in(0,1)$, $(1-t)^{-1}\\ge1+t$, and Bernoulli implies $(1-t)^{-L^2}\\ge(1+t)^{L^2}\\ge1+k$. Thus each power in the sum is at most $(1+k)^{-L}\\le2^{-L}$. This yields the asserted bounds and limit. For any fixed factor depending only on integer dimension one, choose $N$ so that $K$ exceeds it and then choose finite $L$ large enough.\n",
+  "source_candidate_ids": [
+    "5f2f7e126cbd43cc"
+  ],
+  "source_candidate_sha256": {
+    "5f2f7e126cbd43cc": "9f65122def430b146be379dd7632eadf750937f4b3b4a8762b0b6af73983c9d0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5f2f7e126cbd43cc",
+      "locator": "5f2f7e126cbd43cc:05 §2, five-fiber obstruction and (6)"
+    },
+    {
+      "candidate_id": "5f2f7e126cbd43cc",
+      "locator": "5f2f7e126cbd43cc:06 §3, three-fiber variant"
+    },
+    {
+      "candidate_id": "5f2f7e126cbd43cc",
+      "locator": "5f2f7e126cbd43cc:07 §4, (7)–(10), no integer-dimension-only conversion"
+    }
+  ],
+  "statement": "For the actual integer fibers of a convex body in $\\mathbb R\\times\\mathbb R^d$, let $w_z$ be their $d$-volumes in units of the volume of the standard simplex $T_d$. At an integer anchor $j$ define $E_j=\\inf_{\\alpha\\in\\mathbb R}\\sum_z w_z e^{\\alpha(z-j)}$. Let $T_j$ denote the maximum actual mass, in the same units, of a convex subbody whose positive unweighted mixed volume has centroid base $j$. In each of the following examples one ambient closed cap attains $T_j$.\n\n1. For the five integer fibers $zT_4$, $z=1,\\ldots,5$, at anchor $j=3$, $T_3=116$ and $E_3^{16}\\ge 2^{90}3^{18}5^4>232^{16}$.\n2. For the three integer fibers $(1+z/10)T_{40}$, $z=-1,0,1$, at anchor $j=0$, $T_0=1+2(9/10)^{40}$ and $E_0=1+2(99/100)^{20}\\ge13/5>5/2>2T_0$.\n3. For integers $N\\ge1$ and $L\\ge2S_2$, where $S_2=\\sum_{k=1}^N k^2$, set $d=L^3$ and take the integer fibers $(1+z/L^2)T_d$, $z=-N,\\ldots,N$, at anchor $j=0$. With $K=2N+1$,\n$$\nK(1-S_2/L)^{1/K}\\le E_0\\le K,\\qquad\n1\\le T_0\\le 1+\\frac{N(N+3)}2\\,2^{-L}.\n$$\nFor each fixed $N$, the ratio $E_0/T_0$ tends to $K$ as $L$ tends to infinity through integers. In particular the ratio is unbounded over actual affine-root homothetic simplex frusta at fixed integer dimension one.",
+  "subgoal_id": "pk-intake-fixed-anchor-exponential-capacity-retention-gap",
+  "title": "Unbounded fixed-anchor gap between exponential capacity and actual cap retention"
+}

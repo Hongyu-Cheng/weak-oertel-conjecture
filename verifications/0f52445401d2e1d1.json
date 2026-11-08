@@ -1,0 +1,59 @@
+{
+  "candidate_id": "17ecac9ec97a847f",
+  "candidate_sha256": "55b1262cffef78fc244def5c9a597b18ecfe41c387d872062ec9fc35552f7c8f",
+  "checked_dependency_candidate_sha256": {
+    "0586b032c888ffb0": "043a7ca7161102c01efb1ff638765b756a0b6216ee88d1232a21eb4b6a4831bf",
+    "bb755603257fd80b": "9681d068ee82cc4403d26672176ee53a9126f038368e003f33ef96291f1f8d94"
+  },
+  "checks": [
+    "Compared original a260044e1f85011a §§3–4 to the frozen statement. This is the source-at-maximum profile class, with continuous physical profile, finite slope menu, zero outer heights allowed, and no projective change of density.",
+    "Checked that A-sv is strictly decreasing from a positive value, each internal intersection is a single equality, and top-saturated cases preserve the inequality because the terminal endpoint may only increase. The internal finite slopes and the finite initial slope at zero satisfy the exact local lemma; the weight v^(m-2) is positive on open cells for m>=2, and m=1 uses the separate bounded choice w=1.",
+    "At each common grid point the new left derivative is at least the old left derivative, which is at least the old right derivative, which is at least the new right derivative. Fixed grid values and nonincrease give a globally continuous concave assembled arm. At most q+1 cells with eight locations each plus at most q grid points imply the stated 9(q+1) bound.",
+    "Integrated the accepted branches explicitly: outer coarea integrates to a_s^m/2 and inner coarea to the stated linear arm moment. The constants in the inner j_s and k_s integrals are respectively plus and minus s(R^(m+1)-a_s^(m+1))/4; retaining the opposite constants for the two arms gives the stated formulas for actual P and M.",
+    "Checked the three preserved records give the positive-slope quantities and arm volume. In m=1 the terms with m-1 are absent, and at s=0 the z=0 segment has constant density R^(m-1)/2, giving R^m total section mass, zero section moment and the positive arm volume for the cap.",
+    "Independently tested the kernel formulas against exact direct axial polynomial integrations on an asymmetric plateau profile. All 48 arm checks and all 24 complete record comparisons passed across four m values and six slopes, including internal crossings and top-saturated cases.",
+    "Checked the hypograph between the two new arms is compact, convex and polygonal with nested level intervals. Its top gives a continuous concave piecewise affine profile on the original axial interval, keeps height R at zero, and remains positive in the axial interior."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bb755603257fd80b",
+      "candidate_sha256": "9681d068ee82cc4403d26672176ee53a9126f038368e003f33ef96291f1f8d94",
+      "hypotheses": "Same-batch local replacement. On each open-cell weight is positive, the old arm is continuous, concave, nonincreasing and nonnegative, and both slopes are finite at internal joins. The terminal portion requires only the finite left derivative and preserves the allowed nondecrease of the completed top value.",
+      "review_status": "Independent review required before admission",
+      "reviewed_proof_sha256": "53fa482313b78b4f806ae529d0e11ec3df5c8ecb4fde3d2186d1d202212fd084",
+      "reviewed_statement_sha256": "b6179a7e6aa7057abbbbcecc74ad00dde9f66c3f2272fad78549146238d8cbe2",
+      "same_batch": true
+    },
+    {
+      "candidate_id": "0586b032c888ffb0",
+      "candidate_sha256": "043a7ca7161102c01efb1ff638765b756a0b6216ee88d1232a21eb4b6a4831bf",
+      "fact_sha256": "0febb17ea44f43776a949de720914b924c7bbb4888914ad5e68d595531e0cff3",
+      "hypotheses": "The continuous nonnegative profile has a<0<b and r(0)=R>0. Its closed superlevel arms and physical density r(z)^(m-1)/2, threshold z+sx, and line coarea division are exactly those of the predecessor. Apply its positive-slope branch kernels and zero-slope physical section formulas.",
+      "reviewed_proof_sha256": "f545e4a07be3d67f3a02949d26732e0feb7b6a67364fe07faef20bd7fc6ef196",
+      "reviewed_statement_sha256": "851130219c23e68bd89a20723884379021ca95589847ddfeba7bec3a8a4857fe"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:24:42Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its physical signed-arm kernel identities apply on a larger source-position class, but do not supply a finite-knot replacement preserving them. The frozen result restricts the source to the maximum so both arms are nonnegative.",
+      "fact_id": "0586b032c888ffb0"
+    }
+  ],
+  "readability": "K_s and J_s are convenient shifted primitives; the shifts cancel between arms. C_s is already the actual section coarea contribution of its arm.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of frozen statement and proof, source and dependency comparison, and exact symbolic or rational checks where applicable.",
+  "reviewed_proof_sha256": "83852f01673161d32d79fbef58803091bdf761b4c9d8558e12bd0a702b63f87b",
+  "reviewed_statement_sha256": "267da569e83bb9f2a7b7bec52ed891bda38166f3824362ffa99805bad62fea22",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:19:22Z",
+  "summary": "The cellwise replacement reconstructs one physical piecewise affine profile and preserves all selected cap, coarea and moment records, including zero slope and top plateaus.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

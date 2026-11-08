@@ -1,0 +1,26 @@
+{
+  "advances": "Necessary inequalities for actual ordinary planar data under the stated ascending sorted profile. Equivalence concerns the relaxed area system.",
+  "author": "PK-research-agent",
+  "candidate_id": "1a5dac21f3a264d0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:18:43.798236+00:00",
+  "depends_on": [],
+  "draft_key": "ordinary-clipped-unique-sector-area-credits",
+  "kind": "lemma",
+  "proof": "Off the three lines the three balanced signs have at least one positive and at least one negative entry. Counting the six disjoint sectors, put $D=\\sum_iY_i$ and $d_i=X_i-Y_i$. Then $k=2D+\\sum_i d_i$, $q_i=D+d_i$, and $d_i=k-q_j-q_\\ell\\ge(1-2c)k>0$. Each $Y_i\\ge C_i$ by the convex hull of the origin and the two actual boundary points of its sector. Thus $D\\ge C>0$ and $d_i\\le E_i-C_i=G_i$. The sorted profile is equivalent to $D\\le3\\max_i d_i$, since $\\sum_i q_i=k+D$ and $\\max_i q_i=D+\\max_i d_i$.\n\nThe strict bound $q_i<k/2$ gives $2d_i<\\sum_jd_j$. Therefore $(D+d_i)/(2D+\\sum_jd_j)$ is strictly increasing in $D$ at fixed $d_i$. Lowering $D$ to $C$ preserves the cap fractions' upper bounds and yields $C\\le3\\max_i d_i$. This proves the relaxed feasibility from the actual data.\n\nConversely, for any finite $m\\in[C/3,\\max_iG_i]$, choosing $d_i=\\min(G_i,m)$ gives the largest possible sum of $d_i$ and some component equals $m$. These $d_i$ are positive. The cap condition in the relaxed system is therefore equivalent to the existence of such an $m$ with\n$$\n\\sum_i\\min(G_i,m)-m/c\\ge (1-2c)C/c .\n$$\nIf some $G_i<C/3$, at most two clipped terms grow when $m\\ge C/3$, so the left side is strictly decreasing on that interval because $2-1/c<0$. The best permissible value is $m=C/3$. If every $G_i\\ge C/3$, the same choice already works since the cap fraction then equals $4/9\\le c$, and the claimed clipped inequality also holds because its left side is one. Thus in either case the relaxed feasibility is equivalent to the two stated tests. Extended upper bounds cause no difficulty because all choices for $m,d_i$ in the proof are finite. Evaluating $4/(3c)-2$ at $128/279$ gives $29/32$.\n",
+  "source_candidate_ids": [
+    "96512e7b6c584a7e"
+  ],
+  "source_candidate_sha256": {
+    "96512e7b6c584a7e": "239c79948b12d035eff8bd13bdfabfa42d5b576c271cae6bbfa13c927acbcaf6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "96512e7b6c584a7e",
+      "locator": "Opening, (1)–(2); Proof (3)–(4)"
+    }
+  ],
+  "statement": "Let $K$ be a planar convex body containing $0$ in its interior. Use the caps $x\\ge0$, $y\\ge0$, $x+y\\le0$, with areas $q_i$ and total area $k=|K|$. Write $X_i$ for the area in cap $i$ alone and $Y_i$ for the area in precisely the two other caps. Suppose $4/9\\le c<1/2$, each $q_i\\le ck$, and $q_{\\min}+q_{\\mathrm{mid}}+q_{\\max}/4\\le k$. Write the actual chord endpoints as $(A,0),(-a,0),(0,B),(0,-b),(r,-r),(-t,t)$. Set $(C_1,C_2,C_3)=(at,br,AB)/2$, $C=\\sum_iC_i$ and $G_i=E_i-C_i$ for any upper bounds $E_i\\in[0,+\\infty]$ on $X_i$. Then each $G_i>0$ and\n$$\n\\max_i G_i/C\\ge\\tfrac13,\\qquad\n\\sum_i\\min(G_i/C,\\tfrac13)\\ge \\frac{4}{3c}-2.\n$$\nAt $c=128/279$ the right side is $29/32$. With $G_i>0$, the two inequalities are equivalent to feasibility of the relaxed system $0<d_i\\le G_i$, $m=\\max_i d_i\\ge C/3$, $C+m\\le c(2C+\\sum_i d_i)$ for finite real $d_i$.",
+  "subgoal_id": "pk-intake-ordinary-clipped-unique-sector-area-credits",
+  "title": "Clipped unique-sector bounds for an ascending cap-area profile"
+}

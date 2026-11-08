@@ -1,0 +1,30 @@
+{
+  "advances": "Finite ambient Borel measures with no atom at the marked point for the depth characterization.",
+  "author": "PK-research-agent",
+  "candidate_id": "d84d740a59312d9a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:18:43.795665+00:00",
+  "depends_on": [],
+  "draft_key": "odd-hemisphere-transform-and-angular-half-depth",
+  "kind": "lemma",
+  "proof": "Let $G$ be standard Gaussian in $\\mathbb R^N$. Its direction is uniform, so the hypothesis gives $\\int\\operatorname{sgn}(G\\cdot\\theta)\\,d\\sigma(\\theta)=0$ almost surely. For fixed $\\theta$, $G\\cdot\\theta$ is standard normal, so the equators in the transform have $\\lvert\\sigma\\rvert$-mass zero for almost every $G$ by Fubini.\n\nUse probabilists' Hermite polynomials $H_m$, defined by $\\exp(tx-t^2/2)=\\sum_{m\\ge0}H_m(x)t^m/m!$. For any unit $v,\\theta$, write $Z=\\theta\\cdot G$ and $\\rho=v\\cdot\\theta$. The conditional generating function of $H_m(v\\cdot G)$ given $Z$ is $\\exp(t\\rho Z-t^2\\rho^2/2)$, since the conditional Gaussian has mean $\\rho Z$ and variance $1-\\rho^2$. Comparing derivatives at zero gives $\\mathbb E[H_m(v\\cdot G)\\mid Z]=\\rho^mH_m(Z)$, including $\\rho=\\pm1$. Multiplying the zero transform by $H_m(v\\cdot G)$ and using Fubini, justified by finiteness of $\\lvert\\sigma\\rvert$ and Gaussian polynomial moments, yields\n$$\n0=\\mathbb E[\\operatorname{sgn}(Z)H_m(Z)]\\int (v\\cdot\\theta)^m\\,d\\sigma(\\theta).\n$$\nFor odd $m=2k+1$, integration of $(\\phi H_{m-1})'=-\\phi H_m$ on the positive half-line, where $\\phi$ is the standard Gaussian density, gives\n$$\n\\mathbb E[\\operatorname{sgn}(Z)H_{2k+1}(Z)]\n=2\\phi(0)H_{2k}(0)=2\\phi(0)(-1)^k(2k-1)!!\\ne0,\n$$\nwith $(-1)!!=1$. These Hermite identities follow by differentiating and evaluating the generating function. Homogeneity and comparison of the coefficients in $v$ now show that all odd monomial moments of $\\sigma$ vanish. The difference of $\\sigma$ and its antipodal pushforward therefore annihilates all coordinate polynomials, including even monomials by parity. Their restrictions contain constants and separate points, so Stone–Weierstrass and uniqueness of finite Borel measures by continuous tests give the claim. This argument includes $N=1$, with the uniform law on $\\{-1,1\\}$.\n\nFor the depth characterization, let $M=\\mu(\\mathbb R^N)$ and let $\\nu$ be the angular pushforward of mass $M$. For each $a\\ne y$ the Gaussian scalar $G\\cdot(a-y)$ is nondegenerate, so almost every through-$y$ plane is $\\mu$-null by Fubini. If the depth is at least $M/2$ in raw units, its two opposite closed caps must both have mass $M/2$ for each such generic normal. The sign transform of $\\nu$ vanishes almost everywhere and the first assertion gives antipodal invariance. Conversely, two opposite closed hemispheres cover the sphere and have equal $\\nu$-mass, so each has mass at least $M/2$, including for normals with charged equators. Each closed halfspace containing $y$ contains the parallel one through $y$. A generic null boundary gives equality, proving the exact depth.\n",
+  "source_candidate_ids": [
+    "b90a2673d60a00b3"
+  ],
+  "source_candidate_sha256": {
+    "b90a2673d60a00b3": "eac74f81512e4b8a2b25ecf2a9ee3b2443cb4626f4d41ff73a1778cfcfcc2db3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b90a2673d60a00b3",
+      "locator": "b90a2673d60a00b3:01 §1, (1)–(3)"
+    },
+    {
+      "candidate_id": "b90a2673d60a00b3",
+      "locator": "b90a2673d60a00b3:02 §2"
+    }
+  ],
+  "statement": "Let $N\\ge1$ and let $\\sigma$ be a finite signed Borel measure on $\\mathbb S^{N-1}$. If $\\int\\operatorname{sgn}(u\\cdot\\theta)\\,d\\sigma(\\theta)=0$ for spherical-almost every $u$, then $\\sigma$ is antipodally invariant. The value assigned at zero does not affect the almost-everywhere premise.\n\nConsequently, for any nonzero finite positive Borel measure $\\mu$ on $\\mathbb R^N$ and point $y$ with $\\mu(\\{y\\})=0$, the normalized depth over closed ambient halfspaces is at least $1/2$ precisely when the pushforward of $\\mu$ by $a\\mapsto(a-y)/\\lVert a-y\\rVert$ is antipodally invariant. In that case the normalized depth is exactly $1/2$.",
+  "subgoal_id": "pk-intake-odd-hemisphere-transform-and-angular-half-depth",
+  "title": "Odd hemisphere transform and angular characterization of half depth"
+}

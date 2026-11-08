@@ -1,0 +1,50 @@
+{
+  "candidate_id": "e24d99c6c69dc7f9",
+  "candidate_sha256": "367b6dfc3d240f84c77add221549af6b7d751549a5d3b885da45296fc5ad461e",
+  "checked_dependency_candidate_sha256": {
+    "a1775cf33bf68cee": "7ff4b539ee48b06a94a7a1c9854ecee479da50d7a8de8d3646f7f051614070c7"
+  },
+  "checks": [
+    "The three extremizing vertices can be chosen distinct within 3δ of the reference vertices. The signed determinant bound (1−6δ)²−(6δ)² is positive and gives the stated inscribed area lower bound.",
+    "The outer halfplane enclosure has area (1+4δ)²/2. Dividing by the inscribed lower bound gives h≤(20δ+16δ²)/(1−12δ)≤24δ, verified at the permitted radius by monotonic inequalities.",
+    "Among the edges of the triangle formed by three extreme vertices, one is a quadrilateral diagonal and two are polygon edges. The fourth vertex is across only the diagonal, so its normalized coordinates are positive, and the excess area ratio gives sum 1+h.",
+    "Exchanging the two shared-edge endpoints makes k≤(1+h)/2. Affine transport preserves all normalized quantities. Confirmed 39f4da3e2b2dd7eb opening and §§4–5 (11)."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "a1775cf33bf68cee",
+      "candidate_sha256": "7ff4b539ee48b06a94a7a1c9854ecee479da50d7a8de8d3646f7f051614070c7",
+      "hypotheses": "Pending same-wave review. The selected affine frame has h>0 because the fourth vertex is extreme, h≤1/10000 by the determinant and area estimates, and 0<k≤(1+h)/2 by relabeling. The predecessor supplies S, τ/45 and cap distance equality.",
+      "reviewed_proof_sha256": "a4a64b56583a627b1947bc87127443ea2fff7ee952dbf0eb39f6da42ec26b902",
+      "reviewed_statement_sha256": "d4cea6e6c5f07e072b47b5a3bba3044e12dbb800de57eb99fade713fcd584d6f",
+      "same_batch": true
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:33Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives relative simplex depth with exact facet-centroid contacts and an unspecified small relative radius. Here the initial hypothesis is an explicit affine Hausdorff threshold on quadrilaterals and the constructed missing corner realizes cap distance exactly.",
+      "fact_id": "c99394a395ea2399"
+    },
+    {
+      "comparison": "Bounds a distinct convexification cost involving three actual integer fibers; it is not a bound on the ordinary distance to one enclosing triangle.",
+      "fact_id": "c7e97600d54831a4"
+    }
+  ],
+  "readability": "The statement and proof are readable as written.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof and archived-source review, with a separate exact symbolic or rational check where applicable.",
+  "reviewed_proof_sha256": "710de6069a2e814edfe298377cd0c0cda4a62493ae3682d8c2735e35ad804e55",
+  "reviewed_statement_sha256": "41c09fe3e00451fc4e1cfc5ca95972599873bd66644efb3e67e7a7062102ed30",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:19:44Z",
+  "summary": "The Hausdorff hypothesis yields an exact small-bump normalization of the quadrilateral, so the enclosing triangle and constant follow.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

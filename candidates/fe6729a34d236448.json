@@ -1,0 +1,26 @@
+{
+  "advances": "An identity for the actual physical marginals of a martingale. Its equality hypothesis is what a subsequent exact contact repair would need.",
+  "author": "PK-research-agent",
+  "candidate_id": "fe6729a34d236448",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:21:26.822961+00:00",
+  "depends_on": [],
+  "draft_key": "physical-martingale-affine-contact-dissipation",
+  "kind": "lemma",
+  "proof": "The least-active selector is Borel, since the finite family and its minimum are continuous. Affine barycenter preservation gives $\\int A_i(t)\\,dP_s(t)=A_i(s)$ for every $i$ simultaneously outside one null set. For any active $i$ at $s$, subtracting $\\int L(t)\\,dP_s(t)$ yields the row gap\n$\nL(s)-\\int L(t)\\,dP_s(t)=\\int[A_i(t)-L(t)]\\,dP_s(t).\n$\nIts integrand is nonnegative and vanishes exactly in the closed cell $\\{A_i=L\\}$. Integrating with the least active selector gives the formula. A zero integral forces zero row gap almost everywhere, and the row identity for each active plane gives the simultaneous contact-cell criterion. The expression with $W$ is direct substitution of the source marginal. The same argument with conditional marginals gives its conditional form.\n",
+  "source_candidate_ids": [
+    "e6ba532e542af929"
+  ],
+  "source_candidate_sha256": {
+    "e6ba532e542af929": "47a7a1126b9d61f314a33ab68b8c342fe7ea62464a0937a930e64e0e67365faf"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e6ba532e542af929",
+      "locator": "e6ba532e542af929:02 §§7–8, (4)–(6)"
+    }
+  ],
+  "statement": "Let $\\Pi(ds,dt)=\\nu(ds)P_s(dt)$ be a finite physical martingale on a compact convex set $C$ with target $\\eta$, and let $L=\\min_{1\\le i\\le N}A_i$ be the minimum of finitely many affine functions on $C$. Choose the least active index $i(s)$ at each source. Then\n$\n\\int L\\,d\\nu-\\int L\\,d\\eta\n=\\int[A_{i(s)}(t)-L(t)]\\,d\\Pi(s,t)\\ge0.\n$\nEquality holds exactly when for $\\nu$-almost every source $s$, its row $P_s$ is concentrated in every closed contact cell $\\{A_i=L\\}$ active at $s$. If $\\nu=(W/\\beta)\\eta$ with $\\beta>0$, the dissipation equals $\\beta^{-1}\\int L(W-\\beta)\\,d\\eta$. These assertions apply separately under any conditioning for which the conditional marginals and martingale row identity hold.",
+  "subgoal_id": "pk-intake-physical-martingale-affine-contact-dissipation",
+  "title": "Exact affine contact dissipation of a physical martingale"
+}

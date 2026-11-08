@@ -1,0 +1,38 @@
+{
+  "advances": "Explicit ordinary planar cap geometry; no deletion or other-body hypothesis.",
+  "author": "PK-research-agent",
+  "candidate_id": "08391b9c5139968a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:19:24.642624+00:00",
+  "depends_on": [],
+  "draft_key": "near-centroid-planar-low-cap-localization",
+  "kind": "lemma",
+  "proof": "A cap containing two vertices (including a vertex on its cut line) has a complementary cap with one strictly captured vertex and incident intercept fractions $t_j,t_k\\in(0,1]$. A direction through a vertex has one complementary intercept equal to one; a cut through the interior point $y$ cannot pass through two vertices. Put $z=\\lambda_j(y)/t_j$. The relation $\\lambda_j(y)/t_j+\\lambda_k(y)/t_k=1$ implies $z\\in[\\lambda_j(y),1-\\lambda_k(y)]$. The complementary fraction $t_jt_k=\\lambda_j(y)\\lambda_k(y)/[z(1-z)]$ is maximized at an endpoint because $z(1-z)$ is concave. The maximum is at most $\\max\\{\\lambda_j(y)/(1-\\lambda_k(y)),\\lambda_k(y)/(1-\\lambda_j(y))\\}\\le17/33$, since each coordinate is less than $17/50$. Thus the original cap fraction is at least $16/33>4/9+1/10000$. If the cap line passes through a vertex then it contains two vertices with the boundary one counted, since it also passes through the interior of $S$. Therefore every cap under the threshold has one strictly captured vertex and two strictly excluded ones.\n\nIn this case the intercepts are $1/A_j,1/A_k$, with $A_j,A_k>1$, and the fraction is $1/(A_j A_k)$. The lower bound $9997/30000$ on each coordinate and the area threshold imply $A_j+A_k\\le U=30000/9997$ and $A_jA_k\\ge P=90000/40009$. The product with either coefficient equal to $a$ is at most $a(U-a)$. This bound increases up to $U/2$ and decreases beyond it, so a coefficient $\\le29/20$ or $\\ge31/20$ would contradict, respectively,\n$$\nP-(29/20)(U-29/20)=110147293/159987989200>0,\\qquad\nP-(31/20)(U-31/20)=95744053/159987989200>0.\n$$\nThis proves both strict bounds in all directions.\n",
+  "source_candidate_ids": [
+    "39f4da3e2b2dd7eb",
+    "3eac754793b38d1c",
+    "94bf8f29da63e55b"
+  ],
+  "source_candidate_sha256": {
+    "39f4da3e2b2dd7eb": "5f4e1e6e400a09bfe06d9d343f77af4db3597df7f0efd3c89a33bbac5e81b37c",
+    "3eac754793b38d1c": "e1aecca47472b3402f82a2e86817062df2567bb575297cc0db058f36763f926b",
+    "94bf8f29da63e55b": "bb827d54219c04b477c6a42d418b10f04e15882e118f6dc98e7fcd05593ca3f1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "94bf8f29da63e55b",
+      "locator": "94bf8f29da63e55b:03 §4 (19), exact all-normal triangle cap localization"
+    },
+    {
+      "candidate_id": "3eac754793b38d1c",
+      "locator": "§3, (12), exact low-volume triangle-cap localization"
+    },
+    {
+      "candidate_id": "39f4da3e2b2dd7eb",
+      "locator": "§2, (6), explicit control of every low-volume triangle cap"
+    }
+  ],
+  "statement": "Let $S$ be a nondegenerate triangle with barycentric coordinates $\\lambda_0,\\lambda_1,\\lambda_2$. If $|\\lambda_i(y)-1/3|\\le1/10000$ for all $i$, every closed halfspace through $y$ capturing at most $(4/9+1/10000)|S|$ strictly isolates one vertex $i$ and has the equation $A_j\\lambda_j+A_k\\lambda_k\\le1$ for the other indices $j,k$, with equality at $y$ and $29/20<A_j,A_k<31/20$. In particular a direction through a vertex of $S$ cannot satisfy the area threshold.",
+  "subgoal_id": "pk-intake-near-centroid-planar-low-cap-localization",
+  "title": "Explicit localization of every small triangle cap near the centroid"
+}

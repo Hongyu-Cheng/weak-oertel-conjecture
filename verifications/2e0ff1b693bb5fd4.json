@@ -1,0 +1,61 @@
+{
+  "candidate_id": "bc6cb7089fc565fa",
+  "candidate_sha256": "531da35aa1ad0e507f759365997ce25026c0207ce0304a3ec0fca3302fa29536",
+  "checked_dependency_candidate_sha256": {
+    "1b712e5e8b760dc8": "caae890e5aecaa1faf8919d8e43ad234f4e4ea5ffc6a7b0c911421aeed369e1d",
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "Properness of each A cut implies alpha_i>1. With actual middle supports at most 1+eta, all barycentric upper bounds lie strictly below (2+2eta)/3. The comparison corner deletions are disjoint because that common threshold is at least 2/3.",
+    "For any smaller bound a relative open patch inside the comparison enclosure and above that bound has positive area. At eta=1/2 the common bound is one and the same patch can be chosen strictly below it. A nonpositive actual bound already contradicts the positive B premise.",
+    "Expanding (33/32)f gives 11/16+(11/8)eta-(11/8)eta². Combining k<(33/32)b with the actual lower volume bound yields the displayed strict deficit.",
+    "The sandwich adds k>=(1-eta)² V and the upper support constraint. Comparing (32/33)(1-eta)² with f gives 5-54eta+38eta², with smaller root (27-sqrt(539))/38 in (0,1/2). Strictness excludes the root itself.",
+    "At the middle plane balance makes the three closed traces cover the centroid. The full-middle-mass centroid bound is 4k/9, and a mixed cap has at least its own middle contribution. Thus the common cap budget indeed gives k<=a+b.",
+    "The frozen locators match cbd731cd19c40abd §§2–3. The conclusion is conditional on the stated actual support or sandwich bounds, with no claim those bounds follow from criticality."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1b712e5e8b760dc8",
+      "candidate_sha256": "caae890e5aecaa1faf8919d8e43ad234f4e4ea5ffc6a7b0c911421aeed369e1d",
+      "hypotheses": "For the exact same A,K,B,T, all body and midpoint hypotheses hold and the frozen erosion theorem gives the unequal upper bounds on the three barycentrics. The present proof derives a strict comparison against the equal-bound region. This proof has its own independent review.",
+      "reviewed_proof_sha256": "7121913e7413b4b218aafbeaba0dc64d3ab333526b1f2e03caca7ce70de2d5c0",
+      "reviewed_statement_sha256": "6055da4f81f582ecc09482267b4d5bd91e80fb757e2290dcad06c2c5cd37ddc4"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "Take d=2 and mass m=k on the full-dimensional K. Its full-mass metronoid consists of the ordinary centroid, so any of the covering middle halfspaces containing that point has area at least 4k/9.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:27:18Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted proper-cap menu requires the full endpoint triangle and proves a different raw depth-budget contradiction. This theorem bounds an arbitrary endpoint B inside T using actual middle supports and an explicit neighborhood radius.",
+      "fact_id": "9dd1398102da730a"
+    },
+    {
+      "comparison": "The accepted result provides ordinary centroid depth on one full-dimensional body, which is the input to the last cap-budget implication.",
+      "fact_id": "6769574fc1bd9f8d"
+    }
+  ],
+  "readability": "The area bound and the support bound are separate assumptions in the general form. The sandwich provides both.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of frozen bytes, source locator audit, comparison to accepted and same-batch predecessors, and direct checks of the derivations.",
+  "reviewed_proof_sha256": "3d9caccddd1267846a1e59793ba6f6452ee3f641dd655715d9dda7e083f96682",
+  "reviewed_statement_sha256": "526e39e27d1271767c7fc0063a77f431cabbb74f3f92a0d1021874232f712402",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:22:13Z",
+  "summary": "Proper cuts on A make the endpoint bound strict, including at the last permitted support excess. The volume and critical-cap consequences use the same actual A, K and B.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

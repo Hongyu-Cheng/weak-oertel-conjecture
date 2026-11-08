@@ -1,0 +1,36 @@
+{
+  "advances": "The optimized original reflection retention and its width-only necessary bounds for planar interval fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "5d553d984eb96eee",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:20:11.841902+00:00",
+  "depends_on": [],
+  "draft_key": "interval-reflection-budget-width-defect",
+  "kind": "lemma",
+  "proof": "Each ordered term of the reflection profile $R_j(y)$ is a convolution of two interval indicators evaluated at $2y$. It is a translated trapezoid with slopes of absolute value at most two. Actual convexity places the half-Minkowski sum of the two source intervals inside $I_j$, so the full profile vanishes at both endpoints of $I_j$ and is supported in $I_j$. It is $2N_j$-Lipschitz. The substitution $s=2y$ and Fubini give $\\int_{I_j}R_j(y)\\,dy=C_j/2$, including every ordered term. Thus for $0\\le x\\le w_j$,\n$\nR_j(l_j+x)\\le\\min(R_*,2N_jx,2N_j(w_j-x)).\n$\nThe unclipped triangle has integral $N_jw_j^2/2$. If clipped, the removed triangle of height $(N_jw_j-R_*)_+$ has area $(N_jw_j-R_*)_+^2/(2N_j)$. This gives the squared defect inequality and its lower bound for $R_*$. Because $C_j\\ge w_j^2>0$, rationalizing yields\n$\nN_jw_j-\\sqrt{N_j\\Delta_j}\n=\\frac{N_j C_j}{N_jw_j+\\sqrt{N_j\\Delta_j}}>\\frac{C_j}{2w_j}.\n$\nThe decomposition follows by pairing $j-k,j+k$ and expanding their product as $s_k^2-(w_{j-k}-w_{j+k})^2/4$. Compatibility gives $w_j\\ge s_k$, so the displayed summands are nonnegative. If $R_*<M/2$, the positive-part square is strictly larger with $R_*$ than with $M/2$ whenever $N_jw_j>M/2$.\n\nFor the example the roof joining the four upper endpoints has decreasing slopes $4,4,-7$, with lower endpoint zero, so it gives an actual convex body. Here $M=21$, $N_j=(1,3,3,1)$, $C_j=(4,76,136,9)$, and $\\Delta_j=(0,32,164,0)$. The only active comparisons at $b=10$ are $64\\le96$ and $400\\le492$. To check the exact reflection value, let $s=2y$; the ordered overlap of $[0,a]$ and $s-[0,c]$ is $[\\min(a,c,s,a+c-s)]_+$. At the two edge bases the maxima are their own widths $2,3$. At base 1 the middle interval contributes at most $6$ and the reflected pair at most $4$, with both attained at $s=6$. At base 2 the own term is $\\min(s,20-s)$ on $0\\le s\\le20$ and the pair adds $2[\\min(3,s,9-s)]_+$. For $0\\le s\\le6$ their sum is at most $s+6\\le12$; for $6\\le s\\le9$ it is $18-s\\le12$; for $s\\ge9$ it is at most $10$. Equality is attained at $s=6$, proving $R_*=12$.\n",
+  "source_candidate_ids": [
+    "1176a6cc970482b9",
+    "311680d006cf5fea"
+  ],
+  "source_candidate_sha256": {
+    "1176a6cc970482b9": "0cd99ced8e3becb7ba55b2a4df9e6a9dc22a4aba827dfe65403f36202eb98b82",
+    "311680d006cf5fea": "ad7b294e4e334ebbf2bfb557ab1c349eb9a2ce153b49c38289dd86081b2e01f7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "311680d006cf5fea",
+      "locator": "311680d006cf5fea:01 §1, (1)–(5); §2, (6)–(7), reflection cap and curvature/asymmetry defect"
+    },
+    {
+      "candidate_id": "311680d006cf5fea",
+      "locator": "311680d006cf5fea:03 §3, exact limitation using widths (2,6,10,3)"
+    },
+    {
+      "candidate_id": "1176a6cc970482b9",
+      "locator": "§2, supporting exact reflection maximum of the four-interval example"
+    }
+  ],
+  "statement": "Let an actual planar convex body have positive integer interval fibers $I_i=[l_i,r_i]$ of widths $w_i>0$ at $i=0,\\ldots,N-1$; other fibers have zero length or are empty. Put $M=\\sum_i w_i$ and $R_*=\\max_{j,y\\in I_j}\\sum_i|I_i\\cap(2y-I_{2j-i})|$, with zero terms for missing or null fibers. For each $j$, let $K_j=\\min(j,N-1-j)$, $N_j=2K_j+1$, $C_j=\\sum_{0\\le 2j-i<N}w_iw_{2j-i}$, and $\\Delta_j=N_j w_j^2-C_j$. Then\n$\n(N_jw_j-R_*)_+^2\\le N_j\\Delta_j,\\qquad\nR_*\\ge N_jw_j-\\sqrt{N_j\\Delta_j}>\\frac{C_j}{2w_j}.\n$\nWith $s_k=(w_{j-k}+w_{j+k})/2$ the defect decomposes as\n$\n\\Delta_j=2\\sum_{k=1}^{K_j}(w_j-s_k)(w_j+s_k)\n+\\tfrac12\\sum_{k=1}^{K_j}(w_{j-k}-w_{j+k})^2.\n$\nIn particular $R_*<M/2$ implies $\\Delta_j\\ge (N_jw_j-M/2)_+^2/N_j$, strictly when $N_jw_j>M/2$. For an exact limitation of these conditions, the actual fibers $[0,2],[0,6],[0,10],[0,3]$ satisfy the full set of defect inequalities with proposed budget $b=10\\ge\\max_i w_i$, although $b<M/2$ and their actual $R_*$ equals $12$.",
+  "subgoal_id": "pk-intake-interval-reflection-budget-width-defect",
+  "title": "A reflection budget forces a width defect in interval fibers"
+}

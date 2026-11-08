@@ -12,8 +12,10 @@ Here $\Gamma_d=(d/(d+1))^d$.
 | $\Gamma_d/2^n$ | 129 | 104 | 233 |
 | $1/(e2^n)$ | 52 | 1,345,226,000,000,000,003 | 1,345,226,000,000,000,055 |
 
-**The target $n+d<100$ remains unresolved.** The small sharp-bound
-examples satisfy the weaker $1/(e2^n)$ bound. None of these results
+The sharp-bound target $n+d<100$ was open when this submission was
+written. The [17-dimensional fact](../../facts/ecbacdec2c429376.md)
+now meets that target. The small sharp-bound examples below satisfy
+the weaker $1/(e2^n)$ bound. None of these results
 refutes the repository's locked assertion that some positive absolute
 constant works. The proofs are analytic, with exact rational checks and
 independent model reviews; they are not Lean-formalized.
@@ -48,6 +50,8 @@ from the sharp-bound and total-dimension objectives.
 The [final publication review](publication-review.md) binds the final
 proofs and candidate statements to their hashes. The corresponding
 verification records use the repository's `LLM-verified` assurance.
+The publication review records the original candidate hashes. The current
+candidate hashes include the updated links to this directory.
 Earlier review notes are retained as history; statements that a result
 was outside the fact graph describe its status when those reviews ran.
 
@@ -73,11 +77,11 @@ From the repository root, all of the following use the Python standard
 library. The sharp checkers regenerate their adjacent JSON certificates.
 
 ```sh
-python3 research/dimension-reduction-2026-11-07/sharp-triangle-join-check.py
-python3 research/dimension-reduction-2026-11-07/sharp-triangle-join-pareto-check.py
-python3 research/dimension-reduction-2026-11-07/alternative-join-audit-check.py
-python3 research/dimension-reduction-2026-11-07/compress-certificate.py
-python3 research/dimension-reduction-2026-11-07/pr10-independent-n167.py
+python3 research/sharp-dimension-187/sharp-triangle-join-check.py
+python3 research/sharp-dimension-187/sharp-triangle-join-pareto-check.py
+python3 research/sharp-dimension-187/alternative-join-audit-check.py
+python3 research/sharp-dimension-187/compress-certificate.py
+python3 research/sharp-dimension-187/pr10-independent-n167.py
 python3 scripts/check_graph.py
 python3 scripts/check_pk_parity_core.py
 ```

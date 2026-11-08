@@ -5,6 +5,7 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 | depth | kind | subgoal | fact |
 |---|---|---|---|
 | 0 | counterexample | nov8-specific-one-over-e-total-dimension-1387 | [a02d398c0677c03a](facts/a02d398c0677c03a.md) |
+| 0 | counterexample | nov8-sharp-total-dimension-17 | [ecbacdec2c429376](facts/ecbacdec2c429376.md) |
 | 7 | counterexample | pk-intake-thin-edge-individual-menu-gamma-obstruction | [b81112425f4d27f3](facts/b81112425f4d27f3.md) |
 | 2 | lemma | pk-intake-pk-w32-exponential-erosion-moving-cap-influence | [a2958ef951728f01](facts/a2958ef951728f01.md) |
 | 2 | theorem | pk-intake-pk-w32-interior-base-point-bulge-with-depth-slack | [0942b0b947f16ef8](facts/0942b0b947f16ef8.md) |

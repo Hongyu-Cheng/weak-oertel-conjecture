@@ -1,0 +1,26 @@
+{
+  "advances": "A fixed-cap deformation on an actual paired planar chain. The cap has the original center and one shared tilt throughout.",
+  "author": "PK-research-agent",
+  "candidate_id": "67fcb7e6d012a3c4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.080618+00:00",
+  "depends_on": [],
+  "draft_key": "paired-triangle-empty-suffix-enlargement",
+  "kind": "lemma",
+  "proof": "At index $h$ the smaller threshold is $t-\\beta h$ on the left member, and the maximum value of $aX_1+(1-a)X_2$ on either triangle is $ar_h$. A threshold at the maximum captures only a null face, whereas one strictly below the maximum captures positive area on a positive-radius triangle. This gives the exact criterion after the deletion of zero radii. The sequence $ar_h+\\beta h-t$ is concave and positive at $h=0$, since $a\\ge1/2>1/3$. Once nonpositive, its incoming difference is strictly negative by concavity, and the subsequent differences are no larger. This proves the suffix assertion.\n\nConcavity bounds each old suffix radius by $r_H-(k-H)D$, and the zero-area criterion bounds it by $(t-\\beta k)/a$. Thus $r'_k\\ge r_k>0$, with equality at $H$. The minimum of the two affine functions is concave and nonincreasing, and its outgoing slope at the join is at most $-D$ because its value at $H$ equals that of the first affine function. So the joined sequence satisfies the required drop condition. Interpolate the modified paired radii piecewise affinely on the original base interval. Its slopes are the nonnegative drops read inward, zero between bases zero and one, and the negatives of the drops read outward, hence are nonincreasing. Its nonnegative simplex subgraph is a compact convex body with exactly the displayed integer fibers and positive interior. The replaced radii still meet $ar'_k+\\beta k\\le t$, so each changed pair still gives zero area to the same cap. The unchanged pairs give their original area. Total area is $2V\\sum_k(r'_k)^2$, so the cap fraction cannot increase.\n",
+  "source_candidate_ids": [
+    "5e6e53a58ea7a59b"
+  ],
+  "source_candidate_sha256": {
+    "5e6e53a58ea7a59b": "ec143e6264a63c86a4dfecc80403f8a65b6028855d23e00cb004543f709b1aa4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5e6e53a58ea7a59b",
+      "locator": "5e6e53a58ea7a59b:05 §5, (5)–(6)"
+    }
+  ],
+  "statement": "Put $T=\\operatorname{conv}(0,e_1,e_2)$, $V=|T|=1/2$, and take radii $R=r_0\\ge r_1\\ge\\cdots\\ge r_m\\ge0$ with $R>0$ and nondecreasing drops $r_{h-1}-r_h$. At bases $-h,h+1$, for $0\\le h\\le m$, put the two fibers $r_hT$. Let $t=R/3$, and consider the cap $-\\beta z+aX_1+(1-a)X_2\\ge t$ through $(0,t,t)$, with $a\\in[1/2,1]$ and $\\beta\\ge0$. All masses are summed ordinary areas on the displayed integer fibers. Delete any terminal zero radii before defining the uncaptured pairs. A positive-radius pair has zero cap area exactly when $ar_h+\\beta h\\le t$. If these indices are nonempty, they form a terminal suffix $H,\\ldots,m$ with $H\\ge1$. For $D=r_{H-1}-r_H$, define\n$$\nr'_k=\\min\\{r_H-(k-H)D,(t-\\beta k)/a\\}\\quad(H\\le k\\le m),\n$$\nkeeping every earlier radius fixed. These radii are positive, nonincreasing and have nondecreasing drops, with $r'_k\\ge r_k$. The new paired chain has the same central fiber and the same area in the fixed cap. Its total area weakly increases, so its cap fraction weakly decreases.",
+  "subgoal_id": "pk-intake-paired-triangle-empty-suffix-enlargement",
+  "title": "Enlargement of an uncaptured suffix in paired triangle chains"
+}

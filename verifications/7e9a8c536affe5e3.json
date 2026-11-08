@@ -1,0 +1,65 @@
+{
+  "candidate_id": "2c3e77217a72c4c5",
+  "candidate_sha256": "c12809d54fe34b9f9cb348800e13e43d9227b56c1313c9bf54eb95b7290fe5e7",
+  "checked_dependency_candidate_sha256": {
+    "c343c9f3dc96957e": "a952e2f742c093432567f048e9ae11aadc72b04ebc5f5bc3ef2cd369f1e20a9d",
+    "c3e79bc0190bfda3": "fc2f2bc2e3c8c8535ff30fe3ab8040a8e92f7137cac48f9a949683f7da4dee11"
+  },
+  "checks": [
+    "Each assigned cap is canonical and has no mass at other fibers. Any cap assigned elsewhere is strictly negative at this fiber's interior centroid, including when its plane supports that fiber elsewhere. The canonical local caps have zero values there, so coverage gives F_p=0.",
+    "For any optimal minimax weights the weighted value at the centroid must equal its minimum zero. Off-fiber weights vanish, the interior centroid forces resultant zero, and rank d with the sum-zero relation for barycentric gradients gives the unique positive weights proportional to 1/H_j. All local nonpositive margins force the genuine contact to equal g.",
+    "For cap i the base first moment is c_i p and all positive contact weight comes only from p. Subtracting p times the mass equation gives r_i(P_i^s−pS_i)=0. The affine binary distance and nonnegative section masses give r_i s_iz=0 at every other fiber, also for sections supported on off-fiber facets. The own section is proper and its centroid is g by averaging the d facet-parallel vertices.",
+    "The own cap is the homothetic simplex with center v_j and factor d/(d+1), so its centroid is g+(v_j−g)/(d+1). Dividing the hinge integral by the cap mass gives d H_j/(d+1)^2. Eliminating the mass equation in the continuous balance gives alpha_0 c_i(g_i−g)=alpha_0 Psi_i u_i with the stated sign. A positive objective multiplier then makes each vertex-centroid vector a normal to its opposite facet.",
+    "For these normal vectors w_j, opposite-facet differences give a constant dot product in each off-diagonal row of their Gram matrix. Symmetry makes these constants equal, and the sum-zero relation gives the equal squared norms and edge lengths. This argument applies in every stated d≥2.",
+    "For regular K, uniform local weights and eta_p=(d+1)gamma_d v give contact coefficients c_i. With r_i=0 the three balances hold, and the chart equations lift with nonnegative multipliers −eta_p L_i(p,g) on zero simplex coordinates and sphere multiplier −Psi_i. The existence of a possibly abnormal stress is invoked only after independent product minimization establishes the hypothesis of the general Fritz–John theorem.",
+    "The recorded source locator covers the same contact, trace, regularity and converse arguments. Its recorded hash matches the pinned original."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c3e79bc0190bfda3",
+      "candidate_sha256": "fc2f2bc2e3c8c8535ff30fe3ab8040a8e92f7137cac48f9a949683f7da4dee11",
+      "hypotheses": "Pending independent admission. The binary product, individual budget gamma_d v, unit continuous normalization, and exact cap count N0 give the canonical cap structure and show this cover is an attained global minimum. Its proof does not use a stress or regularity classification.",
+      "reviewed_proof_sha256": "37f66bafb553cad418e905ce087e4eb659bc3cd0a7e07fd0185ab4f95740468b",
+      "reviewed_statement_sha256": "5d3df5b26af6031b562650e50d0c1ab0d18d1651b8439947fb60b606dc066ae8",
+      "status": "pending_independent_admission"
+    },
+    {
+      "candidate_id": "c343c9f3dc96957e",
+      "candidate_sha256": "a952e2f742c093432567f048e9ae11aadc72b04ebc5f5bc3ef2cd369f1e20a9d",
+      "fact_sha256": "79a5b588885b1b3363d55c0fbd4397c3c794c0cd0ed865fab33776a265285296",
+      "hypotheses": "At this attained minimum, the finite full-dimensional fibers and 0<tau=gamma_d/2^n<1 satisfy its hypotheses. The used mass/base/continuous equations, nonnegative jointly nontrivial multipliers, genuine contacts, and shared density representation are exactly those of the accepted statement. Its chart proof fixes the sphere and simplex multiplier sign conventions.",
+      "reviewed_proof_sha256": "76f73c8ae10dac73b01968669f5361c27d89aaa25c3caa13777dbb5307a16283",
+      "reviewed_statement_sha256": "d87ccc328c4d45f48ffeae14e3ab7c64867ea7a0b9b1ddc68b1d43324ce72d13",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:09:09Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The general joint Fritz–John theorem supplies an at-least-one-positive multiplier stress and common-density section measures, allowing alpha_0=0. It neither excludes a normal stress for nonregular products nor constructs one in the regular case.",
+      "fact_id": "c343c9f3dc96957e"
+    },
+    {
+      "comparison": "The fixed-normal offset theorem provides a normal offset balance. It does not impose the continuous vector balance in the joint chart, which is where regularity is forced.",
+      "fact_id": "0366ccb8fa1881a1"
+    }
+  ],
+  "readability": [
+    "The shared density in the statement is read as the same section density for all its moments, as in the accepted Fritz–John theorem. The necessity needs only nonnegative effective section masses and density one on proper sections, and the constructed regular solution has r_i=0."
+  ],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6210b772b10ea4fa2dc8215084f9f5b94523346cac52e9f30ac268685544d52c",
+  "reviewed_statement_sha256": "ac0a0b50e5a9ad6c272651dc6e7b03053ba18a478cfb78e0a1dd4e98120179a4",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:06:27Z",
+  "summary": "The exact-count structure pins the minimax contacts and removes multiplied off-fiber traces. The remaining normal objective equation characterizes regularity, and the regular case gives an explicit joint normal stress.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

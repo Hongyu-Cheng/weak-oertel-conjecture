@@ -1,0 +1,29 @@
+{
+  "advances": "An actual mixed body family above the normalized OC target, with stationarity restricted to a fixed-cap endpoint block.",
+  "author": "PK-research-agent",
+  "candidate_id": "f967ba259d25c184",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.085165+00:00",
+  "depends_on": [
+    "dad8b277ce2587c7",
+    "baee8ddaa588aef0"
+  ],
+  "draft_key": "binary-embedding-critical-variance-near-oc",
+  "kind": "theorem",
+  "proof": "For any fixed $d\\ge2$, take the exact three-fiber star of the preceding critical-variance theorem and write the extended base coordinates as $(z,w)$. Form the convex hull of the star at $w=0$ and the centered simplices of volume $D/\\Gamma_d$ at $(0,v),(1,v)$ for every nonzero binary $v$. Its projection is $\\operatorname{conv}([0,1]^n\\cup\\{-e_1\\})$. Every integer base has binary $w$, and at a binary $w$ any convex representation uses only constituent points with that same $w$ because every coordinate of $w$ lies in $[0,1]$. For $w\\ne0$ this leaves exactly two integer endpoint fibers, with no other contributions at those endpoints. For $w=0$ the three integer fibers are exactly the original ones by midpoint compatibility. The body is full-dimensional, and its mass is therefore $M_n=2D+(2^n-2)D/\\Gamma_d$.\n\nFor each fixed star cap with margin $l_i(x)+(a-1/m)z$, subtract $L\\sum_k w_k$ from its margin. Choose $L>0$ larger than the maximum of its original margin on the finitely many other compact integer fibers. This keeps its old trace at $w=0$ and strictly excludes every other integer fiber. For a regular base $q=(z_0,v)$ with $v\\ne0$, the linear functional\n$$\nE_q(z,w)=3\\left(\\sum_{v_k=1}w_k-\\sum_{v_k=0}w_k\\right)+(2z_0-1)z\n$$\nis uniquely maximized at $q$ over the integer support, with gap at least one. If $w=v$, the last term selects $z_0$. Otherwise the first term loses at least three and the last can gain at most two. For each canonical simplex centroid cap $u\\cdot x\\ge0$ at $q$, add the term $L_q(E_q(z,w)-E_q(q))$ to its margin. Taking positive $L_q$ larger than the maximum of $u\\cdot x$ over the other compact fibers isolates the cap strictly. On its own simplex the cap fraction is $\\Gamma_d$, so its total mass is $D$.\n\nThe star groups cover the star and a canonical group covers each regular component, since the $d+1$ centered barycentric margins sum to zero. Hence every point on an integer fiber is covered by an ambient cap of mass $D$ and has depth at most $D$. The original star center retains depth at least $D$ from the star. Each regular centroid has depth at least $D$ from its own simplex by baee8ddaa588aef0, since the centroid cap inequality is at least $\\Gamma_d$ and a containing cap can be shifted to pass through the centroid. A purely base cap containing it contains the entire own fiber. Thus the maximum equals $D$ at all the stated contacts, and all displayed caps pass through one such contact. The star contributes $d+1$ groups and there are $2^n-2$ regular groups.\n\nAll star cap traces and their derivatives on the moving star endpoint are unchanged. The regular caps strictly exclude that endpoint, so their masses are constant under sufficiently small physical motion. The binary projection argument preserves the same strict star midpoint compatibility. Thus the positive stationary stress and Hessian persist for the star cap budget problem with the full family imposed. Equivalently, any positive multipliers on the constant regular constraints leave stationarity and Hessian unchanged. Finally,\n$$\n\\frac{D}{\\Gamma_d M_n/2^n}=\\frac{2^n}{2^n-2+2\\Gamma_d}>1,\n$$\nand this tends to one for fixed $d$. The displayed cover has separate contact points for separate components and may be redundant.\n",
+  "source_candidate_ids": [
+    "8ac7846221e4d65a"
+  ],
+  "source_candidate_sha256": {
+    "8ac7846221e4d65a": "1c6cde35ac6626fd64cfa5edbb075f20dec2e24aaebfc9d3757f6929797ab614"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8ac7846221e4d65a",
+      "locator": "8ac7846221e4d65a:03 §6, (6) and exact relative-depth ratio"
+    }
+  ],
+  "statement": "For every $d\\ge2$ and $n\\ge2$, write $\\Gamma_d=(d/(d+1))^d$. Retain the exact three-fiber critical-variance star at binary coordinate $w=0$ and add a centered simplex of volume $D/\\Gamma_d$ at both bases $(0,v),(1,v)$ for each nonzero binary $v\\in\\{0,1\\}^{n-1}$. Their convex hull has exactly $2^n+1$ positive full-dimensional integer fibers and total mass $M_n=2D+(2^n-2)D/\\Gamma_d$. The actual maximum depth is $D$, attained at the star center and the added simplex centroids. A family of $2^n+d-1$ groups covers all integer fibers by caps of mass $D$, with maximum-depth contacts shared within components. For fixed caps the original free simplex endpoint retains its positive stationary variance stress and negative-definite Hessian. The ratio $D/(\\Gamma_d M_n/2^n)$ is $2^n/(2^n-2+2\\Gamma_d)>1$ and tends to one for fixed $d$ as $n$ grows.",
+  "subgoal_id": "pk-intake-binary-embedding-critical-variance-near-oc",
+  "title": "Binary embedding preserves critical endpoint variance arbitrarily close to the normalized OC target"
+}

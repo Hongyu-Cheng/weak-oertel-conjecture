@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary Euclidean area centroids of strict tetrahedral quadrilateral sections.",
+  "author": "PK-research-agent",
+  "candidate_id": "1aa346b10594ee87",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.083925+00:00",
+  "depends_on": [
+    "1462fa9ce6ced54e"
+  ],
+  "draft_key": "tetrahedral-actual-centroid-conic",
+  "kind": "lemma",
+  "proof": "Put $(X,Y,Z,W)=(1/p,1/q,1/r,1)$ and $L=X+Y+Z+W$. The four centroid formulas from 1462fa9ce6ced54e are\n$$\n\\begin{aligned}\n3b_1&=X/(X+Z)+X/(X+W)-X/L,&\n3b_2&=Y/(Y+Z)+Y/(Y+W)-Y/L,\\\\\n3b_3&=Z/(X+Z)+Z/(Y+Z)-Z/L,&\n3b_4&=W/(X+W)+W/(Y+W)-W/L.\n\\end{aligned}\n$$\nIndeed the four edge intersections are the four normalized adjacent coordinate pairs in those sums, and the diagonal intersection is $(X,Y,Z,W)/L$. Incidence $pb_1+qb_2-rb_3-b_4=0$ gives the displayed expression for $q$.\n\nHere are explicit polynomial verification details. Set $J=pqr+pq+pr+qr$, and substitute\n$$\nA=\\frac{r}{p+r}+\\frac1{p+1}-\\frac{qr}{J}-1,\\quad\nB=\\frac{r}{q+r}+\\frac1{q+1}-\\frac{pr}{J}-1,\\quad\nG=1-\\frac{p}{p+r}-\\frac{q}{q+r}+\\frac{pq}{J}\n$$\nin $C_b$. Multiply by $[(p+r)(q+r)(p+1)(q+1)J]^3$, expand, and collect in $p,q,r$. Every coefficient is zero. This verifies the identity with positive denominators and without any division by differences of heights or centroid coordinates. For the determinant, expanding four times its value gives\n$$\n4c_3c_5c_0-c_3c_2^2-c_5c_1^2-c_0c_4^2+c_4c_1c_2.\n$$\nSubstituting the coefficients and $D=1+A+B-G$ and collecting gives $(A-B)(1+B)(G-D)(AB-GD)^2$.\n",
+  "source_candidate_ids": [
+    "5db4787053e18091"
+  ],
+  "source_candidate_sha256": {
+    "5db4787053e18091": "21e050d47bb57d81e3f32fea30987ad5b6c09053c569a5c3997b7d68c1d006e2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5db4787053e18091",
+      "locator": "5db4787053e18091:01 §1, (2)–(5), conic for actual centroid map"
+    }
+  ],
+  "statement": "For a strict quadrilateral section of a tetrahedron with oriented raw margins $(p,q,-r,-1)$, $p,q,r>0$, let $b$ be its actual area centroid in barycentric coordinates. Set $A=3b_1-1$, $B=3b_2-1$, $G=1-3b_3$, $D=1-3b_4=1+A+B-G$. Then $q=[G-A-B+(1-G)r-(1+A)p]/(1+B)$ and $C_b(p,r)=0$, where $C_b=c_0+c_1p+c_2r+c_3p^2+c_4pr+c_5r^2$ and\n$$\n\\begin{aligned}\nc_0&=(G-A)^2(G-A-B),\\\\\nc_1&=-2A^3-A^2B+5A^2G-2A^2+AB^2-3AG^2+3AG-B^2G+BG^2+BG-2G^2,\\\\\nc_2&=-(G-D)(AB+2A-GD),\\\\\nc_3&=(A-B)(1+A)(G-D),\\qquad c_4=-c_1(A,B,D),\\\\\nc_5&=(G-1)(G-1-B)^2.\n\\end{aligned}\n$$\nThe homogeneous symmetric matrix in $(p,r,1)$ has determinant $(A-B)(1+B)(G-D)(AB-GD)^2/4$.",
+  "subgoal_id": "pk-intake-tetrahedral-actual-centroid-conic",
+  "title": "A conic identity for the actual tetrahedral quadrilateral centroid map"
+}

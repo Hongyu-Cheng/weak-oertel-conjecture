@@ -1,0 +1,28 @@
+{
+  "advances": "A refinement of the integrated positive-convex reserve for a single actual separator. It requires the stated full test cone and pointwise error, and it imposes no pointwise load inequality.",
+  "author": "PK-research-agent",
+  "candidate_id": "cb6064c2f4f7b272",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.083108+00:00",
+  "depends_on": [
+    "71a9133a8b7eb4ce"
+  ],
+  "draft_key": "rate-resolved-positive-convex-log-reserve",
+  "kind": "theorem",
+  "proof": "For fixed $\\lambda>0$ the function $k(s)=s_+g(\\lambda s_+)$ is nonnegative, nondecreasing and convex on the line. To see convexity, represent $g$ on the half-line by its affine supports at positive arguments. They have nonnegative slopes and approximate the endpoint value by continuity. On the nonnegative line $t g(\\lambda t)$ is therefore a supremum of quadratics with nonnegative quadratic coefficients, and is nondecreasing because both factors are nonnegative and nondecreasing. Composition with $s_+$ gives the claim. As a finite convex nondecreasing function, $k$ is a supremum of affine supports with nonnegative slopes. Thus $t k(\\log t-T)$ for $t>0$ is a supremum of convex functions of the form $m t\\log t+(b-mT)t$ with $m\\ge0$. Its perspective $a k(\\log(a/b)-T)$ is jointly convex for $a,b>0$. It is nondecreasing in $a$ by nonnegativity and monotonicity of $k$, and nonincreasing in $b$ by monotonicity of $k$.\n\nAssume first that $f$ is bounded below by a positive constant by adding a positive constant to the desired test. Fix $T>\\sup\\log f$ on the common compact physical range, and write $c=T-\\log f>0$ there. The perspective with $\\lambda=\\lambda_j$, $a=f(w)$ and $b=L_j(w)$ is convex on the positive neighborhood by the two monotonicities, convexity of $f$ and concavity of $L_j$. Its nonnegative globally finite extension, as in the floor lemma, is a permitted test for that same separator. On the sampled boundary the test is $f v_jg(\\lambda_j v_j)$ where $s_j=(\\ell_j)_+$ and $v_j=(s_j-c)_+$. The numbers $r_j=\\lambda_js_j$ lie in a common compact interval, on which $g$ is Lipschitz by finite convexity and monotonicity on the larger half-line. With $c$ bounded and $s_j-v_j=\\min(s_j,c)$, we have\n$$\nv_jg(\\lambda_jv_j)=s_jg(r_j)-\\min(s_j,c)g(0)+E_j,\\qquad\n|E_j|\\le 2\\,\\operatorname{Lip}(g)\\lambda_j c s_j .\n$$\nIndeed the differences are $v_j[g(\\lambda_j v_j)-g(r_j)]$ and $-(s_j-v_j)[g(r_j)-g(0)]$. Their bound vanishes in integral because the first log masses are uniformly bounded.\n\nIn the $W_j-\\beta_j$ term, the first term on the right passes by joint weak convergence of the rate lift. The truncated correction $\\min(s_j,c)$ is continuous as a function of $L_j,w$ after assigning $c(w)$ at nonpositive inputs, so it passes by the ordinary boundary and selector weak limits. Together their limit is\n$$\ng(0)\\int\\psi(W-\\beta)f(\\ell-c)_+\\,d\\eta\n+\\int\\psi f g(r)\\,d(\\widehat a-\\beta\\widehat b).\n$$\nThe separator's logarithmic term equals $\\int\\psi f r_jv_jg(\\lambda_jv_j)\\,d\\eta_j$, since $v_j>0$ implies $\\ell_j>0$. The difference from $\\int\\psi f r_js_jg(r_j)\\,d\\eta_j$ tends to zero: multiply the above expansion by $r_j$, use its uniform bound for $E_j$, and use $r_j=\\lambda_js_j$ for the bounded truncated correction. The latter integral passes to $\\int\\psi f r g(r)\\,d\\widehat b$ by the rate lift, with zero ordinary part. The remainder term is bounded by a constant times $\\lambda_j\\int s_j\\,d\\eta_j$ and tends to zero.\n\nNow let $T\\to\\infty$ after taking the subsequential limit. The ordinary term tends to zero by domination by $\\ell_+$, and adding then removing a positive constant from $f$ gives the result for every nonnegative $f$. Taking $g(r)=(r-t)_+$ and using $r(r-t)_+=t(r-t)_++(r-t)_+^2$ proves the tail inequality. The tests control the actual residual integrals. They do not give a separate pointwise bound on the load at every rate.\n",
+  "source_candidate_ids": [
+    "942ae5a91bb1a792"
+  ],
+  "source_candidate_sha256": {
+    "942ae5a91bb1a792": "94c66893dda492e00e9319b92b2eabc59f2c68fac7e4c2747021a8270ff81ed7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "942ae5a91bb1a792",
+      "locator": "942ae5a91bb1a792:04 §§3–4, (6)–(10), rate-weighted perspective, limit and tails"
+    }
+  ],
+  "statement": "Under the hypotheses of the joint rate-coordinate defect lemma, retain its actual subsequence and $\\widehat a,\\widehat b$. For every globally finite nonnegative convex physical test $f$, every continuous normal weight $\\psi\\ge0$, and every finite nonnegative convex nondecreasing $g:[0,\\infty)\\to[0,\\infty)$,\n$$\n\\int\\psi f g(r)\\,d\\widehat a+\\int\\psi f r g(r)\\,d\\widehat b\n\\le\\beta\\int\\psi f g(r)\\,d\\widehat b .\n$$\nIn particular this holds for $g(r)=r^m$, $m\\ge1$ integer, and $g=1$ recovers the projected reserve. For $0\\le t\\le\\beta$, put $a_t=\\pi_*((r-t)_+\\widehat a)$ and $b_t=\\pi_*((r-t)_+\\widehat b)$. Then\n$$\n\\int\\psi f\\,da_t+\\int\\psi f(r-t)_+^2\\,d\\widehat b\n\\le(\\beta-t)\\int\\psi f\\,db_t .\n$$",
+  "subgoal_id": "pk-intake-rate-resolved-positive-convex-log-reserve",
+  "title": "Rate-resolved positive-convex logarithmic defect bound"
+}

@@ -1,0 +1,73 @@
+{
+  "candidate_id": "1f98d2e726475e3a",
+  "candidate_sha256": "f971374e32bd8c6f510a2ad7f1bb1f226a80b5ee590caa2699180ea6a6504ec2",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "bee3cc8e50a0dcea": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa"
+  },
+  "checks": [
+    "Finitely many integer fibers are disjoint in the ambient space and isometric to the continuous sections. The largest dimension q gives positive finite total intrinsic mass; lower-dimensional sections have zero q-measure.",
+    "At a positive anchored combination, the direction space of the Minkowski average is the sum of input directions. Since its actual integer target has dimension at most q, each q-dimensional input and the output share this direction. The reasoning is local to the participating incidence and does not assume a common direction across the whole contact set.",
+    "In that common intrinsic direction space, the ordinary Brunn–Minkowski lower bound and affine-majorant upper bound coincide at the actual target. Positivity places the target in E, and equal-volume containment of the two compact q-bodies implies exact equality. The strict-separation/interior-ball argument establishes the needed strictness of volume under proper containment.",
+    "For q≥2 the positive-volume two-body equality case gives positive homothety. Grouping and the equality of both successive bounds justify the many-body induction. For q=1 the intervals are already homothetic. The centroid identity follows from a common homothetic representation and does not invoke unrestricted additivity of centroids.",
+    "Representing each point of the centroid hull over an integer base by its positive coefficients proves it is exactly the actual centroid at a base in E. This gives lattice completeness, the singleton integer sections and same-parity midpoint closure.",
+    "The weighted graph selection keeps the actual unequal weights a_z and produces one mark before testing any cap. A containing cap with nonconstant fiber restriction uses the full-volume centroid estimate in the intrinsic q-plane. A constant containing restriction includes all that fiber, including a whole fiber on the boundary.",
+    "Summation retains at least gamma_q times captured centroid weight, hence gamma_q W_E/2^n. The derivative log(t/(t+1))+1/(t+1) is negative, so q≤d gives gamma_q≥gamma_d. The proof covers rank zero directly and the empty E branch has a zero bound at any feasible point.",
+    "Verified source bytes and both exact locators. The structure is §§1–3 and (5)–(8); the actual raw cap inequality and boundary convention are §§4–5 and (2), (9). The accepted graph theorem replaces the source’s Doignon proof for weighted selection."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bee3cc8e50a0dcea",
+      "candidate_sha256": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa",
+      "fact_id": "bee3cc8e50a0dcea",
+      "fact_sha256": "d7fb8bf1055406ebcaa03906c37ae5c346a791238bfc82ab445225504cc670e3",
+      "hypotheses": "When n≥1 and E is nonempty use the finite graph T_E in the actual ambient coordinates, with singleton labels g_z and weights a_z. Same-parity midpoint closure follows from exact integer-anchor centroid equality, so every containing closed ambient halfspace captures at least W_E/2^n. For n=0 the single graph point gives the result directly.",
+      "reviewed_proof_sha256": "5f71717b77abc881a8566e239b260d568886b9968e0805f252142523621e3ddb",
+      "reviewed_statement_sha256": "b35d11bb8b5672e290f57d665efd27927629b295e5ae5d1e0655b22288a2bd12"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "At every retained centroid in the halfspace identify its own q-dimensional affine plane isometrically with R^q, use dimension q≥1 and full metronoid mass a_z=|K_z|_q, and take f=1. The proper restriction is a closed containing halfspace, while a constant restriction containing that centroid includes the whole fiber.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:11:51Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "With the constant majorant at the maximum root, E is exactly the maximum intrinsic-volume stratum and the frozen graph proof specializes to the accepted equality theorem. For a nonconstant affine majorant the positive contact roots and volumes can differ, so the prior theorem does not give their centroid graph.",
+      "fact_id": "8c184887a7947b64"
+    },
+    {
+      "comparison": "Gives the same contact-mass lower bound on the equal maximum-volume stratum. The extension uses actual unequal contact weights and retains the mass fraction of a single affine contact set.",
+      "fact_id": "4e6a79b213537299"
+    },
+    {
+      "comparison": "Uses full continuous-dimensional positive fibers and assumes root equality at each same-parity midpoint of their positive support. The present global majorant forces equality at all integer anchors on a selected contact set, includes intrinsic lower-dimensional fibers, and states a different mass guarantee.",
+      "fact_id": "03208c4af629e958"
+    },
+    {
+      "comparison": "Gives ordinary full-dimensional transfer from an existing weighted centroid-depth bound, with additional equality information. It neither constructs the present intrinsic contact centroid graph nor supplies its weighted center from the affine-majorant geometry.",
+      "fact_id": "c2180d0c4d7ea592"
+    }
+  ],
+  "readability": "The affine function is the upper majorant of the volume roots. The conclusion is about equality at integer anchors and does not require the real centroid hull to be the graph of one affine centroid map.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d596d1e5b3fbfd795d90f8b2ab7b67cb9afe813688a1192a9c78a37968143734",
+  "reviewed_statement_sha256": "2e06ed77e16657f36d19f357593635a619f08a39286013a08a11c95100db45b0",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:08:54Z",
+  "summary": "The affine root majorant forces exact integer-anchor Minkowski equality and centroid consistency, and gives the stated weighted contact-fiber depth.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

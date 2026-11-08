@@ -1,0 +1,64 @@
+{
+  "candidate_id": "636ab2c480ef41f7",
+  "candidate_sha256": "779482ca0294a7dfc81e6a17c364c7bd1db96907bc856a7a71b770fc32d59b1f",
+  "checked_dependency_candidate_sha256": {
+    "45fc9d7b3d03b3a5": "d507c0a68859daed2bc9437a3d1b6fd684cd83ffc776d56d4467f8a3ff86eacc",
+    "f709653c8f9b5874": "dbd7a805ccde10a7b0545e776cbf5a335e1d45fd03dad7eb52ef6c922d8509d5"
+  },
+  "checks": [
+    "With translated support {0,1}, the target constraints and mean force all upper mass equal to the full base-one fiber mass, leaving the full base-zero fiber for the complement. The original positive masses on both sites follow from the nonintegral mean.",
+    "If both ends extend beyond 0 and 1, the uniformly fractional feasible density assigns a proper positive mass on every positive fiber. Replacing any one such assignment by an equal-mass dominated measure on that same fiber keeps both constraints. If the minimum is zero and some base exceeds one, theta M>M-w_0 leaves a proper positive lower trim of the zero fiber. If the maximum is one and some site is negative, 0<theta M<w_1 leaves a proper positive upper trim of the one fiber. No other support case is possible.",
+    "For any proper mass s on a full-dimensional fiber, the homothet with factor (s/w_z)^(1/d) and center parameter v in K_z stays inside the fiber. Its indicator has mass s, and its centroid ranges over a translated positive dilation of K_z. Fixing other fiber allocations preserves the two constraints and contributes a fixed vector to the whole centroid, so this range has interior. The complementary map transfers interior to the other body.",
+    "For John uniqueness, the feasible center and positive-semidefinite shape parameter set is bounded and closed, and an inscribed ball makes the maximum determinant positive. Averaging distinct maximizing shape matrices would strictly improve log determinant. If they coincide but centers differ, normalize them to unit balls centered at +/-v. The ellipsoid with shape (I+vv^T)^(1/2) is contained in their convex hull by the displayed support inequality and has determinant sqrt(1+||v||^2)>1. Thus the inscribed maximal ellipsoid is unique, including d=1.",
+    "The complementary affine map is invertible with nonzero constant Jacobian. It maps inscribed ellipsoids bijectively and multiplies all their volumes by the same factor, so uniqueness identifies the John ellipsoids and transports the centers. Rearranging their affine relation gives the stated weighted center identity.",
+    "The source 461e51dc31c626f1 §6 states the same complete support dichotomy and John-center relation. Section 1 and the explicit strict mixture are used only in the two-sided support branch. The normalized proof provides the homothetic source and the ellipsoid uniqueness details inline."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "45fc9d7b3d03b3a5",
+      "candidate_sha256": "d507c0a68859daed2bc9437a3d1b6fd684cd83ffc776d56d4467f8a3ff86eacc",
+      "hypotheses": "In the branch with sites below zero and above one, the translated normalized positive marginal satisfies the strict feasibility conclusion; the resulting fiber-constant source gives the proper positive mass needed to vary one continuous barycenter.",
+      "reviewed_proof_sha256": "1cfbde543b4f78d0010739c38d027b9505e88176a7698fa5a9983954867a7c06",
+      "reviewed_statement_sha256": "a29727a38c89ef047401f20e04b3c6ffda78cf4470acea53e64801d8ae466e09",
+      "status": "same-batch predecessor; independent approval required before admission"
+    },
+    {
+      "candidate_id": "f709653c8f9b5874",
+      "candidate_sha256": "dbd7a805ccde10a7b0545e776cbf5a335e1d45fd03dad7eb52ef6c922d8509d5",
+      "hypotheses": "The two sets and source classes are exactly those of the complementary moment theorem. Its compactness and invertible affine identity transfer interior and identify the map used to carry ellipsoids and centers.",
+      "reviewed_proof_sha256": "1862bdcffc336bc04164835df0ab90e08e3f1eae9f4ec5f1b43279ccf167de8b",
+      "reviewed_statement_sha256": "fa9091aca483e85e97ac02fb52a2642efd356b7dc6672d9bd38a733b582a4b11",
+      "status": "same-batch predecessor; independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:13:30Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its ordinary metronoid concerns only a fixed mass constraint in one full-dimensional body. The fixed-base moment constraint and the exact dichotomy by the original positive integer support are new here; the proper trim argument is applied within one chosen fiber.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "The one-dimensional continuous moment interval for the four-site rectangle illustrates the interior case, but supplies neither the general criterion nor affine covariance of the John centers.",
+      "fact_id": "196f1bcbb66bc3ee"
+    }
+  ],
+  "readability": "The maximal-volume ellipsoid argument is used only once both moment sets have ambient interior.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "f3695422f446feff8c9f47515984ad20a9b1c1f0036f310335f1cd209f0077f2",
+  "reviewed_statement_sha256": "762c59f873c775814b86ec05cbde1d1ac3d1ac4f8539763b9ec77f556058aef2",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "461e51dc31c626f1": "5f81310611ffb46c774adaccb041f5d0014b441e36ad6f7982b1a855556e47a4"
+  },
+  "started_utc": "2026-11-08T15:09:38Z",
+  "summary": "The adjacent positive support pair is exactly the singleton case. All other supports give full-dimensional moment sets, and their John ellipsoids obey the claimed affine covariance.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,52 @@
+{
+  "candidate_id": "cb6064c2f4f7b272",
+  "candidate_sha256": "0641ea1867d1442244cf7126ee72ec4167b63a46f92b4a46eb881bf6eeb5244e",
+  "checked_dependency_candidate_sha256": {
+    "71a9133a8b7eb4ce": "24757ff1c9576529be54383c221d4564bd7abdd9c830ba435952da0fffe61b23"
+  },
+  "checks": [
+    "Checked original 942ae5a91bb1a792 §§3–4, (6)–(10), against the frozen source. The proposed proof replaces the distributional second-derivative argument with affine supports, and keeps the same sequence and actual selector.",
+    "A finite nonnegative convex nondecreasing g on the closed half-line is right-continuous at zero by convexity and monotonicity. Its affine supports at positive arguments have nonnegative slopes and their supremum also gives the endpoint value. Multiplying the support formula by a nonnegative argument yields a supremum of convex quadratics for t g(lambda t). That function is nondecreasing since both factors are nonnegative and nondecreasing. Composition with the positive part therefore makes k convex and nondecreasing on the line.",
+    "The affine supports of k have nonnegative slopes. Thus t k(log t-T) is a supremum of convex functions m t log t plus a linear term. The perspective b times this function at a/b is jointly convex on positive pairs. It increases in a by positivity and monotonicity of k, and decreases in b by monotonicity of k. These two signs justify composition with convex f and concave L_j, then a nonnegative globally finite extension by the same support construction as in the floor proof.",
+    "For fixed positive shifted f and fixed T, c=T-log f is positive and bounded on the common physical compact set. On the support of the test ell_j>c, so the logarithmic term has the positive rate r_j. The stated expansion follows by adding and subtracting v_j g(r_j) and then the constant g(0) term. Each error is bounded by Lip(g) lambda_j c s_j because 0<=v_j<=s_j and s_j-v_j<=c. The bounded rate range gives the required Lipschitz bound even at zero, by monotonicity and a secant to a larger positive argument.",
+    "The expansion's error in the W_j-beta_j contribution integrates to zero by the uniformly bounded first log mass. The truncation min(s_j,c) is a bounded continuous function of L_j and w after extending it by c at zero, hence passes using the two given selector weak limits. It removes exactly the ordinary truncated term and leaves the residual a minus beta times b with g(r).",
+    "In the logarithmic term multiply the same expansion by r_j. The bounded rate controls its error, and the truncated correction is bounded by a constant times lambda_j s_j. The remaining lifted integrand has multiplier r g(r), continuous and bounded on the rate interval. Its ordinary part is zero. The R_j term vanishes since |R_j|<=C lambda_j and the test is bounded by a constant times s_j.",
+    "Take the subsequential weak limit first at fixed T and fixed positive shift. Then T tending to infinity removes the ordinary integral by integrable domination by the positive log, and the positive shift tends to zero against finite measures. Powers r^m and the constant one are valid weights. For g(r)=(r-t)_+, use r(r-t)_+=t(r-t)_++(r-t)_+^2 to get the stated tail inequality, including t=beta. This uses allowed integrated tests and does not derive a pointwise selector bound."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "71a9133a8b7eb4ce",
+      "candidate_sha256": "24757ff1c9576529be54383c221d4564bd7abdd9c830ba435952da0fffe61b23",
+      "hypotheses": "Its entire floor and joint compactness setting is inherited. Use its actual weak limits of the two rate lifts, finite first log mass, ordinary parts at rate zero, domination and residual support. The ancestor floor also supplies the compact rate interval used to bound the test errors. Independent approval of the exact frozen predecessor is required.",
+      "reviewed_proof_sha256": "b257000085a4b27f4e59ba54b60d7304e32691df476303ba36a6919a94c55f6c",
+      "reviewed_statement_sha256": "2b717d0354eedc3fec4a60f8407ddc54254fea2bb754ff7560ed1a976271c3ce"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:15:06Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The g=1 projection gives exactly its positive-convex inequality with residual a, b and q. Nonconstant convex nondecreasing weights, their admissible perspective, and the rate-tail inequalities are additional.",
+      "fact_id": "062391e82e22c201"
+    },
+    {
+      "comparison": "Uses a different Jensen reserve from a physical martingale on the unlifted boundary density. It neither records an exponential rate coordinate nor proves this rate-weighted separator inequality.",
+      "fact_id": "442c4c99600062dc"
+    }
+  ],
+  "readability": "The limits occur in the order j along the fixed subsequence, then T, then removal of the positive shift of f. The same actual W_j is used throughout.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "49f5d2846823121c98ce7c89262f1264bbd9ad807b2afaa07ec0cb82a9831d70",
+  "reviewed_statement_sha256": "b1ae801df870a46a3cd8c606eb3b56a04dc256cad861c59e4ac284c27ed53633",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:13:11Z",
+  "summary": "The rate-weighted perspective is a valid test for the original separator, including nonsmooth convex nondecreasing weights. Its cutoff limit yields the stated joint reserve and upper-tail inequality.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

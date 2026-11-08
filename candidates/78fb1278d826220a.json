@@ -1,0 +1,28 @@
+{
+  "advances": "Attainment for a given feasible cap budget and fixed gauge.",
+  "author": "PK-research-agent",
+  "candidate_id": "78fb1278d826220a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.075201+00:00",
+  "depends_on": [
+    "0a73ba4a9c7b24d1"
+  ],
+  "draft_key": "width-hinge-attainment",
+  "kind": "theorem",
+  "proof": "Take Euclidean unit-normal representatives, so the positive denominators $h_D(u_i)$ are continuous on the compact sphere and at most $R$. On a minimizing sequence with bounded width objective the Euclidean total hinge is therefore bounded. With all fibers in $A B_d$ for some $A>0$, this bounds each threshold $t_i(z)=b_i-a_i\\cdot z$ below because the own-fiber Euclidean hinge is at least $|K_z|(-A-t_i(z))_+$. Apply 0a73ba4a9c7b24d1 successively for all cap indices. Each limiting threshold is finite or $+\\infty$. The lemma realizes the finite thresholds exactly and the divergent thresholds by empty traces on the ball. The realized cover retains every point of the source, because each point occurred infinitely often in at least one indexed cap. Masses converge by the lemma. On finite-threshold fibers the hinge integrands converge uniformly, and on divergent fibers they are eventually zero. The denominators also converge to the positive support values at the limit normals. The realized cover attains the limit objective.\n\nIn each fiber some cap contains the center of an inball of radius $r_z$. Its Euclidean unit-normal hinge on that ball is at least the integral of the positive linear margin through that center, $\\kappa_{d-1}r_z^{d+1}/(d+1)$ by cross-sectional integration. Its denominator is at most $R$. Sum these contributions over the distinct fibers.\n",
+  "source_candidate_ids": [
+    "d233b11c4a70933f"
+  ],
+  "source_candidate_sha256": {
+    "d233b11c4a70933f": "30b56019e5ccb4f563f48f36e84f4d603470401a9f84bd6872fc2da110df8462"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d233b11c4a70933f",
+      "locator": "d233b11c4a70933f:02 §2, (3)"
+    }
+  ],
+  "statement": "For a centrally symmetric convex body $D\\subset\\mathbb R^d$ with $0\\in\\operatorname{int}D$, write $h_D(u)=\\max_{v\\in D}u\\cdot v$. For nonvertical affine margins $L_i(z,x)=a_i\\cdot z+u_i\\cdot x-b_i$, define $\\Psi_D=\\sum_i\\int_S(L_i)_+\\,d\\mu/h_D(u_i)$ on the finite positive-volume integer fibers with summed volume $\\mu$ and mass $M$. Assume $n,d,N\\ge1$, every fiber $K_z$ is compact, convex and full-dimensional, and $0<\\tau<1$. If there is a full cover of $S$ by $N$ closed nonvertical ambient caps each of mass at most $\\tau M$, the minimum of $\\Psi_D$ over these covers is attained. If $D\\subset R B_d$ and $r_z>0$ are inball radii of the respective fibers, then every such cover satisfies $\\Psi_D\\ge\\kappa_{d-1}\\sum_z r_z^{d+1}/[(d+1)R]>0$, where $\\kappa_j$ denotes Euclidean unit $j$-ball volume and $\\kappa_0=1$.",
+  "subgoal_id": "pk-intake-width-hinge-attainment",
+  "title": "Attainment and positive lower bound for width-normalized hinge"
+}

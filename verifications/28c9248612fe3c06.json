@@ -1,0 +1,76 @@
+{
+  "candidate_id": "c851a5f1d70b1674",
+  "candidate_sha256": "5dbcab2435e701f664863fd6e36dc88b16fc78c1044ea62122e23d411db6a21b",
+  "checked_dependency_candidate_sha256": {
+    "092da3dd16fe42c7": "8c113c035813a8df991f53cc6c09d4b528a350e93fbce55c92b2330785f67460",
+    "b026600b8d8e369b": "a84f71a68b85f75810033fa9a22db9d80686cf4f0d137c58381dd5aa67b6ba2c"
+  },
+  "checks": [
+    "On the full scalar domain, P≥1/2, Q=P−kz≥0 including Q=0, k(1±z)>0, and 2−3b≥1/2. The denominator 270k(2−3b)(1−z²) is strictly positive for k>0.",
+    "Direct rational multiplication gives the displayed N: the two cubic integrals contribute 90(1−k) with opposite linear factors in z, the quadratic terms give 135k(1+k), and the target gives (40+60k+24k²)(2−3b)(1−z²).",
+    "Independent exact rational expansion after the stated b,z,k substitutions verified degrees (4,4,4). The 125 Bernstein coefficients on each box all matched the archived arrays by their interval metadata. The respective exact minima are 5/2 and 331/384. Positive coefficients give strict positivity on the entire boxes; k=0 is only a polynomial boundary.",
+    "For the actual cap, t−βh≥r_h/3 and t+β(h+1)≥r_h/3 for positive radii. Since 1−a≤1/3, both use the upper tail or its empty extension, including the shared branch equality at a=2/3. At a=1 the coordinate cap directly gives the same square formula.",
+    "Using b=1/(3a) and z=β/(ak) changes the two thresholds to P−k(1−z)h and P−kz−k(1+z)h inside the squared positive parts. At h=1/k their values are z−b and −b−z−kz, both negative in the geometric domain, and both affine hinges decrease. No tail term from outside the positive-radius leg is counted.",
+    "The first term and the convex trapezoid integral give the two lower bounds for S(p,ℓ), including p=0 and integer cutoff. Their weights 1−k and k are nonnegative. The accepted quadratic hinge estimate at p=1,ℓ=k gives the upper bound with 3k/16≤k/5 and the strict chain inequality follows.",
+    "The original Step 3 and Lemma 2 are the same actual-cap identity and strict arithmetic certificate. Its preceding geometric affine replacement and prefix-extension steps are outside the stated scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "b026600b8d8e369b",
+      "candidate_sha256": "a84f71a68b85f75810033fa9a22db9d80686cf4f0d137c58381dd5aa67b6ba2c",
+      "fact_sha256": "ba679159065501d4d274843c49368a60fb602d26cc26445c615aee1941ddbbdf",
+      "hypotheses": "For a≥2/3 and s≥r/3 the upper proper branch or the empty branch applies. The accepted proof gives its quadratic form, with the coordinate direction a=1 checked directly.",
+      "reviewed_proof_sha256": "6222e57d8c22c4aaeb1185c5ccd88923e89a3a7775a49d33212fc1f40bf33e9a",
+      "reviewed_statement_sha256": "c9b765e6ad0e35c0ca69a14bfaaeea2892dadedbcddb43415fbc9a6b51225316",
+      "status": "accepted"
+    },
+    {
+      "candidate_id": "092da3dd16fe42c7",
+      "candidate_sha256": "8c113c035813a8df991f53cc6c09d4b528a350e93fbce55c92b2330785f67460",
+      "fact_sha256": "7885abda7e9f8cc8dbbd176e7e9ec5633a5a72379d4752c64cf4c1729f883273",
+      "hypotheses": "The accepted S_2 upper bound at p=1 and ℓ=k>0 is 1/(3k)+1/2+3k/16, including an integral truncation index.",
+      "reviewed_proof_sha256": "3fb4ac638a111d9014352d2f46a2d3676ccb9c139baa4ba855234b43e41a5ce8",
+      "reviewed_statement_sha256": "cffc7ea998141fd72c08d42050c8258d2e60bde6acc2adac0770f5870813f29f",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:18:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "At d=2 and maximum normal coordinate a≥2/3, the accepted all-tilt theorem and its equality classification already imply strict cap surplus for this affine leg because β<k/3≤1/3. The exact cap sum identity and the stronger scalar bound on the convex combination f_k are additional.",
+      "fact_id": "5adcdc64a058b8aa"
+    },
+    {
+      "comparison": "The accepted finite-sum theorem supplies the separate quadratic sum upper estimate used here. It does not prove the coupled two-hinge scalar certificate.",
+      "fact_id": "092da3dd16fe42c7"
+    }
+  ],
+  "readability": [],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2e56048af6a3ff6a6696573cf29773d36f93276e028df3686f4a84d805446f23",
+  "reviewed_statement_sha256": "0b5f457b0dbade2f8a26b0020e9360008400dc54e3903d8f953f1e2127d24dcc",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_checks": [
+    {
+      "candidate_id": "77cefa95257c7b19",
+      "candidate_sha256": "022cee83d00ab72f0eebf6ba682a554065be770c17fe767cff04860517534542"
+    }
+  ],
+  "started_utc": "2026-11-08T15:13:17Z",
+  "summary": "The exact polynomial certificate gives a strict scalar bound on both boxes. The two arithmetic sums then give the actual maximal affine cap area, including supporting and zero-radius endpoints.",
+  "supporting_files": [
+    {
+      "path": "assets/pk-nov6/computations/half-integer-affine-high-sector-bernstein.json",
+      "sha256": "54434d62344c5481299194e17e8000c4468756d9153b34b05b17a1db4f15e771"
+    }
+  ],
+  "target_match": null,
+  "verdict": "APPROVED"
+}

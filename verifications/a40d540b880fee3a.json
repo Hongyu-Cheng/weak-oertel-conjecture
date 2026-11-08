@@ -1,0 +1,54 @@
+{
+  "candidate_id": "f7418fe6a4d843a4",
+  "candidate_sha256": "c6dfb24ef321481b87ad90f41691d54a7833bb0310f8790e60f393927ba33e00",
+  "checked_dependency_candidate_sha256": {
+    "a8cbe3efd17354fb": "f20cecd34c67301eb902f719fb018e4a472672f25230fe5e985bd0c5924b3644"
+  },
+  "checks": [
+    "By symmetry E[N]=d h^(d−1)=mΓ and E[Ns_i]=E[N]/d, so all affine terms cancel. Conditional scaling of the remaining barycentrics yields the stated density-weighted expectation. For d=2 the remaining coordinate is deterministic and the final truncated power is the indicated indicator.",
+    "From min(x,c)=c−(c−x)_+, integration of the density gives I_1(c), I_h(c−b), and I_h(c) with the stated signs and factors. Integrating (c−x)(L−x)^(d−2) gives the displayed I_L exactly.",
+    "For c≥b the linear coefficient cancels by mΓ=d h^(d−1). The constant contribution is −h^(d−1)+b h^(d−1)+h^d=0. The remaining terms give the claimed formula and monotonicity after division by (1−c)^d. Exact rational substitution checked the splice and positive constants in dimensions 2–8.",
+    "For c<b, twice differentiating gives the stated bracket. Bounding the ratio by h leaves h^(d−2)[dh−(d−1)]=h^(d−2)/m. Integrating from the two zero initial values gives the first hinge majorant bound. For c>b the x majorant has mean error (1−c)^d/d, and monotonicity gives the second bound with its exact constant dE(b)/(1−b)^d>0.",
+    "The zero-boundary Green kernel is nonnegative with the prescribed curvature mass. Exhaustion by closed interior intervals and endpoint continuity give the formula even for unbounded one-sided endpoint slopes. Evaluation at x=b bounds both weighted curvature integrals. The majorant difference is nonnegative, and bounded N−mΓ and the integrable Green mixture justify signed Fubini. E(c)>0 for each interior c gives deficit zero exactly for an affine roof.",
+    "The unit-determinant change q=r−sum z_j+1 gives the claimed enclosing simplex and its volume factor. Since E[s_1]=1/d, the first-order volume ratio has coefficient d times the mean majorant error. The exact ordinary all-normal expansion then yields the ratio and the inequality for every smaller positive constant. Nested uniform measures have total variation equal to the missing fraction.",
+    "The archived Sections 1–4, including formulas (1)–(13), match the normalization. The original raw source hash matches."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "a8cbe3efd17354fb",
+      "candidate_sha256": "f20cecd34c67301eb902f719fb018e4a472672f25230fe5e985bd0c5924b3644",
+      "fact_sha256": "901731c3535a84052df8305bde455310d9561f7cab236de385a895b59a705e8d",
+      "mapping": "Use d≥2 and the fixed continuous concave nonnegative facet roof ψ(z)=φ(z_1). Its body, facet probability, Γ, and E_d are identical. Invoke only its all-normal normalized expansion; the enclosure and its ratio here are proved for a different explicit majorant.",
+      "reviewed_proof_sha256": "1509a93e8f8367cbf42c725a4f2945f7a168f32f5cf6a9a3290d122f2fa516ce",
+      "reviewed_statement_sha256": "b858d7c0475e53c533d493c3cf48ba6e3a51b9f0a7d64e0a09da607b46add82c",
+      "status": "accepted fact at repository snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:11:22Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The geometry of K_ε, ordinary normalized depth expansion, and general enclosure-volume calculation are covered there for continuous concave facet roofs. Its quantitative comparison uses a supporting affine majorant at the facet centroid. The present candidate specifies a majorant at s_1=b and exact one-coordinate hinge formulas, with a separately verified coefficient for that majorant.",
+      "fact_id": "a8cbe3efd17354fb"
+    },
+    {
+      "comparison": "The facet consequence already supplies E_d(ψ)=0 exactly for affine ψ and a quantitative bound for a centroid supporting majorant. It does not give the displayed piecewise value of E_d(min(s_1,c)) or the claimed bound for the explicitly assembled majorant at s_1=b.",
+      "fact_id": "f566248002918e0f"
+    }
+  ],
+  "readability": "At the hinge c=b either affine majorant touches, and the candidate consistently uses the constant one. The plateau of E(c)/(1−c)^d for c≥h is handled by the weak monotonicity stated.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0e79877a4270cbbd2043cf8f4b931a630d89efe9f2aa39160d9f7f4c557794a4",
+  "reviewed_statement_sha256": "db16ddae90b78f80edc1cd0e6a42f554e0db89c9dc73941b7e59874013fad5f1",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:06:00Z",
+  "summary": "The facet marginal gives both exact hinge formulas and a strictly positive dimension-only comparison with the explicit affine majorant. The curvature-measure proof includes endpoint-singular derivatives, and the ordinary maximum-depth expansion is applied within its exact roof scope.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

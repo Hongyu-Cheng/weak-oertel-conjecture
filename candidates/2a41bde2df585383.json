@@ -1,0 +1,29 @@
+{
+  "advances": "A local sufficient condition requiring strict lower contact in every facet mark and a through-source profile; no assertion that such a base or an appropriate source always exists.",
+  "author": "PK-research-agent",
+  "candidate_id": "2a41bde2df585383",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.207140+00:00",
+  "depends_on": [
+    "37b32ccd92db0405",
+    "ea91e021ff1f4416"
+  ],
+  "draft_key": "simplex-strict-support-radial-localization",
+  "kind": "lemma",
+  "proof": "For each $i$, $a(z)=b_i(p)+a_i\\cdot(z-p)$ touches the lifted lower graph only at $(p,b_i(p))$. Hence that point is an exposed singleton face of the graph hull in the finite marked face-quota theorem. Use its hinge on that face: it equals some $\\delta_i>0$ on the whole facet at base $p$ with mark $n_i$, and is zero on every other marked facet. The theorem applies to the given actual fibers and same physical potential class, including endpoints in dimension one.\n\nThe radial flux $r_i=n_i\\cdot(x-y)$ is constant and strictly positive on $F_i(p)$, since the facet lies on a supporting plane and $y$ is interior. Multiply each hinge by $r_i/\\delta_i$ and sum. The resulting nonnegative continuous field is convex at each fixed normal and has exactly the required values. By Gauss–Green with vector field $x-y$, of divergence $d$, its denominator is $d|K_p|>0$.\n\nIf a cap has nonzero continuous normal, its slice over $p$ is a halfspace whose boundary passes through $y$ and meets $\\operatorname{int}K_p$. Apply Gauss–Green to the ordinary truncated polytope; its new cutting facet has zero flux because $x-y$ is tangent to that plane. All other facets are pieces of the old boundary, giving numerator $d$ times the truncated volume. Intersections of old and new facets are null for the boundary integrals (in dimension one the new endpoint is interior and distinct from the two old endpoints). If the continuous normal is zero, the closed cap contains the whole own fiber, so the numerator is $d|K_p|$. Linearity yields the displayed formula. Each ordinary through-$y$ cap fraction is at least the depth of $y$, and so is the whole-fiber fraction one. The centroid conclusion follows from the ordinary Grünbaum bound as stated in Section 1 of the accepted ordinary simplex rigidity theorem.\n",
+  "source_candidate_ids": [
+    "810352ec6ea27062"
+  ],
+  "source_candidate_sha256": {
+    "810352ec6ea27062": "b400fdf33306c7fac26646cafdfccc697edaf5e702b299aac95570044b5cca2c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "810352ec6ea27062",
+      "locator": "810352ec6ea27062:05 §7, (10)–(12), whole-fiber radial localization"
+    }
+  ],
+  "statement": "Let $K_z$, $F_i(z)$, $n_i$, $\\eta$ and the admissible potentials be as in the finite marked face-quota theorem. Fix $p\\in P$ and suppose that for every $i$ there exists $a_i\\in\\mathbb R^n$ such that\n\n$b_i(z)>b_i(p)+a_i\\cdot(z-p)\\quad(z\\ne p).$\n\nFor every $y\\in\\operatorname{int}K_p$ there is an admissible potential equal to $n\\cdot(x-y)$ on the actual marked boundary of $K_p$ and zero on every other sampled boundary. Its denominator equals $d|K_p|$. For any normalized finite profile $W=\\sum_l\\theta_l\\mathbf1_{H_l}$ of closed ambient halfspaces with boundary through $(p,y)$, its efficiency is exactly\n\n$\\sum_l\\theta_l\\frac{|\\{x\\in K_p:(p,x)\\in H_l\\}|}{|K_p|}.$\n\nThis is at least the ordinary normalized depth of $y$ in $K_p$. In particular, it is at least $\\Gamma_d=(d/(d+1))^d$ for the own-fiber centroid or any mark with ordinary depth at least $\\Gamma_d$.",
+  "subgoal_id": "pk-intake-simplex-strict-support-radial-localization",
+  "title": "Whole-fiber radial efficiency at strict lower-support contacts"
+}

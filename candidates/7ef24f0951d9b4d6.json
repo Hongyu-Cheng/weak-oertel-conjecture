@@ -1,0 +1,33 @@
+{
+  "advances": "An exact fixed-body reduction. It keeps the parameter and certificate on sampled fibers and makes no claim about body paths or decomposition of physical cap allocations.",
+  "author": "PK-research-agent",
+  "candidate_id": "7ef24f0951d9b4d6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.204347+00:00",
+  "depends_on": [
+    "347dc8c30a1e79ad",
+    "155691fc3768c06f"
+  ],
+  "draft_key": "canonical-parity-plane-envelope-with-same-rows",
+  "kind": "lemma",
+  "proof": "The complete finite set $I=B\\cap\\mathbb Z^n$ has hull $B$ because it contains $J_+$. Its maximal minimal faces cover $I$. By 347dc8c30a1e79ad their chosen relative-interior integer witnesses have distinct parities and their number is at most $k(I)\\le k(P)$. For each such face $Q$, the positive source bases in $Q$ include its vertices and span it. A witness $q_Q$ has a representation with positive weight on each of these bases: subtract a sufficiently small positive multiple of their average and divide by the remaining coefficient to obtain another point of $Q$. Thus $q_Q\\in J$ and the two exact interpolation identities apply.\n\nChoose a finite own-fiber supergradient $c$ of $L(q_Q,\\cdot)$ at $y_{q_Q}$, which exists by concavity at an interior point. To lift it, apply 155691fc3768c06f to the sampled compact convex fibers\n$$\n\\{(X,t):X\\in K_p,\\ 0\\le t\\le L(p,X)\\}\n$$\nin direction $(-c,1)/\\lVert(-c,1)\\rVert$. Their anchored inclusions follow from $C_p=K_p$ and concavity of $L$. Their rescaled support at $q_Q$ is $L(Y_{q_Q})-c\\cdot y_{q_Q}$. The resulting affine majorant of the rescaled supports plus $c\\cdot X$ gives a sampled affine majorant touching the witness, even on the boundary of the full base. For any such $A_Q$, the nonnegative gaps $A_Q(Y_p)-L(Y_p)$ at the face’s original positive marks have weighted sum zero by the interpolation identities. Each gap vanishes.\n\nEvery $A_Q$ is positive on $S$ and hence on $C$. Its minimum $V$ majorizes $L$ on $S$ and equals $L$ at every original positive mark. Concave Jensen for $V$ in the supplied rows gives\n$$\n\\int V\\,d\\nu\\le\\sum_p m_pV(Y_p)=\\sum_p m_p L(Y_p)=\\int L\\,d\\nu=1.\n$$\nThus $V=L$ almost everywhere for $\\nu$, and then throughout each closed sampled body, since the target density is strictly positive there and every relatively open neighborhood has positive volume. Each old row is supported on $S$ and consequently has its original parameter integral with $V$ as well. For $h+cV$ concave, apply Jensen on each row and cancel its exact $V$-equality. The target and all other row quantities stay the same. The same nonnegative-gap integration shows that each old row with base on a face $Q$ is carried by the sampled $A_Q=V$ contact. On the real hull this equality set for $V$ is convex because $V$ is concave and $A_Q\\ge V$ there; for the old extension the justified convex containing set is $C\\cap\\{A_Q\\le L\\}$.\n\nFinally an affine touching majorant has its continuous coefficient among the own-fiber supergradients at the mark, so it equals the gradient wherever that gradient is unique. At a witness any sampled touching plane has zero gaps at its positive inputs, giving the asserted witness label when the contributing gradients are common. The equality $V=L$ throughout each sampled fiber also preserves all gradients wherever the restrictions are differentiable.\n",
+  "source_candidate_ids": [
+    "c106b596b70bfd05"
+  ],
+  "source_candidate_sha256": {
+    "c106b596b70bfd05": "41169de43a2799fc68e614d912ee04d523d43e19e5307798144cacdbd9c12a88"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c106b596b70bfd05",
+      "locator": "c106b596b70bfd05:02 §§2–3, (4)–(5), maximal occupied faces and common touching"
+    },
+    {
+      "candidate_id": "c106b596b70bfd05",
+      "locator": "c106b596b70bfd05:03 §§3–4, (5)–(7), and §4a, unchanged rows certify the new cone"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be nonempty and finite, and let $K_p\\subset\\mathbb R^d$, $d\\ge1$, be convex bodies, with $C$ the hull of their lifted union $S$ and actual sampled fibers $C_p=K_p$. Let $dm$ be summed fiber volume, $M=m(S)$, $L>0$ continuous concave on $C$, and $\\nu=dm/(ML)$. At finitely many distinct sampled bases $p\\in J$ let $Y_p=(p,y_p)$ be own-interior marks. Assume that every positive-weight combination of these bases with integer average $r$ satisfies $r\\in J$, and that $Y_r$ and $L(Y_r)$ are the same combinations of the corresponding input data. Suppose the supplied rows $\\nu_p\\ge0$ on $S$ sum to $\\nu$, with masses $m_p$, moments $\\int w\\,d\\nu_p=m_pY_p$, and $\\int L\\,d\\nu_p=m_pL(Y_p)$. Write $J_+=\\{p:m_p>0\\}$ and $B=\\operatorname{conv}J_+$.\n\nLet $Q$ range over the maximal faces of $B$ having an integer point in relative interior. At a relative-interior integer witness $q_Q$ there exists a sampled affine majorant $A_Q$ of $L$ touching $Y_{q_Q}$. Any such choice touches every original positive mark over $Q$. The witnesses have distinct parities, and the positive concave function $V=\\min_Q A_Q$ on $C$ therefore has at most $k(P)$ planes, where $k(P)$ is the occupied parity count. It satisfies $V=L$ on $S$. Every supplied row is kept, with the same masses, barycenters, parameter moments and target measure $dm/(MV)=\\nu$. In particular it certifies the entire new cone\n$$\n\\sum_p m_p h(Y_p)\\ge\\int h\\,d\\nu\n\\quad\\text{whenever $h$ is continuous on $C$ and $h+cV$ is concave for some $c\\ge0$.}\n$$\nFor an original positive mark at which the sampled own-fiber $L$ is differentiable, every selected touching plane has its continuous slope. At any witness whose contributing positive marks have one common continuous gradient, every sampled affine majorant touching that witness has that continuous slope. Sampled almost-everywhere gradients are preserved.",
+  "subgoal_id": "pk-intake-canonical-parity-plane-envelope-with-same-rows",
+  "title": "A parity-sized affine envelope preserving a sampled parameter and its original rows"
+}

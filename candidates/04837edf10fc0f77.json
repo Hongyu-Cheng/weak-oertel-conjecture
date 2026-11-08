@@ -1,0 +1,29 @@
+{
+  "advances": "Ordinary tetrahedral section geometry for a hypothetical different-split triple.",
+  "author": "PK-research-agent",
+  "candidate_id": "04837edf10fc0f77",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.084431+00:00",
+  "depends_on": [
+    "1aa346b10594ee87",
+    "1462fa9ce6ced54e"
+  ],
+  "draft_key": "tetrahedral-other-split-conic-sign",
+  "kind": "lemma",
+  "proof": "For the split $\\{1,3\\}\\mid\\{2,4\\}$ the actual centroid formulas of 1462fa9ce6ced54e use reciprocal heights $1/p,1/q,1/r,1$ in the order $1,3,2,4$. In terms of $J=pqr+pq+pr+qr$, substitute\n$$\nA=\\frac{r}{p+r}+\\frac1{p+1}-\\frac{qr}{J}-1,\\quad\nB=\\frac{p}{p+r}+\\frac{q}{q+r}-\\frac{pq}{J}-1,\\quad\nG=1-\\frac{r}{q+r}-\\frac1{q+1}+\\frac{pr}{J}\n$$\ninto the conic polynomial for $\\{1,2\\}\\mid\\{3,4\\}$, and evaluate it at $(p,-q)$. Multiplying by $(p+r)^2(q+1)(q+r)J^3$, combining the fractions and factoring the result gives $-NH$, where\n$$\n\\begin{aligned}\nN={}&2p^2q^2r+p^2q^2+p^2qr^2+2p^2qr+p^2r^2\n       +pq^2r^2+2pq^2r+pqr^2+q^2r^2,\\\\\nH={}&p^4q^4r^2+2p^4q^4r+p^4q^4+4p^4q^3r^2+2p^4q^3r+3p^4q^2r^2\\\\\n &+2p^3q^4r^2+4p^3q^4r+6p^3q^3r^2+4p^3q^2r^2\\\\\n &+3p^2q^4r^2+4p^2q^3r^3+3p^2q^2r^4+6p^2q^2r^3+3p^2q^2r^2\\\\\n &+4p^2qr^4+2p^2qr^3+p^2r^4+2pq^2r^4+4pq^2r^3+2pqr^4+q^2r^4 .\n\\end{aligned}\n$$\nThese products are positive for all positive $p,q,r$.\n\nFor the triple, orient each normal toward the unique noncentral vertex and normalize its margin at that vertex to one. All normalized normals lie on an affine line, because the balance gives linear dependence and the three unoriented normals are distinct. One point is strictly between the others. If the two outer points captured the same central partner, their convex combination would have the same signs, contrary to different splits. If the outer points capture different central partners, their common excluded central vertex remains excluded in the middle. The middle must capture one of the two outer partners, since its split is strict $2+2$. Thus the shared split occurs at the middle and one outer point, with the different-split point outside their interval. Relabel the common excluded vertex fourth, and now normalize its margin to $-1$. This preserves the middle relation: multiplying positive orientation representatives by positive factors takes an interior positive combination to an interior positive combination after normalizing the same affine coordinate. Label the shared split $\\{1,2\\}\\mid\\{3,4\\}$ with the unique noncentral vertex first. The two shared-split points lie on its conic and the exterior point has strictly negative value by the preceding identity. Parametrizing the chord by the two same-split roots $0,1$, its restricted polynomial is $k t(t-1)$, and the exterior evaluation forces $k<0$. Finally, orienting any strict section toward the noncentral vertex, the normalized reciprocal-coordinate formula gives $K=xy-zw>0$ and makes every opposite centroid coordinate strictly below $1/3$. Each of the three central vertices is opposite that vertex in at least one of the two splits, proving all three strict bounds.\n",
+  "source_candidate_ids": [
+    "5db4787053e18091"
+  ],
+  "source_candidate_sha256": {
+    "5db4787053e18091": "21e050d47bb57d81e3f32fea30987ad5b6c09053c569a5c3997b7d68c1d006e2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5db4787053e18091",
+      "locator": "5db4787053e18091:05 §8, (15), other-split conic sign and necessary chord condition"
+    }
+  ],
+  "statement": "For $p,q,r>0$ let $b$ be the actual area centroid of the section with margins $(p,-r,q,-1)$. The centroid conic $C_b$ for split $\\{1,2\\}\\mid\\{3,4\\}$ satisfies $C_b(p,-q)<0$. In a triple of distinct strict quadrilateral sections with common actual centroid having a unique coordinate above $1/3$, with different splits and linearly dependent normals, orient toward the noncentral vertex. Normalize the common excluded vertex margin to $-1$ and label the split repeated in the triple as $\\{1,2\\}\\mid\\{3,4\\}$. The quadratic coefficient of $C_b$ on the affine chord through the repeated-split points is strictly negative. All three other centroid coordinates are strictly below $1/3$.",
+  "subgoal_id": "pk-intake-tetrahedral-other-split-conic-sign",
+  "title": "Strict other-split sign for the tetrahedral centroid conic"
+}

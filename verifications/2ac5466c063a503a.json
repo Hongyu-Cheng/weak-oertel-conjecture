@@ -1,0 +1,68 @@
+{
+  "candidate_id": "2fe5c760b516ae9d",
+  "candidate_sha256": "a3fb133c11ced48683df57926b94de7f3296ff877bbf30a57b61bb6b5b9dbf5c",
+  "checked_dependency_candidate_sha256": {
+    "2e18e45926575d26": "074ec98588430b525c75628962e6c5122dfd7b697defbe396f7a6e8789205364",
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "e4ef1ac154c5d280": "85eff8bf4977b758bdadfc4168ffd61057189dc81f0fe19b8cde541c18ecd2f4"
+  },
+  "checks": [
+    "Checked original 5ef2792a4d153635 §8, (16)–(17), and its frozen source digest. This is the dense regime example with h=L^-2 and a=L^-1, not a change to the assumptions of the general recovery theorem.",
+    "The bases zero and one are extreme, so there is no nontrivial dependence and the component split is into two singletons. Since a/h=L and 1/h=L^2 are integers, all generating vertices are sampled. The Q_1 triangle contains the diagonal segment (at,t), and 2epsilon/a<=1. Thus the same tetrahedron and box argument applies with a<=1/6. The determinants give two areas 2epsilon, so (h/2)/(4epsilon)=L^2/8.",
+    "The two block maps give exactly the displayed fixed images and determinant 1/(4epsilon). Their fine projection scalars give spacings h and h/(2a)=1/(2L). The first fine mass is epsilon(2+h). The second section is a tent with lattice levels -L through L and zero-length ends. Its discrete tent sum is L and the weighted mass is 2epsilon. Exact rational replay checked both masses and the original relative ratio for L through 99.",
+    "The fixed triangles have centroid depth 4/9 by the full-mass centroid bound, and their three barycentric caps cover them and bound all other depths above by 4/9. The image centroids have u=1/3 and u=0. Divisibility of L by three makes 1/3 lie on the transformed Q_0 grid, and zero lies on the Q_1 grid. Each fixed triangle has mass 1/2, a fixed outer bound, and a one-dimensional fundamental interval of radius half its vanishing spacing. Thus uniform normalized same-point discrepancy tends to zero by the accepted theorem, and normalized fine maxima within both components converge to 4/9.",
+    "Block normalization preserves normalized within-component fine depth since the product of fine covolume and vertical length scaling is constant. At each point, every ambient containing cap has a containing trace on its component, while any containing component cut extends with sufficiently large coarse tilt excluding the other component. The resulting global depth equals within-component depth times the actual fine mass fraction. Both fractions tend to one half. The comparison regime uses the exact frozen predecessor with a=h=1/L."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "2e18e45926575d26",
+      "candidate_sha256": "074ec98588430b525c75628962e6c5122dfd7b697defbe396f7a6e8789205364",
+      "hypotheses": "Frozen same-wave proof. Its tetrahedron comparison transfers because the shear parameter can be replaced by a<=1/6 with the same diagonal segment inclusion and box. The original persistent comparison uses exactly its input a=h=1/L and its exact depth formula 1/(4+h). Independent approval of that predecessor is required before admission.",
+      "reviewed_proof_sha256": "f47be4ffa98094b51f1a6b532515ef6bd74c66d63b2771c5832d68164d994ac4",
+      "reviewed_statement_sha256": "d4641b2d1276a8c65cd6f1d1d3910ee33c9e6b280c264805b4cc212d498e1e00"
+    },
+    {
+      "candidate_id": "e4ef1ac154c5d280",
+      "candidate_sha256": "85eff8bf4977b758bdadfc4168ffd61057189dc81f0fe19b8cde541c18ecd2f4",
+      "fact_sha256": "4fc0dfe1997be608231473097c2bf01da51c0e1ea91becf1d432703070491362",
+      "hypotheses": "Apply with J=1, fine rank one, continuous dimension one, and coarse area M=1/2 separately on each fixed normalized triangle. The half-spacing fundamental-cell bounds tend to zero and each triangle has a fixed outer radius, giving the claimed uniform normalized depth comparison.",
+      "reviewed_proof_sha256": "323c2c69b9964a75db34548086ea3af6664edfdddc38c409cba5305df81b56bb",
+      "reviewed_statement_sha256": "aa1e4d8d310ba256274f12fa32c008aa8bbeabac35b39167d16ab2eb287cfa82"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "Apply with d=2 and m equal to each normalized triangle's entire area. The metronoid point is its centroid and the full-mass closed-cap lower bound gives normalized depth at least 4/9.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:08:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives a general lower recovery bound under vanishing component mesh, with the same type of block Jacobian. It does not supply a sequence whose original relative mesh diverges, nor the matching upper limit and the contrast with the persistent-mesh sequence.",
+      "fact_id": "9b5058bf49ca5ea3"
+    },
+    {
+      "comparison": "Defines dependence components by anchored relations. The two exposed bases here are a trivial singleton special case of that concept. The geometric sequence and depth computation are additional.",
+      "fact_id": "3d5f56b513c21fc4"
+    }
+  ],
+  "readability": "A component map changes both the section Jacobian and its lattice covolume, while normalization cancels their product. The two component comparisons use their own fixed triangle and fine grid.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c147e67450176dac7d197d4862209ddc236b43f288dc57264f6754e2da634e09",
+  "reviewed_statement_sha256": "9a15560401c031fc969eae2e6007803c3bb55866dbaffe345cb6c637339a6260",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:05:04Z",
+  "summary": "The modified crossed triangles have divergent original relative mesh and vanishing transformed meshes on both components. Uniform discrepancy at feasible centroids and coarse isolation give the exact limit 2/9.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

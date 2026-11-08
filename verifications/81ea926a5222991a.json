@@ -1,0 +1,56 @@
+{
+  "candidate_id": "2e18e45926575d26",
+  "candidate_sha256": "074ec98588430b525c75628962e6c5122dfd7b697defbe396f7a6e8789205364",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "Checked original a9e65ff9ced5e6f6 §§1–7 against all five source locators and verified its frozen source digest. All original hypotheses on h and the sampled coordinates are retained.",
+    "The two endpoint fibers are exposed by the coarse projection, every vertex is sampled, and both edge determinants have magnitude 4h^2. The diagonal segment at base one and horizontal segment at base zero give a sheared tetrahedron. Each original tetrahedron facet has distance 1/(2 sqrt(2)) from the stated center, and the inverse shear norm is at most 1+h. For h<=1/6 this yields the inball of radius at least 1/4. All generating vertices lie in the stated box, giving outer radius 3/2 before scaling.",
+    "The Q_0 fiber section lengths sum to h^2(2+h). The Q_1 sections in t=x-u/h have singleton endpoints at u=±h and the single positive interval [0,2h] at zero, giving 2h^2. Exact rational replay for L divisible by three checked the masses and the two arithmetic-progression cap sums through L=99.",
+    "The three Q_0 barycentric caps cover all its points and each has weighted fine mass h^2(8/9+2h/3)<=h^2. The stated coarse tilt excludes Q_1 using the explicit bounds on u and x. The two caps t>=h and t<=h cover Q_1 with mass h^2 each, and the other tilt strictly excludes Q_0. The caps cover singleton fine endpoints as well. Any ambient containing cap at the center of [0,2h] captures at least half its length, including the full interval if its continuous coefficient vanishes. Hence its raw depth is h^2 and the normalized maximum is 1/(4+h).",
+    "The accepted full-mass centroid bound in each two-dimensional fiber gives raw depth at least (4/9)2h^2 in the coarse law. Three parallel-to-facet vertex caps of area fraction 4/9 cover each entire triangle and extend by finite affine tilts excluding the opposite fiber. Hence the coarse maximum is exactly 2/9. For the fixed discrepancy cap, the complement corner on Q_1 has incident fractions 1/2 and 1/(1+2h), which gives the claimed normalized coarse mass. All positive fine mass on Q_1 lies in that closed cap.",
+    "The fixed scaling multiplies coarse area by 16 and fine radius by 4. After any further uniformly round block normalization the one-dimensional generator length scales by ||B e_u|| and the coarse area by ||B e_u|| times |d|, so their ratio changes by 1/|d|. Width bounds give 1/6<=|d|<=R. The two local maps have determinant 1/(4h^2) and the stated fixed vertices and spacings. For any round image of Q_1 the projected width is twice its fine spacing, giving spacing at least its inball radius and covering radius at least half that."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "Apply with d=2 and m equal to the full area of either triangle, so the unique metronoid point is the ordinary centroid and every containing closed planar halfspace has area at least 4/9 of its triangle. An ambient cap at that point restricts on its plane to such a halfspace or the whole plane.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:08:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives block affine roundness and normalized depth covariance in general. It does not compare the different coarse and fine measures on these explicit triangles, nor give the relative mesh obstruction and exact depths.",
+      "fact_id": "77d36834ea2179e7"
+    },
+    {
+      "comparison": "Gives a sufficient relative fine/coarse discrepancy condition. The ratio in this example instead diverges, and the fixed cap gives a positive limiting discrepancy.",
+      "fact_id": "e4ef1ac154c5d280"
+    },
+    {
+      "comparison": "Requires transformed meshes to vanish for all positive components. The Q_1 component here has mesh bounded below in every uniformly round block frame. This explicit persistence and the five-cap certificate are additional.",
+      "fact_id": "9b5058bf49ca5ea3"
+    }
+  ],
+  "readability": "The exact global mesh is measured in the one-dimensional fine-base line, including after the two-base block map. The shear used for the tetrahedron inclusion is only a geometric comparison.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "f47be4ffa98094b51f1a6b532515ef6bd74c66d63b2771c5832d68164d994ac4",
+  "reviewed_statement_sha256": "d4641b2d1276a8c65cd6f1d1d3910ee33c9e6b280c264805b4cc212d498e1e00",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:05:04Z",
+  "summary": "The two crossed triangles give the exact fine and coarse maximum depths, the persistent directional mass discrepancy, and the claimed global and component mesh behavior.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

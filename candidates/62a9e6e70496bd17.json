@@ -1,0 +1,28 @@
+{
+  "advances": "A new parameter certificate may use different positive source weights and rows. No statement about retention of a physical separator is part of this contraction.",
+  "author": "PK-research-agent",
+  "candidate_id": "62a9e6e70496bd17",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.204627+00:00",
+  "depends_on": [
+    "86609687edc6bef4"
+  ],
+  "draft_key": "quadratic-source-contraction-for-the-full-radial-cone",
+  "kind": "lemma",
+  "proof": "The feasible coefficient set is nonempty and closed because each test is linear in the coefficients. Both signs of a constant belong to $T_L$, so all feasible coefficients lie in the simplex of mass $\\nu(C)$. Minimize $\\sum_p m_p\\lVert Y_p\\rVert^2$ over this compact set. If a nontrivial combination of distinct positive bases has integer average $r$, move from each input mass the amount $t\\theta_p$, where $\\theta_p$ is its positive combination coefficient and $t>0$ is small, and place the sum $t$ at $r$. For any $h\\in T_L$, Jensen for $h+cL$ and exact $L$-interpolation give $h(Y_r)\\ge\\sum_p\\theta_p h(Y_p)$. Thus every cone test survives. The squared-norm moment strictly decreases by strict convexity, a contradiction. Every lattice point of the hull other than its vertices is a nontrivial combination of distinct positive inputs, so there are no such points, and every positive base is a vertex. Two distinct equal-parity vertices would have an integer midpoint, which is also ruled out.\n\nBoth signs of any affine test belong to $T_L$, and both signs of $L$ do as well ($-L+L=0$). They give the matching full affine moments and $\\sum_p m_pL(Y_p)=\\int L\\,d\\nu=1$. For the minimizing masses, use the finite-source allocation argument in the proof of (5) of 86609687edc6bef4: the compact convex moment image consists of the mass and vector moments of nonnegative allocations of $\\nu$ summing to one. If the desired $(m_p,m_pY_p)_p$ lay outside this image, its separating affine scores $A_p$ would satisfy $\\sum_p m_p A_p(Y_p)>\\int\\max_p A_p\\,d\\nu$. The cone test $-\\max_p A_p$ gives the opposite inequality. The allocated rows therefore exist. Each has $\\int L\\,d\\nu_p\\le m_pL(Y_p)$ by concavity. Their sum is exactly $\\int L\\,d\\nu=1$, so each row has equality.\n",
+  "source_candidate_ids": [
+    "c106b596b70bfd05"
+  ],
+  "source_candidate_sha256": {
+    "c106b596b70bfd05": "41169de43a2799fc68e614d912ee04d523d43e19e5307798144cacdbd9c12a88"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c106b596b70bfd05",
+      "locator": "c106b596b70bfd05:05 §5, (8), compact source contraction"
+    }
+  ],
+  "statement": "Let $C$ be a compact convex hull with sampled set $S$ and normalized reciprocal target $\\nu=dm/(ML)$ for summed positive fiber volume $dm$ of mass $M$ and positive continuous concave $L$ on $C$. Let $J$ be a finite set of integer bases with one mark $Y_p\\in S$ over each $p\\in J$. Assume that every positive-weight combination of bases in $J$ with integer average $r$ has $r\\in J$, with mark and $L$-value equal to the combinations of the input marks and $L$-values. Set\n$$\nT_L=\\{h\\in C(C):h+cL\\text{ is concave on }C\\text{ for some }c\\ge0\\}.\n$$\nIf some nonnegative masses $m_p$ satisfy $\\sum_p m_p h(Y_p)\\ge\\int h\\,d\\nu$ for all $h\\in T_L$, then there are such masses with positive support $J_0$ satisfying $\\operatorname{conv}J_0\\cap\\mathbb Z^n=J_0$ and with every point of $J_0$ a vertex of its hull. In particular its bases have distinct parities. The new masses satisfy $\\sum_p m_pL(Y_p)=1$ and admit rows with target $\\nu$, mass $m_p$, barycenter $Y_p$, and $L$-moment $m_pL(Y_p)$.",
+  "subgoal_id": "pk-intake-quadratic-source-contraction-for-the-full-radial-cone",
+  "title": "An empty lattice source hull for a full radial-cone certificate"
+}

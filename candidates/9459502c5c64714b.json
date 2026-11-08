@@ -1,0 +1,28 @@
+{
+  "advances": "A scalar expansion and an exact old-tuple crossing term. The vanishing condition is a premise about a fixed coupling.",
+  "author": "PK-research-agent",
+  "candidate_id": "9459502c5c64714b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.026376+00:00",
+  "depends_on": [
+    "bbcbedc83bd8a531"
+  ],
+  "draft_key": "concentrating-hinge-old-crossing-cost",
+  "kind": "lemma",
+  "proof": "On $kh>L$, the explicit positive branch gives $F_{kh}/k-h\\log k-G_h=L/k$. On $kh\\le L$ set $s=kh/L\\in[0,1]$. The same difference is $(L/k)s(1-\\log s)$, between zero and $L/k$, including the continuous value at zero. Integration against $\\eta-\\rho_{\\rm old}$, whose two nonnegative measures each have mass $m$, gives the expansion, with absolute remainder at most $mU/k$.\n\nAt an old pair whose two margins have the same sign, or with one zero, the hinge is affine on that segment, so its midpoint Jensen gap is zero. For opposite signs, write the margins as $a>0$ and $-b<0$. The gap is $a/2-(a-b)_+/2=\\min(a,b)/2$. Integrating gives the exact $C_h\\ge0$. If $C_h=0$, convex order $\\rho_{\\rm old}\\preceq_{\\rm cx}\\rho$ and midpoint Jensen squeeze the new hinge gap to zero. Nonnegativity of $\\Delta_{\\rm old}(k)/k$ for all $k$ gives $\\Delta_G\\ge0$ in this case. Divide the fixed-coupling entropy estimate by $k$ and let $k\\to\\infty$. Uniform convergence of $(h-L/k)_+$ to $h$ gives the left integral and endpoint budget limits, and the old gap limit is $\\Delta_G$. The continuous perspective from the preceding theorem gives the result also at $T_h=0$. If $C_h>0$, the normalized old gap grows logarithmically; no zero-cost concentration follows from this bound.\n",
+  "source_candidate_ids": [
+    "fc542fd7a6ea864e"
+  ],
+  "source_candidate_sha256": {
+    "fc542fd7a6ea864e": "98f9e962920425c71911365db5b46b8113937003a24f80bd1e7dedf5c58e4e19"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fc542fd7a6ea864e",
+      "locator": "fc542fd7a6ea864e:03 §4 (3)–(5)"
+    }
+  ],
+  "statement": "Use the compact domain, positive $L$, fixed endpoint couplings, midpoint laws and error $E$ of fixed-coupling-one-sided-convex-weight-entropy, and put $m=\\pi(C\\times C)$ and $U=\\max_C L$. For affine $h_0$, let $h=(h_0)_+$, $G_h=h\\log(h/L)-h$ with value zero at $h=0$, and $q=kh$ for $k>0$. Uniformly on $C$,\n$$\n0\\le F_{kh}/k-h\\log k-G_h\\le U/k.\n$$\nWith $\\eta=(\\gamma_-+\\gamma_+)/2$, put $C_h=\\int h\\,d(\\eta-\\rho_{\\rm old})$ and $\\Delta_G=\\int G_h\\,d(\\eta-\\rho_{\\rm old})$. The old entropy gap obeys\n$$\n\\Delta_{\\rm old}(k)/k=C_h\\log k+\\Delta_G+O(mU/k).\n$$\nHere $C_h$ is the $\\pi_{\\rm old}$ integral of $\\frac12\\min(|h_0(w_-)|,|h_0(w_+)|)$ over pairs with strictly opposite margin signs. If $C_h=0$ then $\\Delta_G\\ge0$ and\n$$\n\\int h\\,dE\\le T_h(1-e^{-d\\Delta_G/T_h})\\le d\\Delta_G,\\qquad T_h=\\int h\\,d\\eta,\n$$\nwith zero middle expression for $T_h=0$. In this case the new hinge gap $\\int h\\,d(\\eta-\\rho)$ is also zero.",
+  "subgoal_id": "pk-intake-concentrating-hinge-old-crossing-cost",
+  "title": "Crossing cost and zero-gap limit for a concentrating affine hinge"
+}

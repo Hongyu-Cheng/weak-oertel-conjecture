@@ -1,0 +1,26 @@
+{
+  "advances": "Finite weighted atomic cap compression on a midpoint-closed test set. No buffered minimum or continuous cut is used.",
+  "author": "PK-research-agent",
+  "candidate_id": "efc6257ea1f83bc1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.023741+00:00",
+  "depends_on": [],
+  "draft_key": "parity-compression-exact-atomic-caps",
+  "kind": "lemma",
+  "proof": "For each point of $I$, choose one closed containing cap of minimum weight $Q$, attained because only finitely many traces on $P$ occur. Write the chosen caps as $\\{a_i\\ge b_i\\}$ for affine $a_i$ on the base span. Take $U_i>\\max(b_i,\\max_P a_i)$ and maximize $\\sum_i c_i$ over the compact box $b_i\\le c_i\\le U_i$ subject to the caps $\\{a_i\\ge c_i\\}$ covering $I$. The constraint is closed because $I$ and the index set are finite, and $c=b$ is feasible.\n\nA row with $c_i<U_i$ has an exclusive witness $p_i\\in I$ at equality $a_i(p_i)=c_i$. Indeed, otherwise every point of $I$ outside the other caps has a positive gap $a_i(p)-c_i$, or there are no such points. A small increase of $c_i$ would preserve the cover, a contradiction. Discard saturated rows, which are empty on $P$. The retained list is nonempty and still covers $I$. If two witnesses have the same parity, their midpoint belongs to $I$, and at every retained row at least one witness satisfies its inequality strictly in the excluded direction while the other satisfies the non-strict excluded inequality. Their midpoint lies strictly outside every cap, a contradiction. This gives $m\\le k(I)$. A retained cap has mass at most $Q$ because it is contained in its original cap and mass at least $Q$ because it contains an exclusive witness whose atomic depth is $Q$.\n",
+  "source_candidate_ids": [
+    "f324bc23ceb65e89"
+  ],
+  "source_candidate_sha256": {
+    "f324bc23ceb65e89": "3eeb98e082a94bc54a73b347ae8c1f45d446b3d8b8d300f3a812f8e26edd1f72"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f324bc23ceb65e89",
+      "locator": "f324bc23ceb65e89:01 §§2–3 (3)–(6), parity compression"
+    }
+  ],
+  "statement": "Let $\\Lambda=c+L$ be an affine lattice and let $P=\\operatorname{conv}(P)\\cap\\Lambda$ be finite, with positive point weights of total mass $M$. Let $I\\subseteq P$ be nonempty and closed under midpoints of two points congruent modulo $2L$. Suppose every $p\\in I$ has the same closed atomic halfspace depth $Q\\in(0,M)$, computed using all weights on $P$. Then $I$ can be covered by $1\\le m\\le k(I)$ closed base halfspaces, where $k(I)$ counts occupied classes modulo $2L$. Each halfspace has mass exactly $Q$ and contains a point of $I$ on its boundary lying strictly outside every other retained halfspace.",
+  "subgoal_id": "pk-intake-parity-compression-exact-atomic-caps",
+  "title": "Closed atomic cap compression at an exact common depth"
+}

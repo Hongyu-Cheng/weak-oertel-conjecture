@@ -1,0 +1,57 @@
+{
+  "candidate_id": "17ef55f56b28af10",
+  "candidate_sha256": "3277b19f879602c77949b8966155ba3bccf3a89c8da291a17b4da063e3b4b9e5",
+  "checked_dependency_candidate_sha256": {
+    "c680a307d3f26cec": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0"
+  },
+  "checks": [
+    "The polygon is convex because its lower endpoint is convex and its upper endpoint concave. It is compact and full-dimensional, with exactly the three stated integer fibers. The masses are 1,3/2,1, hence M=7/2 and 3/2<7/4. The bases occupy both parity classes.",
+    "The accepted interval formula applies after identifying a=b=1, U=3/2, s=1/5 and checking 0≤s≤1/4. The intermediate branch is valid (α=0, β=1) and gives x_*=1/10, raw depth 33/20 and normalized depth 33/70. The endpoint maxima are 1/2.",
+    "For H_+ the three lengths are 2/5,17/20,2/5. For H_- the thresholds at the endpoints are −19/10 and 21/10, so its three lengths are 0,13/20,1. Both masses are 33/20. Only proper sections are present: the first cap has three points averaging to y in both coordinates, and the second cap's only section is y.",
+    "Each continuous normal has absolute value one, so the coarea counts are 3 and 1. Inverting and normalizing gives 1/4,3/4, whose division by 33/70 gives 35/66,35/22. Their sum times 33/20 is 7/2.",
+    "The fiber tents are actual because the jointly concave roof is the minimum of two concave functions over the actual polygon. A tent over an interval of length l has area l²/4. Exact Fraction integration of both lifted caps gave 409/800 and 369/800, total 17/16, normalized fractions 409/850 and 369/850, and (35/66)(409/800)+(35/22)(369/800)=2653/2640=17/16−19/330.",
+    "Checked source 059d029e30e0be30:02 §2 (2)–(4) and :04 §3 (5)–(7). The two lifted inequalities omit the lift coordinate, so the computations apply at every lift height of the original mark."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c680a307d3f26cec",
+      "candidate_sha256": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0",
+      "fact_sha256": "4908e98c45bfa104a83c5437a691833104576ea0fd397ed655df40899326d24c",
+      "mapping": "The only nonempty integer fibers are positive intervals at consecutive bases −1,0,1 and the endpoint centers are already zero. Substitute a=b=1, U=3/2 and s=1/5 in the intermediate branch, then compare F=33/20 to the endpoint maximum 1/2 and divide by the unchanged total mass.",
+      "reviewed_proof_sha256": "fbd43a05d11b238754907f092d0f8e020febd4bd8e9ffd7e46960a59ae92b7c0",
+      "reviewed_statement_sha256": "b80774a2792eb75e78f6de3ec9e17c99d1724c565943d7ccacdfc5f9c6bdab93",
+      "status": "accepted at pinned graph"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:14:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The three-interval depth calculation is a specialization with equal endpoints. It does not address uniform volume of an own-depth lift, the two lifted cap budgets, or their multiplier deficit.",
+      "fact_id": "c680a307d3f26cec"
+    },
+    {
+      "comparison": "The projected lift keeps (base,depth level) and weights hit ranges, whereas the present lift keeps the original continuous coordinate and takes uniform area under its depth graph. The resulting lifted measures and cap values differ.",
+      "fact_id": "4bd2e6d22487dfef"
+    },
+    {
+      "comparison": "Joint depth-root concavity gives convexity of a general hypograph. It makes no cap-budget preservation assertion.",
+      "fact_id": "4e868f774de77608"
+    }
+  ],
+  "readability": "The multipliers are obtained from the stated inverse-section normalization. They are the original circuit weights carried through the fixed lift, without any assumption about a shape-variational stress.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c5794de3b7372d06cd64d4cf9bf7d600923549f9081c0e11dab6cd84914b4357",
+  "reviewed_statement_sha256": "59c1dffc03f25f4131b3e025b18f26fbcdafc186ebc22e1be36ff4dafabd242a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:11:11Z",
+  "summary": "The accepted three-interval depth theorem identifies the deepest mark. The two fixed critical caps have identical original budgets and the stated section centroids, but unequal lifted budgets and an exact positive multiplier deficit.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

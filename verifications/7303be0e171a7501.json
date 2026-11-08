@@ -1,0 +1,39 @@
+{
+  "candidate_id": "7e729c39ef82809e",
+  "candidate_sha256": "100f0a68231f986e5969bf4137dc2e11dd041f8fabe7593ed6d5ff7d32c8f388",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Checked original 5ef2792a4d153635 §6, final example, and its frozen source digest. The original uses precisely the same zero-area segment and retained thin triangle.",
+    "Every listed vertex is sampled when h is reciprocal to a positive integer. The only integer coarse levels are exposed endpoints, with exactly the given fibers. The segment from (0,-1,0) to (0,1,0) and the segment from (1,0,-1) to (1,0,1) lie in the hull and their four endpoints form a tetrahedron with nonzero determinant.",
+    "The triangle has height two and opposite-edge length 2h^2, so its area is 2h^2. Its section length at u is h^2(1+u); the singleton at -1 is counted as length zero. Summing on the symmetric grid of 2/h+1 points gives weighted fine mass h^2(2+h). The omitted segment has coarse area zero and precisely one fine level of length two, hence weighted mass 2h.",
+    "The retained block map fixes u and divides x by 2h^2. The resulting nondegenerate fixed triangle has positive inradius and finite outer radius, the absolute determinant is 1/(2h^2), and the one-dimensional fine radius is h/2. The omitted-to-retained coarse mass ratio equals 1/h. The retained fine fraction is h(2+h)/(h(2+h)+2), which tends to zero. These mass identities were replayed by exact rational sums."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:08:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives conditional retained-support recovery, with an explicit factor equal to the retained fine mass fraction. It does not show that zero coarse area can coexist with a dominant omitted fine contribution. This example tests the hypothesis without invoking the recovery bound.",
+      "fact_id": "9b5058bf49ca5ea3"
+    },
+    {
+      "comparison": "Includes zero-volume sections in a general absolute discrepancy estimate and assumes small relative mesh for normalized convergence. The example has retained mass of order h^2 and original mesh of order h, so the relative error assumption is absent.",
+      "fact_id": "e4ef1ac154c5d280"
+    }
+  ],
+  "readability": "Fixed round image means a fixed nondegenerate triangle with uniform inner and outer radii. The ratio 1/h uses retained coarse mass as denominator, while the final retained fraction uses total fine mass.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "44cd243009f8874b5b49483a4cebdd82a48e9ab1a8c60d2d5e28b569ec3109c9",
+  "reviewed_statement_sha256": "469da93681cc8a522480d94381fb9cb00936beb225d42d1ed05569fd9a5eb641",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:05:04Z",
+  "summary": "The explicit full-dimensional sampled hull has an omitted zero-area coarse fiber whose sampled fine mass dominates the retained mass even in a dense retained block frame.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,70 @@
+{
+  "candidate_id": "2a41bde2df585383",
+  "candidate_sha256": "eb48fcf002a2c8a408cf8dcb45caef147860070fd4cc0f5f88621cf57310d9fd",
+  "checked_dependency_candidate_sha256": {
+    "37b32ccd92db0405": "88b1ca93605e9a4dc03d4fc9c4ea5a94b4e1c32a02ec456ec40b6758aed87451",
+    "ea91e021ff1f4416": "67cec4d3ae5456e06c3b53232ee13354100ead48f99fb462585f60af561b6bfd"
+  },
+  "checks": [
+    "The strict sampled offset gap is a supporting affine function on the lower graph exposing just the chosen base for that facet. By the accepted theorem the fixed-normal hinge is constant positive on the whole chosen marked facet and zero on every other marked facet. This holds even for a singleton base, when any positive hinge width works.",
+    "For y interior, r_i is constant positive on each facet. Multiplying the hinges by r_i/delta_i and summing preserves nonnegativity, continuity, and convexity at each fixed normal. The resulting potential has precisely the required whole-bundle values.",
+    "The field x-y has divergence d. For a proper cut through y its flux on the new cutting facet is zero, and intersections with the old facets have surface measure zero. In d=1 the added cut endpoint is y with zero field. A through-source pure-base cap contains the entire own fiber and all of its marked boundary.",
+    "As an exact check, the standard planar triangle at its centroid y=(1/3,1/3) has denominator 1. The cap x>=1/3 has area 2/9, and the surviving old bottom and hypotenuse each contribute flux 2/9, giving efficiency 4/9. In an interval [0,1] at y=1/4 the two endpoint fluxes are 1/4 and 3/4, exactly matching the two through-mark length fractions.",
+    "The weighted sum formula follows by linearity, with every proper cut fraction bounded below by ordinary normalized depth and every pure-base fraction equal to one. At the centroid use the classical all-centroid-cap bound already stated in the accepted ordinary rigidity proof.",
+    "The source is 810352ec6ea27062 §7, (10)–(12). The accepted hinge replaces the same displayed explicit construction. The proof retains strict lower support at every facet, an interior own mark, and caps through that same mark. The source bytes match the frozen hash."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "37b32ccd92db0405",
+      "candidate_sha256": "88b1ca93605e9a4dc03d4fc9c4ea5a94b4e1c32a02ec456ec40b6758aed87451",
+      "fact_sha256": "79193de348f225964f2ae8e1ef6eb205f4e6e9123a66321fc13486a329a31bbe",
+      "hypotheses": "The candidate adopts the same actual compatible simplex fibers, common barycentric normals, marked surface measure, and potential class. For every i the affine lower graph support has equality precisely at p and exposes the singleton required by the accepted constant-facet hinge.",
+      "reviewed_proof_sha256": "754c783f539e41ef65f3596ad0255eda3c6dead0f888f6b1523bfc62f62c4589",
+      "reviewed_statement_sha256": "2106913903fffa58684ae5370782665f352211f1cf0fbd2eb729b65e6066098a",
+      "status": "accepted at the pinned graph snapshot"
+    },
+    {
+      "candidate_id": "ea91e021ff1f4416",
+      "candidate_sha256": "67cec4d3ae5456e06c3b53232ee13354100ead48f99fb462585f60af561b6bfd",
+      "fact_sha256": "7df0ab466517c08027b19984c8fcc99e925534ad6c1ec7c6905b698e7122a204",
+      "hypotheses": "Section 1 and the simplex converse state the ordinary d-dimensional full-volume centroid cap lower bound Gamma_d. The localized K_p is a full-dimensional compact simplex, so this applies to all its proper through-centroid cuts; pure-base cuts have own-fiber fraction one.",
+      "reviewed_proof_sha256": "7f96240a7f6daadfa378ed87c324d38ae1d8192f0e6c9d3418ee841b28dc8215",
+      "reviewed_statement_sha256": "a0e387ad13f0b77b65c3e51862237d9404bd7d3c38c854810a68f8abdc3185c1",
+      "status": "accepted at the pinned graph snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:08:59Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The last part supplies each individual whole-facet hinge. The simultaneous radial combination and exact through-source cap-volume response are the added conclusion.",
+      "fact_id": "37b32ccd92db0405"
+    },
+    {
+      "comparison": "The proof supplies the ordinary centroid cap bound, but gives no localized marked potential or mixed family flux formula.",
+      "fact_id": "ea91e021ff1f4416"
+    },
+    {
+      "comparison": "The general fixed-cut deformation has a boundary-flux integral with different supporting-cap selectors. It does not give a single potential localized to the chosen actual fiber from its strict lower support gaps, nor this exact through-mark volume identity.",
+      "fact_id": "84cd8a85417b0d7a"
+    }
+  ],
+  "readability": "The Gauss–Green identity concerns only the through-mark cuts in the statement; the proof makes the pure-base and endpoint conventions explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "24260443bef557ec45283e5ac5b4e0265b477af7c04a664e4cec6e2b4373714c",
+  "reviewed_statement_sha256": "abaa8bef2f8b13457d1dd086b6e6a23ab8e91c7ea9742089c9380d6ea5a87b8e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "810352ec6ea27062": "b400fdf33306c7fac26646cafdfccc697edaf5e702b299aac95570044b5cca2c"
+  },
+  "started_utc": "2026-11-08T15:05:49Z",
+  "summary": "Strict lower supports at one base permit exact whole-fiber radial localization, and every through-mark closed cap has the asserted exact flux-to-volume ratio.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

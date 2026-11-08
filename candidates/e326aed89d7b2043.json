@@ -1,0 +1,28 @@
+{
+  "advances": "The full fractional allocation polytope and a selector-specific consequence for an actual body.",
+  "author": "PK-research-agent",
+  "candidate_id": "e326aed89d7b2043",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.026911+00:00",
+  "depends_on": [
+    "df039ea7394654ca"
+  ],
+  "draft_key": "strict-convex-cost-empty-target-compression",
+  "kind": "lemma",
+  "proof": "The polytope is nonempty by the diagonal allocation and compact by its column bounds. If a lattice point $j$ is a convex combination $\\sum_{a}\\lambda_a j_a$ of at least two distinct positive targets with all $\\lambda_a>0$, completeness puts $j$ in $P$. Choose $0<\\varepsilon\\le\\min_a m_{j_a}/\\lambda_a$. Move the subrow $\\varepsilon\\lambda_a c_{j_a z}/m_{j_a}$ out of each row $j_a$ into row $j$, for every source $z$. Each removed part has its row's base mean, and the combined row added at $j$ has mean $j$. Hence column sums, nonnegativity and all row moments are preserved, also if $j$ was one of the supplying rows. The objective decreases by\n$$\n\\varepsilon\\left(\\sum_a\\lambda_a\\phi(j_a)-\\phi(j)\\right)>0\n$$\nby strict Jensen. This excludes any nonvertex positive target and any additional lattice point in the hull.\n\nFor the rectangle, one positive target cannot have base mean $1/2$. Two distinct integer vertices of an empty lattice segment are adjacent, and their interval must contain $1/2$, so the only possible pair is $0,1$. Conservation gives mass two at each. The objective for the quadratic is then two, so the minimum-variance partition obstruction classifies these pieces and gives the shallow centroids and contained caps.\n",
+  "source_candidate_ids": [
+    "b5f24b03b630e2b0"
+  ],
+  "source_candidate_sha256": {
+    "b5f24b03b630e2b0": "6631f6e9dba6791e5f05675e1976e574b93fd4c34e305df967182e5e66024da2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b5f24b03b630e2b0",
+      "locator": "b5f24b03b630e2b0:03 §7, empty-target rectangle and proportional-row merge"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be nonempty and finite, let $w_z>0$ for $z\\in P$, and let $\\phi$ be strictly convex on $\\operatorname{conv}(P)$. In the fractional allocation polytope\n$$\nc_{jz}\\ge0,\\qquad\n\\sum_{j\\in P}c_{jz}=w_z,\\qquad\n\\sum_{z\\in P}(z-j)c_{jz}=0\\quad(j\\in P)\n$$\nwrite $m_j=\\sum_{z\\in P}c_{jz}$. For every minimizer of $\\sum_{j\\in P}m_j\\phi(j)$, the set $V=\\{j:m_j>0\\}$ is both the vertex set and the set of all lattice points of $\\operatorname{conv}(V)$.\n\nIn the rectangle of the minimum-variance partition obstruction, every exhaustive positive two-piece integer-centroid convex partition with such a target set, allowing null mixed overlap, has target bases $0,1$ and is one of the two shallow partitions established there.",
+  "subgoal_id": "pk-intake-strict-convex-cost-empty-target-compression",
+  "title": "Strictly convex base costs force empty lattice target hulls"
+}

@@ -1,0 +1,38 @@
+{
+  "advances": "Exact sharp-budget hinge geometry for simplex products and continuously unit-normal caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "c3e79bc0190bfda3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.074144+00:00",
+  "depends_on": [
+    "baee8ddaa588aef0"
+  ],
+  "draft_key": "sharp-simplex-product-hinge-rigidity-and-minimum",
+  "kind": "theorem",
+  "proof": "Set $c=1/(d+1)$. A cap containing $(p,g)$ has own-fiber mass at least $\\gamma_d v$. Indeed, shift its cutting plane to pass through $g$ and apply baee8ddaa588aef0. The bound there gives $\\gamma_d$ when there are $d$ negative vertex margins and a strictly larger fraction when there are at least two included vertices and $d\\ge2$. For $d=1$ the centered cuts are half-intervals. If the margin was strictly positive at $g$, the shift removed an interior slab of positive volume. Thus equality requires the plane through $g$ and, by the equality case of that fact, one positive vertex margin and $d$ equal negative ones. The centered cap is therefore $\\{\\lambda_j\\ge c\\}$ for some $j$. Its Euclidean unit-normal margin is $H_j(\\lambda_j-c)$, since $\\lVert\\nabla\\lambda_j\\rVert_2=1/H_j$. The individual budget forces zero mass on all other fibers. In particular, a cap cannot serve two centroids.\n\nFor each $p$, the finitely many caps strictly missing $(p,g)$ miss an open neighborhood of $g$ in that fiber. If one canonical type $j$ is absent, add $d\\varepsilon$ to its barycentric coordinate at $g$ and subtract $\\varepsilon$ from every other coordinate. For sufficiently small $\\varepsilon>0$ the resulting point is in that neighborhood and misses all the caps containing $(p,g)$. This contradicts full coverage. The required distinct indices therefore number at least $N_0$, and exhaust the count at equality.\n\nThe volume of $\\{\\lambda_j\\ge t\\}$ is $v(1-t)^d$ for $0\\le t\\le1$ by homothety about $v_j$. The hinge cost of each forced cap is $H_jv\\int_c^1(1-t)^d\\,dt=vH_jd\\gamma_d/(d+1)^2$. All other fibers give zero contribution for that cap, and all extra indices give nonnegative contributions. This proves the bound. To attain it, use the margins $H_j(\\lambda_j-c-Aq_p(z))$ for all $(p,j)$, with $A>1$ and\n$$\nq_p(z)=\\sum_{k=1}^n[(1-p_k)z_k+p_k(1-z_k)].\n$$\nThis affine function vanishes at $p$ and is at least one at every other binary base. The caps therefore exclude other fibers, attain the individual budget, and cover their own fibers since $\\max_j\\lambda_j\\ge c$. If $N>N_0$, append caps strictly disjoint from the compact source. In the regular case the centroid is the incenter and its distance to the opposite facet of $v_j$ is $H_j/(d+1)=r$.\n",
+  "source_candidate_ids": [
+    "0e807db2bba0c137",
+    "eb91fe2b51b1ac7b"
+  ],
+  "source_candidate_sha256": {
+    "0e807db2bba0c137": "b9ce310988cfc26ea94b5fee1d7d49839ebb41de2217fc9d57d2ddc7c94b649e",
+    "eb91fe2b51b1ac7b": "856e4d2035ab0cfa9aaa9cda91503aad0bd02356d8f7789ef7444816703cc179"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0e807db2bba0c137",
+      "locator": "0e807db2bba0c137:02 §2, sharp-budget canonical structure and minimum cap count"
+    },
+    {
+      "candidate_id": "0e807db2bba0c137",
+      "locator": "0e807db2bba0c137:03 §3, (1)–(2), exact every-cover potential at the minimal cap count and attainment"
+    },
+    {
+      "candidate_id": "eb91fe2b51b1ac7b",
+      "locator": "eb91fe2b51b1ac7b:02 Opening (1) and Proof of the forced caps, exact minimum with arbitrary cap count"
+    }
+  ],
+  "statement": "Let $n,d\\ge1$, let $K\\subset\\mathbb R^d$ be a $d$-simplex of volume $v$, and put $S=\\{0,1\\}^n\\times K$ with summed fiber volume $\\mu$ and mass $M=2^n v$. Write $H_j$ for the altitude from vertex $v_j$, $\\lambda_j$ for its barycentric coordinate, $g$ for the centroid, $\\gamma_d=(d/(d+1))^d$, and $N_0=2^n(d+1)$. Consider finite full covers of $S$ by $N$ closed ambient caps with margins $L_i(z,x)=a_i\\cdot z+u_i\\cdot x-b_i$, $\\lVert u_i\\rVert_2=1$, each of mass at most $\\gamma_d v$. Each feasible cover contains, for every binary $p$ and each $j$, a distinct cap with own-fiber margin $H_j(\\lambda_j(x)-1/(d+1))$ and zero cap volume on all other fibers. Thus $N\\ge N_0$, and at $N=N_0$ these are exactly all the caps. For every $N\\ge N_0$ the exact attained minimum is\n$$\n\\min\\sum_i\\int_S(L_i)_+\\,d\\mu\n=\\frac{M d\\gamma_d}{(d+1)^2}\\sum_{j=0}^d H_j.\n$$\nEvery feasible cover at $N=N_0$ has this value. For a regular simplex of inradius $r$ it is $M d r\\gamma_d$.",
+  "subgoal_id": "pk-intake-sharp-simplex-product-hinge-rigidity-and-minimum",
+  "title": "Exact sharp-budget simplex-product hinge minimum and cap classification"
+}

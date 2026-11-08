@@ -1,0 +1,33 @@
+{
+  "advances": "Dimension and ellipsoid geometry for the two constrained moment bodies, without an original-depth conclusion.",
+  "author": "PK-research-agent",
+  "candidate_id": "636ab2c480ef41f7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.027504+00:00",
+  "depends_on": [
+    "45fc9d7b3d03b3a5",
+    "f709653c8f9b5874"
+  ],
+  "draft_key": "adjacent-centroid-moment-body-dimension",
+  "kind": "theorem",
+  "proof": "Translate the base so $k=0$, and write $w_z$ for positive fiber masses. If the support is $\\{0,1\\}$, the constraints on the upper source force all its mass $\\theta M=w_1$ at base one. The source must be the full fiber and the complementary source must be the full base-zero fiber.\n\nIf the support extends below zero and above one, the top-mass lemma provides a feasible fiberwise constant density for the upper source with values strictly between zero and one. On any positive fiber, its assigned mass is therefore some $s$ strictly between zero and the fiber volume $w_z$. Replacing the constant restriction on that fiber by any dominated source of the same mass preserves both the mass and the base first moment.\n\nIf the support minimum is zero and some site exceeds one, then $\\theta M=\\sum_{z\\ge1}zw_z>\\sum_{z\\ge1}w_z=M-w_0$. The lower source of mass $(1-\\theta)M$ is feasible entirely in the base-zero fiber, where this mass lies strictly between zero and $w_0$. If the support maximum is one and some site is negative, then $0<\\theta M=w_1+\\sum_{z<0}zw_z<w_1$. The upper source is feasible entirely in the base-one fiber, again at a proper positive mass. These cases exhaust the remaining supports by the mean assumption.\n\nIn each nonsingleton case a proper mass $s$ within one full-dimensional fiber $K_z$ can vary while all other mass allocations are fixed. With $\\lambda=(s/w_z)^{1/d}\\in(0,1)$, the set $(1-\\lambda)v+\\lambda K_z$ is contained in $K_z$ for every $v\\in K_z$. Its volume is $s$ and its centroid is $(1-\\lambda)v+\\lambda c(K_z)$. Its indicator yields a full-dimensional range of continuous centroid positions for the entire source because it enters with positive weight. The complementary moment identity transfers this to the other body.\n\nFor completeness, a compact convex body with interior has a unique maximum-volume inscribed ellipsoid. Write an ellipsoid as $c+AB_2^d$ with $A$ symmetric positive definite. Existence follows by compactness of feasible $(c,A)$ allowing positive semidefinite $A$, using boundedness of the body and the positive determinant of an inscribed ball. Averaging two feasible centers and matrices gives another feasible pair by convexity. Strict concavity of $\\log\\det$ on positive definite matrices gives equality only if their matrices coincide. This strictness follows by conjugating by one matrix's inverse square root and applying scalar strict concavity of $\\log$ to the eigenvalues. If the equal-shape ellipsoids had distinct centers, an affine change of coordinates would make them $B_2^d\\pm v$ for $v\\ne0$. Their convex hull $B_2^d+[-v,v]$ contains the ellipsoid $(I+vv^{\\mathsf T})^{1/2}B_2^d$, as its support function $\\sqrt{\\|u\\|^2+(u\\cdot v)^2}$ is at most $\\|u\\|+|u\\cdot v|$. This ellipsoid has larger volume, a contradiction. Now $T$ bijects inscribed ellipsoids and scales their volumes by the same positive factor. Uniqueness therefore carries the John ellipsoids and their centers through $T$.\n",
+  "source_candidate_ids": [
+    "461e51dc31c626f1"
+  ],
+  "source_candidate_sha256": {
+    "461e51dc31c626f1": "5f81310611ffb46c774adaccb041f5d0014b441e36ad6f7982b1a855556e47a4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "461e51dc31c626f1",
+      "locator": "461e51dc31c626f1:05 §6, support cases and John center identity"
+    },
+    {
+      "candidate_id": "461e51dc31c626f1",
+      "locator": "§1, strict mass/base feasibility"
+    }
+  ],
+  "statement": "Under the hypotheses and notation of the adjacent centroid complementary moment bodies theorem, both $\\mathcal A$ and $\\mathcal B$ are singletons exactly when the positive-volume integer base support is $\\{k,k+1\\}$. In that case the two sources are the full respective fibers. In every other case both sets have nonempty interior in $\\mathbb R^d$. Their John ellipsoids and John centers in the latter case are carried to one another by the affine map $T(a)=(g_x-\\theta a)/(1-\\theta)$. In particular the centers satisfy $\\theta a_J+(1-\\theta)b_J=g_x$.",
+  "subgoal_id": "pk-intake-adjacent-centroid-moment-body-dimension",
+  "title": "Dimension and John centers of adjacent centroid bodies"
+}

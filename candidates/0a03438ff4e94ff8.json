@@ -1,0 +1,26 @@
+{
+  "advances": "An exact comparison cover for any given positive anchored circuit; it does not assert that the moved cover masses equal the moved actual depths.",
+  "author": "PK-research-agent",
+  "candidate_id": "0a03438ff4e94ff8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.207373+00:00",
+  "depends_on": [],
+  "draft_key": "anchored-cap-quantile-exact-circuit-cover",
+  "kind": "lemma",
+  "proof": "Each old body contains an interior ball, and by support functions a smaller concentric ball remains in every nearby version of the same body. There is also a uniform outer radius by local Hausdorff continuity. If two such bodies have Hausdorff distance $\\epsilon$ and share a ball of radius $r$ centered at $a$, then each is contained in the other dilated by $1+\\epsilon/r$ about $a$: adding $\\epsilon B_d$ is bounded by adding $(\\epsilon/r)(K-a)$. Hence their symmetric-difference volume is $O(\\epsilon)$, by the uniform volume bound and the volume of the two outer dilations. The cap mass is therefore locally Lipschitz in $p$ at every fixed threshold, uniformly in that threshold.\n\nFor nearby $b_1<b_2$, the cap-mass difference is the sum of slab volumes over the finite base set. On the anchor, a fixed ball about $y$ stays in the body, and the thresholds considered run through a fixed central subinterval of this ball. Its section areas have a uniform positive lower bound, including counting measure in dimension one. All slice areas on every fiber have a uniform upper bound from boundedness. Thus for positive uniform constants $c,C$,\n\n$c(b_2-b_1)\\le F_j(p,b_1)-F_j(p,b_2)\\le C(b_2-b_1).$\n\nFubini justifies these bounds; the endpoint level sets are null for $d$-dimensional volume. Take two thresholds on opposite sides of $b_j$. By continuity they bracket all sufficiently nearby $\\tau$ for every nearby $p$. This gives the unique local quantile, and the two slope bounds give its monotonicity and bi-Lipschitz estimates in $\\tau$. The lower slope and the uniform bound on variation of $F_j$ in $p$ also give the joint Lipschitz estimate by comparing the inverse equations.\n\nThe weighted sum of quantiles has the same strict decrease, with a uniform positive lower decrease rate. At the old mass its value is $\\sum_j\\rho_j b_j=A\\cdot z$, because the caps pass through the mark and the continuous normals balance. The same bracketing and slope argument gives the unique Lipschitz root. At any point $(z,x)$ the weighted sum of the shifted margins is now exactly zero, so some margin is nonnegative. This proves the whole-plane cover by closed caps. The cap containing a given point gives the claimed bound on that point's depth; division by the positive total mass proves the normalized assertion.\n",
+  "source_candidate_ids": [
+    "a0fdd477aa859374"
+  ],
+  "source_candidate_sha256": {
+    "a0fdd477aa859374": "9c2e01f74c84656a03f5f4cd4d999b2e17531c17af864a8c7739512539d55c07"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a0fdd477aa859374",
+      "locator": "a0fdd477aa859374:01 §§1–2, (1), anchored cap quantile and exact circuit cover"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be a nonempty finite set and $K_w(p)\\subset\\mathbb R^d$, $w\\in P$, be compact convex bodies depending locally Hausdorff-Lipschitz on a finite-dimensional parameter $p$ near $p_0$. Write $\\mu_p=\\sum_{w\\in P}\\delta_w\\otimes(\\mathcal L^d|_{K_w(p)})$ and $M(p)=\\sum_w|K_w(p)|$. Use a finite list of closed caps\n\n$H_j(b)=\\{(w,x):v_j\\cdot w+u_j\\cdot x\\ge b\\},\\qquad |u_j|=1.$\n\nAt the old family suppose each $H_j(b_j)$ passes through the same mark $(z,y)$ with $z\\in P$, $y\\in\\operatorname{int}K_z(p_0)$, and has the same raw mass $\\tau_0$. Suppose $\\rho_j>0$, $\\sum_j\\rho_j=1$ and $\\sum_j\\rho_j u_j=0$, and set $A=\\sum_j\\rho_j v_j$.\n\nEach function $F_j(p,b)=\\mu_p(H_j(b))$ has a unique local inverse in the threshold, $Q_j(p,\\tau)$, for $(p,\\tau)$ near $(p_0,\\tau_0)$. It is locally Lipschitz jointly and locally uniformly decreasing and bi-Lipschitz in $\\tau$. There is a unique nearby locally Lipschitz mass $\\tau_c(p)$ with\n\n$\\sum_j\\rho_j Q_j(p,\\tau_c(p))=A\\cdot z.$\n\nThe shifted closed caps at these thresholds all have raw mass $\\tau_c(p)$ and cover the whole plane $\\{z\\}\\times\\mathbb R^d$. In particular the new restricted maximal normalized depth over $z$ is at most $\\tau_c(p)/M(p)$.",
+  "subgoal_id": "pk-intake-anchored-cap-quantile-exact-circuit-cover",
+  "title": "Anchored cap quantiles and exact circuit covers"
+}

@@ -1,0 +1,60 @@
+{
+  "candidate_id": "d07647a65fdd431d",
+  "candidate_sha256": "d9dc038ac6914c51028b880ecdb4d524b642e10b000a6a475f300be78ea7ef68",
+  "checked_dependency_candidate_sha256": {
+    "c3e79bc0190bfda3": "fc2f2bc2e3c8c8535ff30fe3ab8040a8e92f7137cac48f9a949683f7da4dee11"
+  },
+  "checks": [
+    "Positive Euclidean normalization preserves cover, cap count and sharp per-cap mass, so the exact-count simplex-product classification applies. With N=2^n(d+1) every cap is one forced own-fiber type, with zero volume and zero hinge on the other fibers. Its own margin becomes β_j−1/(d+1) because h_{K−K}(∇β_j)=max_K β_j−min_K β_j=1.",
+    "Integrating the homothetic tail v(1−t)^d from t=1/(d+1) to 1 gives v d γ_d/(d+1)^2 per cap. Multiplying by 2^n(d+1) gives M γ_d d/(d+1). The classification's explicit isolated covers attain this value, including d=1.",
+    "The homothety of ratio d/(d+1) about v_j has cap centroid g+(v_j−g)/(d+1). Since v_j−g=d(v_j−g_j)/(d+1), the moment correction is exactly Ψ_iR_j. The difference R_j belongs to K−K and evaluates to one in direction ∇β_j, so it is an actual exposed support point.",
+    "At each p the chosen weights sum to one and produce η_p/(d+1)=γ_d v for its caps, with base moments at p. Their own continuous normals sum to zero because the barycentric coordinates sum to one, and the weighted affine margin on the entire own fiber is zero.",
+    "At the own centroid every assigned cap has margin zero. An off-fiber cap has strictly negative margin there because any nonnegative margin at an interior centroid with nonzero continuous normal would give positive off-fiber mass. Thus the cover minimax value is zero, the contact is genuine, and its zero resultant satisfies the normal-cone condition. All cap-budget multipliers can be zero.",
+    "Original §5 (11) provides the same calibration and actual stress. The explicit stress check does not rely on the original §3 general width multiplier existence theorem."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c3e79bc0190bfda3",
+      "candidate_sha256": "fc2f2bc2e3c8c8535ff30fe3ab8040a8e92f7137cac48f9a949683f7da4dee11",
+      "hypotheses": "The dependency's Euclidean unit representatives arise by positive scaling of each width representative. Their sharp individual budget, nonvertical normals, full product coverage and exact cap count force every canonical cap, with all other-fiber masses zero. Its explicit realization also supplies an attained width cover.",
+      "reviewed_proof_sha256": "37f66bafb553cad418e905ce087e4eb659bc3cd0a7e07fd0185ab4f95740468b",
+      "reviewed_statement_sha256": "5d3df5b26af6031b562650e50d0c1ab0d18d1651b8439947fb60b606dc066ae8",
+      "status": "same-wave independently approved, pending graph admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:12:09Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted general Euclidean normalized-cap stress allows α_0=0 and uses Ψ_i u_i in the moment equation. The proposed exact simplex calibration uses a width support point and explicitly gives α_0=1 for each classified width-normalized cover.",
+      "fact_id": "c343c9f3dc96957e"
+    },
+    {
+      "comparison": "The accepted simplex-product construction uses normalization by the full ambient Euclidean normal at strict slack budgets. It does not determine the width-normalized minimum or the stress at the exact budget.",
+      "fact_id": "29658845b83bcc67"
+    }
+  ],
+  "readability": [
+    "The λ weights in the stress are the probability weights on cap indices; the proof's β_j are the simplex barycentric coordinates."
+  ],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1abafbf665cee2cddfccd18f555c32db4f59993ae5c93c8ed12e6c0308ecd297",
+  "reviewed_statement_sha256": "75318c44ec87223f04a3d091c15f47e689c2d0d3496ef53913f4e46612a09301",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_checks": [
+    {
+      "candidate_id": "d233b11c4a70933f",
+      "candidate_sha256": "30b56019e5ccb4f563f48f36e84f4d603470401a9f84bd6872fc2da110df8462"
+    }
+  ],
+  "started_utc": "2026-11-08T15:08:51Z",
+  "summary": "The exact-count classification forces the width-normalized cost for every feasible cover. The explicitly normalized stress satisfies all row balances and uses actual minimax contacts for every simplex shape.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

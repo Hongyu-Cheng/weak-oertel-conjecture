@@ -1,0 +1,32 @@
+{
+  "advances": "Obstruction to a whole-fiber partition under actual contact transport, on a canonical strict-quota body with prescribed marks.",
+  "author": "PK-research-agent",
+  "candidate_id": "e0da699db6f5c6fd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:07:56.022467+00:00",
+  "depends_on": [],
+  "draft_key": "forced-split-positive-volume-crease-fibers",
+  "kind": "counterexample",
+  "proof": "The concave length roof on the base rectangle is\n$$\nV(z)=\\min(270+67q(z),270-67q(z),270+268z_1,538-268z_1)/1230.\n$$\nIts four affine pieces from left to right are the triangles with vertex lists\n$$\n((-1,-1),(-1,1),(0,1)),\\quad ((-1,-1),(0,1),(1,-1)),\\quad\n((0,1),(1,-1),(2,1)),\\quad ((1,-1),(2,-1),(2,1)).\n$$\nThey tile the rectangle. At their vertices the corresponding planes are respectively the third, first, second and fourth listed planes and equal the minimum. Affine inequalities then give the same equality throughout each triangle. This also verifies the listed heights at sampled sites by substitution. The roof interpolates centered intervals by Minkowski sums on the triangles, and its positive minimum on the rectangle is at least $2/1230$ since each affine term is at least that large. Thus the entire real-base family is the canonical hull of the sampled intervals. The lengths sum to one.\n\nFor reproducibility, the finite quota enumeration uses the following exact predicate. A point $q$ of the sampled base belongs to the hull of a nonempty subset $T$ iff it belongs to $T$, lies between two points of $T$ on their line, or lies in one nondegenerate triangle with vertices in $T$, by planar Carathéodory. For the segment test require $\\det(b-a,q-a)=0$ and $(q-a)\\cdot(q-b)\\le0$. For the triangle test orient the three vertices counterclockwise by the sign of $\\det(b-a,c-a)$ and require all three oriented edge determinants with $q$ to be nonnegative. The enumeration is the following integer loop.\n```text\nfor each mask from 1 through (1 << |P|) - 2:\n    T = the points of P selected by the mask\n    if any q in P outside T passes the segment or triangle test for T:\n        continue\n    k = number of distinct (z_1 mod 2, z_2 mod 2) for z in T\n    count[k] += 1\n    minimum[k] = min(minimum[k], integer quota slack of T)\n```\n\nHere the integer slack is $1230k-4\\sum_{z\\in T}1230V_z$. The loop retains 704 masks, and the minima by $k=1,2,3,4$ are $(150,24,166,8)$. These are all positive. The integer loop and those values are also implemented in the source calibration verifier.\n\nOn the ordered targets $(-1,-1),(-1,0),(-1,1),(0,-1),(0,0),(0,1),(1,-1)$ put first-row masses\n$$\n(24,12,8,544,609,604,44)/14760.\n$$\nUse the reflection $z\\mapsto(1-z_1,-z_2)$ for the second row. Spread each listed mass uniformly on its corresponding interval. The first row has mass $1845/14760=1/8$, zero base first moments by the list, and zero continuous first moment by centering. Reflection gives the second barycenter. On each strict side the listed mass equals $V_z/\\ell(z)$. At each crease their two masses sum to $648/14760=(9/41)/5$. Thus their sum is $dm/\\ell$. The contacting planes are $5+q$ and $5-q$ respectively, so affine Jensen gives each row $\\ell$-integral $(1/8)4=1/2$.\n\nFor any coupling with these source and target marginals and the martingale property, the $\\ell$-integrals of the two marginals are both one. Concave Jensen is therefore an equality row by row, so a row is supported on the contact of its source plane. The strict-side fibers are forced to the corresponding rows. The first row has strict-side base moments $-44/14760$ and $-560/14760$. If its remaining two masses on $(0,1),(1,-1)$ are $a,b$, the two moment equations are $b=44/14760$ and $a-b=560/14760$. Dividing by $648/14760$ gives the stated positive fractions, each less than one. Allocating to that row a centered subinterval of the prescribed length fraction and to the other its symmetric complement also preserves both row masses and continuous means. It differs from uniform splitting. Multiplication by a common positive constant preserves the plane contacts and rescales the inverse-density marginals inversely. This gives the asserted normalization rule.\n",
+  "source_candidate_ids": [
+    "3b257d8ddacb6167",
+    "f1e67b1b6817e2f9"
+  ],
+  "source_candidate_sha256": {
+    "3b257d8ddacb6167": "3d719a302911d9e927813a436f66c159e338233bc7cc8076de4eaa225e98398c",
+    "f1e67b1b6817e2f9": "8b561f8aad5dfe03e637c95d2c8b134ee7cc42d6ebf413afa208c6a63792893e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3b257d8ddacb6167",
+      "locator": "3b257d8ddacb6167:07 §7, (19)–(20), explicit two-row crease-fiber obstruction"
+    },
+    {
+      "candidate_id": "f1e67b1b6817e2f9",
+      "locator": "f1e67b1b6817e2f9:03 §6, (12)–(18), rational roof, rows and exact quota enumeration"
+    }
+  ],
+  "statement": "Let $P=\\{-1,0,1,2\\}\\times\\{-1,0,1\\}$, $q(z)=2z_1+z_2-1$, and $\\ell(z)=5-|q(z)|$. Take centered interval fibers $K_z=[-V_z/2,V_z/2]$ with lengths in lexicographic order\n$$\n(V_z)_z=(2,2,2,136,203,270,270,203,136,2,2,2)/1230 .\n$$\nTheir hull is compatible and canonical, has mixed mass $M=1$, and every nonempty proper closed minor $T=P\\cap\\operatorname{conv}T$ has $\\sum_{z\\in T}V_z<k(T)/4$, where $k(T)$ counts its occupied parities. For the two marks $Y_0=((0,0),0)$ and $Y_1=((1,0),0)$ there is a full-space contact martingale from $(\\delta_{Y_0}+\\delta_{Y_1})/8$ to $dm/\\ell$, with $\\ell$-integral $1/2$ in each row. In every such contact martingale both rows take positive mass from each of the complete crease fibers at $(0,1)$ and $(1,-1)$, of length $9/41$ each. The first row takes fractions $151/162$ and $11/162$ of their respective target masses. In particular no partition assigning each whole sampled fiber to one contacting row can realize the martingale. The continuous allocations can be nonunique. Geometrically normalizing $\\ell$ rescales both tilted marginals by the same factor and preserves the fractions and original-volume weights.",
+  "subgoal_id": "pk-intake-forced-split-positive-volume-crease-fibers",
+  "title": "A two-source logarithmic martingale can force splitting whole crease fibers"
+}

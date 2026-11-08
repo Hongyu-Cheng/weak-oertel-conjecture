@@ -1,0 +1,61 @@
+{
+  "candidate_id": "efbf470a35041aac",
+  "candidate_sha256": "4eb42ec922ba8227beaf22d872158de82f210b37160df39f22275aad5d56e9b7",
+  "checked_dependency_candidate_sha256": {
+    "390b45541b0a46fc": "2d0a134703110429cb3b4e89afc84145419703049336910534584aeb64956fc2",
+    "abb6c0fd2ba74ca0": "f3c85c5a32259ca3f8784524e0d68e8486c2a22c073973065a9e8af1088d128b"
+  },
+  "checks": [
+    "Every witness satisfies every row because the row normals expose their own points among all vertices. In row i, p_i is tight, and strict exposure in all other rows gives positive slacks. The full-dimensional hull Q lies in L.",
+    "A relative neighborhood of p_i in the row hyperplane is feasible, giving a face of dimension 3. A small outward displacement along n_i violates just that row, proving irredundancy. Distinct rows give distinct facets by the exclusive witnesses. At a relative-interior point of any facet an active row is constant throughout that facet and hence describes it.",
+    "For each integer x in the entire space, the compact convex source conv(Q∪{x})×{0} contains x and every root at its base. The frozen hull result gives one root in every parity and no other lattice point in Q. The recurrence therefore stays in this finite lattice projection and terminates by the accepted orbit lemma.",
+    "The terminal barycenter is equivalent to the displayed integer sum, using sum_{j<k} 2^j=2^k−1. If x differs from p_s, at least one digit differs from p_s; all summands have nonnegative n_s margin and that digit has strictly positive margin. Thus x violates row s. The case k=0 is already a root.",
+    "For an arbitrary real x outside L choose a violated row i. At r=(p_i−alpha x)/(1−alpha) the same row is strict inward, and finitely many other positive slacks persist for small alpha>0. A ball around r gives a ball of radius scaled by 1−alpha around the integer witness p_i inside conv(L∪{x}). This treats every proper convex enlargement, including ones not given by finitely many closed inequalities.",
+    "Verified both source digests and locators. The primary §4 gives exactly these normals, the parity-basin exclusion and maximality. The second source is the explicit correction withdrawing the width-one suggestion for saturated exclusive facet witnesses."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "390b45541b0a46fc",
+      "candidate_sha256": "2d0a134703110429cb3b4e89afc84145419703049336910534584aeb64956fc2",
+      "hypotheses": "The exact frozen predecessor supplies the listed full-dimensional Q, sixteen exposed vertices with normals n_i, distinct parities exhausting all classes, exact lattice-point census, and lattice width two. Admission requires its independent approval.",
+      "reviewed_proof_sha256": "0121802412b00eb8da7850d98b2e5d5d506fe93ae2e9c2703d5cad081db1bba4",
+      "reviewed_statement_sha256": "6273e37327ac01799618cf4310d10da50acea368547ea001cd59aca309c2d24b"
+    },
+    {
+      "candidate_id": "abb6c0fd2ba74ca0",
+      "candidate_sha256": "f3c85c5a32259ca3f8784524e0d68e8486c2a22c073973065a9e8af1088d128b",
+      "fact_id": "abb6c0fd2ba74ca0",
+      "fact_sha256": "99398bc08d4ddbdd11e50e65c5310063aed6cc956ea2b05e8db051edaff2d41b",
+      "hypotheses": "For every test x apply the lemma with n=4 and d=1 to conv(Q∪{x})×{0}. The source is compact convex, the lattice projection is finite, all parity roots are present, their hull has no additional lattice point, and the anchors are the allowed point 0 in the respective singleton fibers. The termination proof needs no positive continuous volume or full-dimensional ambient source.",
+      "reviewed_proof_sha256": "5239f6487e910f328991058fba13e759288f5f2dad1b5102e4edf23927c296ac",
+      "reviewed_statement_sha256": "9366a25fadad2bfef7217dbb7e157f200588a882cc341891319ffac7bdec35f0"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:11:51Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Derives emptiness and distinct parity from already given exclusive facet witnesses. The new argument constructs a maximal lattice-free realization from the specified width-two hull.",
+      "fact_id": "095440dfdf5f6eab"
+    },
+    {
+      "comparison": "Provides the same terminal sum and exterior-basin conclusion under exclusive witness and relative interior-exclusion hypotheses on a compact domain. The proof here starts instead with the independently verified empty root hull and the accepted unrestricted compact-source termination lemma, and then proves actual maximality.",
+      "fact_id": "5969e97329ff52ae"
+    }
+  ],
+  "readability": "The first source already contains a self-contained cycle proof. The frozen proof validly replaces its termination substep by the accepted compact-source predecessor.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "73a333c1939b61d95d5973872c3d8f0c81fafca4c129d53e3d8e32e39ba9cda7",
+  "reviewed_statement_sha256": "4fdd67d1076f94e203c2ab258b8e54ccc1994d70602848e693b638b6ddc8b718",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:08:54Z",
+  "summary": "The same 16 exposed lattice points realize 16 exclusive facets of a full-dimensional maximal lattice-free polyhedron, with no other lattice points.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

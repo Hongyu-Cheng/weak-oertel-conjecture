@@ -1,0 +1,28 @@
+{
+  "advances": "Counterexample to a dimension-only Euclidean hinge upper bound at the exact sharp cap budget.",
+  "author": "PK-research-agent",
+  "candidate_id": "2c40781731ee5b2d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:05:19.074707+00:00",
+  "depends_on": [
+    "c3e79bc0190bfda3"
+  ],
+  "draft_key": "simplex-product-hinge-inradius-upper-obstruction",
+  "kind": "counterexample",
+  "proof": "A nonnegative distribution on binary vertices with base mean $p$ is supported at $p$, since the mean of each coordinate equals that coordinate's extreme value. The full own fiber is an admissible submeasure of mass $v$. This also identifies the continuous centroid body at mass $v/2$ with the set of means of densities $0\\le f\\le1$ on $K_L$ of total mass $v/2$.\n\nFor each $y\\in K_L$, the subset $(1-1/\\sqrt2)y+K_L/\\sqrt2$ lies in $K_L$ and has area $v/2$. Its centroid runs over a translate of $(1-1/\\sqrt2)K_L$, giving the lower inradius bound since the triangle's inradius is $L/(L+1+\\sqrt{L^2+1})\\ge1/(2+\\sqrt2)$. Every admissible mean belongs to $K_L$, whose vertical width is one, giving the upper bound. The three altitudes are $L/\\sqrt{L^2+1},L,1$. The product hinge minimum gives the formula because $2\\gamma_2/3^2=8/81$. Dilation by a factor $s>0$ multiplies the hinge minimum by $s^3$, the mass by $s^2$, and the moment-body inradius by $s$. The hinge scaling follows in both directions by carrying the covers through the dilation with unit-normal representatives.\n",
+  "source_candidate_ids": [
+    "eb91fe2b51b1ac7b"
+  ],
+  "source_candidate_sha256": {
+    "eb91fe2b51b1ac7b": "856e4d2035ab0cfa9aaa9cda91503aad0bd02356d8f7789ef7444816703cc179"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "eb91fe2b51b1ac7b",
+      "locator": "eb91fe2b51b1ac7b:03 Failure of an inradius-normalized universal upper bound, explicit right-triangle family"
+    }
+  ],
+  "statement": "For $n\\ge1$ and $d=2$, take $S=\\{0,1\\}^n\\times K_L$ where $K_L=\\operatorname{conv}\\{(0,0),(L,0),(0,1)\\}$ and $L\\ge1$. Let $v=|K_L|_2$ and $M=2^n v$. At each binary anchor $p$, the largest mass of a submeasure of the mixed volume with base mean $p$ is $v$. Its continuous centroid body at mass $v/2$ is the ordinary half-mass metronoid of $K_L$, with inradius $r_L$ satisfying\n$$\n\\frac{1-1/\\sqrt2}{2+\\sqrt2}\\le r_L\\le\\frac12.\n$$\nFor $N\\ge 3\\cdot 2^n$ and the sharp cap budget $\\gamma_2 v$, the continuously unit-normal hinge minimum satisfies\n$$\n\\frac{\\Psi_{\\min}}{M r_L}\n=\\frac{8}{81r_L}\\left(L+1+\\frac{L}{\\sqrt{L^2+1}}\\right)\n\\ge \\frac{16L}{81}.\n$$\nThus even after uniform continuous scaling to $r_L=1$ there is no dimension-only upper bound for $\\Psi_{\\min}/(M r_L)$.",
+  "subgoal_id": "pk-intake-simplex-product-hinge-inradius-upper-obstruction",
+  "title": "Unbounded sharp-budget hinge relative to the half-mass inradius"
+}

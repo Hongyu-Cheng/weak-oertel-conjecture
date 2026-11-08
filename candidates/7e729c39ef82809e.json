@@ -1,0 +1,26 @@
+{
+  "advances": "Counterexample to deriving the retained fine-mass condition from zero coarse weight and density in the retained component.",
+  "author": "PK-research-agent",
+  "candidate_id": "7e729c39ef82809e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:04:13.205732+00:00",
+  "depends_on": [],
+  "draft_key": "zero-coarse-area-can-carry-dominant-omitted-fine-mass",
+  "kind": "counterexample",
+  "proof": "The only coarse integer levels are zero and one, at which the fibers are exactly the given sets because the base endpoints are exposed. At $z=0$ the fine sections are exactly\n$$\n\\left[-\\frac{h^2(1+u)}2,\\frac{h^2(1+u)}2\\right],\n\\qquad u\\in[-1,1]\\cap h\\mathbb Z,\n$$\nincluding the singleton at $u=-1$. At $z=1$ the only fine section is the full interval at $u=0$. Every generating vertex is sampled. The two segments $(z,u,x)=(0,t,0)$ and $(1,0,t)$, $-1\\le t\\le1$, have a fixed full-dimensional tetrahedron as their hull, proving full dimension. The elementary triangle area is $2h^2$ and the segment has area zero.\n\nThe map $(u,x)\\mapsto(u,x/(2h^2))$ gives the fixed triangle with vertices $(-1,0),(1,-1/2),(1,1/2)$, preserves the fine lattice, and has the prescribed determinant. At $z=0$ the weighted sum of the section lengths is $h^2(2+h)$, since $u$ runs symmetrically over $2/h+1$ fine levels. The weighted mass at $z=1$ is $2h$. Thus the retained fraction is $h^2(2+h)/(h^2(2+h)+2h)\\to0$ and the stated omitted-mass ratio is exact.\n",
+  "source_candidate_ids": [
+    "5ef2792a4d153635"
+  ],
+  "source_candidate_sha256": {
+    "5ef2792a4d153635": "0a52755361ce19e9ff17bd81a4ccf81b96b771f3f8d5456a6091c6c2e77c8a3d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5ef2792a4d153635",
+      "locator": "5ef2792a4d153635:05 §6, last paragraph, zero coarse weight example"
+    }
+  ],
+  "statement": "For reciprocal integers $h\\to0$, take coarse levels $z=0,1$ and put $Q_0=\\operatorname{conv}\\{(-1,0),(1,-h^2),(1,h^2)\\}$ and $Q_1=\\{0\\}\\times[-1,1]$ in the $(u,x)$ coordinates. Let $C_h$ be the convex hull of the two placed fibers and sample on $\\mathbb Z\\times h\\mathbb Z\\times\\mathbb R$. Then $C_h$ is full dimensional and equals the convex hull of this actual fine trace. The coarse area of $Q_1$ is zero, while that of the retained $Q_0$ is $2h^2$. The retained block normalization of determinant $1/(2h^2)$ can have a fixed round image and fine covering radius $h/2\\to0$. For the fine law with weight $h$ per sampled $u$-level the omitted mass is $2h$, and its ratio to the retained coarse mass is $1/h\\to\\infty$. The retained fine mass fraction tends to zero.",
+  "subgoal_id": "pk-intake-zero-coarse-area-can-carry-dominant-omitted-fine-mass",
+  "title": "A zero-area coarse fiber can carry dominant omitted fine mass"
+}

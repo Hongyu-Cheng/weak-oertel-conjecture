@@ -1,0 +1,65 @@
+{
+  "candidate_id": "9930ef2c4185835a",
+  "candidate_sha256": "dbf40ba076de6f41576ad06a433159644c119c577bedba23dc3128cef6d9cb10",
+  "checked_dependency_candidate_sha256": {
+    "700febf4b7a92759": "9c72688a255c1b12acbbcd09b9e11c980ad32db764ade71c97e1961518ed221b"
+  },
+  "checks": [
+    "The common left bases −h, including h=0, cancel. The right bases h+1 in the even chain and h in the odd chain produce exactly the paired terms at t+βh and the final core at t+β(m+1). The identity also gives just the core when m=0.",
+    "Each nested-triangle difference is the ordinary area of the selected annulus. These annuli and the core partition RT up to area-null boundaries, and their thresholds are all no larger than the final threshold. This proves the coarse lower comparison without counting annuli twice.",
+    "For interior a, the two proper tail formulas follow from the intercept fractions; their threshold derivative magnitudes meet at 2r/a at the lower-to-upper branch transition. For a=1/2 the derivative magnitude is at most 4r, and for a=1 it is at most 2r. The continuous clipped tails are therefore globally 4R-Lipschitz when r=R.",
+    "The central point has equal barycentric coordinates 1/3 and the cutting plane passes through it. The accepted centroid-depth formula gives the normalization F_R(t)≥4R²/9, hence the coarse bound with error 4Rβ(m+1).",
+    "For s>0 and a∈[2/3,1), varying r yields density zero, then affine slope 2/(2a−1), then a constant, with matching values at both radial knots. The a=1 formula 2(r−s)_+ yields the endpoint directly. Thus the annular derivative loss bound holds almost everywhere.",
+    "Apply the radial Lipschitz bound separately with threshold increment βh at annulus h and β(m+1) at the core. The weighted radial drops telescope to ∑_h r_h. Zero terminal radii contribute zero and do not create a derivative singularity for s>0.",
+    "Original 5e6e53a58ea7a59b §6 gives the coarse telescope and a6778097fd0174ca Lemmas 1–2 give the refined first-radius-moment bound. The further moment substitution in the latter source is outside the stated result."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "700febf4b7a92759",
+      "candidate_sha256": "9c72688a255c1b12acbbcd09b9e11c980ad32db764ade71c97e1961518ed221b",
+      "fact_sha256": "cfb324c62d51fed2ddbb9873c3d66c8564c7e8e6a37da2812d751baa4aed417d",
+      "hypotheses": "Take the scaled standard triangle and its centroid (R/3,R/3), with three barycentrics equal to 1/3≤1/2. The normalized depth is 4/9, so the own tail in units of |T| is at least 4R²/9.",
+      "reviewed_proof_sha256": "2cbc8c11af5c9424a0b6383af2550f0370176a121b8a1e15523cef3452c12218",
+      "reviewed_statement_sha256": "aa03de8379db66f47939e67ce0cff5c5841de3ce928b12c8b638a8485f76df8f",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:18:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted lower bound on planar paired-chain cap mass does not compare the fixed even-chain cap to the corresponding odd-chain cap or give either annular error bound.",
+      "fact_id": "a886f31c444612a5"
+    },
+    {
+      "comparison": "The accepted proof contains the individual triangle-tail formulas. It has no paired-chain difference identity or radius-Lipschitz comparison for its annular densities.",
+      "fact_id": "b026600b8d8e369b"
+    }
+  ],
+  "readability": [],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "8ceba96f446a275aa7d3cdd7160987ab9cf80b5b9e143e2cc06bd4a2e9397b3e",
+  "reviewed_statement_sha256": "482f54e7a492f0e2dd1cb8fe327bfd713902b5df835cd0dc5e6bb7fa54625d06",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_checks": [
+    {
+      "candidate_id": "5e6e53a58ea7a59b",
+      "candidate_sha256": "ec143e6264a63c86a4dfecc80403f8a65b6028855d23e00cb004543f709b1aa4"
+    },
+    {
+      "candidate_id": "a6778097fd0174ca",
+      "candidate_sha256": "5fff8603647f33a3330ce9586c4efc11b2b35fc6df034274d077f298f6497284"
+    }
+  ],
+  "started_utc": "2026-11-08T15:13:17Z",
+  "summary": "Subtracting the odd chain from the even chain gives the stated annuli plus their final core. The sharp radial slope of the section density gives the refined first-radius-moment loss.",
+  "supporting_files": [],
+  "target_match": null,
+  "verdict": "APPROVED"
+}

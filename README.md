@@ -14,6 +14,16 @@ On 7 November 2026, the integration review of PRs #4–#8 covered all **39 newly
 
 The recorded subgoal statuses are research history, not a freshly reviewed list of available assignments. Some subgoals mention unshared research notes; reconstruct their mathematical target from accepted facts before using them. The README highlights are navigation aids, not an additional verification of the results.
 
+## Counterexample to the specific 1/e bound in total dimension 1387
+
+A full-dimensional rational polytope with **$(n,d)=(209,1178)$** has
+normalized mixed-integer halfspace depth uniformly below
+$0.36787944/2^{209}<1/(e2^{209})$. The [proof and exact replay](facts/a02d398c0677c03a.md)
+cover every mixed-integer point. The [Lean theorem](lean/SharpOC/Witness1387/DepthBound.lean)
+proves the depth bound for the explicit witness. The
+[verification guide](research/one-over-e-1387/README.md) gives the
+reproduction and axiom audit commands.
+
 ## Counterexample of total dimension 17
 
 A rational polytope with **$(n,d)=(12,5)$** has normalized mixed-integer

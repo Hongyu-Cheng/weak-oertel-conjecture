@@ -1,5 +1,25 @@
 # Lean verification of mixed-integer counterexamples
 
+## Counterexample of total dimension 17
+
+[`SharpOC.Selector17.sharp_oc_counterexample`](SharpOC/Selector17Counterexample.lean)
+constructs a compact, full-dimensional convex body with $n=12$ and $d=5$
+and positive finite mixed-integer mass. One uniform $0<r<(5/6)^5/2^{12}$
+bounds the normalized mass of a proper closed halfspace containing each
+mixed-integer point. Exterior points are covered by strict separation.
+
+Lean checks the signed support census, every actual fiber, all cap and
+body masses, and the strict comparison. The
+[geometric proof and exact replay](../research/sharp-dimension-17/README.md)
+give the rational construction.
+
+| Modules | Verified content |
+| --- | --- |
+| Selector17Arithmetic, Selector17Bases, Selector17Lattice | Exact margins, signed base census, and exposure |
+| Selector17Sources, Selector17SourceGeometry, Selector17Cap, SelectorSlabVolume | Source simplices and truncated cap volumes |
+| Selector17Near, Selector17Body | Simplex neighbors, affine radius bound, and actual fibers |
+| Selector17Cuts, Selector17Mass, Selector17Counterexample | Cut and body masses, uniform strict bound, and total dimension |
+
 ## Counterexample of total dimension 19
 
 [`SharpOC.Selector.sharp_oc_counterexample`](SharpOC/SelectorCounterexample.lean)
@@ -103,8 +123,8 @@ lake build
 lake env lean CheckAxioms.lean
 ```
 
-`CheckAxioms.lean` checks the three final theorems, including
-`SharpOC.Selector.sharp_oc_counterexample`, and their supporting results.
+`CheckAxioms.lean` checks the final theorems for the counterexamples above
+and their supporting results.
 The final theorems depend only on the standard axioms `propext`,
 `Classical.choice`, and `Quot.sound`. The build reports non-fatal style
 and deprecation warnings from several modules.

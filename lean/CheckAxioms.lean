@@ -52,3 +52,16 @@ elab "#assert_standard_axioms " id:ident : command => do
 #assert_standard_axioms SharpOC.Selector.ambient_dimension
 #assert_standard_axioms SharpOC.Selector.strict_violation
 #assert_standard_axioms SharpOC.Selector.sharp_oc_counterexample
+
+-- The 17-dimensional counterexample to the strengthened bound.
+#assert_standard_axioms SharpOC.Selector17.integerBase_injective
+#assert_standard_axioms SharpOC.Selector17.integer_projection_census
+#assert_standard_axioms SharpOC.Selector17.origin_fiber_exact
+#assert_standard_axioms SharpOC.Selector17.integer_fiber_exact
+#assert_standard_axioms SharpOC.Selector17.nearFiber_volume
+#assert_standard_axioms SharpOC.Selector17.K_cap_volume
+#assert_standard_axioms SharpOC.Selector17.body_mass
+#assert_standard_axioms SharpOC.Selector17.middle_mass
+#assert_standard_axioms SharpOC.Selector17.ambient_dimension
+#assert_standard_axioms SharpOC.Selector17.strict_violation
+#assert_standard_axioms SharpOC.Selector17.sharp_oc_counterexample

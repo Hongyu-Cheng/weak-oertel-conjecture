@@ -14,9 +14,17 @@ On 7 November 2026, the integration review of PRs #4–#8 covered all **39 newly
 
 The recorded subgoal statuses are research history, not a freshly reviewed list of available assignments. Some subgoals mention unshared research notes; reconstruct their mathematical target from accepted facts before using them. The README highlights are navigation aids, not an additional verification of the results.
 
-## Counterexamples of total dimension 187
+## Counterexample of total dimension 19
 
-The [dimension-reduction submission](research/dimension-reduction-2026-11-07/README.md) gives rational counterexamples to the sharp bound $\Gamma_d/2^n$, where $\Gamma_d=(d/(d+1))^d$, at **(n,d)=(153,34), (132,82), and (129,104)**. The smallest displayed total dimension is **187**. Their actual fibers and every-point halfspace bounds are proved, and their maximum depths are determined exactly. These examples satisfy the weaker $1/(e2^n)$ bound; **the target n+d<100 remains unresolved**.
+A rational polytope with **$(n,d)=(14,5)$** has normalized mixed-integer
+depth uniformly below $(5/6)^5/2^{14}$. Its $17{,}770$ integer fibers
+are identified exactly. The [geometric proof](research/sharp-dimension-19/README.md),
+[exact replay](research/sharp-dimension-19/check.py), and
+[Lean theorem](lean/SharpOC/SelectorCounterexample.lean) verify the strict bound.
+
+## Earlier counterexamples of total dimension 187
+
+The [dimension-reduction submission](research/dimension-reduction-2026-11-07/README.md) gives rational counterexamples to the sharp bound $\Gamma_d/2^n$, where $\Gamma_d=(d/(d+1))^d$, at **(n,d)=(153,34), (132,82), and (129,104)**. Their actual fibers and every-point halfspace bounds are proved, and their maximum depths are determined exactly. These examples satisfy the weaker $1/(e2^n)$ bound.
 
 The same submission improves the specific $1/e$ counterexample to **n=52, d=1,345,226,000,000,000,003**, using one simplex factor for both amplification and caps. It also proves the support-count obstruction that forces $d\ge68,727,866,368$ for any $1/e$ counterexample on the old n=52 support. The three new records bring the graph to **1,283 accepted facts**, 2,574 candidates, and 1,343 verification runs. Independent mathematical reviews and exact rational checks are recorded with `LLM-verified` assurance; these additions are not Lean-formalized. See the [final publication review](research/dimension-reduction-2026-11-07/publication-review.md).
 

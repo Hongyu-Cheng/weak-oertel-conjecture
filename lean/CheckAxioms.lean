@@ -41,3 +41,14 @@ elab "#assert_standard_axioms " id:ident : command => do
 #assert_standard_axioms SharpOC.BoxParameters.scalar_depth_bound
 #assert_standard_axioms SharpOC.BoxCounterexample.point_has_small_halfspace
 #assert_standard_axioms SharpOC.BoxCounterexample.one_over_e_counterexample
+
+-- The 19-dimensional counterexample to the strengthened bound.
+#assert_standard_axioms SharpOC.Selector.integerBase_injective
+#assert_standard_axioms SharpOC.Selector.origin_fiber_exact
+#assert_standard_axioms SharpOC.Selector.fiber_exact
+#assert_standard_axioms SharpOC.Selector.integer_base_census
+#assert_standard_axioms SharpOC.Selector.body_mass
+#assert_standard_axioms SharpOC.Selector.middle_mass
+#assert_standard_axioms SharpOC.Selector.ambient_dimension
+#assert_standard_axioms SharpOC.Selector.strict_violation
+#assert_standard_axioms SharpOC.Selector.sharp_oc_counterexample

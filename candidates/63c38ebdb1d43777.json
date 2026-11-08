@@ -1,0 +1,29 @@
+{
+  "advances": "A joint curvature restriction for a homogeneous column-stochastic maximum, with no assumed curvature at unperturbed rows.",
+  "author": "PK-research-agent",
+  "candidate_id": "63c38ebdb1d43777",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:18:08.120106+00:00",
+  "depends_on": [
+    "0c8e3bec450b31c1",
+    "e51b30b2ba5896c9"
+  ],
+  "draft_key": "least-active-stochastic-joint-positive-index",
+  "kind": "lemma",
+  "proof": "Let $V$ be the active-row span. The least-active row independence lemma gives $\\dim V=k$. Define a linear map $\\bigoplus_{i\\in S}E_i\\to\\mathbb R^m/V$ by $(v_i)_{i\\in S}\\mapsto\\sum_{i\\in S}v_i+V$. If the asserted bound failed, its kernel would contain a nonzero tuple. The exact proportional compensation lemma applies to that tuple, since its sum is in $V$, all selected rows are strictly positive and differentiable, and $X$ is a local maximum. In the objective remainder from that lemma, Taylor expansion and $s_i=t+O(t^2)$ give\n$$\nL(X(t))-L(X)\n=\\frac{t^2}{2}\\sum_{i\\in S}v_i^{\\mathsf T}\\nabla^2 f_i(X_i)v_i+o(t^2).\n$$\nEach summand is nonnegative and at least one is positive. This contradicts maximality for small nonzero $t$.\n",
+  "source_candidate_ids": [
+    "58f8bbb67f63ee23"
+  ],
+  "source_candidate_sha256": {
+    "58f8bbb67f63ee23": "df0dac3b95f7c11884a56c0988b4e56921037808c62bf1e53530b891f5451f50"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "58f8bbb67f63ee23",
+      "locator": "§1, (1) and exact homogeneous funding identity"
+    }
+  ],
+  "statement": "Let $X$ maximize $\\sum_i f_i(X_i)$ on nonnegative $N\\times m$ matrices with each column sum one, with each $f_i$ finite and positively homogeneous of degree one. Choose $X$ with the fewest nonzero rows and let $k$ be that count. For each $i$ in a selected set $S$ of strictly positive rows, assume $f_i$ is $C^2$ near $X_i$ and let $E_i$ be a subspace on which the Hessian $\\nabla^2 f_i(X_i)$ is positive definite. Then\n$$\nk+\\sum_{i\\in S}\\dim E_i\\le m.\n$$\nIn particular, this applies to $f_i=\\omega_i\\phi$ with positive weights on the selected rows and positive-definite subspaces of the Hessian of $\\phi$ there.",
+  "subgoal_id": "pk-intake-least-active-stochastic-joint-positive-index",
+  "title": "Joint positive-index bound at a least-active stochastic maximizer"
+}

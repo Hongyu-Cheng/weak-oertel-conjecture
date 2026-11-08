@@ -1,0 +1,68 @@
+---
+fact_id: b4efc0a0a7fcfb69
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-prescribed-mixed-barycentric-convex-order
+depends_on: ["0d017e6c3c14b846", "21fe36cb211350dd"]
+verifier_run: 8dbccb88b748aa49
+target_match: null
+---
+
+## Source
+
+- [1bc960743a4bce34](../candidates/1bc960743a4bce34.json), §§1–2, 4–7.
+- [9c4bb3ca1bcd69e1](../candidates/9c4bb3ca1bcd69e1.json), §§1, 3–7.
+
+## Statement
+
+Let $n,d\ge0$ be integers with $n+d\ge1$, and let $P_i\subset\mathbb R^n$ be finite for $1\le i\le k$, $k\ge1$. For a finite base set $Q$ put $\sigma_Q=\sum_{q\in Q}\delta_q\otimes\mathcal L^d$, with $\mathcal L^0$ the unit measure on the single point $\mathbb R^0$. Let $\gamma_i$ be compactly supported finite nonnegative Borel measures on $P_i\times\mathbb R^d$, with common mass $M$ and $\gamma_i\le a_i\sigma_{P_i}$ for $0<a_i<\infty$. Let $\lambda_i>0$ sum to one, put $P=\sum_i\lambda_iP_i$, and use the full physical barycentric map $b(x_1,\ldots,x_k)=\sum_i\lambda_i x_i$. For every prescribed coupling $\pi_0$ of the $\gamma_i$ there is one coupling $\pi$ of exactly those marginals such that
+$$
+ b_\#\pi_0\preceq_{\mathrm{cx}} b_\#\pi,\qquad
+ b_\#\pi\le A_d\,\sigma_P,\qquad
+ A_d=\begin{cases}
+  \bigl(\sum_i\lambda_i a_i^{-1/d}\bigr)^{-d},&d\ge1,\\
+  \min_i a_i,&d=0.
+ \end{cases}
+$$
+Here convex order requires equal mass and compares integrals of every finite convex function on $\mathbb R^{n+d}$. The barycentric first moment is fixed by the prescribed marginals. Moreover, every optimizer of $\int\phi(b(x))\,d\pi(x)$ over the same couplings satisfies the displayed ceiling if $\phi$ is smooth with $D^2\phi\ge\varepsilon I$ everywhere for some $\varepsilon>0$. When $n=0$, the optimizer ceiling already holds for $\phi\in C^2$ with the same Hessian lower bound. The constant is sharp uniformly over the indicated data of positive common mass and supports.
+
+If all the input measures are supported in one compact convex set $C$, the new law is carried by $C\cap(P\times\mathbb R^d)$. Thus, when $P\subseteq\mathbb Z^n$, it is carried by the actual mixed-integer fibers and obeys the same ceiling there. Equal weights $1/k$ and $P_i\subseteq r+k\mathbb Z^n$ for all $i$, for some $r\in\mathbb Z^n$, suffice for this integrality assumption.
+
+In the single-input-base-per-slot case there is also an intrinsic face version. Let $K_{z_i}$ and $K_p$ be compact convex fibers in a common Euclidean space, where $p=\sum_i\lambda_i z_i$ is a sampled integer base. Suppose $\sum_i\lambda_iK_{z_i}\subseteq K_p$ and $h_{K_p}(u)=\sum_i\lambda_i h_{K_{z_i}}(u)$ for a unit normal $u$. Suppose each endpoint exposed face spans an affine space of dimension $m\ge1$ and these spaces have a common tangent space. For equal-mass endpoint laws $\gamma_i$ on these faces bounded by $a_i$ times their Euclidean $m$-area, one can dominate any prescribed old barycentric law in full physical convex order while bounding the new law by $A_m$ times Euclidean $m$-area of the weighted affine plane, on which its support is contained in the actual exposed face of $K_p$. If the latter face has dimension $m$, this is a ceiling relative to its face area. If the prescribed physical branches are $\alpha_i$ of masses $\lambda_i M$ and unit $m$-area ceilings, applying this assertion to $\gamma_i=\alpha_i/\lambda_i$ gives $A_m=(\sum_i\lambda_i^{1+1/m})^{-m}$ for the mass-$M$ barycentric law.
+
+## Proof
+
+The assertion for $M=0$ is immediate. For positive mass let $\pi$ be any maximizer of a smooth uniformly strongly convex surplus as in the statement, which exists by weak compactness of couplings on the product of the compact marginal supports. Write $\rho=b_\#\pi$. The inverse endpoint lemma applies to these supports and gives locally Lipschitz maps $F_i(z)=\nabla V_i(\lambda_i\nabla\phi(z))$ with convex $C^1$ functions $V_i$ of Lipschitz gradient. They satisfy $(F_i)_\#\rho=\gamma_i$ and $\sum_i\lambda_iF_i(z)=z$ $\rho$-almost everywhere.
+
+Assume $d\ge1$ and fix $p\in P$ with nonzero slice measure $\rho_p$ on $\mathbb R^d$. Write $F_i(p,y)=(B_i(y),T_i(y))$ in base and continuous coordinates. On the compact support $E$ of $\rho_p$, continuity gives $B_i(y)\in P_i$ and $\sum_i\lambda_i T_i(y)=y$. For a compact $D\subseteq E$ and an input base $q\in P_i$, put $D_q=D\cap B_i^{-1}(\{q\})$. Its image $T_i(D_q)$ is compact. From the pushforward identity, the marginal ceiling, and the Lipschitz area formula on a ball containing $D_q$,
+$$
+ \rho_p(D_q)\le\gamma_i(\{q\}\times T_i(D_q))
+ \le a_i\mathcal L^d(T_i(D_q))
+ \le a_i\int_{D_q}|\det DT_i(y)|\,dy .
+$$
+The last bound follows because the area formula counts image multiplicity. Each map is Lipschitz on a fixed ball containing $E$, by local Lipschitzness and compactness. Sum over $q$ and use inner regularity to get the same bound for Borel subsets of $E$. It follows that $\rho_p=h_p\,dy$, with $h_p\le a_i|\det DT_i|$ almost everywhere on $E$, for each $i$.
+
+Partition $E$ into finitely many joint strata where all the $B_i$ are constant. At almost every point of any stratum it has Lebesgue density one and all the slice derivatives exist. A differentiable function constant on a set of density one at a point has zero derivative there: a nonzero derivative would exclude a fixed cone of positive relative volume from the set near the point. Apply this to the base coordinates and to $\sum_i\lambda_i T_i(y)-y$. Since $\rho_p$ is absolutely continuous, for $\rho_p$-almost every $y$,
+$$
+ D_yF_i(p,y)=(0,DT_i(y)),\qquad \sum_i\lambda_i DT_i(y)=I_d .
+$$
+Apply the pullback lemma to $V_i$ and the smooth slice map $q_i(y)=\lambda_i\nabla\phi(p,y)$. With $H=D^2_{yy}\phi(p,y)>0$, the matrix $(Dq_i)^{\mathsf T}D_yF_i=\lambda_i H DT_i$ is symmetric positive semidefinite at almost every such point. The vanishing base derivatives eliminate the off-diagonal Hessian blocks. Hence $C_i=H^{1/2}DT_iH^{-1/2}$ is symmetric positive semidefinite, $\sum_i\lambda_i C_i=I_d$, and $\det C_i=|\det DT_i|$. By eigenvalue arithmetic-geometric mean, at Lebesgue-almost every point where $h_p>0$,
+$$
+ h_p^{1/d}\sum_i\lambda_i a_i^{-1/d}
+ \le\sum_i\lambda_i(\det C_i)^{1/d}
+ \le\sum_i\lambda_i\operatorname{tr}(C_i)/d=1.
+$$
+This gives the ceiling in every output slice. For $d=0$, every positive atom of $\rho$ at $p$ maps through $F_i$ to a single atom of $\gamma_i$ of mass at least $\rho(\{p\})$, so $\rho(\{p\})\le\min_i a_i$.
+
+For the $C^2$ optimizer assertion when $n=0$, the area estimate already proved gives $h\le a_i|\det DF_i|$ on the output support. The map $z\mapsto\lambda_i\nabla\phi(z)$ has an everywhere positive definite derivative, so the inverse function theorem gives a locally Lipschitz inverse on neighborhoods of every point in its range. The preimage of the Lebesgue-null exceptional set for differentiability of the Lipschitz map $\nabla V_i$ is null, by a countable cover of such neighborhoods. At almost every $z$, let $G_i$ denote the derivative of $\nabla V_i$ at $\lambda_i\nabla\phi(z)$. It is symmetric by commutation of distributional second derivatives of $V_i$, and positive semidefinite by monotonicity of $\nabla V_i$. The chain rule gives $DF_i=\lambda_i G_iH$ with $H=D^2\phi(z)$. The density-point argument gives $\sum_i\lambda_i DF_i=I$ on the positive-density set almost everywhere. The matrices $H^{1/2}DF_iH^{-1/2}=\lambda_i H^{1/2}G_iH^{1/2}$ therefore give the same trace and determinant estimate without the higher regularity required by the mixed pullback argument.
+
+Now let $\mathcal D$ be the couplings satisfying $b_\#\pi\le A_d\sigma_P$. This is a nonempty compact convex set: nonemptiness follows by maximizing $|b|^2$, and the measure inequality is weakly closed by nonnegative continuous tests on a common compact output support. For any finite convex $f$ on the ambient space, smooth convolution of $f$ with a nonnegative approximate identity plus $\epsilon |z|^2$ converges uniformly to $f$ on that support as $\epsilon\downarrow0$. The maximizing couplings for these smooth strongly convex costs belong to $\mathcal D$ and their values exceed or equal the values at $\pi_0$. A subsequential limit yields
+$$
+ \max_{\pi\in\mathcal D}\int f\,d(b_\#\pi)\ge\int f\,d(b_\#\pi_0).
+$$
+For any finite collection of convex tests, the vector of integral differences as $\pi$ ranges over $\mathcal D$ is a compact convex set. If it were disjoint from the closed positive orthant, strict separation would give nonnegative coefficients with the corresponding weighted difference strictly negative for every $\pi\in\mathcal D$. This contradicts the preceding inequality for that nonnegative combination of the tests. Thus the comparison sets have the finite-intersection property in $\mathcal D$. A member of their full intersection gives the one coupling in the statement.
+
+For sharpness when $d\ge1$, put all inputs at one common base and let $\gamma_i$ be the constant density $a_i$ on $t_i+r_iK$, where $K$ is a convex body of volume one in $\mathbb R^d$, $r_i=(M/a_i)^{1/d}$, and $t_i$ are arbitrary translations. Every output lies in $\sum_i\lambda_i t_i+(\sum_i\lambda_i r_i)K$, of volume $M/A_d$. The coupling with one common uniform draw in $K$ attains constant density $A_d$ there. For $d=0$, common point masses of mass $\min_i a_i$ attain the universal constant. The convex-set and integrality assertions follow directly from the support of every product tuple.
+
+For the face statement, choose origins in the parallel endpoint planes and use one orthonormal coordinate system in their common tangent space. The weighted origins give the output plane. Apply the theorem with $n=0,d=m$ to the tangent laws. Every tuple average lies in the actual middle fiber by the stated inclusion, and its height equals $h_{K_p}(u)$ by the tight support relation. Restricting any finite convex physical test to that plane gives a finite convex tangent-coordinate test, and orthonormal coordinates preserve its Euclidean $m$-area. Finally the normalized endpoint measures $\alpha_i/\lambda_i$ have ceilings $1/\lambda_i$, which yield the stated formula.

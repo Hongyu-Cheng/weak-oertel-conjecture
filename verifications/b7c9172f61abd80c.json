@@ -1,0 +1,83 @@
+{
+  "candidate_id": "06e309827d4af58d",
+  "candidate_sha256": "411fbb2eab993a976ff09413fb434ff09e98f2d709646092ffd1eceac1bdd926",
+  "checked_dependency_candidate_sha256": {
+    "099aa1c919dac117": "bc31b75adb89ce3d429764e5deebd2b3fbac99dd2e8b2012c6a20b0bdef6310e",
+    "5097879468363a7e": "b6026e29aef886843672e82b650c02392225de7bf979ad087ccd1b5f7a2139d4",
+    "643b08457d03e63b": "8f804d289dc7d801da532c05c681ec72e36c6be92021a4f4464587136e1dcd72",
+    "d2ba4e3cbd6eb730": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0"
+  },
+  "checks": [
+    "Checked 6a014eb26413a72b §5, (8)–(9) against its frozen hash. The normalized proof retains the actual section and objective-preserving merger, and strengthens the equality description using μ_j>0 at every matched label.",
+    "The support exclusion leaves only one-zero or zero rows outside r. For rows sharing a zero column, the multiplier identity gives identical weights and the same strictly positive reciprocal vector on that support, with scale μ_i>0. Merging adds those scales and capacities by geometric-mean homogeneity. It preserves column sums, and the surviving zero columns form a partial injection allowing the stated permutation.",
+    "The original sole positive row has a unique proper minimum, and its capacity is strictly less than max_j x_j≤1 by comparison with the full threshold. Its capacity is positive since t>min_j x_j>0. This row therefore witnesses that the original capacity vector is not a standard unit vector, making the common-centroid fact applicable before merging. The merger leaves that row unchanged up to coordinate permutation.",
+    "For each column j, only the matched row labeled j omits its reciprocal-multiplier entry, yielding λ_j(1−x_j)=μ−μ_j. Pairing the full row with λ gives St and pairing any surviving one-zero row gives dμ_i, both equal to their weighted objective contributions. Column stochasticity then gives H=S=St+dμ. The same μ identity follows by summing the column equations, since there are d+1 columns.",
+    "The true proper threshold lies between positive entries bounded by one, so 1−t>0. The nonnegative diagonal map has coordinate sum one on the section by the identities Σ_j u_j=1 and x·u=t. Linearity of expectation and b=λ/S give the displayed bound with exact equality iff μ_j=0. If a factor vanishes, its image coordinate is zero and the pushforward probability remains well-defined."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "application": "The sole strictly positive row has a proper minimizing threshold. Uniqueness gives the strict comparison with the full-threshold ratio, and the gradient exists on that row.",
+      "candidate_id": "d2ba4e3cbd6eb730",
+      "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+      "fact_sha256": "1ea56df969a8d887e9e78ed86174eee2934f79a095ee0f54bf7fb9255fd58f61",
+      "reviewed_proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+      "reviewed_statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc",
+      "status": "accepted at reviewed snapshot"
+    },
+    {
+      "application": "The original X has a strictly positive funding row and is a positive-weight local maximum, so each other nonzero row has at most one zero. Since r is the only strictly positive row, each such row has exactly one.",
+      "candidate_id": "099aa1c919dac117",
+      "candidate_sha256": "bc31b75adb89ce3d429764e5deebd2b3fbac99dd2e8b2012c6a20b0bdef6310e",
+      "reviewed_proof_sha256": "71cb28b51be5c29a67db5ae3a3f196ae9df0f479fac0f47f1015be480ca7a3fd",
+      "reviewed_statement_sha256": "3bf0e6ae32d7b16e930a4da6faf4795ea67e218575e50b52c686577cdb34e72d",
+      "status": "same-batch, pending predecessor admission"
+    },
+    {
+      "application": "The capacity of r is in (0,1), so the original capacity vector is nonunit. Applying the same-batch centroid equations to r before the merger gives b=λ/S, t=x·b, and c_rφ_d(x)=St.",
+      "candidate_id": "643b08457d03e63b",
+      "candidate_sha256": "8f804d289dc7d801da532c05c681ec72e36c6be92021a4f4464587136e1dcd72",
+      "reviewed_proof_sha256": "ccff615025a8ca050d6291b09450ece71009148a399b85c8f9be2bf2221eaf75",
+      "reviewed_statement_sha256": "452306aac0ef1af44a8de524b38c5fcce04bfde7ba377e99fdc973257bb5322d",
+      "status": "same-batch, pending predecessor admission"
+    },
+    {
+      "application": "The original X has the required strictly positive row with a proper minimum. The same-batch fixed-support multiplier formulas give X_ij=μ_i/λ_j and identical weights for rows with the same missing column. These formulas are preserved algebraically by addition within each group.",
+      "candidate_id": "5097879468363a7e",
+      "candidate_sha256": "b6026e29aef886843672e82b650c02392225de7bf979ad087ccd1b5f7a2139d4",
+      "reviewed_proof_sha256": "3e5aeda84b32fa732ca5d4c5e6fee5c8eb4367a1f02004702ae4cc4f77a692b9",
+      "reviewed_statement_sha256": "9d7e56c11ad94dfe4eb4cd74150a32104553af0ce1cfb6fa23b215428f13a5be",
+      "status": "same-batch, pending predecessor admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:22:13Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "An individual strictly positive row at a proper minimum already has the stated capacity gradient and a unique threshold. The fact does not impose cross-row stochastic transfer or multiplier conditions.",
+      "fact_id": "d2ba4e3cbd6eb730"
+    },
+    {
+      "comparison": "The accepted theorem handles the full-cut saturated case and guarantees properness outside the unit case. It does not give matched mergers or a pushforward-centroid bound for a sole positive row with a proper cut.",
+      "fact_id": "10916437d7f6301d"
+    },
+    {
+      "comparison": "This controls the signs of raw section margins at indices with large raw centroid coordinates. It does not rescale the centroid using column slack or use stochastic multipliers.",
+      "fact_id": "08e57a9d5210184f"
+    }
+  ],
+  "readability": "The multiplier relations are established on the original local maximizer and carried through the merger by proportionality. No local optimality of the merged matrix is needed for the displayed conclusions.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3801fbf6ddbfc4d616b0e7e5a30ff24fa184dd8e95bdc1a565b477ef0670038c",
+  "reviewed_statement_sha256": "2144e0f95c005ce9ab82206d7ed0b116a13824a73b01a702ff2e53c1bc65d6c1",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:19:09Z",
+  "summary": "The matched merger preserves the weighted objective, and column balance gives the coordinatewise centroid bound for the pushforward of the true minimizing section measure.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

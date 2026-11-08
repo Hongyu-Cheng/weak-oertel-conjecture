@@ -1,0 +1,56 @@
+{
+  "candidate_id": "e143ec3bc7a1b8e8",
+  "candidate_sha256": "df2713508f1770da0f7a6928f1bdada87939d09d6ea7402a98096468f9113eec",
+  "checked_dependency_candidate_sha256": {
+    "a19fb2ae234afb2a": "a051c52f35db8b023a04403f7e58188c7fd2ef24845e229caf985eb8aa6922f6"
+  },
+  "checks": [
+    "Cold-read the frozen statement and proof; source 111d4eb988c37817 §2, Lemma 2, (2)–(3) has the same actual-scale identity and ceiling bound. The declared source byte digest matches. The frozen edge-determinant calculation avoids expanding all three origin determinants from the source.",
+    "The strict positive captured heights give H>0. By balance and span, the first two normals are independent, giving area factor D/H². In those coordinates det(P_1,P_2)=a_1a_2-b_12b_21>0 by substituting the two positive column sums. The interior origin has all barycentric weights positive, so the cyclic edge determinant has the same sign.",
+    "The transformed edges from P_3 toward P_1 and P_2 are (a_1+b_13,b_23-b_21) and (b_13-b_12,a_2+b_23). Substitution gives the stated entries. Their determinant is [1-(d_1+d_2-d_3)^2]/4+d_1d_2=R/4; it equals twice the transformed area, giving R=8Dk/H².",
+    "From the accepted row formulas, summing (1-d_{i+1}+d_{i+2})² gives 3+3 sum d_i²-(sum d_i)². Subtracting sum d_i² proves R=4-sum f_i². Summing the three row inequalities gives F+(F²+sum f_i²)/4<=6 with the correct coefficient for the squared pair sums.",
+    "Replayed exact rational comparisons: 4/(128/279)-(59/20)²=13/800 and (59/20)²+4(59/20)-20=201/400. The moment and positive f_i give F>=2/sqrt(128/279)>59/20, and the function F²+4F-20 is increasing on this domain."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "a19fb2ae234afb2a",
+      "candidate_sha256": "a051c52f35db8b023a04403f7e58188c7fd2ef24845e229caf985eb8aa6922f6",
+      "fact_sha256": "7d029b4ce614dd6eb2b10238006e5d1d7a434091eaff4098be42fcc443c20e29",
+      "mapping": "Same K, interior y, nonzero spanning balanced normals, and distinct strict single-vertex incidence. Its column balance, g_i and f_i formulas, moment, and row inequalities hold with identical normalizations.",
+      "reviewed_proof_sha256": "cd7d42df0e7913be3954a8220d058e90b4b16e7f85aa0dbbbfe0c973b1e23bb4",
+      "reviewed_statement_sha256": "bb308b4cbb5c29c79d23d9facc5500251a9b409e1c539aee234fbf1720d01c16",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:21:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same strict triangle and signed rows. The row identities already imply the equality of the two dimensionless expressions and, with the ceiling, the numerical bound for 4-sum f_i². They do not identify that quantity with 8Dk/H².",
+      "fact_id": "a19fb2ae234afb2a"
+    },
+    {
+      "comparison": "Its cubic deficit gives positivity of 4-sum f_i² for strict triangles, but no determinant or actual area scale.",
+      "fact_id": "33488d4938a6ee4a"
+    },
+    {
+      "comparison": "Constructs and characterizes the same strict row image; gives positive principal minors of a realization but does not express Dk/H² in the actual configuration.",
+      "fact_id": "5f923438468803ac"
+    }
+  ],
+  "readability": "The cyclic sign of the off-diagonal edge entries is easiest to verify by explicitly writing the two coordinate differences from P_3.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6879187816c4a4750f6a2ac2f7aa16397791ea0a293280698254257debde6eb1",
+  "reviewed_statement_sha256": "3b97a36908c9a7c46e9563f28a6de1f6b74b79be529f8d988a222514e67cecaa",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:17:13Z",
+  "summary": "The signed-row factor is four times the signed edge determinant in the normalized two-normal coordinates. The row constraints then yield the claimed strict lower bound for this actual area scale.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

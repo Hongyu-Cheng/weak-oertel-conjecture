@@ -1,0 +1,39 @@
+{
+  "candidate_id": "2863c5c8ec9f05b2",
+  "candidate_sha256": "a0dd2c0d8cc7a28de528419a14f510e52f4fa72d0776110fd4c5af5ed3bdf075",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The AM–GM infimum has equality at a_j=GM(z)/z_j for positive z. At a zero entry the displayed coefficient choice drives the sum to zero, also for d=1. The resulting concavity and positive homogeneity yield superadditivity. The closed feasible pairs (Y,v) lie in a compact box and have a convex projection, which is downward by the coordinatewise bounds.",
+    "For c≥0 the support objective at any allowed matrix is the weighted sum of its actual row means. Multiplying each row entry by its column price gives the product expression in weak duality, also for zero prices or zero row means. Column sums then give the objective bound Σ_j λ_j.",
+    "At a maximizer of H_ε, a forward transfer within one column from a positive entry to any other off-diagonal entry forces the receiving derivative to be at most the donor derivative. Thus all positive entries in the column have maximal derivative and their sum is one. The derivative pairing with Y+ε is H_ε exactly and dominates the pairing with Y since all derivatives are nonnegative. The product of the d row derivatives is (c_i/d)^d even if c_i=0. Each column maximum dominates its corresponding derivative, proving feasibility for each ε.",
+    "Uniform continuity of GM on a common compact cube for small ε gives uniform convergence, so the dual infimum is bounded above by the unregularized primal maximum. Feasibility is closed, a large constant price is feasible, and the nonnegative price vector is bounded on a finite objective sublevel. Hence the dual infimum is attained without any strictness assumption on prices or weights.",
+    "Setting λ_j=p_j^d and taking c_i=d∏_{j≠i}p_j gives necessity for every p≥0, including the boundary. For sufficiency a dual minimizer and nonnegative v give all nonnegative support inequalities. If w is a nearest point and v is exterior, the projection inequality gives strict separation by v−w. Testing coordinate decreases of w shows v−w≥0, with zero coordinates of w covered directly.",
+    "For d=1 the polynomial is linear with coefficients 1−v_i in the complementary positions. For d=2 its off-diagonal entries are the negatives of the complementary v_i. Taking absolute values cannot increase the quadratic form. The determinant is 1−Σ_i v_i²−2v_1v_2v_3 and its nonnegativity forces v_i≤1, so the other principal minors are nonnegative.",
+    "For the proposed positive λ with λ_i≤T, each off-diagonal Y entry is nonnegative and each column has total (dT−(Σ_i λ_i−λ_j))/λ_j=1. All d products λ_j Y_ij within row i equal T−λ_i, so every row saturates weak duality, even when λ_i=T makes the whole row zero. The total is Σ_j λ_j.",
+    "Verified source candidate 8095e181b6be7bf1 against the repository snapshot and declared raw SHA-256. Its §§1–3 give the definitions, regularized price proof, test, low-dimensional claims and special support attainment used here."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T12:24:26Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its cubic and PSD region becomes the displayed d=2 formula on rescaling f=2v, with a cyclic relabeling of edge weights for the PSD matrix. Each old strict triangle parameter u gives an allowed Y by Y_{i,i+1}=u_i and Y_{i,i+2}=1−u_{i+1}. Conversely these formulas parametrize all allowed Y by u in [0,1]^3; at their row means the cubic deficit is (√(∏u_i)−√(∏(1−u_i)))². Thus the accepted downward hull together with this elementary matrix identification yields the d=2 specialization. It does not establish the attained all-dimensional support identity or general price construction.",
+      "fact_id": "e85ab5a80f874e71"
+    }
+  ],
+  "readability": "The key regularization step uses the shifted matrix only in the derivative pairing. Column prices and primal feasibility are computed at the unshifted feasible maximizer.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bed5b06d5a86f8dac9d93e7c393bd47dcdb2360800d525d5392458f0aa976740",
+  "reviewed_statement_sha256": "48f805d0391741160992ee32b9fdc3ede1836a1b5366c9d8f185b92926a16cea",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:20:41Z",
+  "summary": "The regularized maximizers produce dual-feasible column prices with an asymptotically sharp value, and a compact sublevel gives an attained dual. The orthant polynomial criterion, low-dimensional specializations, and explicit attaining matrix follow.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

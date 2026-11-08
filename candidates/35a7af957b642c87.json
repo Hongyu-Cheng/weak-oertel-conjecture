@@ -1,0 +1,31 @@
+{
+  "advances": "A local exclusion in a genuine depth-attaining triangular-middle branch with strict gaps at both endpoints.",
+  "author": "PK-research-agent",
+  "candidate_id": "35a7af957b642c87",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:16:36.714259+00:00",
+  "depends_on": [
+    "1375fe2aad37f06a",
+    "ba445d671279810a",
+    "25cb17da7fc8ba32",
+    "3e7f0a31e608bd79"
+  ],
+  "draft_key": "small-endpoint-triangular-middle-shell-descent",
+  "kind": "theorem",
+  "proof": "The three original $A$ traces $H_i^A=\\{x:v_i\\cdot x\\ge b_i\\}$ cover the plane because $\\sum_i b_i<0$ by the positive sum of the support gaps of an interior point of $B$. The middle cuts are proper since $y$ is interior. The actual cap hypotheses give a common area $Q$. The present-singleton weight theorem applies to these same caps under the displayed area bounds. Writing $p_i$ for the normalized reciprocals of $\\sigma_{K,i}+2\\sigma_{A,i}$, it gives $p_i>2/9$ whenever $A\\setminus\\bigcup_{j\\ne i}H_j^A$ is nonempty.\n\nThe genuine depth attainment, midpoint containment, proper cuts and balanced spanning normals also give the hypotheses of ba445d671279810a for these same $p_i$. It yields $\\max_i p_i\\le3/4$, so any two weights sum to at least $1/4$. A point of $A$ captured only by cap $i$ belongs to a present singleton region, hence has load $p_i>2/9$. Every other capture pattern has load at least $1/4$. Since there are finitely many patterns, some $\\tau>2/9$ bounds $\\sum_i p_i\\mathbf1_{H_i^A}$ below throughout $A$.\n\nApply fact 25cb17da7fc8ba32 in dimension two with the proper covering halfplanes, weights $p_i$, and any $p\\in A$. With $U_i=|A\\cap H_i^A|$, the weighted shell loss $\\overline L(p)=\\sum_i p_i[2U_i+(b_i-v_i\\cdot p)\\sigma_{A,i}]$ satisfies $\\overline L(p)\\ge2a\\tau>4a/9\\ge2aQ/M$.\n\nFact 3e7f0a31e608bd79 applies to the original common-budget caps and the contraction, since the $A,K$ cuts are proper, the normals balance and span, midpoint inclusion holds, and the endpoint maxima have strict gaps below the original global maximum $Q$. The endpoint raw depths here equal the ordinary ones because a prescribed ordinary endpoint cap can be extended with enough tilt to exclude the other two compact fibers. That fact yields an actual admissible deformation and a rebalanced common budget $q(t)$ bounding the new global raw maximum for small positive $t$. For $M(t)=|A_t|+k+b$, its normalized upper bound starts at $q(0)/M(0)=Q/M$ and has derivative $[-M\\overline L(p)+2aQ]/M^2<0$. This proves strict descent for every fixed contraction center.\n",
+  "source_candidate_ids": [
+    "111d4eb988c37817"
+  ],
+  "source_candidate_sha256": {
+    "111d4eb988c37817": "9987cbc7647a2da352ec01ca3c4568c5c3f81bfd3caea6f378405a6487d3d861"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "111d4eb988c37817",
+      "locator": "§6, (20)–(21) and normalized quotient"
+    }
+  ],
+  "statement": "Let $A,K,B$ be planar convex bodies at levels $-1,0,1$ with $(A+B)/2\\subseteq K$, where $K$ is a triangle. Let $y\\in\\operatorname{int}K$ and let $v_1,v_2,v_3$ be nonzero spanning normals with $\\sum_i v_i=0$. Set $b_i=2v_i\\cdot y-h_B(v_i)$, and assume the caps\n$$\nv_i\\cdot(x-y)+(v_i\\cdot y-h_B(v_i))z\\ge0\n$$\nhave proper $A$ cuts and attain the true raw mixed depth $Q$ at $(0,y)$. Put $a=|A|$, $k=|K|$, $b=|B|$, and $M=a+k+b$. Suppose $Q\\le2M/9$, $b\\le a+k$, and $a<b/32$. Suppose $Q$ is the global raw maximum and that the raw maxima on both endpoint fibers are strictly below $Q$.\n\nFor every $p\\in A$, the compatible contraction $A_t=p+(1-t)(A-p)$ with $K,B$ fixed strictly reduces the normalized global maximum depth for all sufficiently small $t>0$. The decrease is certified by rebalancing the same three cap normals at a new meeting point while keeping the $B$ support thresholds fixed. In particular the original configuration fails to be an admissible local minimum of normalized maximum depth.",
+  "subgoal_id": "pk-intake-small-endpoint-triangular-middle-shell-descent",
+  "title": "Strict endpoint-gap contraction for a triangular middle fiber"
+}

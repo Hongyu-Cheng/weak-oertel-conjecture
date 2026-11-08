@@ -1,0 +1,61 @@
+{
+  "candidate_id": "57fcea441fbf5d21",
+  "candidate_sha256": "14fe93ddaa06ad4f7b04e02f9de9c9f03a90d52efda65bdaf0d7a6b57f9a7311",
+  "checked_dependency_candidate_sha256": {
+    "2863c5c8ec9f05b2": "a0dd2c0d8cc7a28de528419a14f510e52f4fa72d0776110fd4c5af5ed3bdf075",
+    "c80576b633835713": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729"
+  },
+  "checks": [
+    "For d≥2 the predecessor boundary calculation applies to exactly the defined uniform barycentric law. With d positive entries, the cap volume is at most t^d divided by the product of those entries, with equality at small t. For k<d positive entries it is at least a positive multiple of t^k near zero, giving capacity zero, and for the all-zero row the ratio equals t. For d=1 the single nonzero coordinate is uniform on [0,b] after scaling and the capacity is exactly b.",
+    "Discarding zero-capacity rows retains only rows whose unique zero is fixed within each group. The chosen maximal nonnegative weight times the geometric mean of the sum dominates the old weighted sum by superadditivity. This includes a group whose largest weight is zero.",
+    "Surviving labels are distinct and have distinct zero columns, so their prescribed diagonal zeros define an injective partial permutation of columns. Non-surviving rows are zero at this stage. Merging preserved the retained column masses, which were at most one, so after the permutation each remaining budget is nonnegative and can be filled in an off-diagonal position because d+1≥2.",
+    "Filling column budgets preserves all diagonal zeros and raises entries only, hence no row mean decreases. The new vector of row means is a feasible member of D_d. Repeating for arbitrary c≥0 proves the support bound. Nonnegative separation then gives one admissible coordinatewise dominator even though the weight-by-weight constructions can differ.",
+    "Verified source candidate 8095e181b6be7bf1 against the repository snapshot and declared raw SHA-256. Its §§4–5, formulas (3)–(4), give the exact boundary formulas and merging reduction."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "application": "Its final proof paragraph treats every nonnegative row under the same uniform Δ_d law for d≥2. Fixed-support one-zero and multiple-zero computations apply here before any perturbation. The candidate supplies d=1 directly.",
+      "candidate_id": "c80576b633835713",
+      "candidate_sha256": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729",
+      "fact_sha256": "370ea6c3991b1d6a95daede2fd8d3d9517c62e8f3c5edb298ef4bee8352eaed5",
+      "reviewed_proof_sha256": "ec660ed58ec144de72b71ff2ad5d5658d53793955b55e9584645412d757a77e8",
+      "reviewed_statement_sha256": "7aa377887ba7f60185aa7c650f4da7a0e7b203a2e491c9071e11bb6a417a903b",
+      "status": "accepted"
+    },
+    {
+      "application": "The frozen theorem uses the identical D_d definition for d≥1. Its proof establishes geometric-mean superadditivity and that nonnegative support inequalities characterize the compact convex downward D_d; the weighted merging supplies those inequalities.",
+      "candidate_id": "2863c5c8ec9f05b2",
+      "candidate_sha256": "a0dd2c0d8cc7a28de528419a14f510e52f4fa72d0776110fd4c5af5ed3bdf075",
+      "reviewed_proof_sha256": "bed5b06d5a86f8dac9d93e7c393bd47dcdb2360800d525d5392458f0aa976740",
+      "reviewed_statement_sha256": "48f805d0391741160992ee32b9fdc3ede1836a1b5366c9d8f185b92926a16cea",
+      "status": "same-batch, pending predecessor admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:24:26Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The final proof paragraph gives the required boundary formulas for d≥2, so the row-capacity computation there is reused verbatim in substance. The accepted conclusion concerns directional derivatives and does not turn these rows into a stochastic geometric-mean dominator.",
+      "fact_id": "c80576b633835713"
+    },
+    {
+      "comparison": "Its unit-vector realization starts with a positive full-cut row of a local maximizer with strictly positive weights, and applies for d≥2. The present boundary containment starts with a zero in every row of an arbitrary column-stochastic matrix, and does not follow from that local result.",
+      "fact_id": "10916437d7f6301d"
+    }
+  ],
+  "readability": "The last sentence correctly distinguishes the support construction for each c from the common matrix whose existence follows by membership in D_d.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "36b0832acdd7aa00d61a8372d4d9cb8468b77e6af988ae7abd14f5d475922d98",
+  "reviewed_statement_sha256": "4e371492deeae1b80eb16a7d803f500cb36ac644d74b75e496a4b6db231494c3",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:20:41Z",
+  "summary": "Merging by each unique zero column at the largest weight preserves the retained column budgets and improves each weighted group objective. The resulting support inequalities imply containment in every dimension, subject to admission of the frozen support-dual predecessor.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

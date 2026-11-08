@@ -1,0 +1,29 @@
+{
+  "advances": "An ordinary fixed-endpoint feasibility region with four prescribed core sectors and two opposite collinearities. It includes boundary strata and supplies the exact inputs to a row calculation.",
+  "author": "PK-research-agent",
+  "candidate_id": "ac92c3b01909dae5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:15:23.782680+00:00",
+  "depends_on": [
+    "7d1ee06fa4119930",
+    "2fb8b0785692a5b4"
+  ],
+  "draft_key": "opposite-singular-core-exact-area-region",
+  "kind": "theorem",
+  "proof": "The equation of the line through $P_5$ and $P_1$ gives its intercept $A=Br/(B+r)$ on the positive horizontal ray. The analogous line through $P_2$ and $P_4$ gives $a=bt/(b+t)$ on the negative horizontal ray. The four core products match the prescribed areas. In [7d1ee06fa4119930](../facts/7d1ee06fa4119930.md), all six gaps are less than $\\pi$, the consecutive and next-neighbor direction determinants are one, and the remaining two core tests are precisely $X\\ge Bt/2$, $Y\\ge br/2$. The canonical matrix therefore has diagonal $c_{s-1}+c_s-R_s^{-2}$ and consecutive entries $c_s-1/(R_sR_{s+1})$ for $c_s=1/(2W_s)$.\n\nIn the two singleton positions $0,3$ the matrix entries vanish by the intercept formulas. With $\\alpha=1/(Br)$, $\\beta=1/(bt)$, $u=1/(2X)$ and $v=1/(2Y)$ the other two principal blocks, on $\\{1,2\\}$ and $\\{4,5\\}$, are\n$$\nL_X=\\begin{pmatrix}u+\\alpha&u-1/(Bt)\\\\u-1/(Bt)&u+\\beta\\end{pmatrix},\n\\qquad\nL_Y=\\begin{pmatrix}v+\\beta&v-1/(br)\\\\v-1/(br)&v+\\alpha\\end{pmatrix}.\n$$\nFor instance $1/(AB)-1/B^2=1/(Br)=\\alpha$ and $1/(at)-1/t^2=1/(bt)=\\beta$. Their diagonal entries are strictly positive, so the PSD tests are exactly nonnegativity of the determinants. These are $u(\\alpha+\\beta+2/(Bt))+\\alpha\\beta-1/(Bt)^2$ and $v(\\alpha+\\beta+2/(br))+\\alpha\\beta-1/(br)^2$. The constant terms have signs of $Bt-br$ and $br-Bt$, respectively. Solving the determinant with negative constant gives the stated upper bound, and all determinants with nonnegative constant are strictly positive because $u,v>0$. Thus the criterion gives actual feasibility at all and only the stated parameters.\n\nIf both lower bounds are strict, there are two positive-excess sectors, each with one strict insertion vertex in the reconstruction. A positive least eigenvector in each connected block exists by [2fb8b0785692a5b4](../facts/2fb8b0785692a5b4.md). The reconstruction's slack $(Lw)_s/w_s$ at a node is its block's least eigenvalue. By the endpoint turn determinant in the sector criterion, each node of a positive-definite block is a strict vertex and the zero-slack nodes are straight joins. Under strict upper bounds both two-node blocks are positive definite, giving four ray vertices in addition to the two sector vertices. If a finite upper bound is attained, exactly one two-node block is singular and its two ray vertices disappear, giving four vertices in total. This is a count for this specific reconstruction.\n\nFor the original three caps the total and cap areas of these data are $k=X+Y+(AB+at+ab+Ar)/2$, $q_1=Y+(AB+Ar)/2$, $q_2=X+(AB+at)/2$, $q_3=Y+(at+ab)/2$, from the sums of their sectors. The coarea chord lengths are $B+b$, $A+a$, $r+t$.\n",
+  "source_candidate_ids": [
+    "1a5bfc0fdb9108c3"
+  ],
+  "source_candidate_sha256": {
+    "1a5bfc0fdb9108c3": "9a76296e22710ebcc3f184b2ed0e893bd83dbdb15cdb80709989cdac7d194eba"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1a5bfc0fdb9108c3",
+      "locator": "§10, intercepts, two-block determinants and exact region"
+    }
+  ],
+  "statement": "Use the six cyclic rays with endpoints\n$$\n(P_0,\\ldots,P_5)=((A,0),(0,B),(-t,t),(-a,0),(0,-b),(r,-r)),\n\\qquad (R_0,\\ldots,R_5)=(A,B,t,a,b,r)>0.\n$$\nIndices on rays and sectors are modulo six. Sector $s$ is the cone between $P_s$ and $P_{s+1}$. A feasible datum $(R,W)$ is realized by an ordinary planar convex body with $0$ in its interior, these boundary ray endpoints and sector areas $W_s$.\n\nFix $B,b,r,t>0$ and put $A=Br/(B+r)$, $a=bt/(b+t)$. Fix $W_0=AB/2$, $W_2=at/2$, $W_3=ab/2$, $W_5=Ar/2$. These are four core sectors, and the triples $(P_5,P_0,P_1)$ and $(P_2,P_3,P_4)$ are collinear. For finite $X=W_1$, $Y=W_4$, feasibility is exactly $X\\ge Bt/2$, $Y\\ge br/2$, together with the following additional bound when applicable.\n$$\n\\begin{array}{ll}\nbr>Bt & X\\le \\dfrac{Bt(bt+Br+2br)}{2(br-Bt)},\\\\[5pt]\nbr<Bt & Y\\le \\dfrac{br(bt+Br+2Bt)}{2(Bt-br)}.\n\\end{array}\n$$\nFor $br=Bt$ there is no additional bound. All indicated equalities are allowed. When both core lower bounds and any finite upper bound are strict, the reconstruction using positive least eigenvectors of the connected blocks yields a hexagon. At a finite upper bound with both core lower bounds strict, that reconstruction is a quadrilateral.",
+  "subgoal_id": "pk-intake-opposite-singular-core-exact-area-region",
+  "title": "Exact sector-area region for two opposite collinear core pairs"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "Joint compensation for corrected directions at actual proper cuts of uniform-simplex capacity rows.",
+  "author": "PK-research-agent",
+  "candidate_id": "f8cc9b4619513ed5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:18:08.120269+00:00",
+  "depends_on": [
+    "8bdcdcd6e2fa69d9",
+    "63c38ebdb1d43777"
+  ],
+  "draft_key": "stochastic-joint-threshold-schur-funding",
+  "kind": "lemma",
+  "proof": "The accepted optimized threshold Schur law applies to each normalized positive row $X_i/t_i$ with proper threshold one. It gives $g_i\\cdot\\mathbf 1=dP(c_i)>0$, local $C^2$ regularity and a strictly positive threshold denominator. The shift in $T_i(v)$ is precisely the value canceling the square in the accepted completed-square formula. This yields the asserted quadratic identity at $X_i/t_i$ without the factor $1/t_i$. By degree-one homogeneity, for $t_i>0$ one has $\\nabla^2\\phi_d(X_i)=t_i^{-1}\\nabla^2\\phi_d(X_i/t_i)$, giving the displayed identity. If $T_i(v)=0$, then $v$ is a multiple of $\\mathbf 1$, and $g_i\\cdot\\mathbf 1>0$ and $g_i\\cdot v=0$ imply $v=0$.\n\nThe rows sum to $\\mathbf 1$, so $\\mathbf 1\\in V$. Each shift $T_i(v_i)-v_i$ is a multiple of $\\mathbf 1$, proving the equivalence for sums. For the index consequence, each $T_i(N_i)$ has dimension $\\dim N_i$ and the quadratic identity gives positive definiteness there. The joint positive-index bound applies with these subspaces and positive objective weights.\n",
+  "source_candidate_ids": [
+    "58f8bbb67f63ee23"
+  ],
+  "source_candidate_sha256": {
+    "58f8bbb67f63ee23": "df0dac3b95f7c11884a56c0988b4e56921037808c62bf1e53530b891f5451f50"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "58f8bbb67f63ee23",
+      "locator": "§2, (2)–(3), conditional Schur computation"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $m=d+1$, and let $\\phi_d$ be the uniform-simplex row capacity $\\inf_{t>0:F_x(t)>0}t/F_x(t)^{1/d}$ for $F_x(t)=\\Pr(x\\cdot U\\le t)$ and uniform $U$ on $\\Delta_d=\\{u\\in\\mathbb R_+^m:\\sum_j u_j=1\\}$. Let $X$ be nonnegative and column-stochastic with $m$ columns, and let $V$ be its active-row span. Select any collection $S$ of strictly positive rows $X_i$ with proper minimizing thresholds $t_i$, and for each set $c_i=\\mathbf 1-X_i/t_i$. Put $P(c)=\\Pr(\\sum_j c_jE_j\\ge0)$ for independent unit exponentials, $g_i=\\nabla P(c_i)$ and $H_i=\\nabla^2P(c_i)$. Define\n$$\nT_i(v)=v+\\frac{\\mathbf 1^{\\mathsf T}H_i v}{dP(c_i)}\\mathbf 1\n\\qquad (g_i\\cdot v=0).\n$$\nEach $T_i$ is injective on $g_i^\\perp$ and satisfies\n$$\nT_i(v)^{\\mathsf T}\\nabla^2\\phi_d(X_i)T_i(v)\n=-\\frac{P(c_i)^{-1/d}}{t_i dP(c_i)}v^{\\mathsf T}H_i v .\n$$\nFor each tangent tuple $(v_i)_{i\\in S}$ one has $\\sum_i T_i(v_i)\\in V$ if and only if $\\sum_i v_i\\in V$. In particular, if $X$ is a least-active maximizer of a positively weighted sum of $\\phi_d$ and $N_i\\subseteq g_i^\\perp$ are negative-definite subspaces for $H_i$, then $k+\\sum_{i\\in S}\\dim N_i\\le m$, where $k$ is the number of active rows.",
+  "subgoal_id": "pk-intake-stochastic-joint-threshold-schur-funding",
+  "title": "Common-shift Schur correction preserves simultaneous stochastic compensation"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "A planar endpoint section inequality for one proper cut and an actually present corner.",
+  "author": "PK-research-agent",
+  "candidate_id": "8e4bf44d920bc3f8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:16:36.712475+00:00",
+  "depends_on": [],
+  "draft_key": "present-corner-shifted-tail-chord",
+  "kind": "lemma",
+  "proof": "For an interior point of $B$, each support gap is strictly positive. Their sum is $W$ by balance, so $W>0$. Each point of $R_i$ satisfies $v_i\\cdot(x-y)>h_j+h_k=W-h_i$. The corner has positive area, since a point in it can be moved toward an interior point of $A$ while preserving both strict inequalities, and the resulting interior point has a small ball in the corner. Thus $T_i\\ge |R_i|>0$, and the complement of the union of the other two $A$ caps has area at least $a-U_j-U_k$, giving $T_i\\ge\\delta_i$. Properness gives a positive-area slab just above the original line, below the level shifted by $W$, so $T_i<U_i$.\n\nLet $F(t)=|A\\cap\\{x:v_i\\cdot(x-y)\\ge -h_i+t\\}|$ for $0\\le t\\le W$. Convexity of $A$ gives Minkowski containment for the interpolated caps, so planar Brunn–Minkowski gives concavity of $\\sqrt{F(t)}$. The parallel section lengths are continuous near the proper level, by concavity of the section length at interior levels, and Fubini gives $F'(0)=-\\sigma_{A,i}$. The tangent to $\\sqrt F$ at zero therefore gives\n$$\n\\sqrt{T_i}\\le \\sqrt{U_i}-\\frac{W\\sigma_{A,i}}{2\\sqrt{U_i}}.\n$$\nRearrange and use $T_i\\ge\\delta_i$ for the two upper bounds. The last bound is strict because $T_i>0$, even when $\\delta_i=0$.\n",
+  "source_candidate_ids": [
+    "111d4eb988c37817"
+  ],
+  "source_candidate_sha256": {
+    "111d4eb988c37817": "9987cbc7647a2da352ec01ca3c4568c5c3f81bfd3caea6f378405a6487d3d861"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "111d4eb988c37817",
+      "locator": "§1, Lemma 1, (1)"
+    }
+  ],
+  "statement": "Let $A,B$ be planar convex bodies, let $v_1,v_2,v_3$ be nonzero spanning normals with $\\sum_i v_i=0$, and fix $y\\in\\mathbb R^2$. Use planar area $|\\cdot|$. Set $h_i=h_B(v_i)-v_i\\cdot y$, where $h_B(v)=\\max_{x\\in B}v\\cdot x$, and put $W=\\sum_i h_i$, $H_i^A=\\{x:v_i\\cdot(x-y)\\ge-h_i\\}$, $U_i=|A\\cap H_i^A|$, and $a=|A|$.\n\nFix an index $i$ whose $A$ cut is proper, meaning that its cutting line meets $\\operatorname{int}A$. Suppose the residual corner $R_i=A\\cap\\bigcap_{j\\ne i}\\{x:v_j\\cdot(x-y)<-h_j\\}$ is nonempty. Define $T_i=|A\\cap\\{x:v_i\\cdot(x-y)\\ge W-h_i\\}|$ and $\\delta_i=(a-U_j-U_k)_+$ for the other indices $j,k$, where $(s)_+=\\max(0,s)$. Write $\\sigma_{A,i}=\\mathcal H^1(A\\cap\\{x:v_i\\cdot(x-y)=-h_i\\})/\\lVert v_i\\rVert$. Then $W>0$, $0<T_i<U_i$, $T_i\\ge\\delta_i$, and\n$$\n\\sigma_{A,i}\\le \\frac{2}{W}\\bigl(U_i-\\sqrt{U_iT_i}\\bigr)\n\\le \\frac{2}{W}\\bigl(U_i-\\sqrt{U_i\\delta_i}\\bigr),\\qquad\n\\sigma_{A,i}<\\frac{2U_i}{W}.\n$$",
+  "subgoal_id": "pk-intake-present-corner-shifted-tail-chord",
+  "title": "A present endpoint corner bounds its original section"
+}

@@ -1,0 +1,32 @@
+{
+  "advances": "Auxiliary boundary sensitivity for a uniform-simplex row capacity.",
+  "author": "PK-research-agent",
+  "candidate_id": "15649c49010660b8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:18:08.116982+00:00",
+  "depends_on": [],
+  "draft_key": "simplex-capacity-one-zero-derivative",
+  "kind": "lemma",
+  "proof": "Write $M=\\max_j b_j$ and use the $d$ barycentric coordinates corresponding to $b$ as coordinates on the simplex. For $0\\le\\epsilon<y$ and $t>\\epsilon$, the cap is\n$$\n\\left\\{u\\ge0:\\ \\sum_j u_j\\le1,\\ \\sum_j(b_j-\\epsilon)u_j\\le t-\\epsilon\\right\\}.\n$$\nThe second inequality alone defines an orthant simplex of relative volume $(t-\\epsilon)^d/\\prod_j(b_j-\\epsilon)$. The first inequality is redundant for $t\\le y$. It removes positive volume for $t>y$, since the orthant simplex extends past $\\sum_j u_j=1$ along a coordinate attaining $y$. In particular at $\\epsilon=0$ the capacity is $\\operatorname{GM}_d(b)$, with ratio strictly above it for $t>y$.\n\nFor $0<\\epsilon<y$ the ratio on $(\\epsilon,y]$ equals $A_\\epsilon t/(t-\\epsilon)$ with $A_\\epsilon=(\\prod_j(b_j-\\epsilon))^{1/d}$ and is strictly decreasing there. Above $M$ the ratio equals $t$. On $[y,M]$ it is continuous with positive cap probability, so some minimizing threshold $t_\\epsilon$ belongs to this interval. Along any subsequence with $t_\\epsilon\\to t_0$, the corresponding cap probabilities converge to $F_{(0,b)}(t_0)$ by dominated convergence: the unperturbed nonconstant linear form has probability zero at equality. Comparing with the ratio at $y$ then forces $t_0=y$. Thus $t_\\epsilon\\to y$, including the case $y=M$.\n\nThe full orthant bound at $t_\\epsilon$ and equality at $y$ give\n$$\nA_\\epsilon\\frac{t_\\epsilon}{t_\\epsilon-\\epsilon}\\le\\phi_d(\\epsilon,b)\\le A_\\epsilon\\frac{y}{y-\\epsilon}.\n$$\nBoth bounds equal $\\operatorname{GM}_d(b)\\big[1+\\epsilon(1/y-d^{-1}\\sum_j 1/b_j)\\big]+o(\\epsilon)$. This yields the stated right derivative.\n",
+  "source_candidate_ids": [
+    "6a014eb26413a72b",
+    "8095e181b6be7bf1"
+  ],
+  "source_candidate_sha256": {
+    "6a014eb26413a72b": "3719743f6abaf5cf2e4ff3b377c385001c02eed325fe2549064666cfa9006379",
+    "8095e181b6be7bf1": "3832d115fb94f667ee58c025203f97275b55c57d0418abab526bb83928a1360c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6a014eb26413a72b",
+      "locator": "§1, (2)"
+    },
+    {
+      "candidate_id": "8095e181b6be7bf1",
+      "locator": "§4, one-zero cap volume"
+    }
+  ],
+  "statement": "For $d\\ge1$, let $U$ be uniform on $\\Delta_d=\\{u\\in\\mathbb R_+^{d+1}:\\sum_j u_j=1\\}$, and for $x\\ge0$ put $F_x(t)=\\Pr(x\\cdot U\\le t)$ and $\\phi_d(x)=\\inf_{t>0:F_x(t)>0} t/F_x(t)^{1/d}$. For $b=(b_1,\\ldots,b_d)>0$ and $y=\\min_j b_j$, one has $\\phi_d(0,b)=\\operatorname{GM}_d(b)$ and\n$$\n\\left.\\frac{d}{d\\epsilon}\\phi_d(\\epsilon,b)\\right|_{\\epsilon=0+}\n=\\operatorname{GM}_d(b)\\left(\\frac1y-\\frac1d\\sum_{j=1}^d\\frac1{b_j}\\right).\n$$\nThe formula includes repeated positive entries and $d=1$.",
+  "subgoal_id": "pk-intake-simplex-capacity-one-zero-derivative",
+  "title": "Right derivative of simplex capacity at a row's unique zero"
+}

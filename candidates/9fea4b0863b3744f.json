@@ -1,0 +1,26 @@
+{
+  "advances": "Attainment for a finite-dimensional stochastic objective for an arbitrary barycentric law.",
+  "author": "PK-research-agent",
+  "candidate_id": "9fea4b0863b3744f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:18:08.119515+00:00",
+  "depends_on": [],
+  "draft_key": "stochastic-row-capacity-attainment",
+  "kind": "lemma",
+  "proof": "If $x\\le y$ coordinatewise then $F_x(t)\\ge F_y(t)$ for every $t$. Each threshold with $F_y(t)>0$ is admissible for $x$ and gives a ratio for $x$ at most its ratio for $y$. This proves monotonicity. For $\\alpha>0$, the identity $F_{\\alpha x}(\\alpha t)=F_x(t)$ gives $\\phi(\\alpha x)=\\alpha\\phi(x)$. At $x=0$ all positive thresholds have probability one, so $\\phi(0)=0$. The threshold $\\max_j x_j$ captures probability one when $x\\ne0$, giving the stated upper bound.\n\nSuppose $x^{(n)}\\to x$ and let $\\epsilon_n=\\max_j|x_j^{(n)}-x_j|$. For each fixed $t>0$ with $F_x(t)>0$, coordinatewise monotonicity and $\\sum_j\\Xi_j=1$ give\n$$\n\\phi(x^{(n)})\\le\\phi(x+\\epsilon_n\\mathbf 1)\n \\le\\frac{t+\\epsilon_n}{F_{x+\\epsilon_n\\mathbf 1}(t+\\epsilon_n)^{1/d}}\n =\\frac{t+\\epsilon_n}{F_x(t)^{1/d}}.\n$$\nTake the upper limit and then the infimum in $t$. If $x\\ne0$, let $\\delta_n=\\epsilon_n/\\min_{j:x_j>0}x_j$. For sufficiently large $n$, $0\\le\\delta_n<1$ and $x^{(n)}\\ge(1-\\delta_n)x$ coordinatewise, including at each zero entry. Thus $\\phi(x^{(n)})\\ge(1-\\delta_n)\\phi(x)$, giving the lower limit. If $x=0$, use $0\\le\\phi(x^{(n)})\\le\\max_j x_j^{(n)}$.\n\nThe stochastic domain is a finite product of compact simplices, so the continuous objective attains its maximum. The row counts of its maximizers form a nonempty finite set of integers with a minimum.\n",
+  "source_candidate_ids": [
+    "f62fe2e83b180bf3"
+  ],
+  "source_candidate_sha256": {
+    "f62fe2e83b180bf3": "b28b5be4b4b3ba5f853f544672c5ae965df29e2e883e66f9a4a712bced9e043e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f62fe2e83b180bf3",
+      "locator": "§1, definition of φ and weighted attainment"
+    }
+  ],
+  "statement": "Let $m\\ge1$ be an integer, let $d\\ge1$, and let $\\Xi$ have any probability law on $\\{u\\in\\mathbb R_+^m:\\sum_j u_j=1\\}$. For $x\\in\\mathbb R_+^m$ put $F_x(t)=\\Pr(x\\cdot\\Xi\\le t)$ and\n$$\n\\phi(x)=\\inf_{\\substack{t>0\\\\F_x(t)>0}}\\frac{t}{F_x(t)^{1/d}}.\n$$\nThen $\\phi$ is coordinatewise nondecreasing, positively homogeneous of degree one, continuous on $\\mathbb R_+^m$, and satisfies $0\\le\\phi(x)\\le\\max_j x_j$. For each fixed finite positive number of rows and fixed nonnegative weights $\\omega_i$, the objective $\\sum_i\\omega_i\\phi(X_i)$ attains a maximum over the nonnegative matrices with $m$ columns whose column sums all equal one. It has a maximizer with the fewest nonzero rows.",
+  "subgoal_id": "pk-intake-stochastic-row-capacity-attainment",
+  "title": "Continuity and attainment for stochastic row capacities"
+}

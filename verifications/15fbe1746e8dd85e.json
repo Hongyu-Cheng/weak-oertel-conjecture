@@ -1,0 +1,100 @@
+{
+  "candidate_id": "7cc865b9f263a067",
+  "candidate_sha256": "76ea322972cd8b43682a4fcc98c7577c21806dfd3027d15bb0dec7ca9959771a",
+  "checked_dependency_candidate_sha256": {
+    "2fb8b0785692a5b4": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+    "63f90fd70f747bd0": "ea4707e62235adb0158946fcd0761d23fdf840c7f11ad7b4f119b5386f301d88",
+    "7d1ee06fa4119930": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+    "82a8acc237f57498": "dd40963d7c18a0f8c7397b3f5a904737f3274c95df966b743adfd5d0c3d68e5d",
+    "ffdb2bc33d7a6750": "a9e9e895e580ec4e269b56c7cf68669ed6b394e934e2d34121443164c00d044a"
+  },
+  "checks": [
+    "Checked the source digest and locators for 1a5bfc0fdb9108c3. Sections 1–6 cover the objective and boundary analysis, section 8 gives the internal-node argument, and sections 9 and 12 exclude unique singular blocks of sizes 1–4. The proof uses no later cap-band enumeration.",
+    "Replayed the six integer direction determinants and cap membership exactly. Consecutive and next-neighbor determinants are one, so the E_s/(D_(s-1)D_s) term is R_s^(-2); the positive box follows from the PSD diagonal and next-core product. The actual-data equivalence and continuity give compact attainment.",
+    "Recomputed z_s as a strictly monotone projective coordinate. The selected-coordinate quadratic has positive curvature; in a nonselected coordinate zero curvature would leave the strictly negative linear slope -2 zbar_i/rho_i. The change of variable to the chord has nonzero derivative, so at a stationary chord either available direction strictly improves. Differentiating f_a=2z_a/rho_a gives partial_x_s f_a=(q_s/M)(2 delta_as/rho_a-f_a), yielding the stated H and row derivatives.",
+    "Euler homogeneity gives the weighted zero sum. A feasible one-coordinate increase forces strictly negative chord derivative, and a feasible one-coordinate decrease forces strictly positive derivative. Hence positive-derivative chords have an incident core at each opposite endpoint, and all-zero derivatives force core incidence at all six nodes. Positive definiteness of L permits all six decreases, which is impossible. An internal node in a positive-definite block of size at least three can move either way without affecting separating edges, also impossible.",
+    "A decrease relaxes any core product inside the positive-definite complement, where openness permits a former zero edge to become negative in L. Increasing the opposite radius across the same core with reciprocal factors preserves that separating product. Strict excess on the other affected internal edges gives nonpositive off-diagonal entries after the increase. Entrywise increase then preserves PSD via testing absolute values. The matrix criterion realizes the perturbed data with the original sector areas.",
+    "An exact cycle enumeration gives the core pairs (0,3), (0,4), (1,3), (1,4) after the positive chord is relabeled {1,4}. Blocks of sizes 3+3 are singular by the internal-node argument. In the 2+4 patterns the short block is {5,0} or {2,3}; its two endpoints belong to the other two chords and each has a positive-derivative neighbor across its own core. A nonpositive first variation R_v d_v-R_u d_u in both transfers would force both other chord derivatives strictly positive.",
+    "For three or more cores, enumerated all missing-edge subsets and verified the possible unique singular blocks are paths or singletons of sizes 1–4. For a singleton, s+2,s+3,s+4 are untouched by its separators and span the three chord labels. For {1,2}, the separate decreases at 4 and 5 yield positive derivatives for {1,4} and {2,5}, and the transfer 0 down to 1 up improves since the remaining derivative is negative. For {0,1,2}, increasing 1 and decreasing 4 force opposite strict signs on the same chord.",
+    "For {0,1,2,3}, increases at 1 and 2 give negative derivatives on their chords, and homogeneity makes the derivative on {0,3} positive. The paired exponential change at 0,3 up and 4,5 down fixes both separating core products and decreases the complementary core product. The positive-definite principal complement remains positive definite even with the new off-diagonal entry. The first variation is (R_0+R_3)d_{0,3}-R_4 d_{1,4}-R_5 d_{2,5}>0.",
+    "Disjoint singular blocks give independent null vectors. With exactly two cores both blocks are singular and their strictly positive block null vectors concatenate. The actual-body rigidity parent then gives a unique polygon with exactly one strict vertex in each of the four positive-excess sectors."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+      "fact_id": "7d1ee06fa4119930",
+      "fact_sha256": "e587b22c4c52f76df19679e8e61f467cd4e013f0efd5266a66f42c7265772ab0",
+      "hypotheses_mapping": "Six positive endpoints on distinct canonical rays with successive gaps below pi and W_s at least the core area when h_s is nonnegative. Expansion of the parent form gives this L and applies equally to the exact perturbed actual data.",
+      "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+      "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043",
+      "verification_sha256": "8d71c2e5937bd9f1de57a06963ff87f919fa685b40788d8209f2c48fbd0d2f53"
+    },
+    {
+      "candidate_sha256": "dd40963d7c18a0f8c7397b3f5a904737f3274c95df966b743adfd5d0c3d68e5d",
+      "fact_id": "82a8acc237f57498",
+      "fact_sha256": "3ecfcba63c1059c54597333038a768be07294e2212f0b2eb855f838c512d1093",
+      "hypotheses_mapping": "Same canonical endpoints and fixed positive sector areas with an actual witness; use the feasible box and compactness, independently of its inverse-weight objective.",
+      "reviewed_proof_sha256": "680eb5dc2c6c1159cab077051441757e15946bab54b333d7b49c68030668dc74",
+      "reviewed_statement_sha256": "5cedaf1336b84057302c18b3e79a6c87d5b2be7e37b987dd2c4da098aceeae91",
+      "verification_sha256": "b05aba8bbf12ff3647b18731959f07381081f32573edee8f2c7b6826b65f28a2"
+    },
+    {
+      "candidate_sha256": "ea4707e62235adb0158946fcd0761d23fdf840c7f11ad7b4f119b5386f301d88",
+      "fact_id": "63f90fd70f747bd0",
+      "fact_sha256": "545f6be8b03c04c08bb2cf10a0062a84dfed505a4905c126157fd8cab0917320",
+      "hypotheses_mapping": "Three distinct central lines, opposite canonical vectors, d_s=1 for the consecutive direction determinants, and the actual current data. A radius without an incident core has a nontrivial feasible increase interval at fixed areas and other radii.",
+      "reviewed_proof_sha256": "089b6726eb49ff7e50bec43037a3d237a394867ab79ebd6b505775606dcc4513",
+      "reviewed_statement_sha256": "bee64ecd4f214c229dfca7eea3f2cb5bd2c8c1665a368dcaf59dfc9d415cc609",
+      "verification_sha256": "2d74ba2279c43789cd1df07d2dfe3144a085dc96a09e678dd9162f4f1975eb51"
+    },
+    {
+      "candidate_sha256": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+      "fact_id": "2fb8b0785692a5b4",
+      "fact_sha256": "326d1150bfb1ff54791e0cadfb9d05e81404d449a613151ea47cd68b59abf925",
+      "hypotheses_mapping": "Use h_s>=0 and b_s from the expanded parent form. For connected singular PSD blocks the least eigenvalue is zero and the supplied least eigenvector is positive on that block.",
+      "reviewed_proof_sha256": "4748e8e25d1403e53bee831d62f59ea4e4ed213361d14c7d076ffa35e592aaf8",
+      "reviewed_statement_sha256": "ce8a642e0b42373e9cc4d8ed52bbbce8e9bea3b10a4fb272d1232bcf2a4f3592",
+      "verification_sha256": "d30fc2d5fa38556765e7d2999e64bc90ae0b7a47256f48e7fe0d54b4b479253c"
+    },
+    {
+      "candidate_sha256": "a9e9e895e580ec4e269b56c7cf68669ed6b394e934e2d34121443164c00d044a",
+      "fact_id": "ffdb2bc33d7a6750",
+      "fact_sha256": "5c601d83ba66a6126364de9fe3f2fce6be69ccd19c07142eaa2c4508e451f6f6",
+      "hypotheses_mapping": "The maximizing datum is feasible on the same six canonical rays. With exactly two cores both blocks are singular; concatenation gives the required strictly positive null vector, so all actual realizations agree and there are four open-sector vertices.",
+      "reviewed_proof_sha256": "6987abe1cbd74acde09232b557d0ad1bf2cb8868a29aced746a8d4e99cebac6d",
+      "reviewed_statement_sha256": "15d68a185b7721fb5f4309fe9ee5dddd5d87c49532f3a8631eb02b1bcb26de0a",
+      "verification_sha256": "411ee66daa53d585817e802ead14547ff6b92581027fc938165f6c7f004bc186"
+    }
+  ],
+  "finished_utc": "2026-11-08T12:21:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same fixed positive budgets, canonical data and compact feasible set. The accepted objective is one inverse chord weight, whereas the present conclusion concerns local maxima of the selected Lorentz row and multiple singular blocks.",
+      "fact_id": "82a8acc237f57498"
+    },
+    {
+      "comparison": "Same exactly-two-core rigidity conclusion for minimizers of a fixed inverse chord weight. The accepted hypothesis does not follow from Lorentz-row maximality, so its perturbations do not supply the new derivative analysis or the general multiple-block result.",
+      "fact_id": "f1b9f11ad90a1eb2"
+    },
+    {
+      "comparison": "Same actual-body rigidity after a positive full-support kernel vector is known. The candidate supplies that vector in the exactly-two-core Lorentz-maximal case and proves at least two singular blocks in all core strata.",
+      "fact_id": "ffdb2bc33d7a6750"
+    }
+  ],
+  "readability": "The cyclic relabeling acts on adjacency and the three opposite pairs only. It does not change the selected row or assume a rotation symmetry of the numeric area data.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6bb665522f4f969241351e003942036fb35625f18c7cb0ca646409d72981b643",
+  "reviewed_statement_sha256": "508acbcd50e14a2c7c13256535869c8df609f1100397f878e1ec262fe3f81d9e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T12:18:38Z",
+  "summary": "Approved. At every fixed-area local maximum of the selected row in feasible radius space, a strictly improving feasible change rules out each possible unique singular block. Exactly two cores give a positive kernel vector on all six nodes and hence the stated unique actual quadrilateral.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

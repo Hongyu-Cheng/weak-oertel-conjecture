@@ -1,0 +1,28 @@
+{
+  "advances": "An actual area identity for one ordinary triangle and its three strict vertex caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "e143ec3bc7a1b8e8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:16:36.713406+00:00",
+  "depends_on": [
+    "a19fb2ae234afb2a"
+  ],
+  "draft_key": "strict-triangle-actual-signed-row-area",
+  "kind": "lemma",
+  "proof": "The strict cap incidences and the balanced spanning normals satisfy the hypotheses of fact a19fb2ae234afb2a. In its notation $g_i=1-d_{i+1}+d_{i+2}$, $2(a_i+b_{i,i+1})=g_i+d_i$, $2(a_i+b_{i,i+2})=g_i-d_i$, and $f_i^2=g_i^2-d_i^2$. Expanding $\\sum_i g_i^2$ yields $3+3\\sum_i d_i^2-(\\sum_i d_i)^2$, giving $4-\\sum_i f_i^2=R$.\n\nMap $x$ to $(v_1\\cdot(x-y),v_2\\cdot(x-y))/H$. The determinant magnitude of this map is $D/H^2$, positive because every pair of normals is independent by balance and spanning. In these coordinates the determinant of the first two vertex position vectors is $a_1a_2-b_{12}b_{21}>0$ by the column identities $a_1=b_{21}+b_{31}$ and $a_2=b_{12}+b_{32}$. The origin is interior, so the ordered vertices have positive orientation. The two edge vectors from the third vertex, in order toward the first and second vertices, have columns\n$$\n\\begin{pmatrix}\n(g_1-d_1)/2 & -d_1\\\\\nd_2 & (g_2+d_2)/2\n\\end{pmatrix}.\n$$\nThe determinant is $[1-(d_1+d_2-d_3)^2]/4+d_1d_2=R/4$. It is twice the transformed area, hence $R=8Dk/H^2$.\n\nThe signed-row moment gives $F\\ge 2/\\sqrt{128/279}$ under the cap ceiling. Its square exceeds $(59/20)^2$ by $13/800$. The three row inequalities $f_i+(f_j+f_k)^2/4\\le2$ sum to $F+(F^2+\\sum_i f_i^2)/4\\le6$. Substitution into $R=4-\\sum_i f_i^2$ yields $R\\ge F^2+4F-20>(59/20)^2+4(59/20)-20=201/400$.\n",
+  "source_candidate_ids": [
+    "111d4eb988c37817"
+  ],
+  "source_candidate_sha256": {
+    "111d4eb988c37817": "9987cbc7647a2da352ec01ca3c4568c5c3f81bfd3caea6f378405a6487d3d861"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "111d4eb988c37817",
+      "locator": "§2, Lemma 2, (2)–(3)"
+    }
+  ],
+  "statement": "Let $K$ be a nondegenerate planar triangle of area $k$ with $y\\in\\operatorname{int}K$. Let $v_1,v_2,v_3$ be nonzero spanning normals with $\\sum_i v_i=0$. Suppose the caps $v_i\\cdot(x-y)\\ge0$ strictly capture distinct vertices $P_i$ and strictly exclude the other two vertices. Let $q_i$ be their area fractions, and use cyclic indices. Put $H=\\sum_i v_i\\cdot(P_i-y)$, $D=|\\det(v_1,v_2)|$, $a_i=v_i\\cdot(P_i-y)/H$, $b_{ij}=-v_i\\cdot(P_j-y)/H$ for $i\\ne j$, $d_i=b_{i,i+1}-b_{i,i+2}$, and $f_i=2a_i/\\sqrt{q_i}$. Then\n$$\nR:=1+\\Bigl(\\sum_i d_i\\Bigr)^2-2\\sum_i d_i^2=4-\\sum_i f_i^2=\\frac{8Dk}{H^2}>0.\n$$\nIf all $q_i\\le128/279$, then $F:=\\sum_i f_i\\ge2/\\sqrt{128/279}>59/20$ and $R\\ge F^2+4F-20>201/400$.",
+  "subgoal_id": "pk-intake-strict-triangle-actual-signed-row-area",
+  "title": "Actual triangle area in signed-row variables"
+}

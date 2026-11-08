@@ -1,0 +1,32 @@
+{
+  "advances": "An exactly feasible variation of a finite stochastic matrix with homogeneous row objectives.",
+  "author": "PK-research-agent",
+  "candidate_id": "e51b30b2ba5896c9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:18:08.119933+00:00",
+  "depends_on": [],
+  "draft_key": "stochastic-proportional-row-compensation",
+  "kind": "lemma",
+  "proof": "All factors $1+t a_i$ are positive for small signed $t$. Pure scaling retains support, and strict positivity at the selected rows permits their additional perturbations. The relation defining the coefficients $a_i$ preserves all column sums exactly. For a selected row, homogeneity gives\n$$\n f_i(X_i(t))=(1+t a_i) f_i(X_i+s_i v_i).\n$$\nSubtract the baseline value, adding and subtracting $(1+t a_i)s_i\\ell_i=t\\ell_i$. A purely scaled row contributes exactly $t a_i f_i(X_i)$. Consequently the objective change is the displayed sum of remainders plus\n$$\nt\\left[\\sum_{i\\in I}a_i f_i(X_i)+\\sum_{i\\in S}\\ell_i\\right].\n$$\nThe remainders are $o(|t|)$ by the directional derivatives. Local maximality for both signs of $t$ forces the bracket to vanish, giving the exact identity. In the one-row case $t\\mapsto s_r$ maps a neighborhood of zero onto a neighborhood of zero, and the prefactor $(1+t a_r)\\omega_r$ is positive. Nonpositivity of the capacity remainder follows. If $\\phi(X_r+s_rv_r)-\\phi(X_r)-s_rD_{v_r}\\phi(X_r)=\\frac12 s_r^2 Q+o(s_r^2)$, dividing by $\\frac12 s_r^2$ gives $Q\\le0$.\n",
+  "source_candidate_ids": [
+    "58f8bbb67f63ee23",
+    "f62fe2e83b180bf3"
+  ],
+  "source_candidate_sha256": {
+    "58f8bbb67f63ee23": "df0dac3b95f7c11884a56c0988b4e56921037808c62bf1e53530b891f5451f50",
+    "f62fe2e83b180bf3": "b28b5be4b4b3ba5f853f544672c5ae965df29e2e883e66f9a4a712bced9e043e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f62fe2e83b180bf3",
+      "locator": "§3, projective substitution and exact tangent remainder"
+    },
+    {
+      "candidate_id": "58f8bbb67f63ee23",
+      "locator": "§1, (1) and exact homogeneous funding identity"
+    }
+  ],
+  "statement": "Let $X$ be a local maximizer of $L(X)=\\sum_i f_i(X_i)$ on the nonnegative $N\\times m$ matrices with each column sum one, where each $f_i$ is finite and positively homogeneous of degree one on $\\mathbb R_+^m$. Write $I=\\{i:X_i\\ne0\\}$. Choose a set $S\\subseteq I$ of strictly positive rows and vectors $v_i\\in\\mathbb R^m$ for $i\\in S$, with $v_i=0$ for $i\\in I\\setminus S$. Suppose $\\sum_{i\\in S}v_i\\in\\operatorname{span}\\{X_i:i\\in I\\}$, and choose $a_i$ with $\\sum_{i\\in I}(v_i+a_iX_i)=0$. Assume for $i\\in S$ that the two-sided directional derivative $\\ell_i=\\frac{d}{ds}f_i(X_i+s v_i)|_{s=0}$ exists.\n\nThen the matrix with rows $X_i(t)=(1+t a_i)X_i+t v_i$ for $i\\in I$ and zero elsewhere is feasible for sufficiently small signed $t$, and, with $s_i=t/(1+t a_i)$,\n$$\nL(X(t))-L(X)\n=\\sum_{i\\in S}(1+t a_i)\n \\bigl[f_i(X_i+s_i v_i)-f_i(X_i)-s_i\\ell_i\\bigr].\n$$\nIn particular, for $S=\\{r\\}$ and $f_r=\\omega_r\\phi$ with $\\omega_r>0$, every such direction in the active span has nonpositive capacity remainder for all small $s_r$. If a second directional coefficient exists along that direction, it is nonpositive.",
+  "subgoal_id": "pk-intake-stochastic-proportional-row-compensation",
+  "title": "Exact proportional compensation of stochastic row perturbations"
+}

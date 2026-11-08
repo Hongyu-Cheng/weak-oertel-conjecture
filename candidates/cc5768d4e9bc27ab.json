@@ -1,0 +1,29 @@
+{
+  "advances": "Ordinary reconstruction of the same finite ray and sector data with at least one core. This does not impose any containment of fixed neighboring-fiber averages.",
+  "author": "PK-research-agent",
+  "candidate_id": "cc5768d4e9bc27ab",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T12:15:23.782113+00:00",
+  "depends_on": [
+    "7d1ee06fa4119930",
+    "2fb8b0785692a5b4"
+  ],
+  "draft_key": "prescribed-sector-sparse-slack-rank-polygon",
+  "kind": "theorem",
+  "proof": "Core inclusion gives $W_i\\ge D_i/2$ with $D_i>0$, so $h_i\\ge0$. By the exact ordinary sector criterion [7d1ee06fa4119930](../facts/7d1ee06fa4119930.md), whose ray-gap and area hypotheses hold, $L$ is positive semidefinite. Its connected blocks are symmetric with nonpositive off-diagonal entries and strictly negative entries on graph edges.\n\nFor a positive-definite block $C$, choose the desired vertex index $j$ and let $w=C^{-1}e_j$, where $e_j$ is the unit coordinate vector in that block. The function $x^\\top Cx/2-x_j$ is strictly convex and minimized at $w$. Replacing $x$ by its coordinatewise absolute value cannot increase either term, so uniqueness implies $w\\ge0$. If $w_j=0$ the $j$th coordinate of $Cw$ would be nonpositive. If $w_i=0$ at another index, the zero $i$th coordinate of $Cw$ forces all its neighbors to vanish, propagating to $j$ by connectivity. Thus $w>0$, including for a singleton block.\n\nFor each singular block $C$, the positive eigenvector for the least eigenvalue supplied by [2fb8b0785692a5b4](../facts/2fb8b0785692a5b4.md) is a positive null vector $w$. To see that the nullity is one, put $D=\\operatorname{diag}(w)$ in this block. The matrix $DCD$ has zero row sums and its quadratic form is $\\sum_{i<j}(-C_{ij}w_iw_j)(x_i-x_j)^2$. Connectivity makes the kernel consist of constants, also for a singleton. Concatenating the vectors chosen in all blocks gives a global $w>0$ with $Lw\\ge0$ and exactly one positive coordinate of $Lw$ in each positive-definite block.\n\nWrite $t_i=2W_i/D_i$, $a_i=t_i-1$. The harmonic charges in [2fb8b0785692a5b4](../facts/2fb8b0785692a5b4.md) for this $w$ are $r_i=h_i(1+w_i/w_{i+1})$, $s_i=h_i(1+w_{i+1}/w_i)$, with both zero on a core. The slack in the node budget is $\\delta_i=b_i-r_{i-1}-s_i=(Lw)_i/w_i$. In a positive-excess sector put $u_i=t_iw_{i+1}/(w_i+w_{i+1})$, $v_i=t_iw_i/(w_i+w_{i+1})$ and $V_i=u_iP_i+v_iP_{i+1}$. These are the coefficients $a_i/(D_i r_i)$ and $a_i/(D_i s_i)$ of [7d1ee06fa4119930](../facts/7d1ee06fa4119930.md), because $h_i=a_i/(D_i t_i)$. At a core take $u_i=v_i=1/2$. All coefficients are positive, have sum $t_i$, and their charges satisfy the node budgets. The finite construction of that fact therefore gives the convex polygon with boundary sequence $P_i,V_i,P_{i+1}$ in each sector, the prescribed data, and $0$ interior.\n\nThe turn determinant at $V_i$ is $(t_i-1)D_i$, and the turn determinant at $P_i$ is $u_{i-1}v_iD_{i-1}D_i\\delta_i$ by the turn formula in the exact sector criterion. The factors in the latter product are positive. A zero turn here gives a straight join: at a ray endpoint the neighboring insertion points lie on opposite sides of the ray line, and at a core the insertion point is the midpoint of the chord segment. Thus exactly the positive determinants contribute vertices.\n\nLet $p$ be the number of positive edges and $d$ the number of positive-definite blocks. The vertex count just proved is $p+d$. Since some edge is missing, the graph is a forest of paths and singletons with $m-p=s+d$ components. Each singular block has nullity one, so $p+d=m-s=\\operatorname{rank}L$.\n",
+  "source_candidate_ids": [
+    "9e9a3ee2a80ec95a"
+  ],
+  "source_candidate_sha256": {
+    "9e9a3ee2a80ec95a": "9e34df0f2cabf0964b8f5dfde4b2e5827e9930fde1c63fe0333fd1e93adb2e4f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9e9a3ee2a80ec95a",
+      "locator": "§§1–3, positive forcing and exact rank-controlled reconstruction"
+    }
+  ],
+  "statement": "Let $m\\ge3$ and take nonzero ray endpoints $P_i$ on distinct counterclockwise rays whose consecutive gaps are less than $\\pi$. Indices are cyclic. Put $D_i=\\det(P_i,P_{i+1})$, $E_i=\\det(P_{i-1},P_{i+1})$. Suppose the finite sector areas $W_i$ and these endpoints are realized by an ordinary convex body with $0$ interior. Define $h_i=1/D_i-1/(2W_i)$, $b_i=(D_{i-1}+D_i-E_i)/(D_{i-1}D_i)$ and\n$$\nx^\\top Lx=\\sum_i b_i x_i^2-\\sum_i h_i(x_i+x_{i+1})^2.\n$$\nIf some $h_i=0$, let $s$ count the singular connected components of the graph joining $i$ to $i+1$ when $h_i>0$, where singularity refers to the corresponding block of $L$. The same ray endpoints and all the same sector areas admit a convex polygonal realization with $0$ interior and exactly $\\operatorname{rank} L=m-s$ vertices. There is one strict vertex in each sector with $h_i>0$ and one strict ray vertex in each positive-definite component. The ray vertex may be chosen arbitrarily in its component.",
+  "subgoal_id": "pk-intake-prescribed-sector-sparse-slack-rank-polygon",
+  "title": "Sparse sector reconstruction with exactly the matrix rank in vertices"
+}

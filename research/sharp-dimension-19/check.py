@@ -56,12 +56,14 @@ for indicator in product((0, 1), repeat=n):
         balanced_large += 1
         assert all(entry >= 0 for entry in base)
         selectors = base[ordinary:]
-        owner = selectors.index(1)
+        owners = [j for j, entry in enumerate(selectors) if entry]
+        assert owners
         for j, entry in enumerate(selectors):
             if entry:
                 assert thresholds[j] > large_scale
             else:
-                assert thresholds[j] == 0 == max_scores[(j - owner) % 3]
+                assert thresholds[j] == 0
+                assert all(max_scores[(j - owner) % 3] == 0 for owner in owners)
 
 large_count = len(sites) - 1
 small_counts = [0] * 3
@@ -87,7 +89,8 @@ total = 1 + large_count * m + sum(small_counts) * small_mass
 surplus = total - 2**n * m
 slack = gamma * m - max(beta + count * small_mass for count in small_counts)
 
-assert surplus > F(21, 1000) and slack > F(2, 1000)
+assert surplus == F(6486053963, 300000000000) > 0
+assert slack == F(1235613187493, 583200000000000) > 0
 assert gamma * m / total < gamma / 2**n
 print(f"support = {len(sites)} (1 origin, {large_count} large, {sum(small_counts)} small)")
 print(f"balanced large sites = {balanced_large}")

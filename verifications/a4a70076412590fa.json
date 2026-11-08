@@ -1,0 +1,51 @@
+{
+  "candidate_id": "7c4c9bc125f16261",
+  "candidate_sha256": "640a15ef31796443ecdb934e9c869c7eb2a40458f112337e7557b1725b213999",
+  "checked_dependency_candidate_sha256": {
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "Matched 5a3c8a5af6aaf266:1 §1 (1)–(2), including positivity on all of C and the inverse-power mean computed from summed fiber volume normalized by M.",
+    "The affine map fixes each base and acts on its fiber by x↦Ax+Bz+c, multiplying every volume and M by |det A|. Hence the mixed probability measure is pushed forward exactly. Composing L with the inverse preserves positivity and its inverse-power normalization for the same r.",
+    "The projective energy scales by |det A| in the fiber interior and stays zero at mapped boundary marks, so the ratio LE/M is invariant there as well. The exponent 1/(d+1) is unchanged.",
+    "Each transformed centroid is Ag_z+Bz+c. The shear and translation cancel in X′−g′_z, and the mass-normalized covariance becomes AΣA^T. For u′=A^−Tu the covariance norm is preserved. Using α′=α−B^T u′ exactly cancels the extra drift u′·B(z−p); the correspondence is bijective and preserves the sign and magnitude of the displacement. This is an equality of normalized cap masses for fixed ε, including pure-base caps. A signed real ε obeys the same algebra if one elects to define shifted caps for it, with containment of the mark only automatic for the source's nonnegative buffer."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "d90ba05577427854",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "hypotheses": "At a fixed sampled interior mark use its affine covariance with Q=A and b=Bz+c. Its factor is the same |det A| as for mixed mass. The draft's zero boundary extension is preserved by the invertible affine maps."
+    }
+  ],
+  "finished_utc": "2026-11-08T17:53:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its covariance and cap proof is identical when the multiplier is fixed to L=1. This draft additionally transports a variable positive affine scalar with continuous coefficients and preserves its inverse-power mean.",
+      "fact_id": "6e758d95a45b4dee"
+    },
+    {
+      "comparison": "Proves the same covariance transport for its specified volume-tied profile. That body-tied profile is not the normalized full affine multiplier here.",
+      "fact_id": "32418f8d50e792af"
+    },
+    {
+      "comparison": "Allows generic nonnegative multipliers in positive-Hausdorff continuity, but its scope does not assert this affine covariance or preserve an inverse-power constraint.",
+      "fact_id": "f2ead43a963c7026"
+    }
+  ],
+  "readability": "The proof applies the affine change to both the coefficient and its continuous covector; stating the cap margin makes the shear sign check immediate.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold reading of the frozen statement and proof, followed by source, dependency, and overlap checks",
+  "reviewed_proof_sha256": "35d879b9608275112dc2907a48cc7ba66a8223f3c8d975f670b729517c7a48cf",
+  "reviewed_statement_sha256": "518fdc70fa8545a2ac9dcfcf600830d75b1567d060bbce6ce88b07fc171cb61e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:46:53Z",
+  "summary": "The normalized full affine multiplier, projective energy, covariance norm, and cap comparisons transform together under the stated maps.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,30 @@
+{
+  "advances": "This is the sharp threshold for detecting every affine zero on a full-dimensional sampled fiber by inverse-power integration. It includes joint body and affine-coefficient limits.",
+  "author": "PK-research-agent",
+  "candidate_id": "30c3f3ea847fe4b6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.935633+00:00",
+  "depends_on": [],
+  "draft_key": "affine-inverse-power-boundary-divergence-sharpness",
+  "kind": "lemma",
+  "proof": "If $h$ vanishes identically the integral is infinite. Otherwise its continuous coefficient $c$ is nonzero and it is positive at every interior point. Let $x_0\\in D$ be a zero and choose a positive-level $(d-1)$-disk $B$ inside $D$ at level $s_0>0$. Its cone with vertex $x_0$ is in $D$. The level-$s$ section of this cone has area $(s/s_0)^{d-1}\\mathcal H^{d-1}(B)$ for $0<s<s_0$. In dimension one use a point with $\\mathcal H^0$-mass one. The affine coarea formula gives the lower bound\n$$\n\\frac{\\mathcal H^{d-1}(B)}{\\lVert c\\rVert s_0^{d-1}}\\int_0^{s_0}s^{d-1-r}\\,ds=+\\infty .\n$$\nThe exponent is $-1$ at $r=d$.\n\nEvery interior point of the limiting $D$ eventually belongs to $D_j$. In fact Hausdorff convergence implies uniform support-function convergence, and an interior point has a strictly positive support margin on the unit sphere. Apply Fatou's lemma to the nonnegative functions equal to $h_j^{-r}$ on $D_j$ and zero outside. The pointwise limit on the interior of $D$ is $h^{-r}$ with $0^{-r}=+\\infty$. The boundary is Lebesgue-null, so the divergent integral yields $\\liminf_j\\int_{D_j}h_j^{-r}\\,dx=+\\infty$.\n\nFor the standard simplex the relative volume of $\\{\\sum_i x_i\\le t\\}$ is $t^d$ for $0\\le t\\le1$ by homothety. The density of $t$ under uniform probability is $d\\,t^{d-1}$. By monotone convergence the stated mean tends to $\\int_0^1 d\\,t^{d-1-r}\\,dt=d/(d-r)$. Multiplying $h_\\delta$ by the $1/r$ power of its inverse-power mean gives a normalized affine parameter with a finite nonzero limiting scale and a zero at the simplex vertex.\n",
+  "source_candidate_ids": [
+    "5a3c8a5af6aaf266"
+  ],
+  "source_candidate_sha256": {
+    "5a3c8a5af6aaf266": "ff6139d8ce0a0baa8446205623f659276ca909d5fa261de7009453c9a888cfe0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5a3c8a5af6aaf266",
+      "locator": "5a3c8a5af6aaf266:4 §3, (3)–(4)"
+    },
+    {
+      "candidate_id": "5a3c8a5af6aaf266",
+      "locator": "5a3c8a5af6aaf266:5 §3, simplex sharpness"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and $D\\subset\\mathbb R^d$ be a convex body. If $h$ is nonnegative affine on $D$ and vanishes somewhere on $D$, then $\\int_Dh^{-r}\\,dx=+\\infty$ for every $r\\ge d$. When $h$ is nonconstant, the cone lower bound has logarithmic divergence at $r=d$. If convex bodies $D_j$ converge in Hausdorff distance to $D$ and affine $h_j>0$ on $D_j$ converge coefficientwise to such an $h$, then $\\int_{D_j}h_j^{-r}\\,dx\\to+\\infty$.\n\nFor each $0<r<d$ the standard simplex $D=\\{x_i\\ge0,\\ \\sum_i x_i\\le1\\}$ has positive affine $h_\\delta=\\delta+\\sum_i x_i$, $\\delta>0$, with $|D|^{-1}\\int_D h_\\delta^{-r}\\,dx\\to d/(d-r)$ as $\\delta\\downarrow0$. Thus inverse-power-mean-one positive affine functions can converge to a finite affine function vanishing at a vertex in that exponent range.",
+  "subgoal_id": "pk-intake-affine-inverse-power-boundary-divergence-sharpness",
+  "title": "The sharp inverse-power boundary divergence threshold for affine functions"
+}

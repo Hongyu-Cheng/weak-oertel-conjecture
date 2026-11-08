@@ -1,0 +1,28 @@
+{
+  "advances": "This supplies an explicit mixed-area coefficient and the resulting opposite-middle-cap lower bound for one full triangular endpoint.",
+  "author": "PK-research-agent",
+  "candidate_id": "ac04bfb96352ad8a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.935370+00:00",
+  "depends_on": [
+    "2021348e0b2d8c9f"
+  ],
+  "draft_key": "planar-triangle-mixed-area-support-formula",
+  "kind": "lemma",
+  "proof": "Let $S=\\sum_i h_A(v_i)$. Translation of $A$ leaves both the area and $S$ unchanged because $\\sum_i v_i=0$, so assume $0\\in A$. The mixed area polynomial of 2021348e0b2d8c9f, equation (3), gives $|T+tA|=b+2tV_2(T,A)+t^2|A|$ for $t\\ge0$. We compute the right derivative at zero.\n\nWrite $h_i=h_A(v_i)$. The outer triangle $\\{x:v_i\\cdot x\\le1+th_i\\}$ contains $T+tA$. It is a translate of $(1+tS/3)T$, since the three offsets $t(h_i-S/3)$ sum to zero and hence are the three $v_i$-coordinates of a common translation vector. Its area is $b+3tS+O(t^2)$.\n\nFor each $i$ choose $a_i\\in A$ with $v_i\\cdot a_i=h_i$ and put $n_i=v_i/\\lVert v_i\\rVert$. The portion of the $i$-th facet of $T$ with $v_j\\cdot x\\le1-Ct$ for $j\\ne i$ has length $3\\lVert v_i\\rVert-O(t)$ as $t\\downarrow0$. Choose a fixed $C>0$ large enough that for every $0\\le\\lambda\\le th_i/\\lVert v_i\\rVert$ and every $j\\ne i$, both $v_j\\cdot(\\lambda n_i)$ and $v_j\\cdot(\\lambda n_i-ta_i)$ are at most $Ct$. The strips $x+\\lambda n_i$ from these shortened facets then lie in $T+t a_i$, because subtracting $ta_i$ satisfies all three constraints of $T$. For $\\lambda>0$ they are outside $T$ only in the $i$-th constraint. They are therefore disjoint from $T$ and from one another there. Since $T\\subseteq T+tA$, their total area adds $3tS-O(t^2)$ to the lower bound. The derivative of the area is thus $3S$. Setting $t=1$ and scaling by $1/4$ proves the area identity.\n\nFor $x\\in R_i$ and $y\\in T$, the midpoint has $v_i\\cdot(x+y)/2\\le0$ and is in $K$. The cutting line has zero planar area, so this complementary middle cap has area $|K|-q_i$. Apply the area identity to $R_i$ to conclude.\n",
+  "source_candidate_ids": [
+    "b9b0fda52c8adffe"
+  ],
+  "source_candidate_sha256": {
+    "b9b0fda52c8adffe": "5e5b70785e535e72a7633cdd3993e119f63d3cb27b4079388953be922b051e61"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b9b0fda52c8adffe",
+      "locator": "b9b0fda52c8adffe:02 §4, (7)–(9), including the opposite residual cuts"
+    }
+  ],
+  "statement": "Let $(v_1,v_2,v_3)=((1,0),(0,1),(-1,-1))$, $T=\\{x:v_i\\cdot x\\le1,\\ i=1,2,3\\}$, and $b=|T|=9/2$. For every planar convex body $A$, writing $h_A$ for its support function,\n$$\n|(A+T)/2|=\\frac{|A|+b+3\\sum_j h_A(v_j)}4.\n$$\nIf $(A+T)/2\\subseteq K$ for a planar convex body $K$, the same expression lower-bounds $|K|$. For every $i$ such that $R_i=A\\cap\\{v_i\\cdot x\\le-1\\}$ has positive area, writing $q_i=|K\\cap\\{v_i\\cdot x\\ge0\\}|$,\n$$\n|K|-q_i\\ge\\frac{|R_i|+b+3\\sum_j h_{R_i}(v_j)}4.\n$$",
+  "subgoal_id": "pk-intake-planar-triangle-mixed-area-support-formula",
+  "title": "Exact planar mixed area against the normalized triangle"
+}

@@ -1,0 +1,42 @@
+{
+  "advances": "One lift over the original positive base in its saturated affine span. The law is intrinsic H^m in continuous ambient dimension D, which can exceed m. Weak-limit representation and one-way pointwise transfer.",
+  "author": "PK-research-agent",
+  "candidate_id": "9383ac00bc6b9e51",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.933591+00:00",
+  "depends_on": [
+    "d4cbefe418299993",
+    "2beba099308501dc",
+    "04c4009af6a7a76c"
+  ],
+  "draft_key": "global-intrinsic-thin-fiber-ball-lift",
+  "kind": "theorem",
+  "proof": "The common bounded region and simultaneous finite weak convergence give $\\sum_zp_z=1$. Fix $z\\in P_+$ and a point $x\\in K_z$. Choose $x_\\ell\\in K_{z,\\ell}$ tending to $x$ and a common radius $R>0$ for the original fibers. For each $\\rho>0$ choose $0<t<\\min(1,\\rho/(4R))$. The homothetic copy $(1-t)x_\\ell+tK_{z,\\ell}$ lies in $K_{z,\\ell}\\cap\\overline B(x,\\rho)$ for all sufficiently large $\\ell$. It carries fraction $t^m$ of the uniform measure of the fiber, whose volume is positive eventually because $p_z>0$. The conditional probabilities converge to $\\mu_z/p_z$. Portmanteau on the closed ball gives it conditional limit mass at least $t^m$. Applying this inside every open neighborhood and using Hausdorff convergence to exclude all points outside $K_z$ proves exact support equality. By convex volume continuity and $|K_{z,\\ell}|_m\\le M_\\ell\\to0$, $q_z<m$.\n\nFor d4cbefe418299993, replace $C_\\ell$ by $\\operatorname{conv}\\bigcup_{z\\in P}(\\{z\\}\\times K_{z,\\ell})$, which has the same integer fibers by containment in $C_\\ell$ and lies in one compact set. Take its product with $[-1,1]$ in an extra continuous coordinate and cut at level zero of that coordinate. This gives the parallel $N=m$ planes, with normalizer $1/M_\\ell$. Weak convergence survives the isometric embedding. Removing the dummy coordinate from the resulting inequality yields, for every integer incidence and compact $A_i$ of positive $\\mu_{z_i}$-mass,\n$$\n\\mu_j\\Bigl(\\sum_i\\lambda_i A_i\\Bigr)^{1/m}\\ge\\sum_i\\lambda_i\\mu_{z_i}(A_i)^{1/m}.\n$$\nIn particular the same fact yields the claimed lattice completeness. Apply 2beba099308501dc to these joint measures. The support Minkowski combinations are contained in the corresponding target support, and each incidence uses one common support dimension $q$ and one tangent space $V$. Writing the affine supports as $b_z+V$ within that incidence, with $b_z\\perp V$, gives $b_j=\\sum_i\\lambda_i b_{z_i}$ by the support inclusion.\n\nOn each stratum of equal dimension and tangent use the density and canonical ball part of 04c4009af6a7a76c with $N=m$. Its joint inequality is the one just obtained, and $q<m$ holds on every stratum. It gives the asserted density representative and in $V\\times\\mathbb R^r$, $r=m-q$, the centered ball bodies of radius $(f_z(b_z+v)/\\kappa_r)^{1/r}$ over $v$, or the ball of radius $(p_z/\\kappa_m)^{1/m}$ at a point when $q=0$. The same predecessor proves that their Minkowski combinations over every original incidence within the stratum are contained in the target body. Its graph placement preserves those incidences exactly.\n\nEmbed each ball body by $(v,u)\\mapsto(b_z+v,\\iota_r u)$, where $\\iota_r$ is the inclusion into the first $r$ standard axes of a single $\\mathbb R^m_y$. This map is a fiberwise isometry. Its image $L_z$ has dimension $m$ and, by the orthogonal product formula, intrinsic mass $p_z$ and original-coordinate pushforward $\\mu_z$. Every incidence uses a common $V$ and the same $\\iota_r$, and the offsets average exactly. Thus the Minkowski inclusion transfers to these embedded bodies over the original integer bases. Every point of their hull above an integer base is an anchored convex combination of placed points. Grouping repeated bases by convexity proves that it belongs to the specified $L_j$. The reverse inclusion holds by construction and the lattice completeness excludes other integer bases.\n\nTranslate the base by a chosen $z_0\\in P_+$. The space spanned by the resulting integer differences meets $\\mathbb Z^k$ in a saturated lattice of rank $k'$. A basis of this induced lattice gives coordinates with exactly the sampled integer points. In these coordinates let $G$ be the affine hull of the lifted hull. Its projection is $\\mathbb R^{k'}$. The vertical kernel $W$ of its direction space contains every $m$-dimensional lifted fiber direction, so $D=\\dim W$ lies in $[m,2m]$. Choose an affine section $z\\mapsto(z,b(z))$ of $G$ and a linear isometry $T:W\\to\\mathbb R^D$. Then $(z,X)\\mapsto(z,T(X-b(z)))$ is an affine bijection from $G$ to $\\mathbb R^{k'}\\times\\mathbb R^D$. It maps the lifted hull to a full-dimensional body and preserves intrinsic fiber measure exactly because on each fixed base it is a translation followed by an isometry. Composing its inverse with projection to $x$ and the inverse lattice chart gives $\\Pi$ and the asserted full probability pushforward. For every closed halfspace containing the projected mark, its affine preimage is a closed halfspace containing the lifted mark or the whole reduced space, with exactly the same mass. The depth inequality follows by taking the infimum.\n",
+  "source_candidate_ids": [
+    "4103337048e3d0cb"
+  ],
+  "source_candidate_sha256": {
+    "4103337048e3d0cb": "86c01f394a0eda63b948d593a02316b5c169bba5149d6e9e6c8909a607945597"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4103337048e3d0cb",
+      "locator": "4103337048e3d0cb:1 §2, exact support and density (1)"
+    },
+    {
+      "candidate_id": "4103337048e3d0cb",
+      "locator": "4103337048e3d0cb:7 §1 and §5, (10)–(12), global lift"
+    },
+    {
+      "candidate_id": "4103337048e3d0cb",
+      "locator": "4103337048e3d0cb:8 §6, (13)–(14), relative affine reduction"
+    },
+    {
+      "candidate_id": "4103337048e3d0cb",
+      "locator": "4103337048e3d0cb:9 §7, (15), closed-halfspace depth transfer"
+    }
+  ],
+  "statement": "Fix $k\\ge0$ and $m\\ge1$. Let $C_\\ell\\subset\\mathbb R^k\\times\\mathbb R^m$ be compact and convex. Assume that all $C_\\ell$ have the same finite nonempty integer fiber base set $P$, that $K_{z,\\ell}=(C_\\ell)_z$ for $z\\in P$ lie in one bounded region, and that $M_\\ell=\\sum_{z\\in P}|K_{z,\\ell}|_m>0$ tends to zero. Suppose $K_{z,\\ell}\\to K_z$ in Hausdorff distance and $\\mathbf1_{K_{z,\\ell}}dx/M_\\ell\\rightharpoonup\\mu_z$ for every $z\\in P$. Put $p_z=|\\mu_z|$ and $P_+=\\{z:p_z>0\\}$. Then $\\sum_zp_z=1$ and $P_+=\\operatorname{conv}(P_+)\\cap\\mathbb Z^k$. For $z\\in P_+$, $\\operatorname{supp}\\mu_z=K_z$ and $q_z=\\dim\\operatorname{aff}K_z<m$. For $q_z>0$, the density $f_z$ of $\\mu_z$ relative to $\\mathcal H^{q_z}$ on $K_z$ has a bounded representative whose $1/(m-q_z)$ power is upper semicontinuous and concave on $K_z$ and positive and continuous on $\\operatorname{relint}K_z$. For $q_z=0$, $\\mu_z$ is a point mass of size $p_z$.\n\nThere exist compact convex $L_z\\subset\\mathbb R^m_x\\times\\mathbb R^m_y$ of intrinsic affine dimension $m$, using a single additional $\\mathbb R^m_y$, with $\\mathcal H^m(L_z)=p_z$ and $(\\operatorname{pr}_x)_\\#(\\mathcal H^m|_{L_z})=\\mu_z$. Every combination of bases $z_i\\in P_+$ with $\\lambda_i>0$, $\\sum_i\\lambda_i=1$ and $j=\\sum_i\\lambda_i z_i\\in\\mathbb Z^k$ satisfies $\\sum_i\\lambda_iL_{z_i}\\subset L_j$. The hull $H$ of the placed $L_z$ has exactly those integer fibers and no other integer bases.\n\nIn saturated coordinates on the affine base span, $H$ is affinely equivalent to a full-dimensional convex body $H'\\subset\\mathbb R^{k'}\\times\\mathbb R^D$, where $k'=\\dim\\operatorname{aff}P_+\\le k$ and $m\\le D\\le2m$. The equivalence preserves the sample census and is an isometry on each continuous fiber. An affine map $\\Pi$ from the reduced ambient space pushes the intrinsic mixed $\\mathcal H^m$ probability of $H'$ to $\\sum_{z\\in P_+}\\delta_z\\otimes\\mu_z$. It maps every mixed point of $H'$ to the corresponding physical limiting fiber and its closed-halfspace depth cannot decrease under this pushforward.",
+  "subgoal_id": "pk-intake-global-intrinsic-thin-fiber-ball-lift",
+  "title": "A single intrinsic ball lift for normalized thin-fiber laws"
+}

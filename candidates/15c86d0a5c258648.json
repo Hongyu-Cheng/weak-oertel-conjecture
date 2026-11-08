@@ -1,0 +1,36 @@
+{
+  "advances": "Actual mixed d-volume and all closed ambient halfspaces. The conclusions concern the two selected strata.",
+  "author": "PK-research-agent",
+  "candidate_id": "15c86d0a5c258648",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:47:32.362988+00:00",
+  "depends_on": [
+    "155691fc3768c06f",
+    "669858b8fc253d7c",
+    "e1a87cecde4fb89d",
+    "cec377ec22e9690f",
+    "5aeb5916857f97a9"
+  ],
+  "draft_key": "actual-deepest-retained-cap-and-energy-strata",
+  "kind": "theorem",
+  "proof": "Let $\\beta$ be the largest actual depth. For upper semicontinuity, if $Y_j\\to Y$ and $H$ is any closed halfspace containing $Y$, parallel enlargements of $H$ by a positive amount contain $Y_j$ eventually. Their finite masses decrease to $\\mu(H)$ as the enlargement decreases to zero. Infimizing over $H$ gives the upper semicontinuity. The center of an interior ball in a positive fiber has positive depth because any containing ambient halfspace captures at least half that ball, including constant traces. Hence compactness of $S$ gives $\\beta>0$ and a nonempty compact $\\mathcal Y$.\n\nA point $(p,y)$ outside the ordinary interior of its own fiber, with $y\\in K_p$, admits a continuous unit supporting normal $u$ with $u\\cdot y=h_{K_p}(u)$. Apply 155691fc3768c06f to the finite family of all nonempty integer fibers. They are compact convex and the required anchored Minkowski inclusion is furnished by convexity of $C$, even for lower-dimensional fibers. Its affine support slope $A$ makes the closed cap\n$$\nu\\cdot x-A\\cdot(z-p)\\ge h_{K_p}(u)\n$$\ncontain $(p,y)$ and restrict on every fiber to a subset of a hyperplane of zero $d$-volume. Thus every point in $\\mathcal Y$ is own-interior.\n\nContinuity of the own-fiber retained mass follows from 669858b8fc253d7c for each fixed positive body. There are finitely many bases, so $\\tau$ is attained on $\\mathcal Y$, and it is positive by the feasible indicator of a centered small ball. Any closed halfspace containing a positive convex combination of marks contains at least one input. Thus a combination of deepest marks remains deepest whenever its base is integral, because convexity of $C$ makes the target an actual sampled point. In particular the deepest marks in each fiber form a convex set. Fixed-body strict quasiconcavity of the retained mass gives at most one maximizer over such a set.\n\nIn an integral-target combination of marks in $\\mathcal Y_\\tau$, joint retained-cap concavity gives target retained mass at least $\\tau$. It equals $\\tau$ by maximality on $\\mathcal Y$. The joint equality theorem now makes the input caps centered at their marks homothetic, with target the Minkowski combination. All input masses equal $\\tau$, so the centered caps agree, including the target. For every integer base in the convex hull of the selected bases, a convex representation by them has such a target after omitting zero weights. Two bases of the same coordinate parity have an integral midpoint, so their caps are translates. This proves both base assertions.\n\nThe stratum $\\mathcal Y_\\tau$ is nonempty and finite, so energy attains a common positive maximum on $\\mathcal Z$. A positive convex combination of $\\mathcal Z$ with integral base is in $\\mathcal Y_\\tau$ by the preceding argument. All its input and target marks are own-interior and the target fiber contains the weighted Minkowski sum. The containing-body part of 5aeb5916857f97a9 gives target energy root at least the common selected root; maximality makes this equality. The same theorem gives exact target inclusion equality and positive homothety of the centered whole bodies. Changing variables in the energy integral scales it by the $d$th power of the homothety factor. Equal positive energies therefore force all factors to be one. The target lies in $\\mathcal Z$ and the same-parity midpoint argument gives the bound on translation classes.\n",
+  "source_candidate_ids": [
+    "38e8cdfda56d1d3d"
+  ],
+  "source_candidate_sha256": {
+    "38e8cdfda56d1d3d": "0fdab044b6e223bf50c47f801630c41584512d10549d242ee85184051c0e5205"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "38e8cdfda56d1d3d",
+      "locator": "38e8cdfda56d1d3d:07 §6, (14)–(16), Theorem C, actual ordinary deepest retained-cap stratum"
+    },
+    {
+      "candidate_id": "38e8cdfda56d1d3d",
+      "locator": "38e8cdfda56d1d3d:09 §8, (17)–(18), successive retained-mass then energy tie-break"
+    }
+  ],
+  "statement": "Let $n\\ge0$, $d\\ge1$, and let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a compact convex body whose integer fibers $K_p=\\{x:(p,x)\\in C\\}$ have positive total $d$-volume. Include every nonempty integer fiber in the mixed set $S$ and let $\\mu$ sum ordinary $d$-volume over these fibers. For $Y\\in S$ define $\\Delta(Y)=\\inf_{H\\ni Y}\\mu(H)$ over all closed ambient halfspaces, and write $\\mathcal Y$ for the points maximizing this depth. All points in $\\mathcal Y$ are in the ordinary interiors of their own fibers. Use the physical retained mass $T_K(y)$ and its unique optimal cap $D_K(y)$, defined by maximizing $\\int_K f$ over measurable $0\\le f\\le1$ with $\\int_K(x-y)f(x)\\,dx=0$.\n\nThere is an attained positive maximum $\\tau$ of $T_{K_p}(y)$ over $(p,y)\\in\\mathcal Y$. Its attaining stratum $\\mathcal Y_\\tau$ has at most one mark at each base. For any positive convex combination of marks $(p_i,y_i)$ in this stratum whose target base $p=\\sum_i\\lambda_i p_i$ is integral, the target $(p,y)$ with $y=\\sum_i\\lambda_i y_i$ lies in $\\mathcal Y_\\tau$, and\n$$\nD_{K_{p_i}}(y_i)-y_i=D_{K_p}(y)-y\\quad\\text{for every }i,\n\\qquad D_{K_p}(y)=\\sum_i\\lambda_iD_{K_{p_i}}(y_i).\n$$\nThe set of its bases equals the integer points of its convex hull, and at most $2^n$ translation classes of retained caps occur.\n\nOn $\\mathcal Y_\\tau$, let $\\mathcal Z$ be the marks maximizing the ordinary projective energy\n$$\nE_K(y)=\\inf_{a:\\ 1+a\\cdot(x-y)>0\\ (x\\in K)}\\int_K[1+a\\cdot(x-y)]^{-d-1}\\,dx.\n$$\nThen $\\mathcal Z$ is nonempty and finite. For each positive convex combination of its marks with integral target base, the target is in $\\mathcal Z$ and\n$$\nK_{p_i}-y_i=K_p-y\\quad\\text{for every }i,\n\\qquad K_p=\\sum_i\\lambda_iK_{p_i}.\n$$\nThere are at most $2^n$ translation classes of these centered whole fibers.",
+  "subgoal_id": "pk-intake-actual-deepest-retained-cap-and-energy-strata",
+  "title": "Physical retained-cap and energy strata on actual deepest points"
+}

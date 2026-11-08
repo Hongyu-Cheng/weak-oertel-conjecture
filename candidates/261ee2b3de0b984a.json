@@ -1,0 +1,26 @@
+{
+  "advances": "An exact one-dimensional profile identity for conditional middle-face costs. It does not establish the separate geometric deformation theorem.",
+  "author": "PK-research-agent",
+  "candidate_id": "261ee2b3de0b984a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.857987+00:00",
+  "depends_on": [],
+  "draft_key": "middle-face-tent-green-signed-roof",
+  "kind": "lemma",
+  "proof": "Split the kernel integral at $s=t$. The two terms are $(\\beta-t)\\int_\\alpha^t(s-\\alpha)f(s)\\,ds/(\\beta-\\alpha)$ and $(t-\\alpha)\\int_t^\\beta(\\beta-s)f(s)\\,ds/(\\beta-\\alpha)$. Differentiating cancels the moving boundary terms and gives the stated regularity, endpoint values and $-U''=f$. As a function of $s$ the kernel is the unit tent multiplied by $(t-\\alpha)(\\beta-t)/(\\beta-\\alpha)>0$. This proves the cost and sign equivalence; the derivative signs follow from the endpoint values.\n\nIntegrate $-H U''$ by parts on the affine pieces. Since $U$ vanishes at both endpoints, the boundary contribution is $H(\\alpha)U'(\\alpha)-H(\\beta)U'(\\beta)$, and the interior contribution is minus the sum of $U$ times the jumps of $H'$. The two jumps are $-1/(c-\\alpha_0)$ at $c$ and $-1/(\\beta_0-d)$ at $d$; when $c=d$ they add at one point. The two endpoint values of $H$ are $-(\\alpha_0-\\alpha)/(c-\\alpha_0)$ and $-(\\beta-\\beta_0)/(\\beta_0-d)$. This gives the formula. In the whole-face case the endpoint contributions vanish, and the nonnegative interior terms also exhibit this trapezoid as a nonnegative linear combination of the two normalized tents.\n\nIf $\\alpha_0>\\alpha$, for example, choose $h>0$ with $\\alpha+2h<c$, and prescribe $U(\\alpha+x)=4hx-3x^2$ for $0\\le x\\le h$, $(2h-x)^2$ for $h\\le x\\le2h$, and zero beyond. This $C^1$ nonnegative $U$ is the stated potential of $f=-U''$, by uniqueness of the zero-endpoint solution, and gives a negative signed cost. Reflect the construction for right-hand trimming alone. Taking $f$ to be a nonzero nonnegative step supported where $H>0$ instead gives $U\\ge0$ and positive cost. The identity requires no assertion that a signed shape path exists for arbitrary $H$.\n",
+  "source_candidate_ids": [
+    "929f9f6bc9acea34"
+  ],
+  "source_candidate_sha256": {
+    "929f9f6bc9acea34": "0168c61d8e5db25fa41837f403e697b7873b9c9c2a166451c911bd6f27e57cf3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "929f9f6bc9acea34",
+      "locator": "929f9f6bc9acea34:03 §3, (5)–(6), Green potential and signed roof"
+    }
+  ],
+  "statement": "Let $F=[\\alpha,\\beta]$, $\\alpha<\\beta$, and $f$ be a bounded piecewise constant function on $F$. Put\n$\nU(t)=\\int_\\alpha^\\beta\n\\frac{(\\min(t,s)-\\alpha)(\\beta-\\max(t,s))}{\\beta-\\alpha} f(s)\\,ds.\n$\nThen $U\\in C^1(F)$, $U(\\alpha)=U(\\beta)=0$, and $-U''=f$ almost everywhere. For the piecewise affine tent $T_t$ of height one at $t\\in(\\alpha,\\beta)$ and zero at the endpoints,\n$\n\\int_F T_t f=\\frac{(\\beta-\\alpha)U(t)}{(t-\\alpha)(\\beta-t)}.\n$\nConsequently nonnegative costs for all interior peaks are equivalent to $U\\ge0$, and then $U'(\\alpha)\\ge0\\ge U'(\\beta)$.\n\nFor $\\alpha\\le\\alpha_0<c\\le d<\\beta_0\\le\\beta$, define $H(s)=\\min\\{1,(s-\\alpha_0)/(c-\\alpha_0),(\\beta_0-s)/(\\beta_0-d)\\}$. Then\n$\n\\int_F H f\n=\\frac{U(c)-(\\alpha_0-\\alpha)U'(\\alpha)}{c-\\alpha_0}\n+\\frac{U(d)+(\\beta-\\beta_0)U'(\\beta)}{\\beta_0-d}.\n$\nIn particular $U\\ge0$ implies nonnegative cost for a trapezoid based on the whole face, including a tent with $c=d$. With a positive outer trimming length, $U\\ge0$ alone does not fix the sign of the signed cost. For an already justified face variation with signed normal speed $H/2$, the profile term is one half this integral.",
+  "subgoal_id": "pk-intake-middle-face-tent-green-signed-roof",
+  "title": "Green potential for face tents and signed roofs"
+}

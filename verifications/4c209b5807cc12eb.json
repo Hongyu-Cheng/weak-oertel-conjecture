@@ -1,0 +1,72 @@
+{
+  "candidate_id": "4fc4de392515dd3a",
+  "candidate_sha256": "ba64fd5e879123a9035ea3af46aa47da7dd481b4ae2ded801b7fd447d63a9de5",
+  "checked_dependency_candidate_sha256": {
+    "84cd8a85417b0d7a": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e",
+    "d1b238a7600118e2": "28d81d07a4f3dde4926767d57e7abdfc7db8db711817dd4a71f72259c1f4fba2",
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "23587fb4045280b8 §5 and 4e871da0351ca07a §1 use the same source denominator, support field, tangent extension and factor d. At the attained positive minimum denominator the left tangent has negative slope, agrees in value and derivative, and stays positive below it. The centered support is positive on the unit sphere.",
+    "The positive projective map takes segments to segments and rays through the source to the same rays. Its determinant and the optimal first-moment identity in d90ba05577427854 give a full-dimensional image of centroid zero.",
+    "The radial Jacobian sends h_K(ν)f(L) dS to ρ^d/L^d on the sphere. The integral over the through-mark directions is exactly d times the image cap volume, including the two-ray formula when d=1. Grünbaum applies to the image at its centroid.",
+    "The propagated final field dominates every prescribed source seed. For a proper containing cap use its parallel through-mark restriction and note that proper boundaries are surface-null. Whole-fiber traces, including closed pure-base boundaries, use selector one.",
+    "Distinct sampled bases contribute disjoint terms. On a shared base the maximum over individual guaranteed values follows without double counting. The lower bound uses prescribed seed cost d_i and need not scale with added incoming cost."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d1b238a7600118e2",
+      "candidate_sha256": "28d81d07a4f3dde4926767d57e7abdfc7db8db711817dd4a71f72259c1f4fba2",
+      "hypotheses": "Apply it to the pointwise maximum of all marked fields at each site. They satisfy its nonnegative continuous convex-in-x assumptions, and the output dominates every such seed on the chosen compatible family.",
+      "review_status": "Independent admission approval required for this exact same-batch candidate.",
+      "reviewed_proof_sha256": "3e7b846453d8a11e57f8310fe3499e6aa05d2e5d29d00be7b8740eb024edb117",
+      "reviewed_statement_sha256": "e1d03d4680603f645e4340f67839ae93d4364197437ec344a11283fd6d244dba"
+    },
+    {
+      "candidate_id": "d90ba05577427854",
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "fact_id": "d90ba05577427854",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "hypotheses": "Apply to the full-dimensional convex K_pi at its own-interior mark y_i. The positive optimizer and projective Jacobian give the transformed centroid through the first moment ∫(x−y_i)L^(−d−2)=0.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+    },
+    {
+      "candidate_id": "84cd8a85417b0d7a",
+      "candidate_sha256": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e",
+      "fact_id": "84cd8a85417b0d7a",
+      "fact_sha256": "16bd146b2050f339f2be11288d8c222c5ab509906f9b840ab78ad17f7f96786b",
+      "hypotheses": "With one ceiling and a singleton base, its actual selector compares the final radial loss to the seed on a proper or full containing trace.",
+      "reviewed_proof_sha256": "387bb6105dddce5e09b51c4e0a5eca4c06f2132620577a14ab7c507ac6d2593c",
+      "reviewed_statement_sha256": "edb6bc1e4f85bd5b779ce923003896f53e7e6834fc8a3e8e50fd2d59b4c674ed"
+    },
+    {
+      "hypotheses": "The transformed set is a full-dimensional compact convex body of centroid zero. A through-source continuous halfspace is the same closed halfspace in the transformed rays. Its retained fraction is at least (d/(d+1))^d.",
+      "reference": "Grünbaum's centroid halfspace inequality, stronger centroid form of Theorem 2, §3",
+      "url": "https://doi.org/10.2140/pjm.1960.10.1257"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:56:42Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses a single centered inverse-power seed with a global affine denominator and anchored majorant. The reviewed claim gives simultaneous marked credit under the distinct upward construction.",
+      "fact_id": "b29b972734a1208b"
+    }
+  ],
+  "readability": "The source cost and the larger total loss after propagation have different roles.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, source and predecessor comparison, and exact computations where applicable.",
+  "reviewed_proof_sha256": "df306254eaee19742cedc7d92c529ca894a6077a001f9175ccfffa1843321390",
+  "reviewed_statement_sha256": "3d62be7899ed1150c48c9646697446b2b77425b392eac200c87c1bd9eb030ff8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:50:18Z",
+  "summary": "The upward erosion preserves the marked projective credit on each actual containing cap, with addition across distinct base fibers.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

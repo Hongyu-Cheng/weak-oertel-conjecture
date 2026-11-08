@@ -1,0 +1,28 @@
+{
+  "advances": "Necessary quantitative constraints at a hypothetical below-target middle critical source with strict nonheaviness.",
+  "author": "PK-research-agent",
+  "candidate_id": "e01b2ec7daa946ba",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.857517+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "critical-centroid-slope-compensation",
+  "kind": "lemma",
+  "proof": "The ordinary centroid inequality, the full-mass specialization of 6769574fc1bd9f8d, gives at least $\\gamma_d$ times the whole fiber volume whenever a trace contains its centroid. Every pair of whole fiber volumes has sum greater than $M/2$, so no critical cap contains two centroids. If an endpoint centroid is captured, subtracting its own guarantee from $Q$ gives $q_i<\\gamma_dc$, since that endpoint and $K$ have combined volume exceeding $M/2$. The middle traces cover the whole plane by positive normal balance, so $I_0\\ne\\varnothing$. For $i\\in I_0$, $q_i\\ge\\gamma_dc$ and $Q-q_i<\\gamma_d(M/2-c)<\\gamma_d\\min(a,b)$.\n\nFor a cap $\\{u\\cdot x\\ge s\\}$ below the centroid guarantee, the centroid must satisfy $u\\cdot g_D<s$. The difference from the parallel cap through $g_D$ is a slab of thickness $s-u\\cdot g_D$ in the functional coordinate $u\\cdot x$. Fubini bounds its volume by $S_D(u)(s-u\\cdot g_D)$, while the centroid inequality bounds it below by $\\gamma_d|D|-w$. The section supremum is positive by an inner ball and finite by an outer ball; for $d=1$ nonempty sections have $\\mathcal H^0=1$. This yields $\\ell_i^\\pm\\le-D_i^\\pm$ on $I_0$, and $\\ell_i^-+\\ell_i^+=2u_i\\cdot(m-y)$. As $\\ell_i^0\\ge0$ on $I_0$, the bound on the slope follows.\n\nThe three margin sum identities follow directly by continuous balance. For each endpoint, its weighted positive sum minus its weighted negative magnitude is the indicated signed drift, while the negative magnitude is at least the sum of the respective $D_i^\\pm$ over $I_0$. This gives the individual positive-part bounds and, on adding the two exact identities, the stated bound for $P_-+P_+$. The slopes $u_i\\cdot(m-g)$ also have zero weighted sum, so their weighted positive part equals their negative magnitude. The lower bound for the negative slopes on $I_0$ yields the final inequality.\n",
+  "source_candidate_ids": [
+    "0354c832e0d018af"
+  ],
+  "source_candidate_sha256": {
+    "0354c832e0d018af": "2d177626d86d3abaedb3514e5bf4cc5dd88dd4a837f1a7190717048a8ba9b60f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0354c832e0d018af",
+      "locator": "0354c832e0d018af:04 §§4–5, (9)–(15)"
+    }
+  ],
+  "statement": "Let $A,K,B$ be $d$-dimensional convex bodies at $-1,0,1$, $(A+B)/2\\subseteq K$, of volumes $a,c,b$. Set $M=a+c+b$ and $\\gamma_d=(d/(d+1))^d$. Suppose $a,b,c<M/2$ and a finite family of caps with margins $u_i\\cdot(x-y)+\\beta_i z$, $u_i\\ne0$, is critical at $(0,y)$ with common raw mass $Q<\\gamma_d M/2$ and $\\sum_i\\lambda_i u_i=0,\\ \\lambda_i>0$. Write $U_i,q_i,V_i$ for the three cap volumes, $g_A,g,g_B$ for the ordinary centroids, $m=(g_A+g_B)/2$, and $\\Delta=\\sum_i\\lambda_i\\beta_i$. No cap contains two lifted centroids. Every cap containing an endpoint centroid has $q_i<\\gamma_dc$ and misses the lifted middle centroid. Let $I_0$ be the nonempty set containing the lifted middle centroid. For $i\\in I_0$, $q_i\\ge\\gamma_dc$ and $U_i+V_i<\\gamma_d\\min(a,b)$.\n\nFor a body $D$ and $u\\ne0$ write $S_D(u)=\\sup_s\\mathcal H^{d-1}(D\\cap\\{u\\cdot x=s\\})/\\|u\\|$. A cap of mass $w<\\gamma_d|D|$ misses $g_D$ by a signed functional deficit at least $(\\gamma_d|D|-w)/S_D(u)$. Put $D_i^-=(\\gamma_da-U_i)/S_A(u_i)$, $D_i^+=(\\gamma_db-V_i)/S_B(u_i)$ on $I_0$. Then $-u_i\\cdot(m-g)\\ge(D_i^-+D_i^+)/2$ there. Write $\\ell_i^-=u_i\\cdot(g_A-y)-\\beta_i$, $\\ell_i^0=u_i\\cdot(g-y)$, $\\ell_i^+=u_i\\cdot(g_B-y)+\\beta_i$. Their respective $\\lambda_i$-weighted sums are $-\\Delta,0,\\Delta$. Set $P_\\pm=\\sum_i\\lambda_i(\\ell_i^\\pm)_+$. Then\n$\n\\begin{aligned}\nP_-&\\ge \\Big(\\sum_{i\\in I_0}\\lambda_iD_i^--\\Delta\\Big)_+,\n& P_+&\\ge \\Big(\\sum_{i\\in I_0}\\lambda_iD_i^++\\Delta\\Big)_+,\\\\\nP_-+P_+&\\ge\\sum_{i\\in I_0}\\lambda_i(D_i^-+D_i^+),\n& \\sum_i\\lambda_i\\big(u_i\\cdot(m-g)\\big)_+\n&\\ge\\tfrac12\\sum_{i\\in I_0}\\lambda_i(D_i^-+D_i^+).\n\\end{aligned}\n$",
+  "subgoal_id": "pk-intake-critical-centroid-slope-compensation",
+  "title": "Quantitative centroid separation and drift compensation"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "One family of actual critical caps; separate ordinary volumes on two covered fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "2855c38d8b3db4ad",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.857345+00:00",
+  "depends_on": [
+    "ac7ba1e1e0ebc955"
+  ],
+  "draft_key": "critical-caps-joint-interval-profile",
+  "kind": "lemma",
+  "proof": "The weighted sum of margins over a base $z$ is $z\\Delta$ with $\\Delta=\\sum_i\\lambda_i\\beta_i$. Thus the traces cover the whole continuous space at $z=0$ and at one endpoint (both when $\\Delta=0$); choose the names so the covered endpoint is $A$. Every trace has nonzero continuous normal, so ordinary $d$-volume sees null cut boundaries even when a trace takes a full, supporting or empty part of a fiber.\n\nApply the ordinary specialization of ac7ba1e1e0ebc955 to $K$ at threshold $\\tau$ and $A$ at threshold $Q-\\tau$. Both thresholds are nonnegative. Adding the inequalities gives $c+a\\le Q/\\gamma_d+\\sum_i[(q_i-\\tau)_++(U_i-Q+\\tau)_+]$. Since $U_i+q_i+V_i=Q$ with the same index in all three fibers, the bracket is $(q_i-\\tau)_++(\\tau-q_i-V_i)_+$, the stated distance. For $\\tau<q_i$ the correction to $|q_i-\\tau|$ is zero; for $\\tau\\ge q_i$ it is $\\min\\{V_i,\\tau-q_i\\}$. At $\\tau=q_2$ the sum of the absolute values is $q_3-q_1$, and only the first correction can be nonzero, including in case of ties. The strict budget gives $c+a-Q/\\gamma_d>c+a-M/2=(c+a-b)/2$.\n",
+  "source_candidate_ids": [
+    "0354c832e0d018af"
+  ],
+  "source_candidate_sha256": {
+    "0354c832e0d018af": "2d177626d86d3abaedb3514e5bf4cc5dd88dd4a837f1a7190717048a8ba9b60f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0354c832e0d018af",
+      "locator": "0354c832e0d018af:02 Opening setup and §2, (3)–(6)"
+    }
+  ],
+  "statement": "Let $A,K,B\\subset\\mathbb R^d$, $d\\ge1$, be convex bodies at bases $-1,0,1$ with $(A+B)/2\\subseteq K$, volumes $a,c,b$, and total mixed mass $M=a+c+b$. Set $\\gamma_d=(d/(d+1))^d$. Let finitely many ambient closed caps $u_i\\cdot(x-y)+\\beta_i z\\ge0$, with $u_i\\ne0$, attain raw mixed depth $Q$ at the same point $(0,y)$. Write $U_i,q_i,V_i$ for their respective fiber masses. Suppose $\\sum_i\\lambda_i u_i=0$ with $\\lambda_i>0$, and relabel the endpoints, if necessary, so the $A$ traces cover $A$. For every $0\\le\\tau\\le Q$,\n$\n\\frac{Q}{\\gamma_d}+\\sum_i\\operatorname{dist}\\bigl(\\tau,[q_i,q_i+V_i]\\bigr)\\ge c+a.\n$\nThe distance summand equals $|q_i-\\tau|-\\min\\{V_i,(\\tau-q_i)_+\\}$. For exactly three caps with $q_1\\le q_2\\le q_3$, this implies $q_3-q_1\\ge c+a-Q/\\gamma_d+\\min\\{V_1,q_2-q_1\\}$. If $a,b,c<M/2$ and $Q<\\gamma_d M/2$, then $q_3-q_1>(c+a-b)/2+\\min\\{V_1,q_2-q_1\\}$.",
+  "subgoal_id": "pk-intake-critical-caps-joint-interval-profile",
+  "title": "Joint interval profile of two covered fibers"
+}

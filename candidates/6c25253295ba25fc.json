@@ -1,0 +1,32 @@
+{
+  "advances": "Exact test for a single-fiber uniform interval law dominated by twice the original mixed-length probability in every closed cap.",
+  "author": "PK-research-agent",
+  "candidate_id": "6c25253295ba25fc",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:47:32.363770+00:00",
+  "depends_on": [
+    "dcb05945476b6c35"
+  ],
+  "draft_key": "uniform-single-fiber-interval-target-finite-feasibility",
+  "kind": "theorem",
+  "proof": "For a uniform law on a nondegenerate subinterval the CDF is $F(t)=[at+b]_0^1$, where the support inclusion is exactly the displayed pair of inequalities at $l_k,u_k$. Their difference gives $a w_k\\ge1$. A vertical halfspace either misses the target or has target mass one. Of the containing halfspaces the smallest source masses are the two closed base-side masses through $k$. They are both at least $M/2$ exactly under the two strict-side conditions in the statement.\n\nA nonvertical cap is an upper or lower halfspace with threshold $t+s(j-k)$ at each fiber $j$. Its boundary is length-null in each fiber and in the target, so the target masses are $1-F(t)$ for the upper cap and $F(t)$ for the lower one. Taking infima over the slopes gives $F(t)\\le2L_k(t)/M$ and $F(t)\\ge1-2R_k(t)/M$. The first upper bound has nonnegative right side, so if it is below one the inequality is equivalent to the affine upper bound, and otherwise it is automatic. The second right side is at most one, so if it is positive the inequality is equivalent to the affine lower bound, and otherwise it is automatic. If $t<l_k$, then $F(t)=0$, the lower-cap condition is automatic, and $R_k(t)\\ge R_k(l_k)$ gives the upper-cap condition. If $t>u_k$, then $F(t)=1$, the upper-cap condition is automatic, and $L_k(t)\\ge L_k(u_k)$ gives the lower-cap condition. These monotonicities follow termwise before taking slope infima. Thus the stated conditions are necessary and sufficient.\n\nFor each $t\\in I_k$, the two oriented evaluations in dcb05945476b6c35 apply at the actual mark $(k,t)$, before the final minimum over the orientations. The slope candidates are $(e-t)/(j-k)$ at $j\\ne k$, $e\\in\\{l_j,u_j\\}$, and the constant tails at both extremes of the slope variable. In a tail, all other traces are full or empty by the signs of $j-k$, and the own contribution is a clipped affine function of $t$. At each other candidate, every trace is a clipped affine function of $t$ by direct substitution. Thus each envelope is the minimum of a finite list of continuous piecewise-affine functions, and the same description holds on the full real line by the same clipping calculation. With a single fiber, the mass is constant in slope and this argument uses only the tails.\n\nSubdivide $I_k$ at the breaks of the envelope for each inequality and where it meets its activation threshold. If the corresponding strict activation set is nonempty, its closure is a finite union of closed intervals or points. The original inequality extends to that closure by continuity and is implied there by checking the endpoints of each affine piece restricted to the closure. Empty activation sets contribute no inequalities. Rational endpoints give rational clipping breaks, crossing points of distinct affine functions, and all resulting coefficients, proving the finite rational formulation.\n",
+  "source_candidate_ids": [
+    "064f113a153b1a91"
+  ],
+  "source_candidate_sha256": {
+    "064f113a153b1a91": "90e91f73d791b783291b2bf7d9bb77a76ba08999dac36680fef34dbffb4ddec0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "064f113a153b1a91",
+      "locator": "064f113a153b1a91:01 Exact cumulative-function feasibility statement, conditions 1–2"
+    },
+    {
+      "candidate_id": "064f113a153b1a91",
+      "locator": "064f113a153b1a91:02 Exact cumulative-function feasibility statement, slope breaks and finite rational linear system"
+    }
+  ],
+  "statement": "Let finitely many positive interval fibers $I_j=[l_j,u_j]$ at distinct integer bases $j$ have lengths $w_j$ and total mixed length $M$. Let $\\mu$ be the summed length divided by $M$, fix an actual fiber $k$, and put $[r]_0^w=\\min(w,\\max(0,r))$. Define the raw cap envelopes\n$$\nL_k(t)=\\inf_s\\sum_j[t+s(j-k)-l_j]_0^{w_j},\\qquad\nR_k(t)=\\inf_s\\sum_j[u_j-t-s(j-k)]_0^{w_j}.\n$$\nThere is a nondegenerate uniform interval law $\\nu$ on a subinterval of $I_k$ with $\\nu(H)\\le2\\mu(H)$ for every closed ambient halfspace if and only if $\\sum_{j<k}w_j,\\sum_{j>k}w_j\\le M/2$ and there are real $a,b$ with $a l_k+b\\le0$, $a u_k+b\\ge1$, and\n$$\n\\begin{aligned}\nat+b&\\le 2L_k(t)/M &&\\text{where } t\\in I_k,\\ 2L_k(t)/M<1,\\\\\nat+b&\\ge 1-2R_k(t)/M &&\\text{where } t\\in I_k,\\ 1-2R_k(t)/M>0.\n\\end{aligned}\n$$\nThen $a\\ge1/w_k$ and the target is uniform on $[-b/a,(1-b)/a]$. The envelopes are continuous piecewise affine with finitely many pieces. The conditions reduce to a finite linear feasibility problem in $a,b$, with rational coefficients for rational fiber endpoints.",
+  "subgoal_id": "pk-intake-uniform-single-fiber-interval-target-finite-feasibility",
+  "title": "Finite feasibility for uniform targets on one integer interval fiber"
+}

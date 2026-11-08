@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary Euclidean two-body estimate, valid at arbitrary eccentricity and volume scale.",
+  "author": "PK-research-agent",
+  "candidate_id": "f31b226c2897b2ec",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.933492+00:00",
+  "depends_on": [
+    "77d36834ea2179e7"
+  ],
+  "draft_key": "thin-fiber-contained-body-relative-width",
+  "kind": "lemma",
+  "proof": "The lower bound is containment and translation invariance. Use 77d36834ea2179e7 with integer block dimension $m$ and continuous block dimension zero, using just its affine normalization of the body $A$. Write $A'=L A+b$ for its normalized image, so $B_2^m\\subset A'\\subset R B_2^m$. Use $B'=LB+\\lambda b-Lt$, so $\\lambda A'\\subset B'$ and $|B'|\\le C|A'|\\le C\\kappa_mR^m$ by the common determinant. For $v\\in B'\\setminus\\{0\\}$ the cone with apex $v$ and base $\\lambda B_2^m\\cap v^\\perp$ lies in $B'$. Its volume is $\\kappa_{m-1}\\lambda^{m-1}\\lVert v\\rVert/m$, also for $m=1$, when the cone is the segment from $0$ to $v$. Thus $B'$ lies in the origin-centered ball of the claimed upper multiplier, while $A'$ contains the unit ball. Comparing the two directional widths and taking covectors through $L^{\\mathsf T}$ gives the bound in the original coordinates.\n",
+  "source_candidate_ids": [
+    "4103337048e3d0cb"
+  ],
+  "source_candidate_sha256": {
+    "4103337048e3d0cb": "86c01f394a0eda63b948d593a02316b5c169bba5149d6e9e6c8909a607945597"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4103337048e3d0cb",
+      "locator": "4103337048e3d0cb:3 §3, (4)"
+    }
+  ],
+  "statement": "Let $m\\ge1$ and let $A,B\\subset\\mathbb R^m$ be convex bodies with $\\lambda A+t\\subset B$, where $\\lambda>0$, and $|B|\\le C|A|$. Write $\\kappa_s$ for unit $s$-ball volume, with $\\kappa_0=1$, and let $R=m(m+2)$. Then for every direction $u$,\n$$\n\\lambda\\,\\operatorname{width}_A(u)\\ \\le\\ \\operatorname{width}_B(u)\\\n\\le\\ \\frac{m C\\kappa_m R^m}{\\kappa_{m-1}\\lambda^{m-1}}\\operatorname{width}_A(u).\n$$",
+  "subgoal_id": "pk-intake-thin-fiber-contained-body-relative-width",
+  "title": "Relative widths under a contained homothet and a volume bound"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "The counterexample concerns this penalty family at the specified mark velocity. It establishes a finite-penalty first-response defect while the same exact original speed has a different potential realization.",
+  "author": "PK-research-agent",
+  "candidate_id": "5296b5479526b38b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:49:47.849282+00:00",
+  "depends_on": [
+    "0883fc7315c71f70",
+    "dbb1331ec0f15edd"
+  ],
+  "draft_key": "disk-contact-penalty-destroys-retained-neutrality",
+  "kind": "counterexample",
+  "proof": "The original action is the disk of radius $1-\\varepsilon$ centered at $-\\varepsilon a e_1$. It is nested since its radii decrease faster than its centers move. The mark is its centroid, so the full indicator satisfies the retained first moment. Maximizing $1-L+u\\cdot(Lx+a e_1)$ over unit $u$ gives the stated penalty. On the unit circle it is positive since $1-L+|L-a|\\ge1-a$. Write $c=n_1$. The speed error on that circle is\n$\\delta_L(c)=\\sqrt{L^2+2Lac+a^2}-L-ac$. For $0<c<1$,\n$$\n\\delta_L(c)-\\delta_L(-c)=2ac\\left(\\frac{2L}{\\sqrt{L^2+2Lac+a^2}+\\sqrt{L^2-2Lac+a^2}}-1\\right)<0 .\n$$\nThe denominator is the sum of the lengths of $Le_1+an$ and $Le_1-an$. It is strictly larger than $2L$ by the strict triangle inequality when $L>0$ and $|c|<1$, and is $2a$ when $L=0$. Reflection of the first coordinate and integration give $\\int n_1\\delta_L(n_1)\\,dS<0$. Reflection of the second coordinate gives $\\int n_2\\delta_L(n_1)\\,dS=0$. As $\\int n(1+an_1)\\,dS=\\pi a e_1$, it follows that $B_L\\ne\\pi a e_1$ for every finite $L$.\n\nThe roof's fixed-$L$ radial limit and inner homothet are provided by the contact approximation theorem. Apply the centroid formula of dbb1331ec0f15edd to the unit disk with $V=\\pi$, Euclidean gauge and $w=-ae_1$. Dividing the retained mass by its own deformed volume cancels the term $-\\int\\Phi_L\\,dS$ in the numerator derivative, since $T_K(0)=V$. This gives exactly $-|B_L-\\pi ae_1|/\\pi$. The $L^1$ speed convergence implies $B_L\\to\\pi ae_1$ by boundedness of the coordinate tests. The convex potential $[1+ax_1]_+$ realizes the original trace exactly, since $1+an_1>0$ on the circle.\n",
+  "source_candidate_ids": [
+    "61c2a6c203bcade2"
+  ],
+  "source_candidate_sha256": {
+    "61c2a6c203bcade2": "4e39ddfbd84f7da9f2d330ac119a153e51df671dbc7a316754becd08b7ef30c3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "61c2a6c203bcade2",
+      "locator": "§5, (12)–(17), prescribed moving-mark disk calibration"
+    }
+  ],
+  "statement": "Let $K$ be the unit disk in $\\mathbb R^2$ and fix $0<a<1$. The contact action $u\\cdot x+\\varepsilon(1+au_1)\\le1$ for all unit $u$ has normalized physical retained mass $T_{K_\\varepsilon}(y_\\varepsilon)/|K_\\varepsilon|=1$ at $y_\\varepsilon=-\\varepsilon a e_1$ for small $\\varepsilon\\ge0$. Its max-gap penalty potential is $\\Phi_L(x)=[1-L+|Lx+a e_1|]_+$. For the corresponding old-roof deformation at every finite $L\\ge0$, at the same prescribed mark the normalized right derivative is $-|B_L-\\pi a e_1|/\\pi<0$, where $B_L=\\int_{\\partial K}n\\,\\Phi_L(n)\\,dS$. This derivative tends to zero as $L\\to\\infty$.",
+  "subgoal_id": "pk-intake-disk-contact-penalty-destroys-retained-neutrality",
+  "title": "Finite penalties lose disk retained-mass neutrality"
+}

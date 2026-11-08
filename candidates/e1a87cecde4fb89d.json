@@ -1,0 +1,29 @@
+{
+  "advances": "The function is the fixed-body ordinary retained mass. Strict quasiconcavity suffices for uniqueness on convex constraints.",
+  "author": "PK-research-agent",
+  "candidate_id": "e1a87cecde4fb89d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:47:32.362910+00:00",
+  "depends_on": [
+    "efa4558174ce60cf",
+    "669858b8fc253d7c"
+  ],
+  "draft_key": "fixed-body-retained-mass-strict-quasiconcavity",
+  "kind": "lemma",
+  "proof": "By efa4558174ce60cf the optimal densities at the two marks are $\\mathbf1_{D_i}$ for unique convex caps of positive mass $T_i=T_K(y_i)$. With $t=\\min(T_1,T_2)>0$, put $f_i=(t/T_i)\\mathbf1_{D_i}$. Their strict weighted mixture has mass $t$ and barycenter $(1-\\lambda)y_1+\\lambda y_2$. If the target retained mass were $t$, uniqueness at the target would make this mixture an indicator almost everywhere. A strict convex combination of two numbers in $[0,1]$ equals an endpoint only when both equal that endpoint. Thus the two $f_i$ would be the same density almost everywhere, contradicting their distinct means. Finally 669858b8fc253d7c with a one-body family gives continuity of $T_K^{1/d}$ on $K$. Continuity supplies a maximizer on a nonempty compact convex subset, and the proved inequality excludes two maximizers.\n",
+  "source_candidate_ids": [
+    "38e8cdfda56d1d3d"
+  ],
+  "source_candidate_sha256": {
+    "38e8cdfda56d1d3d": "0fdab044b6e223bf50c47f801630c41584512d10549d242ee85184051c0e5205"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "38e8cdfda56d1d3d",
+      "locator": "38e8cdfda56d1d3d:04 Theorem B, §3, (5), fixed-body strict quasiconcavity"
+    }
+  ],
+  "statement": "Let $d\\ge1$, let $K$ be a convex body in $\\mathbb R^d$, and let $T_K(y)$ be the maximal mass of a measurable Lebesgue density $0\\le f\\le1$ on $K$ with $\\int_K(x-y)f(x)\\,dx=0$. If $y_1,y_2\\in\\operatorname{int}K$ are distinct and $0<\\lambda<1$, then\n$$\nT_K((1-\\lambda)y_1+\\lambda y_2)>\\min\\{T_K(y_1),T_K(y_2)\\}.\n$$\nConsequently $T_K$ attains its maximum uniquely on every nonempty compact convex subset of $\\operatorname{int}K$.",
+  "subgoal_id": "pk-intake-fixed-body-retained-mass-strict-quasiconcavity",
+  "title": "Strict quasiconcavity of physical retained mass in a fixed body"
+}

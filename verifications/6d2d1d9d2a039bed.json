@@ -1,0 +1,95 @@
+{
+  "candidate_id": "87f812914a25fe76",
+  "candidate_sha256": "f4505fe3d5d4b164ae8c16092346b0663f1eda72c795f687e2d424c7622ff4fe",
+  "checked_dependency_candidate_sha256": {
+    "ac7ba1e1e0ebc955": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df"
+  },
+  "checks": [
+    "Compared the exact candidate bytes and decoded fields against the original candidate and its initial review. The statement changed only by explicitly requiring the finite covering family H_1 through H_N. The proof, dependencies, source bindings, and all other fields are unchanged.",
+    "Original 2201a46234e42aae §1 assumes a finite family. The revised premise excludes the countable interval cover that had no largest cap mass and supplies finiteness to the local theorem and every cap rank and finite tie ordering.",
+    "Each intrinsic trace is either a genuine closed halfspace of the affine fiber span, or is constant and can be represented as a full or empty intersection with a nonzero-normal intrinsic halfspace. Thus the accepted finite local surplus bound, followed by regrouping finite sums over the same original labels, has the stated scope.",
+    "The unchanged top-three identity uses strict threshold comparison, preserves tied labels, and uses zeros with no labels when padding. The unchanged contact proof derives the weighted KKT identity and rules out zero e_i at positive lambda_i for q>1, while q=1 needs no division.",
+    "Replayed the exact finite rectangular-fiber example with cap masses (2,1,0) and (0,1,2), weights (0,3,0), and thresholds (0,1,0). Both loads vanish and the positive-part inequality is equality at 27/4. The weighted one-cap residual is 3, equal to the primal objective at heights (1,1,1).",
+    "Recomputed all raw candidate and decoded statement/proof hashes, verified the accepted fact and its exact candidate against the pinned graph, and matched the frozen source digest bindings."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ac7ba1e1e0ebc955",
+      "candidate_sha256": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+      "fact_sha256": "9a7fcf050afaf6a170e1e9c222468d3d36986633f09439295647be2cc1b17fd7",
+      "hypotheses": "The revised ambient cover is finite. In each positive intrinsic q-volume fiber, identify its q-dimensional affine span isometrically and replace whole or empty constant traces by containing or disjoint intrinsic halfspaces. The retained finite local cover and its intrinsic ordinary volumes satisfy the accepted hypotheses for every nonnegative threshold.",
+      "reviewed_proof_sha256": "76922090615d5ce7641a49c1ff447e454326f5634bc45eff19e5aa9daf91279f",
+      "reviewed_statement_sha256": "bc29bec04a379e95f5f6632e6ed13ef21f0726dfed029e01d071527d2787773a"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:54:58Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "87f812914a25fe76",
+    "candidate_sha256": "cfe60262a26ec51a94f7ae7f1979a6065975fafc9634e650270f522f016fb35d",
+    "checks": [
+      "For a finite cover each positive intrinsic q-volume fiber is full-dimensional in its own affine span. Constant traces can be replaced for the local application by full or empty intersections of nonzero-normal intrinsic halfspaces, preserving all incidences and captured volumes. ac7ba1e1e0ebc955 then gives the pointwise surplus inequality at each nonnegative threshold.",
+      "The first weighted identity is an expansion of the surplus. For every label the strict comparison A_ai>alpha_i selects precisely the contributing bases, each contributing weight is at most L_a, and the sum of captured intrinsic fiber volumes is the original global cap mass.",
+      "At alpha_i=A_(3)i, tied masses and padded zero ranks leave exactly A_(1)i+A_(2)i−2A_(3)i as the positive-part sum. Kappa≥0 follows from the binomial bound including q=1. Grouping the ranked expression by original label gives both maxima and preserves the rank information in each fiber.",
+      "The finite polyhedral h-projection is closed, the objective is bounded below with bounded sublevels since h_i≥e_i≥0, and a constant height is feasible. For q>1 the objective extension is differentiable even at zero, while q=1 uses a linear objective. Feasible directions in the active linear constraints give the stated nonnegative KKT multipliers by finite Farkas.",
+      "The g_i stationarity and complementarity make the weighted outgoing height difference zero. Multiplying h-stationarity by h_i gives sum lambda_i e_i = q sum h_i^q. For q>1, a zero-height row sends only to zero heights; summing stationarity over that set gives zero obstacle multipliers and zero incoming flux from positive heights, so the division defining rho at positive lambda is legitimate. For q=1 the formula avoids division.",
+      "An independent exact actual example uses [−1,1]×[0,1] at each of z=−1,0,1 and caps x+z≤0 and x+z≥0. At q=2 the residual roots are (0,1,0), optimum heights are (1,1,1), and valid contact weights are (0,3,0). Thresholds (0,1,0) give E=(0,1/4,0), both loads zero, and both sides of the positive-part bound equal 27/4. This checks the strict-threshold tie convention and contact normalization.",
+      "Original 2201a46234e42aae §1 expressly starts with a finite family of ambient caps, used again for ties in §3. Its finite scope is also explicit in the accepted local theorem. Neither source supports ranked quantities for an arbitrary cover."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "ac7ba1e1e0ebc955",
+        "candidate_sha256": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+        "fact_sha256": "9a7fcf050afaf6a170e1e9c222468d3d36986633f09439295647be2cc1b17fd7",
+        "hypotheses": "Applies after the local isometric identification and removal of constant-trace degeneracies, provided the ambient cover is finite. The frozen statement omits that premise.",
+        "reviewed_proof_sha256": "76922090615d5ce7641a49c1ff447e454326f5634bc45eff19e5aa9daf91279f",
+        "reviewed_statement_sha256": "bc29bec04a379e95f5f6632e6ed13ef21f0726dfed029e01d071527d2787773a"
+      }
+    ],
+    "finished_utc": "2026-11-08T17:53:04Z",
+    "issues": [
+      {
+        "defect": "There is no assumption that the original cap family is finite. On one ordinary interval K=[0,1], the closed halfspaces x≤0 and x≥1/j for integers j≥2 cover K. Their cap masses are 0 and 1−1/j, so no largest mass or first-ranked label exists. The accepted local inequality is also stated only for finite covers.",
+        "locator": "Statement opening and first proof paragraph invoking ac7ba1e1e0ebc955; ranked-mass definitions",
+        "repair": "Say that a finite family H_1,…,H_N of original closed ambient halfspaces covers the positive-volume fibers. This restores the original source scope and makes the local invocation and ranking valid.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "The intrinsic local surplus and local top-three nonnegativity are exactly its finite ordinary-volume cover inequality in dimension q. The reviewed theorem adds weighted regrouping by actual global cap labels and the finite residual contact identity, which the local theorem does not supply.",
+        "fact_id": "ac7ba1e1e0ebc955"
+      }
+    ],
+    "readability": "An explicit finite index set is necessary for the ranked quantities and their cap-label tie orderings. The contact part states and proves only the scalar KKT identity needed here, with no reliance on a pending full martingale dual.",
+    "review_method": "Independent frozen-proof and source comparison with exact arithmetic where applicable",
+    "reviewed_proof_sha256": "caa3f12912a621a706877d4b58fdb46261f9a4c9a3186a01366f6e6e11e18a9d",
+    "reviewed_statement_sha256": "954f279a21dd9b8fc0a62151b57036e88f1ddebe0489aebad2749f97d13b4955",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T17:47:53Z",
+    "summary": "The finite-cover proof is sound, but the frozen statement omits finiteness of the original cap family and its ranked masses need not exist.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The intrinsic local surplus and local top-three nonnegativity are exactly its finite ordinary-volume cover inequality in dimension q. The reviewed theorem adds weighted regrouping by actual global cap labels and the finite residual contact identity, which the local theorem does not supply.",
+      "fact_id": "ac7ba1e1e0ebc955"
+    }
+  ],
+  "readability": "The explicit finite-family indexing resolves the only scope ambiguity in the original review.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent exact revision comparison and linked proof recheck",
+  "reviewed_proof_sha256": "caa3f12912a621a706877d4b58fdb46261f9a4c9a3186a01366f6e6e11e18a9d",
+  "reviewed_statement_sha256": "449164c39f1b37576df794dcaeb82618031e94abd202ddae57d24e167af07d17",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "cfe60262a26ec51a94f7ae7f1979a6065975fafc9634e650270f522f016fb35d",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:54:08Z",
+  "summary": "The sole statement change restores the original finite-cover premise. It makes the intrinsic local theorem applicable and all ranked masses and label tie orderings well-defined. The unchanged proof and exact accepted dependency satisfy the revised claim.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

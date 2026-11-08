@@ -1,0 +1,32 @@
+{
+  "advances": "This classifies parameter limits and the actual centroid multipliers under joint variation of the positive fibers. Buffered bad-attainment additionally needs a base-depth choice in the complement of a limiting zero face.",
+  "author": "PK-research-agent",
+  "candidate_id": "df1486a54a6f11aa",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.935715+00:00",
+  "depends_on": [
+    "30c3f3ea847fe4b6"
+  ],
+  "draft_key": "negative-power-affine-parameter-escape-alternative",
+  "kind": "lemma",
+  "proof": "The affine span of every $C_K$ is $\\operatorname{aff}P\\times\\mathbb R^d$ since every sampled fiber has interior. If $m_K$ were on the relative boundary, there would be a nonzero relative supporting affine function nonnegative on $C_K$ and zero at $m_K$. Its integral against $\\mu_K$ would be zero, so by positivity and continuity it would vanish on every fiber. Its continuous coefficient would vanish and its base affine restriction would vanish on the spanning set $P$, a contradiction. Therefore $m_K$ is relative interior. Both $C_K$ and $m_K$ vary continuously with $K$: convex hulls of finitely many Hausdorff-convergent compact sets converge, and bounded integrals of fiber indicators and coordinate times indicator converge by their almost-everywhere convergence. The relative inradius centered at $m_K$ is the minimum of $h_{C_K}(u)-u\\cdot m_K$ over the unit sphere in the relative linear span, so it is continuous and positive on $\\mathcal A$. Its minimum is $\\rho>0$. An affine $h\\ge0$ with mean one has $h(m_K)=1$. Testing the ball in the direction of steepest decrease bounds its linear coefficient by $1/\\rho$. Boundedness of $m_K$ then bounds its constant coefficient.\n\nSelect a body subsequence and, by this coefficient bound, a coefficientwise convergent subsequence of $h_j$. The limit $h$ is nonnegative by Hausdorff convergence and still has mixed mean one by bounded integration. Writing $A_j=\\int L_j\\,d\\mu_{K_j}$, the normalization is exactly $A_j=(\\int h_j^{-r}\\,d\\mu_{K_j})^{1/r}$. If $h$ is positive on $C_K$, the $h_j$ are uniformly bounded below on $C_{K_j}$ for large $j$, so the integral and scale converge to the corresponding finite positive values for $h$. Then $L_j=A_jh_j$ converges to a positive normalized parameter.\n\nIf $h$ vanishes on the hull, its minimum over the hull equals its minimum over the compact union of actual fibers, so it vanishes on some sampled fiber. Apply the inverse-power boundary divergence lemma to that moving fiber with the same exponent and restricted affine coefficients. Its integral tends to infinity, forcing $A_j\\to+\\infty$. If the continuous coefficient is nonzero, $h$ is nonconstant on every full-dimensional fiber and is positive on every fiber interior. Its value at the centroid of each limiting fiber is its strictly positive mean there. Centroid and coefficient convergence then give $L_j(z,g_{j,z})\\to+\\infty$ for all $z$. If the continuous coefficient vanishes, $h$ is nonnegative affine on the base hull with mean one and minimum zero. Its zero set is a nonempty proper exposed face, and at each sampled $z$ outside it the same argument gives divergence.\n",
+  "source_candidate_ids": [
+    "5a3c8a5af6aaf266"
+  ],
+  "source_candidate_sha256": {
+    "5a3c8a5af6aaf266": "ff6139d8ce0a0baa8446205623f659276ca909d5fa261de7009453c9a888cfe0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5a3c8a5af6aaf266",
+      "locator": "5a3c8a5af6aaf266:3 §2, uniform interiority and coefficients"
+    },
+    {
+      "candidate_id": "5a3c8a5af6aaf266",
+      "locator": "5a3c8a5af6aaf266:6 §4, (5)–(7)"
+    }
+  ],
+  "statement": "Let $d\\ge1$ be an integer, let $P$ be a fixed nonempty finite base, and let $\\mathcal A$ be a compact family in the simultaneous Hausdorff metric of tuples of positive convex $d$-fibers $K_z$, $z\\in P$, of total volume one, with every fiber volume at least $v>0$ and all fibers contained in a fixed ball. Use mixed measure $\\mu_K=\\sum_z\\delta_z\\otimes(\\mathbf 1_{K_z}\\,dX)$, its centroid $m_K$, and $C_K=\\operatorname{conv}\\bigcup_z(\\{z\\}\\times K_z)$. There is $\\rho>0$ such that every $C_K$ contains the relative $\\rho$-ball about $m_K$. Hence the affine functions $h\\ge0$ on $C_K$ with $\\int h\\,d\\mu_K=1$ have relative linear coefficient norm at most $1/\\rho$ and uniformly bounded constant coefficients in fixed relative affine coordinates.\n\nFix $r\\ge d$. For every sequence $K_j\\in\\mathcal A$ and affine $L_j>0$ on $C_{K_j}$ with $\\int L_j^{-r}\\,d\\mu_{K_j}=1$, there is a subsequence with $K_j\\to K\\in\\mathcal A$ and $h_j=L_j/\\int L_j\\,d\\mu_{K_j}$ converging coefficientwise to an affine $h\\ge0$ on $C_K$ of mixed mean one. If $h>0$ on $C_K$, then $L_j$ converges coefficientwise to a finite positive normalized affine parameter on $C_K$. Otherwise $\\int L_j\\,d\\mu_{K_j}\\to+\\infty$. In this second case, write $g_{j,z}$ for the actual centroid of $K_{j,z}$. If $h$ has nonzero continuous coefficient then $L_j(z,g_{j,z})\\to+\\infty$ for every $z\\in P$. If its continuous coefficient vanishes, its base zero set is a nonempty proper exposed face $F$ of $\\operatorname{conv}P$ and the same divergence holds for each $z\\in P\\setminus F$.",
+  "subgoal_id": "pk-intake-negative-power-affine-parameter-escape-alternative",
+  "title": "The normalized affine parameter limit and centroid divergence alternative"
+}

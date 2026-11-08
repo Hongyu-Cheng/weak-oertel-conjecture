@@ -1,0 +1,60 @@
+{
+  "candidate_id": "b965b9b920717bc3",
+  "candidate_sha256": "79eda6b00e3d352f5cfbeb6816c0975d4361d38565fda4f681ecbdee7ca4961b",
+  "checked_dependency_candidate_sha256": {
+    "2fb8b0785692a5b4": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+    "7d1ee06fa4119930": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870"
+  },
+  "checks": [
+    "All six canonical consecutive and next-neighbor direction determinants equal one. With actual positive radii, each sector area is at least half its consecutive determinant, so the accepted full six-sector PSD criterion applies.",
+    "Expanding the node and adjacent terms gives the stated scaled energy, with negative part the sum of individual squares plus twice the adjacent products. Identifying opposite variables makes that negative part exactly twice the square of the sum of the three remaining variables.",
+    "Each retained off-diagonal is the sum of two core ratios at most one each, minus two. Positive semidefiniteness is preserved by the substitution and restriction.",
+    "For a triangle with three strict isolated vertices, double sectors are cores and unique sectors have exactly one vertex and positive excess. Every ray endpoint lies inside a straight edge, so the actual turn budgets have zero slack. The harmonic Gram identity gives one kernel relation per positive edge.",
+    "The coefficients on sectors 5,1,3 give the three stated ratios after dividing by radii. The opposite-variable constraints make the cycle solvable nontrivially exactly at the displayed product equality. Positive coefficients give nullity one at equality and positive definiteness otherwise. This matches 3b0f32e0ae75b4d0 §§1–2."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7d1ee06fa4119930",
+      "candidate_sha256": "9ab49002601b6feea7ec585a1bb583a680359d62670afacb14f8200db76c3870",
+      "fact_sha256": "e587b22c4c52f76df19679e8e61f467cd4e013f0efd5266a66f42c7265772ab0",
+      "hypotheses": "The six cyclic canonical rays have gaps strictly below π, and the actual body provides feasible areas and endpoints. The accepted turn formula and actual one-vertex geometry yield the positive-edge charges and zero node slack in the triangle case.",
+      "reviewed_proof_sha256": "a4caebbc545ddf8025d9f3fe8e58f9aca8fcd716d96f5ece65d5369010113839",
+      "reviewed_statement_sha256": "05e25071023712bf1534646d59f382f42e891e989f988379541e1d40df328043"
+    },
+    {
+      "candidate_id": "2fb8b0785692a5b4",
+      "candidate_sha256": "3887dc260c310f03d982400f03bea09080267822381c994669a51e603bb3b5f5",
+      "fact_sha256": "326d1150bfb1ff54791e0cadfb9d05e81404d449a613151ea47cd68b59abf925",
+      "hypotheses": "The six actual charges have the required harmonic means and saturate the node budgets when all ray endpoints lie inside straight triangle edges. The Gram identity then gives exactly the three pairwise square terms used before restriction.",
+      "reviewed_proof_sha256": "4748e8e25d1403e53bee831d62f59ea4e4ed213361d14c7d076ffa35e592aaf8",
+      "reviewed_statement_sha256": "ce8a642e0b42373e9cc4d8ed52bbbce8e9bea3b10a4fb272d1232bcf2a4f3592"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:53:28Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The exact full matrix coefficients for the same canonical rays and actual areas are already in this accepted proof. The new compression is a direct substitution and restriction, and its triangle kernel test imposes a further opposite-variable identification.",
+      "fact_id": "7cc865b9f263a067"
+    },
+    {
+      "comparison": "The accepted strict-incidence triangle has the same three rank-one blocks with kernel proportional to the reversed vertex coefficients. It imposes no equality between opposite ray coordinates after radial normalization, so it supplies no compressed cycle criterion.",
+      "fact_id": "212f957189de9062"
+    }
+  ],
+  "readability": "The adjacent index in the matrix is modulo three and its original radii are indexed modulo six. For the kernel, dividing by radii is necessary before identifying opposite coordinates.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e514617225e28deda06e6906495bf783f0cb3b8915d8b0c0cacc3971cb715ff4",
+  "reviewed_statement_sha256": "5edc0564ac725d675b2c62cc951af97682dcecd6eaa9ab31b6b31417c5b52f84",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:47:48Z",
+  "summary": "The period-three restriction is exactly a three-node positive semidefinite Z-matrix, and for strict triangle incidence its kernel is determined by the signed-offset product equation.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

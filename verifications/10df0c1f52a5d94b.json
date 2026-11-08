@@ -1,0 +1,75 @@
+{
+  "candidate_id": "b3a2aa55e721a22f",
+  "candidate_sha256": "f3373d4492cadabb9d91dc36f1319a7e1c6dba5fa6e74240189f12b602971052",
+  "checked_dependency_candidate_sha256": {
+    "23a563a735c07c25": "585fc3fea7952f0d573abda678b75588c8528379e7f45e6792ed4c009b82361e",
+    "ac7ba1e1e0ebc955": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+    "b33e7b408da21347": "4e323570b34b1a2e8c1f975668d3d878228e7b1f6101bc9e6989d3407b7ab135"
+  },
+  "checks": [
+    "Source 4dfc7dda63b85569 §3 (9)–(11) and §6 give the same ordered inequalities and keep the exponent of the residual root equal to 1/d in the effective cap-count variant.",
+    "The middle and covered endpoint have ordinary d-volume and closed traces with nonzero normals. Evaluating the effective positive-part profile at the third-largest mass gives weights 1,1,κ even with ties. κ is positive for the applicable effective dimension at least two.",
+    "Use W_i≤Q−q_i before sorting, for the very same cap i. The top-three order statistic is monotone in each entry, and the order on Q−q_i is reversed. This gives the endpoint inequality without presuming endpoint masses themselves are in reverse order.",
+    "For m=3 subtract κ times the endpoint left side from the middle left side to cancel q_1. Both remaining coefficients are positive. The exact residual predecessor bounds q_2 and q_3 by h(Q); their coefficient sum is (1−κ)(2+κ).",
+    "With effective dimension two the arithmetic is κ=1/4 and four times the coefficients are 9/4 for Q and 27/4 for h(Q). The covered endpoint has e≥a. For m≤2 the direct union bound counts the two actual fibers once."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ac7ba1e1e0ebc955",
+      "candidate_sha256": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+      "fact_id": "ac7ba1e1e0ebc955",
+      "fact_sha256": "9a7fcf050afaf6a170e1e9c222468d3d36986633f09439295647be2cc1b17fd7",
+      "hypotheses": "Ordinary d-volume clause on K and on the covered endpoint. Each family of proper closed halfspaces has nonzero continuous normals and covers the corresponding full-dimensional body.",
+      "reviewed_proof_sha256": "76922090615d5ce7641a49c1ff447e454326f5634bc45eff19e5aa9daf91279f",
+      "reviewed_statement_sha256": "bc29bec04a379e95f5f6632e6ed13ef21f0726dfed029e01d071527d2787773a"
+    },
+    {
+      "candidate_id": "23a563a735c07c25",
+      "candidate_sha256": "585fc3fea7952f0d573abda678b75588c8528379e7f45e6792ed4c009b82361e",
+      "fact_id": "23a563a735c07c25",
+      "fact_sha256": "2621df7fd406ca7dd8683d226068d2ad51a17cbd344af1e9addbb64e5b96feb0",
+      "hypotheses": "The full profile applies to the same ordinary covers with D=d and m caps; choose α equal to the third-largest cap mass. Proper ambient trace halfspaces are allowed to cut empty or full portions of the bodies.",
+      "reviewed_proof_sha256": "4af106804fe99545b57233abe2b9131c64e1e86c51af7ab9db90120a5a9a2437",
+      "reviewed_statement_sha256": "8d63b4e7db60e6cb2b4e4a924845a411db9988b9dff322d8acbbb0e2b3d3e2d4"
+    },
+    {
+      "candidate_id": "b33e7b408da21347",
+      "candidate_sha256": "4e323570b34b1a2e8c1f975668d3d878228e7b1f6101bc9e6989d3407b7ab135",
+      "hypotheses": "Same-batch residual-root theorem. Here K has volume one, endpoint volumes are a≤b, midpoint compatibility holds, and the extra hypotheses give nonheaviness, true depth attainment at one middle source and 0<Q≤γ_dM/2. Thus every listed q_i≤h(Q), still with d-dimensional roots even when the cover coefficient uses dimension two.",
+      "reviewed_proof_sha256": "d7577977d65b69bb8b0bbfb503a2bcfd8d0d77a99dc3ec4777e3a19e06040026",
+      "reviewed_statement_sha256": "87a39d9b38599f617039a6a12c86ce0689fcd175cea59e8a25df2b82ebaa606c",
+      "status": "same batch, pending admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:56:42Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The ordinary ordered bound supplies a one-body inequality, without coupling the common budget to endpoint captures.",
+      "fact_id": "ac7ba1e1e0ebc955"
+    },
+    {
+      "comparison": "Its effective constant is used on both bodies. The common-cap complement comparison and resulting residual estimate are additional.",
+      "fact_id": "23a563a735c07c25"
+    },
+    {
+      "comparison": "Its critical endpoint floor supplies an input to the residual predecessor, without a simultaneous circuit-level ordered estimate.",
+      "fact_id": "03c59c70402b66a2"
+    }
+  ],
+  "readability": "The three-cap special case uses exactly three original caps. No bound on circuit size in higher dimension is needed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4be7b753090c5097065b288ff26f77713f27f4765b61084627bdb21db50b09ee",
+  "reviewed_statement_sha256": "b20fa31ae515ae225218a4a337fc52ced84fcb166dea1c9db242aefe3690f360",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:50:00Z",
+  "summary": "Approved. The weighted three-largest profiles combine on two actual covered fibers, and their three-cap combination gives the effective root bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

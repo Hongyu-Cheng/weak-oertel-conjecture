@@ -1,0 +1,26 @@
+{
+  "advances": "This is an ordinary sectional Brunn–Minkowski estimate with a mixed three-fiber cap application. It retains the geometric effect of the zero-d-volume endpoint support facet.",
+  "author": "PK-research-agent",
+  "candidate_id": "19210d0a14ccfebc",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.935284+00:00",
+  "depends_on": [],
+  "draft_key": "supporting-facet-section-minkowski-volume",
+  "kind": "lemma",
+  "proof": "The section identity follows because the $e$-coordinate of each point of the translated $F$ is zero. Each section of $D$ at an interior height has positive $m$-volume, as can be seen by interpolating an interior ball with a point at height above or below the ball. Fubini ignores the two endpoint heights. Apply ordinary Brunn–Minkowski to the compact sections in $e^\\perp$ and expand the integer power to obtain the formula. In dimension two both sections are intervals and their lengths add exactly.\n\nFor the cap application work with the original position of $F$. If $x\\in D$ and $y\\in F$, then $(x+y)/2\\in K$ and $u\\cdot(x+y)/2\\ge(a_0+b_0)/2$. Properness gives the bottom height $a_0/\\lVert u\\rVert$ of $D$ and the top height is $h_A(u)/\\lVert u\\rVert$. Since halving scales $d$-volume by $2^{-d}$, the inclusion gives the full bound for $q$. The endpoint trace on $B$ is exactly $F$ of $d$-volume zero. The contributions from the two other named fibers give $Q\\ge U+q$. For the triangle the vertices are $(1,1),(1,-2),(-2,1)$. Its supporting segment at $v_i\\cdot x=1$ has length $3\\lVert v_i\\rVert$, and the threshold in $A$ is $-1$, giving the stated planar constant. For a smaller $B$, the same argument uses its actual facet length.\n",
+  "source_candidate_ids": [
+    "b9b0fda52c8adffe"
+  ],
+  "source_candidate_sha256": {
+    "b9b0fda52c8adffe": "5e5b70785e535e72a7633cdd3993e119f63d3cb27b4079388953be922b051e61"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b9b0fda52c8adffe",
+      "locator": "b9b0fda52c8adffe:01 §1, (1)–(3); §§2–3, (4)–(6)"
+    }
+  ],
+  "statement": "Let $d\\ge2$, let $D$ be a convex body in $\\mathbb R^d$, and let $F$ be a compact convex subset of a hyperplane normal to the unit vector $e$, with $f=\\mathcal H^{d-1}(F)>0$. Translate $F$ to height zero in this direction, let $I$ be the open height interval of $D$, and write $h=|I|$, $m=d-1$, $U=|D|$ and $D_t$ for the height-$t$ section identified with $e^\\perp$. Then $(D+F)_t=D_t+F$, and\n$$\n\\begin{aligned}\n|D+F|&\\ge\\int_I\\bigl(|D_t|^{1/m}+f^{1/m}\\bigr)^m\\,dt\\\\\n&=U+fh+\\sum_{j=1}^{m-1}\\binom mj f^{j/m}\\int_I |D_t|^{(m-j)/m}\\,dt .\n\\end{aligned}\n$$\nFor $d=2$, $|D+F|=U+fh$.\n\nIn particular, suppose $A,K,B$ are convex bodies in $\\mathbb R^d$ with $(A+B)/2\\subseteq K$, $u\\ne0$, $D=A\\cap\\{u\\cdot x\\ge a_0\\}$ is a proper positive-volume cap, and $B\\subseteq\\{u\\cdot x\\le b_0\\}$ has a support facet $F=B\\cap\\{u\\cdot x=b_0\\}$ with $f=\\mathcal H^{d-1}(F)>0$. For $q=|K\\cap\\{u\\cdot x\\ge(a_0+b_0)/2\\}|$, the first bound above applies to $2^dq$ with $e=u/\\lVert u\\rVert$ and $h=(h_A(u)-a_0)/\\lVert u\\rVert$, where $h_A$ is the support function of $A$. In particular $2^dq\\ge U+fh$. If these bodies are the positive-volume fibers at $-1,0,1$ of a mixed body and the closed ambient cap with these three thresholds has raw mixed mass $Q$, then $2^d Q\\ge (2^d+1)U+fh$.\n\nFor $d=2$, $B=T=\\{x:v_i\\cdot x\\le1,\\ i=1,2,3\\}$ and $(v_1,v_2,v_3)=((1,0),(0,1),(-1,-1))$, the cap $v_i\\cdot x\\ge z$ has $2^d Q_i=4Q_i\\ge5U_i+3(h_A(v_i)+1)$ for every proper positive $A$ trace of area $U_i$.",
+  "subgoal_id": "pk-intake-supporting-facet-section-minkowski-volume",
+  "title": "Sectional volume from Minkowski addition of a supporting facet"
+}

@@ -1,0 +1,66 @@
+{
+  "candidate_id": "0143817849026887",
+  "candidate_sha256": "e6cf142cf1a39ab94e221fe1c65d9e8c641dbec71b9797044758f2c47fb38173",
+  "checked_dependency_candidate_sha256": {
+    "11ed3ca552482ee9": "be68f998cba5d2c9f296fc0b7b74f3c813f84050ba19d3fb161c5a92af1e2ab7",
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "Source d7fcf9727e1fd83d §2 supplies the exact cap setup, volume and section formulas. The historical audit d3c738ffa3f1acc6 §§2–3 supplies the exposed-vertex and shifted-middle argument for uniqueness.",
+    "The accepted lattice census gives exactly zero and the d+1 displayed vertices. Independently checked small-rank lattice inequalities and each ℓ_j(v_i)=d for i=j and −1 otherwise. The latter values give strict statuses because every barycentric coordinate lies in [0,1] on K.",
+    "The cap margins sum to zero globally, hence the closed caps cover the whole space and cap mass (1+γ_d)V gives the upper bound. The own contribution at (0,g) is at least γ_dV. The d+1 cyclic barycentric permutations have identical uniform marginals and their margins sum to zero pointwise, giving outer contribution at least V for every through-center cap. This uses closed signs and includes pure-base caps.",
+    "An exposing slope at an outer vertex gives an isolated half-area cap at any of its points. At another middle point, shifting a canonical threshold to one barycentric coordinate greater than 1/(d+1) keeps the same outer fiber full and all other outer fibers empty, and strictly shrinks the middle mass.",
+    "The continuous barycentric gradients have rank d and sum to zero. The proper central section has barycentric mean g, and differentiating the ordinary simplex cap law gives exact unnormalized-normal coarea d(d/(d+1))^(d−1)V, with no outer sections."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "11ed3ca552482ee9",
+      "candidate_sha256": "be68f998cba5d2c9f296fc0b7b74f3c813f84050ba19d3fb161c5a92af1e2ab7",
+      "fact_id": "11ed3ca552482ee9",
+      "fact_sha256": "af9182c993d3e56b0143d497071c931fe5ccfa2bc58e2afe8c6f5d9dc66eacb7",
+      "hypotheses": "Use n=d and only its exact initial lattice census, with precisely the same d+1 vertices and all integer sites in their convex hull.",
+      "reviewed_proof_sha256": "a1805dab4892abd1121655d500ab65b1dd4528b660028a1f5387f77be61e8c4c",
+      "reviewed_statement_sha256": "51afc9867949acbab8c91a7878ac0c0e3456be51b1a40165bc0955b5efd32f17"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "Use the ordinary d-dimensional full-volume metronoid specialization on K. It supplies γ_dV for every ordinary closed cap containing g on the middle fiber. A pure-base cap captures all of that fiber.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T17:56:42Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its identical lattice census is directly reused. Its other conclusions concern atomic entropy and hitting and do not yield the continuous mixed critical-depth and section claims.",
+      "fact_id": "11ed3ca552482ee9"
+    },
+    {
+      "comparison": "It treats this base in rank two with strictly positive smoothing width and buffer. The limiting planar value matches, but the exact original closed-halfspace theorem with the stated cap and coarea formulas in every dimension is additional.",
+      "fact_id": "8cb8a65a915b2ac0"
+    },
+    {
+      "comparison": "Its simplex cap and exposed-base arguments concern the binary product, where all integer bases are exposed. The present base has an interior lattice point and requires the outer cyclic coupling.",
+      "fact_id": "2acc8bc803acf1c0"
+    }
+  ],
+  "readability": "The depth units are raw fiber volume until division by (d+2)V. Coarea uses the displayed barycentric normals without Euclidean renormalization.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "eca10fadeafd08848e2721f7687ac786b770ad54c229121a24b142b543241688",
+  "reviewed_statement_sha256": "ab94bcd6d1db885a2eafdcd3df1b09fd320c95ec6e39fcc09b2c516095964d5d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T17:50:00Z",
+  "summary": "Approved. The frozen proof gives a unique deepest point for the original closed halfspace problem and exact coarea of its regular canonical circuit in every d≥2.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

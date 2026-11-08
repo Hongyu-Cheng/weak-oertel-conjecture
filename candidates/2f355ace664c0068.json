@@ -1,0 +1,32 @@
+{
+  "advances": "A one-integer-coordinate transfer conditional on the selected target law's depth. The source is allowed to be atomic.",
+  "author": "PK-research-agent",
+  "candidate_id": "2f355ace664c0068",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:46:30.934304+00:00",
+  "depends_on": [],
+  "draft_key": "median-segment-coupling-halfspace-domination",
+  "kind": "lemma",
+  "proof": "Write $L=\\mu\\{z<z_0\\}$ and $R=\\mu\\{z>z_0\\}$. Assign masses $1/2-L$ and $1/2-R$ from the central measure to the left and right marginals, respectively, with a common constant density on the central measure for each assignment. Their sum is the central mass $1-L-R$, and when this is zero both assignments are zero. For endpoints $(i,x)$ and $(j,x')$ with $i<j$, the image is $(z_0,((j-z_0)x+(z_0-i)x')/(j-i))$. On the central-central stratum use $(z_0,(x+x')/2)$. The strata are clopen among the legal pairs and the map is continuous on each. The image belongs to $C$ by convexity. If both endpoints lie outside a closed halfspace, the whole segment lies in its open convex complement. Consequently $\\mathbf1_H(T(p,q))\\le\\mathbf1_H(p)+\\mathbf1_H(q)$ even on the boundary of $H$. Integration gives the claimed factor using the two probability marginals whose sum is $2\\mu$. Taking the infimum over all original containing halfspaces gives the depth claim, since their traces on the target fiber are containing halfspaces or the whole fiber.\n",
+  "source_candidate_ids": [
+    "0b2178fc42ce31d4",
+    "641c5559a440bf48"
+  ],
+  "source_candidate_sha256": {
+    "0b2178fc42ce31d4": "081614719064be40ac4ddb4b9eab687ad7bc97a932a4c9b7f19ffe52c5befa37",
+    "641c5559a440bf48": "5448729b0e8cd524066515f2ecb277789107753008b36a5a8bd35fbbc8d0a046"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "641c5559a440bf48",
+      "locator": "641c5559a440bf48:01 §1, (1), normalized mixed-volume version"
+    },
+    {
+      "candidate_id": "0b2178fc42ce31d4",
+      "locator": "0b2178fc42ce31d4:01 §1, exact coupling lemma for arbitrary probabilities"
+    }
+  ],
+  "statement": "Let $\\mu$ be a probability measure on $C\\cap(\\mathbb Z\\times\\mathbb R^d)$ for a compact convex $C$. Fix an integer median $z_0$ of its base marginal, meaning both strict sides have mass at most $1/2$. Split the mass at $z_0$ proportionally between submeasures $\\mu_-,\\mu_+$ of mass $1/2$ supported at $z\\le z_0$ and $z\\ge z_0$, respectively, and with $\\mu_-+\\mu_+=\\mu$. For every probability coupling $\\sigma$ of $2\\mu_-,2\\mu_+$, send endpoints $p,q$ to the point $T(p,q)$ of their segment at base $z_0$, choosing their midpoint if both endpoints are at $z_0$. The image law $\\nu_\\sigma=T_\\#\\sigma$ is carried by the actual median fiber, and $\\nu_\\sigma(H)\\le2\\mu(H)$ for every closed ambient halfspace $H$. In particular a target point of normalized depth $v$ in that fiber has original normalized depth at least $v/2$.",
+  "subgoal_id": "pk-intake-median-segment-coupling-halfspace-domination",
+  "title": "Halfspace domination by median segment couplings"
+}

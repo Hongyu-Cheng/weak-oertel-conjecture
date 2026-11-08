@@ -1,0 +1,28 @@
+{
+  "advances": "Refutes nonincrease of maximum fractional convex-hull packing under every positive eligible mass-preserving merge, even with one eligible pair. The source already satisfies the nominal M/4 packing threshold.",
+  "author": "PK-research-agent",
+  "candidate_id": "3c834d813e7162f6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T17:47:32.362096+00:00",
+  "depends_on": [
+    "82894b05233cbc9c"
+  ],
+  "draft_key": "unique-eligible-hull-pair-sharp-midpoint-packing-obstruction",
+  "kind": "counterexample",
+  "proof": "The defining inequalities are $x\\ge0$, $0\\le y\\le3$, $y\\ge2x-6$, and $x+y\\le6$. The last two imply $x\\le4$, with $y=2$ if $x=4$; for integer $0\\le x\\le3$ they allow every integer $0\\le y\\le3$. Thus $S=\\{0,1,2,3\\}^2\\cup\\{C\\}$ has exactly seventeen sites, of which twelve are light. The five listed vertices are precisely the extreme sites and their parities in order are $00,10,00,11,01$. Also $M=5+12\\varepsilon=501/100>4$, so all weights are below $M/4$.\n\nAt $m$, the six disjoint groups\n$$\n \\{A,C\\},\\quad\\{B,E\\},\\quad\\{m\\},\\quad\\{(1,0),(3,2)\\},\\quad\n \\{(1,1),(3,1)\\},\\quad\\{(2,0),(2,2)\\}\n$$\nhave convex hulls containing $m$; in the second group $m=(2B+E)/3$, and the four other two-point groups use the ordinary midpoint. Give the groups weights $1,1,\\varepsilon,\\varepsilon,\\varepsilon,\\varepsilon$. Every closed halfspace containing a target meets each group with that target in its convex hull, so its mass upper bounds the packing value. Outside $P$ the packing value is zero. For every $z\\in S$ the table gives the counts of heavy and light sites in the cap $(a,b)\\cdot((x,y)-z)\\ge0$, computed from the lattice census:\n\n| $z$ | $(a,b)$ | heavy | light |\n|---|---|---:|---:|\n| $(0,0)$ | $(-1,-1)$ | 1 | 0 |\n| $(0,1)$ | $(-2,-1)$ | 1 | 1 |\n| $(0,2)$ | $(-2,1)$ | 1 | 1 |\n| $(0,3)$ | $(-1,1)$ | 1 | 0 |\n| $(1,0)$ | $(-1,-2)$ | 1 | 1 |\n| $(1,1)$ | $(-3,-2)$ | 1 | 4 |\n| $(1,2)$ | $(-3,2)$ | 1 | 4 |\n| $(1,3)$ | $(-1,2)$ | 1 | 1 |\n| $(2,0)$ | $(1,-2)$ | 1 | 1 |\n| $(2,1)$ | $(1,-3)$ | 2 | 4 |\n| $(2,2)$ | $(2,3)$ | 2 | 4 |\n| $(2,3)$ | $(1,3)$ | 1 | 1 |\n| $(3,0)$ | $(1,-1)$ | 1 | 0 |\n| $(3,1)$ | $(2,-3)$ | 1 | 2 |\n| $(3,2)$ | $(2,1)$ | 2 | 1 |\n| $(3,3)$ | $(1,2)$ | 1 | 0 |\n| $(4,2)$ | $(1,0)$ | 1 | 0 |\n\nEach mass is at most $2+4\\varepsilon$, proving the original maximum. After the merge, use weights $1-\\delta$ on $\\{A,C\\}$ and $\\varepsilon+2\\delta$ on $\\{m\\}$, leaving all other weights unchanged. This gives $2+4\\varepsilon+\\delta$ at $m$. The comparison lemma gives the upper bound at every lattice target. At $\\delta=1$ any feasible positive-weight group already avoids the zero-capacity endpoints, and $m$ remains a positive-capacity site. Thus removing the endpoints preserves the exact maximum.\n",
+  "source_candidate_ids": [
+    "0d48b13f5ad2c2a1"
+  ],
+  "source_candidate_sha256": {
+    "0d48b13f5ad2c2a1": "020d28bd06d0876316756558ee2828d8c9b240e5a6b2aa2204c1ce99dd914817"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0d48b13f5ad2c2a1",
+      "locator": "0d48b13f5ad2c2a1:02 §§2–4, (2)–(3), exact sharpness and unique eligible hull pair"
+    }
+  ],
+  "statement": "Let $P$ be the pentagon with consecutive vertices $A=(0,0)$, $B=(3,0)$, $C=(4,2)$, $D=(3,3)$, $E=(0,3)$, and $S=P\\cap\\mathbb Z^2$. Give each vertex weight one and each other point of $S$ weight $\\varepsilon=1/1200$. The total weight is $M=501/100$, every point weight is strictly below $M/4$, and the only same-parity pair of hull vertices is $A,C$. For the fractional packing value $f_w$ of the comparison lemma and $m=(A+C)/2=(2,1)$, one has\n$$\n \\max_{z\\in\\mathbb Z^2} f_w(z)=f_w(m)=2+4\\varepsilon=\\frac{601}{300}.\n$$\nFor every $0<\\delta\\le1$, the mass-preserving merge $w'=w-\\delta e_A-\\delta e_C+2\\delta e_m$ satisfies\n$$\n \\max_{z\\in\\mathbb Z^2} f_{w'}(z)=f_{w'}(m)=\\frac{601}{300}+\\delta .\n$$\nAt $\\delta=1$ the equality persists when the zero-capacity endpoints are deleted from the source set.",
+  "subgoal_id": "pk-intake-unique-eligible-hull-pair-sharp-midpoint-packing-obstruction",
+  "title": "A positive planar packing example with exact midpoint merge loss"
+}

@@ -1,0 +1,71 @@
+% Traces on the active face x_4=x_5=x_6=0 at a=663/1000. Barycentric weights are exact.
+% Panel (a) is to scale. Panel (b) enlarges T_1 uniformly, except the strip p<=epsilon,
+% which is drawn at p=1/5 instead of the true epsilon=13/20000.
+\begin{tikzpicture}[
+    every node/.style={font=\footnotesize,inner sep=1.5pt},
+    pt/.style={circle,fill=black,minimum size=3.2pt,inner sep=0pt},
+    capfill/.style={pattern=north east lines,pattern color=figgold!70!black},
+    tfill/.style={fill=figblue!38},
+    bdy/.style={line width=0.8pt},
+    zero/.style={line width=0.7pt,figblue},
+    zerod/.style={line width=0.8pt,dashed,figred!85!black}]
+  % Panel (a): the whole active face, side 6 cm.
+  \begin{scope}
+    \coordinate (v1) at (0,5.196);
+    \coordinate (v2) at (-3,0);
+    \coordinate (v3) at (3,0);
+    \coordinate (c) at (barycentric cs:v1=1,v2=1,v3=1);
+    \coordinate (w2) at (barycentric cs:v1=1,v2=0.337,v3=0);
+    \coordinate (w3) at (barycentric cs:v1=1,v2=0,v3=0.663);
+    \coordinate (f1a) at (barycentric cs:v1=0.663,v2=1,v3=0);
+    \coordinate (f1b) at (barycentric cs:v1=0.337,v2=0,v3=1);
+    \coordinate (f2b) at (barycentric cs:v1=0,v2=0.663,v3=1);
+    \coordinate (f3b) at (barycentric cs:v1=0,v2=1,v3=0.337);
+    \node[anchor=north west,inner sep=0pt] at (-3.6,5.7) {(a)};
+    \fill[capfill] (v1)--(f1a)--(f1b)--cycle;
+    \fill[tfill] (v1)--(w2)--(c)--(w3)--cycle;
+    \draw[bdy] (v1)--(v2)--(v3)--cycle;
+    \draw[zerod] (f1a)--(f1b);
+    \draw[zero] (w2)--(f2b);
+    \draw[zero] (w3)--(f3b);
+    \foreach \p in {v1,v2,v3,c,w2,w3,f1a,f1b} \node[pt] at (\p) {};
+    \node[anchor=south] at (v1) {$\v_1$};
+    \node[anchor=north east] at (v2) {$\v_2$};
+    \node[anchor=north west] at (v3) {$\v_3$};
+    \node[anchor=east,xshift=-2pt] at (w2) {$\w_2$};
+    \node[anchor=west,xshift=2pt] at (w3) {$\w_3$};
+    \node[anchor=north,yshift=-3pt] at (c) {$\bar\v$};
+    \node at (barycentric cs:v1=3,w2=1,w3=1.2,c=2) {$T_1$};
+    \node[anchor=east,xshift=-2pt] at (f1a) {$f_1=0$};
+    \node[anchor=north,yshift=-1pt] at (f2b) {$f_2=0$};
+    \node[anchor=north,yshift=-1pt] at (f3b) {$f_3=0$};
+  \end{scope}
+  % Panel (b): T_1 at a uniform enlargement of 7/4 relative to panel (a).
+  \begin{scope}[xshift=8.3cm,yshift=-0.75cm]
+    \coordinate (V1) at (0,6.062+0.75);
+    \coordinate (V2) at (-5.25,6.062+0.75-9.093);
+    \coordinate (V3) at (5.25,6.062+0.75-9.093);
+    \coordinate (C) at (barycentric cs:V1=1,V2=1,V3=1);
+    \coordinate (W2) at (barycentric cs:V1=1,V2=0.337,V3=0);
+    \coordinate (W3) at (barycentric cs:V1=1,V2=0,V3=0.663);
+    \coordinate (Sa) at (barycentric cs:V1=4,W2=1);
+    \coordinate (Sb) at (barycentric cs:C=4,W2=1);
+    \node[anchor=north west,inner sep=0pt] at (-2.6,6.45) {(b)};
+    \fill[tfill] (V1)--(C)--(W3)--cycle;
+    \fill[figblue!85!black] (V1)--(Sa)--(Sb)--(C)--cycle;
+    \draw[bdy] (V1)--(W2)--(C)--(W3)--cycle;
+    \draw[line width=0.8pt] (V1)--(C);
+    \draw[line width=0.7pt,densely dotted] (Sa)--(Sb);
+    \foreach \p in {V1,W2,C,W3} \node[pt] at (\p) {};
+    \node[anchor=south] at (V1) {$\v_1$};
+    \node[anchor=east,xshift=-2pt] at (W2) {$\w_2$};
+    \node[anchor=west,xshift=2pt] at (W3) {$\w_3$};
+    \node[anchor=north,yshift=-2pt] at (C) {$\bar\v$};
+    \node at (barycentric cs:V1=1,C=1,W3=1) {$U$};
+    \node at (barycentric cs:Sa=1,Sb=1,W2=2) {$P$};
+    \node[anchor=east,align=right] (schem) at (-1.05,2.1) {schematic $p=\varepsilon$\\(true $\varepsilon=13/20000$)};
+    \draw[line width=0.4pt] (schem.east) -- (barycentric cs:Sa=1,Sb=1.65);
+    \node[anchor=west] (diag) at (1.75,4.7) {$p=0$};
+    \draw[line width=0.4pt] (diag.west) -- (barycentric cs:V1=2,C=1);
+  \end{scope}
+\end{tikzpicture}

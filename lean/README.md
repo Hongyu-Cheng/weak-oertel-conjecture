@@ -123,11 +123,11 @@ lake build
 lake env lean CheckAxioms.lean
 ```
 
-The complete build and both final theorem axiom checks passed on 7 November 2026.
-Both final theorems depend only on the standard axioms `propext`,
-`Classical.choice`, and `Quot.sound`. No admitted proofs, extra axioms, or
-native-evaluation proof shortcuts are used. The build currently reports
-non-fatal style/deprecation warnings from several modules.
+`CheckAxioms.lean` checks the three final theorems, including
+`SharpOC.Selector.sharp_oc_counterexample`, and their supporting results.
+The final theorems depend only on the standard axioms `propext`,
+`Classical.choice`, and `Quot.sound`. The build reports non-fatal style
+and deprecation warnings from several modules.
 
 See the [1/e audit](ONE_OVER_E_AUDIT.md) and [earlier sharp-bound audit](AUDIT.md)
 for the precise statements and measure checks.

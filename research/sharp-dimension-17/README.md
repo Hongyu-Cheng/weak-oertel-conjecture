@@ -2,12 +2,13 @@
 
 There is a rational polytope $C\subset\mathbb R^{12}\times\mathbb R^5$
 of positive mixed-integer volume such that every point of
-$\mathbb Z^{12}\times\mathbb R^5$ belongs to a closed halfspace of
-mixed-integer volume strictly less than $(5/6)^5/2^{12}$ times that of
-$C$. The twelve integer coordinates comprise ten ordinary coordinates
-and two selectors. Changing the signs of four ordinary coordinates
-between the zero-selector and nonzero-selector layers allows three
-light pools of 252 sites each. The large fibers in these pairs are truncated simplex joins.
+$\mathbb Z^{12}\times\mathbb R^5$ belongs to a closed halfspace whose
+intersection with $C$ has mixed-integer volume strictly less than
+$(5/6)^5/2^{12}$ times that of $C$. The twelve integer coordinates
+comprise ten ordinary coordinates and two selectors. Changing the signs of
+four ordinary coordinates between the zero-selector and nonzero-selector
+layers allows three light pools of 252 sites each. The large fibers in
+these pairs are truncated simplex joins.
 
 ## Integer support
 
@@ -209,9 +210,9 @@ The total mixed-integer volume is
 $$
 W=3339h^5+756(1+\delta)^5V+1+3L.
 $$
-The [rational checker](check.py)
-verifies the inequalities for the generator containments and
-cap formulas, together with
+The [rational checker](check.py) verifies the signed generator census
+and the inequalities used in the generator containments and cap
+formulas, together with
 $$
 \Gamma h^5-(\beta+L)>10^{-6},\qquad
 \Gamma h^5-(1+\delta)^5\max_i C_i>10^{-9},\qquad
@@ -220,4 +221,24 @@ $$
 The covering cuts have normalized mass at most
 $\Gamma h^5/W<\Gamma/4096$, as claimed.
 
-[Lean theorem](../../lean/SharpOC/Selector17Counterexample.lean).
+## Reproduce the verification
+
+With Python 3 and `elan` installed, run from the repository root.
+The project pins Lean 4.34.1 and mathlib commit
+`d13f23b723b8a846827a245b89c10fc7d3f11612`.
+
+```sh
+python3 research/sharp-dimension-17/check.py && (
+  cd lean &&
+  lake exe cache get &&
+  lake build &&
+  lake env lean CheckAxioms.lean
+)
+```
+
+The Python assertions use exact rational arithmetic. The Lean development
+proves the integer-fiber census, cut and body masses, and uniform depth bound
+for a compact, full-dimensional convex body. `CheckAxioms.lean` checks that
+the final theorem and the listed intermediate results depend only on
+`propext`, `Classical.choice`, and `Quot.sound`. See
+[`SharpOC.Selector17.sharp_oc_counterexample`](../../lean/SharpOC/Selector17Counterexample.lean).

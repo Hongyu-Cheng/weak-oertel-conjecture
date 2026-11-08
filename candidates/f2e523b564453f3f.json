@@ -1,0 +1,26 @@
+{
+  "advances": "An obstruction to inference from abstract convex face tests and their fixed cap weights; no lattice realization or positive-buffer claim.",
+  "author": "PK-research-agent",
+  "candidate_id": "f2e523b564453f3f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.930000+00:00",
+  "depends_on": [],
+  "draft_key": "w33-face-convex-test-simplex-trace-reserve-obstruction",
+  "kind": "counterexample",
+  "proof": "Use the two free barycentric coordinates $t,1-t$; the opposite cap misses the facet and each other cap tests that its own coordinate is at least $1/3$. Thus $W=2/3$ on $J=[1/3,2/3]$ and $W=1/3$ elsewhere up to endpoints. Hermite–Hadamard on $J$, the expression of the pair $1/3,2/3$ as opposite convex combinations of $1/12,11/12$, and Jensen on the two end-sixths give\n$\n\\int_J\\phi\\le\\frac{\\phi(1/3)+\\phi(2/3)}6\n\\le\\frac{\\phi(1/12)+\\phi(11/12)}6\\le\\int_C\\phi .\n$\nWriting $E=[0,1]\\setminus(C\\cup J)$, the original signed integral is $(4/15)\\int_J\\phi-(5/15)\\int_C\\phi-(1/15)\\int_E\\phi$. It is at most $-(\\int_C\\phi+\\int_E\\phi)/15$, which is at most $-\\int_0^1\\phi/30$ by the same comparison and nonnegativity. Since $\\rho\\le5$, the correction adds at most $(1/30)\\int_0^1\\phi$. This establishes the exact reserve. The profile is the limiting unbuffered face trace; the added end footprints are an abstract face law, not a realized collection with the whole mixed family and its actual critical menu.\n",
+  "source_candidate_ids": [
+    "982c37bd4bfdeb89"
+  ],
+  "source_candidate_sha256": {
+    "982c37bd4bfdeb89": "9bfc6f18b80b84015f9e071aba8e16526e549d90d1efae635b52327a44928ca5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "982c37bd4bfdeb89",
+      "locator": "982c37bd4bfdeb89:04 §4, (7)–(10)"
+    }
+  ],
+  "statement": "On a facet of a centroid-marked triangle, parameterize its uniform law by $t\\in[0,1]$. The trace of the three equally weighted canonical centroid caps is $W(t)=(\\mathbf1_{t\\ge1/3}+\\mathbf1_{t\\le2/3})/3$ almost everywhere. Put $C=[0,1/6]\\cup[5/6,1]$, $\\rho=1+4\\mathbf1_C$, and $B=2/5<\\gamma_2=4/9$. For every nonnegative convex $\\phi$,\n$\n\\int_0^1\\phi(W-B)\\rho\\,dt\\le-\\frac1{30}\\int_0^1\\phi\\,dt.\n$\nFor any measurable $0\\le r(t)\\le1/150$, $\\int_0^1\\phi(W-B+r)\\rho\\,dt\\le0$. The law includes the full uniform source facet and four added copies of each convex end-sixth.",
+  "subgoal_id": "pk-intake-w33-face-convex-test-simplex-trace-reserve-obstruction",
+  "title": "All convex face tests can fail to recover the simplex payment"
+}

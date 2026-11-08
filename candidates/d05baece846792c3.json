@@ -1,0 +1,28 @@
+{
+  "advances": "The weighted cap comparison for the actual whole-face polygon enlargement, using the same three original menu weights.",
+  "author": "PK-research-agent",
+  "candidate_id": "d05baece846792c3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.927276+00:00",
+  "depends_on": [
+    "4c54e089191137d9"
+  ],
+  "draft_key": "pk-w33-coupled-face-cap-cost-compensation",
+  "kind": "lemma",
+  "proof": "The inner middle trapezoid with base $I_0=(F_A+F_B)/2$ and top $J+\\varepsilon n/2$ is the midpoint sum of the added $A$ triangle and $F_B$. At each normal height of the triangle its tangential interval contains the coordinate of $p$. Its Minkowski sum with $F_B$ splits into the left part of the triangle row translated by the left endpoint of $F_B$, the length-$L_B$ middle interval obtained by adding the full $F_B$ to the point directly above $p$, and the right part of the row translated by the right endpoint. The pieces are disjoint up to endpoints. For any paired $x_A,x_B$, capture of their midpoint by middle cap $i$ implies $v_i\\cdot x_A\\ge 2v_i\\cdot y_0-v_i\\cdot x_B\\ge b_i$. Hence its load is at most $W_A(x_A)$ with the original weights. Subtract $r$ and integrate. Midpoint scaling multiplies area by $1/4$. The two translated pieces give at most $C_A/4$ after division by $\\varepsilon$ and passage to the limit. The middle strip has area $\\varepsilon L_B$ before scaling, and the vertical $A$ points above $p$ keep its old strict signature for small $\\varepsilon$. Its contribution is at most $L_B(W_A(p)-r)/4$. When $L_B=0$ this strip is absent.\n\nThe actual trapezoidal profile on $F_K$ dominates the inner profile pointwise: extending the two ramp bases to the endpoints of $F_K$ increases the height and keeps the same plateau. Its extra area coefficient is exactly $\\Delta/4$. Its weighted normalized cost is at most $(1-r)\\Delta/4$ since $W_K\\le1$. Adding the old $A$ cost and the inner bound gives the inequality and its strict consequences.\n",
+  "source_candidate_ids": [
+    "b85e6bd6eff40d13"
+  ],
+  "source_candidate_sha256": {
+    "b85e6bd6eff40d13": "d41ee47c00fe89c4d7e46ff4487ed0b028e2ba074eb1be017bad765b16eb0abb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b85e6bd6eff40d13",
+      "locator": "b85e6bd6eff40d13:02 §4, (10)–(11) and consequences"
+    }
+  ],
+  "statement": "Use the shared polygon-face enlargement and notation of pk-w33-coupled-shared-polygon-face-enlargement. Put $\\Delta=L_K-(L_A+L_B)/2\\ge0$ and $C_A=\\int_{F_A}T_p(W_A-r)\\,ds$. If $p$ lies on none of the three old $A$ cutting lines, the actual coupled cost obeys\n$$\nC\\le \\tfrac54 C_A+\\tfrac{L_B}{4}(W_A(p)-r)+\\tfrac{1-r}{4}\\Delta.\n$$\nIf $\\Delta=0$, $C_A<0$ and $W_A(p)<r$ suffice for a negative cost. If also $L_B=0$, $C_A<0$ alone suffices, including for apex points on old cuts.",
+  "subgoal_id": "pk-intake-pk-w33-coupled-face-cap-cost-compensation",
+  "title": "Cap-cost compensation and the excess middle-face payment"
+}

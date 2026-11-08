@@ -1,0 +1,28 @@
+{
+  "advances": "Separates exact first-order contact equations and fixed-normal maximality from free-normal local maximality.",
+  "author": "PK-research-agent",
+  "candidate_id": "2c8eb38b401f4c87",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.931658+00:00",
+  "depends_on": [
+    "952a84dec37b18b0"
+  ],
+  "draft_key": "lattice-free-diamond-fixed-normals-versus-free-volume",
+  "kind": "counterexample",
+  "proof": "At any integer point both absolute coordinate deviations are at least $1/2$. The sum in the inequality is therefore at least one. On the unit square both deviations are at most $1/2$ and equality occurs only at its four corners. The depth-region projection is contained in $P_0$ from the unbounded-container example, which omits those corners. Thus $K\\subset\\operatorname{int}L_s$.\n\nThe axis intercepts relative to the center $(1/2,1/2)$ are $\\pm(1/(1+s),0)$ and $\\pm(0,1/(1-s))$. The area follows from the perpendicular diagonals. At $s=0$ the four facet midpoints are exactly the binary corners and the facets have length $\\sqrt2$. Assigning that length to each sole relative-interior lattice point gives the centroid conditions. The outward unit normal at the binary contact $p$ is $\\sqrt2(p-(1/2,1/2))$, so summing these weights gives zero vector and matrix $2I_2$, and its trace is four.\n\nEach contact strictly satisfies the other three inequalities. Thus for all sufficiently small fixed-normal offset perturbations, any positive offset change brings its contact into the interior, regardless of the other offsets. The feasible perturbations have all offsets nonincreasing. A nonzero such change cuts positive area because the original facets are irredundant. This proves strict fixed-normal local maximality. The exact area formula gives the positive second derivative under the free-normal family.\n",
+  "source_candidate_ids": [
+    "75212e124d66e084"
+  ],
+  "source_candidate_sha256": {
+    "75212e124d66e084": "5dfed3c15b9044fd0628d164c9c396d3e60a61f03b53f448541c502b0dc7ea2c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "75212e124d66e084",
+      "locator": "75212e124d66e084:05 §4, diamond family through the positive second variation"
+    }
+  ],
+  "statement": "Let $K$ be the actual depth-region projection in the unbounded-container example. For $|s|<1$ put\n$$\nL_s=\\{z:(1+s)|z_1-1/2|+(1-s)|z_2-1/2|\\le1\\}.\n$$\nEach $L_s$ is interior-lattice-free and contains $K$ strictly in its interior. The four facet centroids of $L_0$ are its binary lattice contacts and all facet lengths equal $\\sqrt2$, so $L_0$ satisfies the facet-centroid and lattice-contact equations for free lattice-free stationarity. It is a strict local volume maximum with normals fixed. Nevertheless $|L_s|=2/(1-s^2)$, with first derivative zero and second derivative $4$ at zero.",
+  "subgoal_id": "pk-intake-lattice-free-diamond-fixed-normals-versus-free-volume",
+  "title": "Stationary lattice-free diamond with an increasing free-normal second variation"
+}

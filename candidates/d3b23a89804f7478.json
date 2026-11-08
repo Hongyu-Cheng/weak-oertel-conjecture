@@ -1,0 +1,26 @@
+{
+  "advances": "A single fixed original positive fiber and all ambient closed halfspaces, with original mixed-volume budgets.",
+  "author": "PK-research-agent",
+  "candidate_id": "d3b23a89804f7478",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.928205+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w33-fixed-fiber-log-concave-target-attainment",
+  "kind": "theorem",
+  "proof": "Uniform volume restricted to $K$ is log-concave by the Brunn–Minkowski inequality and is a submeasure of $\\mu$. A halfspace containing all sampled fibers gives the upper bound $M$. Finite measures of mass at most $M$ on compact $K$ are weakly sequentially compact, and mass is continuous there by testing against the constant one.\n\nIf $\\rho_j$ are feasible and $\\rho_j$ converges weakly to $\\rho$, take $H=\\{w:a\\cdot w\\ge b\\}$. For $\\delta>0$ let $G_\\delta=\\{a\\cdot w>b-\\delta\\}$ and $H_\\delta=\\{a\\cdot w\\ge b-\\delta\\}$. Open-set Portmanteau gives $\\rho(H)\\le\\rho(G_\\delta)\\le\\liminf_j\\rho_j(G_\\delta)\\le\\mu(H_\\delta)$. Send $\\delta\\downarrow0$ and use continuity from above. This preserves every constraint, including vertical boundaries carrying whole fibers.\n\nFor compact test sets $A,B$ in the target fiber plane and $0<t<1$, put $D=(1-t)A+tB$. The convex combination of their open $\\delta$-neighborhoods is contained in the closed $\\delta$-neighborhood of $D$. The log-concavity inequality for those open sets follows by compact inner approximation and monotonicity. Apply the inequality for $\\rho_j$, then use the closed-set upper and open-set lower parts of Portmanteau. The limit mass of the closed $\\delta$-neighborhood of $D$ is at least $\\rho(A)^{1-t}\\rho(B)^t$. Let $\\delta\\downarrow0$ to obtain log-concavity of $\\rho$, allowing lower-dimensional support. A convergent subsequence of a maximizing sequence now gives an admissible maximizer by continuity of mass.\n",
+  "source_candidate_ids": [
+    "cf7d29d4de34fb55"
+  ],
+  "source_candidate_sha256": {
+    "cf7d29d4de34fb55": "a8b1d98cccb777fb0c6d93b46c63614ce014d8f7790de80952701866b004c8da"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cf7d29d4de34fb55",
+      "locator": "cf7d29d4de34fb55:01 Proof §1"
+    }
+  ],
+  "statement": "Let $\\mu$ be the original summed $d$-dimensional volume of a finite compact sampled family, $d\\ge1$, with total mass $M>0$. Fix a positive-volume compact convex fiber $K$ at one sampled base and identify it with its lift. Among all finite nonnegative log-concave measures $\\rho$ supported on this fixed fiber with $\\rho(H)\\le\\mu(H)$ for every ambient closed halfspace $H$, the maximum total mass $L(K)$ is attained and satisfies $|K|\\le L(K)\\le M$. Here log-concavity is the multiplicative set inequality on compact sets, so measures on proper affine subspaces and the zero measure are allowed.",
+  "subgoal_id": "pk-intake-pk-w33-fixed-fiber-log-concave-target-attainment",
+  "title": "Attainment of halfspace-dominated log-concave mass on a fixed fiber"
+}

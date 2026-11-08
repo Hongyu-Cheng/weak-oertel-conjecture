@@ -1,0 +1,28 @@
+{
+  "advances": "A global ordinary Minkowski volume bound using the support heights from one actual A.",
+  "author": "PK-research-agent",
+  "candidate_id": "2d40d8c6e56282d7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.817365+00:00",
+  "depends_on": [
+    "41e91e1dea46f672"
+  ],
+  "draft_key": "pk-w33-simplex-global-mixed-volume-reserve",
+  "kind": "theorem",
+  "proof": "Apply 41e91e1dea46f672 to the path $B+sA$, using it for both branches. The support increment is exactly $s h_A$ uniformly on the sphere. Thus the right volume derivative is $\\int h_A\\,dS_B=dX_1$. The surface area measure of the simplex has atoms at $v_i/\\lVert v_i\\rVert$ with masses equal to the facet areas. The centroid pyramids, each of height $1/\\lVert v_i\\rVert$ and volume $b/(d+1)$, give the corresponding support coefficient $db/(d+1)$. Hence $dX_1=\\sum_i db\\,h_A(v_i)/(d+1)=\\sum_iP_i-db$.\n\nBy the Alexandrov–Fenchel inequality the mixed-volume sequence is log-concave. Specifically, in its two distinguished slots use $A,B$ and in the other slots use $j-1$ copies of $A$ and $d-j-1$ of $B$, giving $X_j^2\\ge X_{j-1}X_{j+1}$ for $1\\le j\\le d-1$. The theorem applies to these full-dimensional convex bodies, whose mixed volumes are positive. [Shenfeld and van Handel, Mixed volumes and the Bochner method, Theorem 1.1](https://web.math.princeton.edu/~rvan/yairb190305.pdf)\n\nInterpolate $\\log X_j$ between indices $1$ and $d$ to obtain $X_j\\ge X_1 r^{j-1}$ for every $1\\le j\\le d$, since $X_d=a$. The polynomial at $s=1$ then gives the bound on $|A+B|$, and midpoint compatibility supplies $2^dk\\ge|A+B|$. For $d=3$, expand $X_1[(1+r)^3-1]/r=3X_1+3\\sqrt{aX_1}+a$ and put $X=3X_1$.\n",
+  "source_candidate_ids": [
+    "b69ebda3a2e6d72a"
+  ],
+  "source_candidate_sha256": {
+    "b69ebda3a2e6d72a": "a1bc16469fe72a189c40ec9e994c9bb3b53bfedffbdf712ff1cbe6d22d145482"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b69ebda3a2e6d72a",
+      "locator": "b69ebda3a2e6d72a:08 §8, (18)–(20)"
+    }
+  ],
+  "statement": "Let $d\\ge2$, let $B=\\{x:v_i\\cdot x\\le1,\\ 1\\le i\\le d+1\\}$ be a full-dimensional simplex of volume $b$ with $\\sum_i v_i=0$, and let $A,K$ be convex bodies of volumes $a,k$ with $(A+B)/2\\subseteq K$. Set $P_i=db(1+h_A(v_i))/(d+1)$. Write $X_j=V(A[j],B[d-j])$ in the normalization $|B+sA|=\\sum_{j=0}^d\\binom dj X_j s^j$. Then\n$$\ndX_1=\\sum_iP_i-db,\\qquad\n2^dk\\ge|A+B|\\ge b+X_1\\frac{(1+r)^d-1}{r},\\qquad\nr=(a/X_1)^{1/(d-1)} .\n$$\nFor $d=3$ the bound is $8k\\ge a+b+X+\\sqrt{3aX}$ with $X=\\sum_iP_i-3b$.",
+  "subgoal_id": "pk-intake-pk-w33-simplex-global-mixed-volume-reserve",
+  "title": "Global mixed-volume reserve from the support heights of a simplex"
+}

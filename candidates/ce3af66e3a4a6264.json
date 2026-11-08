@@ -1,0 +1,26 @@
+{
+  "advances": "A local result for one fixed common normal and unchanged ambient caps; it does not assert normal-independent payment.",
+  "author": "PK-research-agent",
+  "candidate_id": "ce3af66e3a4a6264",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.928683+00:00",
+  "depends_on": [],
+  "draft_key": "w33-one-homothetic-contact-facet-fixed-cap-credit",
+  "kind": "lemma",
+  "proof": "Small changes of the support numbers with fixed normals preserve a simple polytope's normal fan: each old vertex remains the intersection of its independent active $d$-tuple and all other slacks stay strict; every independent $d$-tuple that did not give a vertex retains a violated inequality. On the common fan both support functions are linear on its cones, so their average has the averaged facet support values and the same fan. Hence only the chosen midpoint support moves, by $(v_A+v_B)/2=h$. The convex hull of the endpoint lifts has exactly these three integer fibers and the path is nested. If $k=d-1$, $\\sigma_A=r_A^k|F|$, $\\sigma_B=r_B^k|F|$, $\\sigma_K=((r_A+r_B)/2)^k|F|$. The harmonic mean $2C$ is at most the geometric mean of the endpoint areas, which is at most $\\sigma_K$.\n\nThe ambient affine cap margin at $(0,m(x))$ is the average of its margins at $(-1,a(x))$ and $(1,b(x))$. This equality persists after the three points are displaced inward for the same infinitesimal time $\\tau$ at speeds $h,v_A,v_B$. If the displaced midpoint is in the closed cap, at least one displaced endpoint is. Taking the one-sided limit proves $I_A(a(x))+I_B(b(x))\\ge I_K(m(x))$. The limit gives the ordinary trace at a proper crossing almost everywhere, the inward-side bit at an entire facet coincidence, and the constant closed bit for a pure-base cap.\n\nThe removed layer in each fiber is a strip at just that plane. Integrating parallel slices, in fixed normal coordinates and dividing by time, gives its cap-loss derivative as the facet speed times the integral of the inward bit. Off facet edges and proper trace boundaries the indicators converge; these boundaries have zero facet area, and boundedness permits dominated convergence on a fixed enlarged tangential patch. This also handles an entire coincidence by the stated one-sided trace. The pairing preserves uniform probability under all three homotheties, and $v_A\\sigma_A=v_B\\sigma_B=2hC$. Integrating the pointwise inequality with normalized area on $F$ gives the claimed endpoint contribution $2hCq_H$ and the total cost formula. The local coefficient depends on the facet; summing over normals would weight the captured and total terms differently, and this argument does not control that global ratio.\n",
+  "source_candidate_ids": [
+    "101249feac4a4158"
+  ],
+  "source_candidate_sha256": {
+    "101249feac4a4158": "44e3214b84ed49cf68aee3925df7305a89e79e7f69731b7c75121440ed4d9f2e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "101249feac4a4158",
+      "locator": "101249feac4a4158:01 §1, (1)–(3); §2, (4)–(7); §3, last paragraph"
+    }
+  ],
+  "statement": "Let $A,B$ be full-dimensional simple $d$-polytopes with the same normal fan, $d\\ge2$, and let the fibers at $-1,0,1$ be $A,K=(A+B)/2,B$. Suppose the facets at one common outer unit normal $u$ are parametrized by $a(x)=a_0+r_Ax,\\ b(x)=b_0+r_Bx,\\ m(x)=(a(x)+b(x))/2$ on a common $(d-1)$-body $F\\subset u^\\perp$ with $r_A,r_B>0$. Write $\\sigma_A,\\sigma_B,\\sigma_K$ for their areas, $C=\\sigma_A\\sigma_B/(\\sigma_A+\\sigma_B)$, and $\\rho=2C/\\sigma_K\\in(0,1]$. For $h>0$, move only the two endpoint $u$-supports inward at speeds $v_A=2h\\sigma_B/(\\sigma_A+\\sigma_B)$, $v_B=2h\\sigma_A/(\\sigma_A+\\sigma_B)$ and take their actual Minkowski midpoint. This realizes a nested compatible path for sufficiently small nonnegative time; only the midpoint's $u$-support moves, at speed $h$.\n\nFor any fixed closed ambient halfspace $H$, let $I_A,I_B,I_K$ be its facet traces from the inward side and $q_H=\\sigma_K^{-1}\\int I_K$. Its captured-volume loss derivative $L_H$ is $h\\int I_K+v_A\\int I_A+v_B\\int I_B$ and satisfies $L_H\\ge h\\sigma_K(1+\\rho)q_H$. The total loss derivative is $T=h\\sigma_K(1+2\\rho)$, so $L_H/T\\ge [(1+\\rho)/(1+2\\rho)]q_H\\ge(2/3)q_H$. The same path works for every halfspace, including supporting and pure-base cuts, and can be tested against any finite nonnegatively weighted menu. For translated equal-area facets $\\rho=1$.",
+  "subgoal_id": "pk-intake-w33-one-homothetic-contact-facet-fixed-cap-credit",
+  "title": "A realizable one-facet contraction pays all fixed cap traces on a homothetic contact"
+}

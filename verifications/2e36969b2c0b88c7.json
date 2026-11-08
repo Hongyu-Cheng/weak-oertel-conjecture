@@ -1,0 +1,47 @@
+{
+  "candidate_id": "15d0f1466ef6446a",
+  "candidate_sha256": "ca705171a425aeaff96548d303e0dd3b0e9a77b1da7c54b94bad19d70dbe1f6e",
+  "checked_dependency_candidate_sha256": {
+    "c680a307d3f26cec": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0"
+  },
+  "checks": [
+    "The endpoint midpoint interval is contained in the middle interval, so taking the lifted hull and then multiplying by a common L yields precisely the three actual product fibers.",
+    "After height translation by -1/2, the accepted interval data are a=b=1, U=3, s=1. The centered endpoints have maximum raw depth 1/2 and the middle value is 2 at the seam between the intermediate and final regimes.",
+    "At every product point a containing cap from the interval model lifts to a containing closed ambient cap with identical raw mass since |L|=1. Thus the full ambient infimum is at most its interval counterpart, without assuming the minimizing cap ignores L.",
+    "The difference fibers are unchanged in volume because the interval factors retain their lengths and (L-L)/2=L. Central inversion gives raw depth at least 5/2 at the origin even for pure-base caps, and the two height-normal caps through any candidate have combined mass five.",
+    "Exact fractions 4/9, 27/64, 256/625 and 3125/7776 all exceed 2/5. Original 1afce146f321da9d gives the same interval model and final product extension."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0",
+      "fact_id": "c680a307d3f26cec",
+      "fact_sha256": "4908e98c45bfa104a83c5437a691833104576ea0fd397ed655df40899326d24c",
+      "hypotheses": "The interval hull has exactly three positive consecutive fibers. Translation puts it at a=b=1, U=3, s=1, the feasible seam σ=β. The exact formula gives F=(U+a)/2=2 and endpoint maxima 1/2.",
+      "reviewed_proof_sha256": "fbd43a05d11b238754907f092d0f8e020febd4bd8e9ffd7e46960a59ae92b7c0",
+      "reviewed_statement_sha256": "b80774a2792eb75e78f6de3ec9e17c99d1724c565943d7ccacdfc5f9c6bdab93"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:01:48Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides the exact uncentered interval computation including ambient orientations. It does not compare the original and centered difference products in d=2,3,4,5.",
+      "fact_id": "c680a307d3f26cec"
+    }
+  ],
+  "readability": "The uncentered product depth is an upper bound, which suffices for the strict refutation.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, exact arithmetic where applicable, and pinned source/dependency comparison",
+  "reviewed_proof_sha256": "160ade0406d900f04f847fe3a2a5efce0b9a8632ae04c0bdc95afb45a74f3f28",
+  "reviewed_statement_sha256": "db4c95c9abf2410a376e07dc3d9f0dfa9ce080789f865066c63e09602927e9db",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:56:22Z",
+  "summary": "The product construction refutes the specified comparison for every listed continuous dimension and every stated symmetric factor.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

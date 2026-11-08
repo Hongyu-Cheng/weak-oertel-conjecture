@@ -1,0 +1,54 @@
+{
+  "candidate_id": "74f7fb231982db0e",
+  "candidate_sha256": "de71aa97441807420fd52739652392d894131ae3ce5a3fcf677039cdb89a3bee",
+  "checked_dependency_candidate_sha256": {
+    "2d939149b3777664": "6a49fc8b6c67a3ffb3379d952c2407369f9825dbb5eb7c52f2f21d90e7877abc",
+    "53fa213bc5d44a1e": "382460f123fb163567bc744c502079c3a76304461661fb01aa2d40e67d2419b2"
+  },
+  "checks": [
+    "A selected inside affine branch underestimates its positive part. The surviving outside hinges have negative convex contributions and preserve jointly concave losses. Every branch choice has threshold slope bounded below by the positive proper term.",
+    "Decreasing a threshold loss increases its inverse at fixed target loss. For the same weighted budget, monotonicity then forces the selected equalized loss to be no larger than the exact loss. The inverse epigraph argument gives its concavity with the stated concave budget.",
+    "At the solved exact thresholds one can choose a maximizing inside branch for every hinge simultaneously, including either choice at a tie. The selected equations agree there and have a unique common solution, proving the exact finite maximum.",
+    "Subtracting the common linear total-loss correction preserves concavity of each selected response. Choosing one tuple for each group gives a convex intersection of strict superlevel sets on the same cone, and their finite union is equivalent to exact simultaneous strict improvement.",
+    "The original §4 locator states exactly this quantifier order and the all-zero conservative choice."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "53fa213bc5d44a1e",
+      "candidate_sha256": "382460f123fb163567bc744c502079c3a76304461661fb01aa2d40e67d2419b2",
+      "mapping": "Use the exact common weighted inverse for the actual facet-constant losses, with positive proper coarea. The proof gives strict monotonicity again for each modified loss. This same-wave parent requires independent approval before admission.",
+      "reviewed_proof_sha256": "08ebd0a77acf4453452df04d43de98c969c66594efc88351df3cf100b95ae0b0",
+      "reviewed_statement_sha256": "f8c4f6ec638e3123b7ce965516430955d967ab1481efcc04f1beb48ce25c7dd0"
+    },
+    {
+      "candidate_id": "2d939149b3777664",
+      "candidate_sha256": "6a49fc8b6c67a3ffb3379d952c2407369f9825dbb5eb7c52f2f21d90e7877abc",
+      "mapping": "Apply its inverse-epigraph concavity argument to the selected jointly concave modified losses. The selected inside contributions are affine, so the outside-hinge proof applies to the modified linear terms as written. This same-wave parent requires independent approval before admission.",
+      "reviewed_proof_sha256": "4c9dceef788c772e21a09e9108b15f2c292a5277c811e459b78e5184f08e105a",
+      "reviewed_statement_sha256": "292e6d076a3e9abb31a603f0f66cbceed0edfe41017a088e9dc3ed28731b8c72"
+    }
+  ],
+  "finished_utc": "2026-11-08T20:59:57Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Deleting all nonnegative inside hinges gives its conservative lower response. Retaining arbitrary selected inside affine branches and recovering the exact mixed response as their maximum is additional.",
+      "fact_id": "9ee0d9a1e9f65259"
+    }
+  ],
+  "readability": "The index ζ specifies only the inside affine choices. The outside hinge values remain exact, so neither their choices nor the physical direction are chosen independently by cap.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "f5d37620d4bfef8b8749639b17d4df6ef267b142d9f5ab9cda3b19d7543dff61",
+  "reviewed_statement_sha256": "1d491e557d0158ccaa7ea95bdd7e4f6712006b2898b3b0c8464427a521ddf34e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:55:05Z",
+  "summary": "Freezing only the inside branches gives concave lower responses whose pointwise finite maximum equals the exact mixed-status response. The common-direction strict-feasibility union follows.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

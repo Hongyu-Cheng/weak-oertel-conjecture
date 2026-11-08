@@ -1,0 +1,32 @@
+{
+  "advances": "Actual mixed closed-halfspace depth at one integer coordinate and a comparison between different bodies. The transform in this assertion is centered Minkowski difference.",
+  "author": "PK-research-agent",
+  "candidate_id": "15d0f1466ef6446a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:56:08.916826+00:00",
+  "depends_on": [
+    "c680a307d3f26cec"
+  ],
+  "draft_key": "w33-difference-body-product-transfer-failure",
+  "kind": "counterexample",
+  "proof": "The hull of the three lifted intervals has integer projection $\\{-1,0,1\\}$ and the displayed integer fibers, since any convex combination at base zero has equal endpoint weights and their midpoint interval $[0,1]$ lies in $[0,3]$. Multiplying by the common convex body $L$ commutes with taking the hull of the lifted sets. Indeed, a convex combination in the hull has its extra coordinate in $L$, and any point of the base-height hull can be realized with a fixed common extra coordinate. This yields exactly the claimed $d$-dimensional fibers, and the hull is full-dimensional.\n\nAfter subtracting $1/2$ from all heights, accepted fact c680a307d3f26cec applies to the interval model with $a=b=1$, $U=3$, and $s=1$, which is the endpoint $\\beta=(b+3a)/4$ of its intermediate range. The middle raw maximum is $(U+a)/2=2$ and the endpoint maxima are $1/2$. At any product point, every closed cap on its interval projection lifts to a closed ambient cap by ignoring the extra coordinates, with exactly the original captured raw length because $|L|=1$. Taking the infimum proves the product raw depth is at most the interval depth at its projection. The total mass remains five, giving the asserted upper bound.\n\nThe difference fibers are $[-1/2,1/2]\\times L,[-3/2,3/2]\\times L,[-1/2,1/2]\\times L$, because $(L-L)/2=L$. They are again exact in their lifted hull by the same midpoint inclusion. Inversion of all coordinates preserves this mixed measure and the origin belongs to its middle fiber. Each closed halfspace containing zero contains the parallel halfspace through zero, which has mass at least $5/2$ by reflection. At any mark, the two opposite halfspaces through its height with normals along the interval coordinate have zero common mixed volume, so at least one captures at most $5/2$. The normalized maximum is therefore $1/2$. Finally $\\Gamma_d$ for $d=2,3,4,5$ is respectively $4/9,27/64,256/625,3125/7776$, each strictly greater than $2/5$.\n",
+  "source_candidate_ids": [
+    "1afce146f321da9d"
+  ],
+  "source_candidate_sha256": {
+    "1afce146f321da9d": "4616fb4c046a89d084566f60a63610447f4e7bae264ce7d84ff70e3ea181c714"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1afce146f321da9d",
+      "locator": "1afce146f321da9d:03 final paragraph, product extension to d=2,3,4,5"
+    },
+    {
+      "candidate_id": "1afce146f321da9d",
+      "locator": "1afce146f321da9d:02 interval construction and depth calculation"
+    }
+  ],
+  "statement": "For each $d\\in\\{2,3,4,5\\}$ and any origin-symmetric $(d-1)$-dimensional convex body $L$ of volume one, lift the fibers $[0,1]\\times L,[0,3]\\times L,[0,1]\\times L$ at bases $-1,0,1$ and take their convex hull. Its integer fibers are exactly those three products, and its maximum normalized closed ambient halfspace depth is at most $2/5$. The lifted hull of the centered difference fibers $(K_z-K_z)/2$ has the same fiber volumes and maximum normalized depth $1/2$. Thus the comparison $D_{\\mathrm{orig}}\\ge2\\Gamma_d D_{\\mathrm{diff}}$, where $\\Gamma_d=(d/(d+1))^d$ and $D$ denotes maximum normalized depth, fails in each of these dimensions with one integer coordinate.",
+  "subgoal_id": "pk-intake-w33-difference-body-product-transfer-failure",
+  "title": "Failure of the difference-body depth transfer in dimensions two through five"
+}

@@ -1,0 +1,56 @@
+{
+  "candidate_id": "d20b0f5d48d32a41",
+  "candidate_sha256": "f5428d172e80cc644cfb863df83f8c471b574bc9a3bb5011a92c880421e5283a",
+  "checked_dependency_candidate_sha256": {
+    "23a563a735c07c25": "585fc3fea7952f0d573abda678b75588c8528379e7f45e6792ed4c009b82361e",
+    "ab61d9604953b1b4": "518e3c229cb2b6b973db11920b42444d46a301a461ebea22ffcff450307aed87"
+  },
+  "checks": [
+    "The halfspaces v_i·x≥0 cover K since the normals sum to zero. They meet its interior on both sides: choose A points strictly on either side of −1 and add a point on the corresponding B facet, then halve. Thus the proper-cap hypotheses hold even in the stronger sense of a cut crossing the interior.",
+    "At α=Q−U₃=q₃≥0 only q₁−q₃ and q₂−q₃ can contribute to the positive-part sum. This remains valid at ties. The cap count is d+1 in dimension d, so the coefficient is 1/Γ and the right bound is Q/Γ−F.",
+    "Substituting Q≤Γ(a+b+k)/2 gives k≤a+b−2F and Q≤Γ(a+b−F). The bound k≥b−a gives F≤a. Also κ>0 for all d≥2 since (1+1/d)^d>2.",
+    "The intersection of the two strict A complements has volume at least a−U₁−U₂≥κU₃>0 by properness. At one common point its remaining margins sum strictly above 2 before adding the d−1 ones in the H_i. Multiplication by db/(d+1) gives the strict reserve. Summing the two dimension-three local inequalities preserves each radical, and the reserve supplies the strict 3b term.",
+    "Original b69ebda3a2e6d72a §5 (7)–(10) uses the same shared point, same Q assumptions and same normalization."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "585fc3fea7952f0d573abda678b75588c8528379e7f45e6792ed4c009b82361e",
+      "fact_id": "23a563a735c07c25",
+      "fact_sha256": "2621df7fd406ca7dd8683d226068d2ad51a17cbd344af1e9addbb64e5b96feb0",
+      "hypotheses": "The ordinary body K in dimension d is covered by d+1 proper closed halfspaces with cap masses q_i. The cutoff q₃ is nonnegative and the theorem's dimension/cap-count parameter is d.",
+      "reviewed_proof_sha256": "4af106804fe99545b57233abe2b9131c64e1e86c51af7ab9db90120a5a9a2437",
+      "reviewed_statement_sha256": "8d63b4e7db60e6cb2b4e4a924845a411db9988b9dff322d8acbbb0e2b3d3e2d4"
+    },
+    {
+      "candidate_id": "ab61d9604953b1b4",
+      "candidate_sha256": "518e3c229cb2b6b973db11920b42444d46a301a461ebea22ffcff450307aed87",
+      "hypotheses": "The same A,B,K obey the midpoint inclusion and each A cap is proper. Use its general q_i inequality at d=3 and the given equality q_i=Q−U_i to recover the displayed local 8Q bounds, without extra mixed-source assumptions.",
+      "reviewed_proof_sha256": "aecbf3ef07e211a63f6ab9174a3af23620f85bc0313cb88b84eee0273bdc5fc6",
+      "reviewed_statement_sha256": "081d30e3594f8794774490ad9ce0d88108b455c383a0706313729ae098e1a6ed",
+      "status": "Same-wave predecessor reviewed separately. Its approval is required before admission of this dependent."
+    }
+  ],
+  "finished_utc": "2026-11-08T21:04:01Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its general profile covers the top-three cap inequality exactly. It does not give the strict support-height reserve from a common residual point or the two coupled local radical terms.",
+      "fact_id": "23a563a735c07c25"
+    }
+  ],
+  "readability": "The stated hypotheses and proof scope are clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "57458a7d35d9d837a858af3081fa852317c52010b906f054f1591adce660114d",
+  "reviewed_statement_sha256": "8613ec5d0a4a960fda93f59f00c3f38d2eb5406faf7cbc578e865ae341aae7fa",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:58:19Z",
+  "summary": "The accepted cap-cover profile and one shared residual point give the stated strict support sum, and the local facet reserve gives the dimension-three refinement.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

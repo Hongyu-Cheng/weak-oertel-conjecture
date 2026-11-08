@@ -1,0 +1,30 @@
+{
+  "advances": "Monotone enlargement at one fixed site of a complete positive sampled polytopal family.",
+  "author": "PK-research-agent",
+  "candidate_id": "160a2705cd1b4592",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.926558+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w33-exact-single-fiber-enlargement-reserve",
+  "kind": "theorem",
+  "proof": "For any labeled fibers, the section of their lifted hull at a sampled base $q$ is the union of the Minkowski combinations of the labeled fibers over all representations of $q$. Therefore exact realization is equivalent to inclusion of every anchored Minkowski combination in its target fiber. At a target $q\\ne p$, testing the old and new inclusions at its facet normals shows respectively that $K_p\\subseteq R_p$ and that $L\\subseteq R_p$ is necessary.\n\nConversely, for $q\\ne p$ every extreme non-self representation obeys each target facet bound: if $\\lambda_p>0$ this follows from the defining inequality for $R_p$, and if $\\lambda_p=0$ it is the unchanged old inclusion. For any other non-self representation the same support inequality holds by linearity in the representation weights. A representation using its own target with weight less than one reduces to a non-self representation by dividing by one minus that weight, and the weight-one case is trivial. At target $p$ the non-self inputs are unchanged, and their combination is in $K_p\\subseteq L$. Thus the new hull has exactly the stated fibers over $P$. Its projection is still $\\operatorname{conv}(P)$, so completeness excludes other sampled bases. It remains full dimensional since the bases span and the positive fibers contain open continuous balls.\n\nFor the facet consequence, keep all other own-fiber inequalities unchanged. The normals are fixed and the recession cone is still trivial. The resulting polytopes are uniformly bounded for small shifts: otherwise normalizing a sequence of unbounded feasible points gives a unit direction in that recession cone. Every accumulation point of points in the new set but outside $K_p$, as the shift tends to zero, lies in $G$ because they violate only its old facet inequality. A neighborhood of compact $G$ lies in $R_p$ by the interior assumption, so all the new points lie in $R_p$ for sufficiently small shifts. Together with $K_p\\subseteq R_p$ this proves feasibility. The interior assumption is equivalently strict slack in each of the finitely many reserve inequalities on every vertex of $G$.\n",
+  "source_candidate_ids": [
+    "be4d9f84e764ef2a"
+  ],
+  "source_candidate_sha256": {
+    "be4d9f84e764ef2a": "09129d76f145f095eb373843a2c14d2b09387606cef4822ba913cfaadf6e5b9a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "be4d9f84e764ef2a",
+      "locator": "be4d9f84e764ef2a:01 §§1–2, (1)–(3), Theorem 1"
+    },
+    {
+      "candidate_id": "be4d9f84e764ef2a",
+      "locator": "be4d9f84e764ef2a:02 §3, (4)–(5), Lemma 2"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be finite and affinely span $\\mathbb R^n$. Suppose positive-volume compact polytopes $K_r\\subset\\mathbb R^d$, $r\\in P$, $d\\ge1$, are the actual sampled fibers of their lifted convex hull. Write $h_r$ for their support functions, and fix $p\\in P$. For $q\\ne p$, take the extreme non-self representations $\\lambda$ of $q$ as a convex combination of $P\\setminus\\{q\\}$, and let $u$ range over the outward facet unit normals of $K_q$. Define\n$$\nR_p=\\bigcap_{\\substack{q\\ne p,\\ \\lambda\\ {\\rm extreme},\\ \\lambda_p>0\\\\u\\ {\\rm a\\ facet\\ normal\\ of}\\ K_q}}\n\\left\\{x:u\\cdot x\\le\n\\frac{h_q(u)-\\sum_{r\\ne p,q}\\lambda_r h_r(u)}{\\lambda_p}\\right\\}.\n$$\nAn empty intersection is $\\mathbb R^d$. Then $K_p\\subseteq R_p$, and replacing only $K_p$ by a compact convex $L\\supseteq K_p$ is actual on the same sampled set if and only if $L\\subseteq R_p$.\n\nIn particular, if a facet $G$ of $K_p$ is contained in $\\operatorname{int}R_p$, shifting only its supporting inequality outward by a sufficiently small positive distance gives a bounded actual enlargement of this single fiber.",
+  "subgoal_id": "pk-intake-pk-w33-exact-single-fiber-enlargement-reserve",
+  "title": "Exact finite reserve for enlarging one sampled polytope"
+}

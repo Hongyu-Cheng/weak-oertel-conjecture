@@ -1,0 +1,26 @@
+{
+  "advances": "An exact mixed cap accounting identity for supplied actual anchors and allocations.",
+  "author": "PK-research-agent",
+  "candidate_id": "57c6049a8075fdbd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:54:32.073072+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w33-anchored-coupling-exact-cap-surplus",
+  "kind": "lemma",
+  "proof": "Convexity of $C$ puts every $(p,Z_E)$ in $C$. The signed affine margin of $H$ at this point is the corresponding positive weighted mean of the source margins. If the output margin is nonnegative, at least one source margin is nonnegative, which proves $I_{E,0}\\le N_E$ for closed caps, including all zero margins. Uniformity of the source marginal at $z$ gives $\\mathbb E\\mathbf1_H(z,X_{E,z})=|K_z\\cap H_z|/v_z$. Therefore $\\eta(H_p)+\\sum_E\\Delta_E$ is exactly $\\sum_z(c_z-s\\mathbf1_{\\{z=p\\}})|K_z\\cap H_z|$. Adding the central and unused parts proves the identity. If $N_E=k\\ge1$, the left side of the pointwise bound is at least $k-1$, and $k-1\\ge (2/r)\\binom{k}{2}$ since $k\\le r$. Both sides are zero for $k=0$.\n\nFor $d\\ge1$ the centroid of a nonzero measure supported on the compact convex fiber belongs to that fiber by convexity. The centroid of its uniform volume lies in the interior, since every supporting hyperplane has zero volume and the body has positive volume strictly to one side. When $s>0$ the combined centroid is a convex combination with positive weight at that interior point, so is interior. In $d=0$ every positive fiber has the unique point of $\\mathbb R^0$ and counting mass one. The margin and marginal arguments continue to apply, as does the membership statement.\n",
+  "source_candidate_ids": [
+    "4bb4c167681e8955"
+  ],
+  "source_candidate_sha256": {
+    "4bb4c167681e8955": "71f3185fea507329ff364e77a15fc6c988e1107f6ca6df9216727a6f26dae521"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4bb4c167681e8955",
+      "locator": "4bb4c167681e8955:03 §2, (9)–(11), including the d=0 paragraph"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a compact convex body with $n\\ge1$, $d\\ge0$. Let $P$ be the finite set of positive-volume integer fibers $K_z$ with volumes $v_z$, using counting mass one for nonempty fibers when $d=0$. Fix $p\\in P$. For each member $E$ of a finite family of nonempty sets of distinct bases in $P$, fix positive weights $\\lambda_{E,z}$ of sum one with $\\sum_{z\\in E}\\lambda_{E,z}z=p$, and a joint law of uniform marginal points $X_{E,z}\\in K_z$. Write $Z_E=\\sum_{z\\in E}\\lambda_{E,z}X_{E,z}\\in K_p$. Choose $0\\le s\\le1$ and $t_E\\ge0$ such that\n$$\nc_z=s\\mathbf1_{\\{z=p\\}}+\\sum_{E\\ni z}t_E/v_z\\le1,\\qquad \\eta=\\sum_E t_E\\operatorname{Law}(Z_E).\n$$\nFor any closed ambient halfspace $H$, write $H_z=\\{x:(z,x)\\in H\\}$, $I_{E,0}=\\mathbf1_H(p,Z_E)$ and $N_E=\\sum_{z\\in E}\\mathbf1_H(z,X_{E,z})$. Then $\\Delta_E=t_E\\mathbb E(N_E-I_{E,0})\\ge0$ and\n$$\n\\sum_{z\\in P}|K_z\\cap H_z|\n=s|K_p\\cap H_p|+\\eta(H_p)+\\sum_E\\Delta_E+\\sum_{z\\in P}(1-c_z)|K_z\\cap H_z|.\n$$\nFor $r=|E|\\ge2$, the pointwise bound\n$$\nN_E-I_{E,0}\\ge \\frac2r\\sum_{\\{z,z'\\}\\subset E}\\mathbf1_H(z,X_{E,z})\\mathbf1_H(z',X_{E,z'})\n$$\nsums over unordered distinct pairs. A nonzero measure of the form $s\\mathbf1_{K_p}\\,dx+a\\eta$, $a>0$, has centroid in $K_p$, in its interior if $s>0$. For $d=0$ its centroid is the unique point of the nonempty fiber.",
+  "subgoal_id": "pk-intake-pk-w33-anchored-coupling-exact-cap-surplus",
+  "title": "Exact closed-cap surplus for anchored barycentric couplings"
+}

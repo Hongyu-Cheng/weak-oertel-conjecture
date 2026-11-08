@@ -1,0 +1,28 @@
+{
+  "advances": "The optimum at a single prescribed direction, over actual ordinary convex subbodies of fixed volume.",
+  "author": "PK-research-agent",
+  "candidate_id": "897267d3c8f88fdd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.816794+00:00",
+  "depends_on": [
+    "30388e25038350a0"
+  ],
+  "draft_key": "pk-w33-sharp-simplex-directional-roof",
+  "kind": "theorem",
+  "proof": "The hypotheses of the result “Exact affine overlap for simplex roof costs” hold in this same $T,e,t,\\nu$. With $u=1-\\sigma\\beta/\\lambda$, $\\lambda>\\sigma\\beta$, the exact formula there gives $W(\\lambda)=Vg(u)$ and $\\Phi(\\lambda):=\\int(\\lambda-r_e)_+\\ell\\,d\\nu=\\lambda Vg(u)$. The function $g$ is strictly convex on $(0,1)$. To check the nonpolynomial summand, for $a=\\beta-1>0$,\n$$\n\\left(\\frac{u^d}{a+u}\\right)''\n=\\frac{u^{d-2}[d(d-1)a^2+2d(d-2)au+(d-1)(d-2)u^2]}{(a+u)^3}>0 .\n$$\nSince $g(0)=g'(0)=0$ and $g(1)=1$, the function $g(u)+(1-u)g'(u)$ increases continuously from zero to one, with derivative $(1-u)g''(u)>0$ in the interior.\n\nThe difference quotients of the defining integral for $\\Phi$ are dominated by the integrable chord length $\\ell$. Its left and right derivatives are respectively the chord-volume masses of $\\{r_e<\\lambda\\}$ and $\\{r_e\\le\\lambda\\}$. The explicit formula is differentiable, so the equality level has zero chord-volume mass. It gives\n$$\n\\Phi'(\\lambda)=V[g(u)+(1-u)g'(u)],\\qquad\n\\lambda\\Phi'(\\lambda)-\\Phi(\\lambda)=V\\sigma\\beta g'(u).\n$$\nFor $b<V$ choose the prescribed $\\lambda$, so $\\Phi'=b$. The dual inequality gives the lower bound for every $B$. On each positive-length column the affine image moves both endpoints down, so the overlap is nonempty exactly when $r_e\\le\\lambda$. The overlap has positive volume by the exact formula. Its projection is compact and convex, and taking the whole $T$ columns over that projection produces a convex compact subbody of volume $\\Phi'=b$. Its roof cost is $\\int_{\\{r_e\\le\\lambda\\}}r_e\\ell\\,d\\nu=\\lambda\\Phi'-\\Phi$, proving attainment.\n\nAt $b=V$ any such convex subbody is $T$ since a proper closed subset omits positive volume. The integrals of $\\min(\\lambda\\ell,h+U)$ increase to $R_e(T,h)$ by monotone convergence on the projection interior. They equal $\\lambda[V-W(\\lambda)]$, whose limit from the overlap formula is $V[d\\sigma\\beta-(\\sigma-1)]=V\\sigma\\beta g'(1)$.\n\nWhen $\\sigma=1$, $g(u)=u^d$ so $u=\\eta$ and the fixed-direction value is the asserted universal bound. When $\\sigma>1$ and $b<V$, apply the strict overlap comparison at $\\lambda=\\beta/(1-\\eta)>\\beta$. The dual bound is strictly greater than $\\lambda[b-V(1-\\beta/\\lambda)^d]=Vd\\beta\\eta^{d-1}$. At $b=V$, the exact value exceeds $Vd\\beta$ by $V(\\sigma-1)(d\\beta-1)>0$.\n",
+  "source_candidate_ids": [
+    "5e5b642b770e6623"
+  ],
+  "source_candidate_sha256": {
+    "5e5b642b770e6623": "642b3d19ea961e47db2ece9f0f6f4a78600ffa447aeb48209c4d2849af36c8d3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5e5b642b770e6623",
+      "locator": "5e5b642b770e6623:03 §6, (10)–(13); 5e5b642b770e6623:02 §§4–5, (1)–(2)"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $m=d+1$, and $T=\\{x:v_i\\cdot x\\le1,\\ 0\\le i\\le d\\}$ be a full-dimensional simplex of volume $V$ with spanning normals satisfying $\\sum_i v_i=0$. Fix $e$ with $v_0\\cdot e=1$ and write $x=y+te$ with $t=v_0\\cdot x$, $y\\in\\ker v_0$. Use $\\pi_e x=y$ and $d\\nu=d\\mathcal H^{d-1}/\\lVert v_0\\rVert$. For $h>d$, set $H=h+1$, $\\beta=H/m$, and $\\sigma=\\sum_i(v_i\\cdot e)_+$. For a convex body $B\\subseteq T$ of volume $b$, write $U_B(y)$ for its upper $t$ endpoint and $R_e(B,h)=\\int_{\\pi_e B}(h+U_B)\\,d\\nu$.\n\nSet $g(u)=u^d/\\sigma+[(\\sigma-1)/\\sigma]\\beta u^d/(\\beta-1+u)$ on $[0,1]$. For each $0<b\\le V$ there is a unique $u\\in(0,1]$ with\n$$\nb/V=g(u)+(1-u)g'(u).\n$$\nThe minimum roof cost over convex $B\\subseteq T$ of volume $b$ is $V\\sigma\\beta g'(u)$. For $b<V$, an optimizer consists of the whole $T$ columns over $\\pi_e[T\\cap F_\\lambda(T)]$, where $\\lambda=\\sigma\\beta/(1-u)$ and $F_\\lambda$ is the affine map of the result “Exact affine overlap for simplex roof costs”. For $b=V$, $B=T$ gives the value $V[d\\sigma\\beta-(\\sigma-1)]$.\n\nIn particular, for $\\eta\\in(0,1]$ defined by $b/V=d\\eta^{d-1}-(d-1)\\eta^d$, all directions satisfy $R_e(B,h)\\ge Vd\\beta\\eta^{d-1}$. It is strict when $\\sigma>1$ and attained for every $b$ when $\\sigma=1$.",
+  "subgoal_id": "pk-intake-pk-w33-sharp-simplex-directional-roof",
+  "title": "Sharp simplex roof costs for each fixed direction"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "An ordinary convex-body counterexample to extrapolating a Stein derivative and density monotonicity bound from independent signed exponentials.",
+  "author": "PK-research-agent",
+  "candidate_id": "cb6582375222243a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:54:32.073665+00:00",
+  "depends_on": [
+    "18ac4869642d018e"
+  ],
+  "draft_key": "pk-w33-uniform-triangle-stein-slope-counterexample",
+  "kind": "counterexample",
+  "proof": "First use $K=\\operatorname{conv}\\{(-3,3),(3,-3),(3,3)\\}$, of area $18$. In coordinates $(t,z)=(x_1+x_2,x_1)$, whose inverse has absolute Jacobian one, the triangle is $0\\le t\\le6$, $t-3\\le z\\le3$. Therefore on $(0,6)$ the density is $f(t)=(6-t)/18$, the mean is $2$ by integration, and the conditional means are both $t/2$ by uniformity on the displayed segment.\n\nUse the accepted scalar closed-tail formula with one fiber and $L(x)=x$ on the law of $T$. Its tail numerator $\\kappa(t)=\\int_t^6(s-2)f(s)\\,ds$ has derivative $(2-t)f(t)$ and vanishes at six. The function $t(6-t)^2/54$ has that derivative and endpoint value, so $\\tau(t)=\\kappa(t)/f(t)=t(6-t)/3$. Its derivative is $2-2t/3>1$ for $0<t<3/2$. The density is strictly decreasing on all of $(0,6)$, including $(0,1)$, which lies below $\\mathbb ET-1$.\n\nTranslate the triangle by $(3,3)$ to obtain vertices $(0,6),(6,0),(6,6)$. The sum shifts by six, so the conditional coordinate means are still $t/2$, the mean is eight, the density on $(6,12)$ is $(12-t)/18$, and the kernel is $(t-6)(12-t)/3$. Translation preserves both interior failures, independently of density values at the endpoints.\n",
+  "source_candidate_ids": [
+    "d16fcea53c3aead3"
+  ],
+  "source_candidate_sha256": {
+    "d16fcea53c3aead3": "43882bb0e0eb0f327791024791e9db108498b07b83494cb16de5c897f81a4d99"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d16fcea53c3aead3",
+      "locator": "d16fcea53c3aead3:04 §4, (7), including translated example"
+    }
+  ],
+  "statement": "There is a full-dimensional planar triangle with nonnegative coordinates and a uniform point $X$ such that for $T=X_1+X_2$ both conditional coordinate means are increasing and $1$-Lipschitz on the interior projection interval, yet its scalar Stein kernel $\\tau$ has $\\tau'>1$ on an open subinterval. Its density is strictly decreasing on a nonempty open interior interval lying below $\\mathbb ET-1$. The number one is the largest coefficient of the projection $X_1+X_2$.",
+  "subgoal_id": "pk-intake-pk-w33-uniform-triangle-stein-slope-counterexample",
+  "title": "Monotone conditional means do not force the signed-exponential Stein slope bound"
+}

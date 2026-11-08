@@ -1,0 +1,28 @@
+{
+  "advances": "Complete depth and attaining-menu classification for this actual eight-fiber product.",
+  "author": "PK-research-agent",
+  "candidate_id": "2525656ce61d945c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.815208+00:00",
+  "depends_on": [
+    "fa0d66edea26e81a"
+  ],
+  "draft_key": "w33-eight-triangle-fiber-exact-depth-menu",
+  "kind": "theorem",
+  "proof": "Apply fa0d66edea26e81a to this exact product: it has eight area-one integer fibers, the global maximum is $112/33$, and the two stated centroids and six stated caps attain it. We use its through-$(3,g)$ height normalization $(-1,t,1-t)$, $-1\\le t\\le1/2$, and $G(t,L)=\\sum_{k=-3}^4F_t(kL)$ for the normalized tail $F_t$. Its proof excludes pure-base caps and $L\\ge2$ by strict lower bounds $4$ and $31/9$, respectively. We show strictness away from the displayed equality cases on the remaining domain.\n\nIn the same exact rational partition let $D=(t+1)(2-t)(1-2t)$ and $P=33DG-112D$. On the all-upper cell the accepted identity $P=(t+1)[12(11L+t-1)^2+28(t+1)^2]$ is strictly positive when $-1<t<1/2$. On the other 34 cells, use the 42 triangles and their nonnegative degree-three Bernstein coefficients from [the certificate](../assets/pk-nov6/computations/triangle-eight-fiber-depth-exact-certificate.json), also printed in the original source's Appendix A. Here are the additional strictness checks. For each triangle choose its largest coefficient. For each vertex and edge midpoint whose $t$ lies in $(-1,1/2)$ evaluate the same branch polynomial. The counts and exact minima over the listed occurrences are:\n\n| Check | Count | Minimum |\n|---|---:|---:|\n| Largest coefficient of each triangle | 42 | $229/125$ |\n| Open-strip vertex values of $P$ | 92 | $229/125$ |\n| Open-strip edge-midpoint values of $P$ | 115 | $12949/16000$ |\n\nThese finite calculations use $P$ given by the branch terms in fa0d66edea26e81a. Equivalently, for a vertex use its corresponding Bernstein coefficient and for the midpoint of an edge use the dot product of the four restricted coefficients in edge order with $(1,3,3,1)/8$. Occurrences shared between triangles are counted once per triangle. The [rational verifier](../assets/pk-nov6/computations/verify_triangle_eight_depth_exact_certificate.py) recomputes the coefficients and verifies the positive vertex and edge evaluations directly. Each triangle interior has all basis weights positive. Along a triangle edge every edge basis weight is positive in the relative interior. An edge meeting the open strip in its relative interior has its midpoint in that strip, so its midpoint positivity implies positivity throughout its relative interior. Vertices in the strip are included in the checks. This proves $P>0$ and hence $G>112/33$ on the entire open strip for $0\\le L\\le2$.\n\nFor $t=1/2$ the accepted endpoint table has minimum $31/9>112/33$. For $t=-1$ only the first interval $0\\le L\\le1/3$ can attain $112/33$, because the other four minima are $157/45,94/27,94/27,31/9$. The first quadratic $(44L^2-16L+32)/9$ is strictly convex and has its unique minimum at $L=2/11$. Negative $L$ cannot give equality: the accepted comparison $G(t,L)\\ge G(t,|L|)$ would first force $t=-1$ and $|L|=2/11$. There the seven paired terms agree, but the extra tail $F_{-1}(-8/11)$ is strictly larger than $F_{-1}(8/11)$, by the proper formula $(2-s)^2/9$. This also excludes negative $L$ with $|L|>2$ using the bound for positive $|L|$.\n\nAt $t=-1$ the normalized functionals are precisely $3\\lambda_i-1$, giving the three stated caps at $L=2/11$. Their barycentric thresholds range from $5/33$ to $19/33$, and at their own fiber the threshold is $1/3$, giving captured fraction $(2/3)^2$. A cap with nonzero continuous normal strictly containing $(3,g)$ has strictly more source-fiber mass than its parallel through-cap, because the through-cut crosses the interior of the triangle. None of the other contributions can decrease. This exhausts all critical closed caps at $(3,g)$. Reflecting in the base gives the same conclusion at $(4,g)$.\n\nThe accepted proof's isolating tilt gives mass at most $22/9<112/33$ for any point on a nonmiddle base. At a noncentroid point of either middle fiber, choose a barycentric coordinate strictly larger than $1/3$ and raise the corresponding critical cap's own threshold to this coordinate, keeping its tilt. The cap now contains that point, its own area strictly decreases, and no other contribution increases. Thus these two centroids are the only deepest points.\n",
+  "source_candidate_ids": [
+    "d4522420ea2ebef1"
+  ],
+  "source_candidate_sha256": {
+    "d4522420ea2ebef1": "e990c3ab9be6547518d89691f2a6c4f20b2ebe7a8ef0c751fadc7b7094808e42"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d4522420ea2ebef1",
+      "locator": "d4522420ea2ebef1:02 §§1–4 and Appendix A, (1)–(3), (5)–(11)"
+    }
+  ],
+  "statement": "Let $T$ be an area-one triangle with centroid $g$ and barycentric coordinates $\\lambda_i$, $i=0,1,2$. For the integer-fiber source of $[0,7]\\times T$, the global maximum raw closed-halfspace depth is $112/33$ (normalized $14/33$). The only deepest points are $(3,g)$ and $(4,g)$. At $(3,g)$ the full attaining halfspace menu consists of the three caps\n$$\nH_i=\\{\\lambda_i(x)-(2/33)(z-3)\\ge1/3\\}.\n$$\nAt $(4,g)$ the menu consists of their reflections $J_i=\\{\\lambda_i(x)+(2/33)(z-4)\\ge1/3\\}$. All six caps have proper positive-area cuts in every fiber and capture $4/9$ of their own fiber.",
+  "subgoal_id": "pk-intake-w33-eight-triangle-fiber-exact-depth-menu",
+  "title": "Exact depth and all critical caps on eight triangle fibers"
+}

@@ -1,0 +1,33 @@
+{
+  "advances": "Specified actual eight-fiber critical cover and its original residual optimizer and rows.",
+  "author": "PK-research-agent",
+  "candidate_id": "e10d3813aa9874ef",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.815368+00:00",
+  "depends_on": [
+    "fc27a2d1671b7707",
+    "2525656ce61d945c"
+  ],
+  "draft_key": "w33-eight-triangle-critical-cover-original-rows",
+  "kind": "theorem",
+  "proof": "For $z\\le3$, the three $H_i$ thresholds are at most $1/3$, hence their union covers $T$ by the sum of its barycentric coordinates. The analogous $J_i$ union covers each $z\\ge4$. Each left cap leaves the root $f(z)$: its captured fraction is the square of $1-[1/3+2(z-3)/33]=2(14-z)/33$ by triangle similarity. Every fraction is strictly between zero and one. Since $f$ strictly increases on $[0,7]$, the minimum residual root over the six caps is $f(\\min(z,7-z))$, with the two central values $c=\\sqrt5/3$ and strict obstacle slack elsewhere at $h\\equiv c$.\n\nStrict convexity gives a unique minimizer, since the feasible set is nonempty and closed and the objective has bounded sublevels. Reflection forces it to be symmetric. Nondecreasing differences make all its heights at least its common central height, which is at least $c$, so the constant $c$ is the minimizer. Use fc27a2d1671b7707 to read the nearest-neighbor system as one of the original supporting-slope KKT systems. The gradient is $s$ at each site. The endpoint conditions $\\beta_0=\\beta_7=0$ and $\\lambda=0$ off the central pair determine successively $\\beta/s=(0,1,3,6,6,3,1,0)$ via $\\lambda_j=s+2\\beta_j-\\beta_{j-1}-\\beta_{j+1}$. The same stationarity at $3,4$ gives $\\lambda=4s$ at each. Complementarity holds at the stated minimizer.\n\nThe original Green component is $\\{1,\\ldots,6\\}$, with $W_j=(\\beta_j/s)\\theta_j$ there. For the stated row at $3$, these weights are $(5,15,30,18,9,3)/32$. The system $(2+s/\\beta_j)W_j-W_{j-1}-W_{j+1}=\\mathbf1_{\\{j=3\\}}$ with $W_0=W_7=0$ holds by substitution, and $W_1=5/32$, $W_6=3/32$ give the adjacent stopping masses. Uniqueness follows from the accepted Green result. Its barycenter is $3$, also obtained by direct summation of the row.\n\nThe smooth extension to $[0,7]$ has $f''(z)=-(2/33)^2[1-(2(14-z)/33)^2]^{-3/2}<0$. Strict Jensen applies since the row has full support and mean $3$. All three $H_i$ have precisely the same residual-root function, and the exact menu theorem exhausts every critical cap at the source. Reflection gives the entire assertion at $4$. In the signed Green formula all second differences at positive-$\\beta$ sites are strictly negative; there is no empty-residual boundary contribution.\n",
+  "source_candidate_ids": [
+    "d4522420ea2ebef1"
+  ],
+  "source_candidate_sha256": {
+    "d4522420ea2ebef1": "e990c3ab9be6547518d89691f2a6c4f20b2ebe7a8ef0c751fadc7b7094808e42"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d4522420ea2ebef1",
+      "locator": "d4522420ea2ebef1:03 §5, (12)–(14)"
+    },
+    {
+      "candidate_id": "d4522420ea2ebef1",
+      "locator": "d4522420ea2ebef1:04 §6, (15)–(17)"
+    }
+  ],
+  "statement": "For the area-one triangle product on bases $0,\\ldots,7$, let $H_i,J_i$ be the six globally critical caps of the exact eight-fiber depth theorem. They cover the entire mixed source. The residual-root obstacles are $e_z=f(\\min(z,7-z))$ with\n$$\nf(z)=\\sqrt{1-(2(14-z)/33)^2}.\n$$\nThe program minimizing $\\sum_z h_z^2$ with $h_z\\ge e_z$ and nonnegative adjacent second differences has unique solution $h_z=c=\\sqrt5/3$. With $s=2c$, its nearest-neighbor multipliers are $\\beta/s=(0,1,3,6,6,3,1,0)$ and $\\lambda/s=(0,0,0,4,4,0,0)$. The original terminal row from $3$ is $\\theta=(5,5,5,5,3,3,3,3)/32$ with barycenter $3$. For every critical cap at $3$, its residual-root row satisfies $\\sum_z\\theta_zf(z)<f(3)$. The row and inequality at $4$ are their reflections.",
+  "subgoal_id": "pk-intake-w33-eight-triangle-critical-cover-original-rows",
+  "title": "Exact residual program and original rows of the eight-fiber oblique cover"
+}

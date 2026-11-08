@@ -1,0 +1,33 @@
+{
+  "advances": "Ordinary simplex and actual centroid caps in one body. The failure is for the translated reflected containment of a Blaschke section body.",
+  "author": "PK-research-agent",
+  "candidate_id": "8185884fb3e30ecb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:56:08.918154+00:00",
+  "depends_on": [
+    "2acc8bc803acf1c0",
+    "c3835529a10c63ef"
+  ],
+  "draft_key": "w33-simplex-reflected-blaschke-containment-obstruction",
+  "kind": "counterexample",
+  "proof": "The ordinary simplex computation in 2acc8bc803acf1c0 gives the depth at the centroid. With vertices $v_i$, the $i$th cap is $v_i/(d+1)+rB$, hence has volume $\\beta|B|$ and full normal measure $r^{d-1}S_B$. The cut-face simplex has centroid with $i$th barycentric coordinate $1/(d+1)$ and every other coordinate $r/d=1/(d+1)$. For the inward gradients $\\nabla\\lambda_i$, the relation $\\sum_i\\nabla\\lambda_i=0$ is positive and unique up to scale: after an affine change to the standard simplex, the gradients are the coordinate basis and its negative sum. Normalizing to unit length preserves minimality and positivity of the circuit.\n\nOn an original facet opposite vertex $v_k$, its opposite cap $k$ captures no facet area and each of the other $d$ caps takes fraction $r^{d-1}$. The old normal measure is therefore multiplied by $d r^{d-1}/(d+1)=\\beta$. All cuts are proper. Apply the one-body area identity of c3835529a10c63ef. The full cap aggregate measure is $r^{d-1}S_B$, and subtracting the old portion gives the cut section measure $r^{d-1}S_B/(d+1)$. Dilation and translation uniqueness of surface area measure give the two bodies stated above. With $p=(d-1)/d$, direct substitution gives $|A|^p=r^{d-1}|B|^p$, which equals both $(\\beta+s^{d-1})|B|^p$ and the probability mean of the $p$th powers of the individual cap volumes. These are the two equality statements.\n\nA translated reflected copy $-sB+q$ fits in $tB$ exactly when $t\\ge ds$. To prove this use affine equivalence to $B=\\operatorname{conv}(0,e_1,\\ldots,e_d)$. Inclusion requires $q$ and all $q-se_i$ to lie in $tB$, which gives $q_i\\ge s$ for all $i$ and $\\sum_iq_i\\le t$. Conversely $q=(s,\\ldots,s)$ suffices when $t\\ge ds$. Translation absorbs the affine offset for other simplices. In the proposed containment $t/s=d^{1/(d-1)}$, smaller than $d$ for $d\\ge3$, and equal to $d$ for $d=2$. Also $\\beta\\le \\beta^{1/(d-1)}$ because $0<\\beta<1$. At $d=3$ we have $r=3/4$, $s=3/8$ and $\\beta=27/64$, giving the exact displayed scales. The classical translation uniqueness used here is the Minkowski surface-area theorem. [Gardner, The Brunn–Minkowski inequality, §6](https://sites.stat.washington.edu/jaw/COURSES/520s/523/HO.523.20/Gardner.BullAMS.02.pdf).\n",
+  "source_candidate_ids": [
+    "455c254ad09b8374"
+  ],
+  "source_candidate_sha256": {
+    "455c254ad09b8374": "14f89f6320411dfe8a0b1a38027b5857fec33eadea6acbb002f8dd45a8cb9958"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "455c254ad09b8374",
+      "locator": "455c254ad09b8374:02 §2, (4)–(8)"
+    },
+    {
+      "candidate_id": "455c254ad09b8374",
+      "locator": "455c254ad09b8374:01 §1, (1)–(3)"
+    }
+  ],
+  "statement": "For a $d$-simplex $B$, $d\\ge2$, let $g$ be its centroid, $\\lambda_i$ its barycentric coordinates, and set $r=d/(d+1)$, $\\beta=r^d$ and $s=r(d+1)^{-1/(d-1)}$. The equal-weight caps $\\{\\lambda_i\\ge1/(d+1)\\}$ attain the ordinary maximum normalized halfspace depth $\\beta$ at $g$, have section centroids $g$, and their unit inward normals form a minimal positive full-rank circuit. Their mean old-boundary normal measure is $\\beta S_B$. Their full cap aggregate and section body are $A=rB$ and $J=sB$ up to translation. Both Kneser–Süss volume lower bounds for $A$, from the two summands $\\beta^{1/(d-1)}B$ and $J$ and from the weighted cap bodies, are equalities.\n\nFor $d\\ge3$, no translate of $-J$ lies in $\\beta^{1/(d-1)}B$, and none lies in $\\beta B$. The least scale of $B$ containing a translate of $-J$ is $ds$, equal to $\\beta^{1/(d-1)}$ in $d=2$. For $d=3$, the respective scales are $9/8$ and $3\\sqrt3/8$.",
+  "subgoal_id": "pk-intake-w33-simplex-reflected-blaschke-containment-obstruction",
+  "title": "Sharp simplex caps fail reflected Blaschke section containment"
+}

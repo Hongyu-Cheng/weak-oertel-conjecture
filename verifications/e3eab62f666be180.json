@@ -1,0 +1,71 @@
+{
+  "candidate_id": "d24cf5c46b230b4e",
+  "candidate_sha256": "d53f0c8498138348a38c720dc452f0fe23bbd4a80d95cd7a0f56874e8e5da715",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Compared the exact revised statement and proof against the original reviewed bytes. The statement is the only altered decoded field. The original source f8a85d598f5eddb1 §§1 and 7 remains pinned.",
+    "Inclusion-minimality ensures every original cap occurs, so double counting proves the identity with three nonnegative summands. The repetition term bounds both the number of repeated caps and, by m≤2(m−1) for m≥2, the groups meeting a shared cap.",
+    "The union of the other groups proves the private-cap estimate. The strict threshold N>(h−1)(d+1) forces s=h. Under d≥h−1, hd≥(h−1)(d+1) verifies the other sufficient threshold. At h=4,d=2 and N=10,11,12 the counts are one, two, and three.",
+    "At N=12 both deficit terms for sizes and repetitions vanish, giving disjoint triples independently of normals. A minimal positive continuous-normal triple has a one-dimensional support kernel, hence rank two. More generally a deficient minimal positive group has k_g≤d and contributes at least one to the size deficit, so their number is at most Δ even if the other groups are arbitrary.",
+    "The original twelve-cap parallel-normal example is now consistent with the statement, which requires minimal positive dependence for the rank claims. The strict sub-M/9 budget implies N>9 by the union bound and still does not supply a group selection."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T20:59:35Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "d24cf5c46b230b4e",
+    "candidate_sha256": "0fcd27df45c3b419c21c8b945708a80603e9b9d5d363e19598fcc76a0057356a",
+    "checks": [
+      "Checked f8a85d598f5eddb1 §§1 and 7. Minimality makes each original cap occur. Double counting incidences gives the three nonnegative deficit terms. The repetition term controls shared caps, and the inequality m≤2(m−1) for m≥2 controls the number of groups meeting a shared cap.",
+      "The other s−1 groups contain at most (s−1)(d+1) distinct caps, giving the private count. If N>(h−1)(d+1) then s=h. The implication from N>hd requires and uses d≥h−1.",
+      "For h=4,d=2, direct substitution gives private counts one, two, and three at N=10,11,12 and proves disjointness at twelve. The strict mass bound follows from subadditivity alone.",
+      "The conversion from size to continuous rank requires minimal positive dependence. The opening only assumes groups of bounded cardinality, which suffices for the incidence statements but cannot imply full continuous rank at N=12."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T20:58:59Z",
+    "issues": [
+      {
+        "defect": "The hypotheses permit arbitrary groups, whereas the statement concludes that the four triples at N=12 have full continuous rank without explicitly carrying the circuit premise into that specialization. For a literal counterexample take twelve source points (z,x)=((j,j²),(0,0)) and caps 2i z₁−z₂+x₁≥i²−1/2. Each cap contains exactly its indexed point, by the squared difference identity. Four arbitrary triples meet the counting hypotheses with Δ=0 and all continuous normals equal (1,0).",
+        "locator": "Statement, second sentence after the n=d=2 specialization and the earlier rank-deficiency consequence",
+        "proof_locator": "First paragraph of proof for the size-to-rank conversion and final paragraph for N=12",
+        "severity": "major",
+        "smallest_repair": "State that all rank conclusions, including full rank at N=12 and the count of deficient groups, concern minimal positive continuous-normal circuit groups. The disjoint-triple statement and the counts can remain unconditional."
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Gives the rank k−1 of a minimal positive continuous circuit. It neither assumes nor proves the new whole-cover incidence identity and supplies no rank implication for arbitrary groups.",
+        "fact_id": "d192c5d880bad772"
+      }
+    ],
+    "readability": "The statement should mark the circuit-conditioned rank clauses directly.",
+    "reviewed_proof_sha256": "20ec54cfa3fb85e93aad0f0ac4941beb5877cfd101090b63a6dcfed739885d45",
+    "reviewed_statement_sha256": "b7e9b0a7b53d87037e1f7275ea8007593f2b998f16398e2d76dc2e50f0b526a1",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T20:54:54Z",
+    "summary": "The incidence identity and private-cap estimates hold. The rank conclusions need the minimal-positive-circuit hypothesis explicitly attached to them.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the rank k−1 of a minimal positive continuous circuit. It neither assumes nor proves the new whole-cover incidence identity and supplies no rank implication for arbitrary groups.",
+      "fact_id": "d192c5d880bad772"
+    }
+  ],
+  "readability": "The disjointness and rank premises are stated in separate sentences.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "20ec54cfa3fb85e93aad0f0ac4941beb5877cfd101090b63a6dcfed739885d45",
+  "reviewed_statement_sha256": "4d0792c2c915cc7960536dc093def9a3875a88ee2e2636705931a38d00bac0ff",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "0fcd27df45c3b419c21c8b945708a80603e9b9d5d363e19598fcc76a0057356a",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:59:04Z",
+  "summary": "The revised statement separates the unconditional incidence counts from the rank conclusions for minimal positive circuits. The original proof establishes both at their corrected scopes.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

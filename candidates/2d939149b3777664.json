@@ -1,0 +1,28 @@
+{
+  "advances": "Curvature of the actual equalized group loss; no curvature assertion for exact mixed-support responses.",
+  "author": "PK-research-agent",
+  "candidate_id": "2d939149b3777664",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:54:32.071705+00:00",
+  "depends_on": [
+    "53fa213bc5d44a1e"
+  ],
+  "draft_key": "buffered-one-sided-support-response-curvature",
+  "kind": "lemma",
+  "proof": "For outside support only, $R_j$ is jointly concave in $(\\xi,r)$. With $t_j(\\xi,q)=R_j(\\xi,\\cdot)^{-1}(q)$, the inequality $r\\ge t_j(\\xi,q)$ is equivalent to $R_j(\\xi,r)\\ge q$, a convex constraint in $(\\xi,q,r)$. Hence $t_j$ is convex. The hypograph of $\\ell$ is characterized by $\\sum_j\\rho_j t_j(\\xi,q)\\le\\alpha(\\xi)$, since every inverse is increasing and the weighted inverse sum equals $\\alpha$ at $\\ell$. This set is convex for concave $\\alpha$. For inside support only, the hinges are positive and $R_j$ is jointly convex. Its inverse hypograph is characterized by $R_j(\\xi,r)\\le q$, a convex constraint. Thus the inverse is concave and the epigraph of $\\ell$ is given by $\\sum_j\\rho_j t_j(\\xi,q)\\ge\\alpha(\\xi)$, a convex constraint for linear $\\alpha$. Subtracting the linear total-loss term does not change curvature.\n\nFor the finite test, a full-dimensional realized branch agrees with the function on an open subset of the relative interior of $V$. If the function is concave, its linear form majorizes the whole function: start at a point of that open subset, move a small positive fraction toward any other point of $V$ while remaining on the branch, and apply concavity. For convexity the same segment gives a minorant. Conversely, the full-dimensional regions cover a dense subset of $V$. Indeed the boundaries of the finitely many full-dimensional sign regions and the lower-dimensional regions have empty interior in the span, and the relative interior of a convex cone is dense in the cone. Agreement on the dense subset and continuity on $V$ give the entire function as the minimum of the majorants, or the maximum of the minorants. This gives concavity or convexity respectively. On each branch region the required comparison of two linear forms is itself linear.\n",
+  "source_candidate_ids": [
+    "4f875cf42fc6ba0a"
+  ],
+  "source_candidate_sha256": {
+    "4f875cf42fc6ba0a": "eb82b704ddea98b6fe3f820947f2856245e95bac7449cc17272077ec5a5da5ee"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4f875cf42fc6ba0a",
+      "locator": "4f875cf42fc6ba0a:02 §2, (4), curvature and finite test"
+    }
+  ],
+  "statement": "In the exact facet-constant buffered equalization of the preceding lemma, assume $V$ is convex. If all selected caps have only outside supporting coincidences, then $\\ell$ and $G=\\ell-(Q/M)D$ are concave when the contact budget $\\alpha$ is concave, including a finite minimum of linear forms. If all selected caps have only inside supporting coincidences and $\\alpha$ is linear, then $\\ell$ and $G$ are convex.\n\nFor a polyhedral $V$ and the finite branch fan, restrict to the linear span of $V$. Concavity holds exactly when every realized full-relative-dimensional branch linear form majorizes the realized function on every region; convexity holds exactly when every such form minorizes it. These are finitely many tests of linear inequalities on polyhedral cones.",
+  "subgoal_id": "pk-intake-buffered-one-sided-support-response-curvature",
+  "title": "Curvature of the exact buffered response with one-sided support"
+}

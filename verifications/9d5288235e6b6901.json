@@ -1,0 +1,45 @@
+{
+  "candidate_id": "aa9f54bdeb89d4eb",
+  "candidate_sha256": "3c95a02721db169340253c51a4e90aec45e68dd2e2c13b6837659a898e55beb4",
+  "checked_dependency_candidate_sha256": {
+    "388668713cd84c75": "4f71d93303b75a6ce68d985ac197f197b6b1d940ea927de02b4a6620f52c0858"
+  },
+  "checks": [
+    "Each high upper endpoint is at least 1/2+t and each low lower endpoint is at most -1/2-t. Averaging the two corresponding corners forces both bounds at central base (1,1), so any convex containing set has central length at least 1+2t.",
+    "Choose the four intervals as close to zero as allowed. Their four continuous ranges lie in [-1/2-t,1/2+t], and the two extremes are realized as diagonal midpoint values at the center. This proves sharpness. The additionally selected centered middle and edge trims also lie in the same range.",
+    "A fixed horizontal radius section of a convex lift is itself convex, so exact central length t is impossible for that slice. This does not constrain constructions that change the level measure.",
+    "For homothetic trims about the old corner centroids ±1, the averages force ±(1+t/2) at the central base, giving length at least 2+t. Checked original a1e40e6e6a2316e4 §3 (4), §5 and the final homothetic case in §4."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "388668713cd84c75",
+      "candidate_sha256": "4f71d93303b75a6ce68d985ac197f197b6b1d940ea927de02b4a6620f52c0858",
+      "hypotheses": "Use the same-wave singleton-graph parent's exact original square fibers: high corner intervals [1/2,3/2], low intervals [-3/2,-1/2], and centered edge and central intervals. The determinant and exact fiber representation were checked in the frozen parent. Admission is conditional on separate approval of that parent.",
+      "reviewed_proof_sha256": "4549d1adaebcb320dae36f60defb84b7eeffb4a334facdc481f782ff81d40873",
+      "reviewed_statement_sha256": "271795dc613d84851ae814c8f2a5f83b70b87166a0fdcfedeb904a8d8b7787f5"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:07:02Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Does not give a sharp central volume forced by all interval trims. The present claim is an obstruction to realizing its equal-volume idea by these physical slices.",
+      "fact_id": "e4253a0d6f78849c"
+    }
+  ],
+  "readability": "The final homothetic calculation is also in source §4, in addition to the primary §§3 and 5 locator.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent proof read, predecessor-scope and provenance check, and exact rational replay where needed",
+  "reviewed_proof_sha256": "11d4457cf99e320886a5a172d001df2c78a9435b0aaa028152e3177e8891b755",
+  "reviewed_statement_sha256": "563401d82bc4c06488e2a16ec01720359b3c5a1e3768813c4c72fb9e60112568",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T21:00:52Z",
+  "summary": "The forced central interval has exact least length 1+2t over corner trim choices, and the same obstruction applies to an exact fixed-radius section.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

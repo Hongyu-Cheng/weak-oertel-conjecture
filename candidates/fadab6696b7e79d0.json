@@ -1,0 +1,33 @@
+{
+  "advances": "An obstruction for a single selected ordinary critical cover; the compatible example is not an unrestricted local minimum.",
+  "author": "PK-research-agent",
+  "candidate_id": "fadab6696b7e79d0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.929146+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d",
+    "bf9a7e56f89375b5"
+  ],
+  "draft_key": "w33-one-selected-simplex-cover-convex-order-obstruction",
+  "kind": "counterexample",
+  "proof": "For an integer point of the outer simplex the barycentric weight at $p_N$ is $a=(1-\\sum z_i)/N$; the other weights are $z_i+a$. Thus $a<1$ implies $z_i\\ge0,\\sum z_i\\le1$; $a=1$ gives $p_N$. So $P$ is complete. For any simplex point, the cap in the direction of a largest barycentric coordinate has fraction at most $\\gamma$. The full centroid lower bound follows from 6769574fc1bd9f8d with mass equal to the full simplex volume and its centroid as the metronoid point. At the central centroid, couple the common inner copies $r_{\\min}K$ in the outer fibers by cyclic permutations of one uniform barycentric vector. Every marginal is uniform, and their sum is zero since their averaged barycentrics are $1/N$. Including the outer base coordinates leaves the lifted sum zero. Every closed cap through the origin therefore captures at least one marginal, yielding one full $r_{\\min}K$ volume in addition to the central centroid quota. Define $\\ell_i(z)=Nz_i-\\sum_lz_l$ for $i\\le d$, $\\ell_N(z)=-\\sum_lz_l$. A large finite tilt by $\\ell_i$ at the center strictly includes the chosen outer fiber and excludes all others, retaining any selected central through-mark cap. Choosing a smallest outer fiber gives the matching central maximum. At any outer site, exposed-base tilts isolate that fiber and its ordinary depth exactly; its maximum is $\\gamma r_j^d|K|$. This proves the formula, without assuming compatibility for arbitrary radii.\n\nAt equal radii take the unit inward vertex directions $u_j$ and use $H_j=\\{L\\ell_j(z)+u_j\\cdot x\\ge0\\}$ with large common $L$. The margin sum is zero, the normals are a full-rank minimal circuit, and the outer statuses are strictly saturated. Only the central sections contribute. By symmetry their areas are equal, and the section $\\lambda_j=1/N$ has centroid zero since its other barycentric means equal $1/N$. Hence the response weights and multipliers are those stated.\n\nOn a facet $F$, one center cap misses it and each of the other $d$ caps takes the homothetic copy $av_i+(1-a)F$ at a facet vertex with $a=1/N$. With uniform facet probability $X$ and $V$ a uniformly independent facet vertex, the summed center trace is $d(1-a)^{d-1}=N\\gamma$ times the law of $Y=(1-a)X+aV$. Apply bf9a7e56f89375b5 in affine barycentric coordinates, $m=d$: its conditional expectation law gives $Y\\preceq_{\\rm cx}X$ exactly at this $a=1/(m+1)$. After dividing all facet measures by its area, the objective is $\\mu=\\delta_0 X+\\sum_j\\delta_{p_j}X$ and the multiplier-weighted cap law is $\\nu=s_0\\delta_0Y+\\lambda\\sum_j\\delta_{p_j}X$ where $s_0=\\lambda N\\gamma$. Since $1/\\gamma=(1+1/d)^d<e<3\\le N$, one has $\\lambda<1$, $s_0>1$ and $s_0-1=N(1-\\lambda)$. For a joint convex $\\phi(z,x)$, Jensen on the base average at fixed $Y$ gives\n$\n\\int\\phi\\,d\\nu\\le\\lambda\\sum_j\\mathbb E\\phi(p_j,X)+\\mathbb E\\phi(0,Y)+(1-\\lambda)\\sum_j\\mathbb E\\phi(p_j,Y)\n\\le\\int\\phi\\,d\\mu.\n$\nThe same inequality holds on every facet and contains the affine equalities. Also $N\\lambda>1/\\gamma$ by $N\\gamma>1$.\n\nThe displayed perturbation extends to one positive affine radius on the outer simplex, with value one at zero, so its scaled fibers are actual (the support heights of $r(z)K$ are affine). The denominator in the formula is at least $N+1$ by convexity. Its central numerator is strictly below $\\gamma+1$, and its largest outer numerator is at most $\\gamma e^{1/4}<(4/3)\\gamma<\\gamma+1$, where $e^{1/4}<\\sum_{k\\ge0}(1/4)^k=4/3$. Finally, keeping the same vertex directions but using one common outer isolating tilt makes every cap include the same outer fiber. It preserves coverage of the central plane and the critical mass. The weighted base first moment on each shared facet is a positive multiple of that outer base, whereas the full measure's first moment is zero. Thus this valid alternative selection fails even the affine part of the condition.\n",
+  "source_candidate_ids": [
+    "ffc34ddb869ec7d5"
+  ],
+  "source_candidate_sha256": {
+    "ffc34ddb869ec7d5": "f992fd1e4f1508b05ed224da09ef431347901ba2e55173050dc287cdfa2f6c27"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ffc34ddb869ec7d5",
+      "locator": "ffc34ddb869ec7d5:05 §5, (9)–(12)"
+    },
+    {
+      "candidate_id": "ffc34ddb869ec7d5",
+      "locator": "ffc34ddb869ec7d5:06 §6, (13) and alternative selected circuit"
+    }
+  ],
+  "statement": "Let $d\\ge2$, $N=d+1$, $\\gamma=(d/(d+1))^d$, and $P=\\{0,p_1,\\ldots,p_N\\}$ with $p_j=e_j$ for $j\\le d$ and $p_N=-\\mathbf{1}$. Put the same centered regular $d$-simplex $K$ at every site. Its normalized maximum is $\\beta=(1+\\gamma)/(N+1)$, attained only at the central base. There is a full-rank critical $N$-cap cover with common mixed section centroid $(0,0)$, response weights $1/N$, and multipliers $\\lambda=(N+1)/(N(1+\\gamma))$ for which every full physical shared-facet convex-order test holds despite $N\\lambda>1/\\gamma$.\n\nMore generally, in the finite union with central radius one and arbitrary positive outer radii $r_j$, the normalized maximum is\n$\n\\frac{\\max\\{\\gamma r_{\\max}^d,\\ \\gamma+r_{\\min}^d\\}}{1+\\sum_jr_j^d}.\n$\nThe choice of two outer radii $1-s,1+s$ and all others one, $0<s\\le1/(4d)$, gives an actual compatible strict descent. At the original equal-radius body, a different valid critical circuit putting all caps on the same outer fiber fails the shared-facet base first-moment test.",
+  "subgoal_id": "pk-intake-w33-one-selected-simplex-cover-convex-order-obstruction",
+  "title": "One selected simplex cover passes every shared-facet convex test at a nonminimum"
+}

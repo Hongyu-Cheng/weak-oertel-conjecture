@@ -1,0 +1,34 @@
+{
+  "advances": "An actual strict upper bound on the perturbed maximum from a specified retargeted cover. It is not a claim about the whole perturbed active menu.",
+  "author": "PK-research-agent",
+  "candidate_id": "84e9994a35df672a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.929006+00:00",
+  "depends_on": [
+    "7a5ea4f8a4c5094c"
+  ],
+  "draft_key": "w33-cube-roof-two-plane-descent",
+  "kind": "theorem",
+  "proof": "The outer simplex with vertices $p_1=e_1,p_2=e_2,p_3=e_3,p_4=-\\mathbf{1}$ has just these integer points and zero. The barycentric weight at $p_4$ for an integer point $z$ is $a=(1-\\sum z_i)/4$, and the other weights are $z_i+a$. If $0\\le a<1$ these force $z_i\\ge0$ and $\\sum z_i\\le1$; $a=1$ gives $p_4$. Let the four sign normals be $(1,1,1),(1,-1,-1),(-1,1,-1),(-1,-1,1)$. Apply their four coordinatewise sign maps to one uniform cube vector and associate the resulting marginal vectors with the four outer sites. Their full lifted sum is zero, so any closed ambient cap through $(0,0)$ captures at least one of the four coupled points and at least 8 units of total outer volume. The central fiber adds 4 by symmetry (or 8 for a pure-base cap). Define $\\ell_i(z)=4z_i-\\sum_lz_l$ for $i\\le3$ and $\\ell_4(z)=-\\sum_lz_l$. These sum to zero and each is $3$ at its own outer site and $-1$ at the other three. Adding sufficiently large common multiples to the four displayed cube forms produces the stated caps, of mass 12 each; their margins sum to zero globally. This proves the exact original maximum. Equal continuous normal lengths and symmetry give equal positive threshold coareas and response weights $1/4$.\n\nWriting $u=x_2,v=x_3$ at $x_1=1$, the four center inequalities give the count $c$ in the statement. Their outer trace sum is one per outer site, and the old objective totals five copies of the face. With cap weights $(1/4)/(3/10)=5/6$, subtraction gives density $5-(5/6)(4+c)=(5/6)(2-c)$. In $a=u+v,b=u-v$ the square becomes $|a|+|b|\\le2$ with Jacobian $1/2$. This yields $\\int |b|\\,du\\,dv=8/3$, $\\int_{|b|\\ge1}|b|\\,du\\,dv=4/3$, and $\\int_{|a|>1}|b|\\,du\\,dv=1/3$ by integration on the corresponding two triangles. In particular the roof $-|b|$ has signed comparison integral $5/6>0$.\n\nThe split path uses the same modified positive cube fiber at each base, and gives velocity $-|b|$ on that face only. Apply the exact noncoincident case in the proof of 7a5ea4f8a4c5094c to the two copies of the original inequality; all strict outer statuses remain fixed. The total derivative is $-5(8/3)=-40/3$. The sum of the four fixed-cap derivatives is $-4(8/3)-[2(8/3)+4/3-1/3]=-17$. Shifting thresholds at their fixed-cap derivative minus their average, divided by the common coarea, equalizes each new cap's first-order budget. The shifts sum to zero, so the full ambient cover survives. Expanding the normalized budget gives $[-(17/4)+(3/10)(40/3)]/40=-1/160$.\n",
+  "source_candidate_ids": [
+    "15d4d14834b04881",
+    "ffc34ddb869ec7d5"
+  ],
+  "source_candidate_sha256": {
+    "15d4d14834b04881": "88430b76ae621395991320bf825cc1f6817ac0a83adc96978bff3f834d94fad7",
+    "ffc34ddb869ec7d5": "f992fd1e4f1508b05ed224da09ef431347901ba2e55173050dc287cdfa2f6c27"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ffc34ddb869ec7d5",
+      "locator": "ffc34ddb869ec7d5:03 §3, (7) and response −1/160"
+    },
+    {
+      "candidate_id": "15d4d14834b04881",
+      "locator": "15d4d14834b04881:02 §§2–6, (1)–(2), (5)–(7), actual cube stress obstruction"
+    }
+  ],
+  "statement": "Over the complete integer base $P=\\{0,e_1,e_2,e_3,-(1,1,1)\\}$, put $[-1,1]^3$ on each fiber. The normalized maximum depth is $3/10$. There is a critical four-cap cover with the four tetrahedral continuous sign normals, each including a distinct whole outer fiber. Splitting the body inequality $x_1\\le1$ into $x_1\\le1\\pm t(x_2-x_3)$ gives an actual positive family with mass derivative $-40/3$. The selected four caps can be retargeted while retaining the full ambient cover, to common budget $12-(17/4)t+o(t)$. Hence its new normalized maximum is at most $3/10-t/160+o(t)$. On the shared face $x_1=1$, the signed measure of the original objective minus the normalized selected cap laws has aggregate tangential density $(5/6)(2-c)$ where $c=2+\\mathbf1_{\\{|x_2-x_3|\\ge1\\}}-\\mathbf1_{\\{|x_2+x_3|>1\\}}$ almost everywhere.",
+  "subgoal_id": "pk-intake-w33-cube-roof-two-plane-descent",
+  "title": "Splitting one cube facet gives an exact selected-cover descent"
+}

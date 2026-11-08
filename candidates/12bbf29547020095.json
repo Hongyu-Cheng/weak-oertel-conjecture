@@ -1,0 +1,26 @@
+{
+  "advances": "An obstruction to exact capwise trace preservation under width-normalized hinge control, separate from the existence of alternative cap covers.",
+  "author": "PK-research-agent",
+  "candidate_id": "12bbf29547020095",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.933761+00:00",
+  "depends_on": [],
+  "draft_key": "fixed-trace-one-cap-hinge-unbounded-despite-difference-equality",
+  "kind": "counterexample",
+  "proof": "The canonical hull is the rectangle $[-N,N]\\times[-1/2,1/2]$, giving the difference bodies. The old cap contains the upper half of the central fiber, all positive-index fibers and no negative-index fiber, with total mass $N+1/2$. The proper upper-half trace at zero forces the sign of the continuous coefficient to be positive and the threshold there to be zero. Thus the normalized margin is $x+Az$. At $z=1$ containment of its lower endpoint forces $A\\ge1/2$. Exact exclusion at $z=-1$ additionally forces strictness, which preserves the displayed bound.\n\nThe hinge integral on the center interval is $1/8$. At positive index $j$ the margin is nonnegative on the whole interval and its integral is $Aj$, while negative indices contribute zero. Hence the total is at least $1/8+\\frac12\\sum_{j=1}^Nj=1/8+N(N+1)/4$. For the horizontal pair each half-cap has length $1/2$ and hinge $1/8$ per interval. This gives both cap masses and total hinge as stated.\n",
+  "source_candidate_ids": [
+    "f7422e63e37f7d98"
+  ],
+  "source_candidate_sha256": {
+    "f7422e63e37f7d98": "19c1c8f57c29a4933e3eaccde8e1c6c1ee76f4503ce8486a5b8550256f253970"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f7422e63e37f7d98",
+      "locator": "f7422e63e37f7d98:05 Exact limitation of capwise trace-preserving clipping, (5)"
+    }
+  ],
+  "statement": "Let $N\\ge1$ be an integer and take interval fibers $[-1/2,1/2]$ at $-N,\\ldots,N$ in one integer coordinate. Write $\\mu$ for summed fiber length and $M=2N+1$. Both difference bodies of the canonical hull equal $[-1,1]$. The closed cap $z+x\\ge0$ has mass $M/2$. Every closed affine cap with the same trace on the sampled set, normalized so that the absolute continuous coefficient is one, has margin $x+Az$ with $A\\ge1/2$ and satisfies\n$$\n\\int (x+Az)_+\\,d\\mu\\ \\ge\\ \\frac18+\\frac{N(N+1)}4.\n$$\nIn particular the minimum hinge lower bound divided by $M$ grows without bound. The horizontal pair $x\\ge0$ and $-x\\ge0$ covers the sampled set, with cap masses $M/2$ and total hinge $M/4$.",
+  "subgoal_id": "pk-intake-fixed-trace-one-cap-hinge-unbounded-despite-difference-equality",
+  "title": "A fixed cap trace can force unbounded relative hinge despite difference-body equality"
+}

@@ -1,0 +1,30 @@
+{
+  "advances": "Counterexamples for dependent coordinates in ordinary uniform convex-body laws.",
+  "author": "PK-research-agent",
+  "candidate_id": "eed3a655ba18bb13",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:54:32.073549+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w33-uniform-convex-coordinate-conditional-mean-counterexamples",
+  "kind": "counterexample",
+  "proof": "Take $K=\\operatorname{conv}\\{(0,1),(1,0),(0,2)\\}$. The affine coordinates $t=x_1+x_2$, $z=x_1$ have inverse $(z,t-z)$ with absolute Jacobian one, and $K$ is given by $1\\le t\\le2$, $0\\le z\\le2-t$. Its area is $1/2$. For $1<t<2$, its sum density is $2(2-t)>0$ and the conditional law of $X_1$ is uniform on $[0,2-t]$. Thus the two conditional means are $(2-t)/2$ and $(3t-2)/2$, with slopes $-1/2$ and $3/2$. These hold throughout an interval of positive density, so changing versions on null sets cannot restore the properties. In dimension one the coordinate sum is $X_1$ itself and its conditional mean given this sum is the identity.\n\nFor the unrestricted slopes, send the unit square in $(t,z)$ to $(X_1,X_2)=(z-Lt,(1+L)t-z)$ with $L>0$. The determinant is $-1$, so the image carries uniform measure. The sum is $t$, uniform on $[0,1]$, and the conditional means are $1/2-Lt$ and $(1+L)t-1/2$, with slopes $-L$ and $1+L$.\n\nFor general full-dimensional uniform convex bodies in $\\mathbb R^m$, coarea for the coordinate sum gives the density on the interior projection interval as the section $(m-1)$-volume divided by the full volume and the gradient norm $\\sqrt m$. It is positive there: the projection of the interior is the interior of the projected interval, so each such slice contains a relatively open set. Normalizing section measure gives the conditional law and the sum of conditional coordinate means equals $t$. For $m\\ge2$, Brunn–Minkowski in the common section hyperplane, after parallel translation of each slice, proves concavity of the density's $1/(m-1)$-power by the section inclusion at intermediate values. The arithmetic-geometric mean inequality gives log-concavity. The explicit triangle and parallelogram obey these density properties.\n",
+  "source_candidate_ids": [
+    "d16fcea53c3aead3"
+  ],
+  "source_candidate_sha256": {
+    "d16fcea53c3aead3": "43882bb0e0eb0f327791024791e9db108498b07b83494cb16de5c897f81a4d99"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d16fcea53c3aead3",
+      "locator": "d16fcea53c3aead3:01 §1, (1) and dimension comparison"
+    },
+    {
+      "candidate_id": "d16fcea53c3aead3",
+      "locator": "d16fcea53c3aead3:02 §2, (2) and parallelogram example"
+    }
+  ],
+  "statement": "For a uniform point $X$ of a full-dimensional planar convex body with nonnegative coordinates, the coordinate conditional means given $T=X_1+X_2$ need not be nondecreasing or $1$-Lipschitz, even for a triangle with integer vertices. The failure is possible in dimension two, the smallest dimension for conditioning on the coordinate sum. For unrestricted coordinate signs there is also no universal bound on the magnitude of an individual conditional-mean slope, even when $T$ is uniform on a fixed interval.",
+  "subgoal_id": "pk-intake-pk-w33-uniform-convex-coordinate-conditional-mean-counterexamples",
+  "title": "Conditional coordinate means of uniform convex bodies can have unbounded slopes"
+}

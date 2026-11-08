@@ -1,0 +1,39 @@
+---
+fact_id: 0d78fc6b5ffef6fc
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-interval-fixed-mass-density-sharp-cap-formula
+depends_on: ["72c591b20bb1ed8c"]
+verifier_run: 2d257f9c5df88f5b
+target_match: null
+---
+
+## Source
+
+- [326fdf5e708cf497](../candidates/326fdf5e708cf497.json), 326fdf5e708cf497:01 Statement (1); proof (2)–(4) and two-band realization.
+
+## Statement
+
+Let $B$ be a compact interval of positive length, $0\le\eta\le\mathbf1_B\,dx$ with $\eta(B)=\alpha|B|$, $0\le\alpha\le1$, and $\rho=\mathbf1_B\,dx+2\eta$. For the centroid $g$ of $\rho$, the sharp lower bound on $\rho(H)/\rho(B)$ over all such $\eta$ and closed halfspaces $H$ containing the resulting $g$ is
+$$
+\Theta_1(\alpha)=\frac{1+2\alpha^2}{2+4\alpha}.
+$$
+For every prescribed $\alpha$ there is an attaining $\eta$ and halfspace on every $B$. Over $\alpha\in[0,1]$ this expression has its unique minimum $(\sqrt3-1)/2$ at $\alpha=(\sqrt3-1)/2$.
+
+## Proof
+
+Apply the exact scalar characterization of 72c591b20bb1ed8c with $d=1$ and $q=2$ to this original weight-two measure. Affine changes of the interval and corresponding scaling of $\eta$ preserve the fraction, so the attaining simplex model can be placed on any $B$. The objective is $(s+2r)/(1+2\alpha)$ with $0\le s\le1$, $0\le r\le\min(\alpha,s)$, $s+\alpha-r\le1$, and the final constraint simplifies to
+$$
+s\ge S(r):=\frac{1+2\alpha^2+4r^2-4\alpha r}{2(1+2r)} .
+$$
+The necessary inequality $S(r)\le1-\alpha+r$ is equivalent to $r\ge r_0=(2\alpha^2+2\alpha-1)/6$. Therefore
+$$
+S(r)+2r-\tfrac12-\alpha^2
+=\frac{r(6r+1-2\alpha-2\alpha^2)}{1+2r}\ge0 .
+$$
+This proves the bound for every feasible point.
+
+Put $\alpha_0=(\sqrt3-1)/2$. For $\alpha\le\alpha_0$ take $r=0$, $s=1/2+\alpha^2$: the constraint $s+\alpha\le1$ holds by the defining quadratic for $\alpha_0$, and $s=S(0)$. For $\alpha\ge\alpha_0$ take $r=r_0$, $s=1-\alpha+r_0$: then $r_0\ge0$ and $r_0\le\alpha$ since $2\alpha^2-4\alpha-1<0$ on $[0,1]$. Thus $r\le s\le1$ and $s+\alpha-r=1$. Here too $s=S(r)$, and the preceding difference vanishes. In both cases the two-band realization of 72c591b20bb1ed8c on $B=[0,1]$ uses $\eta$ equal to length on the ranks $v=1-x$ in $[0,r]\cup[s,s+\alpha-r]$. The centroid rank is $s$ by equality, and the closed half-line through it pays $s+2r$ in units of $|B|$. This verifies attainment including $\alpha=0,1$.
+
+The derivative of $\Theta_1$ has the sign of $2\alpha^2+2\alpha-1$, negative before $\alpha_0$ and positive after it. Substituting $\alpha_0^2+\alpha_0=1/2$ gives $\Theta_1(\alpha_0)=\alpha_0$.

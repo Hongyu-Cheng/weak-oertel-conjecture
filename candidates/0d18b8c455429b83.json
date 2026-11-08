@@ -1,0 +1,26 @@
+{
+  "advances": "Counterexample to the auxiliary step-cap formula on even products. The calculation is an upper bound on actual depth and leaves the locked lower-bound target separate.",
+  "author": "PK-research-agent",
+  "candidate_id": "0d18b8c455429b83",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.814621+00:00",
+  "depends_on": [],
+  "draft_key": "w33-even-triangle-chain-oblique-upper-bound",
+  "kind": "counterexample",
+  "proof": "The product has exactly the $2m$ indicated integer fibers, each of area one. The upper projection tail in the chosen direction is $F(s)=(2-s)^2/9$ on $[-1,2]$, by triangle similarity. Set $L=6/(2m^2+1)$ and $k=z-(m-1)$. All thresholds $kL$ lie in that interval: $2m^2+1-6(m-1)=2(m-3/2)^2+5/2>0$ and $2(2m^2+1)-6m=2(2m-1)(m-1)\\ge0$. Summing with $\\sum k=m$ and $\\sum k^2=m(2m^2+1)/3$ gives\n$$\n\\sum_{k=-(m-1)}^m F(kL)=\\frac{8m-4mL+m(2m^2+1)L^2/3}{9}\n=\\frac{4m(4m^2-1)}{9(2m^2+1)}.\n$$\nAn ambient depth superlevel is convex: it is the intersection of the open complements of all closed caps of mass strictly below the level. The six affine symmetries permuting the vertices of $T$ preserve the source and halfspace mass. Averaging any source point over these permutations puts it at its own fiber centroid without decreasing depth. Base reflection about $m-1/2$ also preserves depth, and the segment between any integer fiber centroid and its reflection contains both middle centroids. Thus the depth at $(m-1,g)$ dominates that of every mixed point.\n\nSubtracting $m-1+4/9$ gives numerator $-2m^3+10m^2-13m+5$ over $9(2m^2+1)$. The numerator is $-15$ at $m=4$ and its forward difference is $-6m^2+14m-5<0$ for every $m\\ge4$. At $m=4$ substitution gives the stated rational masses.\n",
+  "source_candidate_ids": [
+    "0f873637705b2427"
+  ],
+  "source_candidate_sha256": {
+    "0f873637705b2427": "f403c615c05d3a9e849b5fd2c4ed95276c2f46eaa15175e7d7136ccefa4d1cd9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0f873637705b2427",
+      "locator": "0f873637705b2427:01 §1, (1)–(3)"
+    }
+  ],
+  "statement": "Let $T$ be an area-one triangle with centroid $g$, let $m\\ge1$ be an integer and let $S$ be the actual integer-fiber source of $[0,2m-1]\\times T$. For any direction $u$ whose vertex values $u\\cdot(x-g)$ are $(-1,-1,2)$, the closed cap\n$$\nu\\cdot(x-g)\\ge \\frac{6(z-(m-1))}{2m^2+1}\n$$\nat $(m-1,g)$ has mass $4m(4m^2-1)/(9(2m^2+1))$. The global maximum raw depth under summed fiber area is at most this mass. For $m\\ge4$ this strictly defeats the step-cap formula $m-1+4/9$. At $m=4$ the cap has mass $112/33$ with gap $5/99$ below $31/9$.",
+  "subgoal_id": "pk-intake-w33-even-triangle-chain-oblique-upper-bound",
+  "title": "Oblique caps defeat the even triangle-chain step depth"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "Refutes containment of the entire balanced moment body. It does not rule out selecting a different point of that body.",
+  "author": "PK-research-agent",
+  "candidate_id": "73e09be696893636",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:00:22.793572+00:00",
+  "depends_on": [
+    "0fcb7fa715e2af62"
+  ],
+  "draft_key": "whole-balanced-moment-body-depth-obstruction",
+  "kind": "counterexample",
+  "proof": "Take exactly the compact convex body of 0fcb7fa715e2af62, with the middle standard simplex $B$ of volume $V=1/120$, endpoint fibers $A=(2-q)D$, $C=qD$, $D\\subset B$, $q=m^{-1/5}$ and $m=|D|/V$. Its verified bounds give $1<q<2$, $(A+C)/2=D$, and $a=(2-q)^5m$. The lesser closed marginal ray through zero captures $A$ and $B$, hence has mass $(1+a)V$.\n\nUse the common reference measure $dx/V$ in each of the three fibers. Select all of $A$, the density $\\mathbf1_B-(a/m)\\mathbf1_D$ on the middle fiber, and density $a\\mathbf1_C$ on the right fiber. These lie between zero and one on their respective fibers: $a/m=(2-q)^5<1$, $D\\subset B$ and $0<a<1$. Their masses in the common units are $a,1-a,a$; the total is $1+a$ and the base moment is zero. Multiplying this reference by $V$ gives an actual dominated source of mass $D_0$. Write $g_E$ for the volume centroid of $E$. Homothety gives $g_A+g_C=2g_D$, so the continuous centroid of the selection is\n$$\ny=\\frac{a g_A+g_B-a g_D+a g_C}{1+a}\n =\\frac{g_B+a g_D}{1+a}.\n$$\nIt is in $\\operatorname{conv}(\\{g_B\\}\\cup D)$. More precisely $(g_D)_1=5r/6$ because one of the six vertices has first coordinate zero and the others $r=497/3000$. Therefore $1/6-y_1=[a/(1+a)](103/3600)<(2/25)a$. At base zero this puts $y$ in the first closed cap $H_1$ of 0fcb7fa715e2af62. Its endpoint traces are empty by that fact, and its actual mass is $V(5/6)^5[1+(12/125)a]^5<V(5/6)^5(1+a/2)=(5/6)^5M/2$.\n",
+  "source_candidate_ids": [
+    "b4c3b9c6a52059d2"
+  ],
+  "source_candidate_sha256": {
+    "b4c3b9c6a52059d2": "3c68baa42db20f20a46e7cd529484ba122079d98970789de06b176aca0241278"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b4c3b9c6a52059d2",
+      "locator": "b4c3b9c6a52059d2:08 §6, (15), failure of whole-body sharp depth containment"
+    }
+  ],
+  "statement": "There is a compact full-dimensional convex body with $n=1,d=5$, exactly three positive integer fibers of volumes $aV,V,V$ at $-1,0,1$, $0<a<10^{-5}$, and no fiber of volume at least half its total $M=(2+a)V$. At base zero, with marginal depth $D_0=(1+a)V$, the balanced moment body $M_{D_0}(0)$ contains a point $y$ such that $(0,y)$ lies in a closed ambient halfspace of mixed mass strictly below $(5/6)^5 M/2$. Here the balanced body uses actual dominated sources of mass $D_0$ and base mean zero.",
+  "subgoal_id": "pk-intake-whole-balanced-moment-body-depth-obstruction",
+  "title": "A balanced moment body is not contained in the sharp depth region"
+}

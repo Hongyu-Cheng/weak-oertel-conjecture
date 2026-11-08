@@ -1,0 +1,32 @@
+{
+  "advances": "Counterexample to sufficiency of the stated identical-inner-pair certificate. It measures the lower certificate, while the actual mixed depth of the example is separately bounded below.",
+  "author": "PK-research-agent",
+  "candidate_id": "7f5b6ab1e23de98d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.815511+00:00",
+  "depends_on": [
+    "d6ce3858d2712450"
+  ],
+  "draft_key": "w33-triangle-inner-pair-certificate-failure",
+  "kind": "counterexample",
+  "proof": "At $(a,a)$ in $rT$ the barycentric coordinates are $(1-2a/r,a/r,a/r)$. By d6ce3858d2712450 the normalized ordinary cap minimum in units of $V$ is $F_r(a)$, the product of the two least barycentric coordinates times $4r^2$. In a through-cap with nonzero continuous normal, each reflected pair contains two copies of the same min-radius triangle, and the base tilt gives opposite threshold shifts relative to $(a,a)$. The accepted paired formula lower-bounds their total by twice that ordinary cap minimum. If the mark is outside this inner triangle its $F_r(a)$ is zero, still a valid lower bound. The own triangle contributes its own minimum. In a pure-base through-cap the whole own fiber and at least one member of every pair are present. This dominates the same bound since $F_r(a)\\le(4/9)r^2$ and $2(4/9)<1$. Any containing cap contains its parallel through-cap. The pairs and the own fiber are disjoint. This proves validity.\n\nThe radius sequence $(1,R,R,1)$ is concave, so its piecewise-linear interpolation $r(z)$ defines the compact convex body $\\{0\\le z\\le3,\\ x_1,x_2\\ge0,\\ x_1+x_2\\le r(z)\\}$. It has exactly the four specified integer fibers, and on each unit interval its fibers are interpolated Minkowski sums of the two lifted endpoints, so it is their lifted convex hull. At either outer anchor the certificate is $F_1$, with maximum $4/9$ at $1/3$. At either inner anchor it is $F_R+2F_1$. In the consecutive intervals cut by $0,1/3,1/2,R/3,R/2$ its expressions are respectively\n$$\n12a^2,\\qquad 8a-12a^2,\\qquad 4a^2,\\qquad 4Ra-8a^2.\n$$\nThe first increases and the second decreases from its vertex $1/3$. The third increases and the fourth decreases because its vertex $R/4$ is before that branch. The zero-length third interval at $R=3/2$ is allowed. Thus the only necessary peak candidates are $4/3$ and $4R^2/9$. The target exceeds both since $1+R^2>3$ and $1+R^2>R^2$. The ratio decreases for $R^2\\le3$ and increases for $R^2\\ge3$, proving the exact minimum. For the integer example take $R=7/4$ and multiply radii by four, which multiplies the certificate and target by sixteen.\n\nFor a general anchor use its own radius once and each reflected min-radius twice. On an open subinterval between the participating breakpoints let $n_H$ count the radii with $r>3a$, and $n_M$ and $R_M$ count and sum those with $2a<r<3a$, all with multiplicity. Each of the latter contributes $4ra-8a^2$, each of the former contributes $4a^2$, and the rest contribute zero. The resulting quadratic is $(4n_H-8n_M)a^2+4R_Ma$. Its maximum on the closed interval is at an endpoint unless there is an interior stationary point and the quadratic is strictly concave. In that case the additional candidate is $R_M/(4n_M-2n_H)$. The pieces agree at their breakpoints. A constant piece is maximized at its endpoints, so this list also covers all degeneracies.\n",
+  "source_candidate_ids": [
+    "4c4818ef16a7e9ee"
+  ],
+  "source_candidate_sha256": {
+    "4c4818ef16a7e9ee": "12db1c4410388d9b3666335a13e6b12abdde28e4558a322879ad904b10e82449"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4c4818ef16a7e9ee",
+      "locator": "4c4818ef16a7e9ee:02 §§1–2, (3)–(7)"
+    },
+    {
+      "candidate_id": "4c4818ef16a7e9ee",
+      "locator": "4c4818ef16a7e9ee:03 §4, piecewise quadratic maximization"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}(0,e_1,e_2)$ have area $V$. For positive concave radii on a finite complete integer interval and $0\\le a\\le r_j/2$, define\n$$\nF_r(a)=4a\\min(a,(r-2a)_+),\\qquad C_j(a)=F_{r_j}(a)+2\\sum_{h\\ge1}F_{\\min(r_{j-h},r_{j+h})}(a),\n$$\nwhere the sum uses only existing pairs. Then $VC_j(a)$ is a lower bound on actual raw depth at $(j,a,a)$ for common-vertex fibers $r_k T$. Nevertheless, for the actual four fibers at $0,1,2,3$ with radii $(1,R,R,1)$, $R\\ge3/2$, the exact all-anchor and all-point maximum of this certificate is\n$$\n\\max_{j,a}C_j(a)=\\max(4/3,4R^2/9)<4(R^2+1)/9.\n$$\nIts ratio to this last target is $\\max(3,R^2)/(R^2+1)$ and has minimum $3/4$ at $R=\\sqrt3$. The radii $(1,2,2,1)$ give $16/9<20/9$. The integral radii $(4,7,7,4)$ give $196/9<260/9$ with ratio $49/65$ and gap $64/9$, in units of $V$.\n\nFor any radii and anchor, the exact maximum over the permitted $a$ is obtained from the interval endpoints, all breakpoints $r/3,r/2$ of participating radii, and each admissible concave-quadratic stationary point given in the proof.",
+  "subgoal_id": "pk-intake-w33-triangle-inner-pair-certificate-failure",
+  "title": "Exact four-fiber obstruction to the identical inner-pair certificate"
+}

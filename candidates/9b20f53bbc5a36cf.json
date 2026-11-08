@@ -1,0 +1,28 @@
+{
+  "advances": "Scalar comparison for four common-shape planar-fiber radii. Its application to actual depths also requires separate pointwise payments.",
+  "author": "PK-research-agent",
+  "candidate_id": "9b20f53bbc5a36cf",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.815653+00:00",
+  "depends_on": [
+    "e9da2489a6c65517"
+  ],
+  "draft_key": "w33-triangle-peak-scalar-closure",
+  "kind": "lemma",
+  "proof": "When $c\\ge b$, apply e9da2489a6c65517 at $d=2$. Its clipped term is $[(3/2)b+2c-2]_+=(3/2)h$. It gives $1+(9/4)h^2\\ge (2b-1)^2+b^2+c^2$, so\n$$\n4/9+h^2/2\\ge 2[(2b-1)^2+b^2+1+c^2]/9.\n$$\nSince $7/9\\ge1/2$ and $a\\le2b-1$, the second branch suffices.\n\nSuppose $c\\le b$ and the first branch misses. Multiplying by nine gives $a^2<(2/5)(1+c^2-b^2)$. Along with $a^2\\le(2b-1)^2$ this bounds the target by the minimum of\n$$\n\\frac29[(2b-1)^2+b^2+1+c^2],\\qquad \\frac{14(1+c^2)+6b^2}{45}.\n$$\nComparison of the second branch against either expression is equivalent, respectively, to\n$$\n7h^2\\ge R_1:=10b^2-8b+2c^2,\\qquad 35h^2\\ge R_2:=14c^2+6b^2-6.\n$$\nSet $e=1-b$ and note $c\\le h+4e/3$, including $h=0$. Substituting this upper bound on $c$ yields\n$$\n\\begin{aligned}\n9(7h^2-R_1)&\\ge45(h-8e/15)^2+108e-(674/5)e^2-18,\\\\\n9(35h^2-R_2)&\\ge189(h-8e/9)^2+e(108-(1282/3)e).\n\\end{aligned}\n$$\nFor $0\\le e\\le1/4$, the bracket on the second line is at least $7/6$, giving the second comparison. For $1/4\\le e\\le3/7$, the final quadratic on the first line is concave, with endpoint values $23/40$ and $864/245$, giving the first. If $3/7\\le e<1/2$, then $c\\le b\\le4/7$ and $R_1\\le12b^2-8b\\le0$. These intervals cover the domain. The comparisons also hold at $a=0$ or $c=0$ because the proof uses nonnegative variables throughout.\n",
+  "source_candidate_ids": [
+    "86b03c88b3643f55"
+  ],
+  "source_candidate_sha256": {
+    "86b03c88b3643f55": "c7a34eb85665d9d81eafa2860b83718892369fd1e96aad22edee315b33952535"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "86b03c88b3643f55",
+      "locator": "86b03c88b3643f55:02 §§4–5, (11)–(19), scalar conclusion (4)"
+    }
+  ],
+  "statement": "Suppose $1/2<b\\le1$, $0\\le a\\le2b-1$, and $0\\le c\\le1$. Set\n$$\nh=[\\min(b,c)-4(1-\\max(b,c))/3]_+.\n$$\nThen\n$$\n\\max\\{(4b^2+7a^2)/9,\\ (4+7h^2)/9\\}\\ge 2(a^2+b^2+1+c^2)/9.\n$$",
+  "subgoal_id": "pk-intake-w33-triangle-peak-scalar-closure",
+  "title": "Exact scalar closure for the four-triangle peak profile"
+}

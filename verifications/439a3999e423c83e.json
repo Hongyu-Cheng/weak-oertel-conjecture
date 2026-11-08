@@ -1,0 +1,47 @@
+{
+  "candidate_id": "9b20f53bbc5a36cf",
+  "candidate_sha256": "bda9ce7f8bcd260044de1fe618b6d6dab135fef7bce198170245ceb2137e1b67",
+  "checked_dependency_candidate_sha256": {
+    "e9da2489a6c65517": "63eea93ab2e487cc239be340df3e4aab00c6429b32cbf756db625dada9e7b2b9"
+  },
+  "checks": [
+    "For c≥b the accepted ordered lemma at d=2 has clipped term (3/2)h. The resulting coefficient 1/2 on h² is bounded by 7/9, and a²≤(2b−1)².",
+    "For c≤b and a strict first-branch miss, rearrangement gives a²<(2/5)(1+c²−b²). The two resulting target bounds yield exactly the displayed R₁,R₂ comparisons after multiplying by 9 and 45.",
+    "Direct polynomial expansion with c=h+4e/3 gives both completed squares. The actual c≤h+4e/3 and c≥0 only improve their lower bounds. Fraction checks confirm 7/6, 23/40 and 864/245 at the indicated endpoints.",
+    "The three closed overlapping e ranges exhaust 0≤e<1/2. In the last range c≤b≤4/7 gives R₁≤12b²−8b≤0. The nonnegative boundary choices a=0,c=0 use no division by either.",
+    "Source 86b03c88b3643f55 §§4–5 supplies the same scalar conclusion. This frozen lemma does not assume the companion geometric lower bounds."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "e9da2489a6c65517",
+      "candidate_sha256": "63eea93ab2e487cc239be340df3e4aab00c6429b32cbf756db625dada9e7b2b9",
+      "fact_sha256": "30ef4f5247dbe0716cbc36f3529f619df883977257e35b840d05d4276fdd11bd",
+      "hypotheses": "Take d=2 and 1/2<b≤c≤1. Then [(1+1/d)b+2c−2]_+=(3/2)h, exactly matching the ordered case.",
+      "reviewed_proof_sha256": "4bdb8a2ac8ce77ea0105be9b2642f8dc2f6323da9cdf5dc4c0a35d16dbaaefb5",
+      "reviewed_statement_sha256": "badce0b6e37f37e3c191ef97f2bf68dd1ac4457c2bf9e25470eff223af5d1dca"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:03:38Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Covers the ordered c≥b comparison via d=2, with a smaller coefficient on h² sufficient there. It does not cover the reverse order and two-branch maximum.",
+      "fact_id": "e9da2489a6c65517"
+    }
+  ],
+  "readability": "Clear on the frozen statement and its proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold read of the frozen statement and proof, source and predecessor comparison, and exact arithmetic where used.",
+  "reviewed_proof_sha256": "1e58e243d72001edf2f0049295f100958ca1391883af837db6187ef0d85fe0a2",
+  "reviewed_statement_sha256": "28d522e262f957ab9089eaab78ca13c2a87c4c039b48598cb8ddadf6c525528a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:58:22Z",
+  "summary": "The scalar branch inequalities close the four-triangle peak profile on the entire stated parameter domain.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

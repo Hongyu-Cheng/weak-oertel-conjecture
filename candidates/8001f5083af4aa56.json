@@ -1,0 +1,26 @@
+{
+  "advances": "Necessary volume, incidence and first-moment constraints on the actual cuts of one ordinary convex body.",
+  "author": "PK-research-agent",
+  "candidate_id": "8001f5083af4aa56",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.817253+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w33-simplex-residual-incidence-and-moments",
+  "kind": "theorem",
+  "proof": "Put $m=d+1$. At every interior point of $A$, $\\sum_i g_i(x)=m$ and the omitted coordinates are negative. Thus $\\sum_{i\\in I}g_i(x)\\ge m$. Because each $v_i\\ne0$, $H_i>g_i(x)$ at interior points. This proves the strict pattern bound and its integrated version $\\sum_iP_iU_i>db\\,a$. Also,\n$$\n\\sum_i\\int_{A\\cap\\{g_i\\ge0\\}}g_i(x)\\,dx=m a+\\sum_iR_i .\n$$\nFor a single captured cap with range $[0,H_i]$, homothety about any point at $g_i=0$ by factor $s/H_i$ puts a copy of the cap of volume $(s/H_i)^d U_i$ in $\\{g_i\\le s\\}$. Integrating the upper-tail bound gives its first moment at most $dH_iU_i/m$. Combine this with the identity and $P_i=dbH_i/m$. Properness gives $R_i>0$.\n\nThe density $\\rho_i$ is the Euclidean section measure divided by $\\lVert v_i\\rVert$. Suppress the index and write $\\rho_0=\\rho(0)$. The cone from the cut section at zero to a highest point gives $U\\ge \\rho_0 H/d$. On the interior of the height support, $\\rho^{1/(d-1)}$ is concave by Brunn–Minkowski for parallel sections. Compare its value at zero with its chord from $-s$ to a level tending to $H$, where the limiting value is nonnegative. This gives $\\rho(-s)\\le\\rho_0(1+s/H)^{d-1}\\le (dU/H)(1+s/H)^{d-1}$. Off the support the density is zero. The same estimate holds at support endpoints for the representative given by the one-sided section limit, and the almost-everywhere assertion suffices for the integrals.\n\nWrite $E(s)=(dU/H)(1+s/H)^{d-1}$ and choose $L=H(t^{-1/d}-1)$ with $\\int_0^L E=a-U$ for $t=U/a$. The function $\\rho(-s)-E(s)\\mathbf 1_{[0,L]}(s)$ integrates to zero, is nonpositive below $L$ and nonnegative above $L$. Multiplication by $s-L$ and integration give $R\\ge\\int_0^L sE(s)\\,ds$. Substituting $w=1+s/H$ gives $dUH[w^{d+1}/(d+1)-w^d/d]_1^{t^{-1/d}}$, the stated lower bound. Substitute it for each $R_i$ in $d\\sum_i H_iU_i/m\\ge m a+\\sum_iR_i$ and divide by $a$ to obtain the last inequality.\n",
+  "source_candidate_ids": [
+    "b69ebda3a2e6d72a"
+  ],
+  "source_candidate_sha256": {
+    "b69ebda3a2e6d72a": "a1bc16469fe72a189c40ec9e994c9bb3b53bfedffbdf712ff1cbe6d22d145482"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b69ebda3a2e6d72a",
+      "locator": "b69ebda3a2e6d72a:06 §6, (11)–(14); b69ebda3a2e6d72a:07 §7, (15)–(17)"
+    }
+  ],
+  "statement": "Let $d\\ge2$, let $B=\\{x:v_i\\cdot x\\le1,\\ 1\\le i\\le d+1\\}$ be a full-dimensional simplex of volume $b$ with $\\sum_i v_i=0$, and let $A$ be a convex body of volume $a$. Assume every cut $g_i(x)=v_i\\cdot x+1=0$ is proper on $A$. Define\n$$\nH_i=\\max_A g_i,\\quad U_i=|A\\cap\\{g_i\\ge0\\}|,\\quad P_i=\\frac{db}{d+1}H_i,\\quad\nR_i=\\int_{A\\cap\\{g_i<0\\}}(-g_i)\\,dx,\\quad t_i=U_i/a .\n$$\nEvery membership pattern $I=\\{i:g_i(x)\\ge0\\}$ occurring on positive volume satisfies $\\sum_{i\\in I}P_i>db$. The common volume and first-moment bounds are\n$$\n\\sum_iP_iU_i>db\\,a,\\qquad\n\\sum_iP_iU_i\\ge(d+1)ba+b\\sum_i R_i>(d+1)ba.\n$$\nFor $\\rho_i$ the ordinary volume density in the coordinate $g_i$, for almost every $s\\ge0$ one has\n$$\n\\rho_i(-s)\\le \\frac{dU_i}{H_i}(1+s/H_i)^{d-1},\\qquad\nR_i\\ge H_i a\\left[\\frac{d}{d+1}t_i^{-1/d}-1+\\frac{t_i}{d+1}\\right].\n$$\nConsequently\n$$\n\\sum_i H_i\\left[1+\\frac{d-1}{d+1}t_i-\\frac{d}{d+1}t_i^{-1/d}\\right]\\ge d+1.\n$$",
+  "subgoal_id": "pk-intake-pk-w33-simplex-residual-incidence-and-moments",
+  "title": "Common simplex cap incidence and residual-moment bounds"
+}

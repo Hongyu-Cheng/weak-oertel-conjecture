@@ -1,0 +1,51 @@
+{
+  "candidate_id": "c0148c58084f8d01",
+  "candidate_sha256": "5b6b80f8eac983c78013a8f6b55d14283bed2cc4571e0c40b07ee79ddecc1b42",
+  "checked_dependency_candidate_sha256": {
+    "897267d3c8f88fdd": "8e46ceebb60ebfb4148cc84cc4415ba520f40fae01bcb41919e1421408aab940"
+  },
+  "checks": [
+    "The coordinates (t,s) have determinant of absolute value one and send T heights to [−2,1]. The tangent translation of A by a fixed vector and K by half that vector preserves midpoint inclusion, the cut and all areas. It makes the selected full-height segment vertical in these coordinates.",
+    "The sets S+B and A+B are nested and have the same height projection. The left and right endpoint gains are nonnegative and sum to the section-width gain. At each t in [−t₊,h], adding the rightmost B point to (0,t) realizes the rightmost S+B endpoint, while adding it to (a₊(t),t) gives a gain at least a₊(t). The left extreme gives the other integral.",
+    "Both integration intervals lie inside [l,h] and contain [2,h], since −2≤t_±≤1. They can overlap as height intervals because left and right gains are separate terms in the section difference. If both t_±=1, the two integrals sum to the exact area above −1.",
+    "For fixed s the S+B interval is [l+L_B,h+U_B]. It straddles zero by l<−1 and h>2, so its nonnegative length is h+U_B. Thus the captured area is the physical roof integral, and halving A+B costs the factor four.",
+    "At d=2, V=9/2, e=(c,−1−c), v₀=(−1,−1). The parameter s on (s,−s) gives the physical measure ds, and η=1−sqrt(1−2b/9) solves b/V=2η−η². Substituting β=H/3 gives H[3−sqrt(9−2b)]. Source cde78a6346699a8a §4 (11)–(13) has the same individual extreme-point intervals and exact common-body reserve."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "897267d3c8f88fdd",
+      "candidate_sha256": "8e46ceebb60ebfb4148cc84cc4415ba520f40fae01bcb41919e1421408aab940",
+      "hypotheses": "Use d=2, the standard balanced triangle of area 9/2, h>2 and the chosen direction e with v₀·e=1. The actual B is compact convex and lies in T. Its transverse physical measure is ds, so the uniform sharp lower roof formula applies.",
+      "reviewed_proof_sha256": "e66e0585ccb62e9c688b689d4f8fad1790ddb4b46d31ce8a6802609d91c6e68c",
+      "reviewed_statement_sha256": "d09a8d83d2596a60a02a801515426ab03a8bb13b5c335cac2d1a5885399f68df",
+      "status": "Same-wave predecessor reviewed separately. Its approval is required before admission of this dependent."
+    }
+  ],
+  "finished_utc": "2026-11-08T21:04:01Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Identifies the original swept roof area and gives a weaker lower bound for it, without the two boundary gains.",
+      "fact_id": "f72232f80fbdd753"
+    },
+    {
+      "comparison": "Its accepted critical-circuit proof uses the same right and left endpoint gains only on [2,h], paying the upper-tail area. It neither retains the extreme-specific lower integration heights nor gives this sharp roof term on the full stated geometric domain.",
+      "fact_id": "077e154ea4666171"
+    }
+  ],
+  "readability": "The stated hypotheses and proof scope are clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "079a27c5ea6079b17e2f2d128d08317f532281ae933eae99293df465b0819052",
+  "reviewed_statement_sha256": "34e854da4cbff66e6e7277b4978d37dcd1b9cbdcbf22e6eacae8fba7d53d163a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T20:58:19Z",
+  "summary": "The two transverse extreme points yield additive boundary gains on the common height sections, and the sharp directional roof inequality gives the final planar constant.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

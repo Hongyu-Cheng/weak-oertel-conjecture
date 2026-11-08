@@ -1,0 +1,60 @@
+{
+  "candidate_id": "0f14a2d0edfba241",
+  "candidate_sha256": "db46b579072f52725ce82d6a0cfad4c286644e94c4361bc915af2660886b5537",
+  "checked_dependency_candidate_sha256": {
+    "1269c554ca9a41b8": "fabf34fbffac777cddba1d06ca55c7ce7fe766062a1a3bdeba86b3d9e5a391bf",
+    "6d4fda353a2353ab": "553720be9c385d9b0a76c1c80903912a4a8b52ffa6dec807b75aa41eba593b06"
+  },
+  "checks": [
+    "The threshold sign is correct with theta=(a,-b), so the constraint derivative is B δu+G δtheta. For proper sections the Fréchet cap variation has positive enlarging sign and coarea factor 1/|u|.",
+    "At a zero-area supporting section, the perturbation is contained in a slab of thickness O(parameter change) whose section-area supremum tends to zero. Multiplication by bounded q or x retains the little-o estimate. Strictly separated traces are locally constant. In d=1 a nonempty supporting point has counting measure one and is excluded by the zero-measure assumption.",
+    "The assumed moment continuity gives continuously differentiable constraint and objective moment maps; G invertible gives local exact mass and base balance by the implicit function theorem. The feasible cap maximizes via the affine-score sign and both moment constraints, so no global dual-attainment assumption enters.",
+    "The first-derivative boundary term with u·x is minus the term with theta·q on the active section, which vanishes by the constrained derivative. Differentiating the resulting gradient produces E-B^T G^{-1}B divided by t. The square completes with c=-G^{-1}Bv, and for v=u the old theta makes the integrand identically zero.",
+    "Checked original b4c3b9c6a52059d2 §5, (12)–(14). This is the support of a fixed balanced moment body, not a Hessian of the ambient depth."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "553720be9c385d9b0a76c1c80903912a4a8b52ffa6dec807b75aa41eba593b06",
+      "fact_id": "6d4fda353a2353ab",
+      "fact_sha256": "1379bd51f597cc41f665449efdebdf11de57cd9d8289d04efee40e4320029aae",
+      "hypotheses": "In each proper positive fiber translate from a point of its section in the fiber interior, divide by |u| to use the unit-normal proper-cut column argument, and take the continuous bounded coordinate weights q or x in the original coordinates. Multiplying by fiber volume removes the normalized-measure convention.",
+      "reviewed_proof_sha256": "477d2b1053099fcd70eb656dcff3432f43f0d891607ad0849e77f39be5bb25d0",
+      "reviewed_statement_sha256": "e271ac4e859a72887cff586abece24e5bf32967735680273b9afc7d9427831d9"
+    },
+    {
+      "candidate_sha256": "fabf34fbffac777cddba1d06ca55c7ce7fe766062a1a3bdeba86b3d9e5a391bf",
+      "fact_id": "1269c554ca9a41b8",
+      "fact_sha256": "a6f5734326252e75bb5cf8d44fccbf13425413494ad77b814fbff53c64eff739",
+      "hypotheses": "Use the local geometric slab estimate in §2 of the proof for each supporting trace with zero section area. Its weighted consequence follows by boundedness of q and x on the finite compact sampled family. The projected-contact assumptions of the main theorem are not invoked.",
+      "reviewed_proof_sha256": "242e01aeddc55e141c2519daa3a4b1c5c269c327fb73c85d3fc9623d7784c0a1",
+      "reviewed_statement_sha256": "2128e7a0616c8d6b91156849a4fc0d57427da0b2059283fdcc6da72db00bcf24"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:07:02Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides the proper-section cap differential and a one-body fixed-mass support Hessian at a centered section. It does not retain all base-balance moments or their Schur complement.",
+      "fact_id": "6d4fda353a2353ab"
+    },
+    {
+      "comparison": "Provides zero-tangency first variation at a cap, not implicit persistence of a base-balanced cap or the support Hessian.",
+      "fact_id": "1269c554ca9a41b8"
+    }
+  ],
+  "readability": "The order-two continuity assumption covers q–q, q–x and x–x section moments and supplies precisely the C¹ input to the implicit function theorem.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent proof read, predecessor-scope and provenance check, and exact rational replay where needed",
+  "reviewed_proof_sha256": "da60d19c72928796cfcf079102ebb83a3c48e886ec6bd02cfc28ced19b1af7b5",
+  "reviewed_statement_sha256": "3d885231583f5c4137ed51b93c5f460446a59c48f60700931073c835935f9985",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T21:00:44Z",
+  "summary": "The coarea matrices give the claimed support Hessian under the stated regularity and positive-definite constraint block.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

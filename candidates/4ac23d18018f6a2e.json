@@ -1,0 +1,30 @@
+{
+  "advances": "Ordinary planar density and Ball area. The direction is the normal of a prescribed centered section.",
+  "author": "PK-research-agent",
+  "candidate_id": "4ac23d18018f6a2e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:56:08.915184+00:00",
+  "depends_on": [],
+  "draft_key": "w33-ball-centroid-centered-section-normal",
+  "kind": "counterexample",
+  "proof": "Set $s(x)=\\sqrt{1+2x/3}$. On each unit ray with endpoint $Ru$, direct integration gives radial endpoint $Rs(Ru_x)$. The map $(x,y)\\mapsto s(x)(x,y)$ has Jacobian $1+x$ and radial derivative $(1+x)/s(x)>0$ in the interior. It is a bijection on interiors and fixes rays, giving the exact area pushforward and halfplane fractions. As a function of $X=xs(x)$, $S(X)=s(x(X))$ has decreasing derivative $1/[3(1+x(X))]$. The transformed graphs $\\pm S(X)$ bound a convex body by continuity to the endpoints. On $x=0$ the map is the identity, so the centered section is its own chord.\n\nLet $Z=(1+b)^2/2$ be the mass of the horizontal marginal. The original normalized $x$-mean is $(2b-1)/3=-133/10000$. In the transformed first moment, set $t=\\sqrt{3+2x}$, whose endpoints are $1$ and $199/100$. Since $x=(t^2-3)/2$, $1+x=(t^2-1)/2$, and $dx=t\\,dt$,\n$$\n\\sqrt3\\,g_{B,x}\n=\\frac1{4Z}\\left[\\frac{t^7}{7}-\\frac{4t^5}{5}+t^3\\right]_{1}^{199/100}\n=\\frac{16184667199}{312903500000}.\n$$\nReflection in the second coordinate fixes both measures. The sign reversal is along the normal to their shared centered section.\n",
+  "source_candidate_ids": [
+    "1563b8a78d9657e7"
+  ],
+  "source_candidate_sha256": {
+    "1563b8a78d9657e7": "52abaacfb55d2d1ab20bae9dedc6b4a18c9fa40f9f04bac26518330ddb998cb0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1563b8a78d9657e7",
+      "locator": "1563b8a78d9657e7:04 §6, strict sign reversal normal to a centered section"
+    },
+    {
+      "candidate_id": "1563b8a78d9657e7",
+      "locator": "1563b8a78d9657e7:01 §§1–2, (1)–(6), exact affine-density Ball transport and centroid formulas"
+    }
+  ],
+  "statement": "Let $b=9601/20000$ and $f=(1+x)\\mathbf1_{[-1,b]\\times[-1,1]}$. Its planar Ball radial body, with $\\rho(u)^2=2\\int_0^\\infty r f(ru)\\,dr$, is convex and preserves all origin-through halfplane mass fractions. The vertical density section at $x=0$ is uniform on the centered segment $[-1,1]$ in the $y$ coordinate, and the corresponding Ball chord is the same segment. In the normal direction $(1,0)$ the full centroids have projections $-133/10000$ and $16184667199/(312903500000\\sqrt3)$ respectively. Both second coordinates are zero.",
+  "subgoal_id": "pk-intake-w33-ball-centroid-centered-section-normal",
+  "title": "Ball radialization reverses centroid sign normal to a centered section"
+}

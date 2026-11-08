@@ -1,0 +1,26 @@
+{
+  "advances": "An ordinary planar concave-power density and its radialized area. The obstruction concerns full first moments with two specified centered sections.",
+  "author": "PK-research-agent",
+  "candidate_id": "d8441fb788472720",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:56:08.915026+00:00",
+  "depends_on": [],
+  "draft_key": "w33-power-ball-centroid-obstruction",
+  "kind": "counterexample",
+  "proof": "Write $L=(m+2)/(m+1)$. Substitution $u=1+x$ gives the horizontal first moment $L^{m+2}/(m+2)-L^{m+1}/(m+1)=0$. The vertical section is uniform on $[-1,1]$, and the full mean is zero by the product form of the density.\n\nPut $A(x)=2\\int_0^1 t(1+tx)^m\\,dt$ and $s(x)=\\sqrt{A(x)}$. Integrating the derivative of $t^2(1+tx)^m$ on $[0,1]$ gives $A+xA'/2=(1+x)^m$. Thus the map $T(x,y)=s(x)(x,y)$ has Jacobian $(1+x)^m$. On each ray its radial derivative is $(1+x)^m/s(x)>0$ in the interior. At a unit ray endpoint $Ru$, substituting $r=Rt$ in the radial integral shows the prescribed radius is $R s(Ru_x)$. Consequently $T$ bijects interiors and sends $f_m\\,dx\\,dy$ to area on the radial body. Its ray preservation proves all the asserted through-origin halfplane fractions. Along each coordinate axis the signed first moment is zero, so the two integrals $\\int_0^\\infty r f_m(\\pm ru)\\,dr$ are equal. This gives centered chords.\n\nFor convexity, $X=xs(x)$ is strictly increasing in the interior with a continuous inverse up to the endpoints. The image is bounded by the graphs $\\pm S(X)$, where $S(X)=s(x(X))$. Its derivative is $A'(x)/(2(1+x)^m)$. For $0<t<1$ and $x>-1$, the logarithmic derivative of $(1+tx)^{m-1}/(1+x)^m$ is\n$$\n\\frac{(m-1)t}{1+tx}-\\frac{m}{1+x}\n=\\frac{t(m-1-x)-m}{(1+tx)(1+x)}<0.\n$$\nUsing the integral formula for $A'$, this proves $S'$ is decreasing. Continuity includes the boundary of the image, so it is convex.\n\nUnder the probability density proportional to $f_m$, write $X_0$ for the original first coordinate. The transformed first moment is $\\mathbb E[X_0s(X_0)]=\\operatorname{Cov}(X_0,s(X_0))$. It is strictly positive because $s$ is strictly increasing and the covariance equals half the expectation of $(X_0-X_0')(s(X_0)-s(X_0'))$ for independent copies. Reflection in the second coordinate preserves the image, hence its second mean is zero.\n",
+  "source_candidate_ids": [
+    "1563b8a78d9657e7"
+  ],
+  "source_candidate_sha256": {
+    "1563b8a78d9657e7": "52abaacfb55d2d1ab20bae9dedc6b4a18c9fa40f9f04bac26518330ddb998cb0"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1563b8a78d9657e7",
+      "locator": "1563b8a78d9657e7:03 §5, arbitrary positive integer concavity power"
+    }
+  ],
+  "statement": "For every integer $m\\ge1$ put $D_m=[-1,1/(m+1)]\\times[-1,1]$ and $f_m(x,y)=(1+x)^m\\mathbf1_{D_m}(x,y)$. The density has affine $m$th root on its positive support, full centroid zero, and both coordinate-line sections centered at zero. The planar Ball body with $\\rho(u)^2=2\\int_0^\\infty r f_m(ru)\\,dr$ is convex, has centered coordinate chords, and preserves every halfplane mass fraction through zero. Its full centroid has strictly positive first coordinate and second coordinate zero.",
+  "subgoal_id": "pk-intake-w33-power-ball-centroid-obstruction",
+  "title": "Centroid failure under Ball radialization for every integer power"
+}

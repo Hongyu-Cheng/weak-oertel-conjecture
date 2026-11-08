@@ -1,0 +1,32 @@
+{
+  "advances": "A barycenter-preserving reweighting of the ordinary simplex.",
+  "author": "PK-research-agent",
+  "candidate_id": "138d85ba470c2b88",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:54:32.072716+00:00",
+  "depends_on": [
+    "0cb23c24da6052fc"
+  ],
+  "draft_key": "pk-w33-balanced-simplex-cap-density-conservation",
+  "kind": "lemma",
+  "proof": "The mass equality follows by integrating the indicators. The proper-cap first-moment identity applies to each cap with $L_i=df_i$. Multiply by $\\alpha_i/f_i$ and sum. The additional term in coordinate $j$ has numerator $d b_j\\sum_i\\alpha_i c_{ij}=0$ by raw balance, giving the claimed moment.\n\nFor the full-row specialization, take a finite family $x_i>0$ with componentwise sum $\\mathbf1$. Write $F_i(t)=\\mu\\{x_i\\cdot\\xi\\le t\\}$ and suppose $t_i$ is a proper differentiable minimizing threshold of $t/F_i(t)^{1/d}$ for $t>0$ with $F_i(t)>0$. Assume the actual section centroids are common. Use $c_i=t_i\\mathbf1-x_i$. The proper threshold is interior to the range of the row heights, so differentiating at $t_i$ gives $t_iF_i'(t_i)=d F_i(t_i)$. Here $F_i'(t_i)=L_i=df_i$, hence $t_i=P_i/f_i$. Since $x_i\\cdot b=t_i$ and $\\sum_i x_i=\\mathbf1$, one has $\\sum_i t_i=1$ and $\\sum_i c_i=0$. Thus $\\alpha_i=1$ gives $T=1$ in this specialization.\n",
+  "source_candidate_ids": [
+    "b6ffecfff4f39a35"
+  ],
+  "source_candidate_sha256": {
+    "b6ffecfff4f39a35": "722b6de8440ac69c49c0bc84fa73f4b6398b129da6d2749c8c7c275faa585eb9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b6ffecfff4f39a35",
+      "locator": "b6ffecfff4f39a35:02 §3, (4) and weighted extension"
+    },
+    {
+      "candidate_id": "b6ffecfff4f39a35",
+      "locator": "b6ffecfff4f39a35:03 §4, (5)–(6), supporting full-row specialization"
+    }
+  ],
+  "statement": "Let $\\mu$ be uniform probability on $\\Delta_d$, $d\\ge1$. Consider a nonempty finite family of proper caps $H_i=\\{\\xi:c_i\\cdot\\xi\\ge0\\}$ with the same actual section centroid $b$. Put $P_i=\\mu(H_i)$ and let $f_i>0$ be the density at zero of $\\sum_j c_{ij}E_j$ for independent unit-rate exponentials. If $\\alpha_i>0$ and $\\sum_i\\alpha_i c_i=0$, then\n$$\nw=\\sum_i\\frac{\\alpha_i}{f_i}\\mathbf1_{H_i},\\qquad T=\\sum_i\\frac{\\alpha_iP_i}{f_i}\n$$\nsatisfy $\\int w\\,d\\mu=T>0$ and $\\int \\xi_j w\\,d\\mu=T/(d+1)$ for all $j$. In particular $w/T$ is a probability density with the ordinary simplex centroid.",
+  "subgoal_id": "pk-intake-pk-w33-balanced-simplex-cap-density-conservation",
+  "title": "Balanced simplex caps conserve the simplex barycenter"
+}

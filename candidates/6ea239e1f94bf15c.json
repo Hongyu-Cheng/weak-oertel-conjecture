@@ -1,0 +1,28 @@
+{
+  "advances": "Boundary-source cap order fails after whole physical martingale repair. The defining cap law has a surface normalization distinct from its original-volume fraction.",
+  "author": "PK-research-agent",
+  "candidate_id": "6ea239e1f94bf15c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.925035+00:00",
+  "depends_on": [
+    "f79eb82cd3159a33"
+  ],
+  "draft_key": "w33-repaired-midpoint-source-cap-order-failure",
+  "kind": "counterexample",
+  "proof": "Use $[-1,1]\\times[-1,1]^2$ with the cap law in f79eb82cd3159a33, giving each $az+v\\cdot X\\ge-1/3$ weight $1/8$, where $a=\\pm2$ and $v\\in\\{\\pm e_1,\\pm e_2\\}$. That fact gives the endpoint source density $18/19$, middle edge source density $18/19+(9/19)\\mathbf1_{|t|<1/3}$ for tangent $-1\\le t\\le1$, and the raw mixed fraction $5/9$.\n\nKeep endpoint-source rows fixed. On each middle edge retain the common part with $(21/19)\\,dt$ and send the central excess $6/19$ in equal parts to $t-2/3$ and $t+2/3$. Each exterior interval gets its missing $3/19$, giving $(21/19)\\,dt$ on the whole edge while retaining every conditional mean. Choose base zero with probability $19/21$ and each endpoint with probability $1/21$, retaining the intermediate tangent and normal. The source physical means are unchanged and the target density on every edge is one. Each endpoint crossflow has density $1/19$ and their two conditional tangent laws agree. Diagonal pairing gives $\\rho=\\eta_0/19$.\n\nFor $H=\\{X_2\\le1/4\\}$ the full bottom edge and two vertical pieces of length $5/4$ give $\\eta_0(H_0)=9/2$. Each vertical piece contains $7/12$ of the central interval in length, so its middle-source capture is $(18/19)(5/4)+(9/19)(7/12)=111/76$. The bottom contributes $42/19$, giving $\\nu_0(H_0)=195/38$. The proposed bound is $(21/19)(9/2)=189/38$. The difference is $3/19$. All traces are proper and have surface-null boundaries. Thus the inequality fails for the actual dominated midpoint law and exact original source.\n",
+  "source_candidate_ids": [
+    "9c6adfbcefcc0c3d"
+  ],
+  "source_candidate_sha256": {
+    "9c6adfbcefcc0c3d": "cbe95658606bf594fabea762b0e3ac87bff882fa63e6fd559172881921108b0b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9c6adfbcefcc0c3d",
+      "locator": "9c6adfbcefcc0c3d:04 §8, (11), exact failure of source-cap order after repair"
+    }
+  ],
+  "statement": "There are three identical actual square fibers at bases $-1,0,1$, a probability law of ambient caps with boundary incidence $W$, and a same-normal physical martingale from $\\nu=(W/\\beta)\\eta$ to the marked surface law $\\eta$. Its middle-to-endpoint crossflows $\\gamma_-,\\gamma_+$ admit a single conditional pairing with $\\rho\\le\\eta_0$. Nevertheless a closed cap $H$ proper on all three fibers satisfies\n$$\n\\nu_0(H_0)-\\eta_0(H_0)-\\gamma_-(H)-\\gamma_+(H)=3/19.\n$$\nHere $\\beta=19/36$ is the boundary normalization and the eight caps defining $W$ each have original mixed volume fraction $5/9$.",
+  "subgoal_id": "pk-intake-w33-repaired-midpoint-source-cap-order-failure",
+  "title": "Actual midpoint density repair does not order source-cap capture"
+}

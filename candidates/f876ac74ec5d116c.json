@@ -1,0 +1,29 @@
+{
+  "advances": "Actual mixed depth and six actual cap traces on two bases, compared with ordinary planar Blaschke volumes. The aggregate surface-area body has no retained base coordinate.",
+  "author": "PK-research-agent",
+  "candidate_id": "f876ac74ec5d116c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:56:08.917794+00:00",
+  "depends_on": [
+    "2acc8bc803acf1c0",
+    "c3835529a10c63ef"
+  ],
+  "draft_key": "w33-blaschke-aggregation-loses-fiber-index",
+  "kind": "counterexample",
+  "proof": "The hull projects to $[0,1]$. Its two extreme-base fibers are exactly the given triangles, and either triangle together with a point at the other base certifies full dimension. Each triangle has area $1/2$. The two bases are strictly exposed in the positive-fiber base set, by the linear functionals $-z$ and $z$ respectively. Accepted fact 2acc8bc803acf1c0 therefore identifies every pointwise mixed raw depth with the ordinary raw depth of its own fiber, including boundary points and all ambient halfspace directions. The same fact gives the ordinary maximum $4/9$ times each triangle area, attained at its centroid. This gives the mixed value $2/9$ with total mass one.\n\nPlanar normal area measure is additive under Minkowski addition and determines the body up to translation, as proved by the support-function identity in accepted fact c3835529a10c63ef. Thus $B$ is a translate of $K_0+K_1$. That sum is the hull of the pairwise vertex sums. Its boundary runs through $(0,0)$, $(L+1/L,0)$, $(L,L)$, and $(0,L+1/L)$ in this order. Indeed those four are pairwise sums and the others lie on an axis segment or on the diagonal segment from $(0,0)$ to $(L,L)$, using $L\\ge1$. When $L=1$ the third point is on the edge between its neighbors. The shoelace formula gives area $L(L+1/L)=L^2+1$.\n\nAt either centroid take the three caps given by barycentric coordinate at least $1/3$. Each is homothetic to its own triangle with scale $2/3$. Its ambient lift can exclude the other fiber strictly: add a sufficiently large multiple of the exposing base functional, shifted to vanish at the chosen base, to the continuous cap margin. Boundedness of the other triangle gives a finite such multiple. The lifted cap has exactly its ordinary triangular trace, with raw area $(2/3)^2(1/2)=2/9$. On an original edge the two caps associated to its vertices each take a $2/3$ fraction of the edge and the cap associated to the opposite vertex takes none. The multiplier $3/4$ on each therefore gives full edge area in the weighted sum of old traces. The common cap boundaries cross the own fibers properly and exclude the other fibers strictly.\n\nThe full area measure of each cap is $(2/3)S_{K_p}$ by length scaling. Summing all six with weights $3/4$ gives $(3/2)(S_{K_0}+S_{K_1})$, the area measure of $(3/2)B$. Its area is $(9/4)(L^2+1)$, whereas the weighted sum of captured volumes is $6(3/4)(2/9)=1$. Both $L^2+1$ and $(9/4)(L^2+1)$ grow without bound.\n",
+  "source_candidate_ids": [
+    "4b6ce6cf06c8f669"
+  ],
+  "source_candidate_sha256": {
+    "4b6ce6cf06c8f669": "26e6c67c54ffa99b6b715c6e138c7755c17a28a58f8a53a9494642b366e15a73"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4b6ce6cf06c8f669",
+      "locator": "4b6ce6cf06c8f669:02 §2, (2)–(3)"
+    }
+  ],
+  "statement": "For every $L\\ge1$ take the exact integer fibers\n$$\nK_0=\\operatorname{conv}\\{(0,0),(L,0),(0,1/L)\\},\\qquad\nK_1=\\operatorname{conv}\\{(0,0),(1/L,0),(0,L)\\}\n$$\nof their lifted hull at bases $0,1$. Its mixed area is one and its maximum normalized depth over closed ambient halfspaces is $2/9$. The planar Blaschke sum $B=K_0\\#K_1$ has area $L^2+1$. The six centroid vertex caps, each lifted to exclude the other fiber, have common raw area $2/9$ and weights $3/4$ giving weighted old normal marginal $S_{K_0}+S_{K_1}$. Their weighted sum of ordinary cap areas is one, whereas the planar body with the weighted sum of their full cap normal measures has area $(9/4)(L^2+1)$. In particular neither aggregate area admits an upper bound by a fixed multiple of mixed area, even at this sharp mixed depth.",
+  "subgoal_id": "pk-intake-w33-blaschke-aggregation-loses-fiber-index",
+  "title": "Blaschke aggregation can have unbounded area at sharp mixed depth"
+}

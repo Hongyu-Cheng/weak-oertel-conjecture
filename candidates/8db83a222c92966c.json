@@ -1,0 +1,34 @@
+{
+  "advances": "Fixed weights and given marginal measures on a one-dimensional tangent. The convex order concerns physical tests and does not compare halfspace indicators.",
+  "author": "PK-research-agent",
+  "candidate_id": "8db83a222c92966c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:15.925244+00:00",
+  "depends_on": [],
+  "draft_key": "w33-many-marginal-comonotone-face-law",
+  "kind": "theorem",
+  "proof": "The quantile tuple supplies the stated marginals. All weighted sums have the same mass and first moment. For a competing coupling and a call strike $c$, take the subset on which the weighted sum exceeds $c$, of mass $r$. Its $i$-th projected submeasure $\\xi_i$ has mass $r$ and is bounded by $\\gamma_i$. For every real $t$,\n$$\n\\int x\\,d\\xi_i\\le tr+\\int(x-t)_+\\,d\\gamma_i.\n$$\nFor $0<r<m$ take the upper-tail quantile cutoff of mass $r$. The right side equals $\\int_{m-r}^m Q_i(u)\\,du$, including when the threshold atom is partly used. The cases $r=0,m$ follow directly. Summing with the weights bounds the competing call by\n$$\n\\int_{m-r}^m (T(u)-c)\\,du\\le\\int_0^m(T(u)-c)_+\\,du.\n$$\nTogether with equal means this proves convex order for continuous convex tests by uniform polygonal approximation, because convex polygonal functions are affine plus nonnegative combinations of calls. A finite convex function on a nondegenerate closed interval has finite interior limits at both endpoints, by an interior supporting line and the endpoint chord. It differs from its continuous convex extension by nonnegative endpoint jumps. The upper endpoint indicator at $b$ is the bounded pointwise limit of $(x-(b-\\epsilon))_+/\\epsilon$ on the interval, and reflected calls handle the lower endpoint. Thus the comparison also covers jumps. A singleton interval is immediate.\n\nIf a marginal has density bounded by $a_i$, its cumulative mass is continuous and $a_i$-Lipschitz and has value $u$ at its quantile $Q_i(u)$. Hence $T(v)-T(u)\\ge(v-u)\\sum_i\\lambda_i/a_i$ for $v>u$. The inverse image of an interval of length $\\ell$ has length at most $\\ell/(\\sum_i\\lambda_i/a_i)$, and countable interval covers extend the bound to all Borel sets. For sharpness use constant densities $a_i$ on intervals of lengths $m/a_i$. Every weighted sum has support in an interval of length $m\\sum_i\\lambda_i/a_i$, and mass $m$ therefore forces the claimed density ceiling as a lower bound on any admissible uniform bound. Substituting $a_i=1/\\lambda_i$ gives the branch formula.\n\nIn the planar setting write $X_i=h_{K_{z_i}}(n)n+t_i e$ with unit tangent $e$. Compatibility gives membership of every tuple barycenter in $K_p$, and tightness fixes its height to $h_{K_p}(n)$. The coordinate along the line is isometric, and restriction of any physical convex test to that line at the fixed base $p$ is convex. These facts transfer the support, density and convex order, including degenerate faces in the assertion without a density hypothesis. Summation over a finite normal set preserves the comparisons.\n",
+  "source_candidate_ids": [
+    "a60ee1969152d817"
+  ],
+  "source_candidate_sha256": {
+    "a60ee1969152d817": "cf8d4fbd1e2620934b3cac9439783f9ec8d34c1ef40e8690e9cda7a60c479aa9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a60ee1969152d817",
+      "locator": "a60ee1969152d817:01 §1, (1)–(2), and historical comment 233685f00eefae65"
+    },
+    {
+      "candidate_id": "a60ee1969152d817",
+      "locator": "a60ee1969152d817:02 §2, (3)–(5), including sharpness"
+    },
+    {
+      "candidate_id": "a60ee1969152d817",
+      "locator": "a60ee1969152d817:03 §3, (6) and finite planar normals"
+    }
+  ],
+  "statement": "Let $\\gamma_i$ be compactly supported finite nonnegative Borel measures on the real line of common mass $m>0$, $i=1,\\ldots,k$, and let $\\lambda_i>0$ sum to one. With increasing quantiles $Q_i$ on $(0,m)$, put $T=\\sum_i\\lambda_i Q_i$. The law $T_\\#(du)$ dominates in convex order the weighted sum law of every coupling of the given marginals, including for every finite convex test on the closed compact common range. If $\\gamma_i\\le a_i\\,dt$ with $0<a_i<\\infty$, its density is bounded by $(\\sum_i\\lambda_i/a_i)^{-1}$, sharply among all choices of coupling. For branch measures $\\alpha_i\\le dt$ of mass $\\lambda_i m$, taking $\\gamma_i=\\alpha_i/\\lambda_i$ gives ceiling $(\\sum_i\\lambda_i^2)^{-1}$.\n\nFor compatible planar convex fibers at integer bases, take input laws on their support faces in a common unit tangent coordinate at normal $n$, with input bases $z_i$ and sampled integer barycenter $p=\\sum_i\\lambda_i z_i$. Assume tight support height $h_{K_p}(n)=\\sum_i\\lambda_i h_{K_{z_i}}(n)$. The common-quantile law lifts to the actual face at $p$ with the same length ceiling and dominates every competing physical barycenter law with these marginals in full physical convex order. For finitely many normals this holds separately at each normal and after summation.",
+  "subgoal_id": "pk-intake-w33-many-marginal-comonotone-face-law",
+  "title": "Common quantiles give the greatest weighted barycenter law on a line"
+}

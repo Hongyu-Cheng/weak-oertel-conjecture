@@ -1,0 +1,29 @@
+{
+  "advances": "Finite inside-choice characterization for the exact group response, not a common minimax separator.",
+  "author": "PK-research-agent",
+  "candidate_id": "74f7fb231982db0e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:54:32.072038+00:00",
+  "depends_on": [
+    "53fa213bc5d44a1e",
+    "2d939149b3777664"
+  ],
+  "draft_key": "buffered-exact-mixed-support-inside-choices",
+  "kind": "lemma",
+  "proof": "Fix one group. Its selected inside affine branches underestimate the respective positive parts, so the modified cap loss $R_j^\\zeta$ is no larger than $R_j$. It is jointly concave because only outside negative hinges remain. It is still continuous and strictly increasing onto $\\mathbb R$ in threshold speed: its increments are bounded below by those of the positive proper term, since selected inside branches have nonnegative threshold slope and so do the outside terms. The same inverse hypograph argument gives concavity of $\\ell_i^\\zeta$. For every target loss its threshold inverse is at least the exact inverse; comparing the increasing weighted sums at a common budget gives $\\ell_i^\\zeta\\le\\ell_i$.\n\nAt a given actual direction, use the solved exact thresholds simultaneously to choose the inside bits, taking either bit at equality. With this choice every selected branch agrees with the original cap loss at its solved threshold. Those thresholds then solve the selected equations at exactly the same common budget; uniqueness yields $\\ell_i^\\zeta=\\ell_i$. This proves the maximum identity. For each joint tuple across groups, the conditions $\\ell_i^\\zeta-(Q/M)D>0$ are strict superlevel conditions of concave functions and hence convex. The maximum identity makes their finite union exact. It does not give a single separating functional that is required to work for every inside tuple.\n",
+  "source_candidate_ids": [
+    "4f875cf42fc6ba0a"
+  ],
+  "source_candidate_sha256": {
+    "4f875cf42fc6ba0a": "eb82b704ddea98b6fe3f820947f2856245e95bac7449cc17272077ec5a5da5ee"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4f875cf42fc6ba0a",
+      "locator": "4f875cf42fc6ba0a:04 §4, (8), exact mixed-support choice"
+    }
+  ],
+  "statement": "In the actual facet-constant buffered equalization, let the physical velocity cone be convex and the contact budget be concave. The old caps may have both inside and outside supporting facets, with positive proper coarea in every cap. For any tuple of binary inside choices $\\zeta$, replace every inside positive part by its chosen linear branch and keep the outside hinges exact. Let $\\ell_i^\\zeta$ be the resulting equalized loss. Each $\\ell_i^\\zeta$ is concave, $\\ell_i^\\zeta\\le\\ell_i$, and the exact loss is $\\ell_i=\\max_\\zeta\\ell_i^\\zeta$ pointwise. Hence simultaneous strict normalized improvement for finitely many groups is a finite union over joint inside choices of convex strict-feasibility problems in the same physical velocity. Choosing every inside bit zero gives a conservative lower response.",
+  "subgoal_id": "pk-intake-buffered-exact-mixed-support-inside-choices",
+  "title": "Exact inside branch choice for a mixed buffered response"
+}

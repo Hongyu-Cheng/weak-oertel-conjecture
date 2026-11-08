@@ -1,0 +1,29 @@
+{
+  "advances": "One actual endpoint facet at a time and its cap in the midpoint body. The cone attains the standalone extrusion constant.",
+  "author": "PK-research-agent",
+  "candidate_id": "ab61d9604953b1b4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T20:57:53.817027+00:00",
+  "depends_on": [
+    "19210d0a14ccfebc",
+    "64397de350168f10"
+  ],
+  "draft_key": "pk-w33-full-binomial-facet-extrusion",
+  "kind": "theorem",
+  "proof": "Write $m=d-1$, $L=\\max_D e\\cdot x-\\min_D e\\cdot x$, and $f=\\mathcal H^{d-1}(F)$. Apply 19210d0a14ccfebc to $D,F$ after translating $F$ to height zero. This gives the integral of $(f^{1/m}+h(t))^m$ as a lower bound, where $h(t)=|D_t|^{1/m}$. Brunn–Minkowski for the interior sections makes $h$ positive and concave on the height interval, and $\\int h^m=U$ by Fubini. Apply the result “Sharp normalized moments of concave functions on an interval” to every power $1\\le p\\le m$ in the binomial expansion. The term for $p=0$ is exact. Using $P=fL$ gives\n$$\n\\int (f^{1/m}+h)^m\\,dt\n\\ge P\\sum_{p=0}^m\\binom mp\\frac{r^p}{p+1}\n=P J_d(r).\n$$\nThe coefficient formulas in dimensions $2,3,4$ follow by expansion. In dimension two the lengths add exactly by 19210d0a14ccfebc. To attain equality, first translate $F$ to height zero and form the cone with height interval of length $L$ and slices $trF$ at fractional height $t\\in[0,1]$. It has $U=Pr^m/d$. Its slice-root function is affine and the summands $trF,F$ are homothetic in the hyperplane, giving equality at each step.\n\nFor the cap statement, $(1-v_i\\cdot x)/(d+1)$ are barycentric coordinates on $B$, so $0$ is its centroid. The pyramid from $0$ to facet $i$ has volume $b/(d+1)$ and height $1/\\lVert v_i\\rVert$. Hence the facet's Euclidean measure divided by $\\lVert v_i\\rVert$ equals $db/(d+1)$. Pair the actual cap $D=A\\cap\\{v_i\\cdot x\\ge-1\\}$ with the actual full facet $F=B\\cap\\{v_i\\cdot x=1\\}$. Properness gives a $D$ width of $H_i/\\lVert v_i\\rVert$, so $P=P_i$. Their Minkowski sum is contained in $2K\\cap\\{v_i\\cdot x\\ge0\\}$, and dilation by $1/2$ accounts for $2^d$. At the $B$ endpoint the trace is the facet, of zero $d$-volume. Hence for the stated three-fiber measure the common mass is exactly $U_i+q_i$ and substitution proves the final bounds.\n",
+  "source_candidate_ids": [
+    "b69ebda3a2e6d72a"
+  ],
+  "source_candidate_sha256": {
+    "b69ebda3a2e6d72a": "a1bc16469fe72a189c40ec9e994c9bb3b53bfedffbdf712ff1cbe6d22d145482"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b69ebda3a2e6d72a",
+      "locator": "b69ebda3a2e6d72a:03 §3, (2)–(3); b69ebda3a2e6d72a:04 §4, (4)–(6)"
+    }
+  ],
+  "statement": "Let $D$ be a convex body in $\\mathbb R^d$, $d\\ge2$, and let $F$ be a convex body of positive $(d-1)$-volume in a hyperplane perpendicular to unit $e$. Let $U=|D|$, $P=\\mathcal H^{d-1}(F)(\\max_D e\\cdot x-\\min_D e\\cdot x)$, $r=(dU/P)^{1/(d-1)}$, and $J_d(r)=\\int_0^1(1+rt)^{d-1}\\,dt=((1+r)^d-1)/(dr)$. Then $|D+F|\\ge P J_d(r)$, with equality for a cone whose sections are scaled copies of $F$. For $d=2$ the value is exactly $U+P$ for every such pair. For $d=3$ the bound is $U+P+\\sqrt{3UP}$, and for $d=4$ it is $U+P+(3/2)4^{1/3}U^{1/3}P^{2/3}+4^{2/3}U^{2/3}P^{1/3}$.\n\nLet $d\\ge2$ and $B=\\{x:v_i\\cdot x\\le1,\\ 1\\le i\\le d+1\\}$ be a full-dimensional simplex of volume $b$ with $\\sum_i v_i=0$. Let $A,K$ be convex bodies with $(A+B)/2\\subseteq K$ and $a=|A|$, $k=|K|$. Assume each cut $v_i\\cdot x=-1$ is proper on $A$. Put $U_i=|A\\cap\\{v_i\\cdot x\\ge-1\\}|$, $q_i=|K\\cap\\{v_i\\cdot x\\ge0\\}|$, $H_i=1+\\max_A v_i\\cdot x$, and $P_i=dbH_i/(d+1)$.\nThen\n$$\n2^dq_i\\ge P_i J_d\\big((dU_i/P_i)^{1/(d-1)}\\big).\n$$\nIf $A,K,B$ are the only positive-volume fibers at $-1,0,1$ and the ambient cuts $v_i\\cdot x\\ge z$ all have raw mixed mass $Q$, then $q_i=Q-U_i$ and $2^d Q\\ge 2^d U_i+P_i J_d((dU_i/P_i)^{1/(d-1)})$. In $d=3$ this is $8Q\\ge9U_i+P_i+\\sqrt{3U_iP_i}$.",
+  "subgoal_id": "pk-intake-pk-w33-full-binomial-facet-extrusion",
+  "title": "Sharp full-binomial volume reserve for a supporting facet"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "Refutes equality in the auxiliary comparison, and any gap upper bound forced to vanish from identical endpoint volumes and lossless midpoint domination alone.",
+  "author": "PK-research-agent",
+  "candidate_id": "10810d273b68893f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:00:22.793159+00:00",
+  "depends_on": [],
+  "draft_key": "identical-fiber-capacity-integration-gap",
+  "kind": "counterexample",
+  "proof": "The three fibers over $-1,0,1$ all have length one; the two containing marginal half-lines through zero each capture two. Take the top interval $[1/3,1]$ in each fiber. This selection has total mass two and centered base moment zero. For any other dominated source of mass two, integrating $(x-1/3)(\\mathbf1_{\\{x\\ge1/3\\}}-f)\\ge0$ proves maximality of its first moment, even without balance. Its continuous mean is $2/3$.\n\nWrite $F(s)=\\min(1,(1-s)_+)$. For a tilt $a$, the endpoint cost is $F(s+a)+F(s-a)$. If either trace is full, the sum is at least one. Otherwise the positive-part convexity inequality makes the sum at least $2(1-s)_+$. When $2(1-s)_+\\le1$, zero tilt attains that value; when $2(1-s)_+\\ge1$, a sufficiently large finite tilt attains one by making exactly one endpoint trace full. Thus the endpoint infimum is $\\min(1,2(1-s)_+)$. Adding the middle trace, $V_1$ equals $2$ for $s\\le0$, $2-s$ for $0\\le s\\le1/2$, $3(1-s)$ for $1/2\\le s\\le1$, and zero for $s\\ge1$. Its law is carried by $[0,1]$ and has mass two. Its mean is\n$$\n\\tfrac12\\int_0^1 V_1(s)\\,ds=\\tfrac12(7/8+3/8)=5/8.\n$$\nFor the uniform diagonal coupling of the endpoints, the continuous midpoint is the same uniform variable on $[0,1]$, proving the asserted domination with no density loss.\n",
+  "source_candidate_ids": [
+    "b4c3b9c6a52059d2"
+  ],
+  "source_candidate_sha256": {
+    "b4c3b9c6a52059d2": "3c68baa42db20f20a46e7cd529484ba122079d98970789de06b176aca0241278"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b4c3b9c6a52059d2",
+      "locator": "b4c3b9c6a52059d2:06 §4, (10)–(11), strict gap with identical fibers"
+    }
+  ],
+  "statement": "For the actual body $[-1,1]\\times[0,1]$ with integer base $z$, continuous coordinate $x$, and original mixed length, the base $j=0$ has raw marginal depth $D_0=2$. At balanced mass $t=2$ and direction $u=1$, the support of the continuous mean interval is $h_{M_2(0)}(1)=2/3$, while the full mean of the optimized directional capacity law is $J_2(1)=5/8$. Thus the support gap is $1/24$ despite identical endpoint fibers and a midpoint coupling of their unit measures with density exactly one on the middle fiber.",
+  "subgoal_id": "pk-intake-identical-fiber-capacity-integration-gap",
+  "title": "A strict capacity integration gap with identical fibers"
+}

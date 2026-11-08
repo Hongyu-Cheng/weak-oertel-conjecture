@@ -1,0 +1,47 @@
+{
+  "candidate_id": "33488d4938a6ee4a",
+  "candidate_sha256": "4cf5340cd24a87299f2b841763b116fe73283de907888c2f936ace54c818ba6a",
+  "checked_dependency_candidate_sha256": {
+    "5f923438468803ac": "9895cfc89a93b456485c2b08ddef90a629fe40ec0ec32a6abc477e783beb173a"
+  },
+  "checks": [
+    "Cold-read the frozen statement and proof. Source d61c49578c90db6d §4, (4)–(7) and the immediately following row argument, gives the same claim; its source byte digest matches.",
+    "The row-image predecessor has the same cap/chord normalization and strict incidence. It places every actual f in the stated open cube slab, so the roots and cyclic products are positive and f_i<2.",
+    "Independently checked the square identity by taking a matrix with column i equal to sqrt(u_i)e_i minus sqrt(1-u_{i+1})e_{i+1}. Its Gram matrix in row coordinates has diagonal one and cyclic off-diagonals -f_i/2. The column matrix determinant is sqrt(prod u_i)-sqrt(prod(1-u_i)), with a minus sign from the three negative entries in the cyclic term. Expanding the Gram determinant gives 1-(sum f_i^2+f_1f_2f_3)/4, independently verifying all constants and signs.",
+    "For g=f_j+f_k the cubic sum is f_i^2+g^2-(2-f_i)f_jf_k, which is at least f_i^2+(2+f_i)g^2/4 by f_jf_k<=g^2/4. Dividing the resulting bound on (2+f_i)g^2/4 by 2+f_i>0 yields g^2/4<=2-f_i. Equality is equivalent to both zero cubic deficit and f_j=f_k, since 2-f_i is strictly positive.",
+    "At u=(1/2,1/2,1/2) the row vector is (1,1,1), giving both cubic and all three row equalities. The same-batch signed-row predecessor of the row-image theorem already gives the individual row inequalities by a different deficit; the new claim is the joint cubic identity and its direct equality link."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "5f923438468803ac",
+      "candidate_sha256": "9895cfc89a93b456485c2b08ddef90a629fe40ec0ec32a6abc477e783beb173a",
+      "mapping": "Applies to the identical actual strict triangle hypotheses and f normalization; supplies the cyclic u coordinates with 0<u_i<1 and 1<sum u_i<2. Its own signed-row approval is required upstream.",
+      "reviewed_proof_sha256": "3cd74644d43a21aadfd30f04955b98c067f8f1e8d80c5dd7aece371bc235ced7",
+      "reviewed_statement_sha256": "6ad162a15082ffa0fa8f352daa5b986bd4ae663dfeec4b341a2c77e9b104e397",
+      "status": "same-batch approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:53:14Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Ensures strict distinct-vertex incidences for a positively balanced triangle circuit under a cap ceiling. It gives neither the normalized f-image nor its inverse realization; the frozen claim assumes the strict incidence directly.",
+      "fact_id": "b08bdaf82b84ef41"
+    }
+  ],
+  "readability": "The equality test depends on f_i<2, which the proof checks before the inequality. At a closed-domain endpoint f_i=2 this coefficient could vanish, so the strict scope matters.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "97c560ebf4ac7a967d9c6749e620fd6fcf49bb7ff5f2604b3dc582c3c35b3d02",
+  "reviewed_statement_sha256": "2627a0768145e660338b8f307735ca8df6e5e86b2d1dad065733f3adc9dcc79e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:50:22Z",
+  "summary": "The cyclic parameter formula yields the stated exact square deficit. The row inequalities and their equality criterion follow with a strictly positive coefficient on the two-coordinate inequality.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

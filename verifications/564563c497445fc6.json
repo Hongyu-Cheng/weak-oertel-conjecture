@@ -1,0 +1,47 @@
+{
+  "candidate_id": "2e657e976221a74d",
+  "candidate_sha256": "76d6e0c753bea58e0678fb6c8169fdb53219639a1158d645b44c03e23ea3a0ac",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "In barycentric coordinates, the cutting line through the two intercepts has equation λ_j/r+λ_k/u=1. At y the two positive terms sum to one, so their product is at most 1/4; with q_i=ru this gives q_i≥4α_jα_k.",
+    "If α_j≥1/2, the through-source equation gives r>α_j and ru=α_k r²/(r−α_j). The derivative is nonpositive on (α_j,1], including the equality case α_j=1/2. Evaluating at 1 is valid for the continuous formula and bounds the actual product below by α_k/(1−α_j). The caps at both other vertices therefore sum to at least 1, while 2(128/279)<1.",
+    "Set z=max α_i<1/2 and choose the larger of the other two coordinates, at least (1−z)/2. The remaining cap bounds 2z(1−z) by 128/279. The increasing function reaches 45/98 at 5/14, with exact difference 45/98−128/279=11/27342, proving z<5/14.",
+    "Each pair sums to more than 9/14 since the complementary coordinate is below 5/14. Expanding the positive product of their gaps from 5/14 gives α_jα_k>(5/14)(9/14)−(5/14)²=5/49. The area product bound yields the strict floor 20/49 for every cap.",
+    "Source 919c51f1d263878e §6 contains the same barycentric proof. The normalized statement keeps the strict distinct-vertex condition directly, so it needs neither balance nor a proof of incidence."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T11:53:09.527480Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The one-vertex simplex minimization gives individual corner lower bounds at a fixed source, including the product bound and the saturated-intercept case in dimension two. It does not state the joint consequence under the three ceilings or the bounds 5/14 and 20/49.",
+      "fact_id": "f75e1f526e17ab44"
+    },
+    {
+      "comparison": "Its proof shares the lower bound 4α_jα_k and the exclusion of α_j≥1/2 in a reduced strict-corner menu. Its statement gives incidence under positive dependence, and its proof does not carry the ceiling through to the rational coordinate and cap floors.",
+      "fact_id": "b08bdaf82b84ef41"
+    },
+    {
+      "comparison": "This uses corner caps at an arbitrary source and gives a lower bound on a complementary pair sum, with a further source-hit statement. It does not give individual cap or coordinate bounds under a uniform ceiling.",
+      "fact_id": "dc15f4248ddf4742"
+    }
+  ],
+  "readability": "The r=1 evaluation is a monotone endpoint comparison, not an extra allowed strict cap. The proof makes no normal-balance assumption.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "fff0a0e590416ab4e3a66bb541ebf69948249162d5c22ce7cd3b15a209e81e84",
+  "reviewed_statement_sha256": "a7e9a98090d67608e9c3b1cb27386e3b11069e4e37ffd93b13dc00c6f0bf1ce8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "919c51f1d263878e": "6b0ffb2986d69a7dc995935fa4d156875e4241266b21e9cd2608e847cb0d9bbf"
+  },
+  "started_utc": "2026-11-08T11:49:48.119990Z",
+  "summary": "The three strict corner caps and their common area ceiling force every source coordinate below 5/14 and every cap fraction strictly above 20/49.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

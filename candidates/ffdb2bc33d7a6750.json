@@ -1,0 +1,30 @@
+{
+  "advances": "Uniqueness for fixed ordinary planar endpoint and sector data under a strictly positive null-vector hypothesis.",
+  "author": "PK-research-agent",
+  "candidate_id": "ffdb2bc33d7a6750",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:46:52.516631+00:00",
+  "depends_on": [
+    "7d1ee06fa4119930",
+    "4b408a905c45b287",
+    "2fb8b0785692a5b4"
+  ],
+  "draft_key": "ordinary-sector-positive-kernel-rigidity",
+  "kind": "lemma",
+  "proof": "Put $D_i=R_iR_{i+1}$, $t_i=2W_i/D_i$, $a_i=t_i-1$, and $h_i=1/D_i-1/(2W_i)$. The accepted support-preserving theorem `4b408a905c45b287` applies to the six distinct rays, whose consecutive gaps are less than $\\pi$, and to any one chosen support of the realizing body at each $P_i$. Consider any polygon it produces. As in the reconstruction of `7d1ee06fa4119930`, in a positive-excess sector its inserted point is $V_i=u_iP_i+v_iP_{i+1}$, where $u_i,v_i>0$ and $u_i+v_i=t_i$. In a core sector take the redundant point $V_i=(P_i+P_{i+1})/2$. The positive-excess charges are $r_i=a_i/(D_i u_i)$ and $s_i=a_i/(D_i v_i)$, with harmonic value $h_i$. The core charges are both zero. The convexity inequalities at the prescribed endpoints yield node slacks $\\delta_i\\ge0$, as in `7d1ee06fa4119930`. These data meet the hypotheses of the Gram identity in `2fb8b0785692a5b4`, with edge constants $h_i\\ge0$ and the node budgets from the exact sector criterion. Its matrix is $L$ because the canonical consecutive and next-neighbor direction determinants are one. The identity is\n$$\nx^\\top Lx=\\sum_i\\delta_i x_i^2+\n\\sum_{i:h_i>0}\\frac{(s_i x_i-r_i x_{i+1})^2}{r_i+s_i}.\n$$\nAt $x=w$ all terms vanish. Positivity of $w$ gives $\\delta_i=0$ for every $i$. On a positive edge $s_iw_i=r_iw_{i+1}$, so its charge ratio is fixed and its positive harmonic value fixes both charges. Hence every positive-excess $V_i$ is determined by the data and the fixed vector $w$. The core pieces are already fixed by their endpoints. This determines the replacement polygon $Q$ for every choice of endpoint supports.\n\nThe zero node slack is equality in the convex turn condition of `7d1ee06fa4119930`, so $V_{i-1},P_i,V_i$ are collinear. The two inserted points are strictly inside their respective angular sectors and lie on opposite sides of the line through $0$ and $P_i$. Hence $P_i$ is strictly between them. At a positive-excess $V_i$ the turn determinant is $(u_i+v_i-1)D_i>0$, so $V_i$ is a strict vertex. A core midpoint is on the straight segment joining its two endpoints. It follows that every edge of $Q$ contains at least one prescribed $P_i$ in its relative interior, since two consecutive inserted vertices in the polygonal boundary traversal are separated by at least one prescribed endpoint.\n\nFor any realizing body $K$, choose one support at every $P_i$ and use the support-preserving replacement above. Each chosen line supports $Q$ at $P_i$ and hence is the unique edge line there. These lines include every edge line of $Q$, and their inward halfplanes contain $K$. Thus $K\\subseteq Q$. Their areas agree because all sector areas agree. If $K$ were a proper subset, a point of $Q\\setminus K$ would have positive distance from the closed set $K$. Every neighborhood of such a point contains a positive-area subset of $Q$, by convexity and the existence of an interior disk. This would contradict equal areas. Therefore $K=Q$.\n",
+  "source_candidate_ids": [
+    "50872e565640d12b"
+  ],
+  "source_candidate_sha256": {
+    "50872e565640d12b": "60169c7f3d39d45be93f9aec3b42b18c5a4a49db6a3a5c554d0cff2537075747"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "50872e565640d12b",
+      "locator": "§2, Gram identity and actual-body rigidity with zero excesses"
+    }
+  ],
+  "statement": "Use the six endpoints $P=((A,0),(0,B),(-t,t),(-a,0),(0,-b),(r,-r))$ with positive radii $R=(A,B,t,a,b,r)$. The indices are cyclic modulo six and $W_i$ is the area in the sector from $P_i$ to $P_{i+1}$. A core sector is one with $W_i=R_iR_{i+1}/2$.\n\nAssume the data $(R,W)$ have a realization by a planar convex body containing $0$ in its interior. Put $c_i=1/(2W_i)$. The symmetric cyclic matrix $L$ has diagonal $L_{ii}=c_{i-1}+c_i-1/R_i^2$ and entries $L_{i,i+1}=L_{i+1,i}=c_i-1/(R_iR_{i+1})$, with other off-diagonal entries zero. If $Lw=0$ for some vector $w$ with all entries strictly positive, the body is uniquely determined by $(R,W)$. It is a polygon whose vertices consist of one point strictly in each sector with $W_i>R_iR_{i+1}/2$. Every prescribed endpoint lies in the relative interior of an edge.",
+  "subgoal_id": "pk-intake-ordinary-sector-positive-kernel-rigidity",
+  "title": "Rigidity of prescribed planar sector data with a positive null vector"
+}

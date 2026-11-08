@@ -1,0 +1,47 @@
+{
+  "candidate_id": "aa4df3d20ca63976",
+  "candidate_sha256": "28e8755914ddaba52cd95420c9c8a0255aaf4eefdd9559a6d82b0c826d77d532",
+  "checked_dependency_candidate_sha256": {
+    "3d5f56b513c21fc4": "ef3ab81ce0e282a0bbda069677de721a69b5056faab8969726fffd9e88e90282"
+  },
+  "checks": [
+    "A positive-volume compact convex anchor has a positive maximum-volume inscribed simplex. After mapping its ordered vertices to 0 and the coordinate vectors, every coordinate has absolute value at most one by replacing the corresponding simplex vertex. Choosing the orientation before the map and dilating by the inverse d-th root of its absolute determinant gives determinant +1 and radius at most √d(d!a)^(1/d).",
+    "A section of B normal to x has supremal essential area at least b/(2R). The pyramid over any section has height at least T−R and lies in L. Integration gives V≥b(T−R)/(2dR), including d=1 with counting measure for a nonempty point section.",
+    "A bounded source gives a translated scaled copy in the target with volume at least λ_*^d v and radius at most λ_u D. A bounded target controls each source by its inverse coefficient. Since 0<λ_*≤1, these two bounds compose within the asserted factor on one hyperedge, and there are at most |P_i|−1 expansions. For a singleton only the anchor bound is needed.",
+    "For any representation supported on the limiting positive sites, a source with fixed λ>0 supplies |K_z|≥λ^d|K_u|. This persists after division by each positive total mass and passage to the limit. The trivial representation already has its target in the support.",
+    "Checked the original notes 2a5bf571e6159901 §§1–2 and dbf3b23d25004153 §3, (3)–(5), including both archived candidate digests. The finite-volume radius and propagation formulas match the source. The normalized support claim has no uniform volume-floor hypothesis."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3d5f56b513c21fc4",
+      "candidate_sha256": "ef3ab81ce0e282a0bbda069677de721a69b5056faab8969726fffd9e88e90282",
+      "mapping": "Apply to the fixed finite base. Its minimal-face hyperedges are exactly the target and all positively weighted other sites in the chosen representation, so connectivity gives the finite expansion order and makes λ_* well-defined for a nonsingleton.",
+      "reviewed_proof_sha256": "42414300b26b7d83cc52cd4df2c41561b5b48474e6088deadcb3a53e78851253",
+      "reviewed_statement_sha256": "d12d8603f519b58d81dff2ff058216c90b2702dec128713a328f0d230c1cf349",
+      "status": "same batch, independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:56:34Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof uses the same positively scaled source inclusion to show completeness of the positive-volume lattice support of one mixed-integer body. It does not assert the normalized limiting support statement or component diameter propagation.",
+      "fact_id": "a15ae50c21ef6716"
+    }
+  ],
+  "readability": "The common affine map is chosen for the specified component. It acts on every fiber with the same coefficients, and the asserted diameter control concerns the selected component.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7597f5853a24b1d14a518dcb9b9f1a6f1c0873de0a839f2ae4cb85060184c043",
+  "reviewed_statement_sha256": "cc833492526d04d61e89215e3db4df20736abb215b29c5af7a16a0bbee00b8b0",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:52:50Z",
+  "summary": "The maximal-simplex normalization and sectional cone estimate give the claimed uniform diameter bound on the selected component. The translated-source inclusion also closes the limiting positive-mass support.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

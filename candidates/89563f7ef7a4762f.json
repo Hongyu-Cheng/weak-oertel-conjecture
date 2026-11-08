@@ -1,0 +1,28 @@
+{
+  "advances": "Depth uses full residual fibers on a fixed canonical graph. The limiting maximum is for those fibers and their actual closed ambient halfspaces.",
+  "author": "PK-research-agent",
+  "candidate_id": "89563f7ef7a4762f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:52:13.455047+00:00",
+  "depends_on": [
+    "ba0f3db1bf4f62c6"
+  ],
+  "draft_key": "anchored-affine-recession-and-depth-transfer",
+  "kind": "lemma",
+  "proof": "The vertex rows have kernel $L(P)$ because any coefficient vector of an anchored representation is a convex combination of the vertices of its coefficient polytope. By compatibility, the target centroid and the represented average of the source centroids both lie in the target fiber. Every row applied to the centroid array therefore gives a vector of norm at most $D$, so $\\|Tc\\|_{\\rm F}\\le D\\sqrt m$. The singular-value bound on the orthogonal complement of the kernel gives the claimed distance. Each residual fiber is within $D+\\|c-g\\|_{\\rm F}$ of the origin. Subtracting $g_z$ preserves compatibility because $g$ preserves every anchored equality. Each of its coordinate functions becomes an affine restriction on the lift by the canonical-lift lemma, which yields $G$.\n\nThe stated affine map is a translation on each source fiber and is bijective on the sampled unions, so it pushes the lifted measure to the original measure. Every original closed halfspace containing a mapped point pulls back to a closed halfspace containing the source point, or to the whole affine space. The corresponding masses are equal and the lifted infimum permits all lifted containing halfspaces. This proves the inequality. When the base is already canonical the affine shear is invertible on that base's affine space times $\\mathbb R^d$, which gives equality.\n\nFor continuity use raw depths first. For a fixed candidate, changing the family changes its raw depth by at most $\\sum_z |R_{j,z}\\mathbin{\\triangle}R_{*,z}|_d$, since this bounds each cap mass difference. The sum tends to zero. A point outside a limit fiber is eventually outside, and an interior point of a full-dimensional limit is eventually inside by the Hausdorff convergence of support functions and separation. Boundaries of full-dimensional convex fibers have zero volume, and a lower-dimensional limit has zero volume itself. Thus the indicators converge almost everywhere, and the common ball gives convergence in $L^1$.\n\nFor moving the candidate inside a fixed base, it suffices to use cuts through the candidate. A cut with nonzero continuous normal, scaled to unit continuous length, shifts each fiber threshold by at most the distance moved. Each intervening slab in the common ball has volume at most $\\kappa_{d-1}R^{d-1}$ times that distance by Fubini. Pure-base cuts are unchanged. Taking infima gives the raw Lipschitz estimate, and division by $M$ gives its normalized version. These estimates imply existence of a maximum on the finite union of compact fibers, including any lower-dimensional fibers. With $\\delta_j=\\max_z d_H(R_{j,z},R_{*,z})$, any maximizing candidate in either family has a candidate of the other in the same fiber within $\\delta_j$. Thus the difference of raw maxima is bounded by the symmetric-difference mass sum plus $|P|\\kappa_{d-1}R^{d-1}\\delta_j$. The total masses converge to a positive number, so the normalized maxima converge. Combining this with the pointwise affine comparison gives the liminf inequality.\n",
+  "source_candidate_ids": [
+    "dbf3b23d25004153"
+  ],
+  "source_candidate_sha256": {
+    "dbf3b23d25004153": "9d9c2e18556d2a24ac28a6b56a43c086e1f3d25cd92b2fe4d69d7319bdbbd014"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "dbf3b23d25004153",
+      "locator": "§§5–6, (8)–(13)"
+    }
+  ],
+  "statement": "Let $P$ be a nonempty finite base and let the positive compact convex fibers $K_z\\subset\\mathbb R^d$ be compatible, $d\\ge1$, with diameters at most $D$. Let $T$ be the matrix of the rows $e_z-(\\lambda_w)_w$ associated with the vertices of the anchored coefficient polytopes, let $m$ be its number of rows, and write $\\sigma$ for its least nonzero singular value when $T\\ne0$. The centroid array $c=(c_z)_z$ has Euclidean distance at most $D\\sqrt m/\\sigma$ from $L(P)\\otimes\\mathbb R^d$, with distance zero if $T=0$. Its orthogonal projection $g$ to this space makes $R_z=K_z-g_z$ compatible and contained in a common ball. On the fixed canonical lift $B=\\Phi_P(P)$ there is an affine function $G$ with $G(\\Phi_P(z))=g_z$. If $\\pi$ is the affine base projection, the map $(b,x)\\mapsto(\\pi(b),x+G(b))$ preserves fiber masses, sends the lifted residual union onto the original union, and gives the inequality of normalized point depths\n$$\n\\delta_{\\rm original}(z,x+g_z)\\ \\ge\\ \\delta_{\\rm lift}(\\Phi_P(z),x).\n$$\nIf $P$ itself is canonical, the recentering is an affine shear on its original ambient space and preserves depth exactly.\n\nFor a sequence of these residual families in a common ball $R\\mathbb B_d$ and with simultaneous Hausdorff limit of positive total $d$-volume, maximum normalized lifted depth converges to the limiting maximum, and the liminf of the original maxima is at least that limit. Here each limiting fiber is nonempty compact convex and may have zero $d$-volume. For a fixed residual family of total volume $M>0$, the normalized depth within a base fiber is Lipschitz with constant $|P|\\kappa_{d-1}R^{d-1}/M$, with $\\kappa_0=1$.",
+  "subgoal_id": "pk-intake-anchored-affine-recession-and-depth-transfer",
+  "title": "Anchored affine translations give bounded residuals and transfer full-fiber depth"
+}

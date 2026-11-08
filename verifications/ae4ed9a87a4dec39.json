@@ -1,0 +1,83 @@
+{
+  "candidate_id": "8bdcdcd6e2fa69d9",
+  "candidate_sha256": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+  "checked_dependency_candidate_sha256": {
+    "3e6e1eb15d927db8": "356c4ff2da696c29949b653e0a2dd2941dfa210be5f2a5c1371d7fde3a5ca463",
+    "511d89569241b0d6": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+    "aef64d0fab6e1fa1": "1e9ae9fb4a25437b37411f626d5f6717251f986a14949e0ca66803bbdbe1a59b",
+    "d2ba4e3cbd6eb730": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0"
+  },
+  "checks": [
+    "At a proper normalized cut, the first variation makes F_x differentiable and threshold stationarity gives F_x′(1)=dP. The bounded projection density and E[G⁻¹]=1/d give f_V(0)=P. If exactly one margin c_p is positive, the other nonzero phases give Y>0 almost surely. The conditional density at z is c_p⁻¹exp(−(z+Y)/c_p) on z+Y>0 and zero on z+Y<0. It is bounded by c_p⁻¹ and continuous at zero for almost every Y, yielding f_V(0)=P/c_p. Strict row positivity excludes c_p=1. Zero margins do not enter this argument.",
+    "Log-concavity implies f(z)≤P exp(ℓz) for z≥0 with ℓ=f′(0)/P. If ℓ<−1, its integral is less than P. If ℓ=−1, equality of integrals and continuity force equality pointwise. Since 0<c_j<1 at each positive margin, a λ>1 with λc_j<1 for every j gives a finite product moment, contradicting the rate-one positive tail. Thus f′(0)>−P.",
+    "P(c+s1)=Pr(c·U≥−s) gives its second shift derivative −f_{c·U}′(0). Joint C² makes the projection density C¹ near zero. In the gamma difference quotient the small-G part is bounded by a constant times |z|⁻¹ times the integral of G^(d−1) up to |z|/δ, hence O(|z|^(d−1)); the rest is dominated by G⁻². The exact gamma moment is Γ(d−1)/Γ(d+1)=1/[d(d−1)] and remains finite for d=2. These signs give the stated B and its strict positivity.",
+    "Differentiating the row gradient tP^(−1/d−1)g/d at t=1 gives L_xt=K(η−dg), since 1ᵀg=dP. The row-row block is K[(d+1)ggᵀ/(dP)−H], and direct threshold differentiation gives L_tt=K[d(d−1)P−1ᵀH1]. The actual nearby minimizers are proper and converge by the unique-threshold lemma, so the C¹ implicit critical branch is the minimizer. Differentiation of the envelope gradient gives the stated Schur complement.",
+    "Let A=η·v for g·v=0. Before the rank-one subtraction, the divided-by-K quadratic on v+s1 is −vᵀHv−2sA+s²(2dP+B). The subtracted square is [A−s(dP+B)]²/B. Expanding leaves −vᵀHv−(A−sdP)²/B, and v=0,s=1 gives −Kd²P²/B<0.",
+    "Verified the raw source digest and checked a5d3d44181ebed82 §§2, 4 and 4a against (3)–(7) and (9)–(15). The all-dimensional density argument suffices for the frozen result. The separate tetrahedral face proof is supporting source material."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "aef64d0fab6e1fa1",
+      "candidate_sha256": "1e9ae9fb4a25437b37411f626d5f6717251f986a14949e0ca66803bbdbe1a59b",
+      "mapping": "Properness of the normalized cut gives a jointly C¹ threshold CDF and a continuous projection density at zero, including the one-positive-phase case before the joint C² lemma applies.",
+      "reviewed_proof_sha256": "084cd35c57421b5d9756ad8bc5b25916d6430db1e8a75983ea0eb12720c1d3cb",
+      "reviewed_statement_sha256": "9e61967d5c7fb600921f04531c7273e178ff95c35aaec9a0fa7fca47e261d23d",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "d2ba4e3cbd6eb730",
+      "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+      "mapping": "Strict row positivity and properness imply a nonconstant row. The lemma gives uniqueness and localization of nearby minimizing thresholds, so the critical branch from the implicit-function theorem represents the actual optimized capacity.",
+      "reviewed_proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+      "reviewed_statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "3e6e1eb15d927db8",
+      "candidate_sha256": "356c4ff2da696c29949b653e0a2dd2941dfa210be5f2a5c1371d7fde3a5ca463",
+      "mapping": "After excluding the one-positive-phase case, the cut has two strictly positive and one strictly negative margin. The joint lemma gives local C² and 1ᵀg=d f_V(0)=dP by summing the centroid coordinates.",
+      "reviewed_proof_sha256": "25d949ef6fa241b3d18c2c32cf19f9ac1a0318aef6a19ac93a7cf58edc78d4b2",
+      "reviewed_statement_sha256": "0b69be9c183ac54f44ac540cf3cd01ed728938689e4e176bd501148269c397ca",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "511d89569241b0d6",
+      "candidate_sha256": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+      "mapping": "The established phase counts give the accepted positive C¹ log-concave density needed for the tangent bound.",
+      "reviewed_proof_sha256": "de2812dbc5632f66b6800ec3d17e4a2fa4d439425feb37f623d693d06a842516",
+      "reviewed_statement_sha256": "5da49339a62c68ed1622a42d4d7d1c4bff3ac044a334dd512c679d389cf75c8b",
+      "status": "accepted at reviewed repository base"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:55:27Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the density regularity and selected second derivatives after the positive-phase count is proved. Its statement has no optimized threshold, strict threshold curvature, or capacity Hessian.",
+      "fact_id": "511d89569241b0d6"
+    },
+    {
+      "comparison": "Concerns the second variation of raw cap volume through a fixed point. The optimized threshold and the resulting rank-one correction here involve a different objective.",
+      "fact_id": "27d3881f8bfc290c"
+    },
+    {
+      "comparison": "The arbitrary-cut capacity there maximizes the volume of an inscribed simplex. The present capacity minimizes a threshold-to-volume ratio over cuts and asserts its local Hessian.",
+      "fact_id": "6fbefd0eb6914aa9"
+    }
+  ],
+  "readability": "The projection and exponential densities have different derivatives at zero. The common-shift identity supplies the minus sign and the gamma mixture supplies the exact conversion factor.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3f10992a46b97286bfba42b813249fa659b3504118defeeae9510650608b52f7",
+  "reviewed_statement_sha256": "deba3f575be9d9f26f3af97154bc46e151f89c2cdb0be8bb5cb80bcbb484e157",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:51:52Z",
+  "summary": "The normalized proper minimum has strict threshold curvature in every dimension d≥2, and optimization gives the displayed Hessian and square identity.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,48 @@
+{
+  "candidate_id": "a19fb2ae234afb2a",
+  "candidate_sha256": "a051c52f35db8b023a04403f7e58188c7fd2ef24845e229caf985eb8aa6922f6",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Strict incidence gives H>0, positive diagonal heights and positive negated off-diagonal heights. Normal balance is a column identity at each fixed P_j, so a_j=Σ_{i≠j} b_ij; summing yields Σs_i=1. In cyclic order, 2a_i=s_{i+1}−d_{i+1}+s_{i+2}+d_{i+2}, hence g_i=2a_i+s_i>|d_i| and Σg_i=3.",
+    "Along each edge from P_i the affine margin crosses zero at fraction a_i/(a_i+b_ij), strictly between zero and one. Their product is the corner area fraction. Expanding the resulting f_i² gives g_i²−d_i²; the positive root is required by f_i=2a_i/√q_i. The moment is exactly 2Σa_i=2.",
+    "For cyclic j=i+1, k=i+2, g_j+g_k=3−g_i and d_j−d_k=1−g_i; their difference of squares gives 4(2−g_i). Expanding the remaining difference yields twice g_jg_k+d_jd_k−f_jf_k. The first two terms sum to a positive number because g_j>|d_j| and g_k>|d_k|. Its square minus f_j²f_k² is (g_jd_k+g_kd_j)², so rationalization and (f_j+f_k)>0 prove g_i<2. After division by four and addition of g_i−f_i the two denominators and factors are as stated.",
+    "Equality first forces d_i=0. Then g_jd_k+g_kd_j=(d_j+d_k)(1+d_j−d_k)=(d_j+d_k)(2−g_i), whose second factor is strictly positive. The two conditions also suffice and imply g_j=g_k and d_j²=d_k², hence f_j=f_k. The identity and equality conditions are invariant under exchanging j,k.",
+    "The corner altitude is Ha_i/||v_i|| and its base is the actual chord length ||v_i||σ_i, so 1/σ_i=Ha_i/(2|K|q_i). As Q>0 and Σa_i=1, a_i=λ_i q_i/Q and substitution gives the stated equivalent inequalities.",
+    "Source 919c51f1d263878e §§1–3, equations (1)–(10), contains the normalized heights, row inequalities, exact deficit and equality analysis, and ordinary chord relation. The frozen proof discharges the exact incidence premise internally as a hypothesis, with no dependence on a separate incidence fact."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T11:53:09.527480Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The same triangle geometry and strict incidence occur there, but that fact derives incidence under a cap ceiling for a positive circuit; it does not compare the signed rows or chord weights.",
+      "fact_id": "b08bdaf82b84ef41"
+    },
+    {
+      "comparison": "The positive-normal right-triangle envelope minimizes a single cap over its normal. It supplies no joint signed-height identities, deficit, or chord relation.",
+      "fact_id": "b39ecb342488b802"
+    },
+    {
+      "comparison": "That fact bounds a gauge in terms of mixed weights with denominators 2a_i+k_i under criticality and additional fiber assumptions. It neither identifies ordinary signed-height weights nor gives the row deficit.",
+      "fact_id": "ba445d671279810a"
+    }
+  ],
+  "readability": "The cyclic choice of j,k is for expanding d_j−d_k; the final squared expression is symmetric in them. The equality conclusion concerns f_j and f_k only.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "cd7d42df0e7913be3954a8220d058e90b4b16e7f85aa0dbbbfe0c973b1e23bb4",
+  "reviewed_statement_sha256": "bb308b4cbb5c29c79d23d9facc5500251a9b409e1c539aee234fbf1720d01c16",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "919c51f1d263878e": "6b0ffb2986d69a7dc995935fa4d156875e4241266b21e9cd2608e847cb0d9bbf"
+  },
+  "started_utc": "2026-11-08T11:49:48.119990Z",
+  "summary": "The signed-height identities give the exact nonnegative row deficit and its stated equality set. The final reciprocal-weight identity uses the actual corner triangles and their actual chords.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

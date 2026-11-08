@@ -1,0 +1,60 @@
+{
+  "candidate_id": "3e6e1eb15d927db8",
+  "candidate_sha256": "356c4ff2da696c29949b653e0a2dd2941dfa210be5f2a5c1371d7fde3a5ca463",
+  "checked_dependency_candidate_sha256": {
+    "511d89569241b0d6": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+    "aef64d0fab6e1fa1": "1e9ae9fb4a25437b37411f626d5f6717251f986a14949e0ca66803bbdbe1a59b"
+  },
+  "checks": [
+    "For z≤0 the conditional negative-phase tail multiplies exp(z/r) by E[exp(−(aE₁+bE₂)/r)]=r²/[(a+r)(b+r)]. For z≥0 integration of the two-positive-phase survival at z+rE₃ multiplies its two exponentials by a/(a+r) and b/(b+r), respectively.",
+    "For a≠b the right-hand value at zero is (ab+r(a+b))/[(a+r)(b+r)], and its first and second z derivatives there are −r/[(a+r)(b+r)] and −1/[(a+r)(b+r)]. These equal the left-hand expressions. The integral of the scale derivative along the segment from b to a is smooth in positive parameters, so these identities persist at a=b and may be differentiated to give all mixed boundary matches of total order at most two.",
+    "On a compact parameter neighborhood bounded away from zero, the divided-difference integral and both exponential expressions have a uniform exponential bound times polynomials in |z| for their nonconstant terms through second order. Conditioning on the remaining phases therefore gives a quadratic integrable bound in their exponential sum, including when some of their coefficients are zero or change sign. With d=2 there are no remaining phases, and the same smooth survival kernel directly applies at z=0.",
+    "The identity P(λc)=P(c) for λ>0 first gives g·c=0, and differentiating the latter gives Hc=−g. For the actual section centroid, P(c)=F_{−c}(0) gives the positive sign g_j=f_{c·U}(0)b_j by proper-cut first variation. The independent shape-(d+1) gamma radius has E[G⁻¹]=1/d. Bounded coarea density and continuity at zero justify identifying f_V(0) with f_{c·U}(0)/d via the mixture and the continuous density version.",
+    "Verified the raw digest of source a5d3d44181ebed82 and checked §1, (1)–(2), including the two survival pieces and both homogeneity identities."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "aef64d0fab6e1fa1",
+      "candidate_sha256": "1e9ae9fb4a25437b37411f626d5f6717251f986a14949e0ca66803bbdbe1a59b",
+      "mapping": "Apply the jointly C¹ proper-cut formula to x=−c and t=0. The fixed positive and negative margins make this a proper cut. Its section centroid is b and the CDF threshold derivative equals the projection density at zero.",
+      "reviewed_proof_sha256": "084cd35c57421b5d9756ad8bc5b25916d6430db1e8a75983ea0eb12720c1d3cb",
+      "reviewed_statement_sha256": "9e61967d5c7fb600921f04531c7273e178ff95c35aaec9a0fa7fca47e261d23d",
+      "status": "same-batch independent approval required for admission"
+    },
+    {
+      "candidate_id": "511d89569241b0d6",
+      "candidate_sha256": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+      "mapping": "The selected two positive and one negative coefficients give the accepted continuous density version of V, which agrees at zero with the gamma-mixture density continuous there.",
+      "reviewed_proof_sha256": "de2812dbc5632f66b6800ec3d17e4a2fa4d439425feb37f623d693d06a842516",
+      "reviewed_statement_sha256": "5da49339a62c68ed1622a42d4d7d1c4bff3ac044a334dd512c679d389cf75c8b",
+      "status": "accepted at reviewed repository base"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:55:27Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The identical sign pattern already gives joint C¹ regularity at zero margins and second derivatives restricted to strictly positive coordinates. The frozen claim adds joint C² regularity with mixed and nonpositive-coordinate derivatives and identifies the complete Hessian in the differentiated homogeneity identity.",
+      "fact_id": "511d89569241b0d6"
+    },
+    {
+      "comparison": "Its proof gives the same centroid relation on stationary through-point caps and uses the gamma scaling. In this candidate the actual centroid is defined directly by the given cut, and the regularity assertion is for the whole coefficient neighborhood.",
+      "fact_id": "27d3881f8bfc290c"
+    }
+  ],
+  "readability": "The letter b serves first as a selected scalar phase coefficient and later as the centroid vector. The roles occur in separate parts of the proof and the formula signs can be read directly from F_{−c}(0).",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "25d949ef6fa241b3d18c2c32cf19f9ac1a0318aef6a19ac93a7cf58edc78d4b2",
+  "reviewed_statement_sha256": "0b69be9c183ac54f44ac540cf3cd01ed728938689e4e176bd501148269c397ca",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:51:52Z",
+  "summary": "The three-phase survival kernel gives joint second derivatives in all coefficient directions, and coarea and gamma scaling give the stated centroid formula.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

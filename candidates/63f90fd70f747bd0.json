@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary planar convex-body feasibility and optimization for a fixed central line arrangement. The local topology is the finite endpoint and sector data. A mixed-integer realization would require a separate midpoint constraint.",
+  "author": "PK-research-agent",
+  "candidate_id": "63f90fd70f747bd0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:46:52.513067+00:00",
+  "depends_on": [
+    "7d1ee06fa4119930"
+  ],
+  "draft_key": "ordinary-central-radius-saturation",
+  "kind": "theorem",
+  "proof": "The gaps between consecutive rays are positive, repeat after a semicircle, and sum to $\\pi$ over the $N$ gaps in that semicircle. Each gap is therefore less than $\\pi$, and the sum of any two consecutive gaps is at most $\\pi$. In particular\n$c_i=\\det(e_{i-1},e_{i+1})/(d_{i-1}d_i)\\ge0$.\nThe hypotheses of the exact sector criterion in `7d1ee06fa4119930` hold for the endpoints $P_i=R_ie_i$ and areas $W_i$. Its core constraints are $d_iR_iR_{i+1}\\le2W_i$. Expanding its quadratic form with $D_i=d_iR_iR_{i+1}$ and $E_i=R_{i-1}R_{i+1}\\det(e_{i-1},e_{i+1})$ gives\n$$\nL_{ii}=\\frac1{2W_{i-1}}+\\frac1{2W_i}-\\frac{c_i}{R_i^2},\n\\qquad\nL_{i,i+1}=\\frac1{2W_i}-\\frac1{d_iR_iR_{i+1}}.\n$$\nThe matrix is symmetric, with other off-diagonal entries zero. In particular it is positive semidefinite and its off-diagonal entries are nonpositive.\n\nIncreasing $R_i$ to any point in the claimed interval keeps the two incident core inequalities valid. All changed entries of $L$ weakly increase because $c_i\\ge0$, and all off-diagonal entries of the new matrix $L'$ are still nonpositive. For each real vector $x$, with $|x|$ taken coordinatewise,\n$$\nx^\\top L'x\\ge |x|^\\top L'|x|\\ge |x|^\\top L|x|\\ge0.\n$$\nThus the criterion gives a convex polygon with at most $2(2N)$ vertices for the new data. A larger radius than the claimed upper bound violates a necessary core inequality. At the bound at least one incident core inequality is an equality, so the corresponding sector equals its core triangle by convexity and equality of areas.\n\nThe opposite nodes $i,i+N$ are nonadjacent because $N\\ge2$. Neither occurs in the other's upper bound, so both changes can be made in either order. Fixed-line cap areas are sums of sector areas, since the boundary lines have area zero. If $\\ell$ is the target chord length in its chosen normalization and the other normalized chord lengths are $\\ell_j$, the target weight is $[1+\\ell\\sum_{j\\ne\\mathrm{target}}\\ell_j^{-1}]^{-1}$. This is strictly decreasing in $\\ell$, with the other lengths fixed.\n\nAll consecutive direction determinants are one in the canonical coordinates. The target endpoints can reach $B'=\\min\\{2W_0/A,2W_1/t\\}$ and $b'=\\min\\{2W_3/a,2W_4/r\\}$. Thus one core is in $\\{0,1\\}$ and another in $\\{3,4\\}$, giving the four listed pairs. If a feasible datum has neither incident core at one target endpoint, an arbitrarily small increase of that radius strictly improves the weight at fixed $W$. This rules out such a datum at a finite-data local minimum or an attained global minimum under the stipulated area constraints.\n",
+  "source_candidate_ids": [
+    "83b3822a403eee2c"
+  ],
+  "source_candidate_sha256": {
+    "83b3822a403eee2c": "04c208303b8d5d6a28c18b544182126b328f760d6fd4f986f92c81f2e6ddec51"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "83b3822a403eee2c",
+      "locator": "§§1–4, canonical and general finite radius saturation and inverse weights"
+    }
+  ],
+  "statement": "Let $K$ be a planar convex body with $0$ in its interior. Choose $N\\ge2$ distinct lines through $0$. Let $e_i$ be nonzero vectors on the $2N$ rays in counterclockwise order with $e_{i+N}=-e_i$, and write the boundary endpoints as $R_ie_i$, $R_i>0$. All indices are cyclic modulo $2N$. Let $d_i=\\det(e_i,e_{i+1})>0$ and let $W_i$ be the area of $K$ in the sector between these consecutive rays.\n\nWith all $W_i$ and all other radii fixed, the feasible values of the $i$th radius that are at least $R_i$ are exactly the closed interval\n$$\nR_i\\le R_i'\\le \\min\\left\\{\\frac{2W_{i-1}}{d_{i-1}R_{i-1}},\\frac{2W_i}{d_iR_{i+1}}\\right\\}.\n$$\nEach value has a convex polygonal realization containing $0$ in its interior with at most $4N$ vertices. At the upper endpoint at least one adjacent sector has area equal to its core triangle. Opposite radii can be increased to their upper endpoints independently. All fixed-line cap areas and all other central chord lengths are preserved. For any fixed positive length scaling on each line, the normalized inverse weight of the changed chord strictly decreases if either of its radii increases.\n\nIn the canonical three-line coordinates, let $R=(A,B,t,a,b,r)$ on ray vectors $(1,0),(0,1),(-1,1),(-1,0),(0,-1),(1,-1)$. For the caps $x\\ge0$, $y\\ge0$, $x+y\\le0$, write $W=(Y_3,X_2,Y_1,X_3,Y_2,X_1)$, where $X_j$ is area in cap $j$ alone and $Y_j$ is area in the other two caps. The coarea chord lengths are $B+b$, $A+a$, and $r+t$. Every realized datum admits a replacement with target coarea chord $B+b$ no shorter and with one of the core-sector pairs $(Y_3,X_3),(Y_3,Y_2),(X_2,X_3),(X_2,Y_2)$. Every local minimum of the target inverse weight in the finite radius and area data, and every attained global minimum, already lies in this union under any constraints depending only on $W$. The pairs allow additional core equalities.",
+  "subgoal_id": "pk-intake-ordinary-central-radius-saturation",
+  "title": "Finite saturation of an ordinary central radius at fixed sector areas"
+}

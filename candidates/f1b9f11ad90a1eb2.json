@@ -1,0 +1,30 @@
+{
+  "advances": "Conditional ordinary planar result for an attained fixed-budget minimizer with exactly two core sectors. Uniqueness is for the specified endpoint and area data.",
+  "author": "PK-research-agent",
+  "candidate_id": "f1b9f11ad90a1eb2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:46:52.517227+00:00",
+  "depends_on": [
+    "7d1ee06fa4119930",
+    "82a8acc237f57498",
+    "ffdb2bc33d7a6750"
+  ],
+  "draft_key": "ordinary-two-core-inverse-weight-quadrilateral",
+  "kind": "theorem",
+  "proof": "Put $c_i=1/(2W_i)$. The symmetric cyclic matrix $L$ has diagonal $L_{ii}=c_{i-1}+c_i-1/R_i^2$ and entries $L_{i,i+1}=L_{i+1,i}=c_i-1/(R_iR_{i+1})$, with other off-diagonal entries zero.\n\nThe core products and $L\\succeq0$ are the exact conditions in `7d1ee06fa4119930`, specialized to the canonical rays with consecutive and next-neighbor determinants one. By the fixed-budget minimum theorem `ordinary-fixed-sector-inverse-weight-minimum`, the two core edges include one incident to node $1$ and one incident to node $4$. In the six-cycle these edges have no common node and are precisely one of the four listed pairs. Deleting them splits $L$ into two path blocks, each with at least two nodes and strictly negative internal edge entries. Each target node is at the end of a block.\n\nSuppose one block is positive definite. If it has at least three nodes, decrease the radius at an internal node slightly. That node is outside the target chord. Its two core inequalities remain valid, and all other core products stay fixed. The modified block stays positive definite by continuity and the other block is unchanged. The exact criterion realizes the perturbed datum. The target chord is fixed and one other chord shortens, so $p$ strictly decreases.\n\nIf the positive definite block has two nodes, choose one of its nodes outside the target chord. Such a node exists because the two target nodes are opposite in the six-cycle. Each node of this block is incident to one core edge. The core edge at the chosen node has a target node across it in the other block, since each core edge has exactly one target endpoint. Decrease the chosen radius slightly and increase that target radius to keep their product exactly equal to the core value. The other core is unchanged because the core edges have disjoint endpoints. All four strict core inequalities remain valid for sufficiently small changes. The block with the decreased radius stays positive definite by continuity. In the other block the changed entries increase and the off-diagonal signs stay nonpositive. For a vector $x$ in that block, the new quadratic form is at least its value on $|x|$, which in turn is at least the old quadratic form on $|x|$. Thus the other block stays PSD. The exact criterion again realizes the datum. The target chord length increases and one other chord length decreases, so $p$ strictly decreases.\n\nBoth cases contradict minimality. Each block is therefore singular and PSD. In a singular block take a nonzero null vector. Its coordinatewise absolute value has quadratic form at most zero because the off-diagonal entries are nonpositive. It belongs to the kernel by positive semidefiniteness. If an entry were zero, the eigenvector equation at that node would force every adjacent entry to vanish, by strict negativity of the edge entries. Connectedness would force the entire vector to be zero. Thus each block has a strictly positive null vector, and concatenation gives $Lw=0$ with $w>0$. Apply `ordinary-sector-positive-kernel-rigidity` to the actual data. Its four positive-excess sectors give exactly four vertices and the unique body asserted.\n",
+  "source_candidate_ids": [
+    "50872e565640d12b"
+  ],
+  "source_candidate_sha256": {
+    "50872e565640d12b": "60169c7f3d39d45be93f9aec3b42b18c5a4a49db6a3a5c554d0cff2537075747"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "50872e565640d12b",
+      "locator": "§3, all four exactly-two-core patterns"
+    }
+  ],
+  "statement": "Use the six endpoints $P=((A,0),(0,B),(-t,t),(-a,0),(0,-b),(r,-r))$ with positive radii $R=(A,B,t,a,b,r)$. The indices are cyclic modulo six and $W_i$ is the area in the sector from $P_i$ to $P_{i+1}$. A core sector is one with $W_i=R_iR_{i+1}/2$.\n\nFix positive $W_i$ with an ordinary planar realization containing $0$ in its interior. The target normalized inverse chord weight is\n$$\np(R)=\\left[1+\\frac{B+b}{A+a}+\\frac{B+b}{r+t}\\right]^{-1}.\n$$\n\nSuppose $R$ minimizes $p$ over the feasible radius vectors for $W$ and exactly two sectors are cores. The core pair is one of $(0,3),(0,4),(1,3),(1,4)$. The datum $(R,W)$ has a unique realizing body, a quadrilateral whose four vertices lie strictly in the four other sectors. Each prescribed endpoint lies in the relative interior of a quadrilateral edge.",
+  "subgoal_id": "pk-intake-ordinary-two-core-inverse-weight-quadrilateral",
+  "title": "Exactly two core sectors force a quadrilateral at a fixed-sector inverse-weight minimum"
+}

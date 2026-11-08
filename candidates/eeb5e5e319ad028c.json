@@ -1,0 +1,35 @@
+{
+  "advances": "The threshold, fixed base and positive limit come from the smallest bad canonical minor theorem. The objective is original closed-halfspace depth and the complexity bound concerns one shared list of inequalities.",
+  "author": "PK-research-agent",
+  "candidate_id": "eeb5e5e319ad028c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:52:13.455516+00:00",
+  "depends_on": [
+    "26d27b0f77ea4ac9",
+    "43ed87d91b76249c"
+  ],
+  "draft_key": "shared-inequality-attainment-on-minimal-bad-base",
+  "kind": "theorem",
+  "proof": "Start from a strict bad family on $B$. Choose a finite inner $\\epsilon$-net in each fiber and let $A_{\\epsilon,b}$ be its convex hull. Form the convex hull of the placed $A_{\\epsilon,b}$ and use its actual fibers at $B$. Each such fiber is between $A_{\\epsilon,b}$ and $K_b$, by compatibility of the original family. Thus its Hausdorff distance from $K_b$ is at most $\\epsilon$, its volume is positive for sufficiently small $\\epsilon$, and its depth converges to that of the original family. The last assertion follows from the accepted fixed-base marked stability lemma 43ed87d91b76249c, by taking convergent subsequences of maximizing marks for the upper limit and approximating a fixed limiting maximizer for the lower limit. Thus a sufficiently fine net retains a strict violation. Its placed hull is a polytope of full relative dimension in $\\operatorname{aff}(B)\\times\\mathbb R^d$: the positive fibers provide every continuous direction and their placements span the base. The pure-base facets restrict no point of a specified fiber plane, since they hold at its base site. The remaining facets give the displayed shared representation for some $N$.\n\nFor the closure assertion, all fibers of the sequence are in a common ball of radius $R$ by simultaneous Hausdorff convergence and finiteness of the base. Normalize each $n_f^{(j)}$ to unit length and scale the corresponding thresholds. After subselection, let $n_f^{(j)}\\to n_f$ and $t_f^{(j)}(b)\\to t_f^\\infty(b)$ for every $f,b$, the latter in $\\mathbb R\\cup\\{+\\infty\\}$. A nonempty fiber in the common ball gives $t_f^{(j)}(b)\\ge-R$, excluding $-\\infty$. In the limit $|n_f|=1$.\n\nAt a site $b$, the finite limiting inequalities describe the limiting fiber globally. To see this, approximating points from the sequence gives one inclusion. For the converse, let $y$ satisfy all finite limiting inequalities and choose a point $v$ in the interior of the limit fiber. A smaller fixed ball about $v$ belongs to every late fiber, by Hausdorff convergence of the convex support functions and separation. Thus $v$ satisfies each finite limiting inequality strictly. Every convex combination $(1-s)y+sv$ with $0<s<1$ satisfies the finite limiting inequalities strictly, and the divergent thresholds eventually exceed its fixed directional evaluations. This convex combination therefore lies in all sufficiently late fibers and hence in the limit. Let $s$ decrease to zero to obtain $y$ in the limiting fiber.\n\nFor each $f$, let $F$ be the sites with finite threshold limit, and let $E\\subset\\mathbb R^B$ be the linear space of affine evaluation vectors. The finite limits on $F$ belong to the closed space $E|_F$. Use a fixed linear right inverse of the restriction $E\\to E|_F$ to correct each approximating vector to its exact limiting entries on $F$. The corrections tend to zero in $E$, so all entries outside $F$ still tend to $+\\infty$. A sufficiently late corrected vector keeps those entries above the support values of the corresponding limit fibers in direction $n_f$. Hence the corrected affine thresholds give exactly the finite limiting inequalities where present and redundant inequalities elsewhere. This works even if $F$ is empty. The resulting $N$ inequalities represent all limiting fibers at once.\n\nSince the polytopal approximation gives $\\beta_N<\\tau/q(B)$, choose $\\delta$ strictly between them. Normalize a minimizing sequence in the class to total mass one, and discard its finite initial segment so it lies in the strict original-depth $\\delta$-sublevel. The smallest bad canonical minor theorem gives an all-positive simultaneous limit after common continuous affine maps and base-dependent affine shears. These invertible maps preserve the class because they transform continuous normals by the same invertible linear map and change each threshold by an affine function of $b$. The closure just proved keeps the limit in $\\mathcal R_N(B)$, and depth continuity on this sublevel gives attainment of $\\beta_N$.\n\nFor a represented family, the finitely many normals remain nonzero under sufficiently small perturbations. Fixed interior balls at the finitely many sites persist under sufficiently small coefficient changes. The common continuous normals satisfy $\\min_{|u|=1}\\max_f n_f\\cdot u>0$: otherwise a nonzero direction in the recession cone would contradict boundedness of any nonempty fiber. This positive margin persists for small changes, giving boundedness of the perturbed fibers. Every anchored combination of points satisfying the perturbed inequalities at their sites satisfies the same shared inequalities at the target, by affineness of the thresholds. Thus compatibility persists.\n",
+  "source_candidate_ids": [
+    "c280bb0dcfd30f3d",
+    "d485228e666ca27b"
+  ],
+  "source_candidate_sha256": {
+    "c280bb0dcfd30f3d": "33bdcad25d72be5f08283955250701a4842ff324e7e7ed13de06380ff95fae8f",
+    "d485228e666ca27b": "6cc71799d5f8706e4e497b7286c13c3f483d35b8f4690e26e0b3e16d4ead0971"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c280bb0dcfd30f3d",
+      "locator": "§9, (11), shared representation and closure"
+    },
+    {
+      "candidate_id": "d485228e666ca27b",
+      "locator": "§1, positive-limit shared representation closure and coefficient variations"
+    }
+  ],
+  "statement": "Use the assumptions and either budget of the smallest bad canonical minor theorem, and let $B$ be one of its selected bases. For a positive integer $N$ let $\\mathcal R_N(B)$ consist of positive fiber families with a representation by $N$ shared affine inequalities\n$$\nK_b=\\{x\\in\\mathbb R^d:n_f\\cdot x\\le t_f(b),\\ 1\\le f\\le N\\}\\qquad(b\\in B),\n$$\nwhere $n_f\\ne0$ and $t_f$ is an affine function on the affine hull of $B$. Redundant and repeated inequalities are allowed. There is some finite $N$ for which $\\beta_N=\\inf_{K\\in\\mathcal R_N(B)}D_B(K)$ is attained with total mass one, positive volume in every fiber, and $\\beta_N<\\tau/q(B)$.\n\nFor any fixed finite base and fixed $N$, this class is closed under simultaneous Hausdorff limits whose fibers all have positive volume. A sufficiently small perturbation of all shared inequality coefficients of an $\\mathcal R_N(B)$ family keeps each fiber positive and bounded and preserves compatibility. The minimum $\\beta_N$ is a separate extremal value and satisfies $b_d(B)\\le\\beta_N$.",
+  "subgoal_id": "pk-intake-shared-inequality-attainment-on-minimal-bad-base",
+  "title": "A smallest bad canonical minor has a separate attained minimum with finitely many shared inequalities"
+}

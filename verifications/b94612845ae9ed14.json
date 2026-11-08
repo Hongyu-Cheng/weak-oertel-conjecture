@@ -1,0 +1,59 @@
+{
+  "candidate_id": "c80576b633835713",
+  "candidate_sha256": "3ca6357b5bd9236995987fc0c15b5af3154f5ed29403d9f4fd2a63edd1673729",
+  "checked_dependency_candidate_sha256": {
+    "a00161dbb06b25c0": "773041b223ec604c7bbbd71a7a70c17b4becf21991ca2c5ae7531c534f597d69",
+    "d2ba4e3cbd6eb730": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0"
+  },
+  "checks": [
+    "Simplex slicing gives L with density d(1−L)^(d−1) independent of the normalized high coordinates. Solving the perturbed tail inequality yields L<ε(W−s)_+/(m−a+εW). For bounded s and fixed w its right side is uniformly O(ε) with denominator bounded away from zero. Integrating gives tail dε E(W−s)_+/(m−a)+O(ε²), so the ratio expansion has coefficient s+β^(−1)E(W−s)_+.",
+    "The full cut bounds the minimizing ratio above by m+εM. For t+εM<m, the unperturbed cap contains the perturbed cap at t, giving the displayed lower bound and, after multiplication by the positive denominator and division by a+εM, the stated lower threshold bound. The complementary case gives t≥m−εM. Thus minimizing scaled thresholds are bounded and comparison with a fixed minimizing s of the limiting convex function proves the derivative.",
+    "The left and right slopes of the convex function at s use Pr(W≥s) and Pr(W>s), respectively. The minimizing quantile lies between the extrema of W, and evaluation gives the average of the upper β fraction with fractional mass at a quantile atom. This includes constant directions.",
+    "With Y=1−Z the density is (d−1)y^(d−2). Its mean on the lower β fraction is (d−1)β^(1/(d−1))/d, and on the upper β fraction is (d−1)[1−(1−β)^(d/(d−1))]/(dβ). Taking 1 minus these means gives D_+ and D_− with the stated signed convention. The difference is strictly positive by β^p+(1−β)^p<1 for 0<β<1 and p>1.",
+    "At the one-low row, varying the low entry preserves full-cut capacity. At a constant row, lowering one entry preserves m. When raising one entry, the threshold parameter s_ε must converge to one because a fixed deficit keeps the cap fraction bounded below one, conflicting with the full-cut upper bound. The bounds then give right derivative 1 and left derivative 0.",
+    "The remaining strictly positive rows have proper minima and are C^1. With exactly one zero the cap in the d positive coordinates lies in the orthant simplex and equals it for t at most the smallest positive entry. Its volume ratio gives the geometric mean exactly, smooth while the support is fixed. With 1≤k<d positive entries the cap includes an O(t)-sized orthant simplex in those k coordinates, whose marginal density is bounded below near zero. Its probability is at least c t^k, so capacity is zero by t→0. This includes all single-entry rows for d≥2. The all-zero row has no positive coordinate.",
+    "For d=2 and (1,2,2), direct triangle upper-cap geometry and stationarity give capacity squared 4+3h for small positive signed high-coordinate change h and 4+h for small negative h. This yields 3/4 and 1/4, respectively, as in the formulas at β=1/2.",
+    "Verified the raw source digest for 78b95c208ba2d374 and its §4, equations (5)–(8). The frozen proof supplies the source's fixed-support capacity assertions by explicit integration."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "application": "For sufficiently small negative single-coordinate perturbations of a positive constant row, and for small perturbations of the low entry of a one-low row, strict positivity and the d equal maxima are preserved. The classification fixes capacity at m in both cases and identifies all full minima.",
+      "candidate_id": "a00161dbb06b25c0",
+      "candidate_sha256": "773041b223ec604c7bbbd71a7a70c17b4becf21991ca2c5ae7531c534f597d69",
+      "reviewed_proof_sha256": "b09fbc61ba03eea6c73d052bc662a03d57732f291857cb20900d6f7858c906a6",
+      "reviewed_statement_sha256": "188438168a0469ad000c40a82e4a1efb6af0220a2f547266780bff4beb96232e",
+      "status": "same-batch, pending predecessor admission"
+    },
+    {
+      "application": "The small positive-step perturbations considered in the threshold minimization remain strictly positive and nonconstant whenever needed. The predecessor gives attainment and C^1 for the proper positive cases. The unperturbed constant row is treated separately.",
+      "candidate_id": "d2ba4e3cbd6eb730",
+      "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+      "reviewed_proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+      "reviewed_statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc",
+      "status": "same-batch, pending predecessor admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:55:36Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The explicit planar cap fractions permit the triangle consistency check, but the accepted claim minimizes a paired cap mass over shifts. It gives no general d-dimensional row-capacity jump or fixed-support derivative statement.",
+      "fact_id": "d6ce3858d2712450"
+    }
+  ],
+  "readability": "The left derivative in the increasing-coordinate parameter is the negative of the positive-step directional derivative along the decreasing coordinate.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ec660ed58ec144de72b71ff2ad5d5658d53793955b55e9584645412d757a77e8",
+  "reviewed_statement_sha256": "7aa377887ba7f60185aa7c650f4da7a0e7b203a2e491c9071e11bb6a417a903b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:50:47Z",
+  "summary": "The uniform first-order expansion accounts for moving minimizing thresholds. Its quantile minimization gives the claimed jump, and the fixed-support cases give zero jumps at positive coordinates of boundary rows.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

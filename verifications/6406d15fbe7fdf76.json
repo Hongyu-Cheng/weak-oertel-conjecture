@@ -1,0 +1,37 @@
+{
+  "candidate_id": "aef64d0fab6e1fa1",
+  "candidate_sha256": "1e9ae9fb4a25437b37411f626d5f6717251f986a14949e0ca66803bbdbe1a59b",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Strictly intermediate t ensures the section crosses the relative interior of the simplex and its plane cannot equal a facet plane. The section has positive (d−1)-volume and its intersection with the boundary is (d−1)-null, including cuts containing vertices or faces of dimension at most d−2.",
+    "In the affine simplex hull the old normal n is nonzero. On a line through y in the old section plane the new boundary has signed coordinate (h−k·y)/(||n||+k·e), with the denominator positive for small k. An interval clipped at a moving endpoint is 1-Lipschitz in that endpoint. On fibers whose zero coordinate is interior the captured length changes by exactly the endpoint displacement for sufficiently small perturbations, while outside the old section it is eventually unchanged.",
+    "The displacement minus its linearization is uniformly O(||(k,h)||²) on the fixed bounded projection. The normalized remainder in the captured length converges pointwise off the null boundary and is uniformly bounded, establishing a Fréchet derivative by dominated convergence. Integrating 1 and the barycentric coordinates yields the claimed threshold derivative and signed row partials.",
+    "The nearby graph Jacobian and coordinates converge uniformly on the fixed projection. The simplex indicators converge wherever the old graph point is in the simplex interior or strictly outside it, so dominated convergence gives continuity of the section moments and volume. Dividing by the positive section volume and the nonzero normal length preserves continuity.",
+    "For the triangle with heights (0,1,2) at t=1, the section segment has endpoints (0,1,0) and (1/2,0,1/2). Its length divided by the simplex area and by ||n|| is 1, and the resulting centroid is (1/4,1/2,1/4), consistent with the derivatives through the middle vertex.",
+    "Verified the raw source digest for 78b95c208ba2d374 and its §1, equation (1). The frozen joint derivative and continuity are within the original proper-cut scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T11:55:36Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Section 2 gives the two-sided directional first-variation formula for an ordinary proper section by taking one fiber, the complementary normal, and an isometric affine chart of the simplex hull. It gives the same centroid-weighted linear expression. The frozen result also proves continuity of the derivative under simultaneous row and threshold changes and states joint C^1 through intermediate vertex heights.",
+      "fact_id": "1269c554ca9a41b8"
+    }
+  ],
+  "readability": "The normal is taken inside the affine hull, so all volumes in the derivative are intrinsic Euclidean volumes.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "084cd35c57421b5d9756ad8bc5b25916d6430db1e8a75983ea0eb12720c1d3cb",
+  "reviewed_statement_sha256": "9e61967d5c7fb600921f04531c7273e178ff95c35aaec9a0fa7fca47e261d23d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:50:47Z",
+  "summary": "The frozen fiber argument gives the full joint derivative and continuous section volume and moments throughout the proper-cut region, including repeated and intermediate vertex heights.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

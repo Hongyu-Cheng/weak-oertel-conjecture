@@ -1,0 +1,26 @@
+{
+  "advances": "Necessary conditions on one ordinary planar body under a cap ceiling. The two quantitative product bounds have separate saturation hypotheses.",
+  "author": "PK-research-agent",
+  "candidate_id": "36f62a71dc48885b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:46:52.519046+00:00",
+  "depends_on": [],
+  "draft_key": "ordinary-cap-ceiling-unique-core-restrictions",
+  "kind": "lemma",
+  "proof": "The caps cover the plane and have no common interior, as follows from the three linear inequalities. Up to the null boundary lines, a point outside caps $j,l$ lies in cap $i$ alone and the overlap of caps $j,l$ has area $Y_i$. Inclusion and exclusion give $q_j+q_l=k-X_i+Y_i$. The ceiling gives $X_i-Y_i\\ge\\varepsilon k>0$.\n\nEach sector area is at least its core area, by convexity. The product of the three unique core areas equals the product of the opposite core areas, since\n$(Ar/2)(Bt/2)(ab/2)=(at/2)(br/2)(AB/2)$.\nIf the three unique sectors were cores, each of their areas would be strictly larger than its opposite sector area and hence strictly larger than that opposite core area. Positivity then contradicts the product identity.\n\nIf $X_2=Bt/2$, the opposite sector bound $Y_2\\ge br/2$ and the cap difference inequality give $Bt\\ge br+2\\varepsilon k$. If $X_3=ab/2$, the same reasoning using $Y_3\\ge AB/2$ gives $ab\\ge AB+2\\varepsilon k$. These two strict improvements over $br$ and $AB$ give the ordered ratios when both equalities hold. Multiplying the two product inequalities and dividing by $Bb>0$ gives\n$$\nat\\ge Ar+2\\varepsilon k(A/b+r/B)+\\frac{4\\varepsilon^2k^2}{Bb}.\n$$\nFinally $X_1\\ge Y_1+\\varepsilon k\\ge at/2+\\varepsilon k$. Substituting the last bound yields the claimed excess of $X_1$.\n",
+  "source_candidate_ids": [
+    "83b3822a403eee2c"
+  ],
+  "source_candidate_sha256": {
+    "83b3822a403eee2c": "04c208303b8d5d6a28c18b544182126b328f760d6fd4f986f92c81f2e6ddec51"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "83b3822a403eee2c",
+      "locator": "§5, cap differences, core product, and quantitative unique-sector restrictions"
+    }
+  ],
+  "statement": "Use the six endpoints $P=((A,0),(0,B),(-t,t),(-a,0),(0,-b),(r,-r))$ with positive radii $R=(A,B,t,a,b,r)$. The indices are cyclic modulo six and $W_i$ is the area in the sector from $P_i$ to $P_{i+1}$. A core sector is one with $W_i=R_iR_{i+1}/2$. For the caps $x\\ge0$, $y\\ge0$, $x+y\\le0$, let $X_j$ be the area in cap $j$ alone and $Y_j$ the area in the other two caps. Then $W=(Y_3,X_2,Y_1,X_3,Y_2,X_1)$.\n\nLet $k=\\sum_i W_i$ and let $q_j$ be the area of cap $j$. Assume the data come from a planar convex body containing $0$ in its interior and all three $q_j\\le ck$ for $c<1/2$. Put $\\varepsilon=1-2c>0$. Then $X_i-Y_i=k-q_j-q_l\\ge\\varepsilon k$ whenever $\\{i,j,l\\}=\\{1,2,3\\}$. The three unique sectors cannot all be cores. The core equality $X_2=Bt/2$ implies $Bt\\ge br+2\\varepsilon k$, and the core equality $X_3=ab/2$ implies $ab\\ge AB+2\\varepsilon k$. When both equalities hold,\n$$\n\\begin{aligned}\n\\frac rt&<\\frac Bb<\\frac aA,\\\\\nat-Ar&\\ge2\\varepsilon k(A/b+r/B)+\\frac{4\\varepsilon^2k^2}{Bb},\\\\\nX_1-Ar/2&\\ge\\varepsilon k(1+A/b+r/B)+\\frac{2\\varepsilon^2k^2}{Bb}.\n\\end{aligned}\n$$",
+  "subgoal_id": "pk-intake-ordinary-cap-ceiling-unique-core-restrictions",
+  "title": "Restrictions on saturated unique sectors under a strict planar cap ceiling"
+}

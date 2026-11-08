@@ -1,0 +1,52 @@
+{
+  "candidate_id": "5f923438468803ac",
+  "candidate_sha256": "9895cfc89a93b456485c2b08ddef90a629fe40ec0ec32a6abc477e783beb173a",
+  "checked_dependency_candidate_sha256": {
+    "a19fb2ae234afb2a": "a051c52f35db8b023a04403f7e58188c7fd2ef24845e229caf985eb8aa6922f6"
+  },
+  "checks": [
+    "Cold-read the frozen statement and proof. The cited source candidate d61c49578c90db6d §§1–4, (1)–(5), supplies necessity, actual realization, closure and the coordinate change. Source 919c51f1d263878e §§1–2 and its concluding area/height calculation supply the signed rows and actual chord relation. Both source byte digests match.",
+    "Write q_i=Q_i/k. Summing Q_i/sigma_i=Ha_i/2 gives H/2, hence the displayed chord normalization equals 2a_i/sqrt(q_i). Strict off-diagonal signs give |d_i|<s_i, and the column identities give sum s_i=1, so the open ball is necessary.",
+    "In the reverse direction g_i-|d_i| is at least epsilon by the triangle inequality. Subtracting s_i=|d_i|+epsilon/3 gives a_i at least epsilon/3 and each b_ij at least epsilon/6. Summing gives sum s_i=1 and sum a_i=1. With the two cyclic predecessor rows, the off-diagonal column sum is (s_{i+1}-d_{i+1}+s_{i+2}+d_{i+2})/2=a_i.",
+    "Each principal cofactor is positive because the product of the two off-diagonal column sums contains b_ij b_ji plus positive terms. Column balance bounds rank by two, so rank is exactly two. The identity adj(M)M=0 makes every adjugate row a multiple of the all-ones row; M adj(M)=0 then puts the common positive column in the right kernel. Normalizing gives positive barycentric coordinates. Any affine dependence of the first two column entries would have zero sum and lie in the same one-dimensional kernel, hence vanish. The third margin is minus the first two, so the specified spanning balanced normals give exactly M and the three strict incidences.",
+    "As an exact nonsymmetric spot check, d=(1/2,-1/4,0) yields 24M with rows (8,-13,-1), (-7,14,-1), (-1,-1,2). The principal cofactors of 24M are (27,15,21); the normalized kernel vector (9,5,7)/21 gives source zero. The prescribed squared row values are (21,35,1)/16.",
+    "The inverse d_i=u_i+u_{i+1}-1 works for every real u, and g_i-d_i=2(1-u_{i+1}). The all-plus/minus forms give the sum bounds and the three cyclic one-minus forms and their negatives give the six coordinate bounds. The identical argument holds with weak inequalities. The closed ball maps continuously because g_i>=|d_i|; its compact image is closed and every boundary image is the limit of images of contractions toward zero."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "a19fb2ae234afb2a",
+      "candidate_sha256": "a051c52f35db8b023a04403f7e58188c7fd2ef24845e229caf985eb8aa6922f6",
+      "mapping": "The two claims have identical strict incidence and balance hypotheses. The signed-row identities give sum a_i=1, column balance, and f_i^2=g_i^2-d_i^2 with f_i>0; its proof establishes Q_i/sigma_i=Ha_i/2. These facts apply to both the initial triangle and the constructed nondegenerate triangle.",
+      "reviewed_proof_sha256": "cd7d42df0e7913be3954a8220d058e90b4b16e7f85aa0dbbbfe0c973b1e23bb4",
+      "reviewed_statement_sha256": "bb308b4cbb5c29c79d23d9facc5500251a9b409e1c539aee234fbf1720d01c16",
+      "status": "same-batch approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:53:14Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Ensures strict distinct-vertex incidences for a positively balanced triangle circuit under a cap ceiling. It gives neither the normalized f-image nor its inverse realization; the frozen claim assumes the strict incidence directly.",
+      "fact_id": "b08bdaf82b84ef41"
+    },
+    {
+      "comparison": "Optimizes one cap over positive normals at a fixed threshold on a reference triangle. Its use of corner intercept fractions is common geometry, but it does not give a joint balanced three-cap image.",
+      "fact_id": "b39ecb342488b802"
+    }
+  ],
+  "readability": "The adjugate step uses both adjugate identities: adj(M)M=0 for its row form and M adj(M)=0 for the right null vector. The proof is concise and the identities follow directly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3cd74644d43a21aadfd30f04955b98c067f8f1e8d80c5dd7aece371bc235ced7",
+  "reviewed_statement_sha256": "6ad162a15082ffa0fa8f352daa5b986bd4ae663dfeec4b341a2c77e9b104e397",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:50:22Z",
+  "summary": "The open parameter domains give exactly the actual strict triangle data. The inverse constructs a nondegenerate triangle with an interior source, and the weak domains give precisely the closure.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

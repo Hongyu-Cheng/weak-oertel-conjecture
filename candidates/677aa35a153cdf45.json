@@ -1,0 +1,26 @@
+{
+  "advances": "Scalar implication for the specified cap and row inequalities, independent of geometric realization.",
+  "author": "PK-research-agent",
+  "candidate_id": "677aa35a153cdf45",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:49:19.104603+00:00",
+  "depends_on": [],
+  "draft_key": "scalar-reciprocal-chord-margin",
+  "kind": "lemma",
+  "proof": "Put $\\theta=223/1000$, $c=128/279$, $q_0=119/279$, $s=\\sqrt c$, $m=\\sqrt{20/49}$, and $\\rho=\\sqrt{q_0}$. By symmetry suppose the first normalized quantity is at most $\\theta$. Write $x=f_1$, $t=\\sqrt{q_1}$, $g=f_2+f_3$, and $F=x+g$.\n\nSumming the row inequalities yields $F+(F^2+\\sum_i f_i^2)/4\\le6$. Since $\\sum_i f_i^2\\ge F^2/3$, we have $F\\le3$. The moment identity gives $F\\ge2/s>59/20$, using $4/c-(59/20)^2=13/800$. The first normalized quantity is at least $xm/(sF)$ because its numerator is at least $x/s$ and its denominator is at most $F/m$. Hence $x\\le3s\\theta/m<71/100$, using\n$$\n(71/100)^2-9\\theta^2 c/(20/49)=40107/38750000>0 .\n$$\n\nWe claim that $f_j/s>x/\\rho$ for both $j=2,3$. If $f_j\\le(s/\\rho)x$, then $T=x+f_j<3621/2500<29/20$, since $s/\\rho=\\sqrt{128/119}<26/25$. The row inequality for the remaining index gives $F\\le T+2-T^2/4<4679/1600<59/20$, since $T+2-T^2/4$ is strictly increasing on $(0,2)$. This contradicts the lower bound on $F$.\n\nApply the square-root tangents at $q_0$ for $q_1$ and at $c$ for $q_2,q_3$. The latter two increments $q_j-c$ are nonpositive, so $f_j/s>x/\\rho$ yields\n$$\n\\begin{aligned}\n2&\\le x\\rho+gs+\\frac{x}{2\\rho}(q_1-q_0)\n             +\\sum_{j=2,3}\\frac{f_j}{2s}(q_j-c)\\\\\n &\\le x\\rho+gs+\\frac{x}{2\\rho}\\left(\\sum_i q_i-q_0-2c\\right)\n \\le x\\rho+gs .\n\\end{aligned}\n$$\nThe last step uses $q_0+2c=125/93$. The row inequality for index $1$ gives $g\\le2\\sqrt{2-x}$, so $2\\le x\\rho+2s\\sqrt{2-x}$. The derivative of this last right-hand side is $\\rho-s/\\sqrt{2-x}>0$ on $(0,71/100]$, because $(129/100)q_0-c=2551/27900>0$. At $x=67/100$ the right-hand side is strictly below $2$. Indeed,\n$$\n\\rho<\\frac{65309}{100000},\\qquad\ns<\\frac{33867}{50000},\\qquad\n\\sqrt{133/100}<\\frac{57663}{50000},\n$$\nas follows by squaring, and substituting these upper bounds leaves a gap of $10269/78125000$ below $2$. We obtain $67/100<x<71/100$.\n\nFor $m\\le r\\le s$, the reciprocal secant $1/r\\le(m+s-r)/(ms)$ follows from $(r-m)(s-r)\\ge0$. Apply it at $r=\\sqrt{q_2},\\sqrt{q_3}$ and use the moment identity, the row bound on $g$, and $t\\le s$ to obtain\n$$\nZ:=\\frac{f_2}{\\sqrt{q_2}}+\\frac{f_3}{\\sqrt{q_3}}\n\\le\\frac{(m+s)g-2+xt}{ms}\n\\le\\frac{2(m+s)\\sqrt{2-x}-2+xs}{ms}.\n$$\nDefine $G(x)=4+x[(1554/223)m-2s]-4(m+s)\\sqrt{2-x}$. The coefficient $(1554/223)m-2s$ is positive, as follows by squaring, and makes $G$ strictly increasing on $(0,2)$. At $x=67/100$, the coefficient of $m$ remains positive with $\\sqrt{2-x}$ replaced by $57663/50000$, since $(1554/223)(67/100)-4(57663/50000)=155901/2787500>0$. Using $m>63887/100000$ by squaring, together with the previous upper bounds on $s$ and the radical, gives\n$$\nG(67/100)>\\frac{975345521}{278750000000}>0 .\n$$\nThus $G(x)>0$. Since $1554/223=2(1/\\theta-1)$, the bound on $Z$ gives $Z<(1/\\theta-1)x/s\\le(1/\\theta-1)x/t$. It follows that $(x/t)/(x/t+Z)>\\theta$, a contradiction.\n",
+  "source_candidate_ids": [
+    "919c51f1d263878e"
+  ],
+  "source_candidate_sha256": {
+    "919c51f1d263878e": "6b0ffb2986d69a7dc995935fa4d156875e4241266b21e9cd2608e847cb0d9bbf"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "919c51f1d263878e",
+      "locator": "§§5 and 7, (13)–(22) and (25)–(26)"
+    }
+  ],
+  "statement": "Let $q_i,f_i>0$ for $i=1,2,3$. Assume\n$$\n\\frac{20}{49}\\le q_i\\le\\frac{128}{279},\\qquad\n\\sum_i q_i\\le\\frac{125}{93},\\qquad\n\\sum_i f_i\\sqrt{q_i}=2,\\qquad\n f_i+\\frac{(f_j+f_k)^2}{4}\\le2\\quad(\\{i,j,k\\}=\\{1,2,3\\}).\n$$\nThen $(f_i/\\sqrt{q_i})/\\sum_\\ell(f_\\ell/\\sqrt{q_\\ell})>223/1000=2/9+7/9000$ for every $i$.",
+  "subgoal_id": "pk-intake-scalar-reciprocal-chord-margin",
+  "title": "A strict scalar lower bound for normalized reciprocal chord quantities"
+}

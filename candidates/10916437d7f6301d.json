@@ -1,0 +1,30 @@
+{
+  "advances": "Necessary condition for local or global maxima of a finite stochastic row objective. The saturated exception concerns its capacity vector.",
+  "author": "PK-research-agent",
+  "candidate_id": "10916437d7f6301d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:50:12.463779+00:00",
+  "depends_on": [
+    "a00161dbb06b25c0",
+    "c80576b633835713",
+    "d2ba4e3cbd6eb730"
+  ],
+  "draft_key": "stochastic-full-cut-row-exclusion",
+  "kind": "theorem",
+  "proof": "By the full-cut classification, a strictly positive row $r$ at a full-cut minimum is constant or has one low entry and $d$ high entries equal to its maximum $m$. Suppose $m<1$ and choose a high column $j$. Its remaining mass $1-m$ gives a positive entry $X_{ij}$ in a different row $i$. Move a signed amount $\\epsilon$ from that entry to $X_{rj}$. The line is feasible in both signs near zero. The row-$r$ right derivative minus left derivative of capacity along the line is strictly positive by the coordinate-jump lemma. For row $i$ it is nonnegative, since reversing the parameter exchanges and negates its one-sided derivatives. Positive weights and constant other rows therefore give a strictly positive jump in the objective. A local maximum requires its left derivative to be nonnegative and its right derivative to be nonpositive, a contradiction.\n\nIt follows that $m=1$. At least $d$ columns are saturated by row $r$, and every other row is supported in at most one column. Its capacity is zero by the fixed-support boundary calculation of the coordinate-jump lemma, while row $r$ has capacity one. To realize $e_r$ with zero diagonal, put $1$ in every off-diagonal entry in row $r$ and put the remaining column's unit mass in any other row. This is column-stochastic and has capacities $1$ in row $r$ and $0$ elsewhere by the one-zero and at-least-two-zero formulas. The unique-threshold lemma gives the proper-row conclusion outside the unit-vector case.\n",
+  "source_candidate_ids": [
+    "78b95c208ba2d374"
+  ],
+  "source_candidate_sha256": {
+    "78b95c208ba2d374": "abf1bd1596aab01b1e14f02770a3deb0dab4c6e4883e3a88e12248239a1da326"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "78b95c208ba2d374",
+      "locator": "§5, local transfer and saturated exception"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and maximize $\\sum_i \\omega_i\\phi_d(X_i)$ locally over nonnegative $(d+1)\\times(d+1)$ matrices with each column sum equal to one, where $X_i$ is row $i$, $\\omega_i>0$, and $\\phi_d$ is the uniform-simplex row capacity. If a strictly positive row $X_r$ has a full-cut minimum, it has maximum entry one and saturates at least $d$ columns. The capacity vector then equals $e_r$ and is realized also by a zero-diagonal column-stochastic matrix. If the capacity vector is no unit vector, every strictly positive row has a unique proper minimizing threshold and locally differentiable capacity.",
+  "subgoal_id": "pk-intake-stochastic-full-cut-row-exclusion",
+  "title": "Full-cut rows at positive-weight stochastic capacity maxima"
+}

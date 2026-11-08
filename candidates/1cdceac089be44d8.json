@@ -1,0 +1,30 @@
+{
+  "advances": "The row-level direction has a central captured-pair premise. Its existence alone does not enforce a feasible stochastic matrix perturbation.",
+  "author": "PK-research-agent",
+  "candidate_id": "1cdceac089be44d8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:50:12.464240+00:00",
+  "depends_on": [
+    "3e6e1eb15d927db8",
+    "8bdcdcd6e2fa69d9",
+    "27d3881f8bfc290c"
+  ],
+  "draft_key": "simplex-capacity-corrected-central-pair",
+  "kind": "lemma",
+  "proof": "The joint cap derivative lemma and threshold stationarity give $\\nabla P(c)=dP(c)b$, so $v$ is tangent to $b\\cdot c=0$. The centroid lies on the cut and, because the cut is proper, is interior to the simplex. Thus the cap is stationary among oriented planes through the point with barycentrics $b$. Apply the positive-pair calculation in accepted fact 27d3881f8bfc290c to this stationary cap: its exact pair vector is $v$, the required two barycentric coordinates are at most $1/d$, and the chosen vertices are strictly captured. That calculation gives $v^\\mathsf{T}Hv<0$, including the equal-margin limit and other zero margins. The optimized-capacity square formula with $s=\\mathbf 1^\\mathsf{T}Hv/(dP(c))$ cancels the threshold penalty and proves the conclusion. Together with the strictly negative common-shift quadratic value in that formula, this supplies both signs at such a row.\n",
+  "source_candidate_ids": [
+    "a5d3d44181ebed82"
+  ],
+  "source_candidate_sha256": {
+    "a5d3d44181ebed82": "4c8a3c23e88c54164eb227cbc1922eeff4364d4321b897f4203cc2cb22e35c1e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a5d3d44181ebed82",
+      "locator": "§§2–4, (6)–(8), (12), corrected direction"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let a strictly positive row $x$ have a proper minimizing threshold for the uniform-simplex capacity $\\phi_d$. Normalize its threshold to one, let $c=\\mathbf 1-x$, and set $P(c)=\\Pr(\\sum_j c_jE_j\\ge0)$ for independent unit exponentials, $H=\\nabla^2P(c)$, and $b$ equal to the actual barycentric section centroid. Suppose $c_i,c_j>0$ at distinct indices with $b_i,b_j\\le1/d$. Put\n$$\nv=d b_j e_i-d b_i e_j,\\qquad\nw=v+\\frac{\\mathbf 1^\\mathsf{T}Hv}{dP(c)}\\mathbf 1.\n$$\nThen $w^\\mathsf{T}\\nabla^2\\phi_d(x)w=-P(c)^{-1/d}v^\\mathsf{T}Hv/(dP(c))>0$. Other margins may be zero and the two captured heights may coincide.",
+  "subgoal_id": "pk-intake-simplex-capacity-corrected-central-pair",
+  "title": "Positive capacity curvature from a corrected central pair"
+}

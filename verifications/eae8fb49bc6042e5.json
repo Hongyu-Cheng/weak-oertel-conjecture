@@ -1,0 +1,42 @@
+{
+  "candidate_id": "ba0f3db1bf4f62c6",
+  "candidate_sha256": "80c7786ec3487f6cf51ae119cff069de8d52bd18b8b3b3dbb05254f0b5d8c782",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Take coordinates on aff(P), which is finite-dimensional. Their expansions in the basis give the affine projection and injectivity. An affine relation among the lifted sites would be a linear relation among the basis functions, so the affine dimension is exact, including rank zero.",
+    "Applying each basis function preserves every anchored coefficient vector; projecting proves the reverse. Convex-hull membership is representability by supported coefficients, so this preserves all closed traces. Every convex trace is closed and its convex hull realizes it; the empty trace is realized by the empty set. Basis changes give affine equivalence, and any representation-preserving function on the lift pulls back to L(P) and is therefore affine on the lift.",
+    "Group any hull representation of a point over q by the originating sites, using convexity to average within each nonzero-coefficient fiber. Conversely, a Minkowski combination for an anchored representation belongs to that hull section. The trivial representation ensures K_q is contained in the section. Restriction and lifting preserve compatibility using exactly the retained anchored coefficient vectors.",
+    "At a retained candidate each containing cut has original raw mass at least its retained mass. Its intrinsic trace is a containing halfspace or the whole retained affine hull, and every proper intrinsic cut extends by extending its affine functional. The full trace has full retained mass and cannot decrease the infimum. This gives the factor M_T/M_P. The affine lift projection acts identically in continuous coordinates, preserves each fiber measure, and pulls each original cut back to a containing cut or the whole space. The lifted infimum is no greater, giving the second inequality.",
+    "For each normal a containing cut can first be moved to the candidate without increasing mass. With unit continuous normal the threshold then moves by at most the candidate displacement within one fiber. Each fiber pays at most a slab width times a uniform section bound from a common ball, including d=1. Pure-base cuts stay fixed. The infimum is uniformly Lipschitz on each compact fiber, so the maxima exist.",
+    "If T is closed, every trace closed in T is closed in P because its hull lies in conv(T). A minimal empty trace family retains its deletion witnesses and its size in P. Lifted restriction preserves the same anchored representations as the corresponding subset of P, so its new canonical lift is affinely equivalent to the one on that subset of the original P.",
+    "Checked original candidate hashes and source locators c280bb0dcfd30f3d §§1–3, (1), (4)–(7), and dbf3b23d25004153 §4 (6)–(7), §6 (12) and following slab argument. The depth comparison is the zero-shear case; no numerical target or attainment claim is used."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T11:58:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same ambient-to-intrinsic cut extension for a finite weighted base. It does not give the canonical lift, full-fiber depth inequalities or closed minor iteration.",
+      "fact_id": "f4547c4166b39683"
+    },
+    {
+      "comparison": "Uses a restriction mass factor and affine pullback for moments of finite scalar laws; it does not preserve the anchored coefficient spaces or transfer the full continuous fibers.",
+      "fact_id": "fd4f5307e85f2930"
+    }
+  ],
+  "readability": "The projection lands in aff(P) and maps the lifted sites onto P. Positivity is per fiber for the depth statement, giving M_T>0; compatibility itself does not require it.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "85354cd7f177fc1a4428289f74f24904dcb3c5fe23b42984d39548c9be34c47d",
+  "reviewed_statement_sha256": "91a694f67248f20d6618a4ff011ab9d0cb5cc3dbac5828570bb138b15c0234b0",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:52:43Z",
+  "summary": "The canonical lift preserves exactly the anchored representations and convex traces. The depth inequalities hold for full fibers, and closed minor iteration and its Helly bound follow.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

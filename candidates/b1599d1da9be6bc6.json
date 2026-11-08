@@ -1,0 +1,28 @@
+{
+  "advances": "Refutes automatic stationary base projection and vanishing hinge defects for this exact critical menu.",
+  "author": "PK-research-agent",
+  "candidate_id": "b1599d1da9be6bc6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:45:41.502937+00:00",
+  "depends_on": [
+    "691142cf2fd43ce7"
+  ],
+  "draft_key": "r4-selected-menu-quadratic-and-hinge-defects",
+  "kind": "counterexample",
+  "proof": "The integer census of the menu theorem gives $\\sum_{z\\in P}Q(z)=165$, $\\sum_{\\ell_i>0}Q(z)=60$, and $\\sum_{\\ell_i=0}Q(z)=6$ for each $i$. These numbers follow by adding $Q(z)$ in the same loop over the retained coordinate pairs. Combining these sums with the exact facet lengths and the fixed column sums gives\n$$\n\\int Q\\,d(\\eta-\\mu_\\theta)=L\\left(165-\\frac{60+(2/3)\\cdot6\\cdot(1-1/3)}{\\beta}\\right)=\\frac{193}{10}L.\n$$\nEqual projected marginals would give zero for this integral. For a martingale, the linear cross term in the expansion of $Q(Z')-Q(Z)$ about $Z$ has zero conditional mean. The integral equals the $Q(Z'-Z)$-energy, which is strictly positive.\n\nFor the hinge computation at $\\lambda_0=0$, write $(\\lambda_0,\\lambda_1,\\lambda_2)=(0,t,1-t)$ and use the three midpoint values $t_s=(2s+1)/6$ for $s=0,1,2$. On the corresponding open thirds the profile is constant and every hinge is affine because a zero for an integer offset inside the facet requires a continuous barycentric coordinate of $1/3$. Thus integrate by summing the midpoint values. Explicitly set $b=(0,t_s,1-t_s)$ in each summand and let $k(z,s)=|\\{j:\\ell_j(z)+b_j\\ge 1/3\\}|$. Each matrix entry is the finite rational sum\n$$\n\\frac13\\sum_{\\substack{-4\\le z_1,z_2\\le4\\\\\\min_i\\ell_i(z)\\ge-4}}\n\\sum_{s=0}^{2}\\left(1-\\frac{31}{40}k(z,s)\\right)[\\ell_i(z)+b_j-1/3]_+.\n$$\nEvaluating gives the displayed matrix. The [archived exact verifier](../assets/pk-nov6/computations/verify_selected_menu_birkhoff_calibration_defect_transport.py) also checks these values and their images under the six base permutations.\n\nA base permutation of the canonical profile permutes the rows of this matrix. The continuous triangle symmetry and its corresponding base permutation transport the canonical profile to each facet, with the constant arclength factor accounted for by dividing by $L$. The menu theorem expresses every feasible profile as a convex combination of permutations, and each $J_{ij}$ is affine in that profile. All entries are therefore at least the smallest normalized canonical value times $L$.\n",
+  "source_candidate_ids": [
+    "a9fd9b4c832ea48f"
+  ],
+  "source_candidate_sha256": {
+    "a9fd9b4c832ea48f": "b566b9005946a369eeb3cdbd91fa0b7a99ea8de1a83af5da38b8947ff45cb3ef"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a9fd9b4c832ea48f",
+      "locator": "§3, (9)–(10), and §4 after (12a), (13)–(14)"
+    }
+  ],
+  "statement": "Use the R4 product, nine caps, balanced profiles, and marked arclength measures of the nine-cap menu theorem. On a facet of length $L$, set $Q(z)=z_1^2-z_1z_2+z_2^2$. For every balanced profile,\n$$\n\\int Q(z)\\,d(\\eta-\\mu_\\theta)=\\frac{193}{10}L.\n$$\nNo balanced profile has its base projection equal to the base projection of the full capacity on that facet. For every feasible profile this number is the $Q$-displacement energy of each capacity martingale. Thus no feasible martingale is stationary in its base projection.\n\nFor the canonical permutation profile on the facet $\\lambda_0=0$, the matrix of the nine normalized hinge deficits $J_{ij}/L$, with\n$$\nJ_{ij}=\\int[\\ell_i(z)+\\lambda_j(x)-1/3]_+\\,d(\\eta-\\mu_\\theta),\n$$\nis\n$$\n\\begin{pmatrix}\n98/45 &1129/720&1129/720\\\\\n32/9 &707/240&2183/720\\\\\n32/9 &2183/720&707/240\n\\end{pmatrix}.\n$$\nFor every feasible profile on every facet all nine hinge deficits are at least $(1129/720)L$.",
+  "subgoal_id": "pk-intake-r4-selected-menu-quadratic-and-hinge-defects",
+  "title": "Positive quadratic and hinge defects throughout the R4 transport menu"
+}

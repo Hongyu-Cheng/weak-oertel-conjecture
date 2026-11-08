@@ -1,0 +1,29 @@
+{
+  "advances": "One fixed positive six-sector budget in an ordinary planar body. This is compactness of the feasible radius data for that budget.",
+  "author": "PK-research-agent",
+  "candidate_id": "82a8acc237f57498",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:46:52.516111+00:00",
+  "depends_on": [
+    "7d1ee06fa4119930",
+    "63f90fd70f747bd0"
+  ],
+  "draft_key": "ordinary-fixed-sector-inverse-weight-minimum",
+  "kind": "theorem",
+  "proof": "Put $c_i=1/(2W_i)$. The symmetric cyclic matrix $L$ has diagonal $L_{ii}=c_{i-1}+c_i-1/R_i^2$ and entries $L_{i,i+1}=L_{i+1,i}=c_i-1/(R_iR_{i+1})$, with other off-diagonal entries zero.\n\nThe consecutive and next-neighbor determinants of the canonical ray vectors are one. Thus the exact criterion in `7d1ee06fa4119930` identifies the feasible radius vectors with the positive vectors satisfying $R_iR_{i+1}\\le2W_i$ for every $i$ and $L\\succeq0$. Its ray-gap hypothesis holds for these six rays. Nonnegativity of $L_{ii}$ gives $R_i\\ge\\ell_i>0$, and the inequality on the following sector gives $R_i\\le2W_i/\\ell_{i+1}$. The core inequalities and the PSD condition are closed within this positive compact box because all entries of $L$ are continuous there. Hence the exact feasible set is compact. It is nonempty by hypothesis.\n\nThe function $p$ is continuous on the positive box, so it has a minimizer on the feasible set. The same exact criterion gives a polygon realizing this datum. If either of the target endpoints lacked an incident core, `ordinary-central-radius-saturation` would increase that radius at fixed $W$ and strictly decrease $p$. This contradicts minimality.\n",
+  "source_candidate_ids": [
+    "50872e565640d12b"
+  ],
+  "source_candidate_sha256": {
+    "50872e565640d12b": "60169c7f3d39d45be93f9aec3b42b18c5a4a49db6a3a5c554d0cff2537075747"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "50872e565640d12b",
+      "locator": "§1, fixed-area compactness and actual attainment"
+    }
+  ],
+  "statement": "Use the six endpoints $P=((A,0),(0,B),(-t,t),(-a,0),(0,-b),(r,-r))$ with positive radii $R=(A,B,t,a,b,r)$. The indices are cyclic modulo six and $W_i$ is the area in the sector from $P_i$ to $P_{i+1}$. A core sector is one with $W_i=R_iR_{i+1}/2$.\n\nFix six positive sector areas $W_i$ realized by at least one planar convex body containing $0$ in its interior, with some positive radii. The set of feasible radius vectors is nonempty and compact, and each feasible radius satisfies\n$$\n\\ell_i\\le R_i\\le\\frac{2W_i}{\\ell_{i+1}},\n\\qquad\n\\ell_i=\\left(\\frac1{2W_{i-1}}+\\frac1{2W_i}\\right)^{-1/2}.\n$$\nThe target normalized inverse chord weight is\n$$\np(R)=\\left[1+\\frac{B+b}{A+a}+\\frac{B+b}{r+t}\\right]^{-1}.\n$$\n\nIt attains a minimum at a datum realized by a convex polygon. Every minimizing datum has a core sector in each of $\\{0,1\\}$ and $\\{3,4\\}$.",
+  "subgoal_id": "pk-intake-ordinary-fixed-sector-inverse-weight-minimum",
+  "title": "Attained minimum of a normalized inverse chord weight at fixed planar sector areas"
+}

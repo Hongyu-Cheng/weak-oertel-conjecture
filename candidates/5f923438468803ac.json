@@ -1,0 +1,34 @@
+{
+  "advances": "Actual strict ordinary triangle data, with a separate closed image for their limits.",
+  "author": "PK-research-agent",
+  "candidate_id": "5f923438468803ac",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:49:19.105147+00:00",
+  "depends_on": [
+    "a19fb2ae234afb2a"
+  ],
+  "draft_key": "strict-triangle-row-image",
+  "kind": "theorem",
+  "proof": "Use the normalized signed heights $a_i,b_{ij}$ from the signed-row theorem for these strict triangle caps. Its chord–height relation gives $Q_i/\\sigma_i=Ha_i/2$, where $H$ is the total unnormalized diagonal height. Since $\\sum_i a_i=1$, the $f_i$ here equals $2a_i/\\sqrt{Q_i/k}$, as in the signed-row theorem. Put $s_i=b_{i,i+1}+b_{i,i+2}$ and $d_i=b_{i,i+1}-b_{i,i+2}$. Then $\\sum_i s_i=1$ by the column identities and $|d_i|<s_i$ by strict signs. The same theorem yields $f_i=\\sqrt{g_i^2-d_i^2}$ with the stated $g_i$. This proves necessity.\n\nConversely, let $\\varepsilon=1-\\sum_i|d_i|>0$ and set\n$$\ns_i=|d_i|+\\varepsilon/3,\\qquad\nb_{i,i+1}=(s_i+d_i)/2,\\qquad b_{i,i+2}=(s_i-d_i)/2,\\qquad a_i=(g_i-s_i)/2.\n$$\nAll $b_{ij}>0$. Since $g_i-|d_i|\\ge\\varepsilon$, each $a_i\\ge\\varepsilon/3>0$. The sums of the $s_i$ and $g_i$ are $1$ and $3$, respectively, so $\\sum_i a_i=1$. Substitution gives $2\\sum_{\\ell\\ne i}b_{\\ell i}=s_{i+1}-d_{i+1}+s_{i+2}+d_{i+2}=g_i-s_i=2a_i$.\n\nLet $M$ be the matrix with diagonal $a_i$ and off-diagonal entries $-b_{ij}$. Its columns sum to zero. Each principal two-by-two minor, for distinct $i,j$ and the remaining index $\\ell$, equals\n$$\na_i a_j-b_{ij}b_{ji}=(b_{ji}+b_{\\ell i})(b_{ij}+b_{\\ell j})-b_{ij}b_{ji}>0.\n$$\nThus $M$ has rank two. Each row of $\\operatorname{adj} M$ is in the left kernel of $M$, which is spanned by $(1,1,1)$. Hence the columns of $\\operatorname{adj} M$ coincide, and their entries are the positive principal cofactors. Normalizing this common column gives a positive right null vector of $M$ with coordinate sum one.\n\nTake $P_j=(M_{1j},M_{2j})$ in the plane. An affine dependence among the $P_j$ would give a vector in $\\ker M$ with zero coordinate sum, because row three is minus the first two rows. The right kernel is one-dimensional and spanned by the positive vector of coordinate sum one, so there is no nonzero affine dependence. The same vector expresses $0$ as a strict convex combination of the $P_j$. With source $0$ and normals $(1,0),(0,1),(-1,-1)$, the signed margins are exactly $M$. In particular all incidences are strict, the total positive diagonal height is one, and the signed-row formula yields the prescribed $f$.\n\nFor the other coordinates let $u_i=(g_i+d_i)/2$. Then $(g_i-d_i)/2=1-u_{i+1}$ and $d_i=u_i+u_{i+1}-1$, giving the asserted formula. The eight sign inequalities $\\sum_i \\epsilon_i d_i<1$ for $\\epsilon_i\\in\\{-1,1\\}$ describe $\\sum_i|d_i|<1$. The pair for the all-plus and all-minus signs gives $1<\\sum_i u_i<2$ because $\\sum_i u_i=(3+\\sum_i d_i)/2$. The other six give $0<u_i<1$ because $2u_i-1=d_i-d_{i+1}+d_{i+2}$. The same equivalence holds with weak inequalities.\n\nOn the closed $\\ell_1$ ball, $g_i\\ge|d_i|$ so the formula is continuous with a compact image. Conversely, any boundary parameter is a limit of its contractions toward zero, all in the open ball. Thus the closed image is exactly the closure of the strict triangle image.\n",
+  "source_candidate_ids": [
+    "919c51f1d263878e",
+    "d61c49578c90db6d"
+  ],
+  "source_candidate_sha256": {
+    "919c51f1d263878e": "6b0ffb2986d69a7dc995935fa4d156875e4241266b21e9cd2608e847cb0d9bbf",
+    "d61c49578c90db6d": "ee6d05e74a2ac993bcdfb6c2786d0f3b2c22fbb78f8492e3b76225145d4b99df"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d61c49578c90db6d",
+      "locator": "§§1–4, (1)–(5)"
+    },
+    {
+      "candidate_id": "919c51f1d263878e",
+      "locator": "§§1–2, signed rows and actual chord–height relation"
+    }
+  ],
+  "statement": "Let $K$ range over nondegenerate planar triangles, $y$ over their interior points, and $v_1,v_2,v_3$ over nonzero spanning normals with $\\sum_i v_i=0$. Require that the cap $v_i\\cdot(x-y)\\ge0$ strictly capture vertex $P_i$ and strictly exclude the other two vertices, with the $P_i$ distinct. Let $k=|K|$, let $Q_i$ be the cap areas, let $\\sigma_i$ be the cutting chord lengths divided by $\\lVert v_i\\rVert$, and set\n$$\n f_i=\\frac{2\\sqrt{kQ_i}}{\\sigma_i\\sum_\\ell Q_\\ell/\\sigma_\\ell}.\n$$\nWith indices modulo three, the set of these $f$-vectors is exactly\n$$\n f_i=\\sqrt{g_i^2-d_i^2},\\qquad g_i=1-d_{i+1}+d_{i+2},\\qquad \\sum_i|d_i|<1.\n$$\nEquivalently, the set is exactly\n$$\nf_i=2\\sqrt{u_i(1-u_{i+1})},\\qquad\n0<u_i<1,\\qquad 1<\\sum_i u_i<2 .\n$$\nIts closure is the image given by replacing the strict inequalities in either domain with weak inequalities.",
+  "subgoal_id": "pk-intake-strict-triangle-row-image",
+  "title": "The exact parameter image of a strict triangle cap circuit"
+}

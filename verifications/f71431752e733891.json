@@ -1,0 +1,69 @@
+{
+  "candidate_id": "064f212eedef754c",
+  "candidate_sha256": "a1b90f58837ed7233e1d8d85b7edea43726abafcdb525319224f5d298ed58750",
+  "checked_dependency_candidate_sha256": {
+    "09a0ec46efc18691": "efe59cc0a758658657d93312230cd006ecb0af4b39033b0e5f98c62877c79bd7",
+    "0b2fbdaf8d3134a0": "96c1f8af449491471f72100d4b317bf8101fba6e5ecaf819b3e9adcac7c34295",
+    "1269c554ca9a41b8": "fabf34fbffac777cddba1d06ca55c7ce7fe766062a1a3bdeba86b3d9e5a391bf"
+  },
+  "checks": [
+    "At an active mass-q cap, a proper own trace has positive coarea and strictly decreasing tail in a threshold neighborhood, so the active threshold is its right endpoint. Fact 1269c554ca9a41b8, §2, supplies the two-sided full ambient directional derivative under precisely the nonproper-section hypothesis. This subsection is independent of that fact’s projected-region and normal-cone assumptions.",
+    "For nearby parameters, membership can change only inside a slab of thickness proportional to the parameter distance since the support is bounded and the continuous normal remains nonzero. Uniform section area bounds give local Lipschitz continuity. The directional derivative is linear and is therefore a full derivative here: for a convergent subsequence of normalized increments, the Lipschitz estimate replaces its varying directions with the limit direction at a normalized error tending to zero.",
+    "All nonvertical tails are continuous, so at the finite right endpoint the mass is exactly q. The quantile is locally Lipschitz by the support-uniform score bound. The same bound works in ambient nonvertical normals, or by positive homogeneity from the unit-normal statement. In the derivative expansion, this makes the remainder smaller than the size of the normal increment. The negative threshold derivative equals minus positive coarea, yielding the stated gradients.",
+    "Feasibility makes the buffered constraint slack attain zero as a maximum over base tilts and the unit sphere. Its differential gives the correct base and tangential components. The section lies on the active plane and |u|=1, so the normal component is exactly −epsilon f and the sign of the shift is inward. In d=1 the tangential assertion is vacuous and the same plane identity yields the shift.",
+    "In the fixed-face argument, the same cap binds at every feasible vertex mark. Keeping the unit normal fixed gives a zero maximum of the constraint as a function of the base tilt at every such mark. The single gradient must equal their base coordinates (within the affine base space), and it equals the original base p. This proves F_p={p} without any assumption of differentiability in u for this part.",
+    "If this argument applies to every maximizing base, all such bases are extreme. Convexity of the deepest region and C_z=K_z at sampled bases put every element of P in their convex hull back in I. Hence I is an empty convex-position witness in P and k(I)=|I|. Any convex-position witness in lattice-complete P has at most one point per parity, since a same-parity midpoint belongs to P and could neither be a witness vertex nor be absent from its hull intersection with P.",
+    "For d≥2 strict convexity makes every nonempty supporting trace a singleton of zero (d−1)-measure. At a proper limiting plane the sections converge after identifying the planes: compactness gives the outer inclusion and a dense set of proper interior slice points gives the inner approximation. Areas and first moments converge by null relative boundaries. At a supporting limiting plane compactness forces the diameters of nonempty sections to zero, which suffices for their measures and moments to vanish. Thus the mass derivative is continuous at every nonvertical parameter. At a proper trace its strictly negative threshold derivative gives the local C¹ right quantile by the implicit function theorem and local strict decrease.",
+    "The raw source digest for 86dd5366456916a8 matches. Section 6 and (12) give the shift under a neighborhood C¹ assumption, §§13–14 give the singleton and strict-convexity statements, and the frozen proof justifies the weaker pointwise differentiability assumption using the accepted full cap derivative."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "1269c554ca9a41b8",
+      "hypotheses_mapping": "Its §2 applies to the finite full-dimensional sampled fibers, the nonvertical cap normal and zero-measure nonproper sections. The proper own trace adds the positive coarea used to solve for the quantile derivative.",
+      "status": "accepted at the reviewed snapshot"
+    },
+    {
+      "candidate_id": "0b2fbdaf8d3134a0",
+      "candidate_sha256": "96c1f8af449491471f72100d4b317bf8101fba6e5ecaf819b3e9adcac7c34295",
+      "hypotheses_mapping": "Supplies fixed-q Lipschitz quantiles and the universal active inequality, and supplies the convex buffered region and canonical sampled fiber identification used for lattice-complete I.",
+      "reviewed_proof_sha256": "834b16ff632d2cacd8b545090649f33368a9e34a221de52feafb9a3cdba4cd2e",
+      "reviewed_statement_sha256": "38ef402dde0038799b11ef0e95cdcb17278f7e6d67d3ef6a3c0fcd5f1cdc0a81",
+      "status": "pending independent review"
+    },
+    {
+      "candidate_id": "09a0ec46efc18691",
+      "candidate_sha256": "efe59cc0a758658657d93312230cd006ecb0af4b39033b0e5f98c62877c79bd7",
+      "hypotheses_mapping": "Under its retained properness, marked-functional, and positive-group assumptions, the selected cap binds throughout the feasible set over F_p. The finite active-cap balance theorem is used through this cover theorem, with no separate invocation in this proof.",
+      "reviewed_proof_sha256": "f46b4e4d81dddc0569ebe5484cd0cdde51e509a1721522439a34457d459389ac",
+      "reviewed_statement_sha256": "9c1545b66435577149cacd0cad507a270da861ed3e7b03f365e7949b5eb02e04",
+      "status": "pending independent review"
+    }
+  ],
+  "finished_utc": "2026-11-08T11:22:26Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its §2 gives the cap first variation, and §3 gives the unshifted centroid for an ordinary depth contact. It does not give the nonzero Euclidean buffer shift or the singleton result for a minimal face of the sampled buffered maximizing-base hull.",
+      "fact_id": "1269c554ca9a41b8"
+    },
+    {
+      "comparison": "The 2^n bound there concerns Helly number and atomic depth on a midpoint-closed graph. It does not imply the regular buffered contact or the identification of maximizing bases as an empty convex-position witness.",
+      "fact_id": "bee3cc8e50a0dcea"
+    }
+  ],
+  "readability": "The first conclusion uses the positive-homogeneous extension of the right quantile off the unit sphere, while the singleton conclusion requires only base-tilt differentiability on the fixed normalized cap. Here active means a buffered cap at the mark with mass q.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7fae9c4c72925d7b65205e581aa318b7c8dbd6a82afe7ba47c70a3a8c427140a",
+  "reviewed_statement_sha256": "a5ba5bd098c47b76d7713e2f73635d0d3c90561bcd7b18b5b6906a5b9dc95619",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:19:11Z",
+  "summary": "Pointwise differentiability under zero-measure nonproper sections yields the displaced actual section centroid. A selected quantile differentiable in the base tilts already gives a singleton minimal face. Strict convexity in dimension at least two supplies local C¹ quantiles at proper traces.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

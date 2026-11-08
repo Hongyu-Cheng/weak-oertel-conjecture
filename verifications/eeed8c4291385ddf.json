@@ -1,0 +1,52 @@
+{
+  "candidate_id": "cb254ea93a82679e",
+  "candidate_sha256": "40c9694bfb3718f91eb2598f17ce8b9f0b2210ad930812775e6051061bb7ea4d",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Enumerated the 81 integer sites in the coordinate box by oriented edge determinants, independently of the certificate predicate. This gives 31 sites with the stated row counts, all four parities, and for each facet form exactly 12 positive, 3 zero, and 16 negative sites; each zero slice sums to (0,0). The unimodular permutations preserve the lattice and permute the facet forms.",
+    "The integer offsets make nonzero traces strict. The zero traces are vertex triangles with side scale 2/3 and area 4V/9. The zero-offset chord has midpoint g and length 2/3 of the opposite side, so dividing by the gradient norm gives 4V/3 per chord. Summing over the balanced three-site slice gives coarea mass 4V and centroid (0,g). The margins sum to zero, proving the ambient cover and upper bound.",
+    "Translate any containing cap inward to pass through (0,g). Each independent permutation preserves the relevant measure and fixes the center. The base vertex values a,b,-a-b and the continuous values 1-a,c,-1+a-c are decreasing precisely on the stated normalized tetrahedron. Evaluating twice the margins at its four vertices gives the three displayed f rows, and subtraction gives the nonnegative g rows.",
+    "For distinct ordered heights, the included or excluded corner follows from the two edge intercept ratios. Writing f0=t+q+r, f1=t+r, f2=t with q,r>0 gives g0=r, g1=q+r, g2=q and r f0²−(q+r)f1²+q f2²=qr(q+r). This verifies the complementary-corner and all-full formulas; vertex-height ties with the threshold have area zero. The denominator is positive, and scaling all heights by two cancels cubically.",
+    "The terminal cubic replacements are lower bounds because the g rows are nonnegative, the extrema of each f are at vertices, and a squared positive part never exceeds the full square. Integer-ray substitution multiplies each local power coefficient by the positive product of the ray sums for its monomial, including repeated indices. Nonnegativity of all 20 coefficients therefore suffices on the closed local simplex.",
+    "Verified both referenced asset SHA-256 hashes and the data types and counts of the 69 integral split planes and 15,099 path records. Reviewed the saved verifier: projective edge intersections use positive combinations of the rays; oriented signed minors test actual facet halfspaces; the normalized determinant is the relative volume; pairwise facet separation implies interior disjointness. Containment and volume equality give full coverage because the finite union is closed and each relative neighborhood of a point in a full-dimensional parent meets its interior in positive volume.",
+    "Replayed the saved exact verifier without disabling its assertions: 525,779 checks, 11,188 nonnegative cubic leaves, 3,911 verified disjoint covering splits, every record visited once, maximum depth 15. Also replayed the separate two-sided implementation: 223,497 explicitly represented cubic coefficients, 15,767 zero, exact summed leaf volume 1.",
+    "At repeated continuous heights with nonzero continuous normal, the limiting boundary is a line of zero planar area on every fiber; bounded convergence applies. At a pure-base normal the pointwise limsup is bounded by the closed-cap indicator, and reverse Fatou retains every zero-margin fiber. Any deepest point with a strictly positive canonical margin would survive a small threshold increase that removes positive proper-trace area. All margins must therefore be zero; integrality and barycentric bounds imply z=0 and x=g.",
+    "Both source candidate file hashes match. In de93c4f08837e128, §§1–7 contain the asserted depth and certificate, including (1)–(9), and §9 proves uniqueness. In b78a2eb10bd3783f, §1 around (1) gives the traces and section centering; the normalized proof supplies the explicit coarea value by length times altitude. Neither source's pending cross-reference is used as a premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T11:22:07Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its d=2 specialization already gives the continuous centroid vertex-cap fraction 4/9 and covering on K. It has no shifted lattice fibers or mixed depth bound.",
+      "fact_id": "1c6088cbbbb3f688"
+    },
+    {
+      "comparison": "Its general active-circuit theorem gives some depth-attaining caps covering the plane of a fiberwise maximizer. It does not evaluate mixed depth, identify these canonical caps, or give this ambient cover and uniqueness.",
+      "fact_id": "755cb08c379113cc"
+    },
+    {
+      "comparison": "It uses the undilated primitive reflexive simplex and a discrete uniform entropy audit. It does not cover the 31-site fourth dilate with continuous triangular fibers.",
+      "fact_id": "e1538bd5cc63f818"
+    }
+  ],
+  "readability": "The raw margin normalization is explicit and needed for the coarea mass. No same-batch result is needed. The proved depth is above 1/9.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ebbe8515ef270a86c1f9031314faf389cc3abe244b63ce20e2cced41b748a625",
+  "reviewed_statement_sha256": "9038fc4476afbab0b77a453124c07b0d41ead42c8ee9908e877641dbe5700eda",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "b78a2eb10bd3783f": "c875e2a5196291973cd71164bfa4bc2a4db6329d398a7a6f7c99bb52ae4e5be9",
+    "de93c4f08837e128": "2b2bb7d53cbbf8e42e775b5e8ef18be21d16120373cd1dcd3bd3d60b4fbbd459"
+  },
+  "started_utc": "2026-11-08T11:18:19Z",
+  "summary": "The exact finite cover and cubic certificate prove the lower bound for all distinct continuous heights; the limit arguments transfer it to repeated heights and closed pure-base cuts. The canonical caps give the matching upper bound, the stated coarea data, and the unique deepest point.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

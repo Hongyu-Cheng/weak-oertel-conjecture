@@ -1,0 +1,46 @@
+{
+  "candidate_id": "4b408a905c45b287",
+  "candidate_sha256": "422e4649538c6870faa4eb09f695b2853979e12e5cc4718152e28a24472382dc",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Each consecutive determinant is positive, so the sector basis is invertible. The support constants are positive since the origin is interior. Testing each support at the opposite endpoint gives p,q≤1, and the sector has the core triangle as a subset and the support wedge as a superset.",
+    "If p=1 or q=1 the wedge is exactly the core. For p,q<1 and 1−pq>0, the two coefficients E_y,E_x are positive and combine the two support inequalities into x+y≤E_x+E_y. The four vertices and area follow; when 1−pq≤0 both coefficients p,q are negative and (−p,1) is a positive recession direction, also when the support boundaries are parallel.",
+    "The chosen point on the segment from the core midpoint to E, or on the recession ray, has positive coordinates and sum 2α. At the core value it is redundant; at the bounded upper value it is E. A proper closed convex subset of either full dimensional comparison polygon has strictly smaller area.",
+    "The new wedge coefficients satisfy p′≥p and q′≥q and the one-sector gauge is positive off zero. Adjacent gauges agree at every nonzero point on their common ray and both dominate the same selected linear functional. Its affine restriction orders the left and right slopes at every line crossing. Lines through zero instead have slopes −f(−e) and f(e).",
+    "The joined unit sublevel is the convex union of finitely many sector polygons, contains a neighborhood of zero and has the required endpoints and areas. Each selected support is valid near its endpoint and hence globally by convexity along a segment starting there. A vertex in an open sector must be one of that sector piece's vertices; the only other possibilities are the m ray endpoints.",
+    "Independently checked exact axis-ray examples: for the unit square the first-sector wedge has E=(1,1) and area 1, attaining its bounded upper value. For the body |x−y|≤1, |x+y|≤2 with axis rays and the supports x−y=±1, the first-sector wedge has p=q=−1 and area of the body section 3/2. The reconstructed first-sector vertex is (3/2,3/2); the six-vertex reconstruction has positive turns, all four correct radial endpoints, total area 4, and all four chosen endpoint support incidences.",
+    "The exact raw source digest for be9098c627b40217 matches the frozen source digest; §§1–4 contain the statement, complete wedge classification, insertion and gluing. Its separate finite-cap/chord discussion is a consequence for the concurrent six-ray specialization, not an additional hypothesis."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T11:18:56Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The two specified chord endpoints in one fixed coordinate fan give a sharp one-sector containment and area upper bound. If the relevant rays are included in this replacement, the endpoint pair and that sector area are preserved, so the accepted bound remains applicable to the replacement. The bound provides no existence of simultaneous area-and-endpoint replacement, no arbitrary support preservation, and no global vertex bound.",
+      "fact_id": "ebea5ab33e39407b"
+    },
+    {
+      "comparison": "Uses that sector envelope under the proper depth-attaining mixed-cap and fiber compatibility hypotheses to bound chord and sector scales. It gives no ordinary planar replacement and does not establish that replacing a fiber preserves its mixed constraints.",
+      "fact_id": "d372e5eb0caea032"
+    },
+    {
+      "comparison": "Uses Hausdorff approximation by polygons in its mixed-area proof. Approximation does not give exact radial endpoints, exact sector areas, selected support lines, or a uniform vertex count.",
+      "fact_id": "2021348e0b2d8c9f"
+    }
+  ],
+  "readability": "In the bounded wedge branch, the coefficients E_y,E_x multiply the first and second inequalities, respectively. Their coefficients on x and y both equal one by the two equations for E. The core equality case includes a redundant inserted point.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "edc803d15759137767512932ef990b65cdf87dd709f1ba55deffced3f8e11f64",
+  "reviewed_statement_sha256": "4e6428c6c442d37d44ef572a6295870583bfab8da9e541b71e635af4ec4ea75c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:15:28Z",
+  "summary": "The construction realizes all sector areas and prescribed radial endpoints, preserves each independently selected support globally, and uses at most one new vertex in each open sector.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

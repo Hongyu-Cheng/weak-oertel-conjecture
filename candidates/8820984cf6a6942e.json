@@ -1,0 +1,26 @@
+{
+  "advances": "Signed paths of actual compatible bodies, with simultaneous addition in the declared convex-field class.",
+  "author": "PK-research-agent",
+  "candidate_id": "8820984cf6a6942e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:19:53.444172+00:00",
+  "depends_on": [],
+  "draft_key": "signed-physical-cone",
+  "kind": "lemma",
+  "proof": "At each sampled $z$, convexity along rays from the continuous origin and the common bound on $\\Phi$ for unit $u$ and $|X|\\le1$ give $\\Phi(u,z,X)\\ge-C(1+|X|)$ uniformly. Taking $u=X/|X|$ in the constraints bounds all new points in a fixed ball for small $t$. There $\\Phi$ has a uniform bound $L$. The support inequalities put $K_z(t)$ within the parallel body of radius $tL$ around $K_z$, and an inward homothet of ratio $1-tL/r$ about an old inball center with radius $r$ lies inside $K_z(t)$. Thus there are two-sided $O(t)$ homothetic bounds about the same center and the radial displacements satisfy the uniform bound.\n\nFor any convex representation $p=\\sum_z\\lambda_z z$, and $X_z\\in K_z(t)$, convexity of the field gives\n$$\nu\\cdot\\sum_z\\lambda_z X_z+t\\Phi\\left(u,p,\\sum_z\\lambda_z X_z\\right)\n\\le\\sum_z\\lambda_z h_{K_z}(u)\\le h_{K_p}(u).\n$$\nThis is precisely compatibility. The completeness of $P$ means the new canonical hull has the same integer bases.\n\nFix a regular point and test the old normal $n$ at $X_t$. Its constraint implies $s_t n\\cdot(X-o)\\ge t\\Phi(n,z,X_t)$. There is an active new constraint $u_t$ at $X_t$ by compactness of the unit sphere and the absence of uniform strict slack at a boundary point. Its equality gives $s_t u_t\\cdot(X-o)\\le t\\Phi(u_t,z,X_t)$ by $u_t\\cdot X\\le h_{K_z}(u_t)$. Every limiting $u_t$ supports the old fiber at $X$, so $u_t\\to n$ and $u_t\\cdot(X-o)$ is eventually positive, bounded away from zero by the old inball. The bounds squeeze the stated derivative. Regularity holds surface-almost everywhere, including both endpoints in dimension one. The formula is linear in the test field and the class is closed under finite nonnegative sums. Finite normal perturbations $N_{ij}+t\\nu_{ij}$ retain nonzero continuous parts for small $t$, and $\\varepsilon e^{st}$ realizes the stated scale velocities.\n",
+  "source_candidate_ids": [
+    "8effe5eb4947ba88"
+  ],
+  "source_candidate_sha256": {
+    "8effe5eb4947ba88": "b60c227edb670cb87d8a5651fb4380dfb71d7a2c8c041486dedaabbbe498f7d1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8effe5eb4947ba88",
+      "locator": "§3 (3)"
+    }
+  ],
+  "statement": "Let $P$ be finite and lattice-complete and let the positive convex bodies $K_z$ satisfy the sampled anchored Minkowski inclusions. Let $\\Phi(u,z,X)$ be jointly continuous for $u\\in\\mathbb S^{d-1}$ and all physical coordinates $(z,X)$, finite and convex in $(z,X)$ for each $u$. For $t\\ge0$ define\n$$\nK_z(t)=\\{X:u\\cdot X+t\\Phi(u,z,X)\\le h_{K_z}(u)\\text{ for every unit }u\\}.\n$$\nFor small $t$ these are positive compact convex bodies $O(t)$ Hausdorff-close to the old ones, satisfying the same sampled compatibility, hence they are their canonical hull's actual sampled fibers. At a regular old boundary point $X$ with unique outer unit normal $n$, let the endpoint on its ray from an old inball center $o$ be $X_t=o+(1-s_t(X))(X-o)$. Then $|s_t(X)|=O(t)$ uniformly and\n$$\n\\frac{s_t(X)}t\\longrightarrow\\frac{\\Phi(n,z,X)}{n\\cdot(X-o)}.\n$$\nThis gives a bounded measurable signed inward speed almost everywhere for surface area, with counting measure on the endpoints if $d=1$. Finite nonnegative combinations of the fields realize the corresponding sums of speeds. Both signs of normal-dependent affine physical fields are allowed. Independent finite cap-normal velocities and, when the scale is interior, either sign of $s=\\dot{\\log\\varepsilon}$ can be appended.",
+  "subgoal_id": "pk-intake-signed-physical-cone",
+  "title": "Actual signed convex physical fields on compatible fibers"
+}

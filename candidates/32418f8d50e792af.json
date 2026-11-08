@@ -1,0 +1,31 @@
+{
+  "advances": "Defines a normalized auxiliary buffer on positive compatible fibers.",
+  "author": "PK-research-agent",
+  "candidate_id": "32418f8d50e792af",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T11:19:53.442784+00:00",
+  "depends_on": [
+    "5aeb5916857f97a9",
+    "7227bbfcd12ad3d2",
+    "d90ba05577427854",
+    "a56f8711406a3870"
+  ],
+  "draft_key": "tied-profile",
+  "kind": "lemma",
+  "proof": "Compatibility gives $C_z=K_z$ at sampled bases. By 7227bbfcd12ad3d2 all real fibers of $C$ are convex bodies, vary Hausdorff-continuously, and have uniform positive inradius. Put $F=E_{C_z}(y)^{1/d}$ and $v(z)=V(z)^{1/d}$. The joint energy-root theorem 5aeb5916857f97a9 gives joint concavity and strict own-interior concavity for $F$. Brunn–Minkowski and the canonical Minkowski inclusions give concavity of $v$. Their increasing, concave weighted geometric mean $H=F^{d/N}v^{1/N}$ is concave on the own-interior domain and strictly concave inside each fiber.\n\nHere are the continuity details for bodies and marks. On positive-volume bodies converging in Hausdorff distance and marks converging to a fixed interior mark, a common ball at the marks bounds the optimizing parameters, while a56f8711406a3870 gives the common denominator floor $1/N$ on the corresponding bodies. Along a convergent subsequence of optimizers this gives an admissible limit and convergence of the objectives, using the vanishing volume of symmetric differences. Testing the old optimizer on the new bodies gives the opposite value bound. If a mark approaches its own boundary, choose a unit supporting direction $u$ at the limiting boundary point. The nonnegative distances $\\delta=h_K(u)-u\\cdot y$ tend to zero. At an interior mark the test denominator $1-u\\cdot(X-y)/(2\\delta)$ is at least $1/2$ on $K$. If the bodies lie in a fixed ball, their sections perpendicular to $u$ have uniformly bounded area. Integrating this denominator to power $-N$ over strips at distance $s\\ge0$ from the support plane bounds the energy by a constant times $\\int_0^\\infty(1/2+s/(2\\delta))^{-N}\\,ds=O(\\delta)$. This also covers limits with boundary marks of zero energy. Thus $F$ is continuous at all fiber/mark pairs here, including across real bases by Hausdorff continuity. Approximating marks along their own fibers extends joint concavity to $C$.\n\nBy d90ba05577427854, $E_{C_z}(y)\\le V(z)$ and the energy transforms by the absolute determinant of an invertible continuous affine map. Hence $H$ and $M^{1/d}$ transform by the same factor and the sampled bound follows. Base-affine translations translate each fiber and mark together and leave the within-fiber covariance unchanged. A common linear map $A$ sends $\\Sigma$ to $A\\Sigma A^\\mathsf{T}$, so transforming normals contravariantly preserves the paired margins. A unimodular affine base change permutes lattice sites and preserves both types of caps. Continuous affine maps multiply all sampled cap masses and $M$ by the same determinant factor.\n",
+  "source_candidate_ids": [
+    "26455afca6af9c16"
+  ],
+  "source_candidate_sha256": {
+    "26455afca6af9c16": "2356169cee151b89a5b7677499b2b978d8ac0823c7998f48ccb4d231e296c4c8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "26455afca6af9c16",
+      "locator": "§1 (1)–(3); sampled-base correction in historical comment 85b4cd60578796ce §3"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb Z^n$ be finite, nonempty and equal to $\\operatorname{conv}(P)\\cap\\mathbb Z^n$. For $d\\ge1$, let $K_z\\subset\\mathbb R^d$ be convex bodies for $z\\in P$ satisfying $\\sum_z\\lambda_z K_z\\subset K_p$ for every convex representation $\\sum_z\\lambda_z z=p\\in P$. Set $C=\\operatorname{conv}\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$, $V(z)=|C_z|$, $V_z=|K_z|$ at sampled bases, $M=\\sum_{z\\in P}V_z$, and $N=d+1$. Let $E_K(y)$ be the minimum of $\\int_K[1+a\\cdot(X-y)]^{-N}\\,dX$ over strictly positive affine denominators on $K$ for $y\\in\\operatorname{int}K$, extended by zero on $\\partial K$. Define\n$$\nH(z,y)=[E_{C_z}(y)V(z)^{1/d}]^{1/N},\\qquad f(z,y)=H(z,y)/M^{1/d}.\n$$\nThen $H$ is continuous and jointly concave on $C$, strictly concave on each own-fiber interior, and zero on each own-fiber boundary. At sampled bases $0\\le f(z,y)\\le(V_z/M)^{1/d}\\le1$. The sampled profiles are jointly continuous under simultaneous positive-fiber Hausdorff convergence and convergence of sampled marks. Write $g_z$ for the centroid of $K_z$, $\\Sigma=M^{-1}\\sum_z\\int_{K_z}(X-g_z)(X-g_z)^\\mathsf{T}\\,dX$, and $\\Gamma(u)=(u^\\mathsf{T}\\Sigma u)^{1/2}$. At a sampled mark $(p,y)$ define buffered depth as the infimum of the mixed volume of the caps\n$$\na\\cdot(z-p)+u\\cdot(X-y)\\ge-\\varepsilon f(p,y)\\Gamma(u),\\qquad u\\ne0,\n$$\ntogether with the closed pure-base caps through $p$. Normalized cap masses and normalized buffered depths are invariant under common invertible affine changes of the continuous coordinates, continuous base-affine shears, and unimodular affine changes of the base.",
+  "subgoal_id": "pk-intake-tied-profile",
+  "title": "Concavity and covariance of the body-tied energy buffer"
+}

@@ -4,6 +4,32 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 8 | theorem | pk-intake-tied-common-separator | [a1081821f9c8a5b1](facts/a1081821f9c8a5b1.md) |
+| 7 | lemma | pk-intake-conservative-cap-branches | [9ee0d9a1e9f65259](facts/9ee0d9a1e9f65259.md) |
+| 6 | theorem | pk-intake-tied-contact-continuation | [5efc62439ac46cfb](facts/5efc62439ac46cfb.md) |
+| 5 | theorem | pk-intake-tied-finite-cover | [6621b23e5d3f30bb](facts/6621b23e5d3f30bb.md) |
+| 5 | lemma | pk-intake-tied-log-scale | [d8c29b196aa3baeb](facts/d8c29b196aa3baeb.md) |
+| 4 | theorem | pk-intake-tied-attainment | [4bf4936eff4d698d](facts/4bf4936eff4d698d.md) |
+| 4 | lemma | pk-intake-tied-source-chart | [df51254e978fb6a2](facts/df51254e978fb6a2.md) |
+| 0 | lemma | pk-intake-signed-physical-cone | [8820984cf6a6942e](facts/8820984cf6a6942e.md) |
+| 3 | lemma | pk-intake-tied-profile | [32418f8d50e792af](facts/32418f8d50e792af.md) |
+| 5 | theorem | pk-intake-regular-buffered-cap-contact-and-singleton | [064f212eedef754c](facts/064f212eedef754c.md) |
+| 5 | theorem | pk-intake-fixed-face-marked-projective-energy-rigidity | [78f0698dc6ca4224](facts/78f0698dc6ca4224.md) |
+| 4 | theorem | pk-intake-fixed-deepest-base-face-buffered-cap-cover | [09a0ec46efc18691](facts/09a0ec46efc18691.md) |
+| 3 | theorem | pk-intake-finite-buffered-active-cap-balance | [c5ce541ffa55a29c](facts/c5ce541ffa55a29c.md) |
+| 1 | lemma | pk-intake-retained-volume-continuous-concave-buffer | [669858b8fc253d7c](facts/669858b8fc253d7c.md) |
+| 2 | theorem | pk-intake-concave-buffered-mixed-depth-regions | [0b2fbdaf8d3134a0](facts/0b2fbdaf8d3134a0.md) |
+| 4 | theorem | pk-intake-uniform-own-properness-before-covariance-buffer-minimization | [481a0b2cb463b75b](facts/481a0b2cb463b75b.md) |
+| 2 | theorem | pk-intake-uniform-covariance-buffered-depth-positive-hausdorff-continuity | [f2ead43a963c7026](facts/f2ead43a963c7026.md) |
+| 1 | theorem | pk-intake-planar-prescribed-sector-area-psd | [7d1ee06fa4119930](facts/7d1ee06fa4119930.md) |
+| 1 | theorem | pk-intake-marked-projective-energy-positive-hausdorff-continuity | [b3c0088cf09b2894](facts/b3c0088cf09b2894.md) |
+| 0 | theorem | pk-intake-r4-full-convex-potential-obstruction | [7559aec0ef3647a6](facts/7559aec0ef3647a6.md) |
+| 0 | lemma | pk-intake-r4-strict-closed-minor-quotas | [2f0f0c8da9a51a01](facts/2f0f0c8da9a51a01.md) |
+| 0 | theorem | pk-intake-r4-all-normal-depth | [cb254ea93a82679e](facts/cb254ea93a82679e.md) |
+| 0 | counterexample | pk-intake-sharp-positive-circuit-triangle-incidence-witness | [98bad83a8a372a77](facts/98bad83a8a372a77.md) |
+| 1 | theorem | pk-intake-sharp-positive-circuit-triangle-incidence | [b08bdaf82b84ef41](facts/b08bdaf82b84ef41.md) |
+| 0 | lemma | pk-intake-cyclic-harmonic-budget-psd | [2fb8b0785692a5b4](facts/2fb8b0785692a5b4.md) |
+| 0 | theorem | pk-intake-planar-sector-support-preserving-replacement | [4b408a905c45b287](facts/4b408a905c45b287.md) |
 | 0 | counterexample | pk-intake-actual-two-ball-fiberwise-critical-pairing | [67cc1b9bd6c550e9](facts/67cc1b9bd6c550e9.md) |
 | 2 | theorem | pk-intake-actual-critical-weight-exclusion | [7844fbb9b48c10d9](facts/7844fbb9b48c10d9.md) |
 | 5 | theorem | pk-intake-finite-base-critical-face-fractional-partition | [a15ae50c21ef6716](facts/a15ae50c21ef6716.md) |

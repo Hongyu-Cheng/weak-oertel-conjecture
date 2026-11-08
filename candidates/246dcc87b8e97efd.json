@@ -1,0 +1,29 @@
+{
+  "advances": "One-sided certificate for fixed selected original circuits and realizable polytopal deletions, including cap contacts. The upper derivative is a cover estimate for actual depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "246dcc87b8e97efd",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:29:19.953787+00:00",
+  "depends_on": [
+    "88edf5e8e1aa71fe",
+    "755cb08c379113cc"
+  ],
+  "draft_key": "pk-w34-birth-vertex-incidence-game",
+  "kind": "theorem",
+  "proof": "The simultaneous trim lemma gives exact deleted cap mass $\\varepsilon\\iota_j(\\lambda)$ with $\\iota_j(\\lambda)=\\sum_v\\lambda_v\\iota_{jv}$ and a moving slab error $o(\\varepsilon)$ for each selected cap under the dimension hypotheses. Set $a_p=(A\\lambda)_p$. In circuit $p$ shift the threshold of cap $j$ by $\\varepsilon[a_p-\\iota_j(\\lambda)]/S_j$. The weighted sum of these shifts is zero by the definition of $a_p$. The old weighted cap margin is zero everywhere on the anchor plane and so remains zero. Hence the shifted closed caps cover that whole plane. By the two-sided slope expansion and the trim lemma, their new raw masses are each $Q-\\varepsilon a_p+o(\\varepsilon)$. The old fixed strictly cheaper whole-plane covers at other bases from 755cb08c379113cc remain strictly cheaper than these masses under shrinking. All bases remain occupied, and all candidates are covered. Taking the maximum cap budget and dividing by $M-\\varepsilon$ gives the asserted upper limit. The maximization in $\\lambda$ attains its value by compactness and continuity.\n\nLet $X$ be the compact convex hull of the columns of $A$. It is disjoint from $\\{x:x_p>\\tau\\ \\text{for all }p\\}$. Separation from this open convex orthant gives a nonzero separating covector with $\\sup_{x\\in X}\\pi\\cdot x\\le\\inf_{y_p>\\tau}\\pi\\cdot y$. Each coordinate of $\\pi$ must be nonnegative, since a negative coordinate makes the right-hand infimum minus infinity. Normalize to sum one. The right-hand infimum is then $\\tau$. Conversely, for every pair $\\lambda,\\pi$ the minimum row of $A\\lambda$ is at most its $\\pi$-average, which is at most the maximum column payoff against $\\pi$. This proves minimax and its threshold comparison.\n\nChoose a primal optimizer with smallest support and any dual optimizer. Every column in the primal support must have dual payoff $\\tau$, since each column payoff is at most $\\tau$ and the average over the optimal combination is at least $\\tau$. The lifted support columns $(1,A_{\\cdot v})$ lie in the linear hyperplane $\\pi\\cdot x=\\tau x_0$ in dimension $|I|+1$. If there are more than $|I|$, a nonzero linear dependence preserves the weight sum and all row payoffs. Its coefficients sum to zero and so have both signs. Move the primal weights in this direction up to the first vanishing weight to preserve optimality and reduce support, a contradiction. Finally the actual trim paths approach the old fibers. Strict descent contradicts a local minimum whenever these paths are admissible, which gives the required dual condition separately for each permitted menu.\n",
+  "source_candidate_ids": [
+    "a277c91b06544c90"
+  ],
+  "source_candidate_sha256": {
+    "a277c91b06544c90": "ec7c7560b0ae263aaa28963d58a8c7d59d3e36636f82d4e084d37dbd709ea8a2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a277c91b06544c90",
+      "locator": "a277c91b06544c90:03 §§4–4.1 (8)–(11), game, dual, and support bound"
+    }
+  ],
+  "statement": "Consider an actual compatible finite family of positive polytopal fibers with total mass $M$ and full normalized closed-halfspace depth $\\beta$, and let $I$ be the nonempty set of deepest bases. Fix finitely many distinct exposed vertices $V$ with their exposing functionals and the associated simultaneous trims of masses $\\varepsilon\\lambda_v$, where $\\lambda$ is a probability vector on $V$. Select one critical circuit $C_p$ at each $p\\in I$. Its caps have old mass $Q=\\beta M$, pass through an interior deepest mark at $p$, and have balanced unit continuous normals with positive weights $\\rho_j$. Suppose each selected cap has equal positive one-sided old threshold slopes $S_j^+=S_j^-=S_j$. Assume $d\\ge2$, or $d=1$ and the selected cap boundaries avoid the trimmed vertices. Put\n$$\nA_{pv}=\\sum_{j\\in C_p}\n  \\frac{\\rho_j/S_j}{\\sum_{\\ell\\in C_p}\\rho_\\ell/S_\\ell}\\,\\iota_{jv},\n\\qquad \\tau=\\max_{\\lambda\\in\\Delta(V)}\\min_{p\\in I}(A\\lambda)_p,\n$$\nwhere $\\iota_{jv}$ is the actual fraction of the removed vertex piece in cap $j$, including the tangent-cone fraction at a boundary vertex. Then an optimizer $\\lambda$ exists, and along its actual trim path\n$$\n\\limsup_{\\varepsilon\\downarrow0}\n \\frac{D(C_\\varepsilon)-\\beta}{\\varepsilon}\\le-\\frac{\\tau-\\beta}{M}.\n$$\nHere $D$ denotes maximum normalized depth for the whole finite measured family. Furthermore\n$$\n\\tau=\\min_{\\pi\\in\\Delta(I)}\\max_{v\\in V}\\sum_{p\\in I}\\pi_pA_{pv}.\n$$\nAn optimizer $\\lambda$ may be chosen with support of size at most $|I|$. In particular $\\tau>\\beta$ certifies strict actual descent by at most $|I|$ simultaneous cuts, and $\\tau\\le\\beta$ is equivalent to existence of a probability vector $\\pi$ with $\\sum_p\\pi_p A_{pv}\\le\\beta$ at every $v$. At a fiberwise Hausdorff local minimum in the unrestricted class, the latter conclusion holds for every fixed choice of vertices, exposing functionals, and equal-slope circuits as above. For a restricted class the same necessary condition applies whenever the trims used in the argument are admissible.",
+  "subgoal_id": "pk-intake-pk-w34-birth-vertex-incidence-game",
+  "title": "Finite incidence game for simultaneous actual vertex trims"
+}

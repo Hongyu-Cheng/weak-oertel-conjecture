@@ -1,0 +1,29 @@
+{
+  "advances": "A fixed-source Euclidean hinge differential bound with body-dependent coefficients.",
+  "author": "PK-research-agent",
+  "candidate_id": "620425fa49cecfe1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:30:44.670775+00:00",
+  "depends_on": [
+    "d83edebb7d5b8852",
+    "641908e36857195e"
+  ],
+  "draft_key": "pk-w34-buffered-actual-hinge-differential-bound",
+  "kind": "lemma",
+  "proof": "The difference set is compact, symmetric and convex and contains the differences in each real fiber; conversely every one of its elements is a difference of points at the same real base. A positive sampled fiber gives $R>0$, and $0<S_*<\\infty$ by comparison with enclosing balls, with section counting measure for $d=1$.\n\nUse d83edebb7d5b8852 for the normalized stress. For cap $i$ its source-side measure is the actual cap volume plus $r_i$ times its consistent section measure. Its contact-side measure assigns $\\eta_z\\lambda_i$ times the actual saddle law at base $z$ and projects to the fiber point. Both nonnegative measures are supported in $C$. The mass and base Euler equations give common mass $W_i$ and common base first moment. If $W_i>0$, their probability barycenters are in the same real fiber, and the continuous Euler equation gives difference $(\\Psi_i/W_i)u_i$. This proves the asserted inclusion and the radius bound, also allowing the radial length of $D_{\\rm all}$ in the direction $u_i$ in place of $R$. If $W_i=0$, then $c_i=0$ and $\\Psi_i=0$. Since $S_i\\le S_*$ and $c_i\\le\\tau M$, sum the radius estimates and use $M\\sum_i r_i=-v'(\\tau)$. Rearranging gives the differential inequality with the stated constants.\n\nOn each regular interval the derivative of $e^{A\\tau}v(\\tau)$ is at most $B\\tau e^{A\\tau}$. Integrate on the regular pieces and take their one-sided limits as in the actual-hinge jump lemma. Every jump of $e^{A\\tau}v(\\tau)$ is downward, by right continuity and monotonicity of $v$. Summing yields the integrated inequality.\n",
+  "source_candidate_ids": [
+    "dafd1173a49d9223"
+  ],
+  "source_candidate_sha256": {
+    "dafd1173a49d9223": "0102abe7972be01a75233920981d4246ae1e4434126420842b1ba4f7006f930d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "dafd1173a49d9223",
+      "locator": "dafd1173a49d9223:04 §4, (12)–(15), same-real-base barycenter and differential bound"
+    }
+  ],
+  "statement": "Use the attained actual-fiber hinge problem on fixed positive polytopal fibers with $N$ caps, Euclidean unit continuous normals, total volume $M$, and value $v(\\tau)$. Let $C=\\operatorname{conv}(S)$ be the canonical hull of the measured fibers and put\n$$\nD_{\\rm all}=\\{v:(0,v)\\in C-C\\},\\quad R=\\max_{v\\in D_{\\rm all}}\\lVert v\\rVert,\\qquad\nS_*=\\sum_z\\sup_{\\lVert u\\rVert=1,t}\\mathcal H^{d-1}(K_z\\cap\\{u\\cdot X=t\\}).\n$$\nAt a regular interior feasible budget write $\\Psi_i,c_i,S_i,r_i$ for the actual hinge, cap volume, effective section mass and budget multiplier of a sensitivity-normalized stress. Set $W_i=c_i+r_iS_i$. Then $\\Psi_i\\le R W_i$, and $(\\Psi_i/W_i)u_i\\in D_{\\rm all}$ if $W_i>0$. Hence, for $A=M/(RS_*)$ and $B=NM^2/S_*$,\n$$\nv(\\tau)\\le R[N\\tau M-(S_*/M)v'(\\tau)],\\qquad v'(\\tau)+A v(\\tau)\\le B\\tau .\n$$\nFor every compact interior feasible interval $[a,b]$ this implies\n$$\ne^{Ab}v(b)-e^{Aa}v(a)\\le B\\int_a^b t e^{At}\\,dt .\n$$",
+  "subgoal_id": "pk-intake-pk-w34-buffered-actual-hinge-differential-bound",
+  "title": "A real-fiber diameter bound on actual hinge sensitivity"
+}

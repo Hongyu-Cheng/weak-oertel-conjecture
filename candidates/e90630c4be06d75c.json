@@ -1,0 +1,26 @@
+{
+  "advances": "Arithmetic on fixed maximal occupied faces under same-parity midpoint closure.",
+  "author": "PK-research-agent",
+  "candidate_id": "e90630c4be06d75c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:28:33.679004+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-circuits-midpoint-closed-face-saturation",
+  "kind": "theorem",
+  "proof": "Every occupied minimal face lies in a maximal one by finiteness. For $p,q\\in I$ of the same parity, their midpoint belongs to $I$. Its minimal face is the smallest face containing both $F(p)$ and $F(q)$: a face containing a strict convex combination contains both endpoints, and a face containing the endpoints contains the midpoint. For points in the relative interiors of distinct maximal occupied faces, this would give an occupied minimal face strictly containing both. Thus their parity sets are disjoint and $s\\le k$. The same midpoint argument with $p_i$ and any same-parity $q$ gives an occupied face containing $F_i$, so maximality places $q$ in $F_i$.\n\nIf $s=k$ the witness parities exhaust the occupied parities. Any point of $I$ in $\\operatorname{relint}F_i$ must therefore have the parity of $p_i$, by disjointness. If $q\\in I$ has that parity, its midpoint with $p_i$ belongs to $I$ and to $\\operatorname{relint}F_i$, so also has that parity. Iteration gives $p_i+2^{-h}(q-p_i)\\in I$ for every positive integer $h$. Finiteness forces $q=p_i$. Thus every occupied parity is a singleton and $I$ is precisely the set of witnesses. A vertex of $F_i$ is a vertex of $B$ and belongs to the finite generating set $I$, hence is some $p_j$. Its singleton minimal face is maximal by definition of $p_j$, and is contained in $F_i$. Thus $F_i$ is a singleton vertex. Conversely, if all points are vertices of distinct parities, the maximal occupied faces are exactly those singletons. Since $s\\ge1$, failure of equality implies $k\\ge2$ and the claimed strict integer bound.\n",
+  "source_candidate_ids": [
+    "377015272f07c571"
+  ],
+  "source_candidate_sha256": {
+    "377015272f07c571": "032438a61355869c9ae7ce21a700e06d990eb7780f7d422ab7f2d26a91a181e5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "377015272f07c571",
+      "locator": "377015272f07c571:01 §§1–2, (1)–(3), exact saturated witness classification"
+    }
+  ],
+  "statement": "Let $I\\subset\\mathbb Z^n$ be finite, nonempty and closed under midpoints of pairs congruent modulo $2$, with $n\\ge0$. In $B=\\operatorname{conv}I$ let $F(p)$ be the minimal face containing $p$. Let $F_1,\\ldots,F_s$ be the inclusion-maximal members of $\\{F(p):p\\in I\\}$, and fix $p_i\\in I\\cap\\operatorname{relint}F_i$. Let $k$ be the number of occupied parities. The $F_i$ cover $I$, and the parity sets represented in their relative interiors are disjoint. Each $q\\in I$ of the parity of $p_i$ belongs to $F_i$. One has $s\\le k$, with equality exactly when $I$ consists of $k$ vertices of $B$ of distinct parities. In every other case $k\\ge2$ and $s\\le k-1$.",
+  "subgoal_id": "pk-intake-pk-w34-circuits-midpoint-closed-face-saturation",
+  "title": "Parity saturation of maximal occupied faces under midpoint closure"
+}

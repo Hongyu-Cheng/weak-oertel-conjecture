@@ -1,0 +1,26 @@
+{
+  "advances": "A rigidity statement for fixed-source uniform affine Markov maps.",
+  "author": "PK-research-agent",
+  "candidate_id": "64c2ad57bbba2445",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:25:36.224618+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-probability-stationary-affine-rigidity",
+  "kind": "lemma",
+  "proof": "Translate $y$ to zero and let $p_K$ be the gauge of the translated body. The origin is interior and the body is compact, so the gauge is finite and continuous, positively homogeneous, vanishes only at zero, and has unit sublevel set $K$. Each translated map is linear and preserves $K$ by inclusion, hence $p_K(T_rx)\\le p_K(x)$. Stationarity gives\n$$\n\\sum_r w_r\\int_K[p_K(x)-p_K(T_rx)]\\,dx=0.\n$$\nThe summands are nonnegative and the weights positive. Every continuous difference therefore vanishes on $K$, since volume has full support there. Homogeneity extends equality to all vectors by scaling each into $K$. If $T_rx=0$, equality gives $p_K(x)=0$ and thus $x=0$. Invertibility and preservation of the unit sublevel set now give $T_rK=K$, and the volume formula gives $|\\det DT_r|=1$.\n\nFor a boundary fixed point, take $K=\\operatorname{conv}(0,e_1,e_2)$ in the plane and $m=(e_1+e_2)/2$. The two linear maps fix zero and send the ordered pair $(e_1,e_2)$ to $(e_1,m)$ and $(m,e_2)$, respectively. Each has determinant $1/2$ and the images partition $K$ up to null boundaries. The equal-weight mixture of their pushforwards is therefore exactly the original area measure, while neither image is all of $K$.\n",
+  "source_candidate_ids": [
+    "655fcaee47bd2237"
+  ],
+  "source_candidate_sha256": {
+    "655fcaee47bd2237": "e0dd21ee7b42528804639b6a9c376bfba1e8f98c366b8afda85f6ea3aca50e61"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "655fcaee47bd2237",
+      "locator": "655fcaee47bd2237:01 §1, (1), interior-fixed stationary affine maps"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a full-dimensional compact convex body, let $y\\in\\operatorname{int}K$, and let finitely many affine maps $T_r$ satisfy $T_r(K)\\subseteq K$ and $T_r(y)=y$. Suppose $w_r>0$, $\\sum_r w_r=1$, and $\\sum_r w_r(T_r)_\\#(\\mathbf1_K\\,dx)=\\mathbf1_K\\,dx$. Then every $T_r$ maps $K$ bijectively onto itself with $|\\det DT_r|=1$. The corresponding conclusion can fail when the common fixed point lies on the boundary.",
+  "subgoal_id": "pk-intake-pk-w34-probability-stationary-affine-rigidity",
+  "title": "Stationary affine maps fixing a common interior point are automorphisms"
+}

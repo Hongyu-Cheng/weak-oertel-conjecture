@@ -1,0 +1,26 @@
+{
+  "advances": "A counterexample to cap-by-cap monotonicity for iid averaging of an ordinary uniform law.",
+  "author": "PK-research-agent",
+  "candidate_id": "df87106d4b61b130",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:25:36.224184+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-probability-iid-directional-depth-decrease",
+  "kind": "counterexample",
+  "proof": "The height is nonnegative and concave, making $K$ a convex quadrilateral. Its area is $5/8+3/8=1$, so the height extended by zero is the density of the first coordinate. Integrating $xh(x)$ gives $1/6+1/4=5/12$. The single cap mass is $1-m-m^2/2=143/288$.\n\nWrite the density for real $x$ as $\\mathbf1_{\\{x\\ge0\\}}+x_+-4(x-1/2)_++3(x-1)_+$. Integrate the product of two copies over $x,y\\ge0$ and $x+y\\le s$, with $1/2\\le s\\le1$. The unshifted product $(1+x)(1+y)$ integrates to $s^2/2+s^3/3+s^4/24$. Either of the two linear correction terms shifted by $1/2$ contributes $-4[(s-1/2)^3/6+(s-1/2)^4/24]$ after translation. Terms shifted by $1$ or shifted by $1/2$ in both coordinates have zero integral on this domain. The resulting sum CDF is\n$$\nG(s)=s^2/2+s^3/3+s^4/24-\\frac43(s-1/2)^3-\\frac13(s-1/2)^4 .\n$$\nThere are no atoms, so the closed midpoint cap has mass $1-G(5/6)=15343/31104$. Subtracting from $143/288$ gives the claimed decrease. Both masses exceed $4/9$.\n",
+  "source_candidate_ids": [
+    "ff8f68258ebbdc66"
+  ],
+  "source_candidate_sha256": {
+    "ff8f68258ebbdc66": "7290aebb8fabf3bec2e5b9fb9df12d9adcf59cb2f6654af0e126f7562cd01d7a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ff8f68258ebbdc66",
+      "locator": "ff8f68258ebbdc66:02 Exact failure of directional monotonicity"
+    }
+  ],
+  "statement": "Let $K=\\{(x,y):0\\le x\\le1,\\ 0\\le y\\le h(x)\\}$, with $h(x)=1+x$ on $[0,1/2]$ and $h(x)=3(1-x)$ on $[1/2,1]$. Its centroid has first coordinate $m=5/12$. If $X,Y$ are independent and uniform on $K$ and $H=\\{(x,y):x\\ge m\\}$, then $\\Pr(X\\in H)=143/288$ and $\\Pr((X+Y)/2\\in H)=15343/31104$, a decrease of $101/31104$.",
+  "subgoal_id": "pk-intake-pk-w34-probability-iid-directional-depth-decrease",
+  "title": "An iid midpoint can reduce a directional centroid-cap mass"
+}

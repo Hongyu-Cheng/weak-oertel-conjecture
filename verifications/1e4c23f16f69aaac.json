@@ -1,0 +1,46 @@
+{
+  "candidate_id": "03cad4f027c5f226",
+  "candidate_sha256": "d5511366cb390bf00b051fdb6aeb22db94c04ebf7c205bd6f3027d3ee792bbfd",
+  "checked_dependency_candidate_sha256": {
+    "155691fc3768c06f": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c"
+  },
+  "checks": [
+    "Anchored Minkowski inclusion is the feasibility premise of the fixed-matrix parent. For target q, shift variables by q to obtain feasible right side c−Vq. The parent's minimum-norm continuity proof applies on the full feasible domain, including deficient rank.",
+    "Projection nonexpansiveness gives the uniform growth bound |P_q(u)|≤|q|+max|P_0|. With all positive weights proportional to 2^(−j−1)/(1+|q_j|), the infinite series converges uniformly and is a feasible limit of normalized partial averages.",
+    "Averaged slacks are averages of nonnegative terms, so tight rows intersect. If a row can be slack at any feasible point, approximate that point by dense targets and project, yielding a strictly slack projected target. This gives decreasing finite contact sets and exact pointwise intersection, including the zero-rank case.",
+    "If a row is always tight, dualize max V_z A subject to VA≥c. Nonnegative t has Vᵀt=−V_z and c·t=−c_z; adding a unit weight at z gives an anchored nonnegative zero-gap representation. Conversely a zero-gap representation forces every positively weighted slack to vanish. Vertex decomposition preserves a tight extreme representation using the row. Continuity gives the closed normal sets and Minkowski compatibility plus support equality gives the face inclusion."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "155691fc3768c06f",
+      "candidate_sha256": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+      "fact_sha256": "afecd88a8ebe5c473d9297f6454db7d90db5c79dd7986e3072a482620d9a126a",
+      "hypotheses": "The accepted anchored inclusion hypotheses and fixed-matrix minimum-norm continuity apply after translating by each target q, for every feasible right-hand side and all base ranks.",
+      "reviewed_proof_sha256": "2c027df5280f826f67575a9caf2fc48f86961afb4378d9b6cc9503c2e1aed953",
+      "reviewed_statement_sha256": "ae620bc47a6c7c8bd2eac230a3afeee4e3a8ca76a0eb43dcfa9603f6609fa787"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:35:10Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It yields a continuous minimum-norm feasible slope but does not remove optional tight rows or characterize forced ones by tight extreme anchored representations.",
+      "fact_id": "155691fc3768c06f"
+    }
+  ],
+  "readability": "The proof and its scope are clear.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "039e1f50ad816805c09a5a4841e175b315f581e81cf3b27369418c0fcf4a89aa",
+  "reviewed_statement_sha256": "78b9d3b8b988b809d84243a0ba2e273866d8740250e0c081b9dea1139891fa53",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T21:29:04Z",
+  "summary": "Uniform positive averaging gives one continuous slope with exactly the universal tight rows, and anchored LP duality characterizes those rows.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

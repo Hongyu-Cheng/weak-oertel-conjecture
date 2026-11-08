@@ -1,0 +1,26 @@
+{
+  "advances": "Calibration in the ordinary iid midpoint problem.",
+  "author": "PK-research-agent",
+  "candidate_id": "6377ff5908278776",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:25:36.224327+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-probability-iid-simplex-cap-calibration",
+  "kind": "lemma",
+  "proof": "The barycentric coordinate of the chosen vertex has survival probability $(1-u)^d$ on $[0,1]$, since its upper cap is a homothetic simplex with linear ratio $1-u$. Thus the coordinate has density $d(1-u)^{d-1}$ and mean $1/(d+1)$. The two coordinates $U,V$ of the independent points have independent copies of that law. The cap event is $U+V\\ge a=2/(d+1)$, and $a\\le1$. On the complementary threshold triangle, expansion of the two densities gives monomials $u^iv^j$ whose integrals are $a^{i+j+2}i!j!/(i+j+2)!$ by the beta integral. The boundary has probability zero. This gives the formula, with its first two values by direct substitution.\n\nFor $s\\ge0$, $\\Pr(dU\\ge s)=(1-s/d)_+^d\\to e^{-s}$. By independence the pair $(dU,dV)$ converges jointly to independent unit-rate exponentials. The sum of the limiting pair has the continuous density $s e^{-s}$ on $[0,\\infty)$ and $da\\to2$, so the cap probability tends to $\\int_2^\\infty s e^{-s}\\,ds=3/e^2$. The simplex itself is a full-dimensional convex body with the prescribed halfspace containing its centroid, so its value is an upper bound for a universal lower constant.\n",
+  "source_candidate_ids": [
+    "ff8f68258ebbdc66"
+  ],
+  "source_candidate_sha256": {
+    "ff8f68258ebbdc66": "7290aebb8fabf3bec2e5b9fb9df12d9adcf59cb2f6654af0e126f7562cd01d7a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ff8f68258ebbdc66",
+      "locator": "ff8f68258ebbdc66:03 Exact simplex obstruction to larger constants"
+    }
+  ],
+  "statement": "Let $X,Y$ be independent uniform points on a $d$-simplex, $d\\ge1$. For the closed centroid halfspace pointing toward a chosen vertex in its opposite facet's barycentric coordinate, the midpoint cap probability is\n$$\n\\beta_d\n=1-d^2\\sum_{i,j=0}^{d-1}(-1)^{i+j}\\binom{d-1}{i}\\binom{d-1}{j}\n     \\left(\\frac{2}{d+1}\\right)^{i+j+2}\\frac{i!j!}{(i+j+2)!}.\n$$\nIn particular $\\beta_1=1/2$, $\\beta_2=115/243$, and $\\lim_{d\\to\\infty}\\beta_d=3/e^2$. Any universal lower bound for centroid halfspace probabilities of iid midpoints of uniform $d$-dimensional convex bodies is at most $\\beta_d$.",
+  "subgoal_id": "pk-intake-pk-w34-probability-iid-simplex-cap-calibration",
+  "title": "Exact simplex centroid-cap probabilities for iid midpoints"
+}

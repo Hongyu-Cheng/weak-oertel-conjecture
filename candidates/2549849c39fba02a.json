@@ -1,0 +1,26 @@
+{
+  "advances": "An obstruction to dropping the law class in the scalar Laplace reformulation.",
+  "author": "PK-research-agent",
+  "candidate_id": "2549849c39fba02a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:25:36.223902+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-probability-arbitrary-laplace-relaxation-fails",
+  "kind": "counterexample",
+  "proof": "Under the formal substitution $\\rho=1/\\mathbb E e^{T/2}$, $p_0=1/b$, $t=1/2$ and $L=1/u$, one has $\\rho=2/(2+u)$ and $h\\rho=1/(2+u)$. Thus the two formal sides are the displayed $A$ and $B$.\n\nWrite $\\epsilon=2^{-30}$. Then $\\mathbb E e^{T/2}=(1-\\epsilon)\\sqrt2+2^{-10}$ and $b=2(1-\\epsilon)+1024>1024$. The bounds $707/500<\\sqrt2<71/50$, $\\epsilon\\sqrt2<1/1000$, and $2^{-10}<1/1000$ give $41/50<u<421/500$. Also $\\mathbb ET=(1+39\\epsilon)\\log2>69/100$, since the first three terms of $2\\sum_{k\\ge0}3^{-(2k+1)}/(2k+1)$ sum to more than $69/100$.\n\nNow $1/u<50/41<5/4$. By comparing fourth powers, $2^{-5/4}>2/5$. Consequently $\\mathbb E e^{-T/u}>(1-\\epsilon)2^{-5/4}>399/1000$. The numerator of $A$ is smaller than $1-(69/100)/(421/500)=76/421$, so $A<(76/421)/(399/1000)<1/2$. For the second bound, $(1+u)/(2+u)>91/141$ and $1-(1+u)/b>511/512$ since $1+u<2$ and $b>1024$. Hence $B>(91/141)(511/512)>3/5$. These final comparisons reduce to $152000<167979$ and $232505>216576$.\n\nThe two-point law has atoms and cannot be a sum of one or more independent exponentials with strictly positive scales, whose law is absolutely continuous.\n",
+  "source_candidate_ids": [
+    "031c94ef9be4288f"
+  ],
+  "source_candidate_sha256": {
+    "031c94ef9be4288f": "4d471fb7665e4b078119bc8385ed59e5a8e0be0341ec34ea3274ce4abfb3826e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "031c94ef9be4288f",
+      "locator": "031c94ef9be4288f:02 §3, (3) and rational certificates"
+    }
+  ],
+  "statement": "Let $T$ take the values $\\log 2$ and $40\\log 2$ with probabilities $1-2^{-30}$ and $2^{-30}$, respectively. Put $u=2(\\mathbb E e^{T/2}-1)$ and $b=\\mathbb E e^T$. Then\n$$\nA=\\frac{1-\\mathbb ET/u}{\\mathbb E e^{-T/u}}<\\frac12,\n\\qquad\nB=\\frac{1+u}{2+u}\\left[1-\\frac{1+u}{b}\\right]>\\frac35.\n$$\nThus $A\\ge B$, the formal four-moment comparison at $h=1/2$, fails for arbitrary nonnegative laws with all four moments finite.",
+  "subgoal_id": "pk-intake-pk-w34-probability-arbitrary-laplace-relaxation-fails",
+  "title": "A two-point law refutes the arbitrary nonnegative Laplace comparison"
+}

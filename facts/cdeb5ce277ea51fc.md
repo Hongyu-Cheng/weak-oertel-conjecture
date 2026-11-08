@@ -1,0 +1,53 @@
+---
+fact_id: cdeb5ce277ea51fc
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-pk-w34-birth-localized-removal-quantile
+depends_on: ["755cb08c379113cc", "6b80e85ff6937910"]
+verifier_run: ec5c66c4d0ccbddc
+target_match: null
+---
+
+## Source
+
+- [c9f582e034f0948d](../candidates/c9f582e034f0948d.json), c9f582e034f0948d:03 §3, threshold slopes and incidence response (3)–(8).
+- [c9f582e034f0948d](../candidates/c9f582e034f0948d.json), c9f582e034f0948d:02 §2, exact deletion criterion (2).
+
+## Statement
+
+Let a compact convex hull $C$ realize positive $d$-dimensional compact convex sections at a finite set $P\subset\mathbb R^n$, with summed fiber-volume measure $\mu$, total mass $M$ and maximum normalized closed-halfspace depth $\beta$. Put $Q=\beta M$ and select one critical circuit through an interior maximizing mark at each deepest base $p$. Write each original cap as $H_j(b_j)=\{(z,x):a_j\cdot z+u_j\cdot x\ge b_j\}$, with unit $u_j$, old mass $Q$ and positive circuit weights $\rho_j$ satisfying $\sum_j\rho_ju_j=0$. Consider compact convex inner deformations $C_t\subseteq C$ at the same bases, with positive fibers and persistent balls about the anchor marks. Write $\mu_t$ for the restricted measure, $R_t=C\setminus C_t$ and $\varepsilon_t=\mu(R_t)>0$, with $\varepsilon_t\to0$.
+
+For each selected cap the inverse threshold $b_j^t(q)$ is well defined near $q=Q$, and $b_j^t(Q-\beta\varepsilon_t)-b_j=O(\varepsilon_t)$. If all selected deepest circuits satisfy
+$$
+\sum_{j\in C_p}\rho_j[b_j^t(Q-\beta\varepsilon_t)-b_j]<0,
+$$
+then the new actual maximum normalized depth is strictly below $\beta$ for all sufficiently small such $t$.
+
+Let $S_j^+$ be the summed proper section area plus inside supporting section area of the old cap and $S_j^-$ the summed proper section area plus outside supporting section area, counting endpoints and proper point sections in dimension one. The signs refer to increasing and decreasing the cap threshold, respectively. Suppose, along the path or a sequence, $\mu(R_t\cap H_j(b_j))/\varepsilon_t\to\iota_j$ and for every fixed $A>0$,
+$$
+\mu\big(R_t\cap\{|a_j\cdot z+u_j\cdot x-b_j|\le A\varepsilon_t\}\big)=o(\varepsilon_t)
+$$
+for each selected cap. Then
+$$
+\frac{b_j^t(Q-\beta\varepsilon_t)-b_j}{\varepsilon_t}\longrightarrow
+\frac{(\beta-\iota_j)_+}{S_j^+}-\frac{(\iota_j-\beta)_+}{S_j^-}.
+$$
+Denote by $\Phi_{C_p}(\iota)$ the sum of these limits with weights $\rho_j$ over that circuit. Strict negativity of all these sums implies descent for all sufficiently small terms of the path or sequence. For $S_j^+=S_j^-=S_j$ a sum is negative exactly when
+$$
+\frac{\sum_j(\rho_j/S_j)\iota_j}{\sum_j\rho_j/S_j}>\beta.
+$$
+For binary incidences $I_j\in\{0,1\}$, with possibly unequal slopes, it is negative exactly when
+$$
+\frac{\sum_{I_j=1}\rho_j/S_j^-}{\sum_{I_j=1}\rho_j/S_j^-+\sum_{I_j=0}\rho_j/S_j^+}>\beta.
+$$
+
+## Proof
+
+For a threshold near $b_j$, cap mass has a continuous decreasing tail, since the cutting hyperplane has fiber volume zero. A fixed ball about the anchor gives a positive lower bound for the slab mass divided by threshold width in a neighborhood of $b_j$. The finite union of bounded fibers gives an upper bound by integrating projected section areas. Hence the tails are locally uniformly bi-Lipschitz, and their difference from the original tail is uniformly bounded by $\varepsilon_t$. Bracketing on both sides of $b_j$ gives the local inverses and the $O(\varepsilon_t)$ bound. This is the anchored slab argument of 0a03438ff4e94ff8 applied using a mass error bound instead of parameter Lipschitz continuity.
+
+At the anchor base the old circuit weighted margin vanishes identically. A negative weighted threshold change remains nonpositive after reducing the common budget slightly, by continuity of the inverse. The resulting caps cover the entire anchor plane and have mass strictly below $\beta(M-\varepsilon_t)$. At nondeep bases take the old whole-plane covers from 755cb08c379113cc, which applies because the old measured family is finite, positive and compatible. Their masses do not increase under restriction, and their finitely many strict old gaps persist relative to $\beta(M-\varepsilon_t)$. The finite cover gives a uniform strict bound on the depth of every point of the new measured family.
+
+For the old threshold slope, use the fixed-body slicing argument of 6b80e85ff6937910, equations (4)–(5), with zero density velocity and constant cap margin velocity $-1$ or $+1$. In one fiber, slicing along the unit normal turns a retained line into length $[h-\max(l,c)]_+$ for the old interval $[l,h]$ and threshold $c$. Its right slope in the threshold is $-1$ for $l\le c<h$, and its left slope is $-1$ for $l<c\le h$. The other slopes are zero. Difference quotients are bounded by one and projections are bounded, permitting integration. At a proper section the relative boundary has zero section area and each relative-interior point is an interior point of the fiber. For a supporting section of positive section area, almost every point lies over the interior of the projection and has a nondegenerate normal slice. Indeed the projection of the body interior equals the projection interior by convexity, and the projection boundary has zero area. This gives $F_j(b_j+s)=Q-S_j^\pm s+o(|s|)$ as $s\to0$ with the stated sign. The proper anchor ensures $S_j^\pm>0$.
+
+The shift of the quantile is $O(\varepsilon_t)$, so the slab hypothesis replaces the removed mass at the shifted cap by $\varepsilon_t\iota_j+o(\varepsilon_t)$. Subtract it from the old cap mass expansion and set the result equal to $Q-\beta\varepsilon_t$. Thus $S_j^\pm s/\varepsilon_t=\beta-\iota_j+o(1)$ for the quantile shift $s$. A nonzero right-hand limit fixes the sign of the shift. A zero limit gives $s/\varepsilon_t\to0$ since both slopes are positive. This proves the inverse limit and the strict criterion. For equal slopes each weighted summand is $\rho_j(\beta-\iota_j)/S_j$. For binary incidences the sum is $\beta\sum_{I_j=0}\rho_j/S_j^+-(1-\beta)\sum_{I_j=1}\rho_j/S_j^-$, which gives the claimed comparison.

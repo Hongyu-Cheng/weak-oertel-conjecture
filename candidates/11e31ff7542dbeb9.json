@@ -1,0 +1,28 @@
+{
+  "advances": "Equivalent probability representations of the already-scoped omitted-larger-height section comparison.",
+  "author": "PK-research-agent",
+  "candidate_id": "11e31ff7542dbeb9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:25:36.223755+00:00",
+  "depends_on": [
+    "7cae55c49007d765"
+  ],
+  "draft_key": "pk-w34-probability-two-positive-four-moment-transform",
+  "kind": "lemma",
+  "proof": "Independence of the Bernoulli variables gives $M(z)=\\prod_j(1-a_j+a_jz)$, $p_0=\\prod_j q/(q+r_j)$ and $\\mu=\\sum_j a_j$. Apply 7cae55c49007d765 to the given proper cut with $x_j=ha_j$. The exact section identities have $\\prod_j(1-x_j)=M(t)=\\rho$, $X=\\prod_j p/(p+r_j)=p_0/\\rho$, and $E=\\rho^{-1}-1=h/L$. They give $F=(X/h)(1-t\\rho)$ and\n$$\nd^d\\prod_{i\\ne p} b_i\n  =\\frac Xh(1-L\\mu)\\prod_j(1+La_j)\n  =\\frac Xh(1-L\\mu)M(1+L).\n$$\nEvery zero coefficient contributes the factor $db_i=1$, so these formulas use the original dimension $d$. Divide by $X/h>0$ and use $X=p_0/\\rho$ in $1-F$ to obtain the equivalence.\n\nIntegrating each exponential density shows $\\mathbb E e^{-(z-1)a_jE_j}=1/(1+a_j(z-1))$ when $1+a_j(z-1)>0$, the exact finiteness condition for that factor. Multiplication gives the transform, and $\\mathbb ET_E=\\sum_j a_j$. Here $0<a_j<1$, $0<h<1$, and $L>0$, so the transform is finite at $z=t,0,1+L$. Substitution proves the claimed identities.\n",
+  "source_candidate_ids": [
+    "031c94ef9be4288f"
+  ],
+  "source_candidate_sha256": {
+    "031c94ef9be4288f": "4d471fb7665e4b078119bc8385ed59e5a8e0be0341ec34ea3274ce4abfb3826e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "031c94ef9be4288f",
+      "locator": "031c94ef9be4288f:01 §§1–2, (1)–(2)"
+    }
+  ],
+  "statement": "Let a proper affine cut of a $d$-simplex have vertex heights $p>q>0$, negative heights $-r_j$ for $j=1,\\ldots,m$, where $m\\ge1$ and $r_j>0$, and any remaining heights zero. Let $F$ be the closed nonnegative volume fraction and let $b_i$ be the barycentric coordinates of the uniform section centroid. Put $h=1-q/p$, $t=1-h$, and $a_j=r_j/(q+r_j)$. For the sum $N$ of independent Bernoulli variables of probabilities $a_j$, put $M(z)=\\mathbb E z^N$, $p_0=M(0)$, and $\\mu=\\mathbb EN$. Let $\\rho=M(t)$ and $L=h\\rho/(1-\\rho)$. The comparison $d^d\\prod_{i\\ne p} b_i\\ge F(1-F)$ is equivalent to\n$$\n(1-L\\mu)M(1+L)\\ge (1-t\\rho)\n  \\left[1-\\frac{p_0(1-t\\rho)}{h\\rho}\\right].\n$$\nFor independent unit-rate exponentials $E_j$, set $T_E=\\sum_j a_jE_j$. For real $z$ where the expectation is finite, $1/M(z)=\\mathbb E e^{-(z-1)T_E}$. In particular, $\\rho=1/\\mathbb E e^{hT_E}$, $p_0=1/\\mathbb E e^{T_E}$, $\\mu=\\mathbb ET_E$, $L=h/(\\mathbb E e^{hT_E}-1)$, and $M(1+L)=1/\\mathbb E e^{-LT_E}$.",
+  "subgoal_id": "pk-intake-pk-w34-probability-two-positive-four-moment-transform",
+  "title": "Bernoulli and exponential transforms of the two-positive section comparison"
+}

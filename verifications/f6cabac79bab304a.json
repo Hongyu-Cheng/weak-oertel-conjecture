@@ -1,0 +1,60 @@
+{
+  "candidate_id": "412d2561c0fa8586",
+  "candidate_sha256": "3c23c9c26876230b6e162db34db7de2df84fd59c531d00f1868d0e9b7bcc036c",
+  "checked_dependency_candidate_sha256": {
+    "cf17d6bf1aab7a2d": "13f65f13220e7084701fc9e69255f06855a9e4ea80f3f2ef62c253b032cc3106",
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "Verified original §5, equations (7)–(8), including its scope as a curved calibration rather than a bad-depth example.",
+    "For the uniform unit disk, radial integration gives E|X|²=1/2 and isotropy gives Sigma=I/4. At the centroid the optimizer is zero and f=1; every unit Euclidean direction then cuts at -1/2 and gives the segment complement 2π/3+sqrt(3)/4. For y≠0 the outward direction has threshold |y|−f(y)/2>−1/2 and strictly smaller mass, including when the threshold is at the upper support.",
+    "The covectors have covariance norm one, their positive equal-weight resultant vanishes, and the weighted old shifted margin is 1−f≥0, with equality at the unique source. All own cuts are proper and the rank-zero pure-base mass is M.",
+    "The chord length is sqrt(3), so dividing by ||u||=2 gives S_j=sqrt(3)/2, θ=1/3 and δ=sqrt(3)/2. The three omitted arcs of angle 2π/3 partition up to endpoints; the quadratic sum is 2||X||² from the isotropic three-direction outer products.",
+    "The density correction bracket is 1/(2π), which times δ cancels exactly the excess beta−2/3. The continuous covectors span the plane, so A is positive definite despite the curved boundary."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d90ba05577427854",
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "hypotheses": "Applied to the unit disk and its centroid to obtain E=M, optimizer zero, and E≤M at every interior mark; the standard boundary zero extension is explicit.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+    },
+    {
+      "candidate_id": "cf17d6bf1aab7a2d",
+      "candidate_sha256": "13f65f13220e7084701fc9e69255f06855a9e4ea80f3f2ef62c253b032cc3106",
+      "fact_sha256": "1f9735a4997c34fde532d527530e84015feb16a5ac7639e23a440ef406ea1e54",
+      "hypotheses": "The three cap traces are proper, have positive coarea, share the sole deepest mark and satisfy the exact positive-weight balanced cover. These are regular singleton group data for its d=2 density.",
+      "reviewed_proof_sha256": "e7be533bb2d3f39b15f68fd636e5416e628b711179f2ecf47406ec8b47cf8c5e",
+      "reviewed_statement_sha256": "8d8bc7b154b8d3d8563bdaf16e98cf201b16c90e660724d68fe522799191fe13"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:38:51Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its general response formula does not provide an actual curved calibration with simultaneous cap criticality, positive definite Hessian and vanishing density.",
+      "fact_id": "cf17d6bf1aab7a2d"
+    },
+    {
+      "comparison": "Its obstruction assumes a free uncut facet; the disk has no facet and shows why that conclusion cannot be extended to all freely tested regular bodies.",
+      "fact_id": "9baf143196c3d633"
+    }
+  ],
+  "readability": "The excluded arc endpoints are the three shared chord endpoints on the circle, a null set. The claim is about maximum depth on the disk and its response density, not shape optimality.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "06bcd0a15943c5c02c36d969e536e0237a4481d90a0091b1f91dae286ea0e91e",
+  "reviewed_statement_sha256": "86f2d73500cd2487d5c6e7b696bf9f977e84a133031630a112c481325ec614c5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T21:31:06Z",
+  "summary": "The disk and the three covariance-unit active directions give an actual critical regular group with identically zero density almost everywhere.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

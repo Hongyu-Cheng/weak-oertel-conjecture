@@ -1,0 +1,66 @@
+{
+  "candidate_id": "c2ea8a9fe902fed1",
+  "candidate_sha256": "82846d16ceb2d192c253e267e6019135ca5967a954f88e2da568c7e27961d551",
+  "checked_dependency_candidate_sha256": {
+    "0758cf3d392ffdb6": "4c9c19895215d540db77f1075ad2cb18b09681e0490722d27e917c10e744ce60",
+    "7cae55c49007d765": "0cbe8fdc3c03cb071d408d33654f9fac116beb0fb376d9ce95bb198fb7aec834"
+  },
+  "checks": [
+    "Original e0294e8cfde61d00 specifies precisely the four coefficient phases, coarea means, two strict comparisons and both limits.",
+    "At s=1 the positive heights are 2 and 1, the negative scales 2 and 1. The section formula gives rho=1/2, X=1/3 and the listed means. At s=0 the same calculation with one negative scale and one independent zero phase yields rho=2/3, X=1/2 and the listed means. Replayed these values independently by differentiating the rational cap expression.",
+    "The finite section formulas are continuous as the second negative scale tends to zero since 1−rho stays positive. The zero phase has conditional mean one, as needed for the full product.",
+    "The large-negative-phase coarea conditioning has the required independent added unit exponential and finite positive old cap probability and truncated first moment. Cancelling the positive truncated first moment gives the product of the old conditional cap means divided by their cap probability.",
+    "Integrating the threshold Y_2<Y_0/2+Y_1 gives 2/3 for the old cap and means 7/6, 5/4, 7/12. Replayed all three ratios and the strict rational differences 5/324 and 215/5184."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7cae55c49007d765",
+      "candidate_sha256": "0cbe8fdc3c03cb071d408d33654f9fac116beb0fb376d9ce95bb198fb7aec834",
+      "fact_id": "7cae55c49007d765",
+      "fact_sha256": "56a93170e9d607a5fa2914f3c24d54cc360cf1de1163881fbd1e5ca617d08c6e",
+      "hypotheses": "The finite law uses the two strict positive coefficients 2 and 1, one strict negative scale 2, and another scale 1 or zero. Its section formulas include both the genuine two-negative case and an independent zero coefficient.",
+      "reviewed_proof_sha256": "9720b7e03a8231823c3319751a729adf90c6b101ca94c898b5d5844e3868a054",
+      "reviewed_statement_sha256": "6474aebfda36ff05345e32ae702824955475b49c53ccfa336ecd443d9b7fd5ae"
+    },
+    {
+      "candidate_id": "0758cf3d392ffdb6",
+      "candidate_sha256": "4c9c19895215d540db77f1075ad2cb18b09681e0490722d27e917c10e744ce60",
+      "fact_id": "0758cf3d392ffdb6",
+      "fact_sha256": "e01893bb7b68bb6456dd57ac3c098a1a021d823bc6c8ffe4b54474e75e02c6ed",
+      "hypotheses": "The old law has strict positive heights 2 and 1 and a negative scale 2. The new independent unit exponential has coefficient −s. The proof's dominated-convergence formulas for each old conditional mean, s times the added mean, and s times the cap mass give the ratio limit.",
+      "reviewed_proof_sha256": "3f5b019513150626afa9ec4d64c8641bbfbc8279da9d9059b30253f42d831644",
+      "reviewed_statement_sha256": "502fc1066500d1ebbef4b59585f0d2eee6b49c7f43e26de1aae307df08d49616"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:31:23Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the general finite-section identities, with no comparison of the all-coordinate ratio at these two endpoints and the interior phase.",
+      "fact_id": "7cae55c49007d765"
+    },
+    {
+      "comparison": "Gives the large-negative-phase conditional limits, without the finite constants and strict comparison to the interior value.",
+      "fact_id": "0758cf3d392ffdb6"
+    },
+    {
+      "comparison": "Optimizes a fixed-sector polygon objective, not this signed-exponential ratio under variation of one negative coefficient.",
+      "fact_id": "f56c82f24e66e60b"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent exact-byte proof review, source and predecessor comparison, and exact arithmetic replay where applicable.",
+  "reviewed_proof_sha256": "b6f800ba515d6fa4fe3003e8d6fe9b91cdff6fa5d0db73de4692b2c6d3a9bdf1",
+  "reviewed_statement_sha256": "22f6685e2bbe6534abb1c0988345d5473a19e016c95f1271482013f873a90372",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T21:26:27Z",
+  "summary": "The exact two finite section ratios and the large-negative-phase ratio show that neither endpoint realizes the smaller interior value.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

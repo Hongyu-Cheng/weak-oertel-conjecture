@@ -1,0 +1,32 @@
+{
+  "advances": "The maximum is ordinary projected depth, not original mixed depth. The concurrent meeting point is outside the small fiber. This explicit nested simplex family and its uniform finite gap are distinct from projective slope shadows and from asymptotic additions meeting every fiber.",
+  "author": "PK-research-agent",
+  "candidate_id": "720ec4c67abf509b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:29:19.948032+00:00",
+  "depends_on": [
+    "700febf4b7a92759"
+  ],
+  "draft_key": "pk-w34-lifts-five-dimensional-count-depth-obstruction",
+  "kind": "counterexample",
+  "proof": "Take the convex body\n$$\n0\\le z\\le N,\\qquad x_i\\ge0,\\qquad S:=\\sum_i x_i\\le1,\\qquad\nS+(1-\\varepsilon)z\\le N(1-\\varepsilon)+\\varepsilon .\n$$\nThe section is $r(z)T$ with $r(z)=1$ through $z=N-1$ and $r(z)=\\varepsilon+(1-\\varepsilon)(N-z)$ from there to $N$, so the stated census is exact. In fact the roof is the hull of the stated fibers: each flat portion and final affine portion is obtained by interpolating its two endpoint fibers. For $x\\in T$ the base interval is $[0,\\min(N,N-(S-\\varepsilon)/(1-\\varepsilon))]$. It contains $N+1$ integers when $S\\le\\varepsilon$ and $N$ when $\\varepsilon<S\\le1$. Thus there is no continuous-width or ray Jacobian in $\\rho$. Its mass is $(N+e)|T|$, where $|T|=1/120$, so no single fiber has half that mass.\n\nFor barycentric coordinates $\\lambda_0=1-S,\\lambda_i=x_i$ for $i\\ge1$, the closed halfspaces $H_i=\\{\\lambda_i\\ge a_i\\}$ with $a_0=1/6+5\\theta$ and $a_i=1/6-\\theta$ for $i\\ge1$ cover all of $\\mathbb R^5$: the thresholds and coordinates both sum to one. They are concurrent at $(a_1,\\ldots,a_5)$. Since $e\\le1/5$ and $N\\ge3$, we have $\\theta\\le1/150$; thus $a_i\\ge4/25>\\varepsilon$ for $i\\ge1$, and $a_0\\le1/5<1-\\varepsilon$. Thus the small simplex is strictly in $H_0$ and disjoint from the other caps. The $T$-cap fraction is $(1-a_i)^5$ by the homothety about vertex $i$. Dividing the raw masses by $|T|$ gives $B_0=N(c-5\\theta)^5+e$ and $B_i=N(c+\\theta)^5$ for $i\\ge1$. Since $c-5\\theta\\ge4/5$ and $c+\\theta\\le6/7$, the differences of fifth powers give\n$$\nN[c^5-(c-5\\theta)^5]\\ge5N(4/5)^4(5\\theta)=128e/125,\\qquad\nB_i-N\\Gamma\\le5N(6/7)^4\\theta=(648/2401)e .\n$$\nHence $B_0<N\\Gamma<B_i$. Every continuous mark lies in one of the displayed closed caps, and $\\Gamma-648/2401=2464277/18670176>0$. This gives both upper estimates after normalizing. For $N=3,\\varepsilon=1/7$, the explicit upper bound is $3(5/6+1/504210)^5/(3+1/16807)$. At the centroid of $T$ the lower bound follows from $N\\mathbf1_T\\le\\rho$ and accepted fact 700febf4b7a92759, applied at barycentric coordinates all $1/6$ to give ordinary depth fraction $\\Gamma$. Because $N>e$, it is greater than $\\Gamma/2$.\n\nFor the non-log-concavity test put $g=(1/6,\\ldots,1/6)$, $x=\\varepsilon g$, and $y=(3\\varepsilon/2)g$. Their coordinate sums and the midpoint sum are $5\\varepsilon/6$, $5\\varepsilon/4$, and $25\\varepsilon/24$. All points are interior to $T$, and the inequalities against $\\varepsilon$ are strict, so $\\rho(x)=N+1$, $\\rho(y)=\\rho((x+y)/2)=N$. This contradicts the midpoint inequality. It remains false after changing the density on a null set: take small neighborhoods of $x,y$ in which both endpoint values and the midpoint value are fixed. For each first point, the second points whose midpoint falls in the exceptional set have zero volume by the invertible affine midpoint map. Fubini gives a pair outside the exceptional set at both ends and the midpoint.\n",
+  "source_candidate_ids": [
+    "0d7a19234146a56a"
+  ],
+  "source_candidate_sha256": {
+    "0d7a19234146a56a": "7f86e6e73950b0b5293295c18554ee188145a760c2ee872f0541eea32f631ab1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0d7a19234146a56a",
+      "locator": "0d7a19234146a56a:01 §§1–2, (1)–(8), exact actual body and cap cover"
+    },
+    {
+      "candidate_id": "0d7a19234146a56a",
+      "locator": "0d7a19234146a56a:02 §3, strict midpoint test"
+    }
+  ],
+  "statement": "Let $T=\\{x\\in\\mathbb R_+^5:\\sum_i x_i\\le1\\}$, let $N\\ge3$ be an integer and $0<\\varepsilon\\le1/7$. There is a compact full-dimensional convex body with actual integer fibers $T$ at $0,\\ldots,N-1$ and $\\varepsilon T$ at $N$, and no others. No fiber holds half the original mixed mass. Its ordinary continuous-coordinate projection has density $\\rho=N\\mathbf1_T+\\mathbf1_{\\varepsilon T}$. With $c=5/6$, $\\Gamma=c^5$, $e=\\varepsilon^5$ and $\\theta=e/(10N)$, the supremum $D(\\rho)$ of normalized closed-halfspace depth over all continuous marks satisfies\n$$\n\\frac{N\\Gamma}{N+e}\\le D(\\rho)\\le\\frac{N(c+\\theta)^5}{N+e}\n\\le \\Gamma-\\frac{2464277}{18670176}\\frac{e}{N+e}<\\Gamma .\n$$\nThe lower bound is strictly larger than $\\Gamma/2$. This density has no log-concave representative.",
+  "subgoal_id": "pk-intake-pk-w34-lifts-five-dimensional-count-depth-obstruction",
+  "title": "Exact depth gap for an actual five-dimensional count projection"
+}

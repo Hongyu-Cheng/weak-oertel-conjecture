@@ -1,0 +1,29 @@
+{
+  "advances": "Actual first-order global-cut optimization over slope choices at fixed fields. Signed payment differences and the choice of cap covers are separate.",
+  "author": "PK-research-agent",
+  "candidate_id": "19f4157aa3292a58",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:28:33.682745+00:00",
+  "depends_on": [
+    "03cad4f027c5f226",
+    "84cd8a85417b0d7a"
+  ],
+  "draft_key": "pk-w34-rigidity-forced-contact-global-cut-cost",
+  "kind": "theorem",
+  "proof": "At each source the anchored compatibility assumptions imply the hypotheses of the continuous forced-contact slope lemma. Its selection is continuous and feasible, so $\\ell_i(u,z)=h_{p_i}(u)+A_i(u)\\cdot(z-p_i)$ is affine in $z$, continuous in $u$ and majorizes every old $h_z(u)$. The fields are nonnegative, continuous and convex on the required common domain. Hence all hypotheses of 84cd8a85417b0d7a hold for these cuts. It gives the relative convex realization, positive sampled fibers, projection and anchored compatibility. Its old contacts are exactly $\\ell_i(u,z)=h_z(u)$, which here are the forced rows. The radial formula therefore gives the displayed speed and total loss $D^*=\\sum_z\\int_{\\partial K_z}v_z^*\\,d\\mathcal H^{d-1}$.\n\nFor a closed ambient halfspace $H$, put $H_z=\\{x:(z,x)\\in H\\}$. The cap formula is $D_H^*=\\sum_z\\int_{\\partial K_z}\\kappa_{z,H}v_z^*\\,d\\mathcal H^{d-1}$. Here $\\kappa_{z,H}=1$ if $K_z\\subseteq H_z$, including inside-supporting traces and pure-base equality, and $\\kappa_{z,H}=0$ if $\\operatorname{int}K_z\\cap H_z=\\varnothing$, including outside-supporting traces. Otherwise $\\kappa_{z,H}=\\mathbf1_{\\operatorname{int}H_z}$. When $d=1$ this is counting surface measure on the endpoints. The discontinuous contact indicator is allowed by the radial theorem.\n\nAny other feasible continuous slope retains every forced row. Holding all fields fixed, the pointwise maximum over contacts can therefore only be greater than or equal to $v_z^*$. Integration and $\\kappa_{z,H}\\ge0$ give the nonnegative loss comparisons. For the finite projection averages, the contact sets at each source decrease to the exact forced sets. Since the index of sources is finite, their pointwise speed maxima decrease to $v_z^*$. The fields have a common finite bound on the original fiber boundaries by compactness. Convex bodies have finite boundary measure, so dominated convergence gives both loss limits, with simultaneous convergence for every finite menu. The slope sequence itself need not be uniformly bounded in its index. These comparisons order the individual nonnegative costs and cap losses.\n",
+  "source_candidate_ids": [
+    "4bf40258fc44a4e6"
+  ],
+  "source_candidate_sha256": {
+    "4bf40258fc44a4e6": "cc6aae2a7d849f8fe56017832cda39183f79d485fdffd6294fa2398fdd7c215d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4bf40258fc44a4e6",
+      "locator": "4bf40258fc44a4e6:03 §§5–6, (9)–(11), actual fixed-field loss minimization"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be finite and nonempty, and let $K_z\\subset\\mathbb R^d$ for $z\\in P$ be positive compact convex fibers satisfying every anchored Minkowski inclusion. Let $C=\\operatorname{conv}\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$ and choose finitely many marked bases $p_i\\in P$, with nonnegative jointly continuous fields $\\Phi_i(u,z,x)$ on $\\mathbb S^{d-1}\\times C$ that are convex in $(z,x)$ for each fixed $u$. For each source select a bounded continuous feasible slope that touches only its forced rows, as in the continuous forced-contact slope lemma. With $h_z=h_{K_z}$ the global cuts\n$$\nC_\\varepsilon=C\\cap\\bigcap_{i,u}\n\\{(z,x):u\\cdot x+\\varepsilon\\Phi_i(u,z,x)\\le h_{p_i}(u)+A_i(u)\\cdot(z-p_i)\\}\n$$\ngive an actual nested convex deformation for small $\\varepsilon\\ge0$, in the relative ambient space $\\operatorname{aff}(P)\\times\\mathbb R^d$, with projection $\\operatorname{conv}(P)$ and the same positive integer bases. At a regular point $x\\in\\partial K_z$ with outward unit normal $\\nu_z(x)$ its first inward speed is\n$$\nv_z^*(x)=\\max\\bigl(\\{\\Phi_i(\\nu_z(x),z,x):z\\text{ is forced for }p_i\\text{ at }\\nu_z(x)\\}\\cup\\{0\\}\\bigr).\n$$\nThe first total loss and each fixed closed ambient halfspace's first loss are the integrals of this speed and of this speed times the inward-loss cap selector, respectively, summed over the fibers. They are minimal among all continuous feasible anchored slope choices with these same fields. Using the finite projection averages gives decreasing first total and first cap losses converging to the exact ones, simultaneously on every fixed finite cap menu.",
+  "subgoal_id": "pk-intake-pk-w34-rigidity-forced-contact-global-cut-cost",
+  "title": "Exact forced-contact slopes minimize fixed-field global-cut losses"
+}

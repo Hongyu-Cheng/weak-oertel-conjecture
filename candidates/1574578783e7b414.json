@@ -1,0 +1,32 @@
+{
+  "advances": "Exact evaluation at any fixed cap normal, not reduction to finitely many normals or a claim about minimum depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "1574578783e7b414",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:24:15.611779+00:00",
+  "depends_on": [
+    "53fe12b742a7608d"
+  ],
+  "draft_key": "pk-w34-simplex-staircase-cap-calculus",
+  "kind": "theorem",
+  "proof": "Use barycentric coordinates of the ambient simplex. On the face with all coordinates in $E$ zero, the slice equation says $\\sum_{i\\in I}\\delta_i\\lambda_i=\\sum_{j\\in J}\\delta_j\\lambda_j$, where $\\delta_k=|h_k-z|$ on $I\\cup J$. Both sums are positive. Normalize each group of summands by their common sum to get probability vectors $\\alpha,\\beta$ on $I,J$. Conversely, setting $D=\\sum_{i\\in I}\\alpha_i/\\delta_i+\\sum_{j\\in J}\\beta_j/\\delta_j$, the barycentric coordinates are $\\alpha_i/(\\delta_i D)$ and $\\beta_j/(\\delta_j D)$. This positive-denominator bijection sends product vertices to the edge intersections displayed in the statement. It preserves convex hulls: for a convex combination of input points, the output weights are the input weights multiplied by their positive denominators and renormalized, and conversely these new weights determine the input weights. Injectivity gives preservation of intersections.\n\nFor a probability vector of length $a$ use its first $a-1$ cumulative sums as coordinates; their order is weakly increasing between zero and one. Do the same for the vector of length $b$. Interleaving the two ordered lists subdivides their product into cells given by a single weak order on $a+b-2$ coordinates between zero and one. Such a cell is a simplex: its vertices have an initial block of zeros and a remaining block of ones. Under the cumulative-sum map these vertices run in order along the path from the first to the last pair, advancing one group index each time. Every product point satisfies at least one interleaving and cell interiors have distinct strict orders. The positive-denominator map takes this partition to a simplicial partition of the strict-crossing section. Each image cell has dimension $a+b-2$: the map and its inverse preserve convex hulls, and map its relatively open interior to a relatively open subset of the section. This includes the point case $a=b=1$.\n\nIf $E\\ne\\varnothing$, separate the total barycentric weight on $E$ from the other weights. Any slice point is a convex combination of a point on the equal-height vertex face and a point of the strict-crossing section, with uniquely determined two weights and, when each weight is positive, uniquely determined component points. The coordinate supports are disjoint, so adjoining the $c$ equal-height vertices to each strict-crossing cell increases its dimension by $c$ to $a+b+c-2=d$. The same representation proves the union and disjoint interiors. For $E=\\varnothing$ the strict-crossing cells already have dimension $d$.\n\nThe determinant is the ordinary simplex volume in the continuous coordinates of the slice. For nonconstant margins let $m=\\min_i t_i$, $M=\\max_i t_i$ and set $r_i=(t_i-m)/(M-m)$, $s=-m/(M-m)$. The divided-difference tail in the proof of 53fe12b742a7608d applies: the affine margin of a uniform point is a uniform barycentric combination of the $t_i$, and its upper cap probability equals $[r_0,\\ldots,r_d](x-s)_+^d$. Affine substitution in the divided difference gives the displayed $[t_0,\\ldots,t_d](t)_+^d$: the factor $(M-m)^d$ in the truncated power cancels the degree-$d$ knot scaling. The formula includes repeated knots by confluent evaluation and the nonconstant zero level is volume-null. A constant margin includes the entire cell exactly when nonnegative, including zero. At an extreme height only the extremizing vertices can have positive barycentric weight, giving the endpoint face and its volume rule. Cell boundary overlaps are volume-null, so volume adds on each slice, and summation over integer levels is the definition of the mixed mass. The edge coordinates, determinants, and confluent values at rational nonconstant knots are rational, since confluent evaluation uses only rational operations and derivatives through order at most $d-1$ of the truncated power at rational arguments.\n",
+  "source_candidate_ids": [
+    "d725bb328eb3595c"
+  ],
+  "source_candidate_sha256": {
+    "d725bb328eb3595c": "2a43aa831623bd2eeb0654acce7bcff1d2186027d6b7ce5046af3401ca93eab9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d725bb328eb3595c",
+      "locator": "d725bb328eb3595c:01 Definitions of I,J,E and the edge vertices through the staircase partition"
+    },
+    {
+      "candidate_id": "d725bb328eb3595c",
+      "locator": "d725bb328eb3595c:02 Determinant and cap formulas through the closed endpoint and integer sum rules"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R\\times\\mathbb R^d$, $d\\ge1$, be a full $(d+1)$-simplex with vertices $(h_i,\\xi_i)$. For a height $z$ strictly between the extreme heights, put $I=\\{i:h_i<z\\}$, $J=\\{j:h_j>z\\}$, $E=\\{e:h_e=z\\}$, with sizes $a,b,c$. Order $I$ and $J$ arbitrarily and let\n$$v_{ij}=\\frac{(h_j-z)\\xi_i+(z-h_i)\\xi_j}{h_j-h_i} \\qquad (i\\in I,\\ j\\in J).$$\nFor each monotone path in the $a$ by $b$ index grid from the first pair to the last, increasing one index by one at each step, take the convex hull of its $a+b-1$ vertices $v_{ij}$ and all the $\\xi_e$ for $e\\in E$. These $\\binom{a+b-2}{a-1}$ full $d$-simplices cover $C_z$ with disjoint interiors.\n\nFor an affine ambient cap $L(z,x)\\ge0$, the contribution from a cell $Q=\\operatorname{conv}(q_0,\\ldots,q_d)$ with nonconstant margins $t_i=L(z,q_i)$ is\n$$\n \\frac{|\\det(q_1-q_0,\\ldots,q_d-q_0)|}{d!}\\,[t_0,\\ldots,t_d](t)_+^d ,\n$$\nwith the usual confluent divided difference. If the margins are constant, the full cell contributes exactly when the constant is nonnegative. At an extreme height use the simplex on all vertices at that height if it has $d+1$ vertices, and zero $d$-volume otherwise. Outside the height interval use zero. Summing cell contributions gives the closed cap volume on each slice, including interior knots and extreme heights; summing over integer heights gives the raw mixed cap mass. Rational data give rational contributions.",
+  "subgoal_id": "pk-intake-pk-w34-simplex-staircase-cap-calculus",
+  "title": "Exact staircase decomposition and closed cap evaluation for an ambient simplex slice"
+}

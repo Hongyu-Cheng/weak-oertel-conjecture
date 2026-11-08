@@ -1,0 +1,60 @@
+{
+  "candidate_id": "be45f934b9e3794b",
+  "candidate_sha256": "68dd852a40d7aa40fff1b9c903905731b48dcdeed746c4ff45a698ff053d77ae",
+  "checked_dependency_candidate_sha256": {
+    "83013931f08bbf73": "c22ca71c548c2fdd95b13c45a4b1ea5d7d5179f82f500d7d074486c1cf81dce9"
+  },
+  "checks": [
+    "Equal endpoint weights in any combination at base zero give an exact compatible hull. The same-batch reflected-pair bound applies at the middle symmetry center with one pair. At the right center, any continuous trace contains the center and has at least half the symmetric endpoint volume, while a pure-base cap contains the full endpoint.",
+    "After division by b, v_*/b≥u=√(a/b) follows by AM–GM on the positive dth roots, strictly if a<b. Thus twice the better normalized bound dominates max(1,w,(1-u)w+2u²). For u≤1/2 the third branch never exceeds max(1,w), whose ratio is minimized at w=1. This gives only the possible equality u=1/2,w=1.",
+    "For 1/2<u<1 the upper envelope changes from one to its affine branch at w_0 when w_0≥0, and from that branch to w at 2u. Verified the two exact difference identities by expansion. An affine numerator over 1+u²+w is monotone or constant on each interval, so those endpoints, the endpoint zero when w_0<0, and the limit one suffice. The u=1 minimum is 1/2.",
+    "The only relaxed equality case has a=b/4 and k=b, and the strict AM–GM inequality improves its middle bound beyond b/2. Hence the strictness belongs to a fixed lower bound before taking the infimum over cuts or choosing the better of the two marks."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "83013931f08bbf73",
+      "candidate_sha256": "c22ca71c548c2fdd95b13c45a4b1ea5d7d5179f82f500d7d074486c1cf81dce9",
+      "hypotheses": "The same-wave reflection pairing theorem applies to the actual hull with symmetric K at base zero, with the one reflected pair -1,+1 and exactly the stated root-volume scale v_*. The theorem does not require symmetric endpoints. The present endpoint guarantee separately uses symmetry of B.",
+      "reviewed_proof_sha256": "45f4b9a78e4de3dd768ef5a57f78000c93d61f1f492768174b2b6a7006ed10eb",
+      "reviewed_statement_sha256": "5220895f16adb8f35a0823989df1d4407acc54b31e1f5c9a5ce10a442d2ae7c6",
+      "status": "same-wave review dependency"
+    }
+  ],
+  "finished_utc": "2026-11-08T21:36:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same middle transport certificate but the generic centroid floor Γ_d b at the larger endpoint. Under central symmetry of that endpoint the b/2 certificate yields a different two-mark theorem.",
+      "fact_id": "6f67dc47de09950a"
+    },
+    {
+      "comparison": "Requires homothetic retained endpoint copies and estimates caps at a specified midpoint of their centroids. It does not give this arbitrary A with symmetric K and B or the strict 2/9 bound.",
+      "fact_id": "706ce1dc5b5b8d67"
+    }
+  ],
+  "readability": "The displayed notation fixes the cap and mass conventions throughout.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent frozen proof read, exact algebra and rational geometry where applicable, accepted-fact comparison, and pinned source and dependency verification.",
+  "reviewed_proof_sha256": "713495317fbcd1d78b8e144d50fda35207793f724b9ff4e862192c5d0a71f0b5",
+  "reviewed_statement_sha256": "336c169b3378d6a336c634008e388c9aca58a9054ac6d86016063fa4b0974543",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "sources_verified": [
+    {
+      "candidate_id": "5e107e24de91c307",
+      "candidate_sha256": "569a9f607e515cc4b1c2ae5721c5f561fa926dc4c98f96b8b70131683b4bf63b",
+      "locator": "5e107e24de91c307:06 §7 (12)–(15), including equality case",
+      "reviewed_proof_sha256": "359f666023eb981c42356d405e149befdc9afa0071d88f3fd40bac976f2371ca",
+      "reviewed_statement_sha256": "5e2dbf2d1c6a5ccae5934d1ecf4f6e69a269f3d2eb5e28835b48fe9346c7c62d",
+      "scope_verified": "§7 equations (12)–(15) give both fixed marks, the relaxed scalar envelope, its sole equality case and the strict AM–GM improvement."
+    }
+  ],
+  "started_utc": "2026-11-08T21:28:58Z",
+  "summary": "The stated two fixed marks have the claimed lower bounds, and comparison of those bounds gives a strict 2/9 fraction.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

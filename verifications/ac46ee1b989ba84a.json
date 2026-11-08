@@ -1,0 +1,58 @@
+{
+  "candidate_id": "ea11ab6a45200089",
+  "candidate_sha256": "53d3ce8ec795612a40f43c3df54d04d168856975ab41cc18609f578d31df35b1",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The turn determinants are L(Y+b), Lt, L(X+a), L², with strict positivity under the stated hypotheses. The old triangle has area L²/2 and the triangle on its edge and the new tip adds Lt/2. The mark is inside the old triangle, so all three cap areas and chords are positive.",
+    "In the double-tip chart the first complementary piece is a trapezoid with width a and sides L,σ₁. Solving the top chord on QP₂ gives σ₁=b+1+at/(a+X) and its stated area. For X≤0, the first cap becomes the triangle based on the chord of P₁Q, whose height is b+1. The reflected chart covers Y≤0. The unchanged diagonal cap has coordinate legs a+b and coarea chord a+b.",
+    "The cubic is equivalent to ME>2 k^(3/2) sqrt(U). Since M,U>0, the E>0 condition is needed before squaring. The two cross-multiplied identities use the correct factor 4k³=[L(L+t)]³/2.",
+    "Ran the archived exact rational and integer checker without modifying the source archive. It completed with 3,456 exact polygon clipping checks and 353,203 total checks. The double and unique charts verified both polynomial identities and all coefficient signs. The respective R numerator/denominator term counts are 39016/16871 and 11816/4782. A positive u⁰ monomial in every relevant polynomial verifies positivity at u=0, and reflection covers the other seam.",
+    "At t=0 each Q_i=σ_i²/2, M=L and k=L²/2, so every f_i equals one. Affine transport preserves the ratio because covectors transport by the inverse transpose and both areas and threshold coarea multiply by the same absolute determinant. Common normal rescaling also cancels. The statement is for ears on a triangle and not arbitrary quadrilaterals or an Oertel depth conclusion.",
+    "Checked the exact source locators and matched all archived candidate hashes against the pinned graph."
+  ],
+  "computational_evidence": {
+    "archive_sha256": {
+      "parallel_cut_ear_double_E_den_root.txt": "c8bb9616d498087ab9aba1d030c047d4c016fa74b6647b1416194fa6b18f5c30",
+      "parallel_cut_ear_double_E_num_root.txt": "9b94c42de5f007468e4c524f7e9f6f7248dd77084d6b0170314d69329dc09280",
+      "parallel_cut_ear_double_R_den_root.txt": "7429093ed1d9195051d1fd98b9b2ca987593324dc2b550958bf52a6232de6628",
+      "parallel_cut_ear_double_R_num_root.txt": "c8f6b91bdd443758822857da4164ab3a5898f5ec2c7cbbddffe836281f475737",
+      "parallel_cut_ear_unique_E_den_root.txt": "250fc49b29e7e68cdaf5a5f18535bce756dd6da218fc29d210a29418c5025b61",
+      "parallel_cut_ear_unique_E_num_root.txt": "179784472a4601c668e92e828933e024efe8fab87a7722ddf2f112a131374d99",
+      "parallel_cut_ear_unique_R_den_root.txt": "1cf2db2e5755932607486f198b857e67abae9be8fc13fce9392c930f477d11f5",
+      "parallel_cut_ear_unique_R_num_root.txt": "2b66990f2d0ebf22b0d42f89cf84147d4a025e42e64c9c5ccaee7df4cec5dea6",
+      "verify_arbitrary_source_parallel_cut_ear_audit_slab_recovery.py": "12849540e7b97c7e28e30fa3ec71fa4164a9af5247e06be6b237966677079e52"
+    },
+    "exact_polygon_checks": 3456,
+    "replay_environment": {
+      "python": "3.11",
+      "python-flint": "0.6.0",
+      "sympy": "1.14.0"
+    },
+    "replay_exit_code": 0,
+    "total_exact_checks": 353203
+  },
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T21:37:15Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Taking a=b=1 recovers the predecessor's centroid strict-ear case. Affine transport preserves the centroid, so that case cannot cover an arbitrary marked interior source. The frozen candidate does not claim the predecessor's additional degenerate triangle boundary or separate eigenvalue conclusion.",
+      "fact_id": "f5dea144eae3ba15"
+    }
+  ],
+  "readability": "The archived polynomial coefficient checks establish positivity through exact identities. The finite rational polygon examples separately exercise the clipping formulas.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent frozen proof review with exact arithmetic where applicable",
+  "reviewed_proof_sha256": "77f98496677afe905bef03e831c052ec50cdddd082d7d411322df9bd9df6db2f",
+  "reviewed_statement_sha256": "137895830bef64e4fe31a8f0da377e91b38fd3d31ced89e22277ffa2dc51838b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T21:29:42Z",
+  "summary": "Both clipping charts and the seam cases satisfy the strict cubic. The archived sparse integer identities replayed successfully, with a separate exact calculation at the zero-ear boundary.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

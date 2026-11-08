@@ -1,0 +1,26 @@
+{
+  "advances": "The counterexample concerns the fixed ordinary-depth level of a point in a nonsymmetric body and its two-copy paired cost.",
+  "author": "PK-research-agent",
+  "candidate_id": "375904a176bca663",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:28:33.683640+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w34-reflection-pyramid-depth-level",
+  "kind": "counterexample",
+  "proof": "Put $c=77/100$. Uniform volume on $K$ is the law of $(ZU,ZU',Z)$, with $Z$ of density $3z^2$ on $[0,1]$ and $U,U'$ independent uniforms on $[-1,1]$, independent of $Z$. For an upward through-$y$ cap, divide by the positive vertical coefficient. Its normalized mass is the expectation of $\\phi(W)$ for a linear combination $W$ of $U,U'$, where $\\phi(w)=1-c^3/(1+w)^3$ if $1+w>c$ and zero otherwise. If the absolute coefficients are $A\\ge B>0$, $W$ is a mixture of uniforms on $[-v,v]$ with mixing density $v/(2AB)$ on $[A-B,A+B]$: integration of $1/(2v)$ against that density over $v\\ge |w|$ gives exactly the convolution density of the two uniforms. When $B=0$ there is just one uniform, or a point mass at zero when $A=0$.\n\nThe average on $[-v,v]$, including the limit at zero, is\n$$\nQ(v)=\\begin{cases}\n1-c^3/(1-v^2)^2,&0\\le v\\le1-c,\\\\\n(1+v-3c/2+c^3/(2(1+v)^2))/(2v),&v\\ge1-c.\n\\end{cases}\n$$\nThe first branch decreases to a value exceeding $27/64$ by $66973/968256$. On the second branch,\n$$\n4v(1+v)^2(Q(v)-27/64)\n=\\frac{5v^3}{16}+\\frac{63v^2}{200}-\\frac{123v}{400}+\\frac{146533}{1000000}.\n$$\nThe quadratic part is strictly positive by its positive leading coefficient and discriminant $-9007533/100000000$, and the cubic term is nonnegative. This gives the bound for each upward cap. For a downward cap write $\\psi=1-\\phi$, using nullity of the separating plane. For $0\\le w\\le1-c$ the convexity of $x^{-3}$ gives $\\psi(w)+\\psi(-w)\\ge2c^3$. For $w>1-c$, $\\psi(-w)=1>2c^3$. Symmetry of $W$ thus yields mass at least $c^3V>\\Gamma_3V$. With zero vertical coefficient, simultaneous reflection of $U,U'$ gives mass $V/2$. Every containing cap contains the parallel through-$y$ cap, proving the all-normal ordinary bound.\n\nThe upward vertical cuts at $1$ and $2c-1=27/50$ have total volume $V[1-(27/50)^3]=105317V/125000$. With thresholds $1-\\varepsilon$ and $27/50+\\varepsilon$, the normalized sum is $2-(1-\\varepsilon)^3-(27/50+\\varepsilon)^3$ and its derivative in $\\varepsilon$ is at most $3$. Both cuts are then proper and the increase is at most $3/10000$.\n",
+  "source_candidate_ids": [
+    "42db79d64fa93f5f"
+  ],
+  "source_candidate_sha256": {
+    "42db79d64fa93f5f": "0eb12bb2836fc6449b01802a70d4efcd537109577603c9128d83acb31cd98d1a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "42db79d64fa93f5f",
+      "locator": "42db79d64fa93f5f:03 §4 (5) and proper-cut perturbation"
+    }
+  ],
+  "statement": "Let $K=\\{(x_1,x_2,z):0\\le z\\le1,\\ |x_1|,|x_2|\\le z\\}$, $V=|K|=4/3$, $y=(0,0,77/100)$, and $\\Gamma_3=27/64$. Its ordinary raw depth at $y$ is at least $\\Gamma_3 V$. The infimum of the sum of two $K$-cap volumes with common nonzero normal $u$ and thresholds $u\\cdot y\\pm t$ is at most $105317V/125000=2\\Gamma_3V-607V/500000$. For the upward vertical normal, taking $t=23/100-\\varepsilon$ with $0<\\varepsilon\\le1/10000$ makes both caps proper and the sum at most $2\\Gamma_3V-457V/500000$.",
+  "subgoal_id": "pk-intake-pk-w34-reflection-pyramid-depth-level",
+  "title": "A square pyramid defeats paired preservation of the Grünbaum depth level"
+}

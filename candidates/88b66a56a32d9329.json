@@ -1,0 +1,29 @@
+{
+  "advances": "Exact closed-cap response for simultaneous one-dimensional interval endpoint cuts, including coincident endpoints.",
+  "author": "PK-research-agent",
+  "candidate_id": "88b66a56a32d9329",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:29:19.954145+00:00",
+  "depends_on": [
+    "88edf5e8e1aa71fe",
+    "755cb08c379113cc"
+  ],
+  "draft_key": "pk-w34-birth-interval-endpoint-inverse",
+  "kind": "lemma",
+  "proof": "The simultaneous trim lemma makes each chosen interval end move inward by its exact removed length $\\varepsilon\\lambda_v$, and the opposite endpoint either stays fixed or moves by its own assigned length. All positive intervals stay positive. In the oriented coordinate increasing into the cap the new interval is $[l-\\varepsilon r_l,h+\\varepsilon r_h]$ and the new cutoff is $b+\\varepsilon s$, where $b$ is the old threshold on that base. For an old proper cut its new retained length differs by $\\varepsilon(r_h-s)$. For an old strictly full or strictly empty trace, the change is respectively $\\varepsilon(r_l+r_h)$ or zero. At an inside coincidence $b=l<h$ the retained length change is $\\varepsilon[r_h+\\min(r_l,-s)]$. At an outside coincidence $b=h>l$ it is $\\varepsilon\\max(r_h-s,0)$. These follow by clipping the perturbed interval at the perturbed cutoff and apply uniformly for bounded $s$, since the strictly separated endpoints have finitely many fixed positive gaps. They are the two coincidence branches of the closed-cap strip formula in 7a5ea4f8a4c5094c with threshold velocity $-s$, now as exact interval identities.\n\nThe proper anchor gives $S_{\\mathrm{pr},j}\\ge1$. Each remaining term is constant or nonincreasing in $s$, so $f_j$ is continuous and strictly decreasing onto the real line. Its inverse is also continuous and strictly decreasing onto the real line, hence the positive weighted sum has exactly one zero. Choose the corresponding finite threshold velocities. Their weighted shift sum vanishes, preserving the original whole-plane cover, and the exact interval identities give the common mass $Q+\\varepsilon a_C$. When every deepest circuit has $a_C<-\\beta$, this mass is strictly below $\\beta(M-\\varepsilon)$. All nondeep bases have original cheaper whole-plane covers by 755cb08c379113cc, which stay cheaper as the measure shrinks and the target tends to $Q$. Together these covers bound every candidate of the new actual family.\n",
+  "source_candidate_ids": [
+    "a277c91b06544c90"
+  ],
+  "source_candidate_sha256": {
+    "a277c91b06544c90": "ec7c7560b0ae263aaa28963d58a8c7d59d3e36636f82d4e084d37dbd709ea8a2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a277c91b06544c90",
+      "locator": "a277c91b06544c90:05 §6 (15)–(16), interval endpoint inverse"
+    }
+  ],
+  "statement": "In the simultaneous exposed-vertex trim construction with $d=1$, assign each measured interval endpoint its outward velocity $r_F=-\\lambda_v$ if the endpoint is a selected vertex $v$, and $r_F=0$ otherwise. Fix a nonvertical cap through an interior anchor, with unit continuous normal and old threshold $b_j$. Move its threshold by $\\varepsilon s$. For small $\\varepsilon>0$ its exact change in retained mixed length is $\\varepsilon f_j(\\lambda,s)$, where\n$$\nf_j(\\lambda,s)=\n\\sum_{\\text{strictly inside endpoints }F}r_F\n-S_{\\mathrm{pr},j}s\n+\\sum_{\\text{inside coincidences }F}\\min(r_F,-s)\n+\\sum_{\\text{outside coincidences }F}\\max(r_F-s,0).\n$$\nHere $S_{\\mathrm{pr},j}$ counts the old proper sections. This holds uniformly for bounded $s$. For a critical circuit there is a unique $a_C$ with $\\sum_j\\rho_j f_j(\\lambda,\\cdot)^{-1}(a_C)=0$. The corresponding shifted thresholds give an exact whole-plane cover of raw mass $Q+\\varepsilon a_C$. If a selected circuit at every deepest base has $a_C<-\\beta$, the maximum normalized depth strictly decreases for small positive $\\varepsilon$.",
+  "subgoal_id": "pk-intake-pk-w34-birth-interval-endpoint-inverse",
+  "title": "Exact endpoint interaction in interval trim quantiles"
+}

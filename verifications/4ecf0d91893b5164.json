@@ -1,0 +1,57 @@
+{
+  "candidate_id": "9e19d2f887bff2c5",
+  "candidate_sha256": "a47d795ede794d09a14402a52a9e6fedd4f499844fca5f84fb00408d4a3367d2",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The weighted centroid lies in the interior because the measure dominates positive volume. Brunn–Minkowski makes the projection tail root concave. The uniform volume rank is uniform, and the pushed-forward added measure has rank density bounded by L. Jensen with centroid coefficient two gives exactly (1+2α)s^(1/d)≥d/(d+1)+2∫v^(1/d)h(v)dv.",
+    "Both band lengths r/L and (α-r)/L fit their intervals by the domination inequalities. Left filling minimizes the rank integral because the signed difference has zero integral and the shifted increasing integrand has matching sign. Integrating both bands gives the stated necessary inequality. Filling the whole interval gives b, and the complement measure of mass δ gives r≥Ls-δ. The L=0 case and exact full-saturation simplex example follow directly.",
+    "Writing h=L-(L-h) loses at most δ in the rank integral. The condition makes the resulting lower bound on s^(1/d) nonnegative, so taking powers and Bernoulli is valid. Multiplying s by 1+L and subtracting δ gives E_d after substitution α=L-δ.",
+    "Independently checked the monotone ratio maxima 9/4 and 16/11 and the two exact margin coefficients. The elementary exponential series bound gives e≤87/32<11/4 and Γ_d>4/11>1/3, proving both strict positive conclusions. Tightening a containing cap preserves the lower bounds by monotonicity of both s and s+r."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T21:36:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Derives the same rank Jensen formula and two-band constraint when L=1, with a distinct unit-ceiling lower bound. It does not provide the arbitrary-ceiling saturation estimates.",
+      "fact_id": "607dca34de472b94"
+    },
+    {
+      "comparison": "Optimizes the unit-ceiling scalar feasible region for the weighted mass s+2r. Here the objective is s+r, and L may exceed one.",
+      "fact_id": "72c591b20bb1ed8c"
+    }
+  ],
+  "readability": "The displayed notation fixes the cap and mass conventions throughout.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent frozen proof read, exact algebra and rational geometry where applicable, accepted-fact comparison, and pinned source and dependency verification.",
+  "reviewed_proof_sha256": "4a53a5430037d2a6121a954c9f8cccf63e6f092b59596c288fc7654ae6b39887",
+  "reviewed_statement_sha256": "24093628cf6dd0390b1c8598e311733b8c911db832332c354027204b04459937",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "sources_verified": [
+    {
+      "candidate_id": "21545f87e4705da7",
+      "candidate_sha256": "6c02d6679c1ac854b5105fc3642c9cb9fefbd90cfb8fbbecaf52a5ab90efe27f",
+      "locator": "21545f87e4705da7:04 §3 (5)–(7), general ceiling and quantile feasibility",
+      "reviewed_proof_sha256": "7ff782d097558550aa8d8782a63297f4f8a8da8e92577b095d0b51149b831c06",
+      "reviewed_statement_sha256": "9fd14f6abae607e53fef18d38e44ef3c304b6f8dfe876693223988754631e4e3",
+      "scope_verified": "§3 equations (5)–(7) give the arbitrary-ceiling Jensen feasibility and explicit bound."
+    },
+    {
+      "candidate_id": "21545f87e4705da7",
+      "candidate_sha256": "6c02d6679c1ac854b5105fc3642c9cb9fefbd90cfb8fbbecaf52a5ab90efe27f",
+      "locator": "21545f87e4705da7:05 §4 (8)–(10), explicit saturation margin",
+      "reviewed_proof_sha256": "7ff782d097558550aa8d8782a63297f4f8a8da8e92577b095d0b51149b831c06",
+      "reviewed_statement_sha256": "9fd14f6abae607e53fef18d38e44ef3c304b6f8dfe876693223988754631e4e3",
+      "scope_verified": "§4 equations (8)–(10) give the saturation reserve and the two exact margin constants."
+    }
+  ],
+  "started_utc": "2026-11-08T21:28:58Z",
+  "summary": "The arbitrary-ceiling two-band constraint and both saturation margins are valid with the stated centroid weighting and raw cap objective.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

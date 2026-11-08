@@ -1,0 +1,29 @@
+{
+  "advances": "The attained actual-fiber hinge value at fixed cap count and fixed Euclidean unit continuous normals.",
+  "author": "PK-research-agent",
+  "candidate_id": "641908e36857195e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:30:44.670618+00:00",
+  "depends_on": [
+    "d83edebb7d5b8852",
+    "0a73ba4a9c7b24d1"
+  ],
+  "draft_key": "pk-w34-buffered-actual-hinge-value-jumps",
+  "kind": "lemma",
+  "proof": "The fixed-actual-fiber theorem d83edebb7d5b8852 gives attainment, monotonicity, finitely many exceptional interior budgets and the stated identity for the sum of multipliers. For a feasible $\\tau$ and $\\tau_k\\downarrow\\tau$, choose attaining covers of hinge at most $v(\\tau)$. Every fiber lies in some ball $RB_d$ and has positive volume. For a cap's affine threshold $t_{iz}$ on that fiber the bound on its hinge implies $t_{iz}\\ge-R-v(\\tau)/|K_z|$. Therefore the affine trace compactification 0a73ba4a9c7b24d1, applied successively to the finitely many indices, produces finite limiting caps with every threshold limit either finite or $+\\infty$. For base rank zero the same result is obtained by embedding the singleton at $0\\in\\mathbb Z$. Each fixed point is covered by one recurring index and stays covered by the closed limiting trace. Cap masses converge and are at most $\\tau M$ at the limit. On finite trace coordinates the hinge integrands converge uniformly; on the diverging ones they are eventually identically zero and the limiting trace is empty. Thus the limiting cover has hinge $\\lim_k v(\\tau_k)$. Feasibility gives $v(\\tau)\\le\\lim_kv(\\tau_k)$, and monotonicity gives the reverse inequality.\n\nOn each open interval between the finitely many exceptional points the value is $C^1$ and nonincreasing. Integrate $-v'$ on interior subintervals and use the one-sided limits of this monotone finite function. This gives a finite improper integral at the endpoints. Summing over the intervals and using right continuity gives the displayed identity, with the left-limit loss at a jump counted precisely when $a<t\\le b$. The sensitivity identity then replaces $-v'$ almost everywhere, so individual multipliers require no measurable selection.\n",
+  "source_candidate_ids": [
+    "dafd1173a49d9223"
+  ],
+  "source_candidate_sha256": {
+    "dafd1173a49d9223": "0102abe7972be01a75233920981d4246ae1e4434126420842b1ba4f7006f930d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "dafd1173a49d9223",
+      "locator": "dafd1173a49d9223:03 §3, (11), right continuity and exact integration with jumps"
+    }
+  ],
+  "statement": "Let finitely many fixed positive compact polytopes $K_z\\subset\\mathbb R^d$ at sampled integer bases carry summed volume $\\mu$ of mass $M$. Fix a count of closed affine caps with unit continuous normals. For feasible $0<\\tau<1$ let $v(\\tau)$ be the attained minimum of their total hinge over covers of the actual fibers with cap masses at most $\\tau M$. Then $v$ is right-continuous at every feasible budget. If $[a,b]$ lies in the interior feasible domain, and $r_i(t)$ are the sensitivity-normalized cap-budget multipliers at regular budgets, then\n$$\nv(a)-v(b)=M\\int_a^b\\sum_i r_i(t)\\,dt+\\sum_{a<t\\le b}[v(t-)-v(t)].\n$$\nOnly finitely many terms of the sum are nonzero. The integrand is specified almost everywhere by $\\sum_i r_i(t)=-v'(t)/M$, independently of the choice of stress.",
+  "subgoal_id": "pk-intake-pk-w34-buffered-actual-hinge-value-jumps",
+  "title": "Right continuity and jump integration for the attained actual hinge value"
+}

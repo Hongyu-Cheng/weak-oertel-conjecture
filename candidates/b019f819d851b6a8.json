@@ -1,0 +1,28 @@
+{
+  "advances": "The conclusion concerns corresponding own centroids, not unrestricted maximal depth over each fiber, and does not prove the locked depth bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "b019f819d851b6a8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T21:24:15.610116+00:00",
+  "depends_on": [
+    "f388180fb6231b20"
+  ],
+  "draft_key": "pk-w34-simplex-fixed-vertex-depth",
+  "kind": "theorem",
+  "proof": "Translate any original containing cap inward in parallel until its boundary passes through $(j,c_j)$; this cannot increase its mass. For a nonzero continuous normal $u$, a minimizer of $u$ on $K$ may be chosen to be a vertex $v$. Apply the support-anchored cap domination lemma with this $u,v$ and the cap's base tilt. It gives a no-larger cap through $(j,0)$ in the compatible family $L_p=r_jv+r_p(K-v)$. Choose an affine automorphism of $K$ sending $v_0$ to $v$. It fixes the centroid zero, so it is linear, say $A$, and has $|\\det A|=1$ because it preserves $K$. The ambient affine map fixing the base and sending $x$ to $A^{-1}(x-r_jv)$ takes $L_p$ to $r_pT$ for every $p$ and the comparison mark to $(j,-r_jv_0)$. It maps the comparison cap to one genuine closed cap and preserves all its fiber volumes. Thus the original cap pays at least the right-hand infimum. A pure-base through-cap has exactly the same mass in both families, so it also pays the right-hand infimum.\n\nThe $r_pT$ are compatible because the radius inequality proved in the lemma implies $\\sum_p\\lambda_p r_pT\\subset r_kT$ when $0\\in T$ and $k=\\sum_p\\lambda_p p$. Their fiber centroids are $-r_pv_0$. The reference family is therefore among the admissible arrangements and is independent of the chosen anchor and direction, proving simultaneous minimization at the prescribed centroids.\n",
+  "source_candidate_ids": [
+    "24467ade6f021ae8"
+  ],
+  "source_candidate_sha256": {
+    "24467ade6f021ae8": "a57f36270122119439e7d5e218c019abb7d090d522c0543d95cb2c2affb13cd6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "24467ade6f021ae8",
+      "locator": "24467ade6f021ae8:03 §4, (12)–(14), and §5 first paragraph"
+    }
+  ],
+  "statement": "Under the hypotheses of the support-anchored cap domination lemma, suppose $K$ is a polytope whose affine automorphism group is transitive on its vertices (in particular, a simplex). Fix a vertex $v_0$ and put $T=K-v_0$. The fixed compatible comparison family with fibers $r_pT$ satisfies, for every $j\\in P$,\n$$\n \\inf_{H\\ni(j,c_j)}\\sum_{p\\in P}|K_p\\cap H_p|\n \\ \\ge\\\n \\inf_{G\\ni(j,-r_jv_0)}\\sum_{p\\in P}|r_pT\\cap G_p|,\n$$\nwhere both infima are over closed ambient halfspaces and subscripts denote traces at base $p$. Thus one common-vertex arrangement simultaneously minimizes the depth at each corresponding own-fiber centroid among all compatible translation arrangements with these radii.",
+  "subgoal_id": "pk-intake-pk-w34-simplex-fixed-vertex-depth",
+  "title": "Common-vertex minimization of depth at homothetic fiber centroids"
+}

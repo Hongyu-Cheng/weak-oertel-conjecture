@@ -1,5 +1,8 @@
 # A sharp-bound counterexample in total dimension 17
 
+[Manuscript PDF](../../output/pdf/oertel-sharp-dimension-17.pdf) ·
+[LaTeX source](oertel-sharp-dimension-17.tex)
+
 There is a rational polytope $C\subset\mathbb R^{12}\times\mathbb R^5$
 of positive mixed-integer volume such that every point of
 $\mathbb Z^{12}\times\mathbb R^5$ belongs to a closed halfspace whose
@@ -242,3 +245,16 @@ for a compact, full-dimensional convex body. `CheckAxioms.lean` checks that
 the final theorem and the listed intermediate results depend only on
 `propext`, `Classical.choice`, and `Quot.sound`. See
 [`SharpOC.Selector17.sharp_oc_counterexample`](../../lean/SharpOC/Selector17Counterexample.lean).
+
+## Build the manuscript
+
+From the repository root, use XeLaTeX and latexmk with
+`DejaVuSansMono.ttf` available to XeLaTeX (included in TeX Live).
+
+```sh
+build_dir=$(mktemp -d)
+latexmk -xelatex -halt-on-error -outdir="$build_dir" \
+  research/sharp-dimension-17/oertel-sharp-dimension-17.tex
+```
+
+The PDF is written to `$build_dir/oertel-sharp-dimension-17.pdf`.

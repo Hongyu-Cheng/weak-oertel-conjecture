@@ -1,0 +1,50 @@
+{
+  "candidate_id": "f6c67d1728f45e6c",
+  "candidate_sha256": "9b39c6659da59b01de7eca574899c9cb16116540fb6a9239a1b6c6bab98f03a0",
+  "checked_dependency_candidate_sha256": {
+    "18e7bdf54588779d": "147af10a15ccd0baaf7f740ad71979edbc9e7689171b8840b16a2520307819aa"
+  },
+  "checks": [
+    "The frozen predecessor has identical density, parameters, raw coarea, signed moment, normalizations and centering on finite slopes. Substituting its P/V and C/C0 with the stated c gives 1−v+(4/9)e(a0) exactly. The lower bound simplifies to (5−v)/9≥4/9, and the difference between 5/9 and the upper expression is (3v−2)^2/(9v)≥0.",
+    "For s>1, v(s)=(1+1/s)/2 tends to 1/2. The two section kernels are bounded at the finite end b=1 and decay as O(|b|^(−d)) at the negative end, so they are absolutely integrable for d≥2. Their truncated integrals multiplied by 1/(2s) tend to zero. The cap formula then gives P(s)→V/2. An atom at infinity has zero moment, so the conditional finite law is centered whenever its mass is positive. Its corrected average mixes with V/2, and the pure infinity case directly gives V/2.",
+    "Multiply the corrected lower inequality for μ by C̄ν and the corrected upper inequality for ν by C̄μ. Subtraction cancels the common coefficient c, and adding VC̄μ gives the oriented numerator with lower bound (4/9)V(C̄μ+C̄ν). The division assumes positive total coarea. The derivative of log Γ_x=−x log(1+1/x) is strictly negative because log(1+y)>y/(1+y) for y>0, so Γ_d≤Γ_2=4/9.",
+    "Every finite layer has strictly positive C by positivity of its kernel and captured probability, so an averaged C of zero means a pure infinity law. If one coarea vanishes, the remaining term in the quotient evaluates its corresponding infinity cap fraction or complement, both 1/2. For finite laws, P̄/V−1/2=p0e−(v−1/2), and 0≤v−1/2≤e/2, giving the stated bound (p0+1/2)C̄/C0 in absolute value without centering. Averaging with the infinity record preserves it. For fixed cone parameters the quotient is a convex combination of P̄μ/V and 1−P̄ν/V, and both approach 1/2 as the respective coareas approach zero, proving continuity in the records even for unbounded finite slopes.",
+    "As an independent check of the constants, take d=2 and H=2, so a0=1/3 and c=0. For s=3, v=2/3 and e(q)=[(1/3)(1+1/3)]/[2(1−q)(1/3+q)] has its minimum at q=1/3 with value 1/2. This single layer is centered and P/V=5/9. The centered horizontal layer has P/V=4/9. Using the horizontal layer for μ and s=3 for ν gives quotient 4/9.",
+    "The bound is for two separately centered laws on one full affine cone. The actual frustum transfer in f26ba90707244e98 yields β_f=(β_c−tω)/(1−t) for bounded representatives, with ω=Cν/(Cμ+Cν). A lower bound on β_c alone leaves the subtraction term to account for, and the reviewed statement draws no conclusion for that frustum or for other profiles.",
+    "Source 6146c77d1d7c5e08 at fd41e97ff0cf53c3b4a631a7fd42bb4b5ca56499 matches SHA-256 ef0e265591ae908949ab554f8980d1ba8c56085a49fe51bab37ba8547352190b. Its statement, equations (1)–(3), and §3 give the common correction, separate orientation cancellation and infinity record. The reviewed proof supplies the absolute kernel integrability and the explicit estimate for continuity at zero total coarea."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "18e7bdf54588779d",
+      "candidate_sha256": "147af10a15ccd0baaf7f740ad71979edbc9e7689171b8840b16a2520307819aa",
+      "mapping": "The frozen Wave 08 predecessor supplies the finite cone record and energy bounds under the same d,H and centering. Its unconditional lower bound supplies the cap-to-coarea estimate at infinity. This draft requires the exact predecessor's independent approval and admission first."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:42:11.807042+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It already establishes the 1/2 endpoints and correction extension for actual truncated-frustum laws. Its cone quotient for bounded centered laws enters a transfer identity and has no 4/9 lower bound there. The reviewed claim supplies the full-cone bound, allowing arbitrary finite slope laws and infinity.",
+      "fact_id": "f26ba90707244e98"
+    },
+    {
+      "comparison": "It establishes the limiting infinity record and a bounded-law representation for the frustum only. These share endpoint behavior with this cone theorem and do not imply its common corrected interval.",
+      "fact_id": "f4be2679c83c2fd1"
+    }
+  ],
+  "readability": "The stated compactification is a limit of the three records. The zero-total-coarea extension is taken for fixed d and H.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1a57369691c810a9db6dee9bbc500108d47883ded9c31776e4fb5c0d5bd71879",
+  "reviewed_statement_sha256": "109ed0c5514e6fa21d9434775ffe4cae03a25dbf034cdee4c893d9c4b24dbe6c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:39:31Z",
+  "summary": "A single correction works for every centered law on the fixed affine cone. Separate centering gives the 4/9 quotient bound, with continuous extension 1/2 at zero total coarea.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

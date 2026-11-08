@@ -17,7 +17,7 @@
 
 Use `equivalent`, `covered`, `specialization`, `extension`, `distinct`, or `unresolved` for the relation. Explain what changes in the hypotheses or conclusion. A similar title or lexical match can motivate a comparison and belongs in `related_facts` until the mathematical implication is checked.
 
-The [pilot report](../../reviews/pk-intake/pilot.md) and batch reports [1](../../reviews/pk-intake/wave01.md), [2](../../reviews/pk-intake/wave02.md), [3](../../reviews/pk-intake/wave03.md), [4](../../reviews/pk-intake/wave04.md), [5](../../reviews/pk-intake/wave05.md), [6](../../reviews/pk-intake/wave06.md), and [7](../../reviews/pk-intake/wave07.md) record independent proof reviews, timing, and rework. Commit checked batches separately on the intake branch and submit the completed intake in one PR.
+The [pilot report](../../reviews/pk-intake/pilot.md) and batch reports [1](../../reviews/pk-intake/wave01.md), [2](../../reviews/pk-intake/wave02.md), [3](../../reviews/pk-intake/wave03.md), [4](../../reviews/pk-intake/wave04.md), [5](../../reviews/pk-intake/wave05.md), [6](../../reviews/pk-intake/wave06.md), [7](../../reviews/pk-intake/wave07.md), and [8](../../reviews/pk-intake/wave08.md) record independent proof reviews, timing, and rework. Commit checked batches separately on the intake branch and submit the completed intake in one PR.
 
 The [contribution rules](../../CONTRIBUTING.md) govern admission. The original candidate files and historical reviews are preserved. Normalize a new result in a separate candidate and link its sources. Before committing a batch, run:
 

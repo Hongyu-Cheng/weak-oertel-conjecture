@@ -1,0 +1,28 @@
+{
+  "advances": "A two-law bound with separate section-moment centering on one continuous affine cone.",
+  "author": "PK-research-agent",
+  "candidate_id": "f6c67d1728f45e6c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:37:27.772249+00:00",
+  "depends_on": [
+    "18e7bdf54588779d"
+  ],
+  "draft_key": "affine-cone-two-mixture",
+  "kind": "theorem",
+  "proof": "For a centered finite-slope law, apply the centered cone energy lemma with its $v,e(a_0)$. Its cap and coarea formulas give $(\\overline P-c\\overline C)/V=1-v+(4/9)e(a_0)$. The lower energy bound gives at least $(5-v)/9\\ge4/9$. The upper energy bound gives at most $1-v+(4/9)(2v-1)/v$, whose gap from $5/9$ is $(3v-2)^2/(9v)$.\n\nFor a single slope $s\\to\\infty$, its uniform layer has $v(s)\\to1/2$. The coarea and moment kernels are absolutely integrable with respect to $db$ on $(-\\infty,1]$. Their absolute values decay as $O(|b|^{-d})$ at $-\\infty$ with $d\\ge2$. The layer density is $1/(2s)$, so the coarea and moment both tend to zero. The cap formula then gives $P(s)\\to V/2$. A centered law on $[0,\\infty]$ with positive finite mass has a centered conditional law on finite slopes, because $M(\\infty)=0$. Its corrected average cap is the convex combination of the finite conditional law's corrected cap and $V/2$. A pure infinity law has corrected cap $V/2$.\n\nMultiply the lower bound for $\\mu$ by $\\overline C_\\nu$ and the upper bound for $\\nu$ by $\\overline C_\\mu$, using nonnegative coareas. Subtraction cancels the common $c$ and gives the quotient inequality. The derivative of $-x\\log(1+1/x)$ is $-\\log(1+1/x)+1/(1+x)<0$ for $x>0$, so $\\Gamma_d\\le\\Gamma_2=4/9$.\n\nThe energy kernel is strictly positive on the captured part of every finite layer, so a zero coarea identifies a pure infinity law. Its cap is $V/2$, which gives the quotient when exactly one coarea is zero. For a law on finite slopes, the lower energy bound, valid without centering, and the cap identity give\n$|\\overline P/V-1/2|\\le (p_0+1/2)\\overline C/C_0$.\nThe same estimate extends by averaging with the infinity record. For positive total coarea the quotient is a weighted average of $\\overline P_\\mu/V$ and $1-\\overline P_\\nu/V$, so it tends to $1/2$ as both coareas tend to zero.\n",
+  "source_candidate_ids": [
+    "6146c77d1d7c5e08"
+  ],
+  "source_candidate_sha256": {
+    "6146c77d1d7c5e08": "ef0e265591ae908949ab554f8980d1ba8c56085a49fe51bab37ba8547352190b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6146c77d1d7c5e08",
+      "locator": "Statement, equations (1)–(3), and §3 including the infinity endpoint"
+    }
+  ],
+  "statement": "Fix an integer $d\\ge2$ and $H>0$. Put $B=H+1$ and $r(z)=(H-z)/B$. On $-1\\le z\\le H$, $|x|\\le r(z)$, take density $f(x,z)=r(z)^{d-2}/2$ with respect to $dx\\,dz$. The total mass is $V=B/d$. For finite $s\\ge0$, let $P(s)$ be the mass of the cap $z+sx\\ge0$. Let $C(s)$ and $M(s)$ be the integrals of $f$ and $zf$, respectively, over the section $z+sx=0$ inside the support, against $d\\mathcal H^1/\\sqrt{1+s^2}$. The records of a probability law are the averages of $(P,C,M)$, and the law is centered if its averaged $M$ is zero. Write $C_0=(H/B)^{d-1}$ and $p_0=(H/B)^d$.\n\nAllow also an atom at $s=\\infty$, whose record is the limit $(V/2,0,0)$ as $s\\to\\infty$. Put $c=(V/C_0)(p_0-4/9)$. Every centered probability law on $[0,\\infty]$ satisfies $4V/9\\le\\overline P-c\\overline C\\le5V/9$, with this same $c$.\n\nFor any two separately centered probability laws $\\mu,\\nu$ with $\\overline C_\\mu+\\overline C_\\nu>0$,\n\n$$\n\\frac{\\overline C_\\nu\\overline P_\\mu+\\overline C_\\mu(V-\\overline P_\\nu)}\n{V(\\overline C_\\mu+\\overline C_\\nu)}\\ge\\frac49\\ge\n\\Gamma_d:=\\left(\\frac d{d+1}\\right)^d.\n$$\n\nIf exactly one coarea is zero, the quotient is $1/2$. If both are zero, both cap fractions are $1/2$ and the quotient has continuous extension $1/2$ in the records.",
+  "subgoal_id": "pk-intake-affine-cone-two-mixture",
+  "title": "A common cap correction for two centered slope laws on an affine cone"
+}

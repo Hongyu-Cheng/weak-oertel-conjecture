@@ -1,0 +1,29 @@
+{
+  "advances": "Intrinsic uniform volume on a simplex at its ordinary centroid, with a quantitative refinement of the ordinary Γ_d bound when fewer vertices are strictly excluded.",
+  "author": "PK-research-agent",
+  "candidate_id": "baee8ddaa588aef0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:40:50.010793+00:00",
+  "depends_on": [
+    "aa5cc178125ac2d3",
+    "564e798ecec2b61f"
+  ],
+  "draft_key": "simplex-negative-vertex-cap-gap",
+  "kind": "theorem",
+  "proof": "The centroid is the mean of the vertices, so $\\sum_{i=0}^d h(v_i)=0$. Affine independence and nonconstancy imply that some margin is nonzero, so both signs occur. By the uniform simplex representation in the proof of accepted fact aa5cc178125ac2d3 before (1), and affine equivalence, the barycentric coordinates of a uniform point of $T$ are distributed as $E_i/\\sum_k E_k$ for independent mean-one exponentials $E_i$. The denominator is positive, so the cap fraction is\n$$\n\\Pr\\left(\\sum_{h(v_i)>0}h(v_i) E_i\n\\ge \\sum_{h(v_j)<0}(-h(v_j))E_j\\right).\n$$\nThe two coefficient totals agree, and the phases with zero margin drop out. The signed-exponential theorem gives the bound and its equality criterion. The proper cutting plane has zero intrinsic $d$-volume, so the same probability describes the strict inequality on the interior side.\n\nFor any $1\\le q\\le d$, prescribe one vertex margin $1$, $q$ margins $-1/q$, and $d-q$ margins zero. Affine interpolation gives a nonconstant $h$ whose value at $g$ is zero, and the equality criterion gives attainment. For a fixed $p>1$, prescribe one positive margin $1-(p-1)\\varepsilon$, $p-1$ margins $\\varepsilon$, $q$ margins $-1/q$, and the remaining margins zero. The corresponding probability tends to $\\Gamma_q$ by the scalar fixed-count result.\n\nWhen at least two vertices belong to the closed halfspace, $q\\le d-1$. For real $r>0$,\n$$\n\\frac{d}{dr}\\left[r\\log\\left(\\frac r{r+1}\\right)\\right]\n=-\\log(1+1/r)+\\frac1{r+1}<0,\n$$\nbecause $\\log(1+x)>x/(1+x)$ for $x>0$ by integrating $(1+t)^{-1}$ on $[0,x]$. Thus $\\Gamma_q\\ge\\Gamma_{d-1}>\\Gamma_d$, with equality at $\\Gamma_{d-1}$ requiring $q=d-1$ and the preceding scalar equality pattern. This leaves exactly one zero vertex. For $d=1$ the two margins are nonzero opposites, so $p=q=1$ and both orientations give the stated half-intervals.\n",
+  "source_candidate_ids": [
+    "191a0eb2244ea4a9"
+  ],
+  "source_candidate_sha256": {
+    "191a0eb2244ea4a9": "6b642bc8d4183f64a958f0fd6bf408fce5b242842f48f0ae291dc2f2030a84c9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "191a0eb2244ea4a9",
+      "locator": "§5, vertex-margin representation and closed centroid cap bound"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}(v_0,\\ldots,v_d)$ be a $d$-simplex with $d\\ge1$ and centroid $g$. Let $h$ be a nonconstant affine function on $\\operatorname{aff}(T)$ with $h(g)=0$. Let $p=\\#\\{i:h(v_i)>0\\}$ and $q=\\#\\{i:h(v_i)<0\\}$. Then $p,q\\ge1$ and the closed centroid cap $C=T\\cap\\{h\\ge0\\}$ satisfies\n$$\n\\frac{|C|_d}{|T|_d}\\ge \\Gamma_q=\\left(\\frac{q}{q+1}\\right)^q.\n$$\nEquality holds exactly when $p=1$ and all $q$ strictly negative margins are equal. For each $d$ and $1\\le q\\le d$ the bound is attained. If $p>1$ is fixed as well with $p+q\\le d+1$, the bound is the infimum and is never attained.\n\nFor $d\\ge2$, a proper closed centroid cap containing at least two vertices has fraction at least $\\Gamma_{d-1}>\\Gamma_d$. This bound is attained exactly when one vertex has positive margin, one has zero margin, and the remaining $d-1$ have equal negative margins. In dimension one, each proper closed centroid cap is a half-interval of relative length $1/2$ and contains exactly one vertex.",
+  "subgoal_id": "pk-intake-simplex-negative-vertex-cap-gap",
+  "title": "A sharp centroid cap bound by the number of excluded simplex vertices"
+}

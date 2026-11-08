@@ -1,0 +1,30 @@
+{
+  "advances": "Conditions projected cover normals at the exterior threshold in projection rank r.",
+  "author": "PK-research-agent",
+  "candidate_id": "3df584464f5236ab",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:36:18.785937+00:00",
+  "depends_on": [
+    "3919a4dbe7ace166",
+    "d6a3cbae1da72277",
+    "4d3ee3757f4ea53a"
+  ],
+  "draft_key": "projected-contact-normal-conditioning",
+  "kind": "theorem",
+  "proof": "Choose coordinates on the image that identify $\\pi$ with the orthogonal projection onto $(\\ker\\pi)^\\perp$. The claims under consideration are invariant under this change of coordinates. The density $f$ of $\\nu$ is the normalized $(D-r)$-dimensional section volume, or a constant times $\\mathbf1_B$ when $D=r$. For $r<D$, Fubini gives the density formula. Every interior image point has an interior preimage, since a segment from the projection of an interior point can be extended slightly past it in $B$ and lifted by convexity. Hence $f>0$ on $\\operatorname{int}B$. The sections lie in a common bounded set and their indicator functions have upper limit bounded by the indicator of the limiting section, by closedness of $K$. The upper-limit form of Fatou’s lemma gives upper semicontinuity, and compact support and boundedness are immediate. The Brunn–Minkowski inequality makes $f^{1/(D-r)}$ concave on the positive set. Composing with the convex decreasing power $-(D-r)/(r+1)$ shows that $f^{-1/(r+1)}$, extended by $+\\infty$ where $f=0$, is convex. In dimension $r=D$ the extended inverse power is constant on $B$ and infinite outside.\n\nWe first show that a whole-space cover with a shared contact outside $\\operatorname{int}B$ has a member of mass at least $\\gamma_{r-1}$. For $r=1$ both orientations must occur and one contains $B$. For $r\\ge2$ and a strict exterior contact, translate it to zero and choose orthonormal separating coordinates $(t,x)$ with $0<a\\le t\\le b$ on $B$. The change $(t,s)\\mapsto(t,ts)$ has Jacobian $t^{r-1}$. The density\n$$\n\\phi(s)=\\int_a^b t^{r-1} f(t,ts)\\,dt\n$$\nhas mass one. It is bounded and compactly supported by the height bounds, and upper semicontinuous by the upper-limit form of Fatou’s lemma. It is positive on a nonempty open set because the projective images of a small interior ball in $B$ give rays with intervals of positive density. Apply accepted fact 3919a4dbe7ace166 with $p=r$ and restrict its convex gauge to $(1,s)$. It gives convexity of the extended $\\phi^{-1/r}$, so accepted fact d6a3cbae1da72277 applies in dimension $r-1$. The cover restricted to $t=1$ is a whole-space cover in $s$. If a restricted cap is the whole space, its mass is one. Otherwise some proper member contains the density centerpoint and has mass at least $\\gamma_{r-1}$, with empty restrictions discarded. Homogeneity of the original caps preserves their masses under this projection. If the common contact is on $\\partial B$, translate the family a small distance outward along a supporting normal. The family still covers, and every cap mass converges to its original value as hyperplanes are null. Finiteness lets us pass the lower bound to the maximum of the original masses.\n\nThis threshold gives $c\\in\\operatorname{int}B$. Take $v\\in\\partial(B-B)$. The point $c-v$ cannot lie in $\\operatorname{int}B$, since then $v$ would belong to the open subset $c-\\operatorname{int}B$ of $B-B$. Translate all caps by $-v$. The translated threshold for $\\ell_i$ drops by $\\ell_i(v)$. By the scalar bound $p\\le D$ in the projected slab lemma, its mass is at most $\\tau+D\\max(0,\\ell_i(v))$. Some translated cap has mass at least $\\gamma_{r-1}>\\tau$. This proves the claimed bound. The support function of $(B-B)^\\circ$ is the gauge of $B-B$, which is one on $\\partial(B-B)$. Positive homogeneity and support-function comparison give the polar inclusion. The polar has nonempty interior, so the normals span.\n",
+  "source_candidate_ids": [
+    "3502773126e88b57"
+  ],
+  "source_candidate_sha256": {
+    "3502773126e88b57": "e2ea60fb2c5f36942333c917b05f6cf867eb3011b3a5c7eb762677d0a6c5fcfa"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3502773126e88b57",
+      "locator": "§2, (8) and equivalent polar inclusion"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^D$ be a convex body, let $\\mu$ be uniform probability on $K$, and let $\\pi:\\mathbb R^D\\to\\mathbb R^r$ be a surjective linear map with $1\\le r\\le D$. Put $\\nu=\\pi_\\#\\mu$ and $B=\\pi K$. Write $\\gamma_0=1$ and $\\gamma_j=(j/(j+1))^j$ for $j\\ge1$. Suppose finitely many closed halfspaces $H_i=\\{x:\\ell_i(x-c)\\ge0\\}$ cover $\\mathbb R^r$, each $\\ell_i$ has width one on $B$, and $\\nu(H_i)\\le\\tau<\\gamma_{r-1}$ for every $i$. Then $c\\in\\operatorname{int}B$ and\n$$\n\\max_i\\ell_i(v)\\ge\\frac{\\gamma_{r-1}-\\tau}{D}\\qquad(v\\in\\partial(B-B)).\n$$\nEquivalently, the convex hull of the $\\ell_i$ contains $(\\gamma_{r-1}-\\tau)(B-B)^\\circ/D$, where $(B-B)^\\circ$ is the polar in the dual space. In particular, the $\\ell_i$ span the dual space.",
+  "subgoal_id": "pk-intake-projected-contact-normal-conditioning",
+  "title": "Normal conditioning for projected common-contact covers"
+}

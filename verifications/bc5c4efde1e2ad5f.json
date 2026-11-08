@@ -1,0 +1,58 @@
+{
+  "candidate_id": "27d3881f8bfc290c",
+  "candidate_sha256": "9a382480eb7fdedbe7306bbed9e353f6e1b0a30b8704de907efb2a4c1afba45e",
+  "checked_dependency_candidate_sha256": {
+    "506e246f680da4b5": "e998f15ec065dc0a96a2729002676d298a57e43ff7c6d9a714f4060a9ba6f724",
+    "511d89569241b0d6": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc"
+  },
+  "checks": [
+    "An affine margin through y is determined by its vertex values, and nonzero c in λ⊥ correspond to oriented normals modulo positive scaling. Homogeneity eliminates the radial derivative, so stationarity of the normal is exactly stationarity on λ⊥. The exponential-to-gamma change of variables has Jacobian G^d and makes G independent of the uniform barycentric vector.",
+    "The projection L has a bounded section density, continuous at zero: the zero section meets the interior, contains no facet, and after translating parallel hyperplanes its simplex boundary indicators disagree in the limit only on a section-null set. Since E[1/G]=1/d, dominated convergence at zero identifies the continuous density f(0)=f_L(0)/d. Translation by the all-ones vector gives ∑Pᵢ=f_L(0). The constrained gradient is therefore d f(0)λ. Positive first derivatives force all λᵢ>0; a zero margin has Pᵢ=f(0), so λᵢ=1/d.",
+    "For a chosen positive pair, the density convolution gives φ(a)=a⁻¹∫₀∞e^(−t/a)f(−t)/f(0)dt. It has qᵢ=dλᵢ∈(0,1] and likewise for j, so ψ′ is strictly positive at each selected coefficient, even when the coordinate bound is an equality. The vector wᵢ=qⱼ, wⱼ=−qᵢ is in λ⊥ and preserves all sign and zero margins nearby. A fixed nonzero negative coefficient rules out a radial direction.",
+    "Using φ′(cᵢ)=−qᵢ²ψ′(cᵢ) and Dφ=−qᵢqⱼ Dψ in wᵀHw gives the factor 2f(0)qᵢ²qⱼ² and the stated bracket. At unequal coefficients convexity bounds Dψ by the derivative at the larger argument; the other derivative is strictly positive. At equal coefficients the bracket is −ψ′(cᵢ)<0. A zero first derivative then yields an actual local decrease.",
+    "Properness makes the cutting hyperplane volume-null, so P(−c)=1−P(c). Complementing interchanges the signs of directional second derivatives and preserves stationarity. For at least three nonzero margins one orientation always has two positives and one negative; this proves the asserted positivity and zero-margin restrictions for either orientation. With exactly two nonzero margins a proper cut has one strict vertex on each side, so the pair conditions and the at-least-three-margin restriction are inapplicable and the local-minimum conclusion already holds.",
+    "Boundary check beyond the proof's needs: for margins a>0, −b<0 and all others zero, the explicit two-phase law gives P=a/(a+b), positive-coordinate derivative b/(a+b)², negative-coordinate derivative a/(a+b)², and each zero-coordinate derivative 1/(a+b). These follow by conditioning on the other phases and differentiating the continuous asymmetric Laplace survival, whose parameter derivatives match at threshold zero. Stationarity thus permits this case only with the remaining coordinates 1/d and the two nonzero-margin coordinates b/[d(a+b)] and a/[d(a+b)]. No extension of the C¹ density claim to two phases is needed.",
+    "The exact pinned source 8704554a92158bfc matches its declared digest. Its statement and §2, (4), (7)–(8), plus §§4–5, (11)–(12), supply the selected-pair rather than all-coordinate bound, complement, properness, and zero-margin scope. The draft's section-density argument makes the continuity at the zero projection value explicit."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "506e246f680da4b5",
+      "candidate_sha256": "e998f15ec065dc0a96a2729002676d298a57e43ff7c6d9a714f4060a9ba6f724",
+      "mapping": "Use h(t)=f(−t)/f(0), positive, continuous, log-concave and integrable on the half-line, with h(0)=1. The transform is ψ=1/φ. The hypotheses ψ(cᵢ),ψ(cⱼ)≥1 follow from stationarity and the selected-pair bound; the lemma gives convexity and strict positive derivatives at both arguments.",
+      "reviewed_proof_sha256": "5fec4c17b070afe8db47205756e1fdd8df014d4e956bc991241605fecb4a0c32",
+      "reviewed_statement_sha256": "a4e5b0aaf2e1cdd12c887515e2e02a477a8ec997a96439b16257801c4d348214",
+      "status": "Pending frozen Wave 08 predecessor; independent approval required before admission."
+    },
+    {
+      "candidate_id": "511d89569241b0d6",
+      "candidate_sha256": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+      "mapping": "The selected orientation has at least two strictly positive margins and one strictly negative margin. Use neighborhood C¹ regularity for stationarity and the zero-coordinate gradient formula, then the positive-block Hessian for a direction supported on the selected pair.",
+      "reviewed_proof_sha256": "de2812dbc5632f66b6800ec3d17e4a2fa4d439425feb37f623d693d06a842516",
+      "reviewed_statement_sha256": "5da49339a62c68ed1622a42d4d7d1c4bff3ac044a334dd512c679d389cf75c8b",
+      "status": "Pending frozen Wave 08 predecessor; independent approval required before admission."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:43:59.505005Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted result minimizes volume for a fixed unique strictly included vertex and gives a counterexample to restricting the global search to those caps for all interior points. It does not imply a feasible descent direction for stationary multiple-vertex caps. Its two-versus-two example uses included barycentric coordinates 3/8>1/3, so the pair threshold does not apply.",
+      "fact_id": "f75e1f526e17ab44"
+    }
+  ],
+  "readability": "Stationarity lives on the oriented unit-normal sphere, but the homogeneous margin parametrization makes the radial derivative vanish. This is why the whole λ-orthogonal linear space can be used for the first-variation equation.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "b42c48bff18ae512e45f0e1ed501ebeeccd7601437aca724561a9416271f95c2",
+  "reviewed_statement_sha256": "d70c918e678e1728c63a256f14675fa6053879bc3bd3d6d7e9442ccb0b78bb4d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:39:25Z",
+  "summary": "The stationarity equation and the reciprocal-transform bound give the strict pair variation at each stated threshold, with the opposite sign obtained by complementing the cap. Zero margins and the proper cuts with only two nonzero margins do not leave an uncovered case in any asserted conclusion.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

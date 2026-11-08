@@ -1,0 +1,29 @@
+{
+  "advances": "Normalized depth and all minimizing halfspaces for ordinary uniform simplex measure in the central barycentric region, including equality in the coordinate bounds.",
+  "author": "PK-research-agent",
+  "candidate_id": "700febf4b7a92759",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:38:52.388992+00:00",
+  "depends_on": [
+    "f75e1f526e17ab44",
+    "27d3881f8bfc290c"
+  ],
+  "draft_key": "central-barycentric-simplex-depth",
+  "kind": "theorem",
+  "proof": "Work in the affine hull of $T$. For an interior $y$, tightening a containing halfspace to $y$ strictly decreases its volume if $y$ was strictly inside that halfspace: the removed strip contains an open subset of a ball about $y$ lying in $T$. The volume of the cap through $y$ is continuous in its unit normal by dominated convergence, since its boundary is volume-null. Compactness of the unit sphere gives attainment. For $d\\ge2$ every through-$y$ cap is proper at an interior point, and the stationary simplex cap theorem shows that every minimizer strictly includes just one vertex. For $d=1$ every through-interior-point cap already has this form.\n\nFor a cap strictly including only $v_i$, write its intercepts as $(1-t_j)v_i+t_jv_j$ with $0<t_j\\le1$. The closed cap is the simplex on $v_i$ and the $d$ intercepts, and its defining inequality is $\\sum_{j\\ne i}\\lambda_j(x)/t_j\\le1$, as in accepted fact f75e1f526e17ab44. That fact gives the unique optimizing parameters $t_j=\\min(1,\\mu_i\\lambda_j)$ with $\\sum_{j\\ne i}\\lambda_j/t_j=1$ and relative volume $\\prod_{j\\ne i}t_j$. Here $\\mu_i=d$ solves the water-level equation, including ties at one. At least one intercept parameter is below one since $\\lambda_i>0$. Thus this is a proper cap with exactly one strictly included vertex. Its volume is $d^d\\prod_{j\\ne i}\\lambda_j$. Taking the minimum over $i$ proves the formula and classifies all minimizers, since at an interior point the product is minimized by omitting a largest coordinate.\n\nIf $y$ belongs to the boundary of $T$, any facet through $y$ provides an outward supporting halfspace with zero $d$-volume. Conversely, a halfspace of zero cap volume cannot meet the interior of $T$, even on its boundary, since a ball about an interior point would supply positive volume. Density of the interior in $T$ then puts all of $T$ on the closed opposite side. Since $y$ belongs to the given halfspace, its boundary passes through $y$. The product minimum is zero as well, because some $\\lambda_k=0$ and there is an index $i\\ne k$. In the central region a boundary point must have exactly one zero coordinate and all others $1/d$, so this also covers the facet centroid and all lower-dimensional supporting traces through it. For $d=1$ the central constraint is automatic and the formula includes the endpoints.\n",
+  "source_candidate_ids": [
+    "8704554a92158bfc"
+  ],
+  "source_candidate_sha256": {
+    "8704554a92158bfc": "0b0afbcdc9e7015af4a34cd69c28239696719dbd664966c288733efab0e78114"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8704554a92158bfc",
+      "locator": "§6, (13) and edge-intercept argument; §5 for proper-cut conventions"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}(v_0,\\ldots,v_d)$ be a $d$-simplex, $d\\ge1$, and let $y\\in T$ have barycentric coordinates $\\lambda_i$ satisfying $\\max_i\\lambda_i\\le1/d$. The normalized ordinary halfspace depth, using $d$-volume and closed halfspaces in the affine hull, is\n$$\n\\inf_{H\\ni y}\\frac{|T\\cap H|}{|T|}=\\min_i d^d\\prod_{j\\ne i}\\lambda_j .\n$$\nIf $y$ is interior, every minimizing halfspace has boundary through $y$. Its unique strictly included vertex is $v_i$ for an index attaining $\\max_j\\lambda_j$, and its boundary meets each edge $[v_i,v_j]$, $j\\ne i$, at $(1-d\\lambda_j)v_i+d\\lambda_j v_j$. Each such index gives a minimizing halfspace. If $y$ is on the boundary of $T$, the depth is zero and the minimizing halfspaces are the outward supporting halfspaces through $y$.",
+  "subgoal_id": "pk-intake-central-barycentric-simplex-depth",
+  "title": "Exact ordinary simplex depth in the central barycentric region"
+}

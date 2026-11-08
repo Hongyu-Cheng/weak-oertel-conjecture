@@ -1,0 +1,46 @@
+{
+  "candidate_id": "275b3b7cccde92d4",
+  "candidate_sha256": "9bc64a30d0e9842b4d8a5bbcd5ebc6478d42d6468766f03f6b08b54816892015",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The conditional barycentric law is Beta(1,k) with density k(1−t)^(k−1); normalizing the remaining coordinates gives a uniform opposite-simplex variable, also for k=1. Convexity along each fixed conditional ray proves convexity of the nonnegative conditional average.",
+    "For |t−b|≤r, both endpoints t±r are strictly inside [0,1] since r≤b/4 and r≤(1−b)/(4k). Midpoint Jensen and the minimum density at t+r imply the first bound in the weighted-strip display. The ratio r/(1−t) is at most 1/(4k−1), and 1−(k−1)/(4k−1)>1/2. Integration over length 2η gives 2η/r with no division by the integral of f. The η=0 strip is null, and k=1 gives constant density.",
+    "The inclusion of the inner simplex makes the gauge finite and continuous; the triangle estimate applies in both displacement directions. Each facet endpoint has 1≤ρ≤(1−δ)^−1. Expanding (ρ−1)∑ρ^−a telescopes to 1−ρ^−d, and each summand lies between (1−δ)^d and 1. This proves both inequalities even at ρ=1.",
+    "The centroid cones cover S with null overlaps and equal volume |S|/m. In facet orthonormal coordinates the transverse Jacobian is the facet height times a^(d−1), so radial probability integrates from 1/ρ to 1 to give w_j. Closedness of K includes the radial endpoint and leaves the same exact volume; facet interfaces contribute zero even for arbitrary measurable direction sets.",
+    "Opposite signs of the two margins imply |λ_i−b|≤η even if one margin vanishes. On deleted rays a≥1−δ>0, and the reference margin scales exactly by a because λ_i(g)=b. On F_i the strip is empty; on each other facet k=d−1 gives r=1/(4m), since (1−b)/(d−1)>b. Two weight comparisons and the enlarged strip yield 8mη(1−δ)^−d−1; summing with the cone weights uses τ with no extra factor of m. Adding the canonical loss is a set inclusion. η=0, δ=0, τ=0 and the allowed upper strip width are all covered. The threshold is constrained only by the stated affine margin bound.",
+    "Checked 330 rational threshold/body cases independently using clipped powers for exact ordinary cap volumes on homothetic inner simplices in dimensions 2–12. The checks include both signs of threshold displacement, the largest allowed displacement, δ=0, and δ as large as 9/10.",
+    "Both pinned source candidates match their declared byte digests. c62d1cc13c75171f §§2–4 gives (6)–(15), including the one-sided cap bound. e499db59e12bfbe4 §§1–3 gives (1)–(17), including the symmetric-difference assertion. The normalized vector gauge ρ(z−g) is the point-centered gauge of the latter source; no source facet-contact hypothesis is used or needed here."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T08:43:16Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Compares the integral of a multiplicity of canonical facet cap sets against the total convex-function integral, requiring zero at the facet centroid. It does not give an interior strip bound or disintegrate actual missing convex volume.",
+      "fact_id": "f566248002918e0f"
+    },
+    {
+      "comparison": "Uses a neighborhood of canonical affine forms for a strict-hitting score with finitely many simplex sources, rather than a symmetric-difference bound for ordinary volume removed from a simplex. Its hypotheses and conclusion do not imply this lemma.",
+      "fact_id": "e8b040625fe84794"
+    }
+  ],
+  "readability": "The gauge argument is a displacement z−g. The radial variable a and the integer sum index a occur in different displays; the two uses are unambiguous.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c41b63994bcaf62c85a0a6d0ce61a9372f7bc575f3427f5c6ea37109d0731e40",
+  "reviewed_statement_sha256": "63547587d77db5eafb0618850b35efd8a76f97cf30592780530d4174f65365d1",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "c62d1cc13c75171f": "0c45d96beb51a4c76eb188a6ce0e32b074e3407d4bc73b45fd94595608358931",
+    "e499db59e12bfbe4": "3e896d455ef55273692f92d316038df9b7d1e761091b373dd2354b40701c602e"
+  },
+  "started_utc": "2026-11-08T08:40:19Z",
+  "summary": "The convex strip estimate controls the exact deleted radial volume uniformly over all nearby affine margins. The proof uses only the nested simplex inclusions and ordinary volume.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

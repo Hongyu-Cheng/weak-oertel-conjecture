@@ -1,0 +1,33 @@
+{
+  "candidate_id": "511d89569241b0d6",
+  "candidate_sha256": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Scaled nonzero exponential densities are bounded and log-concave with half-line support. Prékopa–Leindler preserves log-concavity under convolution. The difference of one phase of each sign has strictly positive density everywhere; further convolution preserves positivity. The sum of two positive phases has zero density at its lower endpoint and a bounded L¹ derivative on the positive half-line, including the equal-mean Erlang case. Thus its zero extension has no atom in its weak derivative; convolving with a bounded negative-phase density gives a bounded continuous derivative by translation continuity in L¹.",
+    "After omitting any coordinate, two of the three fixed nonzero witness phases remain bounded away from zero in a common neighborhood. Their convolution has bounded uniformly continuous density. Its supremum-norm continuity in the scales follows from L¹ continuity of the individual densities and uniform L∞ bounds. Coupling the remaining phases by the same exponentials proves joint continuity of the conditioned density gᵢ(x), including at zero coefficients.",
+    "Differentiation of the conditional survival function is dominated by a fixed multiple of Eᵢ and gives E[Eᵢgᵢ(−cᵢEᵢ)]. The size-biased unit exponential is the sum of two independent unit exponentials, including the unchanged sum when cᵢ=0. Positivity and continuity give the asserted C¹ gradient and Pᵢ=f(0) at zero margins.",
+    "Writing A−B with the negative coefficients fixed gives P=E[F_B(A)]. On positive arguments, b p_B′+p_B=p_{B−bE} follows by differentiating the one-phase convolution; in the one-phase case p_B′=−p_B/b. This proves boundedness and continuity of p_B′ on (0,∞), which is enough since A>0 almost surely. Boundedness times EᵢEⱼ dominates the second derivatives and continuity follows by dominated convergence on the positive block.",
+    "Size bias with Eᵢ² gives twice the gamma shape-three density; distinct indices each add one independent exponential. Differentiating f_{V+aE′}(0)=E[p_B(A+aE′)] yields the same expectation after adding two phases of scale a. For unequal a,b the two-phase density vanishes at u=0 and infinity; its negative derivative is (e^(−u/a)/a−e^(−u/b)/b)/(a−b), giving the stated divided difference by integration by parts. At equal scales the two added phases have exactly the law in φ′.",
+    "As a separate exact check with a single negative phase of mean b, P=1−∏ᵢ b/(b+cᵢ) over positive indices and φ(a)=b/(b+a). Direct differentiation yields Pᵢᵢ=−2(1−P)/(b+cᵢ)² and Pᵢⱼ=−(1−P)/[(b+cᵢ)(b+cⱼ)], including equal positive scales. Both agree with the candidate formulas.",
+    "The exact pinned source 8704554a92158bfc matches its declared digest. Sections 2–3, (5)–(6) and (9)–(10), and the start of §5 supply the sign assumptions, derivatives, and zero-margin identity. The A−B proof independently verifies the same Hessian with an integration by parts in place of the source convolution ODE."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T08:43:59.505005Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [],
+  "readability": "The density f in φ stays fixed at the base coefficient vector. The second derivative assertion varies the positive block only; it does not require a Hessian across zero coefficients.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "de2812dbc5632f66b6800ec3d17e4a2fa4d439425feb37f623d693d06a842516",
+  "reviewed_statement_sha256": "5da49339a62c68ed1622a42d4d7d1c4bff3ac044a334dd512c679d389cf75c8b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:39:25Z",
+  "summary": "The stated sign stratum supplies a bounded positive C¹ log-concave density, a gradient continuous through zero coefficients, and the exact Hessian on the strictly positive coordinates. The diagonal factor, mixed sign, and repeated-coefficient limit all check.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,67 @@
+{
+  "candidate_id": "700febf4b7a92759",
+  "candidate_sha256": "9c72688a255c1b12acbbcd09b9e11c980ad32db764ade71c97e1961518ed221b",
+  "checked_dependency_candidate_sha256": {
+    "27d3881f8bfc290c": "9a382480eb7fdedbe7306bbed9e353f6e1b0a30b8704de907efb2a4c1afba45e",
+    "f75e1f526e17ab44": "b6ac622bead0bb726820f47395448f1453977d676af1b5bb70df6a65092ca09f"
+  },
+  "checks": [
+    "For an interior point, any containing halfspace whose boundary misses y loses positive simplex volume when tightened to y: a small ball about y lies in the simplex and supplies an open piece of the removed strip. Normal continuity follows by dominated convergence across volume-null boundaries; compactness gives a minimizing through-y halfspace. Every such through-interior cut is proper. The stationary-cap predecessor thus gives one strict included vertex for d≥2; for d=1 this is automatic.",
+    "For the unique strictly included vertex i, the intercept fraction satisfies 0<tⱼ≤1, and λⱼ(x)/tⱼ are the barycentric weights of the intercepts in the cap simplex. The normalized determinant is ∏tⱼ. The point y lies on its boundary exactly when ∑λⱼ/tⱼ=1. This includes tⱼ=1, meaning vertex j lies on the boundary rather than strictly included.",
+    "At μᵢ=d every water-level contribution is λⱼ/(dλⱼ)=1/d, including ties at one. There must be some tⱼ<1 since λᵢ>0, so the constructed halfspace is proper. As an independent lower-bound and equality check, AM–GM applied to the d positive terms λⱼ/tⱼ of sum one gives ∏tⱼ≥d^d∏λⱼ with equality precisely when every tⱼ=dλⱼ. Minimizing the products is equivalent to maximizing the omitted positive coordinate; tied maximizers produce distinct halfspaces with their own unique strict vertex.",
+    "Exactly two nonzero margins cannot be overlooked in the global argument: such a proper cut already has one strict included vertex, and the same optimization applies. If it achieved the fixed-vertex optimum with d≥2, its d−1 other zero margins would force d−1 coordinates to equal 1/d. The two remaining coordinates are positive and sum to 1/d, so the included vertex cannot maximize λ. It is therefore not a global minimizer.",
+    "A zero-volume containing halfspace cannot meet int(T), since an interior ball meets either side of any plane through its center in positive volume. Closure then puts T on the opposite closed side, and y lies on the supporting boundary. Conversely every outward supporting halfspace through y has zero volume. Under the central bound a boundary point has exactly one zero coordinate and all d others equal 1/d, so it is a facet centroid. For d=1 the formula is min(λ₀,λ₁), with the two midpoint choices and the outward endpoint halfspaces included.",
+    "The exact pinned source 8704554a92158bfc matches its declared digest. Section 6, (13), derives the same value and intercept construction by AM–GM, with §5 giving the proper-cut convention. Uniqueness of each interior intercept vector follows from AM–GM equality; the tie-of-maxima and boundary-minimizer classifications are explicit consequences spelled out in this draft."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f75e1f526e17ab44",
+      "candidate_sha256": "b6ac622bead0bb726820f47395448f1453977d676af1b5bb70df6a65092ca09f",
+      "fact_id": "f75e1f526e17ab44",
+      "fact_sha256": "25dcc8ebbc2593bb374e0f1c3682520c59cbc9657a2a2a4576b9e2474b874d52",
+      "mapping": "Apply the affine-invariant fixed-vertex cap formula at the interior point y, with all aⱼ=λⱼ(y)>0 and parameters 0<tⱼ≤1. The budget inequality is satisfied with equality for through-y caps. The central bound makes μᵢ=d the unique solution even if tⱼ=1. Only the scoped optimization is invoked; the accepted counterexample is outside this regime.",
+      "reviewed_proof_sha256": "37bd26659bf9dcca7442e267fb26235bf462cc6e5db6eb9a57e71654326baa1f",
+      "reviewed_statement_sha256": "a58d065b7c75ac97c1cb92f6996ebdc29969144ce5417d1495863ed5c2afe86a",
+      "status": "Accepted at fd41e97ff0cf53c3b4a631a7fd42bb4b5ca56499."
+    },
+    {
+      "candidate_id": "27d3881f8bfc290c",
+      "candidate_sha256": "9a382480eb7fdedbe7306bbed9e353f6e1b0a30b8704de907efb2a4c1afba45e",
+      "mapping": "For d≥2 and interior y, an attained minimizer on the sphere is a proper local minimum. The all-coordinate hypothesis max λ≤1/d is exactly the one in the predecessor, which yields one strictly included vertex even when other margins vanish. Dimension one does not invoke this predecessor.",
+      "reviewed_proof_sha256": "b42c48bff18ae512e45f0e1ed501ebeeccd7601437aca724561a9416271f95c2",
+      "reviewed_statement_sha256": "d70c918e678e1728c63a256f14675fa6053879bc3bd3d6d7e9442ccb0b78bb4d",
+      "status": "Pending frozen Wave 08 predecessor; independent approval required before admission."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:43:59.505005Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies unique fixed-vertex cap optimization for any interior point and zero boundary depth. It does not supply the global interior lower bound in the central region. The tetrahedron point has max λ=3/8>1/3, so the accepted failure outside the region is consistent. Its rational comparison is 5/32<4/25 since 125<128.",
+      "fact_id": "f75e1f526e17ab44"
+    },
+    {
+      "comparison": "Supplies maximal ordinary simplex depth Γ_d and the centroid equality-cap case through Grünbaum. At λᵢ=1/(d+1) the present product gives Γ_d and the same apex caps; this fact does not determine the present off-centroid central region.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Gives an upper envelope from two-level subset-sum caps, including equal-intercept vertex cuts. It does not minimize over all halfspaces or give the generally unequal optimal intercepts.",
+      "fact_id": "290ddd8516d76865"
+    }
+  ],
+  "readability": "The final reference to lower-dimensional supporting traces can be read as dimension below d. In the central boundary region the point is in the relative interior of a facet, so the only supporting trace through it is that facet; making this explicit would avoid any suggestion that lower faces can occur here.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2cbc8c11af5c9424a0b6383af2550f0370176a121b8a1e15523cef3452c12218",
+  "reviewed_statement_sha256": "aa03de8379db66f47939e67ce0cff5c5841de3ce928b12c8b638a8485f76df8f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:39:25Z",
+  "summary": "In the stated central region the stationary-cap result reduces global minimizers to one strict vertex. The accepted fixed-vertex optimization then gives the exact volume and all intercepts, including ties. The support argument treats the boundary and the interval case directly.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

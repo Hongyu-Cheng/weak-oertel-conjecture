@@ -4,6 +4,25 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 3 | theorem | pk-intake-projected-deepest-set-localization | [4feafed4a73bb57f](facts/4feafed4a73bb57f.md) |
+| 2 | theorem | pk-intake-central-barycentric-simplex-depth | [700febf4b7a92759](facts/700febf4b7a92759.md) |
+| 1 | theorem | pk-intake-simplex-negative-vertex-cap-gap | [baee8ddaa588aef0](facts/baee8ddaa588aef0.md) |
+| 2 | theorem | pk-intake-projected-contact-normal-conditioning | [3df584464f5236ab](facts/3df584464f5236ab.md) |
+| 3 | theorem | pk-intake-normalized-physical-retained-response | [45fd63ae8f0584dc](facts/45fd63ae8f0584dc.md) |
+| 3 | theorem | pk-intake-relative-ordinary-simplex-depth-stability | [c99394a395ea2399](facts/c99394a395ea2399.md) |
+| 1 | theorem | pk-intake-minimum-enclosing-simplex-locality | [e823c82617a0bc70](facts/e823c82617a0bc70.md) |
+| 2 | theorem | pk-intake-affine-cone-two-mixture | [f6c67d1728f45e6c](facts/f6c67d1728f45e6c.md) |
+| 1 | theorem | pk-intake-stationary-simplex-cap-positive-pair-descent | [27d3881f8bfc290c](facts/27d3881f8bfc290c.md) |
+| 0 | counterexample | pk-intake-signed-exponential-arbitrary-merge-obstruction | [1618ee1d863a817a](facts/1618ee1d863a817a.md) |
+| 0 | theorem | pk-intake-signed-exponential-largest-merge | [564e798ecec2b61f](facts/564e798ecec2b61f.md) |
+| 0 | lemma | pk-intake-projected-deepest-point-slab | [4d3ee3757f4ea53a](facts/4d3ee3757f4ea53a.md) |
+| 2 | counterexample | pk-intake-neutral-cover-does-not-preserve-deepest-marks | [2b432d1067d654e0](facts/2b432d1067d654e0.md) |
+| 2 | theorem | pk-intake-physical-retained-mass-right-derivative | [dbb1331ec0f15edd](facts/dbb1331ec0f15edd.md) |
+| 0 | lemma | pk-intake-uniform-nearby-simplex-cap-loss | [275b3b7cccde92d4](facts/275b3b7cccde92d4.md) |
+| 0 | theorem | pk-intake-minimum-enclosing-simplex-facet-contacts | [a839bfd22b7f11a2](facts/a839bfd22b7f11a2.md) |
+| 1 | lemma | pk-intake-affine-cone-centered-energy | [18e7bdf54588779d](facts/18e7bdf54588779d.md) |
+| 0 | lemma | pk-intake-signed-exponential-cap-derivatives | [511d89569241b0d6](facts/511d89569241b0d6.md) |
+| 0 | lemma | pk-intake-log-concave-reciprocal-laplace-transform | [506e246f680da4b5](facts/506e246f680da4b5.md) |
 | 2 | theorem | pk-intake-large-maximum-normal-simplex-chain-cap | [5adcdc64a058b8aa](facts/5adcdc64a058b8aa.md) |
 | 0 | lemma | pk-intake-finite-prefix-two-list-counting | [29a6150872e2ef85](facts/29a6150872e2ef85.md) |
 | 5 | theorem | pk-intake-few-ordinary-caps-profile-equality | [f9d129e6ff0c190c](facts/f9d129e6ff0c190c.md) |

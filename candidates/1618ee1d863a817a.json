@@ -1,0 +1,26 @@
+{
+  "advances": "An obstruction to removing the largest-receiver condition from a scalar coefficient-transfer assertion.",
+  "author": "PK-research-agent",
+  "candidate_id": "1618ee1d863a817a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:40:50.011007+00:00",
+  "depends_on": [],
+  "draft_key": "signed-exponential-arbitrary-merge-obstruction",
+  "kind": "counterexample",
+  "proof": "The survival function of $Y$ on $x\\ge0$ is $e^{-2x}(1+2x)$ by convolution of the two exponential densities of rate two. If $U=\\sum_k a_k E_k$ and $L_U(t)=\\prod_k(1+t a_k)^{-1}$ is its Laplace transform, then independence gives\n$$\n\\Pr(U\\ge Y)=1-L_U(2)\\left(1+2\\sum_k\\frac{a_k}{1+2a_k}\\right).\n$$\nHere $\\mathbb E[Ue^{-2U}]=-L_U'(2)$ follows by differentiating the Laplace integral. For $X$ the product is $250/847$ and the sum $\\sum_k a_k/(1+2a_k)$ is $127/308$. For $X'$ the product is $25/84$ and the sum is $17/42$. Substitution yields $\\Pr(X\\ge Y)=30094/65219$ and $\\Pr(X'\\ge Y)=407/882$. Their difference in the stated order is $25/1173942$.\n",
+  "source_candidate_ids": [
+    "191a0eb2244ea4a9"
+  ],
+  "source_candidate_sha256": {
+    "191a0eb2244ea4a9": "6b642bc8d4183f64a958f0fd6bf408fce5b242842f48f0ae291dc2f2030a84c9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "191a0eb2244ea4a9",
+      "locator": "§6, balanced arbitrary-pair merging witness"
+    }
+  ],
+  "statement": "Let $E_1,E_2,E_3,F_1,F_2$ be independent exponential random variables of mean one. Define $X=(E_1+E_2+18E_3)/20$, $X'=(2E_1+18E_3)/20$, and $Y=(F_1+F_2)/2$. Both positive coefficient totals and the negative coefficient total are one. The two smallest positive coefficients of $X$ are merged in $X'$, and\n$$\n\\Pr(X'\\ge Y)-\\Pr(X\\ge Y)=\\frac{25}{1173942}>0.\n$$\nThis refutes the claim that merging any two positive coefficients of a balanced signed-exponential sum can only decrease its nonnegative sign probability.",
+  "subgoal_id": "pk-intake-signed-exponential-arbitrary-merge-obstruction",
+  "title": "An exact obstruction to merging arbitrary positive exponential coefficients"
+}

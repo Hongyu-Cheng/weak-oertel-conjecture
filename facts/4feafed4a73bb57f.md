@@ -1,0 +1,34 @@
+---
+fact_id: 4feafed4a73bb57f
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-projected-deepest-set-localization
+depends_on: ["d6a3cbae1da72277", "4d3ee3757f4ea53a", "3df584464f5236ab"]
+verifier_run: d8e54555546cfbf9
+target_match: null
+---
+
+## Source
+
+- [3502773126e88b57](../candidates/3502773126e88b57.json), Theorem, (2)–(3), and §3.
+
+## Statement
+
+Let $K\subset\mathbb R^D$ be a convex body, let $\mu$ be uniform probability on $K$, and let $\pi:\mathbb R^D\to\mathbb R^r$ be a surjective linear map with $1\le r\le D$. Put $\nu=\pi_\#\mu$ and $B=\pi K$. Let $\alpha$ be the maximum closed-halfspace depth for $\nu$ and let $\mathcal A$ be its set of maximizers. Write $\gamma_0=1$ and $\gamma_j=(j/(j+1))^j$ for $j\ge1$. Suppose finitely many closed halfspaces $H_i=\{x:\ell_i(x-c)\ge0\}$ cover $\mathbb R^r$, each $\ell_i$ has width one on $B$, and $\nu(H_i)\le\tau<\gamma_{r-1}$ for every $i$. Then $c\in\operatorname{int}B$, $\gamma_r\le\alpha\le\tau$, and for every $c_*\in\mathcal A$ the gauge of the difference body satisfies
+$$
+\lVert c-c_*\rVert_{B-B}
+\le\min\left\{1,\frac{D^2(\tau-\alpha)}{\alpha(\gamma_{r-1}-\tau)}\right\}
+\le\min\left\{1,\frac{D^2(\tau-\gamma_r)}{\gamma_r(\gamma_{r-1}-\tau)}\right\}.
+$$
+If $\tau=\alpha$ then $\mathcal A=\{c\}$. If $\tau=\gamma_r$ then additionally $\alpha=\gamma_r$.
+
+## Proof
+
+Choose coordinates on the image that identify $\pi$ with the orthogonal projection onto $(\ker\pi)^\perp$. The claims under consideration are invariant under this change of coordinates. The density $f$ of $\nu$ is the normalized $(D-r)$-dimensional section volume, or a constant times $\mathbf1_B$ when $D=r$. For $r<D$, Fubini gives the density formula. Every interior image point has an interior preimage, since a segment from the projection of an interior point can be extended slightly past it in $B$ and lifted by convexity. Hence $f>0$ on $\operatorname{int}B$. The sections lie in a common bounded set and their indicator functions have upper limit bounded by the indicator of the limiting section, by closedness of $K$. The upper-limit form of Fatou’s lemma gives upper semicontinuity, and compact support and boundedness are immediate. The Brunn–Minkowski inequality makes $f^{1/(D-r)}$ concave on the positive set. Composing with the convex decreasing power $-(D-r)/(r+1)$ shows that $f^{-1/(r+1)}$, extended by $+\infty$ where $f=0$, is convex. In dimension $r=D$ the extended inverse power is constant on $B$ and infinite outside.
+
+The density centerpoint theorem d6a3cbae1da72277 gives $\alpha\ge\gamma_r$. The projected slab lemma gives a nonempty deepest set, and some cover member contains each $c_*\in\mathcal A$, so $\alpha\le\tau$. The conditioning theorem for projected cover normals gives $c\in\operatorname{int}B$. If $q=\lVert c_*-c\rVert_{B-B}>0$, apply that theorem to $v=(c_*-c)/q$. Some $i$ has $\ell_i(c_*-c)\ge q(\gamma_{r-1}-\tau)/D>0$. The projected slab lemma then gives
+$$
+\tau\ge \nu(H_i)\ge \alpha+\frac{\alpha q(\gamma_{r-1}-\tau)}{D^2}.
+$$
+This bounds $q$ by the first displayed fraction. The bound also holds for $q=0$. Both points lie in $B$, hence $q\le1$. The function $\tau/\alpha-1$ decreases in $\alpha>0$, giving the second bound. When $\tau=\alpha$, every deepest point must equal $c$. When $\tau=\gamma_r$, the two bounds on $\alpha$ force equality.

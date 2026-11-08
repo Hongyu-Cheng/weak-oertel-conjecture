@@ -1,0 +1,26 @@
+{
+  "advances": "Controls the scalar law at any deepest point of the exact projected marginal.",
+  "author": "PK-research-agent",
+  "candidate_id": "4d3ee3757f4ea53a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:36:18.785261+00:00",
+  "depends_on": [],
+  "draft_key": "projected-deepest-point-slab",
+  "kind": "lemma",
+  "proof": "The pushforward $\\nu$ is absolutely continuous by Fubini along $\\ker\\pi$. Every nonempty open subset of $\\operatorname{int}B$ has positive mass, since the projection of $\\operatorname{int}K$ equals $\\operatorname{int}B$. Indeed, starting with the image of an interior point, extend the segment to the desired interior image slightly beyond it in $B$, and take the corresponding convex combination of the interior point and a preimage of the extension. Any containing halfspace can be moved inward until its boundary passes through the given point. The resulting cap masses depend continuously on the unit normal and the point by dominated convergence, as hyperplanes are $\\nu$-null. Minimizing over the compact unit sphere therefore gives a continuous depth function. It is zero on $\\partial B$ by a supporting plane and positive in $\\operatorname{int}B$ because each cap there contains an open subset of the interior and the minimum is attained. Thus the maximum on $B$ is attained and $\\mathcal A$ is compact in $\\operatorname{int}B$.\n\nThe functional $\\ell\\circ\\pi$ has width one on $K$. For $D\\ge2$, write its support interval as $[m,M]$ and let $p$ be its density given by parallel section volumes, scaled by the constant coarea factor and $|K|^{-1}$. The cones joining the section at $t$ to support points at levels $m$ and $M$ lie in $K$, and their interiors are disjoint. Their total volume divided by $|K|$ is $p(t)(M-m)/D=p(t)/D$. At an endpoint the zero-height cone contributes zero. Hence $p\\le D$. When $D=1$, the scalar density is one on $[m,M]$ and zero outside.\n\nThe two tails at $t_*$ each have mass at least $\\alpha$. When $D\\ge2$, Brunn–Minkowski makes $p^{1/(D-1)}$ concave on $[m,M]$. The section representative is upper semicontinuous by closedness and boundedness of the sections and the upper-limit form of Fatou’s lemma. On the side of $t_*$ away from a maximizer of $p$, concavity bounds $p$ by $p(t_*)$. If $t_*$ itself is a maximizer, either side works. The tail on that side has length at most one and mass at least $\\alpha$, so $p(t_*)\\ge\\alpha$. The same inequality holds for the uniform scalar law when $D=1$. For $D\\ge2$ and $0\\le s\\le L$, concavity between $t_*$ and $m$ gives $p(t_*-s)\\ge p(t_*)(1-s/L)^{D-1}$. Thus the slab mass is at least $p(t_*)L[1-(1-a/L)^D]/D\\ge\\alpha a/D$. When $D=1$ its mass is $a$. Finally, moving the through-$c_*$ cap down to level $\\ell(c)$ adds the slab with $a=\\ell(c_*-c)\\in[0,L]$. The original cap has mass at least $\\alpha$ and the shared boundary has mass zero.\n",
+  "source_candidate_ids": [
+    "3502773126e88b57"
+  ],
+  "source_candidate_sha256": {
+    "3502773126e88b57": "e2ea60fb2c5f36942333c917b05f6cf867eb3011b3a5c7eb762677d0a6c5fcfa"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3502773126e88b57",
+      "locator": "Preamble, (1), and §1, (4)–(7)"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^D$ be a convex body, let $\\mu$ be uniform probability on $K$, and let $\\pi:\\mathbb R^D\\to\\mathbb R^r$ be a surjective linear map with $1\\le r\\le D$. Put $\\nu=\\pi_\\#\\mu$ and $B=\\pi K$. Let $\\alpha$ be the maximum closed-halfspace depth for $\\nu$ and let $\\mathcal A$ be its set of maximizers. The set $\\mathcal A$ is nonempty and compact in $\\operatorname{int}B$. Let $\\ell$ have width one on $B$ and let $p$ be the scalar section-volume density of $\\ell_\\#\\nu$, extended by zero off its support. Then $0\\le p\\le D$. For each $c_*\\in\\mathcal A$, put $t_*=\\ell(c_*)$ and $L=t_*-\\min_B\\ell$. Then $p(t_*)\\ge\\alpha$ and\n$$\n\\nu\\{x:t_*-a\\le\\ell(x)\\le t_*\\}\\ge\\alpha a/D\\qquad (0\\le a\\le L).\n$$\nIn particular, if $c\\in B$ and $\\ell(c_*-c)\\ge0$, the cap $\\{x:\\ell(x-c)\\ge0\\}$ has mass at least $\\alpha+(\\alpha/D)\\ell(c_*-c)$.",
+  "subgoal_id": "pk-intake-projected-deepest-point-slab",
+  "title": "Scalar slab estimates at deepest points of a projected body"
+}

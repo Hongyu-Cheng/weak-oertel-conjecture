@@ -123,8 +123,8 @@ lake build
 lake env lean CheckAxioms.lean
 ```
 
-`CheckAxioms.lean` checks the three final theorems, including
-`SharpOC.Selector.sharp_oc_counterexample`, and their supporting results.
+`CheckAxioms.lean` checks the final theorems for the counterexamples above
+and their supporting results.
 The final theorems depend only on the standard axioms `propext`,
 `Classical.choice`, and `Quot.sound`. The build reports non-fatal style
 and deprecation warnings from several modules.

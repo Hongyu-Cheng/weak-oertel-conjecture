@@ -1,0 +1,47 @@
+{
+  "candidate_id": "67cc1b9bd6c550e9",
+  "candidate_sha256": "4d4a80c32dbaf1eaa0aa41edf187579bac0ad4e79e4d231bf2b4ea8deb7efb10",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The projection is [0,1], so the only integer bases are 0 and 1, and the actual section at each is the full unit ball. The mixed mass is 2V.",
+    "For any closed halfspace containing a center, its restriction either contains the whole own ball when the continuous normal vanishes, or contains a central hemisphere by comparison of its threshold with zero. This proves a lower bound of V/2 at both centers.",
+    "For any actual point (j,y), take u = y/|y| if y is nonzero and any unit u otherwise, so the own threshold t = u·y is nonnegative. Independently checked the tilt sign: the margin u·x - t - T(1-2j)(z-j), with T>1, vanishes at (j,y), preserves the own trace, and gives threshold t+T>1 at z=1-j. The other ball contributes zero. The own trace has volume at most V/2 by reflection symmetry, also when the marked point is on the boundary. Thus V/2 is the global raw maximum and (V/2)/(2V)=1/4.",
+    "Each displayed halfspace has own threshold zero and foreign threshold L>1 in a unit direction, so its raw mass is V/2 and it is critical at the corresponding center. At each mark the pair has normals +e1 and -e1 and hence a minimal positive dependence with equal coefficients. Each own plane x1=0 properly cuts the ball. Both foreign planes x1=+L and x1=-L miss the ball.",
+    "For any signed threshold increment s with |s|<L-1 the foreign threshold L+s stays above one. For |s|<1 the own section at level s has area equal to the (d-1)-unit-ball volume times (1-s²) raised to (d-1)/2. Integrating the area from s to 1 gives the same two-sided derivative at zero, the negative of that unit-ball volume, for all four caps. This verifies strict positivity of the stated magnitude and the equal within-pair weights.",
+    "At each ball boundary point with x1 nonzero, exactly one own closed cap contains the point and neither foreign cap does. Weight 1/4 per cap yields score 1/4. At x1=0 both own closed caps would count, so the exclusion of the cut is necessary and matches the statement.",
+    "Solving the four ambient boundary equations for x1 gives slopes +L and -L in z. The two intercepts at slope +L are 0 and -L, and the two at slope -L are 0 and +L. Since L>1, no two lines coincide, and extending in the unconstrained coordinates cannot change that conclusion.",
+    "Verified the exact source bytes and the locator in section 5 of pending note 571b5ceb2d4e114a. The first example has exactly this product, four caps, coefficient choice, and distinction between restricted and ambient pairing. The frozen proof supplies the explicit global upper bound and slope calculation. The source's later changing-partners example is separate. The frozen result is about genuine critical caps on this body and makes no local-minimum claim."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T11:02:53Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its cube-product identities at n=1 imply total mass 2V and equality of mixed and intrinsic ball depth at every actual point. The elementary symmetry calculation then gives V/2 and 1/4. That accepted depth theorem gives no example of matched proper restricted planes with four distinct ambient critical planes.",
+      "fact_id": "2acc8bc803acf1c0"
+    },
+    {
+      "comparison": "Its hypotheses hold on the two positive compatible fibers and its existence conclusion supplies critical circuits. The present claim verifies specific equal-mass circuits and shows that their fiberwise pairings do not identify any ambient planes.",
+      "fact_id": "755cb08c379113cc"
+    },
+    {
+      "comparison": "Its section-derivative calculation specializes to the same proper-section slope for a central ball section and empty foreign traces. Its certificate concerns an affine projective orbit, with no conclusion about distinct ambient planes of paired restricted critical caps.",
+      "fact_id": "6b80e85ff6937910"
+    }
+  ],
+  "readability": "The margins use the coefficient of the continuous coordinate as their unit-normal convention. The equality of slopes is for threshold shifts in those displayed margins, consistent with the source's circuit weights.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e1c89e873284f15976bf50a4b168720bb3aa2e7bf2fa2416b4d9d3e826989549",
+  "reviewed_statement_sha256": "b6f68b13fa48e5be3ea8ef2d6431b199ff067e2781f4092b71daf5bc0d952f23",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T11:01:41Z",
+  "summary": "The explicit four caps have the claimed globally critical masses and common positive slope magnitude. They pair on each measured ball while all four ambient planes are distinct.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

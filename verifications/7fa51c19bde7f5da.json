@@ -1,0 +1,37 @@
+{
+  "candidate_id": "076e59f25eda4291",
+  "candidate_sha256": "68b91992325582eb8451591b57e5bd60b3f87e0e543345b7d642a20a2ea99fb6",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "At each intersection the proper cutting plane cannot be tangent: the tangent hyperplane is supporting, while a proper plane meets the interior. Its restriction to the C1 patch has nonzero differential there, giving a C1 trace of dimension d - 2.",
+    "Two distinct parallel planes are disjoint. Otherwise their intersection has dimension d - 2. If it contained a relatively open patch of the trace, the tangent space of the trace at a point there would be the direction space of that intersection. Local projection and the inverse function theorem would give a relatively open subset of that affine intersection contained in U; positive dimension gives a forbidden segment.",
+    "Each other plane therefore removes a relatively closed set with empty interior. A finite intersection of open dense complements in the nonempty trace is nonempty. This proves a point on this plane alone without any isolated-crossing or generic-position hypothesis.",
+    "The regular equation changes sign near the chosen point on U. All other plane margins retain their signs. Both nearby points avoid every plane, so subtracting their constant scores cancels every unrelated cap and gives equality of the aggregate weights by orientation on the chosen plane. Closed-boundary double membership is not used.",
+    "The three unit-circle directions are separated by 120 degrees. A cap at threshold 1/2 covers angles within 60 degrees of its direction, so exactly one weight 1/3 appears off the shared endpoints. The three cap boundary equations have distinct proper cutting lines. A proper point cut in dimension one is interior to its interval and misses the boundary.",
+    "Original pending source 571b5ceb2d4e114a, sections 2 and 4 including (2), supplies the geometric and dimensional arguments. The proof works with local C1 and no-segment hypotheses on U, because the open affine patch contradiction takes place inside U. Verified the source bytes against the frozen pointer and snapshot."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T10:58:14Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It uses an isolated crossing to detect unequal weights for central cuts in a positive-curvature section-preserving variation, obtaining a crossing automatically under globally positive support curvature. Here the cuts are arbitrary affine proper cuts of the patch, the input is constant score, and positive curvature and a preselected crossing are unnecessary.",
+      "fact_id": "baa0b304f8ca0521"
+    }
+  ],
+  "readability": "All plane groups are unoriented after restriction to the continuous space. The local no-segment assumption is used only where the trace would fill an open part of the intersection of two distinct planes.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a5cc2e327acebfa926d954e2465989e4f0a11867d3a71f6c36e04d9fec095d50",
+  "reviewed_statement_sha256": "7caa7653e16d671b65ea5282c2b68aeaf7364c6675745dc9d51cf9b70d121864",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:55:39Z",
+  "summary": "The trace of a proper cut has positive dimension, and no other listed plane can cover a relatively open part of that trace. A crossing off all other planes gives exact orientation cancellation.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

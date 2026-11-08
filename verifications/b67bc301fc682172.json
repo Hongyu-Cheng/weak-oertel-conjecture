@@ -1,0 +1,67 @@
+{
+  "candidate_id": "d372e5eb0caea032",
+  "candidate_sha256": "11c0f179b220d25f891cd695685e0f8b667d1ac82aad62c0a8a5cd426d7b1b30",
+  "checked_dependency_candidate_sha256": {
+    "ba445d671279810a": "54e186027ed4746ddecfb675bd635221ad15daeb36bef6164fb35a798f4185b9",
+    "ebea5ab33e39407b": "b4ac73764be75e8dcaec5672c90e824f11b1cff85c862bbf8cfc16dc2684f995"
+  },
+  "checks": [
+    "The original cap thresholds on A, K, B are respectively 2v_i·y−h_i, v_i·y and h_i. Both proper sections have positive length. The supporting B face has zero planar area, and all caps attain the actual depth of the same mark. These match ba445d671279810a without changing bodies or choosing substitute caps.",
+    "The accepted chord-center estimate gives k_i≥a_i and |c_i|/s_i≤t_i(1−3t_i), so t_i∈(0,1/3]. Subtracting or adding that bound to k_i/(2s_i) gives the two endpoint polynomials. The lower endpoint bound is at least s_i/6, with equality only at t_i=1/3, where c_i=0. The upper bound is strictly below s_i/2 because t_i>0.",
+    "The symmetric core is a convex body containing an origin neighborhood. Its gauge of Jv_i is the reciprocal of the nearer positive endpoint distance and lies between 2λ_i/(1−2t_i) and 2λ_i/f(t_i). The common norm triangle inequality yields the permutation inequality and the strict comparison p_l<3(p_i+p_j), hence p_l<3/4.",
+    "All normal pairs are independent with determinant of absolute value D by the spanning and zero-sum conditions. The affine planar map with rows v_1ᵀ,v_2ᵀ after relabeling sends the normals to (1,0),(0,1),(−1,−1), the mark to 0 and every fiber area to D times its original value. The identity LJLᵀ=(det L)J scales chord parameter lengths by D even when orientation reverses. Therefore Λ becomes Λ/D, weights and t are invariant, and the actual mixed-depth hypotheses are preserved by the ambient bijection.",
+    "For desired i,l relabeled 1,3 the canonical sector has y<0<x+y, and the negative vertical and positive diagonal endpoints are β and ρ in the lemma. The bounds β≥1/(6p_iΛ′), ρ<1/(2p_lΛ′) imply ρ/β<3p_i/p_l. For p_l>3p_i, comparison of both positive factors in ρ²/[2(1−ρ/β)] gives the strict bound after returning to original area units. At p_l=3p_i the endpoint envelope still has β>ρ, while the weight-only expression has a zero denominator. The complement of two closed caps yields |Z_i|≥k−q_j−q_l, including nonempty overlaps.",
+    "In the stronger weight domain the strict gauge comparison gives 1/3≤f(t_i)<p_i/(p_l−3p_j)<1. Inverting the decreasing quadratic on [0,1/3] gives t_i>T_i with the claimed smaller root and T_i∈(0,1/3). The same holds for j. At equality in the lower weight condition the corresponding root is zero.",
+    "The two actual A chords become perpendicular coordinate segments of lengths Da_i and Da_j. Their hull contains two triangles with disjoint interiors when the vertical segment straddles the horizontal line, or one triangle of height at least Da_i on one side, including endpoint contact. Dividing the resulting area by D yields a≥Da_ia_j/2. Substituting the strict lower bounds for t_i,t_j and dividing by the strict upper scale for k gives the stated ratio and factor 4.",
+    "Verified both source hashes and checked 1a4f9cc73e4a014c §§1–3 (1)–(12) and c5a29d6b8953c3ed §5 (14)–(17). The frozen proof rederives the gauge, roots and chord-hull inequality with the strict margins supplied by t_i>0."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ba445d671279810a",
+      "candidate_sha256": "54e186027ed4746ddecfb675bd635221ad15daeb36bef6164fb35a798f4185b9",
+      "mapping": "Apply its actual chord-center bound with the same mark, body triple, three minimizing halfspaces and proper A,K sections. Use k_i≥a_i and |c_i|≤a_i(k_i−a_i)/(k_i+2a_i).",
+      "reviewed_proof_sha256": "66d45092bf00477a4aaa194a136558b056ba42601f8a00fd00a25041b9b5cdb9",
+      "reviewed_statement_sha256": "fed64e4ee3fcffafe2230b78261cd6f4051e84d3b615d4085daa602b16823c08",
+      "status": "accepted"
+    },
+    {
+      "candidate_id": "ebea5ab33e39407b",
+      "candidate_sha256": "b4ac73764be75e8dcaec5672c90e824f11b1cff85c862bbf8cfc16dc2684f995",
+      "mapping": "Apply the independently reviewed endpoint lemma after affine normalization. Z_i becomes y<0<x+y. The β and ρ parameter lengths use the actual chords normal to the remaining small index and to the heavy index respectively.",
+      "reviewed_proof_sha256": "f4847eb5664beb4d78057975a0376ae64b19fed9e2e7a054d82411808f935fac",
+      "reviewed_statement_sha256": "11f2b81a332ad26b99ead33bf6309e1d20dd9eb6fb63e13cb2c0d19f3ca0997b",
+      "status": "same_batch"
+    }
+  ],
+  "finished_utc": "2026-11-08T10:59:55Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Identical actual cap hypotheses and precisely the chord center estimate used here. Its coarse gauge and p_l≤3/4 conclusions overlap the sharpened norm calculation. The new sector bounds, two-body scales, ratio and strict weight ceiling are absent.",
+      "fact_id": "ba445d671279810a"
+    },
+    {
+      "comparison": "Positive-fan sector identities overlap the inclusion-exclusion step. The fact treats cap-mass and sector-ratio geometry without tying a fixed menu to proper A and supporting B traces or bounding the normalized actual section scales.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    },
+    {
+      "comparison": "Bounds a reweighted average of cap fractions under bisected chords of one body. The actual middle chords can be off center, and its conclusion gives no endpoint-body scale or weight-conditioned sector bound.",
+      "fact_id": "e0bd82357032b4ec"
+    }
+  ],
+  "readability": "The signed determinant scales the oriented chord parameter, while its absolute value scales distances. The use of ρ/β preserves the strict bound on the entire sector.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7fa26d3e917dfa7e8258c8eaa59f66ce1a6ff14b1398596f4b9973814fce0a16",
+  "reviewed_statement_sha256": "2ba2c183b9dd5c1d77aadc37b1baa49b23df105b26205907927b384c9b0da437",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:56:53Z",
+  "summary": "The two-sided actual chord estimates sharpen the accepted norm bounds. The resulting strict upper sector scale and strict lower endpoint-body scale use the same three depth-attaining cuts.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

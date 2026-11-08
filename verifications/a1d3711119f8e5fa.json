@@ -1,0 +1,65 @@
+{
+  "candidate_id": "a15ae50c21ef6716",
+  "candidate_sha256": "b011ac72a1d7dbfbcbbb2da5767d2a82c7fcbb03e06dafd90d16e4ac2436eab3",
+  "checked_dependency_candidate_sha256": {
+    "6d6fcf377e68c79c": "d5b251e75567aff3da9f0767d89121ad75927a3913df28543a8b5083e25ae135",
+    "bee3cc8e50a0dcea": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa",
+    "c2180d0c4d7ea592": "3e5bab26e3c986880ea947400394cdca0d50dd15151b00df0a8c4b3da024df7a"
+  },
+  "checks": [
+    "The finite nonempty convex hull of projected incidence vectors either omits 0, in which case differentiating squared norm along each nearest-point segment yields b·b_F≥||b||², or contains 0. In the latter case the lifted incidence combination is constant. Pairing it with original weights gives α=cM and c=1/h. Scaling gives total coefficient h, and pairing with a zero-total strict perturbation proves mutual exclusion.",
+    "The empty list has the vacuous choice v=0 and no fractional partition because P is nonempty. For h=1 it is always empty since every nonempty proper face omits a positive-weight vertex. The mixed strict conclusion correctly assumes h>1, including for the full minimal face.",
+    "One small positive ε simultaneously preserves all weights, total M, and the strict subcritical status of every original subcritical subset, by finiteness of P. Every originally critical proper face becomes subcritical. A center for w′ is a center for w because each closed halfspace trace is a subset of P. An exposing closed halfspace for any nonempty proper face containing that center retains exactly the sites on that face. Thus none of the small original proper faces contains the center, while the full face weighs M>α.",
+    "The affine transfer is applied to the original positive fibers and original atomic weights at the selected site. The auxiliary weights are used only for center selection. The strict statement concerns an actual centroid mark; equality of the maximum then implies the partition. No sufficiency of a fractional partition is claimed.",
+    "For a site q outside all small proper faces, e_q−w/M has sum zero and gives −α/M on each critical face. A relative-interior site is outside every nonempty proper face. In the complete integer case the constant graph satisfies same-parity midpoint closure and has exactly the base traces of product lifts. For positive-volume fibers of a convex body, at a lattice point in the hull of their bases the fiber contains a Minkowski convex combination, which contains a positive scaling of any participating full-dimensional fiber with nonzero coefficient, translated by chosen points from the others.",
+    "Compared §§3–4 and equations (4)–(5) of imported source fc860651e80d6fd0 at SHA-256 d12133b91550b60abb24519d8a99fd2b3fdd887b96ff006e1f904c5a93c75a6b. The frozen proof uses an equivalent perturbation for the exterior-site criterion and the accepted constant-graph Helly theorem for the integer specialization. Section 2's center-selection result is invoked through the accepted Borel centerpoint fact."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "6d6fcf377e68c79c",
+      "mapping": "P is closed and nonempty, and the perturbed atomic measure is positive, finite, supported on P, and has total M. The accepted theorem yields depth M/h(P)≥M/h for all closed containing base halfspaces."
+    },
+    {
+      "fact_id": "bee3cc8e50a0dcea",
+      "mapping": "In the complete integer-base specialization, use n≥1 and the constant zero label in any continuous space of positive dimension. Completeness supplies the graph midpoint for each same-parity pair. Product lifts of all base convex sets transfer the accepted graph Helly bound 2^n to P."
+    },
+    {
+      "candidate_id": "c2180d0c4d7ea592",
+      "candidate_sha256": "3e5bab26e3c986880ea947400394cdca0d50dd15151b00df0a8c4b3da024df7a",
+      "mapping": "For the original weights the selected site has weighted base depth at least α, and the same affine centroid map is used on every original fiber. The predecessor converts this to the ambient atomic center hypothesis, identifies the minimal graph face with the base face, and gives raw depth strictly greater than γ_d α because its weight is greater than α. Same-batch admission requires the independently approved predecessor at the recorded exact input.",
+      "reviewed_proof_sha256": "b8a9c20be1aff21e3af3bba4642ce06caedc1f68a200d8b1a88d1778de5c814b",
+      "reviewed_statement_sha256": "449332ef18547af49f7661b8760201e7ee1f410e6c24781e99009fb14094e625"
+    }
+  ],
+  "finished_utc": "2026-11-08T10:59:58Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof before incidence classes already proves the unrestricted separation/fractional-balance step by the same constant-vector argument, with its k replaceable by h there. The stated theorem assumes midpoint labels and derives the stronger singleton-vertex classification at M/k. It does not prove strict actual mixed depth for affine fibers at an arbitrary supplied Helly bound.",
+      "fact_id": "5c32c6fd8fbe588e"
+    },
+    {
+      "comparison": "It gives excess minimal-face mass for a weighted atomic center under midpoint-label closure at M/k except for the equal-weight vertex case. The present theorem uses a fractional obstruction at supplied M/h without such label closure and transfers strictness to actual fiber depth.",
+      "fact_id": "f4547c4166b39683"
+    },
+    {
+      "comparison": "Its affine-centroid corollary gives the weak ≥γ_d M/2^n bound for actual lattice fibers. It supplies neither a strictness criterion nor a necessary fractional partition for equality.",
+      "fact_id": "bb2b5f9519ae23e8"
+    }
+  ],
+  "readability": "The two uses of the weights are distinct. A center for the perturbed measure is checked against all original subcritical traces before the original fibers enter the proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "b44cc19eec8cf77c62c7833b6a4c6f351f21e98588bd9ec17e6df5ac3061073e",
+  "reviewed_statement_sha256": "aee7b64fb7160081374b7c7c54687626ac60e5083443c24d1b2f0b6f079cd3a9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:56:31Z",
+  "summary": "The two finite alternatives are exhaustive and exclusive. When h>1 and bounds relative Helly, the perturbation supplies an original center with excess minimal-face weight, so the independently reviewed affine transfer gives strict actual depth.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

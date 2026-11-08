@@ -1,0 +1,26 @@
+{
+  "advances": "Refutes the common correction at the actual dimension-three exponent and ambient constant. The signed aggregate condition is weaker than individual section centering.",
+  "author": "PK-research-agent",
+  "candidate_id": "4a3bea44b15dd225",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:57:00.611619+00:00",
+  "depends_on": [],
+  "draft_key": "dimension-three-profile-multiplier-obstruction",
+  "kind": "counterexample",
+  "proof": "Integrating $(1-z)^2$ gives $V=511/24$. For $0<s\\le3/4$ the section interval is $[-s/(1-s),s/(1+s)]$, lying in $[-3,1/2]$. Parametrizing by $x=-z/s$ gives coarea and moment integrands $(1-z)/(2s)$ and $z(1-z)/(2s)$ in $z$. Integrating them gives $C(s)=(1-s^2)^{-2}$ and $M(s)=-4s^2/[3(1-s^2)^3]$. At $s=0$ the section directly gives $C(0)=1$ and $M(0)=0$.\n\nTemporarily extend the profile to its apex at $z=1$. In this extension each section $z+sx=q$ for $0\\le q<1$ is the image of the section at zero by homothety of scale $1-q$ about $(0,1)$. Indeed the lower endpoint of the zero cut has $z\\ge-3$, and contraction toward the apex puts the corresponding endpoint of the parallel cut at $z\\ge-3$. On these cuts the density also scales by $1-q$. The extended cap mass is therefore $\\int_0^1(1-q)^2 C(s)\\,dq=C(s)/3$. For $z\\in[1/2,1]$ the smallest margin on the horizontal slice is $z-s(1-z)\\ge1/8$, so truncation removes the mass $\\int_{1/2}^1(1-z)^2\\,dz=1/24$ from every cap here. Thus $P(s)=C(s)/3-1/24$. The records are\n$$\n\\begin{array}{c|ccc}\ns&P(s)&C(s)&M(s)\\\\ \\hline\n0&7/24&1&0\\\\\n1/2&119/216&16/9&-64/81\\\\\n3/4&1999/1176&256/49&-3072/343\n\\end{array}\n$$\nUse the lower inequality at $0$ and $3/4$ and the reversed lower inequality $V-P+cC+\\lambda M\\ge(27/64)V$ at $1/2$. Multiply by $5120,343,3888$, respectively. The coarea correction is proportional to $5120+1792-6912=0$, and the moment correction to $-3072+3072=0$. Reflection cancels the horizontal components of the raw coarea vectors. The resulting mean must be at least $27/64$, whereas the actual mean is\n$$\n\\frac{5120(7/24)+3888(511/24-119/216)+343(1999/1176)}{9351(511/24)}\n=\\frac{31511}{75847}\n=\\frac{27}{64}-\\frac{31165}{4854208}.\n$$\nBoth oblique types have nonzero individual vertical moments.\n",
+  "source_candidate_ids": [
+    "197c4420ab5b2852"
+  ],
+  "source_candidate_sha256": {
+    "197c4420ab5b2852": "33fc0bbfc5eda2f03be020e30b66eae7284b99196ce6f9508a4ac3fe82dab47a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "197c4420ab5b2852",
+      "locator": "§6, (2)–(3)"
+    }
+  ],
+  "statement": "Let $r(z)=1-z$ on $[-3,1/2]$, and let $f(x,z)=r(z)/2$ on $\\{(x,z):-3\\le z\\le1/2,\\ |x|\\le r(z)\\}$ and zero elsewhere. This is the positive affine profile with the interval-layer density exponent $d-2=1$ in dimension $d=3$. Its mass is $V=511/24$. Let $P(s)$ be the mass of $z+sx\\ge0$, and let $C(s)$ and $M(s)$ be the integrals of $f$ and $zf$ on $z+sx=0$ against $d\\mathcal H^1/\\sqrt{1+s^2}$. No real $c,\\lambda$ satisfy\n$$\n\\frac{27}{64}V\\le P(s)-cC(s)-\\lambda M(s)\\le\\frac{37}{64}V\n\\qquad\\text{for all }s\\ge0.\n$$\nAn explicit witness uses slopes $0,1/2,3/4$, with the middle cap reversed, and total weights $5120,3888,343$ divided by $9351$. Splitting each oblique type equally under $x\\mapsto-x$ gives raw coarea vector balance and signed vertical section first-moment balance, with weighted mass fraction $31511/75847<27/64$.",
+  "subgoal_id": "pk-intake-dimension-three-profile-multiplier-obstruction",
+  "title": "An affine dimension-three profile obstructs the two-multiplier bound"
+}

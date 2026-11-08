@@ -1,0 +1,28 @@
+{
+  "advances": "Refutes unconditional rank reduction with a nonincreasing cap mean. The tetrahedral mean equals the ambient centroid constant, so the witness leaves open reductions restricted to strict violations of that constant.",
+  "author": "PK-research-agent",
+  "candidate_id": "9b0e9cc6d713be2c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:57:00.613306+00:00",
+  "depends_on": [
+    "03ec0bc313e02df5"
+  ],
+  "draft_key": "tetrahedral-stationary-rank-obstruction",
+  "kind": "counterexample",
+  "proof": "Take a regular tetrahedron with vertices $v_1,\\ldots,v_4$ and centroid $0$. Write $\\lambda_i$ for its barycentric coordinate at vertex $i$. The cap $H_i=\\{\\lambda_i\\ge1/4\\}$ has inward unit normal $u_i$ in the direction of $v_i$, since the opposite facet is perpendicular to $v_i$. The section has vertices $v_i/4+3v_j/4$ for the three $j\\ne i$, whose average is $(v_i+\\sum_{j\\ne i}v_j)/4=0$. All four section areas are the same by the isometries permuting the vertices. The vectors $v_i$ have equal length and sum to zero, so the equal weights $1/4$ balance the four section-area-weighted normals. The normals span $\\mathbb R^3$, and the only linear dependence is their sum, because the four tetrahedron vertices are affinely independent. Thus the dependence is a positive circuit.\n\nEach cap is the tetrahedron scaled by $3/4$ about its corresponding vertex and has fraction $(3/4)^3=27/64$. For a competing rank-at-most-two menu, translate its source to $0$ and take a two-dimensional plane containing its positive-weight normals. The interior source projects to an interior point and each centered section projects to centroid $0$. Fact 03ec0bc313e02df5 applies and gives $c_3=3/7$, which exceeds $27/64$ by $3/448$.\n",
+  "source_candidate_ids": [
+    "4e8f9d0191e9e822"
+  ],
+  "source_candidate_sha256": {
+    "4e8f9d0191e9e822": "637232cdb52b9c4b90555d623cf8a4924f93c22334c7fb3e48c8680b8a887ad5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4e8f9d0191e9e822",
+      "locator": "§6, second and third paragraphs"
+    }
+  ],
+  "statement": "There is a rank-three positive balanced stationary cap circuit in dimension three with weighted mean $27/64$. Here each cap passes through the interior source point, each section centroid equals that point, the positive weights sum to one, and their weighted unit normals multiplied by section areas sum to zero. Every balanced stationary menu with positive-weight normal rank at most two in any three-dimensional convex body has mean at least $3/7>27/64$. Hence no operation can always reduce such a circuit in dimension three to normal rank at most two while retaining these hypotheses and weakly decreasing its weighted mean, even if the body can change.",
+  "subgoal_id": "pk-intake-tetrahedral-stationary-rank-obstruction",
+  "title": "A tetrahedral obstruction to monotone stationary rank reduction"
+}

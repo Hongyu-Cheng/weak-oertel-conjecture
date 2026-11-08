@@ -4,6 +4,28 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 0 | counterexample | pk-intake-actual-two-ball-fiberwise-critical-pairing | [67cc1b9bd6c550e9](facts/67cc1b9bd6c550e9.md) |
+| 2 | theorem | pk-intake-actual-critical-weight-exclusion | [7844fbb9b48c10d9](facts/7844fbb9b48c10d9.md) |
+| 5 | theorem | pk-intake-finite-base-critical-face-fractional-partition | [a15ae50c21ef6716](facts/a15ae50c21ef6716.md) |
+| 1 | theorem | pk-intake-actual-critical-chord-scales | [d372e5eb0caea032](facts/d372e5eb0caea032.md) |
+| 4 | theorem | pk-intake-common-stress-on-smooth-fiber-patches | [00c3455c74add1e2](facts/00c3455c74add1e2.md) |
+| 1 | counterexample | pk-intake-scalar-cap-fraction-support-obstruction | [0a79cfb962ab1ba6](facts/0a79cfb962ab1ba6.md) |
+| 6 | theorem | pk-intake-actual-deepest-maximal-projective-energy-stratum | [a3f9e21545cc535e](facts/a3f9e21545cc535e.md) |
+| 0 | lemma | pk-intake-fixed-base-hausdorff-stability-of-marked-depth | [43ed87d91b76249c](facts/43ed87d91b76249c.md) |
+| 1 | theorem | pk-intake-actual-centroid-graph-face-transfer | [c2180d0c4d7ea592](facts/c2180d0c4d7ea592.md) |
+| 0 | counterexample | pk-intake-sharp-homothetic-centroid-displacement-coefficient | [a4e0ede7004ed3dd](facts/a4e0ede7004ed3dd.md) |
+| 3 | theorem | pk-intake-homothetic-pair-budget-at-own-centroid | [dbb5aef8e95bc052](facts/dbb5aef8e95bc052.md) |
+| 4 | theorem | pk-intake-arbitrary-middle-volume-ratio-gluing | [bc2c56abf70b3209](facts/bc2c56abf70b3209.md) |
+| 0 | lemma | pk-intake-two-endpoint-sector-envelope | [ebea5ab33e39407b](facts/ebea5ab33e39407b.md) |
+| 0 | lemma | pk-intake-constant-boundary-score-plane-pairing | [076e59f25eda4291](facts/076e59f25eda4291.md) |
+| 0 | lemma | pk-intake-strict-compatibility-ambient-exposure | [ec9eb6a035fb449f](facts/ec9eb6a035fb449f.md) |
+| 3 | counterexample | pk-intake-tetrahedral-stationary-rank-obstruction | [9b0e9cc6d713be2c](facts/9b0e9cc6d713be2c.md) |
+| 0 | theorem | pk-intake-stationary-cap-hessian-realization | [f2644544aebd18da](facts/f2644544aebd18da.md) |
+| 0 | lemma | pk-intake-regular-cap-second-variation | [ce191a9f8e9f3597](facts/ce191a9f8e9f3597.md) |
+| 0 | counterexample | pk-intake-dimension-three-profile-multiplier-obstruction | [4a3bea44b15dd225](facts/4a3bea44b15dd225.md) |
+| 0 | counterexample | pk-intake-planar-profile-multiplier-obstruction | [3d94cbbf84119d14](facts/3d94cbbf84119d14.md) |
+| 0 | lemma | pk-intake-homothetic-interval-layer-records | [8f1256d28f434b09](facts/8f1256d28f434b09.md) |
+| 3 | theorem | pk-intake-ellipsoidal-stationary-reflection | [653d6b88a18d33c5](facts/653d6b88a18d33c5.md) |
 | 3 | theorem | pk-intake-selected-circuit-signed-dual | [ec5e140eb107957e](facts/ec5e140eb107957e.md) |
 | 2 | theorem | pk-intake-projected-stationary-sections-planar-normals | [03ec0bc313e02df5](facts/03ec0bc313e02df5.md) |
 | 1 | theorem | pk-intake-exact-planar-corner-loss-common-center | [6d1e0acd23043f7a](facts/6d1e0acd23043f7a.md) |

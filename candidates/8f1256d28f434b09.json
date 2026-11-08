@@ -1,0 +1,26 @@
+{
+  "advances": "Exact projected cap and section identities for each finite tilt with nonzero vertical coefficient. The averaged moment condition gives no layerwise centering.",
+  "author": "PK-research-agent",
+  "candidate_id": "8f1256d28f434b09",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:57:00.610980+00:00",
+  "depends_on": [],
+  "draft_key": "homothetic-interval-layer-records",
+  "kind": "lemma",
+  "proof": "The projection of uniform $U$ on $D$ has an even density $q$. When $m=1$ it is uniform on an interval. When $m\\ge2$ its value at $x$ is the $(m-1)$-volume of the section at $x$, divided by $|D|$. Symmetry makes $q$ even, and Brunn–Minkowski makes its $1/(m-1)$ power concave on the projection, hence $q$ nonincreasing on the positive half. The density given by these actual sections is upper semicontinuous: for $x_j\\to x$, the limsup of the section indicators in perpendicular coordinates is bounded by the indicator of the section at $x$ because $D$ is closed, and the indicators have a common bounded support. Also $q$ is continuous near $0$ by concavity of its positive root. For $0<v<q(0)$ the superlevel set $\\{q\\ge v\\}$ is a centered interval $[-R_v,R_v]$ of positive radius. The layer-cake identity gives $q(x)=\\int_0^{q(0)}\\mathbf1_{\\{|x|\\le R_v\\}}\\,dv$. Integrating in $x$ shows that $2R_v\\,dv$ has total mass one, and its pushforward by $v\\mapsto R_v$ gives the stated law. For $m=1$ use the single radius of the interval.\n\nAfter dividing by $|D|$, the projected volume density in $(x,z)$ is $r(z)^{m-1}q(x/r(z))$ on $a\\le z\\le b$. In radius $R$ it is $r(z)^{m-1}/(2R)$ on $|x|\\le Rr(z)$. The change $x=Ry$ gives $f$ and converts the cap inequality to $z+tRy\\ge0$. Integrating gives the mass identity and the cap average.\n\nFor $t\\ne0$, the original section is the graph $x=-z/t$ over $z$ and $X-xe$. Its area element divided by $\\sqrt{1+t^2}$ is $dz\\,d(X-xe)/|t|$. Integrating over the perpendicular coordinates and dividing by $|D|$ yields the integral of $r(z)^{m-1}q(-z/(t r(z)))/|t|$ over $[a,b]$, with an extra factor $z$ for the moment. Layering $q$ puts $|z|\\le |t|Rr(z)$ in the integration domain and changes the denominator to $2|t|R$. These are exactly the fixed-line section integrals for slope $tR$. Tonelli applies to the coarea and to the positive and negative parts of the moment. For $t=0$ the coarea divided by $|D|$ is $r(0)^m$ in the original section and in each layer, and the moment is zero. The last implication follows by integrating the vertical coordinate over a section whose centroid is zero.\n",
+  "source_candidate_ids": [
+    "197c4420ab5b2852"
+  ],
+  "source_candidate_sha256": {
+    "197c4420ab5b2852": "33fc0bbfc5eda2f03be020e30b66eae7284b99196ce6f9508a4ac3fe82dab47a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "197c4420ab5b2852",
+      "locator": "§2, before (1)"
+    }
+  ],
+  "statement": "Let $m\\ge1$, let $D\\subset\\mathbb R^m$ be a centrally symmetric convex body with center $0$, and let $K=\\{(X,z):a\\le z\\le b,\\ X\\in r(z)D\\}$, with $a<0<b$ and $r$ positive and concave. For a fixed horizontal unit vector $e$, write $x=e\\cdot X$. There is a probability law $\\mu$ on radii $R>0$ under which the projection $e\\cdot U$ of uniform $U$ on $D$ is a mixture of the uniform laws on $[-R,R]$. The layer of radius $R$, in coordinates $x=Ry$, has density\n$$\nf(y,z)=\\frac12 r(z)^{m-1}\\mathbf1_{\\{a\\le z\\le b,\\ |y|\\le r(z)\\}}\n$$\nafter dividing ordinary volume on $K$ by $|D|$. Its mass is $V=\\int_a^b r(z)^m\\,dz$. Let $P(s)$ be the cap mass of $z+sy\\ge0$ under this density. Let $C(s)$ and $M(s)$ be its section integrals of $f$ and $zf$ over $z+sy=0$, with line measure divided by $\\sqrt{1+s^2}$. For any finite $t\\in\\mathbb R$, the cap mass, raw section coarea, and raw vertical section first moment of $z+tx\\ge0$ in $K$, divided by $|D|$, are the $\\mu$-averages of $P(tR),C(tR),M(tR)$. Raw section integrals in $K$ use $\\mathcal H^m/\\sqrt{1+t^2}$. In particular full centering of the actual section implies $\\int M(tR)\\,d\\mu(R)=0$.",
+  "subgoal_id": "pk-intake-homothetic-interval-layer-records",
+  "title": "Exact interval-layer records for homothetic sections"
+}

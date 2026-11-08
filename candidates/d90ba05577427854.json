@@ -1,0 +1,32 @@
+{
+  "advances": "Ordinary full-dimensional compact convex bodies at interior marks. The escort is an ordinary Lebesgue density and the projective volume is computed in the continuous coordinates.",
+  "author": "PK-research-agent",
+  "candidate_id": "d90ba05577427854",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:45:21.610782+00:00",
+  "depends_on": [],
+  "draft_key": "projective-energy-attainment-escort",
+  "kind": "lemma",
+  "proof": "Translate the mark to the origin for the parameter analysis. The admissible set $\\Omega=\\{a:1+a\\cdot x>0\\text{ for all }x\\in K\\}$ is convex, contains $0$, and is open by compactness of $K$. Choose $r>0$ such that the closed ball of radius $r$ about $0$ lies in $K$. Testing the denominator at $-ra/\\|a\\|$ for $a\\ne0$ gives $\\|a\\|<1/r$. For $V(a)=\\int_K(1+a\\cdot x)^{-d-1}\\,dx$, differentiation on a parameter neighborhood with uniform positive lower bound on the denominator gives\n$$\n\\nabla V(a)=-(d+1)\\int_K x(1+a\\cdot x)^{-d-2}\\,dx,\\qquad\nD^2V(a)[b,b]=(d+1)(d+2)\\int_K(b\\cdot x)^2(1+a\\cdot x)^{-d-3}\\,dx.\n$$\nThe Hessian is positive definite since a nonzero linear functional does not vanish on a set with nonempty interior.\n\nSuppose $a_k\\in\\Omega$ tends to $a_0\\in\\partial\\Omega$. The limiting affine function is nonnegative on $K$ and has a zero $x_0\\in K$. In particular $a_0\\ne0$. Put $\\delta_k=1+a_k\\cdot x_0>0$, which tends to zero. A fixed small $(d-1)$-dimensional disk $D$ about $0$ in $a_0^\\perp$ lies in $K$, so $\\operatorname{conv}(\\{x_0\\}\\cup D)\\subset K$. The parameterization $x=(1-t)x_0+tu$ for $u\\in D$ has volume element $c\\,t^{d-1}\\,dt\\,du$ with $c=\\operatorname{dist}(x_0,a_0^\\perp)>0$. In dimension one $D=\\{0\\}$ with unit zero-dimensional mass. Boundedness of $a_k$ and $D$ gives a constant $C>0$ with $1+a_k\\cdot x\\le\\delta_k+Ct$ on the cone. For large $k$ the range $\\delta_k\\le t\\le2\\delta_k$ lies inside $(0,1)$, and its contribution to $V(a_k)$ is bounded below by a positive constant times $\\delta_k^{d}\\delta_k^{-d-1}=\\delta_k^{-1}$. Thus $V(a_k)\\to\\infty$. Any minimizing sequence has a convergent subsequence in the bounded closure of $\\Omega$, and the limit is interior by this divergence. Continuity and strict convexity give the unique minimum, which is positive.\n\nRestore the mark $y$. Stationarity gives the first integral identity. Multiplying it by $a_*$ and using $L=1+a_*\\cdot(x-y)$ gives $\\int_K(L-1)L^{-d-2}\\,dx=0$, hence the other identities and the escort assertions. Positivity of $L$ on the compact body gives a neighborhood with the same positivity. For the volume identity, the inverse projective map is $v\\mapsto v/(1-a\\cdot v)$ on the image. The determinant of the derivative of $w\\mapsto w/(1+a\\cdot w)$ is $(1+a\\cdot w)^{-d-1}$ by the rank-one determinant formula, giving the displayed objective by change of variables.\n\nFor affine covariance use $x'=Qx+b$ and the bijective parameter substitution $a=Q^{\\mathsf T}a'$. For inclusion use the attained denominator on $H$, which is admissible on $K$. If $K\\subsetneq H$, choose $x\\in H\\setminus K$ and an interior point of $H$. Points on the segment arbitrarily close to $x$ toward that interior point are interior to $H$ and lie outside the closed set $K$. Thus $H\\setminus K$ has positive volume, and the strictly positive larger-body integrand has strictly larger integral on $H$ than on $K$. The integral on $K$ is at least $E_K(y)$. Finally $a=0$ has objective $|K|$, so equality $E_K(y)=|K|$ holds exactly when $a=0$ is the minimizer. The gradient at $a=0$ vanishes exactly when $y=g_K$, which is interior to $K$ because a nonconstant supporting functional has strict inequality from its maximum on a subset of positive volume.\n",
+  "source_candidate_ids": [
+    "5811f0ad1132ce56",
+    "ce31fbbf06cede9c"
+  ],
+  "source_candidate_sha256": {
+    "5811f0ad1132ce56": "cf888fb2717b5d4b3cfabc3c9ae14a262d47186f2d905801d018fe8579528548",
+    "ce31fbbf06cede9c": "c9024fdfeb50b2e8a7eda4857d61ffa2ed2f739b3ecedff4274f7209e09e12a1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5811f0ad1132ce56",
+      "locator": "§1, (1), (3)–(5), §4, (15), and §5, first paragraph"
+    },
+    {
+      "candidate_id": "ce31fbbf06cede9c",
+      "locator": "§2, (5), strict energy monotonicity"
+    }
+  ],
+  "statement": "Let $d\\ge1$, let $K\\subset\\mathbb R^d$ be a compact convex body with nonempty interior, and let $y\\in\\operatorname{int}K$. For $a\\in\\mathbb R^d$ put $L_a(x)=1+a\\cdot(x-y)$ and define\n$$\nE_K(y)=\\inf_{\\{a:L_a>0\\ \\text{on }K\\}}\\int_K L_a(x)^{-d-1}\\,dx.\n$$\nThe infimum is positive and attained at a unique admissible $a_*$, and $E_K(y)$ is the minimum $d$-volume of the images of $K-y$ under $w\\mapsto w/(1+a\\cdot w)$ over these $a$. For $L=L_{a_*}$ and $E=E_K(y)$,\n$$\n\\int_K (x-y)L(x)^{-d-2}\\,dx=0,\\qquad\n\\int_K L(x)^{-d-2}\\,dx=\\int_K L(x)^{-d-1}\\,dx=E.\n$$\nThus $\\rho=L^{-d-2}/E$ on $K$ is a probability density with barycenter $y$ and $\\int_K L\\rho\\,dx=1$. Its restriction to $K$ extends to a smooth positive function on a neighborhood of $K$.\n\nFor every invertible linear $Q$ and every $b\\in\\mathbb R^d$, $E_{QK+b}(Qy+b)=|\\det Q|E_K(y)$. If $K\\subset H$ for another convex body $H$, then $E_K(y)\\le E_H(y)$ with equality exactly when $K=H$. Writing $g_K=|K|^{-1}\\int_K x\\,dx$ for the ordinary centroid, $E_K(y)\\le |K|$ with equality exactly when $y=g_K$.",
+  "subgoal_id": "pk-intake-projective-energy-attainment-escort",
+  "title": "Attainment and escort identities for marked projective volume"
+}

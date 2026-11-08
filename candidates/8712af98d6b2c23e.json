@@ -1,0 +1,29 @@
+{
+  "advances": "A fixed-dimension explicit slope range of strictly negative scalar diagonal-envelope deficit, uniform over the allowed tilt interval.",
+  "author": "PK-research-agent",
+  "candidate_id": "8712af98d6b2c23e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:43:48.543919+00:00",
+  "depends_on": [
+    "57557331147abd2a",
+    "f0d6276552741806"
+  ],
+  "draft_key": "explicit-diagonal-small-slope-cutoff",
+  "kind": "lemma",
+  "proof": "For $v=\\beta/(at)\\in[0,1]$, the paired kernels in the uniform quartic gain theorem are $K_{-v}=L_v$ and $K_v=R_{0,v}$ from the deficit expansion. Their support endpoints and polynomial factors agree. The dimension is an integer $d\\ge2$, so the theorem gives $G_d(v)\\ge v^2/[4(d+1)]$, including $G_d(0)=0$.\n\nThe deficit expansion holds throughout the stated slope and tilt range. Use its bounds $|J_d(v)|\\le K_d v$ and $|\\rho_d(a,v)|\\le C_da$ to obtain\n$$\n\\begin{aligned}\n\\frac{D(a,atv)}{\\Gamma}\n&\\le-\\frac12-\\frac{v^2}{4(d+1)a}+K_d v+C_d a\\\\\n&=-\\frac12+[C_d+(d+1)K_d^2]a\n -\\frac{[v-2(d+1)aK_d]^2}{4(d+1)a}.\n\\end{aligned}\n$$\nThe last term is nonpositive for every admissible $v$. Since the constants are positive, $a\\le\\varepsilon_d$ makes the preceding linear correction at most $1/4$.\n",
+  "source_candidate_ids": [
+    "c21aa22115d69526"
+  ],
+  "source_candidate_sha256": {
+    "c21aa22115d69526": "ff6efa4d70ba35bb25785f79848a6912b4035894c5f6d977e7079b1ad37c3ed4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c21aa22115d69526",
+      "locator": "§6, explicit quantitative cutoff, canonical claim :06, with the constants and square completion from associated historical mathematical discussion 1253f367cc2cd6f1 §5."
+    }
+  ],
+  "statement": "Fix an integer $d\\ge2$ and put $t=1/(d+1)$ and $\\Gamma=(dt)^d$. For $a>0$, $0\\le\\beta\\le at$ and $h\\in\\mathbb Z_{\\ge0}$, set $r_h=(1-ah)_+$, $q_h=t-\\beta h$ and $p_h=t+\\beta(h+1)$, where $x_+=\\max\\{x,0\\}$. The diagonal-envelope deficit is\n$$\nD(a,\\beta)=\\Gamma\\sum_{h\\ge0}r_h^d\n-d^d\\sum_{\\substack{h\\ge0\\\\r_h>0}}\n  \\left[q_h^{d-1}(r_h-dq_h)_++p_h^{d-1}(r_h-dp_h)_+\\right].\n$$\nBoth sums have only finitely many nonzero terms. Whenever $r_h>0$, one has $q_h\\ge tr_h>0$ and $p_h\\ge t>0$.\n\nWith the constants $C_d$ and $K_d$ of the uniform deficit expansion, define\n$$\n\\varepsilon_d=\\min\\left\\{\\frac1{2d},\\frac1{4[C_d+(d+1)K_d^2]}\\right\\}.\n$$\nFor every $0<a\\le1/(2d)$ and $0\\le\\beta\\le at$,\n$$\n\\frac{D(a,\\beta)}{\\Gamma}\\le -\\frac12+[C_d+(d+1)K_d^2]a.\n$$\nIn particular $D(a,\\beta)\\le-\\Gamma/4$ for all $0<a\\le\\varepsilon_d$ and $0\\le\\beta\\le at$.",
+  "subgoal_id": "pk-intake-explicit-diagonal-small-slope-cutoff",
+  "title": "Explicit small-slope cutoff for the diagonal-envelope deficit"
+}

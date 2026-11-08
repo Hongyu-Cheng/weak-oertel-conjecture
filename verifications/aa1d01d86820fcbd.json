@@ -1,0 +1,50 @@
+{
+  "candidate_id": "68c5513d4b6cae29",
+  "candidate_sha256": "63ea0f9d76d562de0b0fe099f65be44493b083f52410c90d044f1ced36cf0d74",
+  "checked_dependency_candidate_sha256": {
+    "bf9a7e56f89375b5": "d398d477a0f2743ed4362eb3a37dca0526d6c26fd018eccf508ab6e8ad6e9e05"
+  },
+  "checks": [
+    "The fixed-index affine images have volume fraction rho^(d−1), so their uniform mixture has the stated counting density. Permutation invariance gives cell probabilities 1/d in both laws; ties are null and conditional normalization cancels.",
+    "The cell barycentrics give normalized t density (d−1)(1−t)^(d−2). The threshold condition reduces to w_j≥1/d for t<1. The normalizer is d rho^(d−1)=(d−1)rho^(d−2), exactly that of the uniform mixture of facet homotheties. This also gives density one for the point facet.",
+    "For each label the beta predecessor gives uniform U independently of T and the conditional mean V. Reconstructing both vectors with the same T gives the two target laws, preserves the minimum index and value on the almost-sure positive-facet event, and gives the required conditional mean. Integrating the density of T from ds to 1 gives the common survival function.",
+    "For interior b the mixture coefficient is db; pointwise Jensen and the critical bound give the comparison. For b≥1/d the raised coordinate cannot be below the minimum of the others. Translating k coordinates scales volume by (1−ks)^(d−1) up to 1/k; integrating gives 1/(dk). Thus the strict failure above 1/d includes b=1.",
+    "For interior b, both nonnegative Jensen gaps must vanish. Full support and continuity promote the first gap to zero for every z and i. The affine subintervals [rho r,r] cover (0,1) by interiors, so the test is affine along each vertex ray, hence on the simplex by opposite-facet induction. Both means equal the centroid, proving the converse.",
+    "At critical b, continuity and full support extend zero conditional Jensen gap to all t and w, including boundary points. Positive beta density makes each nondegenerate segment from w to a facet vertex fully supported. A supporting line at the mean proves segment affineness, and vertex-ray induction gives slice affineness. Conversely slice affineness kills the conditional gap. This includes singleton slices at t=1 and throughout d=2. Minimum is constant on each slice but nonaffine globally; when d≥3 a positive-dimensional slice rules out a strictly convex equality test.",
+    "The original c6aadce19d219a98 matches its frozen digest at base 3220f79. Opening (1)–(2) and §§2–4 (4)–(10) supply the comparison, exact coupling, sharpness and equality examples; the full equality criteria are independently proved additions in the normalized draft."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bf9a7e56f89375b5",
+      "candidate_sha256": "d398d477a0f2743ed4362eb3a37dca0526d6c26fd018eccf508ab6e8ad6e9e05",
+      "mapping": "Use m=d−1 on the opposite facet after dropping the zero coordinate, conditional on L=i and T=t. W is uniform, J uniform on the m vertices, and R has density m(1−r)^(m−1) independently, so U is uniform and its conditional mean given W,J is (mW+e_J)/(m+1)=V. The exact predecessor has a separate independent approval and must be admitted first."
+    }
+  ],
+  "finished_utc": "2026-11-08T07:46:10.257Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Constructs a sub-simplex at one prescribed centroid for volume and depth; gives no two-marginal transport between the continuous vertex-averaged and uniform laws.",
+      "fact_id": "75e9cb08300c59fb"
+    },
+    {
+      "comparison": "Characterizes finite atomic packet packing by a nonnegative convex-order inequality; supplies neither the continuous simplex comparison nor its sharp threshold or equality criteria.",
+      "fact_id": "2c093df4eb8158a9"
+    }
+  ],
+  "readability": "The coupling uses a new probability space; only the interpolation proof uses the original independent pair (Z,I). The source locator references equality examples, while the draft itself supplies the full equality proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4724d7b0f22a088dfaad1da098d4e09fec624f850d9d5f6fdc0a92c2ac5541a2",
+  "reviewed_statement_sha256": "5847460bffc087ace14954fbd7a1a6483e35d672e22ae33074549953e7ba7898",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:45:13Z",
+  "summary": "The coupling matches both exact marginals and preserves the unique minimum almost surely; the sharp parameter range and both equality classifications follow from the stated proofs.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

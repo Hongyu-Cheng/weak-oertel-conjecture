@@ -1,0 +1,42 @@
+{
+  "advances": "One source chart with freely chosen base coefficient on a finite anchored hull. The cut conclusion uses a lattice-complete finite base and concerns the actual nested bodies and local inward speeds.",
+  "author": "PK-research-agent",
+  "candidate_id": "b29b972734a1208b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:54:31.011758+00:00",
+  "depends_on": [
+    "a56f8711406a3870",
+    "155691fc3768c06f",
+    "84cd8a85417b0d7a"
+  ],
+  "draft_key": "positive-projective-chart-global-cut",
+  "kind": "lemma",
+  "proof": "If $a_y=0$, take $b=0$. Otherwise use the accepted anchored support slope lemma 155691fc3768c06f in direction $u=-a_y/\\|a_y\\|$ and take $b=\\|a_y\\| A_p(u)$. Multiplying its support inequality by $\\|a_y\\|$ gives $-a_y\\cdot x\\le h_{K_p}(-a_y)+b\\cdot(z-p)$ throughout $C$. It follows that $L\\ge 1-a_y\\cdot y-h_{K_p}(-a_y)$ on $C$, and equality is attained on the corresponding support face in $K_p$ at $z=p$. This establishes the identity of minima. The optimal denominator floor then gives the lower bound. The open halfspace $\\{L>\\delta\\}$ contains $C$. The function agreeing with $t^{-d}$ for $t\\ge\\delta$ and with its tangent at $\\delta$ below $\\delta$ is positive, finite and convex, with the two branches matching in value and derivative. Its composition with $L$ consequently equals $L^{-d}$ on that neighborhood.\n\nFor the cuts in the lattice-complete case, the same accepted slope lemma supplies a bounded continuous choice $A_p(u)$ if desired. The baseline $\\ell$ is continuous in $u$, affine in $z$, and majorizes every sampled support. Because $y$ is interior to $K_p$, $h_{K_p-y}(u)>0$ for each unit $u$. The field $h_{K_p-y}(u)L^{-d}$ is jointly continuous and nonnegative on the normal sphere times $C$. For fixed $u$ it is convex in $(z,x)$ on $C$ by positivity and affinity of $L$ and convexity of $t^{-d}$ on $t>0$. These are exactly the hypotheses of the one-action specialization of the accepted finite global-cut lemma 84cd8a85417b0d7a. It gives the actual convex deformation, positive integer fibers, and displayed contact speed. At $z=p$ the baseline is $h_{K_p}(u)$ and the base term of $L$ vanishes, giving exactly the indicated source cuts.\n",
+  "source_candidate_ids": [
+    "2d9458b5433d0a83",
+    "6748c967393345b9",
+    "c0fc791108fc8765"
+  ],
+  "source_candidate_sha256": {
+    "2d9458b5433d0a83": "fbeb0469394bcf7badd652f7fd8c8babf029d3be90dfc6c9b5bc11a737430393",
+    "6748c967393345b9": "ac7839bad603361376f211044751135a5573e16e077b5c26050ec4f3c647fe93",
+    "c0fc791108fc8765": "985f6158a7e7ec8eaf1baae577c256d7631146e1c217a26ba979cfb49d0b800f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c0fc791108fc8765",
+      "locator": "§5, (10)–(11) and global-cut paragraph"
+    },
+    {
+      "candidate_id": "6748c967393345b9",
+      "locator": "§2, (3)–(4), exact convex cuts"
+    },
+    {
+      "candidate_id": "2d9458b5433d0a83",
+      "locator": "(3) and tangent continuation preceding it"
+    }
+  ],
+  "statement": "Let $d\\ge1$. Let $P\\subset\\mathbb R^n$ be finite and nonempty, let each $K_z\\subset\\mathbb R^d$ for $z\\in P$ be a convex body, and assume the sampled anchored Minkowski inclusions. Put $C=\\operatorname{conv}\\bigcup_{z\\in P}(\\{z\\}\\times K_z)$. Fix $p\\in P$ and $y\\in\\operatorname{int}K_p$, and let $a_y$ be the optimal parameter for $E_{K_p}(y)=\\min_a\\int_{K_p}[1+a\\cdot(x-y)]^{-d-1}\\,dx$ over positive denominators. There exists a fixed base vector $b$ for which\n$$\nL(z,x)=1+a_y\\cdot(x-y)+b\\cdot(z-p),\\qquad\n\\min_C L=\\min_{x\\in K_p}[1+a_y\\cdot(x-y)]\\ge\\frac1{d+1}.\n$$\nFor every threshold $0<\\delta<1/(d+1)$, a tangent continuation of $t^{-d}$ below $\\delta$ is inactive on a neighborhood of $C$ when evaluated at $L$.\n\nIf $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$, choose any continuous anchored support majorant $\\ell(u,z)=h_{K_p}(u)+A_p(u)\\cdot(z-p)\\ge h_{K_z}(u)$ on $P$ for each unit $u$. Then the pure inverse-power cuts\n$$\nC_\\varepsilon=C\\cap\\bigcap_{u\\in\\mathbb S^{d-1}}\n\\{(z,x):u\\cdot x+\\varepsilon h_{K_p-y}(u)L(z,x)^{-d}\\le \\ell(u,z)\\}\n$$\ngive a nested compact convex deformation for all sufficiently small $\\varepsilon\\ge0$, in $\\operatorname{aff}(P)\\times\\mathbb R^d$, with projection $\\operatorname{conv}(P)$ and positive integer fibers exactly at $P$. On the source fiber the cuts are exactly the prescribed single-source cuts with denominator $1+a_y\\cdot(x-y)$. At a regular old boundary point $x\\in\\partial K_z$ with normal $\\nu$, the inward first speed is $h_{K_p-y}(\\nu)L(z,x)^{-d}$ if $\\ell(\\nu,z)=h_{K_z}(\\nu)$, and zero otherwise.",
+  "subgoal_id": "pk-intake-positive-projective-chart-global-cut",
+  "title": "An optimal source chart gives pure inverse-power global cuts"
+}

@@ -1,0 +1,43 @@
+{
+  "candidate_id": "57557331147abd2a",
+  "candidate_sha256": "a2917b62a19dfa47f29975281e72dfb1e8d2874d478646ac897a7de9ab37fb6a",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For x = ah < 1 and v = β/(at), q_h = t(1−vx) ≥ tr_h > 0 and p_h = t(1+av+vx) ≥ t. Both cap brackets are t times the displayed affine brackets, so the factor d^d t^d is Γ. The left and right support endpoints are 1/(d+1−dv) and (1−dav)/(d+1+dv), respectively. The latter is positive even at the largest a and v. Both caps vanish at x ≥ 1; at v = 1 the left kernel is (1−x)^d on its whole active interval and has derivative zero at x = 1.",
+    "Two integrations by parts give the signed cell trapezoid difference with the quadratic weight and the distributional derivative of g′. Its maximum is a²/8. The endpoint values of the weight are zero, so jumps exactly at mesh points contribute zero. A cutoff inside a cell contributes its derivative atom. Summed trapezoids have half weight at zero, giving the stated sample correction and a/8 times the total variation.",
+    "On each active interval, the product rule gives the two derivative bounds using |s| ≤ 1, B ≤ 2d+1, affine bracket at most 1 and base at most 2. For d = 2 the second-power derivative term is identically absent, including the left corner with zero base. Integrating the second bound over length at most one and adding the sole endpoint jump yields [(d−1)(9d+2)+2(5d+1)]2^(d−3) = V_d. The monotone mass derivative has variation d. This gives the combined quadrature remainder a(V_d/4+d/8).",
+    "Rescaling the moving endpoint x = uy yields the polynomial-in-a right integral with coefficients continuous in v. In the moving-domain derivative, the first endpoint term is zero. The second is the product (−dv Z(u)^(d−1))(−dv/B), positive with the stated coefficient. The sum of the bounds on the two interior terms and the endpoint term has numerator (d−1)(d−2)+4d(d−1)+4d² = 9d²−7d+2. The d = 2 zero coefficient and the v = 0 constant integral cause no singularity. Taylor's bound after division by a is T_d a/2.",
+    "Direct differentiation at a = 0 gives the bracket 1+[(d−1)(d+1+dv)+dv]x = 1+(d²−1+d²v)x. Its bound at x ≤ 1/(d+1) is d(2d+1)/(d+1), proving K_d. The right sample at zero has a-derivative −v(1+av)^(d−2)(1+d²av). The half-endpoint correction changes by at most (d+2)2^(d−4)a = B_da. Combining with the mass and left endpoint values gives the constant −J_d(v)−1/2 and the stated C_d.",
+    "The common unshifted kernels are continuous jointly on the fixed compact x-domain. For z ≠ 0 the transformed bracket is (A_z−B_z y)/z and dx = dy/z. Evaluating with oriented limits gives A_z^(d+1)/(d(d+1)B_z^d) = f(z)/d at the upper limit. The affine parts sum to −2/d at opposite tilts. This includes z = −1 where the transformed interval ends at zero. At v = 0 the two equal triangle integrals are each 1/[2(d+1)], so G_d(0) = 0 directly.",
+    "Independently compared the original deficit with the normalized kernel sums and exact polynomial integrals in 136 rational cases across d = 2 through 8. The cases include v = 0 and v = 1, a = 1/(2d), left and right cutoffs on and off mesh, and zero-radius mesh points. Extracting the first a coefficient from the rescaled right polynomial reproduced the separate integral for J_d. The three quadrature bounds, the stronger right Taylor bound with v², the endpoint bound, and the assembled remainder passed exactly.",
+    "Verified the historical candidate byte hash at base 3220f79. Candidate c21aa22115d69526 §§1–4 give the quadrature, scaling, right integral and continuous formula in (1)–(9). Its §6 and historical mathematical discussion 1253f367cc2cd6f1 §§5.1–5.4 give the same explicit V_d, T_d, C_d and K_d with E_d renamed B_d. The frozen proof derives the bounds independently of that discussion and agrees with canonical claims :01, :02 and :05."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T07:46:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its unshifted integral formula and continuity at v = 0 give exactly the G_d subformula after subtracting 1/(d+1). Its kernel gain concerns a = 0 and supplies no a-derivative, mesh expansion or uniform shifted remainder.",
+      "fact_id": "f0d6276552741806"
+    },
+    {
+      "comparison": "Uses the same deficit and kernels on positive-right-index double knots. Its bound uses knot-specific finite quadrature and a finite shift estimate. The uniform expansion for all real small slopes and allowed tilts has a different conclusion.",
+      "fact_id": "3da9e3745e7c7879"
+    }
+  ],
+  "readability": "In Scaling, the left endpoint of truncation denotes the terminal support endpoint of the left kernel. The subsequent argument identifies that endpoint unambiguously, including when it is also the mass cutoff.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "da5fc900f9d36e4a5c63ad6d2e5af1b41a4cb63203703ccaefb52b313bf1681c",
+  "reviewed_statement_sha256": "363ff70c64e5b8c4d6173f837521c5dd735c3856b74a64c7b9aeff7048beab07",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:44:19Z",
+  "summary": "The frozen proof establishes the exact scaled finite sum, both integral identities, and the dimension-dependent uniform expansion, including the stated C_d and K_d constants throughout the closed tilt interval. It uses no lower bound for the continuous gain.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

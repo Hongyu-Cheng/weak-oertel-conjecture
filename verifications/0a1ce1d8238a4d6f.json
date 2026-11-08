@@ -1,0 +1,70 @@
+{
+  "candidate_id": "f497d1290c37f335",
+  "candidate_sha256": "25b4c14bb2b109543aee01e0aee432b4194bf44aff9a5211bbe24dfac17ad721",
+  "checked_dependency_candidate_sha256": {
+    "23a563a735c07c25": "585fc3fea7952f0d573abda678b75588c8528379e7f45e6792ed4c009b82361e",
+    "55467f91ed79e945": "277965879610cf5c4987db78ef5e0c2dd2003922935f2b4a8efb20bb9d635799",
+    "f6c497926ac327fa": "660ef30eb977353654c923eec6c69af1cbd580281ed8eab325d8bc838e18a318"
+  },
+  "checks": [
+    "A proper inclusion-minimal subcover of size k<j inherits linear independence, so its normal rank is k and the fixed-subcover theorem gives effective dimension k-1, including k=1 and gamma_0=1. The derivative of q log(q/(q+1)) is -log(1+1/q)+1/(q+1)<0 for q>0, and gamma_0>gamma_1. At alpha>0 the coefficient replacement increases the left side strictly, and the omitted positive parts are nonnegative.",
+    "The affine margin image is compact convex and disjoint from the open negative orthant. Weak separation in the indicated orientation gives a nonzero lambda whose supremum on the orthant is finite. Any negative coefficient would make it infinite; with lambda>=0 the supremum is zero. At any point of K, t>=0 forces at least one positively weighted margin to be nonnegative. Thus any zero coefficient would give a proper subcover, so lambda_i>0 for every i in the minimal case.",
+    "The j affine coordinates (ell_1,...,ell_{j-1},t) have independent linear parts: replacing ell_j by t multiplies the coordinate-change determinant by lambda_j>0. They extend to affine coordinates in dimension D, including j=D with no remaining coordinates. Here t is nonconstant, nonnegative on K and has null zero set, and each original margin is homogeneous linear in (v,t).",
+    "The projective marginal parent applies with r=j-1, which is in [1,D-1]. Its density is bounded and integrable, its positive set convex and full-dimensional, and its inverse power -1/j is finite positive and convex there. Restricting the density to the open positive interior discards only a null boundary and leaves all masses unchanged; the projected support itself need not be bounded.",
+    "Dividing the margins by t>0 gives z_i for i<j and (1-sum_{i<j} lambda_i z_i)/lambda_j for the last margin. All are nonconstant since j>=2 and every lambda_i>0. Their positively weighted sum is 1 on all of projective space, so some projected margin is strictly positive at every point. The open-cover parent applies with r=j-1 and beta=j; its hypotheses include the possible unbounded support and require no positivity assumption on individual cap masses.",
+    "Setting alpha=a>0 gives the strict overlap inequality because all differences A_i-a are nonnegative. It is not valid to substitute alpha=0 into a statement for alpha>0 to obtain a strict overlap. The displayed cube example has independent coordinate normals, one full cap and j-1 empty caps, so overlap is zero when a=0. The proof gives fixed-configuration strictness and no uniform gap or mixed-integer summation assertion.",
+    "Verified source eaf48fc18423f63a bytes and Section 2, equations (3)–(5), including the positive-minimum condition. The frozen version makes the projective margins explicit and supplies an admissible zero-minimum example, without changing the source claim."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "23a563a735c07c25",
+      "candidate_sha256": "585fc3fea7952f0d573abda678b75588c8528379e7f45e6792ed4c009b82361e",
+      "mapping": "Apply its fixed minimal subcover bound to the proper subcover, whose inherited independent normal rank k gives min(k,k-1)=k-1. The ambient compact full-dimensional convex body and proper covering halfspaces match.",
+      "status": "Accepted at graph base 3220f79."
+    },
+    {
+      "candidate_id": "f6c497926ac327fa",
+      "candidate_sha256": "660ef30eb977353654c923eec6c69af1cbd580281ed8eab325d8bc838e18a318",
+      "mapping": "Use affine coordinates with r=j-1 and nonnegative t on K. The original margins are homogeneous in (v,t), so its inverse-power exponent is -1/j and total/cap masses transfer exactly, including the null t=0 set.",
+      "status": "Accepted at graph base 3220f79."
+    },
+    {
+      "candidate_id": "55467f91ed79e945",
+      "candidate_sha256": "277965879610cf5c4987db78ef5e0c2dd2003922935f2b4a8efb20bb9d635799",
+      "mapping": "Take r=j-1, beta=j and the projective marginal restricted to its open positive interior. The weighted affine identity supplies an open-interior cover by proper halfspaces on the entire projected space, so the parent gives the desired strict inequality for every alpha>0.",
+      "status": "Frozen same-wave parent independently approved in its own exact review; pending admission at this base. Admit first."
+    }
+  ],
+  "finished_utc": "2026-11-08T07:47:23Z",
+  "gaps": [],
+  "graph_base": "3220f7967fbe5b0328bf45d598b69545c331df3b",
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its weak fixed-subcover and all-cover profiles have the same effective constant gamma_(j-1) on this independent j<=D regime. It gives neither strictness at positive alpha nor its strict overlap consequence without the additional argument.",
+      "fact_id": "23a563a735c07c25"
+    },
+    {
+      "comparison": "Classifies equality at gamma_D for D+1 ordinary caps. This theorem uses j<=D and gamma_(j-1), so the classification does not imply the strict profile here.",
+      "fact_id": "1c6088cbbbb3f688"
+    },
+    {
+      "comparison": "Gives the projected density and exact cap mass transfer, but no strict cap profile by itself.",
+      "fact_id": "f6c497926ac327fa"
+    }
+  ],
+  "readability": "Both branches use the same original cap masses. The coordinates explicitly identify the projected last margin, and the null-boundary change does not alter those masses.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "370be41781f1404f1482518a7b8c3ed4551abd50d1ab487b5997191f3d1c053e",
+  "reviewed_statement_sha256": "87c5ca6a7357a2af7045db4683ad465b8a650d4bcef9a04e363d49a55692eb02",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:46:19Z",
+  "summary": "Independent normals give a strict cap profile at every positive parameter. A proper subcover gives a strictly better coefficient, while a minimal cover projects to a strict open cover. Admission requires the exact independently approved open-cover parent first.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

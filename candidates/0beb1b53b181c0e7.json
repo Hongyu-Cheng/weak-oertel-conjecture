@@ -1,0 +1,31 @@
+{
+  "advances": "Gives the unrestricted maximum for the scalar envelope governing the affine simplex chain model.",
+  "author": "PK-research-agent",
+  "candidate_id": "0beb1b53b181c0e7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:45:21.673910+00:00",
+  "depends_on": [
+    "8712af98d6b2c23e",
+    "4c65d2a05d1be51c",
+    "3da9e3745e7c7879",
+    "9fa02d395df8157e"
+  ],
+  "draft_key": "unrestricted-diagonal-envelope-deficit",
+  "kind": "theorem",
+  "proof": "For each positive radius we have $q_h\\ge t(1-ah)=tr_h>0$ and $p_h>0$. When $a\\ge1$ the only positive radius is $r_0=1$. Its left envelope is $E_d(t,1)=\\Gamma$, and its right envelope is nonnegative. Thus $D_d(a,\\beta)\\le0$ for $a\\ge1$.\n\nAt the admissible pair $a=2t$, $\\beta=t/d$, the right threshold satisfies $p_h\\ge p_0=1/d$, so every right envelope vanishes. At each positive radius with $h\\ge1$, the left factor $r_h-dq_h=t(1-h)$ is nonpositive. Therefore the only nonzero envelope is $E_d(t,1)=\\Gamma$, and\n$$\nD_d(2t,t/d)=\\Gamma\\sum_{h\\ge1}(1-2th)_+^d>0\n$$\nsince $2t<1$.\n\nChoose $0<\\varepsilon<\\min\\{1/(2d),\\varepsilon_d\\}$, where $\\varepsilon_d$ is the positive cutoff of 8712af98d6b2c23e. That theorem gives $D_d(a,\\beta)\\le-\\Gamma/4$ whenever $0<a\\le\\varepsilon$ and $0\\le\\beta\\le at$. All pairs $(a_H,t/d)$ for $1\\le H\\le d$ belong to $\\varepsilon\\le a\\le1$, $0\\le\\beta\\le at$, since $1/d\\le a_H\\le2t<1$. This includes the positive witness with $H=1$. The compact reduction 4c65d2a05d1be51c gives an attained maximum on that truncated domain. Its value is positive, and the excluded small-slope region and $a\\ge1$ cannot exceed it. It is therefore the unrestricted maximum.\n\nThe compact reduction bounds this value by the largest of zero, the maximum at $a=\\varepsilon$, and the values at the double knots in the truncated domain. The edge value is negative by the choice of $\\varepsilon$. Each positive-right-index knot has negative deficit by 3da9e3745e7c7879. The admissible knots of right index zero are exactly $(a_H,t/d)$ for $1\\le H\\le d$. Thus the unrestricted maximum is at most the largest of their values. Each such knot is admissible, so equality holds.\n\nThe zero-right-index theorem 9fa02d395df8157e evaluates each of these values as $\\Gamma(W_{d,H}-K_{d,H})$ and bounds it strictly by $\\Gamma/6$. There are finitely many of them, so the maximum is strictly below $\\Gamma/6$. This proves the finite representation and the equivalent envelope bound.\n",
+  "source_candidate_ids": [
+    "e06a5b80357a8187"
+  ],
+  "source_candidate_sha256": {
+    "e06a5b80357a8187": "09bf488a0f36113c858bd0e92f9a0b008aeb78cdd90c4ca4e3b20514c3be22d2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e06a5b80357a8187",
+      "locator": "Definitions and theorem (1)–(4), and Full assembly proof (13)"
+    }
+  ],
+  "statement": "Let $d\\ge2$ be an integer, $t=1/(d+1)$, and $\\Gamma=(dt)^d$. For $a>0$ and $0\\le\\beta\\le at$, put $r_h=(1-ah)_+$, $q_h=t-\\beta h$, and $p_h=t+\\beta(h+1)$ for integers $h\\ge0$, where $x_+=\\max\\{x,0\\}$. For $r,q>0$ set $E_d(q,r)=d^dq^{d-1}(r-dq)_+$. The diagonal-envelope deficit is\n$$\nD_d(a,\\beta)=\\Gamma\\sum_{h\\ge0} r_h^d-\n\\sum_{\\substack{h\\ge0\\\\r_h>0}}\\bigl[E_d(q_h,r_h)+E_d(p_h,r_h)\\bigr].\n$$\nEvery term in the second sum has positive thresholds. For $1\\le H\\le d$ put\n$$\na_H=\\frac{H+1}{H(d+1)},\\qquad\nW_{d,H}=\\sum_{h\\ge0}(1-a_Hh)_+^d,\\qquad\nK_{d,H}=\\sum_{h=0}^{H-1}(1-h/d)^{d-1}(1-h/H).\n$$\nThe unrestricted maximum of $D_d(a,\\beta)$ on the specified domain is attained and satisfies\n$$\n0<\\max_{\\substack{a>0\\\\0\\le\\beta\\le at}}D_d(a,\\beta)\n=\\Gamma\\max_{1\\le H\\le d}(W_{d,H}-K_{d,H})\n<\\frac{\\Gamma}{6}.\n$$\nEquivalently, the envelope sum for every admissible $(a,\\beta)$ is strictly larger than $\\Gamma\\sum_h r_h^d-\\Gamma/6$.",
+  "subgoal_id": "pk-intake-unrestricted-diagonal-envelope-deficit",
+  "title": "Exact finite maximization of the diagonal-envelope deficit"
+}

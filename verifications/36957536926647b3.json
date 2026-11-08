@@ -1,0 +1,69 @@
+{
+  "candidate_id": "a56f8711406a3870",
+  "candidate_sha256": "cf4183b801df0f13dc195abfae0a454a6a749302a1a96e7b44aefdb4b7390624",
+  "checked_dependency_candidate_sha256": {
+    "5aeb5916857f97a9": "9446fc178fc416850af9a0ff3a790588d69d3d050eec68eecad079b3858f3607",
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "The admissible-pair domain is open: continuity of the denominator is uniform in x on compact K near any admissible pair. All mixed derivatives of the inverse power are bounded there locally uniformly in x, so the objective is smooth by differentiation under the integral.",
+    "For a fixed interior mark the admissible parameter domain is convex and the parameter Hessian is positive definite. At an attained minimizer the parameter gradient is zero; the implicit function theorem supplies a smooth stationary branch which stays in the open admissible domain. Strict convexity identifies this branch with the unique global minimizer at each nearby interior mark. Uniqueness also identifies local branches on overlaps.",
+    "The envelope chain rule drops the parameter derivative by stationarity. The derivative of 1+a·(x−y) in y at fixed a is −a, giving the positive coefficient (d+1)a in the integral. The normalized escort identity replaces the integral of L^(−d−2) by E; positivity then justifies differentiating the dth root.",
+    "The same-body choice K_1=K_2=K in the joint theorem gives ordinary concavity on int K. The tangent upper bound at y and positivity of E at every interior test x force 1+((d+1)/d)a_y·(x−y)>0, equivalently L_y(x)>1/(d+1). Approximation of any closed-body point by points on the segment toward y gives the weak bound there by affine continuity alone. The argument uses no energy evaluation at boundary marks.",
+    "There is no circular use of the floor. Both local smoothness and the escort calculation need only compact admissibility, and the accepted joint concavity proof uses attained positive denominators and triangular substitution without the asserted floor.",
+    "For an independent d=1 check take K=[0,1], y=1/4. Integrating and minimizing gives a_y=4/3 and E=3/4; the fixed-body energy 4y(1−y) has derivative 2 there, exactly 2a_y E. The denominator minimum is 2/3 and exceeds 1/2. The case a_y=0 gives the constant denominator 1.",
+    "Archived c0fc791108fc8765 §1 (2) and §2 (5) match the derivative and own-body floor. Its byte digest matches the frozen provenance. The boundary-base energy supergradient discussed elsewhere in that note is outside this lemma and is not a premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d90ba05577427854",
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "mapping": "The same compact convex body and interior mark give a positive attained minimum, unique admissible optimizer, and escort equality ∫L^(−d−2)=E. Its proof gives the positive definite parameter Hessian used for the implicit function theorem.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d",
+      "status": "Independently approved and admitted in wave06 after graph base 3220f79."
+    },
+    {
+      "candidate_id": "5aeb5916857f97a9",
+      "candidate_sha256": "9446fc178fc416850af9a0ff3a790588d69d3d050eec68eecad079b3858f3607",
+      "fact_sha256": "f7f3c8aaeacc0fb865576094ea23acade42ada143e4a99b8e36b6e316700e62f",
+      "mapping": "Set K_1=K_2=K, with any two interior marks and convex weights. Convexity gives λK+(1−λ)K=K and the theorem gives concavity of E_K^(1/d) on int K, as needed for the tangent inequality.",
+      "reviewed_proof_sha256": "0c7cb5ae4417d30069878fca40e850253c2172791f22822c4de6920384bdec8c",
+      "reviewed_statement_sha256": "9b9ee7c9f6af4a921419acc3a443a55de75cccb60d9f26eb489558bed6e02a7e",
+      "status": "Independently approved and admitted in wave06 after graph base 3220f79."
+    }
+  ],
+  "finished_utc": "2026-11-08T07:56:32.794269+00:00",
+  "gaps": [],
+  "graph_base": "3220f7967fbe5b0328bf45d598b69545c331df3b",
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same marked-body hypotheses. Attainment, parameter differentiation and escort normalization supply ingredients, but the fact does not establish the mark derivative, smooth optimizer map in y, or uniform floor.",
+      "fact_id": "d90ba05577427854"
+    },
+    {
+      "comparison": "Its fixed-body specialization supplies concavity. It does not assert the envelope formula or quantify the minimum optimizing denominator.",
+      "fact_id": "5aeb5916857f97a9"
+    },
+    {
+      "comparison": "Finite atomic energy on an affine face has different hypotheses and exponent for the concave root. It does not establish the ordinary-body derivative or floor.",
+      "fact_id": "9ea9bc3d72c92743"
+    }
+  ],
+  "readability": "The proof cleanly separates the admissible local branch from the later dimension-dependent floor. No limiting interpretation of the energy itself is needed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "fe29a2f6643f87670ea241d9dc09f195371a63853e47655622b8aa50bef99e48",
+  "reviewed_statement_sha256": "22b840fa739bd676a6bd5061cd02b421ab581a84413b06cba0b174b5104927e3",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:54:46Z",
+  "summary": "The envelope differentiation is valid independently of the floor, and the fixed-body tangent inequality yields the strict interior and weak closed-body bounds.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

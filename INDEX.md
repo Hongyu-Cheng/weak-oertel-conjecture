@@ -4,6 +4,23 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 3 | lemma | pk-intake-positive-projective-chart-global-cut | [b29b972734a1208b](facts/b29b972734a1208b.md) |
+| 3 | theorem | pk-intake-canonical-fiber-energy-boundary-supergradient | [d7ff9f9aad2b6512](facts/d7ff9f9aad2b6512.md) |
+| 0 | lemma | pk-intake-canonical-fibers-hausdorff-lipschitz | [7227bbfcd12ad3d2](facts/7227bbfcd12ad3d2.md) |
+| 2 | lemma | pk-intake-projective-energy-envelope-denominator-floor | [a56f8711406a3870](facts/a56f8711406a3870.md) |
+| 2 | theorem | pk-intake-unrestricted-diagonal-envelope-deficit | [0beb1b53b181c0e7](facts/0beb1b53b181c0e7.md) |
+| 1 | theorem | pk-intake-projective-energy-ordinary-entropy-dual | [07551648686cd536](facts/07551648686cd536.md) |
+| 1 | theorem | pk-intake-joint-projective-energy-marked-homothety | [5aeb5916857f97a9](facts/5aeb5916857f97a9.md) |
+| 0 | theorem | pk-intake-compact-double-knot-reduction | [4c65d2a05d1be51c](facts/4c65d2a05d1be51c.md) |
+| 1 | lemma | pk-intake-explicit-diagonal-small-slope-cutoff | [8712af98d6b2c23e](facts/8712af98d6b2c23e.md) |
+| 0 | lemma | pk-intake-projective-energy-attainment-escort | [d90ba05577427854](facts/d90ba05577427854.md) |
+| 0 | lemma | pk-intake-uniform-diagonal-deficit-expansion | [57557331147abd2a](facts/57557331147abd2a.md) |
+| 4 | theorem | pk-intake-independent-normal-strict-cap-profile | [f497d1290c37f335](facts/f497d1290c37f335.md) |
+| 1 | lemma | pk-intake-simplex-independent-step-density-uniqueness | [f23350c8656c1bb2](facts/f23350c8656c1bb2.md) |
+| 3 | theorem | pk-intake-open-cover-strict-cap-profile | [55467f91ed79e945](facts/55467f91ed79e945.md) |
+| 1 | theorem | pk-intake-sharp-simplex-vertex-averaging-convex-order | [68c5513d4b6cae29](facts/68c5513d4b6cae29.md) |
+| 0 | lemma | pk-intake-simplex-beta-step-merging | [bf9a7e56f89375b5](facts/bf9a7e56f89375b5.md) |
+| 0 | theorem | pk-intake-zero-right-index-knot-deficit | [9fa02d395df8157e](facts/9fa02d395df8157e.md) |
 | 1 | theorem | pk-intake-positive-right-index-knot-deficit | [3da9e3745e7c7879](facts/3da9e3745e7c7879.md) |
 | 6 | theorem | pk-intake-entropy-lattice-maximum-equality | [0918a0883fc164ae](facts/0918a0883fc164ae.md) |
 | 1 | counterexample | pk-intake-larger-hull-selector-obstruction | [0fcb7fa715e2af62](facts/0fcb7fa715e2af62.md) |

@@ -1,0 +1,30 @@
+{
+  "advances": "A sufficient descent test and necessary local orbit condition with fixed continuous cap normals. It supplies no descent jet from a numerical depth failure alone.",
+  "author": "PK-research-agent",
+  "candidate_id": "a0c4b1cf68b62185",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.943432+00:00",
+  "depends_on": [
+    "755cb08c379113cc",
+    "6b80e85ff6937910",
+    "d953cc9c8dee416e"
+  ],
+  "draft_key": "exact-polytopal-projective-two-jet-descent",
+  "kind": "theorem",
+  "proof": "The exact circuit theorem 755cb08c379113cc provides the positive deepest circuits and the fixed cheaper covers on the remaining bases. If the base rank is zero, view the single site in one dummy base coordinate for this application and then restrict all caps to its plane. The polynomial affine denominator is positive on the finitely many sites and their hull for small $t$. By the projective law in 6b80e85ff6937910 the new depth is the maximum on the fixed original candidates, using density $L_t(p)^{-d}$ with respect to the original fiber-volume measure. The projective correspondence takes each chosen old-chart ambient closed cap to a cap on the new chart.\n\nThe $ij$-th moved threshold in $K_p$ is exactly $b_{ij}-a_{ij}\\cdot p+tq_{ijp}+t^2R_{ijp}/2$. Apply the one-sided polytope expansion at this threshold and use\n$$\nL_t(p)^{-d}=1-dtA(p)+\\tfrac12t^2[d(d+1)A(p)^2-dB(p)]+o(t^2).\n$$\nThe total new mass uses the same density and has coefficients $\\sum_p[-dA(p)]V_p$ and $\\sum_p[d(d+1)A(p)^2-dB(p)]V_p$. Subtracting $\\beta$ times this mass from each critical cap mass gives exactly the coefficients $b_{ij,1}$ and $b_{ij,2}$. In particular the product of the two first changes yields the factor $-2dA(p)D_{ijp}(q_{ijp})$ in the second coefficient. The first strictly negative coefficient forces each critical row below the normalized threshold for small $t>0$. For the unchanged nondeep caps the old strict gap persists by continuity of the finite fiber weights and total mass.\n\nOn the plane over $p_i$, the $\\rho_{ij}$-weighted sum of the moved margins is identically $-t\\sum_j\\rho_{ij}s_{ij}-t^2\\sum_j\\rho_{ij}r_{ij}/2$. The assumed signs make this sum nonnegative for small positive $t$, so some margin is nonnegative at every point of that plane. Thus the closed moved caps still cover it even when the two weighted sums are zero. The combined finite covers give a strict uniform upper bound on the new depth, below $\\beta$, since every cap in their menu is below that budget.\n\nFor fixed first jets, constraints with strictly favorable first terms need no second sign test. At other rows, $B,e_{ij},r_{ij}$ enter linearly except for the branch $E_{ijp}(0,R_{ijp})=D_{ijp}(R_{ijp})$. Each choice of nonnegative or nonpositive region of the linear expression $R_{ijp}$ makes this branch linear, including its shared value at zero. There are finitely many sign choices, giving precisely the stated finite union of systems.\n",
+  "source_candidate_ids": [
+    "4338d43b80b00575"
+  ],
+  "source_candidate_sha256": {
+    "4338d43b80b00575": "a0351285bbd955602a1eadc0ce4f8805192fbdc4eb74c57f7b9284d799db19e5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4338d43b80b00575",
+      "locator": "4338d43b80b00575:02 §§2–6, (4)–(12), exact descent and feasibility"
+    }
+  ],
+  "statement": "Let $P$ be a finite real base and $K_p$ positive compatible $d$-polytopes. Write $V_p=|K_p|$, $M=\\sum_pV_p$, and $\\beta$ for their maximum normalized closed-halfspace depth. Translate the origin into the relative interior of the base hull. At each deepest base $p_i$ take a positive critical circuit of closed caps\n$$\na_{ij}\\cdot p+u_{ij}\\cdot X\\ge b_{ij},\\qquad\n\\|u_{ij}\\|=1,\\qquad b_{ij}=a_{ij}\\cdot p_i+u_{ij}\\cdot x_i\n$$\nof old mass $\\beta M$, with weights $\\rho_{ij}>0$ summing to one and $\\sum_j\\rho_{ij}u_{ij}=0$. Use fixed strictly cheaper whole-plane covers at the other bases. For affine $A,B$ set $L_t=1+tA+t^2B/2$. In each critical cap vary the base covector and threshold by\n$$\na_{ij}(t)=a_{ij}+tc_{ij}+t^2e_{ij}/2,\\qquad\nb_{ij}(t)=b_{ij}+t(c_{ij}\\cdot p_i+s_{ij})+t^2(e_{ij}\\cdot p_i+r_{ij})/2 .\n$$\nPut $q_{ijp}=s_{ij}-c_{ij}\\cdot(p-p_i)$ and $R_{ijp}=r_{ij}-e_{ij}\\cdot(p-p_i)$. Let $F^0_{ijp}$ denote the old cap volume in $K_p$ and $D_{ijp},E_{ijp}$ its one-sided parallel cap coefficient functions at the old threshold. Define\n$$\n\\begin{aligned}\nb_{ij,1}&=\\sum_p\\left[D_{ijp}(q_{ijp})-dA(p)(F^0_{ijp}-\\beta V_p)\\right],\\\\\nb_{ij,2}&=\\sum_p\\left[E_{ijp}(q_{ijp},R_{ijp})-2dA(p)D_{ijp}(q_{ijp})+\n(d(d+1)A(p)^2-dB(p))(F^0_{ijp}-\\beta V_p)\\right].\n\\end{aligned}\n$$\nSuppose $\\sum_j\\rho_{ij}s_{ij}\\le0$ for every group, with $\\sum_j\\rho_{ij}r_{ij}\\le0$ whenever the first sum is zero. Suppose also $b_{ij,1}\\le0$ for every critical cap, with $b_{ij,2}<0$ whenever $b_{ij,1}=0$. Then for every sufficiently small positive $t$, the actual projective image under $(p,X)\\mapsto(p/L_t(p),X/L_t(p))$ has maximum normalized depth strictly less than $\\beta$. At a local positive affine projective minimum these jets are therefore infeasible for every choice of old circuits. For each fixed first jet the second-order feasibility is a finite union of linear systems with weak and strict inequalities, branched on the signs of $R_{ijp}$ where $q_{ijp}=0$.",
+  "subgoal_id": "pk-intake-exact-polytopal-projective-two-jet-descent",
+  "title": "Exact polytopal projective descent from affine denominator and cap two-jets"
+}

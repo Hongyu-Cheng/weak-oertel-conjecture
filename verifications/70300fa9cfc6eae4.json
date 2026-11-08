@@ -1,0 +1,49 @@
+{
+  "candidate_id": "cb2e00624a842614",
+  "candidate_sha256": "81f037ff822f5e9bea14569db48541abebfac742dc7a74f59d3eaafed17fce70",
+  "checked_dependency_candidate_sha256": {
+    "c680a307d3f26cec": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0"
+  },
+  "checks": [
+    "Checked 8280d34e5808dfad §8, (18). Translating x to X=x−1/2 gives three consecutive positive intervals, centered endpoints of length one and middle center s=1 with U=3. Substituting yields the two through-point branches; the predecessor accounts for pure-base cuts.",
+    "Reducing the profile gives 3x then x+1 then 3−x on the stated ranges. With F=min(x,3−x) the objective strictly rises before one, strictly falls after 3/2, and on the middle segment equals 3+(λ−1)x. Endpoint fiber objectives are always strictly lower. This gives exactly the claimed three regimes and the sole slope jump at one.",
+    "Independently checked the clipped endpoint minimization at all finite tilt breakpoints on a rational grid, and verified every regime against the actual depth profile. The analytic piecewise argument gives the complete continuum.",
+    "A cap x≥(x0+x1)/2 with 1≤x0<x1≤3/2 is depth-attaining and receives no endpoint length. Its shift loses exactly half the interval difference in the original middle fiber. The midpoint root gain is zero and depth drop is the whole interval difference. Summing over any finite increasing subdivision preserves equality."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c680a307d3f26cec",
+      "candidate_sha256": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0",
+      "fact_sha256": "4908e98c45bfa104a83c5437a691833104576ea0fd397ed655df40899326d24c",
+      "hypotheses": "Set its a=b=1, U=3, s=1 at translated continuous height X=x−1/2. Compatibility holds with |s|=U/2−(a+b)/4. The middle formula and exact endpoint depths therefore apply to the original summed length, unaffected by this translation.",
+      "reviewed_proof_sha256": "fbd43a05d11b238754907f092d0f8e020febd4bd8e9ffd7e46960a59ae92b7c0",
+      "reviewed_statement_sha256": "b80774a2792eb75e78f6de3ec9e17c99d1724c565943d7ccacdfc5f9c6bdab93"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:51:37Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides the exact raw depth profile on this hull after the coordinate map, but does not optimize D+λF or identify the tied continuum and sharp original slab charge.",
+      "fact_id": "c680a307d3f26cec"
+    }
+  ],
+  "readability": "The sharp constant concerns the chosen original slabs. The same body also has a unique deepest unweighted mark.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1ffef829218e7c2ecf82b4abde18d45967567ff6b9071c10358ffba7dec6ed55",
+  "reviewed_statement_sha256": "9b98d89de38ff94c0315ee264dd590cd746e4fe18412cbe189ef0029687aff50",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "8280d34e5808dfad": "b85da706684229bdbdc9262240c053d060e85905a92205377bb03e410402674f"
+  },
+  "started_utc": "2026-11-08T15:44:43Z",
+  "summary": "The interval example has exactly the stated optimizing continuum and saturates the one-half actual midpoint slab coefficient.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,47 @@
+{
+  "candidate_id": "b28f38da13704ada",
+  "candidate_sha256": "0d91cdf2431504a93d621659aef2b7519b85522c568c6a94717381ab0f537357",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Verified 9a8aeae7f2236762 §1, (1)–(4) and the exact finite LP attainment argument. The tested normal and widths are fixed while upper endpoints vary.",
+    "Convex lower and concave upper endpoint sequences are equivalent to the two stated second-difference bounds. Their linear interpolants enclose a convex region with exactly the sampled intervals; a small product in the singleton case supplies an ambient body without adding an integer fiber.",
+    "Integrating x over an interval gives w_i(r_i-w_i/2), so the stated linear equation is exactly the continuous centroid condition. Width-weighted Jensen for the interpolated upper and lower endpoints gives the two bounds at zero, forcing the anchor to be proper.",
+    "The strict sign sets for upper and lower endpoints are intervals containing zero. On either side the first failed inequality cannot become strict again; the other cannot fail on that side at the same or later index because each width is positive. Thus the proper block and homogeneous tails have exactly the listed pattern, with endpoint ties preserving objective values.",
+    "Conversely the weak pattern inequalities give the stated actual clipped length at every index. Each nonempty polyhedron has a nonnegative linear objective on its feasible set; the standard polyhedral attainment result applies even with unbounded feasible slopes."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:49:41Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Attains a clipped affine upper envelope in a slope parameter for a fixed actual source. Here endpoints of all actual fibers vary at fixed widths, exact centroid constraints, and a fixed tested halfspace, producing finite exact LPs.",
+      "id": "0e03dc26f6e51fc5"
+    },
+    {
+      "comparison": "Gives exact middle depth for three actual intervals with fixed source and varied tilt. It does not characterize all fixed-width compatible endpoint data with a prescribed centroid or provide the finite LP formulation.",
+      "id": "c680a307d3f26cec"
+    }
+  ],
+  "readability": "The weak block constraints may place a fiber on an endpoint. The objective is the same for each adjacent pattern where such a fiber is admissible.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a74fed8e9a2eb1e83b8e5a070d930a7f3775911b0635739677dc2b89bce5cdc4",
+  "reviewed_statement_sha256": "06dd16d8271ac7afae14169c3c1bfa977d148fc55258050f5069cbc6a21a120f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "sources_verified": [
+    {
+      "locator": "9a8aeae7f2236762:01 §1, (1)–(4), exact attained finite LP representation",
+      "source_candidate_id": "9a8aeae7f2236762",
+      "source_candidate_sha256": "4b28c8ca1b81a63a200fff757fa610492f2fe8ab849a2eb3621fd7def260f601"
+    }
+  ],
+  "started_utc": "2026-11-08T15:44:21Z",
+  "summary": "The weak captured/proper/excluded patterns represent every actual compatible fixed-width family with the prescribed centroid, and their finite LP minima are attained.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

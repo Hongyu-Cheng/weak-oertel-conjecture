@@ -1,0 +1,40 @@
+{
+  "candidate_id": "c97ee48b18ef88e8",
+  "candidate_sha256": "097fd052d1ea5647acabb5a1b76592e29914726b0e06e2eb2194b5b17f57d6b2",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "965c1fac7900f6cc": "14bd3c4527535515076c8d34acd17d802054df5b5dac54465dd5b829e76120f9"
+  },
+  "checks": [
+    "An integer-ended segment through the translated origin has opposite nearest primitive lattice steps in the segment, so isolation rules it out. A triangulation by polygon vertices then puts zero strictly in one lattice triangle. Any extra lattice point in a minimum-area such triangle subdivides it into smaller triangles or puts zero on an integer-ended segment, giving the needed emptiness.",
+    "For an empty lattice triangle, choose a primitive edge as the first integer basis vector and write the third vertex (u,t), t>0. At t≥2, height one has interval [u/t,(u+t−1)/t]. Writing u=kt+j, 0≤j<t proves ceil(u/t) belongs even for negative u. The resulting extra lattice point contradicts emptiness.",
+    "The three triangles from zero to the old edges are empty and oriented with positive determinants, hence determinants one. In the basis a,b, det(b,c)=det(c,a)=1 forces c=(−1,−1). Any vertex permutation is unimodular because the vertices sum to zero and any two form an integer basis.",
+    "After sorting barycentric coordinates an additional point has integers i≥j≥0 and i+j≥2. For j≥1 the proposed convex combination has both numerators i+j−1, putting (1,1) in R and giving its midpoint zero with c. For j=0 the segment from e1 to p contains 2e1, which gives a hyperedge with endpoints 0 and 2e1. Both contradict isolation.",
+    "In the converse the three unimodular triangles exhaust the normalized polygon, and its four integer points occupy four distinct parities. An independent exact enumeration of the distinct complete traces of hulls from a 4×4 lattice box found 32 isolated interior points, each with exactly the asserted four-point trace and unimodular barycentric normal form.",
+    "Source 965c1fac7900f6cc §§2–3 contains the same classification and the frozen proof adds an explicit converse trace check."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:49:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its dependence components use all anchored convex representations. On the displayed four-point lattice polygon the representation of zero by the three vertices joins all four in that graph, while the midpoint hypergraph has no edges. The accepted theorem therefore does not classify midpoint-isolated interior lattice points.",
+      "fact_id": "3d5f56b513c21fc4"
+    }
+  ],
+  "readability": "Isolation concerns every position in a hyperedge, including the role of zero as an endpoint in the j=0 case. The converse checks both the full trace and all midpoint edges.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "96d7bc08db77ada791fa4b2f0ab3b978052a2307397edce4b178cf8ff8ca6b0a",
+  "reviewed_statement_sha256": "4f940a04381fbeffb8b9302c91ce18b400081845171b187cf6f20b7795625d24",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:44:38Z",
+  "summary": "The classification is correct, including the converse and affine unimodular normal form.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,73 @@
+{
+  "candidate_id": "5827666c5ec237a1",
+  "candidate_sha256": "dbf38ae4485958067a779bfa100e6f3f5f9650044843fde4793c1f67fa267da5",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "e4ef1ac154c5d280": "85eff8bf4977b758bdadfc4168ffd61057189dc81f0fe19b8cde541c18ecd2f4"
+  },
+  "checked_source_candidate_sha256": {
+    "0639bd50a01557c4": "fe1c18be911ef71af6b3131363c393c226ab78d0a5e2b3be62b5027d1ba08d37"
+  },
+  "checks": [
+    "Apply the box form of the cell estimate to each late coarse fiber and every closed cap trace with the given R and δ. It covers null fibers and s=0, and summation gives the displayed uniform error. Hausdorff convergence gives eventual membership for interior points of a full-volume limit and eventual exclusion outside it. Its null boundary permits L1 convergence; a lower-dimensional limit instead has shrinking neighborhoods of vanishing volume.",
+    "The coarse measures converge in total variation, while the fine-to-limit estimate is only uniform on halfspaces. Positive limiting total M_* licenses normalization and the same-ambient-mark infimum comparison. At a fixed coarse base pure coarse cuts stay unchanged, and a nonzero continuous normal can be normalized so that all thresholds move by at most the mark displacement.",
+    "The section area bound follows from the radius R√m enclosing ball, or unit counting at m=1. The uniform fixed-base slab bound gives continuity for every candidate base. Finiteness and compactness give attainment of the limiting maximum, and a positive-volume own ball gives positivity.",
+    "The same P for every prelimit gives lattice completeness. Approximating each chosen input mark passes the anchored convex inclusions to the limit, so its lifted hull has exactly the integer trace. A positive-depth base must lie in the hull of the positive-volume bases by pure-base strict separation, which makes the own limiting fiber full dimensional by the anchored inclusion.",
+    "The limsup subsequence fixes the coarse base and lands in the corresponding limit fiber. For the liminf an interior point has an eventually feasible ball. The closed boxes around the sampled coset cover every fine coordinate because they cover almost everywhere and have locally finite union. The roundoff affects only the first r coordinates and is at most √rδ, preserving feasibility and depth accuracy.",
+    "When the coarse affine span is deficient, a ball in a sufficiently small convex neighborhood of the base hull, strictly on one side of an affine hyperplane containing that span, adds ambient interior without adding any integer base or altering fibers on the span. In the full-span case the positive fiber already supplies all continuous directions.",
+    "The constant comparison uses Γ_m>1/e and Γ_s≤1/2 for s≥1, with Γ_0=1; it is strict except at (r,s)=(1,0). At k=0 the ordinary full-mass centroid theorem applies. In the exceptional one-dimensional no-coarse-base case a discrete median gives the bound directly.",
+    "Independent exact counting check used Q_{l,0}=[0,1+1/l] and Q_{l,1}={0}, with grid l^{-1}Z, for 200 l. Fine mass is (l+3)/l versus coarse mass (l+1)/l. The fine depth supremum is ceil((l+2)/2)/(l+3), since finite tilts isolate the positive endpoint fiber and the null endpoint carries one sample. This tends to the limiting coarse maximum 1/2.",
+    "Source 0639bd50a01557c4 §§3–5 (7)–(9) matches the fixed-body limit, strict threshold, and varying fiberwise extension. The exact realization statement preserves nonempty null integer fibers."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "e4ef1ac154c5d280",
+      "candidate_sha256": "85eff8bf4977b758bdadfc4168ffd61057189dc81f0fe19b8cde541c18ecd2f4",
+      "fact_sha256": "4fc0dfe1997be608231473097c2bf01da51c0e1ea91becf1d432703070491362",
+      "hypotheses_mapping": "Invoke the box-form convex-set estimate proved in its first two proof paragraphs for Q_{l,j} and the compact convex trace of each ambient halfspace. They lie in the given box, have the same fine-cell hypothesis, and include empty or null traces. This does not require an individual positive fiber volume.",
+      "reviewed_proof_sha256": "323c2c69b9964a75db34548086ea3af6664edfdddc38c409cba5305df81b56bb",
+      "reviewed_statement_sha256": "aa1e4d8d310ba256274f12fa32c008aa8bbeabac35b39167d16ab2eb287cfa82",
+      "status": "accepted predecessor at pinned snapshot"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses_mapping": "For k=0 the positive fixed m-dimensional convex fiber is an ordinary body. Set metronoid mass equal to its full volume. The only admissible density is one almost everywhere, giving its centroid and normalized bound Γ_m.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d",
+      "status": "accepted predecessor at pinned snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:49:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives uniform halfspace and same-mark depth discrepancy. It does not compare extrema over distinct feasible sets or realize the limiting trace.",
+      "fact_id": "e4ef1ac154c5d280"
+    },
+    {
+      "comparison": "Gives a liminf via a transformed intrinsic lift with positive component masses and an affine recovery map. This draft gives full equality of maxima on a common fixed coarse base, retains null limiting fibers, and proves exact full-dimensional trace realization.",
+      "fact_id": "9b5058bf49ca5ea3"
+    },
+    {
+      "comparison": "Supplies the isolated one-dimensional counting half-depth bound after mapping a coset to the integer lattice. The draft proves that endpoint case by a median and gives a separate fixed-base convergence theorem.",
+      "fact_id": "6d6fcf377e68c79c"
+    }
+  ],
+  "readability": "The separation of coarse total variation from fine halfspace discrepancy is substantive and clear. The final discrete-median sentence proves a separate equality-threshold case rather than using strict convergence.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4ecb418a5712a379b30f683d8c9db94ff308556dc518e29c62569bd4bc090d86",
+  "reviewed_statement_sha256": "4ffe1e8e268a14cf7d8604e61d60e0fc0041251c24963dabe4413c8d6c6e9e5c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:44:38Z",
+  "summary": "The exact fine-depth limit follows from uniform cap discrepancy, coarse total variation, and same-base feasible rounding. The trace realization and conditional threshold also hold with the stated fixed-base hypotheses.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

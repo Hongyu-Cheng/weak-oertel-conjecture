@@ -1,0 +1,30 @@
+{
+  "advances": "Own-depth-weighted volume and its ordinary comparison. A positive mixture is a different candidate for uniform volume and its exact obstruction is explicit.",
+  "author": "PK-research-agent",
+  "candidate_id": "078744022bac23b7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:43:59.890019+00:00",
+  "depends_on": [
+    "4e868f774de77608",
+    "9e6b5c9eeaab615d",
+    "f344076e5aaf0689"
+  ],
+  "draft_key": "ordinary-own-depth-layer-cake-and-uniform-mixture",
+  "kind": "theorem",
+  "proof": "Use 4e868f774de77608 on the product $[0,1]\\times K$ to obtain concavity of $f^{1/d}$. The same compact-sphere cap formula and dominated convergence for a fixed fiber give continuity of $f$ on $K$. It is zero on the boundary by a supporting cap and positive in the interior by a centered ball. The maximum therefore exists and is positive. For the peak-law assertion, the ordinary-depth uniqueness argument at the start of 9e6b5c9eeaab615d applies directly to $K$ (equivalently, take all bodies there equal to $K$ and $s=t=1/2$).\n\nFubini applied to $\\mathbf1_{\\{s\\le f(x)\\}}$ gives the layer-cake identity. Root concavity along the segment from $g_*$ to any $x\\in K$ gives the lower inclusion and volume bound. Fix a unit direction and let $Y$ be the projection of a uniform point of $K$. Its tail $T(t)=\\Pr(Y\\ge t)$ is continuous and strictly decreasing on its support interval. Hyperplanes have zero volume, and each intermediate nonempty open slab meets the interior, proving these properties. Hence $T(Y)$ is uniform on $[0,1]$. At a point of $W_s$, the two opposing through-point caps both have volume at least $s$, so $T(Y)$ is in $[s/V,1-s/V]$. In particular $A\\le V/2$, and the length of that interval gives the upper volume bound. Integration gives $V^2/4$ as the upper moment bound; for the lower one use $t=(s/A)^{1/d}$ to obtain $VA\\int_0^1 d t^{d-1}(1-t)^d\\,dt=VA/\\binom{2d}{d}$. On an interval, $f$ is the nearer endpoint distance, so $|W_s|=V-2s$ and both integral bounds agree. For the larger potential class, take $f(x)=A(1-p(x-g_*))^d$, with $p$ the convex gauge of $K-g_*$ for an interior $g_*$. Its root is concave, and all its levels are exactly the homothetic copies in the lower inclusion. The sum over triangle fibers follows by applying triangle-exact-inner-level-volume-and-mean to each triangle with its own area.\n\nFor a probability law $\\eta$ of levels in $[0,A)$, the mixed measure has density $G(x)=\\int_{[0,f(x)]}|W_s|^{-1}\\,d\\eta(s)$ on $K$, by Tonelli. Every $|W_s|$ is positive for $s<A$ by the lower bound, and these volumes are uniformly bounded below for $s$ in a fixed interval $[0,r]$ with $r<A$. For each small $\\rho>0$ the set of interior points with $f(x)<\\rho$ has positive volume: continuity at any boundary point gives a neighborhood with this inequality, and a segment to any interior ball gives positive volume there. If $G=1/V$ almost everywhere, choose such interior points from that equality set with depths tending to zero. The boundedness for $s\\le r$ and continuity from above for $\\eta$ give $1/V=\\eta(\\{0\\})/V$. An allowed atom at the peak would instead give positive mass to a singleton, impossible under uniform volume. Thus every uniform mixture is concentrated at zero.\n",
+  "source_candidate_ids": [
+    "9402605e47a1b4ef"
+  ],
+  "source_candidate_sha256": {
+    "9402605e47a1b4ef": "0fe099ce18be4bbc38ba3a0e230f00f46dd5dfe3dbfb13c46646031bb57ba9d7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9402605e47a1b4ef",
+      "locator": "9402605e47a1b4ef:07 §4, layer cake, volume bounds, exact constants and uniform-mixture obstruction (6)–(9)"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a compact convex body, $d\\ge1$, with volume $V$, raw ordinary halfspace depth $f$, peak $A=\\max_Kf>0$ and levels $W_s=\\{x\\in K:f(x)\\ge s\\}$. For every measurable $H$, $\\int_0^A|W_s\\cap H|\\,ds=\\int_{K\\cap H} f(x)\\,dx$. For every $0\\le s\\le A$ and any maximizer $g_*$,\n$$\ng_*+[1-(s/A)^{1/d}](K-g_*)\\subseteq W_s,\\qquad\nV[1-(s/A)^{1/d}]^d\\le |W_s|\\le V-2s .\n$$\nThus $VA/\\binom{2d}{d}\\le\\int_K f\\le V^2/4$. Both bounds are exact for intervals. The lower factor is also attained for the larger class of potentials with nonnegative concave $d$th root and zero boundary values. Any probability mixture of the uniform laws on $W_s$ for $0\\le s<A$ that equals uniform volume on $K$ is concentrated at $s=0$. The same holds if $s=A$ is allowed with its law defined as the Dirac mass at the unique deepest point. In particular, for triangle fibers the layer-cake total is $(7/54)\\sum_z|K_z|^2$.",
+  "subgoal_id": "pk-intake-ordinary-own-depth-layer-cake-and-uniform-mixture",
+  "title": "Own-depth layer cake, exact comparison factors and the uniform mixture obstruction"
+}

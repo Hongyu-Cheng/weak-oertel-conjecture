@@ -1,0 +1,33 @@
+{
+  "advances": "Ordinary own-depth level geometry in all simplex dimensions.",
+  "author": "PK-research-agent",
+  "candidate_id": "3caebddb66618770",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:43:59.889391+00:00",
+  "depends_on": [
+    "53fe12b742a7608d",
+    "d2f95e21650e61cb"
+  ],
+  "draft_key": "simplex-own-depth-inner-level-shape",
+  "kind": "theorem",
+  "proof": "By 53fe12b742a7608d the exact centroid depth is $\\Gamma V$. Away from $g$ some barycentric coordinate exceeds $1/(d+1)$, and the corresponding canonical cap has volume $V(1-\\lambda_i)^d<\\Gamma V$. At $v_i+t(g-v_i)$, for $t>0$, the homothetic simplex $v_i+t(T-v_i)$ has that mark as centroid and volume $t^dV$. Its depth at the mark is $\\Gamma t^dV$ by the same accepted fact. Inclusion gives this lower bound in $T$, and the canonical vertex-$i$ cap, with ratio $dt/(d+1)$, gives equality. At $t=0$ the supporting cap has zero volume.\n\nThe exact local depth formula in d2f95e21650e61cb with every truncation zero gives $f_T(x)/V=\\min_i d^d\\prod_{j\\ne i}\\lambda_j(x)$ near $g$. In dimension one the same formula follows directly from the two endpoint distances. Membership in $L_\\tau$ implies $\\lambda_i\\le1-\\tau^{1/d}$ for each $i$ by the canonical caps. The product constraints imply the same bounds by AM–GM. As $\\tau\\uparrow\\Gamma$ these bounds and the sum constraint force both regions uniformly to $g$, proving equality of the two descriptions.\n\nWrite $m=d+1$ and $\\lambda_i=1/m+\\delta_i$. The coordinate upper bounds and zero sum give $\\max_i|\\delta_i|=O_d(\\varepsilon)$ on the region at $\\tau=\\Gamma-\\varepsilon$. In these coordinates the $i$th product times $d^d$ is $\\Gamma-m\\Gamma\\delta_i+O_d(\\varepsilon^2)$. Thus the region lies between the zero-sum coordinate simplexes with all $\\delta_i\\le\\varepsilon/(m\\Gamma)-C_d\\varepsilon^2$ and all $\\delta_i\\le\\varepsilon/(m\\Gamma)+C_d\\varepsilon^2$, for a fixed sufficiently large $C_d$. For the inner inclusion, the same zero-sum bound gives $\\max_i|\\delta_i|=O_d(\\varepsilon)$ on the smaller simplex itself, so the Taylor estimate applies there and the barycentrics are positive. The centered simplex $T-g$ in these coordinates is given by $\\delta_i\\ge-1/m$. The two bounding simplexes therefore correspond to homothetic copies of $-(T-g)$ with positive factors $\\varepsilon/\\Gamma+O_d(\\varepsilon^2)$. The sandwich gives the stated Hausdorff and volume limits.\n",
+  "source_candidate_ids": [
+    "9402605e47a1b4ef"
+  ],
+  "source_candidate_sha256": {
+    "9402605e47a1b4ef": "0fe099ce18be4bbc38ba3a0e230f00f46dd5dfe3dbfb13c46646031bb57ba9d7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9402605e47a1b4ef",
+      "locator": "9402605e47a1b4ef:05 §2, exact simplex high levels and reflected limit (2)–(3)"
+    },
+    {
+      "candidate_id": "9402605e47a1b4ef",
+      "locator": "9402605e47a1b4ef:04 §2, simplex maximum and exact vertex-to-centroid rays (1)"
+    }
+  ],
+  "statement": "Let $T$ be a full-dimensional $d$-simplex, $d\\ge1$, of volume $V$, centroid $g$ and barycentrics $\\lambda_i$, and set $\\Gamma=(d/(d+1))^d$. Write $L_\\tau=\\{x\\in T:f_T(x)\\ge\\tau V\\}$ for its ordinary raw depth region. The unique maximum is $\\Gamma V$ at $g$. On each vertex-to-centroid ray $f_T(v_i+t(g-v_i))=\\Gamma Vt^d$ for $0\\le t\\le1$. For $\\tau\\le\\Gamma$ sufficiently close to $\\Gamma$ the exact level region is given by the simultaneous inequalities $d^d\\prod_{j\\ne i}\\lambda_j(x)\\ge\\tau$ on $T$. As $\\varepsilon\\downarrow0$,\n$$\n(\\Gamma/\\varepsilon)(L_{\\Gamma-\\varepsilon}-g)\\longrightarrow -(T-g)\n\\quad\\text{in Hausdorff distance},\\qquad\n|L_{\\Gamma-\\varepsilon}|/V=(\\varepsilon/\\Gamma)^d(1+O_d(\\varepsilon)).\n$$",
+  "subgoal_id": "pk-intake-simplex-own-depth-inner-level-shape",
+  "title": "Exact high own-depth levels of a simplex and their reflected limit"
+}

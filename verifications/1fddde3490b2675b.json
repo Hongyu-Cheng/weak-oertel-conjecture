@@ -1,0 +1,60 @@
+{
+  "candidate_id": "52b1c0ed5583eacd",
+  "candidate_sha256": "e746d5ab61e40729b28dfe4faa82b79a8c56abcd3f1f5d208e6e075874918328",
+  "checked_dependency_candidate_sha256": {
+    "8c6a53dd27e5c125": "b0ad38a189b298edb2725b4082811faacf9a2e8a55e38a912789602e0fa82fe5",
+    "c9b7d48527d3d6a1": "a2309dd629f61c01d6132c4d235cc7d33c3d1e003c4bfa8594cff33ed0714394"
+  },
+  "checks": [
+    "Source 43892fde2d187dd5 §6 equations (10)–(12) uses the same optimizing raw section and prescribed cap slopes. The draft supplies the uniform variation argument and retains the integer coefficients.",
+    "Interior mass and interpolation give a positive section radius. Mixing the normalized ball section with a feasible point on each side of the mass keeps zero in both nearby sections, excluding vertical active normals and uniformly bounding the slopes.",
+    "The active triples form a compact set and their cone is closed by the unit trace coordinate. Separating (0,0,I) and shrinking the shape increment by a small isotropic term would keep positive trace and give strict negative support variation at every active normal. Uniform first-order control near those normals and positive support gap on the complement give an actual feasible perturbed ellipsoid.",
+    "The positive trace would strictly increase volume after returning by A. The transformed ellipsoid remains an ellipsoid representable by a symmetric positive shape via the positive square root of its shape-product matrix. The separation contradiction gives the augmented identities.",
+    "Linear dependence reduces the number of active triples to 1+d+d(d+1)/2. The trace gives total weight d. Actual cap realizations preserve b_i, and their exact raw moments make the weighted hinge sum d. The covariance is A I A divided by d t_0², and the base-plane cover and integrated positive-part bound follow from the summed margins."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "8c6a53dd27e5c125",
+      "candidate_sha256": "b0ad38a189b298edb2725b4082811faacf9a2e8a55e38a912789602e0fa82fe5",
+      "mapping": "The same compact joint raw graph gives support continuity and positive John radius at the interior mass via strict interpolation between the sections at 0 and T_j.",
+      "reviewed_proof_sha256": "575700ce2b9bef6c366fac3503a095ef1e0ee3933556a986196391a6bf1c8a78",
+      "reviewed_statement_sha256": "69cacb2bd38cf7aa5bbabbe69a7c2ce1ea6de2280d15f8d34f9efe115714df68",
+      "status": "same-wave predecessor, approval and admission required first"
+    },
+    {
+      "candidate_id": "c9b7d48527d3d6a1",
+      "candidate_sha256": "a2309dd629f61c01d6132c4d235cc7d33c3d1e003c4bfa8594cff33ed0714394",
+      "mapping": "At each selected active plane, use the same feasible j and interior t_0, nonzero u_i=A^{-1}v_i, q_0=c+Av_i, and the unchanged scalar slope b_i. The plane supports the original joint raw-moment body, so the cap has all the exact moments.",
+      "reviewed_proof_sha256": "a630950bec318043b6ca36fbd96be2f448e648bc9ec6f63ad2fc2cef505d1e50",
+      "reviewed_statement_sha256": "5126b6a32d37404d443fe1cbf53cbf45603f3de220ca349758629b431a545612",
+      "status": "same-wave predecessor, approval and admission required first"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:46:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Concerns Fritz John conditions for a physical cap hinge optimization with different variables and constraints. The present normal cone is for mass, center, and shape of a raw-moment ellipsoid and gives a prescribed-slope cap family.",
+      "fact_id": "c343c9f3dc96957e"
+    },
+    {
+      "comparison": "The interval example is a depth obstruction for a prescribed centroid mass. The current stationarity theorem requires a free-mass optimum and makes no depth comparison.",
+      "fact_id": "ac2e657b19753c17"
+    }
+  ],
+  "readability": "Normalizing the full support normal and then its continuous component gives the sign b=-r/||w||. The raw moment covariance and ambient cap budget follow after this convention is fixed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "b4b586034d91e74db29716a59d9baa7de8b915006461d242c3fe17c1f7756ba1",
+  "reviewed_statement_sha256": "24fe3ecf5e4f7b944b0cc8ac02281c416ca0dd774c24864d5409e5a3d143f235",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:41:57Z",
+  "summary": "Augmented John stationarity at an interior maximizing mass gives a finite balanced contact family, exact slope and hinge identities, and the stated cap measure, covariance, and covering consequences.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "A fixed-body conditional parameter calculation for a weighted buffer.",
+  "author": "PK-research-agent",
+  "candidate_id": "fc85045f0b0a8846",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.941241+00:00",
+  "depends_on": [
+    "5aeb5916857f97a9",
+    "a56f8711406a3870"
+  ],
+  "draft_key": "arithmetic-parameter-original-volume-order",
+  "kind": "lemma",
+  "proof": "By 5aeb5916857f97a9, $E^{1/d}$ is jointly concave at own-interior marks. Extending by zero at own-boundary marks preserves the concavity inequality: when one or both inputs are boundary marks, first replace them by interior marks at those same bases and use continuity at interior output marks, or, when the output is on its own boundary, note that no positively weighted input can be interior by convexity and its inball. Interior continuity and $\\nabla_X\\log E=Na$ follow from a56f8711406a3870. The weighted geometric mean $s^{d/N}t^{1/N}$ is increasing and concave on the nonnegative quadrant, so its composition with $(E^{1/d},L)$ proves the assertion. The gradient formula follows by the product rule.\n\nSince $L$ has a positive minimum on compact $C$, $L+th$ remains positive for small $t\\ge0$. Normalize by $1+t\\langle h\\rangle$ and differentiate; signed affine directions are allowed for both signs. Testing the assumed response inequality on both signs of constants and affine functions gives equal total mass and barycenter. Testing on negatives of continuous convex functions gives convex order on $C$, in particular for all finite convex tests on the ambient space.\n\nIn $K_z$ choose a point attaining the maximum $A$ of $L$. Its convex combinations of weights $s,1-s$ with every point of $K_z$ lie in the $sA$ superlevel, with volume $(1-s)^d|K_z|$. Layer cake gives $\\int_{K_z} L\\ge A|K_z|/N$. The total integral is $M$ and $E\\le|K_z|$ by the competitor with projective parameter zero. This gives both bounds. Normalize any nonvertical continuous covector to Euclidean unit norm; $\\Gamma$ is bounded on that sphere, so the physical shifts are uniformly $O(\\varepsilon)$. Each fiber's shifted cap volume changes by at most the shift times a uniform bound on parallel section area from a ball containing the fiber. Pure-base caps are unchanged. These uniform all-tilt comparisons survive the infimum over caps and the maximum over sampled marks.\n",
+  "source_candidate_ids": [
+    "ec7a5867f3acc4b0"
+  ],
+  "source_candidate_sha256": {
+    "ec7a5867f3acc4b0": "b17d26fe71661b6ef1941adea4d4f7a89fb3860d3e35deb43d3321ab7f231c53"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ec7a5867f3acc4b0",
+      "locator": "ec7a5867f3acc4b0:01 §1, (1)–(5)"
+    }
+  ],
+  "statement": "Let $C$ be a canonical compatible finite positive $d$-fiber body, $\\mu$ its original mixed measure, $M=\\mu(C)$, $N=d+1$, and $E$ the ordinary marked projective energy of its real fibers, extended by zero at own boundaries. For a continuous positive concave $L$ with $\\langle L\\rangle=M^{-1}\\int L\\,d\\mu=1$, the profile $f_L=(LE/M)^{1/N}$ is concave. At an own-interior differentiability point of $L$ its continuous logarithmic gradient is the old projective parameter plus $\\nabla_X L/(NL)$. For a bounded continuous concave direction $h$, the fixed-body arithmetic renormalization of $L+th$ has derivatives\n$$\n\\dot L=h-L\\langle h\\rangle,\\qquad\n\\dot{\\log f_L(Y)}=\\tfrac1N\\bigl(h(Y)/L(Y)-\\langle h\\rangle\\bigr)\n$$\nat every own-interior mark $Y$. If finite marks $Y_i$ and $\\sigma_i\\ge0$, $\\sum_i\\sigma_i=1$, satisfy $\\sum_i\\sigma_i h(Y_i)/L(Y_i)\\ge\\langle h\\rangle$ for every continuous concave $h$, then\n$$\n\\sum_i\\frac{\\sigma_i}{L(Y_i)}\\delta_{Y_i}\\le_{\\rm cx}\\frac{\\mu}{M}.\n$$\nFor any continuous nonnegative concave arithmetic-mean-one $L$, including boundary parameters, $\\sup_{K_z}L\\le NM/|K_z|$ and $0\\le f_L\\le N^{1/N}$ on sampled fibers. Consequently fixed-body buffered values at physical shift $\\varepsilon f_L\\Gamma(u)$ differ from ordinary values by $O(\\varepsilon)$ uniformly over all such $L$ for each fixed continuous norm $\\Gamma$ on covectors.",
+  "subgoal_id": "pk-intake-arithmetic-parameter-original-volume-order",
+  "title": "Original-volume convex order from an arithmetic parameter response"
+}

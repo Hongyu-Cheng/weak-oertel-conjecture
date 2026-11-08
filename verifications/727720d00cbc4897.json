@@ -1,0 +1,55 @@
+{
+  "candidate_id": "ae8f94d7d0e2ab8a",
+  "candidate_sha256": "26d18b556f9283bc72ce84e46a01a4bee56352a3fa4ef848f0639289ef82d764",
+  "checked_dependency_candidate_sha256": {
+    "d96502a3b8baff9b": "b77de048ca912e555fded40783c2b6de702dfd79ce9417c1e305bdd1b157906d"
+  },
+  "checked_source_candidate_sha256": {
+    "f525b2b4bb53c54e": "00d397a23e50564bc5fb4ebf1cde0b1d70f660acb13f07dc1ac9b59510b581c7"
+  },
+  "checks": [
+    "Interpolating a near-peak section to a point at each projection endpoint gives the two s-power lower envelopes. Their integrals add to L times that section's volume divided by s+1. Zero-length sides contribute zero. The cone from a full endpoint section to a point attains equality, since its section at height u is scaled by exactly 1−u/L.",
+    "Every closed cap has a compact convex trace. Its slice profile is upper semicontinuous by reverse Fatou and log-concave by Brunn–Minkowski and weighted AM–GM on positive sections. The zero and singleton profiles cause no exceptional loss. In the accepted scalar formula take sampling density 1/h and phase −t/h, which gives samples t+hj and error h times the cap-profile peak.",
+    "The cap-profile peak is at most W even for a vertical cap retaining an entire grid fiber. Applying the same bound to the whole source gives A_h≥(1−η)A and the stated normalized bound after subtracting ratios. A fixed positive discrepancy b implies η≥b/(b+2) or η≥1, hence L/h≤(s+1)(b+2)/b.",
+    "An affine block map sends the actual grid to aG+c, section volumes to |det T| times themselves, and both ordinary and covolume-weighted sampled masses to |a det T| times themselves. The ratios are invariant even if a<0.",
+    "Source f525b2b4bb53c54e §2 (3)–(5) and its block affine calculation match the frozen statement; the draft specializes to closed caps."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d96502a3b8baff9b",
+      "candidate_sha256": "b77de048ca912e555fded40783c2b6de702dfd79ce9417c1e305bdd1b157906d",
+      "fact_sha256": "6e94ba10dfa7499a7960901479622bc592ea9f06ff9c4f06cd59f91a2aae9982",
+      "hypotheses_mapping": "Use the scalar estimate (4), which is explicitly stated for any compactly supported upper semicontinuous log-concave function. The through-cap slice profile has those properties without the parent theorem's diffuse-section hypotheses. Take sampling density 1/h and phase −t/h, then multiply the scalar error by h.",
+      "reviewed_proof_sha256": "7da88c84a152c73f515add2a67770f7df8649d654b28c34f7cd320ad1472859e",
+      "reviewed_statement_sha256": "fc8fc6807fabe84f221c64e5d6aab02ff1742846e8912e773dfad4981e065bc3",
+      "status": "accepted predecessor at pinned snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:49:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Scalar estimate (4) supplies absolute quadrature error for the section profiles. It does not give the sharp lower A/(LW) factor, the projection-length relative criterion, or the block affine normalization.",
+      "fact_id": "d96502a3b8baff9b"
+    },
+    {
+      "comparison": "Gives a general box-and-cell absolute cap error. For r=1 it uses a common box bound; it does not supply the sharp one-coordinate peak-to-total comparison or the dimension-only projection-length criterion.",
+      "fact_id": "e4ef1ac154c5d280"
+    }
+  ],
+  "readability": "The phase sign is clear after substituting (j−(−t/h))/(1/h)=hj+t. The compactness argument also handles a positive slice on an endpoint of a closed cap.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "49c47797bd9521d1aba265dc2dc5fc6e171d32bf2e55604642439f74cb6ae513",
+  "reviewed_statement_sha256": "01529200b5ac55d0a57c4e921bfd0cdc92063567d4438338c9a34e12c8426c5e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:44:38Z",
+  "summary": "The sharp peak-to-total comparison, uniform relative closed-cap error, and affine invariance follow with the stated constants for every allowed one-coordinate grid.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

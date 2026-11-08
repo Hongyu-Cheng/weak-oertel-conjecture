@@ -1,0 +1,36 @@
+{
+  "advances": "Actual finite-volume caps and section centroids of ordinary simplices with exactly two positive heights.",
+  "author": "PK-research-agent",
+  "candidate_id": "baef4d408413a817",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:43:59.980985+00:00",
+  "depends_on": [
+    "7cae55c49007d765",
+    "e1a7a34258ecebfa",
+    "13bcef2174ad3496"
+  ],
+  "draft_key": "two-positive-simplex-variance-either-positive-omission",
+  "kind": "theorem",
+  "proof": "If $p>q$, apply the exact two-positive section identities, using $x_j=hr_j/(q+r_j)$ for each strictly negative height $-r_j$. All $0<x_j<h=1-q/p<1$, and $X/h>0$. The larger- and smaller-positive scalar theorems make the two corresponding gaps strictly positive. The exact coarea normalization $\\mu_i=d b_i$ uses the original dimension. There are exactly $d$ factors after either omission, and a zero-height coordinate has $\\mu_i=1$. Thus the two products of section means equal exactly the two products $d^d\\prod_{i\\ne k}b_i$ in the original simplex.\n\nFor $p=q$ approach the tie by decreasing the first positive height $p$ to the fixed $q>0$, keeping all the other vertex heights fixed. Use independent unit-rate exponential coordinates and write $S=\\sum_j r_jY_j$ over the negative phases. The coarea density of $V=pY_p+qY_q-S$ at zero is obtained by changing $Y_p$ to $V$. With $z$ the other coordinates on the nonnegative orthant, the density is the integral of\n$$\n\\frac1p e^{-\\sum z_i}\\exp[-(S-qY_q)/p]\\mathbf1_{\\{S\\ge qY_q\\}} .\n$$\nThe numerator for each section mean has one additional factor, either the relevant other coordinate or $(S-qY_q)/p$ for the eliminated coordinate. The integration domain is fixed, and the boundary $S=qY_q$ has Lebesgue measure zero. On a compact positive interval of $p$, all the integrands have an integrable bound given by a fixed multiple of $(1+\\sum z_i)e^{-\\sum z_i}$. The density integral at the tied value is positive since the fixed domain has interior and the integrand is positive there. Thus the density and all section means are continuous at the tie by dominated convergence. The cap probabilities are also continuous by bounded convergence of their indicators, because the signed sum at the tie has no atom at zero. At the tie the barycentric coarea relation remains valid by the radial disintegration in the proof of the finite section identities, which uses only a proper cut and hence does not require unequal coefficients. Taking limits of the two strict comparisons proves the two nonstrict bounds. The closed side has the same volume as the positive side since a proper cut has full-dimensional volume-zero boundary.\n",
+  "source_candidate_ids": [
+    "2e27b7d358779b43",
+    "fdab4307532951f8"
+  ],
+  "source_candidate_sha256": {
+    "2e27b7d358779b43": "cb2c00968ab616596e20e6addb3a1420b76701df54abc662010f9df76c9c4f97",
+    "fdab4307532951f8": "6b377c41f6ebba4cc44d3facb911cb63f660afb16c6bfa8a23e6ff6ca824a9f8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fdab4307532951f8",
+      "locator": "Theorem and §§1–3, (1)–(4) and coarea tie continuity"
+    },
+    {
+      "candidate_id": "2e27b7d358779b43",
+      "locator": "§6, actual smaller-omission section variance and tie"
+    }
+  ],
+  "statement": "Let $T$ be a $d$-simplex, $d\\ge2$, and let an affine height cut its interior, with exactly two strictly positive vertex values $p\\ge q>0$, at least one strictly negative vertex value, and any remaining vertex values zero. Let $F$ be the fraction of the simplex on the closed nonnegative side and $b$ the barycentric coordinates of the uniform section centroid. For each of the two positive indices $k$,\n$$\nF(1-F)\\le d^d\\prod_{i\\ne k}b_i .\n$$\nBoth comparisons are strict if $p>q$.",
+  "subgoal_id": "pk-intake-two-positive-simplex-variance-either-positive-omission",
+  "title": "Simplex cap variance with either of its two positive vertices omitted"
+}

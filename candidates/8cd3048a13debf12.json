@@ -1,0 +1,35 @@
+{
+  "advances": "The force is the same-coefficient volume force. The result controls its scale and volume entropy.",
+  "author": "PK-research-agent",
+  "candidate_id": "8cd3048a13debf12",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.939589+00:00",
+  "depends_on": [
+    "e9fc678ed90ba6c3",
+    "d90ba05577427854",
+    "91ad59d2662839ca",
+    "ff01846e056fd4d4"
+  ],
+  "draft_key": "exact-same-separator-buffer-force-entropy",
+  "kind": "lemma",
+  "proof": "The energy satisfies $0<E_a\\le |K_{p_a}|\\le M$ by d90ba05577427854. In particular $\\Delta>0$, and both probability vectors are positive on the same contact occurrences. The hypotheses of e9fc678ed90ba6c3 hold for $L$ and the rows. The original-volume mixture is $\\sum_a\\sigma_a\\bar\\rho_a=dm/M$, and its entropy identity gives $K_V=-\\sum_a\\sigma_a\\log L_a\\ge0$. By the definitions of the scalar displacement and the two weights,\n$$\n\\begin{aligned}\n\\sum_a\\sigma_a\\log\\delta_a\n&=\\log\\varepsilon-\\frac{K_V+\\sum_a\\sigma_a\\log(M/E_a)}{N},\\\\\nD(\\sigma\\|w)&=\\sum_a\\sigma_a\\log\\delta_a-\\log(\\Delta/K).\n\\end{aligned}\n$$\nSubtracting proves the identity. Both relative entropies and every $\\log(M/E_a)$ are nonnegative. Since $\\Delta=\\varepsilon K e^{-I}$ and $I e^{-I}\\le 1/e$ for $I\\ge0$, each scaled estimate follows.\n\nFor the physical application, let $\\omega_{ij}$ and $\\kappa_{ia}$ be the common weights of 91ad59d2662839ca. Its relation $\\omega_{ij}T_{ij}=(\\sum_a\\kappa_{ia})\\rho_{ij}$ and $\\sum_j\\rho_{ij}=1$ give $K=\\sum_{ij}\\omega_{ij}T_{ij}$. The sum of the proper weights is at most one, and equals one if atomic weights vanish. This gives the two asserted bounds on $K$ under their respective assumptions. In particular the upper bound uses no positive coarea floor. For the rows, ff01846e056fd4d4 yields a martingale from masses $e_{ia}/L_a$ with $e_{ia}=\\kappa_{ia}\\delta_a$ to the target $(\\Delta/M)dm/L$, whenever its stated same-separator parameter test and positivity hypotheses hold. Dividing by $\\Delta$ gives precisely the mixture in the statement and that fact supplies its row $L$-moments. Discard zero $\\kappa_{ia}$ in this application.\n",
+  "source_candidate_ids": [
+    "ed103e599726c87f"
+  ],
+  "source_candidate_sha256": {
+    "ed103e599726c87f": "78d83aaf59f4216755ea5fe5389073840e9471f6a694ea3d0ad0c48e1d26d9fa"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ed103e599726c87f",
+      "locator": "ed103e599726c87f:02 §4, (7)–(9)"
+    },
+    {
+      "candidate_id": "ed103e599726c87f",
+      "locator": "ed103e599726c87f:03 §§4–6, (9)–(15)"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $N=d+1$, and use original sampled mixed $d$-volume $dm$ of mass $M>0$ on a compact set of positive compatible fibers. Let $L$ be positive continuous and log-normalized by $\\int\\log L\\,dm/M=0$. At finitely many own-interior marks $Y_a=(p_a,y_a)$ set $L_a=L(Y_a)$, $E_a=E_{K_{p_a}}(y_a)$, and for $\\varepsilon>0$ take $\\delta_a=\\varepsilon(L_aE_a/M)^{1/N}$. Given positive coefficients $\\kappa_a$, put $K=\\sum_a\\kappa_a$, $\\Delta=\\sum_a\\kappa_a\\delta_a$, $w_a=\\kappa_a/K$ and $\\sigma_a=\\kappa_a\\delta_a/\\Delta$. Assume the same-coefficient probability rows $\\rho_a$ satisfy $\\int L\\,d\\rho_a=L_a$ and $\\sum_a(\\sigma_a/L_a)\\rho_a=dm/(ML)$. Define $\\bar\\rho_a=(L/L_a)\\rho_a$ and $K_V=\\sum_a\\sigma_a D(\\bar\\rho_a\\|\\rho_a)$. Then\n$$\nI:=\\log(\\varepsilon K/\\Delta)=D(\\sigma\\|w)+\\frac{K_V+\\sum_a\\sigma_a\\log(M/E_a)}{N}\\ge0.\n$$\nIn particular $0<\\Delta\\le\\varepsilon K$, $\\Delta I\\le\\varepsilon K/e$, $\\Delta D(\\sigma\\|w)\\le\\varepsilon K/e$, and $\\Delta K_V\\le N\\varepsilon K/e$.\n\nFor a joint separator with effective coareas bounded above by $S_{\\max}$, these upper bounds hold with $K$ replaced by $S_{\\max}$ if its own coefficients supply the stated probability rows and $\\Delta>0$. If the separator has total proper weight one and its coareas are also at least $S_{\\min}>0$, then $K\\ge S_{\\min}$.",
+  "subgoal_id": "pk-intake-exact-same-separator-buffer-force-entropy",
+  "title": "Exact entropy identity for total logarithmic buffer force"
+}

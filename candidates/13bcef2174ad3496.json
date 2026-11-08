@@ -1,0 +1,37 @@
+{
+  "advances": "All finite smaller-positive scalar gap vectors and nonzero faces.",
+  "author": "PK-research-agent",
+  "candidate_id": "13bcef2174ad3496",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:43:59.980725+00:00",
+  "depends_on": [
+    "7cae55c49007d765",
+    "f8e5ccdf06e64ddf",
+    "e1a7a34258ecebfa",
+    "5cf36dd9d81f88a0"
+  ],
+  "draft_key": "all-dimensional-smaller-positive-scalar-envelope",
+  "kind": "theorem",
+  "proof": "The upper-face lemma handles all nonzero vectors on upper faces, deletion of zeros, and the base case $m=1$, for which the exact gap is positive at $0<x<h<1$. Throughout the nonzero domain $C>0$, because $1-\\rho\\le\\sum_jx_j< B$, so $W>0$. For interior vectors $R>0$ as well: take $p=1$, $q=1-h$, $r_j=q x_j/(h-x_j)$ in the finite section identities. The displayed fraction in the bracket is then the cap fraction, strictly between zero and one since the independent phases of both signs are unbounded.\n\nSuppose the theorem holds in smaller dimensions and fails in dimension $m\\ge2$. Fix $h,E$ of an interior counterexample. The set $[0,h]^m\\cap\\{\\prod_j(1-x_j)=1/(1+E)\\}$ is compact and excludes the all-zero vector, so $R/W$ attains a maximum there. This maximum exceeds one and cannot be on an upper or zero face, by the upper-face lemma or by deletion and induction. Denote the maximum by $\\Lambda$. At its point $\\Lambda W-R$ has a local minimum zero along the fixed-product constraint. If two coordinates are unequal, keeping $k=uv=(1-x_i)(1-x_j)$ fixed permits $T_0=u+k/u$ to vary two-sidedly because its derivative is $1-k/u^2\\ne0$. In that parameter $W$ is strictly concave and $R$ affine, as in the pair computation in the finite section identities. Thus $\\Lambda W-R$ is strictly concave, excluding a minimum. The ratio therefore attains at least its original value at an equal-coordinate vector at these $E,h$. In particular every value above one is bounded by an equal-coordinate value in the same dimension.\n\nOn equal-coordinate vectors $x_j=x$, set $M=C(1+x/E)^m$ so that $W=(1-h)M$. We check that the limsup of $R/W$ is at most one at every boundary point of the compact triangle $0\\le x\\le h\\le1$. If $x$ tends to a positive value below one and $h-x$ tends to zero, the upper-face lemma applies by continuity. If instead $h\\to1$ with $x$ in a compact subset of $(0,1)$, $R(x,1)=0$ and differentiation gives $-\\partial_hR(x,1)=B-1+\\rho=(1-\\rho)C$, with $B=mx/(1-x)$. Thus the ratio tends to $(1-\\rho)/(1+x/E)^m<1$ when $x$ converges in that compact subset.\n\nFor $x\\to0$ the fixed-$m$ binomial expansions give\n$$\nE=mx+\\tfrac12 m(m+1)x^2+O(x^3),\\quad\nC=\\tfrac12(m+1)x+O(x^2),\\quad\n1-mx/E=\\tfrac12(m+1)x+O(x^2).\n$$\nIf also $h\\to0$, then $W/L\\to1$, and the larger-positive scalar envelope gives $R/W\\le L/W$, so the limsup is at most one. If $h$ stays bounded below by $\\eta>0$, write $R/(1-h)$ as the removable continuous extension $-\\int_0^1\\partial_hR(x,h+t(1-h))\\,dt$ using $R(x,1)=0$. In the exact formula for $R$, $E=(1-x)^{-m}-1$ and $\\rho=(1-x)^m$, so $R$ is smooth on a rectangle about $x=0$, $\\eta\\le h\\le1$. It satisfies $R(0,h)=\\partial_xR(0,h)=0$ there by substitution and differentiation. Differentiating these two zero identities in $h$ shows that the quotient has vanishing constant and linear terms in $x$. Bounded mixed derivatives on the rectangle give the uniform estimate $R/(1-h)=O(x^2)$. Meanwhile $M/x\\to(m+1)(1+1/m)^m/2>0$, so the ratio tends to zero.\n\nIf $x\\to1$, put $\\epsilon=1-x$, $\\delta=1-h$ and $t=\\delta/\\epsilon\\in(0,1)$. The exact formula gives\n$$\nR=1-\\epsilon^m\\delta-\\frac{(1-\\epsilon^m\\delta)^2(1-t)^m}{(1-\\delta)^{m+1}}\n\\le mt+2\\epsilon^{m+1}t .\n$$\nIndeed the denominator in the subtracted term is at most one, $(1-\\epsilon^m\\delta)^2\\ge1-2\\epsilon^m\\delta$, and $1-(1-t)^m\\le mt$. Also $C=m(1-\\epsilon)/[\\epsilon(1-\\epsilon^m)]-1\\ge m/\\epsilon-(m+1)$, so $Q\\ge1$ gives $W\\ge t[m-(m+1)\\epsilon]$ for sufficiently small $\\epsilon$. Consequently $R/W\\le[m+2\\epsilon^{m+1}]/[m-(m+1)\\epsilon]\\to1$ uniformly in $t$. These cases exhaust the boundary.\n\nA ratio above one now forces the equal-coordinate ratio to attain its supremum at an interior equal-coordinate point. To see this, any sequence tending to the supremum, including an infinite supremum, has a convergent subsequence in the closed triangle. No boundary limit can have limsup above one, while at an interior limit the ratio is finite and continuous. By the fixed-product reduction, this supremum is also the global maximum over all vectors in the open $m$-coordinate domain. The negative-coordinate ratio theorem maps that point to an interior local maximum of $R/L$ on its negative domain, which it excludes. This proves $W\\ge R$. If equality held at an interior point, the ratio would have a local maximum of value one in the full open domain. The same negative-coordinate theorem rules it out for $m\\ge2$, and the exact one-coordinate formula handles $m=1$.\n",
+  "source_candidate_ids": [
+    "2e27b7d358779b43",
+    "fdab4307532951f8"
+  ],
+  "source_candidate_sha256": {
+    "2e27b7d358779b43": "cb2c00968ab616596e20e6addb3a1420b76701df54abc662010f9df76c9c4f97",
+    "fdab4307532951f8": "6b377c41f6ebba4cc44d3facb911cb63f660afb16c6bfa8a23e6ff6ca824a9f8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2e27b7d358779b43",
+      "locator": "Theorem and §§1–5, (1)–(12)"
+    },
+    {
+      "candidate_id": "fdab4307532951f8",
+      "locator": "§4, finite smaller-positive interface"
+    }
+  ],
+  "statement": "For an integer $m\\ge1$ and $0\\le x_j\\le h<1$ with some $x_j>0$, put $\\rho=\\prod_j(1-x_j)$, $E=\\rho^{-1}-1$, and\n$$\nL=\\left(1-\\frac{\\sum_j x_j}{E}\\right)\\prod_j(1+x_j/E),\\qquad\nR=\\rho(E+h)\\left[1-\\frac{(E+h)\\prod_j(h-x_j)}{h^{m+1}}\\right].\n$$\n\nAlso set $Q=\\prod_j(1+x_j/E)$, $B=\\sum_j x_j/(1-x_j)$, $C=B/(1-\\rho)-1$, and $W=(1-h)CQ$.\n\nThen $W\\ge R$, with strict inequality whenever all $0<x_j<h<1$.",
+  "subgoal_id": "pk-intake-all-dimensional-smaller-positive-scalar-envelope",
+  "title": "The all-dimensional scalar envelope for omission of the smaller positive phase"
+}

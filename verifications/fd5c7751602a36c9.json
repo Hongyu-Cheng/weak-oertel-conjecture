@@ -1,0 +1,45 @@
+{
+  "candidate_id": "3969fc850fd55cf7",
+  "candidate_sha256": "e1948450baf79bebd03993a51d1ad800222a0b524c9e362c1f52a72be7566504",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Source 293336b22f4df188 §§1–4 gives the same strip and triangle, both ambient perturbations, exact polynomial test, and strict area comparison. The replacement by disjoint radial triangles is valid even without separately proving positive turn determinants.",
+    "The linewise first variation has a signed proper contribution and a positive part on the outside supporting edge. Compactness bounds the perturbation along all lines, and the difference quotient is dominated by the magnitude of the linear increment. Proper section endpoints and outside supporting edge endpoints have one-dimensional measure zero.",
+    "Both endpoint sections have length three. Their first moments are -3 and -3/2, with opposite base-tilt contributions. Taking a large positive base tilt activates the entire outside edge for either sign of the tangential increment, forcing p_i²-q_i²=9 on both axes.",
+    "The four specified midpoint points are actual midpoint vertices. The segments to the positive chord endpoints give the crossed lower bounds for q_1 and q_2. Using the smaller positive endpoint gives the normalized inequality with increasing left side and decreasing right side.",
+    "Independent exact symbolic replay derived the four offsets, the seven positive coefficients in the shift L-5, the polygon-area expression, and equality to 6L+9/2 at the exact threshold p_H. The failed test at p_H forces p>p_H, including at L=5.",
+    "All six sector triangles are in K by convexity and lie in disjoint angular interiors, with all gaps less than π because U>V>0 and W>J>0. Their summed area is strictly above the endpoint total for the chosen p_0>p_H. The coordinate Jacobian has absolute value two."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T15:46:04Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "In its compatible setting, take unit x-normal, source zero, and both outer section masses equal to three. Its saturated-selector identity gives the first chord moment; exchanging coordinates gives the second. It does not use both equations together with the actual strip midpoint vertices to force the heavy middle area.",
+      "fact_id": "3acaacf5c13d6f0e"
+    },
+    {
+      "comparison": "Controls a different planar residual configuration using three actual equal-depth cap masses and area constraints. This theorem uses two first-variation hypotheses and the specified strip, with no equality of cap masses.",
+      "fact_id": "29faad268c79cd91"
+    },
+    {
+      "comparison": "Controls allowed central radii given fixed sector areas; it does not impose the saturated endpoint chord equations or the shared midpoint vertices used for this area lower bound.",
+      "fact_id": "63f90fd70f747bd0"
+    }
+  ],
+  "readability": "The labels p_i and q_i denote positive and negative chord lengths respectively, and p_2 is used in the x-axis segment while p_1 is the positive y-axis coordinate. The cyclic area proof keeps the actual points and their angular order explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a77506db195bd3fc68d94dd63a4c08348b5c8308c615938a86de73e78b7e18aa",
+  "reviewed_statement_sha256": "0dfa387acb3b83bc21dd94148aafd669dccc2b14e56f55ad3c0f6ba1629aee64",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:41:57Z",
+  "summary": "Both ambient first-variation conditions force the two saturated chord moments. Together with the actual shared midpoint vertices they yield a contained area strictly exceeding the sum of the endpoint areas for every L≥5.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

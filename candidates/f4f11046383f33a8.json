@@ -1,0 +1,41 @@
+{
+  "advances": "The scale is an optimized normalized value estimate for the freely chosen positive log-normalized concave parameter.",
+  "author": "PK-research-agent",
+  "candidate_id": "f4f11046383f33a8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:41:56.938812+00:00",
+  "depends_on": [
+    "ac61d4418753fdd1",
+    "b22db3535d2a902a",
+    "43ed87d91b76249c",
+    "155691fc3768c06f",
+    "9583fbdf100e75ef",
+    "d90ba05577427854"
+  ],
+  "draft_key": "linear-value-gap-for-free-log-buffer",
+  "kind": "theorem",
+  "proof": "The indicated affine changes preserve the objective and the normalization. The continuous linear map multiplies all volumes and the energies by the same determinant factor by d90ba05577427854, and transforms the covariance norm contragrediently with the continuous normal. An affine base shear changes the base tilt, which is unrestricted. The sampled average of $\\log L$ is invariant under this transport. For either assertion work with $M=1$ and the displayed bounds, choosing constants for the single family in the local case.\n\nLet selected marks $Y_p=(p,y_p)$ have own inballs of radius $r_s>0$ with their minimal base faces covering $P$. For each pair $u\\in P\\cap F_p$ choose an anchored representation of $p$ with weight $t_{pu}>0$ at $u$. Such a representation follows from $p\\in\\operatorname{relint}F_p$, by extending the segment from $u$ past $p$ within $F_p$, and using its vertices for the remaining weights. When $u=p$, weight one suffices. Put $t_*=\\min t_{pu}>0$ over the finitely many pairs, chosen once over the whole base. For $X\\in K_u$ combine $X$ with arbitrary other points in its representation. Compatibility and nonnegative concavity yield a point $X'\\in K_p$ with $L(p,X')\\ge t_* L(u,X)$. The opposite point of the source inball along the line through $X'$ and $y_p$ expresses $y_p$ with weight at least $r_s/(r_s+2R)$ at $X'$ (the coincident case needs no extension). Thus with $c_L=t_*r_s/(r_s+2R)$ we have $c_L\\sup_S L\\le\\max_p L(Y_p)$. The log mean zero gives $\\sup_S L\\ge1$. In particular one selected mark has $L(Y_p)\\ge c_L$.\n\nThe energy there is at least $E_{\\min}=\\omega_d r_s^d$, by the contained ball and the monotonicity and centroid equality of d90ba05577427854. Put $d_0=(c_LE_{\\min})^{1/(d+1)}$, $A_s=\\omega_{d-1}(\\sqrt3r_s/2)^{d-1}$ and $c_B=A_s d_0\\sqrt{\\lambda_-}$. The actual displacement scalar is at least $\\varepsilon d_0$, and a $\\Gamma$-unit normal has Euclidean length at most $1/\\sqrt{\\lambda_-}$. The gain estimate of 9583fbdf100e75ef therefore gives a raw gain at least $c_B\\varepsilon$ at the selected mark for\n$$\n0<\\varepsilon\\le \\min\\!\\left(\\frac{r_s}{2d_0\\sqrt{\\lambda_-}},\\frac{v}{2c_B}\\right).\n$$\nThis estimate includes pure-base caps by their separate reserve of half the own volume. For the upper bound, $L=1$ gives scalar at most $\\varepsilon$ by the energy test with constant denominator. With unit Euclidean continuous normals, the shift is at most $\\varepsilon\\sqrt{\\lambda_+}$, and the old all-tilt slab bound of 43ed87d91b76249c gives $\\beta_\\varepsilon(K,1)\\le\\beta_0(K)+A\\sqrt{\\lambda_+}\\varepsilon$, where $A=|P|\\omega_{d-1}R^{d-1}$.\n\nIn the fixed-body case b22db3535d2a902a supplies the exact deepest face cover. The maximizing marks exist by the slab continuity, have positive depth by an own inball and lie in the own interior by the supporting tilt of 155691fc3768c06f. Choose one per deepest base and a common radius $r_s>0$. The raw gain at the selected mark is then a gain above $Q=\\beta_0$ in this mass-one frame.\n\nFor changing bodies apply the quantitative near-deepest face lemma with $g=\\beta_0-\\beta_*$. For $0\\le g\\le g_0=(c_F/2)\\min(2C_D,q_*/2)$ use its covering marks, $r_s=q_*/(4A)$, and their raw depths at least $\\beta_0-2g/c_F$. Hence, with $H=\\max(1,2/c_F)$,\n$$\n\\beta_\\varepsilon(K,L)-\\beta_*\n\\ge\\max\\{g,c_B\\varepsilon-(H-1)g\\}\\ge c_B\\varepsilon/H.\n$$\nHere the first term uses cap monotonicity. For $g>g_0$ inside the frame the same first term suffices when $\\varepsilon\\le Hg_0/c_B$. Outside the original sublevel, $\\beta_\\varepsilon(K,L)\\ge\\beta_0>b$ suffices when $c_B\\varepsilon/H\\le b-\\beta_*$. For the upper bound, take ordinary near-minimizers below $b$ in the bounded frame and apply the $L=1$ bound, then take their infimum.\n",
+  "source_candidate_ids": [
+    "5dc06bb8226350eb"
+  ],
+  "source_candidate_sha256": {
+    "5dc06bb8226350eb": "c0967be57574573ccc2539f6d2788e37813b3ea2d10e7e20ef30465d5c73a906"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5dc06bb8226350eb",
+      "locator": "5dc06bb8226350eb:02 §4, (11)–(13)"
+    },
+    {
+      "candidate_id": "5dc06bb8226350eb",
+      "locator": "5dc06bb8226350eb:03 §§5–6, (14)–(16)"
+    },
+    {
+      "candidate_id": "5dc06bb8226350eb",
+      "locator": "5dc06bb8226350eb:04 §6, (17)–(18)"
+    }
+  ],
+  "statement": "On a fixed finite nonempty real base $P$, let $d\\ge1$, use the summed $d$-volume $dm$ of actual positive compatible fibers, and let $M$ denote its total mass. Let $L>0$ be finite concave on the canonical hull with $\\int_S\\log L\\,dm/M=0$. For the ordinary through-mark halfspace caps add the displacement $\\varepsilon(L(p,y)E_{K_p}(y)/M)^{1/(d+1)}\\Gamma(u)$ to the margin when the continuous normal $u$ is nonzero. Here $E_K(y)$ is marked projective energy, zero on the own boundary, and $\\Gamma(u)=\\sqrt{u^{\\mathsf T}\\Sigma u}$ for the pooled within-fiber covariance. Keep pure-base caps unchanged and use the supremum of the raw depths divided by $M$ for $\\beta_\\varepsilon(K,L)$, or equivalently the maximum when attained. Write $\\beta_0$ for the ordinary normalized maximum.\n\nAt a fixed actual positive compatible family on a finite real base that is a local minimum of the ordinary normalized maximum over all actual fixed-base positive compatible Hausdorff perturbations, the infimum over the positive concave log-normalized parameters of the covariance-buffered normalized maximum lies between $\\beta_0+c\\varepsilon$ and $\\beta_0+C\\varepsilon$ for all sufficiently small $\\varepsilon>0$, with the lower bound holding for every such parameter.\n\nFor the joint infimum, let $\\beta_*$ be the unrestricted ordinary fixed-base infimum. Suppose $\\beta_*<b$ and every family with $\\beta_0\\le b$ has a representative under an invertible common continuous affine change and affine base shear with $M=1$, $K_z\\subset RB_d$, $|K_z|\\ge v>0$, an own inball of radius $r_b>0$ in every fiber, and $\\lambda_- I\\le\\Sigma\\le\\lambda_+ I$ with $\\lambda_->0$, all bounds common to the class. Then $\\beta_*+c\\varepsilon\\le\\inf_{K,L}\\beta_\\varepsilon(K,L)\\le\\beta_*+C\\varepsilon$ for all sufficiently small $\\varepsilon>0$.",
+  "subgoal_id": "pk-intake-linear-value-gap-for-free-log-buffer",
+  "title": "Uniform linear growth of optimized logarithmic buffered depth"
+}

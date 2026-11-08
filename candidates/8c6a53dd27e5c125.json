@@ -1,0 +1,30 @@
+{
+  "advances": "An auxiliary source-body theorem for dominated densities on arbitrary finite positive fibers, with raw moments and no depth assertion.",
+  "author": "PK-research-agent",
+  "candidate_id": "8c6a53dd27e5c125",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:39:22.516192+00:00",
+  "depends_on": [],
+  "draft_key": "raw-moment-support-and-strict-john-interpolation",
+  "kind": "lemma",
+  "proof": "The densities form a weak-* compact convex subset of $L^\\infty(\\mu)$ by Banach–Alaoglu: the unit ball is weak-* compact and the pointwise order bounds are closed by testing against nonnegative $L^1(\\mu)$ functions. Mass and both first moments are weak-* continuous since all coordinates are bounded and $\\mu$ is finite. This proves the compact graph and feasible domain.\n\nFor a fixed fiber and assigned mass, an upper threshold in direction $u$ exists by continuity of the cap mass between its support levels. At mass zero or full the density is prescribed almost everywhere. At a proper mass, if $s$ is a matching threshold, the product $(u\\cdot x-s)(1_{\\{u\\cdot x\\ge s\\}}-f)$ is nonnegative pointwise and vanishes almost everywhere only for the cap indicator, since the level hyperplane has zero volume. Its integral is the support-objective improvement because the masses agree. Thus every support optimizer, which exists by compactness, is a cap indicator on each fiber: replacing one restriction by its cap changes neither total mass nor base moment. Two distinct optimizing densities would have an optimizing average fractional on positive measure, which is impossible.\n\nFix a unit $u$ and take the unique support indicators for all $b_i$. At least two of them differ on positive measure because their constraint pairs differ. Their positive mixture is fractional on that set and hence is strictly suboptimal for the mixed constraint. Consequently the support function of $Q(b)$ exceeds $\\sum_i\\alpha_i h_{Q(b_i)}$ at every unit $u$. The difference is continuous on the compact sphere, so its minimum is positive. The support-function characterization of inclusion gives the claimed ball inclusion.\n\nChoose maximizing ellipsoids for the summands, allowing shape zero if a summand has empty interior. Such ellipsoids exist since the feasible centers and positive semidefinite shapes of ellipsoids in a fixed compact set are closed and bounded. Write their centers and shapes as $c_i,A_i$. The ball inclusion contains the ellipsoid with center $\\sum_i\\alpha_i c_i$ and shape $\\sum_i\\alpha_i A_i+\\varepsilon I$: evaluate each summand at the same unit-ball argument. The determinant root of the latter shape strictly exceeds that of $\\sum_i\\alpha_i A_i$, by the eigenvalues and $\\varepsilon>0$. For two positive definite shapes the determinant root of a convex combination is at least the convex combination of the determinant roots. Indeed, conjugate the first shape to $I$ and diagonalize the second, with eigenvalues $\\lambda_1,\\ldots,\\lambda_d$. In the expansion of $\\prod_j(\\alpha+(1-\\alpha)\\lambda_j)$, each elementary symmetric mean of degree $k$ is at least $(\\prod_j\\lambda_j)^{k/d}$ by the arithmetic–geometric mean inequality over the $k$-subsets. Taking the $d$th root gives the assertion, which extends to semidefinite shapes by continuity and to finite mixtures by iteration. This proves strictness also when some or all endpoint sections have lower dimension.\n",
+  "source_candidate_ids": [
+    "43892fde2d187dd5"
+  ],
+  "source_candidate_sha256": {
+    "43892fde2d187dd5": "3abc72d939b9299234dc78e5d613fd4ac27d69b79d93cf7f12a3babf8f40bca2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "43892fde2d187dd5",
+      "locator": "43892fde2d187dd5:01 §§1–2, (1), compact graph and indicator support sources"
+    },
+    {
+      "candidate_id": "43892fde2d187dd5",
+      "locator": "43892fde2d187dd5:02 §3, (5)–(6), strict moment-body and John-radius interpolation"
+    }
+  ],
+  "statement": "Let $n\\ge0$, $d\\ge1$, and let $P\\subset\\mathbb Z^n$ be finite and nonempty. For each $z\\in P$ let $K_z\\subset\\mathbb R^d$ be a compact convex body of positive $d$-volume, and set $\\mu=\\sum_{z\\in P}\\delta_z\\otimes(\\mathcal L^d|_{K_z})$. Call $b=(t,v)$ feasible if $\\int f\\,d\\mu=t$ and $\\int zf\\,d\\mu=v$ for some measurable $0\\le f\\le1$. For a feasible $b$ let $Q(b)$ be the set of $\\int xf\\,d\\mu$ over those densities. For a compact convex nonempty set $Q\\subset\\mathbb R^d$ write $J(Q)=\\max\\{(\\det A)^{1/d}:c+AB_d\\subset Q,\\ A\\succeq0\\}$, with $B_d$ the closed Euclidean unit ball and $A$ symmetric.\n\nThe feasible domain and the joint graph $\\{(b,q):q\\in Q(b)\\}$ are compact convex. For every feasible $b$ and $u\\ne0$ there is exactly one density, up to $\\mu$-null sets, maximizing $u\\cdot\\int xf\\,d\\mu$. On each fiber this density is the indicator of an upper $u$-cap of its assigned mass, including empty and full traces up to null sets.\n\nFor every finite feasible mixture $b=\\sum_i\\alpha_i b_i$ with $\\alpha_i>0$, $\\sum_i\\alpha_i=1$ and at least two distinct $b_i$, there is $\\varepsilon>0$ such that $\\sum_i\\alpha_i Q(b_i)+\\varepsilon B_d\\subseteq Q(b)$. In particular $J(Q(b))>\\sum_i\\alpha_i J(Q(b_i))$, with $J=0$ on lower-dimensional sets.",
+  "subgoal_id": "pk-intake-raw-moment-support-and-strict-john-interpolation",
+  "title": "Strict interpolation of raw moment bodies and their John radii"
+}

@@ -1,0 +1,62 @@
+{
+  "candidate_id": "52437a185ed1fb32",
+  "candidate_sha256": "fcc9550fb2b1731d56d22f4c110598e549df1230bc327b01495df1987cbf7a3e",
+  "checked_dependency_candidate_sha256": {
+    "155691fc3768c06f": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+    "5d743dac7de8813b": "dcafa5e77dd5b61de449bf3220ac33016a750295d6c485609b970fd34e777b85"
+  },
+  "checks": [
+    "Fixed-direction anchored inclusion yields a nonempty feasible slope polyhedron. A tight representation makes every positively used row always tight by a nonnegative weighted slack sum.",
+    "The dual of maximizing V_z·A under V_w·A≥c_w yields nonnegative multipliers with Σλ_w V_w=−V_z and −Σλ_w c_w=c_z. Adding one to row z gives exactly the zero moment and zero support gap, and normalization keeps the z weight positive.",
+    "Outgoing isolation supplies at source p one strictly slack witness for every other row. Averaging these witnesses preserves all nonnegative slacks and makes every required row strict. Incoming isolation supplies a separate source-q witness strictly slack at p.",
+    "Nearest-point selection is the fixed-matrix minimum-norm formula translated by A_q^0, so strict slacks persist on one normal neighborhood. There the p-field is the only active field at p, and inactive at each other base. The cutoff avoids all other polytopal facet normals; in d=1 the normal sphere is the discrete two-point set and the endpoint is regular.",
+    "For d≥2 the negative tent is a maximum of affine forms after projection to the facet plane, so it extends to a finite convex field. The same baselines realize finite nonnegative combinations of the prescribed fields.",
+    "Checked the original source passages and pinned source bytes for 2951c303a65db1e9:04 §5, (9)–(10), isolated free-facet realization, 4bf40258fc44a4e6:02 §§1–4, (6)–(8), tight anchored representation and forced-contact equivalence."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "155691fc3768c06f",
+      "candidate_sha256": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+      "fact_sha256": "afecd88a8ebe5c473d9297f6454db7d90db5c79dd7986e3072a482620d9a126a",
+      "hypotheses": "All anchored Minkowski inclusions are assumed, and applying the fixed-row proof at q gives feasible slopes and continuity also for the translated right-hand side c(u)−VA_q^0.",
+      "reviewed_proof_sha256": "2c027df5280f826f67575a9caf2fc48f86961afb4378d9b6cc9503c2e1aed953",
+      "reviewed_statement_sha256": "ae620bc47a6c7c8bd2eac230a3afeee4e3a8ca76a0eb43dcfa9603f6609fa787",
+      "status": "accepted at the pinned graph snapshot"
+    },
+    {
+      "candidate_id": "5d743dac7de8813b",
+      "candidate_sha256": "dcafa5e77dd5b61de449bf3220ac33016a750295d6c485609b970fd34e777b85",
+      "hypotheses": "All sampled support functions are majorized by the finite plane family, which touches at every own index. The signed cutoff field is finite, continuous and convex at fixed normal. The active-index maximum and its signed additivity therefore apply.",
+      "reviewed_proof_sha256": "d1feee9a6948ed2f1952b04ea81f87a075d3101d4e3c19ed916f4f69b222d220",
+      "reviewed_statement_sha256": "94522f4850639b1edaa707b9e0aeaa403dd738dcc8a266c8e425f36488ca81b8",
+      "status": "same-batch predecessor; independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:49:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides continuous feasible support slopes with own touching. It does not by itself impose strict slack in both directions near the chosen normal or realize signed facet localization.",
+      "fact_id": "155691fc3768c06f"
+    },
+    {
+      "comparison": "Realizes common convex physical fields. The active-plane construction here isolates one facet using forced contact and permits either sign on it.",
+      "fact_id": "8820984cf6a6942e"
+    }
+  ],
+  "readability": "Both incidence directions are used. Strict outgoing slack prevents the target field from changing other fibers, and strict incoming slack prevents zero fields from blocking an outward speed on the target.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3a9ce36fc09ec885422873f8030b08b18261c9f964c5d2557642271ab9f89057",
+  "reviewed_statement_sha256": "ef37459d161eb6bb31db6b738d15a998674f33d66e312c42a38f7f6da3aa053c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:44:27Z",
+  "summary": "Two-direction isolation in the actual forced-contact relation realizes every stated signed facet speed, including both endpoint signs in dimension one.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

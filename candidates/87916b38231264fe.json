@@ -1,0 +1,28 @@
+{
+  "advances": "Closure for components of the midpoint hypergraph in low affine rank. Completeness refers to the ambient integer lattice.",
+  "author": "PK-research-agent",
+  "candidate_id": "87916b38231264fe",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:43:59.888956+00:00",
+  "depends_on": [
+    "c97ee48b18ef88e8"
+  ],
+  "draft_key": "affine-rank-at-most-two-midpoint-components-are-complete",
+  "kind": "theorem",
+  "proof": "Different components occupy disjoint parity classes: any distinct same-parity pair has its lattice midpoint in $P$ by completeness, and the corresponding edge joins them. Also a segment between points of one component contains only lattice points of that component. Indeed, with its primitive lattice step $v$ the segment has points $a+jv$ for $0\\le j\\le m$. For $m\\ge2$ the overlapping hyperedges from $a+jv$ and $a+(j+2)v$ connect all these points, which are in $P$ by completeness. For $m\\le1$ there are no additional points. This proves ranks zero and one.\n\nIn rank two take $c\\in C$, $V=\\operatorname{span}_{\\mathbb R}(C-c)$ and the saturated lattice $\\Lambda=V\\cap\\mathbb Z^n$. It has rank two since $V$ is spanned by integer vectors, and $\\operatorname{aff}(C)\\cap\\mathbb Z^n=c+\\Lambda$. A basis identifies this affine lattice with $\\mathbb Z^2$. Parity is preserved: an ambient integral half-difference lies in $V$ and so belongs to $\\Lambda$, while an even difference in $\\Lambda$ is also ambient even. Set $R=\\operatorname{conv}(C)$ and $T=R\\cap\\mathbb Z^n$ and work in these coordinates. We have $T\\subseteq P$. Every old edge within $C$ survives and no edge in $T$ can join $C$ to a different original component. Thus $C$ is a connected component of the hypergraph on $T$.\n\nChoose a minimum-area nondegenerate triangle with vertices in $C$. If $C$ occupied at most two parities, two of these vertices would have the same parity. Replacing one by the midpoint gives a nondegenerate component triangle of half the area. Hence $C$ occupies at least three of the four plane parities. Any set $T\\setminus C$ uses at most the one remaining parity class. It is closed under integral midpoints, since an edge between two of its points and a point of $C$ is impossible. If it had two or more points, a closest distinct pair would give a closer distinct pair with its midpoint, a contradiction. A sole omitted point would be isolated in $T$, since any edge through it would use points of $C$. It would lie in the interior of $R$, since every boundary edge has endpoints in $C$ and contains only component lattice points by the primitive-step argument.\n\nApply the isolated-interior-point classification to that point. Then $T$ has exactly four distinct-parity points and no edges, so its three other points cannot form the connected component $C$. This contradiction leaves $T=C$. Since the plane lattice was the whole ambient integer trace of the affine plane, the conclusion is in the original lattice.\n",
+  "source_candidate_ids": [
+    "965c1fac7900f6cc"
+  ],
+  "source_candidate_sha256": {
+    "965c1fac7900f6cc": "14bd3c4527535515076c8d34acd17d802054df5b5dac54465dd5b829e76120f9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "965c1fac7900f6cc",
+      "locator": "965c1fac7900f6cc:02 Theorem and §§1, 4–5, rank-at-most-two original-lattice closure"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb Z^n$ be finite, nonempty and complete, so $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$. Give $P$ a hyperedge $\\{p,q,(p+q)/2\\}$ for each distinct same-parity pair $p,q\\in P$. If a connected component $C$ has affine dimension at most two, then $\\operatorname{conv}(C)\\cap\\mathbb Z^n=C$.",
+  "subgoal_id": "pk-intake-affine-rank-at-most-two-midpoint-components-are-complete",
+  "title": "Midpoint components of affine rank at most two are lattice-complete"
+}

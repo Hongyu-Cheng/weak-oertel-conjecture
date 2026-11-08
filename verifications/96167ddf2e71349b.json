@@ -1,0 +1,66 @@
+{
+  "candidate_id": "0758cf3d392ffdb6",
+  "candidate_sha256": "4c9c19895215d540db77f1075ad2cb18b09681e0490722d27e917c10e744ce60",
+  "checked_dependency_candidate_sha256": {
+    "716fa7580a098deb": "2b26b82b1bf0d9be9ff07cc68200eeb782c10cab685f67656840635803d1f34b",
+    "efa4558174ce60cf": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3"
+  },
+  "checks": [
+    "Conditioning on the other phases makes W atomless by pY_p. Positivity of its positive event, finiteness of W_+, and integrability of each old phase are immediate from independence and finite means.",
+    "At fixed old variables, v=W-aY_* has conditional density a^{-1} exp((v-W)/a) 1_{v<W}. At zero, weighted old-index and new-index densities therefore give the displayed moment formulas. Boundary assignments at W=0 are immaterial.",
+    "Dominated convergence applies to J_a, to Y_i weights, and to the weighted positive part. The scaled cap probability tends to E(W_+)=PM while F_a tends to zero, so each stated scaled gap converges without presupposing a finite-a inequality.",
+    "Exact check on the empty-negative old list: W is always positive, P=1, M=p+q and all nu_i=1, giving zero leading gap. Also F_a=1-[(1+p/a)(1+q/a)]^{-1}, confirming a F_a -> p+q.",
+    "Compared source 16db32a020dc6379 §3 (5)–(6) and its final all-product paragraph against the frozen version. The latter explicitly limits the claim to leading asymptotics."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "716fa7580a098deb",
+      "candidate_sha256": "2b26b82b1bf0d9be9ff07cc68200eeb782c10cab685f67656840635803d1f34b",
+      "fact_sha256": "b4339041e7f986402a1f164b9cc8766389f6ca70103ba0500c658b53f8d43ace",
+      "mapping": "Take its dimension to be N-1>=1 with N old exponential variables, their actual coefficient list (including zeros), and event W>=0, which has probability P and differs from W>0 only on a null set. Its conditional means are exactly nu_i, and its omitted product covers any single old index.",
+      "reviewed_proof_sha256": "11b44886995aeaae7882b0a0b9d85dc6c67b0bba1fe33992315782db860ddb16",
+      "reviewed_statement_sha256": "5b6d3faa8e44cef37832700016cd263aafb013e2a948683a72965d04e0658d5c",
+      "status": "accepted fact at pinned graph base"
+    },
+    {
+      "candidate_id": "efa4558174ce60cf",
+      "candidate_sha256": "6351eb9ea98213f87cddd73da60b6d2b09989095cfbb19798762800807a7d9e3",
+      "fact_sha256": "46fe81dabdb3dce217066cbdf0b03811e5f31600f47ff212687d11ef712b7b0e",
+      "mapping": "Use the (N-1)-simplex of normalized old phases. Independence of the gamma sum gives barycentric cap centroid nu_i/N; each coordinate is positive because P>0 and old phases are almost surely strictly positive. The cap indicator is feasible in T_K at that centroid, and the energy formula divided by full simplex volume is prod_i nu_i. This includes the case P=1.",
+      "reviewed_proof_sha256": "3f02b0dc5890813c93ca758645cbc602e93b598f5e7b2d5e6ea6f5f983ecfca5",
+      "reviewed_statement_sha256": "930a2a913d290a108052291c9fbf63e5f9e4b67fcb18c94309504f165bdfa29e",
+      "status": "accepted fact at pinned graph base"
+    }
+  ],
+  "finished_utc": "2026-11-08T15:41:15Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same old exponential cap and omitted product used for the limiting sign, but no coefficient tending to infinity, coarea conditional means, or scaled gap limit in the accepted statement.",
+      "fact_id": "716fa7580a098deb"
+    },
+    {
+      "comparison": "Same normalized simplex retained-volume bound used for the full-product sign. It compares a fixed cap with its centroid energy and supplies no phase asymptotic.",
+      "fact_id": "efa4558174ce60cf"
+    },
+    {
+      "comparison": "Controls the derivative of a signed density at zero for a Gamma(k,1) positive sum and bounded negative means. It does not address conditional products or an unbounded new phase.",
+      "fact_id": "55ec62c36c689dfe"
+    }
+  ],
+  "readability": "The coarea law can be read directly from the one-coordinate Jacobian; no auxiliary regularity theorem is needed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3f5b019513150626afa9ec4d64c8641bbfbc8279da9d9059b30253f42d831644",
+  "reviewed_statement_sha256": "502fc1066500d1ebbef4b59585f0d2eee6b49c7f43e26de1aae307df08d49616",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T15:39:34Z",
+  "summary": "The coarea tilt, scaled probability limit and nonnegative leading gap are valid for all stated old indices, including zeros and an empty negative list.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

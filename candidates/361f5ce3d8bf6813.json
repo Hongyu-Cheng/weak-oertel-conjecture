@@ -1,0 +1,32 @@
+{
+  "advances": "A compact finite-dimensional minimizer description and a conditional reduction of a scalar inequality.",
+  "author": "PK-research-agent",
+  "candidate_id": "361f5ce3d8bf6813",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T15:38:34.554571+00:00",
+  "depends_on": [],
+  "draft_key": "scalar-envelope-fixed-product-extremizers",
+  "kind": "lemma",
+  "proof": "The constraint is closed in the compact cube and excludes the all-zero vector. Hence the continuous gap attains a minimum on $\\Omega$. If two unequal coordinates $x_i,x_j$ are interior, fix the other coordinates and put $u=1-x_i$, $v=1-x_j$, $k=uv$. With $k$ fixed the pair sum $T_0=u+k/u$ varies over an open interval around its original value since its derivative in $u$ is $1-k/u^2\\ne0$ there. These variations remain feasible and keep $E$ fixed. With $S_o=\\sum_{l\\ne i,j}x_l$ and $C_*=\\prod_{l\\ne i,j}(E+x_l)/E^{m+1}>0$, the varying expression is\n$$\nL(T_0)=C_*(E-S_o-2+T_0)\\big[(E+1)^2-(E+1)T_0+k\\big].\n$$\nThe moving factor in the product defining $R$ is $(h-1)^2+(h-1)T_0+k$. Thus the gap has second derivative $-2C_*(E+1)<0$ along the feasible open interval. Its midpoint value strictly exceeds the average at two distinct sufficiently close symmetric points, ruling out a local minimum. All interior coordinates at any minimizer must therefore be equal. The displayed formula for $t$ and the zero-interior feasibility condition follow by taking the product of $1-x_j$ at this form.\n\nDeleting a zero coordinate preserves $E$ and $L$, and preserves $R$ because its numerator factor $h$ cancels a denominator factor $h$. If an interior vector has a negative gap, minimize at its fixed $E,h$. The attained negative minimum cannot use an upper coordinate under the hypothesis. Deleting its zeros leaves a nonempty equal interior vector with the same negative gap. Conversely such a vector is already an interior counterexample. In dimension one, substituting $E=x/(1-x)$ gives\n$$\nL-R=\\frac{x(h-x)[2h(1-x)+x]}{h^2(1-x)}\\ge0\n\\qquad(0<x\\le h<1).\n$$\nThus a reduced counterexample has at least two coordinates.\n",
+  "source_candidate_ids": [
+    "31dd328861ee872c",
+    "864cc441bf9ce1c3"
+  ],
+  "source_candidate_sha256": {
+    "31dd328861ee872c": "cae711118e992b66aac2e4e213f2ba0aedd644671104e23790f26557a5d82e6b",
+    "864cc441bf9ce1c3": "3c742a887b6b6a0ef888a00c6f86ac3a46d5335f0bea151d7945ee1c6d2af970"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "864cc441bf9ce1c3",
+      "locator": "§§1–4, (1)–(5)"
+    },
+    {
+      "candidate_id": "31dd328861ee872c",
+      "locator": "§2, fixed-product pair motion"
+    }
+  ],
+  "statement": "For an integer $m\\ge1$ and $0\\le x_j\\le h<1$ with some $x_j>0$, put $\\rho=\\prod_j(1-x_j)$, $E=\\rho^{-1}-1$, and\n$$\nL=\\left(1-\\frac{\\sum_j x_j}{E}\\right)\\prod_j(1+x_j/E),\\qquad\nR=\\rho(E+h)\\left[1-\\frac{(E+h)\\prod_j(h-x_j)}{h^{m+1}}\\right].\n$$\n\nFix $m$, $h\\in(0,1)$ and $E>0$ such that $\\Omega=\\{x\\in[0,h]^m:\\prod_j(1-x_j)=1/(1+E)\\}$ is nonempty. The gap $L-R$ attains its minimum on $\\Omega$. Every minimizer has $r$ coordinates equal to $h$, $\\ell$ coordinates all equal to one $t\\in(0,h)$, and $m-r-\\ell$ coordinates equal to zero. If $\\ell>0$ then $t=1-[(1+E)^{-1}(1-h)^{-r}]^{1/\\ell}$, and if $\\ell=0$ then $(1-h)^r=(1+E)^{-1}$.\n\nConsequently, if the gap is nonnegative at every nonzero upper face with some $x_j=h$ in all dimensions, its nonnegativity for all interior vectors is equivalent to its nonnegativity on all equal interior vectors. A counterexample would then have an equal-vector witness of at least two coordinates.",
+  "subgoal_id": "pk-intake-scalar-envelope-fixed-product-extremizers",
+  "title": "Fixed-product minimizers of the two-positive scalar gap"
+}

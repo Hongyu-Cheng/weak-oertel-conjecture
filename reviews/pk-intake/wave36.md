@@ -115,4 +115,6 @@ Two applications still have precise gaps. The marked mixed defect needs common-n
 | 4c4db2dc9830c76a:04 §5, (14)–(16), exact response hull and minimax | [Exact finite-menu minimax for fixed-source convex cut mixtures](../../facts/0b513c1a53872f05.md) | 4m 52s |
 | 4c4db2dc9830c76a:03 §§3–4, (7)–(13) and uniform mixture argument | [Uniform first variation of fixed-source convex cut mixtures](../../facts/682ac1340bfb8e09.md) | 4m 52s |
 
-All 1,217 source notes have checked dispositions for every entry. 97 notes include at least one precise hold. The 4,702 canonical rows comprise 2,217 admissions, 1,554 checked reuse mappings, 115 holds, and 816 supporting entries. There are 89 additional source occurrences linked to canonical rows. [Crosswalk](../../assets/pk-nov6/crosswalk.json).
+At the close of batch 36, all 1,217 source notes had checked dispositions. Of the 4,702 canonical entries, 2,217 were admissions, 1,554 were reuse mappings, 115 were holds, and 816 were supporting entries. The batch recorded 89 additional source occurrences and 97 notes with at least one hold.
+
+The PR review resolved two holds using accepted results and recorded one partial source match as a separate reuse entry. The crosswalk now has 4,703 entries, with 2,217 admissions, 1,557 reuse mappings, 113 holds, and 816 supporting entries. There are 88 additional source occurrences and 95 notes with a hold. [Crosswalk](../../assets/pk-nov6/crosswalk.json).

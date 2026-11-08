@@ -4961,27 +4961,21 @@
     },
     "0f11bff1d492f9c2:01": {
       "depends_on": [
-        "6769574fc1bd9f8d",
-        "6f616779219fd76c"
+        "bd6ce9f2240a8b67"
       ],
-      "disposition": "held",
-      "external_dependencies": [
-        "Ordinary continuous Grünbaum centroid halfspace inequality, as invoked at the cited source location and available from the full-mass case of accepted fact 6769574fc1bd9f8d"
+      "disposition": "reused",
+      "external_dependencies": [],
+      "fact_ids": [
+        "bd6ce9f2240a8b67"
       ],
-      "fact_ids": [],
-      "open_dependencies": [
-        "ff51b2f45de7ad0e, theorem (1), finite square truncation with positive remainder",
-        "58714b1fac606069, §§1–4 and final high-sector corollary, exact tails, pair floors, and equal-normal payment",
-        "9c420d2e51075e2c, §§1–4, genuine pair-floor budgets, discrete trapezoid bound and conditional thresholds",
-        "f1d41e47743392b2, (S), Bernstein certificate on 1/2<a<(9+√33)/24 and 0≤b≤1"
-      ],
-      "reason": "Use the constant touching majorant R at the central radius in the accepted normal reduction. The integer-centered pair floors and finite square truncation still require their separate proofs.",
+      "open_dependencies": [],
+      "reason": "Use the all-normal integer-centered chain theorem of bd6ce9f2240a8b67 and its common continuous dilation to r_0=R. The nondecreasing outward drops make the piecewise-linear radius roof concave. The stated affine map preserves the mixed lattice and halfspaces, and scales every fiber area by |det A|, so the normalized bound is preserved.",
       "related_facts": [
         "1a7377b8dcb5b16b",
         "2a8c2bc6d7992c5e",
         "d2709a081ada73df"
       ],
-      "relation": "distinct",
+      "relation": "covered",
       "statement": "Integer-centered chain: T=conv(0,e1,e2), V=area(T)=1/2, r_0=R>0, r_{-h}=r_h for 0≤h≤m, outward radii nonincreasing and successive drops nondecreasing, fibers r_h T at integer base h, M=sum_{h=-m}^m r_h², and y=(0,R/3,R/3). Every closed ambient halfspace H containing y captures at least (2/9)VM in summed area. For m≥1 these are the actual integer fibers of the convex body with piecewise-linear concave radius roof, and the measure is H_2 on the source. Null terminal fibers may be dropped. The statement is covariant under (z,x)↦(εz+j,Ax+bz+c), ε=±1, j integer, A invertible, with both masses multiplied by |det A|."
     },
     "0f11bff1d492f9c2:02": {
@@ -6147,11 +6141,13 @@
       "external_dependencies": [],
       "fact_ids": [],
       "open_dependencies": [
-        "Close the common-chart Clarke cap-gradient representation for coincident moving facets under independent affine body motions and simultaneous cap coefficients, including a single θ for all components. Crosswalk f3e1e26ab17d09a3:02 still holds this ingredient.",
         "Supply actual polygon endpoint critical circuits and an endpoint dilation estimate that gives the asserted factor and denominator, or restrict (10) to triangle endpoints."
       ],
-      "reason": "The proof of (10) explicitly uses three isolated triangle centroid caps with individual area γA_e and derivative 2γA_e under centroid dilation. A general polygon's deepest point and active menu need not be this centroid circuit. Section 6 proves strictification, not that this endpoint budget or all triangle menu hypotheses survive.",
-      "related_facts": [],
+      "reason": "The proof of (10) explicitly uses three isolated triangle centroid caps with individual area γA_e and derivative 2γA_e under centroid dilation. A general polygon's deepest point and active menu need not be this centroid circuit. Section 6 proves strictification, not that this endpoint budget or all triangle menu hypotheses survive. The coupled coincident-edge trace is available in the fixed-normal polygon chart of e8e558a924a764fe.",
+      "related_facts": [
+        "7a5ea4f8a4c5094c",
+        "e8e558a924a764fe"
+      ],
       "relation": "unresolved",
       "statement": "The polygon variant may retain the active-pair contact terms and normalized stress once appropriate actual critical menus and common-trace variations are supplied. The canonical triangle endpoint budget (10) is not derived for arbitrary polygons."
     },
@@ -15771,12 +15767,15 @@
       "external_dependencies": [],
       "fact_ids": [],
       "open_dependencies": [
-        "Pending 4dd22db8fd75566e §3 (7) for the actual unweighted cap flux, pending 53c44db9ae559bfe §4 (9)–(10) for section normal classification, and pending 3432196fb93eb580 §4 (8) for the same full-law stress."
+        "For the selected-minimum application, establish the original same-law budget: prove the pointwise normalized residual estimate, joint actual cap-selector convergence, and admissibility of the normal-localized convex test cone in 3432196fb93eb580:02."
       ],
-      "reason": "Project the actual vector cap flux along e, apply total variation domination before testing with f, and use the individual boundary domination to bound the inside section term. If the denominator vanishes the test is vacuous. The current graph has no admitted original common cap-load budget or capwise logarithmic flux, and regular centroid balance cannot replace either.",
+      "reason": "Project the actual vector cap flux along e, apply total variation domination before testing with f, and use the individual boundary domination to bound the inside section term. If the denominator vanishes the test is vacuous. The remaining gap is identifying the original cap load in the selected-minimum application. The vector flux and section-normal classification are available in 9206650dbfc8b0ec and ecdacd6349c968ba. Fact 062391e82e22c201 proves the abstract budget under its convergence hypotheses.",
       "related_facts": [
         "1269c554ca9a41b8",
-        "ec5e140eb107957e"
+        "ec5e140eb107957e",
+        "9206650dbfc8b0ec",
+        "ecdacd6349c968ba",
+        "062391e82e22c201"
       ],
       "relation": "distinct",
       "statement": "For one actual cap law with the single gradient c, at most one parallel exception E, and the original full-law positive convex budget ∫ψ f d(a+q)≤β∫ψ f db, set e=c/|c|, Z^cap=Σ_Hθ_Hζ^H, B_e(f)=∫|e·n|f db and Q_e(f)=∫|e·n|f dq. Then ∫f d|M|c|Z^cap−θ_E sign(e·u_E)|u_E|s_E|+Q_e(f)≤βB_e(f) for every nonnegative finite convex f, where the outer bars denote total variation. An outside exception adds a nonnegative cost. An inside exception must satisfy θ_E|u_E|∫f ds_E≥[M|c|∫f dZ^cap−β B_e(f)+Q_e(f)]_+, and θ_E is bounded below by that same numerator divided by M|c|∫f dζ^E+B_e(f) when positive."
@@ -15787,12 +15786,16 @@
       "external_dependencies": [],
       "fact_ids": [],
       "open_dependencies": [
-        "Pending 4dd22db8fd75566e §3 (7) and 3432196fb93eb580 §4 (8) for the actual flux and full-law budget. A general selected minimum would still need the single full-rank circuit, common gradient and affine interior graph or separate proofs of equivalent hypotheses."
+        "For the selected-minimum application, establish the original same-law budget: prove the pointwise normalized residual estimate, joint actual cap-selector convergence, and admissibility of the normal-localized convex test cone in 3432196fb93eb580:02.",
+        "For a general selected minimum, establish the single full-rank circuit, common gradient and affine interior graph, or prove equivalent hypotheses."
       ],
-      "reason": "The affine interior graph is needed only for the radial stress test, obtained by freezing its normal variable and approximating with nonnegative partitions of unity. The radial flux and actual selected boundary domination give the sharp status table. At the atom the fixed-face weighted margin identity forces opposite signs for the other two caps; strict capture retains all of the inverse atom. The actual triangle of 53c44db9ae559bfe §5 attains both inside and outside status endpoints and shows why vanishing ordinary coarea does not eliminate section logs.",
+      "reason": "The affine interior graph is needed only for the radial stress test, obtained by freezing its normal variable and approximating with nonnegative partitions of unity. The radial flux and actual selected boundary domination give the sharp status table. At the atom the fixed-face weighted margin identity forces opposite signs for the other two caps; strict capture retains all of the inverse atom. The actual triangle of 53c44db9ae559bfe §5 attains both inside and outside status endpoints and shows why vanishing ordinary coarea does not eliminate section logs. The vector flux and section-normal classification are available in 9206650dbfc8b0ec and ecdacd6349c968ba. Fact 062391e82e22c201 proves the abstract budget under its convergence hypotheses.",
       "related_facts": [
         "1269c554ca9a41b8",
-        "ec5e140eb107957e"
+        "ec5e140eb107957e",
+        "9206650dbfc8b0ec",
+        "ecdacd6349c968ba",
+        "062391e82e22c201"
       ],
       "relation": "distinct",
       "statement": "In the single-gradient actual-law setting assume an affine graph g(z) uniformly inside each defect-bearing fiber. On the zero set let h_z=L(z,g(z))>0 and on the defect normal bundle let r=(n·(X−g(z)))_+. Write B=∫r db=M∫h_z dζ, t_H=M∫h_z dζ^H/B, q_r=∫r dq/B, and for the exception u_E=k_Ec let r_E=|k_E|∫h_z ds_E/B when B>0. Nonexceptional selected radial mass divided by B is t_H, inside is t_E−r_E with 0≤r_E≤t_E, and outside is t_E+r_E with 0≤r_E≤1−t_E. The full-law budget is Σ_Hθ_Ht_H−θ_E sign(k_E)r_E+q_r≤β. In particular dropping the inside term gives Σ_{H≠E}θ_Ht_H+q_r≤β, and θ_E≥[Σ_Hθ_Ht_H+q_r−β]_+/t_E for an inside exception with t_E>0. If d=2, the physical defect is at one point, and a three-cap positive circuit with exception E has zero weighted cover margin there and nonzero margins for the two other caps, the strictly capturing cap C satisfies θ_C+q_r≤β."
@@ -34667,7 +34670,7 @@
       "reason": "Actual compatibility gives a touching affine support roof. Its nonnegative slack must vanish along any physical martingale row from a contact, so regular output normals agree with the input and the localized convex-order tests follow.",
       "related_facts": [],
       "relation": "extension",
-      "statement": "Let $P\\subset\\mathbb R^n$ be nonempty and finite and let $K_p\\subset\\mathbb R^d$, $p\\in P$, be compact convex bodies of positive $d$-volume, with $d\\ge1$. Write $h_p(u)=\\max_{x\\in K_p}u\\cdot x$, and mark each regular boundary point $x$ of $K_p$ by its unique outer unit normal $u=n_p(x)$. The physical coordinate is $w=(p,x)$ and the compact marked exposed-face relation is $N=\\{(u,p,x):u\\in\\mathbb S^{d-1},\\ x\\in K_p,\\ u\\cdot x=h_p(u)\\}$. Suppose $K_p$ is the actual $p$-section of $C=\\operatorname{conv}\\bigcup_{q\\in P}(\\{q\\}\\times K_q)$ for every $p\\in P$. Let $\\nu,\\eta$ be finite nonnegative Borel measures on the physical regular boundaries (or their lifts to $N$). The following are equivalent:\n\n1. The physical measures satisfy $\\nu\\preceq_{\\rm cx}\\eta$.\n2. The marked measures satisfy $\\int\\psi(u)A(w)\\,d(\\eta-\\nu)=0$ and $\\int\\psi_+(u)\\Phi(w)\\,d(\\eta-\\nu)\\ge0$ for all continuous $\\psi$, nonnegative continuous $\\psi_+$ on $\\mathbb S^{d-1}$, affine $A$ and finite continuous convex $\\Phi$ on the ambient physical space.\n3. There is a marked coupling $\\Pi$ from $\\nu$ to $\\eta$ with equal input and output normals almost everywhere and $\\int f(u,p,x)(q-p,y-x)\\,d\\Pi=0$ for all bounded Borel $f$.\n\nIn fact every physical martingale coupling from $\\nu$ to $\\eta$ preserves the normal. For $\\nu$-almost every input $(u,p,x)$ the output row is supported on $y$ in the $u$-exposed face of $K_q$, with $h_q(u)=h_p(u)+A_p(u)\\cdot(q-p)$ for the continuous touching slope $A_p$ of accepted fact 155691fc3768c06f$. Its base probabilities $\\alpha_q$ give an active anchored representation, meaning $\\sum_q\\alpha_q q=p$ and $\\sum_q\\alpha_q h_q(u)=h_p(u)$."
+      "statement": "Let $P\\subset\\mathbb R^n$ be nonempty and finite and let $K_p\\subset\\mathbb R^d$, $p\\in P$, be compact convex bodies of positive $d$-volume, with $d\\ge1$. Write $h_p(u)=\\max_{x\\in K_p}u\\cdot x$, and mark each regular boundary point $x$ of $K_p$ by its unique outer unit normal $u=n_p(x)$. The physical coordinate is $w=(p,x)$ and the compact marked exposed-face relation is $N=\\{(u,p,x):u\\in\\mathbb S^{d-1},\\ x\\in K_p,\\ u\\cdot x=h_p(u)\\}$. Suppose $K_p$ is the actual $p$-section of $C=\\operatorname{conv}\\bigcup_{q\\in P}(\\{q\\}\\times K_q)$ for every $p\\in P$. Let $\\nu,\\eta$ be finite nonnegative Borel measures on the physical regular boundaries (or their lifts to $N$). The following are equivalent:\n\n1. The physical measures satisfy $\\nu\\preceq_{\\rm cx}\\eta$.\n2. The marked measures satisfy $\\int\\psi(u)A(w)\\,d(\\eta-\\nu)=0$ and $\\int\\psi_+(u)\\Phi(w)\\,d(\\eta-\\nu)\\ge0$ for all continuous $\\psi$, nonnegative continuous $\\psi_+$ on $\\mathbb S^{d-1}$, affine $A$ and finite continuous convex $\\Phi$ on the ambient physical space.\n3. There is a marked coupling $\\Pi$ from $\\nu$ to $\\eta$ with equal input and output normals almost everywhere and $\\int f(u,p,x)(q-p,y-x)\\,d\\Pi=0$ for all bounded Borel $f$.\n\nIn fact every physical martingale coupling from $\\nu$ to $\\eta$ preserves the normal. For $\\nu$-almost every input $(u,p,x)$ the output row is supported on $y$ in the $u$-exposed face of $K_q$, with $h_q(u)=h_p(u)+A_p(u)\\cdot(q-p)$ for the continuous touching slope $A_p$ of accepted fact 155691fc3768c06f. Its base probabilities $\\alpha_q$ give an active anchored representation, meaning $\\sum_q\\alpha_q q=p$ and $\\sum_q\\alpha_q h_q(u)=h_p(u)$."
     },
     "72bbac9873894c0b:01": {
       "depends_on": [
@@ -38742,13 +38745,14 @@
       "external_dependencies": [],
       "fact_ids": [],
       "open_dependencies": [
-        "Close the common-chart Clarke cap-gradient representation for coincident moving facets under independent affine body motions and simultaneous cap coefficients, including a single θ for all components. Crosswalk f3e1e26ab17d09a3:02 still holds this ingredient.",
         "For the general polytopal scope, supply a compatible finite actual cap menu and simultaneous normalized first-order separation in the enlarged family.",
         "For an application to the unrestricted infimum, prove attainment with positive polytopal fibers; for the zero-contact chord deduction close the relevant strict-case stationary chord argument."
       ],
-      "reason": "The uniform support/cap truncation estimates and strictification survive the enlarged chart. To pass from an unrestricted actual minimizer to this stress one still needs the coincident common-trace cap gradients and actual critical whole-fiber menus. Moreover the unrestricted attained minimum is not known to be polytopal. A fixed-facet minimum by itself does not authorize the cuts.",
+      "reason": "The coupled coincident-facet derivative is available on the fixed finite row list of 7a5ea4f8a4c5094c, and e8e558a924a764fe gives a normalized stress in the specified polygon chart with supplied coverage. The unrestricted application still needs an actual compatible covering menu, separation in the enlarged family, and polytopal attainment. The strict-case chord deduction has a separate gap.",
       "related_facts": [
-        "2a8c2bc6d7992c5e"
+        "2a8c2bc6d7992c5e",
+        "7a5ea4f8a4c5094c",
+        "e8e558a924a764fe"
       ],
       "relation": "extension",
       "statement": "The note proposes choosing a normalized stress at an unrestricted attained positive polytopal minimum supported only on middle normals exposing facets in both endpoint fibers, and using zero-contact triangle chord bounds when there are no such common directions."
@@ -48096,16 +48100,24 @@
       "statement": "Half-integer-centered triangle chain: T=conv(0,e1,e2), V=area(T)=1/2, radii R=r_0≥r_1≥…≥r_m≥0 with nondecreasing successive drops, fibers r_h T at bases -h and h+1, and y=(0,R/3,R/3). Put t=R/3, M=2 sum_{h=0}^m r_h², and J=cap area divided by V for the closed cap -βz+a x_1+(1-a)x_2≥t. Write F_{a,r}(u)=area(rT∩{a x_1+(1-a)x_2≥u})/V and x_+=max(x,0). For any fixed a∈[1/2,1] and β≥0 put G_h(r)=F_{a,r}(t−βh)+F_{a,r}(t+β(h+1))−(4/9)r². If m≥1, some slope s∈[0,R/m] gives l_h=R−sh and G_h(l_h)≤G_h(r_h) for every h. Replacement keeps all bases, their number, R, y and cap coefficients. The scalar G_h is strictly decreasing up to and strictly increasing after its unique minimizer ρ_h=min{(t−βh)_+/d_a,(2t+β)/(a+d_a)}, d_a=(a+4)/9. For h≥1 the secants (R−r_h)/h are nondecreasing and (R−ρ_h)/h strictly decreasing."
     },
     "a15fce1d462289cc:02": {
-      "depends_on": [],
-      "disposition": "held",
-      "external_dependencies": [],
-      "fact_ids": [],
-      "open_dependencies": [
-        "a6778097fd0174ca, Lemmas 3–4, finite size and high-sector mass/tilt localization"
+      "depends_on": [
+        "9cef204c64b1bff8",
+        "9930ef2c4185835a",
+        "1c6a3d4ab63f450c",
+        "bd6ce9f2240a8b67"
       ],
-      "reason": "The replacement preserves the number of pairs and the fixed cap, and the localized high-sector theorem applies afresh to the resulting chain. The converse is immediate from affine profiles being allowable chains. This is a conditional search reduction; the full high-sector theorem uses a different maximal-leg reduction.",
+      "disposition": "reused",
+      "external_dependencies": [],
+      "fact_ids": [
+        "9cef204c64b1bff8",
+        "9930ef2c4185835a",
+        "1c6a3d4ab63f450c",
+        "bd6ce9f2240a8b67"
+      ],
+      "open_dependencies": [],
+      "reason": "Apply the pointwise deficit replacement of 9cef204c64b1bff8 at d=2 to preserve the same cap and a strict violation relative to the affine replacement's own mass. Apply the localization in a6778097fd0174ca:03 to that affine chain, using its three accepted facts, to obtain the stated restrictions on the number of pairs, tilt, and mass. Every affine chain in the restricted search is an allowed original chain.",
       "related_facts": [],
-      "relation": "specialization",
+      "relation": "covered",
       "statement": "Half-integer-centered triangle chain: T=conv(0,e1,e2), V=area(T)=1/2, radii R=r_0≥r_1≥…≥r_m≥0 with nondecreasing successive drops, fibers r_h T at bases -h and h+1, and y=(0,R/3,R/3). Put t=R/3, M=2 sum_{h=0}^m r_h², and J=cap area divided by V for the closed cap -βz+a x_1+(1-a)x_2≥t. There is a violating high-sector cap for some original chain if and only if there is one for an affine chain r_h=R−sh with 1≤m≤11, 0≤s≤R/m, 2/3≤a≤1, R/78<β<R/3, and 2R²<2 sum_h(R−sh)²<9R²."
     },
     "a1e40e6e6a2316e4:01": {
@@ -64198,6 +64210,21 @@
       "related_facts": [],
       "relation": "distinct",
       "statement": "On K_t=[−R_t,R_t], R_t=1−ht>0, under fixed ε>0 with ε√(2R_t)<R_t, the unnormalized energy-root buffered maximum is uniquely at zero and Q_ε(t)=R_t+ε√(2R_t). The equal coareas of the two selected old caps are one, their fixed-cap losses both h, α(t)=ε√2[1−√R_t], and Q_ε'(0)=−h−εh/√2. The normalized derivative at zero is εh/(2√2), positive for h>0. Under the invariant normalized energy and covariance buffer the ratio is exactly 1/2+ε/(2√3) in its proper regime."
+    },
+    "d77abe6ff171c6f3:01": {
+      "depends_on": [
+        "4360fdf5522130cd"
+      ],
+      "disposition": "reused",
+      "external_dependencies": [],
+      "fact_ids": [
+        "4360fdf5522130cd"
+      ],
+      "open_dependencies": [],
+      "reason": "Use the compatible Minkowski interpolation, exact ambient realization, and one-sided fiber-volume derivative of 4360fdf5522130cd. The source invokes those ingredients under the additional integer base-centroid hypothesis. Its rectangle drift calculation has its own source entry.",
+      "related_facts": [],
+      "relation": "specialization",
+      "statement": "For ambient convex bodies $D\\subseteq C$ of positive mixed mass with integer base centroid of $D$, enlarge on the positive-volume integer bases of $D$ by $E_z(t)=(1-t)D_z+tC_z$. These nested fibers have an actual ambient realization in $C$ with exactly the same positive bases. The right derivative of each fiber volume at zero is $d[V(D_z[d-1],C_z)-|D_z|_d]$."
     },
     "d77abe6ff171c6f3:02": {
       "depends_on": [
@@ -93799,7 +93826,7 @@
       "entries": [
         {
           "claim": "b1d17ea60bee084a:01",
-          "same_claim_reason": "Both claims use the same three actual intervals, base mark, feasible density bounds, chosen mass, interval endpoints, centroid, affine cap and raw length deficit. The crosswalk entry is screened and pending, so the equivalence is not a reuse of an accepted fact.",
+          "same_claim_reason": "Both claims use the same three actual intervals, base mark, feasible density bounds, chosen mass, interval endpoints, centroid, affine cap and raw length deficit. The canonical claim was admitted as c5c4ace8a2b55469.",
           "section": "Unnumbered proof, (1) and final cap"
         }
       ],
@@ -97276,8 +97303,7 @@
     "d77abe6ff171c6f3": {
       "entries": [
         {
-          "claim": "149b5f35c717786d:04",
-          "same_claim_reason": "The same contained Minkowski path, common interpolation parameter, positive-volume base set, actual thickened realization and base centroid derivative appear in the two sources.",
+          "claim": "d77abe6ff171c6f3:01",
           "section": "§1, (1)–(2), and §4, mixed-volume derivative after (13), actual enlargement"
         },
         {

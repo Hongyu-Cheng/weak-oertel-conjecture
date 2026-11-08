@@ -31,6 +31,7 @@ depth uniformly below $(5/6)^5/2^{12}$. Selector-dependent signs on the
 ordinary coordinates give three light pools of 252 fibers each using
 two selector coordinates. The proof accounts for all $4{,}852$ integer
 fibers and gives a containing halfspace at every mixed-integer point.
+[Accepted fact](facts/ecbacdec2c429376.md) ·
 [Geometric proof](research/sharp-dimension-17/README.md) ·
 [Exact replay](research/sharp-dimension-17/check.py) ·
 [Lean theorem](lean/SharpOC/Selector17Counterexample.lean).
@@ -45,9 +46,9 @@ are identified exactly. The [geometric proof](research/sharp-dimension-19/README
 
 ## Earlier counterexamples of total dimension 187
 
-The [dimension-reduction submission](research/dimension-reduction-2026-11-07/README.md) gives rational counterexamples to the sharp bound $\Gamma_d/2^n$, where $\Gamma_d=(d/(d+1))^d$, at **(n,d)=(153,34), (132,82), and (129,104)**. Their actual fibers and every-point halfspace bounds are proved, and their maximum depths are determined exactly. These examples satisfy the weaker $1/(e2^n)$ bound.
+The [dimension-reduction submission](research/sharp-dimension-187/README.md) gives rational counterexamples to the sharp bound $\Gamma_d/2^n$, where $\Gamma_d=(d/(d+1))^d$, at **(n,d)=(153,34), (132,82), and (129,104)**. Their actual fibers and every-point halfspace bounds are proved, and their maximum depths are determined exactly. These examples satisfy the weaker $1/(e2^n)$ bound.
 
-The same submission improves the specific $1/e$ counterexample to **n=52, d=1,345,226,000,000,000,003**, using one simplex factor for both amplification and caps. It also proves the support-count obstruction that forces $d\ge68,727,866,368$ for any $1/e$ counterexample on the old n=52 support. The three new records bring the graph to **1,283 accepted facts**, 2,574 candidates, and 1,343 verification runs. Independent mathematical reviews and exact rational checks are recorded with `LLM-verified` assurance; these additions are not Lean-formalized. See the [final publication review](research/dimension-reduction-2026-11-07/publication-review.md).
+The same submission improves the specific $1/e$ counterexample to **n=52, d=1,345,226,000,000,000,003**, using one simplex factor for both amplification and caps. It also proves the support-count obstruction that forces $d\ge68,727,866,368$ for any $1/e$ counterexample on the old n=52 support. The three new records bring the graph to **1,283 accepted facts**, 2,574 candidates, and 1,343 verification runs. Independent mathematical reviews and exact rational checks are recorded with `LLM-verified` assurance; these additions are not Lean-formalized. See the [final publication review](research/sharp-dimension-187/publication-review.md).
 
 ## PK November 6 contribution
 

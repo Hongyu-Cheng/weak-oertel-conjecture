@@ -1,0 +1,48 @@
+{
+  "candidate_id": "b39ecb342488b802",
+  "candidate_sha256": "b6dc11a1888669a50e8a521f13814cda328d9496ac559fcba48b8a0e8bd1b7f7",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For t≤0 the triangle lies in every cap. For t≥r/2 the equal normal leaves a set of zero planar area, with the closed hypotenuse included at equality. Scaling by r multiplies area by r², so the normalized unit-triangle fractions in the proof give exactly area/V.",
+    "Coordinate exchange covers the full simplex of normals, including its axis endpoints. For 0<θ<1/2 the lower-threshold branch removes the origin triangle and the other branch keeps the e₁ triangle. The products of edge fractions give the stated two rational functions. At α=1−θ the line passes through e₂ and both formulas agree; each denominator is positive in its assigned range.",
+    "On [1/2,1−θ], α(1−α) decreases, so 1−θ²/[α(1−α)] is nonincreasing. The derivative in α of the second branch has numerator (α−θ)[α(4θ−1)−θ] over the positive squared denominator. If 4θ−1≤0 the bracket is negative; if 1/4<θ≤1/3 its maximum is at α=1 and is 3θ−1≤0. Thus α=1 attains the global minimum through θ=1/3.",
+    "For 1/3<θ<1/2 the stationary point θ/(4θ−1) lies in the second branch since its excess over 1−θ is (1−2θ)²/(4θ−1)>0, and it is below 1. The first derivative changes from negative to positive there and substitution gives 4θ(1−2θ). The branches agree at t=0,r/3,r/2. Monotonicity gives the lower bound 4r²/9 for every t≤r/3 and equality at the interface.",
+    "Independently expanded the derivative and evaluated the stationary point symbolically over QQ in SageMath 10.8. Exact polyhedral clipping and volume over QQ checked the lower envelope against 1,161 sampled normal/radius/threshold combinations, including attained minima with axis, equal, and interior optimizing normals and closed support endpoints. These checks accompany the analytic minimization.",
+    "The archived candidate 680d45e380747dc3 matches its declared SHA-256. Its §1 equations (1)–(3) state the same normal simplex, all-threshold envelope, and consequence at t≤r/3."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T10:29:38Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Part 1 gives ordinary planar triangle depth at a fixed point over unrestricted normal directions. At (t,t) it yields 4t² in units of V for 0<t<r/3, whereas the restricted minimum in this draft is (r−t)². The upper positive branch agrees numerically with the ordinary depth, but the accepted fact does not give the full restricted envelope.",
+      "fact_id": "431423848c9bacf8"
+    },
+    {
+      "comparison": "Its balanced-barycentric simplex formula covers ordinary depth at (t,t) for r/3≤t≤r/2, with value 4t(r−2t) in units of V, and also the centroid. It does not give the restricted branch for t<r/3.",
+      "fact_id": "700febf4b7a92759"
+    },
+    {
+      "comparison": "The paired-chain proof uses the same upper-threshold polynomial as a lower bound on a different mixed-integer problem with reflection pairs. It does not assert the sharp restricted envelope over all thresholds.",
+      "fact_id": "a886f31c444612a5"
+    }
+  ],
+  "readability": "The unit-triangle area fraction is multiplied by r² because V is the unscaled reference area.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0528ab22ed20f3c23ce0d5b5fe5c9447b43712a6b86e8b57c465e32968bfdf18",
+  "reviewed_statement_sha256": "88dfdeab4690a5d677dd89e421f8857f87e97b9c4e2bc78dc893d50eaee62d07",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "680d45e380747dc3": "86f22a9f8a213b80f49a41665eeaa09b9ba617f19ff1ec2d580e99889d14353e"
+  },
+  "started_utc": "2026-11-08T10:24:53Z",
+  "summary": "The area divided by V has the stated exact four-branch minimum over the nonnegative probability simplex. The proof identifies an attaining normal and handles the closed supporting face and both transition thresholds.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

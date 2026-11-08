@@ -1,0 +1,46 @@
+{
+  "candidate_id": "e0bd82357032b4ec",
+  "candidate_sha256": "622e1ca0e8f13ce67c2b198373feca0336b666aa80032fc7bb033e335121c594",
+  "checked_dependency_candidate_sha256": {
+    "b82858197fd14145": "83882906ae9385345596593096ae9491171fb4ee1c4566743aec54a50a907cc0"
+  },
+  "checks": [
+    "For normalized weights the positive numerator is at least P and the complementary numerator is at most k(1−P); the ratio is monotone in these two arguments. Clipping at 4/3 leaves an additional multiplier in [1,3b/4], and (3/7)/[(3/7)+(3b/4)(4/7)]=1/(1+b). Substitution gives 3/7 and 2/5.",
+    "The normalized inverse reweighting maps every feasible θ to a balanced λ and conversely. Positive-support independence for the columns (1,pᵢ/qᵢ) leaves pairs and noncollinear triples. In a pair, the marked vectors have equal lengths by their common pair of boundary rays; the cap fractions complement and the smaller normalized multiplier weight is at least 1/(1+b). In a triple a λᵢ above 1/2 would place pᵢ in the interior, and equality invokes the exact accepted half-weight identity, followed by the elementary reweighting estimate.",
+    "In orientation-preserving coordinates the three strict weight inequalities are the three positive successive turn determinants, and the reflected turns repeat. Direct determinant signs at the three ray-pair sums give the two-cap sectors as listed. Each complement of a θᵢ is at least 1/(1+b). Any point deleted by a cut through a nonsupporting line projects from 0 into the segment joining the two marked boundary points, because they must be the endpoints of that line section. A supporting line deletes nothing. The union of deleted sets therefore has nonnegative integral of W−1/(1+b).",
+    "The three displayed normals have the stated positive relation, with coefficients 1+a−c, a+c−1, 1+c−a, and span the plane. The three edge lines and their reflections give D=T∩(−T). The reflected barycentric inequalities are ℓᵢ≤2lᵢ; each is an actual hexagon edge, hence 0<lᵢ<1/2. Corner homotheties give tᵢ², and tᵢ+tⱼ<1 gives disjointness. Their reflected-edge sections are exactly the two marked endpoints and place the corners in singleton sectors.",
+    "The cyclic endpoints are antipodes by the barycentric identity for 0; determinant signs distinguish vᵢ from the two other vertices. The positive relation with coefficients tᵢ(1−tᵢ)/(2e) holds because the coefficient of vᵢ simplifies to lᵢ, and the one-dimensional relation space forces the original orientations to be all these choices or their simultaneous reversals. The latter would make the corner sectors two-cap sectors. Central symmetry gives the e term, and the sign inequality is affine in the corner areas after clearing its positive denominator.",
+    "The derivative in qᵢ of the corner-cost average is Aᵢ(costᵢ−average)/Q. At a minimum an unequal cost forces the appropriate endpoint; a tied multiplier can move to an endpoint leaving the average unchanged. Strict positivity of the Aᵢ forces the average between distinct extreme costs. Thus the listed patterns cover singleton, two-corner and three-corner cases, including middle ties and all equal costs.",
+    "Independently verified all five identities for 9E and also the cleared square completion and discriminant by exact integer evaluation on {0,1,2,3,4} cubed (875 equalities). All differences have degree at most four in each variable, so interpolation successively in each variable proves polynomial equality. With v≤s²/4 the singleton lower bound is nonnegative and the first pair square completion is nonnegative. The second pair has positive leading coefficient except at x=y=0 and a nonpositive discriminant; at x=0<y its bracket is 7yz². Both all-corner expansions have nonnegative coefficients.",
+    "Checked source 3ed6256a0896f434 at SHA-256 8278e51f7f1955df454260a0c7c2ae371b2e4762d4edc13a0620d3317cbeeba7, §§1–4 and (1)–(4): theorem, support reduction, all exact finite inequalities and boundary treatment. The source uses a limit for the half-weight case; the frozen proof instead invokes the exact case in c22519c29667168e §6 (SHA-256 a97864113ba7ee9973070f0b0bbfe5abef49ff5b70fd22b0fcb8811cc540ba7d), which is an explicit part of b82858197fd14145."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "b82858197fd14145",
+      "mapping": "The recovered λ are strictly positive on the noncollinear triple, sum to one and balance the original ± boundary marks. The accepted half-weight clause therefore gives unmodified cap mean exactly 1/2, including nonsmooth edges. Its strict-triple truncation geometry also applies with the same marks, while the normalized reweighted indicator requires and receives a new cut comparison and corner certificates."
+    }
+  ],
+  "finished_utc": "2026-11-08T10:40:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same balanced planar chords before changing weights; its 4/9 is sharper with constant q and it supplies the exact degenerate cases. Its 4/9 bound combined with arbitrary bounded reweighting alone gives 4/(4+5b), strictly below 1/(1+b). The robust bound uses new strict-triple inequalities.",
+      "fact_id": "b82858197fd14145"
+    }
+  ],
+  "readability": "The proof is readable. The assertion about a collinear support uses positive balance to put the support line through 0, so dividing each point by its qᵢ preserves collinearity. The degree-four certificate uses homogeneous Aᵢ after the ordered substitutions; imposing sum tᵢ=1 inside those substitutions is unnecessary.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "209a8d44e5ed762ca3773ad95f1c4cfbd548523aa08ca2c8f12501b4e3222868",
+  "reviewed_statement_sha256": "812b17f7e4475e2499694316f8d4165425128b578b5e540756541cbda8c9238f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:37:13Z",
+  "summary": "The robust planar chord bound is proved for the full stated multiplier range. The endpoint certificates are exact, and the treatment of supporting edges covers degenerate half-weight triples without a limit.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

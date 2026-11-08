@@ -1,0 +1,36 @@
+{
+  "candidate_id": "25cb17da7fc8ba32",
+  "candidate_sha256": "a1196a18bf574d0dbe4cb92847f61f51f69fd710bf947d76095ac9bbf3b84c7c",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For p∈A and 0≤t<1, convexity gives A_t⊆A. The shell has volume |A|[1−(1−t)^d], and the fixed cap loss is exactly its intersection with that shell. An almost-everywhere lower bound on A therefore suffices on each shell.",
+    "The inverse homothety changes the threshold to (b_i−t v_i·p)/(1−t) and its derivative at zero is b_i−v_i·p. Fubini along v_i/||v_i|| makes the cap threshold derivative −σ_i. At a proper cut the section-volume root is concave by Brunn–Minkowski and continuous in d≥2; in d=1 the interior section has counting measure one. Differentiating the product yields minus the displayed loss and the factor d on the right. The center may be on the boundary; no differentiation in p is required.",
+    "Away from the union of forbidden null singleton regions, coverage gives an allowed singleton or a capture set containing a pair. Positive weights make the combined-list minimum valid, including when every singleton is excluded.",
+    "In the d=1 check A=[0,1] with the two opposite unit-normal cuts at 1/2 and weights one, the two calculated losses are p and 1−p. They sum to 1=d|A|τ for every center, including both endpoints.",
+    "Verified the declared source SHA-256 and 86934b651b11f7d5 §5, including the normalized section volume, the all-dimensional homothety argument and the combined singleton/pair minimum."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T10:32:10Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It uses subadditivity and coverage for a static three-planar-fiber depth bound, but neither treats weighted loads over a removed shell nor differentiates arbitrary ordinary cap volumes. No accepted equivalent was found.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    }
+  ],
+  "readability": "No ambiguous step. Proper cuts keep v_i nonzero and all section evaluations away from projection endpoints.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "18b3100d9c16b22bf76753b378e2f1a4c95ea7da4e9f2953b49da0d5f43464db",
+  "reviewed_statement_sha256": "54d65a4f4c2c94c94166549f3025619a4f27c21707ae6a4737a56e2a502c1ce6",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:27:40Z",
+  "summary": "The pointwise weighted capture bound integrates over every nested homothetic shell and yields the stated derivative inequality, with any center in A and any proper-cut finite cover.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

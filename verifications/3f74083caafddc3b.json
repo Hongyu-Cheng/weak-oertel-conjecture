@@ -1,0 +1,67 @@
+{
+  "candidate_id": "706ce1dc5b5b8d67",
+  "candidate_sha256": "b06c2a2ba0efb80662820dfac4e70d401e767ee3639f95b891733ccef57702bf",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "e561372a5640eef8": "209461ce88005712c0200d0a1b82b32b3fcef7704188229a35c777b3b8bbecf3"
+  },
+  "checks": [
+    "Taking midpoints of the two endpoint copies gives g+(rK+sK)/2=g+qK by convexity of K and the homothety identity. These midpoints lie in the actual fiber C_p by convexity of C. The centroid zero belongs to K, so (p,g) is an actual mixed point.",
+    "A containing closed halfspace contains its parallel translate whose boundary passes through (p,g). For u nonzero, restriction of the margin to p−v in coordinates x−a_- gives threshold A·v−u·(a_-−g). At p+v in coordinates x−a_+ it gives −A·v−u·(a_+−g), which equals its negative because the offset vectors sum to zero. The frozen paired bound therefore applies to the very same halfspace.",
+    "The middle restriction for u nonzero is an ordinary closed halfspace through g. Translation and dilation give centroid g and positive volume q^d V for the retained copy. The full-volume metronoid bound gives at least Γ_d q^d V there.",
+    "If u=0, the center base is included and the endpoint signs are opposite or both zero. The retained mass is at least (q^d+r^d)V. In d=1 and on the large-ratio branch Φ_d=r^d. On the interpolation branch its root is between r c_d and r because (s−r)/(r(d−1)) lies in [0,1] and c_d≤1. Thus the pure base lower bound dominates the claimed sum, including ties.",
+    "The three bases are distinct integer points because v is a nonzero integer vector. The retained traces lie in disjoint actual fibers, and full-body mixed mass is the sum of fiber volumes. Thus each trace is counted once and all other actual mass contributes nonnegatively. Taking an infimum over halfspaces preserves the common lower bound at the single fixed mark.",
+    "Checked source cd9374750b11bd94 at SHA-256 943b8ffd8ef0d871017adf8b83393f5f2d0b518edb9a3dd4a3877163cebc89e9. Section 4 and equation (14) give the same retained geometry, point, and additive budget."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "e561372a5640eef8",
+      "candidate_sha256": "209461ce88005712c0200d0a1b82b32b3fcef7704188229a35c777b3b8bbecf3",
+      "mapping": "Apply the scalar inequality to the same full-dimensional compact convex K with centroid zero, V>0, 0<r≤s and u≠0. The paired thresholds relative to the two retained centers are t and −t, and the frozen Φ_d is identical.",
+      "reviewed_proof_sha256": "0adb2622f80d23cc02dab358b4fd195e0159da8f956a359a6ac5ecdea4309e61",
+      "reviewed_statement_sha256": "d29c930bbacdc8a207640c29074197a9af533bbe4d5313c3efc9b019bbeed9ec",
+      "status": "The exact frozen predecessor received a separate APPROVED review in this batch. Admission must precede this lemma."
+    },
+    {
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "Take the body g+qK, m equal to its entire positive volume q^d V and f=1 on the body. The metronoid point is g, and the ordinary trace of the containing ambient halfspace for u≠0 is a closed halfspace through g."
+    }
+  ],
+  "finished_utc": "2026-11-08T10:27:11Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It assumes exactly three positive-volume, fully homothetic actual fibers and scale and volume conditions on the actual middle fiber. It controls the actual middle centroid. The frozen claim allows additional mass and requires only two prescribed retained endpoint copies, with the bound at the centroid of their retained midpoint copy.",
+      "fact_id": "a2427fccbd085fb5"
+    },
+    {
+      "comparison": "It selects a centroid with a total-mass normalized bound under exactly three fully homothetic positive-volume fibers. The frozen result is an absolute bound at a prescribed retained point even when the total mass lies elsewhere.",
+      "fact_id": "1a7377b8dcb5b16b"
+    },
+    {
+      "comparison": "Its three-fiber bound uses a common core contained in both the middle and larger endpoint, with the smaller endpoint inside that core. The frozen result uses opposite offsets after recentering and the unequal-scale paired gain to bound the endpoint contribution.",
+      "fact_id": "8812feca6c8a1e97"
+    },
+    {
+      "comparison": "Its full-volume case supplies the middle contribution alone. The extra term depends on the paired endpoint geometry.",
+      "fact_id": "6769574fc1bd9f8d"
+    }
+  ],
+  "readability": "The final proof paragraph makes clear that g is the centroid of the retained midpoint copy and may differ from the centroid of the actual fiber.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "eefe30edf604a639cac78ab50f16392085cd2806bfc7fe608c506eaed37a773c",
+  "reviewed_statement_sha256": "cfc7205f5e480b7b3e842895e531eb8a51c990e43bc15a607ae37037ff0a489c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:24:44Z",
+  "summary": "The same ambient halfspace gives opposite thresholds on the endpoint copies and a centroid cap on the retained midpoint copy. All three contributions occur at distinct integer bases and give the stated local lower bound for the full body's raw depth.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

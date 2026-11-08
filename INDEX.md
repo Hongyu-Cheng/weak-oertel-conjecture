@@ -4,6 +4,25 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 3 | theorem | pk-intake-selected-circuit-signed-dual | [ec5e140eb107957e](facts/ec5e140eb107957e.md) |
+| 2 | theorem | pk-intake-projected-stationary-sections-planar-normals | [03ec0bc313e02df5](facts/03ec0bc313e02df5.md) |
+| 1 | theorem | pk-intake-exact-planar-corner-loss-common-center | [6d1e0acd23043f7a](facts/6d1e0acd23043f7a.md) |
+| 1 | theorem | pk-intake-fixed-facet-moving-equal-budget-cover | [3e7f0a31e608bd79](facts/3e7f0a31e608bd79.md) |
+| 1 | theorem | pk-intake-actual-signed-local-masses | [fa420503475f57e1](facts/fa420503475f57e1.md) |
+| 5 | theorem | pk-intake-integer-centered-dominant-normal-cone | [527354d0ce513200](facts/527354d0ce513200.md) |
+| 3 | theorem | pk-intake-four-monotone-triangle-fiber-centroid | [d73af8faaea6933f](facts/d73af8faaea6933f.md) |
+| 3 | lemma | pk-intake-unequal-scale-retained-midpoint-cap | [706ce1dc5b5b8d67](facts/706ce1dc5b5b8d67.md) |
+| 1 | theorem | pk-intake-robust-planar-chord-reweighting | [e0bd82357032b4ec](facts/e0bd82357032b4ec.md) |
+| 0 | lemma | pk-intake-weighted-homothetic-shell-incidence | [25cb17da7fc8ba32](facts/25cb17da7fc8ba32.md) |
+| 0 | theorem | pk-intake-actual-critical-planar-chord-weights | [ba445d671279810a](facts/ba445d671279810a.md) |
+| 0 | theorem | pk-intake-sharp-centered-line-radial-chord-comparison | [d49c8cc7c869ce29](facts/d49c8cc7c869ce29.md) |
+| 0 | lemma | pk-intake-non-even-subunit-radial-gauge | [5af5f275fa4c066e](facts/5af5f275fa4c066e.md) |
+| 0 | counterexample | pk-intake-ball-cylinder-hull-bump | [4ee3181ef8f1a39c](facts/4ee3181ef8f1a39c.md) |
+| 0 | lemma | pk-intake-exact-local-hull-additions | [b3dd5f87b2f6ec9e](facts/b3dd5f87b2f6ec9e.md) |
+| 0 | lemma | pk-intake-strict-compatibility-open | [ef28349cb1e27c5b](facts/ef28349cb1e27c5b.md) |
+| 1 | theorem | pk-intake-integer-centered-shared-tilt | [a158ab357a60f74c](facts/a158ab357a60f74c.md) |
+| 0 | lemma | pk-intake-positive-normal-triangle-cap-envelope | [b39ecb342488b802](facts/b39ecb342488b802.md) |
+| 2 | theorem | pk-intake-unequal-scale-homothetic-paired-source-depth | [e561372a5640eef8](facts/e561372a5640eef8.md) |
 | 0 | theorem | pk-intake-affinely-independent-source-array-depth-interpolation | [4fc403cf46f23e49](facts/4fc403cf46f23e49.md) |
 | 0 | counterexample | pk-intake-negative-minimum-dispersion-credit-at-critical-cover | [e9e3b5705373b130](facts/e9e3b5705373b130.md) |
 | 1 | theorem | pk-intake-marked-entropy-local-attainment-directional-value | [66947afeef056d3b](facts/66947afeef056d3b.md) |

@@ -1,0 +1,29 @@
+{
+  "advances": "A necessary variational condition for the chosen regular circuits at a local minimum in a class containing the exact signed perturbations.",
+  "author": "PK-research-agent",
+  "candidate_id": "ec5e140eb107957e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T10:25:23.536994+00:00",
+  "depends_on": [
+    "fa420503475f57e1",
+    "755cb08c379113cc"
+  ],
+  "draft_key": "selected-circuit-signed-dual",
+  "kind": "theorem",
+  "proof": "A finite measure has upper semicontinuous raw depth. If a point lies in a cap of mass below a given value, expand the cap slightly to put the point in its interior while retaining that strict bound. The expanded masses tend to the original closed-cap mass by continuity from above. Thus all deepest values are attained on the compact measured set and on its fibers.\n\nLet $g_{pj}=\\sum_i\\xi_i\\mathbf1_{H_{pj}}(w_i)$ and $a_p=\\sum_j\\kappa_{pj}g_{pj}=\\sum_i A_{pi}\\xi_i$. Shift the threshold of cap $H_{pj}$ by $\\delta b_{pj}=\\varepsilon(g_{pj}-a_p)/S_{pj}$. The $\\rho_{pj}$-weighted sum of these shifts is zero. Before shifting, the $\\rho_{pj}$-weighted margins of the selected caps sum to zero at every point of the base plane $\\{p\\}\\times\\mathbb R^d$, because the caps pass through the same mark there and their continuous normals balance. This identity persists after shifting. At least one shifted closed cap contains every point of that plane.\n\nThe exact signed cap identity at the shifted threshold and the old two-sided slope formula give each new cap mass as $Q+\\varepsilon a_p+o(\\varepsilon)$. The list is finite, so the errors are uniform over it. At a nondeep base, accepted fact 755cb08c379113cc supplies an old finite whole-plane cover by caps of mass equal to its own maximal raw depth, which is strictly less than $Q$. Its hypotheses hold because $P$ is finite, $M>0$, and the original family is actual. Here $n\\ge1$ whenever there is a nondeep base, since $n=0$ has one base. The total variation of the measure difference is bounded by $\\varepsilon\\sum_i|\\xi_i|$, so the finitely many nondeep cap budgets remain below the perturbed deep cap bound for sufficiently small $\\varepsilon$. The covers apply to every point of each new fiber, including points outside the old one. Hence\n$$\nD(C_\\varepsilon)\\le\n\\frac{Q+\\varepsilon\\max_{p\\in I}a_p+o(\\varepsilon)}\n     {M+\\varepsilon\\sum_i\\xi_i}.\n$$\nSubtract $\\beta$ and take the upper limit of the divided difference to obtain the stated inequality.\n\nAt a local minimum every signed competitor lies in the admissible class and converges to $C$, so $\\max_{p\\in I}\\sum_i\\xi_i(A_{pi}-\\beta)\\ge0$ for all real $\\xi$. If the convex hull of the finitely many rows $(A_{pi}-\\beta)_i$ excluded zero, strict separation would supply one $\\xi$ whose dot product with every row was negative. Thus zero belongs to their convex hull, yielding exactly the stated probability vector. The proof estimates an upper derivative from the chosen caps. Equal positive two-sided slopes are hypotheses on the actual old aggregate cap masses. Unequal one-sided slopes do not supply the stated fixed coefficients, and a class of admissible deformations with a fixed plane-count constraint need not contain the signed competitors.\n",
+  "source_candidate_ids": [
+    "97eab0f821e54041"
+  ],
+  "source_candidate_sha256": {
+    "97eab0f821e54041": "6fd053c8eaa203602363a7b90aa8383c0b8298506059ea381ff71a80d405853e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "97eab0f821e54041",
+      "locator": "§4, Theorem 5, (9)–(13), selected-circuit upper derivative and equality dual"
+    }
+  ],
+  "statement": "In the setting of the exact signed local mass theorem, write $D(C)$ for the maximum over the measured set of the infimum of normalized $\\mu_C$-mass of closed ambient halfspaces containing the point. Put $\\beta=D(C)$, $Q=\\beta M$, and let $I$ be the bases attaining this deepest value. At each $p\\in I$ choose a finite positive circuit of actual caps\n$$\nH_{pj}=\\{(z,x):a_{pj}\\cdot z+u_{pj}\\cdot x\\ge b_{pj}\\},\\qquad\n\\lVert u_{pj}\\rVert=1,\\qquad \\sum_j\\rho_{pj}u_{pj}=0,\\quad \\rho_{pj}>0,\n$$\nthrough one maximizing mark in that fiber. Assume every selected cap has old mass $Q$, its boundary avoids every selected $w_i$, and its old threshold function satisfies $F_{pj}(b_{pj}+s)=Q-S_{pj}s+o(|s|)$ with $S_{pj}>0$. In particular this expansion is two-sided and uses the full mixed measure. Define $\\kappa_{pj}=(\\rho_{pj}/S_{pj})/\\sum_\\ell(\\rho_{p\\ell}/S_{p\\ell})$ and $A_{pi}=\\sum_j\\kappa_{pj}\\mathbf1_{H_{pj}}(w_i)$. For every fixed real vector $\\xi$, the exact signed mass competitors satisfy\n$$\n\\limsup_{\\varepsilon\\downarrow0}\\frac{D(C_\\varepsilon)-\\beta}{\\varepsilon}\n\\le \\frac1M\\max_{p\\in I}\\sum_i\\xi_i(A_{pi}-\\beta).\n$$\nIf $C$ is a local minimum among all actual positive fiber families over $P$, with the fiberwise Hausdorff topology, there is a probability vector $\\pi$ on the selected deepest-base circuits such that $\\sum_{p\\in I}\\pi_p A_{pi}=\\beta$ for every selected $i$. This holds for every permitted finite selection of points and one circuit per deepest base. The probability vector is attached to that selection. When $I$ has one base, the corresponding score itself equals $\\beta$ at each selected point.",
+  "subgoal_id": "pk-intake-selected-circuit-signed-dual",
+  "title": "An upper derivative and equality dual for selected regular critical circuits"
+}

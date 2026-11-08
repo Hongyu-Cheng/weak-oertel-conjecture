@@ -1,0 +1,42 @@
+{
+  "candidate_id": "d49c8cc7c869ce29",
+  "candidate_sha256": "9fd7d2d9011ae82783377f1c2f118bbf6f7fc06228560bfc86256dbe9974dd24",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "A bounded ray has finite first moment by integrability. On an unbounded positive ray a value less than f(0)/2 exists at finite b, and concavity bounds the later logarithm above by log(f(0))−x log(2)/b. The local positive interval makes I>0, and the signed centering condition equates the moments of the two reflected rays. Under f→f/c, S scales by 1/c and L by 1/sqrt(c), as claimed.",
+    "Direct differentiation gives F''(x)=1/x and G''(x)/F''(x)=∫_0^1 s(1−s)x^(s−1) ds, which decreases with x. For 1<t₁<t₂ the common-interval weight ratio is (t₂−x)/(t₁−x), increasing in x, and the added interval has larger x. For t₁<t₂<1 the common-interval ratio is (x−t₂)/(x−t₁), also increasing in x, and the removed interval has smaller x. The opposite monotonicities of the weight ratio and integrand give nonpositive covariance. Both averages tend to G''(1)/F''(1)=1/6, so the ratio comparison crosses 1 correctly.",
+    "F'(x)=log x and F(0+)=1. For 0<u<1 this gives two endpoints a,b with w'=1/A+1/B. Substitution of F(a)=F(b)=u gives u/B=b−(b−1)/B and u/A=−a+(1−a)/A. Since G(b)/F(b)≤G(a)/F(a), G(b)≤G(a), and the integral formula for G then gives (b−1)/B−(1−a)/A≥w/2. Hence 2u w'≤w. The Taylor expansion gives w/sqrt(u)→2sqrt(2) as u decreases to zero. Continuity as u increases to one gives a→0 and b→e and preserves w²≤8u.",
+    "A finite supergradient of the interior concave logarithm bounds f by its tangent exponential on both rays. For an envelope filled up to T, the difference h from that fill is nonpositive below T and nonnegative above T, giving (x−T)h≥0. Equal first moments then imply the claimed upper mass bound. At infinite T the full envelope bounds mass directly. For slope zero the fill on each ray has mass sqrt(2I). For positive slope, integrating x exp(±sx) gives precisely the two cutoff formulas with 0<u=s²I≤1, and integrating exp(±sx) gives sS≤e^B−e^(−A). For u=1 the negative fill is the whole ray and the entropy endpoint is its limiting value zero.",
+    "For g(x)=(1−x/a)_+^m on a ray, direct integration gives ∫g=a/(m+1) and ∫xg=a²/[(m+1)(m+2)]. If the positive interval extends beyond a, its root concavity and positivity at a imply f≥g up to a, and positive mass beyond a contradicts the matched first moment. On the positive interval the concave difference from the root line vanishes at zero, so its quotient by x decreases. After extending by zero the difference f−g has only the allowed positive-to-negative crossing. For g(x)=exp(−x/a), ∫g=a and ∫xg=a², and log f+x/a gives the same crossing. At T the sign gives (x−T)(f−g)≤0, so the matched moment yields the lower mass estimate. A one-signed difference with zero moment vanishes almost everywhere.",
+    "For c times the indicator of [−a,a], c exp(−|x|/a), and c(1−|x|/a)_+^m, the values of (S,I) are respectively (2ca,ca²/2), (2ca,ca²), and (2ca/(m+1),ca²/[(m+1)(m+2)]). The functions are centered and have the required concavity. Substitution in L=2sqrt(2I) gives exactly the three claimed equality ratios.",
+    "Checked source ceb2615ce03b7dbc at SHA-256 437065ca5f4004f12ec72885ceeb4a6372930008c57cad0a9a52cd9a9d8f3d8e. The statement at (1)–(2) and its following two paragraphs cover all constants and examples. Sections 1–3 contain the entropy, tangent and one-crossing proofs. Section 4 gives the individual planar chord application with its stated limitation."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T10:31:14.277Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The construction applies to a planar integrable log-concave density with 0 in its positive interior by taking r=2, y=0 and any β>3. The extended inverse power exp(−log(f)/β) is convex, and setting support-boundary values to zero leaves each radial integral unchanged. The construction then supplies the convex radial body and angular mass identity with rho(u)^2=2∫_0^∞ t f(tu)dt. This part has no polytopality premise. The two radii of a centered restriction both equal sqrt(2I). The angular identity gives no bound comparing line mass S with the length of that individual chord.",
+      "fact_id": "8bc17121df970992"
+    },
+    {
+      "comparison": "Its bathtub argument maximizes a directional first moment at a fixed mass under a uniform convex-body envelope. The frozen result matches first moments under log-concave envelopes and gives two-sided mass bounds on a single centered line. The earlier conclusion provides neither sharp centered-line constant.",
+      "fact_id": "6769574fc1bd9f8d"
+    }
+  ],
+  "readability": "The standalone theorem concerns a one-dimensional function. The final application refers to a planar radial body that has already been constructed. When applying that paragraph, state the planar integrability, log-concavity and interior-anchor hypotheses for the cited radial construction. The chord calculation itself uses only the two ray radii and the centered section moment.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2c57947502738016ce2c48f5b8f9b9de6bf24eedcc1705c40070d28002fb4584",
+  "reviewed_statement_sha256": "d88760b16530cb29e976dcdefe0c7d75ffdf84331aac27969b68b7d512bc3a6b",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T10:28:17.822Z",
+  "summary": "The entropy-width comparison proves the sharp upper constant. The signed first-moment comparisons prove the two lower constants, and the displayed examples attain each value.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

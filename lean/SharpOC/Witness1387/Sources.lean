@@ -249,11 +249,14 @@ theorem T_small_halfspace (j : Fin 4) (x : E) :
 def inactiveScale (m : ℝ) : ℝ :=
   (m * (Nat.factorial 1178 : ℝ)) / ((Nat.factorial 3 : ℝ) * (Nat.factorial 1175 : ℝ))
 
+/-- The last continuous coordinate, as in the written construction. -/
+def inactiveStretchAxis : Fin 1178 := Fin.last 1177
+
 def inactiveMap (m : ℝ) : E →ₗ[ℝ] E :=
-  Matrix.toLin' (Matrix.diagonal (fun i : Fin 1178 => if i = 0 then inactiveScale m else 1))
+  Matrix.toLin' (Matrix.diagonal (fun i => if i = inactiveStretchAxis then inactiveScale m else 1))
 
 theorem inactiveMap_apply (m : ℝ) (x : E) (i : Fin 1178) :
-    inactiveMap m x i = (if i = 0 then inactiveScale m else 1) * x i := by
+    inactiveMap m x i = (if i = inactiveStretchAxis then inactiveScale m else 1) * x i := by
   simp [inactiveMap, Matrix.toLin'_apply, Matrix.mulVec_diagonal]
 
 theorem inactiveScale_pos {m : ℝ} (hm : 0 < m) : 0 < inactiveScale m := by
@@ -261,7 +264,8 @@ theorem inactiveScale_pos {m : ℝ} (hm : 0 < m) : 0 < inactiveScale m := by
   positivity
 
 theorem inactiveMap_det (m : ℝ) : LinearMap.det (inactiveMap m) = inactiveScale m := by
-  rw [inactiveMap, LinearMap.det_toLin', Matrix.det_diagonal, Finset.prod_eq_single 0]
+  rw [inactiveMap, LinearMap.det_toLin', Matrix.det_diagonal,
+    Finset.prod_eq_single inactiveStretchAxis]
   · simp
   · intro i hi h0
     simp [h0]
@@ -272,7 +276,7 @@ theorem inactiveMap_injective {m : ℝ} (hm : 0 < m) : Function.Injective (inact
   ext i
   have hi := congrFun h i
   rw [inactiveMap_apply, inactiveMap_apply] at hi
-  have hne : (if i = 0 then inactiveScale m else 1) ≠ 0 := by
+  have hne : (if i = inactiveStretchAxis then inactiveScale m else 1) ≠ 0 := by
     split_ifs <;> simp [(inactiveScale_pos hm).ne']
   exact mul_left_cancel₀ hne hi
 

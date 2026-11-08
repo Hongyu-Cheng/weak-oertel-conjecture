@@ -50,7 +50,7 @@ private def stretchFactor (m : ℚ) : ℚ :=
 
 def inactiveVertices (m : ℚ) : Finset RatE :=
   Finset.univ.image fun j : Fin 1179 => fun i =>
-    (if i = 0 then stretchFactor m else 1) * simplexVertex 1178 j i
+    (if i = inactiveStretchAxis then stretchFactor m else 1) * simplexVertex 1178 j i
 
 private theorem image_ratVertices {ι : Type*} [Fintype ι] (v : ι → RatE) :
     ratToReal '' (↑(Finset.univ.image v) : Set RatE) = range (ratToReal ∘ v) := by
@@ -167,8 +167,8 @@ theorem inactiveVertices_hull (m : ℚ) :
   apply congrArg (convexHull ℝ)
   apply congrArg range
   funext j i
-  change (((if i = 0 then stretchFactor m else 1) * simplexVertex 1178 j i : ℚ) : ℝ) =
-    inactiveMap (m : ℝ) (MiddleSimplex.standardBasis 1178 j) i
+  change (((if i = inactiveStretchAxis then stretchFactor m else 1) *
+    simplexVertex 1178 j i : ℚ) : ℝ) = inactiveMap (m : ℝ) (MiddleSimplex.standardBasis 1178 j) i
   rw [inactiveMap_apply, Rat.cast_mul, cast_simplexVertex, MiddleSimplex.standardBasis_apply]
   congr 1
   split_ifs <;>

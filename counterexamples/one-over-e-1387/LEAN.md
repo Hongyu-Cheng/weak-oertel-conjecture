@@ -20,9 +20,9 @@ proves its full dimension, the exact census of integer bases of
 nonempty fibers, and the finite fiber-sum representation of its actual
 mixed-integer volume. It also proves the exact active-center fibers,
 the cap bounds at the exposed sources and active centers, the pool
-census, and the strict rational inequalities. The inactive simplex is
-stretched in the first coordinate in Lean and in the last coordinate
-in equation (6) of the [analytic proof](../../facts/a02d398c0677c03a.md).
+census, and the strict rational inequalities. Lean stretches the
+inactive simplex along the last continuous coordinate, as in
+equation (6) of the [analytic proof](../../facts/a02d398c0677c03a.md).
 
 The final theorem `SharpOC.Witness1387.one_over_e_depth` gives a
 proper closed halfspace of relative mass below the target at every

@@ -1,0 +1,26 @@
+{
+  "advances": "An independent packing problem with arbitrary positive site weights on a lattice-complete set. The capacity table need not represent convex-body fiber volumes.",
+  "author": "PK-research-agent",
+  "candidate_id": "57ff4e4e2132d193",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.748890+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-line-packing-threshold-house-prism",
+  "kind": "counterexample",
+  "proof": "The roof of $R$ is $y=\\min(x+4,8-x)$ on $0\\le x\\le4$, with bottom $y=0$. Its lattice points are the $25$ grid points at heights $0,\\ldots,4$, the three points at height $5$ with $x=1,2,3$, and the point $(2,6)$. The prism has precisely two integer layers and $P$ is lattice-complete because it is the integer trace of a convex set. The weights sum to $5+24/2400+29(1099/2900)=16$.\n\nFor $p$ use the two disjoint bottom pairs $AC$ and $BD$, each with packing mass one. Their respective convex coefficients are $(1/4,3/4)$ and $(1/2,1/2)$. For $q$ use the two disjoint bottom pairs $AD$ and $BE$, with coefficients $(1/2,1/2)$ and $(1/4,3/4)$ respectively. The pairs obey all capacities. All three marks are in $P$ and the endpoints have the same coordinatewise parity.\n\nFor the midpoint, the signed determinants of the vectors from $(2,3)$ to each pair of distinct bottom vertices, in order $AB,AC,AD,AE,BC,BD,BE,CD,CE,DE$, are\n$$\n12,\\ 4,\\ -6,\\ -8,\\ 8,\\ 6,\\ -4,\\ 6,\\ 4,\\ 6.\n$$\nThus no pair of bottom vertices has the midpoint in its convex hull, and the midpoint itself is not a bottom vertex. Give every bottom vertex dual cost $1/3$, every other bottom point cost $1$, and every top point cost zero. Any group qualifying for the midpoint must have a bottom subgroup whose hull contains it, since a convex combination with last coordinate zero gives zero coefficients to all top points. That subgroup contains a nonvertex bottom point or at least three bottom vertices. In both cases the group has total cost at least one. Multiplying each such inequality by its nonnegative packed mass and summing gives an upper bound by the weighted sum of the costs, since the total mass charged to a point is at most its capacity. The resulting bound is $5/3+24/2400=503/300<2$.\n",
+  "source_candidate_ids": [
+    "9f13d4b01e5646d0"
+  ],
+  "source_candidate_sha256": {
+    "9f13d4b01e5646d0": "4082cd9328b72e815a4ea1d5b541430059287835f2ddfdb3fdaa9f4d5eda2a0a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9f13d4b01e5646d0",
+      "locator": "9f13d4b01e5646d0:01 Whole unnumbered proof, house-prism construction and dual certificate"
+    }
+  ],
+  "statement": "Let $R=\\operatorname{conv}\\{A,B,C,D,E\\}$ for $A=(0,0),B=(4,0),C=(4,4),D=(2,6),E=(0,4)$, and put $P=(R\\times[0,1])\\cap\\mathbb Z^3$. For $z\\in\\mathbb R^3$ let $f_w(z)$ be the maximum total mass of groups $G\\subseteq P$ with $z\\in\\operatorname{conv}G$, charging each group mass to each of its members under capacities $w$. Give each of the five bottom vertices weight $1$, each of the $24$ other bottom points weight $1/2400$, and each of the $29$ top points weight $1099/2900$. All weights are positive, $M=\\sum_v w_v=16$, and $\\max_v w_v=1<M/2^3$. For $p=(3,3,0),q=(1,3,0),m=(2,3,0)=(p+q)/2$ one has $f_w(p),f_w(q)\\ge2$ and $f_w(m)\\le503/300<2$. The superlevel at $M/2^3$ is nonconvex and its lattice trace is not closed under integer midpoints.",
+  "subgoal_id": "pk-intake-pk-w36-line-packing-threshold-house-prism",
+  "title": "The fractional hull-packing threshold is not closed under integer midpoints"
+}

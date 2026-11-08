@@ -1,0 +1,29 @@
+{
+  "advances": "A continuous finite density with an inverse-power hypothesis and a movable radial origin. The density need not be a sampled mixed-integer pointed law.",
+  "author": "PK-research-agent",
+  "candidate_id": "a76d25e8a40f2ae5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.173329+00:00",
+  "depends_on": [
+    "3919a4dbe7ace166",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "pk-w36-radial-centered-ball-density",
+  "kind": "theorem",
+  "proof": "On the positive interior, $f^{-1/(r+1)}$ is convex. In the log-concave case this follows by exponentiating $-\\log f/(r+1)$. In the inverse-power case, take the increasing convex power $\\beta/(r+1)$ of $f^{-1/\\beta}$. The resulting inverse power is finite, positive and continuous in the interior, so $f$ is continuous there. Set $f=0$ on $\\partial D$. This preserves its mass and the convexity of the extended inverse power. An interior ray meets $\\partial D$ at at most one positive parameter, so this choice does not change any stated $L_x$.\n\nFix $x\\in\\operatorname{int}D$. Restrict $f$ to the closed convex sets $x+(1-1/j)(D-x)$ for integers $j\\ge2$, extending by zero. These restrictions are bounded upper-semicontinuous with compact support, have a positive interior about $x$, and have convex extended inverse $(r+1)$-power. Translate $x$ to zero and use accepted fact 3919a4dbe7ace166 with $p=r$. Dilating its radial set by $r^{1/r}$ yields the radii in the statement for each truncated density. These convex bodies increase with $j$, their radii tending to $\\rho_x$ in every direction by monotone convergence. For the original density the radii are continuous in direction by dominated convergence, since on each ray from the interior the only possible discontinuity of $f$ is at the endpoint in $\\partial D$. They are uniformly bounded by compact support and bounded density, and uniformly positive by a small inball about $x$ on which $f$ is bounded below. Thus $L_x$ is closed and is the closure of the increasing union of the truncated bodies, which proves the asserted convexity and full dimension.\n\nUse the same radial formula at boundary origins temporarily. Polar integration, with counting measure on the two unit directions if $r=1$, gives $|L_x|=W$, the stated through-point cap identity, and the centroid\n$$\nm(x)=\\frac{1}{(r+1)W}\\int_{\\mathbb S^{r-1}}u\\,\\rho_x(u)^{r+1}\\,d\\sigma(u).\n$$\nThe centroid vector is continuous on all of $D$. To see this, take $x_j\\to x$ in $D$. For almost every direction $u$, for almost every $t>0$ the point $x+tu$ lies off $\\partial D$. Indeed, polar integration about the fixed $x$ sends the null boundary to a null set in the $(u,t)$ coordinates on each region $t\\ge 1/k$, and these regions exhaust $t>0$. On the complement $f(x_j+tu)\\to f(x+tu)$ by interior or exterior continuity. The radial integrands have a uniform integrable bound supported in $t\\le\\operatorname{diam}D$, and the resulting radii are uniformly bounded. Dominated convergence in the radial and angular integrals proves continuity of $m$.\n\nIf $x\\in\\partial D$ and $v\\ne0$ is an outward support normal there, all directions with $v\\cdot u\\ge0$ have zero radius. Rays in such directions leave $D$ or lie in its supporting plane, on which the density has been set to zero. An open set of inward directions meets an interior ball of $D$, so on it $v\\cdot u<0$ and $\\rho_x(u)>0$. The centroid formula yields $v\\cdot m(x)<0$. Brouwer applied to the continuous self-map $x\\mapsto \\operatorname{proj}_D(x+m(x))$ gives a fixed point. Euclidean projection implies that $m(x)$ is an outward normal at that point. At a boundary fixed point this contradicts the strict sign with $v=m(x)$ if $m(x)\\ne0$, and with any nonzero supporting normal if $m(x)=0$. Thus the fixed point is interior and the projection condition yields $m(x_*)=0$.\n\nApply the full-mass case of accepted fact 6769574fc1bd9f8d to the compact convex body $L_{x_*}$ at its centroid. Its through-origin caps have volume at least $\\Gamma_r W$, hence the parallel through-$x_*$ caps have the same lower bound in the density law. A containing halfspace contains its parallel through-point halfspace. For the source's one-dimensional calibration, $f(t)=2t$ on $[0,1]$ gives $L_x=[-x^2,1-x^2]$. Its zero centroid occurs at $x=1/\\sqrt2$, while the density mean is $2/3$.\n",
+  "source_candidate_ids": [
+    "faf22898d0dc8331"
+  ],
+  "source_candidate_sha256": {
+    "faf22898d0dc8331": "526af144af98a550bc419fa217370a6e73e0ada7ee811319f23e8c8c2a4a7fcb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "faf22898d0dc8331",
+      "locator": "faf22898d0dc8331:01 §§1–2, (2)–(8), including inverse-power compact extension"
+    }
+  ],
+  "statement": "Let $r\\ge1$ be an integer, let $D\\subset\\mathbb R^r$ be a compact convex body, and let $f$ be a bounded nonnegative density supported on $D$ and positive on $\\operatorname{int}D$. Suppose $f$ is log-concave, or $f^{-1/\\beta}$ extended by $+\\infty$ where $f=0$ is convex for some $\\beta\\ge r+1$. Set $W=\\int f$ and $\\Gamma_r=(r/(r+1))^r$. For $x\\in\\operatorname{int}D$ let $L_x$ be the radial set about zero with unit-direction radius\n$$\n\\rho_x(u)^r=r\\int_0^\\infty t^{r-1}f(x+tu)\\,dt .\n$$\nEvery such $L_x$ is a compact full-dimensional convex body of volume $W$. For each nonzero $v$ the volume of its cap $v\\cdot w\\ge0$ is the $f$-mass of $v\\cdot(y-x)\\ge0$. There is $x_*\\in\\operatorname{int}D$ at which $L_{x_*}$ has centroid zero. In particular, every closed halfspace containing $x_*$ has $f$-mass at least $\\Gamma_r W$.",
+  "subgoal_id": "pk-intake-pk-w36-radial-centered-ball-density",
+  "title": "A compact inverse-power density has a centered Ball radial body"
+}

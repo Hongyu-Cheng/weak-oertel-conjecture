@@ -1,0 +1,108 @@
+{
+  "candidate_id": "04c897bc5ff7f321",
+  "candidate_sha256": "437941635a1d84aa3485bfee05eba9c6c26d74e68090e744448d404a91b5da22",
+  "checked_dependency_candidate_sha256": {
+    "3c8a10b70459e6c0": "a465d27ddd3697361e974c13cf167059e338393aeaf03fba7dbe42b461adaad9"
+  },
+  "checks": [
+    "The final statement and proof paragraph both explicitly take the standard interval [0,1] and the unrefined cap-sign partition, matching bee6fd4790a9be39 §5.",
+    "Recomputed the unrefined calibration: the half-interval cap mass is 1/2, the hinge integral is 1/8, the two centroids per base are 1/4 and 3/4, and the through-atom quarter-interval cap gives normalized depth at most 1/8.",
+    "The final and original candidate bytes differ only in the decoded statement and proof, and those changes are restricted to the interval calibration. The base-isolation, own-cap volume, full closed cover, and strict all-refinements proof are unchanged.",
+    "Rechecked the declared source digest and the exact same-wave consensus candidate and both field digests. Each strict positive cap sign identifies the atom's base, so the fixed-base invariants still follow."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3c8a10b70459e6c0",
+      "candidate_sha256": "a465d27ddd3697361e974c13cf167059e338393aeaf03fba7dbe42b461adaad9",
+      "draft_key": "pk-w36-menu-strict-sign-consensus",
+      "hypotheses": "Same-wave consensus theorem. The cube-simplex is compact convex, the finite cap margins are affine, and each positive cell identifies its exact base. Thus even the parity operation is fixed-base in this example, with all the claimed cap and fiberwise joint-complement invariants.",
+      "review_status": "Same-wave dependency remains tied to its independently reviewed exact input.",
+      "reviewed_proof_sha256": "56c5c99466c59e35fd02b15a2fd6c31e3062563b00a011ef91ff091ea5dcb7f6",
+      "reviewed_statement_sha256": "8a881710864f64d2673748e6e030c0c79c6ba20ed251952d277c94969b97f16a"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:41:11Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "04c897bc5ff7f321",
+    "candidate_sha256": "04c41936d477af7e23cee98820e761825b77cf7426f76e6c2877f89c2c302b02",
+    "checks": [
+      "The binary penalty is exactly zero at the designated base and at least one elsewhere, making foreign margins strictly negative. Barycentric homothety gives cap mass Γ_d V and the sum-one identity gives full closed coverage.",
+      "Every positive sign cell has a strictly positive own cap, whose base is therefore fixed by both midpoint rules. Every refined positive cell retains one such positive sign at its limit atom.",
+      "The through-atom cap in that barycentric direction isolates its own base and has mass (1−λ_i(x))^d V strictly below Γ_d V. The inequality is for depth in the original mixed measure, and refinement does not alter it.",
+      "The unrefined interval calibration gives original cap mass 1/2, hinge 1/8, and quarter-interval through-atom mass 1/4, hence normalized depth at most 1/8. Original bee6fd4790a9be39 §4 treats arbitrary refinements, while §5 computes the unrefined interval cells."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "3c8a10b70459e6c0",
+        "candidate_sha256": "a465d27ddd3697361e974c13cf167059e338393aeaf03fba7dbe42b461adaad9",
+        "draft_key": "pk-w36-menu-strict-sign-consensus",
+        "hypotheses": "Same-wave consensus theorem. The cube-simplex is compact convex, the finite cap margins are affine, and each positive cell identifies its exact base. Thus even the parity operation is fixed-base in this example, with all the claimed cap and fiberwise joint-complement invariants.",
+        "review_status": "Requires independent approval of the exact same-wave input.",
+        "reviewed_proof_sha256": "56c5c99466c59e35fd02b15a2fd6c31e3062563b00a011ef91ff091ea5dcb7f6",
+        "reviewed_statement_sha256": "8a881710864f64d2673748e6e030c0c79c6ba20ed251952d277c94969b97f16a"
+      }
+    ],
+    "finished_utc": "2026-11-08T22:38:22Z",
+    "issues": [
+      {
+        "defect": "The statement first permits arbitrary finite max-affine refinement and then gives exactly four output atoms without restricting that calibration. The permitted refinement by max(0,x−1/4) splits the lower half interval at each base and produces continuous coordinates 1/8, 3/8, 3/4 at each base.",
+        "locator": "Statement, final n=d=1 sentence and proof, final paragraph",
+        "repair": "Specify that the four atoms, their locations, and the stated 1/8 atom-depth bound in the final sentence are for the unrefined cap-sign partition. The general strict inequality remains valid after every finite refinement.",
+        "severity": "scope"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Gives exact product depth and isolation at exposed binary sites, including the simplex sharp constant. It has no statement about all limits of sign-preserving averaging.",
+        "fact_id": "2acc8bc803acf1c0"
+      },
+      {
+        "comparison": "Gives a shallow limit for a particular unconditioned parity iteration on unequal simplex fibers. It does not require a sharp closed cap cover or preserve any prescribed strict sign cell.",
+        "fact_id": "dd23298d2fc3e5d6"
+      }
+    ],
+    "readability": "The distinction between the general refined selector and the exact unrefined interval calibration must be explicit.",
+    "reviewed_proof_sha256": "6308a01476fd30aece321e4f22771bfee4466d511994d1c7589b844cb36ed847",
+    "reviewed_statement_sha256": "c8e51ae169857e5e39433edbc0f6ec58b954374dff0ecd035a4a545b9bebcbf6",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T22:33:36Z",
+    "summary": "The general strict-sign obstruction is proved, but the numerical four-atom calibration needs to specify the unrefined partition.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "interim_revision": {
+    "candidate_id": "04c897bc5ff7f321",
+    "candidate_sha256": "71b2b09407a29c64a33e0507375b48c2945ce08db974d588c7bb8fecf71661a9",
+    "finding": "The first linked revision corrected refinement scope but left the one-dimensional simplex arbitrary. On [0,2] the original half-cap mass is 1, the affine barycentric hinge is 1/4, and the two unrefined atom coordinates are 1/2 and 3/2. The final revision explicitly specifies the standard interval.",
+    "finished_utc": "2026-11-08T22:40:29Z",
+    "reviewed_proof_sha256": "cbe6d407588ea661ac961a9220fe8564df8da746b9d333e3c2771097d4c2c3fe",
+    "reviewed_statement_sha256": "1c5af865a1ff3c9e78124280f3cfad31c331105e102785544e6d35fc29a7a60b",
+    "started_utc": "2026-11-08T22:39:05Z"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives exact product depth and isolation at exposed binary sites, including the simplex sharp constant. It has no statement about all limits of sign-preserving averaging.",
+      "fact_id": "2acc8bc803acf1c0"
+    },
+    {
+      "comparison": "Gives a shallow limit for a particular unconditioned parity iteration on unequal simplex fibers. It does not require a sharp closed cap cover or preserve any prescribed strict sign cell.",
+      "fact_id": "dd23298d2fc3e5d6"
+    }
+  ],
+  "readability": "The unit interval and unrefined sign partition now distinguish the exact calibration from the general result.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "78635b68f3e2f7f295ea41e72d10cf5f8651a744caeed95bcd7fdae608f559e6",
+  "reviewed_statement_sha256": "5e0e8ad0dbbafa8ffdb91484a89e0cfcb4c49657621cee91dbf76b9577c696d6",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "04c41936d477af7e23cee98820e761825b77cf7426f76e6c2877f89c2c302b02",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:40:29Z",
+  "summary": "The linked revision now restricts the exact four-atom calibration to the standard interval and the unrefined partition. The all-refinements obstruction and preservation claims are unchanged and proved.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

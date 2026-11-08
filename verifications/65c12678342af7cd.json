@@ -1,0 +1,68 @@
+{
+  "candidate_id": "a3d2069c22a06bd0",
+  "candidate_sha256": "fd14d70aa458ca4edccd61d64bc75ede3772c7bf8d34b1af408fdd00dd7f3bb0",
+  "checked_dependency_candidate_sha256": {
+    "2e657e976221a74d": "76d6e0c753bea58e0678fb6c8169fdb53219639a1158d645b44c03e23ea3a0ac",
+    "4fcf6dc00f3745cb": "3e43204bf678f99fdc628cee1ddddb3365a835ec9cc9aa5e2e215a39038ee2f5"
+  },
+  "checks": [
+    "The corner chart and accepted cap-floor lemma apply to the same ordinary nondegenerate triangle, interior mark and strictly distinct captured vertices. The latter gives the exact strict floor 20/49 and the barycentric bound 5/14 under the individual ceiling.",
+    "Solving λ_1≤2/9 for a/q_1 gives at most (2/7)(p/q_2+(1−p)/q_3). The strict floors and p+(1−p)=1 make this less than 7/10. Multiplication by q_1≤128/279 gives the exact strict upper bound for a.",
+    "The cap ceilings for rows two and three lower-bound the sum of their denominators by p²/[c(1−y)]+(1−p)²/[c(1−x)], which is at least 1/[c(2−x−y)] by Cauchy–Schwarz. Row one gives the opposite control on 2−x−y by AM–GM.",
+    "Checked (19/28)^2>128/279. The polynomial (1+a)(2−18a/19) has derivative (20−36a)/19>0 for a≤1/5, and exact endpoint evaluation gives the stated deficit 429/60800.",
+    "With p≥7/10 the comparison polynomial p²−c(p+448/1395) has positive derivative and evaluates to 167489/7784100 at 7/10. The q_2 denominator is strictly less than p+a, giving the contradiction, and the q_3 formula applies the same argument to 1−p. Independent rational checks reproduce 82603/235904<9/25.",
+    "The original §4 supplies these bounds. The sorted profile, used elsewhere in the source, enters none of these steps."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "2e657e976221a74d",
+      "candidate_sha256": "76d6e0c753bea58e0678fb6c8169fdb53219639a1158d645b44c03e23ea3a0ac",
+      "fact_id": "2e657e976221a74d",
+      "fact_sha256": "e17718c59f2717688aef46b5d00bc7ec9aeda10120a19ea2d8e209b3427c8cdf",
+      "hypotheses": "Every cap cuts through the same interior mark, strictly captures its assigned distinct vertex, and strictly excludes the other two. Their fractions obey 128/279. These are exactly the accepted hypotheses for the strict barycentric and cap-area floors.",
+      "reviewed_proof_sha256": "fff0a0e590416ab4e3a66bb541ebf69948249162d5c22ce7cd3b15a209e81e84",
+      "reviewed_statement_sha256": "a7e9a98090d67608e9c3b1cb27386e3b11069e4e37ffd93b13dc00c6f0bf1ce8"
+    },
+    {
+      "candidate_id": "4fcf6dc00f3745cb",
+      "candidate_sha256": "3e43204bf678f99fdc628cee1ddddb3365a835ec9cc9aa5e2e215a39038ee2f5",
+      "hypotheses": "The frozen corner-elimination statement provides the converse geometric chart, exact q_i and the λ_1 formula for this strict domain. Its later cap-profile elimination is unused in the box proof. Admission requires independent approval of these exact predecessor bytes.",
+      "reviewed_proof_sha256": "d9e7b49fe4fe8a963070740b3d53c3f62033ffae134a29fdaaeec051d01ca3d2",
+      "reviewed_statement_sha256": "35fda0aeb3792ce9c1af95021c8a14f410acda6c2a2f2d9fe5621a35677d4b44"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:36:11Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It exactly supplies the strict barycentric upper bound and cap floor for the same distinct-vertex geometry and ceiling. It does not bound a,p or x+y using λ_1.",
+      "fact_id": "2e657e976221a74d",
+      "fact_sha256": "e17718c59f2717688aef46b5d00bc7ec9aeda10120a19ea2d8e209b3427c8cdf"
+    },
+    {
+      "comparison": "Its stronger weight lower bound assumes the cap-sum or sorted-profile restriction. This box deliberately omits both, and is a necessary restriction on putative cap-only low weights.",
+      "fact_id": "d4f185291093d4db",
+      "fact_sha256": "464bbf29928d22645e61c362327826d76575e03bdbfb319387c578453ba5de20"
+    },
+    {
+      "comparison": "It uses the same cap floor but adds a total cap-sum hypothesis to prove an edge-intercept lower bound. Its conclusion and added premise do not give this parameter box.",
+      "fact_id": "c365b957c457009b",
+      "fact_sha256": "da5a1865f6a85b78224f697fc569e13eb05dd7b3eb19a351fa60b52d4ec5469f"
+    }
+  ],
+  "readability": "The upper bounds are strict because the predecessor's lower bounds on q_i are strict. The proof establishes necessity of the box.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent proof read, exact source and dependency comparison, and rational arithmetic where applicable.",
+  "reviewed_proof_sha256": "eb2e8da01893ea699553566e68fe520cecccd369ff7b58796e3c4ddee0a83ea2",
+  "reviewed_statement_sha256": "56715a59727db5e230daa26f527b361d6a73ec7f817140a703ec0691bb392be7",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:31:54Z",
+  "summary": "All constants in the explicit necessary parameter box follow from the cap ceiling and the first reciprocal-chord weight bound. The two declared predecessors apply.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

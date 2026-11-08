@@ -1,0 +1,65 @@
+{
+  "candidate_id": "4eeaa6f8ed1f9eb3",
+  "candidate_sha256": "3cf89ba2a32dc1ead193f398b32bf97f9ea7171e13043330bb4d3a24bff90359",
+  "checked_dependency_candidate_sha256": {
+    "758871f5be736ae1": "a600660ca4fa3ec461c5e201bee81254a0eed70d02e40fcdf6988301571368e4",
+    "e4ef1ac154c5d280": "85eff8bf4977b758bdadfc4168ffd61057189dc81f0fe19b8cde541c18ecd2f4"
+  },
+  "checks": [
+    "Checked source e306d42187c98e53:03, §4 (10)–(12), together with §1 (4) for the fixed block normalization and §§1–2 for the coarse comparison.",
+    "At z=0 the grid length at kh is epsilon(1+kh) and the odd part cancels. At z=1 the vertical interval is [2|k|/ell−1,1], and the sum of triangular weights over |k|≤ell is ell. Both endpoint formulas include singleton contributions of length zero. All generating vertices have v-coordinate an integer multiple of h, so the exact hull is preserved.",
+    "The boxed absolute error per triangle is h(2+h), including entire, empty or lower-dimensional closed cut traces. With M_f=4/ell+1/ell³ and |M_f−M|=1/ell³, normalization gives precisely the stated three-term upper bound using M_f≥4/ell. The bound is at most 2/ell for ell≥1.",
+    "For each horizontal section, erosion and dilation by the grid half-cell change its length by at most h. The vertical projection length is at most two, so the coarse triangle and the union of the sampled cells differ by at most 4h in area. Moving points in a cell to its sampled base costs the test modulus at h/2. Both normalized errors tend to zero even though M tends to zero.",
+    "Each cap restriction with nonzero planar normal changes by at most 2√2 times the change in threshold on either triangle. Pure coarse-base cuts do not move within a fixed coarse site. Dividing the two section estimates by 4/ell gives √2 ell. The rounded v-coordinate lies strictly between −1 and 1 for ell≥2 and differs by at most h/2. At a fixed mark, infimizing the uniform cap bound compares the fine and coarse depths. Inclusion gives the upper limit, and the rounded centroid gives the lower limit.",
+    "The limiting tetrahedron contains the ball at (1/2,0,0) of radius 1/(2√2) from its four facet inequalities. The original box is inside radius 3/2 about that center. Multiplication by 2√2 gives both ball bounds and both transformed base spacings; the common length Jacobian cancels in normalized depth."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "e4ef1ac154c5d280",
+      "candidate_sha256": "85eff8bf4977b758bdadfc4168ffd61057189dc81f0fe19b8cde541c18ecd2f4",
+      "fact_sha256": "4fc0dfe1997be608231473097c2bf01da51c0e1ea91becf1d432703070491362",
+      "hypotheses": "Apply its proof's boxed per-set estimate to each closed cap trace with r=s=1, R=1, and delta=h/2. This gives h(2+h) without requiring the unit Euclidean ball hypothesis from its packaged statement.",
+      "reviewed_proof_sha256": "323c2c69b9964a75db34548086ea3af6664edfdddc38c409cba5305df81b56bb",
+      "reviewed_statement_sha256": "aa1e4d8d310ba256274f12fa32c008aa8bbeabac35b39167d16ab2eb287cfa82"
+    },
+    {
+      "candidate_id": "758871f5be736ae1",
+      "candidate_sha256": "a600660ca4fa3ec461c5e201bee81254a0eed70d02e40fcdf6988301571368e4",
+      "fact_sha256": "845b20deec59f36b39ebd2f92974021d0589cd1a0fb6e27d9749b58e17fea4a1",
+      "hypotheses": "With epsilon=1/ell the two actual coarse fibers are its exact triangular pair. Their normalized coarse maximum is 2/9, and the isolated weak limiting fibers have conditional CDF (t+1)^2/4 and mixed support maximum 1/4.",
+      "reviewed_proof_sha256": "1b459b0be7ee549d00361457e71b8da581fb02005a0e7a3e3d274307eea00c47",
+      "reviewed_statement_sha256": "453dba4a974050c9ccacd12b58af998115f4d619df1a5ace0af229e520afe667"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:39:29Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Same coarse triangles, closed-cap convention, weak law, and coarse jump. That result does not discretize a planar direction or show convergence of the fine maximum using rounded marks.",
+      "fact_id": "758871f5be736ae1"
+    },
+    {
+      "comparison": "Its changing-body fine maximum theorem needs positive limiting summed full coarse volume. Here the limiting fibers are segments, so its normalization premise fails.",
+      "fact_id": "5827666c5ec237a1"
+    },
+    {
+      "comparison": "Its diamond-product example has an intrinsic coarse-versus-fine gap, with different fibers, grids, measures, and depth constants. It is not this vanishing-area sequence and weak limit.",
+      "fact_id": "1bd53eb9ce320792"
+    }
+  ],
+  "readability": "The boxed estimate is taken from the predecessor proof, as the draft explicitly says. The predecessor statement's unit-ball normalization is narrower than its boxed calculation.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c0c8f5c1d0ba42d8fb01d218624c2dbc8fe7fbb7e95d8bb04958b013c8d5b1d7",
+  "reviewed_statement_sha256": "64c4d2c526bd32c74a40857b29604cfef484181f2e8539eddfec95a989665b54",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:33:40Z",
+  "summary": "The exact finite-grid census, cap comparison, weak limit, and recovering fine-grid marks establish the claimed jump for a genuine fine lattice.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

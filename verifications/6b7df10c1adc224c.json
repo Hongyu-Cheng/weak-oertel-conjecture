@@ -1,0 +1,63 @@
+{
+  "candidate_id": "3c8a10b70459e6c0",
+  "candidate_sha256": "a465d27ddd3697361e974c13cf167059e338393aeaf03fba7dbe42b461adaad9",
+  "checked_dependency_candidate_sha256": {
+    "29f2ee400dd21ddb": "fe1f48d59f98fb7cbb2a7cfff55e9581e1d8e1c27fd310857904efa7db48bf67",
+    "90635d89643091d2": "e30b62eccd188fa683ff516e4a97e31f8acd36b993fe360b0654d3656ea43336"
+  },
+  "checks": [
+    "Each cell closure is contained in the compact convex intersection defined by the corresponding weak inequalities and equalities, so it supplies a valid compact mixed set to the probability iteration.",
+    "Strict signs are preserved by finite-step averaging. The limit is convex-order dominated on the closed cell, so the supporting-boundary lemma gives zero mass to each originally strict boundary. Equality cells are unchanged.",
+    "The finite mixture preserves cell masses and full means. A Boolean combination is a union of cells and each hinge is affine or zero there.",
+    "With exact-base conditioning the base never moves, the covariance halves at each step and the continuous centroid inherits all strict signs. This preserves fiberwise joint complement moments rather than merely their aggregate.",
+    "Every pairwise-affine difference refinement fixes a maximizing piece on each cell. The energy change is the weighted half trace of within-class covariance and vanishes exactly at point masses.",
+    "Both parity and fixed-base variants match bee6fd4790a9be39:02–03. The proof never assigns parity averaging the stronger fixed-base invariants."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "29f2ee400dd21ddb",
+      "candidate_sha256": "fe1f48d59f98fb7cbb2a7cfff55e9581e1d8e1c27fd310857904efa7db48bf67",
+      "fact_id": "29f2ee400dd21ddb",
+      "fact_sha256": "9e38c2f3911bafe80dabc5c6007fd06f3bc2711a1cc8593f8bee8889437322e3",
+      "hypotheses": "Apply the theorem to the normalized positive restriction of each sign cell, considered as a probability on its compact convex weak-sign envelope intersected with the mixed grid.",
+      "reviewed_proof_sha256": "8a29f27be7bf0ee69cc717a500f33c7e1e692a737e0dde3a37593e53fabc54bf",
+      "reviewed_statement_sha256": "6638d9e82e0bf977922d4a5b52f9afd0825e6a7e607e7e8467e9aeb31717a08b"
+    },
+    {
+      "candidate_id": "90635d89643091d2",
+      "candidate_sha256": "e30b62eccd188fa683ff516e4a97e31f8acd36b993fe360b0654d3656ea43336",
+      "draft_key": "pk-w36-menu-convex-order-boundary",
+      "hypotheses": "Same-wave boundary lemma. The source and the weak limit have mass one, are on the same weak sign halfspace in the compact cell envelope, and the limit has all continuous convex integrals no greater than the source. Apply with the oriented margin for each strict sign.",
+      "review_status": "Requires independent approval of the exact same-wave input.",
+      "reviewed_proof_sha256": "0c7b30832b2a748877ad027733df08c9ea225ff0936aa15ae154db3b3345300c",
+      "reviewed_statement_sha256": "7724097ddd20e8941880c4cfda99b9f77cf11817844a397d2344cb04992ea6a4"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:38:22Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies full convergence, barycenter and energy for the unconditioned original-parity operation. The strict sign disintegration, boundary retention, fixed-base joint moments and max-affine refinement are additional.",
+      "fact_id": "29f2ee400dd21ddb"
+    },
+    {
+      "comparison": "Provides an original-parity-mass array for a discrete lattice table. It has no continuous affine sign-cell boundary transfer or full limit of the cell-conditioned iteration.",
+      "fact_id": "464815b935df9890"
+    }
+  ],
+  "readability": "No substantive ambiguity.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "56c5c99466c59e35fd02b15a2fd6c31e3062563b00a011ef91ff091ea5dcb7f6",
+  "reviewed_statement_sha256": "8a881710864f64d2673748e6e030c0c79c6ba20ed251952d277c94969b97f16a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:33:36Z",
+  "summary": "The two conditional averaging rules preserve the stated cap data. Supporting-boundary control is used precisely at the weak limit of each strict cell.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

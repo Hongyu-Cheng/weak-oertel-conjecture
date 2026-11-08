@@ -1,0 +1,52 @@
+{
+  "candidate_id": "a813e5c5ad369ad8",
+  "candidate_sha256": "6e5bbca2f54b4a6fe70f422343d98e64a79ac435188db51efd9b7cc83abce5f7",
+  "checked_dependency_candidate_sha256": {
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "After identifying aff F isometrically with R^m and translating x_0, the input is a full-dimensional convex m-body with an interior mark. The accepted minimizer has denominator strictly positive on the whole compact body, and its first moment identity uses exactly the density L^(−m−2).",
+    "The chart inverse is y/(1−a·y) after the translation. Positive endpoint denominators give the full image of a segment by positive reweighting. The Jacobian is L^(−m−1), so the image volume is E, its first moment is the stationary integral, and dividing the escort density by this Jacobian yields ell(y)/E.",
+    "The graph height ell is affine and strictly positive on the compact image D. Its subgraph has nonempty (m+1)-interior and volume E by the volume and centroid identities. Fubini shows that the normalized uniform volume projects to the normalized escort. The lifted centroid projects to a point in D.",
+    "A physical closed halfspace with intrinsic margin u·(x−x_0)≥b pulls back to (u+ba)·y≥b since ell>0. If the transformed margin is constant and contains the selected point it contains all of D. Otherwise ordinary Grünbaum applies to the lifted containing halfspace and gives Γ_{m+1}, including at boundary. The singleton and codimension statements follow directly.",
+    "For the interval objective the denominator product (1−at)(1+a(1−t)) is a strictly concave quadratic, maximized at a=(1−2t)/(2t(1−t)). The endpoint denominator values are 1/[2(1−t)] and 1/(2t), giving E=4t(1−t). The upper integral from t is [1−(2t)^2]/(2aE)=1/4+t/2 for a≠0, and at a=0 the uniform computation gives 1/2. Complementation gives the lower integral. Exact fraction spot checks agree.",
+    "The frozen source locators match 0798d34d2fb14df0 §5, (11)–(14) and the following interval calibration."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "check": "Apply it in the intrinsic m-dimensional affine span for m>0. The compact convex full-dimensional F and relative-interior mark satisfy its hypotheses. Its unique positive minimizer, exact first moment and reciprocal normalization match the proof. The m=0 atom is treated separately.",
+      "fact_id": "d90ba05577427854"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:37:21Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "check": "It gives unique attainment, image volume, stationary barycenter in the original coordinates and escort normalization. It does not give the affine-density height lift or a center for the escort's physical halfspaces. The interval shows the original centroid can have depth below the lift constant.",
+      "fact_id": "d90ba05577427854"
+    },
+    {
+      "check": "Its pointed product-cone marginal is this same compact escort, with extra cone geometry. It supplies no bounded affine height lift or the selected center.",
+      "fact_id": "34836225febf7839"
+    },
+    {
+      "check": "It identifies a limiting escort on an actual pointed exposed face under closed pointed normal-cone hypotheses. This draft starts from the already specified ordinary compact-face escort, so its representation and depth result do not depend on proving such a limit.",
+      "fact_id": "b3203e0a479b9869"
+    }
+  ],
+  "readability": "The last paragraph is the proof-side calibration at the original escort barycenter, distinct from the selected inverse image of the lifted centroid.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "daa31f32199551d3890c75ee1587dc245b86b3075b904fdeb12576307b11080b",
+  "reviewed_statement_sha256": "28741cbdac96fa192a0ac890d8e56a0ff29ba8f704bc78be834ab90ae9bfb025",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:31:48Z",
+  "summary": "The pushforward is the positive affine density on the centered projective image. The height lift and closed-halfspace pullback give the claimed selected center and the interval computation is exact.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

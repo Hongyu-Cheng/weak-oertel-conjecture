@@ -1,0 +1,66 @@
+{
+  "candidate_id": "2a76746531375103",
+  "candidate_sha256": "17aaccd852851d27f2f1af0c74103be0761a2eb3c4bcd367eeef7ce4f659cd94",
+  "checked_dependency_candidate_sha256": {
+    "2acc8bc803acf1c0": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232"
+  },
+  "checks": [
+    "The projection is [-1,1] and the extreme fibers are B_r. At base zero all hull points lie in T by B_r⊂T, and every point of T is included. The middle affine plane and a single lifted endpoint span the ambient space even at r=0.",
+    "At r=1/10 the endpoint masses are each V/10000 and the total is (1+2/10000)V. Every barycentric cap at a central mark has central volume (1−λ_i)^4 V. If i is nonzero and the cutoff exceeds 1/10, it misses both endpoints. The complementary cutoff case uses t<(9/10)^4. For λ_0 both endpoints together cost at most 2V/10000.",
+    "Independent rational arithmetic recovered t=160016/390625, the positive residual numerators 2032792963819263760799 and 664183074753367294559 over 10^28, and 4a_*+b_*−4=19/10^7. The five inferred coordinate bounds contradict their required sum one.",
+    "The two endpoints are strictly exposed and each has raw maximum at most V/20000 from complementary through-mark caps. Upper semicontinuity and compactness make the pointwise strict bound a strict maximum bound. At r=0, pure-base isolated endpoint caps have zero mass, and the sole positive fiber has raw simplex maximum gamma_4 V, yielding the stated normalized value.",
+    "Original 591372228b947f75:07, lines 182–206, compares global maxima. The subsidiary 8dd62757ee4f1859:05, lines 87–120, gives exactly the central barycentric test, reproduced completely in the frozen proof.",
+    "Matched the frozen raw input, its decoded statement and proof, and the stated source sections and raw source digests to the pinned inputs."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "2acc8bc803acf1c0",
+      "candidate_sha256": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232",
+      "fact_sha256": "d723a90d8b085a401f611b136903b3e751c05bbebed3219fd24588e89ed96ce4",
+      "hypotheses": "Apply the pointwise exposed-fiber identity at both positive extreme bases for r=1/10, and at the sole positive base for r=0. Apply the intrinsic simplex case in dimension four, transported by an invertible continuous affine map, and the compact closed-depth attainment argument.",
+      "reviewed_proof_sha256": "985b3dbdcc98c63b1ba63f236c11170d9714cc5a6cdba6af26568d2f9e370fcf",
+      "reviewed_statement_sha256": "8222b1c3268f5a4fb65d04c6e4e448ab1a57a3a2e33b9855b7c92748ff4b2dfa"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:39:13Z",
+  "gaps": [],
+  "input_sources": [
+    {
+      "candidate_id": "591372228b947f75",
+      "candidate_sha256": "41706cdae66d399967a47c8643cccc3c17997fb7ee039a9b9c1eccf3700800d9",
+      "locator": "591372228b947f75:07 Removing tiny fibers can increase the global optimal depth, lines 182–206"
+    },
+    {
+      "candidate_id": "8dd62757ee4f1859",
+      "candidate_sha256": "e40aa06db4c74712a00df5bd43c9de709d78d5b68f61e180a3d37b04fd907f75",
+      "locator": "8dd62757ee4f1859:05 Higher-dimensional barycentric marginal-lifting obstruction, lines 87–120"
+    }
+  ],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its padded bodies use the same original three-fiber D and reproduce the same central raw root obstruction. Restricting its cap test recovers that middle estimate. The fact does not bound both endpoints of the unpadded body or compare its global maximum to the actual r=0 body.",
+      "fact_id": "875f3a93f59dd606",
+      "fact_sha256": "8d29de7eb7247b826a176408a2b4a6be8eaa9fc2fc8430e632ccd7e65cc908d9"
+    },
+    {
+      "comparison": "Its exposure and simplex depth identities supply the endpoint and limiting calculations. It does not supply the three-fiber central root obstruction or the comparison across collapsing fibers.",
+      "fact_id": "2acc8bc803acf1c0",
+      "fact_sha256": "d723a90d8b085a401f611b136903b3e751c05bbebed3219fd24588e89ed96ce4"
+    }
+  ],
+  "readability": "The overlapping marginal-lifting source is credited and fully proved as an input inside this candidate. No external approval of its draft is needed for this independently verified proof.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "96fec792b41dcf16a390be9206a983bf6c8698f6ada0e3c23f9d1f140b46b9a7",
+  "reviewed_statement_sha256": "9db629e209c181738e9694839e9dd199220d31bf08015fe92111f8f76d9a8321",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:33:51Z",
+  "summary": "The exact central-fiber certificate, the exposed endpoint bounds, and the r=0 calculation give a strict comparison of global maxima on the two actual bodies.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

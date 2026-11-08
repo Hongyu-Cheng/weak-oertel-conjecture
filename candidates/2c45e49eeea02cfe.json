@@ -1,0 +1,30 @@
+{
+  "advances": "Ordinary volume and the actual volume pushforward. No analogous equality for a mixed sampled law is asserted.",
+  "author": "PK-research-agent",
+  "candidate_id": "2c45e49eeea02cfe",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.173528+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-radial-balanced-projection-maximum",
+  "kind": "theorem",
+  "proof": "Every halfspace in $U$ through $p=\\pi_U(y_*)$ lifts to an ambient halfspace through $y_*$. Its pushforward mass is at least $A$, and the selected normals give caps of mass exactly $A$. A containing halfspace contains its parallel through-point halfspace, so the projected raw depth of $p$ is $A$. At any $z\\in U$, the balance gives $u_i\\cdot(z-p)\\ge0$ for some $i$. The halfspace $u_i\\cdot w\\ge u_i\\cdot z$ contains $z$ and is contained in the halfspace $u_i\\cdot w\\ge u_i\\cdot p$ of mass $A$. This bounds every projected candidate, including points outside the support.\n\nFubini gives the slice formula and total mass $|K|$. The support is the compact convex body $\\pi_U(K)$ because projection takes the interior of $K$ onto the interior of $\\pi_U(K)$. For the latter assertion, take an interior point of $K$ and extend the segment from its projection to any given point of $\\operatorname{int}\\pi_U(K)$ slightly past that point in $\\pi_U(K)$. Interpolating the interior point with a preimage of the far endpoint gives an interior preimage of the given point. This also shows positivity of the slice volume there, while boundedness follows by enclosing $K$ in a ball. For $r<d$, Minkowski interpolation of the parallel slices and Brunn–Minkowski show concavity of the positive slice-volume power $1/(d-r)$ wherever the two slices have positive volume. This proves log-concavity, with the zero-density cases immediate, and interior continuity. When $r=d$ the indicator supplies the same properties.\n\nFor existence of the balance, every deepest point is interior. An interior inball gives positive depth at its center, whereas at a boundary point a supporting halfspace meets $K$ only in a Lebesgue-null plane. Through-point cap masses are jointly continuous in unit normal and mark by dominated convergence off the limiting hyperplane. Hence the active set at $y_*$ is nonempty and compact. If its convex hull omits zero, strict separation gives a vector $v$ whose scalar products with the active normals are uniformly positive. On an open neighborhood of the active normals, these scalar products are still bounded below by a positive constant. Moving the mark a small distance along $-v$ increases every cap in that neighborhood by a uniform positive multiple of the distance, from the added slabs inside an inball about $y_*$. On the remaining compact set of normals the old masses have a uniform positive gap above $A$, which persists for a small move by joint continuity. This contradicts maximality. Carathéodory gives a finite balance, and deleting zero coefficients makes it positive. If a balanced family has rank one, it contains both unit normals in its line. Their caps have mass $A$ and partition $K$ up to a null hyperplane. Thus $A=|K|/2$. Any other pair of opposite caps each have mass at least $A$ and sum to $|K|$, so every direction is active.\n",
+  "source_candidate_ids": [
+    "faf22898d0dc8331"
+  ],
+  "source_candidate_sha256": {
+    "faf22898d0dc8331": "526af144af98a550bc419fa217370a6e73e0ada7ee811319f23e8c8c2a4a7fcb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "faf22898d0dc8331",
+      "locator": "faf22898d0dc8331:03 §3, (9), exact projected maximum"
+    },
+    {
+      "candidate_id": "faf22898d0dc8331",
+      "locator": "faf22898d0dc8331:04 §4, (10) and rank-one conclusion"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a full-dimensional compact convex body, and let $y_*$ attain its maximum raw ordinary closed-halfspace depth $A$. A unit normal $u$ is active at $y_*$ if the cap $u\\cdot(x-y_*)\\ge0$ in $K$ has volume $A$. Suppose that a finite active family $u_i$ admits a positive balance $\\sum_i\\lambda_i u_i=0$, with all $\\lambda_i>0$. Let $U=\\operatorname{span}\\{u_i\\}$ have dimension $r$, and let $\\pi_U$ be orthogonal projection onto $U$. The pushforward of the volume of $K$ to $U$ has raw maximum closed-halfspace depth exactly $A$, attained at $\\pi_U(y_*)$. Its density at $z\\in\\pi_U(K)$ is the perpendicular slice volume $\\mathcal H^{d-r}(K\\cap(z+U^\\perp))$ for $r<d$, and is the indicator of $K$ when $r=d$. This density is bounded and log-concave, positive and continuous in the interior of its compact full-dimensional support.\n\nAt any such $y_*$ the full set of active unit normals has a finite positively balanced subfamily. If it has a balanced subfamily of rank one, then $A=|K|/2$ and all unit normals are active. Hence for $d>1$ the complete active span cannot have rank one.",
+  "subgoal_id": "pk-intake-pk-w36-radial-balanced-projection-maximum",
+  "title": "Projection to a balanced active normal span preserves maximum depth"
+}

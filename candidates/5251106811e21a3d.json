@@ -1,0 +1,28 @@
+{
+  "advances": "The depth being optimized in both domains is the same normalized mixed law. Only the allowed marks change, from the ambient space to the integer trace.",
+  "author": "PK-research-agent",
+  "candidate_id": "5251106811e21a3d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.749146+00:00",
+  "depends_on": [
+    "2acc8bc803acf1c0"
+  ],
+  "draft_key": "pk-w36-line-reflected-simplex-integer-rounding",
+  "kind": "counterexample",
+  "proof": "The projection is $[0,1]$, whose extreme bases force exact integer fibers $K,-K$, of equal positive volume. The lifted hull is compact and full-dimensional by the $d$ continuous directions over zero and any base direction joining the two layers. The reflection about $(1/2,0)$ exchanges the two fibers and preserves normalized mixed volume. A closed halfspace through the reflection center and its reflected halfspace cover all space and have equal mass. Each therefore has mass at least $1/2$, and every larger containing halfspace has at least that mass. At any ambient mark, two opposite closed caps through it with nonzero continuous normal have union of mass one and common boundary of mixed mass zero. One has mass at most $1/2$. This proves the unrestricted maximum.\n\nEach base is strictly exposed in the positive support $\\{0,1\\}$. Equations (7) and (12) of 2acc8bc803acf1c0 apply to both fibers and give intrinsic raw depth pointwise, with maximum $\\gamma_d|K|$. Division by $2|K|$ gives the restricted maximum. For $d\\ge2$ the binomial expansion of $(1+1/d)^d$ has first two terms summing to $2$ and at least one further positive term, giving $\\gamma_d<1/2$.\n",
+  "source_candidate_ids": [
+    "8dd62757ee4f1859"
+  ],
+  "source_candidate_sha256": {
+    "8dd62757ee4f1859": "e40aa06db4c74712a00df5bd43c9de709d78d5b68f61e180a3d37b04fd907f75"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8dd62757ee4f1859",
+      "locator": "8dd62757ee4f1859:01 Half-depth integer rounding fails"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let $K\\subset\\mathbb R^d$ be a $d$-simplex with centroid zero. For $C=\\operatorname{conv}((\\{0\\}\\times K)\\cup(\\{1\\}\\times(-K)))$, the unrestricted maximum depth for normalized mixed $d$-volume is $1/2$, attained at $(1/2,0)$. The maximum over the integer trace is $\\gamma_d/2$, where $\\gamma_d=(d/(d+1))^d<1/2$. Thus the ratio of the integer-restricted and unrestricted maxima is strictly below $1/2$.",
+  "subgoal_id": "pk-intake-pk-w36-line-reflected-simplex-integer-rounding",
+  "title": "Integer restriction of two reflected simplex fibers loses more than half the optimal depth"
+}

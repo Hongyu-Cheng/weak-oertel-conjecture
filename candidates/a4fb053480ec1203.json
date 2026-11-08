@@ -1,0 +1,29 @@
+{
+  "advances": "Bounds joint volumes in one actual fiber from original union masses, without an implication about a point simultaneously outside all original caps.",
+  "author": "PK-research-agent",
+  "candidate_id": "a4fb053480ec1203",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.743319+00:00",
+  "depends_on": [
+    "06fed2682a269d0d",
+    "0f6ca72852c286b2"
+  ],
+  "draft_key": "pk-w36-menu-joint-remainder-union-budget",
+  "kind": "theorem",
+  "proof": "The function $F$ is continuous, goes from $M$ to zero on $[0,W]$, and is strictly decreasing there because a term with $w_z=W$ strictly decreases up to $W$. This gives the claimed root for $0<L<M$. If $L=0$, every union has zero mass on each positive fiber, so a fiber of mass $W$ satisfies the claim. Otherwise suppose the common threshold fails, and set $t=V(\\mathcal G)<t_*$ in pk-w36-menu-joint-remainder-max-min, with all divisors one. Select at most $m$ groups with the same value $t$. At each base one of the selected groups has residual $\\le t$, so the sum of their captured masses in that fiber is at least $(w_z-t)_+$. Summing over the fibers gives\n$$\nL\\ \\ge\\ \\sum_{I\\in\\mathcal J} B_I\\ \\ge\\ F(t)\\ >\\ F(t_*)=L ,\n$$\na contradiction. This uses each group's actual union mass. Any upper bound $mB_r<M$ for $L$ gives an equal or weaker threshold by monotonicity of $F$, including the zero case.\n\nFor the cover assertion, a finite closed union covering a positive compact convex fiber almost everywhere covers it entirely. The intersection of the strict complements with its relative interior is empty. Apply ordinary Helly in its affine $q$-plane to retain at most $q+1$ caps covering its relative interior, hence the whole fiber, with the singleton case immediate. The proof of 0f6ca72852c286b2 selects at most $m$ of these original lists with every positive fiber covered by one list. Their unions cover all measured mass, so their summed union masses are at least $M$; one has mass at least $M/m$.\n",
+  "source_candidate_ids": [
+    "fd71224e218c86d2"
+  ],
+  "source_candidate_sha256": {
+    "fd71224e218c86d2": "16ac75da2864496f4c1cd5be15a907120b8b51f042b0eebc47d29d6c3fe607d2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fd71224e218c86d2",
+      "locator": "fd71224e218c86d2:04 §3, (3), one fiber with a common quantitative joint-remainder guarantee"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ nonempty, $q=\\dim_H S$, $\\mu=\\mathcal H_q|_S$, and $P$ the bases of the positive $\\mathcal H_q$-measure fibers $K_z$, with $w_z=\\mathcal H_q(K_z)$, $M=\\sum_{z\\in P}w_z$ and $m=2^n$. For a finite list of original closed ambient halfspaces $H_i$ and a nonempty group $I$ of their indices, write $U_I=\\bigcup_{i\\in I}H_i$, $e_I(z)=\\mathcal H_q(K_z\\setminus (U_I)_z)$, and $B_I=\\mu(U_I)$.\n\nLet $\\mathcal G$ be a nonempty finite family of groups. Let $L$ be the sum of the largest $\\min(m,|\\mathcal G|)$ union masses $B_I$, $W=\\max_z w_z$ and $F(t)=\\sum_{z\\in P}(w_z-t)_+$. If $0<L<M$, let $t_*\\in(0,W)$ be the unique root of $F(t_*)=L$. If $L=0$, put $t_*=W$. Then some $z_*\\in P$ satisfies $e_I(z_*)\\ge t_*$ for every $I\\in\\mathcal G$. The same guarantee holds with $L$ replaced by $m B_r<M$ whenever $B_I\\le B_r$ for all groups in the menu, for example when they have size at most $r$ and this bound holds for each such group. For any finite almost-everywhere cover, some group of at most $q+1$ original caps has union mass at least $M/m$.",
+  "subgoal_id": "pk-intake-pk-w36-menu-joint-remainder-union-budget",
+  "title": "A simultaneous joint-remainder bound from the largest original union masses"
+}

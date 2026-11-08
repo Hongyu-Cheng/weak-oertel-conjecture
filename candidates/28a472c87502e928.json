@@ -1,0 +1,36 @@
+{
+  "advances": "Positive sampled residual roots of actual mixed fibers, with a weighted extension conditional on every destination being an obstacle contact.",
+  "author": "PK-research-agent",
+  "candidate_id": "28a472c87502e928",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.170814+00:00",
+  "depends_on": [
+    "2f7f50e2d82bbc08"
+  ],
+  "draft_key": "pk-w36-psd-residual-positive-contact-rigidity",
+  "kind": "theorem",
+  "proof": "For every allowed subset $J$, the set $U_J$ is convex because it uses the actual strict complements of closed halfspaces. Consider finitely many positive integer fibers of $U_J$ and a convex combination of their bases with positive coefficients whose barycenter is another integer base. The weighted Minkowski sum of the sections is contained in the section at that barycenter. The positive sections have affine dimension $q$. The affine direction of their sum is the sum of their affine directions: keeping points fixed in the other summands and taking differences shows that it contains each direction, and all differences lie in their sum. If two directions differed, the barycenter section would have dimension greater than $q$ at an integer base, contrary to the definition of $q$. Hence the sections have the same $q$-dimensional direction space, the barycenter lies in the positive-volume base set, and intrinsic Brunn–Minkowski gives the usual root inequality after translating to that direction space. One can take closures since the sections are bounded convex sets of positive intrinsic volume, and their relative boundaries are volume-null. The inclusion persists for the weighted sum of the closures by approximating finitely many summand points.\n\nFor the midpoint take distinct $p_a,p_b$ of the given parity, since equal bases give the trivial identity. Every allowed $J$ has positive $q$-volume at both endpoints because the minimum roots there are positive. Therefore the midpoint is a positive base and every midpoint root is at least the mean of the two endpoint roots, which is at least $(e_a+e_b)/2$. Taking the minimum gives the lower bound on $e_c$. A feasible supporting plane at $p_c$ and the base midpoint identity give $e_c\\le h_c\\le(h_a+h_b)/2$. Since the endpoints are contacts, equality follows throughout. Any finite convex interpolant with these values has equality in its midpoint convexity inequality and hence is affine on the segment: if it lay strictly below the endpoint chord at any interior point, taking a convex combination of that point and the opposite endpoint would put its midpoint value strictly below the chord. For a minimizing subset at the midpoint, equality in the root inequality forces both endpoint roots to equal their own minima and forces equality in Brunn–Minkowski.\n\nFor a positive-mass KKT row, the finite residual martingale dual theorem gives an obstacle contact at the source and a supporting-plane equality for every positive target. Let the row probabilities be $\\pi_{ij}/\\lambda_i$. All positive targets have $h_j=e_j>0$ by hypothesis, so the source height, which equals their row average by the affine support equality and the martingale displacement equation, is positive. Take a minimizing subset $J$ at this source. Every destination root is at least its positive contact height, so the weighted Minkowski argument applies at the integer source. The source root equals its height, the row average of the heights. Thus the weighted Brunn–Minkowski lower bound and every destination root bound are equalities. This proves that the same $J$ minimizes at each destination.\n\nIn either case, for $q\\ge2$ equality for positive convex bodies in a common dimension implies positive homothety of the closed summands. In the many-summand case this follows from the two-summand equality case, since strictness for any pair would persist after first grouping it and then applying the weighted inequality to the group and all remaining summands. The weighted Minkowski sum is contained in the barycenter residual closure and has the same positive $q$-volume by the equality, so the two closed convex bodies coincide. Indeed a strict inclusion of full-dimensional compact convex sets in one affine space gives positive excess volume by taking an interior neighborhood of a point outside the smaller set along a segment from an interior point. For homothetic summands the centroid of their weighted sum is the weighted sum of their centroids, by writing each as a positive scaling and translation of a common body. For $q=1$ the endpoints of the intervals add with the same weights and give the same centroid statement.\n",
+  "source_candidate_ids": [
+    "99d50c87eb055f05"
+  ],
+  "source_candidate_sha256": {
+    "99d50c87eb055f05": "c97dd2f1db57a62b8a89934baed2a308c5089f678e61dea1bd5cab6a4038f730"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "99d50c87eb055f05",
+      "locator": "99d50c87eb055f05:5 §5, (18)"
+    },
+    {
+      "candidate_id": "99d50c87eb055f05",
+      "locator": "99d50c87eb055f05:6 §5, paragraph after (18)"
+    },
+    {
+      "candidate_id": "99d50c87eb055f05",
+      "locator": "99d50c87eb055f05:7 §5, final paragraph"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact and convex, and let $q\\ge1$ be the maximum affine dimension of a nonempty integer fiber. List all its positive $\\mathcal H^q$ integer fibers as $K_i=C_{p_i}$, with $V_i=\\mathcal H^q(K_i)$, and let $\\mu$ sum their intrinsic $q$-volumes. Given finitely many original closed ambient halfspaces $H_a$ and an integer $t\\ge0$, set\n$$\nU_J=C\\cap\\bigcap_{a\\in J}H_a^c,\\qquad\ne_i=\\min_{|J|\\le t}\\mathcal H^q((U_J)_{p_i})^{1/q}.\n$$\nUse these obstacles in the finite sampled convex-majorant program with power $q$.\n\nFor any feasible sampled heights $h$, call $p_i$ a positive obstacle contact if $h_i=e_i>0$. If two positive contacts $p_a,p_b$ have the same coordinatewise parity, their integer midpoint $p_c$ is a positive contact and\n$$\ne_c=h_c=(e_a+e_b)/2 .\n$$\nEvery finite convex interpolant of the sampled heights is affine on $[p_a,p_b]$. Every $J$ minimizing at $p_c$ also minimizes at both endpoints. The positive residual closures at the endpoints are homothetic for $q\\ge2$, their Minkowski midpoint equals the residual closure at $p_c$, and their centroids average to its centroid. In dimension $q=1$ the same midpoint and centroid identities hold for the residual intervals.\n\nAlso take the finite KKT martingale coupling for an optimum. In any row of positive mass whose positive destinations are all positive obstacle contacts, a residual subset $J$ minimizing at the source minimizes at every positive destination, and the source residual centroid is the average of their residual centroids with the normalized row weights. In this case the positive destination residual closures are homothetic for $q\\ge2$ and the source residual closure is their row-weighted Minkowski sum.",
+  "subgoal_id": "pk-intake-pk-w36-psd-residual-positive-contact-rigidity",
+  "title": "Residual rigidity at positive obstacle contacts"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "An actual convex-body regularity obstruction to identifying faces by differential rank. It does not obstruct repair along the actual generators, whose conditional law here is uniform.",
+  "author": "PK-research-agent",
+  "candidate_id": "d299f44058264f29",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.171820+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-abnormal-minty-rank-versus-face",
+  "kind": "counterexample",
+  "proof": "Choose a compact nowhere-dense subset $E\\subset(0,1)$ of positive length. For instance, in $[1/4,3/4]$ remove open intervals around a countable dense subset with total length less than $1/2$. Define\n$$\ng(x)=\\int_0^x\\mathbf 1_{[0,1]\\setminus E}(t)\\,dt,\\qquad f(x)=\\int_0^x g(s)\\,ds,\\qquad 0\\le x\\le1.\n$$\nThe function $g$ is Lipschitz and strictly increasing because every nonempty open interval contains an open subinterval off $E$. Thus $f$ is strictly convex and $C^{1,1}$ with derivative $g$ and with $f''=0$ almost everywhere on $E$. Since $0\\le g(x)\\le x$, one has $0\\le f(x)\\le1/2$. The body\n$$\nK=\\{(x,y):0\\le x\\le1,\\ f(x)\\le y\\le2\\}\\times[0,1]\n$$\nis compact, convex, and full-dimensional. On its lower cylindrical patch use $X(x,s)=(x,f(x),s)$ and $n(x)=(g(x),-1,0)/\\sqrt{1+g(x)^2}$ for $0<x,s<1$. Strict convexity makes the supporting line of the planar epigraph in this direction meet the graph only at $(x,f(x))$. Consequently the corresponding exposed face of $K$ is the full vertical segment at that point, of dimension one.\n\nThe original patch has area density $\\sqrt{1+g(x)^2}\\,dx\\,ds$. Its normal map depends only on $x$ and is injective as a function of $x$. Hence $E\\times(0,1)$ has positive area, and disintegrating the displayed density along each normal gives uniform $s$ on its generator. Except for edges of surface measure zero, no other patch has normals $n(x)$ with $0<x<1$, because the other planar faces have a coordinate normal different from these directions, since $0<g(x)$ for $x>0$. To see nullity of $n(E)$, the relatively open complement of $E$ in $[0,1]$ is a disjoint countable union of intervals with total length $|[0,1]\\setminus E|$. The strictly increasing $g$ maps each interval to an interval of the same length, since $g'=1$ there. The length of $g([0,1])$ is exactly $|[0,1]\\setminus E|$, so $g(E)$ is null. The map from $g(x)$ to $n(x)$ is Lipschitz on this bounded range, giving $\\mathcal H^1(n(E))=0$.\n\nFor the unit parallel body set $U(x,s)=X(x,s)+n(x)$. Its supporting normal at $U(x,s)$ is $n(x)$, and the nearest point of $K$ is $X(x,s)$ by the supporting inequality. In fact, every point on the unit parallel boundary has a unique outer unit normal: if $p$ is the point's nearest point of $K$, the boundary point also belongs to the unit ball centered at $p$ inside the parallel body, which forces the normal to be the radial vector at that point. Nearest-point projection onto $K$ is nonexpansive. Indeed the two projection inequalities imply $\\lVert p-q\\rVert^2\\le(p-q)\\cdot(y-w)$ for projections $p,q$ of $y,w$. The coordinate projections of $X$ then show that the inverse of $U$ on its patch is Lipschitz, and $U$ itself is Lipschitz because $g$ is. It carries $E\\times(0,1)$ to a set of positive surface area.\n\nAt almost every $x\\in E$, $g'(x)=0$ and $n'(x)=0$. At every such parameter and every $0<s<1$, the derivative of $U$ has independent columns $(1,g(x),0)$ and $(0,0,1)$. The derivative of $n(x)$ in these parameters is zero, and the bi-Lipschitz inverse makes its tangential derivative on the parallel patch zero. Thus its rank there is zero, and the proposed formula $2-\\operatorname{rank}(D\\text{Gauss})$ gives two, whereas the original exposed face has dimension one.\n",
+  "source_candidate_ids": [
+    "0e4329663b151582"
+  ],
+  "source_candidate_sha256": {
+    "0e4329663b151582": "12e074c5ba952f9c8a5497be00604c296e3c352dd5a4059e473d0b1599b296cb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0e4329663b151582",
+      "locator": "0e4329663b151582:01 Full unnumbered proof, displayed f', X, n, and U"
+    }
+  ],
+  "statement": "There is a full-dimensional compact convex body $K\\subset\\mathbb R^3$ whose unit parallel body has Gauss map of tangential differential rank zero on a set of positive surface area, although all corresponding exposed faces of $K$ have dimension one. The normals in this example form a set of zero $\\mathcal H^1$ measure with positive mass for the original surface-area normal marginal. On the generators with these normals the original conditional surface law is uniform.",
+  "subgoal_id": "pk-intake-pk-w36-abnormal-minty-rank-versus-face",
+  "title": "Parallel-body Gauss rank need not determine exposed-face dimension"
+}

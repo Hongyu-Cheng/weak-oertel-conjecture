@@ -1,0 +1,26 @@
+{
+  "advances": "Conditional on the existence of the specified simultaneous contact rows. Terminals are characterized by the chosen rows. Geometric exposure of every terminal and any coarea-weighted payment are separate requirements.",
+  "author": "PK-research-agent",
+  "candidate_id": "2a80bb4c3eacf073",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.753422+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-localize-chosen-contact-absorption",
+  "kind": "lemma",
+  "proof": "Every coordinate of the base and lift is harmonic under the transition matrix, including the identity rows. In a finite closed irreducible class, a base coordinate attains a maximum, and every successor of a maximizing state with positive transition probability has the same maximum by the averaging identity. Irreducibility propagates this maximum throughout the class. Applying this to each base coordinate gives a common base, hence a singleton because there is one state per base. A singleton at a chosen row cannot be closed, so the closed recurrent classes are precisely the terminal singleton states.\n\nThe communicating-class quotient is acyclic, since a directed cycle of classes would merge them into a single communicating class. From every state there is a positive-probability path to a terminal singleton. Finiteness gives a uniform positive lower bound on the probability of hitting a terminal within some fixed number of steps, by taking a shortest such path from each state and minimizing the products of its positive transition probabilities. Applying this bound in successive blocks gives almost sure absorption. The coordinate martingales are bounded and become constant at absorption, so bounded convergence gives both terminal expectations. An affine functional at its maximum satisfies the same averaging argument as the base coordinates above, so every successor of a state where it is tight also makes it tight. This applies simultaneously to any specified support equalities of that kind.\n",
+  "source_candidate_ids": [
+    "c90117ce6c41cc95"
+  ],
+  "source_candidate_sha256": {
+    "c90117ce6c41cc95": "e6f3b6552a2fc6a3242c64ff6b75bc6b11bf5afd35b9df63bde4804d69d2b357"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c90117ce6c41cc95",
+      "locator": "c90117ce6c41cc95:05 §4, finite absorption of chosen contact rows, lines 159–186"
+    }
+  ],
+  "statement": "Take a finite family of lifted simplex vertices of one fixed vertex type, one state per distinct base, with base coordinates $z_i$ and lifted coordinates $v_i$. At each state with a chosen contact row, suppose the row is a probability vector on the state space which preserves both the base and lift by weighted averaging, and assigns positive mass to a state other than its starting state. At states without a chosen row use the identity row. Then the resulting chain is almost surely absorbed at a state without a chosen row. Its terminal base and lift have expectations equal to the starting base and lift, respectively. Any affine functional of the base and lift which is bounded above on the state space and attains its upper bound at the starting state stays at that bound along the chain.",
+  "subgoal_id": "pk-intake-pk-w36-localize-chosen-contact-absorption",
+  "title": "Finite chosen contact rows preserve base and lift through absorption"
+}

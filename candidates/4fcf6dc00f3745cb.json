@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary actual triangles, not independent cap marginals or the mixed section weights. Gives an exact feasibility description, without needing to prove a new uniform reciprocal-weight bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "4fcf6dc00f3745cb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:31:16.399450+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-chords-corner-elimination",
+  "kind": "lemma",
+  "proof": "Let $h_i=v_i\\cdot(P_i-y_0)>0$. The two normals $v_1,v_2$ are independent, since otherwise $v_3=-v_1-v_2$ would lie in the same line. Take the two coordinates to be $v_1\\cdot(X-y_0)$ and $v_2\\cdot(X-y_0)$ divided by $h_2+h_3$. The canonical third margin is the negative sum. The positive second and third vertex heights are now $p,1-p$ for some $0<p<1$, and the signs at the three vertices give exactly the displayed coordinates and strict conditions. The linear map scales every area by its fixed positive Jacobian, and the margin normalization divides all heights by the same number. In any of these coordinates the area of cap $i$ is its chord length times its Euclidean apex-to-line distance divided by two, hence $q_i|K|=h_i\\sigma_i/2$ with the heights and chords in the corresponding coordinates. Therefore the $q_i$ and normalized reciprocal weights are preserved.\n\nConversely the three cyclic determinants from zero are $ap-xz$, $x(1-p-y)+py$, and $yz+a(1-p-y)$. Each is strictly positive; for the first use $x<p$ and $z<a$. Their sum is twice the oriented triangle area, and dividing the opposite cyclic determinants by that sum gives the positive barycentric weights of zero. The strict vertex incidences are immediate from the three canonical margins. Each corner cap area fraction is the product of the two edge intercept fractions $h_i/(h_i+b)$, where $-b$ is the corresponding negative vertex margin. This gives $q_1=q$, $q_2=p^2/[(p+z)(1-y)]$, and $q_3=(1-p)^2/[(1-p+a-z)(1-x)]$. The cap-area to coarea identity gives the stated formula for $\\lambda_1$.\n\nThe cap ceiling is now exactly $q\\le c$, $v\\ge C/c$, and $v\\le w-D/c$ within $p<v<p+a$. The sorted profile is the minimum of the three sums with exactly one of the $q_i$ quarter weighted, so its bound is the union of the three inequalities $C'/v+D'/(w-v)\\le T$ for the displayed triples. Since $0<v<w$, multiply by $v(w-v)>0$ to obtain the quadratic inequalities. All $T>0$ as $q\\le c<1$, so each quadratic sublevel is empty or the closed interval between its real roots, including a possible singleton. Intersection with the cap and geometric constraints can leave open endpoints, and a singleton is retained only if it satisfies the strict geometric constraints. Finally, $\\lambda_1<2/9$ is equivalent to $J(v)>7a/(2q)$. The affine function has this strict value somewhere in a nonempty interval exactly when its supremum on that interval exceeds the threshold. The direction of its slope chooses the endpoint, and strictness makes an excluded endpoint harmless.\n",
+  "source_candidate_ids": [
+    "90e3574e09ed8576"
+  ],
+  "source_candidate_sha256": {
+    "90e3574e09ed8576": "3b465e3608bca5f656dfe56c588c8a870db4ff00e146103abf91ffeb00aaddf1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "90e3574e09ed8576",
+      "locator": "90e3574e09ed8576:01 §§1–3, (1)–(11)"
+    }
+  ],
+  "statement": "Let $K$ be a nondegenerate planar triangle with an interior mark $y_0$. Let nonzero spanning normals $v_1,v_2,v_3$ sum to zero, and suppose their through-mark nonnegative caps each strictly capture a different vertex $P_i$ and strictly exclude the other two. Write $q_i$ for the cap area fractions, $\\sigma_i$ for the cutting chord lengths divided by the respective normal norms, and $\\lambda_i=(1/\\sigma_i)/\\sum_j(1/\\sigma_j)$.\n\nOne can translate the mark to zero and apply linear coordinates and common positive normalization so the normals are $(1,0),(0,1),(-1,-1)$ and the vertices are\n$$\nP_1=(a,-z),\\qquad P_2=(-x,p),\\qquad P_3=(-y,-(1-p-y)),\n$$\nwhere $a>0$, $0<p<1$, $0<x<p$, $0<y<1-p$ and $0<z<a$. Conversely every such tuple gives exactly this geometric incidence. Set\n$$\nq=\\frac{a^2}{(a+x)(a+y)},\\quad C=\\frac{p^2}{1-y},\\quad\nD=\\frac{(1-p)^2}{1-x},\\quad w=1+a,\\quad v=p+z.\n$$\nThen $(q_1,q_2,q_3)=(q,C/v,D/(w-v))$ and\n$$\n\\lambda_1=\\frac{a/q}{a/q+J(v)},\\qquad J(v)=\\frac{pv}{C}+\\frac{(1-p)(w-v)}{D}.\n$$\n\nFix $a,p,x,y$ in this domain and a ceiling $0<c<1$. The constraints $q_i\\le c$ and $q_{\\min}+q_{\\mathrm{mid}}+q_{\\max}/4\\le1$ are feasible only if $q\\le c$. In that case the feasible $v$ are exactly the intersection of $p<v<p+a$ and $C/c\\le v\\le w-D/c$ with the union of the three quadratic sublevel sets\n$$\nT v^2-(Tw+C'-D')v+C'w\\le0,\n\\quad\n(C',D',T)\\in\\{(C,D,1-q/4),(C/4,D,1-q),(C,D/4,1-q)\\}.\n$$\nA feasible $v$ with $\\lambda_1<2/9$ exists if and only if some nonempty interval in this union after intersection has $\\sup J>7a/(2q)$. The supremum is found at the endpoint selected by the sign of the slope of $J$, using its limit if that endpoint is excluded.",
+  "subgoal_id": "pk-intake-pk-w36-chords-corner-elimination",
+  "title": "Exact quadratic interval elimination for three triangle chords"
+}

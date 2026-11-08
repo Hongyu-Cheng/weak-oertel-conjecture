@@ -1,0 +1,63 @@
+{
+  "candidate_id": "a76d25e8a40f2ae5",
+  "candidate_sha256": "795315af05c69172fea4317099dc59faefa9ddc36115575485a1a85f17513ef7",
+  "checked_dependency_candidate_sha256": {
+    "3919a4dbe7ace166": "79174b3ef5c6911f4a741f855824553827e7be073a637b941f8855d6c505f33d",
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "On the positive interior the log-concave case gives the convex exponential of a convex function. In the inverse-power case the outer power beta/(r+1) is increasing and convex. Discarding the boundary restricts the finite convex domain to the convex interior and does not affect any interior-origin ray integral.",
+    "The homothetic truncations lie inside int D, contain a neighborhood of x, and are nested. The original continuous radii are the closure of their increasing convex radial sets. The unit-ray factor r multiplies the rth power and hence dilates the sets by r^(1/r).",
+    "Polar integration gives W and the vector formula with (r+1)W. For each fixed limit origin the boundary is angular-times-radial null away from t=0, so the two dominated convergence steps work also at boundary origins. For r=1 the two rays carry the ordinary counting angular measure.",
+    "For each outward support normal at a boundary point only inward directions can contribute, and the open cone of directions reaching an interior ball makes the centroid pairing strictly negative. Projection at a Brouwer fixed point puts the centroid vector in the outward cone, forcing the fixed point into the interior and the vector to zero.",
+    "Halfspaces through the new origin correspond to the same signed ray directions, so their volume lower bound transfers exactly. The calibration f(t)=2t gives negative and positive ray lengths x² and 1−x², with balancing point 1/sqrt(2) and density mean 2/3.",
+    "Verified all archived source locators against the original mathematical notes and their frozen source hashes against the pinned graph."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3919a4dbe7ace166",
+      "candidate_sha256": "79174b3ef5c6911f4a741f855824553827e7be073a637b941f8855d6c505f33d",
+      "fact_id": "3919a4dbe7ace166",
+      "fact_sha256": "02d44dcdccfada550aeb144bb9d5e8c41fa86e25467846afc82d699cc9a2a0a1",
+      "hypotheses": "Use p=r in the r-dimensional translated truncated density. Compact support, upper semicontinuity, boundedness, convex extended inverse power and positivity about zero all hold. Dilation accounts for the source radius normalization.",
+      "reviewed_proof_sha256": "2488638a77a744fcb4c012ef10616ec1e3c0df4fbee4ba72d2435249e2475008",
+      "reviewed_statement_sha256": "590950529760b1b9025ee8c06c6da6d68621c244baa9628591e691b7acf1921c"
+    },
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "Use the full mass m=|L_x*|=W and constant weight 1 on the full-dimensional convex radial body at the selected origin. Its centroid is zero, so the all-containing-closed-halfspace conclusion in dimension r supplies Gamma_r W.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:39:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its compact upper-semicontinuous theorem, extended by the interior exhaustion used in 23a563a735c07c25, gives the same numerical centerpoint floor. It does not assert an origin for which the volume-normalized radial body itself has zero centroid.",
+      "fact_id": "d6a3cbae1da72277"
+    },
+    {
+      "comparison": "This proves convexity of radial sets of densities with the specified inverse power, including the truncations. It does not choose a translating origin or impose its centroid condition.",
+      "fact_id": "3919a4dbe7ace166"
+    }
+  ],
+  "readability": "The step setting the density to zero on the boundary also fixes the convention for rays tangent to a supporting plane when the temporary origin is on the boundary.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof read with exact rational checks where applicable",
+  "reviewed_proof_sha256": "b4ed2686ed2a16d679cbf2da51b91e8bb4d45f2aad3a8ab397a69970d317a28a",
+  "reviewed_statement_sha256": "5a2d44623f90396fe3470efef28ec1ac26272baec8e3407d9e6424415ade7bc7",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:34:44Z",
+  "summary": "The normalized radial bodies are convex after the interior truncation argument, and the boundary-continuous centroid map yields an actual interior origin with zero radial centroid. The density halfspace bound follows with the exact original mass.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

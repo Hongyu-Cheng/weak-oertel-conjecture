@@ -1,0 +1,35 @@
+{
+  "advances": "A compatible nonsimplex radial deformation with moving central caps and fixed auxiliary planes, followed by a fixed numerical budget normalization. The displayed perturbed cap masses bound actual depth from above.",
+  "author": "PK-research-agent",
+  "candidate_id": "abc6f3792e267554",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.745811+00:00",
+  "depends_on": [
+    "f36e38ea09ea50e1",
+    "581ac19fe05973b6",
+    "f9b8d8acc258b202",
+    "755cb08c379113cc"
+  ],
+  "draft_key": "pk-w36-shape-bipyramid-affine-radius-descent",
+  "kind": "theorem",
+  "proof": "Adding an affine function preserves concavity, and compact positivity persists for all small $a$, so the entire radial family gives an actual convex body. In base $z$ the displayed cap threshold is $h=pa\\cdot z$. Smallness makes it lie in $[-r_a(z),pr_a(z)]$ at every sampled base. The canonical cap formula gives conical radius $r_a(z)-h/p=r_z^0$ exactly, with remaining correction $-Vp^{d-1}(-a\\cdot z)_+^d$. This proves the stated mass. A nonzero $a$ in the span of $P$ has a nonzero evaluation, and reflection gives a negative one, so $Q(a)<Q_0$. The baseline radii on a pair agree, and strict convexity of the positive radius raised to $d$ increases its combined volume whenever the evaluations are nonzero. Thus $M(a)>M_0$.\n\nThe canonical normals sum to zero on the middle plane. For each nonzero base, apply 755cb08c379113cc to the original actual array: its full-dimensional compact fibers are compatible, the base census is complete, and the persistent-center theorem gives a restricted centroid maximum of strict mass below $Q_0$. This supplies a finite critical group of strictly slack mass covering that entire plane. Freeze these groups. Their coverage is unchanged, and the uniform mass comparison from the center theorem bounds the changes of all their masses. Since $Q(a)\\to Q_0$, for all sufficiently small $a$ they remain strictly below $Q(a)$. The resulting finite family covers the entire sampled set, so its largest cap mass bounds the actual depth. The persistent-center theorem puts the maximum at $Y$. Scaling the continuous coordinates sends all cap traces by the same invertible map and multiplies their $d$-volumes by $Q_0/Q(a)>1$, which preserves the asserted fixed numerical budget and strictly increases volume. Here $Q(a)>0$ for small $a$ by continuity from $Q_0>0$.\n\nIn the explicit range, $p=2$, $d=3$, $V=3$ and $\\delta=4/9$. The radii $1+az$ stay positive and concave, and the thresholds $2az$ lie in $[-r_a(z),2r_a(z)]$ at all three bases. Thus the cap formula gives $Q(a)=4-12s^3$, while the sum of the three cubes gives $M(a)=9+18a^2$. At endpoint $z_0=\\pm1$, use the canonical margins $u_i\\cdot x+10z_0(z-z_0)$. Every other sampled fiber has $u_i\\cdot x\\le2(1+s)\\le12/5$, so the base term strictly excludes it. The own-fiber paired-menu theorem gives depth at least its ordinary maximum at its centroid, and these isolating caps give equality and cover the whole endpoint plane. Their masses are bounded by $(4/3)(6/5)^3=288/125<488/125\\le Q(a)$.\n\nFor a through-middle cap with a nonzero continuous normal, the two endpoint fibers contain identical centered copies $(1-s)K_2$. Their paired contribution is at least $(8/3)(1-s)^3$ by the bipyramid paired bound. The own fiber contributes at least $4/3$. Pure-base through-caps also obey this lower bound because their full middle fiber and one full endpoint supply at least $3[1+(1-s)^3]$. The difference between the central lower bound and the largest endpoint depth is $(4/3)(2-9s+3s^2-3s^3)$, whose bracket is decreasing on $[0,1/5]$ and is at least $37/125$. The fiberwise centroid maximality proof then proves global maximality at the middle for the entire explicit interval. At $s=1/5$ the volume, upper raw bound and lower raw bound are $243/25$, $488/125$ and $1012/375$. Division gives the two asserted normalized bounds. They lie above $\\Gamma_3/2=27/128$ at this displayed calibration, and the upper bound is strictly below $4/9$.\n",
+  "source_candidate_ids": [
+    "b34a13272d68f2d8"
+  ],
+  "source_candidate_sha256": {
+    "b34a13272d68f2d8": "f6ed7a85e9fd340b56903ec282fef135e5d7470d5d5d978ce179b6793bd5a5c8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b34a13272d68f2d8",
+      "locator": "b34a13272d68f2d8:04 §4, (8)–(11), actual affine-radius descent and owned cover"
+    },
+    {
+      "candidate_id": "b34a13272d68f2d8",
+      "locator": "b34a13272d68f2d8:05 §5, (12)–(13), explicit three-fiber range"
+    }
+  ],
+  "statement": "Let $p\\ge2$, $d=p+1$, and $T_p=\\operatorname{conv}(v_0,v_1,\\ldots,v_p)$ with $v_0=(-1,\\ldots,-1)$ and $v_i=v_0+(p+1)e_i$. Set $V_p=(p+1)^p/p!$, $\\delta=(p/(p+1))^p$, and let\n$$\nK_p=\\{(x,t): |t|\\le1,\\ x\\in(1-|t|)T_p\\},\n\\qquad V=2V_p/(p+1).\n$$\nWrite $u_i=e_i$ for $1\\le i\\le p$ and $u_0=-\\sum_{i=1}^p e_i$.\n\nLet $B\\subset\\mathbb R^n$ be a compact convex body (a singleton for $n=0$), with $P=B\\cap\\mathbb Z^n$ centrally symmetric about and containing zero. Let $r^0:B\\to(0,\\infty)$ be continuous and concave with even sampled values. The actual body has fibers $r^0(z)K_p$ over $B$; mixed measure is summed $d$-volume at $P$. Put $M_0=V\\sum_{z\\in P}(r_z^0)^d$ and $Q_0=\\delta M_0$.\n\nFor each sufficiently small nonzero $a\\in\\operatorname{span}P$, the family $r_a(z)=r^0(z)+a\\cdot z$ is realized by a convex body on $B$. All canonical caps $u_i\\cdot x-pa\\cdot z\\ge0$ have mass\n$$\nQ(a)=Q_0-Vp^{d-1}\\sum_{z\\in P}(-a\\cdot z)_+^d<Q_0,\n\\qquad M(a)=V\\sum_{z\\in P}(r_z^0+a\\cdot z)^d>M_0.\n$$\nThey cover the middle plane and can be completed by fixed slack groups at the other original bases. The actual global raw depth is at most $Q(a)$, and the middle centroid is an actual maximizer. Its normalized depth is strictly below $\\delta$. A continuous homothety by $(Q_0/Q(a))^{1/d}$ gives strictly greater volume than $M_0$ under the same numerical raw-depth budget $Q_0$.\n\nFor $p=2$, $P=\\{-1,0,1\\}$ and baseline radii one on $B=[-1,1]$, the statements hold throughout $0<s=|a|\\le1/5$. Here $M_0=9$, $Q_0=4$, $M(a)=9+18a^2$ and $Q(a)=4-12s^3$. The endpoint maxima are $(4/3)(1\\pm a)^3$; the central centroid has depth at least $(4/3)[1+2(1-s)^3]$ and is globally deepest. The three moving central caps plus two groups of three endpoint caps give a nine-cap cover. At $s=1/5$, the normalized depth is between $1012/3645$ and $488/1215$, inclusive.",
+  "subgoal_id": "pk-intake-pk-w36-shape-bipyramid-affine-radius-descent",
+  "title": "Actual bipyramid affine-radius descent under a fixed numerical cap budget"
+}

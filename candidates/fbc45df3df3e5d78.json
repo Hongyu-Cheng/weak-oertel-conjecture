@@ -1,0 +1,26 @@
+{
+  "advances": "Geometry of a supplied positive circuit on one whole continuous space, with no claim that its overlap lies in or meets an actual source fiber.",
+  "author": "PK-research-agent",
+  "candidate_id": "fbc45df3df3e5d78",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.742638+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-menu-circuit-overlap-geometry",
+  "kind": "lemma",
+  "proof": "The image of $U$ has rank $r$ and is contained in the hyperplane perpendicular to the dependence vector, hence equals it. Therefore the affine map $x\\mapsto (\\lambda_jL_j(x))_j$ surjects onto the hyperplane $\\sum_j t_j=c$ with fibers parallel to $\\ker U$. Its nonnegative part is the single point $t=0$ when $c=0$, and the $r$-simplex with vertices at the coordinate points with sole nonzero coordinate $c$ when $c>0$. Restricting the map to an affine complement gives an affine isomorphism with this simplex. The original weighted margin sum is nonnegative everywhere, so at least one original cap contains every point. For each $y\\in A$, the margins $u_j\\cdot(x-y)$ have weighted sum zero and hence cover the whole space with their closed nonnegative traces. Adding $L_j(y)\\ge0$ recovers $L_j(x)$, proving each containment.\n\nWhen $r=d$, any $d$ of the $d+1$ normals are independent: a dependence supported on only those rows would contradict the one-dimensional relation space spanned by the strictly positive weights. The map to the first $d$ weighted coordinates is then invertible with absolute Jacobian $|\\det(u_1,\\ldots,u_d)|\\prod_{j=1}^d\\lambda_j$. Its image of $A$ is the coordinate simplex $t_j\\ge0$, $\\sum_{j=1}^d t_j\\le c$ of volume $c^d/d!$. Dividing by the Jacobian proves the formula.\n",
+  "source_candidate_ids": [
+    "ebf5465656e86ce1"
+  ],
+  "source_candidate_sha256": {
+    "ebf5465656e86ce1": "8bc1c683ceca606bd967570388b179c184d11a2110ed6ed12173198ef7059cc2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ebf5465656e86ce1",
+      "locator": "ebf5465656e86ce1:01 §1, (1)–(2), exact circuit geometry"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let $r+1$ nonzero normals $u_j\\in\\mathbb R^d$ have rank $r$ and a positive dependence $\\sum_j\\lambda_j u_j=0$, with $\\sum_j\\lambda_j=1$. For affine margins $L_j(x)=u_j\\cdot x+e_j$, put $c=\\sum_j\\lambda_j e_j\\ge0$, $H_j=\\{L_j\\ge0\\}$, $A=\\bigcap_j H_j$, and $Ux=(u_j\\cdot x)_j$. The $H_j$ cover $\\mathbb R^d$. If $c=0$, then $A$ is the nonempty common solution flat $\\{L_j=0\\ \\forall j\\}$ with direction $\\ker U$. If $c>0$, then $A$ is an $r$-simplex in an affine complement of $\\ker U$, plus $\\ker U$. Every $y\\in A$ gives a closed through-$y$ cover $\\{u_j\\cdot(x-y)\\ge0\\}$ of $\\mathbb R^d$ contained capwise in the original cover. For $r=d$ and $c>0$,\n$$\n\\operatorname{vol}_d(A)=\\frac{c^d}{d!\\,|\\det(u_1,\\ldots,u_d)|\\prod_{j=1}^d\\lambda_j},\n$$\nwhere the displayed normals are determinant rows.",
+  "subgoal_id": "pk-intake-pk-w36-menu-circuit-overlap-geometry",
+  "title": "Exact overlap geometry of a positive cap circuit"
+}

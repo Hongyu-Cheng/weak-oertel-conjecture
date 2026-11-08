@@ -1,0 +1,46 @@
+{
+  "candidate_id": "2f7f50e2d82bbc08",
+  "candidate_sha256": "7a04d141bf75c35872ecef7ea742c6580619d43c8c15fdf350297e064a389c55",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Projection of the finite supporting-slope polyhedron is closed and constant heights are feasible. The nonnegative sampled height sublevels are bounded, so an optimizing height has a feasible slope lift. At any optimizer the homogeneous active cone gives feasible short directions, and finite Farkas gives the specified nonnegative multiplier signs. For q>1 the positive-part extension is differentiable at zero, and for q=1 use the linear extension.",
+    "Stationarity in slope space gives the full outgoing row displacement because every p_j-p_i is in that same direction space. The complementary support equations make the outgoing height change zero. Multiplying height balance by h_i and summing yields the qR reward, and the mass and first moments follow by summing that balance without h_i and with p_i respectively.",
+    "For q>1 zero-height nodes cannot send to a positive height. Their stationarity sums imply no incoming external flow and no obstacle mass. On this set conservation plus row barycenters forces the sum of squared edge displacements to vanish. Distinct bases remove all remaining internal off-diagonal flow. All-zero and single-node cases are covered.",
+    "On retained nodes the positive stop probabilities bound row sums of T below one. Neumann inversion preserves nonnegativity. In row-vector orientation a=λ+aT gives the column masses after multiplication by D, and (I-T)1=D1 and (I-T)p=Dp give the row masses and displacement. Supporting gaps are nonnegative and their matrix integral vanishes using the qR identity, which gives genuine support equality on every positive edge and obstacle equality at its source.",
+    "For every feasible matrix the zero row displacements remove the slope terms in the weak-dual bound. The conjugate over nonnegative heights is exactly (q-1)q^(-q')s^q', attained at s=q h^(q-1). The constructed columns give penalty (q-1)R, and q=1 gives unit columns. An exact check at bases -1,0,1 with q=2 and e=(0,1,0) gives h=(1,1,1), λ=(0,6,0), one row (2,2,2), reward 6, penalty 3, and R=3.",
+    "All three frozen source locators match the active inequalities, zero-node deletion and Fenchel dual. The older cited source provides sampled convex program context. No pending source is used in the proof.",
+    "The frozen candidate digest matches the intake freeze record, and the archived source digests match both the pinned checkout and its Git objects."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T22:40:20Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Positive obstacles and a dual in multipliers of all vertex Jensen inequalities, also with a subset of active objective sites. It does not supply nonnegative arbitrary obstacles in the supporting-slope formulation, zero-node removal, the explicit matrix from arbitrary complementary KKT flows, or its support contacts.",
+      "fact_id": "fd2cf6b67e1db653"
+    },
+    {
+      "comparison": "Derives the same KKT signs and Euler reward in the covering one-cap residual model, and excludes positive obstacle multipliers at zero height. It does not remove all incident zero-height flow or produce the general stopped matrix and attained dual over row martingales.",
+      "fact_id": "87f812914a25fe76"
+    },
+    {
+      "comparison": "Its explicit absorbing row is a calibrated KKT flow for one simplex chain. It does not give the general construction or duality under arbitrary sampled obstacles.",
+      "fact_id": "99653a71aa1b5ae7"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "21edd0cae97907431ecfa971a62c35e98ec1652f5f7c1475d2731a3f24d826bf",
+  "reviewed_statement_sha256": "97e846b5ea6bebea09640a3b9f24e3fdac1abf120cda4227793060485ac6a3c7",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:34:37Z",
+  "summary": "Approved. The finite KKT proof is valid at every optimizer, including zero heights, and its absorbing resolvent gives an attained matrix dual with exact row barycenters and contact support.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

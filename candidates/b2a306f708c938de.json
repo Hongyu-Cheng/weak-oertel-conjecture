@@ -1,0 +1,26 @@
+{
+  "advances": "Conditional boundary comparison on actual polytopes with an existing physical martingale. It gives no rigidity from a strict inequality and makes no cap response claim at positive supporting coincidences.",
+  "author": "PK-research-agent",
+  "candidate_id": "b2a306f708c938de",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.749927+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w36-split-facewise-jensen",
+  "kind": "lemma",
+  "proof": "Write the facet inequalities with nonnegative gaps on $C$. At a regular fiber boundary point at least one active inequality has nonzero continuous normal, since inequalities with zero continuous normal impose no boundary on the fiber. Any nonzero active continuous normal supports the fiber at that point, so after normalization it equals its unique outward normal. The choice of first such facet is Borel because the facets are closed and the regular normal is Borel.\n\nFor each facet the conditional expectation of its affine gap at the target is its gap at the source by the physical row barycenter. On rows with source in that facet the gap is zero. Its nonnegativity forces the row to stay on the facet. At each regular target in it the same continuous normal argument gives the facet's normalized normal. Because the target marginal is $\\eta$, the target is regular and all the finitely many matching agreements with $g_F$ hold almost surely. They also hold at the source since $\\nu\\ll\\eta$. Thus conditional Jensen on the chosen $F$ gives $g(w)=g_F(w)\\ge\\mathbb E[g_F(Y)\\mid w]=\\mathbb E[g(Y)\\mid w]$, and integration gives the claim. This argument works on simultaneous facet incidences with positive fiber surface measure.\n\nFor an active affine piece $\\ell$, one has $\\ell(w)=g_F(w)$ and $\\mathbb E[\\ell(Y)\\mid w]=\\ell(w)$. Subtracting the target average of $g_F$ gives the asserted nonnegative integrand. Its expectation vanishes exactly when it vanishes almost surely, equivalently when the row is concentrated on the stated closed contact set.\n",
+  "source_candidate_ids": [
+    "332fa99ca9bb69c2"
+  ],
+  "source_candidate_sha256": {
+    "332fa99ca9bb69c2": "fde2889bbe4e3e759f8cddb5f0908bf71afb60bae249df443f620d830d073b74"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "332fa99ca9bb69c2",
+      "locator": "332fa99ca9bb69c2:01 §1 (1) and §4 (6), facewise Jensen and equality criterion"
+    }
+  ],
+  "statement": "Let $C$ be a compact polytope in base and continuous coordinates $(z,x)$ with a nonempty finite integer base and positive $d$-dimensional fibers at every integer base, where $d\\ge1$. Work relative to the affine hull of the base projection. Let $\\eta$ be the sum of fiber boundary $\\mathcal H^{d-1}$ measures marked by their regular outward unit continuous normal, using endpoint counting measure for $d=1$. Let $\\nu=f\\eta$ be a finite nonnegative measure and assume a martingale coupling from $\\nu$ to $\\eta$ in the full physical coordinates. Suppose a bounded Borel $g$ on the marked boundary agrees, $\\eta$-almost everywhere on the regular points of each nonvertical facet $F$ with matching normalized continuous normal, with a continuous concave function $g_F$ on $F$. Then $\\int g\\,d\\nu\\ge\\int g\\,d\\eta$.\n\nFor almost every source $w$, choose the first such containing facet in a fixed ordering. If its function has the form $g_F=\\min_r\\ell_r$ for a finite family of affine functions and $\\ell$ is an active piece at $w$, the row's Jensen gap equals $\\mathbb E[\\ell(Y)-g_F(Y)\\mid w]$. It vanishes exactly when that row is concentrated on $\\{Y\\in F:\\ell(Y)=g_F(Y)\\}$. The condition holds for every active piece of that chosen facet if the gap vanishes.",
+  "subgoal_id": "pk-intake-pk-w36-split-facewise-jensen",
+  "title": "Facewise concave tests for physical boundary martingales"
+}

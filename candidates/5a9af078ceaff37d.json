@@ -1,0 +1,29 @@
+{
+  "advances": "The explicit coefficient controls denominator imbalance at one physical facet, with the uncovered source term still present in the cap bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "5a9af078ceaff37d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:33:18.750971+00:00",
+  "depends_on": [
+    "3bb1d458c8234291",
+    "885e7ded953eb3b6"
+  ],
+  "draft_key": "pk-w36-split-quadratic-denominator-defect",
+  "kind": "theorem",
+  "proof": "Set $k=d-1$, $p=(d+1)/k$ and $B_d=(d+1)/(d-1)$. For $z>0$ and $|r|<z$,\n$$\n\\left[\\frac{(z+r)^p+(z-r)^p}{2}\\right]^k\n\\ge z^{d+1}\\bigl(1+B_d(r/z)^2\\bigr).\n$$\nWhen $d=2$ this is the cubic identity with $k=1$. For $d\\ge3$ one has $1<p\\le2$, and the second derivative in $u=r/z$ of the normalized inner mean is at least $p(p-1)$ because the even mean of $(1\\pm u)^{p-2}$ is at least one by convexity. Integrate twice from zero and use Bernoulli's inequality on the power $k$, with $kp(p-1)/2=B_d$.\n\nApply this bound to the scalar midpoint inequality in the optimized transport. If both arguments $s_1,s_2$ are at least $\\delta$, put $l=(R(s_1)+R(s_2))/2=(s_1+s_2)/2$ and $\\Delta=(R(s_1)-R(s_2))/2$. Dividing by $l^d$ bounds that inequality's left side below by $l+B_d\\Delta^2/l$, hence by $l+c_d\\Delta^2/l$. For the mixed branch put $s_1=\\delta-2b$, $s_2=\\delta+2r$ with $r\\ge b\\ge0$, and $z=\\delta+r$. The true mean is $z-b$, while $l=z+db$ and $\\Delta=db-r$. Apply the power inequality to $\\delta,s_2$, and then divide by $(z-b)^d$. The quadratic Taylor bound $(1-u)^{-d}\\ge1+du+d(d+1)u^2/2$ for $0\\le u<1$ gives the lower bound\n$$\nz+db+\\frac{B_dr^2+d(d+1)b^2/2}{z}.\n$$\nWeighted Cauchy–Schwarz gives $(r-db)^2\\le [B_dr^2+d(d+1)b^2/2]/c_d$ because $1/B_d+2d/(d+1)=1/c_d$. Since $l\\ge z$, the lower bound is at least $l+c_d\\Delta^2/l$. If both arguments are at most $\\delta$, the floor on the mean forces both to equal $\\delta$, where $\\Delta=0$.\n\nThe diagonal determinant bound of the optimized transport and substitution therefore give $\\mu_K\\ge(1+c_d\\kappa^2)\\zeta$, since $\\kappa=|\\Delta|/l$. Cauchy–Schwarz on a Borel $E$ gives the claimed restricted estimate. Apply it on the set selected by the midpoint cap bit in the common cap identity, for which the denominator defect is $\\int_E\\kappa\\,d\\zeta$, and also use $C_H\\ge0$. For the total bound, the signed ratio $\\Delta/l$ has $\\zeta$-integral $(A-B)/2$ by the endpoint marginal identities, and $\\zeta(F_K)=C/2$. Cauchy–Schwarz yields $c_d\\int(\\Delta/l)^2d\\zeta\\ge c_d(A-B)^2/(2C)$. The final expression follows by expanding $(A-B)^2=C^2-4AB$.\n",
+  "source_candidate_ids": [
+    "d4b2499d695ba5c9"
+  ],
+  "source_candidate_sha256": {
+    "d4b2499d695ba5c9": "c4f1ddac1262afae8fe4377d5a018f13cc3eb59184ac452a00a00fb4c3f4e43e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d4b2499d695ba5c9",
+      "locator": "d4b2499d695ba5c9:04 §8, (20)–(26), quadratic surplus and cap and total consequences"
+    }
+  ],
+  "statement": "Use the optimized projective facet transport and its common cap identity. Write $\\mu_K=f(L_K)\\mathcal H^{d-1}|_{F_K}$, $c_d=(d+1)/(3d-1)$ and define $\\kappa=|R_A-R_B|/(R_A+R_B)$ on the injectively parametrized midpoint image, with zero elsewhere. With $A,B$ the two optimized endpoint costs, $C=A+B$ and $M=\\mu_K(F_K)$, one has\n$$\n\\mu_K-\\zeta\\ge c_d\\kappa^2\\zeta,\\qquad\n\\int_E\\kappa\\,d\\zeta\\le\\sqrt{\\zeta(E)(\\mu_K-\\zeta)(E)/c_d}\n$$\nfor every Borel $E\\subseteq F_K$. The same coupling for a closed cap or inward trace gives\n$$\nC_H\\ge \\max\\{0,\\zeta(H)-\\sqrt{\\zeta(H)(\\mu_K-\\zeta)(H)/c_d}\\},\n\\qquad\nM\\ge C/2+\\frac{c_d(A-B)^2}{2C}.\n$$\nEquivalently the last right side is $(1+c_d)C/2-c_d\\,2AB/(A+B)$.",
+  "subgoal_id": "pk-intake-pk-w36-split-quadratic-denominator-defect",
+  "title": "Quadratic control of the optimized facet transport defect"
+}

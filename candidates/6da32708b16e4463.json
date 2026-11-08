@@ -1,0 +1,28 @@
+{
+  "advances": "Exact finite-slope objective reduction for one orientation. The Euler equation is conditional on the stated variations.",
+  "author": "PK-research-agent",
+  "candidate_id": "6da32708b16e4463",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:34:23.175776+00:00",
+  "depends_on": [
+    "527b6a77e7ceac4d"
+  ],
+  "draft_key": "pk-w36-height-centered-arm-linearity",
+  "kind": "lemma",
+  "proof": "The nonincreasing continuous arm and strictly increasing $sv$ give the intersection description, including top saturation. On one side of the deletion record, for fixed $v$ surviving magnitudes $w$ run from zero to $B(v)=\\min(v,A(v)/s)$. Thus $B(v)=v$ up to $a_s$ and $B(v)=A(v)/s$ above it. The atom at level $w$ survives for $w\\le a_s$. Its coarea and moment contributions are $a_s^m/(2m)$ and $s a_s^{m+1}/[2(m+1)]$. The continuous contributions are $(m-1)\\int_0^R v^{m-2} B(v)\\,dv/2$ and $s(m-1)\\int_0^R v^{m-2}B(v)^2\\,dv/4$. Splitting the latter integrals at $a_s$ and adding the atom gives the first two formulas.\n\nFor the bias contribution the kernel at level $v$ is $(A(v)-sw)_+$. The atom contributes $\\frac12\\int_0^{a_s}w^{m-1}(A(w)-sw)\\,dw$. In the continuous contribution the inner integral of the kernel over $0<w<B(v)$ is $A(v)B(v)-sB(v)^2/2$. For $v\\le a_s$ it is $A(v)v-sv^2/2$, and for $v>a_s$ it is $A(v)^2/(2s)$. Multiply by $(m-1)v^{m-2}/2$, integrate and add the atom to obtain the stated $J_s$. The values at zero follow from the uniform $q$ marginal, zero section height, and the one-side time moment in the deletion identity. These calculations also give the stated signed combinations for the two arms.\n\nFor positive slopes, subtracting gives\n$$\nJ_s(A)-K_s(A)=\\frac m2\\int_0^{a_s}v^{m-1}A(v)\\,dv-\\frac s2 a_s^{m+1}.\n$$\nThe zero-slope version follows from its explicit values. Within a zero-moment mixture the signed $K_s$ contribution averages to zero, so the bias uses only these affine expressions. The coarea and volume formulas are already affine at fixed intersections. In $m=1$ all $A^2$ integrals are absent. The constraints defining the arm class are convex: concavity, monotonicity, fixed endpoints at level zero if the axial interval is fixed, and the fixed contact equalities or top inequalities. Requiring each arm to remain positive below $R$ and constant on some initial interval preserves convex combinations. Conversely, the region $0\\le v\\le R,\\ -A_-(v)\\le z\\le A_+(v)$ is a convex hypograph whose upper boundary recovers the profile, with its positive endpoints given by the initial constant intervals. Thus in $m=1$ fixing the intersections leaves a linear optimization over the admissible concave arms, up to fixed objective constants.\n\nFor $m\\ge2$ between consecutive intersections each integral contributing to the fixed-slope expressions has fixed inclusion status. Its arm terms are linear with weights $v^{m-1}$ or $v^{m-2}$, or quadratic with weight $v^{m-2}$. This gives the claimed Lagrangian form. If both signs of every smooth compactly supported variation are allowed, the first variation against any such test is the integral of the test times $v^{m-2}(A_1v+A_0+2A_2A(v))$. Its vanishing gives the equation by continuity and positivity of the weight in the open interval. If $A_2=0$, the equation either cannot hold throughout the interval or imposes no condition on the arm. The statement assumes stationarity under those variations and gives no existence of multipliers or finite-knot bound.\n",
+  "source_candidate_ids": [
+    "b44833e7973a35e4"
+  ],
+  "source_candidate_sha256": {
+    "b44833e7973a35e4": "434f2a46ff17bf6b8e0dd76ced22ffd516d74865b03c5d7d9c8b58263ca943dc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b44833e7973a35e4",
+      "locator": "b44833e7973a35e4:03 §3, (5)–(8) and s=0; §4, (9)–(10)"
+    }
+  ],
+  "statement": "Use the planar inverse-arm data with maximum $R$ and $m\\ge1$. For either arm $A$ and $s>0$ set $a_s=\\max\\{v\\in[0,R]:A(v)\\ge sv\\}$. When $a_s<R$ it obeys $A(a_s)=sa_s$, while at $a_s=R$ only $A(R)\\ge sR$ is required. The single-arm coarea $C_s$, positive magnitude $K_s$ of the vertical section moment, and positive contribution $J_s$ to cap bias are\n$$\n\\begin{aligned}\n C_s(A)&=\\frac{a_s^m}{2}+\\frac{m-1}{2s}\\int_{a_s}^R v^{m-2}A(v)\\,dv,\\\\\n K_s(A)&=\\frac{s a_s^{m+1}}4+\\frac{m-1}{4s}\\int_{a_s}^R v^{m-2}A(v)^2\\,dv,\\\\\n J_s(A)&=\\frac m2\\int_0^{a_s}v^{m-1}A(v)\\,dv-\\frac{s a_s^{m+1}}4\n           +\\frac{m-1}{4s}\\int_{a_s}^R v^{m-2}A(v)^2\\,dv .\n\\end{aligned}\n$$\nTerms with factor $m-1$ are absent when $m=1$. At $s=0$ the values are $R^m/2,0,(m/2)\\int_0^R v^{m-1}A(v)\\,dv$, respectively. Add the two $C_s$ and take the positive-arm value minus the negative-arm value for $K_s$ and $J_s$ to obtain $C(s),M(s),P(s)-V/2$.\n\nFor a finitely supported probability mixture of slopes in a single orientation with mean $M(s)$ equal to zero, at fixed intersections and fixed $R$ the averaged cap objective, averaged coarea and total volume are affine in the arms. When $m=1$ the moment constraints also depend only on the intersections. For $m\\ge2$, on an interval between the fixed intersections each arm's contribution to a Lagrangian formed from these objectives and moment constraints has integrand $v^{m-2}[(A_1v+A_0)A(v)+A_2 A(v)^2]$ for constants $A_0,A_1,A_2$. If an arm is stationary for this Lagrangian under arbitrary two-sided smooth variations compactly supported in such an open interval, then $A_1v+A_0+2A_2A(v)=0$ there. In particular it is affine there when $A_2\\ne0$.",
+  "subgoal_id": "pk-intake-pk-w36-height-centered-arm-linearity",
+  "title": "Exact inverse-arm cap formulas and centered affine objective"
+}

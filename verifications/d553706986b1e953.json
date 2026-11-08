@@ -1,0 +1,45 @@
+{
+  "candidate_id": "c1a33f5d966cf4ab",
+  "candidate_sha256": "b04640863bc585668dd7181255066b35fc84a9d4ee7820fc26699333eb02f964",
+  "checked_dependency_candidate_sha256": {
+    "4b006d72b238bcc6": "0eb210c39c2e3f0735264426bd66bbc40d6986f7b4d9fc6e9a2b3c4b2597204b"
+  },
+  "checks": [
+    "Original d9b60e76f58eda77 §4 matches both optimizations. Apply the exact scalar envelope to the respective endpoint sums 1+B/a and 1−B/b. Comparing each sum with h*=1−eta yields exactly −a eta≤B≤b eta.",
+    "Inside that range the uniform vector at each endpoint is an individual optimizer. Their weighted pairwise mean is 1/m coordinate by coordinate, and the same actual geometry with delta=0 and all beta_i=B/m realizes both optimizers. The argument includes both endpoints of the central range.",
+    "For d≥2 and B nonzero the two uniform arguments differ and straddle 1/m. The segment contains a nontrivial strictly concave portion even if an argument lies in the saturated part, so weighted Jensen is strict. In d=1 eta=0, and the formula at zero is covered by the exact clipped linear identity. The source rational/interval replay passed."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "4b006d72b238bcc6",
+      "candidate_sha256": "0eb210c39c2e3f0735264426bd66bbc40d6986f7b4d9fc6e9a2b3c4b2597204b",
+      "hypotheses": "Use the exact scalar-sum envelope for each endpoint, its crossing and concavity, and its actual realizability formula for the paired thresholds. The same-wave predecessor requires independent approval of the exact frozen input.",
+      "reviewed_proof_sha256": "dc2fc811a629da34e6f3837b8a76be9424c3b64813e8a32b373358121e513812",
+      "reviewed_statement_sha256": "e7b6899bb3c9f0621735844a0b2f19f99d5582fb7c61186463887e913b6bb5fb"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:40:57Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its individual-direction feasible interval does not enforce the endpoint sums or a shared collection of simplex vertex directions. It cannot substitute for the simultaneous optimizer satisfying the paired barycentric identities.",
+      "fact_id": "a67fef996fdffc7c",
+      "fact_sha256": "1c589773dfa4a216aab7570f6f6ee118638e1d26ac2bd5d4c747663d53c0f527"
+    }
+  ],
+  "readability": "The arbitrary-drift bound uses two independent envelopes. The attained joint value is asserted in the central range where the two optimizing vectors are compatible.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, comparison with pinned source and accepted proofs, and exact arithmetic checks",
+  "reviewed_proof_sha256": "137e971d02761daca35f12ec10a02e75edefc9304af04d4cc9397a46cb9a6a1d",
+  "reviewed_statement_sha256": "5d38faf3f324c5ea1f071435e6d762dfed629faa33eff07de221c4f965a6659f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:33:32Z",
+  "summary": "Correct exact joint maximum on the central drift range and a valid independent-endpoint upper bound for arbitrary drift.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

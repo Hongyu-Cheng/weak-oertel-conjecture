@@ -33,6 +33,7 @@
 \renewcommand{\b}{\mathbf{b}}
 \DeclareMathOperator{\conv}{conv}
 \DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\depth}{depth}
 
 \newcommand{\notetitle}{A counterexample to Oertel\texorpdfstring{\textquotesingle}{'}s conjecture on Mixed-integer volume}
 \title{\vspace{-2.5em}\notetitle\\[0.4em]
@@ -46,27 +47,63 @@
 \vspace{-3.5em}
 
 \begin{abstract}
-We construct a rational polytope $C\subset\R^{12}\times\R^5$ of positive mixed-integer volume and a
-number $r<(5/6)^5/2^{12}$ such that every point of $\Z^{12}\times\R^5$ lies in a proper closed
-halfspace whose intersection with $C$ has at most the fraction $r$ of that volume. Of the $4852$ nonempty
-integer fibers of $C$, $4095$ are heavy, one per nonzero parity class, and every point of a heavy fiber lies in
-a tilted cut that meets no other integer fiber. Three coordinated cuts cover the origin fiber, and each has
-positive mass only on that fiber and on one of three pools of $252$ light fibers. The volume
-comparisons use exact rational arithmetic, and
-Lean~4 verifies the uniform depth bound.
+Gr\"unbaum's inequality guarantees that every closed halfspace containing the centroid of a convex body in $\R^d$
+captures at least the fraction $\Gamma_d=(d/(d+1))^d$ of its volume. For the mixed-integer volume, the sum of the fiber
+volumes over $\Z^n$, Oertel conjectured that some point of $\Z^n\times\R^d$ always achieves the fraction $2^{-n}\Gamma_d$,
+which is the exact value for the product of a unit cube and a simplex. We disprove this at $(n,d)=(12,5)$ by constructing a
+rational polytope in $\R^{12}\times\R^5$ and a number $r<(5/6)^5/2^{12}$ such that every point of $\Z^{12}\times\R^5$ lies
+in a proper closed halfspace holding at most the fraction $r$ of the mixed-integer volume. Whereas the product has $2^{12}$
+nonempty integer fibers, our polytope has $4852$. Every point of its $4095$ heavy fibers lies in a tilted cap that meets no
+other fiber, and three cuts cover the origin fiber, each with positive mass only on that fiber and on one of three pools of
+$252$ light fibers. The proof uses exact rational arithmetic, and Lean~4 verifies the uniform strict bound on normalized
+halfspace depth.
 \end{abstract}
 
-\section{The result and the construction}\label{sec:result}
+\section{Introduction}\label{sec:result}
 
-Let $\vol$ denote Lebesgue measure. The \emph{mixed-integer volume}, or \emph{mass}, of a set
-$D\subseteq\R^n\times\R^d$ with measurable slices is
-$\mu(D)=\sum_{\z\in\Z^n}\vol\{\x\in\R^d:(\z,\x)\in D\}$, and the \emph{depth} of a mixed-integer point in
-a convex body $C$ of positive mass is the infimum of $\mu(C\cap H)/\mu(C)$ over proper closed halfspaces
-$H$ containing it. Conjecture~17 of Basu and Oertel~\cite{basu-oertel} asserts that every convex body in
-$\R^n\times\R^d$ of positive mass has a point in $\Z^n\times\R^d$ of depth at least
-$2^{-n}(d/(d+1))^d$. We disprove this bound at $(n,d)=(12,5)$, where it equals $(5/6)^5/2^{12}$. Cheng and
-Basu~\cite{cheng-basu} use the name Oertel's conjecture in their Conjecture~2.3 for the lower bound
-$1/(e2^n)$, which we do not address.
+Cutting plane methods for convex minimization measure progress by the volume they remove from a search region, so a
+query point with a large fraction of the volume in every closed halfspace containing it gives control over the progress
+of a cut. Over $\R^d$ such a point always exists. Gr\"unbaum~\cite[Theorem~2 and Section~3]{grunbaum} proved that every
+closed halfspace containing the centroid of a convex body holds at least the fraction $\Gamma_d=(d/(d+1))^d$ of its
+volume, and this fraction is best possible~\cite[Section~4]{grunbaum}. For convex mixed-integer optimization the volume
+becomes a sum of fiber volumes, and Basu and Oertel~\cite[Section~2 and Theorem~2.6]{basu-oertel} bound the number of
+first-order oracle calls of a centerpoint cutting plane method through the fraction guaranteed at the query point. We
+show that the fraction conjectured by Oertel cannot always be guaranteed, by constructing a rational polytope in
+$\R^{12}\times\R^5$ for which every point of $\Z^{12}\times\R^5$ falls strictly short of it.
+
+For nonnegative integers $n,d$ with $n+d>0$ we write points of $\R^n\times\R^d$ as $(\z,\x)$. The \emph{mixed-integer lattice} is
+$\Z^n\times\R^d$, and the \emph{fiber} of a set $D\subseteq\R^n\times\R^d$ over $\z\in\Z^n$ is
+$D_{\z}=\{\x\in\R^d:(\z,\x)\in D\}$. The \emph{mixed-integer volume}, or \emph{mass}, of a set with Lebesgue measurable
+fibers is the sum of the $d$-dimensional volumes of its fibers. A \emph{proper closed halfspace} is a set
+$\{F\ge b\}=\{(\z,\x):F(\z,\x)\ge b\}$, where $F$ is a nonzero linear functional on $\R^n\times\R^d$ and $b\in\R$. For a
+convex body $C\subset\R^n\times\R^d$, that is, a compact convex set with nonempty interior, of positive mass, the
+\emph{depth} of a point $(\z,\x)\in\Z^n\times\R^d$ is the infimum of the normalized mass over the proper closed
+halfspaces containing it. With $\vol$ denoting Lebesgue measure on $\R^d$,
+\[
+\mu(D)=\sum_{\z\in\Z^n}\vol(D_{\z}),\qquad
+\depth_C(\z,\x)=\inf_{H\ni(\z,\x)}\frac{\mu(C\cap H)}{\mu(C)}.
+\]
+Compactness leaves finitely many nonempty fibers, so $\mu(C)<\infty$. A halfspace containing a point contains the
+parallel halfspace with that point on its boundary, so the infimum is unchanged if we use only the latter, which is the
+form in~\cite[(2)]{basu-oertel}. Points outside $C$ have depth $0$ by strict separation.
+
+Two extreme cases suggest the value to expect. For $n=0$ the mass is the volume, and Gr\"unbaum's theorem gives depth at
+least $\Gamma_d$ at the centroid. For $d=0$ the mass counts integer points, and the general bound $1/(2^n(d+1))$ of
+Oertel~\cite[Theorem~4.1.19]{oertel} and Basu and Oertel~\cite[Corollary~3.4]{basu-oertel} gives $2^{-n}$. The product of
+the unit cube and a simplex combines the two factors~\cite[Section~4.1, after Conjecture~4.1.20]{oertel}. Let
+$S\subset\R^d$ be a $d$-simplex and $C=[0,1]^n\times S$, so that $\mu(C)=2^n\vol(S)$. A point $\x\in S$ has a barycentric
+coordinate at least $1/(d+1)$, and the cap of $S$ where this coordinate is at least $1/(d+1)$ is a homothetic copy of $S$
+with ratio $d/(d+1)$, of volume $\Gamma_d\vol(S)$. For $\z\in\{0,1\}^n$, adding a large multiple of a linear functional
+uniquely maximized over $\{0,1\}^n$ at $\z$ tilts this cap into a closed halfspace that misses all other fibers. Hence
+every point of $\Z^n\times\R^d$ has depth at most $2^{-n}\Gamma_d$ in this $C$. The centroid of any one simplex fiber has
+at least this depth by Gr\"unbaum's theorem on that fiber, so the largest depth in $C$ is exactly $2^{-n}\Gamma_d$, and no
+guarantee above this value, which we call the \emph{sharp value}, can hold for all convex bodies.
+
+Oertel~\cite[Conjecture~4.1.20]{oertel}, for closed convex sets, and Basu and Oertel~\cite[Conjecture~3.5]{basu-oertel},
+for convex bodies, conjectured that the sharp value is always reached. In particular, every convex body of positive mass
+would have a point of $\Z^n\times\R^d$ of depth at least $2^{-n}\Gamma_d$. Cheng and Basu~\cite[Conjecture~2.3]{cheng-basu}
+use the name Oertel's conjecture for the lower bound $1/(e2^n)$, which is weaker because $\Gamma_d>1/e$. Our
+finite-dimensional statement concerns the sharp value at $(n,d)=(12,5)$, which is $\Gamma_5/2^{12}=(5/6)^5/2^{12}$.
 
 \begin{theorem}\label{thm:main}
 There exist a rational polytope $C\subset\R^{12}\times\R^5$ with nonempty interior, $\0\in C$ and
@@ -75,31 +112,64 @@ every $(\z,\x)\in\Z^{12}\times\R^5$ there are $b\in\R$ and a nonzero linear func
 $\R^{12}\times\R^5$ with $F(\z,\x)\ge b$ and $\mu(C\cap\{F\ge b\})\le r\,\mu(C)$.
 \end{theorem}
 
-The proof compares a common budget $M>0$ with the total mass $W=\mu(C)$. If every mixed-integer point lies in
-a proper closed halfspace, or \emph{cut}, of mass at most $M$, then $r=M/W$ works, and $r<(5/6)^5/2^{12}$ is
-equivalent to $W>4096M/(5/6)^5$. We write $M=(5h/6)^5$, so that the target is $W>4096h^5$. Every point of a
-five-dimensional simplex has a barycentric coordinate at least $1/6$, and the cap where that coordinate is at
-least $1/6$ is a homothetic copy with ratio $5/6$. In a simplex of volume $h^5$ this cap has
-mass exactly $M$. Thus $4096$ such simplices, each cap meeting only its own simplex, would only reproduce the
-conjectured fraction, so the construction must carry more mass while no cut exceeds $M$.
+Thus $\depth_C(\z,\x)\le r$ for every $(\z,\x)\in\Z^{12}\times\R^5$, so no point of the lattice reaches the sharp value.
+The proof compares explicit masses in exact rational arithmetic (Section~\ref{sec:cuts}), and Lean~4 verifies the uniform
+strict depth bound for a compact convex set (Appendix~\ref{sec:lean}). Rationality of $C$ is part of the mathematical
+proof (Lemma~\ref{lem:fibers}).
 
-The polytope $C$ is the convex hull of fibers over $4852$ integer points, which we call bases. One heavy base
-lies in each of the $4095$ nonzero classes of $(\Z/2\Z)^{12}$, with a fiber of volume at most $h^5$. Each is a
-vertex of the convex hull of the bases, so every point of its fiber lies in a cap that can be tilted
-in the integer directions to miss all other fibers. The zero class contains the origin, whose fiber has volume
-$1<h^5$ in our units. To make up the missing mass we add $756$ light bases, each the negative of a heavy base,
-so that the two have the origin as their midpoint. Because of this, a tilt in the integer coordinates alone
-cannot separate the origin from both, so three coordinated cuts cover the origin fiber instead. Two selector
-coordinates sort the light bases into three pools of $252$, and each cut has positive mass only on the origin
-fiber and on one pool. All three pools count toward $W$ while each cut contains only one, and their total volume
-exceeds the amount by which the origin fiber and the heavy fibers with light partners fall short of $h^5$. To keep the origin fiber unchanged in the convex hull, we place each fiber over
-$\z$ inside the dilation of the origin fiber by $1+g(\z)$ for a linear form $g$, so that antipodal bases have
-radii $1+g$ and $1-g$.
+For $d\ge2$ the general bound $1/(2^n(d+1))$ lies below the sharp value, and the following results go beyond it under additional
+structure.
+Basu and Oertel~\cite[Theorem~3.6]{basu-oertel} proved the sharp bound when the projection of the body onto $\R^n$ has
+lattice width above a threshold exponential in $n$. Cristi and Salas~\cite[Theorem~4.5]{cristi-salas} proved it when this
+projection contains a Euclidean ball of radius at least $\alpha d^2n^{3/2}$ for a universal constant $\alpha$. For the
+bound $1/(e2^n)$, Cheng and Basu~\cite[Theorem~2.4 and Corollary~2.5]{cheng-basu} showed that a translate of the
+$\ell_\infty$ ball of radius $k\ge3e(n+d)$ in the projection gives depth at least $1/(2e)$, and that a radius of linear
+order in $n+d$ is necessary for a dimension-independent guarantee based only on this containment~\cite[Theorem~5.1 and Corollary~5.2]{cheng-basu}. At the
+other extreme, if a convex body has at most $2^n$ fibers of positive volume, then a largest fiber carries at least
+$2^{-n}$ of the mass, and Gr\"unbaum's theorem on that fiber gives its centroid depth at least $2^{-n}\Gamma_d$, so a
+counterexample needs more than $2^n$ such fibers. Cheng and Basu~\cite[Theorem~1]{cheng-basu-slices} went one fiber further at $(n,d)=(1,2)$, proving the sharp value
+$2/9=\Gamma_2/2$ for compact convex sets in $\R\times\R^2$ with exactly three slices of positive area. The polytope of Theorem~\ref{thm:main} has $4852>2^{12}$
+such fibers, and its projection onto $\R^{12}$ lies in $[-1,1]^{12}$.
 
-Section~\ref{sec:bases} defines the bases and the three linear forms that offset the cuts.
-Section~\ref{sec:fibers} derives the fibers from the requirements of these cuts. Section~\ref{sec:census}
-proves that $C$ has no other integer fibers, and Section~\ref{sec:cuts} constructs the cut at every
-point and completes the exact comparison. Appendix~\ref{sec:lean} records the Lean statement and the replay.
+\subsection{The construction in outline}
+
+We use one budget $M>0$ for all \emph{cuts}, that is, proper closed halfspaces. If every point of the lattice lies in a cut
+of mass at most $M$, then $r=M/W$ works with $W=\mu(C)$, and $r<(5/6)^5/2^{12}$ is equivalent to $W/M>2^{12}(6/5)^5$. We
+write $M=(5h/6)^5$, which is the mass of a tilted cap of a simplex fiber of volume $h^5$, so the target is $W>4096h^5$. As
+in the product, $4096$ such fibers would only reach equality, so the construction must carry more mass while no cut
+exceeds $M$. The polytope $C$ is the convex hull of fibers over $4852$ integer points, which we call bases, and we use
+units where the origin fiber has volume $1$.
+
+Two geometric ideas organize the construction. The first is a tilted cap at each exposed base. One heavy base lies in each of
+the $4095$ nonzero classes of $(\Z/2\Z)^{12}$ and is a vertex of the convex hull of the bases, so every point of its fiber
+lies in a cap of mass at most $M$ that can be tilted in the integer directions to miss all other fibers. The zero class
+contains the origin, whose fiber has volume $1<h^5$, so these $4096$ fibers fall short of the target. The second idea reuses
+three cuts at the origin to pay for the extra fibers that a counterexample needs. We add the light bases, each the negative of a heavy base, so that
+the two have the origin as their midpoint. Because of this, a tilt in the integer coordinates alone cannot separate the
+origin from both, so three coordinated cuts cover the origin fiber instead. Two selector coordinates sort the light bases
+into three pools of $252$, and each origin cut has positive mass only on the origin fiber and on one pool. All three pools
+count toward $W$ while each cut contains only one, and their total volume exceeds the amount by which the origin fiber and
+the heavy fibers with light partners fall short of $h^5$. To keep the origin fiber unchanged in the convex hull, we place
+each fiber inside a dilation of the origin fiber whose radius is affine in $\z$ and equals $1$ at the origin, so that
+antipodal bases have radii with sum $2$. Figure~\ref{fig:selector} shows the bases by selector, and the following table
+groups them.
+\begin{center}
+\begin{tabular}{lcll}
+\toprule
+Bases & Number & Fiber volume & Cuts used on the fiber \\
+\midrule
+origin & $1$ & $1$ & the three origin cuts \\
+light & $3\cdot252$ & small & the origin cut of its pool \\
+heavy with a light partner & $3\cdot252$ & slightly below $h^5$ & tilted caps \\
+other heavy & $3339$ & $h^5$ & tilted caps \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Section~\ref{sec:bases} defines the bases and the three linear forms that offset the origin cuts. Section~\ref{sec:fibers}
+derives the fibers from the requirements of these cuts, Section~\ref{sec:census} proves that $C$ has no other integer
+fibers, and Section~\ref{sec:cuts} constructs a cut at every point and completes the exact comparison.
+Appendix~\ref{sec:lean} records the Lean statement and the replay.
 
 \section{Integer bases and offset forms}\label{sec:bases}
 
@@ -509,7 +579,7 @@ Section~\ref{sec:result}. Finiteness of the mass makes both \texttt{toReal} valu
 Lemma~\ref{lem:fibers} establishes rationality of the polytope. With Python 3, Git and elan installed,
 run the following from the repository root. Lake reads its dependency pins from
 \texttt{lean/lake-manifest.json}.
-\begin{Verbatim}
+\begin{Verbatim}[samepage=true]
 set -eu
 python3 -B research/sharp-dimension-17/check.py
 cd lean
@@ -537,15 +607,39 @@ the dimension lemma and the final theorem depend only on \texttt{propext}, \text
 \begin{thebibliography}{9}
 \bibitem{basu-oertel}
 Amitabh Basu and Timm Oertel.
-\emph{\href{https://www.ams.jhu.edu/~abasu9/papers/centerpoints.pdf}{Centerpoints:
-A link between optimization and convex geometry}}.
-Manuscript version with Conjecture~17.
+\emph{Centerpoints: A link between optimization and convex geometry}.
+SIAM Journal on Optimization 27(2):866--889, 2017,
+\href{https://doi.org/10.1137/16M1092908}{doi:10.1137/16M1092908}.
+Open access at \href{https://orca.cardiff.ac.uk/id/eprint/100934/8/16M1092908.pdf}{orca.cardiff.ac.uk/id/eprint/100934}.
 
 \bibitem{cheng-basu}
 Hongyu Cheng and Amitabh Basu.
-\emph{\href{https://hongyucheng.net/files/linear-threshold-oertel.pdf}{Linear Threshold
-for Oertel's Conjecture on the Mixed-Integer Volume}}.
-Conjecture~2.3.
+\emph{Linear threshold for Oertel's conjecture on the mixed-integer volume}.
+\href{https://arxiv.org/pdf/2603.00286}{arXiv:2603.00286}, 2026.
+
+\bibitem{cheng-basu-slices}
+Hongyu Cheng and Amitabh Basu.
+\emph{A centerpoint theorem for three planar convex bodies}.
+\href{https://arxiv.org/abs/2609.32953}{arXiv:2609.32953}, 2026.
+
+\bibitem{cristi-salas}
+Andr\'es Cristi and David Salas.
+\emph{Reducing the large set threshold for Oertel's conjecture on the mixed-integer volume}.
+Mathematical Programming, 2026,
+\href{https://doi.org/10.1007/s10107-026-02391-9}{doi:10.1007/s10107-026-02391-9}.
+Numbering as in \href{https://arxiv.org/abs/2411.11864v4}{arXiv:2411.11864v4}.
+
+\bibitem{grunbaum}
+Branko Gr\"unbaum.
+\emph{Partitions of mass-distributions and of convex bodies by hyperplanes}.
+Pacific Journal of Mathematics 10(4):1257--1261, 1960,
+\href{https://doi.org/10.2140/pjm.1960.10.1257}{doi:10.2140/pjm.1960.10.1257}.
+
+\bibitem{oertel}
+Timm Oertel.
+\emph{Integer convex minimization in low dimensions}.
+PhD thesis, ETH Z\"urich, 2014,
+\href{https://doi.org/10.3929/ethz-a-010295887}{doi:10.3929/ethz-a-010295887}.
 \end{thebibliography}
 
 \end{document}

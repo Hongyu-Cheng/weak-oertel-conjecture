@@ -1,0 +1,158 @@
+{
+  "candidate_id": "859545cd4bf45c6c",
+  "candidate_sha256": "0c3725710ce42488f1fa185d34f3a28a2811e5fe056e009d648b11beafcee6aa",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "c99394a395ea2399": "cd92a199ddcb9e25db80233f9b5d6fa68dc41a04b77dad3f04bbaf6e24592ce8",
+    "e5152cdadf65331d": "b2adabf23f35b6dd024d80c434a2976bb4eb4157cdb3a3731a611a8d8aed42dd",
+    "e823c82617a0bc70": "dfbbf3fae8f0489581ea21192121a1c7161a862e208478d23041b67a6d1613b3"
+  },
+  "checks": [
+    "Original 3787afd8b1ed0167 §§1–3 gives the same ordinary global statement and TV consequence by maximum-inscribed normalization and a fixed positive depth gap. Original e2c21ddfc5abb8ca §3 (9)–(11a) gives the same enclosure-volume factor, absolute defect budget, retained Q-minus-K slack and scale-aware bound. The frozen proof preserves these scopes and uses a dimension-only threshold from the accepted compact normalization.",
+    "An enclosing simplex exists by boundedness of Q. An inball of Q gives a fixed positive equatorial disk for each nonzero vertex direction. Its cone belongs to each enclosing simplex, so a uniform volume bound bounds all vertices. Convex hulls of convergent tuples converge in Hausdorff distance and the determinant is continuous. The limit contains the full-dimensional Q and is a simplex. A facet with positive separation from Q can move inward slightly and strictly reduce volume.",
+    "For maximum-volume inscribed T, replacing a vertex by x has determinant magnitude |λ_j(x)| times the old one, so |λ_j(x)|≤1. The outer set defined by λ_j≥−1 is exactly a translate of (d+2)T, since the shifted barycentric coordinates sum to d+2. The determinant volume factor is (d+2)^d, and T⊂Q gives the required universal bound.",
+    "Euclidean Hausdorff closeness from 03bc771bddd39a8a implies the required infinity-norm closeness. The cutoff ε≤1/(64d³) implies both locality thresholds in e823c82617a0bc70. That result works for every minimum enclosure and gives both the vertex match and each actual facet-centroid contact. Averaging the matched vertices gives ||g_S−g_T||∞≤Lε. The barycentric defining inequalities of T give the inradius ρ=1/[d(d+1)] about g_T in the infinity norm. The chosen δ=2Lε/ρ≤δ_d also ensures Lε≤ρ/2.",
+    "For each direction the Hausdorff bound yields h_S−h_Q≤Lε||u||₁, because Q contains T. The translated infinity ball in S gives h_S−u·g_S≥(ρ/2)||u||₁. Hence the support of g_S+(1−δ)(S−g_S) is h_S−δ(h_S−u·g_S)≤h_Q. This is exactly the inner inclusion in c99394a395ea2399. Dividing its gain by Γ_dc/4 produces the local factor, and above the fixed cutoff the ratio defect ≤1 gives the global factor 1/(Γ_dτ). Both constants depend only on d.",
+    "An invertible affine map sends minimum enclosing simplices to minimum enclosing simplices, preserves normalized halfspace depth and changes numerator and denominator volumes by a common determinant. The nested uniform densities have positive difference only on Q, whose positive mass is 1−|Q|/|S|. The usual TV supremum therefore bounds every closed-halfspace probability difference.",
+    "The frozen transfer uses the same normals and all finitely many nonnegative weights. It proves K⊂R⊂S for R=Σλ_iP_i and retains the exact slack |S|−|K|=(|S|−|Q|)+(|Q|−|K|). Multiplying the ordinary bound by |S| and applying the upper volume estimate gives the stated coefficient A_d(d+2)^d|Q|. When Q=K, actual facet contact gives R=S, so division by |S| gives λ_i^d|P_i|/|S|=α_i^d. Zero weights and translated summands are allowed, and in dimension one the two support bounds recover each input interval exactly.",
+    "The centroid and scale identities were checked algebraically, including the common determinant factor and the positive denominator Σλ_i r_i. An independent rational replay for d=2 through 32 also checked the locality inequalities, positivity of the local coefficient and the normalized powers with a zero weight and weights not summing to one.",
+    "Linked independent recheck verified the unchanged proof against the exact revised parallel-simplex enclosure theorem."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "hypotheses": "The maximum-volume inscribed simplex of the positive compact Q is mapped onto T. The accepted uniform compactness theorem applies to every maximizing choice and gives τ>0 depending only on d and ε. Its Euclidean distance estimate implies the infinity distance needed by the enclosing-simplex locality result.",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb"
+    },
+    {
+      "candidate_id": "c99394a395ea2399",
+      "candidate_sha256": "cd92a199ddcb9e25db80233f9b5d6fa68dc41a04b77dad3f04bbaf6e24592ce8",
+      "fact_sha256": "448456ea882bae951589f9d89bf26685beb258b27fa809e39f2e7b3ffa3e5bfe",
+      "hypotheses": "The body Q is full-dimensional, lies inside S, contains every facet centroid by enclosing-simplex locality, and contains the inner homothet of S with the displayed δ≤δ_d by the support-function comparison. Thus its exact factor 4/(Γ_dc) applies.",
+      "reviewed_proof_sha256": "1a74de39f84087152c0f7ec2ee44da444601a4414255f66fe735d7e7ca4c6a23",
+      "reviewed_statement_sha256": "0a6e4f08df5657260821ca0d27cb339185c9072db5df58abb72f6f87dcd9c83f"
+    },
+    {
+      "candidate_id": "e823c82617a0bc70",
+      "candidate_sha256": "dfbbf3fae8f0489581ea21192121a1c7161a862e208478d23041b67a6d1613b3",
+      "fact_sha256": "97bd8d1e7086cca3a1b0dd3d415656b9b0bafed06c5741bc0af536c5360cd918",
+      "hypotheses": "Use the already accepted locality theorem with m=d, K=Q and the minimizing enclosure S. The chosen ε meets the stated Hausdorff and vertex thresholds, providing both the centroid proximity and every actual facet contact. The run-level frozen parent copy is byte-identical to the pinned accepted candidate.",
+      "reviewed_proof_sha256": "bbf9034c11ae4665c02129376c38edd8343e60f2e3c1edd68c080dd62b123d5b",
+      "reviewed_statement_sha256": "e6554ff489aab5c9bc51a73a25574dbeb5e39d17d50bf3411bef2ae83f3e8fa5"
+    },
+    {
+      "candidate_id": "e5152cdadf65331d",
+      "candidate_sha256": "b2adabf23f35b6dd024d80c434a2976bb4eb4157cdb3a3731a611a8d8aed42dd",
+      "hypotheses": "For the absolute budget, the unchanged consumer explicitly takes Q to be a full-dimensional compact convex body and S to be a minimum-volume enclosing simplex of Q. Its K is contained in Q and is the finite Minkowski sum of the same full-dimensional compact convex A_i with nonnegative weights and at least one positive. The P_i use the same facet normals. The revised containing-body case therefore gives the exact bound with both slacks |S|−|Q| and |Q|−|K|. For the normalized budget, Q=K is itself a full-dimensional compact convex body because the sum includes a positive multiple of a full-dimensional compact convex summand. The consumer proves every facet of the minimum enclosure supports Q=K by the inward parallel move argument. The supporting-enclosure case therefore gives R=S and division by |S| gives the stated α_i powers. In dimension one the consumer directly identifies each P_i with A_i. The parent proof field is unchanged and the sole parent statement change specifies the compact convex Q already present in both invocations.",
+      "reviewed_proof_sha256": "08b49b0fb2641916942521ee2a2208da83390923893417c28b29a366a45c0b83",
+      "reviewed_statement_sha256": "6624a9f32ad85b22578f678a4e8e3bdd76b511c92199a1889576227a7de3f182"
+    }
+  ],
+  "dependency_recheck_finished_utc": "2026-11-08T18:26:54Z",
+  "dependency_recheck_started_utc": "2026-11-08T18:25:59Z",
+  "finished_utc": "2026-11-08T18:22:30Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "859545cd4bf45c6c",
+    "candidate_sha256": "0c3725710ce42488f1fa185d34f3a28a2811e5fe056e009d648b11beafcee6aa",
+    "checks": [
+      "Original 3787afd8b1ed0167 §§1–3 gives the same ordinary global statement and TV consequence by maximum-inscribed normalization and a fixed positive depth gap. Original e2c21ddfc5abb8ca §3 (9)–(11a) gives the same enclosure-volume factor, absolute defect budget, retained Q-minus-K slack and scale-aware bound. The frozen proof preserves these scopes and uses a dimension-only threshold from the accepted compact normalization.",
+      "An enclosing simplex exists by boundedness of Q. An inball of Q gives a fixed positive equatorial disk for each nonzero vertex direction. Its cone belongs to each enclosing simplex, so a uniform volume bound bounds all vertices. Convex hulls of convergent tuples converge in Hausdorff distance and the determinant is continuous. The limit contains the full-dimensional Q and is a simplex. A facet with positive separation from Q can move inward slightly and strictly reduce volume.",
+      "For maximum-volume inscribed T, replacing a vertex by x has determinant magnitude |λ_j(x)| times the old one, so |λ_j(x)|≤1. The outer set defined by λ_j≥−1 is exactly a translate of (d+2)T, since the shifted barycentric coordinates sum to d+2. The determinant volume factor is (d+2)^d, and T⊂Q gives the required universal bound.",
+      "Euclidean Hausdorff closeness from 03bc771bddd39a8a implies the required infinity-norm closeness. The cutoff ε≤1/(64d³) implies both locality thresholds in e823c82617a0bc70. That result works for every minimum enclosure and gives both the vertex match and each actual facet-centroid contact. Averaging the matched vertices gives ||g_S−g_T||∞≤Lε. The barycentric defining inequalities of T give the inradius ρ=1/[d(d+1)] about g_T in the infinity norm. The chosen δ=2Lε/ρ≤δ_d also ensures Lε≤ρ/2.",
+      "For each direction the Hausdorff bound yields h_S−h_Q≤Lε||u||₁, because Q contains T. The translated infinity ball in S gives h_S−u·g_S≥(ρ/2)||u||₁. Hence the support of g_S+(1−δ)(S−g_S) is h_S−δ(h_S−u·g_S)≤h_Q. This is exactly the inner inclusion in c99394a395ea2399. Dividing its gain by Γ_dc/4 produces the local factor, and above the fixed cutoff the ratio defect ≤1 gives the global factor 1/(Γ_dτ). Both constants depend only on d.",
+      "An invertible affine map sends minimum enclosing simplices to minimum enclosing simplices, preserves normalized halfspace depth and changes numerator and denominator volumes by a common determinant. The nested uniform densities have positive difference only on Q, whose positive mass is 1−|Q|/|S|. The usual TV supremum therefore bounds every closed-halfspace probability difference.",
+      "The frozen transfer uses the same normals and all finitely many nonnegative weights. It proves K⊂R⊂S for R=Σλ_iP_i and retains the exact slack |S|−|K|=(|S|−|Q|)+(|Q|−|K|). Multiplying the ordinary bound by |S| and applying the upper volume estimate gives the stated coefficient A_d(d+2)^d|Q|. When Q=K, actual facet contact gives R=S, so division by |S| gives λ_i^d|P_i|/|S|=α_i^d. Zero weights and translated summands are allowed, and in dimension one the two support bounds recover each input interval exactly.",
+      "The centroid and scale identities were checked algebraically, including the common determinant factor and the positive denominator Σλ_i r_i. An independent rational replay for d=2 through 32 also checked the locality inequalities, positivity of the local coefficient and the normalized powers with a zero weight and weights not summing to one."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "03bc771bddd39a8a",
+        "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+        "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+        "hypotheses": "The maximum-volume inscribed simplex of the positive compact Q is mapped onto T. The accepted uniform compactness theorem applies to every maximizing choice and gives τ>0 depending only on d and ε. Its Euclidean distance estimate implies the infinity distance needed by the enclosing-simplex locality result.",
+        "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+        "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb"
+      },
+      {
+        "candidate_id": "c99394a395ea2399",
+        "candidate_sha256": "cd92a199ddcb9e25db80233f9b5d6fa68dc41a04b77dad3f04bbaf6e24592ce8",
+        "fact_sha256": "448456ea882bae951589f9d89bf26685beb258b27fa809e39f2e7b3ffa3e5bfe",
+        "hypotheses": "The body Q is full-dimensional, lies inside S, contains every facet centroid by enclosing-simplex locality, and contains the inner homothet of S with the displayed δ≤δ_d by the support-function comparison. Thus its exact factor 4/(Γ_dc) applies.",
+        "reviewed_proof_sha256": "1a74de39f84087152c0f7ec2ee44da444601a4414255f66fe735d7e7ca4c6a23",
+        "reviewed_statement_sha256": "0a6e4f08df5657260821ca0d27cb339185c9072db5df58abb72f6f87dcd9c83f"
+      },
+      {
+        "candidate_id": "e823c82617a0bc70",
+        "candidate_sha256": "dfbbf3fae8f0489581ea21192121a1c7161a862e208478d23041b67a6d1613b3",
+        "fact_sha256": "97bd8d1e7086cca3a1b0dd3d415656b9b0bafed06c5741bc0af536c5360cd918",
+        "hypotheses": "Use the already accepted locality theorem with m=d, K=Q and the minimizing enclosure S. The chosen ε meets the stated Hausdorff and vertex thresholds, providing both the centroid proximity and every actual facet contact. The run-level frozen parent copy is byte-identical to the pinned accepted candidate.",
+        "reviewed_proof_sha256": "bbf9034c11ae4665c02129376c38edd8343e60f2e3c1edd68c080dd62b123d5b",
+        "reviewed_statement_sha256": "e6554ff489aab5c9bc51a73a25574dbeb5e39d17d50bf3411bef2ae83f3e8fa5"
+      },
+      {
+        "candidate_id": "e5152cdadf65331d",
+        "candidate_sha256": "967f87155626570ef2fa8ab2a4e236cd3b34a220c76b984f2d9bcdcfc3234320",
+        "hypotheses": "The exact same-wave statement applies to the same full-dimensional bodies and all nonnegative weights with one positive, and uses the same normals. Its containing-body case gives the absolute deficit with Q-minus-K slack. At Q=K its supporting-enclosure case gives R=S and the normalized powers. Its proof uses the classical nonnegative Minkowski polynomial coefficient differences by mixed-volume monotonicity, checked in §1.1 of [van Handel and Wang, On Minkowski’s monotonicity problem](https://arxiv.org/html/2507.20082v1#S1.SS1). Admission requires independent approval of these exact frozen parent bytes.",
+        "reviewed_proof_sha256": "08b49b0fb2641916942521ee2a2208da83390923893417c28b29a366a45c0b83",
+        "reviewed_statement_sha256": "4a25f3e8ac7679ed953931f5eb225b82a490ff4a53ae6a2f4f902bfed6dff71a"
+      }
+    ],
+    "finished_utc": "2026-11-08T18:22:30Z",
+    "issues": [],
+    "overlap": [
+      {
+        "comparison": "In every d≥3 it gives the same enclosure defect bound using paired depth P(Q). At each y, setting the paired offset to s=0 gives p_Q(y)≤ordinary depth at y, hence P(Q)≤D(Q). This implies the ordinary bound for every minimum enclosure in d≥3, including TV by the nested-density identity. The frozen proof additionally treats d=2 and supplies the Minkowski defect budgets.",
+        "fact_id": "8d5061c778ea7d72"
+      },
+      {
+        "comparison": "It already provides the local linear depth bound and TV equality under inner homothetic containment and every facet-centroid contact. The present proof supplies these hypotheses uniformly near equality in an inscribed normalization and adds the far-body and Minkowski bounds.",
+        "fact_id": "c99394a395ea2399"
+      },
+      {
+        "comparison": "Minimum-enclosure existence, the inball-cone vertex bound and actual facet contacts are already accepted here. The frozen proof includes the elementary existence/support steps and uses e823c82617a0bc70 for the required facet-centroid condition near equality.",
+        "fact_id": "a839bfd22b7f11a2"
+      }
+    ],
+    "readability": "The proof's named parallel-simplex transfer resolves to the frozen candidate e5152cdadf65331d through depends_on. The choice of ε gives Lε≤ρ/2 through the additional δ≤1 condition. A_d is dimension-only and uses the compactness cutoff τ, so this proof does not require an explicit numerical value of τ.",
+    "review_method": "independent cold proof read of exact frozen bytes and source and predecessor comparison",
+    "reviewed_proof_sha256": "2e119d5d68738cbae41275775fd92ec62ab60e4f7492dbe1b5ae6cfef23f3ed2",
+    "reviewed_statement_sha256": "3ba834a512fa6120e6d92ad097b78ba623c9954d8faa5cc4cbcab1a4433ba416",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T18:20:01Z",
+    "summary": "The proof gives the dimension-only ordinary stability estimate for every d≥2 and every minimizing enclosure. Its absolute and scale-aware defect budgets follow from the verified same-wave enclosure transfer. The ordinary d≥3 estimate is also an exact consequence of an accepted paired-depth theorem.",
+    "verdict": "APPROVED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "In every d≥3 it gives the same enclosure defect bound using paired depth P(Q). At each y, setting the paired offset to s=0 gives p_Q(y)≤ordinary depth at y, hence P(Q)≤D(Q). This implies the ordinary bound for every minimum enclosure in d≥3, including TV by the nested-density identity. The frozen proof additionally treats d=2 and supplies the Minkowski defect budgets.",
+      "fact_id": "8d5061c778ea7d72"
+    },
+    {
+      "comparison": "It already provides the local linear depth bound and TV equality under inner homothetic containment and every facet-centroid contact. The present proof supplies these hypotheses uniformly near equality in an inscribed normalization and adds the far-body and Minkowski bounds.",
+      "fact_id": "c99394a395ea2399"
+    },
+    {
+      "comparison": "Minimum-enclosure existence, the inball-cone vertex bound and actual facet contacts are already accepted here. The frozen proof includes the elementary existence/support steps and uses e823c82617a0bc70 for the required facet-centroid condition near equality.",
+      "fact_id": "a839bfd22b7f11a2"
+    }
+  ],
+  "readability": "The proof's named parallel-simplex transfer resolves to the frozen candidate e5152cdadf65331d through depends_on. The choice of ε gives Lε≤ρ/2 through the additional δ≤1 condition. A_d is dimension-only and uses the compactness cutoff τ, so this proof does not require an explicit numerical value of τ.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "independent cold proof read of exact frozen bytes and source and predecessor comparison",
+  "reviewed_proof_sha256": "2e119d5d68738cbae41275775fd92ec62ab60e4f7492dbe1b5ae6cfef23f3ed2",
+  "reviewed_statement_sha256": "3ba834a512fa6120e6d92ad097b78ba623c9954d8faa5cc4cbcab1a4433ba416",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:20:01Z",
+  "summary": "The proof gives the dimension-only ordinary stability estimate for every d≥2 and every minimizing enclosure. Its absolute and scale-aware defect budgets follow from the verified same-wave enclosure transfer. The ordinary d≥3 estimate is also an exact consequence of an accepted paired-depth theorem.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

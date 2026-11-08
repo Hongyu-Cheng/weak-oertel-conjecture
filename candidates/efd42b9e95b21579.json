@@ -1,0 +1,32 @@
+{
+  "advances": "Refutes removal of inherited projection flux and transfer of ordinary relative area convergence to mixed mass, including a failed two-cap charge at alpha=1/5. It does not violate sharp or weak Oertel depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "efd42b9e95b21579",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:15:48.904025+00:00",
+  "depends_on": [],
+  "draft_key": "relative-container-corner-cuts-boundary-mass-obstruction",
+  "kind": "counterexample",
+  "proof": "If $P$ has lattice-free interior, setting each fixed cut at the support of $P$ makes $P$ itself feasible. A proper closed subset of $P$ must miss some interior point, since $P$ is the closure of its interior. It therefore loses positive volume.\n\nFor any compact mixed body with a measure given by summing finite measures on its lattice fibers, write $h=h_P(a)$ for nonzero base normal $a$ and $E=\\{z\\in P:a\\cdot z=h\\}$. The vertical closed cap $a\\cdot z\\ge h$ has raw mass $\\sum_{z\\in E\\cap\\mathbb Z^n}\\mu_z(C_z)$; the strict exterior is empty. The threshold $h-\\eta$ has the same mass if $0<\\eta<\\min_{z\\in(P\\cap\\mathbb Z^n)\\setminus E}(h-a\\cdot z)$, with no upper constraint on $\\eta$ if the outside set is empty. Every threshold $h+\\eta$ has zero mass for $\\eta>0$. This is just the finite fiber sum, so also applies when the fiber measure is intrinsic Hausdorff measure.\n\nIn the square product the exact census is four interval fibers of length two, all over boundary vertices. The depth region is convex and closed: for each unit normal $u$, the set of thresholds $t$ with $\\mu(u\\cdot(z,x)\\ge t)\\ge\\alpha M$ is a closed lower ray by continuity of finite measure as thresholds increase to $t$. The depth region is the intersection of the corresponding closed halfspaces in the mark coordinate, and lies in $C$ by separation. It is nonempty by central symmetry. More precisely the four square edge midpoints at height zero have depth at least $1/4$ by symmetry of the two-fiber layer of mass four. The two marks $(1/2,1/2,\\pm1/4)$ have depth at least $3/8$: at the center every containing halfspace has normalized mass at least $1/2$, and moving a through-mark halfspace vertically by $1/4$ changes the total captured length by at most one, or changes nothing for a pure-base cut. These six marks span the ambient space. At each actual sampled point $(v,x)$, choose $\\sigma\\in\\{-1,1\\}$ with $\\sigma x\\ge0$. The cap $\\sigma X-3q_v(z)\\ge\\sigma x$ excludes all other fibers and captures length at most one, so the actual sampled depth is at most $1/8$.\n\nFor the corner bound, let $(z_0,x_0)\\in C$ with $q_v(z_0)<3/10$. Choose $\\sigma x_0\\ge0$ and use the ambient closed cap $\\sigma X-2q_v(z)\\ge\\sigma x_0-2q_v(z_0)$. Its threshold is greater than $-3/5$, while the left side is at most $-1$ on the other three fibers. The retained length on $v$ is at most $1+2q_v(z_0)<8/5=\\alpha M$, proving $q_v\\ge3/10$ on $K$. The affine definition is essential for this to be an ambient halfspace.\n\nAt the optimum the four edges have length one and distance $1/2$ to $q$. Opposite normals cancel in the vector integral. Each edge centroid displacement is its outward normal divided by two, so the sum of their outer products is $I_2$. A coordinate-facet support cap retains two whole interval fibers. For $L_\\epsilon$ the four disjoint corner triangles have legs $\\epsilon$ and each inherited edge has length $1-2\\epsilon$. Each new edge has length $\\sqrt2\\,\\epsilon$ and distance $(1-\\epsilon)/\\sqrt2$ to $q$, giving the area and flux identities directly. The removed corner points are at distance at most $\\epsilon/\\sqrt2$ from their truncating segment, so Hausdorff convergence holds. Each removed open corner contains exactly its own binary vertex and removes exactly one interval fiber. The displayed areas approach one from below, but only $P$ could attain one and it contains four lattice points.\n",
+  "source_candidate_ids": [
+    "75212e124d66e084",
+    "870e8284d5328056"
+  ],
+  "source_candidate_sha256": {
+    "75212e124d66e084": "5dfed3c15b9044fd0628d164c9c396d3e60a61f03b53f448541c502b0dc7ea2c",
+    "870e8284d5328056": "2f618eaacbe76e55eac762e56bfb89e9342033f8d32f635a3568005160ca6052"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "870e8284d5328056",
+      "locator": "870e8284d5328056:05–:07, §§4–5, (10)–(12)"
+    },
+    {
+      "candidate_id": "75212e124d66e084",
+      "locator": "75212e124d66e084:01 §1, product depth-region witness and (1), corner support bound"
+    }
+  ],
+  "statement": "If $P$ is a compact convex body with $\\operatorname{int}P\\cap\\mathbb Z^n=\\varnothing$, then in the relative fixed-direction problem of containing a nonempty compact $K\\subseteq P$ and avoiding interior lattice points, the unique maximum-volume container as a set is $P$, regardless of $K$.\n\nFor the actual mixed body $C=[0,1]^2\\times[-1,1]$, let $P=[0,1]^2$, $\\mu=\\mathcal H^1|_{C\\cap(\\mathbb Z^2\\times\\mathbb R)}$, $M=8$, and let $K$ be the projection of the ambient closed-halfspace depth region at normalized threshold $\\alpha=1/5$. At the relative optimum $L=P$ there are no genuine cut facets, and at $q=(1/2,1/2)$ the inherited boundary vector and matrix integrals are $0$ and $I_2$, with scalar flux $\\Phi_P(q)=2$. Each coordinate-facet closed support cap has raw mass $4>(1+1)\\alpha M=16/5$.\n\nFor each binary vertex $v$ put $q_v(z)=\\sum_{j=1}^2[(1-v_j)z_j+v_j(1-z_j)]$. For $0<\\epsilon\\le3/10$, the container $L_\\epsilon=P\\cap\\bigcap_v\\{q_v\\ge\\epsilon\\}$ contains $K$, misses the entire lattice, and satisfies\n$$\n|L_\\epsilon|=1-2\\epsilon^2,\\qquad \\Phi_P(q)=2-4\\epsilon,\\qquad\n2|L_\\epsilon|=4\\epsilon(1-\\epsilon)+\\Phi_P(q),\n$$\nwhere the flux is integrated over $\\partial L_\\epsilon\\cap\\partial P$ and the first term on the last right-hand side is the scalar flux on the cut facets. As $\\epsilon\\downarrow0$, $L_\\epsilon\\to P$ in Hausdorff distance, yet each $L_\\epsilon$ retains zero mixed mass and $P$ retains all eight units. Each removed corner cap $q_v<\\epsilon$ has area $\\epsilon^2/2$ inside $P$ and raw mixed mass $2$. Under closed lattice exclusion the relative area supremum is one and is not attained.",
+  "subgoal_id": "pk-intake-relative-container-corner-cuts-boundary-mass-obstruction",
+  "title": "Relative corner cuts lose all mixed mass while approaching the maximal area"
+}

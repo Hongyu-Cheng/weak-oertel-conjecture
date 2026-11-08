@@ -1,0 +1,47 @@
+{
+  "candidate_id": "24c8c81012c6bd30",
+  "candidate_sha256": "d9b75bafed84498abbf685bc5f89eb3775d92352fda6fd4c297ee9805c643924",
+  "checked_dependency_candidate_sha256": {
+    "be7fc2f8ef9af30d": "bed34af218b6ab6690cef570a217b895ff9891569df579bc2e2cb50c655f2c28"
+  },
+  "checks": [
+    "Central symmetry gives q_i=1/2 and finite positive section factors through the interior origin. Busemann's original central-section corollary II gives convexity of the radial body, and Kim–Yaskin–Zvavitch §1 and Theorem 1 state the same radial normalization and symmetry assumption. Thus 1/σ_i is the value of a norm at v_i, with no unmentioned rescaling. Sources: https://pmc.ncbi.nlm.nih.gov/articles/PMC1062952/pdf/pnas01538-0036.pdf and https://arxiv.org/pdf/1006.1546.",
+    "The identity v_i=−Σ_{j≠i}v_j implies p_i≤1/2. Any nonpair extreme candidate in the capped simplex has at least two fractional coordinates, since the sum is one and all other coordinates are multiples of one half; the two-coordinate split reaches boundary values and the finite iteration proves the convex hull claim.",
+    "The selected row is convex. Its two values on pair vectors give the stated mixture bound because the total mixture weight of pairs meeting i is exactly 2p_i. Binomial bounds are strict for exponent r=d≥2 and nonstrict for r=d−1, so positivity of p_i makes the row strict even at d=2. Direct subtraction at d=2 gives p_i(3−2√2).",
+    "The mixed Laplacian has trace one, zero row and column sums, strictly negative off-diagonal entries and rank d on the sum-zero subspace. Its first d rows give affinely independent vertices with centroid zero. The last row is minus the sum of those rows and therefore is realized by the final balanced covector. Strict signs isolate distinct vertices and give all hypotheses of the declared simplex-coarea fact.",
+    "With H=1, the accepted σ_i=d|K|q_i/a_i implies q_i/σ_i=a_i/(d|K|), so the normalization in the ordinary f-vector reduces exactly to d a_i/q_i^{1/d}. In the pair limit the selected product is 1·(1/2)^{d−1}, and all other row products go to zero. The normalization preserves both §§1–2 and §3 of original 36dd08e781ae3a57."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "be7fc2f8ef9af30d",
+      "verification": "For each perturbed matrix the constructed simplex is d-dimensional, the mark is its interior centroid, the d+1 normals are nonzero, spanning and balanced, and they strictly isolate the corresponding vertices. Their diagonal heights sum to one, so the accepted cap product and pyramid coarea specialize exactly."
+    }
+  ],
+  "finished_utc": "2026-11-08T18:23:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It proves the same row inequality for normalized strict simplex corner data. Its closure is consistent with the limiting simplex rows here, but it does not derive p_i≤1/2 or the convex mixture bound from the sections of an arbitrary centrally symmetric body.",
+      "fact_id": "ac2505bab295d352"
+    },
+    {
+      "comparison": "It is a planar, prescribed symmetric-ear family and does not provide the all-dimensional result for arbitrary centrally symmetric bodies or the simplex degenerations.",
+      "fact_id": "e864fdabdad4bf39"
+    }
+  ],
+  "readability": "The frozen proof is readable.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "5d36ec6ad3b2a5db26175d68b95b35fca3470c8283e8f3a91f7afe9b7f183995",
+  "reviewed_statement_sha256": "9a3c9f621f90248eba29e4c21170baf856a6006a44e5f8cd5a80b8eedea78a07",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:17:53Z",
+  "summary": "The ordinary symmetry-center row bound and simplex pair realizations are correct with their stated common cap/section normalization.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

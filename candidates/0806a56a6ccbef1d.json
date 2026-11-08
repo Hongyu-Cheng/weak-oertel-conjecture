@@ -1,0 +1,32 @@
+{
+  "advances": "A one-dimensional statement about optimized target laws. Sharpness uses an arbitrary convex probability family.",
+  "author": "PK-research-agent",
+  "candidate_id": "0806a56a6ccbef1d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:15:48.902834+00:00",
+  "depends_on": [
+    "a16dfa31498230d5"
+  ],
+  "draft_key": "optimized-line-law-depth-low-interval-superlevels",
+  "kind": "theorem",
+  "proof": "First assume $0\\le t\\le1/2$ and that there are laws of depth at least $t$ at two marks $y_1<y_2$. For $y_1<y<y_2$, the first law has left-ray mass at least $t$ at $y$, and the second has right-ray mass at least $t$ there. If either law has both ray masses at least $t$ at $y$, use that law. In the remaining case, the second law has left-ray mass below $t$, so some mixture has left-ray mass exactly $t$. The two closed rays cover the line, so its right-ray mass is at least $1-t\\ge t$. This proves the weak assertion under attainment. For two points of the strict superlevel at $t<1/2$, choose a common threshold strictly between $t$ and $\\min(1/2,U(y_1),U(y_2))$. The defining supremum supplies a law at each endpoint exceeding this threshold. The same mixture argument proves membership at the intermediate mark.\n\nFor the median application use the compact probability-coupling set and continuous median map from a16dfa31498230d5, identifying the actual selected fiber with a subset of the line. At each fixed $y$ the two pullbacks of closed rays are closed in the compact pair domain, so by Portmanteau the smaller ray mass is upper semicontinuous in the coupling. The set of couplings is convex and weakly compact. The central-central block is clopen because the base coordinates are integers; requiring zero mass there is a weakly closed affine condition. Both unrestricted and nonempty trimmed coupling families therefore give convex families of target laws and attain each fixed-mark maximum. These facts hold even if a mark is outside the selected fiber. Superlevels restricted to that fiber are intersections with its interval.\n\nFor sharpness use the family $\\{\\theta\\delta_0+(1-\\theta)\\delta_1:0\\le\\theta\\le1\\}$. At each endpoint the optimized depth is $1$ by choosing its point mass. At each interior mark the two ray masses are $\\theta$ and $1-\\theta$, with maximum smaller mass $1/2$ at equal mixing. For each $1/2<t\\le1$, the weak superlevel thus contains both endpoints and no intervening point.\n",
+  "source_candidate_ids": [
+    "39a2ef7b63aae46b"
+  ],
+  "source_candidate_sha256": {
+    "39a2ef7b63aae46b": "621fcab1d0f73d0326a9a4def539458889a43f62b094e6c0eb783e0b78f4342f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "39a2ef7b63aae46b",
+      "locator": "39a2ef7b63aae46b:3 §2, mixture argument and median-family application"
+    },
+    {
+      "candidate_id": "39a2ef7b63aae46b",
+      "locator": "39a2ef7b63aae46b:4 §2, above-half counterexample"
+    }
+  ],
+  "statement": "Let $\\mathcal F$ be a nonempty convex family of Borel probability laws on $\\mathbb R$, and put\n$$\nU(y)=\\sup_{\\nu\\in\\mathcal F}\\min\\{\\nu((-\\infty,y]),\\nu([y,\\infty))\\}.\n$$\nThe strict superlevel $\\{U>t\\}$ is an interval, possibly empty, for $0\\le t<1/2$. If every fixed-point supremum is attained, the weak superlevel $\\{U\\ge t\\}$ is an interval for $0\\le t\\le1/2$. These conclusions apply to the unrestricted median-pair targets in continuous dimension one, and to the trimmed subfamily of couplings giving zero mass to pairs with both endpoints central, whenever that subfamily is nonempty. The level $1/2$ for the general weak-superlevel claim is sharp, even for a weakly compact family.",
+  "subgoal_id": "pk-intake-optimized-line-law-depth-low-interval-superlevels",
+  "title": "Low superlevels of optimized halfspace depth on the line are intervals"
+}

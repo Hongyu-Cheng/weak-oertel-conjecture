@@ -1,0 +1,74 @@
+{
+  "candidate_id": "976d4fed23d63aac",
+  "candidate_sha256": "c18dedd2a860d9a1cbecb527e37fa94b76c71c1d2142140a00b23fbb8d778f89",
+  "checked_dependency_candidate_sha256": {
+    "155691fc3768c06f": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+    "7ad3d72ee6061cf3": "2327b88363c8742e4b1ed7ac9e3f586ca7c0427833cbb0596e28f7778564c387",
+    "e9da2489a6c65517": "63eea93ab2e487cc239be340df3e4aab00c6429b32cbf756db625dada9e7b2b9"
+  },
+  "checks": [
+    "The shear at local bases -1,0,1 has determinant one on each fiber and sends the mark to zero. Adding cg_T gives bT-η1 and cT at the endpoints. Their positive-volume intersection is exactly hT by the nonnegative-coordinate and coordinate-sum inequalities, with h=0 handled by an empty retained set.",
+    "A through-mark cap gives thresholds t,0,-t with one fixed continuous normal after the shear. The accepted weighted centroid-tail inequality applies to E⊂cK on the left and cK at the middle and right. The rest of the middle cap is (1-c^d) times the original K-cap and pays Γ(1-c^d)V.",
+    "For a pure-base cap through base 2 the middle and one neighbor remain, giving at least (1+b^d)V. The omitted base 0 can contribute only nonnegative volume. Null additional fibers change neither the caps nor total M.",
+    "The frozen scalar inequality has exactly the required domain and its positive part is (1+1/d)h. After multiplying by Γ/2, adding Γ/2 and substituting a≤2b-1, it gives the claimed comparison with ΓM/2. This normalization was also checked on the 2,312 rational radius samples.",
+    "The original margin on m_z+r_zX dominates the comparison margin on r_jv+r_z(X-v) by the touching lower-support inequality. Both coordinates use Jacobian r_z^d. The vertex permutation fixes the centered simplex, has determinant of absolute value one, and maps the comparison family to the same common-vertex profile for every normal.",
+    "Checked concavity of the radius roof from consecutive midpoint inclusions, so the common-vertex family is actual. The statements match 8f194c2219f76d2a §§1–2 and the independently internalized comparison in 24467ade6f021ae8 §§2–4."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7ad3d72ee6061cf3",
+      "candidate_sha256": "2327b88363c8742e4b1ed7ac9e3f586ca7c0427833cbb0596e28f7778564c387",
+      "fact_id": "7ad3d72ee6061cf3",
+      "fact_sha256": "bf57e39887757a852da23750f18a7e999a38519f0bc2d3418c4810266617da6e",
+      "kind": "accepted",
+      "mapping": "Use its measurable-subset statement with centered convex body c(T-g_T), subset E of volume h^d V, and the common normal and opposing shifts at the outer retained bases. The empty-subset case with t sufficiently negative so that the surviving shifted cap at threshold -t is empty also gives the ordinary centroid bound.",
+      "reviewed_proof_sha256": "4b833d2d2cd82d3dfce7a1ab019309d281ed445128dd3c9c2abedd4cdb66cf58",
+      "reviewed_statement_sha256": "b453cfa3273367f1ced639c3a1d35e4f57001b823e7ac881215a74d2efc1355a"
+    },
+    {
+      "candidate_id": "155691fc3768c06f",
+      "candidate_sha256": "29ad2d2b234c489577fed70d3cdff60f568dd40e54d11a5a938f759ed7ed962c",
+      "fact_id": "155691fc3768c06f",
+      "fact_sha256": "afecd88a8ebe5c473d9297f6454db7d90db5c79dd7986e3072a482620d9a126a",
+      "kind": "accepted",
+      "mapping": "Actual convexity verifies every anchored Minkowski inclusion on the four sampled bases. Apply to direction -u/||u|| at j=2, then multiply by -||u|| to obtain the touching affine minorant of the lower supports.",
+      "reviewed_proof_sha256": "2c027df5280f826f67575a9caf2fc48f86961afb4378d9b6cc9503c2e1aed953",
+      "reviewed_statement_sha256": "ae620bc47a6c7c8bd2eac230a3afeee4e3a8ca76a0eb43dcfa9603f6609fa787"
+    },
+    {
+      "candidate_id": "e9da2489a6c65517",
+      "candidate_sha256": "63eea93ab2e487cc239be340df3e4aab00c6429b32cbf756db625dada9e7b2b9",
+      "kind": "same_batch",
+      "mapping": "The frozen scalar proof applies because d≥2 and 1/2<b≤c≤1. Substitute its positive part (1+1/d)h, multiply by Γ/2, then use a≤2b-1. Admission depends on independent approval of these exact predecessor bytes.",
+      "reviewed_proof_sha256": "4bdb8a2ac8ce77ea0105be9b2642f8dc2f6323da9cdf5dc4c0a35d16dbaaefb5",
+      "reviewed_statement_sha256": "badce0b6e37f37e3c191ef97f2bf68dd1ac4457c2bf9e25470eff223af5d1dca"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:23:48Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives a normal reduction for common-vertex centroid depth under a touching radius majorant. It gives neither the stronger raw bound Γ+h^d/2 for the ordered profile nor its transfer to arbitrary compatible translations.",
+      "fact_id": "6f616779219fd76c"
+    },
+    {
+      "comparison": "The weighted subset tail statement is a proof input at the retained triple. Its hypotheses alone do not produce the retained translated overlap or compare the result with the full four-fiber volume.",
+      "fact_id": "7ad3d72ee6061cf3"
+    }
+  ],
+  "readability": "The two directions of the base tilt are retained by applying the same all-threshold subset inequality to one common normal. The comparison cap need not have the original normal after the vertex permutation.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the exact frozen statement and proof, comparison to original locators and accepted facts, exact dependency binding, and independent rational arithmetic where applicable.",
+  "reviewed_proof_sha256": "55585d12c9c53b78d595e8eac58a221b250d5beaef40a5666559c31a015bd07b",
+  "reviewed_statement_sha256": "44bb6827900da4731d07e6c4e287f4a9cc19aa76cff75d0dd2a1c257807bd920",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:17:25Z",
+  "summary": "The actual three-fiber cap payment gives the stronger raw bound at the base-2 centroid, and a lower support minorant transfers it cap by cap to any compatible translations.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

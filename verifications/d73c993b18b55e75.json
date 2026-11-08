@@ -1,0 +1,60 @@
+{
+  "candidate_id": "d3c07884e1f0847e",
+  "candidate_sha256": "b12fca5fc6f0a2e0a7ebec3a69d013ae6fb36848c512c1ee55e9318e96c805e5",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "ac7ba1e1e0ebc955": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df"
+  },
+  "checks": [
+    "Source 64b80eee72258d21 §§2 and 5 uses the same zero B volume, positive convex fibers, closed middle cover, residual allowance and cap count. The centered-chord geometry is a separate conditional application.",
+    "The strict uncaptured residual is the exact complement of the closed cap within A. Hence q_i+a−r_i≤Q with zero B contribution. In Q≥a use α=Q−a≥0 in ordinary trimming and (q_i−α)_+≤r_i, including α=0.",
+    "In Q<a the cover union bound gives k≤m(Q−a)+κa and k<κa. The normalized lower bound (x+m−κ)/(m(x+1)) is nonincreasing because κ≤m−1 under either hypothesis, so it is at least 1/(1+κ)≥Γ_d. The case κ=0 cannot occur there.",
+    "Disjointness gives κ≤1≤1/Γ_d−1. The stated cap count d+1 is enough by the displayed elementary inequality, with d=1,2 checked and e<3 for d≥3. Independent rational evaluation gives the planar allowance 5/4.",
+    "For nonheavy B, a+k≥M/2 gives the Q bound. For heavy B, the ordinary centroid is an actual point and every containing ambient cap retains at least Γ_d|B| from that fiber, including full traces with zero continuous normal."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+      "fact_id": "ac7ba1e1e0ebc955",
+      "fact_sha256": "9a7fcf050afaf6a170e1e9c222468d3d36986633f09439295647be2cc1b17fd7",
+      "reviewed_proof_sha256": "76922090615d5ce7641a49c1ff447e454326f5634bc45eff19e5aa9daf91279f",
+      "reviewed_statement_sha256": "bc29bec04a379e95f5f6632e6ed13ef21f0726dfed029e01d071527d2787773a",
+      "verification": "Use its ordinary-volume specialization on the full-dimensional compact middle body with closed covering traces and nonzero continuous normals. The proof chooses the valid α=Q−a≥0."
+    },
+    {
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_id": "6769574fc1bd9f8d",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d",
+      "verification": "At full mass |B| the metronoid is the ordinary centroid of B. Each ambient containing cap restricts to a containing closed continuous halfspace or the full B trace, so its B contribution has the required lower bound."
+    }
+  ],
+  "finished_utc": "2026-11-08T18:21:59Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted inequality applies within the middle fiber and provides the positive-part bound. It contains neither the zero-endpoint residual budget deduction nor the separate Q<a branch.",
+      "fact_id": "ac7ba1e1e0ebc955"
+    },
+    {
+      "comparison": "Its actual facet area bounds under common-simplex critical-circuit hypotheses constrain another fiber. Those area bounds do not imply the disjointness or total residual allowance assumed here.",
+      "fact_id": "d5ee7da0c4b9c567"
+    }
+  ],
+  "readability": "The scope and proof are clear in the frozen text.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4c522d1cf13864ed720b20e2ceab7ac74e6d0d64af8bebdc081f0ac08fd70328",
+  "reviewed_statement_sha256": "1c49d9650fee5a66650b3bc4fe194a586383d556cfd8d5ee4608e11b87af36af",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:16:35Z",
+  "summary": "The disjoint and numerical residual hypotheses both give the claimed mixed cap-budget lower bound, with the stated nonheavy and heavy consequences.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

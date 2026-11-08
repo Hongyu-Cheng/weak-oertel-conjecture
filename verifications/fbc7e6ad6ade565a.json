@@ -1,0 +1,58 @@
+{
+  "candidate_id": "99fcac1ff2e8423a",
+  "candidate_sha256": "c7f0b7aa16343385ec5390fe7b86c1773efafa4cc35603ba619bc253a2cf9c9c",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "e4ef1ac154c5d280": "85eff8bf4977b758bdadfc4168ffd61057189dc81f0fe19b8cde541c18ecd2f4"
+  },
+  "checks": [
+    "Matched 49497dd8dc9538af §§1–4, (1)–(7), including the historical clarification on finite positive total coarse mass in the countable case. Compactness gives upper semicontinuity of fiber volume by confinement to arbitrarily small neighborhoods of the limit section. Brunn–Minkowski makes positive closed superlevels convex. For s=0 the section profile is an indicator. Empty, degenerate and F=0 cases are covered.",
+    "Apply the per-set cell bound in sampled dimension r with continuous dimension zero to each closed superlevel. That part of the accepted proof does not need positive total volume. Tonelli gives actual closed sampled cap masses and coarse volume on integration. The exponent is r−1 because the integration of the bound occurs after the counting comparison in the sampled projection.",
+    "For M>0 and s≥1, convexity inserts a translate of (1−θ)Q_{u₀} at a convexly interpolated base even when the other nonempty fiber has zero volume. Integrating the resulting homothetic superlevels gives the beta factor s!r!/(r+s)!. Checked that integral independently by binomial expansion with rational arithmetic for 49 pairs (r,s). For s=0 the peak comparison is equality.",
+    "The simplex barycenter is at distance at least 1/((r+1)√r) from its facets and at distance at most √r(1+1/(r+1)) from any point of the containing cube. Their ratio is r(r+2). A base-only map multiplies both coarse cap volume and covolume-weighted sampled mass by |det A| and preserves the continuous section volume and all oblique halfspaces. A Voronoi cell realizes the claimed bound from covering radius.",
+    "The total error gives T≥(1−e)M. Since ν(H)≤M, separate normalization costs at most 2e/(1−e). Each original ambient cap on a coarse fiber may be proper, empty or full. Undo the individual determinant before summing. Bounded errors and a finite positive sum of coarse masses make the countable sampled sum finite. A zero coarse fiber can have positive sampled mass and remains under the absolute bound."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "e4ef1ac154c5d280",
+      "fact_sha256": "4fc0dfe1997be608231473097c2bf01da51c0e1ea91becf1d432703070491362",
+      "hypotheses": "Use its proof's per-set cell estimate at continuous dimension s=0 and m=r, for each compact convex positive superlevel in the sampled box. This exact part includes the empty and lower-dimensional cases before the positive-total hypothesis for its aggregate normalization."
+    },
+    {
+      "fact_id": "03bc771bddd39a8a",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "hypotheses": "Apply only its maximal-volume simplex sandwich to the full-dimensional P guaranteed by M>0. Its simplex and cube provide the stated radii after recentering and uniform scaling."
+    }
+  ],
+  "finished_utc": "2026-11-08T18:22:21Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The proof supplies the boxed per-set counting estimate for s=0. Its general bound uses a box in all r+s coordinates. The new layer-cake estimate depends only on the sampled projection box and actual peak section volume.",
+      "fact_id": "e4ef1ac154c5d280"
+    },
+    {
+      "comparison": "In sampled rank one with s≥1 and positive projection length and peak, its bound hF is at least as strong because a fundamental cell inside [−δ,δ] has Lebesgue measure h≤2δ. It also gives the matching factor 1/(s+1). The new theorem extends the dependence on actual projection volume to arbitrary sampled rank and includes the degenerate and coarse-family clauses.",
+      "fact_id": "ae8f94d7d0e2ab8a"
+    },
+    {
+      "comparison": "Its discrepancy concerns actual mixed projections in a fixed unimodular integer frame. The error is expressed through deletion coefficients. It does not imply the covolume- and peak-volume bound after arbitrary affine normalization of the sampled projection.",
+      "fact_id": "ccb572e264ee97be"
+    }
+  ],
+  "readability": "The dimensionless relative error e gives an absolute error eM in original coarse-volume units after canceling the determinant. Thus the fiber-specific normalizations need not agree with one another.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, source and dependency comparison, and exact calculation",
+  "reviewed_proof_sha256": "ec06ec0b6f1eb4c5ee8e7d33817135a9081c3f4fab9252d0cfa1c64443654180",
+  "reviewed_statement_sha256": "5e8843999614a342c6158d7f5a6ae82c304d6507ef2b611079d5f61b61984bb9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:16:42Z",
+  "summary": "The projection-space layer-cake bound, peak-volume constant, affine normalization, and summable aggregate discrepancy are proved with actual sampled boundary values.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

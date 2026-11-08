@@ -1,0 +1,26 @@
+{
+  "advances": "Exact row algebra and residual Brunn–Minkowski on a positive affine face. It does not identify a volume bound from the root inequality, or transport lattice parity.",
+  "author": "PK-research-agent",
+  "candidate_id": "fd4e3980a10946e6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:17:06.632818+00:00",
+  "depends_on": [],
+  "draft_key": "positive-affine-residual-row-chart",
+  "kind": "lemma",
+  "proof": "Affineness gives $\\sum_j\\theta_j h_j=h_p$ and positivity on the compact row hull. Direct substitution gives $1-a\\cdot z'=h_p/h(z)>0$, then the inverse formulas. For a convex combination in the original body, its image is the convex combination of the images with weights proportional to the original weights times the positive denominators. Dividing weights by the denominators reverses this construction. The image of the restricted compact body is therefore compact and convex. The same argument applies to convex subsets, so intersections and finite Helly incidences in this chart are preserved.\n\nSubstitute the inverse into the original margin and divide by $h(z)>0$; since $(z-p)/h(z)=z'$ and $1/h(z)=(1-a\\cdot z')/h_p$, this gives the asserted affine margin, with signs preserved. Thus finite intersections of closed caps or their strict complements are transported exactly. At fixed $z$ the continuous map is scalar dilation, which gives the intrinsic volume factor in an affine $q$-plane. Also $\\sum_j\\eta_j=1$ and $\\sum_j\\eta_j z'_j=\\sum_j\\theta_j(z_j-p)/h_p=0$.\n\nConvexity of the original body intersected with all the strict halfspaces gives $\\sum_j\\theta_jR_{z_j}\\subseteq R_p$. Each destination residual has affine dimension $q$: positive finite $q$-measure of a convex set implies this dimension. The affine direction of their positively weighted Minkowski sum is the sum of their affine directions. It lies in the direction space of the $q$-dimensional source fiber, so all destination direction spaces agree. After translation, Brunn–Minkowski in that common $q$-space gives $\\sum_j\\theta_j\\mathcal H^q(R_{z_j})^{1/q}\\le h_p$. It applies also to these possibly nonclosed bounded convex sets by closure, whose boundary has $q$-measure zero. Divide by $h_p$ for the root inequality, and use $\\theta_j=h_p\\eta_j/h_j$ for the volume identity. This argument does not assign zero to an empty destination residual in the Minkowski sum.\n\nFor the supporting-face assertion, a convex threshold lies above its support and, on the convex hull of equality destinations, lies below the same affine interpolation by convexity. In a KKT row the shared equality follows whenever the row preserves the threshold mean, since the nonnegative support gaps then have zero average. Positive column mass $qh_j^{q-1}$ forces positive destination height when $q>1$; for $q=1$ positivity must be assumed separately. The anchoring at $p$ matters for the inverse; the chart need not preserve integer sites.\n",
+  "source_candidate_ids": [
+    "374134af8a3f1b92"
+  ],
+  "source_candidate_sha256": {
+    "374134af8a3f1b92": "2be246573d8ae90994b2b9a63f8699f9f0f7b640d24afa95958a14fb72c3037d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "374134af8a3f1b92",
+      "locator": "374134af8a3f1b92:01 §1, (1)–(6), positive affine chart and residual moment"
+    }
+  ],
+  "statement": "Let $\\theta_j>0$ with $\\sum_j\\theta_j=1$ and $p=\\sum_j\\theta_jz_j$. On $B=\\operatorname{conv}\\lbrace z_j\\rbrace$ assume an affine threshold $h(z)=h_p+a\\cdot(z-p)$ with $h_p>0$ and $h_j=h(z_j)>0$ at every destination. For a compact convex body restricted to bases in $B$ the map\n$$\nz'=(z-p)/h(z),\\qquad x'=x/h(z)\n$$\nis a convexity-preserving bijection onto its image with inverse $z=p+h_pz'/(1-a\\cdot z')$, $x=h_px'/(1-a\\cdot z')$. It takes the actual cap $b\\cdot z+u\\cdot x\\ge c$ to $[b-(b\\cdot p-c)a/h_p]\\cdot z'+u\\cdot x'+(b\\cdot p-c)/h_p\\ge0$, and divides intrinsic $q$-dimensional section volumes by $h(z)^q$. The positive row weights $\\eta_j=\\theta_jh_j/h_p$ sum to one and have transformed mean zero.\n\nAssume $q\\ge1$, the original fiber at $p$ has affine dimension $q$, and use the actual residual sections $R_z$ of a fixed finite family of closed caps (the complements are strict). If $\\mathcal H^q(R_p)^{1/q}=h_p$ and every $R_{z_j}$ has positive finite $q$-volume, write $r_j=\\mathcal H^q(R_{z_j})^{1/q}/h_j$. Then\n$$\n\\sum_j\\eta_j r_j\\le1,\\qquad\n\\sum_j\\theta_j\\mathcal H^q(R_{z_j})=h_p\\sum_j\\eta_j h_j^{q-1}r_j^q.\n$$\nThe positive affine threshold hypothesis holds on the row hull when a convex threshold has a common supporting affine function with equality at its source and all its destinations and these values are positive.",
+  "subgoal_id": "pk-intake-positive-affine-residual-row-chart",
+  "title": "Exact affine normalization of a positive residual row"
+}

@@ -1,0 +1,51 @@
+{
+  "candidate_id": "6d4fda353a2353ab",
+  "candidate_sha256": "553720be9c385d9b0a76c1c80903912a4a8b52ffa6dec807b75aa41eba593b06",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a"
+  },
+  "checks": [
+    "Original 9287833963d276a6 §2 (4) and §3 (5) match the stated block moment and homogeneous support Hessians. The broader cyclic monotonicity assertions in §1 are separate from this proof.",
+    "The positive part is differentiable after integration because the cutting plane is volume-null. The signed column displacement under (D,δ) is −(D·x+δ) at unit u, and the captured increment has the opposite sign. Bounded projections and strip lengths give a uniform integrable bound even along convergent directions.",
+    "For a proper section the relative interior belongs to the interior of K. Its tangential boundary is null, so rotating or translating nearby section planes yields continuity of the derivative without smoothness assumptions on K. The same argument in d=1 uses interval columns and the single section point.",
+    "The mixed block is the section mass times its centroid divided by |K|. Since L contains a relative ball in u⊥, its second moment is positive definite there and annihilates u.",
+    "The fixed-mass maximizer is unique up to null sets by the strict pointwise bathtub comparison off the cutting plane. Differentiating the fixed cap mass makes the threshold derivative the section average of D·x, which vanishes at the centered section. The derivative of the barycenter gradient therefore introduces exactly the factor 1/(τ|K|) with no spherical curvature term."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "6769574fc1bd9f8d",
+      "candidate_sha256": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+      "fact_sha256": "a4913e0f202cbb410b2716830f524f3a9d6f0ef0b8393e6513d5afd4994cee16",
+      "hypotheses": "K is compact convex and full-dimensional. The cut through 0 is proper, so 0<τ<1 and m=τ|K| is an admissible volume. In its support formula the factor 1/m against volume equals 1/τ against the normalized measure.",
+      "reviewed_proof_sha256": "81ab97a4430fca450bb112a0050f586ce5537bb57e3e624752ef3c259cf7aa31",
+      "reviewed_statement_sha256": "c25b442ad2d62b84a5d65090a05eaa6a8a76eed79d4cf3fd41670174bf14ce0d"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:19:05Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The fixed-mass upper cap and its barycenter already give the support point for m=τ|K|, by matching normalization against ordinary volume. That fact does not state or derive the fixed-mass tangent Hessian.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "Its ordinary hinge calculation uses related proper-section coarea for differences of smoothed normal hinges. The present paired statement isolates both the independent offset Hessian and the fixed-mass quantile Hessian for uniform K.",
+      "fact_id": "a83339dae406ffd6"
+    }
+  ],
+  "readability": "The fixed-mass normalizer divides the cap first moment by τ once. This is explicit in the proof. The published Ulam floating-body support-point formula provides related background, while the frozen proof obtains both Hessians by coarea and the mass equation. See [Huang, Slomka and Werner, Ulam Floating Bodies, §§2.1 and 2.4](https://arxiv.org/abs/1803.08224).",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "independent cold proof read of the frozen candidate, original-source and predecessor comparison",
+  "reviewed_proof_sha256": "477d2b1053099fcd70eb656dcff3432f43f0d891607ad0849e77f39be5bb25d0",
+  "reviewed_statement_sha256": "e271ac4e859a72887cff586abece24e5bf32967735680273b9afc7d9427831d9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:14:10Z",
+  "summary": "The frozen proof gives the lifted coarea block Hessian and its fixed-mass barycenter consequence at an interior cut, including counting coarea in dimension one.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

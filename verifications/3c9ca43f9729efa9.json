@@ -1,0 +1,51 @@
+{
+  "candidate_id": "ddc04d4ca485357e",
+  "candidate_sha256": "2e8e86cf136543bbf7be8d7c71335a8a949f975c7c0a6db0e0bad2f8bd4d4d93",
+  "checked_dependency_candidate_sha256": {
+    "828211a20fa24681": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558"
+  },
+  "checks": [
+    "Compactness of K_z gives a uniform Lipschitz bound for all parameter perturbations after min and max. Finite attained minimax applies to these affine margins and gives actual saddle pairs.",
+    "For a primal optimizer x at p and a dual optimizer λ_t at p+tD, the new value is at most φ_{p+tD}(x,λ_t) and the old weighted value at x is at most F_z(p). Subtraction gives the displayed directional upper bound with the correct inequality sign.",
+    "Compactness and uniform convergence of the weighted margins keep all λ_t cluster points dual optimal. Any old primal optimizer and old dual optimizer form a saddle pair. The gradient support bound in every direction implies membership in the closed convex hull of its saddle feature set.",
+    "At neighboring differentiability points, Carathéodory gives a uniformly bounded count of feature terms. Primal and dual optimizer graphs are closed, so subsequential limits give features at the limiting p, and convexification gives the full Clarke inclusion.",
+    "In the example the favored first margin exceeds the other throughout the rectangle by at least ε and has unique minimum at (0,-1). The second perturbation favors block two with unique minimum at (0,1). Both properties persist locally around the corresponding perturbed parameter. Their limiting average has weight 1/2 in both blocks and distinct normalized y-moments, so factorization through one point is impossible."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "828211a20fa24681",
+      "candidate_sha256": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558",
+      "fact_sha256": "7b05183f5850aa4c0caba911f7e82624e596238e84e3c0cde2c135208bd5f6ab",
+      "reviewed_proof_sha256": "93725456fe067e71e1b890b2febcade19ef334360d13d743a01dd5dbb9ef0a0c",
+      "reviewed_statement_sha256": "be2e0225a338b79b0ce1cbc618a06460b3076262265172b1970e4f053bd2b70b",
+      "verification": "Fix z and take v_i=a_i·z-b_i on compact convex K_z. Every primal-dual pair satisfies the accepted complementary signs at F_z=0. Minimization of the weighted linear form gives the negative weighted continuous normal in the outward normal cone."
+    }
+  ],
+  "finished_utc": "2026-11-08T18:22:09Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives attained fixed-fiber minimax and the zero-level sign and outward-normal conditions. It has no parameter gradient or nonfactorization conclusion.",
+      "fact_id": "828211a20fa24681"
+    },
+    {
+      "comparison": "Uses the same gradient support argument on a large cube to localize a framed whole-space LP. Its minimizers stay strictly inside that cube, so the resulting whole-space contacts have zero continuous weighted normal. The frozen claim concerns an arbitrary fixed compact actual fiber, including contacts at its boundary, and includes a nonfactorization example.",
+      "fact_id": "f567dec1b9fcc1e2"
+    }
+  ],
+  "readability": "The ambient parameter space is important for the feature statement. The optional normalization of the nearby tilted margin is unnecessary for the ambient nonfactorization example.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold reading of the frozen proof, then direct checks of the archived source locators, pinned predecessors and mathematical arguments.",
+  "reviewed_proof_sha256": "ef1914af31ea6d21d790bcfb579e512872ef847d933b5abfa80606c96605bee7",
+  "reviewed_statement_sha256": "e8d1f2eea2a24ff92cf773c78a1d36d633788793602f7013e961f1ceda9e4824",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:16:17Z",
+  "summary": "The compact saddle value admits the claimed ambient Clarke feature inclusion. The rectangle example verifies that one common continuous point need not represent the block moments.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

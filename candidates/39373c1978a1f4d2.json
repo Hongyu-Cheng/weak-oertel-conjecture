@@ -1,0 +1,44 @@
+{
+  "advances": "All hinge costs use the original mixed measure and the original fixed base tilt of each cap. The inequalities are conditional on the multipliers and give no dimension-only lower bound on moment-body radii.",
+  "author": "PK-research-agent",
+  "candidate_id": "39373c1978a1f4d2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:15:48.901503+00:00",
+  "depends_on": [
+    "828211a20fa24681"
+  ],
+  "draft_key": "base-balanced-moment-body-hinge-stress-bound",
+  "kind": "theorem",
+  "proof": "For an admissible dominated density $0\\le f\\le1$ of mass $t_z$, write its continuous centroid as $m$. Then $\\Psi_i\\ge\\int fL_i\\,d\\mu=t_z(u_i\\cdot m+a_i\\cdot z-b_i)$. Taking the supremum over such $m$ proves the one-cap estimate, including at the maximal feasible mass. Compactness of the moment body follows from weak-star compactness of $0\\le f\\le1$ with its closed mass and base-moment constraints. Its containment in $K_z$ also follows from compatibility by grouping the dominated mass over the sampled fibers. The minimax identity in 828211a20fa24681 gives $C_z=\\sum_i\\lambda_{zi}(a_i\\cdot z-b_i)-h_{K_z}(-U_z)$. Substitute this in the sum of the one-cap estimates. Since $p_z\\in K_z$, its first support term is at least $-U_z\\cdot p_z$. The other support terms are at least $U_z\\cdot p_z+\\rho_z$ by the contained translate and $h_D(u_i)=1$. This proves the local lower bound.\n\nFor either coefficient equation, multiply the local bounds by $\\eta_z$ and sum, using $\\eta_zC_z=0$. In the zero-$\\kappa_i$ case the weights sum to $\\sum_i c_i\\ge M$ by coverage, so some $\\eta_z>0$. The left side is at most $\\tau M\\sum_i\\Psi_i$, and the right side is at least $M\\min_{\\eta_z>0}t_z\\rho_z$. Cancel $M$.\n",
+  "source_candidate_ids": [
+    "a5428a02cd85fb48",
+    "b4c3b9c6a52059d2",
+    "dc916a541cd0e1a8"
+  ],
+  "source_candidate_sha256": {
+    "a5428a02cd85fb48": "60cec2c89205534f2044502ad89ffa8b86171a66d73b362067833d22e84c7709",
+    "b4c3b9c6a52059d2": "3c68baa42db20f20a46e7cd529484ba122079d98970789de06b176aca0241278",
+    "dc916a541cd0e1a8": "07683388dd9af7b3d3266cfe45d65b8540a9fc2cbe0a73c38907d4e658cfb45a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "dc916a541cd0e1a8",
+      "locator": "dc916a541cd0e1a8:01 §1, (1)–(2), general support-function normalization"
+    },
+    {
+      "candidate_id": "dc916a541cd0e1a8",
+      "locator": "dc916a541cd0e1a8:02 §2, (3)–(5), conditional weighted sums for both stresses"
+    },
+    {
+      "candidate_id": "a5428a02cd85fb48",
+      "locator": "a5428a02cd85fb48:02 §2, (5)–(7), cover hinge with its supporting resultant"
+    },
+    {
+      "candidate_id": "b4c3b9c6a52059d2",
+      "locator": "b4c3b9c6a52059d2:04 §2, (5)–(6), dominated base-balanced moment bodies and weak duality"
+    }
+  ],
+  "statement": "Let $\\mu$ be the sum of $d$-volume on a nonempty finite compatible family of positive compact convex fibers $K_z$ with total mass $M>0$. Suppose finitely many closed caps with affine margins $L_i(z,x)=a_i\\cdot z+u_i\\cdot x-b_i$ cover all sampled fibers, $c_i=\\mu\\{L_i\\ge0\\}\\le\\tau M$, and $h_D(u_i)=1$ for a fixed centrally symmetric convex body $D$ about zero. Write $\\Psi_i=\\int(L_i)_+\\,d\\mu$. For each $z$ choose a feasible mass $t_z>0$ and let $M_{t_z}(z)$ be the continuous centroids of all submeasures dominated by $\\mu$ of mass $t_z$ and base centroid $z$. Assume $p_z+\\rho_z D\\subset M_{t_z}(z)\\subset K_z$ for some $\\rho_z\\ge0$.\n\nLet $\\lambda_z$ be any optimal probability weights for the exact minimax cover margin $C_z=\\min_{x\\in K_z}\\max_iL_i(z,x)$, and let $U_z=\\sum_i\\lambda_{zi}u_i$. Then\n$$\n\\sum_i\\lambda_{zi}\\Psi_i\n\\ge t_z\\Big(C_z+h_{K_z}(-U_z)+\\sum_i\\lambda_{zi}h_{M_{t_z}(z)}(u_i)\\Big)\n\\ge t_z(C_z+\\rho_z).\n$$\nIf $\\eta_z,\\kappa_i\\ge0$ satisfy $c_i+\\kappa_i=\\sum_z\\eta_z\\lambda_{zi}$ and $\\eta_z C_z=0$, then $\\sum_i(c_i+\\kappa_i)\\Psi_i\\ge\\sum_z\\eta_zt_z\\rho_z$. With all $\\kappa_i=0$ this gives $\\tau\\sum_i\\Psi_i\\ge\\min_{\\eta_z>0}t_z\\rho_z$. Likewise if nonnegative $\\alpha_0,r_i,S_i,\\eta_z$ satisfy $\\alpha_0c_i+r_iS_i=\\sum_z\\eta_z\\lambda_{zi}$ and $\\eta_z C_z=0$, then $\\sum_i(\\alpha_0c_i+r_iS_i)\\Psi_i\\ge\\sum_z\\eta_zt_z\\rho_z$.",
+  "subgoal_id": "pk-intake-base-balanced-moment-body-hinge-stress-bound",
+  "title": "A base-balanced moment-body bound for weighted cover hinges"
+}

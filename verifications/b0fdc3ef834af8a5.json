@@ -1,0 +1,71 @@
+{
+  "candidate_id": "b3daa3848a4f505c",
+  "candidate_sha256": "5406649610201e4e64e802e1e49d790069a25e5caf2a923ef2d2881da34a6e24",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Only the frozen statement and proof changed. The normalized candidate ID, original-source digests and empty dependency list are unchanged. The original CHANGES_REQUESTED review remains attached to its original bytes.",
+    "For a fixed fiber and old unit normal e, the new cutting plane is a graph over e-perpendicular because the perturbed continuous normal has positive dot product with e. Its cutting height is a smooth rational function of the perturbed coefficients, with uniform first-order expansion on the compact projection and at every fixed sampled base.",
+    "On each old line interval the retained length is a 1-Lipschitz function of the cutting height. Away from an old endpoint it is locally affine in the height, with slope minus one on proper line cuts and zero on saturated lines. For an arbitrary sequence of parameter increments the pointwise difference quotient of the linearization error tends to zero, and the uniform height bound dominates it on the finite projection. This proves the full Fréchet derivative, not just derivatives in fixed directions.",
+    "For a proper fiber trace, a boundary point in the section's relative interior would have a supporting normal perpendicular to the section plane, contradicting that the plane cuts the body interior. Thus line endpoints at the old height have a null footprint. At null supporting sections the footprint is already null, while strict saturation gives none. In dimension one the footprint is counted in dimension zero, so supporting endpoints are excluded and proper cuts differentiate by interval length.",
+    "At a section point the negative height derivative is exactly (a-dot·z+u-dot·x−b-dot)/‖u‖, and the orthogonal section coordinates preserve (d−1)-measure. The finite sum works for arbitrary real base labels and for a zero-dimensional base. The original smooth moment differentiation, signed chain rule, common fiber determinant and positive margin scaling are unchanged."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T18:27:31Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "b3daa3848a4f505c",
+    "candidate_sha256": "343ac1a18aa1c2f0c15e8006fd9b759c25d782e47b0f844fdd7c258435c859e0",
+    "checks": [
+      "The original §1 (1)–(4) separates smooth hinge moments from the regular cap-mass derivative and treats positive-area supporting faces separately.",
+      "Because the continuous normal is nonzero, L=0 has zero d-volume in every fiber. Compact support gives a common dominating bound on all unit affine parameter directions. Pointwise derivatives and parameter-continuous coordinate gradients give the stated C¹ formulas for Ψ and T.",
+      "The ordinary chain rule gives the signed sum of coarea, captured mass and L-weighted captured mass, with no sign constraint on the cost partial derivatives. The absolute common fiber determinant and the positive margin rescaling give the two distinct stated scaling laws.",
+      "A support seam cannot be silently included. For K=[0,1] and margin x−1+t the closed cap mass is t for 0<t<1 and zero for −1<t<0, whereas both smooth hinge moments have derivative zero there. The d=1 coarea section at t=0 has H₀ mass one."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T18:25:35Z",
+    "issues": [
+      {
+        "defect": "The statement does not say what regularity of the fiber traces makes Dc exist. The proof assumes the announced formula and declares no dependency establishing it. Positive-area supporting sections can give unequal one-sided derivatives.",
+        "locator": "Statement, “At a regular cap”, and proof final chain-rule paragraph",
+        "repair": "Define a regular cap here by requiring that every nonproper fiber trace have zero (d−1)-section measure. Cite and apply 1269c554ca9a41b8 §2 after verifying the finite fiber hypotheses, or include its elementary normal-line slicing argument if retaining arbitrary real labels or the zero-base convention. Retain the separate signed chain rule.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Section 2 proves the full coarea derivative for proper traces and nonproper traces whose (d−1)-sections are null, including the d=1 endpoint convention. It does not prove the C¹ hinge moments, signed cost formula or covariance of the three moments under scaling.",
+        "fact_id": "1269c554ca9a41b8"
+      }
+    ],
+    "readability": "The phrase “regular cap” is undefined in the frozen statement, and the proof calls the coarea formula “asserted” rather than establishing its premise.",
+    "review_method": "independent cold proof read of the frozen candidate, original-source and pinned-predecessor comparison, and exact arithmetic where applicable",
+    "reviewed_proof_sha256": "a59c5358bda806e3f8e71c19e05391efaad20ad62d8df08d3baf6bbc67a27aff",
+    "reviewed_statement_sha256": "a51c0c5326b50cf7d2cd767076fcd6748ef8388516cb60cd192e86174b702e95",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T18:19:52Z",
+    "summary": "The smooth first and second hinge-moment derivatives, signed chain rule and scaling laws are correct. The coarea assertion needs an explicit trace hypothesis and a proof or accepted reference.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Section 2 gives the same coarea derivative for its finite integer-fiber setting and the same nonproper null-section condition. This revision proves the derivative directly for the stated base conventions, with independent smooth moment, signed cost and scaling conclusions.",
+      "fact_id": "1269c554ca9a41b8"
+    }
+  ],
+  "readability": "The inserted normal-line calculation defines the regular cap convention and separates it from the global smooth hinge moments.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "independent linked revision read, exact source comparison, and line-slicing proof verification",
+  "reviewed_proof_sha256": "ea51f495f19b36b5fe9f6533cc67edda3db7b54554b89bbdeef08be8a4bf8987",
+  "reviewed_statement_sha256": "f95d791af70e5eff4c237d781ad12eea3b98caffb637b9a470a421aaee12b62f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "343ac1a18aa1c2f0c15e8006fd9b759c25d782e47b0f844fdd7c258435c859e0",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:26:11Z",
+  "summary": "The revision gives an explicit regular trace hypothesis and proves the full affine-parameter cap-mass derivative. It resolves the initial issue and preserves the smooth moment and scaling claims.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

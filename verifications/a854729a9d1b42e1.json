@@ -1,0 +1,42 @@
+{
+  "candidate_id": "bff19d5abf55e3e2",
+  "candidate_sha256": "6b001440dc2a418f8504c92931bad6b8222ec8ef679a8c1e135ca7e05811616c",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Each positive-length overlap has a unique ordered pair. Reading the intervals left to right leaves each index nondecreasing and advances at least one between different pairs. Translation invariance of lexicographic order then makes their sums strictly increasing, including simultaneous breakpoint changes.",
+    "The overlap lengths sum to one and are bounded by both normalized source volumes. The midpoint inclusion and the assumed Brunn–Minkowski inequality give the per-target bound π_uv Φ_d(A,B) by homogeneity. Distinct targets allow summing without multiplicity.",
+    "Both totals must be positive for the partitions, as stated. The finite positive-volume case matches 87fbc7e80b2767d9 §1, including the prescribed order and omission of zero-length overlaps."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T18:23:48Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Shows a forced target collision between two parity strata even though every pair has equal endpoint parity. The present deterministic selection of overlap pairs in two ordered lists guarantees distinct sums and has no requirement to retain all parity strata simultaneously.",
+      "fact_id": "3be42e6ae57d7e8e"
+    },
+    {
+      "comparison": "Applies a discrete BBL theorem to two copies of one source parity law with additional hyperplane nonconcentration to get a parity ratio. It gives no per-overlap guarantee for two arbitrary ordered positive-volume families.",
+      "fact_id": "11bfd69ab390e0ec"
+    },
+    {
+      "comparison": "Derives a collision-sensitive geometric-mean bound for a prescribed edge family in a canonical hard instance. It uses injectivity as an optional input rather than constructing distinct sums from arbitrary two-family volume partitions.",
+      "fact_id": "17cb2e32be8479b1"
+    }
+  ],
+  "readability": "The volume claim uses the Brunn–Minkowski premise on the continuous midpoint sets; the monotonicity argument concerns only their discrete indices.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read of the exact frozen statement and proof, comparison to original locators and accepted facts, exact dependency binding, and independent rational arithmetic where applicable.",
+  "reviewed_proof_sha256": "c4110e9318794f47c118f1204197b5c2dc6ed52e5f3a49ae243db9055ae980ef",
+  "reviewed_statement_sha256": "f9098955792cd1a142d7d0b12e8558d7dd6fc92cca43c5cadfb5dd11cb4e0ea4",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:17:25Z",
+  "summary": "The consecutive-partition overlap path supplies strictly increasing target sums and the exact homogeneous volume lower bound for arbitrary nonempty finite positive-volume source families.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,29 @@
+{
+  "advances": "A conditional planar three-fiber result at the actual middle mark or the heavy endpoint centroid. It requires all three proper endpoint cuts and the actual inner triangle.",
+  "author": "PK-research-agent",
+  "candidate_id": "b9c855fe6f0d0210",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:19:28.700370+00:00",
+  "depends_on": [
+    "30309d81a867776b",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "actual-inner-endpoint-triangle-strict-three-fiber-depth",
+  "kind": "theorem",
+  "proof": "The triangle $T$ has vertices $(-1,-1),(2,-1),(-1,2)$, area $9/2$ and centroid zero. Each $B$ trace has zero area because $B\\subseteq T$. Let $u\\le v\\le w$ be the sorted three $A$ cap areas and put $F=u+v+w/4$. The hypotheses match the original marked-source cap profiles of 30309d81a867776b. Their inequalities are\n$$\na\\le w+v+u/4,\\qquad k\\le 9Q/4-F.\n$$\nIn particular $\\delta=a-u-v\\le w$. Suppose $b\\le a+k$ and $Q\\le2(a+k+b)/9$. Substituting the latter into the bound on $k$ gives $k\\le a+b-2F$. Conversely substituting that profile bound on $k$ into the assumed bound on $Q$ gives $Q\\le4(a+b-F)/9$. Nonheaviness and the first inequality give $F\\le a$, so $\\delta\\ge w/4>0$. Therefore the union of the two smaller closed $A$ caps misses an actual point of $A$. Its two corresponding normal values are strictly below $-1$, so the remaining value is above $2$ since the three normals sum to zero. Write $v_\\ell$ for that largest-cap normal, $h=h_A(v_\\ell)>2$ and $H=h+1>3$. The same upper bound on $Q$ gives\n$$\nQ\\le 4(b+\\delta-w/4)/9\\le 2+w/3.\n$$\n\nLet $D=A\\cap\\{v_\\ell\\cdot x\\ge-1\\}$ and $A_\\eta=A\\cap\\{v_\\ell\\cdot x\\ge-1+\\eta\\}$. Choose $p\\in A$ with $v_\\ell\\cdot p=h$. The homothety of $D$ about $p$ with ratio $1-\\eta/H$ has minimum $v_\\ell$ value $-1+\\eta$ and lies in $A$. Thus $w_\\eta=|A_\\eta|\\ge (1-\\eta/3)^2w$. The facet segment $F_\\eta$ of $(1-\\eta)T$ at level $1-\\eta$ has length $3(1-\\eta)|v_\\ell|$ and lies in $B$. By actual midpoint inclusion, $(A_\\eta+F_\\eta)/2$ lies in the original middle cap at level zero. Addition of the segment increases each nonempty line section of $A_\\eta$ parallel to it by its length, on the perpendicular projection of width $(H-\\eta)/|v_\\ell|$. Hence\n$$\nQ\\ge w+\\tfrac14|A_\\eta+F_\\eta|\n=w+\\tfrac14[w_\\eta+3(1-\\eta)(H-\\eta)]\n> \\left[1+\\tfrac14(1-\\eta/3)^2\\right]w+\\tfrac34(1-\\eta)(3-\\eta).\n$$\nThe difference between this last bound and $2+w/3$ is\n$$\n\\left[\\tfrac23+\\tfrac14(1-\\eta/3)^2\\right]w+\n\\tfrac14-3\\eta+\\tfrac34\\eta^2.\n$$\nThe constant polynomial is nonnegative through its smaller root $\\eta_*$ and the coefficient of $w>0$ is positive. This contradicts the upper bound. At $0\\le\\eta\\le1/12$ the constant term is at least $1/192$, by monotonicity there. This proof uses actual portions of $A,K,B$ at each step.\n\nIf $b>a+k$, apply 6769574fc1bd9f8d at full mass to the centroid of $B$. Every ambient containing halfspace has a trace containing that centroid, which either is a continuous halfspace or includes the whole fiber, so the total raw cap mass is at least $4b/9>2M/9$.\n",
+  "source_candidate_ids": [
+    "3a87cc28ce06445f"
+  ],
+  "source_candidate_sha256": {
+    "3a87cc28ce06445f": "26046187cf70727a2b53ef818b650f59d34217c8b99231000fb6af78fb339502"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3a87cc28ce06445f",
+      "locator": "3a87cc28ce06445f:01 §§1–4, (1)–(14), strengthened cap contraction and extrusion"
+    }
+  ],
+  "statement": "Let $v_1=(1,0)$, $v_2=(0,1)$, $v_3=(-1,-1)$, $T=\\{x:v_i\\cdot x\\le1\\ \\forall i\\}$, and $\\eta_*=2-\\sqrt{33}/3$. The only nonempty integer fibers of a convex body are full planar fibers $A,K,B$ at $-1,0,1$, so $(A+B)/2\\subset K$. Assume $0\\in\\operatorname{int}K$, all three lines $v_i\\cdot x=-1$ cut the interior of $A$, and each ambient closed cap $H_i=\\{(z,x):v_i\\cdot x\\ge z\\}$ attains the actual raw mixed depth $Q$ at $(0,0)$. Assume $(1-\\eta)T\\subseteq B\\subseteq T$ for $0\\le\\eta\\le\\eta_*$. Write $a=|A|$, $k=|K|$, $b=|B|$, and $M=a+k+b$. If $b\\le a+k$ then $Q>2M/9$. If $b>a+k$, the point at base $1$ with continuous coordinate the ordinary centroid of $B$ has raw mixed depth at least $4b/9>2M/9$.",
+  "subgoal_id": "pk-intake-actual-inner-endpoint-triangle-strict-three-fiber-depth",
+  "title": "Strict three-fiber depth with an actual inner endpoint triangle"
+}

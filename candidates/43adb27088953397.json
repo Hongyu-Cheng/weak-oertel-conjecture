@@ -1,0 +1,26 @@
+{
+  "advances": "Exact continuous-angle or depth formula for centered homothetic triangle fibers under the stated sampling assumptions.",
+  "author": "PK-research-agent",
+  "candidate_id": "43adb27088953397",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T18:12:04.408782+00:00",
+  "depends_on": [],
+  "draft_key": "centered-triangle-cap-mixed-state-identities",
+  "kind": "theorem",
+  "proof": "An area-preserving linear permutation of the centered triangle places the least, greatest and remaining continuous scores at the displayed first, second and third vertices. Their gaps from the least score, divided by the greatest such gap, are $0,1,\\theta$ at those vertices. Since the scores sum to zero, this gives the stated direction after positive rescaling, including the two boundary directions.\n\nThe three vertex scores on $r_zT$ are $-(1+\\theta)r_z$, $(2-\\theta)r_z$ and $(-1+2\\theta)r_z$. In state $I$ the captured part is the corner at the greatest score. Its two edge fractions are its positive score height divided by the respective edge-score gaps $3r_z$ and $3s r_z$. Multiplying their product by $(9/2)r_z^2$ gives the displayed area and the $x_2$ chord projection $\\ell_z=((2-\\theta)r_z+k_z)/s$. In state $J$ the complementary corner has the analogous gaps $3r_z$ and $3\\theta r_z$, giving the displayed complement and $\\ell_z=((1+\\theta)r_z-k_z)/\\theta$. At the middle-vertex transition both projected lengths are $3r_z$. At the two support thresholds they are zero. Direct differentiation of the proper formulas gives the displayed first derivatives. These agree at every transition, proving $C^1$.\n\nIn state $I$ the two derivatives of $\\ell_z$ are $t_z/s$ and $(\\ell_z-r_z)/s$. In state $J$ they are $-t_z/\\theta$ and $-(\\ell_z-r_z)/\\theta$. Differentiating the first derivative expressions gives all blocks of the signed Hessian, with zero contribution from saturated states. Stationarity gives the first two moment identities. Dot the first with $\\alpha$ and substitute $k_z=s\\ell_z-(2-\\theta)r_z$ in $I$ and $k_z=(1+\\theta)r_z-\\theta\\ell_z$ in $J$. One obtains $sS_I-\\theta S_J-(2-\\theta)T_I+(1+\\theta)T_J=0$. Together with $S_I+S_J=2M$ this gives both allocated identities, valid also when a middle-vertex section is assigned to either state. The source section is proper with positive length. If the radii extend concavely, the weights $\\ell_z/\\sum\\ell_z$ have base barycenter $z_0$, so the concavity inequality yields the claimed bound. The $J$ sign follows from its strict threshold.\n",
+  "source_candidate_ids": [
+    "f89d52b54ff6950f"
+  ],
+  "source_candidate_sha256": {
+    "f89d52b54ff6950f": "ebd5961373ba071d9729333336b0c3f744c9f76083ff820c1cd910145c0c6392"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f89d52b54ff6950f",
+      "locator": "f89d52b54ff6950f:2 Proof §1, (1)–(7), mixed state moments and full Hessian"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite with $z_0\\in P$. Put $T=\\operatorname{conv}\\{(-1,-1),(2,-1),(-1,2)\\}$ and give each fiber $r_zT$ at base $z$ its area measure, where $r_z>0$. Every nonzero continuous normal of a through-$(z_0,0)$ cap reduces, by a vertex permutation and positive rescaling, to $(1,\\theta)$ with $0\\le\\theta\\le1$. Let $Q(\\alpha,\\theta)$ be the sum of the areas of the traces $x_1+\\theta x_2+\\alpha\\cdot(z-z_0)\\ge0$. For $0<\\theta<1$ put $s=1-\\theta$, $t_z=z-z_0$, and $k_z=\\alpha\\cdot t_z$. The trace area at $z$ is\n$$\n\\begin{cases}\n0& k_z\\le -(2-\\theta)r_z,\\\\\n((2-\\theta)r_z+k_z)^2/(2s)&-(2-\\theta)r_z\\le k_z\\le(1-2\\theta)r_z,\\\\\n(9/2)r_z^2-((1+\\theta)r_z-k_z)^2/(2\\theta)&(1-2\\theta)r_z\\le k_z\\le(1+\\theta)r_z,\\\\\n(9/2)r_z^2& k_z\\ge(1+\\theta)r_z .\n\\end{cases}\n$$\nCall the two proper states $I$ and $J$ in that order. If $\\ell_z$ is the length of the section projected onto its $x_2$ coordinate, then $Q$ is $C^1$ in the open angular chart and\n$$\n\\nabla_\\alpha Q=\\sum_z\\ell_z t_z,\\qquad Q_\\theta=\\sum_z(\\ell_z^2/2-r_z\\ell_z).\n$$\nIn a strict trace cell put $v_z=(t_z,\\ell_z-r_z)$. Its Hessian is $\\sum_I v_zv_z^\\top/s-\\sum_J v_zv_z^\\top/\\theta$ and is positive semidefinite at an interior local minimum.\n\nAt an interior stationary point put $T_X=\\sum_Xr_z\\ell_z$ and $S_X=\\sum_X\\ell_z^2$ for $X=I,J$, with a middle-vertex transition assigned to either adjacent state, and let $M=T_I+T_J$. Then $\\sum_z\\ell_z t_z=0$, $S_I+S_J=2M$, $S_I=3T_I-sM$ and $S_J=3T_J-\\theta M$. If the radii extend concavely to $\\operatorname{conv}(P)$ then $M\\le r_{z_0}\\sum_z\\ell_z$. For $\\theta<1/2$, every strict $J$ index has $k_z>(1-2\\theta)r_z>0$.",
+  "subgoal_id": "pk-intake-centered-triangle-cap-mixed-state-identities",
+  "title": "Exact mixed-state derivatives for centered triangle cap profiles"
+}

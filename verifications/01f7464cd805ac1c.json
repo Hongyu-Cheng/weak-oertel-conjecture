@@ -1,0 +1,107 @@
+{
+  "candidate_id": "39373c1978a1f4d2",
+  "candidate_sha256": "0c96258df2fa12ef713213b637d3b7c0477b838ffb2c8099d8a04fdac24e891b",
+  "checked_dependency_candidate_sha256": {
+    "828211a20fa24681": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558"
+  },
+  "checks": [
+    "The sole changed field is the statement opening. It now gives M>0 and requires finitely many closed caps. Coverage of the nonempty source also makes the cap family nonempty.",
+    "The accepted finite minimax lemma 828211a20fa24681 now applies exactly to each nonempty K_z with the affine constants a_i·z−b_i. It gives the same support sign and all the original probability weights.",
+    "For the zero-κ specialization, coverage and probability normalization yield Σ_zη_z=Σ_ic_i≥M>0. The minimum over η_z>0 is therefore taken over a finite nonempty set, and cancellation by M is valid.",
+    "The proof and all later statement clauses are byte-identical in their decoded fields. The dominated-density support estimate and the weighted stress identities retain the previous review conclusions."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "828211a20fa24681",
+      "candidate_sha256": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558",
+      "fact_id": "828211a20fa24681",
+      "fact_sha256": "7b05183f5850aa4c0caba911f7e82624e596238e84e3c0cde2c135208bd5f6ab",
+      "hypotheses": "Take the convex body K_z and affine constants a_i·z-b_i. The accepted identity requires a finite nonempty cap family and applies to any optimal probability vector over that family.",
+      "reviewed_proof_sha256": "93725456fe067e71e1b890b2febcade19ef334360d13d743a01dd5dbb9ef0a0c",
+      "reviewed_statement_sha256": "be2e0225a338b79b0ce1cbc618a06460b3076262265172b1970e4f053bd2b70b"
+    }
+  ],
+  "finished_utc": "2026-11-08T18:26:04Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "39373c1978a1f4d2",
+    "candidate_sha256": "7163abde20412ad6f203972bc95aaaa1f8e72d8f60a2a470986dbcc521b6fda4",
+    "checks": [
+      "In dc916a541cd0e1a8 §§1–2 and a5428a02cd85fb48 §2, the same cap margin and same dominated mixed measure are used. The weak-duality step in b4c3b9c6a52059d2 §2 is enough, even at maximum feasible mass.",
+      "For a feasible density f, the pointwise inequality fL_i≤(L_i)_+ gives the displayed one-cap support estimate. Its base term is exactly a_i·z-b_i by the fixed base centroid constraint.",
+      "The minimax formula supplies C_z with the negative support sign. Membership p_z∈K_z and the inscribed translate lower bound cancel the U_z terms and leave ρ_z. The two global implications are direct sums with the given nonnegative coefficients and complementary products.",
+      "With zero κ, the probability-weight sums and pointwise coverage give Ση=Σc≥M. If M>0, the active set of η is nonempty, Ψ_i≥0 justifies the τM upper bound, and cancellation yields the stated minimum."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "828211a20fa24681",
+        "candidate_sha256": "f655dfdf9b9456f73367e0e4dee96b7babc61cf7f866c400e1f0648a30012558",
+        "fact_id": "828211a20fa24681",
+        "fact_sha256": "7b05183f5850aa4c0caba911f7e82624e596238e84e3c0cde2c135208bd5f6ab",
+        "hypotheses": "Take the convex body K_z and affine constants a_i·z-b_i. The accepted identity requires a finite nonempty cap family and applies to any optimal probability vector over that family.",
+        "reviewed_proof_sha256": "93725456fe067e71e1b890b2febcade19ef334360d13d743a01dd5dbb9ef0a0c",
+        "reviewed_statement_sha256": "be2e0225a338b79b0ce1cbc618a06460b3076262265172b1970e4f053bd2b70b"
+      }
+    ],
+    "finished_utc": "2026-11-08T18:23:13Z",
+    "issues": [
+      {
+        "defect": "The source family is called finite but is not required to be nonempty, and the cap menu is not explicitly finite. For an empty source the zero-κ hypotheses are vacuous with M=0, and the minimum over η_z>0 is undefined. For an infinite menu, even a full cover need not define the displayed pointwise max: on K=[0,1], x≤1/2 and x≥1/2+1/j for j≥3 cover K and each captures at most half the length, yet at x=1 the margin supremum is not attained. The accepted minimax lemma is for a finite nonempty menu.",
+        "locator": "Statement opening and zero-κ conclusion; proof paragraphs 1–2.",
+        "repair": "Specify a finite nonempty family of positive-volume fibers and finitely many closed caps in the first two sentences. No change to the inequalities is needed.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its exact minimax identity gives the term C_z and supporting force. The moment-body radius and hinge inequality are additional.",
+        "fact_id": "828211a20fa24681"
+      },
+      {
+        "comparison": "Its unit-normal fixed-offset stress supplies one version of the coefficient identity under its optimization assumptions. The reviewed inequality is conditional on the identity and has a more general fixed width normalization.",
+        "fact_id": "0366ccb8fa1881a1"
+      },
+      {
+        "comparison": "Its joint Fritz–John balance supplies another coefficient identity when its own premises hold. The weighted moment-body bound does not prove existence of a width-normalized stress.",
+        "fact_id": "c343c9f3dc96957e"
+      }
+    ],
+    "readability": "The proof retains the supporting force until cancellation, and makes both global stress identities assumptions.",
+    "reviewed_proof_sha256": "52e630731773c4afaa29e17acd8abfe5ce41f0099b80517d5618b0792bda2d65",
+    "reviewed_statement_sha256": "70b7dcc26947bddcbb22093343c1faf0b7b4db04ef1f09653253923df6f6c880",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T18:16:29Z",
+    "summary": "The support estimate and both weighted stress sums are correct on the finite nonempty source and finite cap menu of the original statements. The frozen opening should explicitly keep both domain conditions.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its exact minimax identity gives the term C_z and supporting force. The moment-body radius and hinge inequality are additional.",
+      "fact_id": "828211a20fa24681"
+    },
+    {
+      "comparison": "Its unit-normal fixed-offset stress supplies one version of the coefficient identity under its optimization assumptions. The reviewed inequality is conditional on the identity and has a more general fixed width normalization.",
+      "fact_id": "0366ccb8fa1881a1"
+    },
+    {
+      "comparison": "Its joint Fritz–John balance supplies another coefficient identity when its own premises hold. The weighted moment-body bound does not prove existence of a width-normalized stress.",
+      "fact_id": "c343c9f3dc96957e"
+    }
+  ],
+  "readability": "The proof retains the supporting force until cancellation, and makes both global stress identities assumptions.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "52e630731773c4afaa29e17acd8abfe5ce41f0099b80517d5618b0792bda2d65",
+  "reviewed_statement_sha256": "c8deb56a01092404c9ec0bb59aa9e93a0856c8ad4995977c805a7c06232b2cd5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "7163abde20412ad6f203972bc95aaaa1f8e72d8f60a2a470986dbcc521b6fda4",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:24:12Z",
+  "summary": "The revision explicitly requires a finite nonempty positive-mass source and a finite covering menu. It closes both domain issues in the exact earlier review.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

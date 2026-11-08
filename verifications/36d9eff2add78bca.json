@@ -1,0 +1,40 @@
+{
+  "candidate_id": "8a9d13fbb8bcda8a",
+  "candidate_sha256": "2952ac73dc18476bf65d84e7c02170a46f06c19bef9490af1c2336d32d0b2a77",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Checked 8ac2ff347361aad9 §2, (2), including the exact visit identity and scope of deleted loops.",
+    "Move and stop probabilities sum to one since m=a+t. Their row mean equals the current point by the flow's barycentric condition.",
+    "On a closed communicating class with no stop, every coordinate is harmonic. Applying the maximum principle and irreducibility forces all its points to have identical coordinates. Distinctness makes it a singleton, whose outgoing pure loop and zero stopping mass imply b=a and no outside inflow. Deleting these classes preserves other rows.",
+    "Every remaining state reaches a positive stop along a finite positive-probability path. A common finite path-length bound and positive probability bound give a geometric survival tail, so the Green sum converges. The equality m=s+mT then determines m=sG and hence the exact expected edge and terminal masses.",
+    "The bounded held-after-stopping process has mean equal to its start conditional on each source state, and bounded convergence passes this to the terminal point. Row/column subtraction proves the displayed equality. Rowwise Jensen proves its inequality, and the row mean kills the cross term for squared norm."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T18:25:31Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its tight-row construction has the same visit equation for a particular Farkas flow with strictly positive stopping at every site. The present claim starts from arbitrary finite row-centered flow, removes all nonabsorbing classes, and recovers exact edge use even when some stopping probabilities vanish.",
+      "fact_id": "b9e0b3b29694badd"
+    },
+    {
+      "comparison": "The earlier Green sum for a residual process requires positive per-site stop and adds new first-exit locations. The reviewed original-state elimination neither assumes such a stop premise nor modifies outgoing destinations.",
+      "fact_id": "921d7a05411df7ac"
+    }
+  ],
+  "readability": "An injected law need not have total one; expected counts are masses integrated against the initial injection. If all states are deleted, the residual law and all remaining traversal masses are zero.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, original-scope comparison, pinned dependency check and applicable exact arithmetic",
+  "reviewed_proof_sha256": "a919a3dfa168baa07ccd826c0b87dbf624987658e4ab25d4338a9ec096dd7b8b",
+  "reviewed_statement_sha256": "8460c614d1f1cb6bbedcb1d104e99bc3f84bb91fa0ccb22a696fadcfa0ab447f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T18:19:46Z",
+  "summary": "The finite barycentric path eliminates exactly the isolated nonabsorbing loops and preserves both traversal masses and the terminal martingale.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

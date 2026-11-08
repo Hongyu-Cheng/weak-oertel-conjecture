@@ -1,0 +1,70 @@
+{
+  "candidate_id": "860e9b52af56bf21",
+  "candidate_sha256": "bedd9cfbcecc877f8ea536da9f770952beb1013ac706d54ef92ad39eb6c4ded9",
+  "checked_dependency_candidate_sha256": {
+    "69166b0fcb73425a": "0ea64135ebeaba5ebc6636534d4e7327e677098c89c848f4b7710c14e196e349",
+    "ec2b7d125fe6a3f0": "493c94fe36855817d0833b141b4df94d458584dcb4209727548db8b8f827723f"
+  },
+  "checks": [
+    "Verified a779c844eb8df3e4 §4 (5) and §5 (6), and 631839b23c1a0508 §4 (5)–(6), in the original notes with matching source byte digests. The normalized statement keeps the hypotheses explicit and uses the actual positive sampled levels in the averaging denominator.",
+    "Compactness gives finitely many nonempty coarse levels and finitely many nonempty fine lattice fibers in them. Each Q_z is compact convex, and the hyperplane predecessor explicitly applies to its section-volume function without requiring positive ordinary volume. Each selected hyperplane contains at least one positive fiber, whether it contains all positive support or consists of the affine hull of the r greedy points.",
+    "For positive levels the retained mass satisfies R_z >= (T_z-r!M_z/v)_+. The same inequality holds with R_z=0 on zero sampled mass levels since M_z>=0. Summing and taking the positive part gives sum R_z >= (T-r!M/v)_+, retaining even the ordinary volumes of zero sampled mass coarse levels in M. T>0 ensures some R_z>0 even when the displayed lower bound is zero.",
+    "The largest R_z is at least the total retained mass divided by J because there are at most J positive levels. The retained affine span lies in a hyperplane and has rank t<=r-1. The retained source uses its complete induced lattice; the stated positive-rank assumptions cover exactly 1<=t<=r-1, and rank zero uses the continuous centroid. All original containing closed halfspaces inherit the raw lower bound at the same selected point.",
+    "Using 2^-t >= 2^-(r-1) and dividing the raw bound by T gives the formula. The ratio M/(vT)<=1/(2r!) makes the positive-part factor at least 1/2. With J<=2^k this gives Gamma_s/2^(k+r). For k=0 there is one coarse slice with positive T, so J=1.",
+    "For r=1 the full-positive-rank greedy rule starts and stops at a highest-volume fine fiber. In the deficient case exactly one positive fine base exists, so that base is also highest. Choosing a greatest R_z selects a global maximum of the actual fiber volumes, allowing ties. Its centroid meets the formula with no positive-rank hypothesis.",
+    "Exact comparison with 631839b23c1a0508:04: its loss coefficient is (r+s)!/s! = r! binom(r+s,r), with the strictly stronger ratio condition M/(vT)<=s!/[2(r+s)!] for r,s>=1. Its nonempty sampled-level count bounds the number of positive sampled levels, even if it counts a level with only nonempty null fine fibers. Both versions permit the all-coarse-slice volume M, and their lower-rank hypotheses and target Gamma_s/2^(k+r) agree. The older estimate uses mass of levels deficient by all nonempty fine bases. The new estimate can retain positive mass inside full-rank levels. For example k=0, r=s=1, Q=[0,1]×[0,1], and L=Z give T=2 and M=v=1. The two positive bases span rank one, and the new threshold 1/2 is attained while the older threshold is 1/4."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ec2b7d125fe6a3f0",
+      "candidate_sha256": "493c94fe36855817d0833b141b4df94d458584dcb4209727548db8b8f827723f",
+      "mapping": "At each z with T_z>0 take Q=Q_z, its section-volume function f(u), the same r, s and a+L, covolume v, and totals T_z and M_z. The compact convex section clause gives R_z>0 and R_z >= (T_z-r!M_z/v)_+ via the specified greedy or deficient case. At r=1 these cases choose a highest-volume fiber.",
+      "reviewed_proof_sha256": "4ebd61a8441ff7f9330fad931590a71972b868792866ff4b2fa8e4dd2eda302e",
+      "reviewed_statement_sha256": "d85a3148c234e12fe874ae24b10c5cae3c5a71e7f262b08fe7d5f5096f7afcdf",
+      "status": "Same batch. Admission requires independent approval of this exact dependency."
+    },
+    {
+      "candidate_id": "69166b0fcb73425a",
+      "candidate_sha256": "0ea64135ebeaba5ebc6636534d4e7327e677098c89c848f4b7710c14e196e349",
+      "mapping": "Take Q=Q_z in the selected coarse slice, F its selected affine hyperplane, and P all positive-volume sampled fibers over F. Then T_P=R_z>0 and t=dim aff P<=r-1. The local continuous or stipulated positive-rank conclusion transfers raw depth directly to the original C at a fixed coarse level.",
+      "reviewed_proof_sha256": "d81c7e7f68b46e0400978357f1973a540b61429de5d0908bc146192467ef1b5c",
+      "reviewed_statement_sha256": "54e9ae4eef61b1b5ad47dd614dfd5b483764493d68a16e1409814de4a06bf633",
+      "status": "Same batch. Admission requires independent approval of this exact dependency."
+    }
+  ],
+  "finished_utc": "2026-11-08T13:11:37Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "candidate_id": "631839b23c1a0508",
+      "comparison": "Pending source §4 is a specialization with the same lower-rank hypotheses and target, a nonempty sampled-level count and the more restrictive factorial ratio. Its conclusion does not give the new bound on the broader ratio range."
+    },
+    {
+      "candidate_id": "d46094c158197e98",
+      "comparison": "Pending source §§1 and 4 gives the r=1 estimate v(T_z-max_u w_{z,u})<=M_z and the corresponding centroid bound with a nonempty sampled-level count. It provides no r>=2 greedy concentration theorem."
+    },
+    {
+      "comparison": "Its proof uses the same individual largest-fiber centroid bound in the fixed compatible family. It does not bound the largest fiber using coarse slice ordinary volumes or produce the general fine-rank result.",
+      "fact_id": "481a0b2cb463b75b"
+    },
+    {
+      "comparison": "Selects a heaviest actual lattice-line slice and transfers its depth, assuming a covering bound by parallel lines. It does not use the coarse-volume correction, and its weak constant differs from the sharp restricted conclusion here.",
+      "fact_id": "58b799323ed1a32b"
+    }
+  ],
+  "readability": "The parameter J bounds positive sampled mass levels, whereas M sums ordinary volume over all integer coarse levels. These conventions differ deliberately and the zero sampled mass terms obey the same positive-part bound.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d81a69da39a51e657fb7865052dd85cdf988bc61a7ab88ff1cc620d044d67565",
+  "reviewed_statement_sha256": "ff56a386e9af97b6ec9fd2a41d5e8a2bf2beea3be93a0b0b34147741ac5d56fd",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:07:51Z",
+  "summary": "The sampled mass retained by the greedy hyperplanes yields the stated conditional lower bound using only positive-mass levels in the count. At r=1 the guarantee is unconditional and holds at the centroid of an actual globally largest fiber.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

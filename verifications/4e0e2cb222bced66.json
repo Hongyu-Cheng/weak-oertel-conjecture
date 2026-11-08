@@ -1,0 +1,52 @@
+{
+  "candidate_id": "6b106c5bde8c99ab",
+  "candidate_sha256": "98eef7f77099a3e5e11d0024034df1a6b0afb6d0d869750692897070e5c521fd",
+  "checked_dependency_candidate_sha256": {
+    "1ec728c26c11b368": "51806d2078f9a6c9f46e448043322072a544fc6daa2675217bae6c4dd260d10a"
+  },
+  "checks": [
+    "A halfspace retaining a mark restricts to a proper closed halfspace containing that mark in its intrinsic fiber plane, or to the whole plane. The retained fiber contributes at least its weight in either case, and all fibers are disjoint.",
+    "For n=0 distinct bases imply one fiber. Every intrinsic halfspace extends to the ambient space and every containing ambient trace is either such a halfspace or the whole plane. The strict face condition reduces to c_j > α.",
+    "For n≥1 and common direction V, write x=x_perp+x_parallel in orthonormal coordinates. The perpendicular coordinate is constant on each fiber and augments its base z. The original distinct z coordinates ensure distinct augmented bases, and this ambient isometry preserves halfspace traces and the intrinsic r-volume on each fiber. Full dimensionality in V and r≥1 give a minimizing cap through y with unit V-normal by 1ec728c26c11b368.",
+    "Writing the cap relative to every x_i gives the same ambient affine margin -t_i evaluated at every graph atom. Under equality of total mass with α, retained weights sum to α and all retained traces cost exactly their weights. A retained negative threshold strictly increases the volume of the through-mark cap by a positive slab in the relative ball around x_i, so every retained t_i is zero. Excluded thresholds are strictly positive by the definition of retention.",
+    "Every atom on the minimal face receives positive weight in some single convex representation of y, constructed by averaging the opposite-direction representations. The ambient affine margins sum to zero at y. Nonnegative cutoffs therefore vanish for all those atoms, forcing their total weight to be at most α in the equality case.",
+    "Checked 4202609a15fa8f99 §2 and equation (5) against the original source and its committed SHA-256. The frozen proof replaces the limiting cap argument by the accepted attainment theorem after the orthogonal coordinate split, preserving perpendicular offsets and the source restriction on the strict statement."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "51806d2078f9a6c9f46e448043322072a544fc6daa2675217bae6c4dd260d10a",
+      "fact_id": "1ec728c26c11b368",
+      "fact_sha256": "f0f8ad418ed5901792714b0379c4082385e14688567d06835bbbfedd119d51b1",
+      "hypotheses_mapping": "Augment bases with the V-perpendicular translation coordinates and identify each V-direction fiber with a full-dimensional compact convex body in R^r. The augmented base space has dimension n+d-r≥1 when invoked. Its attained through-mark cap has nonzero continuous normal, and a unit normal in V is obtained by normalization.",
+      "reviewed_proof_sha256": "d228493bd17db59a79e7167f3a5cd5a01124f5a57331f852f98d5496774d8919",
+      "reviewed_statement_sha256": "1948dbc9f536c80fe99603b5461223816abe121f3916599822f499d14854e940"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:13:25Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its centroid-graph transfer and strict minimal-face conclusion are recovered in full-dimensional fibers by c_i=γ_d|K_i| and scaling the atomic threshold. The accepted theorem assumes each mark is its volume centroid, whereas this candidate allows arbitrary interior marks and any certified weights up to actual intrinsic depths, including for varying intrinsic planes in the weak assertion.",
+      "fact_id": "c2180d0c4d7ea592"
+    },
+    {
+      "comparison": "Its short-pair argument uses the one-retained-centroid ordinary-volume payment. It lacks the arbitrary multi-atom statement and the strict minimal-face conclusion.",
+      "fact_id": "9e3dc271d831d032"
+    }
+  ],
+  "readability": "The orthogonal regrouping preserves translated fiber positions. The perpendicular offsets are encoded in the augmented base, which allows the affine margin argument to use the actual lifted marks.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ee9981503d52192b831eb646b601c9ccb1759101895db4212a36bc1698b4e940",
+  "reviewed_statement_sha256": "3efc90c708d1694153bdad408e477192457a47e2c93ec32e36eac967ee10760e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:09:40Z",
+  "summary": "The marked atomic bound transfers to intrinsic fiber volumes. For a common fiber direction, attaining equality forces the minimizing cap to contain every graph atom on the minimal face of the mark, so strict face weight gives strict actual depth.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

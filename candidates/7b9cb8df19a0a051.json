@@ -1,0 +1,32 @@
+{
+  "advances": "Transfers the surface integral on a fixed empty-side face to traces on that same face. For the oriented circuit it can use a separate covering family. There is no mixed-mass budget estimate.",
+  "author": "PK-research-agent",
+  "candidate_id": "7b9cb8df19a0a051",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:11:33.638390+00:00",
+  "depends_on": [],
+  "draft_key": "positive-volume-recipients-in-a-finite-closed-cover",
+  "kind": "lemma",
+  "proof": "The union of the halfspaces indexed by $J_+$ is closed. If it misses any point of $\\operatorname{int}K$, it misses an open ball contained in $K$. Every omitted cap has zero volume in that ball, so the original finite family would leave a positive-volume part of $K$ uncovered. Thus the closed union contains $\\operatorname{int}K$ and hence its closure $K$. This proof also allows full and empty traces. On $F_i$, multiply the resulting pointwise inequality $1\\le\\sum_{j\\in J_+}\\mathbf1_{H_j}$ by $w$ and integrate. A restriction of an ambient halfspace to a fiber is a closed halfspace, the whole fiber space, or the empty set, giving the fiberwise form.\n",
+  "source_candidate_ids": [
+    "cdad0ee8b68e978a",
+    "e81d0f726880ea4a"
+  ],
+  "source_candidate_sha256": {
+    "cdad0ee8b68e978a": "ca04e6cb1f4f1e8cad9af82d08d56fb3b73e9f6fd2733d54d372491e09c6b1e8",
+    "e81d0f726880ea4a": "bd9abab86477ed6cf54e6275dabef3eca81ab926a0f346c2479d6139b76d3a4e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cdad0ee8b68e978a",
+      "locator": "Opening result, (1)–(2)"
+    },
+    {
+      "candidate_id": "e81d0f726880ea4a",
+      "locator": "§4.1, specialization to the oriented flux weight"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $K\\subset\\mathbb R^d$ be a compact convex body with nonempty interior. Suppose finitely many closed halfspaces $H_1,\\dots,H_N$ cover $K$ up to a Lebesgue-null set. Write $J_+=\\{j:|K\\cap H_j|_d>0\\}$. Then $K\\subset\\bigcup_{j\\in J_+}H_j$. The same holds if some $H_j$ are the whole space or the empty set.\n\nIn particular, if $|K\\cap H_i|_d=0$ and $F_i=K\\cap\\partial H_i$ is a supporting face, then for every nonnegative $\\mathcal H^{d-1}$-measurable $w$ on $F_i$,\n$$\n\\int_{F_i}w\\,d\\mathcal H^{d-1}\n\\le\\sum_{j\\in J_+}\\int_{F_i\\cap H_j}w\\,d\\mathcal H^{d-1}.\n$$\nFor $d=1$ use counting measure. This applies separately on every positive fiber of a finite closed ambient mixed cover.",
+  "subgoal_id": "pk-intake-positive-volume-recipients-in-a-finite-closed-cover",
+  "title": "Positive-volume recipients in a finite closed cover"
+}

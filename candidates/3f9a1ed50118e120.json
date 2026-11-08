@@ -1,0 +1,28 @@
+{
+  "advances": "Strict inclusion for maximum raw ordinary depth. It uses active caps at a common maximizer under the putative equality.",
+  "author": "PK-research-agent",
+  "candidate_id": "3f9a1ed50118e120",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:07:51.861138+00:00",
+  "depends_on": [
+    "755cb08c379113cc"
+  ],
+  "draft_key": "ordinary-maximal-depth-strict-inclusion",
+  "kind": "lemma",
+  "proof": "Depth at a given mark is monotone under inclusion. Let $g$ maximize depth in $K$. Such a point exists by continuity of cap volume in the mark and direction and compactness of $K$ and the sphere. Assume $A(K)=A(L)$. Then the depth of $g$ in $L$ is between these two equal values, so $g$ is also an actual maximizer in $L$.\n\nApply the exact active-normal cover in fact 755cb08c379113cc to the compatible one-base family $\\{0\\}\\times L$ in $\\mathbb R\\times\\mathbb R^d$. The anchored capacity in direction $u$ is exactly the ordinary cap volume, since the base-slope term is zero at the only base. Thus finitely many ordinary closed halfspaces $H_i$ through $g$ cover $\\mathbb R^d$ and satisfy $|L\\cap H_i|=A(L)$. For each $i$,\n$A(K)\\le |K\\cap H_i|\\le |L\\cap H_i|=A(K)$.\nBoth traces are compact convex bodies of positive volume, because an interior ball gives $A(K)>0$. Their inclusion and equal volumes force their equality. Indeed, given a point in the larger body outside the smaller closed body, joining it to an interior point of the larger gives interior points still outside the smaller, hence a positive volume difference. Taking unions over the cover gives $K=L$, a contradiction.\n",
+  "source_candidate_ids": [
+    "6c56e9569b9982d7"
+  ],
+  "source_candidate_sha256": {
+    "6c56e9569b9982d7": "488a59ed8d218b5abbfa28f4e4552cf9e27266e4a53fc593ba08a4851d5750c4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6c56e9569b9982d7",
+      "locator": "§2, (5)–(6), and §4, (12)"
+    }
+  ],
+  "statement": "For a compact convex body $B\\subset\\mathbb R^d$ with nonempty interior, $d\\ge1$, write $A(B)$ for the maximum over $g\\in B$ of the minimum $d$-volume of a closed halfspace trace on $B$ through $g$. If $K,L$ are such bodies and $K\\subsetneq L$, then $A(K)<A(L)$.",
+  "subgoal_id": "pk-intake-ordinary-maximal-depth-strict-inclusion",
+  "title": "Strict inclusion increases the ordinary maximal depth"
+}

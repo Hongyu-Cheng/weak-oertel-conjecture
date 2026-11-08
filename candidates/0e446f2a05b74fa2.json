@@ -1,0 +1,28 @@
+{
+  "advances": "The test concerns reversal of a prescribed compatible family at fixed sampled bases.",
+  "author": "PK-research-agent",
+  "candidate_id": "0e446f2a05b74fa2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:05:32.375801+00:00",
+  "depends_on": [
+    "074a5bdf8c59720e"
+  ],
+  "draft_key": "exact-fixed-fan-reverse-support-extent",
+  "kind": "theorem",
+  "proof": "Apply the fixed-fan support and compatibility lemma. The $a$th constraint along the ray is $A_ah-s(A_ad-A_ah)\\ge0$. Both arrays are feasible. A positive step fails immediately exactly when an active row has $A_ad>0$, and the rows with decreasing slack give the displayed endpoint. The face cut out by the active rows is the minimal face containing $h$: if $g$ is feasible and all these rows vanish at $g$, the point $h+\\epsilon(h-g)$ remains feasible for small $\\epsilon>0$, and $h$ is in the open segment between it and $g$. Every face containing $h$ therefore contains $g$. The reverse support is at least $h$ pointwise by $D_z\\subseteq K_z$, proving containment.\n\nIf a positive-step reverse support exists, it is convex. On every normal cone of $K_z$ the original support is linear, so the same convexity makes $h_{D_z}$ concave on that cone. It is already convex, hence linear there by homogeneity. Conversely let this linearity hold. On a fixed-fan maximal cone the $h$-piece is the linear form of an exposed vertex of $K_z$. An active support row on another ray says precisely that the ray belongs to the normal cone at that vertex. The $d$-piece agrees there with the same linear function as it uses on the maximal cone, by the assumed linearity on the vertex's whole normal cone. Thus every active support row vanishes on $d$. This includes lower-dimensional polytopes because the argument uses their ambient support and vertex normal cones. The second family of rows is exactly the anchored tightness test on rays and at extreme weights. At any tight anchored inequality, decompose the weights into their vertices and the direction into rays of one fan cone. Nonnegative slacks imply every contributing tested row was tight. Consequently the row test is equivalent to tightness for all anchored inequalities.\n",
+  "source_candidate_ids": [
+    "fbc069c3d3ebfebf"
+  ],
+  "source_candidate_sha256": {
+    "fbc069c3d3ebfebf": "b621981b600c7bf3cb6711e6b937cfd6e58c5d6b6f7456fa5e147c6793c1a305"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "fbc069c3d3ebfebf",
+      "locator": "§3, (4)–(6) and the two compatibility conditions"
+    }
+  ],
+  "statement": "Let $K_z,D_z\\subset\\mathbb R^d$ be two compatible families of nonempty polytopes on a finite lattice-complete base, with $D_z\\subseteq K_z$. Let $h,d$ be their actual support arrays on any common complete simplicial refinement of their normal fans, and let $A$ be the finite support and compatibility matrix from the fixed-fan lemma. The reverse array $(1+s)h-sd$ is feasible for a positive interval starting at $s=0$ if and only if $A_ad=0$ for every row $a$ active at $h$, equivalently if $d$ belongs to the minimal face containing $h$. Its exact feasible set for $s\\ge0$ is $[0,s_*]$ if $s_*<\\infty$, and $[0,\\infty)$ otherwise, where\n$$\ns_*=\\min_{a:A_ad>A_ah}\\frac{A_ah}{A_ad-A_ah},\n$$\nwith an empty minimum equal to $+\\infty$. Each realized reverse fiber contains $K_z$.\n\nEquivalently, the positive-step criterion is that $h_{D_z}$ is linear on every normal cone of $K_z$ for each $z$, and that each tight anchored support inequality of $h$ is tight for $d$ in the same direction with the same weights.",
+  "subgoal_id": "pk-intake-exact-fixed-fan-reverse-support-extent",
+  "title": "Exact reversal criterion and step length for compatible support arrays"
+}

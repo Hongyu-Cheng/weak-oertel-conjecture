@@ -1,0 +1,29 @@
+{
+  "advances": "One contained extra fiber reflected across a binary cube vertex from a distinct core vertex, with identical simplex core fibers. This does not cover other parity cores or multiple additions.",
+  "author": "PK-research-agent",
+  "candidate_id": "a0223f71231de506",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:11:33.637681+00:00",
+  "depends_on": [
+    "98603e266680b22d",
+    "53fe12b742a7608d"
+  ],
+  "draft_key": "tiny-contained-endpoint-binary-simplex-core",
+  "kind": "theorem",
+  "proof": "Flip the base coordinates with $q_i=1$ by $z_i\\mapsto1-z_i$. This preserves the lattice, fiber volumes and halfspaces, and reduces to $q=0$, $v=\\mathbf 1_I$, $p=-\\mathbf 1_I$ for a nonempty coordinate set $I$. Write $k=|I|$. The base projection lies in $[-1,1]^n$ and has nonnegative coordinates outside $I$. Any integer base outside the cube must have a coordinate $-1$. The only generator with such a coordinate is $p$, so attaining $-1$ forces the entire convex weight onto $p$. The fiber there is exactly $A$. All continuous coordinates of the hull lie in $T$, and each cube vertex already carries $T$, proving the census. The hull contains $[0,1]^n\\times T$, so is full dimensional.\n\nTo bound a closed halfspace through $(q,g)$ from below, restrict it to $(q+\\mathbb R(v-q))\\times\\mathbb R^d$. In the parameter $t$ defined by $z=q+t(v-q)$ the three retained fibers over $t=-1,0,1$ are exactly $A,T,T$. If the restriction is the whole subspace they contribute $2V+a$. Otherwise it is a closed halfspace through the middle centroid of this three-fiber configuration, so the three-fiber theorem gives at least $\\Gamma_dV+a$. Its containment and mass hypotheses are exactly those assumed here. Other fibers contribute nonnegative mass. Any closed halfspace containing $(q,g)$ contains a parallel through-point one.\n\nFor the upper bound define $\\delta_q(z)=\\sum_i z_i$, so that $\\delta_q(q)=0$, $\\delta_q(p)=-k$, and $\\delta_q\\ge1$ on the other cube vertices. For each cube vertex $w\\ne q$, set\n$$\n\\delta_w(z)=(k+1)\\sum_{i:w_i=1}(1-z_i)+\\sum_{i:w_i=0}z_i.\n$$\nThis is zero at $w$ and at least one at the other cube vertices. If $j=|I\\cap\\operatorname{supp} w|$ and $s=|\\operatorname{supp} w\\setminus I|$, then $\\delta_w(p)=(2k+3)j+(k+1)s-k\\ge1$, since $j+s\\ge1$. With barycentric coordinates $\\lambda_i$ of $T$, the caps\n$$\n\\lbrace\\lambda_i(x)-2\\delta_w(z)\\ge1/(d+1)\\rbrace,\n\\qquad w\\in\\lbrace0,1\\rbrace^n,\\quad 0\\le i\\le d,\n$$\ncover the whole actual source. For $w=q$ they include all of $A$ and exclude the other cube fibers, giving mass $\\Gamma_d V+a$. For $w\\ne q$ they isolate the canonical cap on the fiber at $w$, giving mass $\\Gamma_d V$. These inclusion and exclusion statements use $0\\le\\lambda_i\\le1$ on $A$ and $T$.\n\nAt $(q,y)$ with $y\\ne g$ some $\\lambda_i(y)>1/(d+1)$. Raising the $q$ cap threshold to $\\lambda_i(y)\\le1$ preserves the full added endpoint and other exclusions, but strictly reduces the own cap. At points over the other cube vertices a covering cap already has mass strictly below $\\Gamma_d V+a$. At any point over $p$, the vertical cap $\\sum_{i\\in I} z_i\\le-k$ isolates $A$, of mass $a$. This proves uniqueness. The exact total is $2^nV+a$. With no added endpoint the canonical caps isolate the cube fibers, and a cube vertex centroid always pays at least $\\Gamma_dV$ on its own fiber, so the same value formula extends to the no-addition baseline. The derivative of the normalized quotient at $\\alpha=0$ is $(2^n-\\Gamma_d)/4^n$.\n",
+  "source_candidate_ids": [
+    "1d1be0b22c707856"
+  ],
+  "source_candidate_sha256": {
+    "1d1be0b22c707856": "84cce1b95e65b1af02c6bf8b51df541e56e272710c57bf6cab37bfbb6e110cab"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1d1be0b22c707856",
+      "locator": "§7, (11), building on §§2–3"
+    }
+  ],
+  "statement": "Let $n\\ge1$, $d\\ge2$, let $T\\subseteq\\mathbb R^d$ be a full-dimensional simplex of volume $V$ and centroid $g$, and let $A\\subseteq T$ be compact convex with $0<a=|A|\\le\\rho_d V$, where $\\rho_d$ is the reflected simplex profile minimum. For distinct $q,v\\in\\lbrace0,1\\rbrace^n$, put $p=2q-v$ and form the convex hull of the fibers $\\lbrace z\\rbrace\\times T$ at all binary vertices and $\\lbrace p\\rbrace\\times A$. Its exact integer support is $\\lbrace0,1\\rbrace^n\\cup\\lbrace p\\rbrace$ with the assigned fibers. Using their $d$-dimensional volumes and all closed ambient halfspaces, the raw maximum over the mixed-integer points in the hull is $\\Gamma_d V+a$, attained only at $(q,g)$. For $\\alpha=a/V$ the normalized maximum is $(\\Gamma_d+\\alpha)/(2^n+\\alpha)$ and its right derivative at zero is $(2^n-\\Gamma_d)/4^n$.",
+  "subgoal_id": "pk-intake-tiny-contained-endpoint-binary-simplex-core",
+  "title": "Exact mixed depth after one tiny addition to a binary simplex core"
+}

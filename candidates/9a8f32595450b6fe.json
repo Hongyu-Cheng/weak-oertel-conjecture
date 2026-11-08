@@ -1,0 +1,28 @@
+{
+  "advances": "This is a failure of a quasiconcavity reduction for actual mixed depth, within a centrally normalized fixed-base class.",
+  "author": "PK-research-agent",
+  "candidate_id": "9a8f32595450b6fe",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:05:32.376255+00:00",
+  "depends_on": [
+    "dcb05945476b6c35"
+  ],
+  "draft_key": "fiberwise-minkowski-interval-depth-nonquasiconcavity",
+  "kind": "counterexample",
+  "proof": "For $A$ the consecutive lower endpoint slopes are $-3,2,7$, and the upper slopes are $12,4,4$. For $B$ the corresponding slopes are $-9,6,10$ and $3,-3,-7$. Linear interpolation of the lower endpoints is convex and of the upper endpoints is concave, proving exact hull compatibility for the four integer fibers. The sums preserve the slope order, so the same holds for $D$. The total lengths are $94,85,179$.\n\nUsing the finite slope lemma gives the following exact raw minima. For each row the above-line values are computed by summing $\\max(0,r_j-\\max(l_j,x+(e-x)(j-k)/(i-k)))$ over $j$ at the six choices $(i,e)$ with $i\\ne k$. The below-line minimum uses the total minus the maximum of those six values. The two extreme slopes already give the constant tail values.\n\n| Array and point | Above-line minimum | Below-line minimum | Smaller vertical mass |\n| --- | ---: | ---: | ---: |\n| $A$, $(2,14)$ | $40$ | $40$ | $55$ |\n| $B$, $(1,33/4)$ | $147/4$ | $147/4$ | $54$ |\n| $D$, $(1,18)$ | $63$ | $63$ | $93$ |\n\nFor the upper bound everywhere on $D$ use two closed caps at each base. Below or at the listed split use the halfspace below the first line, and above it use the halfspace above the second. The line entries give the value of $y$ at base coordinate $z$.\n\n| Base | Split | First line | Second line | Mass of either cap |\n| --- | ---: | --- | --- | ---: |\n| $0$ | $33/2$ | $33/2-100z$ | $33/2+100z$ | $33/2$ |\n| $1$ | $18$ | $40-22z$ | $31z-13$ | $63$ |\n| $2$ | $45/2$ | $(69z-93)/2$ | $(147-51z)/2$ | $119/2$ |\n| $3$ | $59/2$ | $59/2+100(z-3)$ | $59/2-100(z-3)$ | $33/2$ |\n\nBoth lines in each row equal the split at the designated base. The masses come from clipping each of the four displayed intervals. The two orientations have the same contribution vector at base one, $(33,30,0,0)$, and at base two, $(0,0,53/2,33)$. The extreme-base rows isolate their own half intervals. This cover proves the upper bound $63$ at every point, and the depth at $(1,18)$ attains it.\n\nFinally $63/179<20/47$ and $63/179<147/340$ by cross multiplication. Scaling only the continuous coordinates is invertible and preserves normalized depth. The stated weighted interpolation is $D/60$ and all three arrays in that interpolation have their base-one length normalized to one.\n",
+  "source_candidate_ids": [
+    "94a1565e143d393e"
+  ],
+  "source_candidate_sha256": {
+    "94a1565e143d393e": "ce7401f73ea9d55067e61a1164d8e5fb3258feeb75dd12ad7fc7691815dda2b6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "94a1565e143d393e",
+      "locator": "§2, interval arrays and exact maximum and central normalization"
+    }
+  ],
+  "statement": "At bases $0,1,2,3$ take the compatible interval arrays\n$$\nA=([0,12],[-3,24],[-1,28],[6,32]),\\qquad\nB=([0,21],[-9,24],[-3,21],[7,14]).\n$$\nTheir fiberwise Minkowski sum is $D=([0,33],[-12,48],[-4,49],[13,46])$. The normalized depths of $(2,14)$ in $A$ and $(1,33/4)$ in $B$ are respectively $20/47$ and $147/340$, and the normalized maximum of $D$ is $63/179$, attained at $(1,18)$. In particular normalized maximum depth fails quasiconcavity for actual compatible families even on the class whose interval at base $1$ has length one, using the interpolation of $A/27$ and $B/33$ with weights $27/60$ and $33/60$ in the continuous coordinate.",
+  "subgoal_id": "pk-intake-fiberwise-minkowski-interval-depth-nonquasiconcavity",
+  "title": "Normalized mixed depth fails quasiconcavity under fiberwise Minkowski interpolation"
+}

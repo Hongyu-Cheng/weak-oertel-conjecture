@@ -1,0 +1,29 @@
+{
+  "advances": "Conditional control of the physical weight in a fixed-base buffered model. The hypothesis is a strict sublevel below the pure-base parity threshold.",
+  "author": "PK-research-agent",
+  "candidate_id": "cb658c9938ab4d6c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:07:51.862466+00:00",
+  "depends_on": [
+    "dba5cdade881e9ee",
+    "d90ba05577427854"
+  ],
+  "draft_key": "sampled-physical-scale-bound",
+  "kind": "lemma",
+  "proof": "Put $m_{j,z}=\\max_{X\\in K_{j,z}}h_j(z,X)$. These arrays are sampled-concave: for an anchored combination choose maximizers in its input fibers and combine them in the actual target fiber. If $A_j=\\max_z m_{j,z}$ is unbounded, pass to a subsequence with $A_j\\to\\infty$ and $m_{j,z}/A_j\\to a_z$. The limit array is nonnegative, midpoint-concave at sampled midpoints, and has maximum one. Apply dba5cdade881e9ee with weights $|K_z|$ and the assumed minor quotas to find $p$ with $a_p>0$ whose limiting closed pure-base depth is at least $V(P)/k$.\n\nFor a nonnegative concave function with maximum $m$ attained at $X_0$ on a convex $d$-body $K$, the superlevel at $tm$ contains $tX_0+(1-t)K$ for $0\\le t\\le1$. Integration gives average at least $m/(d+1)$, and Jensen gives the same lower bound at the centroid. Thus $h_j(p,g_{j,p})\\to\\infty$ at the current centroids. Their energy is $|K_{j,p}|$ by d90ba05577427854. Volumes converge, the limiting own volume is positive, and the norms have a common positive lower bound on the unit sphere for large $j$. The cap displacement there tends to infinity uniformly for unit $u$.\n\nThe current fiber coordinates have a common bound. Once the displacement exceeds their common diameter, every nonvertical cap through this centroid with displacement contains every whole fiber in its nonnegative base-drift trace. Each such closed trace has weight at least the current pure-base depth at $p$. The pure-base cuts themselves are allowed, so depth at the centroid equals that pure-base depth. Pure-base depth depends continuously on the finitely many fiber weights, since only finitely many traces occur. Dividing by $M_j\\to V(P)>0$ contradicts $Q_j/M_j\\le b<1/k$.\n",
+  "source_candidate_ids": [
+    "36607dd22d2fb045"
+  ],
+  "source_candidate_sha256": {
+    "36607dd22d2fb045": "f5f33cf7e6a453d29d8d77f581246a0a60b7a9c9a56cfc37be47610c5803cfd6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "36607dd22d2fb045",
+      "locator": "§§1–2, (3)–(7)"
+    }
+  ],
+  "statement": "Let $\\Lambda=c+L$ be an affine lattice and $P=\\operatorname{conv}(P)\\cap\\Lambda$ be finite and nonempty. Work in its relative affine span and let $k(T)$ count the occupied classes of $T$ modulo $2L$, with $k=k(P)$. Fix $d\\ge1$. For each $j$ let $K_{j,z}$, $z\\in P$, be positive convex $d$-bodies with canonical hull $C_j=\\operatorname{conv}\\bigcup_z(\\{z\\}\\times K_{j,z})$ whose actual sampled fibers are exactly $K_{j,z}$. Assume $K_{j,z}\\to K_z$ in Hausdorff distance with every $K_z$ a convex body of positive volume. Set $V(T)=\\sum_{z\\in T}|K_z|$ and $M_j=\\sum_z|K_{j,z}|$. Suppose $V(T)\\le k(T)V(P)/k$ for every nonempty proper closed minor $T=P\\cap\\operatorname{conv}(T)$.\n\nTake positive continuous concave $h_j$ on $C_j$, and norms $\\Gamma_j$ on continuous covectors converging uniformly on the Euclidean unit sphere to a norm. For a sampled mark $(p,y)$, use the infimum of summed fiber masses of the closed caps\n$$\na\\cdot(z-p)+u\\cdot(X-y)+\\left(\\frac{h_j(p,y)E_{K_{j,p}}(y)}{M_j}\\right)^{1/(d+1)}\\Gamma_j(u)\\ge0.\n$$\nHere $(a,u)\\ne(0,0)$, and $E$ is the marked projective energy of d90ba05577427854, with value zero on own boundaries. Pure-base caps are unchanged, with the whole-base trace allowed in rank zero. If the maximum raw buffered depth $Q_j$ satisfies $Q_j/M_j\\le b<1/k$ for every $j$, then\n$$\n\\sup_j\\max_{z\\in P,\\ X\\in K_{j,z}}h_j(z,X)<\\infty .\n$$\nIn particular this applies to $h_j=\\varepsilon_j^{d+1}L_j$ for positive concave parameters $L_j$.",
+  "subgoal_id": "pk-intake-sampled-physical-scale-bound",
+  "title": "Bounded physical weights below the pure-base parity threshold"
+}

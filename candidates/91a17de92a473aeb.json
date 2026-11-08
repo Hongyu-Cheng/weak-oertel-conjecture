@@ -1,0 +1,28 @@
+{
+  "advances": "Splitting of original-volume allocations under an assumed exact contact certificate, independently of limiting reciprocal-weight transport.",
+  "author": "PK-research-agent",
+  "candidate_id": "91a17de92a473aeb",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:07:51.863448+00:00",
+  "depends_on": [
+    "c42156e9c470da8e"
+  ],
+  "draft_key": "certified-original-volume-row-split",
+  "kind": "theorem",
+  "proof": "Integrating the definition of $\\eta_{j,p}$ gives its mass by the second row identity. Multiplying the last row identity by $h_j$ gives the sum formula and therefore domination by $dm_j/M_j$. The measures are supported in a fixed compact set and have bounded masses. Choose a common weakly convergent subsequence. Convergence of the volumes in symmetric difference on each base gives $\\sum_p\\eta_p=dm/M$. Testing against the constant one gives the limiting masses. Testing against a continuous base function equal to the indicator of any specified subset on $P$ gives convergence of the masses on that subset of bases.\n\nFor $p\\notin Z$, the denominator $h_j(Y_{j,p})$ converges to $h_p(y_p)>0$ by local uniform convergence, while $\\max_{z\\in Z,\\ X\\in K_{j,z}}h_j(z,X)\\to0$ if $Z$ is nonempty. Thus the mass of $\\eta_{j,p}$ over $Z$ is at most that maximum times $\\sigma_{j,p}/h_j(Y_{j,p})$ and tends to zero. The assertion is immediate when $Z$ is empty. For $p\\in Z$ the base mean of $\\rho_{j,p}$ is $p$, and a base-affine exposing function for $F_p$ is nonnegative on $\\operatorname{conv}P$ and has expectation zero. Thus $\\rho_{j,p}$ and its reweighting are supported over $F_p$; if $F_p$ is the whole base the assertion is automatic. The sampled concave roof compactness lemma gives $P\\cap F_p\\subseteq Z$. Hence the two class sums are exactly the respective restrictions of the total limiting original volume. Each fiber over $Z$ has positive volume, so some surviving zero-class row allocates mass to it; that row's supporting face contains its base. This proves the face cover. Replacing each $F_p$ by such a $G_p$ can enlarge the sampled union only within $Z$, so the cover remains exact.\n",
+  "source_candidate_ids": [
+    "36607dd22d2fb045"
+  ],
+  "source_candidate_sha256": {
+    "36607dd22d2fb045": "f5f33cf7e6a453d29d8d77f581246a0a60b7a9c9a56cfc37be47610c5803cfd6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "36607dd22d2fb045",
+      "locator": "§5, (12)–(16a)"
+    }
+  ],
+  "statement": "In the setting and subsequential limit of the sampled concave roof compactness lemma, let $h_j>0$ on $C_j$, put $S_j=\\bigcup_z(\\{z\\}\\times K_{j,z})$, and use summed volume $dm_j$ of total $M_j$. Fix a nonempty $J\\subseteq P$ and marks $Y_{j,p}=(p,y_{j,p})\\to Y_p=(p,y_p)$ with $y_p\\in\\operatorname{int}K_p$. Suppose that for each $j$ there are nonnegative weights $\\sigma_{j,p}$ summing to one and probability measures $\\rho_{j,p}$ on $S_j$ for positive weights, with\n$$\n\\int w\\,d\\rho_{j,p}=Y_{j,p},\\qquad\n\\int h_j\\,d\\rho_{j,p}=h_j(Y_{j,p}),\\qquad\n\\sum_{p:\\,\\sigma_{j,p}>0}\\frac{\\sigma_{j,p}}{h_j(Y_{j,p})}\\rho_{j,p}\n=\\frac{dm_j}{M_jh_j}.\n$$\nFor positive weights set $d\\eta_{j,p}=(\\sigma_{j,p}h_j/h_j(Y_{j,p}))\\,d\\rho_{j,p}$, and otherwise set $\\eta_{j,p}=0$. These measures have masses $\\sigma_{j,p}$ and sum to $dm_j/M_j$. Along a further subsequence $\\eta_{j,p}\\rightharpoonup\\eta_p$ and $\\sigma_{j,p}\\to\\sigma_p$, with $\\eta_p$ of mass $\\sigma_p$ and $\\sum_p\\eta_p=dm/M$, where $dm$ is the limiting summed volume of total $M$.\n\nWriting $F_p$ for the smallest face of $\\operatorname{conv}P$ containing $p$, rows with $p\\in Z$ are supported over $F_p\\cap P\\subseteq Z$ already at finite $j$, and rows with $p\\notin Z$ allocate zero limiting original volume over $Z$. The two limiting sums are exactly the restrictions of $dm/M$ over $Z$ and its complement. In particular, with $V(T)=\\sum_{z\\in T}|K_z|$,\n$$\n\\sum_{p\\in J\\cap Z}\\sigma_p=\\frac{V(Z)}M,\\qquad\n\\sum_{p\\in J\\setminus Z}\\sigma_p=\\frac{V(P\\setminus Z)}M,\\qquad\nZ=P\\cap\\bigcup_{\\substack{p\\in J\\cap Z\\\\ \\sigma_p>0}}F_p .\n$$\nThe same cover uses any faces $G_p$ for the surviving zero-class sources with $F_p\\subseteq G_p$ and $P\\cap G_p\\subseteq Z$, in particular the faces from the exact finite-plane convergence conclusion when that conclusion applies and $h$ is nonzero.",
+  "subgoal_id": "pk-intake-certified-original-volume-row-split",
+  "title": "Zero and positive classes of reweighted original-volume rows"
+}

@@ -1,0 +1,48 @@
+{
+  "candidate_id": "6bd6bb822eee0863",
+  "candidate_sha256": "029e1326a4c3ddbcbd5700b3791e62a7cb23c86e92d331957b54d574b27a5305",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Start with any r+1 affinely independent members of A. Every later insertion is a distinct point, and the current hull remains full dimensional throughout.",
+    "For an exterior insertion, parameterize each ray from the new apex through the old polytope. The largest entry parameter among the initially violated facet inequalities is attained by one of those finitely many inequalities. The first entry therefore belongs to a strictly visible facet, even if it also lies on a facet coplanar with the apex. The cones over the inherited boundary triangulations cover the added region and are full dimensional. Their common rays have a unique first-entry point, so their intersections are the cones over common base faces or the common apex alone. Their intersection with the old hull is their base.",
+    "For an insertion into the old hull, the minimal face F has m≥1. In each incident full simplex, its m+1 facets missing F each omit a vertex of F. The new apex has positive barycentric coefficient at that vertex, so each cone is full dimensional. Restrictions agree on common faces containing F and preserve faces missing F. Purity gives at least one incident full simplex even on the boundary, and m≥1 preserves every old vertex and strictly increases the full-simplex count. This includes the interval case r=1.",
+    "The affine basis consumes r+1 points and contributes one simplex. Each of the |A|−(r+1) remaining points adds at least one full simplex, giving |A|−r. The absolute determinant of lattice coordinates of the r edge differences is a positive integer; the linear lattice chart multiplies volume by v and the standard simplex has volume 1/r!.",
+    "Verified the two original source digests at snapshot 8d2dca690a1b7d6d745b3ab445cd841f3e22d13a. Original a779c844eb8df3e4 §1, (3) proves the same bound, using the dual graph for the count. Original 631839b23c1a0508 §1 uses the all-vertices triangulation, compatible face subdivision and integral lattice determinant. The normalized incremental proof supplies the count directly."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T13:11:19Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its proof establishes the same r=2 area floor for the full lattice trace of a polygon via point insertion. After an affine lattice chart, take the polygon conv(A) and its full lattice trace containing A to obtain the r=2 volume bound. The frozen lemma asserts the triangulation with the exact prescribed vertex set for arbitrary r.",
+      "fact_id": "bead3fb237d87e28"
+    },
+    {
+      "comparison": "Pick's formula (3) and its upper lattice count (4) also imply the r=2 volume floor in the same way. The accepted proof constructs planar triangulations for full lattice traces and its statement concerns a maximum-area triangle capturing lattice sites.",
+      "fact_id": "6af93f68fb881fc3"
+    },
+    {
+      "comparison": "The proof uses the same planar lower volume estimate for noncollinear complete lattice traces in a wider weighted slab alternative. Its conclusion is planar and gives no all-r triangulation.",
+      "fact_id": "b295de5f23afdbe8"
+    },
+    {
+      "comparison": "The proof uses planar lattice triangulations and counts stellar subdivisions in a lattice tetrahedron, proving a refined count for that tetrahedral setting. It does not give the general full-dimensional insertion claim for arbitrary finite A.",
+      "fact_id": "3472b436c1c4f05f"
+    }
+  ],
+  "readability": "The exterior-ray argument and the subdivision at the relative interior of a boundary face are compressed. Reading them in the simplicial complex, every boundary face is incident to a full simplex and the cones agree on shared faces. No added assumption is needed.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2cd1728f11661eaf352c53dfb0149e43f8f1c71c51f38d27a604370b84bacb05",
+  "reviewed_statement_sha256": "0fde96059e5f5bdb58ded5cdee7d6506f67dfa65b82accb05939de03d7998a49",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:07:44Z",
+  "summary": "The incremental triangulation works for every insertion, including points on boundary faces. The simplex count and lattice determinant give the stated volume floor in every dimension.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

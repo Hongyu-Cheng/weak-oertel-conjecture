@@ -1,0 +1,26 @@
+{
+  "advances": "Prescribes one proper minimizing cap through a section centroid using a finite lower extrusion. The depth formula is for that fixed mark.",
+  "author": "PK-research-agent",
+  "candidate_id": "4e50477f6e59da1e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:11:33.639378+00:00",
+  "depends_on": [],
+  "draft_key": "centered-section-realized-by-proper-minimizing-roof-cap",
+  "kind": "theorem",
+  "proof": "The body is compact and convex by the roof and base assumptions, with nonempty interior. A vanishing positive moment for a unit $v$ would imply $v\\cdot X=0$ almost everywhere since the mean is zero, contradicting full affine span. Continuity on the compact unit sphere gives $m>0$. Also $m\\le R$, so $L\\ge G>0$. Fubini gives both the total mass and the flat cap mass. The vertical thickness is uniformly positive and bounded, so each positive extruded fiber comes from a section fiber of positive $r$-volume. It is cut properly at $t=0$ since $L>0$ and $g>0$.\n\nIt suffices to bound caps through $(0,0)$, because parallel movement to this point only decreases the mass of a containing cap. For a cap $t+\\ell(X)\\ge0$ with linear $\\ell$, its mass minus $Q$ is $\\int\\max(-g(X),\\min(L,\\ell(X)))\\,d\\nu$. This is bounded below by\n$$\n\\int \\min(k(v\\cdot X)_+,L)\\,d\\nu-\\int \\min(k(-v\\cdot X)_+,G)\\,d\\nu\n$$\nwhen $\\ell(X)=k v\\cdot X$ with $k>0$ and $|v|=1$. For $kR\\le L$ the positive moment is untruncated and dominates the negative term by zero mean. For $kR>L$ the inequality $\\min(kx,L)\\ge Lx/R$ on $[0,R]$ gives a positive term at least $LWm/R\\ge GW$, and the negative term is at most $GW$. For $\\ell=0$ the original mass difference is zero.\n\nFor a cap $t\\le\\ell(X)$ with nonzero $\\ell$, the entire lower interval of height $L$ is captured above $\\ell\\ge0$. The same holds for a cap $\\ell(X)\\ge0$ with zero $t$ coefficient. For the associated unit direction $v$, the bound $(v\\cdot X)_+\\le R\\mathbf1_{\\{v\\cdot X>0\\}}$ gives $\\nu\\{\\ell\\ge0\\}\\ge Wm/R$, so the captured mass is at least $LWm/R\\ge GW\\ge Q$. The cap $t\\le0$ has mass $LW\\ge Q$. These cases give the claimed lower bound over all closed ambient directions.\n",
+  "source_candidate_ids": [
+    "4c405e76fb81c248"
+  ],
+  "source_candidate_sha256": {
+    "4c405e76fb81c248": "3dbfc4e4c6e5198d6c7d90d4a327cfec5eac2fec6f938b58896fd6e93fa7dc25"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4c405e76fb81c248",
+      "locator": "§11, (11)–(13)"
+    }
+  ],
+  "statement": "Let $n,r\\ge1$ and let $D\\subset\\mathbb R^n\\times\\mathbb R^r$ be a compact convex body whose mixed $r$-volume $\\nu$ has mass $W>0$, full affine span and centroid an actual mixed point. Translate that point to $0$, preserving the integer lattice. Define $R=\\max_{X\\in\\operatorname{supp}\\nu}|X|$ and $m=\\min_{|v|=1}W^{-1}\\int(v\\cdot X)_+\\,d\\nu>0$. For continuous positive concave $g$ on $D$, put $G=\\max_Dg$ and assume $L\\ge GR/m$. The body\n$$\nC=\\{(X,t):X\\in D,\\ -L\\le t\\le g(X)\\}\n$$\nhas mixed $(r+1)$-volume $LW+Q$ with $Q=\\int_Dg\\,d\\nu$. The raw depth of the actual point $(0,0)$ is exactly $Q$, attained by $\\{t\\ge0\\}$, and this cap cuts every positive-volume sampled fiber properly.",
+  "subgoal_id": "pk-intake-centered-section-realized-by-proper-minimizing-roof-cap",
+  "title": "Realizing a centered mixed section by a proper minimizing roof cap"
+}

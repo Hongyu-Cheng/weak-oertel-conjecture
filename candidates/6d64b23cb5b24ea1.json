@@ -1,0 +1,28 @@
+{
+  "advances": "This characterizes a cone of sampled support functions, before optimizing mixed-integer depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "6d64b23cb5b24ea1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:05:32.375072+00:00",
+  "depends_on": [
+    "ba0f3db1bf4f62c6"
+  ],
+  "draft_key": "compatible-support-array-cone-and-lineality",
+  "kind": "lemma",
+  "proof": "Fact ba0f3db1bf4f62c6 identifies the exact placed hull sections with the anchored Minkowski inclusions for all $\\lambda\\in L_z$. Lattice completeness excludes any other integer bases. Support functions turn these inclusions into the displayed linear inequalities. Vertices suffice by linearity in $\\lambda$. A nonzero affine dependence on the positive support of a vertex would allow a sufficiently small two-sided perturbation of its weights in $L_z$, contradicting extremality.\n\nAddition and nonnegative scaling preserve both support functions and these inequalities. The uniform limit on the sphere of support functions has a finite continuous positively homogeneous and subadditive extension to $\\mathbb R^d$. It is a support function: the dominated supporting linear forms supplied by finite-dimensional Hahn–Banach are bounded by the supremum of the absolute value of the limit on the sphere and attain it pointwise in each direction. Their intersection description gives the nonempty compact convex set with that support. The closed linear inequalities persist under the uniform limit.\n\nIf $h$ and $-h$ belong to the cone, each fiber of $h$ has zero width. Indeed the two widths in any direction are negatives and both nonnegative. Thus the fibers of $h$ are singletons $c_z$ and every anchored inequality is an equality $\\sum_w\\lambda_wc_w=c_z$. Take $z_0\\in P$ in the relative interior. For every $w\\in P$, a sufficiently small positive coefficient on $w$ can be used in a representation of $z_0$ because $(z_0-\\epsilon w)/(1-\\epsilon)\\in\\operatorname{conv}(P)$. Averaging these representations gives one with all coefficients positive. Perturb it by a small multiple of any array $\\alpha$ with $\\sum_w\\alpha_w=0$ and $\\sum_w\\alpha_w w=0$. Subtracting the two anchored equalities gives $\\sum_w\\alpha_wc_w=0$. Each coordinate of $c_w$ therefore lies in the row span of the affine-coordinate matrix with columns $(1,w)$. This gives the affine map in the statement. Conversely any such affine singleton array and its negative satisfy the anchored equalities.\n",
+  "source_candidate_ids": [
+    "94a1565e143d393e"
+  ],
+  "source_candidate_sha256": {
+    "94a1565e143d393e": "ce7401f73ea9d55067e61a1164d8e5fb3258feeb75dd12ad7fc7691815dda2b6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "94a1565e143d393e",
+      "locator": "§1, exact cone description and lineality"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb Z^n$ be finite and nonempty with $\\operatorname{conv}(P)\\cap\\mathbb Z^n=P$. For every $z\\in P$ let $h_z$ be the support function of a nonempty compact convex set $K_z\\subset\\mathbb R^d$, $d\\ge1$. Let $L_z$ be the polytope of nonnegative weights $\\lambda$ on $P$ with $\\sum_w\\lambda_w=1$ and $\\sum_w\\lambda_w w=z$. The convex hull of the placed fibers $\\{z\\}\\times K_z$ has exactly the prescribed integer fibers if and only if $h_z(u)\\ge\\sum_w\\lambda_wh_w(u)$ for every $z,u$ and every vertex $\\lambda$ of $L_z$. The support of each such vertex is affinely independent and has size at most $1+\\dim\\operatorname{aff}P$. The compatible arrays form a closed convex cone in the uniform norm on the unit sphere, with addition and nonnegative scaling given by fiberwise Minkowski addition and dilation.\n\nIf $P$ contains a point in the relative interior of its convex hull, the lineality of this cone consists precisely of the arrays $h_z(u)=u\\cdot(Bz+b)$ for an affine map $z\\mapsto Bz+b$ on $\\operatorname{aff}P$.",
+  "subgoal_id": "pk-intake-compatible-support-array-cone-and-lineality",
+  "title": "Compatible support arrays and their affine-translation lineality"
+}

@@ -1,0 +1,56 @@
+{
+  "candidate_id": "ec2b7d125fe6a3f0",
+  "candidate_sha256": "493c94fe36855817d0833b141b4df94d458584dcb4209727548db8b8f827723f",
+  "checked_dependency_candidate_sha256": {
+    "6bd6bb822eee0863": "029e1326a4c3ddbcbd5700b3791e62a7cb23c86e92d331957b54d574b27a5305"
+  },
+  "checks": [
+    "Compact support and lattice discreteness give a finite positive sample set. If its affine dimension is at most r−1, extend any affine basis of the positive set to r affinely independent coset points. The extension uses that the coset itself affinely spans the ambient space and also works when r=1.",
+    "In the full-rank case, an outside maximizer with value b>0 exists among the finitely many positive samples. It lies outside every earlier greedy span, so every chosen value is at least b, independently of ties. For every 0<t<b the r chosen points and that outside point are affinely independent and belong to the strict trace.",
+    "The convex hull of the trace lies in the strict superlevel by the assumed convexity. Finite trace changes occur only at sampled values, so the hull-volume integrand is a measurable step function. Layer cake over t∈(0,b) and the lattice-hull bound give the inequality. Integrating each sample indicator gives exactly min(f(p),b). The r selected terms cancel rb and every outside value is at most b, so the outside mass is bounded by r!M/v. Nonnegative inside mass permits the positive part.",
+    "For any compact convex Q, all sections lie in one bounded box. Closedness and reverse Fatou give upper semicontinuity, hence measurability. The section function is bounded and vanishes outside the compact projection. Brunn–Minkowski for the positive sections gives convex strict positive superlevels, and Fubini identifies the actual ordinary volume. The argument applies to every closed cut of positive sampled mass separately, and the s=0 indicator case is immediate.",
+    "In basis coordinates a nonnegative integer vector of sum at most one is a vertex of the standard simplex. In the product example all r+1 vertex fibers have mass V, every hyperplane misses at least one and a facet misses just one. Ordinary volume is vV/r!, so the ratio is exactly r!, including s=0 with V=1.",
+    "Verified the raw source digest and read original a779c844eb8df3e4 §§2–3, (1)–(2), (4). They give the same greedy threshold and tie handling, compact convex and counting applications, and product calibration. The frozen proof uses reverse Fatou for the same section regularity."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "6bd6bb822eee0863",
+      "candidate_sha256": "029e1326a4c3ddbcbd5700b3791e62a7cb23c86e92d331957b54d574b27a5305",
+      "hypotheses_mapping": "For every 0<t<b the trace A_t is finite, lies in a+L and affinely spans R^r by the r chosen sites and one outside maximizer. The predecessor gives vol_r(conv A_t)≥(|A_t|−r)v/r! with the same v.",
+      "reviewed_proof_sha256": "2cd1728f11661eaf352c53dfb0149e43f8f1c71c51f38d27a604370b84bacb05",
+      "reviewed_statement_sha256": "0fde96059e5f5bdb58ded5cdee7d6506f67dfa65b82accb05939de03d7998a49",
+      "status_at_review": "Same-batch frozen candidate. Approved in its separate review. Admit it before this dependent theorem."
+    }
+  ],
+  "finished_utc": "2026-11-08T13:11:19Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses finite weighted trace layer cake to bound halfspace depth using counting depth. It does not connect the trace with ordinary ambient volume or select a greedy hyperplane.",
+      "fact_id": "d52c89d30b11ee18"
+    },
+    {
+      "comparison": "Uses planar convex superlevels and lattice-area estimates to prove a wide-slab or top-radius-core alternative. Those hypotheses and conclusions do not supply the single codimension-one outside-mass bound for general bounded measurable f.",
+      "fact_id": "b295de5f23afdbe8"
+    },
+    {
+      "comparison": "Its proof uses Brunn–Minkowski to obtain root-concavity on positive fibers. Its depth and reflected entropy conclusions give no ordinary-volume bound on mass missed by a hyperplane.",
+      "fact_id": "03f650d1c4f1b86d"
+    }
+  ],
+  "readability": "The largest outside value b is attained because full rank gives a positive sample outside E and positive samples are finite. The strict inequality t<b is exactly what makes tied samples of value b appear together.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4ebd61a8441ff7f9330fad931590a71972b868792866ff4b2fa8e4dd2eda302e",
+  "reviewed_statement_sha256": "d85a3148c234e12fe874ae24b10c5cae3c5a71e7f262b08fe7d5f5096f7afcdf",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:07:44Z",
+  "summary": "The single greedy hyperplane gives the stated trace inequality and the sharp coefficient r! for continuous fibers and counting.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

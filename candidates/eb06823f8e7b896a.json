@@ -1,0 +1,28 @@
+{
+  "advances": "A logarithmic constraint on the physical weight of a sampled family.",
+  "author": "PK-research-agent",
+  "candidate_id": "eb06823f8e7b896a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:07:51.862905+00:00",
+  "depends_on": [
+    "c42156e9c470da8e"
+  ],
+  "draft_key": "log-normalization-forces-zero-fiber",
+  "kind": "lemma",
+  "proof": "For a positive continuous concave function $f$ on a positive convex $d$-body $K$, put $m=\\max_K f$ and choose a maximizer. Homotheties about the maximizer give $|\\{f\\ge tm\\}|\\ge (1-t)^d|K|$ for $0<t<1$. Applying the layer-cake formula to $\\log(m/f)$ and substituting $t=e^{-s}$ gives\n$$\n\\frac1{|K|}\\int_K\\log(m/f)\\,dX\n\\le\\int_0^1\\frac{1-(1-t)^d}{t}\\,dt=\\sum_{i=1}^d\\frac1i,\n$$\nusing the finite geometric sum after substituting $1-t$. If $Z$ were empty, a fixed interior point of each fiber would have a positive limit. The moving fiber maxima would therefore all be bounded away from zero along this subsequence. The displayed estimate bounds the mixed average of $\\log h_j$ from below, since that average is a convex combination of the fiber averages. Its exact value is $(d+1)\\log\\varepsilon_j\\to-\\infty$ by normalization, a contradiction.\n",
+  "source_candidate_ids": [
+    "36607dd22d2fb045"
+  ],
+  "source_candidate_sha256": {
+    "36607dd22d2fb045": "f5f33cf7e6a453d29d8d77f581246a0a60b7a9c9a56cfc37be47610c5803cfd6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "36607dd22d2fb045",
+      "locator": "§3, nonemptiness of $Z$"
+    }
+  ],
+  "statement": "In the setting and subsequential limit of the sampled concave roof compactness lemma, suppose $h_j=\\varepsilon_j^{d+1}L_j$, where $\\varepsilon_j\\downarrow0$ and $L_j>0$ are continuous concave with\n$$\n\\frac1{M_j}\\sum_{z\\in P}\\int_{K_{j,z}}\\log L_j(z,X)\\,dX=0,\\qquad\nM_j=\\sum_{z\\in P}|K_{j,z}|.\n$$\nThen the sampled zero set $Z$ is nonempty.",
+  "subgoal_id": "pk-intake-log-normalization-forces-zero-fiber",
+  "title": "Vanishing logarithmic mean forces a sampled zero fiber"
+}

@@ -1,0 +1,56 @@
+{
+  "candidate_id": "6ad992fcbb68c716",
+  "candidate_sha256": "9a1371752dc6d361eb74f0975544c902198783cc0897de6ac4988626c931321c",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+    "238906fb08a2b14c": "a3322d5a4d2ca023574d37729f2fe2f221ccd7f89b5eafe44190844154ee99ea"
+  },
+  "checks": [
+    "Checked the geometry in de0cd073e31eb7f8 §6, equation (11), and raw margin representatives in §1, (1)–(2), against the frozen source digest. The normalized diagonal calculation strips the source's stochastic maximizing hypotheses, which are unnecessary for this geometry.",
+    "Any plane whose centroid is interior contains that interior point and has both signs among the vertex margins. If either side has a single strict vertex, the three incident edge intersections form a nondegenerate triangle, including endpoints on the plane. The three remaining barycentric coordinates of its centroid are intercepts divided by three and hence at most one third. This includes configurations with one or two zero margins.",
+    "In the strict quadrilateral the first centroid above one third implies xy>zw by the positive factor and the margin identity in 238906fb08a2b14c. The reversed pair would give zw>xy for any of its own centroids above one third. Hence the two high centroid coordinates must be paired. The accepted within-pair ordering forces z=w on the low side.",
+    "Recomputed the asymmetric equations xy=z+z², x+y=1−2z and the discriminant 1−8z. The discarded solution z²−z is negative. Both roots are positive in the admissible three-plane range. The identity (1+z+u)(u+z)=2u gives the desired centroids, and at z=1/8 both roots equal 3/8. The symmetric solution follows directly from x=y and z=w.",
+    "Computed actual Euclidean area centroids independently by rational triangulation, using parallel cross-product area ratios, for two three-section examples, the coalescence A=3/8, and the unique symmetric example A=2/5. Checked the reciprocal-height normalization p+q=1/A−2 and pq=(1−s)/3, with the symmetric representative reversed as stated."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "1462fa9ce6ced54e",
+      "hypotheses": "A strict 2+2 cut of a nondegenerate tetrahedron meets all four cross edges, so its normalized diagonal point, reciprocal heights, and actual area centroid obey the accepted strict-split bijection and formulas. Relabeling the pairs preserves all formulas."
+    },
+    {
+      "fact_id": "238906fb08a2b14c",
+      "hypotheses": "The candidate uses its normalized one-coordinate identity from the proof and the difference identities. The low pair has both entries C<1/3, so the within-pair tie conclusion legitimately yields z=w."
+    }
+  ],
+  "finished_utc": "2026-11-08T14:36:42Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Already gives all three displayed sections for each 0<z<1/8, with A=(1+z)/3. It asserts their existence, not exclusion of any other plane, forced split for arbitrary proper planes, uniqueness for A≥3/8, or coalescence.",
+      "fact_id": "8c6f3575c5bfa87a"
+    },
+    {
+      "comparison": "Its reference triple is a member of the present family at A=10/27. Its rigidity conclusion is local for balanced triples, with a Hessian hypothesis, rather than a global inverse-centroid section classification.",
+      "fact_id": "43c87300b078e14e"
+    },
+    {
+      "comparison": "Gives a same-sign result for coordinates above 1/d under a smooth log-concave signed exponential density hypothesis. The present proof obtains the required same-pair implication directly from strict tetrahedral section formulas and classifies the remaining planes.",
+      "fact_id": "08e57a9d5210184f"
+    }
+  ],
+  "readability": "In the asymmetric calculation, the displayed expression x[2/(x+z)−1] is 3λ₀. The raw margin for the symmetric plane is deliberately reversed relative to the two asymmetric representatives.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0a00439444021a190fb4c24facd52f83f6231f5fce6ef6bab42fa1ae9c06e309",
+  "reviewed_statement_sha256": "f79b7a3e268d18663d3316daa0e781c6236437a1763f9d143ebfc0e344b73d2a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:32:38Z",
+  "summary": "The common centroid with two coordinates above one third forces the stated split. The normalized diagonal equations give exactly the claimed one- or three-section classification and raw representatives.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

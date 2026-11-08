@@ -1,0 +1,28 @@
+{
+  "advances": "Uniform pyramid with an arbitrary centrally symmetric base and height in (0,d−1]. Does not classify sections for arbitrary bases or larger heights.",
+  "author": "PK-research-agent",
+  "candidate_id": "8d9bdf166eb599c3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.097829+00:00",
+  "depends_on": [
+    "2f58c412150dafaf"
+  ],
+  "draft_key": "symmetric-base-pyramid-centroidal-section-classification",
+  "kind": "theorem",
+  "proof": "For an oblique plane write $z=-a\\cdot X$ with $a\\ne0$. Accepted fact 2f58c412150dafaf applies with base $D$ and apex height $H$. In its actual section chart $X=Hb/(H+1-a\\cdot b)$, $a\\cdot b\\le1$. Its pullback section area divided by $\\lVert(a,1)\\rVert$ is $H^{d-1}(H+1)(H+1-a\\cdot b)^{-d}\\,db$. Hence the integral of $a\\cdot X$ over the section has the sign of\n$$\n\\int_{-\\infty}^1 \\frac{q f(q)}{(H+1-q)^{d+1}}\\,dq,\n$$\nwhere $f$ is the density of the pushforward of base volume by $q=a\\cdot b$. The density is even, bounded, and compactly supported, and is positive near zero. It is nonincreasing for $q\\ge0$: in base dimension one it is constant on a symmetric interval, and otherwise the section at any height between $-q$ and $q$ contains a Minkowski combination of the two sections there. Those two sections have equal volume by symmetry, so Brunn–Minkowski gives the monotonicity.\n\nFor $0<R\\le1$, the integral of $q/(H+1-q)^{d+1}$ from $-R$ to $R$ is strictly positive by pairing $q$ and $-q$. For $R\\ge1$ the integral from $-R$ to $1$ is strictly larger than the integral from $-\\infty$ to $1$, since the omitted tail is strictly negative. Substitution $v=H+1-q$ gives the latter integral as\n$$\n\\frac{d-1-H}{d(d-1)H^d}\\ge0.\n$$\nEvery nonzero level of $f$ with a positive-length superlevel set yields one such symmetric interval, up to endpoints, before truncation to $q\\le1$. Layer-cake and Fubini give strict positivity of the section integral; the signed integrand is integrable on the bounded support because its denominator is at least $H^{d+1}$. Consequently the mean $z=-a\\cdot X$ is strictly negative.\n\nThe horizontal section is $[H/(H+1)]D$ at height zero. A vertical section is a $(d-1)$-dimensional pyramid over a central symmetric section of $D$ with horizontal centroid zero. Its horizontal coordinate centroid is zero and its height is the average of $H-(H+1)r$ under a density proportional to $r^{d-2}$ on $[0,1]$, giving $(H-(d-1))/d$. This also applies when $d=2$ and the vertical section is an interval.\n",
+  "source_candidate_ids": [
+    "ac7d9d547581534c"
+  ],
+  "source_candidate_sha256": {
+    "ac7d9d547581534c": "e32201748bd4ca1c2ef12e94b36148adc4df16dbf84189152effa108b9149fef"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ac7d9d547581534c",
+      "locator": "§1 and §§2–4, (2)–(7), complete section classification and strict sign"
+    }
+  ],
+  "statement": "Let $d\\ge2$, let $D\\subset\\mathbb R^{d-1}$ be a centrally symmetric convex body with center zero, and fix $0<H\\le d-1$. Put $K=\\operatorname{conv}(D\\times\\{-1\\},\\{(0,H)\\})$. Every oblique through-zero section of $K$, meaning neither horizontal nor vertical, has strictly negative mean height with respect to Euclidean section area. The horizontal section has centroid zero. Every vertical section has centroid $(0,(H-(d-1))/d)$. Thus the horizontal section is the only through-zero section whose centroid is zero for $H<d-1$; at $H=d-1$, all vertical sections and the horizontal section have centroid zero.",
+  "subgoal_id": "pk-intake-symmetric-base-pyramid-centroidal-section-classification",
+  "title": "Centroidal sections of uniform pyramids with symmetric bases"
+}

@@ -1,0 +1,55 @@
+{
+  "candidate_id": "bd0a8fbcb2d1cc47",
+  "candidate_sha256": "3a98fb3261e38b87a085843741d0216c6099b86e80c1c80ddb77b1f61a95388c",
+  "checked_dependency_candidate_sha256": {
+    "a19fb2ae234afb2a": "a051c52f35db8b023a04403f7e58188c7fd2ef24845e229caf985eb8aa6922f6"
+  },
+  "checked_source_candidate_sha256": {
+    "cfb017a0e12acfbf": "bd6b8783496bf2d2c2210698f345c01d30405d2c39bbdb654762aeaa4112e864"
+  },
+  "checks": [
+    "With the signed row normalization of a19fb2ae234afb2a, d_1=0 makes the two excluded first margins equal. For P_1=(p,−r), P_2=(−x,b), P_3=(−x,−e), the numerator of d_2+d_3 is e−r+(p−r)−(b−x), giving exactly the stated constraint.",
+    "The strict signs give x>0, v=p−r>0, s=b−x>0 and positive excluded magnitudes e and r. Swapping labels 2 and 3 after (X,Y)↦(X,−X−Y) swaps the margins and sends (s,v,w) to (s+w,v+w,−w), where s+w=e>0 and v+w=r>0. Thus the representative may take w≥0, including w=0.",
+    "The signed vertex matrix has rows (p,−x,−x), (−v−w,b,−e), (−v,−s,c). Its column sums are zero and it has the required strict signs. The determinant of the two edges at P_1 is LB. The barycentric weights given in the proof sum to one and give zero, with last numerator bp−xr=xv+sp>0.",
+    "The area follows from the determinant. The positive-vertex clipping fractions are p/L on both incident cap-1 edges, b/H and b/B in cap 2, and c/H and c/B in cap 3. The corner altitude is its positive height divided by the normal norm, so coarea is twice corner area divided by the positive height. Independent exact symbolic checks reproduced the determinant, barycentric identities and cap areas.",
+    "The sum of cap area divided by coarea equals (p+b+c)/2=H. Consequently the displayed f-values and Φ_1=2 follow from L+B=2H. Source cfb017a0e12acfbf §1, (1)–(2) has the same full chart and unnormalized geometry."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "a19fb2ae234afb2a",
+      "fact_sha256": "7d029b4ce614dd6eb2b10238006e5d1d7a434091eaff4098be42fcc443c20e29",
+      "mapping": "The canonical cap normals are nonzero, balanced and spanning; the source is interior and the strict distinct-vertex incidence matches the predecessor exactly. The cap-altitude identity gives Q_i/σ_i equal to half the unnormalized positive height, so the predecessor's 2a_i/√q_i equals the draft f_i."
+    }
+  ],
+  "finished_utc": "2026-11-08T14:42:53Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It gives the exact equality criterion in normalized signed-height differences, used here. The specialization solves that criterion for the complete physical vertex triples with specified normals, reconstructs the interior barycentric weights, and retains all three raw areas and coareas.",
+      "fact_id": "a19fb2ae234afb2a"
+    },
+    {
+      "comparison": "It classifies the image of normalized f-vectors and realizes them by some strict triangles. It does not classify the physical triples that yield one tight row or specify their individual coarea data.",
+      "fact_id": "5f923438468803ac"
+    },
+    {
+      "comparison": "It gives the actual signed-row area identity on strict triangles, and a further cap-ceiling bound. The exact tight-row vertex chart and all cap areas and coareas add different information.",
+      "fact_id": "e143ec3bc7a1b8e8"
+    }
+  ],
+  "readability": "The linear change fixes the first cap and swaps the remaining cap margins and vertex labels. The proof uses H as half the sum of positive heights, while the accepted predecessor denotes the full sum by H.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "71e3bc56955b714dc8fa1236e408727a242e70cd3ab4e68ed92ce6705fcd75c7",
+  "reviewed_statement_sha256": "ffc5cc32166d8f1609d608b3beae99353ba029a7366f717e07b26c94ee95b1db",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:35:42Z",
+  "summary": "The exact canonical coordinates classify the tight first rows for the specified normals and preserve the raw cap areas and coareas in both directions.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

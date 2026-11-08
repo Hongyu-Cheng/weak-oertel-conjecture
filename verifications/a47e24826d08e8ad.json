@@ -1,0 +1,74 @@
+{
+  "candidate_id": "3f3448fb28e8446d",
+  "candidate_sha256": "bcca9df42d6e6fa0634d5ecaf4495f85ca8391a1b92551885579b9fbbf42e8ef",
+  "checked_dependency_candidate_sha256": {
+    "3d5f56b513c21fc4": "ef3ab81ce0e282a0bbda069677de721a69b5056faab8969726fffd9e88e90282",
+    "bc5a8b26a83fc327": "8aeda4896c1dc57b8ef481c054c5aedde6ded511049961407ff922fcb473f8c7",
+    "bee3cc8e50a0dcea": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa"
+  },
+  "checks": [
+    "Verified source a2bca99efffd5fb9 §§1–2 (1)–(4) and its exact restricted support. The draft uses the accepted dependence theorem for h(P′) rather than the source's alternative explicit eight-deletion witness.",
+    "The original complete lattice hull contains conv(W). Of the two sites outside W, p₉ is strictly separated by b+c, while p₂ lies in conv(W) via both disjoint midpoint pairs. The nine exposing normals show each W point is a vertex. The rank-three base determinant and rank-four lift determinant both have absolute value one in the selected coordinates.",
+    "The supporting face b=0 contains precisely the four retained corners and the center among integer sites, since every original site has b≥0. The midpoint intersection is interior in that two-dimensional face. Thus there is exactly one nonvertex site. Restriction of the anchored height identities is exact, and g₂=1/2 is the only discarded height.",
+    "The predecessor proves the same lifted W hull has exactly its nine vertices as its integer trace. Its nine deletion hulls miss this set jointly, while removing any one hull leaves the lift of that hull's deleted index in all the others. The one-excluding-set-per-site bound gives h(T′)≤9 for all finite families of convex sets.",
+    "The only nonsingleton minimal-face hyperedge in P′ is the five-point diamond, so the accepted decomposition adds h(D) and five ones. Four corners are not empty relative to D because they enclose its center. Any four-point subset containing the center includes three corners and hence an opposite pair, violating convex position. The five-point set also fails convex position. The accepted empty-vertex upper lemma gives h(D)≤3. Three noncollinear corners have deletion segments meeting pairwise and missing in triple intersection, proving h(D)≥3.",
+    "Every retained lift is a vertex, so its dependence component is a singleton. The four former corners therefore contribute four instead of the original component contribution three. As a direct independent check of the lower h(P′) certificate, take W without p₃. The missing p₃ lies outside its hull by the b=0 face and c≤1 there. Deleting p₀ as well leaves p₁,p₆ on that face, whose segment excludes p₂. The other eight points are excluded by their own exposing deletion."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bc5a8b26a83fc327",
+      "candidate_sha256": "8aeda4896c1dc57b8ef481c054c5aedde6ded511049961407ff922fcb473f8c7",
+      "mapping": "Use the predecessor's original eleven-site lattice completeness, anchored heights, W exposure table, two midpoint pairs, and the full-dimensional empty hull and deletion family on precisely Ŵ. The predecessor's full ten-site T is larger than the graph in this draft by the omitted lift of p₉.",
+      "reviewed_proof_sha256": "de4bb661fdf8a39bda3e3343cb098f1ab6c8450a53c8075cff08682788c56301",
+      "reviewed_statement_sha256": "60f1edb2063807cddd4369c6ee128b3a4ec7ea4b5c7370ea9895ca010b1eea43",
+      "status": "pending_same_batch_admission"
+    },
+    {
+      "candidate_id": "3d5f56b513c21fc4",
+      "candidate_sha256": "ef3ab81ce0e282a0bbda069677de721a69b5056faab8969726fffd9e88e90282",
+      "fact_id": "3d5f56b513c21fc4",
+      "fact_sha256": "8a102ff16ee83b958da77d60b971538dece5f2e6aad3c0faf3e24660bd619d6b",
+      "mapping": "Its finite affine set decomposition applies both to P′⊂R³ and to the lifted T′⊂R⁴, with convex-set trace Helly. On P′ only the center p₂ contributes a nonvertex minimal-face hyperedge. On T′ no nonvertex contributes one.",
+      "reviewed_proof_sha256": "42414300b26b7d83cc52cd4df2c41561b5b48474e6088deadcb3a53e78851253",
+      "reviewed_statement_sha256": "d12d8603f519b58d81dff2ff058216c90b2702dec128713a328f0d230c1cf349",
+      "status": "accepted"
+    },
+    {
+      "candidate_id": "bee3cc8e50a0dcea",
+      "candidate_sha256": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa",
+      "fact_id": "bee3cc8e50a0dcea",
+      "fact_sha256": "d7fb8bf1055406ebcaa03906c37ae5c346a791238bfc82ab445225504cc670e3",
+      "mapping": "Use the general empty-vertex witness upper lemma at the start of its proof on the finite set D. Its applicability does not require D to have full ambient affine rank or invoke a graph midpoint property for D.",
+      "reviewed_proof_sha256": "5f71717b77abc881a8566e239b260d568886b9968e0805f252142523621e3ddb",
+      "reviewed_statement_sha256": "b35d11bb8b5672e290f57d665efd27927629b295e5ae5d1e0655b22288a2bd12",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:41:46Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives general dependence-component additivity and the upper lattice-rank cap. The present restricted support realizes an exact eight-to-nine change under an integral-coordinate filter, with the single nontrivial component identified.",
+      "fact_id": "3d5f56b513c21fc4"
+    },
+    {
+      "comparison": "Its graph midpoint theorem gives the coarse upper bound eight on the complete rank-three base when using zero heights. The integral height filter removes the midpoint p₂, so it does not give an upper bound eight on the integral graph. The accepted proof's finite-set witness lemma is also used for the exact diamond contribution.",
+      "fact_id": "bee3cc8e50a0dcea"
+    }
+  ],
+  "readability": "The letter D in the proof names the five-point set including its center, while the diamond face is the convex hull of only the four corners.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "71ef34bef1ea1e2061cc17290a331bc7db5714d7107c9676923c2d620e931f42",
+  "reviewed_statement_sha256": "2d471c50e2e8ee2f4d59d4fec416154339c295b885dd039d956159281428be3a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:38:38Z",
+  "summary": "The ten-site complete restriction has coarse relative Helly number eight, while its nine-site complete integral lift has Helly number nine. The sole coarse dependence component changed by filtering is the five-point diamond.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

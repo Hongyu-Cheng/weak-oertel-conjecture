@@ -1,0 +1,76 @@
+{
+  "candidate_id": "c12e1cd4003a913a",
+  "candidate_sha256": "da0bf44477d43968298addd2e22943192f432acd2dae6a7ba2f68075596bf7aa",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+    "d2ba4e3cbd6eb730": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0"
+  },
+  "checked_source_candidate_sha256": {
+    "725f5c9c83566e55": "ec5c153003033eda01cdcc0fef0a775395d85771ca9153bc3eb73adc2f108481",
+    "b6ffecfff4f39a35": "722b6de8440ac69c49c0bc84fa73f4b6398b129da6d2749c8c7c275faa585eb9"
+  },
+  "checks": [
+    "The three margins have strict two-versus-two vertex signs and sum to zero. Independent rational edge intersection, diagonal intersection, and projected triangle area calculations give all displayed diagonals and the common centroid (56,56,19,19)/150. Reversing the third margin retains its section while taking the complementary oriented cap.",
+    "An independent exact calculation of shifted edge intersections and tetrahedron determinants gives P=(4/25,4/25,354368/421875). Differentiating each determinant volume at zero shift gives coarea 3f and reproduces f=(1/100,1/100,2128/421875). The Gamma(4,1) scale gives E G⁻¹=1/3 and accounts for the actual raw coefficient scales. The resulting T is 3772/19.",
+    "The simplex tangent field has divergence 1−4ξⱼ and zero original facet flux. At the cap boundary the outward flux equals −cᵢⱼξⱼ divided by the norm of the affine-plane projection of cᵢ, so normalized integration gives the stated first-moment identity. Direct tetrahedral centroid integration agrees. Weighted summation cancels the centroid correction by the shared b and raw balance.",
+    "The three tetrahedra triangulate the cap by coning from one positive vertex over the opposite triangular face and two pieces of the cutting quadrilateral. Absolute barycentric determinants give normalized masses. The exact second-moment integration gives 37/1000, 37/1000 and 742504448/11865234375 and the weighted difference −24871/106087500.",
+    "The hinge is supported at y>4/5 where only the first two caps are present. The beta(2,2) density follows by integrating over the two coordinate pairs. Exact polynomial integration gives 9/1250 before weighting, and the weight increase 7/943 gives 63/1178750. The square and hinge are both continuous convex tests and violate opposite convex-order comparisons.",
+    "The raw normalized rows have the displayed positive entries and column sum one. The proper threshold is strictly between row extrema by the strict split, and its coarea derivative is TLᵢ. Thus sᵢF′(sᵢ)=3Pᵢ. The tangent of the cube-root cap fraction at this point goes through zero; concavity controls all nonempty proper thresholds, and above the last vertex the graph is constant. This proves optimality before using the accepted uniqueness and gradient theorem. With fixed weights Pᵢ^(1/3), the derivatives cancel on the column-sum constraint.",
+    "The cited original sections support the two exact tests, the positive stationary realization, and the divergence and exponential conservation law. The claim concerns stationary rows and makes no global maximizing assertion."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1462fa9ce6ced54e",
+      "candidate_sha256": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+      "fact_sha256": "90c54522176a9bd2392576c6f61a0ae6c5f7dfca357cf8869ae656c987ddcda1",
+      "hypotheses": "Each cut is a strict quadrilateral with two heights of each sign. Permute the third cap orientation as necessary and preserve the actual raw height scale. Its diagonal and cap coarea formulas include the repeated entries present here.",
+      "proof_sha256": "8de3c29eaf4b9ea31778296cf6c19010b1e74d947e37a33c223e812e662b921a",
+      "statement_sha256": "bca7b2d2230b274880856fcf4ccd9e8239bbbebad59eed011d4c53736003028c",
+      "status": "accepted at pinned snapshot"
+    },
+    {
+      "candidate_id": "d2ba4e3cbd6eb730",
+      "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+      "fact_sha256": "1ea56df969a8d887e9e78ed86174eee2934f79a095ee0f54bf7fb9255fd58f61",
+      "hypotheses": "The three rows have d=3, all entries positive and nonconstant, and the preceding concavity argument establishes their displayed proper minimizing thresholds. Apply uniqueness and the gradient formula with mass Pᵢ and actual centroid b.",
+      "proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+      "statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc",
+      "status": "accepted at pinned snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:45:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "At z=3/25 it gives exactly these three unoriented section planes and the same centroid, with the third cap oriented oppositely; it also gives the first two cap fractions. It does not construct or compare the conserved weighted law or give its column-stochastic stationary realization.",
+      "fact_id": "8c6f3575c5bfa87a"
+    },
+    {
+      "comparison": "It supplies the cap calculus for the strict two-versus-two geometry, including repeated heights. It does not compare the two laws or establish the weighted row stationarity for these data.",
+      "fact_id": "1462fa9ce6ced54e"
+    },
+    {
+      "comparison": "It supplies unique minimizing threshold and gradient at any proper positive nonconstant row. The actual three rows, their minimizing thresholds and the convex-order obstruction are proved in the candidate.",
+      "fact_id": "d2ba4e3cbd6eb730"
+    },
+    {
+      "comparison": "It orders a uniform simplex variable averaged with an independent uniform vertex. That transformed law differs from a sum of densities of fixed stationary tetrahedral caps.",
+      "fact_id": "68c5513d4b6cae29"
+    }
+  ],
+  "readability": "The Pᵢ weights in the final stationarity assertion are fixed at the displayed values when the rows vary.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3501b6fe7c4be4f1214b20505102c00329c2514cbd7fd465fa2325982b741f7e",
+  "reviewed_statement_sha256": "e824903143e3096a523b7d1c96ed8c659e1bebf11e1b34df9597ad16758163ba",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:41:49Z",
+  "summary": "The three actual stationary tetrahedral rows yield a same-centroid probability law with strict convex test comparisons in opposite directions.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

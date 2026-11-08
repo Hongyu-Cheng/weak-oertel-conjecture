@@ -1,0 +1,41 @@
+{
+  "candidate_id": "faf0509574789c00",
+  "candidate_sha256": "03155004e40720c72b7b31c4e883e692faecd1e81b382659fa1306a183433248",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The map b↦(k+b·(z-z_0)) has affine-subspace image E in finite-dimensional R^P, even if the labels have deficient affine rank. The three closed intervals for each coordinate cover the line and give finitely many closed polyhedral cells after intersecting with E. At the shared endpoints the adjacent objective formulas agree.",
+    "On a cell the lower coordinates contribute zero and the upper coordinates contribute V_z. Since r_z^d=V_z, the only nonconstant terms are x_z^d for z in I, each continuous on [0,r_z].",
+    "The projection eliminating an omitted variable is exact for closed linear inequalities: positive and negative variable coefficients yield finite lists of upper and lower affine bounds, and each lower bound must lie below every upper bound. With both lists nonempty this condition is sufficient by maximum and minimum. With only one list or neither, a finite witness can still be chosen. Equations of the affine subspace are representable by pairs of inequalities. Iteration yields a closed polyhedron in the remaining coordinates.",
+    "The projected nonempty cell is a closed subset of a compact box, and a minimizer there lifts by the definition of projection to a feasible evaluation and a finite slope b. If I is empty, any point of the original nonempty cell minimizes its constant objective. At least one cell is nonempty because b=0 gives an evaluation. Taking the least cell minimum proves global attainment.",
+    "The proof includes k=0, d=1, coincident clipping statuses, a one-base family, deficient affine rank, and unbounded slope directions. A two-base sanity check with one free evaluation attained its anchor lower bound at finite slope -k, including k=0. No boundedness assumption on the original minimizing sequence is used.",
+    "The reviewed source locator 763180a256538232 §3 (5) has the same evaluation cells, projection and finite-lift argument. Its later comparisons with actual ambient depth caps need additional hypotheses and are outside the frozen statement."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:45:16Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "In one base dimension and d=2 it uses the same summand form for a retained-area supremum at intercept sqrt(s). That envelope is the opposite optimization, not the general finite-dimensional minimum and its attainment.",
+      "fact_id": "4d628efe7673ce2d"
+    },
+    {
+      "comparison": "Uses clipping cells and bounded minimum-norm representatives to prove attainment of actual buffered cap masses under its geometric hypotheses. The present claim uses a different scalar objective on arbitrary finite evaluation labels.",
+      "fact_id": "c5ce541ffa55a29c"
+    }
+  ],
+  "readability": "I is the set of coordinates on the intermediate interval; the labels in the lower and upper sets may be unbounded before projection. Closure of the projected set is the point where polyhedrality matters.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ad7e2d665c379b5242309a49addf4191269065798cb49e4c9bdb00b882aa301d",
+  "reviewed_statement_sha256": "8ba481d01403f64a9a87efb647f466c4859075f474f79b1dd4f3d23db369d443",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:41:40Z",
+  "summary": "The finite scalar minimum is attained by a finite affine slope. Projection onto bounded intermediate coordinates is closed because the cells are polyhedral, even when the original slopes or saturated evaluations are unbounded. The proof uses no compatibility or depth-cap construction.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "The example concerns a fixed inverse moment and a single interval. A strictly positive limit can fail for these representatives.",
+  "author": "PK-research-agent",
+  "candidate_id": "12875b54a4e5ae18",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:34:26.403659+00:00",
+  "depends_on": [],
+  "draft_key": "two-plane-inverse-moment-escape",
+  "kind": "counterexample",
+  "proof": "For slope $A$ the breakpoint is $t_e=(1-e)/A\\in(0,1)$. Split the integral there. The constant part contributes $1-t_e$ and the affine part contributes $(e^{1-r}-1)/[A(r-1)]$ for $r>1$, or $\\log(1/e)/A$ for $r=1$. This gives the formulas and their limits. For $r=2$, $A=e^{-2}$ the result simplifies to $I_e$. The multiplicative normalization is then $\\sqrt{I_e}$ and tends to one. The interval to the right of $t_e\\to0$ has constant normalized value, while the value at zero is $e\\sqrt{I_e}$.\n\nFor $0<y<1$ integrate the energy denominator to obtain\n$$\n\\int_0^1[1+a(x-y)]^{-2}\\,dx\n=\\big[1+a(1-2y)-a^2y(1-y)\\big]^{-1}.\n$$\nThe denominator is maximized at $a=(1-2y)/(2y(1-y))$, where both endpoint factors are positive. Its maximum is $1/[4y(1-y)]$. Thus $E(y)=4y(1-y)$, with zero extension at the endpoints. On the shrinking layer $[0,t_e]$ one has $E\\le4t_e$ and $L_e$ bounded, so the difference of the two square-root buffers tends to zero uniformly there. To the right of the layer it tends to zero by the constant normalization factor. A uniform shift error on an interval changes each direction's captured length by at most that error times the fixed covariance factor and scale. Taking the minimum over directions gives uniform depth convergence.\n",
+  "source_candidate_ids": [
+    "f17e4f2b0ba9ee84"
+  ],
+  "source_candidate_sha256": {
+    "f17e4f2b0ba9ee84": "2750664e1c1da77da12365f9f277ae8547004d2caed51c0191e7ca1fd21f62d6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f17e4f2b0ba9ee84",
+      "locator": "§1"
+    }
+  ],
+  "statement": "For $0<e<1$ on $[0,1]$ let $H_e(x)=\\min(1,e+x/e^2)$ and $I_e=1+e(1-e)^2$. The two-plane positive concave functions $L_e=\\sqrt{I_e}H_e$ satisfy $\\int_0^1 L_e^{-2}=1$. They converge to $1$ locally uniformly on $(0,1]$, while $L_e(0)\\to0$. For the marked interval energy $E(x)=4x(1-x)$, the functions $\\sqrt{L_e E}$ converge uniformly to $\\sqrt E$, so the fixed-scale covariance-buffered depths converge uniformly to those for multiplier one. More generally for each fixed $r>1$, replacing the slope by $A=e^{-r}$ gives\n$$\n\\int_0^1\\min(1,e+Ax)^{-r}\\,dx\n=1+\\frac{e^{1-r}-1}{A(r-1)}-\\frac{1-e}{A}\\longrightarrow1,\n$$\nand for $r=1$ take $A=e^{-1}$ and replace the first correction by $\\log(1/e)/A$. Normalizing by the $1/r$ power of this integral likewise gives positive two-plane weights with a vanishing endpoint value.",
+  "subgoal_id": "pk-intake-two-plane-inverse-moment-escape",
+  "title": "Inverse-moment normalization allows a vanishing endpoint with two planes"
+}

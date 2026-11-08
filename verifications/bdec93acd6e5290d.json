@@ -1,0 +1,61 @@
+{
+  "candidate_id": "bc5a8b26a83fc327",
+  "candidate_sha256": "8aeda4896c1dc57b8ef481c054c5aedde6ded511049961407ff922fcb473f8c7",
+  "checked_dependency_candidate_sha256": {
+    "bee3cc8e50a0dcea": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa"
+  },
+  "checks": [
+    "Exact rational enumeration intersected all triples of the nine rows having nonzero determinant, tested each candidate against all rows, and returned precisely vertex indices 0,1,3,4,5,6,7,9,10. The displayed strict point checks, and summing the stated opposite-slope rows gives z≤2. Testing all 27 integer triples returned exactly the 11 displayed sites.",
+    "All eleven sites have an active row. Only y=0 is active at p2, and only x=2 at p8. Their sampled faces have indices {0,1,2,3,6} and {6,7,8,9,10}, respectively. The given affine prescriptions match all their sampled values and agree at p6. Every anchored representation stays in the minimal face, proving preservation at all sites.",
+    "The three differences from p3 to p4,p5,p6 have determinant of magnitude one. These four height-zero sites span the base, so the height-one p0 proves nonaffinity and supplies the fourth lifted affine dimension.",
+    "Every integer point of conv(T) projects to an integer point in conv(P), and its height is forced by Jensen preservation. This proves conv(T)∩Z^4=T, since exactly p2 has fractional height.",
+    "Independently recomputed all nine exposing rows and strict score gaps. The functional y+z is at most two on W and is three on p9. Thus the lifted W sites are all exposed and the outlier is absent even from their full hull. The integer trace of the full W hull is exactly W-hat.",
+    "Every lifted W site is excluded from its own deletion hull and belongs to all eight others. The outlier is absent from them all, so the nine-set family is critical. The two disjoint midpoint pairs for p2 survive every deletion, and the other ten base sites are excluded by the exposure and outlier inequalities. The unique height above the base kernel's lattice point is 1/2.",
+    "The lift over p8 is the midpoint of the lifts over p7,p9. The only ten-site subset of T therefore fails convex position. The arbitrary-finite-set witness lemma gives h(T)≤9, which combines with the nine deletions to give equality.",
+    "Both source locators match pinned 5c9190df7c42c598 with its raw digest. Sections 1–3 contain (2)–(5) and the height filter, while §§4–5 contain (6)–(11) and the exact critical family.",
+    "Checked downstream use of this hull in the two frozen neighboring drafts. The collapsed-graph exposure works on precisely the nine positive fine bases, as required by 2acc8bc803acf1c0 (6), and the excluded p2 is supplied in the coarse hull by a lifted midpoint. The ten-point-diamond proof restricts to W plus p2, removes the fractional lift, and uses the same nine deletion hulls on precisely W-hat."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bee3cc8e50a0dcea",
+      "candidate_sha256": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa",
+      "fact_id": "bee3cc8e50a0dcea",
+      "fact_sha256": "d7fb8bf1055406ebcaa03906c37ae5c346a791238bfc82ab445225504cc670e3",
+      "mapping": "Use the finite-set witness lemma in the proof for F=T. It needs only a nonempty finite set in Euclidean space. Because the 10-site set T contains a nonvertex, no empty vertex subset has size 10.",
+      "reviewed_proof_sha256": "5f71717b77abc881a8566e239b260d568886b9968e0805f252142523621e3ddb",
+      "reviewed_statement_sha256": "b35d11bb8b5672e290f57d665efd27927629b295e5ae5d1e0655b22288a2bd12",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:43:53Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The finite-set lemma applies. The special coarse graph bound requires equal-parity midpoint closure, which fails here for p0,p6 and for p1,p3 because p2 is dropped by the height integrality filter.",
+      "fact_id": "bee3cc8e50a0dcea"
+    },
+    {
+      "comparison": "Its midpoint-label graph result needs a geometric midpoint of each same-label pair in the graph. The coarse parity labels after filtering lack this property.",
+      "fact_id": "f4547c4166b39683"
+    },
+    {
+      "comparison": "Its component rule describes the dependence decomposition and gives parity bounds in the actual complete lattice. The coarse lattice and the lifted rank-four lattice differ. This general fact supplies neither the explicit hull nor the nine-set witness.",
+      "fact_id": "3d5f56b513c21fc4"
+    }
+  ],
+  "readability": "The advances field uses disconnected in the dependence-component sense of source §6. The mathematical statement uses only the explicit hollow lattice support and does not require a graph-connectivity convention.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "de4bb661fdf8a39bda3e3343cb098f1ab6c8450a53c8075cff08682788c56301",
+  "reviewed_statement_sha256": "60f1edb2063807cddd4369c6ee128b3a4ec7ea4b5c7370ea9895ca010b1eea43",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:38:07Z",
+  "summary": "The eleven-point lattice census, anchored height rule, critical nine-set family, matching Helly upper bound, and empty four-dimensional nine-vertex hull all check out.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

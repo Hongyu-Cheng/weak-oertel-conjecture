@@ -1,0 +1,50 @@
+---
+fact_id: defa773497bddb8f
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-explicit-covering-radius-rounded-centroid-depth
+depends_on: ["77d36834ea2179e7", "e4ef1ac154c5d280", "6769574fc1bd9f8d"]
+verifier_run: bbb823391ad148f1
+target_match: null
+---
+
+## Source
+
+- [7cb4b1bb7928127e](../candidates/7cb4b1bb7928127e.json), 7cb4b1bb7928127e:02 §§2–4, (5)–(12), explicit rounded point and both covering-radius bounds..
+- [7cb4b1bb7928127e](../candidates/7cb4b1bb7928127e.json), 7cb4b1bb7928127e:03 §5, (13)–(14), rank-one width and the $1024$ specialization..
+
+## Statement
+
+Let $n\ge1$, $d\ge0$, $(n,d)\ne(1,0)$, $N=n+d$, and $R=N(N+2)$. Let $F(z,x)=(Az+t,Bz+Tx+c)$ be an invertible block affine normalization of a compact convex body $C$ with $B_2^N\subseteq K=F(C)\subseteq R B_2^N$. Let $\delta$ be the Euclidean covering radius of $A\mathbb Z^n$. Set $\Gamma_0=1$, $\Gamma_j=(j/(j+1))^j$ for $j\ge1$, $\kappa_j=|B_2^j|_j$ with $\kappa_0=1$, $\alpha=2^{-n}\Gamma_d$, $S_N=\kappa_{N-1}R^{N-1}$, and $E=2n(2R+2)^{N-1}$. Put
+$$
+\delta_*=\min\left\{\frac1{2R^N},
+\frac{(\Gamma_N-\alpha)\kappa_N}{S_N+(1+\alpha)E}\right\}.
+$$
+If $\delta\le\delta_*$, let $g=(g_z,g_x)$ be the ordinary volume centroid of $K$, and choose any nearest $\lambda\in A\mathbb Z^n+t$ to $g_z$. Then $F^{-1}(\lambda,g_x)$ is an interior sampled point, the original sampled total is positive, and the point has normalized closed-halfspace depth at least $\alpha$. The following more restrictive condition also suffices:
+$$
+\delta\le\min\left\{\frac1{2R^N},
+\frac{(\Gamma_N-\alpha)(2/\sqrt N)^N}{(1+3n)(2R+2)^{N-1}}\right\}.
+$$
+When $n=1,d\ge1$, if $W$ is the projection length of $C$ in its original integer coordinate, $W\ge R/\delta_*$ suffices for this prescribed point. For $n=d=1$, the resulting sufficient length is $1024$.
+
+## Proof
+
+Use the weighted fine measure $\nu$ of vertical-preserving-block-affine-normalization and write $V=|K|_N$. A measurable Voronoi fundamental cell of $A\mathbb Z^n$ is contained in $[-\delta,\delta]^n$ because it lies in the radius-$\delta$ ball. In e4ef1ac154c5d280 take $k=0$, a single coarse fiber $K$, $r=n$ and $s=d$. The fine measure there is exactly $\nu$ and the coarse measure is ordinary $N$-volume on $K$. Since $V\ge\kappa_N>0$, that result gives $|\nu(K)-V|\le\varepsilon$ and $|\nu(H)-|K\cap H|_N|\le\varepsilon$ for all closed $H$, with $\varepsilon=2n\delta(2R+2\delta)^{N-1}$. These absolute bounds retain sampled boundary mass.
+
+For a unit vector $u$ put $h=h_K(u)\ge1$. The nonnegative integrand $h-u\cdot y$ on $K$ gives
+$$
+h-u\cdot g
+=\frac1V\int_K(h-u\cdot y)\,dy
+\ge\frac{\kappa_N h}{V}\ge R^{-N}.
+$$
+Here the integral over the contained unit ball has zero first moment, and $V\le\kappa_NR^N$. The support inequalities give $g+R^{-N}B_2^N\subseteq K$. The rounded mark $y=(\lambda,g_x)$ satisfies $\lVert y-g\rVert\le\delta\le R^{-N}/2$, so $y$ is interior and the fine mass is positive. In positive $d$ this follows from its own fiber containing a relative ball. For $d=0$ the sampled point itself contributes positive counting mass.
+
+Fix any closed halfspace containing $y$ and move its threshold to $y$, which can only decrease its mass. Comparing the resulting cap to the parallel cap through $g$ moves the threshold by at most $\delta$. Each hyperplane section of $K$ has $(N-1)$-volume at most $S_N$, so the lost ordinary volume is at most $S_N\delta$. By 6769574fc1bd9f8d at its full-volume value $m=V$, the ordinary centroid cap has volume at least $\Gamma_N V$. The same lower bound with the slab loss therefore applies to the original containing halfspace. Consequently
+$$
+\nu(H)-\alpha\nu(K)
+\ge(\Gamma_N-\alpha)V-S_N\delta-(1+\alpha)\varepsilon.
+$$
+For $j\ge1$, the binomial expansion gives $(1+1/j)^j\ge2$ and $(1+1/j)^j\le\sum_{i=0}^{j}1/i!<3$. Thus $1/3<\Gamma_j\le1/2$. In the stated dimensions $\alpha\le1/4$, so $\Gamma_N-\alpha>0$. The first mesh restriction implies $\delta\le1$, whence $\varepsilon\le E\delta$. With $V\ge\kappa_N$, the second mesh restriction makes the displayed difference nonnegative. Divide by $\nu(K)>0$ and use the exact block-affine covariance to obtain the original depth. The elementary sufficient variant follows from the cube bounds $\kappa_N\ge(2/\sqrt N)^N$ and $\kappa_{N-1}\le 2^{N-1}$, which give $S_N+(1+\alpha)E\le(1+3n)(2R+2)^{N-1}$.
+
+If $n=1$, write $A=a$ in the base coordinate. The transformed projection has length $|a|W\le2R$ and the lattice covering radius is $|a|/2\le R/W$. In dimension $n=d=1$ the constants are $R=8$, $S_N=16$, $E=36$, and $\Gamma_N-\alpha=7/36$, so $\delta_*=\min\{1/128,7\pi/2196\}=1/128$ using $\pi>3$. Therefore $R/\delta_*=1024$.

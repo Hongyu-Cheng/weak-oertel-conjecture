@@ -1,0 +1,61 @@
+{
+  "candidate_id": "7db5a8677be72462",
+  "candidate_sha256": "d902132351ec764b8d01a6d1db5376fb6bd3d75de9b1eef67d2617f96d81d663",
+  "checked_dependency_candidate_sha256": {
+    "5969e97329ff52ae": "e8b3d74bb0e1bd75e2909c61d941af63b612a9be70466d8e3f120bbacd42c29c",
+    "a7e1597fe02bbbac": "f6c781ff25533d83e4b9e60c3baf9c0d2828d41b28ed320baa28d747c69766a3"
+  },
+  "checks": [
+    "The cited volume-root argument applies to one step by midpoint containment (K_z+K_{p_[z]})/2⊆K_{R(z)} and Brunn–Minkowski. The full-path formula has a terminal witness target, but its convexity and volume argument already works at this intermediate midpoint, so 2f(R(z))≥f(z)+f(p_[z]). At a root g is exactly zero. All fibers in this step are nonempty, including null fibers.",
+    "Substituting f(z_j)=2f(z_{j+1})−f(p_[z_j])−g(z_j) gives the dyadic recurrence with correct signs. At a root k=0 gives a terminal coefficient one and no digits or slack. Equal f(p_r)=f₀ yields sum of slack weights f₀−f(z) between zero and f₀.",
+    "Finite weighted summation gives the asserted A_w with nonnegative coefficients. Each path has coefficient sum 2^k−(2^k−1)=1. Replacing scalar f with vector bases and dropping g gives the exact first moment from the affine recurrence, without a restriction on rank or positive fiber volumes.",
+    "In one dimension, for roots 0 and 1 the two coefficient moments force C_w(1)=Σ_{z=0}^L z=L(L+1)/2 and C_w(0)=(L+1)(1−L/2), which is negative for every integer L>2. Independently iterating exact integer coefficients for L=1,…,32 reproduced both formulas.",
+    "The l₁ polyhedron has the sign rows Σ_i ε_i(z_i−1/2)≤n/2 for ε_i∈{−1,1}; every binary root is tight at exactly its own row, and at an integer z the sum of absolute distances is at least n/2 with equality exactly at binary roots. This verifies exclusivity, full dimension and lattice avoidance, including n=1; an independent integer check for n=1,…,4 confirms the sign patterns.",
+    "The product C=[0,L]^n×K has actual projection [0,L]^n and K in every sampled fiber, so all midpoint slacks vanish. The actual volumes sum to (L+1)^n|K|_d and 2^n|K|_d at roots, giving a divergent ratio for fixed n≥1 and any d≥1.",
+    "Read 668ad0ef7a63372e §§5–6. These sections give precisely the signed identity, the one-dimensional coefficient example and the product example, with no assertion of strict small-cap feasibility.",
+    "Recomputed the frozen candidate and its UTF-8 statement/proof digests, checked every cited source digest against the pinned original candidate file, and checked each exact declared predecessor."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "5969e97329ff52ae",
+      "candidate_sha256": "e8b3d74bb0e1bd75e2909c61d941af63b612a9be70466d8e3f120bbacd42c29c",
+      "hypotheses_mapping": "Use the full-parity midpoint map with A=π(C). It supplies finite stopping at a witness for each start and the affine recurrence from which the coefficient moments follow. Its exact bytes are reviewed separately.",
+      "reviewed_proof_sha256": "be30be74753c3c29d05747088a436035aa3ccfb6885a06a30108a2807e75282e",
+      "reviewed_statement_sha256": "4329e068568366025a502271e30c08815a5e45e2758c45d8c0ef83a486e92f32"
+    },
+    {
+      "candidate_id": "a7e1597fe02bbbac",
+      "candidate_sha256": "f6c781ff25533d83e4b9e60c3baf9c0d2828d41b28ed320baa28d747c69766a3",
+      "hypotheses_mapping": "Use its midpoint containment and Brunn–Minkowski argument on K_z and K_{p_[z]}, with target K_{R(z)}. Both fibers are nonempty even at zero d-volume. This supplies g(z)≥0. Its exact bytes are reviewed separately.",
+      "reviewed_proof_sha256": "e067ce6f27915d7e698f1d179be1f2abe053971cf9d8627c09eaeb842c29478e",
+      "reviewed_statement_sha256": "60165590c9f3f980397597b9eecf7c5306ec484e43b052388cfb34cf23d0a499"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:38:26+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The terminal barycenter in its proof already gives the per-path coefficient sum and first moment after rearrangement. It does not account for amplified nonnegative volume slack or the summed signed coefficients and counterexamples.",
+      "fact_id": "abb6c0fd2ba74ca0"
+    },
+    {
+      "comparison": "Exhibits an unbounded ratio of one incoming fiber's area to its small anchor area and coincident transported images in a fixed six-fiber source. The new obstruction is the total-volume-to-all-root-volume ratio with every root equal and every volume slack zero, plus a separate exact negative signed coefficient.",
+      "fact_id": "8880964cc5001fee"
+    }
+  ],
+  "readability": "The same letter L is used for the integer side length in the examples and for a polyhedron in the predecessor; the proof names the latter L_fac in the example. The phrase ‘midpoint case’ invokes the explicitly proved barycentric containment and volume argument at a single midpoint, regardless of the eventual path length.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "e9876717eca29176cdff31bab1b360cdc83f93e21f0f2bc20911f413a6e08f4a",
+  "reviewed_statement_sha256": "e15095d891f9bcfce292298647eb2bc5ad81f76812599171e42329a346c94e08",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:34:20+00:00",
+  "summary": "The exact frozen proof establishes the signed telescoping and moment identities, and verifies both obstructions by exact calculation.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

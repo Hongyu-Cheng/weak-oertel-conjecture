@@ -1,0 +1,57 @@
+{
+  "candidate_id": "64fbb19e9b96cf88",
+  "candidate_sha256": "a2dd2f83e2074e2a410474d45a9211bf76204818f246997c7efe9d0268d379a8",
+  "checked_dependency_candidate_sha256": {
+    "347dc8c30a1e79ad": "8a2aced7ee126da88b1ed32194d8615cbeca5a750099b49dffe7a612be1cfbce",
+    "3d5f56b513c21fc4": "ef3ab81ce0e282a0bbda069677de721a69b5056faab8969726fffd9e88e90282"
+  },
+  "checks": [
+    "Each sampled minimal face is contained in an inclusion-maximal sampled minimal face. Adding singleton edges for vertices preserves the anchored hypergraph's components, and retaining only the maximal face edges does as well because every original edge is contained in one of them and every maximal edge occurs.",
+    "A nonempty intersection of two faces of Q is a face and has a vertex of the lattice polytope Q, hence an actual site of I. Thus intersections in the real face graph are exactly intersections of their sampled hyperedges, and the resulting unions J_c partition I.",
+    "For z in J_c, the vertices of its old maximal parent face all belong to J_c. Thus F_z lies in conv(J_c), and the supporting equations of F_z make it a face of conv(J_c) since this smaller hull lies in Q. The point z remains in relint(F_z). The maximal minimal faces of the component hull are therefore exactly the original maximal faces in component c.",
+    "Completeness and disjoint inherited parities follow from the accepted dependence theorem on the complete I. The same-batch saturation theorem applies to J_c with exactly its old m_c and actual k_c. Equality yields parity-distinct singleton faces, and a connected component of singleton faces has one site. Conversely a singleton has m_c=k_c=1. Summing the integer deficits yields at least r and proves m≤k(I)−r.",
+    "Original c3bb7df3660a88b5 §2, Lemma 2 and (1)–(3), matches the disposition. An independent exact calibration on the lattice hull of (0,0),(2,0),(0,1) gives one three-site edge component and one singleton, with m=2,k=3,r=1."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "3d5f56b513c21fc4",
+      "candidate_sha256": "ef3ab81ce0e282a0bbda069677de721a69b5056faab8969726fffd9e88e90282",
+      "fact_sha256": "8a102ff16ee83b958da77d60b971538dece5f2e6aad3c0faf3e24660bd619d6b",
+      "mapping": "Apply to the complete finite I in its affine lattice, after verifying the overlap components equal its anchored hypergraph components. The accepted result supplies completeness of each J_c and pairwise disjoint occupied parities, yielding their additive count.",
+      "reviewed_proof_sha256": "42414300b26b7d83cc52cd4df2c41561b5b48474e6088deadcb3a53e78851253",
+      "reviewed_statement_sha256": "d12d8603f519b58d81dff2ff058216c90b2702dec128713a328f0d230c1cf349",
+      "status": "accepted fact at repository snapshot"
+    },
+    {
+      "candidate_id": "347dc8c30a1e79ad",
+      "candidate_sha256": "8a2aced7ee126da88b1ed32194d8615cbeca5a750099b49dffe7a612be1cfbce",
+      "mapping": "Same-batch saturation theorem. Each J_c is a finite complete lattice set and its own maximal minimal faces were proved to be exactly the m_c original faces in the component. Apply the count and equality characterization with I replaced by J_c.",
+      "reviewed_proof_sha256": "2d3a4ec44115bf13743594f5817423c84dd7e411a54ce6c1bbf4e571caf91dd3",
+      "reviewed_statement_sha256": "e74af4fc50796be623f3087fc447d2bf162a1f1ae99416535c97b585f69985e6",
+      "status": "same-batch draft, approval and admission required before dependent admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:47:16Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its hypergraph characterization, closed minor conclusion, and parity additivity already cover the corresponding component properties. The present result identifies the maximal-face overlap graph, preserves each old minimal face after restriction, and bounds the deficit in the maximal-face count.",
+      "fact_id": "3d5f56b513c21fc4"
+    }
+  ],
+  "readability": "The smaller component hull need not be a face of Q. The proof uses only that the old individual minimal faces remain faces of that hull.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d04a51f891c0989759563dd009664cd4a379727bcfabc312e3f443058af05892",
+  "reviewed_statement_sha256": "c100cb71fdf946ffcb8c85e08048c6b2007b1b6110ab3cbed3c236ca9368697e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:42:34Z",
+  "summary": "The maximal-face overlap graph gives exactly the accepted dependence components and yields the new integer deficit bound m≤k(I)−r.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

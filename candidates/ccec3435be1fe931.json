@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary planar depth for each fixed roof. The threshold in epsilon can depend on the roof.",
+  "author": "PK-research-agent",
+  "candidate_id": "ccec3435be1fe931",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.093533+00:00",
+  "depends_on": [
+    "385f652dbf4ae239"
+  ],
+  "draft_key": "planar-concave-roof-depth-and-triangle-cap-discrepancy",
+  "kind": "theorem",
+  "proof": "Concavity gives $\\psi\\ge\\ell$ on $I$ and $\\psi\\le\\ell$ outside $I$. The secant is nonnegative at both endpoints of $[0,1]$, hence everywhere on that interval. Its integral on $I$ is exactly one third of its total integral because $I$ is centered and has length one third. Subtracting its integrals yields $E=(2A+B)/3$ and the claimed norm bound. Equality $E=0$ forces $A=B=0$, hence $\\psi=\\ell$ by continuity.\n\nThe region $K_\\varepsilon$ is a compact convex body between an affine lower and concave upper graph. It contains the triangle $T=K_0$, of area $V$, and adds exactly $\\varepsilon Z$ area. The probability law uniform on the added strip tends weakly to the measure of density $\\psi(s)/Z$ on the facet $r=0$, by uniform continuity of test functions on a common compact set. The barycentric coordinates of $T$ are $-r,s,1-s+r$, so the limit gives zero mass to each canonical level $1/3$. On the facet the three canonical upper-cap indicators sum to $1+\\mathbf1_I(s)$ almost everywhere. Apply 385f652dbf4ae239 with $d=2$ and $t=\\varepsilon Z$. Its average canonical probability is $(Z+\\int_I\\psi)/(3Z)$, so the normalized depth coefficient is exactly $E/(3V)$ after subtracting the contribution of the added total mass. This proves the assertion for the maximum over all points and closed halfspaces.\n\nFor small $\\varepsilon$, $1-\\varepsilon b>0$. The third vertex of $L_\\varepsilon$ is $(s_*,s_*-1)$ with $s_*=(1+\\varepsilon a)/(1-\\varepsilon b)\\ge1$, since $\\ell(1)\\ge0$. On $0\\le s\\le1$, the excess areas on the two sides are $\\varepsilon A$ for $K_\\varepsilon\\setminus L_\\varepsilon$ and $\\varepsilon B$ for $L_\\varepsilon\\setminus K_\\varepsilon$. The part of $L_\\varepsilon$ beyond $s=1$ is a triangle of area $J_\\varepsilon=\\varepsilon^2\\ell(1)^2/[2(1-\\varepsilon b)]$. The total areas are $V+\\varepsilon Z$ and $(1+\\varepsilon a)^2/[2(1-\\varepsilon b)]$. For two uniform probability densities the total variation is one minus their intersection area divided by the larger total area, by integrating the pointwise minimum of the densities. Here it is\n$$\n\\frac{\\max(\\varepsilon A,\\varepsilon B+J_\\varepsilon)}{\\max(|K_\\varepsilon|,|L_\\varepsilon|)}.\n$$\nIts quotient by $\\varepsilon$ tends to $\\max(A,B)/V\\le3E/V$. Halfspace discrepancy is bounded by total variation. For $E>0$, the excess in depth divided by $\\varepsilon$ tends to $E/(3V)>0$. For any $c<1/9$ this limit strictly exceeds $c\\max(A,B)/V$, which proves the comparison for small $\\varepsilon$, whether or not the infimum over triangles is attained.\n",
+  "source_candidate_ids": [
+    "7b76d58a056349ae"
+  ],
+  "source_candidate_sha256": {
+    "7b76d58a056349ae": "13b5edb2e13b33c7d501734ffeacc707f9fceaba562e2cde652b571c0e811f9d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "7b76d58a056349ae",
+      "locator": "§§1–3, (1)–(7), central secant, actual added strip, and triangle comparison"
+    }
+  ],
+  "statement": "Let $\\psi:[0,1]\\to[0,\\infty)$ be continuous, concave and not identically zero. Put $I=[1/3,2/3]$, $Z=\\int_0^1\\psi$ and $E=\\int_I\\psi-Z/3$. For $\\varepsilon>0$, let $K_\\varepsilon=\\{(s,r):0\\le s\\le1,\\ s-1\\le r\\le\\varepsilon\\psi(s)\\}$ and $V=1/2$. Its maximum normalized ordinary closed-halfspace depth is $4/9+\\varepsilon E/(3V)+o(\\varepsilon)$ as $\\varepsilon\\downarrow0$. If $E>0$, for every fixed $0<c<1/9$ and all sufficiently small $\\varepsilon$, the excess over $4/9$ is at least $c$ times the infimum of its closed-halfspace discrepancy to normalized uniform laws on full-dimensional triangles. Here the discrepancy is the supremum of the absolute mass difference over closed halfspaces.\n\nFor the secant $\\ell(s)=a+bs$ through the ends of $I$, set $A=\\int_I(\\psi-\\ell)$ and $B=\\int_{[0,1]\\setminus I}(\\ell-\\psi)$. Then $E=(2A+B)/3$ and $\\int_0^1|\\psi-\\ell|=A+B\\le3E$, with $E=0$ exactly for affine roofs. For sufficiently small $\\varepsilon$, the explicit triangle $L_\\varepsilon=\\{(s,r):s\\ge0,\\ s-1\\le r\\le\\varepsilon\\ell(s)\\}$ gives a comparison with total variation divided by $\\varepsilon$ tending to $\\max(A,B)/V$.",
+  "subgoal_id": "pk-intake-planar-concave-roof-depth-and-triangle-cap-discrepancy",
+  "title": "Depth and triangle cap discrepancy for a fixed planar concave roof"
+}

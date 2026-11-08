@@ -1,0 +1,41 @@
+{
+  "candidate_id": "12875b54a4e5ae18",
+  "candidate_sha256": "6a822923f84ac393bc4a2772addffe222c021db8b03be1aa1035fab0121dcb8e",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For fixed exponent r≥1, A=e^{-r}>1, so the breakpoint t_e=(1−e)/A lies in (0,1). The constant part contributes 1−t_e; the layer antiderivative gives (e^{1−r}−1)/(A(r−1)) for r>1 and log(1/e)/A for r=1. In the chosen slopes the correction tends to zero in both cases. For r=2 it simplifies to 1+e(1−e)^2.",
+    "Each L_e is a positive scalar multiple of the minimum of two positive affine functions, so it is concave and positive on the closed interval. The chosen normalization divides the inverse-moment integral by itself. Outside the shrinking layer its value is constant and tends to one, whereas its endpoint value equals e times a factor tending to one.",
+    "For an admissible a, integrating the inverse square gives the reciprocal of (1−ay)(1+a(1−y)), including a=0 by continuity. Its strictly concave quadratic denominator is maximized at a=(1−2y)/(2y(1−y)); the two endpoint factors there are 1/[2(1−y)] and 1/(2y), so it is admissible and yields E(y)=4y(1−y). At y=0, denominators 1+ax with a→+∞ give energy infimum zero, with reflected denominators at y=1.",
+    "On the layer E≤4t_e and L_e is uniformly bounded, so both square-root profiles are O(√t_e). Off the layer the profiles differ by the factor I_e^{1/4} tending to one. For unit continuous directions on the interval, the fixed covariance factor is 1/√12 and each cap-length change is at most its threshold displacement. The infimum over the two directions preserves the bound, including endpoint marks. A pure-base cap in a single-base embedding captures the entire fiber and is independent of L.",
+    "Read f17e4f2b0ba9ee84 §1; both the parameter obstruction and its restriction to the chosen moment are retained. Independent rational evaluation for e=1/n with 2≤n≤30, integer 2≤r≤8, and rational interior marks confirmed the layer integral and energy optimizer. The logarithmic r=1 and real r>1 formulas follow from the exact antiderivatives.",
+    "Checked every original candidate digest against the pinned file, and computed exact raw and UTF-8 field digests for the reviewed candidate and its declared predecessors."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:42:38+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Proves general covariance-buffered continuity under uniform multiplier convergence on corresponding marks. That premise fails here since L_e(0)→0 and the limit profile is tested against multiplier one. The candidate instead verifies direct uniform convergence of the product with energy and proves the cap estimate on a fixed interval.",
+      "fact_id": "f2ead43a963c7026"
+    },
+    {
+      "comparison": "Gives general boundary vanishing and positive-body continuity for marked projective energy. It supplies no inverse-moment construction or two-plane parameter escape; the interval energy here is computed exactly.",
+      "fact_id": "b3c0088cf09b2894"
+    }
+  ],
+  "readability": "The symbol e is a small parameter, distinct from the base of natural logarithms. For r≠2 the last assertion concerns endpoint positivity and the chosen inverse moment only.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "de9ec61c5c0c09733d71f08d58ba3b66d1793ce4e773f3ebba7d7d2ce5c7d3cd",
+  "reviewed_statement_sha256": "b284937a3107b041e3e690c89a16f89885b9337acc37be032c7e1b65d60689ee",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:39:10+00:00",
+  "summary": "The exact positive two-plane sequence has the asserted inverse moments and vanishing endpoint, while its marked buffer and fixed-scale interval depth converge uniformly.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

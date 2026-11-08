@@ -1,0 +1,32 @@
+{
+  "advances": "Failure of midpoint concavity for section deficits and erosions made using an actual normalized depth region in the one-integer, one-continuous model.",
+  "author": "PK-research-agent",
+  "candidate_id": "fd447afe7959620d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:35:06.878858+00:00",
+  "depends_on": [
+    "c680a307d3f26cec"
+  ],
+  "draft_key": "actual-depth-region-deficit-and-erosion-counterexample",
+  "kind": "counterexample",
+  "proof": "In c680a307d3f26cec take $a=b=U=2$ and shift $s=0$. All three integer fibers are $[-1,1]$ and the total raw mass is $6$. The pointwise raw endpoint depth is $1-|x|$. At the middle fiber the formula uses $g(x)=\\min\\{2,\\max\\{0,2-2x\\}\\}$. For $0\\le x\\le1$, the two masses in its minimum are $3-3x$ and $3+x$. Reflection gives raw middle depth $3(1-|x|)$ on $[-1,1]$. A mark outside $C$ has zero depth by separation. Thus dividing the raw depths by $6$ and taking the $1/12$ superlevel gives the claimed intervals at the sampled bases.\n\nTheir lengths are $1,5/3,1$, yielding deficits $1,1/3,1$ from the original length $2$. For a centered interval of radius $r\\le1$, its erosion from $[-1,1]$ has radius $1-r$ and the Minkowski sum with its negative has radius $1+r$. Substituting $r=1/2,5/6,1/2$ gives the three erosion intervals and the stated sums. The midpoint of the two equal endpoint erosion intervals is $[-1/2,1/2]$, which strictly contains the central interval $[-1/6,1/6]$. The deficit and erosion-length triples have smaller middle than either endpoint, which persists under every positive power.\n",
+  "source_candidate_ids": [
+    "ce5ad477e8315812"
+  ],
+  "source_candidate_sha256": {
+    "ce5ad477e8315812": "6d8f017b97e30ced29148cf5337e575461bb7c468ab40768f0171506b3846e92"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ce5ad477e8315812",
+      "locator": "ce5ad477e8315812:01 Equations (1)–(3), pointwise profiles, sections and removed lengths."
+    },
+    {
+      "candidate_id": "ce5ad477e8315812",
+      "locator": "ce5ad477e8315812:02 After equation (3), Minkowski erosions and comparison sums."
+    }
+  ],
+  "statement": "Let $C=[-1,1]^2$ with normalized length measure on the three integer fibers $z=-1,0,1$. Let $D_{1/12}$ be the ambient Tukey depth region formed from all containing closed halfspaces. Its sections at the three sampled bases are $[-1/2,1/2]$, $[-5/6,5/6]$, and $[-1/2,1/2]$. The fiber lengths removed by this region are $(1,1/3,1)$, so the deficit fails midpoint quasiconcavity and midpoint concavity of every positive power. The Minkowski erosions $C_z\\ominus(D_{1/12})_z=\\{u:u+(D_{1/12})_z\\subseteq C_z\\}$ are $[-1/2,1/2]$, $[-1/6,1/6]$, and $[-1/2,1/2]$. They fail the set-valued midpoint inclusion, and their lengths fail midpoint concavity of every positive power. The fiberwise sums $C_z+(-(D_{1/12})_z)$ instead have lengths $(3,11/3,3)$, which satisfy the midpoint length inequality.",
+  "subgoal_id": "pk-intake-actual-depth-region-deficit-and-erosion-counterexample",
+  "title": "Actual depth-region deficits and erosions can fail midpoint concavity"
+}

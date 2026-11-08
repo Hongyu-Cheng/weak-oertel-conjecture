@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary planar halfspace depth constrained to an explicit cap of a triangle.",
+  "author": "PK-research-agent",
+  "candidate_id": "7f0686c3a3a5d6d7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.093999+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "triangle-vertex-cap-own-depth",
+  "kind": "lemma",
+  "proof": "The halfplane cutting off $v+k(T-v)$ gives $f_T(x)\\le ck^2$ for every point of this cap. Let $g$ be the centroid of $T$. The triangle $L=v+(3k/2)(T-v)$ is contained in $T$. Its centroid $q=v+(3k/2)(g-v)$ is the midpoint of the cap's edge parallel to the opposite edge of $T$, since $g$ is two-thirds of the way from $v$ to the opposite edge along its median. The full-mass centroid bound of 6769574fc1bd9f8d applied to $L$ gives $|T\\cap H|\\ge |L\\cap H|\\ge (4/9)|L|=ck^2$ for every containing halfplane. This proves the first equality. At the centroid of $T$ the same bound gives depth at least $4c/9$. Every point has a barycentric coordinate at least $1/3$, so some vertex cap of ratio $2/3$ contains it and has area $4c/9$. This proves the second equality.\n",
+  "source_candidate_ids": [
+    "325d279c18e3a49e"
+  ],
+  "source_candidate_sha256": {
+    "325d279c18e3a49e": "10f7d4c857c237eeb90edba94ce8b76b8fa6c36e35a344a59fc20dc869add716"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "325d279c18e3a49e",
+      "locator": "325d279c18e3a49e:01 §2, (2), constrained own-depth maximum in a simplex vertex cap"
+    }
+  ],
+  "statement": "Let $T$ be a triangle of area $c>0$ and let $v$ be one of its vertices. For $x\\in T$, let $f_T(x)$ be the infimum of $|T\\cap H|$ over closed planar halfplanes $H$ containing $x$. If $0<k\\le2/3$, then $\\max_{x\\in v+k(T-v)} f_T(x)=ck^2$. Also $\\max_T f_T=4c/9$, attained at the centroid of $T$.",
+  "subgoal_id": "pk-intake-triangle-vertex-cap-own-depth",
+  "title": "The exact maximum of triangle depth on a small vertex cap"
+}

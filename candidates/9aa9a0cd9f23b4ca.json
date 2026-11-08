@@ -1,0 +1,26 @@
+{
+  "advances": "These are conditional scalar chain rules, before applying an actual cover or an extremum principle.",
+  "author": "PK-research-agent",
+  "candidate_id": "9aa9a0cd9f23b4ca",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:34:26.402698+00:00",
+  "depends_on": [],
+  "draft_key": "affine-log-normalization-derivatives",
+  "kind": "lemma",
+  "proof": "The quotient rule gives $w_z'=(w_zD-D_z)/M$. For the common rescaling the logarithmic derivative of every $\\ell_z$ is $s$. Differentiating the constraint gives $0=\\sum_z w_z'\\log\\ell_z+s$, and the old constraint cancels the $D$ term, giving the first formula. Taking the logarithmic derivative of $f_z$ yields the second. The product rule on $A_\\ell$ gives $A_\\ell'=M^{-1}\\sum_z D_z(A_\\ell-\\ell_z)+sA_\\ell$, which is the third formula.\n\nAt fixed body the normalization factor is $\\exp[-\\sum_z w_z\\log(\\ell_z+t\\phi(z))]$. Its derivative at zero is $-A_\\phi$ and its value there is one. The product rule gives the two fixed-body formulas.\n",
+  "source_candidate_ids": [
+    "108870e8f9aac2e9"
+  ],
+  "source_candidate_sha256": {
+    "108870e8f9aac2e9": "819e803ce5aaaa7917f9ca1056a884c5ba07b936d76f6ac3a31f01a499d15907"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "108870e8f9aac2e9",
+      "locator": "§7, (10)–(13)"
+    }
+  ],
+  "statement": "Let $V_z(t)>0$ be differentiable volumes indexed by finitely many bases, $M=\\sum_z V_z$, $w_z=V_z/M$, and $E_z(t)>0$ differentiable fixed-mark energies. Suppose $V_z'=-D_z$, $D=\\sum_zD_z$, $E_z'=-C_z$ at the old pair. Let $\\ell_z>0$ be affine samples with $\\sum_z w_z\\log\\ell_z=0$, $A_\\ell=\\sum_z w_z\\ell_z$ and $f_z=(\\ell_zE_z/M)^{1/N}$ with $N=d+1$. Rescaling a fixed affine shape by a common factor to preserve the logarithmic constraint gives\n$$\ns:=\\ell_z'/\\ell_z=M^{-1}\\sum_zD_z\\log\\ell_z,\\qquad\nf_z'/f_z=(-C_z/E_z+D/M+s)/N,\\qquad\nA_\\ell'=M^{-1}\\sum_zD_z[A_\\ell(1+\\log\\ell_z)-\\ell_z].\n$$\nAt a fixed body the geometrically normalized affine path with raw values $\\ell_z+t\\phi(z)$ instead gives $\\ell_z'=\\phi(z)-\\ell_zA_\\phi$ and $A_\\ell'=\\sum_z w_z\\phi(z)-A_\\ell A_\\phi$, with $A_\\phi=\\sum_z w_z\\phi(z)/\\ell_z$.",
+  "subgoal_id": "pk-intake-affine-log-normalization-derivatives",
+  "title": "Derivatives of a geometrically normalized affine multiplier"
+}

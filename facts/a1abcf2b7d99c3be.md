@@ -1,0 +1,42 @@
+---
+fact_id: a1abcf2b7d99c3be
+kind: lemma
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-one-row-planar-chord-center-and-interval-inclusion
+depends_on: ["3acaacf5c13d6f0e", "b319e7dcda1486e9"]
+verifier_run: 4b536787bbb12026
+target_match: null
+---
+
+## Source
+
+- [6ac02348e3ceb9a9](../candidates/6ac02348e3ceb9a9.json), 6ac02348e3ceb9a9:03 Proof §4, (14)–(19).
+
+## Statement
+
+In the planar case of a compatible three-fiber cap through $y\in\operatorname{int}K$, write $E_A,E_K,F$ for its proper $A,K$ chord sections and $B$ cut trace, where the $B$ capture has zero area. Suppose $E_A,E_K$ have lengths $t,s>0$ and centers $c_A,c_K$. If $F$ is empty or a point, interpret containment of a length-$t$ interval in $F$ as false. The one-sided capture derivative through the fixed mark is nonnegative in every normal direction if and only if
+$$
+J:=2y-E_A-(s/t)(c_K-y)\subseteq F.
+$$
+If these equivalent conditions hold, writing $b=|F|$ and $c_B$ for its length and center,
+$$
+b\ge t,\qquad s\ge(t+b)/2,\qquad
+\big\|(c_A+c_B)/2-c_K\big\|\le \frac{s-(t+b)/2}{2}.
+$$
+Moreover
+$$
+\frac{\|y-c_K\|}{s}\le\frac{(t/s)(1-t/s)}{1+2t/s}\le\frac{2-\sqrt3}{2}.
+$$
+The smaller-to-larger distance ratio from $y$ to the ends of $E_K$ is at least $1/\sqrt3$. The last scalar maximum is attained at $t/s=(\sqrt3-1)/2$.
+
+## Proof
+
+On the three fibers, the fixed-body slice calculation in b319e7dcda1486e9 gives precisely the all-direction inequality in the facet moment theorem after multiplication by the common $\|u\|$. If $F$ is null or empty, varying just the base coefficient with positive velocity decreases capture by the proper $A$ chord term, so the conditions both fail. On a positive-length $F$, the inequality first requires $b\ge t$. If $b<t$, the interval containment also fails. For $b\ge t$, the extreme means of mass-$t$ selectors on $F$ are the centers of its two end subintervals of length $t$ by the dual formula in the facet moment theorem. Every intermediate mean is the center of some translated length-$t$ interval inside $F$. The prescribed mean from that theorem is $(2+s/t)y-c_A-(s/t)c_K$, exactly the center of $J$. Reflection about $y$ takes the $A$ cut line to the $B$ cut line, and $c_K-y$ is tangent, so this center equivalence is the stated interval containment.
+
+Compatibility gives $(E_A+F)/2\subseteq E_K$. Comparing centers and lengths yields the two inequalities involving $b$ and $c_B$. In particular $(E_A+J)/2\subseteq E_K$; the first interval has length $t$ and center $y-(s/(2t))(c_K-y)$. The center-distance condition for this containment is $(1+s/(2t))\|y-c_K\|\le (s-t)/2$. This proves the relative chord offset estimate. For $\rho=t/s$, direct subtraction gives
+$$
+\frac{2-\sqrt3}{2}-\frac{\rho(1-\rho)}{1+2\rho}
+=\frac{(\rho-(\sqrt3-1)/2)^2}{1+2\rho}.
+$$
+The two endpoint distances are $s/2\pm\|y-c_K\|$, yielding the ratio bound.

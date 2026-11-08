@@ -1,0 +1,28 @@
+{
+  "advances": "One actual outward ear at a tight planar triangle, with strict right derivative and sufficiently small ear size.",
+  "author": "PK-research-agent",
+  "candidate_id": "fcb98a77224687d8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:35:06.879179+00:00",
+  "depends_on": [
+    "bd0a8fbcb2d1cc47"
+  ],
+  "draft_key": "opposite-edge-lorentz-ear-first-variation",
+  "kind": "lemma",
+  "proof": "Write $b,c,e,L,H,B$ as in the canonical coordinate lemma. The base point $(-x,t)$ is in the relative interior of $P_2P_3$ because $-e<0\\le t\\le x<b$. The new point is outside that edge and remains inside the other two edge halfplanes for sufficiently small $\\delta$, so the added region is the actual ear of area $\\delta B/2$ and contains no cap $1$ area or chord extension.\n\nFor an ear triangle of area $E$ with base signed heights $a,-b$ for one cap, where $a,b>0$, and tip height $g\\ge0$, the retained cap area and the coarea of its cut segment are\n$$\nE\\left(1-\\frac{b^2}{(a+b)(b+g)}\\right),\\qquad\n\\frac{2Eb}{(a+b)(b+g)} .\n$$\nThe negative corner has edge fractions $b/(a+b)$ and $b/(b+g)$. Its volume is their product times $E$, and its Euclidean altitude from the cutting line is $b/\\lVert v_i\\rVert$, giving the segment formula. This argument also works for $g=0$, when the cutting segment ends at the tip.\n\nApply the formula first to cap $2$, with heights $(b,-e,t)$, and then to cap $3$, with heights $(c,-s,x+\\delta-t)$ in the order of positive base vertex, negative base vertex, tip. In both cases the base height difference is $B$. It gives the exact data\n$$\n\\begin{aligned}\nk(\\delta)&=k+\\delta B/2,\\\nQ_2(\\delta)&=Q_2+\\frac{\\delta}{2}\\left(B-\\frac{e^2}{e+t}\\right),&\n\\sigma_2(\\delta)&=\\sigma_2+\\frac{\\delta e}{e+t},\\\nQ_3(\\delta)&=Q_3+\\frac{\\delta}{2}\\left(B-\\frac{s^2}{b+\\delta-t}\\right),&\n\\sigma_3(\\delta)&=\\sigma_3+\\frac{\\delta s}{b+\\delta-t}.\n\\end{aligned}\n$$\nIn particular, the moving height at $t=x$ is $\\delta$. All denominators are positive on the whole closed peak interval at $\\delta=0$. With primes denoting right derivatives there, the quotient rule and $f_i'/f_i=k'/(2k)+Q_i'/(2Q_i)-\\sigma_i'/\\sigma_i-M'/M$ give\n$$\n\\begin{aligned}\nM'&=\\frac{BH}{2L}\\left(\\frac{t}{b(e+t)}+\\frac{x-t}{c(b-t)}\\right),\\\n\\Phi_1'&=(4-L/H)\\left(\\frac1{2L}-\\frac{M'}H\\right)\n+\\frac B{2L}\\left(\\frac{Bt-be}{b^2(e+t)}+\\frac{B(x-t)-cs}{c^2(b-t)}\\right).\n\\end{aligned}\n$$\nSet $u=t/x$ and $D=2b^2(b-t)(e+t)c^2 L H>0$. For the following three polynomials,\n$$\n\\begin{aligned}\nP_0&=2s^{2}v+s^{2}w+s^{2}x+2svw+2svx+2sw^{2}+4swx+2sx^{2}\\\\\n&\\quad +vw^{2}+2vwx+vx^{2}+w^{3}+3w^{2}x+3wx^{2}+x^{3}.\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\nP_1&=4s^{4}v+2s^{4}w+2s^{4}x+8s^{3}vw+4s^{3}vx+6s^{3}w^{2}\\\\\n&\\quad +6s^{3}wx+8s^{3}x^{2}+6s^{2}vw^{2}+6s^{2}vwx+6s^{2}w^{3}\\\\\n&\\quad +7s^{2}w^{2}x+12s^{2}wx^{2}+11s^{2}x^{3}+2svw^{3}+2svw^{2}x\\\\\n&\\quad +2sw^{4}+3sw^{3}x+6sw^{2}x^{2}+11swx^{3}+6sx^{4}\\\\\n&\\quad +w^{3}x^{2}+3w^{2}x^{3}+3wx^{4}+x^{5}.\n\\end{aligned}\n$$\n\n$$\n\\begin{aligned}\nP_2&=2s^{2}v+s^{2}w+s^{2}x+2svw+2svx+2sw^{2}+2sx^{2}\\\\\n&\\quad +vw^{2}+vx^{2}+w^{3}+x^{3}.\n\\end{aligned}\n$$\n\nclearing the displayed denominators and collecting powers of $u$ gives\n$$\n-D\\Phi_1'=e^2b^2P_0(1-u)^2+bcP_1u(1-u)+s^2c^2P_2u^2 .\n$$\nEach coefficient is strictly positive also when $w=0$, as each polynomial has a positive monomial independent of $w$. The three nonnegative terms have a positive sum for every $u\\in[0,1]$. Thus $\\Phi_1'<0$.\n\nAt the old triangle write $r=f_1$ and $z=f_2=f_3$. Then $r+z^2=2$, $0<z^2<2$, and\n$$\n4\\bigl(2-z-(r+z)^2/4\\bigr)=(4-z^2)(z-1)^2.\n$$\nIf $z\\ne1$, rows $2$ and $3$ are initially strict and remain so by continuity. If $z=1$, all $f_i=1$ initially and the three row derivatives all equal $f_1'+f_2'+f_3'$. Thus a strictly negative derivative in row $1$ gives all three strict inequalities for sufficiently small positive ear size in either case.\n",
+  "source_candidate_ids": [
+    "cfb017a0e12acfbf"
+  ],
+  "source_candidate_sha256": {
+    "cfb017a0e12acfbf": "bd6b8783496bf2d2c2210698f345c01d30405d2c39bbdb654762aeaa4112e864"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cfb017a0e12acfbf",
+      "locator": "§§2–3, (3)–(7)"
+    }
+  ],
+  "statement": "For a planar convex body $K$ containing $0$ in its interior and three nonzero spanning normals $v_1+v_2+v_3=0$, write\n$$\nk=|K|,\\qquad Q_i=|K\\cap\\{v_i\\cdot x\\ge0\\}|,\\qquad\n\\sigma_i=\\mathcal H^1(K\\cap v_i^\\perp)/\\lVert v_i\\rVert .\n$$\nSet $M=\\sum_iQ_i/\\sigma_i$, $f_i=2\\sqrt{kQ_i}/(\\sigma_i M)$ and $\\Phi_i=f_i+(f_j+f_l)^2/4$ where $\\{i,j,l\\}=\\{1,2,3\\}$. A triangle has strict distinct-vertex incidence if cap $i$ contains its vertex $P_i$ in its open halfplane and excludes both other vertices strictly.\n\nUse the normals $(1,0),(0,1),(-1,-1)$. The canonical vertices for row $1$ are\n$$\nP_1=(2v+w,-v-w),\\qquad P_2=(-x,x+s),\\qquad P_3=(-x,-s-w),\n\\qquad x,s,v>0,\\quad w\\ge0.\n$$\n\nFor each $0\\le t\\le x$ and sufficiently small $\\delta>0$, the body\n$K_\\delta=\\operatorname{conv}(P_1,P_2,P_3,(-x-\\delta,t))$\nis a quadrilateral containing the old triangle, with an ear of area $\\delta B/2$ along $P_2P_3$, where $B=x+2s+w$. Its first row has strictly negative right derivative at $\\delta=0$, and all three rows are strictly below $2$ for sufficiently small positive $\\delta$. The cap $1$ and its cutting chord are unchanged.",
+  "subgoal_id": "pk-intake-opposite-edge-lorentz-ear-first-variation",
+  "title": "Strict Lorentz first variation for an opposite-edge ear"
+}

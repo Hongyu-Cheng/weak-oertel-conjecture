@@ -1,0 +1,26 @@
+{
+  "advances": "A balanced signed exponential law with at most two strictly negative phases, a fixed unit negative coefficient, and every positive coefficient at most one.",
+  "author": "PK-research-agent",
+  "candidate_id": "3dfd807fd5aab02e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.096678+00:00",
+  "depends_on": [],
+  "draft_key": "fractional-two-negative-exponential-half-mass",
+  "kind": "theorem",
+  "proof": "First take $0<c<1$, so $k\\ge2$. The survival probability of $E_0+cE_*$ at $s\\ge0$ is $(e^{-s}-ce^{-s/c})/(1-c)$, by conditioning on one exponential and integrating. Set $A=\\prod_i(1+p_i)$, $B=\\prod_i(c+p_i)$ and $L=A^{-1}-c^{k+1}/B$. Integrating that survival function over the positive sum with its exponential Laplace factors gives the cap probability $1-L/(1-c)$.\n\nPut $R(x)=(c+x)/(1+x)$ on $[0,1]$. The function $\\log R$ is strictly concave, since its second derivative is $-1/(c+x)^2+1/(1+x)^2<0$. When two coefficients are strictly between zero and one, transfer from the smaller to the larger until either reaches an endpoint. Concavity makes their sum of $\\log R$ values nonincreasing, including for initially equal coefficients. After finitely many transfers, at most one coefficient is interior. The fixed sum $1+c$ forces the resulting vector to be $(1,c,0,\\ldots,0)$ up to order. Consequently\n$$\n\\frac BA=\\prod_i R(p_i)\\ge R(1)R(c)c^{k-2}=c^{k-1}.\n$$\nDirect differentiation gives\n$$\n\\partial_i L-\\partial_j L=(p_i-p_j)\n\\left[\\frac1{A(1+p_i)(1+p_j)}\n-\\frac{c^{k+1}}{B(c+p_i)(c+p_j)}\\right].\n$$\nThe bracket is nonnegative because $(B/A)R(p_i)R(p_j)\\ge c^{k-1}c^2=c^{k+1}$, using $R(x)\\ge c$. Thus along each such transfer $L$ is nondecreasing. Its maximum occurs at the endpoint vector, where the two random sums are independent with the same continuous law. The cap probability there is exactly $1/2$.\n\nFor $c=0$, conditioning on the positive sum gives $1-\\prod_i(1+p_i)^{-1}\\ge1/2$ because the product is at least $1+\\sum_i p_i=2$. For $c=1$, put $c_\\varepsilon=1-\\varepsilon$ and $p_{i,\\varepsilon}=(1-\\varepsilon/2)p_i$ for $0<\\varepsilon<1$. These obey the constraints and converge to the original coefficients. On the common exponential sample space, the cap indicators converge off the limiting equality event, which is null by conditioning on $E_0$. Bounded convergence yields the inequality. For both endpoints the stated extremizer has the same continuous distribution as the negative sum, proving attainment.\n",
+  "source_candidate_ids": [
+    "aeef2a7c6dce572b"
+  ],
+  "source_candidate_sha256": {
+    "aeef2a7c6dce572b": "e3c9c82548ea0da82a11b62ac5d25f1095defc129d71f37d5f38f4385f7e1755"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "aeef2a7c6dce572b",
+      "locator": "Main inequality (1), transfer proof (2)–(3) and endpoint cases"
+    }
+  ],
+  "statement": "Let $E_0,E_*,E_1,\\ldots,E_k$ be independent mean-one exponentials. If $0\\le c\\le1$, $0\\le p_i\\le1$, and $\\sum_{i=1}^k p_i=1+c$, then\n$$\n\\Pr\\!\\left(\\sum_{i=1}^k p_iE_i\\ge E_0+cE_*\\right)\\ge\\frac12 .\n$$\nThe bound is attained by the nonzero positive list $(1,c)$, with $c$ omitted if it is zero.",
+  "subgoal_id": "pk-intake-fractional-two-negative-exponential-half-mass",
+  "title": "Half-mass for capped positive exponential phases against two negative phases"
+}

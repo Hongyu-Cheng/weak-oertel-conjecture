@@ -1,0 +1,60 @@
+{
+  "candidate_id": "fd447afe7959620d",
+  "candidate_sha256": "27b18dc287a96c3bc91f511977d82f766c5e0c907033daf6506ed72fe3646e9e",
+  "checked_dependency_candidate_sha256": {
+    "c680a307d3f26cec": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0"
+  },
+  "checked_source_candidate_sha256": {
+    "ce5ad477e8315812": "6d8f017b97e30ced29148cf5337e575461bb7c468ab40768f0171506b3846e92"
+  },
+  "checks": [
+    "With a=b=U=2 and s=0 the accepted theorem applies to the actual square, whose only sampled bases are −1,0,1 and raw mass is 6. At endpoint bases it gives 1−|x|. At the middle for x∈[0,1] its two cap lengths are 3−3x and 3+x, and reflection gives 3(1−|x|) on the whole interval.",
+    "Independently checked the actual all-normal profiles: for continuous coefficient +1, the two outer thresholds at base zero are x±a and their clipped length sum for x≥0 is at least 2(1−x), by its three linear tilt ranges. The opposite orientation yields outer sum at least two. Zero continuous coefficient keeps the middle and at least one endpoint. The horizontal direction toward the nearer endpoint attains the middle bound, and exposing tilts attain the endpoint bounds.",
+    "An exact fraction replay checked 11858 middle cap comparisons and 98 exposed endpoint caps, with the all-normal identities justified analytically. Strict separation gives zero depth outside the square.",
+    "The normalized level 1/12 is raw level 1/2. The three section radii are 1/2,5/6,1/2; subtracting their lengths from 2 gives deficits 1,1/3,1, so every positive power has a strictly lower middle value and midpoint quasiconcavity fails.",
+    "Eroding [−1,1] by a centered radius-r interval imposes |u|+r≤1, giving radii 1/2,1/6,1/2. Their endpoint average strictly exceeds the middle interval, and the length deficit in the middle again persists under positive powers. Minkowski sum with the negative interval instead has radius 1+r, yielding lengths 3,11/3,3.",
+    "Source ce5ad477e8315812 (1)–(3) and the paragraph after (3) contain the actual deficit and erosion claims. The candidate states only the sampled sections and their midpoint comparisons."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c680a307d3f26cec",
+      "candidate_sha256": "97f4c47d74dbece9ab51af72c22ee316b9a224c5b93b8388f7f57b3e66a16da0",
+      "comparison": "Use the actual three interval fibers with endpoint lengths a=b=2, middle U=2 and shift s=0. Its closed-halfspace infimum and mass normalization agree with the proposed input. Applying raw level 1/2 gives the required sampled sections.",
+      "fact_sha256": "4908e98c45bfa104a83c5437a691833104576ea0fd397ed655df40899326d24c",
+      "reviewed_proof_sha256": "fbd43a05d11b238754907f092d0f8e020febd4bd8e9ffd7e46960a59ae92b7c0",
+      "reviewed_statement_sha256": "b80774a2792eb75e78f6de3ec9e17c99d1724c565943d7ccacdfc5f9c6bdab93",
+      "status": "accepted predecessor at pinned snapshot"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:44:22Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Already supplies the pointwise ordinary depths and hence the section radii by the specified superlevel. The proposed counterexample adds the derived deficits and failures of midpoint inclusion and concavity for the actual erosions.",
+      "fact_id": "c680a307d3f26cec"
+    },
+    {
+      "comparison": "Its erosion is a capped atomic mass table defined from individual depth values. The current failure is for continuous-fiber set difference in volume and geometric Minkowski erosion of actual depth sections, neither of which is that atomic operation.",
+      "fact_id": "01a4100542206b94"
+    },
+    {
+      "comparison": "Studies infinitesimal losses of a convex family under global supporting cuts. It gives no midpoint inequality or counterexample for the finite deficit between a body and its actual depth region.",
+      "fact_id": "84cd8a85417b0d7a"
+    }
+  ],
+  "readability": "Depth superlevel, removed length, and Minkowski erosion are distinct operations in the statement, with the signed Minkowski sum explicitly identified.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c974e84657e6e37d5577d55bad680d64a5966b139df247683db39f88bfb6eade",
+  "reviewed_statement_sha256": "8f46075f21c1d447afd22fc02b054f8113845a29d7b87775d8d7c9337594e8d7",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:41:45Z",
+  "summary": "The actual Tukey superlevel sections of the square give both midpoint failures. Their pointwise depth comes directly from the accepted ordinary three-interval formula.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

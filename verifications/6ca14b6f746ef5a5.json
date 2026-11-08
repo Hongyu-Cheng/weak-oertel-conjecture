@@ -1,0 +1,36 @@
+{
+  "candidate_id": "f07bbd26b4981214",
+  "candidate_sha256": "63b61e41f4523de5ae9ceaf91174cd3d033f8e5dbadb8411fc4c847ed9c84db5",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The small-excess branch gives δ≤2Δ/V<ε/(8d²) and dδ<ε/16. The coordinate-face exterior pyramid has volume V(1−ε^(d−1))(−x_i). The top-face exterior pyramid has volume V(sum_i x_i−1), with the two √d factors canceling.",
+    "The d vertices with a coordinate at least one are distinct by the upper sum and coordinate lower bounds. Their sums exceed ε. The minimizing vertex v_0 has sum at most ε and is the only remaining vertex.",
+    "The barycentric coefficient α_0 for εe_i is positive, with (1−α_0)/α_0≤(ε+dδ)/(1−ε−dδ). For each coordinate j, the choice i≠j bounds its v_0 coordinate by δ times this ratio. The summed constant is less than (17/239)ε², hence less than ε²/4.",
+    "The reflected simplex defining P has lower facet area √d(da−ε)^(d−1)/(d−1)!. Its exterior pyramid from v_0 gives the asserted volume after scaling. At d=2, da−ε>1, and at d≥3, da−ε>2. Thus the lower bound εV/8 suffices in the small-excess branch.",
+    "The original source a585520b0a2a14db §2 gives the same hypotheses, both branches, and the same all-dimensional constant. The archived rational script passed 72 source and constant cases, 120 perturbed enclosures, and 102 small-excess cases."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:36:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "At d=2 the sets A,P, arbitrary triangle R and arbitrary compact convex L are identical. The left side is identical because 2^(−d)=1/4. The accepted ε/16 bound implies the frozen ε/128 bound in this specialization. It gives no enclosing d-simplex estimate in d≥3.",
+      "fact_id": "8e9b337a315aca70"
+    }
+  ],
+  "readability": "The upper facet cone is invoked only for a positive violation of its supporting inequality. The reflected lower facet of P then uses the opposite side. The stated signs and scale factors are correct.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0c1c4da3f1f4767eab38c59c006db41735f5688733422977e12be3a3f08f8b0e",
+  "reviewed_statement_sha256": "ff2f7e14f57d205a77df1804de57e67b9e92283b7b127a8d77292bb619d70330",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:32:26Z",
+  "summary": "The geometric proof applies to every enclosing simplex in dimension d≥2 and gives the stated constant. The planar instance is already covered by a stronger accepted estimate.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

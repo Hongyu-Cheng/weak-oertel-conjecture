@@ -1,0 +1,28 @@
+{
+  "advances": "An ordinary continuous-body result at the waist of an actual double cone. The two apex fibers have zero volume and do not affect the section integrals.",
+  "author": "PK-research-agent",
+  "candidate_id": "6e5c1adea0665326",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:33:00.811995+00:00",
+  "depends_on": [
+    "9ff32a01d2439268"
+  ],
+  "draft_key": "double-cone-waist-centroidal-sections",
+  "kind": "theorem",
+  "proof": "If $A=B$, central symmetry gives the cap fractions directly. Suppose $A\\ne B$, and write $d=m+1$. For an oblique plane $z+c\\cdot X=0$ with $c\\ne0$, the axial coordinates $u=z/r(z)$ range over $\\mathbb R$ on the interior of the axial interval. The reciprocals are $R(u)=1+u/B$ for $u\\ge0$ and $R(u)=1-u/A$ for $u\\le0$, so $R-uR'=1$ on each piece. To apply the coarea lemma with a positive radius on a closed interval, truncate the axial domain in the two interiors beyond the finite range of $s=-c\\cdot q$ for $q\\in D$. The section and its measure are unchanged. Its vertical first moment for raw coarea is $\\int_D s\\,w(s)\\,dq$, since $z=s/R(s)$ and raw coarea is $w(s)R(s)dq$. Pair $q$ with $-q$ to write it as\n$$\n\\int_{\\{q\\in D:s>0\\}}s\\bigl[(1+s/B)^{-d-1}-(1+s/A)^{-d-1}\\bigr]\\,dq.\n$$\nThe sign is strict and fixed, since $A\\ne B$ and $D$ has an interior neighborhood of $0$.\n\nFor a vertical cutting plane $c\\cdot X=0$ with $c\\ne0$, the section has horizontal slices $r(z)(D\\cap c^\\perp)$, so its vertical centroid is the centroid of $r(z)^{m-1}\\,dz$ on $[-A,B]$. On the positive side the mass is $B/m$ and first moment $B^2/[m(m+1)]$ up to a common section factor. The negative side has mass $A/m$ and first moment $-A^2/[m(m+1)]$. The centroid is $(B-A)/(m+1)\\ne0$. This includes $m=1$, for which the section is a segment. Thus only $z=0$ remains, with centroid zero. Its two orientations have the same area and complementary fractions. The balance equation gives equal total weight to the two orientations, and their weighted mean is $1/2$.\n",
+  "source_candidate_ids": [
+    "9cc7f272d6dd1c14"
+  ],
+  "source_candidate_sha256": {
+    "9cc7f272d6dd1c14": "5dca77deb13c31fe77f562f0b24d8f364d3d0345910c69374875df0f3ffa8bd2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9cc7f272d6dd1c14",
+      "locator": "§6, double cone at the waist, oblique and vertical cases"
+    }
+  ],
+  "statement": "Let $A,B>0$ and let $D\\subset\\mathbb R^m$, $m\\ge1$, be a convex body centrally symmetric about $0$. Let $K$ have fibers $r(z)D$, where $r(z)=1+z/A$ on $[-A,0]$ and $r(z)=1-z/B$ on $[0,B]$. If $A=B$, every through-origin cap has half the volume. If $A\\ne B$, the only through-origin cutting plane with centroid-zero section is $z=0$. In either case, every finite menu of such centroid-zero sections, with associated inward unit normals $u_j$, section areas $S_j$, and probability weights $\\theta_j$ satisfying $\\sum_j\\theta_j S_j u_j=0$, has weighted mean cap fraction $1/2$.",
+  "subgoal_id": "pk-intake-double-cone-waist-centroidal-sections",
+  "title": "Centroidal sections at the waist of a double cone"
+}

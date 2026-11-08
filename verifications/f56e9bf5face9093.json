@@ -1,0 +1,55 @@
+{
+  "candidate_id": "fcb98a77224687d8",
+  "candidate_sha256": "23a1434e50216cec75d97f3615395e7786a3b2bfdf635e56b45fb50254ed5f44",
+  "checked_dependency_candidate_sha256": {
+    "bd0a8fbcb2d1cc47": "3a98fb3261e38b87a085843741d0216c6099b86e80c1c80ddb77b1f61a95388c"
+  },
+  "checked_source_candidate_sha256": {
+    "cfb017a0e12acfbf": "bd6b8783496bf2d2c2210698f345c01d30405d2c39bbdb654762aeaa4112e864"
+  },
+  "checks": [
+    "For 0≤t≤x the old tip lies strictly in the relative interior of the vertical edge because −e<0≤t≤x<b. It remains inside the other two edge halfplanes for small positive δ, so the actual hull adds exactly the triangle of area δB/2. That triangle has first coordinate strictly negative and does not change either the first cap or its chord.",
+    "For either affected cap the ear's cut crosses the shared old edge at one point, so the two coarea lengths add. The negative corner has edge fractions b/(a+b) and b/(b+g), then altitude b/||v_i|| gives the printed area and coarea. This formula remains valid at g=0; cap 2 has that seam at t=0, while at t=x cap 3 has exact moving height δ.",
+    "The cap-2 signed heights are b,−e,t and the cap-3 heights are c,−s,x+δ−t. Substituting them reproduces all four affected data formulas and k'=B/2. Differentiation of the three Q_i/σ_i terms and of f_i gives the printed M' and row derivative with common coefficient 4−L/H.",
+    "I parsed P_0,P_1,P_2 directly from the frozen proof and independently cleared the rational derivative term by term by exact polynomial division in SymPy 1.14. The difference from the printed Bernstein polynomial is identically zero. The denominator is positive since b−t≥s>0 and e+t>0, with all other factors positive. Each coefficient contains a strictly positive monomial independent of w; at u=0 or 1 its respective endpoint coefficient is strictly positive.",
+    "Exact expansion verifies 4[2−z−(r+z)^2/4]=(4−z²)(z−1)^2 when r=2−z². For z≠1 the other rows have a positive initial margin. For z=1 the derivative of each row is the sum of the three f_i' and equals the strictly negative first-row derivative. This treats all equality seams.",
+    "Source cfb017a0e12acfbf §§2–3, (3)–(7) states the same fixed t, actual positive δ geometry, moving cap-3 peak, and small-ear conclusion. No finite-ear monotonicity or fixed-sector assertion is used."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bd0a8fbcb2d1cc47",
+      "candidate_sha256": "3a98fb3261e38b87a085843741d0216c6099b86e80c1c80ddb77b1f61a95388c",
+      "mapping": "The input vertices, signs, row normalization, Q_i and σ_i are exactly the canonical lemma, used at δ=0. Its independent approval is required before admission.",
+      "reviewed_proof_sha256": "71e3bc56955b714dc8fa1236e408727a242e70cd3ab4e68ed92ce6705fcd75c7",
+      "reviewed_statement_sha256": "ffc5cc32166d8f1609d608b3beae99353ba029a7366f717e07b26c94ee95b1db",
+      "status": "same-batch, admission conditional on independent approval"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:42:53Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It allows replacement by a triangle or quadrilateral to increase a row at fixed sector areas. Here an actual outward ear changes the sector areas and gives the opposite local sign for a prescribed family.",
+      "fact_id": "f56c82f24e66e60b"
+    },
+    {
+      "comparison": "It supplies the original strict-incidence triangle inequality and equality test; the added ear is a quadrilateral and the first-order variation is beyond its statement.",
+      "fact_id": "a19fb2ae234afb2a"
+    }
+  ],
+  "readability": "The proof distinguishes the source height t from the peak height x+δ−t in the other affected cap, and the coarea denominator is the physical normal norm.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "fa0c900767a250dbc8b86c333d11b31b1f296e1cd1035814616beeb30ec2d35b",
+  "reviewed_statement_sha256": "b63f268ca3b95c874daa0c55ed68b3eaaaeff0d109685638fcc3b827d5cfd8dc",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:35:42Z",
+  "summary": "The actual opposite-edge ear has a strictly negative first-row derivative throughout the full closed tip interval and gives all three strict rows at small positive size.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

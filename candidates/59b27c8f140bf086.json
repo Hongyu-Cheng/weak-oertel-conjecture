@@ -1,0 +1,26 @@
+{
+  "advances": "Failure of a specified density-centroid selector, even though its reference measure has the full target mass.",
+  "author": "PK-research-agent",
+  "candidate_id": "59b27c8f140bf086",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.094365+00:00",
+  "depends_on": [],
+  "draft_key": "sharp-midpoint-capacity-centroid-failure",
+  "kind": "counterexample",
+  "proof": "The Minkowski average of the endpoint fibers is $rT\\subset T$. Grouping the two endpoint terms in any hull point at base zero therefore gives the exact middle fiber. The integer bases are precisely $-1,0,1$ and the outer bases are extreme. The endpoint planes with their full-dimensional fibers give ambient interior. Their volumes are $aV,V,V$, all strictly below $(2+a)V/2$.\n\nDilation by ten sends uniform probability on $A$ to uniform probability on $C$, and the midpoint under this coupling is uniform on $rT$. The endpoint root-volume average raised to the $d$th power is $r^dV$, exactly the volume of $rT$. Every midpoint measure of mass $aV$ from these marginals is supported on $rT$. A density bounded above by $a/r^d$ must saturate the bound almost everywhere, since its integral must equal the integral of the bound. The centroid of a midpoint is the average of the endpoint centroids, which is $rg$ for every coupling. The weighted measure has mass $M$ and centroid $[1+(1+a)r]g/(2+a)=hg$. In particular $0<h\\le31/40$ and $hg\\in T$.\n\nLet $c=d/(d+1)$ and $q=ch$. On the left the cap threshold is $q+1>1/10$ and on the right it is $q-1<0$. The cap includes all of $A$, excludes all of $C$ and cuts out $qT$ from the middle. Its mass divided by $\\Gamma V$ is $h^d+a/\\Gamma$. Since $c\\ge1/2$, this is at most $(31/40)^d+(1/5)^d\\le39/40$ for every $d\\ge1$. The target divided by $\\Gamma V$ is $1+a/2>1$. Finally $\\eta(H_0)\\le aV$, so the auxiliary cost is bounded by $|qT|+aV$, exactly the actual cap mass.\n",
+  "source_candidate_ids": [
+    "b5b24ea04cec9d49"
+  ],
+  "source_candidate_sha256": {
+    "b5b24ea04cec9d49": "2d70549b8e544044a5889284288a57da0f81e2bec0e92a514bfaf9b461514559"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b5b24ea04cec9d49",
+      "locator": "b5b24ea04cec9d49:01 §§1–3, (1)–(2), saturation and strict oblique-cap failure"
+    }
+  ],
+  "statement": "For each integer $d\\ge1$, let $T=\\{x\\in\\mathbb R^d:x_i\\ge0,\\ \\sum_i x_i\\le1\\}$, $V=1/d!$, $g=(1,\\ldots,1)/(d+1)$, $a=10^{-d}$, $r=11/20$ and $\\Gamma=(d/(d+1))^d$. The hull of the lifts of $A=T/10$, $B=T$ and $C=T$ at bases $-1,0,1$ has exactly these three positive integer fibers, none as large as half of their total mixed volume $M=(2+a)V$. Its mass-$aV$ midpoint measure $\\eta=(a/r^d)\\mathbf1_{rT}\\,dx$ attains the sharp density bound $|A|/|(A+C)/2|$ for uniform endpoint marginals and is the unique midpoint measure satisfying that bound. The centroid of $\\mathbf1_B\\,dx+[(1+a)/a]\\eta$, placed at base zero, is the actual point $(0,hg)$ with $h=(31+11a)/(40+20a)$, independent of the endpoint coupling. The closed halfspace $H=\\{(z,x):\\sum_i x_i+z\\le dh/(d+1)\\}$ through this point has mixed mass $V(\\Gamma h^d+a)\\le(39/40)\\Gamma V<\\Gamma M/2$. For its base-zero trace $H_0$, the auxiliary cost $|B\\cap H_0|+\\eta(H_0)$ is at most this same mixed mass.",
+  "subgoal_id": "pk-intake-sharp-midpoint-capacity-centroid-failure",
+  "title": "The midpoint-density centroid can fail at sharp capacity in every dimension"
+}

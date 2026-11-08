@@ -1,0 +1,28 @@
+{
+  "advances": "The program concerns a fixed finite original cap family and gives a sufficient residual budget.",
+  "author": "PK-research-agent",
+  "candidate_id": "1b8f72d7fe3a6934",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:35:06.877109+00:00",
+  "depends_on": [
+    "f47790a5ad162036"
+  ],
+  "draft_key": "intrinsic-hinge-residual-subcover-program",
+  "kind": "theorem",
+  "proof": "The local minimum defining $e_z$ is attained because there are finitely many lists and $\\mathcal H_q(C_z)<\\infty$ on $P$. A nonnegative hinge $L_+$ bounds $e_z$ on $P$ precisely under the displayed constraints, with no constraint on $L(z)$ when $e_z=0$.\n\nTo show attainment, introduce $T_z\\ge0$, $T_z\\ge L(z)$ for all $z\\in P$ along with the constraints on $L$. The feasible $T$-vectors form a closed polyhedron: the original joint constraints are nonstrict affine inequalities, and eliminating each affine coefficient pairs all lower bounds for it with all upper bounds for it. A one-sided list leaves no additional condition. A sufficiently large constant $L$ gives feasibility. The function $\\sum_z T_z^q$ has bounded sublevels on the nonnegative orthant, so it attains its minimum on the closed projection. Choose a feasible affine preimage $L$ of a minimizing $T$. Replacing each $T_z$ by $L(z)_+$ preserves feasibility and can only lower the objective, so this $L$ attains the asserted minimum.\n\nUse $\\ell=L_+$ in the intrinsic convex-threshold subcover theorem. It is finite, convex and nonnegative, and the actual local minimum provides each required residual bound. The total allowance is $R_t$. This proves the claims, including $R_t=0$ at $L=0$ if all the local residual roots vanish.\n",
+  "source_candidate_ids": [
+    "2623b39acd3d4a1d"
+  ],
+  "source_candidate_sha256": {
+    "2623b39acd3d4a1d": "f2e0f542223192e00e9d461044b1dc5340713274dc2a8f7071cb095caed6172e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2623b39acd3d4a1d",
+      "locator": "2623b39acd3d4a1d:04 §8, (9)–(10)"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a convex body with nonempty mixed set $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$, and write $C_z=\\{x:(z,x)\\in C\\}$. Put $q=\\dim_H S\\ge1$, $V_z=\\mathcal H_q(C_z)$, $P=\\{z\\in\\mathbb Z^n:V_z>0\\}$, $M=\\mathcal H_q(S)=\\sum_{z\\in P}V_z$, and let $k$ count the occupied coordinate parity classes of $P$. Fix finitely many original closed ambient halfspaces $H_i$ and an integer $t\\ge1$. The mass of a cap is $\\mathcal H_q(S\\cap H_i)$.\n\nPut $U_J=C\\cap\\bigcap_{j\\in J}H_j^c$ for every set of at most $t$ indices, including the empty set, and define the actual local residual root $e_z=\\min_{|J|\\le t}\\mathcal H_q((U_J)_z)^{1/q}$. Write $a_+=\\max(a,0)$. The convex program\n$$\nR_t=\\min_{\\substack{L\\text{ affine on }\\operatorname{aff}(P)\\\\L(z)\\ge e_z\\text{ for }z\\in P\\text{ with }e_z>0}}\n\\sum_{z\\in P}L(z)_+^q\n$$\nattains its minimum. At most $kt$ original caps leave total residual at most $R_t$, so $ktB\\ge M-R_t$ for a nonnegative common cap mass bound $B$. In particular $q=t=2$ and $R_2\\le M/9$ give $B\\ge4M/(9k)$. If all $e_z=0$ then $R_t=0$.",
+  "subgoal_id": "pk-intake-intrinsic-hinge-residual-subcover-program",
+  "title": "An attained hinge program for actual cap residuals"
+}

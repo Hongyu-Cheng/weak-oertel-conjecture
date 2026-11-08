@@ -1,0 +1,26 @@
+{
+  "advances": "This controls sample maxima under logarithmic normalization and does not give a positive boundary floor.",
+  "author": "PK-research-agent",
+  "candidate_id": "208fb00e56dc1088",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:34:26.403903+00:00",
+  "depends_on": [],
+  "draft_key": "concave-weight-logarithmic-bound",
+  "kind": "lemma",
+  "proof": "Take $v\\in K$ with $L(v)=m$. The superlevel at $tm$ contains $(1-t)K+tv$ by concavity and nonnegativity, proving the volume bound. For $s>0$ use $t=e^{-s}$ to bound the probability of $-\\log(L/m)>s$ under normalized volume by $1-(1-e^{-s})^d$. Integrating this bound, using $t=e^{-s}$ and a finite geometric sum, gives\n$$\n|K|^{-1}\\int_K-\\log(L/m)\\le\n\\int_0^1\\frac{1-(1-t)^d}{t}\\,dt=\\sum_{j=1}^d1/j.\n$$\nThe opposite log bound follows from $L\\le m$. Integrating the superlevel bound over $t\\in[0,1]$ gives mean $L$ at least $m/(d+1)$. A continuous-coordinate supporting supergradient at the interior centroid, integrated over $K$, proves Jensen's bound $L(g_K)\\ge |K|^{-1}\\int_K L$.\n\nFor an anchored combination, choose a maximizing point in each input fiber. Compatibility places their combination in the target fiber, and joint concavity gives the claimed inequality for the maxima. Multiply the log-integral bounds in each fiber by $V_z/M$ and sum. The mixed log normalization gives the asserted two-sided bound.\n",
+  "source_candidate_ids": [
+    "f17e4f2b0ba9ee84"
+  ],
+  "source_candidate_sha256": {
+    "f17e4f2b0ba9ee84": "2750664e1c1da77da12365f9f277ae8547004d2caed51c0191e7ca1fd21f62d6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f17e4f2b0ba9ee84",
+      "locator": "§2, (1)–(3)"
+    }
+  ],
+  "statement": "Let $K$ be a compact convex $d$-body with $d\\ge1$ and $L$ a finite nonnegative upper-semicontinuous concave function positive on its interior. Put $m=\\max_KL$ and $H_d=\\sum_{j=1}^d1/j$. Then for $0\\le t\\le1$,\n$$\n|\\{L\\ge tm\\}|\\ge (1-t)^d|K|,\\qquad\n\\log m-H_d\\le |K|^{-1}\\int_K\\log L\\le\\log m,\\qquad\nL(g_K)\\ge m/(d+1).\n$$\nOn a finite positive compatible fiber family, a jointly concave such weight has sampled maxima $m_z$ satisfying $m_p\\ge\\sum_z\\lambda_z m_z$ whenever $p=\\sum_z\\lambda_z z$ is a sampled anchored combination. If the mixed mean of $\\log L$ is zero, then $0\\le\\sum_z (V_z/M)\\log m_z\\le H_d$.",
+  "subgoal_id": "pk-intake-concave-weight-logarithmic-bound",
+  "title": "Harmonic bounds on logarithms of concave fiber weights"
+}

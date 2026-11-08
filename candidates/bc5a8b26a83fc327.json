@@ -1,0 +1,32 @@
+{
+  "advances": "The example refutes a universal Helly bound of eight for rational Jensen heights filtered by integrality over three base coordinates. The filtered hull has integer rank four, and the coarse hollow support is disconnected.",
+  "author": "PK-research-agent",
+  "candidate_id": "bc5a8b26a83fc327",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:35:06.877280+00:00",
+  "depends_on": [
+    "bee3cc8e50a0dcea"
+  ],
+  "draft_key": "integral-jensen-graph-helly-nine",
+  "kind": "counterexample",
+  "proof": "**The lattice support.** In coordinates $(x,y,z)$ the hull is given by\n$$\nx+z\\ge1,\\quad y\\le x,\\quad -x+y+z\\le1,\\quad -x+2y+z\\le2,\\quad\ny\\ge0,\\quad z\\ge0,\\quad x-y-z\\le1,\\quad x-y+z\\le3,\\quad x\\le2.\n$$\nThese imply $0\\le y\\le x\\le2$ and $0\\le z\\le2$, the upper bound on $z$ following by addition of $-x+y+z\\le1$ and $x-y+z\\le3$. The point $(1,1/2,3/4)$ satisfies all nine inequalities strictly. Substituting the 27 integer triples of $[0,2]^3$ gives precisely the displayed $P$. For the real hull verification, write each inequality as $a_j\\cdot p\\le b_j$ and take every three rows with nonzero determinant. Keep a Cramer solution exactly when all nine inequalities hold. The distinct retained points have indices $0,1,3,4,5,6,7,9,10$ in the table. This exhausts all vertices, since a vertex of the bounded full-dimensional system has three independent active rows. All sampled points are on the boundary. At $p_2$ only $y=0$ is active and at $p_8$ only $x=2$ is active.\n\n**Heights and integer graph.** At any vertex every anchored convex representation is trivial. The face $y=0$ has sampled indices $0,1,2,3,6$ and on it $g(x,0,z)=(3-x-z)/2$. The face $x=2$ has sampled indices $6,7,8,9,10$ and all its heights vanish. The prescriptions agree at the common sample $p_6$. Every representation targeting $p_2$ or $p_8$ stays in its supporting face, so $g$ preserves every anchored representation. The differences from $p_3$ to $p_4,p_5,p_6$ have determinant of absolute value one. These four points have height zero while $g(p_0)=1$, proving nonaffinity.\n\nAny integer point $(p,a)$ in $\\operatorname{conv}(T)$ projects to $p\\in P$ by lattice completeness. The anchored representation of $p$ forces $a=g(p)$. Since only $g(p_2)$ is fractional, the full integer trace is the ten displayed integer lifts.\n\n**Helly witness.** On $W$, $y+z\\le2$, whereas $p_9$ has $y+z=3$. Each $p_i\\in W$ has the following exposing normal. The two values are its own score and the largest score among the other eight points.\n\n| $i$ | normal | own | other maximum |\n| --- | --- | --- | --- |\n| 0 | $(-1,0,0)$ | 0 | $-1$ |\n| 1 | $(0,-1,-1)$ | 0 | $-1$ |\n| 3 | $(0,0,1)$ | 2 | 1 |\n| 4 | $(-2,1,-2)$ | $-1$ | $-2$ |\n| 5 | $(-2,3,2)$ | 3 | 2 |\n| 6 | $(1,-1,0)$ | 2 | 1 |\n| 7 | $(2,-1,-2)$ | 3 | 2 |\n| 8 | $(2,1,2)$ | 7 | 6 |\n| 10 | $(0,1,0)$ | 2 | 1 |\n\nProjection shows that the lift of $p_i$ is absent from its own deletion hull. The lift of $p_9$ is absent from all of them by $y+z\\le2$. Each eight deletion hulls share the lift of the missing index, proving $h(T)\\ge9$. On the base, the only further point is $p_2=(p_0+p_6)/2=(p_1+p_3)/2$. These two pairs are disjoint, so at least one survives any deletion and the base kernel meets $P$ exactly in $\\{p_2\\}$. Its unique lift at height $1/2$ is absent from $T$.\n\nFor the upper bound use the finite-set witness lemma of accepted fact bee3cc8e50a0dcea. Its largest empty vertex set in $T$ has size at most nine, since $T$ has ten points and the lift of $p_8$ is the midpoint of the lifts of $p_7,p_9$. Finally, $\\operatorname{conv}(\\widehat W)$ has exactly $\\widehat W$ as its integer trace: its integer points lie in $T$ and the only remaining point of $T$, the lift of $p_9$, is excluded by $y+z$. Every point of $\\widehat W$ is a vertex by the exposure table. The four affinely independent height-zero points and the height-one point over $p_0$ give affine dimension four.\n",
+  "source_candidate_ids": [
+    "5c9190df7c42c598"
+  ],
+  "source_candidate_sha256": {
+    "5c9190df7c42c598": "cffcabbf59308e881e3d49f9d52bb0f8678327b93211a6a85daf014da9344ba2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5c9190df7c42c598",
+      "locator": "5c9190df7c42c598:01 §§1–3, (2)–(5)"
+    },
+    {
+      "candidate_id": "5c9190df7c42c598",
+      "locator": "5c9190df7c42c598:03 §§4–5, (6)–(11)"
+    }
+  ],
+  "statement": "Use the following ordered base points and rational heights.\n\n| $i$ | $p_i$ | $g(p_i)$ |\n| --- | --- | --- |\n| 0 | $(0,0,1)$ | $1$ |\n| 1 | $(1,0,0)$ | $1$ |\n| 2 | $(1,0,1)$ | $1/2$ |\n| 3 | $(1,0,2)$ | $0$ |\n| 4 | $(1,1,0)$ | $0$ |\n| 5 | $(1,1,1)$ | $0$ |\n| 6 | $(2,0,1)$ | $0$ |\n| 7 | $(2,1,0)$ | $0$ |\n| 8 | $(2,1,1)$ | $0$ |\n| 9 | $(2,1,2)$ | $0$ |\n| 10 | $(2,2,0)$ | $0$ |\n\nWrite $P=\\{p_0,\\ldots,p_{10}\\}$ and $T=\\{(p,g(p)):p\\in P,\\ g(p)\\in\\mathbb Z\\}$.\n\nThe hull of $P$ is a full-dimensional hollow lattice polytope whose integer points are exactly $P$. The function $g$ preserves every convex representation with target in $P$ and is nonaffine on $P$. The integral graph $T$ has ten points and $\\operatorname{conv}(T)\\cap\\mathbb Z^4=T$.\n\nFor the above $P,g,T$ the convex-set trace Helly number is $h(T)=9>2^3$. Let $W=\\{p_i:i\\in\\{0,1,3,4,5,6,7,8,10\\}\\}$ and let $\\widehat W=\\{(p,g(p)):p\\in W\\}$. The base deletion kernel $\\bigcap_{w\\in W}\\operatorname{conv}(W\\setminus\\{w\\})$ meets $P$ precisely at $p_2$ of height $1/2$. The nine lifted deletion hulls miss $T$ jointly and every eight meet $T$. The hull of $\\widehat W$ is full-dimensional in $\\mathbb R^4$ and its integer points are precisely its nine vertices.",
+  "subgoal_id": "pk-intake-integral-jensen-graph-helly-nine",
+  "title": "An integral Jensen graph over three base coordinates has Helly number nine"
+}

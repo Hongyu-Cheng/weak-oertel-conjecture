@@ -1,0 +1,55 @@
+{
+  "candidate_id": "86f2b23758e5b436",
+  "candidate_sha256": "60062f05ccf541db2b32daba6ef0353120fbcd5a29fd6e0e627625da8c83efa2",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8"
+  },
+  "checks": [
+    "Verified source a38f0607d5d5c2df §2 (5)–(6), the geometric exclusion witness, and exact canonical-cap loss records.",
+    "Vertex margins (ε,ε,−2ε,−1) give nonpositive averages at all four facet centroids for the stated ε, with equality only opposite vertex 3. An excluded x has 0<h(x)≤ε. Its specified convex combination with v₃ has zero margin and sup distance at most h(x)/(1+h(x))≤ε.",
+    "At the fixed witness the margin is 4ε/25, all first three coordinates exceed 1/4, and λ₂+λ₃=7/25. It therefore belongs to the missing layer outside the stipulated tube, for every ε in the stated range.",
+    "Substitution p=q=a into the strict 2–2 accepted cap formula gives P(a,r,w). Independently, the barycentric marginal in (λ₂,λ₃) has density 6(1−λ₂−λ₃). The positive region is the triangle with intercepts A=a/(a+r), B=a/(a+w); integrating gives AB(3−A−B), the same rational formula.",
+    "Each canonical cap is v_i/4+(3/4)S, and its transformed margins after scaling by four are h(v_i)+3h(v_j). The first three relevant cap patterns are (4ε,4ε,−5ε,−(3−ε)) and (ε,ε,−8ε,−(3+2ε)) up to permutation. All H₃ margins are strictly negative.",
+    "Exact rational substitution confirms all displayed fractions, the ratio 3(125ε+254)/[64(5ε+8)], the positive gap 3(35ε+2)/[64(5ε+8)] and the limit 381/256. Replayed 100 positive rational ε values, with the same formulas independently simplified from the intercept integrals.",
+    "The example refutes the localization inference even with small removed volume and all facet centroids retained. It satisfies the numerical bound 3/2 and does not refute that broader coverage estimate."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1462fa9ce6ced54e",
+      "candidate_sha256": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+      "fact_id": "1462fa9ce6ced54e",
+      "fact_sha256": "90c54522176a9bd2392576c6f61a0ae6c5f7dfca357cf8869ae656c987ddcda1",
+      "mapping": "Use its raw cap formula with the repeated positive heights p=q=a and negative heights −r,−w, all strict. The original and three nonempty rescaled cap records meet those hypotheses. Uniform volume scales by 27/64 for each canonical cap copy, and its open boundary is null. The empty fourth cap is checked separately.",
+      "reviewed_proof_sha256": "8de3c29eaf4b9ea31778296cf6c19010b1e74d947e37a33c223e812e662b921a",
+      "reviewed_statement_sha256": "bca7b2d2230b274880856fcf4ccd9e8239bbbebad59eed011d4c53736003028c",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:37:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Proves that minimum enclosing simplices retain their facet centroids. It neither gives the explicit excluded layers nor requires localization of excluded volume near an edge.",
+      "fact_id": "a839bfd22b7f11a2"
+    },
+    {
+      "comparison": "Supplies the raw strict 2–2 tetrahedral cap formula, including repeated heights. The actual retained body, Hausdorff bound, fixed counterexample point and comparison of four cap losses are additional.",
+      "fact_id": "1462fa9ce6ced54e"
+    }
+  ],
+  "readability": "The transformed vertex heights are rescaled by a common positive factor before using the raw-volume fraction. The barycentric metric is explicitly the sup norm on the four coordinates.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bbaffe52c53d77060c876e6f0c982563ffaf4eb7fc84352584ac6151406fbb14",
+  "reviewed_statement_sha256": "43904cbd77be14116380d4dba8df781390d5fb8785e8200d55a6ae3cd6655bed",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:34:16Z",
+  "summary": "The explicit convex retained body keeps all four facet centroids and stays close to the tetrahedron while its excluded layer reaches outside the thin-edge tube. The four cap loss fractions, summed ratio, and limit are correct.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

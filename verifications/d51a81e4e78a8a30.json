@@ -1,0 +1,56 @@
+{
+  "candidate_id": "3dfd807fd5aab02e",
+  "candidate_sha256": "f99376282e1981c3c7a37f484addafdb8caebda3dc3d9bba640780fdcb24cfe3",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "aeef2a7c6dce572b": "e3c9c82548ea0da82a11b62ac5d25f1095defc129d71f37d5f38f4385f7e1755"
+  },
+  "checks": [
+    "For 0<c<1, conditioning on cE_* gives the survival function (e^(−s)−ce^(−s/c))/(1−c). The positive-side Laplace transform at 1 is 1/A and at 1/c is c^k/B, including zero coefficients. The negative side has no atoms, so complementing its averaged survival yields the stated probability.",
+    "Along (u+t,v−t) with u≥v interior, the derivative of the two log R terms is (log R)′(u+t)−(log R)′(v−t)≤0 by concavity, including equal starting entries. Stopping at the first endpoint reduces the number of interior entries, so finitely many transfers leave the only feasible pattern (1,c,0,…,0).",
+    "R(1)R(c)=c and R(0)=c, giving B/A≥c^(k−1) at every feasible point. Also R(x)−c=(1−c)x/(1+x)≥0, which is valid throughout the transfer segment.",
+    "Independent symbolic differentiation of the two affected coordinates verifies the formula for the gradient difference. Since all denominators are positive, nonnegativity of its bracket is exactly (B/A)R(p_i)R(p_j)≥c^(k+1), as proved by the uniform product bound. Therefore each transfer into a larger coordinate increases or preserves L.",
+    "At the resulting endpoint pattern the two sums are independent and identically distributed with continuous law, hence the event has probability exactly 1/2. At c=0, product expansion gives ∏(1+p_i)≥2. At c=1 the scaled coefficients have sum 2−ε=1+c_ε and stay in the box. Coupling gives indicator convergence off the equality event, which is null after conditioning on every variable except E0. The endpoint lists attain equality as claimed.",
+    "The proof follows source (1)–(3) and both endpoint arguments. The source’s later simplex interpretation is not a premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:35:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its unit-negative theorem covers exactly the c=0 and c=1 cases here, with one and two nonzero negative unit phases respectively. The open interval 0<c<1 has a nonunit phase.",
+      "fact_id": "0b7948c254af939c"
+    },
+    {
+      "comparison": "Its d=3 result covers at most four nonzero phases after zero padding. Its larger listed dimensions have smaller unrestricted minima, and its dimension range is finite.",
+      "fact_id": "27ae4680f7a92708"
+    },
+    {
+      "comparison": "Its m=1 case gives equality on the two-positive list (1,c), with the negative list of the same magnitudes. It does not treat general capped positive lists.",
+      "fact_id": "2eaf96d805cf614f"
+    },
+    {
+      "comparison": "Its largest-positive transfer can fill a coefficient to one, but cannot by itself continue into a nonlargest receiver while keeping the cap. Its unrestricted product lower bound for the two negative phases is (1+c)²/[(2+c)(1+2c)]<1/2 when c>0.",
+      "fact_id": "564e798ecec2b61f"
+    },
+    {
+      "comparison": "Its local-minimum theorem requires feasible variation of a fractional negative coefficient in the full capped signed domain. Minimizing with fixed c is a different domain.",
+      "fact_id": "24e83be093cbd50e"
+    }
+  ],
+  "readability": "The first transfer argument establishes a uniform bound at every feasible vector. The second uses that bound pointwise along each transfer to control L.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4e51aa584a10355d47680b5e61cc3ab26e8890153bb8e20e78c7c6dcb0171a1a",
+  "reviewed_statement_sha256": "a1031eea3fe12c389925cbf510cbba896ab5b6935a74d2ff9da42d9de8f43811",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:31:35Z",
+  "summary": "The direct transfer proof establishes sharp half mass for arbitrary capped positive lists against a unit negative phase and one fractional negative phase.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,32 @@
+{
+  "advances": "Canonical body-tied energy, with a separately chosen positive concave base multiplier. The source chart matches the own-fiber optimizer and does not assert an orbit minimum or any row-density contact identity.",
+  "author": "PK-research-agent",
+  "candidate_id": "9270a73b4c9e1b53",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:33:00.810246+00:00",
+  "depends_on": [
+    "7227bbfcd12ad3d2",
+    "b3c0088cf09b2894",
+    "5aeb5916857f97a9",
+    "a56f8711406a3870",
+    "d7ff9f9aad2b6512"
+  ],
+  "draft_key": "affine-base-weighted-projective-buffer-alignment",
+  "kind": "lemma",
+  "proof": "The gradient identity $\\nabla_x E=NEa$ gives $\\nabla_x(\\log f-\\log(E)/N)=0$ precisely for aligned $f$. The own-interior domain is connected, so the difference is constant there. Conversely the stated form is aligned by differentiation.\n\nThe joint concavity theorem gives concavity of $F$ on own-interior points. The Hausdorff continuity of the canonical fibers and continuity of energy on convergent marked bodies give continuity on all of $C$ and zero boundary values. The concavity inequality extends to boundary marks by taking interior approximations in their respective fixed fibers. The weighted geometric mean $s^{d/N}t^{1/N}$ is concave and increasing in both coordinates on the nonnegative quadrant. For example, its supporting weighted arithmetic mean at each positive pair is an affine upper bound, and their infimum is the function there. Its composition with $(F,\\ell)$, multiplied by $M^{-1/N}$, gives the concavity of $f_\\ell$ and the claimed continuity follows by its formula. Its dependence on $x$ is an aligned multiple of $E^{1/N}$.\n\nSince all $V_z$ are positive, $\\bar g$ lies in the relative interior of $B$: no proper relative supporting hyperplane contains their positive barycenter. Evaluating an affine function at this barycenter gives its normalized mean, yielding the asserted form with a unique $b$ in the parallel subspace. A relative ball of radius $r_0>0$ centered at $\\bar g$ is contained in $B$ unless this subspace is zero, in which case the domain is the singleton $b=0$. Nonnegativity on the ball bounds $\\|b\\|_2$ by $1/r_0$. The nonnegative domain is closed, and each of its points is approached from the positive domain by convex combination with the constant function $1$. This proves compactness of the stated closure.\n\nThe full energy support on a canonical compatible family gives $L_F$, whose continuous coefficient is $Na(p,y)/d$ by the continuous-variable derivative. Divide $f_\\ell$ by $f_\\ell(p,y)$ and apply weighted arithmetic-geometric mean to $F/F(p,y)$ and $\\ell/\\ell(p)$, bounding the first ratio by $L_F$. This gives $L$ and its floor. The factor $\\ell(z)/\\ell(p)$ is one on the own fiber, yielding the exact restriction. More generally the same argument uses any finite affine upper tangent to a concave $\\ell$ at $p$ if one exists.\n\nWrite $a=a(p,y)$ and $\\xi=(x-y)/(1+a\\cdot(x-y))$. The inverse $x-y=\\xi/(1-a\\cdot\\xi)$ has positive denominator on the image. Multiplying each cap inequality by it gives continuous normal $u_j-\\varepsilon f(p,y)a$. The weighted sum is $\\varepsilon(\\nabla_x f-fa)$, and $\\nabla_x f=Nrfa$ for the unweighted power.\n",
+  "source_candidate_ids": [
+    "3101206ec4580190"
+  ],
+  "source_candidate_sha256": {
+    "3101206ec4580190": "a67cd30d84b6968e0beaf4f27cd8b4fae405ead2368d6b68d8967b272b5c7bef"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3101206ec4580190",
+      "locator": "§§1–2, (1)–(7), aligned weighted buffer and normalized domain"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $N=d+1$, and let $C$ be the canonical convex hull of a finite compatible family of positive-volume compact convex $d$-fibers $K_z$ at bases $P$. Write $B=\\operatorname{conv}P$, $V_z=|K_z|$, $M=\\sum_{z\\in P}V_z$, and $E(z,x)=E_{C_z}(x)$ for ordinary projective energy, extended by zero at the own-fiber boundary. At each own-interior point let $a(z,x)$ be its unique optimal covector. In each fiber, a positive $C^1$ function satisfies $\\nabla_x f=fa$ throughout its interior exactly when $f(z,x)=c(z)E(z,x)^{1/N}$ with $c(z)>0$ independent of $x$.\n\nIf $\\ell$ is a positive continuous concave function on $B$, then $f_\\ell=(\\ell E/M)^{1/N}$ is jointly concave and continuous on $C$, vanishes at the own-fiber boundaries and satisfies this alignment. When $\\ell$ is affine and $\\sum_{z\\in P}V_z\\ell(z)=M$, its parameter domain is\n$$\n\\ell(z)=1+b\\cdot(z-\\bar g)>0\\text{ on }B,\\qquad\n\\bar g=M^{-1}\\sum_{z\\in P}V_z z,\\qquad b\\in\\operatorname{span}(B-B).\n$$\nThe domain is bounded and its closure is the compact domain with $\\ell\\ge0$.\n\nWrite $F=E^{1/d}$. At a sampled own-interior mark $(p,y)$, let $L_F$ be a nonnegative affine upper tangent ratio, meaning $F(z,x)\\le F(p,y)L_F(z,x)$ and $L_F(p,y)=1$. Such a ratio exists. If $\\ell$ is positive affine, an affine upper tangent ratio for $f_\\ell$ is\n$$\nL=\\frac{d}{N}L_F+\\frac1N\\frac{\\ell(z)}{\\ell(p)}\\ \\ge\\ \\frac{\\min_B\\ell}{N\\ell(p)}>0.\n$$\nOn the source fiber this is exactly $1+a(p,y)\\cdot(x-y)$.\n\nFinally, for $f=(E/M)^r$, $r>0$, assume buffered cap traces on a source fiber have margins $u_j\\cdot(x-y)+\\varepsilon f(p,y)$, with weights $\\rho_j$ summing to one and $\\sum_j\\rho_ju_j=\\varepsilon\\nabla_x f(p,y)$. Their continuous normals after the source projective map have weighted sum $\\varepsilon(Nr-1)f(p,y)a(p,y)$.",
+  "subgoal_id": "pk-intake-affine-base-weighted-projective-buffer-alignment",
+  "title": "Affine-base weighted projective buffers and alignment"
+}

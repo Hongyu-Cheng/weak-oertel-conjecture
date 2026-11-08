@@ -1,0 +1,26 @@
+{
+  "advances": "The construction varies actual sector areas in a planar ordinary body. The tested caps exceed the small-cap ceiling and satisfy the cubic inequality.",
+  "author": "PK-research-agent",
+  "candidate_id": "a09adcb28bc500c7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:34:26.401828+00:00",
+  "depends_on": [],
+  "draft_key": "fixed-incidence-diagonal-spectral-peak",
+  "kind": "counterexample",
+  "proof": "For each successive pair of sides the oriented turn determinant, and for each oriented edge the determinant to the origin, is affine in $t$ because only one vertex moves. Substitution at both endpoints gives positive values in all cases. Each edge therefore has both remaining vertices strictly to its left, and the origin lies strictly to its left, proving the ordered polygon and interior claims throughout. Each vertex evaluation under each $v_i$ is affine in $t$, and its two endpoint evaluations have the same strict sign. Thus no clipping incidence changes. The moving vertex lies on the line through its opposite vertex $(7,-6)$ with direction $(-17,15)$.\n\nTo compute $Q_i$, keep the vertices with nonnegative evaluation, and along an edge from $p$ to $q$ with opposite signs insert $p+[v_i\\cdot p/(v_i\\cdot(p-q))](q-p)$. Apply the shoelace area formula to the clipped vertices in cyclic order. The first normalized chord is the absolute change in the second coordinate between the two inserted points. The second and third are the absolute change in the first coordinate, the latter because its Euclidean chord length is $\\sqrt2$ times that change. This gives the exact table.\n\n| $t$ | $k$ | $(Q_1,Q_2,Q_3)$ | $(\\sigma_1,\\sigma_2,\\sigma_3)$ |\n|---|---|---|---|\n| $9/10$ | $378/5$ | $(785623/19158,423/10,2672/85)$ | $(79846/9579,168/25,2191/170)$ |\n| $1$ | $84$ | $(2719/66,1405/28,2537/70)$ | $(565/66,97/14,493/35)$ |\n| $11/10$ | $462/5$ | $(1438503/34798,18029/310,165/4)$ | $(151866/17399,220/31,913/60)$ |\n\nSet $S=\\sum_i f_i^2$, $P_2=\\prod_i f_i^2$ and $A=4r^3-rS$. The table gives $A>0$ and $r^2>f_i^2/4$ for every $i$ at all three parameters. The reduced numerators of $A^2-P_2$, in increasing $t$ order, are\n$$\n\\begin{aligned}\n&3510706410588836264660605017721653291756515117813998422666165627020123424388441,\\\\\n&-540700198098510021635901969811763587528417542044536772194256639,\\\\\n&9199865969993839138293812145495142011729826509614410900268826474431000361.\n\\end{aligned}\n$$\nThese inequalities, the clipping data and the geometry can also be verified by the [exact rational companion](../assets/pk-nov6/computations/verify_diagonal_quad_spectral_peak_defect_transport.py). The characteristic determinant is $\\det(rI-B(f))=(A-\\sqrt{P_2})/4$. At the interval endpoints the first two leading principal minors and the determinant are positive, so $rI-B(f)$ is positive definite. At $t=1$ the determinant is negative, so $rI-B(f)$ is not positive semidefinite. These are the claimed strict eigenvalue comparisons. The constant incidence makes all chord and area quantities continuous, so $J$ is continuous and attains its maximum away from the endpoints. Finally the same table gives $4-S>0$ and $(4-S)^2>P_2$ at each test, giving the strict cubic inequalities. In these records $Q_2/k>128/279$, as seen directly from the table.\n",
+  "source_candidate_ids": [
+    "914005c541cbe6d2"
+  ],
+  "source_candidate_sha256": {
+    "914005c541cbe6d2": "0f551f619024f7402346137c9d886b92983f60935023fa83e8cc30effbb65dff"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "914005c541cbe6d2",
+      "locator": "914005c541cbe6d2:01 Clipping table and spectral determinant certificate at t=9/10, 1, 11/10"
+    }
+  ],
+  "statement": "Let $K_t=\\operatorname{conv}\\{(7-17t,-6+15t),(1,-5),(7,-6),(2,4)\\}$ for $9/10\\le t\\le11/10$. The listed order remains strictly convex and counterclockwise, the origin remains interior, and the three lines through zero with normals $v_1=(1,0),v_2=(0,1),v_3=(-1,-1)$ retain fixed strict vertex incidence. Write $k=|K_t|$, $Q_i=|K_t\\cap\\{v_i\\cdot x\\ge0\\}|$ and $\\sigma_i=\\mathcal H^1(K_t\\cap\\{v_i\\cdot x=0\\})/\\lVert v_i\\rVert$. Put $M=\\sum_iQ_i/\\sigma_i$ and $f_i=2\\sqrt{kQ_i}/(\\sigma_iM)$. Let $B(f)$ be the symmetric three-by-three matrix with zero diagonal and cyclic off-diagonal entries $f_i/2$, and put $J(K_t)=\\lambda_{\\max}(B(f))$. For $r=9353/10000$ one has\n$$\nJ(K_{9/10})<r<J(K_1),\\qquad J(K_{11/10})<r<J(K_1).\n$$\nConsequently $J$ is not quasiconvex on this diagonal path and all its maximizers on the displayed compact interval are interior. The three tested bodies each satisfy $\\sum_i f_i^2+f_1f_2f_3<4$.",
+  "subgoal_id": "pk-intake-fixed-incidence-diagonal-spectral-peak",
+  "title": "An actual fixed-incidence diagonal deformation with an interior spectral peak"
+}

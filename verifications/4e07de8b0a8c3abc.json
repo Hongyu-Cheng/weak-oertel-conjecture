@@ -1,0 +1,46 @@
+{
+  "candidate_id": "9ff32a01d2439268",
+  "candidate_sha256": "9fed1e446c77f0f0977d47ce27fe11bd2ef3b8d1482761f205f3d4a1e9be908b",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The centered body D and concavity of r make the homothetic fibers an ordinary convex body. Positivity at zero and a<0<b make the origin interior.",
+    "The supporting tangent gives r(z)-zr'(z)≥r(0)>0. Differentiating u and R with the chain rule gives all six identities, including R''=-r^3 r''/D_r^3 and R-uR'=1/D_r. In the piecewise affine case the one-sided derivatives of R are ordered because h↦-h/(r-zh) has derivative -r/(r-zh)^2. The strict increase of u holds across every piece.",
+    "The volume Jacobian r^m in (q,z), multiplied by dz/du, gives r^(m+2)/D_r. Dividing the actual cap margin by r preserves its orientation and yields u+c·q≥0.",
+    "The raw coarea of z=-c·X is Lebesgue measure in the graph coordinates X. The section parametrization X=q/R(s) is injective since X fixes z and q. Its rank-one Jacobian has determinant R^(-m)(1-sR'/R)=wR, positive on each smooth piece. This checks raw rather than unit-normal normalization.",
+    "For c≠0 the omitted knot and endpoint preimages are hyperplane null sets in q. For c=0 the full section r(0)D is retained, with w(0)R(0)=r(0)^m even at a kink. Multiplication by X cancels the reciprocal factor and gives the horizontal first moment, and z=-c·X gives the vertical moment.",
+    "Source 9cc7f272d6dd1c14 §§1–2 gives the same dimensions, derivative signs, actual cap orientation and coarea pullback."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "elapsed_seconds": 176,
+  "finished_utc": "2026-11-08T14:44:33Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses actual centroidal sections, raw coarea and full horizontal vector moments for a single affine radius that vanishes at the pyramid apex. Its finite section is recovered by truncating that radius before the apex, choosing r(z)=(H-z)/(H+1) and using the section domain in the new lemma. The predecessor does not cover general positive concave radii or piecewise slopes.",
+      "fact_id": "2f58c412150dafaf"
+    },
+    {
+      "comparison": "Computes scalar coarea and axial moment for decreasing affine frusta, including their slope laws. It does not give the vector coarea pullback for a nonlinear concave radius.",
+      "fact_id": "1f86e3e352aa0225"
+    },
+    {
+      "comparison": "Pushes full volume through division by a nonnegative affine coordinate and controls its marginal. It does not imply the nonlinear axial inverse or the raw section coarea identity here.",
+      "fact_id": "f6c497926ac327fa"
+    }
+  ],
+  "readability": "At knots other than u=0, arbitrary pointwise choices for w are harmless for nonhorizontal cuts because the corresponding q slices are null. At u=0 the needed value is independent of the one-sided derivative.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "17f1fbb400b0aa99fb3dc45a0590881567d98c1f303db28ebffa72590dd3e148",
+  "reviewed_statement_sha256": "922e7a4dce403f2b272fb4d5641ed1d026f80812910c55f7eb10208d67260f37",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:41:37Z",
+  "summary": "The axial reciprocal is convex, and the exact volume, raw coarea, and vector first-moment identities hold in both stated regularity classes.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

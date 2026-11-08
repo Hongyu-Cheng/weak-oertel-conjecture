@@ -1,0 +1,29 @@
+{
+  "advances": "This is a conditional estimate on sampled interiors and source occurrences.",
+  "author": "PK-research-agent",
+  "candidate_id": "6195bae7db138d35",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:34:26.403328+00:00",
+  "depends_on": [
+    "1a753eb623654f00",
+    "d90ba05577427854"
+  ],
+  "draft_key": "log-buffer-source-cores",
+  "kind": "lemma",
+  "proof": "For $X\\in K_p$ distinct from $y$ and $0<r'<r$, write $y$ as a combination of $X$ and $y-r'(X-y)/\\|X-y\\|$ in the inball. The weight of $X$ is $r'/(r'+\\|X-y\\|)\\ge r'/(r'+2R)$. Concavity and nonnegativity give the comparison also for $X=y$. Let $r'\\uparrow r$ and take the supremum over $X$. With $V_p=|K_p|$ the normalization and the upper bound give\n$$\n0\\le V_p\\log\\sup_{K_p} L+(M-V_p)\\log L_*.\n$$\nSince normalization implies $L_*\\ge1$, the supremum is at least $L_*^{-(M-V_p)/V_p}\\ge L_*^{-M_{\\max}/v}$.\n\nFor the energy lower bound every admissible denominator on $K_p$ is admissible on the contained ball. Its infimal energy at the ball center is its volume by d90ba05577427854, so $E_i\\ge\\kappa_d r^d$ for the common source radius $r$, with $\\kappa_d=|B_d|$. Thus $(L_iE_i/M)^{1/N}$ has a positive uniform lower bound from $M\\le M_{\\max}$ and a uniform upper bound from $L_i\\le L_*$ and $E_i\\le M$. Divide these bounds by the two bounds on $\\Delta/\\varepsilon$ in the same-force relation.\n",
+  "source_candidate_ids": [
+    "b4f092ee1bb5a205"
+  ],
+  "source_candidate_sha256": {
+    "b4f092ee1bb5a205": "8c179864cfd37c57578de8e85ab1e5987695f1482af865def0e19c48aff6bb6f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b4f092ee1bb5a205",
+      "locator": "§4"
+    }
+  ],
+  "statement": "Assume the hypotheses and the bound $L_*$ of the same-force row-tail lemma, and $\\int_S\\log L\\,dm=0$. Suppose all sampled fibers lie in $RB_d$. For any point $(p,y)$ with $B(y,r)\\subset K_p$, $r>0$, one has\n$$\nL(p,y)\\ge\\frac{r}{r+2R}\\sup_{K_p}L(p,\\cdot)\n\\ge \\frac{r}{r+2R}L_*^{-M_{\\max}/v}.\n$$\nIn particular this holds uniformly at source marks $(p_i,y_i)$ with a common own inball radius and with $L_i=L(p_i,y_i)$. If their $E_i$ are the marked projective energies, and $a_*\\le\\Delta/\\varepsilon\\le a^*<\\infty$, then $\\sigma_i$ and $\\kappa_i$ are comparable at every source by positive constants depending only on these uniform bounds, $N$, and $d$.",
+  "subgoal_id": "pk-intake-log-buffer-source-cores",
+  "title": "Normalized contact parameters have uniform inner-core lower bounds"
+}

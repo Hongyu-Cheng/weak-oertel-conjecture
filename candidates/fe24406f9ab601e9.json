@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary tetrahedral volume; a fixed thin-edge tube is an explicit hypothesis on the entire union. General near-tetrahedral deficits need not meet it.",
+  "author": "PK-research-agent",
+  "candidate_id": "fe24406f9ab601e9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T14:30:49.098116+00:00",
+  "depends_on": [],
+  "draft_key": "tetrahedral-thin-edge-union-cap-coverage",
+  "kind": "theorem",
+  "proof": "The claim is trivial for an empty union. On the tube containing $R$, write\n$$\n(\\lambda_0,\\lambda_1,\\lambda_2,\\lambda_3)=\\frac{(1-t,t,y,z)}{1+y+z},\\qquad y,z\\ge0,\\quad 0\\le t\\le1.\n$$\nThe volume Jacobian in the chart $(\\lambda_1,\\lambda_2,\\lambda_3)$ is $(1+y+z)^{-4}$: the $t$ derivative of $\\lambda_1$ is $(1+y+z)^{-1}$, while the determinant of $(y,z)\\mapsto(\\lambda_2,\\lambda_3)$ is $(1+y+z)^{-3}$. Physical volume differs by a fixed positive constant. Each trace is $cy+dz<a+(b-a)t$. Set $y=r\\cos\\alpha$, $z=r\\sin\\alpha$, $k=\\cos\\alpha+\\sin\\alpha$, $0\\le\\alpha\\le\\pi/2$. The union at fixed $t,\\alpha$ fills the radial interval up to\n$$\nR_\\alpha(t)=\\sup_{\\rm traces}\\frac{a+(b-a)t}{c\\cos\\alpha+d\\sin\\alpha},\n$$\nwith radial endpoints irrelevant to volume. This nonnegative function is convex in $t$, and jointly measurable because the supremum is lower semicontinuous. The tube hypothesis gives $k R_\\alpha(t)\\le1/3$ since $\\lambda_2+\\lambda_3=kr/(1+kr)$. On this range the increasing function $W_k(r)=\\int_0^r u(1+ku)^{-4}\\,du$ is convex, because $W_k''(r)=(1-3kr)/(1+kr)^5\\ge0$. Thus $\\int_0^{\\pi/2}W_k(R_\\alpha(t))\\,d\\alpha$ is a convex nonnegative volume density in $t$, up to the fixed positive Jacobian constant.\n\nFor any such density $f$, the function $g(t)=f(t)+f(1-t)$ is convex and symmetric and hence nonincreasing on $[0,1/2]$. Therefore $\\int_{1/4}^{1/2}g\\le\\int_0^{1/4}g$, equivalently the middle half of $[0,1]$ carries at most half the mass. Inside the tube, $H_2,H_3$ meet $R$ only on volume-null boundaries. Also $H_0$ implies $t\\le3/4$, while $H_1$ implies $t\\ge1/4$. The cap multiplicity is thus at most $1+\\mathbf1_{[1/4,3/4]}(t)$ almost everywhere in $R$. Integrating against the density gives the claim and $27/16-3/2=3/16$.\n",
+  "source_candidate_ids": [
+    "a38f0607d5d5c2df"
+  ],
+  "source_candidate_sha256": {
+    "a38f0607d5d5c2df": "b04a56a528c5be1c4bd24a6a02e49ce6d95206fcc98e0197dfd877cab5739dc9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a38f0607d5d5c2df",
+      "locator": "§1, (1)–(4), projective density and arbitrary union cap multiplicity"
+    }
+  ],
+  "statement": "Let $S$ be a tetrahedron with barycentric coordinates $\\lambda_0,\\ldots,\\lambda_3$, and let $H_i=\\{\\lambda_i\\ge1/4\\}$ be its four canonical centroid caps. Let $R$ be any finite or infinite union in $S$ of strict traces $a\\lambda_0+b\\lambda_1>c\\lambda_2+d\\lambda_3$ with $a,b\\ge0$, $a+b>0$, $c,d>0$. Assume $R\\subseteq\\{\\lambda_2+\\lambda_3\\le1/4\\}$. The pushforward of ordinary volume on $R$ to $t=\\lambda_1/(\\lambda_0+\\lambda_1)$ has a convex density on $[0,1]$, and\n$$\n\\sum_{i=0}^3|R\\cap H_i|\\le\\frac32|R|.\n$$\nFor $|R|>0$ this is strictly below $(27/16)|R|$, by at least $(3/16)|R|$.",
+  "subgoal_id": "pk-intake-tetrahedral-thin-edge-union-cap-coverage",
+  "title": "Canonical cap coverage of arbitrary thin-edge unions in a tetrahedron"
+}

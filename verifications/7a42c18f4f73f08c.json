@@ -1,0 +1,50 @@
+{
+  "candidate_id": "8d6bb75a120c655d",
+  "candidate_sha256": "8f68b1ad1e077972e962d5744c5aaf69b9b9684e4c3a4c6c75a6f92316a021ce",
+  "checked_dependency_candidate_sha256": {
+    "f9532baccf44bacb": "478e60efc07249d7128d81136c906168df632bde56fc35981c8d658baefd81a4"
+  },
+  "checks": [
+    "The original lower hull and [0,2]×Q occupy the two extreme planes of the new coordinate and each has relative (d+1)-dimensional interior. Their hull is full-dimensional. At the two integer layers, the extreme-coordinate equality excludes all contributions from the other layer, giving exactly six positive fibers before padding.",
+    "The scale (F/V)^(1/d) gives Q volume F. The three lower fiber volumes are all positive and one equals F, so the total before padding is strictly above 4F. The padding adds only binary sampled layers and multiplies total mass by 2^(n−2), so every fiber is strictly below W/2^n.",
+    "Fixing any binary padding vertex and then the new coordinate zero forces the replacement hull on that slice to be exactly the convexified original three enclosing simplices. Consequently both the lower bound for the added volume and the upper bound on the two deficit sums multiply by 2^(n−2). Upper-layer excess is nonnegative and its simplex deficits vanish.",
+    "The original a585520b0a2a14db §4 uses Q=(F/V)^(1/d)T and the same strict layer inequality. The archived exact rational verifier includes 72 source, constant and no-heavy checks."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f9532baccf44bacb",
+      "candidate_sha256": "478e60efc07249d7128d81136c906168df632bde56fc35981c8d658baefd81a4",
+      "mapping": "Same-batch three-fiber construction at the same d and ε. Every exposed lower layer repeats its exact fibers A,P/2,B, so the stated deficit and arbitrary-container cost inequalities apply independently at each such layer. Its proof also gives zero ordinary and paired deficits for the new simplex Q. This candidate requires approval before the dependent is admitted.",
+      "reviewed_proof_sha256": "8abb7d1dce12ad5eeb78283b4cf7755e1c61e0db3adcc4ed5722213d59571e15",
+      "reviewed_statement_sha256": "b6b48c84ea6b954ea253ce61267903519b0e63ee23f88c56f1917a3920abbcb2",
+      "status": "same-batch draft, independent approval required before admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T14:36:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This supplies a stronger planar existence result with the same lower layer, upper copies of T of volume V, and the same binary padding. The frozen construction instead has upper copies of Q. For d=2, 8(|A|−|P/2|)=ε(4−13ε+4ε²−4ε³)>0 and |A|>|B|, so F=|A|=(1−ε²)V<V and Q=√(1−ε²)T. The planar qualitative cost-versus-ordinary-or-paired-deficit obstruction is covered, but the exact source and the d≥3 claim are distinct.",
+      "fact_id": "e593f6104402d047"
+    },
+    {
+      "comparison": "Its planar lower layer is identical and gives a stronger cost estimate on that layer. It does not assert the strict no-heavy condition for the present two-layer body or the higher-dimensional layer bound.",
+      "fact_id": "c7e97600d54831a4"
+    }
+  ],
+  "readability": "For n=2 there are no extra binary coordinates and the padding argument uses the unique lower layer without any extra exposure requirement.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "84062aa13b42212aaaf0942b2dccd079b7cdd42afad56e7749cf3d5ef6ab039d",
+  "reviewed_statement_sha256": "37c83c82cbd8c81ee0ae538694d13c8e0583b5f667186bcb0e7f7d9ff831d1d8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:32:26Z",
+  "summary": "The added layer and binary padding preserve the exact fibers and force a strictly light source in every n,d≥2. The proof uses the same-batch three-fiber obstruction only on exposed copies of its original lower layer.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

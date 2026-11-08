@@ -1,0 +1,85 @@
+{
+  "candidate_id": "f8a9e969cf35ede8",
+  "candidate_sha256": "e5edb971e526152d8d9849f7e2666f1e93909f3e85ec56e250a63d50e320a581",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "6db3f4932a57c2cc": "48384ae1eb46a17a58f6cea71cfb285e1a5e0c16b8b9ed2f5c68ad5565118226"
+  },
+  "checks": [
+    "Projection of the hull is [−1,1], leaving exactly three integer sites. At the extreme bases only that base's generators contribute. At zero the two endpoint coefficients agree, so the endpoint contribution is a multiple of their midpoint body. Interval addition and convexity of K give the midpoint body [−5/4,5/4]×K contained in the prescribed middle fiber, establishing exactness. The three volumes are 4,4,1 and no site is half-heavy.",
+    "At the centroid of a full actual fiber the triangle coordinate is g. Each barycentric coordinate equals 1/3 there, so a halfspace with one such coordinate at least 1/3 captures precisely a ratio (2/3)^2=4/9 of the triangle's area. Acting only on that coordinate gives the upper bound 4a/9 for any own capacity at this mark and therefore the single-node bound 16/9.",
+    "A full binary tree with at most three distinct node labels has either one or three nodes. The sole pair of distinct bases with an integral midpoint is −1 and 1, with midpoint zero. Their full-fiber centroids have interval coordinate zero, so their average does too. The actual middle cut x≤0 has volume 5/4. Combining with the smaller endpoint's upper bound 4/9 gives 61/36. The actual middle centroid instead has interval coordinate 3/4.",
+    "Independently computed all interval endpoints, midpoints, volumes and exact rational comparisons. Both 16/9 and 61/36 are below 243/128=9(3/4)^3/2. Source 6db3f4932a57c2cc explicitly uses centroids of the three full actual fibers and leaves different mark selections outside its claim.",
+    "Byte comparison and decoded-field comparison confirm that the sole candidate change is the new full-actual-fiber centroid sentence. It scopes both certificate bounds and leaves the proof and source provenance unchanged.",
+    "The clarified premise fixes the endpoint interval coordinates to zero. The previously identified subbody-centroid at coordinate 3/2 is outside this scope, so the existing middle cut x≤0 applies to the only eligible averaged endpoint mark. The proof remains valid even when capacities are evaluated in the full actual fibers."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:46:47Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "f8a9e969cf35ede8",
+    "candidate_sha256": "69cad674e9712c36d89a82f758cd6186721319e24cdb19c5ec999317c1b1311d",
+    "checked_source_candidate_sha256": {
+      "6db3f4932a57c2cc": "48384ae1eb46a17a58f6cea71cfb285e1a5e0c16b8b9ed2f5c68ad5565118226"
+    },
+    "checks": [
+      "Projection of the hull is [−1,1], leaving exactly three integer sites. At the extreme bases only that base's generators contribute. At zero the two endpoint coefficients agree, so the endpoint contribution is a multiple of their midpoint body. Interval addition and convexity of K give the midpoint body [−5/4,5/4]×K contained in the prescribed middle fiber, establishing exactness. The three volumes are 4,4,1 and no site is half-heavy.",
+      "At the centroid of a full actual fiber the triangle coordinate is g. Each barycentric coordinate equals 1/3 there, so a halfspace with one such coordinate at least 1/3 captures precisely a ratio (2/3)^2=4/9 of the triangle's area. Acting only on that coordinate gives the upper bound 4a/9 for any own capacity at this mark and therefore the single-node bound 16/9.",
+      "A full binary tree with at most three distinct node labels has either one or three nodes. The sole pair of distinct bases with an integral midpoint is −1 and 1, with midpoint zero. Their full-fiber centroids have interval coordinate zero, so their average does too. The actual middle cut x≤0 has volume 5/4. Combining with the smaller endpoint's upper bound 4/9 gives 61/36. The actual middle centroid instead has interval coordinate 3/4.",
+      "Independently computed all interval endpoints, midpoints, volumes and exact rational comparisons. Both 16/9 and 61/36 are below 243/128=9(3/4)^3/2. Source 6db3f4932a57c2cc explicitly uses centroids of the three full actual fibers and leaves different mark selections outside its claim."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T14:46:04Z",
+    "issues": [
+      {
+        "defect": "The exact theorem statement does not specify whose centroids the leaves carry. The neighboring binary certificate permits leaf subbodies D_z⊆C_z. Under that reading take the left leaf subbody [1,2]×K with mark (3/2,g), and the full right leaf [−1/2,1/2]×K with mark (0,g). The parent mark is (3/4,g), the centroid of the full middle fiber. Accepted 6769574fc1bd9f8d gives actual own capacity at least 27/16 in the middle and at least 27/64 at each leaf (on the left already in its subbody). The permitted actual-fiber version of the rule can thus use value at least 135/64>61/36. The proof's x≤0 middle cut contains only the averaged full-fiber centroid, not this alternative root mark.",
+        "locator": "Statement, the universal quantifier over nontrivial binary midpoint certificates with centroid leaves, and Proof final paragraph",
+        "repair": "Insert in the statement before the certificate bounds that every leaf mark is the centroid of its entire actual fiber, regardless of which certified body supplies the capacity. In the last proof paragraph identify the averaged endpoint marks as these full-fiber centroids. The exact source and arithmetic already have this scope.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "This gives a lower interpolation bound for actual own-fiber depths. It does not imply the upper bounds for this three-fiber certificate rule at the specified centroid marks.",
+        "fact_id": "4e868f774de77608"
+      },
+      {
+        "comparison": "Its full-mass centroid lower bound is consistent with the single-leaf upper bound. It also proves the explicit violation below if the centroid of an arbitrary leaf subbody is allowed and exact capacities in the actual fibers may be used.",
+        "fact_id": "6769574fc1bd9f8d"
+      }
+    ],
+    "readability": "With full-fiber centroids made explicit, the witness and the scope of the obstruction are clear.",
+    "reviewed_proof_sha256": "c06c513611c92addb4af6af19d5bfa5a23095d30e2f11bd66d8006f922613381",
+    "reviewed_statement_sha256": "4e1632dd8735dedb42ea5ae81b1abfc6b06cd032dd76308c93494450ee57425e",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T14:42:20Z",
+    "summary": "The arithmetic obstruction is correct for leaves marked at the centroids of the full original fibers, as in the source. The frozen statement needs that restriction because the same-batch certificate permits leaf subbodies and the strengthened bound fails for their centroids.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This gives a lower interpolation bound for actual own-fiber depths. It does not imply the upper bounds for this three-fiber certificate rule at the specified centroid marks.",
+      "fact_id": "4e868f774de77608"
+    },
+    {
+      "comparison": "Its ordinary centroid lower bound is consistent with the single-leaf upper bound. Neither it nor the arbitrary-mark interpolation theorem gives this upper bound on the two full-fiber-centroid certificate outputs.",
+      "fact_id": "6769574fc1bd9f8d"
+    }
+  ],
+  "readability": "The full-fiber centroid condition now expressly governs both certificate bounds.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c06c513611c92addb4af6af19d5bfa5a23095d30e2f11bd66d8006f922613381",
+  "reviewed_statement_sha256": "f181e9293e0e7713f1386b0ddbf774d2e23e7fff68664f269803ea52f2bec12f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "69cad674e9712c36d89a82f758cd6186721319e24cdb19c5ec999317c1b1311d",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:46:13Z",
+  "summary": "The revised statement explicitly fixes each leaf mark to the centroid of its full actual fiber. Under that scope the exact three-fiber obstruction and both strict comparisons are proved.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,43 @@
+{
+  "candidate_id": "1c4d82eab9f9c6a9",
+  "candidate_sha256": "56d3f8c4fee0b749e36fdcd81f153457d028a8b5d8209becd4f0008999f92efb",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "2fee89a46eace267": "60fed255033187bd63a0ece20249cec1374a5b5217007c2e232687e469cd67cc"
+  },
+  "checks": [
+    "For k=3 the two independent fair Bernoulli trials give masses (1/4,1/2,1/4), meeting the at-most-k−1 restriction. All integer tops are at least one, so polynomial binomials agree with truncation. This includes m=0 and the last zero term at m=1.",
+    "With x=m+1, direct expansion of the three weighted cubics gives x³+x/2 for six times the expectation. Independent arithmetic gives F0=1/4, F1=3/2, F2=19/4.",
+    "For P=x³+x/2, exact symbolic differentiation gives PP″−(2/3)(P′)²=x²−1/6, positive for x≥1. With P>0 this yields strict convexity on the closed ray and hence strict midpoint reversal for every integer m≥1.",
+    "Each series for r=0,1,2 starts at m=r by truncation and shifts the series of binom(m+3,3), giving z^r/(1−z)^4. The weighted numerator is (1+z)²/4, with only the root −1 of multiplicity two. The identity holds formally or for |z|<1.",
+    "The scope, mixture, curvature and numerator match source §2 around (1). The proof uses no accepted fact."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T14:35:44Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted proof establishes log-concavity of Poisson-binomial input probability masses. This candidate acts on a different sequence formed by convolution with binomial coefficients and taking a root, and gives strict ordinary convexity of that transformed sequence.",
+      "fact_id": "6ebad92de963eae2"
+    },
+    {
+      "comparison": "The accepted concavity is for actual arithmetic power sums. The candidate concerns an arbitrary Poisson-binomial mixture class, and its explicit two-trial mixture need not be an arithmetic power sum.",
+      "fact_id": "a0756c6751636340"
+    }
+  ],
+  "readability": "The shifted generating series is clear from the stated binomial convention. The m=1 truncation agrees with the same cubic identity.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "b79790705e62983798134bae7d20cf9451cbcbfc8a5cdaa39c21dc01858c61be",
+  "reviewed_statement_sha256": "93148a08103454dc8e1e27b5d6e1ff714b469425d9142f3e0c344b7dfcfadb73",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T14:31:35Z",
+  "summary": "The two-trial mixture has strictly convex cube-root tails at every claimed midpoint, while its generating numerator has a negative double root.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

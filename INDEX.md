@@ -4,6 +4,16 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 1 | theorem | pk-intake-positive-right-index-knot-deficit | [3da9e3745e7c7879](facts/3da9e3745e7c7879.md) |
+| 6 | theorem | pk-intake-entropy-lattice-maximum-equality | [0918a0883fc164ae](facts/0918a0883fc164ae.md) |
+| 1 | counterexample | pk-intake-larger-hull-selector-obstruction | [0fcb7fa715e2af62](facts/0fcb7fa715e2af62.md) |
+| 1 | theorem | pk-intake-entropy-balanced-mass-equality | [08b344179e054c1c](facts/08b344179e054c1c.md) |
+| 0 | theorem | pk-intake-quartic-continuous-kernel-gain | [f0d6276552741806](facts/f0d6276552741806.md) |
+| 0 | theorem | pk-intake-entropy-face-attainment-dual | [9ea9bc3d72c92743](facts/9ea9bc3d72c92743.md) |
+| 2 | theorem | pk-intake-effective-cap-count-profile | [23a563a735c07c25](facts/23a563a735c07c25.md) |
+| 0 | lemma | pk-intake-general-projective-volume-marginal | [f6c497926ac327fa](facts/f6c497926ac327fa.md) |
+| 2 | theorem | pk-intake-ordinary-cap-profile-equality | [1c6088cbbbb3f688](facts/1c6088cbbbb3f688.md) |
+| 1 | theorem | pk-intake-all-point-identical-triangle-paired-depth | [d6ce3858d2712450](facts/d6ce3858d2712450.md) |
 | 2 | theorem | pk-intake-exterior-contact-dimension-drop | [2eb9fc1dbf88b7c8](facts/2eb9fc1dbf88b7c8.md) |
 | 1 | theorem | pk-intake-inverse-power-density-centerpoint | [d6a3cbae1da72277](facts/d6a3cbae1da72277.md) |
 | 2 | theorem | pk-intake-paired-maximum-depth-simplex-rigidity | [7764d50d02b167bf](facts/7764d50d02b167bf.md) |

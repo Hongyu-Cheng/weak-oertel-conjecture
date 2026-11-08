@@ -1,0 +1,34 @@
+{
+  "advances": "Compares scalar finite-base capacities. Dominated escort mass is given by the separate factor c.",
+  "author": "PK-research-agent",
+  "candidate_id": "08b344179e054c1c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T07:21:16.885311+00:00",
+  "depends_on": [
+    "9ea9bc3d72c92743"
+  ],
+  "draft_key": "entropy-balanced-mass-equality",
+  "kind": "theorem",
+  "proof": "The balanced feasible set is a nonempty compact slice of the box $\\prod_{z\\in P}[0,m_z]$, so the maximum is attained. For a proper face the nonnegative exposing functional of the face-attainment result has zero sum against every balanced row, forcing every off-face $q_z$ to vanish. Thus $T_p$ is unchanged on restriction. Similarly, restricting a containing closed halfspace gives a containing face halfspace trace. Conversely any containing face halfspace can be written $a\\cdot(z-p)\\ge h$ on the face with $h\\le0$, allowing $a=0$ for the whole-space trace. Extend $a$ to $\\operatorname{span}(Q-p)$, then subtract a sufficiently large multiple of the exposing functional. This excludes every off-face atom while preserving the trace and containment of $p$. Hence $D_p$ is unchanged as well. All depth minima exist because there are only finitely many traces on the atoms.\n\nFor the hinge formula, every feasible balanced row has\n$$\n\\sum_z q_z=\\sum_z q_z(1+a\\cdot(z-p))\\le\\sum_z m_z(1+a\\cdot(z-p))_+ .\n$$\nFor the reverse inequality form the compact convex image of the box,\n$$\n\\left\\{\\left(\\sum_z q_z(z-p),\\sum_z q_z\\right):0\\le q_z\\le m_z\\right\\}.\n$$\nThe point $(0,T_p+\\varepsilon)$ is strictly separated from this image for each $\\varepsilon>0$. Orient the separator so it is larger at that point. Its last coefficient is positive by comparison with $(0,T_p)$, which belongs to the image. Normalize this coefficient to one and call its vector coefficient $a$. Maximizing over the box coordinatewise gives $\\sum_z m_z(1+a\\cdot(z-p))_+<T_p+\\varepsilon$. Letting $\\varepsilon\\downarrow0$ proves the exact formula. The identical argument applies to the restricted face box. For any full parameter $a$, integrate the weights of $\\{z:1+a\\cdot(z-p)\\ge t\\}$ over $t>0$ to obtain the hinge sum. On $0<t<1$ these are closed halfspace traces containing $p$, so that integral is at least $D_p$. This proves $T_p\\ge D_p$ in the finite real model, including rank zero and the endpoint masses $D_p=0$ and $D_p=M$.\n\nStrict convexity of $L^{-N}$ gives the tangent bound $L^{-N}\\ge1-N(L-1)$ with equality only at $L=1$. Because $L^{-N}>0$, replacing the tangent by its positive part preserves the bound and its equality case. In the face hinge formula take $a=-N\\alpha_p$. Its objective is at least $T_p$, so subtracting it from $E_p$ gives a lower bound for $E_p-T_p$ equal to the sum of $m_z b_N(L_z(\\alpha_p))$. If $E_p=T_p$, every $L_z(\\alpha_p)=1$ by positivity of the masses, and the spanning offsets force $\\alpha_p=0$. The stationarity equation at zero is $\\sum_{z\\in P_p}m_z(z-p)=0$. Conversely, if this balance holds, then zero is the relative minimizer by convexity and the whole face row is feasible for $T_p$. Hence $E_p=T_p=M_p$.\n\nThe formula for $c$ follows from $m_z/e_z=L_z(\\alpha_p)^{N+1}$ on the face. If $\\alpha_p\\ne0$, the relative ball about $p$ in $F_p$ contains a point where the linear offset is negative, so some $z\\in P_p$ has $L_z(\\alpha_p)<1$ and $e_z>m_z$. If $\\alpha_p=0$, the escort is the face mass row. The escort identities give the mass and mean of its positive rescaling. Finally, $\\alpha=0$ gives $E_p\\le M_p\\le M$. Equality with $M$ forces $F_p=Q$ and $\\alpha=0$ to minimize, so stationarity gives the original mean. Conversely that mean lies in $\\operatorname{relint}Q$ since all masses are positive, and at it zero is stationary and minimizes. The escort then uses the original masses and the claimed continuous coordinate follows.\n",
+  "source_candidate_ids": [
+    "2b7d1c7e003a98d0",
+    "b4c3b9c6a52059d2"
+  ],
+  "source_candidate_sha256": {
+    "2b7d1c7e003a98d0": "8ca4fbe8f31beb6bd8440f323583e0ed5bd94c02c8928057b5cd58f8cb4846dd",
+    "b4c3b9c6a52059d2": "3c68baa42db20f20a46e7cd529484ba122079d98970789de06b176aca0241278"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2b7d1c7e003a98d0",
+      "locator": "§4, (7)–(9) and (7a); §5, continuous maximum"
+    },
+    {
+      "candidate_id": "b4c3b9c6a52059d2",
+      "locator": "§1, (2)–(4), and §2, proof of (6) restricted to the zero base-moment constraint"
+    }
+  ],
+  "statement": "Let $P$ be a nonempty finite set in an affine Euclidean space, with masses $m_z>0$ for $z\\in P$, and put $Q=\\operatorname{conv} P$ and $M=\\sum_{z\\in P}m_z$. Fix $N>0$ and $p\\in Q$. Let $F_p$ be the unique face of $Q$ with $p\\in\\operatorname{relint} F_p$, and write $P_p=P\\cap F_p$ and $V_p=\\operatorname{span}(F_p-p)$. Set\n$$\nL_z(\\alpha)=1+\\alpha\\cdot(z-p),\\qquad\nE_p=\\inf_{\\substack{\\alpha\\in V_p\\\\L_z(\\alpha)>0\\ (z\\in P_p)}}\\sum_{z\\in P_p}m_z L_z(\\alpha)^{-N}.\n$$\n\nLet $\\alpha_p$ be the unique relative minimizer and $M_p=\\sum_{z\\in P_p}m_z$. For $p\\in Q$ define\n$$\nT_p=\\max_{\\substack{0\\le q_z\\le m_z\\\\\\sum_{z\\in P}q_z(z-p)=0}}\\sum_{z\\in P}q_z,\\qquad\nD_p=\\min_{H\\ni p}\\sum_{z\\in P\\cap H}m_z,\n$$\nwhere $H$ ranges over closed affine halfspaces in $\\operatorname{aff} Q$, with the whole-space trace allowed, including rank zero. The capacity and the halfspace depth are unchanged on restriction to $P_p$ in $\\operatorname{aff}F_p$. With $a$ ranging over $\\operatorname{span}(Q-p)$,\n$$\nT_p=\\inf_a\\sum_{z\\in P}m_z(1+a\\cdot(z-p))_+,\\qquad\nE_p\\ge T_p\\ge D_p .\n$$\nWriting $b_N(L)=L^{-N}-(1-N(L-1))_+$ for $L>0$, one has\n$$\nE_p-T_p\\ge\\sum_{z\\in P_p}m_z b_N(L_z(\\alpha_p)),\\qquad\nE_p=T_p\\ \\Longleftrightarrow\\ p=M_p^{-1}\\sum_{z\\in P_p}m_z z .\n$$\nAt equality $E_p=T_p=M_p$.\n\nThe escort masses $e_z=m_z L_z(\\alpha_p)^{-N-1}$ on $P_p$ and zero off $P_p$ are dominated by the $m_z$ exactly when $\\alpha_p=0$. The largest scalar $c\\ge0$ with $c e_z\\le m_z$ for all $z$ is $c=\\min_{z\\in P_p}L_z(\\alpha_p)^{N+1}$. The resulting dominated row has total mass $cE_p$ and mean $p$. On the whole of $Q$, $E_p\\le M$ with equality exactly at the original weighted base mean. If this mean is occupied and the compatible-fiber assumptions of the face-attainment result hold with $m_z=|K_z|$, its escort-selected continuous coordinate equals the original volume-weighted fiber centroid.",
+  "subgoal_id": "pk-intake-entropy-balanced-mass-equality",
+  "title": "Power entropy dominates balanced mass with equality at the minimal-face mean"
+}

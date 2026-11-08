@@ -1,0 +1,56 @@
+{
+  "candidate_id": "f6c497926ac327fa",
+  "candidate_sha256": "660ef30eb977353654c923eec6c69af1cbd580281ed8eab325d8bc838e18a318",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "An invertible affine coordinate chart has a fixed absolute Jacobian J for volume. Since t is a nonconstant coordinate and t≥0 on K, t>0 on int K. The hyperplane t=0 has zero D-volume, whether or not it contains a facet of K.",
+    "At fixed t>0 and y, v=tz has absolute Jacobian t^r. Tonelli and this substitution establish the pushforward identity for all Borel sets of z and give integral |K|. Uniform boundedness follows from t≤T and y in a fixed bounded box in the compact coordinate image of K. If D−r−1=0, the inner integral is over the singleton R^0 with unit zero-dimensional volume.",
+    "For (s,w)↦(t,y)=(1/s,w/s), the derivative is block triangular with diagonal blocks −s^(−2) and s^(−1)I. With t^r the combined density factor is s^(−(D+1)). The same calculation applies when w has dimension zero.",
+    "For an interpolation with weights 1−θ and θ, the inverse original points interpolate with normalized weights ((1−θ)s₀, θs₁). Convexity of K therefore gives convexity of Ω. On Ω the integrand's p-power is J^p s for p=−1/(D+1), so it satisfies the exact p-mean identity at all pairs of positive endpoint values.",
+    "Checked Bobkov's Lemma 2.3 directly, equations (2.6)–(2.7): it uses the input inequality for pairs whose two values are positive, on an open convex domain. Use R^k with k=D−r≥1 after zero extension to s≤0. The sections are nonnegative measurable and integrable, and p>−1/k. Inverting p=κ/(1−kκ) gives κ=p/(1+kp)=−1/(r+1). Both endpoint integrals are positive, so the lower κ-mean is positive; raising to the negative power reverses the bound and gives convexity. Interpolation at θ=0 or 1 is immediate.",
+    "Varying v at an interior point with t and y fixed gives an open set of image points. For each such z, continuity of (t,y)↦(tz,t,y) gives an open section near an interior preimage with t>0; its integral is positive. Thus the BBL-positive domain is full-dimensional, and replacing it by its interior changes no integrals because a full-dimensional convex set has null boundary.",
+    "On t>0, the sign of a·v+bt is the sign of a·z+b, with equality preserved pointwise. The excluded hyperplane has zero volume, so the two cap masses are exactly equal. This also handles a=0 as a whole or empty image trace, including b=0.",
+    "Verified the source candidate byte hashes at base f8f4853. Candidate 55fd8fec61360536 §3 states both densities, the exact exponent and removal of the positive-support boundary; its §4 makes cap transfer explicit. Candidate 2338b9b22d6faa2f §3 states the BBL formulation and the primary locator, and its §4 works out the r=2 instance. The frozen proof spells out the general Jacobian and positivity arguments."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "external_sources": [
+    {
+      "locator": "Lemma 2.3, equations (2.6)–(2.7), printed p. 309",
+      "title": "S. G. Bobkov, Convex bodies and norms associated to convex measures",
+      "url": "https://www-users.cse.umn.edu/~bobko001/papers/2010_PTRF_Norms.pdf",
+      "use": "Primary statement of functional Borell–Brascamp–Lieb with positive endpoint values."
+    }
+  ],
+  "finished_utc": "2026-11-08T07:22:38Z",
+  "gaps": [],
+  "graph_base": "f8f4853cba731a23ec07977be09b3e996eb27929",
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses a same-dimension projective bijection of one ball with log-affine weight, a D+1-type determinant factor and cap transport. It does not integrate out projective coordinates of an arbitrary convex body or establish the claimed inverse power of the resulting marginal.",
+      "fact_id": "7a3ce13723086670"
+    },
+    {
+      "comparison": "Uses a same-dimension positive-denominator projective chart for a truncated log-affine law, then epigraph lifting for average depth. It gives neither the arbitrary lower-dimensional projective density formula nor its BBL inverse-power property.",
+      "fact_id": "16148092acb7d0aa"
+    },
+    {
+      "comparison": "A sampled positive-integer-fiber projective shadow can have maximal depth below 4/9. Its sum of sampled fiber areas is a different measure from the ordinary D-volume integral here, so it neither implies nor contradicts this marginal lemma.",
+      "fact_id": "12d2b1d23b041387"
+    }
+  ],
+  "readability": "The affine Jacobian J is interpreted as the absolute determinant converting coordinate Lebesgue measure to ordinary D-volume. The R^0 case follows the standard zero-dimensional integration convention; neither point requires a proof change.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ea3de8bba0c4cd4ad1162b000b4abd8e20e8ae4e26d97a8c104c207a6c4e2e1f",
+  "reviewed_statement_sha256": "06b3f52354845a0025867de51e4ffc7c658f821cda0923deb2cb035562f8d7ec",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T07:20:58Z",
+  "summary": "The two projective density formulas, convex inverse-power marginal, and exact transfer of homogeneous-margin caps all hold for ordinary volume. No accepted fact at the reviewed base states this general dimension-reducing marginal.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

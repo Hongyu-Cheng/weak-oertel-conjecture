@@ -5,7 +5,7 @@
 [`SharpOC.Witness1387.one_over_e_depth`](SharpOC/Witness1387/DepthBound.lean)
 proves a uniform strict depth bound below $1/(e2^{209})$ for a rational
 polytope with $n=209$ and $d=1178$. The
-[verification guide](../research/one-over-e-1387/README.md) gives the
+[verification guide](../research/one-over-e-dimension-1387/README.md) gives the
 exact checker and the witness-specific axiom audit.
 
 ## Counterexample of total dimension 17

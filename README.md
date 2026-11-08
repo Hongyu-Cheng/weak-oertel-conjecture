@@ -21,7 +21,7 @@ normalized mixed-integer halfspace depth uniformly below
 $0.36787944/2^{209}<1/(e2^{209})$. The [proof and exact replay](facts/a02d398c0677c03a.md)
 cover every mixed-integer point. The [Lean theorem](lean/SharpOC/Witness1387/DepthBound.lean)
 proves the depth bound for the explicit witness. The
-[verification guide](research/one-over-e-1387/README.md) gives the
+[verification guide](research/one-over-e-dimension-1387/README.md) gives the
 reproduction and axiom audit commands.
 
 ## Counterexample of total dimension 17

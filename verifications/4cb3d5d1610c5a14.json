@@ -1,0 +1,41 @@
+{
+  "candidate_id": "75a1d57b1e81fdab",
+  "candidate_sha256": "2279c0b3f742bde6beb8744f371e24e4caddc8585afbd1cea5af82d78656fa50",
+  "checks": [
+    "The density integrates to one, direct integration yields the stated m, and pairing points about (1+r)/2 yields m >= (1+r)/2. Positive mass below 1 gives m < 1, so r <= 2m-1 < 1 and the polynomial CDF formula applies.",
+    "Independent exact integer polynomial multiplication verifies the d=2 rational formula and the d=3 factorization. In d=3, substituting 2m-1=N/(2A) and clearing positive denominators gives exactly (5+27r^3)A^3-4N^3 >= 0. The factor coefficients are nonnegative on the entire range. At r=0, equality holds in d=2 and d=3; the higher-dimensional argument includes r=0 and yields strict slack.",
+    "For each fixed d, rescaling [r,1] to [0,1] gives densities d(r+(1-r)x)^(d-1)/(1+r+...+r^(d-1)), converging uniformly to 1 as r tends to 1. The rescaled mean tends to 1/2, and the threshold 2m-1 rescales to twice this mean minus one. Hence T tends to zero. The exact formula is never evaluated at the excluded degenerate interval r=1.",
+    "Independent exact arithmetic verifies the derivative numerator and the series margin 4/15309. The derivative signs are negative, positive, and negative in succession across 1/5 and 2/5; divergence at zero and the values at 1/5 and 1 therefore certify the logarithm bound over 0<v<=1.",
+    "The substitution v=(R+t)/(1+t) lies in (0,1) for t>0, including R=0. The reciprocal inequality follows by integrating 1/(u+t). Subtracting t times each side from 2 reverses its direction. The scaling formula for u^alpha applies to u>0 and is zero at u=0. Tonelli applies; the kernel weight is integrable since 0<alpha<1 and the resulting values are finite.",
+    "With R=r^d and alpha=1/d, the transformed mean is the stated uniform integral, and the nonnegative 2m-1 can be raised to d. This yields T<=1/6. The derivative of -d log(1+1/d) is -log(1+1/d)+1/(d+1)<0, and the exact comparison is 113/625-1/6=53/3750>0.",
+    "Both source candidate hashes match. Candidate 732b11a769399016 §§3–6, (4)–(13), provides the exact endpoint estimate and all three dimension branches; candidate dafd411c026c302c §2, (7), invokes that same estimate at shift 1-m. The normalized lemma proves the estimate without assuming either source theorem, Grünbaum, or localization."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T06:02:39Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Related but distinct. The centered truncated power law is log-concave, so it fits the broader law class, but the accepted inequality bounds F(0)+2F(h)+F(2h)-P(-2h) below by 1/3. Its threshold pattern and coefficients do not give the dimension-dependent endpoint bound at 2m-1.",
+      "fact_id": "be3097c8a79095ef"
+    },
+    {
+      "comparison": "Its ordinary continuous Grünbaum input gives a lower cap bound at the centroid of each full-dimensional fiber. For a frustum realizing the present law, that concerns G(m) and 1-G(m), and does not give 1-G(2m-1)>=2 gamma_d.",
+      "fact_id": "c6b7777f667984de"
+    }
+  ],
+  "readability": "The strict bound m<1 follows immediately from the nondegenerate density supported in [r,1]. Stating this explicitly after midpoint pairing would make the support check easier to see; it is not a proof gap. The integral step can also name Tonelli explicitly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d58a10a13e32de957474ca0cfbf415d9fab879e732fa0f99cab6c9751276625e",
+  "reviewed_statement_sha256": "02080e057dba5320fdc0fc053674a06fb951a4d5b1c02e6ec90a012666f9c2ab",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T05:59:54Z",
+  "summary": "The self-contained argument proves the exact endpoint CDF bound for every integer d >= 2 and 0 <= r < 1. The result is a scalar lemma for the two localization arguments. It has no accepted or pending proof dependencies and is not a duplicate of an accepted fact.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

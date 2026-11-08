@@ -4,6 +4,13 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 1 | theorem | pk-intake-centroid-graph-surplus-first-order-sharpness | [0255a3c283c1a796](facts/0255a3c283c1a796.md) |
+| 0 | lemma | pk-intake-section-preserving-support-bump | [baa0b304f8ca0521](facts/baa0b304f8ca0521.md) |
+| 1 | theorem | pk-intake-ordinary-depth-descent-by-support-bump | [11c2f4875e5c3035](facts/11c2f4875e5c3035.md) |
+| 0 | lemma | pk-intake-affine-power-inner-cdf | [75a1d57b1e81fdab](facts/75a1d57b1e81fdab.md) |
+| 1 | theorem | pk-intake-paired-centroid-tails | [6a7d56e450b3126f](facts/6a7d56e450b3126f.md) |
+| 1 | theorem | pk-intake-weighted-centroid-tails | [7ad3d72ee6061cf3](facts/7ad3d72ee6061cf3.md) |
+| 2 | theorem | pk-intake-nested-three-fiber-depth | [8812feca6c8a1e97](facts/8812feca6c8a1e97.md) |
 | 0 | theorem | pk-intake-affine-score-moment-partition | [bf1ea1ab1ca2de45](facts/bf1ea1ab1ca2de45.md) |
 | 1 | theorem | pk-intake-sharp-integer-centroid-partition | [e4ec84652a3059bf](facts/e4ec84652a3059bf.md) |
 | 0 | counterexample | pk-intake-two-piece-integer-centroid-local-depth-obstruction | [22eef9feeab3bd98](facts/22eef9feeab3bd98.md) |

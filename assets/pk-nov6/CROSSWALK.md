@@ -4,7 +4,7 @@
 
 - `notes` maps every original candidate ID to its stage and source links. A null value marks a note awaiting triage. `triaged` records a preliminary breakdown. `resolved` records a checked disposition for every claim, including any precise hold.
 - `claims` stores the precise statement once, under a stable key of the form `<first-source-id>:<number>`. Each source link has a `section` and a `claim` key. An additional source link for the same claim records a `same_claim_reason`.
-- Each claim records a `relation`, a `disposition`, and a mathematical `reason`. `fact_ids` names the accepted facts that cover the claim or the new accepted fact. `related_facts` holds comparison leads. `depends_on` lists accepted results used by the argument, with named external results in `external_dependencies` and exact missing steps in `open_dependencies`.
+- Each claim records a `relation`, a `disposition`, and a mathematical `reason`. `fact_ids` names the accepted facts that cover the claim or the new accepted fact. `related_facts` and optional `related_sources` hold comparisons to accepted facts and original notes. `depends_on` lists accepted results used by the argument, with named external results in `external_dependencies` and exact missing steps in `open_dependencies`.
 
 | Disposition | Meaning |
 | --- | --- |
@@ -17,7 +17,7 @@
 
 Use `equivalent`, `covered`, `specialization`, `extension`, `distinct`, or `unresolved` for the relation. Explain what changes in the hypotheses or conclusion. A similar title or lexical match can motivate a comparison and belongs in `related_facts` until the mathematical implication is checked.
 
-The [pilot report](../../reviews/pk-intake/pilot.md) records the first independent proof reviews and their timing. Commit checked batches separately on the intake branch and submit the completed intake in one PR.
+The [pilot report](../../reviews/pk-intake/pilot.md) and [first batch report](../../reviews/pk-intake/wave01.md) record independent proof reviews, timing, and rework. Commit checked batches separately on the intake branch and submit the completed intake in one PR.
 
 The [contribution rules](../../CONTRIBUTING.md) govern admission. The original candidate files and historical reviews are preserved. Normalize a new result in a separate candidate and link its sources. Before committing a batch, run:
 

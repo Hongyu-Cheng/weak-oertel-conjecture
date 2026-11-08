@@ -1,0 +1,57 @@
+{
+  "candidate_id": "7ad3d72ee6061cf3",
+  "candidate_sha256": "2327b88363c8742e4b1ed7ac9e3f586ca7c0427833cbb0596e28f7778564c387",
+  "checks": [
+    "Read the frozen proof before inspecting its references. Since the upper tail is nonincreasing, the sum at −s exceeds or equals the sum at s for s>0 by [F(−s)−F(s)]/2. A nonzero direction gives null hyperplane slices, so the marginal has a continuous CDF and s=0 follows by continuity. For d=1, symmetry and continuity give F(0)=1/2 and F(s)+F(−s)=1, and the sum is 1+F(s)/2. Centered uniform extremizers in any dimension obey the same bound, with γ_d≤1/2 by Bernoulli's inequality.",
+    "The inverse images in K of compact subsets of the line are compact, and convexity sends their Minkowski combination into the inverse image of the corresponding combination of cuts. Brunn–Minkowski gives measure parameter 1/d, and the original projected mean is zero. In Fradelizi–Guédon (2004), §3, Theorems 1–2 allow a compact convex ambient interval, a continuous constraint x with nonnegative integral, parameter 1/d≤1/2 including d=2, and an affine weakly upper semicontinuous objective. The closed cuts give upper semicontinuity by Portmanteau. Section 4 uses density parameter s/(1−s) on a nondegenerate segment, giving a nonnegative affine function raised to d−1. The remaining extremizers are Dirac measures at x≥0. The left shift of the central cut preserves any strict original violation by continuity, and every admissible Dirac then contributes at most one. For the mean-zero affine-power extremizers the shifted objective is bounded above by the unshifted one, and the proof covers the entire family regardless of the extra one-sided moment condition. https://perso.math.u-pem.fr/fradelizi.matthieu/pdf/localizationDCG.pdf",
+    "A nonconstant affine factor can be made increasing and scaled so its support values run from r to 1, with 0≤r<1. Centering and the two possible orientations give thresholds m±h with h a positive multiple of the original shift. Jensen's inequality for the concave quantile gives p≤1/2. Independently differentiating I gives I′=αA₁ and I″=α(α−1)B₁, then M″=(1−α)I^(1/α−2)(A₁²−IB₁). Cauchy–Schwarz pairs b^(α/2) and b^(α/2−1)(1−v). The differentiations are on 0<R<1 and bounded convergence supplies endpoint continuity, so the chord from M(0)=γ_d to M(1)=1 yields p≥γ_d.",
+    "In the increasing orientation, m≥(1+r)/2 places both thresholds inside the support until h=1−m. The derivative of the variable terms is −f(m+h)+f(m−h)/2≤0 there, and once the first term vanishes the other only increases. The scalar endpoint estimate and p≤1/2 give the required lower bound at h=1−m, including r=0 and the right endpoint of the support.",
+    "In the reflected orientation the derivative sign on 0<h<1−m is determined by comparing (m−h)/(m+h) to k=2^(−1/(d−1)); that ratio strictly decreases, so the only interior minimum occurs at h_*. On 1−m≤h≤m−r the upper argument is past the support and the remaining term is nonincreasing, then the sum is p+1/2. The endpoint ordering follows from the scalar mean bound. A candidate minimum at h_* is therefore needed exactly when h_*≤1−m. Substituting m−h_*=2km/(1+k) and m+h_*=2m/(1+k) gives the D_d coefficient because k^d+1/2=(1+k)/2. Multiplying the gap above γ_d+1/2 by the positive denominator 1−R yields the stated H(R).",
+    "The quantile strictly increases with R for every v<1. Its mean increases continuously from d/(d+1) to 1, and Bernoulli gives (1+2/(d−1))^(d−1)≥3>2, hence k>(d−1)/(d+1). Thus R_* lies strictly inside [0,1]. At equality h_*=1−m, G(m+h_*)=1 and G(2m−1)≥0, so H(R_*)≥0. At R=0, the exact d=2 product is 16/27. For d≥3, D_d is the reciprocal of the power mean of 1 and 1/√2 of order 2/(d−1), hence at least the reciprocal at order one, 8/(3+2√2). Verified 43²−2·30²=49, the strict rational e upper bound 1631/600<30/11, and (15/11)(11/30)=1/2. The geometric tail bound for e is strict from the factorial ratio below 1/6 after the sixth factorial. Thus D_dγ_d>1/2, and concavity of H extends the bound through the critical interval.",
+    "Independent exact rational checks passed for 43 critical and 57 constant-branch parameters in d=2, including r=0 and tests on both sides of the mean threshold 3/4. At each critical parameter the CDF expression equals the claimed formula and meets the bound. These comparisons supplement the all-dimensional derivative and concavity calculations.",
+    "For sharpness take the convex hull of the origin and a full (d−1)-simplex in the plane with first coordinate one. Its first coordinate has CDF t^d on [0,1] and mean d/(d+1), so the negative coordinate's central upper tail is γ_d. A sufficiently large positive s gives the two shifted tails 0 and 1. In d=1 the interval with a shift past its endpoints realizes equality.",
+    "At fixed t, at most V[1−F(t)] of A can lie in the complement of its closed cap. Writing y=a−V+VF(t), max(0,y)−y/2=|y|/2, also checked with 441 exact rational comparisons. Adding the other two cap volumes yields V[F(0)+F(−t)+F(t)/2]−V/2+a/2. In the reverse direction the measurable open lower cap realizes y=0 and its own closed upper cap is empty, including thresholds at or outside the support. This establishes equivalence with s=−t.",
+    "Both recorded source-candidate byte hashes agree with checkout 9393b1e. The imported proof of dafd411c026c302c contains (1)–(16) and the sharpness witness, with the frozen proof's shift reduction extending the original formulation from s≥0 to every s. Sections 3–6 of 732b11a769399016 contain the endpoint bound and its proof, now isolated as the scalar predecessor. The original note's downstream three-fiber assertions are outside this statement."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "75a1d57b1e81fdab",
+      "candidate_sha256": "2279c0b3f742bde6beb8744f371e24e4caddc8585afbd1cea5af82d78656fa50",
+      "mapping": "The normalized increasing extremizer has exactly the predecessor's density, dimension d≥2 and range 0≤r<1, including the cone case r=0. Its mean endpoint condition gives m≥(1+r)/2 for the support splits in both orientations. Its endpoint CDF bound gives [1−G(2m−1)]/2≥γ_d in the increasing orientation. The weighted proof does not invoke the full paired-tail theorem. Independently matched the predecessor review's APPROVED verdict and all three digests against the frozen scalar bytes and decoded fields.",
+      "reviewed_proof_sha256": "d58a10a13e32de957474ca0cfbf415d9fab879e732fa0f99cab6c9751276625e",
+      "reviewed_statement_sha256": "02080e057dba5320fdc0fc053674a06fb951a4d5b1c02e6ec90a012666f9c2ab",
+      "status": "independently approved, pending admission"
+    }
+  ],
+  "finished_utc": "2026-11-08T06:04:10Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses the same primary localization theorem for a different four-threshold inequality on log-concave laws with constant 1/3. Even discarding the extra positive tail terms from the attempted lower-bound inference would lack a valid inequality direction. Its conclusion does not provide the sharp dimension-dependent weighted sum or the equivalent subset cut.",
+      "fact_id": "be3097c8a79095ef"
+    },
+    {
+      "comparison": "Its metronoid inclusion at full mass gives F(0)≥γ_d for every K. This overlaps the large-shift limiting claim and does not couple F(s) and F(−s) at finite shifts.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "Gives a raw-depth bound for a selected point in the middle of three convex fibers satisfying midpoint inclusion. It does not identify the fixed ordinary centroid or imply the sharp directional inequality and all-measurable-subset formulation here.",
+      "fact_id": "3e766d73edff42b0"
+    }
+  ],
+  "readability": "The reflected branch can be read as min{J(h_*),1/2} when h_* is in the initial support interval, and 1/2 otherwise. The equality h_*=1−m is included. This is a reading aid rather than a needed change.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4b833d2d2cd82d3dfce7a1ab019309d281ed445128dd3c9c2abedd4cdb66cf58",
+  "reviewed_statement_sha256": "b453cfa3273367f1ced639c3a1d35e4f57001b823e7ac881215a74d2efc1355a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:00:19Z",
+  "summary": "The frozen proof establishes the sharp weighted centroid-tail inequality for every dimension and every real shift, and the equivalent lower bound for every measurable subset. The localization hypotheses, both orientations of the affine-power law, the critical transition and both parameter endpoints were checked. The exact scalar predecessor has independent approval and should be admitted first.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

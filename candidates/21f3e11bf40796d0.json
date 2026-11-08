@@ -1,0 +1,26 @@
+{
+  "advances": "Conditional on the exact lower-dimensional limit and equal limiting areas in the given simplex frame. It does not supply compactness of an extremizing family or a finite-volume gap.",
+  "author": "PK-research-agent",
+  "candidate_id": "21f3e11bf40796d0",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.204535+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-sweeps-whole-limit-segment",
+  "kind": "lemma",
+  "proof": "The bodies lie in a common bounded set by Hausdorff convergence. The endpoints of the first chords have a convergent subsequence of pairs with distinct limits by the positive length lower bound. Those two points lie on the first line in $A_0$, so dimension at most one forces all of $A_0$ onto that line. The extremal values of each fixed linear functional converge under Hausdorff convergence, by its Lipschitz bound. Properness of the other two cuts implies that each limiting closed range contains its threshold. On the first line use the coordinate $v_2\\cdot x$; the second cut is at $b_2$ and the third at $-b_1-b_3=b_2+W$. Thus convexity forces the segment between them. A parameter displacement $tJv_1$ on the first line, with $J$ a quarter turn, has normalized length $|t|$ and changes $v_2\\cdot x$ by absolute value $|t||\\det(v_1,v_2)|$.\n\nIn the canonical frame, the inequalities for $-sT$ are $x\\ge-s$, $y\\ge-s$, $x+y\\le s$. The respective extrema over $E$ are $-1,-1,1$. The midpoint inclusion therefore gives, for all $(x,y)\\in B$, $x\\ge1-2s$, $y\\ge1-2s$, and $x+y\\le2s-1$. Put $h=2s-1$; full dimension forces $h>0$ and the inequalities say $B\\subseteq-hT$. The prescribed area implies $s\\le h=2s-1$. From $B\\subseteq T$ one also gets $s\\le1$, so $s=1$. A proper closed convex subset of $T$ misses positive area, because a point outside the closed subset can be moved toward the interior of $T$ while keeping positive distance. Thus $B=T$, which is not a subset of $-T$ as seen from $(1,1)$. This contradicts the midpoint inclusion.\n",
+  "source_candidate_ids": [
+    "28c45f4fbd3dc45b"
+  ],
+  "source_candidate_sha256": {
+    "28c45f4fbd3dc45b": "7da187e84493e496db86de2c3c39b9d7ce1aae6ca1b2376cd6072b6dcef2f6a1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "28c45f4fbd3dc45b",
+      "locator": "28c45f4fbd3dc45b:04 §§3–4, whole-segment localization and midpoint impossibility, (2)–(3)"
+    }
+  ],
+  "statement": "Let $v_1,v_2$ be independent planar normals, $v_3=-v_1-v_2$, and let $\\sum_i b_i=-W<0$. Suppose convex bodies $A_j$ converge in Hausdorff distance to a compact convex $A_0$ of dimension at most one, every cut $v_i\\cdot x=b_i$ is proper on every $A_j$, and the normalized first chord lengths $\\mathcal H^1(A_j\\cap\\{v_1\\cdot x=b_1\\})/\\lVert v_1\\rVert$ have positive lower limit. Then $A_0$ is a nondegenerate segment on the first line, containing the segment between its intersections with the second and third lines. This forced segment has normalized length $W/|\\det(v_1,v_2)|$. In particular for $v_1=(1,0)$, $v_2=(0,1)$, $v_3=(-1,-1)$ and $b_i=-1$, it contains $E=[(-1,-1),(-1,2)]$. For $T=\\{x:v_i\\cdot x\\le1\\}$ and any $s>0$, there is no planar convex body $B\\subseteq T$ with $|B|=s^2|T|$ and $(E+B)/2\\subseteq -sT$.",
+  "subgoal_id": "pk-intake-pk-w35-sweeps-whole-limit-segment",
+  "title": "Three proper cuts force a whole limiting segment and obstruct equal midpoint areas"
+}

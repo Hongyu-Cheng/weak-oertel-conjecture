@@ -1,0 +1,28 @@
+{
+  "advances": "A weighted raw moment inequality on the original caps, without a quantitative lower bound on its ellipsoid term.",
+  "author": "PK-research-agent",
+  "candidate_id": "a0ee7f52e0ce4dc4",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:01:59.473859+00:00",
+  "depends_on": [
+    "93e0ccac55e8bca3"
+  ],
+  "draft_key": "pk-w35-normality-raw-moment-body-bridge",
+  "kind": "lemma",
+  "proof": "Each $Q_z$ is a nonempty compact convex moment set, by weak-* compactness of $0\\le f\\le1$ in $L^\\infty(\\mu)$ and continuity of the bounded moment constraints. For each such $f$, pointwise $(L_i)_+\\ge fL_i$. Integrating and maximizing the raw continuous moment gives\n$$\n\\Psi_i\\ge h_{Q_z}(u_i)+t_z(a_i\\cdot z-b_i).\n$$\nAt a pair $(x,\\lambda)$ the weighted sum of the affine terms is zero, since $\\sum_i\\lambda_i(a_i\\cdot z-b_i)=\\sum_i\\lambda_iL_i(z,x)-(\\sum_i\\lambda_i u_i)\\cdot x=0$. Integrate the weighted bound, and sum with the nonnegative coefficients $\\eta_z$. Finally ellipsoid containment gives $h_{Q_z}(u_i)\\ge u_i\\cdot c_z+|A_z^Tu_i|$. The centers cancel after weighting by $\\lambda$, by the same balance. In the unframed stress the stated pair conditions and the identity for $W_i$ are its active contact and offset equations.\n",
+  "source_candidate_ids": [
+    "da91e18223378a53"
+  ],
+  "source_candidate_sha256": {
+    "da91e18223378a53": "54e4b78fcec96c84a3a4253e4190b3b35ec30ca7caa40732b21c64edf68b1966"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "da91e18223378a53",
+      "locator": "da91e18223378a53:05 §6, (15a)–(15b), raw moment bodies"
+    }
+  ],
+  "statement": "Let $\\mu$ be the summed volume of finitely many bounded source fibers and let $\\Psi_i=\\int (L_i)_+\\,d\\mu$ for affine margins $L_i(z,x)=a_i\\cdot z+u_i\\cdot x-b_i$. Fix nonnegative weights $\\eta_z$ on the sampled bases. All sums involving the associated measures and moment bodies run over the bases of positive weight. Suppose that for each base $z$ with $\\eta_z>0$ a probability measure $\\nu_z$ on pairs $(x,\\lambda)$ satisfies $\\lambda\\in\\Delta_N$, $\\sum_i\\lambda_i u_i=0$ and $\\lambda_iL_i(z,x)=0$ for every $i$. Put $W_i=\\sum_z\\eta_z\\int\\lambda_i\\,d\\nu_z$. For each such $z$ choose a mass $t_z$ for which there exist measurable $0\\le f\\le1$ with $\\int f\\,d\\mu=t_z$ and $\\int wf(w,y)\\,d\\mu(w,y)=t_z z$. Let $Q_z$ be the body of their raw moments $\\int y f(w,y)\\,d\\mu(w,y)$. Then\n$$\n\\sum_i W_i\\Psi_i\\ \\ge\\ \\sum_z\\eta_z\\int\\sum_i\\lambda_i h_{Q_z}(u_i)\\,d\\nu_z .\n$$\nIf $c_z+A_zB_d\\subseteq Q_z$, where $B_d$ is the Euclidean unit ball, the right side is at least $\\sum_z\\eta_z\\int\\sum_i\\lambda_i|A_z^Tu_i|\\,d\\nu_z$. These hypotheses hold for the active pairs and $W_i$ of the unframed whole-space stress.",
+  "subgoal_id": "pk-intake-pk-w35-normality-raw-moment-body-bridge",
+  "title": "Whole-space saddle weights test raw balanced moment bodies"
+}

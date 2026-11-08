@@ -1,0 +1,28 @@
+{
+  "advances": "A weak collapse of ordinary convex-body probability measures in a fixed plane to an atomless law on a line.",
+  "author": "PK-research-agent",
+  "candidate_id": "78ff47525355975b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:00:27.631601+00:00",
+  "depends_on": [
+    "ea91e021ff1f4416"
+  ],
+  "draft_key": "pk-w35-product-atomless-triangle-collapse",
+  "kind": "counterexample",
+  "proof": "The triangle $C_\\varepsilon$ is full dimensional, so its maximal ordinary depth on the triangle is $4/9$ by the simplex case of ea91e021ff1f4416 in dimension two. Points outside the triangle have depth zero by separation. Its area is $\\varepsilon$, and its vertical section at $x\\in[-1,1]$ is $[0,\\varepsilon(1-|x|)]$. For every bounded continuous $f$ on the plane,\n$$\n\\int f\\,d\\mu_\\varepsilon\n=\\int_{-1}^1\\int_0^{1-|x|} f(x,\\varepsilon t)\\,dt\\,dx\n\\ \\longrightarrow\\ \\int_{-1}^1 f(x,0)(1-|x|)\\,dx\n$$\nby dominated convergence. The limit has total mass one and is atomless and symmetric about zero. A closed ambient halfspace through the origin restricts to a halfline based at zero or the whole supporting line, so its mass is at least $1/2$. For every point on the segment the left or right closed vertical halfplane through the point has mass at most $1/2$, using symmetry and the absence of point masses. Off the segment depth is zero by separation. This gives the exact maximum at the limit.\n",
+  "source_candidate_ids": [
+    "5dc9f132057bfdf3"
+  ],
+  "source_candidate_sha256": {
+    "5dc9f132057bfdf3": "385e541301c43d8ca4d1c5deeebd8106171007c7a9b31509415d9cdec324c036"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5dc9f132057bfdf3",
+      "locator": "5dc9f132057bfdf3:01 Unnumbered, collapsing triangle and weak-limit formulas"
+    }
+  ],
+  "statement": "For $\\varepsilon>0$ let $\\mu_\\varepsilon$ be normalized area on $C_\\varepsilon=\\operatorname{conv}\\{(-1,0),(1,0),(0,\\varepsilon)\\}\\subset\\mathbb R^2$. Its maximal normalized ambient closed-halfspace depth is $4/9$. As $\\varepsilon\\downarrow0$, the measures converge weakly to the law $(1-|x|)\\,dx$ on $[-1,1]\\times\\{0\\}$, whose maximal ambient closed-halfspace depth is $1/2$.",
+  "subgoal_id": "pk-intake-pk-w35-product-atomless-triangle-collapse",
+  "title": "An atomless line limit of triangles has strictly larger maximal depth"
+}

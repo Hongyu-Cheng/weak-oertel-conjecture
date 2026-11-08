@@ -1,0 +1,28 @@
+{
+  "advances": "The exact formula keeps one fixed middle point and one shared continuous normal in both terms. It does not assert independent optimization of the middle and endpoint centers.",
+  "author": "PK-research-agent",
+  "candidate_id": "361ef4b2c45786f8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:06:28.270381+00:00",
+  "depends_on": [
+    "ab471fe293627e1a"
+  ],
+  "draft_key": "pk-w35-reflected-actual-middle-normal",
+  "kind": "theorem",
+  "proof": "The compatibility inclusion ensures the lifted convex hull has exactly these fibers at its three integer bases: at base zero, a combination of the two endpoints gives a point of their Minkowski midpoint and any remaining coefficient belongs to $B$. It suffices to consider closed caps through $(0,y)$. For each fixed nonzero continuous normal, normalize it to unit $u$. The through-point cap $u\\cdot x+t z\\ge u\\cdot y$ has fixed middle trace $H_{u,u\\cdot y}$. As $t$ ranges over $\\mathbb R$, the endpoint threshold $s=u\\cdot y+t$ ranges over $\\mathbb R$. The endpoint reflection calculation of pk-w35-reflected-discrepancy gives the endpoint sum $b+|A\\cap H_{u,s}|-|(2y-C)\\cap H_{u,s}|$, so the infimum over $t$ gives precisely $b-\\delta_u(y)$. Infimizing over $u$ and adding the two pure base candidates proves the equality. Those latter caps count all of $B$, which lies in their boundary, and exactly one endpoint. For the lower bound, for each $u$ the middle mass is at least $f_B(y)$ and $\\delta_u(y)\\le\\Delta$. The pure base candidates also satisfy the bound because $f_B(y)\\le |B|$ and $b-\\Delta\\le a$.\n",
+  "source_candidate_ids": [
+    "e18e6db2f3e079d5"
+  ],
+  "source_candidate_sha256": {
+    "e18e6db2f3e079d5": "50f1f35072b89cd55c21019ee86063fc2efd1a1533321a9f4cbd4fc32028079c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e18e6db2f3e079d5",
+      "locator": "e18e6db2f3e079d5:06 §4 (7)–(8)"
+    }
+  ],
+  "statement": "Let $A,B,C\\subset\\mathbb R^d$ be full-dimensional compact convex bodies at bases $-1,0,1$, with $(A+C)/2\\subseteq B$ and $0<a=|A|\\le b=|C|$, $d\\ge1$. Use their actual unnormalized volume measure. For $y\\in B$ and unit $u$, put $H_{u,s}=\\{x:u\\cdot x\\ge s\\}$ and $\\delta_u(y)=\\sup_s(|(2y-C)\\cap H_{u,s}|-|A\\cap H_{u,s}|)$. The raw closed ambient depth at $(0,y)$ is\n$$\n\\min\\left\\{|B|+a,\\ |B|+b,\\\n\\inf_{\\lVert u\\rVert=1}\\left[|B\\cap H_{u,u\\cdot y}|+b-\\delta_u(y)\\right]\\right\\}.\n$$\nIn particular it is at least $f_B(y)+b-\\Delta(A,2y-C)$, where $f_B$ is ordinary raw closed-halfspace depth in $B$ and $\\Delta$ is absolute halfspace discrepancy over closed ordinary halfspaces.",
+  "subgoal_id": "pk-intake-pk-w35-reflected-actual-middle-normal",
+  "title": "Exact common-normal reflected discrepancy with an actual middle fiber"
+}

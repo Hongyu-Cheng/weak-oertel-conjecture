@@ -1,0 +1,56 @@
+{
+  "candidate_id": "1c53aed25c76e129",
+  "candidate_sha256": "7c74ab956df2304478d958f97680638b9b7218d4720ed20286b4fea648fd9e04",
+  "checked_dependency_candidate_sha256": {
+    "30309d81a867776b": "5a785578ec3386abc2a41cc8c52d756f94d4f9e228d940ac0cdeeb940def022a",
+    "b8c5224063d94dc1": "0c70e84ee1b14f0d253fae0d522f62d74f784873efb3475ea0a239d4742e82bf"
+  },
+  "checks": [
+    "Each proper A trace forces its corresponding zero-area B threshold to be a supporting line by varying only the base tilt. The positive spanning three normals give a bounded intersection of three supporting halfplanes containing the interior of B, hence a triangle.",
+    "The balanced-normal shear sends all actual thresholds to −1,0,1 and takes the mark to zero. Its affine nature preserves compatibility and all containing caps. The lifted hull has only those three nonempty sampled fibers, because the midpoint of its endpoint fibers is contained in K.",
+    "In the separate maximum-inscribed-triangle frame, centroid inradius exceeds 1/5, the outer bound is 4√2/3<2 and 1/2≤b≤4. Each cyclic gap is in [2τ,π−τ], so each vertex has norm at most 4/sin τ and the area bound gives δ≤16√(b/|T|).",
+    "The exact checks give R=20k≤180b/7, δR≤720/(7·65536)<2/5 and 2δR²/b≤2025/25088<1/9. The pair lemma therefore applies to the same two actual caps in the common coordinate frame.",
+    "Matched the frozen source section locators to the original proofs and verified raw source hashes against the pinned graph."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "30309d81a867776b",
+      "candidate_sha256": "5a785578ec3386abc2a41cc8c52d756f94d4f9e228d940ac0cdeeb940def022a",
+      "fact_id": "30309d81a867776b",
+      "fact_sha256": "3dd08a4866880d8fc4c60cd61dbb83472561d86111db3661f8fa5f04ba340dce",
+      "hypotheses": "Use the lifted hull after the determinant-scaled invertible shear. There are exactly three full planar fibers, the proper A lines are at −1, the mark is the interior origin of K, B capture is zero at 1, and the three fixed ambient caps are still genuinely depth attaining.",
+      "reviewed_proof_sha256": "62aa0d001a5b5a5adbd94ffcf821a42fd9ac59f028100176418099be6678a746",
+      "reviewed_statement_sha256": "55955093222f6b600bad719a14c38a9bee1f83ea3be7393f5f6d733687e8c243"
+    },
+    {
+      "candidate_id": "b8c5224063d94dc1",
+      "candidate_sha256": "0c70e84ee1b14f0d253fae0d522f62d74f784873efb3475ea0a239d4742e82bf",
+      "hypotheses": "In the common maximum-triangle frame B contains the radius-1/5 ball. Both selected caps support B, pass through the common mark and attain depth. With Γ=4/9, r=1/5 and ω₁=2 the exact radius and error satisfy the lemma. Same-wave predecessor approval required.",
+      "reviewed_proof_sha256": "866ea1b1490c96bd90c2eafea49d4b8266cb8923232f7049d9491337543104ea",
+      "reviewed_statement_sha256": "bdb4a80cf034a96d61321cdcde510f4bb5903bb57ede7fa9702bb2d6d6113526"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:09:53.709Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the bad-target k/b bound after canonicalizing the supports. Its aligned-middle special case and its profile do not imply the strict thin-support-triangle result for arbitrary middle K.",
+      "fact_id": "30309d81a867776b"
+    }
+  ],
+  "readability": "The shear only invokes the accepted planar profile. The subsequent angle estimate uses a different common affine frame, with the area ratio and bad-target k/b bound unchanged.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "3390238b806b715ff39cc318b9a2da9b5b275e4aa4f41564757fc6dbbbcf41a9",
+  "reviewed_statement_sha256": "4b81e91703152411d25be6c53932fb506c14e4c681030ef6109a15edcfbda1c9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:04:27Z",
+  "summary": "The actual contact, angle and slab estimates establish the strict marked-depth conclusion with the stated explicit thinness threshold.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

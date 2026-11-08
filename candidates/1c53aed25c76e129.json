@@ -1,0 +1,29 @@
+{
+  "advances": "The thinness is the area ratio to the three actual supports. The strict conclusion is at the marked middle source and requires nonheavy B; the separate heavy-fiber point is covered by the existing centroid fact.",
+  "author": "PK-research-agent",
+  "candidate_id": "1c53aed25c76e129",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.203840+00:00",
+  "depends_on": [
+    "30309d81a867776b",
+    "b8c5224063d94dc1"
+  ],
+  "draft_key": "pk-w35-sweeps-planar-thin-support-triangle",
+  "kind": "theorem",
+  "proof": "Every zero $B$ cut supports $B$: if its threshold is strictly above support, lower it slightly while keeping the middle threshold and continuous normal fixed. The proper $A$ threshold rises and its capture strictly decreases with no gain on $B$, contradicting depth attainment. The positive dependence and spanning imply that every nonzero direction has positive product with some normal, so $T$ is bounded. The three supporting inequalities contain the full-dimensional body $B$ and are necessary for boundedness, hence $T$ is a triangle.\n\nFor the planar profile, multiply the normals by positive factors to obtain a balanced triple $n_i$. Set $s_i=h_B(n_i)-n_i\\cdot y$ and $\\bar s=\\sum_i s_i/3>0$, where positivity follows by testing an interior point of $B$. Choose $p$ with $n_i\\cdot p=s_i-\\bar s$ for the first two indices; balance gives the third. If $L$ has rows $n_1,n_2$, the invertible ambient map $(z,x)\\mapsto (z,L(x-y-zp)/\\bar s)$ sends the mark to $(0,0)$ and the three actual caps to $v_i\\cdot x'\\ge z$ with $v_i=(1,0),(0,1),(-1,-1)$. It preserves compatibility and actual depth attainment and rescales every area by the same factor. The three sampled fibers may be realized by the convex hull of their lifts, with no additional sample on the middle base by midpoint compatibility. Therefore 30309d81a867776b applies and, under the hypothesized bad target, gives $k\\le9b/7$ in any common frame.\n\nFor the angle comparison use instead the common affine map sending a maximum-area inscribed triangle of $B$ to the standard triangle, then its centroid to zero. Such a triangle exists by compactness, and barycentric vertex replacement puts $B$ inside $[-1,1]^2$ before recentering, so $1/2\\le b\\le4$. The standard triangle contains a ball of radius $1/(3\\sqrt2)>1/5$ about its centroid, and the shifted square lies in a ball of radius $4\\sqrt2/3<2$. Normalize the transformed normals to length one, so their supporting heights lie in $[1/5,2]$. The transformed $T$ and $B$ have the same area ratio as before.\n\nThe consecutive cyclic normal gaps $\\theta_i$ are in $(0,\\pi)$ and sum to $2\\pi$. Write $\\max_i\\theta_i=\\pi-\\tau$, where $0<\\tau\\le\\pi/3$. Each gap is at least $2\\tau$ by subtracting the upper bounds for the other two. Thus $\\sin\\theta_i\\ge\\sin\\tau$ for every gap. A vertex of $T$ is the solution of two unit-normal support equations, giving norm at most $4/\\sin\\tau$ by the two-by-two inverse formula. A triangle in a radius-$D$ disk has area at most $2D^2$ by its side and altitude lengths. Hence $\\sin\\tau\\le\\sqrt{32/|T|}\\le 8\\sqrt{b/|T|}$. The normals adjacent to the largest gap have $\\delta=2\\sin(\\tau/2)\\le2\\sin\\tau$.\n\nApply the actual antipodal-pair lemma with $r=1/5$ and $\\omega_1=2$. Its radius is $R=20k\\le180b/7$. Under the area ratio bound, $\\delta R\\le2^{-16}(720/7)<2/5$, and\n$$\n2\\delta R^2/b\\le \\frac{259200}{49\\cdot65536}\n=\\frac{2025}{25088}<\\frac19 .\n$$\nThe two actual traces consequently satisfy the claimed cover and strict error bound. The lemma with $\\Gamma=4/9$ contradicts the hypothesized bad target.\n",
+  "source_candidate_ids": [
+    "2bb708ddf25004e0"
+  ],
+  "source_candidate_sha256": {
+    "2bb708ddf25004e0": "d99b5177c0749cd81237093da2b2bb284a74d7930edcbb23b6cc441bbbedff4b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2bb708ddf25004e0",
+      "locator": "2bb708ddf25004e0:02 §§1–4, (2)–(3), (8)–(13), explicit thin support-triangle theorem"
+    }
+  ],
+  "statement": "Let $A,K,B$ be the only full planar integer fibers at $-1,0,1$, with $(A+B)/2\\subseteq K$, areas $a,k,b$, $b\\le a+k$, and $y\\in\\operatorname{int}K$. Let three ambient halfspaces through $(0,y)$ attain its raw mixed depth $Q$, with continuous normals $u_i$ forming a minimal positive rank-two circuit, proper $A$ cuts and zero-area $B$ captures. Put $T=\\bigcap_i\\{x:u_i\\cdot x\\le h_B(u_i)\\}$. If $b/|T|\\le2^{-40}$, then $Q>2(a+k+b)/9$ at the specified source. In a maximum-inscribed-triangle frame with $(1/5)\\mathbb B_2\\subseteq B\\subseteq2\\mathbb B_2$ and $1/2\\le b\\le4$, a hypothesized $Q\\le2(a+k+b)/9$ gives radius bound $R=20k\\le180b/7$ for $K-y$ and $2y-A$. Two transformed unit normals then satisfy $\\delta=\\lVert u_i+u_j\\rVert\\le16\\sqrt{b/|T|}\\le2^{-16}$; their traces cover $A$ and miss at most $2\\delta R^2$ in $K$, with $2\\delta R^2/b\\le2025/25088<1/9$.",
+  "subgoal_id": "pk-intake-pk-w35-sweeps-planar-thin-support-triangle",
+  "title": "Three actual critical caps exclude an explicitly thin support triangle"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "One actual threshold of two stop-loss curves, with distinct open and closed cap conclusions.",
+  "author": "PK-research-agent",
+  "candidate_id": "30500dac5d00e722",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:07:09.316393+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-density-stop-loss-contact",
+  "kind": "lemma",
+  "proof": "For $\\sigma=\\alpha,\\beta$ put $C_\\sigma(s)=\\int(\\ell-s)_+\\,d\\sigma$. Bounded convergence for one-sided threshold quotients gives $C_\\sigma'(t-)=-\\sigma\\{\\ell\\ge t\\}$ and $C_\\sigma'(t+)=-\\sigma\\{\\ell>t\\}$. The nonnegative difference $C_\\beta-C_\\alpha$ has minimum zero at $t$, so its left derivative is nonpositive and its right derivative nonnegative. This gives the stated inequalities. If the target boundary is null, the bounds $\\alpha\\{\\ell\\ge t\\}\\le\\beta\\{\\ell\\ge t\\}=\\beta\\{\\ell>t\\}\\le\\alpha\\{\\ell>t\\}$ force equality.\n\nIn a martingale coupling $(X,Y)$, the conditional Jensen defect of the hinge is nonnegative and has integral zero. Where $\\ell(X)<t$, its vanishing means $\\mathbb E[(\\ell(Y)-t)_+\\mid X]=0$, so $\\ell(Y)\\le t$ almost surely. Where $\\ell(X)>t$, subtract the row mean $\\ell(X)-t$ from the hinge expectation and use $(a)_+-a=(-a)_+$ to get $\\ell(Y)\\ge t$. On $\\ell(X)=t$ the first argument gives $\\ell(Y)\\le t$ and the mean forces equality.\n",
+  "source_candidate_ids": [
+    "b5369aed13dad06b"
+  ],
+  "source_candidate_sha256": {
+    "b5369aed13dad06b": "5e4bfc9eaf1a5cd29a78ec0f1d297291207bc5fe51af81e420c4c38439fe5158"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b5369aed13dad06b",
+      "locator": "b5369aed13dad06b:01 §1, (1)–(2) and the final conditional-Jensen paragraph"
+    }
+  ],
+  "statement": "Let $\\alpha\\preceq_{\\rm cx}\\beta$ be compactly supported finite nonnegative measures of equal mass. For affine $\\ell$, if $\\int(\\ell-t)_+\\,d\\alpha=\\int(\\ell-t)_+\\,d\\beta$, then\n$$\n\\beta\\{\\ell\\ge t\\}\\ge\\alpha\\{\\ell\\ge t\\},\\qquad\n\\beta\\{\\ell>t\\}\\le\\alpha\\{\\ell>t\\}.\n$$\nIf $\\beta\\{\\ell=t\\}=0$, the corresponding cap masses agree and $\\alpha\\{\\ell=t\\}=0$. In any martingale coupling, a row starting strictly below or above threshold stays in the corresponding closed side almost surely, and a row starting on the threshold stays on it.",
+  "subgoal_id": "pk-intake-pk-w35-density-stop-loss-contact",
+  "title": "Cap masses at a contact of stop-loss curves"
+}

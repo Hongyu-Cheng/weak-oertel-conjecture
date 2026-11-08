@@ -1,0 +1,28 @@
+{
+  "advances": "Directional mixed volume and cap response, with separate fixed and moving threshold formulas. No sign for normalized depth is asserted.",
+  "author": "PK-research-agent",
+  "candidate_id": "200b787a117477f5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:01:59.468197+00:00",
+  "depends_on": [
+    "0e160cd57a1b26fa"
+  ],
+  "draft_key": "pk-w35-homothetic-green-cap-variation",
+  "kind": "lemma",
+  "proof": "The Green theorem gives actual fibers supported by the same ray inequalities, with offsets $h_{K_j}(r)+t\\delta_j(r)$. For each fiber, work in a bounded ball containing all small perturbations, which exists by uniform support convergence. Its volume change can occur only within $O(t)$ of the finitely many original ray planes. On a compact piece of the relative interior of one facet, every other row has strict slack and the facet sweeps a signed strip of normal thickness $t\\delta_j(r)/\\|r\\|$. The contribution from edges, lower-dimensional contacts of missing facets, or intersections of different nonparallel strips is $o(t)$: within each original ray plane restrict away from a fixed small neighborhood of these lower-dimensional sets, use the exact strip formula on the remaining compact patches, and send the size of the omitted neighborhood to zero. The omitted part has plane area tending to zero in the bounded ball and lies in strips of uniformly $O(t)$ thickness. Distinct parallel planes are separated for small $t$. For $d=1$ the existing facets are endpoints with counting measure and distinct endpoints are separated. This proves the total derivative, including at coarser endpoint fans.\n\nWith fixed endpoints the Green theorem makes the strips outward. On a facet patch, Fubini and dominated convergence along the outward normal segment give the stated limiting indicator. On a coincident plane the outward side may be inside or outside the cap, and that choice determines the limiting trace. For a pure-base cap the indicator is constant throughout each fiber, including when the cap boundary contains it. Under the nullity assumption, at almost every point of each moving facet the original cap margin is strict, so either sign of the strip contributes with the original indicator. The same holds for the shifted threshold for each fixed speed, since the original strict margin dominates its $O(t)$ shift. The strip on a stationary facet is zero away from the omitted lower-dimensional neighborhoods. This proves the signed and shifted claims with the same error argument.\n\nIn the plane the exposed face at $r$ is the Minkowski interpolation of two parallel segments or points, and their lengths add with the interpolation coefficients. Thus $a_{jr}=(1-j/N)a_{0r}+(j/N)a_{Nr}$. Symmetry of $G$ and its inverse identity give $\\sum_{j=1}^{N-1}G_{ji}=i(N-i)/2$ and $\\sum_{j=1}^{N-1}jG_{ji}=i(N^2-i^2)/6$: the first quadratic and second cubic vanish at both endpoints and have discrete second differences one and $i$, respectively. Multiplying the affine expression for $a_{jr}$ by the Green column and summing gives the result.\n\nFor the four-site calibration $A=\\operatorname{conv}\\{0,e_1,e_2\\}$, $B=[0,1]^2$, $N=3$, the endpoint coefficients $(a_{0r},a_{3r})$ are $(1,1)$ at $-e_1,-e_2$, $(0,1)$ at $e_1,e_2$, and $(1,0)$ at $e_1+e_2$ (the triangular edge has length $\\sqrt2$). The two mass derivatives are therefore $(1,1)$, $(4/9,5/9)$ and $(5/9,4/9)$ respectively. Taking both modes at both positive cardinal rays gives mass derivative two.\n",
+  "source_candidate_ids": [
+    "ed6a06822db211dc"
+  ],
+  "source_candidate_sha256": {
+    "ed6a06822db211dc": "ebcefd7be91f1ec8c7023b8c8a221455fd159f73ae55644f42d5e1e69c0b78b9"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ed6a06822db211dc",
+      "locator": "ed6a06822db211dc:04 §5, (13)–(17)"
+    }
+  ],
+  "statement": "Use the actual Minkowski chain, fan and feasible direction $\\delta$ of the discrete Green theorem. For each ray $r$ and site $j$, let $F_{jr}$ be the original facet with normal $r$, with zero area and integrals if that facet is absent, and put $a_{jr}=\\mathcal H^{d-1}(F_{jr})/\\|r\\|$. Write $\\mu_t$ for the summed $d$-volume of the actual deformed fibers. Then $M'(0+)=\\sum_{j,r}a_{jr}\\delta_j(r)$ for $M(t)=\\mu_t(\\mathbb R^{1+d})$.\n\nFor fixed endpoints and any fixed closed ambient cap $H$, its right mass derivative is $\\sum_{j,r}b_{H,jr}\\delta_j(r)$ where\n$$\nb_{H,jr}=\\frac1{\\|r\\|}\\int_{F_{jr}}\\lim_{\\varepsilon\\downarrow0}\\mathbf1_H(j,x+\\varepsilon r/\\|r\\|)\\,d\\mathcal H^{d-1}(x).\n$$\nFor signed velocities with a cap plane meeting each moving original facet in facet measure zero, use the ordinary closed-cap indicator on that facet. Under the latter nullity condition, for a cap $H(t)$ with the same normal and threshold shifted by $t v$, the difference $\\mu_t(H(t))-\\mu_0(H(t))$ is $t\\sum_{j,r}b_{H,jr}\\delta_j(r)+o(t)$ using the ordinary traces, for each fixed $v$.\n\nFor $d=2$, a unit fixed-endpoint Green mode at interior index $i$ and ray $r$ has mass derivative\n$$\n\\frac{i(N-i)}{6N}\\bigl((2N-i)a_{0r}+(N+i)a_{Nr}\\bigr).\n$$",
+  "subgoal_id": "pk-intake-pk-w35-homothetic-green-cap-variation",
+  "title": "Exact first variations of mixed volume and fixed caps in a Green chain"
+}

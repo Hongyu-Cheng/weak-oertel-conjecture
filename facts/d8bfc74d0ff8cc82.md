@@ -1,0 +1,31 @@
+---
+fact_id: d8bfc74d0ff8cc82
+kind: counterexample
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-pk-w35-reserves-mixed-global-exclusive
+depends_on: []
+verifier_run: 9810bc2662d6eb08
+target_match: null
+---
+
+## Source
+
+- [ba063d022876bfc9](../candidates/ba063d022876bfc9.json), ba063d022876bfc9:01 The convex body and its two fibers; Five explicit closed halfspaces; Exact exclusive-volume calculation.
+
+## Statement
+
+In $\mathbb Z\times\mathbb R^2$ there is a compact convex body with mixed volume $M=1$ and five nonvertical closed halfspace caps of common mass $\tau M$, $\tau=6/25$. Their open interiors cover the entire mixed trace and each is necessary. For $m=2$, they satisfy $k=5\le3m$ and $\tau<1/(2m)$, but the volume $E$ covered by exactly one open cap is $4862/6075>(3/2)m\tau M=4374/6075$.
+
+## Proof
+
+Let $A=115/243$, $B=128/243$, $L=256/243$, and take the convex hull of $K_0=[0,A]\times[0,1]$ over base zero and $K_1=\operatorname{conv}\{(0,0),(L,0),(0,1)\}$ over base one. The hull is full-dimensional and has exactly the stated integer fibers, of areas $A$ and $L/2=B$; hence $M=1$. The five halfspaces are
+$$
+\begin{aligned}
+z+x&\le6/25,& x-2z&\ge A-6/25,\\
+2z-x/L-y&\ge53/40,& 2z+x/L&\ge93/40,& 2z+y&\ge93/40 .
+\end{aligned}
+$$
+The first two miss $K_1$, since $1+x\ge1$ and $x-2\le L-2<0<A-\tau$ there. On $K_0$ they give the intervals $x\le\tau$ and $x\ge A-\tau$, each of cap area $\tau$. Since $0<A-\tau<\tau<A$, the strict inequalities cover the rectangle and each has an open exclusive region. The last three miss $K_0$: their respective left sides are at most $0,A/L,1$, below their thresholds. At base one they are the barycentric caps $\lambda_i\ge13/40$, with $\lambda=(1-x/L-y,x/L,y)$. Each has area $B(27/40)^2=\tau$ and they cover strictly because $3(13/40)<1$. Each is necessary, for example at an interior point having its own barycentric coordinate $4/5$ and the other two $1/10$.
+
+The rectangle's two caps overlap in area $2\tau-A$, giving exclusive area $2A-2\tau=2834/6075$. On the triangle the common intersection has area $B(1-3(13/40))^2=B/1600=2/6075$. The area covered once there equals twice the triangle area minus the total cap areas plus the triple area, by the multiplicities $1,2,3$ on the covered regions. This gives $2B-3\tau+B/1600=2028/6075$. All cutting boundaries are null, so the open convention leaves these areas unchanged. Adding gives the claimed excess $488/6075$.

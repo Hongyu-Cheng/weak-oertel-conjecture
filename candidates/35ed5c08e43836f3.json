@@ -1,0 +1,28 @@
+{
+  "advances": "Optimizes base balance, with depth feasibility requiring a separate cap-slack estimate.",
+  "author": "PK-research-agent",
+  "candidate_id": "35ed5c08e43836f3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.206571+00:00",
+  "depends_on": [
+    "b1274a369dfa9af7"
+  ],
+  "draft_key": "pk-w35-trims-moment-gauge",
+  "kind": "theorem",
+  "proof": "The old positive weights balance at $j$, so $0\\in\\operatorname{relint}Q$: a proper supporting hyperplane through zero would force every positively weighted site onto it. If a nonnegative row of total $r>0$ represents $b$, then $b/r$ is a convex combination of the $v_z$; the converse follows by multiplying its coefficients by $r$. The zero vector is represented by the zero row. This gives the gauge formula and an attained row by compactness at fixed total. For positive rank, polar separation gives the support formula in the display: every polar functional gives a lower bound on the gauge, and a supporting functional at $b/\\rho_Q(b)$, when $b\\ne0$, can be normalized to support value one because zero is relatively interior. The polar is compact in $U$. The zero-rank formula is immediate. The box constraint only raises the minimum, and any optimal nonnegative row has each coordinate at most its total $\\rho_Q(b)$, which proves equality in the claimed local regime.\n\nThe removal box is feasible using $s_z=w_z(t)-d_z$. Any retained mixed source with base mean $j$ has a balanced row of masses, whose complementary row is feasible for removal, giving the upper bound. Apply b1274a369dfa9af7 with full $d$-volume to the target removed mass and first moment $(r_*,r_*j+b)$ of an optimal row. The continuous normal opposite to the prescribed retained normal is admissible because every measured fiber is full dimensional. The shared cut boundary is null, so the complementary closed cap has the optimal retained mass and centroid base $j$. Its positive mixed mass ensures interior in the ambient source and its true centroid lies in the cut.\n\nThe gauge is continuous and positively homogeneous, and $b=t b_1+o(t)$ by old balance. The capacities are bounded away from zero near zero, so the exact gauge regime applies and $r_* = t\\rho_Q(b_1)+o(t)$. Subtract this from the total enlarged mass. For $A>0$, $b_1/A$ is a convex combination of the growth sites. In positive rank the gauge equals one on the relative boundary and is less than one on the relative interior. If its value is one, an exposed proper face containing the average contains every positively weighted site, since the exposing functional is bounded above by its value at that average on all sites. The converse follows by evaluating the exposing functional. In zero rank the gauge vanishes and the relative-interior criterion still holds.\n",
+  "source_candidate_ids": [
+    "d77abe6ff171c6f3"
+  ],
+  "source_candidate_sha256": {
+    "d77abe6ff171c6f3": "d49f3a2f5f581f0990a9d592a4e1eadf0e1acee9dc46714455b838ca2d32a793"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d77abe6ff171c6f3",
+      "locator": "d77abe6ff171c6f3:04 §4, (9)–(13), local gauge and exact first-order gain criterion"
+    }
+  ],
+  "statement": "Let $D\\subseteq E_t$ in mixed measure, where $D,E_t$ are ambient convex bodies with the same nonempty finite set $P$ of positive full $d$-dimensional integer fibers, $d\\ge1$. Let $d_z=|D_z|>0$, $w_z(t)=|(E_t)_z|$, let the old true base mean $j$ be integer, and put $v_z=z-j$, $U=\\operatorname{span}\\{v_z:z\\in P\\}$, $Q=\\operatorname{conv}\\{v_z:z\\in P\\}$. For $b=\\sum_z w_z(t)v_z$ define the minimum removal mass $r_*(b;w)$ by the box constraints $0\\le s_z\\le w_z(t)$, $\\sum_z s_zv_z=b$. Let $\\rho_Q$ denote the Minkowski gauge of $Q$ in $U$, with $\\rho_{\\{0\\}}(0)=0$. Then\n$$\n\\rho_Q(b)=\\min_{\\substack{s_z\\ge0\\\\\\sum_z s_zv_z=b}}\\sum_z s_z\n=\\max_{\\substack{a\\in U\\\\a\\cdot v_z\\le1\\ (z\\in P)}}a\\cdot b\\le r_*(b;w),\n$$\nwith $r_*(b;w)=\\rho_Q(b)$ whenever $\\rho_Q(b)\\le\\min_z w_z(t)$. The maximum mass with base mean $j$ obtainable from $E_t$ by a single closed cap, with any prescribed nonzero continuous normal, is $\\sum_z w_z(t)-r_*(b;w)$.\n\nSuppose $w_z(t)=d_z+t a_z+o(t)$ as $t\\downarrow0$, with $a_z\\ge0$, and put $A=\\sum_z a_z$, $b_1=\\sum_z a_zv_z$, $m=\\sum_z d_z$. The optimum retained mass is\n$$\nm+t[A-\\rho_Q(b_1)]+o(t).\n$$\nIf $A>0$, the first-order gain is strict exactly when $b_1/A\\in\\operatorname{relint} Q$. When $U\\ne\\{0\\}$, absence of strict gain is equivalent to all $v_z$ with $a_z>0$ lying in a single proper exposed face of $Q$.",
+  "subgoal_id": "pk-intake-pk-w35-trims-moment-gauge",
+  "title": "Local base-moment gauge and first-order one-cap gain"
+}

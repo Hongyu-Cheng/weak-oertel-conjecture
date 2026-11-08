@@ -1,0 +1,29 @@
+{
+  "advances": "Raw summed volume at a fixed actual anchor with contained affine-centered homothetic copies. The constants apply to the chosen template and leave the original mass intact.",
+  "author": "PK-research-agent",
+  "candidate_id": "9a39bd74c5e2d727",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.210824+00:00",
+  "depends_on": [
+    "6a7d56e450b3126f",
+    "c4499e906cb816d8"
+  ],
+  "draft_key": "pk-w35-shell-shape-constants",
+  "kind": "theorem",
+  "proof": "The paired-tail theorem 6a7d56e450b3126f applies to the uniform law on the full-dimensional centroid-zero $J$, yielding the lower bounds, including shift zero. The fractions of two opposite through-centroid caps sum to one, so the lesser fraction is at most $1/2$. A threshold beyond the absolute projection support gives opposite tails summing to one. This proves the two upper bounds.\n\nUse the disjoint decomposition in c4499e906cb816d8. At $p$ keep the own copy. At $z\\ne p$ take an inner copy of weight $\\sigma_z=\\min(w_z,w_{2p-z})$ and an outer shell of weight $v_z=w_z-\\sigma_z$, setting $v_p=0$. The accepted atomic identity is $D_p(w)=w_p+R_p(w)+D_p(v)$. It holds for these finite weights because generic closed through-$p$ base normals give exactly one center from every reflected pair and suffice for both infima. A small generic perturbation preserves all strict signs and can only omit atoms on the previous closed boundary.\n\nReduce any containing ambient cap to a parallel cap through $Y$. If its continuous normal $u$ is nonzero, affine placement gives opposite relative thresholds in each pair of equal inner copies. In template coordinates they are $s,-s$, so their combined capture is at least $2\\kappa(J)V\\sigma_z$. The own copy pays $\\beta(J)Vw_p$. Each shell whose center is captured pays $\\beta(J)Vv_z$: the parallel cap through the center has this lower fraction, since the two concentric scaled copies are nested and the through-center cut scales in each by the same $F_u(0)$. For a pure-base cap through $p$, at least one full inner copy per pair and the whole own copy are captured, and every captured shell contributes its full volume. These volumes dominate the same respective credits because $2\\kappa(J)\\le1$ and $\\beta(J)\\le1$.\n\nWriting $a(z)=a(p)+A(z-p)$ and using base normal $b$, the captured centers have $(b+A^{\\mathsf T}u)\\cdot(z-p)\\ge0$. Their total residual weight is at least $D_p(v)$, also when the effective normal vanishes and every center is captured. Adding the disjoint terms and substituting the atomic identity gives the first bound. In rank zero only the own fiber contributes. In any rank every containing cap pays at least $\\delta_p$ from that fiber, which is at least $\\beta(J)Vw_p$ by copy containment. No reflected copy or residual shell used this fiber, so the replacement proves the improvement.\n",
+  "source_candidate_ids": [
+    "2d5ed8c78661db43"
+  ],
+  "source_candidate_sha256": {
+    "2d5ed8c78661db43": "6724f191a32156f58f70716691cd324ee7bb93035a396094f124b72195648ce8"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2d5ed8c78661db43",
+      "locator": "2d5ed8c78661db43:01 §1, (1)–(2)"
+    }
+  ],
+  "statement": "Let $K_z$ be the continuous fibers of a compact convex body at integer bases $z\\in\\mathbb Z^n$, measured by summed $d$-dimensional volume, with $n\\ge0$ and $d\\ge1$. Let $J\\subset\\mathbb R^d$ be a convex body with centroid zero and volume $V$. For an affine map $a$ choose finitely supported $r_z\\ge0$ with $a(z)+r_zJ\\subseteq K_z$ whenever $r_z>0$. Let $Y=(p,a(p))$ be an actual mixed point and write $w_z=r_z^d$. Let $D_p(w)$ be the infimum of the weight in a closed base halfspace through $p$ and $R_p(w)$ the sum of $\\min(w_z,w_{2p-z})$ over distinct unordered reflected pairs about $p$. In rank zero take $D_p(w)=w_p$ and $R_p(w)=0$. Define the template constants by\n$$\nF_u(s)=V^{-1}|J\\cap\\{x:u\\cdot x\\ge s\\}|,\\quad\n\\beta(J)=\\inf_{u\\ne0}F_u(0),\\quad\n\\kappa(J)=\\tfrac12\\inf_{u\\ne0,\\ s\\in\\mathbb R}[F_u(s)+F_u(-s)].\n$$\nBoth constants lie in $[\\Gamma_d,1/2]$ for $\\Gamma_d=(d/(d+1))^d$. The raw depth at $Y$ is at least\n$$\nV\\big[\\beta(J)D_p(w)+(2\\kappa(J)-\\beta(J))R_p(w)\\big].\n$$\nWriting $\\delta_p$ for the ordinary raw depth of $a(p)$ in the actual fiber $K_p$, it is also at least\n$$\n\\delta_p+V\\big[\\beta(J)(D_p(w)-w_p)+(2\\kappa(J)-\\beta(J))R_p(w)\\big],\n$$\nwhich dominates the first bound.",
+  "subgoal_id": "pk-intake-pk-w35-shell-shape-constants",
+  "title": "Shape-specific reflected-core and residual-shell depth"
+}

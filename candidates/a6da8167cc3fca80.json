@@ -1,0 +1,28 @@
+{
+  "advances": "A pointwise upper bound on endpoint-only depth in terms of a directional shape gap. It supplies a quantitative converse to reflected containment.",
+  "author": "PK-research-agent",
+  "candidate_id": "a6da8167cc3fca80",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:06:28.270203+00:00",
+  "depends_on": [
+    "ab471fe293627e1a"
+  ],
+  "draft_key": "pk-w35-reflected-support-gap",
+  "kind": "lemma",
+  "proof": "The width $w=h_A(u)+h_A(-u)$ is positive. If the support gap $h_A(u)-h_{C'}(u)$ is nonpositive, the bound for that $u$ is the pure base upper bound $a$. Otherwise let $v\\in A$ attain $h_A(u)$ and put $e=e_y(u)$. The copy $v+e(A-v)$ is contained in $A$, has volume $ae^d$, and its minimum $u$-value is $h_A(u)-ew\\ge h_{C'}(u)$. The closed halfspace $H=\\{x:u\\cdot x\\ge h_{C'}(u)\\}$ takes this copy and only a null supporting trace of $C'$. Its closed opposite halfspace therefore has signed discrepancy $|C'\\cap H^{\\mathrm{opp}}|-|A\\cap H^{\\mathrm{opp}}|\\ge b-a+ae^d$. By pk-w35-reflected-discrepancy, $p(y)\\le a(1-e^d)$. This holds also when $e=1$, when the copy is all of $A$. Taking the infimum of the upper bounds proves the formula. For a common affine map with linear part $L$ the translation cancels in the support difference and the width. Both quantities are evaluated at $L^\\mathsf{T}u$ in the original coordinates, which ranges over all nonzero normals.\n",
+  "source_candidate_ids": [
+    "e18e6db2f3e079d5"
+  ],
+  "source_candidate_sha256": {
+    "e18e6db2f3e079d5": "50f1f35072b89cd55c21019ee86063fc2efd1a1533321a9f4cbd4fc32028079c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e18e6db2f3e079d5",
+      "locator": "e18e6db2f3e079d5:03 §3 (5b)"
+    }
+  ],
+  "statement": "For $d\\ge1$, let $A,C\\subset\\mathbb R^d$ be full-dimensional compact convex bodies of volumes $0<a=|A|\\le b=|C|$. Let $p(y)$ be raw closed ambient halfspace depth at $(0,y)$ of the endpoint-only volume measure with $A,C$ at bases $-1,1$. Put $C'=2y-C$, let $h_K$ be the support function of $K$, and set $e_y(u)=\\min\\{1,(h_A(u)-h_{C'}(u))_+/(h_A(u)+h_A(-u))\\}$ for $u\\ne0$. Then $p(y)\\le a(1-\\sup_{u\\ne0}e_y(u)^d)$. The supremum of the gap-to-width ratio is invariant under a common invertible affine change of the continuous coordinates of $A,C,y$.",
+  "subgoal_id": "pk-intake-pk-w35-reflected-support-gap",
+  "title": "A support gap forces a quantitative two-layer depth loss"
+}

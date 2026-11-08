@@ -1,0 +1,30 @@
+{
+  "advances": "An actual strict-slack example with all caps at the new true centroid. The starting mass is already greater than half that of the ambient source.",
+  "author": "PK-research-agent",
+  "candidate_id": "e41b106a02f63a0b",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.206757+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-trims-rectangle-moment-correction",
+  "kind": "theorem",
+  "proof": "Both lifted hulls have the stated actual traces because the two endpoint rectangles' Minkowski midpoint lies in the middle rectangle, and the end bases are exposed. They have ambient interior and $D\\subseteq C$. Along the common Minkowski interpolation the endpoint side lengths are $(1+3t,1)$ and $(1+t,1+t)$. Their midpoint side lengths are $1+2t,1+t/2$, bounded by $3,3/2$, respectively, so these are again the actual end fibers with the unchanged middle rectangle. The base moment is $(1+t)^2-(1+3t)=-t(1-t)$. On bases $-1,0,1$ each unit of deleted mass can change the base moment by at most one, giving the lower bound $t(1-t)$ on correction mass.\n\nIn the centered construction remove the cap\n$$\nx_1-3(z+1)\\ge b_t,\\qquad b_t=\\tfrac12+\\tfrac12t+t^2 .\n$$\nIts threshold exceeds the maximum first coordinate of the middle and right rectangles, and the left rectangle is trimmed at $b_t$. Its retained first-coordinate interval starts at $-(1+3t)/2$, has length $(1+t)^2$, and has midpoint $-t(1-t)/2$. The removed strip has width $t(1-t)$ and meets the old left square only in a possible null boundary since $b_t\\ge1/2$. The complementary closed cap contains every old fiber. Its equal endpoint areas give base balance, and the middle and right centers are both zero. This gives the displayed true centroid and the exact retained mass. The boundary has zero mixed mass. For the lower-left-corner version use threshold $(1+t)^2$ in place of $b_t$. The actual interpolants have the same midpoint containment, and this cap likewise meets only the left fiber in positive mass, trimming it to $[0,(1+t)^2]\\times[0,1]$ and preserving the old fiber. Its retained endpoint masses agree.\n\nThe old centered body is centrally symmetric about $(0,0)$, so every closed through-centroid cap carries at least half its mass, $13/4$. The sum of old planar chord lengths at arbitrary levels and unit continuous normals is bounded by the sum of the three diameters, $2\\sqrt2+(3/2)\\sqrt5<7$. Translating a cap from the old to the new centroid loses at most $7\\|c'\\|$ in old mass by Fubini, independently of the base tilt. A pure-base cap does not move. Thus every through-new-centroid cap contains at least $13/4-7\\|c'\\|$ of the old mass, which is retained in the corrected source. Containing caps are no smaller than their parallel through-mark caps. At $t=1/10$ the exact values are $c'_1=-1089/138400$, $m'=173/25$, and $13/4-7(1089/138400)=442177/138400>692/225$.\n",
+  "source_candidate_ids": [
+    "d77abe6ff171c6f3"
+  ],
+  "source_candidate_sha256": {
+    "d77abe6ff171c6f3": "d49f3a2f5f581f0990a9d592a4e1eadf0e1acee9dc46714455b838ca2d32a793"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d77abe6ff171c6f3",
+      "locator": "d77abe6ff171c6f3:08 §7, (19)–(21), centered exact rectangle repair and certified depth"
+    },
+    {
+      "candidate_id": "d77abe6ff171c6f3",
+      "locator": "d77abe6ff171c6f3:07 §6, (18), exact rectangle repair"
+    }
+  ],
+  "statement": "In one integer and two continuous dimensions, take positive fibers at $-1,0,1$. Let $D$ have centered unit endpoint squares and centered middle rectangle of side lengths $3,3/2$. Let $C$ have the same middle fiber and centered endpoint rectangles of side lengths $(4,1)$ and $(2,2)$, respectively, with lifts forming the ambient convex hulls. Along the common fiberwise Minkowski enlargement at $t\\in[0,1]$, one closed removal cap corrects the base centroid to zero, removes exactly the least possible mass $t(1-t)$, and retains all old mixed mass. The resulting mass and continuous centroid are\n$$\nm'=\\frac{13}{2}+4t+2t^2,\\qquad c'=\\left(-\\frac{(1+t)^2t(1-t)}{2m'},0\\right).\n$$\nAt $t=1/10$ every closed ambient cap containing the true mixed centroid has mass at least $442177/138400>(4/9)m'$, with $m'=173/25>13/2$.\n\nThe same exact minimum-removal and retained-mass formulas apply if the centered rectangles in the construction are replaced by rectangles with the same side lengths and lower-left corner at zero.",
+  "subgoal_id": "pk-intake-pk-w35-trims-rectangle-moment-correction",
+  "title": "Exact rectangle correction with true-centroid depth slack"
+}

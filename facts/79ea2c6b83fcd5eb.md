@@ -1,0 +1,26 @@
+---
+fact_id: 79ea2c6b83fcd5eb
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-pk-w35-reflected-asymmetric-middle-budget
+depends_on: ["4d7f724b2dd79bfd", "6769574fc1bd9f8d"]
+verifier_run: cf8524940ac9784c
+target_match: null
+---
+
+## Source
+
+- [81c79b42fe3af95e](../candidates/81c79b42fe3af95e.json), 81c79b42fe3af95e:05 §4 (7)–(9), sharp scalar threshold and nested-square example.
+
+## Statement
+
+Let $A,C\subset\mathbb R^d$, $d\ge1$, be centrally symmetric compact convex bodies of positive volumes $a\le b$ placed at bases $-1,1$. Use a base-affine shear and translation to put both symmetry centers at zero. Let $B$ be a compact convex middle fiber containing $D=(A+C)/2$, and put $U=|B|$, $w=|D|$, $I=|A\cap C|$, $K=\max\{b,w+a+I\}/2$, and $\Gamma_d=(d/(d+1))^d$. The actual three-fiber body has maximum raw closed-halfspace depth at least $\max\{\Gamma_d U,K\}$. This bound reaches $\Gamma_d(U+a+b)/2$ for every scalar $U>0$ precisely if $\max\{b,w+a+I\}\ge2\Gamma_d(a+b)$. The normalized estimate as a function of $U>0$ has minimum $K/(K/\Gamma_d+a+b)$ at $U=K/\Gamma_d$. The condition need not hold: for $d=2$, $C=[-1/2,1/2]^2$ and $A=C/2$, the two sides are $17/16$ and $10/9$.
+
+## Proof
+
+The shear subtracts the affine interpolation of the endpoint centers from the continuous variable; it preserves the base coordinates, each fiber volume, and halfspace incidences. The compatibility inclusion makes the lifted hull's three actual integer fibers the displayed bodies. Apply 6769574fc1bd9f8d in dimension $d$ to $B$ at its full-volume centroid. Every containing ambient cap restricts to a containing own-fiber cap or the whole fiber, giving depth at least $\Gamma_d U$. At the larger endpoint's symmetric center the analogous own-fiber argument gives at least $b/2$.
+
+At $(0,0)$, which belongs to the middle fiber, a nonvertical through-point cap takes half of the symmetric subbody $D$ and at least $(a+I)/2$ from the two endpoints by pk-w35-reflected-symmetric-endpoint-intersection. A pure base cap includes $B$ on the boundary and a full endpoint, of mass at least $U+a\ge(w+a+I)/2$ because $w\le U$ and $I\le a$. Thus this third point supplies at least $(w+a+I)/2$, proving the raw lower bound by choosing among the three points.
+
+The ratio $\max\{\Gamma_d U,K\}/(U+a+b)$ decreases up to $U=K/\Gamma_d$ on its constant-numerator branch and increases thereafter on its $\Gamma_d U$ branch. Substituting that value gives the asserted minimum. It is at least $\Gamma_d/2$ precisely if $K\ge\Gamma_d(a+b)$. This calculation concerns only the displayed lower estimate as a scalar function and asserts no body realizing a minimum of actual depth. In the nested-square example, $b=1$, $a=I=1/4$ and $w=9/16$, giving $17/16<10/9$.

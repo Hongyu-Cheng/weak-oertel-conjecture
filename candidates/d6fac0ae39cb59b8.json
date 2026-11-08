@@ -1,0 +1,26 @@
+{
+  "advances": "Threshold perturbation of an auxiliary compact midpoint-law optimization.",
+  "author": "PK-research-agent",
+  "candidate_id": "d6fac0ae39cb59b8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:07:09.317351+00:00",
+  "depends_on": [],
+  "draft_key": "pk-w35-density-threshold-derivative",
+  "kind": "theorem",
+  "proof": "For one hinge the pointwise error after subtracting the linear term $-\\varepsilon v_j\\mathbf1_{\\{\\ell_j\\ge t_j\\}}$ is bounded by $|\\varepsilon v_j|\\mathbf1_{\\{|\\ell_j-t_j|\\le|\\varepsilon v_j|\\}}$. Integrating gives $o(\\varepsilon)$ uniformly by common domination and nullity of the cut. The finite sum therefore has a uniform expansion. Each cap is a continuity set for weak convergence within $\\mathcal D$, so the linear term is continuous there.\n\nThe objective is continuous in the law and uniformly Lipschitz in the thresholds by the common finite mass bound, giving attained maxima and continuity of $V$. Using a maximizer at $t$ with largest linear term gives the lower bound. For the upper limit, take a weakly convergent subsequence of displaced maximizers along a sequence of positive displacements approaching zero. Its limit maximizes at $t$ by the uniform expansion and continuity of the objective. Subtracting $V(t)$ from the displaced maximum gives at most the corresponding linear term times $\\varepsilon$ plus the uniform error, since the same law at $t$ has value at most $V(t)$. Dividing and passing to the subsequence limit proves the upper bound. Equality of the values near $t$ transfers the derivative directly. For nonnegative weights such equality follows if every unrestricted law has a capped convex-order improvement within the same feasible class.\n",
+  "source_candidate_ids": [
+    "b5369aed13dad06b"
+  ],
+  "source_candidate_sha256": {
+    "b5369aed13dad06b": "5e4bfc9eaf1a5cd29a78ec0f1d297291207bc5fe51af81e420c4c38439fe5158"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b5369aed13dad06b",
+      "locator": "b5369aed13dad06b:04 §3, (3)–(4), threshold derivative of a compact capped transport value"
+    }
+  ],
+  "statement": "Let $\\mathcal D$ be a nonempty weakly compact family of finite nonnegative laws on a compact physical set, all dominated by $B\\omega$ for a finite measure $\\omega$ and a finite constant $B\\ge0$. For finitely many affine $\\ell_j$ and real coefficients $c_j$, set $V(t)=\\max_{\\rho\\in\\mathcal D}\\sum_j c_j\\int(\\ell_j-t_j)_+\\,d\\rho$ and let $\\mathcal A(t)$ be its maximizers. If $\\omega\\{\\ell_j=t_j\\}=0$ for every $j$, then for every direction $v$,\n$$\n\\lim_{\\varepsilon\\downarrow0}\\frac{V(t+\\varepsilon v)-V(t)}{\\varepsilon}\n=\\max_{\\rho\\in\\mathcal A(t)}\\left[-\\sum_j c_jv_j\\rho\\{\\ell_j\\ge t_j\\}\\right].\n$$\nIf a repair identifies the unrestricted and capped optimal values at $t$ and all sufficiently nearby thresholds, the same formula holds for the unrestricted value.",
+  "subgoal_id": "pk-intake-pk-w35-density-threshold-derivative",
+  "title": "Directional derivatives of capped hinge transport values"
+}

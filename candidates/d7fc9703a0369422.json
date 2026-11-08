@@ -1,0 +1,29 @@
+{
+  "advances": "An exact varying-source superlevel obstruction for reflected pairs, with all retained original cap masses. The source is allowed to vary across anchors.",
+  "author": "PK-research-agent",
+  "candidate_id": "d7fc9703a0369422",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:06:28.271672+00:00",
+  "depends_on": [
+    "6a7d56e450b3126f",
+    "2acc8bc803acf1c0"
+  ],
+  "draft_key": "pk-w35-reflected-pentagon-pair-superlevel",
+  "kind": "counterexample",
+  "proof": "The polygon's five supporting inequalities are $-1\\le y\\le1$, $x+2y\\ge-3$, $2x-3y\\le3$, and $x-5y\\ge-3$, as is checked from the five successive edges. Substituting $y=-1,0,1$ gives the exact lattice rows\n$$\n\\{(-1,-1),(0,-1)\\},\\qquad\n\\{(j,0):-3\\le j\\le1,\\ j\\in\\mathbb Z\\},\\qquad\n\\{(2,1),(3,1)\\}.\n$$\nAt $p_-$ the reflected set is the whole middle row. At $p_0$ it is $\\{(-1,0),(0,0),(1,0)\\}$. At $p_+$ it is $\\{(-1,-1),(0,-1),(1,0),(2,1),(3,1)\\}$. These are obtained by matching each point to its reflection $2p-z$ in the displayed complete list.\n\nFor any such retained base with $N$ points, the through-$(p,g)$ caps with a nonzero continuous normal have opposite scalar shifts on each reflected pair of identical simplex laws. Apply 6a7d56e450b3126f to uniform $X$ on $F$ with that normal and the absolute value of the shift. Each pair contributes at least $2\\Gamma_d v$, and the same assertion at shift zero gives at least $\\Gamma_d v$ for the own fiber. The through-point pure base caps include the own fiber and at least one member per pair, thus at least $(N+1)v/2\\ge N\\Gamma_d v$. Here $\\Gamma_d\\le1/2$ follows from $(1+1/d)^d\\ge2$ by the binomial expansion. Translate any containing boundary to the point to extend the lower bound. For any $x\\in F$, apply the ordinary simplex maximum in 2acc8bc803acf1c0 to the same $F$. Extending each ordinary closed halfspace containing $x$ across all base coordinates multiplies its cap mass by $N$, so $D_p(x)\\le N\\Gamma_d v$. These arguments apply even when the retained bases have lower affine dimension.\n\nThe two outer anchors are congruent modulo two and have midpoint $p_0$. The points $(p_-,g)$ and $(p_+,g)$ qualify, but even the best $x$ at $p_0$ fails. Thus the projected qualifying anchors cannot be the trace of a convex set on $P_0$, and the full mixed qualifying points cannot be a convex trace on $P_0\\times F$. This obstructs an application of convex-set Helly theory directly to these varying-source superlevels.\n",
+  "source_candidate_ids": [
+    "f220bd0ba4388fb5"
+  ],
+  "source_candidate_sha256": {
+    "f220bd0ba4388fb5": "042dbe4c4daa8dd8dce8eb49d22090e212eaf869d838e36ca5bfb0914b4b0cda"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f220bd0ba4388fb5",
+      "locator": "f220bd0ba4388fb5:02 §2, (3)–(4), and §4"
+    }
+  ],
+  "statement": "Let $Q_0=\\operatorname{conv}\\{(-3,0),(-1,-1),(0,-1),(3,1),(2,1)\\}$ and $P_0=Q_0\\cap\\mathbb Z^2$. Let $F\\subset\\mathbb R^d$ be any full-dimensional simplex of volume $v>0$, $d\\ge1$, with centroid $g$, and set $\\Gamma_d=(d/(d+1))^d$. At an integer anchor $p$ retain all actual fibers of $Q_0\\times F$ with bases in $P_0[p]=\\{z\\in P_0:2p-z\\in P_0\\}$. Use their original unnormalized volumes, and write $D_p(x)$ for raw depth at $(p,x)$ over closed ambient halfspaces of this retained measure. For anchors $p_-=(-1,0),p_0=(0,0),p_+=(1,0)$, the respective maxima over $x\\in F$ are $5\\Gamma_d v,3\\Gamma_d v,5\\Gamma_d v$, attained at $g$. At level $4\\Gamma_d v$ the projected and full mixed superlevel traces fail same-parity midpoint closure, with no qualifying point anywhere on the middle fiber.",
+  "subgoal_id": "pk-intake-pk-w35-reflected-pentagon-pair-superlevel",
+  "title": "Exact reflected-depth superlevels fail same-parity midpoint closure"
+}

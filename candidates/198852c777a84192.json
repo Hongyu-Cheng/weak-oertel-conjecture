@@ -1,0 +1,36 @@
+{
+  "advances": "A fixed compatible deformation and cap menu with prescribed physical marginals. Partial source retention yields a lower bound for actual couplings; the full loss is fixed.",
+  "author": "PK-research-agent",
+  "candidate_id": "198852c777a84192",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:04:03.213036+00:00",
+  "depends_on": [
+    "b22985ed3620f212"
+  ],
+  "draft_key": "pk-w35-shell-selected-source-signatures",
+  "kind": "lemma",
+  "proof": "On each contracted site, the unnormalized mass of the cone from the interior contraction center to a boundary set scales by $r^d$ under a radial dilation of ratio $r$. In the removed shell the boundary direction thus has law $\\nu_z$, and the independent radial factor has density $d r^{d-1}/[1-(1-\\varepsilon)^d]$ on $[1-\\varepsilon,1]$. The shell mass divided by $\\varepsilon$ tends to $\\alpha_z$. The cap indicator converges to the boundary indicator for almost every boundary point, uniformly in the allowed radial factors at each point of nonzero margin. Dominated convergence gives the asserted derivative. Taking expectations term by term in the finite sum defining $C_\\theta$ uses only the one-bit marginals. Since $B_\\theta+(C_\\theta-B_\\theta)=C_\\theta$ pointwise, any nonempty family of couplings with these marginals has the same full-surplus objective, even under extra gluing restrictions.\n\nIf the affine cap margin is nonnegative at a barycentric output, at least one of its source margins is nonnegative. Thus the actual source bits satisfy every completion constraint. There are finitely many assignments, at least one feasible for every actual sample, and the minimum is no greater than its actual cost. Retaining more actual bits shrinks the feasible set, and retaining them all fixes the cost. The bound concerns the law of an actual coupling, so a Boolean table alone supplies no lift of its laws to the physical marginals.\n\nFor the example, b22985ed3620f212 gives the same five centered rectangles with halfwidth pairs $(1,1),(5/2,7/4),(3,2),(5/2,7/4),(1,1)$, the compatible contraction for $0\\le\\varepsilon<1/7$, and the old mass $67$ and depth $67/2$. For the three cap margins $x+y+10z,-x+y+10z,-y+10z$, the actual coarea weights are $(3/10,3/10,2/5)$ and the shell coefficients at $s,a,b$ are $(35,35,8)$. All three margins are strictly negative on $s$ and strictly positive on $a,b$. The actual threshold is $\\beta(-M')=39$ since $\\beta=1/2$ and $-M'=78$. The same accepted fact gives exact loss $43$ in each tilted row, loss $39$ in each cylindrical row, identical joint target signatures, and strict global normalized decrease for the tilted cover.\n\nThe relations are $0=(s+a)/2=(2s+b)/3$. On a cone-uniform square boundary point $(X,Y)$ the corresponding outputs are $((5/2)X,(7/4)Y)$ and $(2X,(3/2)Y)$, from the matching coordinate-scaled source cone laws. In each cap the two output bits $t_1,t_2$ each have mean $1/2$ by symmetry. In the first cap their intersection has probability $79/160$: on the top edge their cut points differ by $1/20$, giving a directed difference of probability $(1/4)(1/40)=1/160$; the bottom edge gives the reverse difference and the vertical edges contribute neither. Reflection in the vertical axis gives the same intersection for the second cap, and the third uses identical output signs and intersection $1/2$.\n\nFor one row, the implications require a hit in $\\{s,a\\}$ when $t_1=1$ and in $\\{s,b\\}$ when $t_2=1$. With no retained bits the cheapest separate payments are $35t_1+8t_2$ and when both are required the shared source can replace both for $35$. The exact empty cost is therefore $35t_1+8t_2-8t_1t_2$. Retaining just $s$ sets its bit to zero, giving $35t_1+8t_2$. Retaining $a$ forces payment $35$, and the cheapest remaining hit for the second output costs $8$, giving $35+8t_2$. Retaining $b$ likewise gives $8+35t_1$ because either hit for the first output costs $35$. Each of these last two formulas is unchanged by retaining $s$ as well, since the exclusive source gives a cheapest completion. Retaining both $a,b$ gives the constant $43$, with or without $s$. These minima apply row by row since the constraints involve no omitted bits from other rows. The weighted overlap equals $(3/5)(79/160)+(2/5)(1/2)=397/800$, and averaging the stated minima gives the eight values. The strict payment is forced by the two known captured source marginals.\n",
+  "source_candidate_ids": [
+    "a4838c03130dd4a9"
+  ],
+  "source_candidate_sha256": {
+    "a4838c03130dd4a9": "09ba297822205f5b79fb3c57a0620352bdaed8bd2bc1f9fb20a49c0f5f2b7816"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a4838c03130dd4a9",
+      "locator": "a4838c03130dd4a9:01 §1, (1)–(5)"
+    },
+    {
+      "candidate_id": "a4838c03130dd4a9",
+      "locator": "a4838c03130dd4a9:03 §2, (4), (7)–(8)"
+    },
+    {
+      "candidate_id": "a4838c03130dd4a9",
+      "locator": "a4838c03130dd4a9:04 §3, (9)–(10), eight-subset table and cylindrical/tilted comparison"
+    }
+  ],
+  "statement": "Fix an actual compatible simultaneous contraction of finitely many full-dimensional fibers $K_z$ about interior centers by $1-\\varepsilon$, leaving the other measured fibers unchanged. Use summed $d$-volume, let $\\alpha_z=d|K_z|$ on the contracted sites, and let $\\nu_z$ be the corresponding normalized boundary cone laws. Fix finitely many closed ambient halfspaces $H_j$ with boundaries null for all the lifted source laws and fixed weights $\\theta_j\\ge0$ summing to one. Under any coupling of the $\\nu_z$, let $\\sigma_{zj}$ record source membership in $H_j$ and let $\\tau_{Ej}$ record membership of the barycentric output of a prescribed anchored relation $E$, with nonnegative barycentric weights summing to one. Write $C_\\theta(\\sigma)=\\sum_{j,z}\\theta_j\\alpha_z\\sigma_{zj}$ and $L_j$ for the actual raw loss derivative in $H_j$. Then for every such coupling\n$$\nL_j=\\sum_z\\alpha_z\\nu_z\\{x:(z,x)\\in H_j\\},\\qquad\n\\mathbb E C_\\theta=\\sum_j\\theta_j L_j.\n$$\nFor any target-signature bound $B_\\theta(\\tau)\\le C_\\theta(\\sigma)$ on the actual samples, adding its full surplus $C_\\theta-B_\\theta$ gives the same fixed expectation.\n\nFor a subset $R$ of retained sources, let $c_R(\\sigma_R,\\tau)$ minimize $C_\\theta$ over all Boolean completions of the retained bits subject to $\\tau_{Ej}=1\\Rightarrow\\sum_{z\\in E}\\sigma_{zj}\\ge1$. This gives $\\mathbb E c_R\\le\\sum_j\\theta_j L_j$, and for the same actual sample law it is pointwise nondecreasing as $R$ grows, with equality at full retention.\n\nFor the compatible five-rectangle deformation of b22985ed3620f212, retain the tilted critical circuit and label the contracted sites $s=-1,a=1,b=2$. Under the shared square cone gluing the exact values for $R=\\varnothing,\\{s\\},\\{a\\},\\{b\\},\\{s,a\\},\\{s,b\\},\\{a,b\\},\\{s,a,b\\}$ are respectively $1753/100,43/2,39,51/2,39,51/2,43,43$. Only sets containing both positive exclusive sources give a strict lower-bound payment over the response threshold $39$ in this relaxation.",
+  "subgoal_id": "pk-intake-pk-w35-shell-selected-source-signatures",
+  "title": "Exact fixed shell loss and lower bounds from retained source signatures"
+}

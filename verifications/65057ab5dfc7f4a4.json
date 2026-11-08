@@ -1,0 +1,54 @@
+{
+  "candidate_id": "2f449efaa5ae943b",
+  "candidate_sha256": "119890fab74550e1617127a0b183a314c52c9777e8667b7dbb51f56d5c805439",
+  "checked_dependency_candidate_sha256": {
+    "2acc8bc803acf1c0": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232"
+  },
+  "checks": [
+    "Solving the four tetrahedron facets along the fixed vertical axis gives endpoints |x_1+x_2|−1 and 1−|x_1−x_2|. Their difference is 2(1−max(|x_1|,|x_2|)), with square projection. Shaking preserves all chord lengths and volume 8/3. The upper-end alignment gives the reflected pyramid.",
+    "The height-rescaled uniform volume is represented by the density 3r² and a conditionally uniform square of radius r. The proposed point rescales from height 12/25 to 6/25. Conditioning on Z and then pairing Z and −Z gives both displayed branches of g.",
+    "Reciprocal-cube convexity gives g≥h³, also in the saturated branch where g≥1/2. Exact integration gives the two branches of I. Checked 6859/15625>7/16, the transition value 475/961<9/16, and the expanded cubic with quadratic lower bound 273743/5500000>0.",
+    "The symmetric convolution of two uniforms yields a nonincreasing density for |Z| and the displayed uniform-mixture formula follows by integrating each linear piece with the terminal mass included. One zero coefficient gives the uniform case, both zero coefficients give the point evaluation, and neither causes a lost orientation.",
+    "Downward through-caps are complements up to null cutting planes, while zero height coefficient cuts each horizontal square in half. Thus every containing cap has normalized mass at least 7/16. This exceeds the exact tetrahedron maximum 27/64.",
+    "Matched the original scope and proof against eba4cea978b206ae:01 §§1–4, (1)–(9), tetrahedron-to-pyramid all-normal strict increase. The source bytes match the frozen input and pinned checkout."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "2acc8bc803acf1c0",
+      "candidate_sha256": "5022277fb61652b12bf4e619cc37dfff9475269f29534afabc436db78fd4b232",
+      "fact_sha256": "d723a90d8b085a401f611b136903b3e751c05bbebed3219fd24588e89ed96ce4",
+      "hypotheses": "Apply (12) to the ordinary full-dimensional tetrahedron with d=3. For every n≥1 apply (9)–(10) separately to both positive-volume convex bodies, with the complete binary product base. Their raw maxima are the ordinary raw maxima and the normalization scales by 2^(−n). For n=0 use the ordinary argument directly.",
+      "reviewed_proof_sha256": "985b3dbdcc98c63b1ba63f236c11170d9714cc5a6cdba6af26568d2f9e370fcf",
+      "reviewed_statement_sha256": "8222b1c3268f5a4fb65d04c6e4e448ab1a57a3a2e33b9855b7c92748ff4b2dfa"
+    }
+  ],
+  "finished_utc": "2026-11-08T22:15:00Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Already shows strict one-sided shaking increase on a different mixed body in continuous dimension one. It does not give the ordinary tetrahedron example, its specified axis, or the 7/16 bound at the pyramid mark.",
+      "fact_id": "07e33c3021f9813f",
+      "fact_sha256": "5f1ffe11eda4b84b2e7d5bc474fc4efd1b2186ad1f7073f4ec4544a0cc0000a9"
+    },
+    {
+      "comparison": "Uses the same square pyramid after reversing and rescaling height, but proves its stated ordinary bound at normalized reversed height 77/100 for a different reflected-tail obstruction. The present normalized reversed height is 19/25, and its claimed 7/16 bound and fixed-direction tetrahedron shake are different.",
+      "fact_id": "375904a176bca663",
+      "fact_sha256": "1ceded053f95cfd4bfdca6e47d8f6bb0b96700f56163f772938c7eadc859ff90"
+    }
+  ],
+  "readability": "The height orientation cases and the zero coefficient cases are explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "0f97fd9b90ac4c397961a63dd0066845448d7323b907e20af8ae419db7703915",
+  "reviewed_statement_sha256": "592eab2c3cff22bcf49fb241679e3eee0cf79314978291cb7ab3df9b7294ea4a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T22:07:08Z",
+  "summary": "The specified tetrahedron-to-pyramid shake increases maximum depth in both axis orientations, with the claimed all-normal mark and binary-product scaling.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

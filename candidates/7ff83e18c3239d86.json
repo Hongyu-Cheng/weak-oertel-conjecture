@@ -1,0 +1,29 @@
+{
+  "advances": "Conditional optimization over actual feasible couplings with a true hinge maximizer.",
+  "author": "PK-research-agent",
+  "candidate_id": "7ff83e18c3239d86",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T22:07:09.316718+00:00",
+  "depends_on": [
+    "30500dac5d00e722",
+    "ac53fe19fef9ec25"
+  ],
+  "draft_key": "pk-w35-density-source-compatible-hinges",
+  "kind": "theorem",
+  "proof": "The midpoint map is continuous. Convex-order tests against finite continuous convex functions cut out a closed, nonempty subset of $\\mathcal P$, so the continuous objective attains its maximum there. If $\\pi_0$ is a maximizer and $\\pi_1$ its repair, transitivity gives $\\nu\\preceq_{\\rm cx}\\rho_{\\pi_1}$. Each hinge integral has nonnegative increase, and their positively weighted sum cannot increase by maximality. Every increase is therefore zero. The stop-loss contact lemma gives the stated cap transfer.\n\nFor the marked assertion apply ac53fe19fef9ec25 to the two compact pairs of marginals, from $\\nu$ to $\\rho_{\\pi_0}$ and from $\\rho_{\\pi_0}$ to $\\rho_{\\pi_1}$. Start with the fixed mark law and take its prescribed physical mean as input to the first martingale. Use the second martingale conditional on the first midpoint. The tower property gives the same conditional midpoint mean under either law. Given each midpoint, draw the actual pair from the corresponding conditional of $\\pi_i$ on its midpoint. This preserves the prescribed endpoint marginals and the mark law. The construction only prescribes the conditional mean of the chosen maximizing midpoint law, not a pre-existing mark-to-midpoint joint law.\n",
+  "source_candidate_ids": [
+    "b5369aed13dad06b"
+  ],
+  "source_candidate_sha256": {
+    "b5369aed13dad06b": "5e4bfc9eaf1a5cd29a78ec0f1d297291207bc5fe51af81e420c4c38439fe5158"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b5369aed13dad06b",
+      "locator": "b5369aed13dad06b:02 §§2–2.1, weighted hinge maximum and marked source compatibility"
+    }
+  ],
+  "statement": "Let $\\mathcal P$ be a nonempty weakly compact class of finite couplings with fixed marginals on compact Euclidean endpoint sets, and let $\\rho_\\pi$ be the actual midpoint law. Let $\\nu$ be a compactly supported finite physical source law with $\\nu\\preceq_{\\rm cx}\\rho_\\pi$ for some $\\pi\\in\\mathcal P$. Assume every $\\pi\\in\\mathcal P$ admits a repair $\\pi'\\in\\mathcal P$ with $\\rho_\\pi\\preceq_{\\rm cx}\\rho_{\\pi'}$ and a specified density bound. For finitely many affine $\\ell_j$, thresholds $t_j$ and strictly positive coefficients $c_j$, the weighted hinge objective $\\sum_j c_j\\int(\\ell_j-t_j)_+\\,d\\rho_\\pi$ attains a maximum on $\\{\\pi\\in\\mathcal P:\\nu\\preceq_{\\rm cx}\\rho_\\pi\\}$. Its repair remains source-compatible and has contact at every included hinge. It transfers both cap masses whenever the corresponding boundary plane is null for the repair.\n\nIf a fixed finite law on a standard Borel mark space has a prescribed physical conditional mean map with pushforward $\\nu$, the two couplings can be realized with that mark law and those conditional midpoint means.",
+  "subgoal_id": "pk-intake-pk-w35-density-source-compatible-hinges",
+  "title": "Hinge maximization preserves selected caps after source-compatible repair"
+}

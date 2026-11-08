@@ -6,7 +6,7 @@ path, and the first run needs access to the mathlib dependency and its
 cache.
 
 ```sh
-python3 -I -B research/one-over-e-1387/check.py
+python3 -I -B research/one-over-e-dimension-1387/check.py
 cd lean
 lake exe cache get
 lake build

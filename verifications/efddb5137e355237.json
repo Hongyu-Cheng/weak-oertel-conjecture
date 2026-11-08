@@ -1,0 +1,61 @@
+{
+  "candidate_id": "e5e1f67c8221865e",
+  "candidate_sha256": "b922bdafb190160745642225bd5909ed4f942a19f22cae2b744b056577128733",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651"
+  },
+  "checks": [
+    "Checked the frozen note against 0549d69dcd95de34 §§1–5, equations (2)–(27), and 4202609a15fa8f99 §6 immediately before the triangle example. Both original JSON byte digests match. The latter is contextual; the cap proof is in the former.",
+    "The reflection fixing c_D changes the coordinate sum to 25/18 minus itself and exchanges all bounding planes. The center satisfies the inequalities strictly. The x_1 interval length is 11/18 minus |s'−7/18| over the entire seven-cube, with minimum 2/9.",
+    "Independent Fraction arithmetic for the reflected simplex integral gave 113149/184320, |D|=900611/7934371614720, 2^7|D|/(Gamma V)=6304277/4194304>3/2, and q=163840000000000000000/209509599832532483477. The diagonal determinant gives |C|=2 Gamma V; q lies strictly between zero and one.",
+    "The projection [-1,1] has only the three integer bases. The extreme sections equal their input polytopes. Equal endpoint coefficients at base zero reduce the only possible extra section to convex combinations with (A+C)/2, whose nonnegative coordinates sum to at most 123/125. The hull is rational and full dimensional. Central symmetry and null continuous cutting planes give the two endpoint own maxima, and the simplex fact supplies A(B)=Gamma V.",
+    "Checked the two high-barycentric caps: both contain all of A and strictly miss C, each having mass V(1−b_h)^8+a. Checked the seven low caps: both endpoint maxima are below the threshold with gap strictly above 1/720, giving mass V(1−b_l)^8 for each. The two high and seven low thresholds sum to 1, so all middle points, including boundary points, are covered by closed caps.",
+    "Checked each sign of the two A-caps and two C-caps. The non-target fibers are strictly excluded; the two signs cover the target fiber with mass a/2 per A-cap and Gamma V per C-cap. Independently evaluated all thirteen affine tests on the vertices of A, B, and C, including all 536 enumerated vertices of D before applying the invertible diagonal map, and reproduced every full, empty, and proper trace.",
+    "Independently checked both exact middle masses and the endpoint masses against U, plus U<Gamma V+a/4−(37/1500)a. The Taylor bounds follow from 8(8/9)^7=9 Gamma, second derivative at most 56 on [0,1], and k,j<1/3. The endpoint caps have mass below U as well.",
+    "Moving any cap through the tested point can only reduce mass; reverse Fatou for the indicators of fixed-direction closed caps yields upper semicontinuity, and the infimum remains upper semicontinuous. Thus the maximum exists on compact S. Any cap containing the C-center contains at least half of C, with equality realized by either C-cap. Exact arithmetic confirms Gamma V>(Gamma/2)((1+2 Gamma)V+a)."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "mapping": "Its ordinary normalized depth equals Gamma_d for a full-dimensional simplex. Apply in d=8 to compact B, and multiply by its volume V to obtain the raw A(B)=Gamma V. No same-batch dependency.",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:35:17Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides an own-depth sum lower bound on a positive affine contact set and a global equal-own-maxima case. Here the unequal maxima do not form one such contact set; the counterexample addresses the unconditional sum over all fibers.",
+      "fact_id": "283a2ee2340c052c"
+    },
+    {
+      "comparison": "Uses a different dimension-15 source and bounds actual depth only on the middle fiber against the Oertel target; it does not upper-bound the global depth against half the sum of ordinary maxima.",
+      "fact_id": "645f91d128f54e5b"
+    },
+    {
+      "comparison": "Computes exact global depth when the middle and large endpoint are identical simplices; the centrally symmetric large endpoint here falls outside those hypotheses.",
+      "fact_id": "98603e266680b22d"
+    },
+    {
+      "comparison": "Its three homothetic triangle fibers limit the best retained-contact scalar bound, not actual mixed depth on the present hull.",
+      "fact_id": "b2ed74a86a3478ae"
+    }
+  ],
+  "readability": "All caps and the strict slack are explicit. The factor one half is the n=1 parity denominator, and the exact depth at the exposed center does not assert equality for the global maximum.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "9ca41e5cba80c5ed103bfd59b5c474ee0863e1aa6edfbb308c256204159982ed",
+  "reviewed_statement_sha256": "fafafabcedf19daf0c56f20a73026340fd847af3ff82e3c8f44627f79d9f33d8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:31:56Z",
+  "summary": "The rational three-fiber hull and thirteen fixed closed caps establish the stated strict failure of the half-sum of own maximum depths. The exposed center has exact depth Gamma V, above this body's Oertel target.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

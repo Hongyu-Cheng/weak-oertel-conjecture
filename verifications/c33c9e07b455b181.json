@@ -1,0 +1,80 @@
+{
+  "candidate_id": "1e91c6cf6b21d5d8",
+  "candidate_sha256": "c3bd3973a3fd060abf7eb0731cf43419624ca3affdaacb278c44ad9cb3460d03",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Verified the only changed JSON field is the statement. Its null-contact conclusion is now explicitly restricted to indices with f(z_j)=0, leaving the t_j=1 convention valid at every positive-residual destination.",
+    "Checked source 3f94bc936c5d4a14 §1, equations (1)–(4), against its declared digest. The source restricts the nonempty null contact conclusion to destinations of zero residual.",
+    "Minkowski inclusion of endpoint fibers yields positive d-volume at all segment parameters. A strict point generates a positive-volume residual by taking small convex mixtures with an interior ball. Strict points at zero persist to small positive t by affine-margin interpolation with any destination point.",
+    "Strict-negative feasibility has an interval of parameters by convexity. Compactness gives a limiting closed residual point at its supremum. A strict point there for t<1 would extend the interval by mixing with a destination point; the t=1 case is excluded by the zero-residual hypothesis. The closed residual at the exit is therefore a nonempty subset of a null continuous hyperplane.",
+    "Reweighted displacement is exactly the original displacement divided by c, so it vanishes, and the weights sum to one. Closed residual sections have the same volumes as the strict ones and their weighted Minkowski sum lies in the closed residual at p. Brunn–Minkowski extends to the nonempty lower-dimensional contacts by adding a vanishing radius ball to each compact section.",
+    "The terms at the exits vanish, and t=1 for the other atoms, giving the desired inequality and exact algebraic correction factor, including the no-exits case c=1 and the possible zero-residual endpoint contact at t=1."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T13:37:57Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "1e91c6cf6b21d5d8",
+    "candidate_sha256": "6a278bee55f4818ecbecc0b81c6d8ac69cfc1c99267aa0ff771bdd040e311fe2",
+    "checks": [
+      "Checked source 3f94bc936c5d4a14 §1, equations (1)–(4), against its declared digest. The source restricts the nonempty null contact conclusion to destinations of zero residual.",
+      "Minkowski inclusion of endpoint fibers yields positive d-volume at all segment parameters. A strict point generates a positive-volume residual by taking small convex mixtures with an interior ball. Strict points at zero persist to small positive t by affine-margin interpolation with any destination point.",
+      "Strict-negative feasibility has an interval of parameters by convexity. Compactness gives a limiting closed residual point at its supremum. A strict point there for t<1 would extend the interval by mixing with a destination point; the t=1 case is excluded by the zero-residual hypothesis. The closed residual at the exit is therefore a nonempty subset of a null continuous hyperplane.",
+      "Reweighted displacement is exactly the original displacement divided by c, so it vanishes, and the weights sum to one. Closed residual sections have the same volumes as the strict ones and their weighted Minkowski sum lies in the closed residual at p. Brunn–Minkowski extends to the nonempty lower-dimensional contacts by adding a vanishing radius ball to each compact section.",
+      "The terms at the exits vanish, and t=1 for the other atoms, giving the desired inequality and exact algebraic correction factor, including the no-exits case c=1 and the possible zero-residual endpoint contact at t=1."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T13:35:59Z",
+    "issues": [
+      {
+        "exact_defect": "Following both cases for j, the sentence reads as assigning zero volume to C_(b_j)∩{ℓ≤0} for every destination. If f(z_j)>0 then b_j=z_j and the volume is f(z_j)^d>0. For example use d=1, C=[−1,1]×[0,1], H={x≥1/2}, and the single atom p=z_1=0.",
+        "proof_locator": "Statement, standalone sentence beginning “Then 0<t_j≤1”",
+        "severity": "major",
+        "smallest_repair": "Start the contact conclusion with “For each j with f(z_j)=0” or move it explicitly inside the otherwise case."
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Uses a fixed three-fiber Minkowski midpoint comparison for equal positive-volume cap traces. It does not construct new boundary contacts or correct a general barycentric row with empty residuals.",
+        "fact_id": "03c59c70402b66a2"
+      },
+      {
+        "comparison": "Provides a coupling existence theorem under physical convex order. It supplies neither a geometric exit point nor the inverse-fraction reweighting for a fixed row.",
+        "fact_id": "ac53fe19fef9ec25"
+      }
+    ],
+    "readability": "The proof correctly scopes the contact argument to a destination of zero residual. The defect is confined to the standalone statement sentence.",
+    "reviewed_proof_sha256": "772d20ffc042b6909d524a8c7c4ce0df8a252f455d8d0efdd6d7b6dfd68e0493",
+    "reviewed_statement_sha256": "56eacd033ed56e44485dfeaf00e86a48d5f61177b6e8f21e7f5b56e33cfbca6c",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T13:32:04Z",
+    "summary": "The first-exit construction and bound are sound. The frozen standalone zero-volume conclusion needs an explicit restriction to exiting destinations.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Uses a fixed three-fiber Minkowski midpoint comparison for equal positive-volume cap traces. It does not construct new boundary contacts or correct a general barycentric row with empty residuals.",
+      "fact_id": "03c59c70402b66a2"
+    },
+    {
+      "comparison": "Provides a coupling existence theorem under physical convex order. It supplies neither a geometric exit point nor the inverse-fraction reweighting for a fixed row.",
+      "fact_id": "ac53fe19fef9ec25"
+    }
+  ],
+  "readability": "The revised statement explicitly limits the null closed section to a zero-residual destination. The proof follows that same scope, including the contact case t_j=1.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "772d20ffc042b6909d524a8c7c4ce0df8a252f455d8d0efdd6d7b6dfd68e0493",
+  "reviewed_statement_sha256": "6e6c7018fc146d4dc84fcc9f3f6832c4dcfbd022f7de8483c131afde43843812",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "6a278bee55f4818ecbecc0b81c6d8ac69cfc1c99267aa0ff771bdd040e311fe2",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:37:03Z",
+  "summary": "The actual first exits of zero-residual destinations produce nonempty null contacts. The inverse-fraction probability row preserves the mean and satisfies the stated Brunn–Minkowski inequality.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

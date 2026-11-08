@@ -1,0 +1,37 @@
+---
+fact_id: ae4e01ead61ea9c3
+kind: lemma
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-eight-base-original-exact-upper-faces
+depends_on: []
+verifier_run: 7bcac978c112d54d
+target_match: null
+---
+
+## Source
+
+- [f1f97e5764053b3f](../candidates/f1f97e5764053b3f.json), §1, upper facets, relative Helly numbers and graph union.
+- [588eabf65d9a1440](../candidates/588eabf65d9a1440.json), §1, (1)–(2), original profile; §3, (9)–(13), five-point Helly witness.
+
+## Statement
+
+Let $p_0,\ldots,p_7$ in order be $(-1,-2),(-1,-1),(-1,0),(0,0),(0,1),(0,2),(1,2),(2,3)$, and put $Q=\operatorname{conv}\lbrace p_0,p_2,p_5,p_7\rbrace$. Let $t(z)=\min\lbrace16+2z_1+3z_2,16+2z_1-4z_2,16-40z_1+24z_2\rbrace$, and $G_i=(p_i,t(p_i))$. Then $Q\cap\mathbb Z^2$ consists exactly of the eight displayed bases, with heights $(8,11,14,16,12,8,10,8)$. The upper facets of the lifted hull have sampled index sets $\lbrace0,1,2,3\rbrace$, $\lbrace2,3,4,5,6,7\rbrace$, and $\lbrace0,3,7\rbrace$. The projections of these facets contain exactly their indicated sampled bases as lattice points. The maximum-height roots in parities $(1,0),(1,1),(0,0),(0,1)$ are $2,1,3,4$, respectively. The minimal faces at indices $1,2,3,4$ have index sets $E=\lbrace0,1,2\rbrace$, $\lbrace2\rbrace$, $\lbrace3\rbrace$, and $F=\lbrace2,3,4,5,6,7\rbrace$, respectively, with exact relative Helly numbers $2,1,1,3$. Here relative Helly number of a finite graph set is the least $h$ such that every finite family of convex sets whose intersection misses that set has a subfamily of at most $h$ with the same property. The maximal root faces satisfy $E\cap F=\lbrace2\rbrace$ and $E\cup F=\lbrace0,\ldots,7\rbrace$, and their union has exact relative Helly number $5$.
+
+## Proof
+
+The polygon $Q$ has the inequalities
+$$
+-2z_1+z_2\le2,\qquad -z_1\le1,\qquad -z_1+2z_2\le4,\qquad 5z_1-3z_2\le1.
+$$
+Indeed these describe the four inward sides of $Q$ through the consecutive vertices $p_0,p_2,p_5,p_7$. In the bounding box $-1\le z_1\le2$, $-2\le z_2\le3$, the allowed integer second coordinates at $z_1=-1,0,1,2$ are, respectively, $\lbrace-2,-1,0\rbrace$, $\lbrace0,1,2\rbrace$, $\lbrace2\rbrace$, and $\lbrace3\rbrace$.
+
+Evaluation of the three affine functions defining $t$ gives the displayed heights and the equality index sets $\lbrace0,1,2,3\rbrace$, $\lbrace2,3,4,5,6,7\rbrace$, and $\lbrace0,3,7\rbrace$, respectively. The supporting planes are distinct and have two-dimensional equality faces, so the lifted hull is three-dimensional. Their projections are the triangle with vertices $p_0,p_2,p_3$, the quadrilateral with vertices $p_2,p_3,p_7,p_5$, and the triangle with vertices $p_0,p_3,p_7$. These tile $Q$, as is seen by drawing the segments from the interior point $p_3$ to its four vertices and combining the two triangles on the $p_5$ side. Each supporting plane gives the exact upper height on its projected polygon because the supporting face contains a lift at every base there. No other upper facet is possible: the relative interior of its projection would intersect the interior of one of those polygons, forcing its plane to coincide with that polygon's upper plane. On the vertices of each projected facet, its supporting affine function is no larger than either of the other two. By affinity this remains true throughout its projected polygon. Therefore the minimum defining $t$ equals the corresponding supporting plane throughout that polygon, and the integer census gives exactly its equality indices.
+
+In those four parity classes the index sets are $\lbrace0,2,6\rbrace$, $\lbrace1\rbrace$, $\lbrace3,5\rbrace$, and $\lbrace4,7\rbrace$. The height list gives the stated unique maxima. At index $1$, intersect the first upper facet with the vertical face $z_1=-1$; its lift lies in the relative interior of the resulting segment $E$. The intersection of the first two upper facets with $z_1=-1$ is the singleton at index $2$. The three upper facets meet only at index $3$. Index $4$ is interior to the projected quadrilateral of the second upper facet, being the common interior point of its diagonals $[p_2,p_7]$ and $[p_3,p_5]$. These are the claimed minimal faces. The maximal two cover all lifts and share only index $2$.
+
+The Helly numbers on each face can be computed in its projection, since the projection is an affine isomorphism on a single upper face. The two singleton sets have number one. The collinear set $E$ has number two: traces of convex sets on its three ordered points are contiguous index intervals, so an empty intersection is detected by an empty trace or by the two most restrictive endpoints; two distinct singleton traces witness sharpness.
+
+On $F$, the three vertex-deletion hulls of the noncollinear triangle $\lbrace p_2,p_3,p_4\rbrace$ give a minimal empty family, proving the lower bound three. For the upper bound, a minimal family of $m$ convex sets with empty $F$-intersection would supply a distinct witness in $F$ for each deletion. Each witness is outside its own set, which contains all the other witnesses. The witnesses are therefore in convex position, and their deletion hulls have no common point of $F$ because each hull lies in its corresponding set. Now $p_2,p_4,p_6,p_7$ lie on one line in that order, and $[p_3,p_5]$ crosses it at $p_4$. No five points can be in convex position, since at least three would be collinear. A convex-position four-set must contain both $p_3,p_5$ and two of the four collinear points. If the two are on the same side of $p_4$ or include $p_4$, the nearer lies in the triangle formed by the farther and $p_3,p_5$. Thus the only four-sets in convex position are $\lbrace2,3,5,6\rbrace$ and $\lbrace2,3,5,7\rbrace$. In either case the disjoint pairs $[p_3,p_5]$ and $[p_2,p_6]$ or $[p_2,p_7]$ both contain $p_4$. Every one-point deletion leaves one of these pairs intact, so $p_4$ lies in all deletion hulls. Neither four-set can be a witness.
+
+For the union upper bound, take at most two convex sets witnessing failure on $E$ and at most three witnessing failure on $F$. The five-point lower witness from the original construction can be checked directly. Use $W=\lbrace G_0,G_1,G_3,G_4,G_6\rbrace$. The following exposing linear normals, in that order, have respective positive minimum gaps $1,7,8,7,1$ over the other four points: $(-5,-1,0),(-16,4,1),(-11,4,3),(-16,11,1),(-5,6,0)$. The inequalities $-9z_1+4z_2+t\le16$, $-5z_1+3z_2-t\le-9$, and $2z_1-z_2\le0$ all hold on $W$, while $G_2,G_5,G_7$ violate the respective inequalities by $7,7,1$. Thus all five members of $W$ are vertices and there are no other sampled lifts in their hull. The five vertex-deletion hulls have empty common intersection with the graph; every four contain the omitted witness. This proves equality.

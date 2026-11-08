@@ -1,0 +1,40 @@
+{
+  "advances": "Finite physical barycentric coupling and atom ceilings. The result supplies no depth bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "3f5e7ab6803eb38a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:34:03.860668+00:00",
+  "depends_on": [
+    "0d017e6c3c14b846"
+  ],
+  "draft_key": "weighted-finite-barycentric-atom-ceiling",
+  "kind": "theorem",
+  "proof": "The zero-mass case uses the zero coupling. Otherwise fix a smooth uniformly strongly convex surplus $\\phi$ on the physical Euclidean space and maximize $\\int\\phi(b(x))\\,d\\pi(x)$ over the compact finite-dimensional coupling polytope. By the inverse endpoint lemma, at each output $z$ of positive mass the optimizer assigns a single endpoint $F_i(z)$ in slot $i$, with $F_i(z)\\in\\operatorname{supp}\\gamma_i$ and $\\sum_i\\lambda_iF_i(z)=z$. The full output atom is included in the marginal atom at $F_i(z)$ for each $i$, so its mass is at most $\\min_i\\gamma_i(\\{F_i(z)\\})\\le\\min_i a_i(F_i(z))\\le c(z)$. In the zero-dimensional ambient space all supports of positive mass are the single point and the conclusion is immediate.\n\nLet $\\mathcal D$ be the set of couplings with output atoms bounded by $c$. It is compact and convex by the finitely many linear inequalities and nonempty by the surplus result for $\\phi(z)=|z|^2$. Every finite convex function on $\\mathbb R^N$ is a uniform limit on the finite output set of smooth uniformly strongly convex functions, by mollification and addition of a positive quadratic with coefficient tending to zero. The maxima over $\\mathcal D$ for these approximants exceed or equal the values at $\\pi_0$. Taking limits gives the same inequality for each convex test. For any finite list of such tests, their integral differences from $\\pi_0$ form a compact convex set of vectors as $\\pi$ ranges over $\\mathcal D$. Disjointness from the closed nonnegative orthant would strictly separate that set by a nonnegative linear combination of the tests, contradicting the single-test inequality for that combination. The compact finite intersection property now yields one $\\pi\\in\\mathcal D$ for every test.\n\nThe minimum at a reconstructed tuple is sharp from the atom ceilings alone. If each $P_i$ is a singleton, put mass $\\min_i a_i$ on its sole point. The unique coupling then reaches this bound at its barycenter.\n",
+  "source_candidate_ids": [
+    "1972e280d049f336",
+    "1bc960743a4bce34",
+    "9764a982661d3ddc"
+  ],
+  "source_candidate_sha256": {
+    "1972e280d049f336": "919a01f6baf3ebc0efd69347285db583b4c7d991c4574d00edad21a07d69a42e",
+    "1bc960743a4bce34": "61f2074ba35d45d978851c39c7e98e03b41437ba2d85760e7f2f6c6c38232834",
+    "9764a982661d3ddc": "53ae7e3d147d7e30ddc88490c1421ac05e60891adb4efe1daf2693fb209dd591"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1972e280d049f336",
+      "locator": "§4, (5)–(6), discrete endpoint determinism"
+    },
+    {
+      "candidate_id": "9764a982661d3ddc",
+      "locator": "§4, discrete variable-ceiling argument"
+    },
+    {
+      "candidate_id": "1bc960743a4bce34",
+      "locator": "§§2, 4–7, finite inverse-endpoint and one-law argument"
+    }
+  ],
+  "statement": "Let $P_i\\subset\\mathbb R^N$ be finite, $1\\le i\\le k$, and let $\\gamma_i$ be finite nonnegative measures on $P_i$ of common mass. Let $\\lambda_i>0$ sum to one, let $b(x)=\\sum_i\\lambda_i x_i$, and suppose $\\gamma_i(\\{x\\})\\le a_i(x)$ for finite nonnegative functions $a_i$ on $P_i$. Define\n$$\nc(z)=\\max_{b(x)=z,\\ x_i\\in\\operatorname{supp}\\gamma_i}\\ \\min_i a_i(x_i),\n$$\nwith the empty maximum zero. For any old coupling $\\pi_0$ of the $\\gamma_i$, one coupling $\\pi$ of the same marginals satisfies $b_\\#\\pi_0\\preceq_{\\rm cx}b_\\#\\pi$ and $(b_\\#\\pi)(\\{z\\})\\le c(z)$ for every $z$. Any fixed output atom ceiling dominating the displayed product envelope may also be used. Convex order tests all finite convex functions on the physical space.",
+  "subgoal_id": "pk-intake-weighted-finite-barycentric-atom-ceiling",
+  "title": "Variable atom ceilings for finite barycentric selection"
+}

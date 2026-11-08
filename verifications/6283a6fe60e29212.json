@@ -1,0 +1,56 @@
+{
+  "candidate_id": "3f5e7ab6803eb38a",
+  "candidate_sha256": "a5fc1cfa5a5344a00a5d599779475748229235af7c860f85ced97fd0844aa250",
+  "checked_dependency_candidate_sha256": {
+    "0d017e6c3c14b846": "c8cae60599d45c62e8e4df34ab6f2af4fcb482c1ccd4cc25a8b22e798c2c91e5"
+  },
+  "checks": [
+    "With common mass zero, the only coupling is zero and both support product and positive output atoms are empty. For positive mass in ambient dimension zero, each supported marginal is the same single physical point of mass M, and every endpoint ceiling there is at least M. The unique coupling has the required ceiling and equality of output laws.",
+    "For N≥1 the finite coupling polytope is compact and nonempty. The smooth global uniform Hessian lower bound allows the accepted inverse endpoint lemma, with no absolute-continuity hypothesis. At a positive output atom z the almost-everywhere inverse identities hold there, every slot is one supported endpoint and the tuple barycenter is z. Its whole output mass is charged to the one marginal atom in each slot. This avoids summing over distinct candidate endpoint tuples at the same output.",
+    "The set of couplings under the fixed envelope is closed and convex by finitely many linear output constraints, and contains a quadratic-surplus optimizer. For any finite convex test, compact local approximation by smooth mollification plus a vanishing positive quadratic gives convergence uniformly on the finite output set. Every approximant has an unrestricted optimizer in the ceiling set, so the same single-test comparison passes to the limit.",
+    "Strict separation of the compact convex vector of test differences from the nonnegative orthant would give nonnegative separating coefficients because the orthant contains all positive coordinate rays and the origin. The linear combination is a finite convex test, contradicting the single-test comparison. Compact finite intersection yields one coupling for the entire family; larger fixed ceilings follow by the original inequality.",
+    "The singleton example is sharp: positive M equal to the smallest singleton ceiling is feasible in all slots, and the unique output atom has mass M. If the smallest ceiling is zero, the zero coupling attains zero. This verifies uniform sharpness from ceilings without a claim of pointwise optimality for every fixed set of marginals.",
+    "Verified all three source byte hashes. Source 1972e280d049f336 §4 (5)–(6) gives the variable minimum through inverse endpoints, 9764a982661d3ddc §4 uses the finite discrete variable-ceiling argument for zero-dimensional conditional faces, and 1bc960743a4bce34 §§2, 4–7 gives the inverse maps and fixed-ceiling compact separation, with the discrete constant case in §6."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "0d017e6c3c14b846",
+      "candidate_sha256": "c8cae60599d45c62e8e4df34ab6f2af4fcb482c1ccd4cc25a8b22e798c2c91e5",
+      "mapping": "For positive mass and N≥1, the finite supports are compact Borel supports, weights are strictly positive with sum one, and each smooth surplus has a global positive Hessian lower bound. Use the almost-everywhere inverse identities at each positive atom. The zero-dimensional argument is direct.",
+      "reviewed_proof_sha256": "c3f004696c1e377a56fff093a18cc71aa04312e896bb44863acc440136e66ab4",
+      "reviewed_statement_sha256": "3afcc1c1b36b082be2d3e63664040d88a2f220422fc22d4e41e1842c21a7c36e",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:38:59.254Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its d=0 case covers constant per-slot ceilings when N≥1. The frozen claim retains the location-dependent maximum of minima over support tuples, which can be smaller than the constant minimum of per-slot suprema.",
+      "fact_id": "b4efc0a0a7fcfb69"
+    },
+    {
+      "comparison": "It proves a positive-dimensional continuous slice density analogue. Its d≥1 hypothesis and determinant exponent leave the finite atom case outside its statement.",
+      "fact_id": "bbbf8fc4a00f02d8"
+    },
+    {
+      "comparison": "The accepted inverse map lemma supplies determinism for strong-surplus optimizers. It alone does not state the fixed variable-capacity coupling that satisfies all convex tests.",
+      "fact_id": "0d017e6c3c14b846"
+    }
+  ],
+  "readability": "In the final singleton example, a_i denotes its value on the sole point in slot i. The proof establishes the sharpness of the displayed bound over admissible data, with no optimality claim for a fixed instance.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "b810e7cc06e5fe8a7db013fdb5c7857a57cace77f388f5cb47c741446dca9ddd",
+  "reviewed_statement_sha256": "3bbed612c8ccded34d60ec19d38775cce49c2380253c1b0266b6a66168121227",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:35:02Z",
+  "summary": "The inverse endpoint identities at each positive output atom give the variable ceiling for every strongly convex optimizer. Separation and compactness give one coupling for all finite convex tests. The empty and zero-dimensional cases are valid.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

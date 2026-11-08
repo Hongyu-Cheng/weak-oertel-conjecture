@@ -1,0 +1,69 @@
+{
+  "candidate_id": "29faad268c79cd91",
+  "candidate_sha256": "4bae58685330a0c1fbcb5c183f0fb4908f2bc8d29caf3c47c32d8e9f6a134cac",
+  "checked_dependency_candidate_sha256": {
+    "ac7ba1e1e0ebc955": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+    "b3a3fe7bee3a516f": "a0fd1a12635556ccb0527f8667cabf184321e39cec90fd9582f68757d9be811c"
+  },
+  "checks": [
+    "Verified all three source byte digests and read 6b20e938071f0379 §§1–2 and 8, cf1b9ba5ada0a5ef (4) and its final paragraph, and cde78a6346699a8a §1. The frozen proof uses the basic sweep to obtain the same strict θ constraint needed in §8.",
+    "The ordinary three-cap bound on A and K gives a≤w+v+u/4 and k≤9Q/4−F, with the smallest K cap Q−w because each ambient cap has common mass Q and zero B capture. The budget inequality gives k≤a+b−2F and Q≤4(a+b−F)/9. Combining b≤a+k with the former yields a≥F, hence r≥1/4. Substituting Q=q+w and a=u+v+rw gives (1).",
+    "The shifted cover at thresholds (−1,−1,2) gives τ≥δ+3 min(u,τ)/4. The alternative τ<u implies τ≥4δ≥w≥u. The proper original cut supplies an anchor on level −1 and positive u,w. Positivity of τ forces h>2. The factor 3/H maps the original cap into its strip between −1 and 2, with area 9w/H² and overlap with τ only on the null level-2 line. Thus 1/4≤r<θ≤1−9/H²<1.",
+    "The segment joins actual extrema of t on A and has constant transverse coordinate after a determinant-one shear in absolute value. A section of E+B is the interval [t₀+L,h+U] at the translated transverse coordinate. Since t₀<−1, h>2, and −2≤L≤U≤1, it strictly straddles zero. Expanding the displayed pointwise identity gives nonnegative terms, and Fubini gives Hb/3. Scaling by one half preserves the t≥0 cut and divides area by four. Then (1) implies 0<(5/2−r)w≤b(1−3H/16), giving H<16/3 and θ<1−(9/16)²=175/256.",
+    "Label the small, middle, and largest A caps by i,j,ℓ, breaking ties arbitrarily. The union bound gives |R_ℓ|≥rw>0 and |R_j|≥(r+y−1)w>0 by the strict hypothesis a−u−w>0. The two midpoint sectors both miss the i-th middle trace and are disjoint by the predecessor. The common cap area and zero B capture make that complement k−Q+u. Expanding both square-root terms gives (4) with the stated coefficients.",
+    "The upper bound k−Q+u≤5Q/4−v−w/4 and Q≤4(b+(r−1/4)w)/9 give 5b/9+[(10r−7)/18−y]w. Subtracting (4) and dividing by b/36 gives (5). The sweep contributes through θ<175/256 and is not counted again as residual area.",
+    "Under a/b≥1/32, the linear coefficient in (5) is strictly above 50−47r>0, so z can be lowered to 1/(32α). The expression decreases with x, allowing x̄=4(175/256−r)/3. The derivative in y of its first term has numerator 47r+45x̄−5>0. With t=r+y−1, the derivative of the square-root term has sign 1+x̄−√(rt)>0 for 0<t≤r<1. Taking y down to 1−r is justified by continuity.",
+    "Differentiated f with L=367/192−4r/3 and checked the rational term −1483/64. Its positive term exceeds 45 since L>1, r<1, 367/192>1 and √32>5, whereas 1483/64<24. Independent Fraction arithmetic gives L(1/4)=101/64, f(1/4)=153/202+18/√202, and 65448>63001 for the squared strict comparison. This contradicts the assumption including equality a/b=1/32."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ac7ba1e1e0ebc955",
+      "candidate_sha256": "0b1686d303a53f2f5109c9e828307c4db38dc82a761225c90267bb12d8e559df",
+      "mapping": "Its ordinary convex-body formula (3) applies in dimension two with coefficient 1/γ₂−2=1/4. The original and shifted three halfplanes have nonzero normals and cover the respective bodies because their normals sum to zero and their thresholds sum to −3 or 0. The same formula includes zero cap area and ties.",
+      "reviewed_proof_sha256": "76922090615d5ce7641a49c1ff447e454326f5634bc45eff19e5aa9daf91279f",
+      "reviewed_statement_sha256": "bc29bec04a379e95f5f6632e6ed13ef21f0726dfed029e01d071527d2787773a"
+    },
+    {
+      "candidate_id": "b3a3fe7bee3a516f",
+      "candidate_sha256": "a0fd1a12635556ccb0527f8667cabf184321e39cec90fd9582f68757d9be811c",
+      "mapping": "Same-batch dependency, reviewed independently in its own report. Use the planar two-sector specialization for indices ℓ and j with remaining index i. The fixed normals span and sum to zero; midpoint compatibility, B containment, common cap mass and zero B capture are stated hypotheses. The lower bounds rw and (r+y−1)w are both strictly positive. Admission requires this predecessor to be admitted first.",
+      "reviewed_proof_sha256": "59282b87f74156fe3510121de0cab5222f106a4fc240f79dd9114f9695402330",
+      "reviewed_statement_sha256": "552065ae6a8f894e84b961b23ff16c0e63e2d2f78bea907756d94b927c054424"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:38:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Bounds the residual of a selected pair of covering halfplanes and its same-fiber overlap. It lacks the two disjoint midpoint reserves with the whole B fiber that give the strict endpoint ratio.",
+      "fact_id": "ceecf08780802b6a"
+    },
+    {
+      "comparison": "Assumes the small endpoint a<b/32, a triangular K, and global depth conditions to prove local contraction descent. Its conclusion supplies neither volume bound.",
+      "fact_id": "35a7af957b642c87"
+    },
+    {
+      "comparison": "Assumes a<b/32 and triangular K, and bounds a reciprocal chord weight when a residual corner exists. It uses the volume bound as a premise.",
+      "fact_id": "1375fe2aad37f06a"
+    },
+    {
+      "comparison": "In a related proper-A, zero-B circuit, gives a lower bound for a/b in a specified chord-weight domain. Its weight exclusion assumes a<b/32. It does not establish a volume upper bound from the two-residual condition.",
+      "fact_id": "7844fbb9b48c10d9"
+    }
+  ],
+  "readability": "The geometric step is applied only at strictly positive residual areas. The later boundary y=1−r is used by continuity in the scalar expression, where one of the lower bounds can vanish.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bc306f81894055ba630860a1325f98dfdc2f492c65b6683883476ffab8902fb8",
+  "reviewed_statement_sha256": "dd23eae301e0461c37571ced8739eb01d860c2f83beb903a265791643ea1cca3",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:34:44Z",
+  "summary": "With both endpoint residuals of positive area, their disjoint middle sectors give the stated joint reserve. The exact scalar contradiction yields the strict bound a<b/32.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

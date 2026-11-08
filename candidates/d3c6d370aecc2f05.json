@@ -1,0 +1,28 @@
+{
+  "advances": "Weighted depth at actual centroid marks for the specified eight-node midpoint pattern, uniformly over its allowable dimensions, translations and radii. There is no general forest aggregation claim.",
+  "author": "PK-research-agent",
+  "candidate_id": "d3c6d370aecc2f05",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:34:03.860416+00:00",
+  "depends_on": [
+    "c2180d0c4d7ea592"
+  ],
+  "draft_key": "eight-base-zero-forest-grouped-ray-mass-exchange",
+  "kind": "theorem",
+  "proof": "Write the fibers as $a_i+r_iK$ with $K$ of centroid zero, so $a_i$ is the actual centroid and $w_i=|K|_d r_i^d$. The exact edge equalities imply the corresponding midpoint identities of both radii and centroids, by comparing volumes and then taking centroids. Root maximality gives $w_0\\le w_2$, $w_5\\le w_3$, and $w_7\\le w_4$. The last edge implies $r_6=(r_7+r_4)/2\\le r_4$, and the preceding edge implies $r_2=2r_4-r_6\\ge r_4$. Thus $w_6,w_7\\le w_4\\le w_2$.\n\nDenote the centroid marks by $q_i=(p_i,a_i)$. At $q_3,q_2$ the own weights guarantee $A,G$, respectively. At $q_1=(q_0+q_2)/2$, any containing halfspace retains at least one of $q_0,q_2$, so its weight is at least $w_1+\\min(w_0,w_2)=L$. At $q_4$, the pair $q_3,q_5$ is opposite, and\n$$\nq_6-q_4=q_4-q_2,\\qquad q_7-q_4=2(q_4-q_2).\n$$\nThus the second line has $q_6,q_7$ on one ray and $q_2$ on the opposite ray. The sign of a containing halfspace's normal on $q_6-q_4$ ensures it contains either both $q_6,q_7$ or $q_2$; with zero sign it contains all three. The two groups have disjoint indices, and adding the own weight gives the uniform score $w_4+\\min(w_3,w_5)+\\min(w_2,w_6+w_7)=B+\\min(G,C)$. Hence one of the four marks guarantees $D$ in every containing cap.\n\nThe root orders give $C\\le2w_4\\le w_4+w_2\\le B+G$. If $C\\le G$, the disjoint blocks $A,G,L,B+C$ sum to $T$ and each is at most $D$. If $C>G$, use the blocks $A,L,B+G,C$: the third is at most $D$ by its definition and the fourth by $C\\le B+G$. This proves $T\\le4D$.\n\nFor the selected mark all fibers are full-dimensional, compact and convex, their graph marks are their true centroids, and $0<D\\le T$ since each score is bounded by the total of disjoint positive weights. Accepted fact c2180d0c4d7ea592 applies with $\\alpha=D$ and gives the claimed lower bound in the actual source, including caps with zero continuous normal.\n\nIn the revised interval example with weights $(50,75,100,68,68,68,36,4)$ in hundredth units, the five blocks are $(A,G,L,B,C)=(68,100,125,136,40)$. Thus $D=176>469/4$ in those units. This evaluates a guaranteed score; it is not a claim of exact depth.\n",
+  "source_candidate_ids": [
+    "39e0ea36e1546d5b"
+  ],
+  "source_candidate_sha256": {
+    "39e0ea36e1546d5b": "764f369c53b960e6108ae5927667947e693f0436fd97262ef8a76c6fc8480a11"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "39e0ea36e1546d5b",
+      "locator": "§5, (16)–(23), grouped-ray score, two-case exchange and revised-profile evaluation"
+    }
+  ],
+  "statement": "Let $p_0,\\ldots,p_7$ in order be $(-1,-2),(-1,-1),(-1,0),(0,0),(0,1),(0,2),(1,2),(2,3)$. Let an actual compact convex source in $\\mathbb R^2\\times\\mathbb R^d$ for an integer $d\\ge1$ have these eight positive integer fibers and no others, all translates of positive homothetic copies of a common convex body with nonempty interior. Assume that the volume-maximal parity roots are $2,1,3,4$ in parities $(1,0),(1,1),(0,0),(0,1)$, and that the edges $0\\to1,5\\to4,6\\to4,7\\to6$ with respective partners $2,3,2,4$ satisfy exact Minkowski midpoint equalities. Let $w_i$ denote the volume of fiber $i$ and $T=\\sum_iw_i$. Give the graph of actual fiber centroids the atomic weights $w_i$. Write\n$$\nA=w_3,\\qquad G=w_2,\\qquad L=w_0+w_1,\\qquad B=w_4+w_5,\\qquad C=w_6+w_7.\n$$\nOne of the marks at indices $3,2,1,4$ has raw atomic depth at least $D=\\max\\lbrace A,G,L,B+\\min(G,C)\\rbrace\\ge T/4$. The same mark has raw mixed depth at least $\\gamma_d D\\ge\\gamma_d T/4$, where $\\gamma_d=(d/(d+1))^d$. Here depth is the infimum of the respective mass over closed ambient halfspaces containing the mark.",
+  "subgoal_id": "pk-intake-eight-base-zero-forest-grouped-ray-mass-exchange",
+  "title": "Grouped-ray exchange pays the quarter budget on the eight-base equality forest"
+}

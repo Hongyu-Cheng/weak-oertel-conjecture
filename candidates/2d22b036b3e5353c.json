@@ -1,0 +1,28 @@
+{
+  "advances": "Support geometry for a non-hollow joint slice law on its original base. The affine offsets are support-plane offsets.",
+  "author": "PK-research-agent",
+  "candidate_id": "2d22b036b3e5353c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:36:03.338923+00:00",
+  "depends_on": [
+    "2beba099308501dc"
+  ],
+  "draft_key": "nonhollow-joint-slice-affine-support-graph",
+  "kind": "lemma",
+  "proof": "Put $B=\\operatorname{conv}(P)$ and choose $z_0\\in\\operatorname{relint}B\\cap\\mathbb Z^n$. It belongs to $P$ by lattice completeness, and it can be expressed using all sites in $P$ with strictly positive weights. Indeed, if $\\bar z$ is their average, then $(z_0-t\\bar z)/(1-t)$ is in $B$ for small positive $t$, and any convex representation of that point gives the required representation after adding $t\\bar z$. Incidence rigidity from joint-measure-homothetic-domination-and-strata yields the common tangent space $V$. That lemma also gives exact integer fibers $S_z$ for $D=\\operatorname{conv}\\bigcup_{z\\in P}(\\{z\\}\\times S_z)$.\n\nChoose $y\\in\\operatorname{relint}D$ and let $p$ be its base. Since $z_0$ lies in $\\operatorname{relint}B$, there is a point $p'\\in B$ such that $z_0$ is a convex combination of $p$ and $p'$ with positive weight on $p$. Choose a point of $D$ over $p'$ and take the same combination with $y$. The combination is in $\\operatorname{relint}D$, because a relative ball about $y$ shrinks by a positive factor in the combination. It is over $z_0$. Consequently the direction of the section $D_{z_0}$ is the vertical kernel of $\\operatorname{aff}(D)$ under projection to the base. Since $D_{z_0}=S_{z_0}$, this kernel is $V$. It follows that the perpendicular projection to $V^\\perp$ of a point of $\\operatorname{aff}(D)$ depends only on its base and is affine there. Call that map $b$. The shear and its inverse are affine, and on each fiber the shear is a translation, proving the asserted invariances.\n",
+  "source_candidate_ids": [
+    "185fb6155f830e0e"
+  ],
+  "source_candidate_sha256": {
+    "185fb6155f830e0e": "fc2294a3d3071e4371e21e8fee17b18b04de8b661c97c5635185b5d41ac591fc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "185fb6155f830e0e",
+      "locator": "§4, (8)–(10)"
+    }
+  ],
+  "statement": "Let $n\\ge0$, $N\\ge1$, and let $\\mu_z$ be nonzero finite positive Borel measures of compact support $S_z\\subset\\mathbb R^D$ indexed by a finite nonempty $P\\subset\\mathbb Z^n$. Suppose every combination $z=\\sum_i\\theta_i z_i\\in\\mathbb Z^n$, with $z_i\\in P$, $\\theta_i>0$, and $\\sum_i\\theta_i=1$, has $z\\in P$ and satisfies $\\mu_z(\\sum_i\\theta_i E_i)^{1/N}\\ge\\sum_i\\theta_i\\mu_{z_i}(E_i)^{1/N}$ for compact positive-mass $E_i$. If $\\operatorname{relint}\\operatorname{conv}(P)$ contains an integer point, then all supports have a common tangent space $V$. There is an affine map $b:\\operatorname{aff}(P)\\to V^\\perp$ such that $S_z\\subseteq b(z)+V$ for every $z\\in P$. The hull of the placed supports has exactly those integer fibers. The affine shear $(z,x)\\mapsto(z,x-b(z))$ fixes bases, preserves intrinsic fiber measure, and carries affine halfspaces to affine halfspaces in the space over $\\operatorname{aff}(P)$.",
+  "subgoal_id": "pk-intake-nonhollow-joint-slice-affine-support-graph",
+  "title": "A relative-interior integer base forces an affine support graph"
+}

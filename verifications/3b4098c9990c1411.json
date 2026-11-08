@@ -1,0 +1,55 @@
+{
+  "candidate_id": "d3c6d370aecc2f05",
+  "candidate_sha256": "f5df34138635d25f199dd15793e7c63763081d3ad02930510b0d118956755090",
+  "checked_dependency_candidate_sha256": {
+    "c2180d0c4d7ea592": "3e5bab26e3c986880ea947400394cdca0d50dd15151b00df0a8c4b3da024df7a"
+  },
+  "checks": [
+    "Translate the common shape to centroid zero and absorb the translation into each a_i. Positivity and full dimension give w_i=|K|₍d₎r_i^d. Convexity of K gives λK+μK=(λ+μ)K for positive coefficients. Comparing volumes of the exact fiber Minkowski midpoint sets yields radius midpoints, and comparing their centroids yields a_i midpoints. This also holds for d=1 and for ties among parity maxima.",
+    "Root orders give w₀≤w₂, w₅≤w₃ and w₇≤w₄. The radius identity r₆=(r₇+r₄)/2 gives r₆≤r₄, and r₂=2r₄−r₆ gives r₄≤r₂. Positive powers give w₆,w₇≤w₄≤w₂. Hence C≤2w₄≤w₄+w₂≤B+G.",
+    "At q₃ and q₂ the own marks give A and G. At q₁ the retained own mark and one midpoint partner give L because w₀≤w₂. At q₄ the pairs q₃,q₅ are opposite, and q₆−q₄=q₄−q₂ and q₇−q₄=2(q₄−q₂). If the cap normal is nonnegative on the latter direction then both 6 and 7 are retained, if nonpositive then 2 is retained, and a zero value retains all three. This is valid even when the mark is in the cap interior. The two direction groups are disjoint and distinct from the own mark. Their score plus the own mark is B+min(G,C).",
+    "If C≤G, T partitions as A+G+L+(B+C), each summand at most D. If C>G, T partitions as A+L+(B+G)+C; the third summand is at most D by definition, the fourth by C≤B+G. The equality case C=G is included in the first case. All scores are positive and at most T, so the accepted raw centroid transfer applies at the same mark.",
+    "Verified the byte hash and 39e0ea36e1546d5b §5, equations (16)–(23). The proof makes the same precise incidence restriction and works for all positive homothetic radii, all translations satisfying the exact edges, and all integer d≥1. Independently computed (A,G,L,B,C)=(68,100,125,136,40), with unique largest guaranteed score 176 at q₄ and 4·176>469. This is a lower score and does not need an exact-depth claim."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "c2180d0c4d7ea592",
+      "candidate_sha256": "3e5bab26e3c986880ea947400394cdca0d50dd15151b00df0a8c4b3da024df7a",
+      "mapping": "Accepted lower-bound direction with E=R², the eight positive fibers, their actual volume centroids and weights, M=T, and α=D. Every containing cap retains atomic mass at least D at the same selected mark; D is positive and at most T. Fibers of zero volume contribute nothing if present, and caps with zero continuous coefficient count retained fibers in full. The affine-graph equality discussion is not used.",
+      "reviewed_proof_sha256": "b8a9c20be1aff21e3af3bba4642ce06caedc1f68a200d8b1a88d1778de5c814b",
+      "reviewed_statement_sha256": "449332ef18547af49f7661b8760201e7ee1f410e6c24781e99009fb14094e625",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:39:37.749Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies raw mixed depth γ_d α once the atomic lower bound is proved. It has no four-block or grouped-ray atomic lower bound.",
+      "fact_id": "c2180d0c4d7ea592"
+    },
+    {
+      "comparison": "Gives a quarter atomic guarantee for all weights on a graph in lattice rank two if every same-parity midpoint is present. Only the four stated midpoint equalities are assumed here, with the revised interval profile exhibiting failure of all-pair closure for 0 and 6 at their base midpoint 3.",
+      "fact_id": "bee3cc8e50a0dcea"
+    },
+    {
+      "comparison": "A continuous cap inequality for one unequal-scale pair. It does not yield the stated atomic bound or two-case mass exchange on the full eight-mark pattern.",
+      "fact_id": "e561372a5640eef8"
+    }
+  ],
+  "readability": "The uppercase C in the exchange denotes w₆+w₇. The candidate states the same-mark conclusion through the score D, with no assumption of globally affine centroids.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "716430fc0c6f5e92f71f82f0b048593a46b8274921d8088cb280de8984a3d370",
+  "reviewed_statement_sha256": "6db4a7c9c8fa3d8f651fa666ca829e1a560cbf74bf6a17f67d9308f70a7812b1",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:34:55Z",
+  "summary": "The exact midpoint relations and parity-root inequalities yield the four disjoint budget blocks, proving a single selected mark has atomic depth at least D≥T/4 and mixed depth at least γ_d D.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,68 @@
+{
+  "candidate_id": "151fa708661bd0e3",
+  "candidate_sha256": "e47602e7f0a0d2731db5a624b62ccf08a6ffa128ce0a73a82fa35186b6a38462",
+  "checked_dependency_candidate_sha256": {
+    "6d6fcf377e68c79c": "d5b251e75567aff3da9f0767d89121ad75927a3913df28543a8b5083e25ae135",
+    "bee3cc8e50a0dcea": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa"
+  },
+  "checks": [
+    "Matched raw source 237f4727836ebab9 at its declared digest and verified §3, (6)–(7). It is the direct intrinsic support Helly result, independent of the joint measure inequality in the source's earlier sections.",
+    "At z, each trace of C_i on S_z is convex in aff(S_z), and their full intersection is empty. Ordinary finite Helly works for arbitrary convex sets, and the local dimension plus one is at most q+1. If there are fewer input constraints, all suffice; if the fiber is a singleton one excluded point gives one index. A nonempty local certificate exists because S_z itself is nonempty.",
+    "Each E_J is the linear projection of an intersection of convex sets, so is convex even if some C_i are open or E_J is empty. Membership z in E_J is equivalent to a point of S_z satisfying the selected constraints, since S_z is the exact D-fiber at z. Thus every z in P is omitted by at least one E_J.",
+    "Applied the general finite-set witness lemma of bee3cc8e50a0dcea with F=P. If two vertices of a P-empty vertex set shared a parity, their midpoint would be in P and the hull but would be a nonvertex; this contradicts equality of the P-trace with the vertex set. Hence h(P)≤k. The union of at most k local certificates of size at most q+1 has at most (q+1)k original indices.",
+    "The located set is a finite union of compact placed fibers, hence nonempty and closed, and the original measure is carried by it without any reweighting. The general Borel theorem in 6d6fcf377e68c79c gives depth at least nu(S)/h(S), which is at least nu(S)/[(q+1)k]. Its closed-halfspace conclusion includes atoms and mass on the boundary. The singleton base case and q=0 are included."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "bee3cc8e50a0dcea",
+      "candidate_sha256": "79be505f1f590df7ea91df2ba4856f5e1d74e0106cc6efc8aff0d5c37e6992fa",
+      "fact_id": "bee3cc8e50a0dcea",
+      "fact_sha256": "d7fb8bf1055406ebcaa03906c37ae5c346a791238bfc82ab445225504cc670e3",
+      "mapping": "Use the general finite-set witness lemma proved inside the fact, with F=P in the base space. Its hypotheses are exactly finite and nonempty, so no n,d>0 or singleton-graph restrictions from the fact's later application enter. The new same-parity counting bounds the lemma's empty-vertex-set maximum by k.",
+      "reviewed_proof_sha256": "5f71717b77abc881a8566e239b260d568886b9968e0805f252142523621e3ddb",
+      "reviewed_statement_sha256": "b35d11bb8b5672e290f57d665efd27927629b295e5ae5d1e0655b22288a2bd12",
+      "status": "accepted"
+    },
+    {
+      "candidate_id": "6d6fcf377e68c79c",
+      "candidate_sha256": "d5b251e75567aff3da9f0767d89121ad75927a3913df28543a8b5083e25ae135",
+      "fact_id": "6d6fcf377e68c79c",
+      "fact_sha256": "4d94a57facfebf6c82ff6ff9114186ef0d95d819e68e571362b809791b3cbd49",
+      "mapping": "Use its general closed-set theorem with location set equal to the compact placed trace S in R^(n+m) and with the given finite nonzero Borel measure nu. The new witness bound makes h(S) finite and at most (q+1)k; the total mass is nu(S).",
+      "reviewed_proof_sha256": "7b1c76f7e78b71fdef6d5a75876ba714d998cee6a393ffb48aa08960ed54c0e1",
+      "reviewed_statement_sha256": "b2bc93a951e05e00ca3866e069596a76bf19c112204a2e97726cd7db8c449ae4",
+      "status": "accepted"
+    }
+  ],
+  "finished_utc": "2026-11-08T13:40:10Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It already gives the base h(P)≤k bound in its proof for same-label midpoint closure and a stronger finite atomic base center conclusion. It has no projection of local Helly certificates and gives no (q+1)k statement for positive-dimensional convex fibers.",
+      "fact_id": "f4547c4166b39683"
+    },
+    {
+      "comparison": "The internal finite-set lemma applies to the base as used here. Its stated graph conclusion instead assumes midpoint closure of the placed graph and pays ambient parity capacity 2^n; the present proof allows entire fibers without graph midpoint labels and uses the occupied count.",
+      "fact_id": "bee3cc8e50a0dcea"
+    },
+    {
+      "comparison": "Its general centerpoint conclusion applies after the new relative Helly bound. Its lattice-product specialization gives the coarser ambient denominator 2^n(m+1), with no bound in terms of the sampled fiber dimensions and occupied classes.",
+      "fact_id": "6d6fcf377e68c79c"
+    }
+  ],
+  "readability": "Local traces mean C_i intersected with the exact D-fiber at the given z, so no added S_z constraint needs a slot. The projected sets need only be convex; compactness is used for the final location set.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2b8a55d5e7f0a09141b07bff2caad73cfd494077abe50aae572e6d28294cc31b",
+  "reviewed_statement_sha256": "46d8cd839fc7363c2487ce218f2aee937640faedb3ab7979a926ee7dea1b1a4e",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T13:37:27Z",
+  "summary": "Local Helly certificates use at most q+1 constraints per sampled fiber. The projected certificates need at most k selections on the midpoint-closed base, and the resulting (q+1)k bound gives a center for the original Borel measure.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

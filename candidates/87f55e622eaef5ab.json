@@ -1,0 +1,30 @@
+{
+  "advances": "This exact allocation transition is for the seven actual positive fibers under the two specified shape and mass cases.",
+  "author": "PK-research-agent",
+  "candidate_id": "87f55e622eaef5ab",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:30:00.238470+00:00",
+  "depends_on": [
+    "53fe12b742a7608d",
+    "6a7d56e450b3126f",
+    "98603e266680b22d"
+  ],
+  "draft_key": "actual-seven-fiber-partial-trace-global-depth",
+  "kind": "theorem",
+  "proof": "The base hull is the quadrilateral $-1\\le z_1\\le1$, $z_2\\le1$, $z_1+2z_2\\ge-1$. At integer first coordinates $-1,0,1$ the allowed integer second coordinates are respectively $(0,1),(0,1),(-1,0,1)$. The added bases $(-1,0),(-1,1),(1,-1)$ uniquely maximize respectively $-2z_1-z_2,-z_1+z_2,z_1-2z_2$ on these generators. Their fibers are exactly $R,A,A$. Each core fiber stays $T$ because all continuous generators lie in $T$. The lifted core spans full dimension, and summing the seven volumes gives the stated mass.\n\nTake a nonvertical through-cap at $((0,0),g)$, with unit continuous normal $u$. If it takes all of $R$, the shifts in the two $A$ fibers are opposite about the centroid $g$. Fact 6a7d56e450b3126f gives combined mass at least $2\\Gamma_d a$ in the homothetic case. Symmetry gives combined mass exactly $a$ in the symmetric case. Together with the own cap, this gives the target. If it fails to take all of $R$, write $B=u\\cdot g$ and $\\ell=\\min_T u\\cdot x$. The threshold in $R$ exceeds $\\ell$. The opposite core fiber at $(1,0)$ then has threshold less than $2B-\\ell$. The own and opposite simplex captures alone have mass at least $(\\Gamma_d+\\rho_d)V$ by the reflected profile, which suffices. A vertical through-cap has at least the own volume $V>(\\Gamma_d+\\rho_d)V$. Moving a containing cap parallel inward proves the bound for all containing caps.\n\nFor each barycentric coordinate $\\lambda_i$ on $T$ use the closed cap\n$$\n\\lambda_i(x)-\\frac{d}{d+1}(z_1+z_2)\\ge\\frac1{d+1}.\n$$\nIts mass is $\\Gamma_d V+w+\\theta a$. It fully captures $R$. At the two $A$ fibers it cuts canonical centroid caps of fraction $\\Gamma_d$ in the homothetic case and $1/2$ in the symmetric case. At the adjacent core fibers the threshold is one, and at $(1,1)$ it exceeds one. The own cap has volume $\\Gamma_d V$. These caps cover the whole $(0,0)$ fiber. At a noncentroid point some own barycentric coordinate exceeds $1/(d+1)$. Raise the corresponding threshold to that coordinate to strictly decrease the own mass without increasing any other trace.\n\nAt the anchors $(0,1)$ and $(1,0)$ their respective $A$ and opposite core form an actual placed three-fiber subset of the type in 98603e266680b22d. Restrict any containing halfspace to the affine base line of the triple. It gives a containing cap or the whole triple, and in either case the mass is at least $\\Gamma_d V+a$ at the anchor centroid. For the matching upper covers use the affine functions $z_1+2(1-z_2)$ and $1-z_1+z_2$ at the respective anchors. Each vanishes at its anchor, is $-1$ at its owned $A$, and is at least one on every other base in the seven-site census. Subtract twice this function from $\\lambda_i(x)$ and take threshold $1/(d+1)$ for all $i$. The caps take just the owned $A$ and the corresponding own cap. At a noncentroid mark raise the threshold as above to obtain a strict decrease. At $(1,1)$ the function $2-z_1-z_2$ gives the cover isolating canonical caps of mass $\\Gamma_d V$. Exposed vertical cuts at the added bases have masses $w$ or $a$, both below $\\Gamma_d V$ by the assumed bounds and $\\rho_d<\\Gamma_d$. All other points are therefore strictly below the stated global maximum, with exactly the comparisons in the statement.\n",
+  "source_candidate_ids": [
+    "8c889e9b634ca1eb"
+  ],
+  "source_candidate_sha256": {
+    "8c889e9b634ca1eb": "3a301101e6baa4f60310604b810df486c64a5a5bdb92a4cd98f24504408aad23"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8c889e9b634ca1eb",
+      "locator": "§§1–4, (1)–(7), exact hull and maximizing points"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let $T$ be a $d$-simplex of volume $V$ with centroid $g$. Place $T$ at the four binary bases in two integer dimensions. Place any convex body $R\\subseteq T$ of volume $w>0$ at $(-1,0)$, and the same convex body $A\\subseteq T$ of volume $a>0$ at $(-1,1)$ and $(1,-1)$. Suppose either $A$ is a positive homothet of $T$ about $g$ and $\\theta=2\\Gamma_d$, or $A$ is centrally symmetric about $g$ and $\\theta=1$. Here $\\Gamma_d=(d/(d+1))^d$, and $\\rho_d$ is the reflected simplex profile minimum of fact 53fe12b742a7608d. Assume $a\\le\\rho_d V$ and $w+\\theta a\\le\\rho_d V$.\n\nThe convex hull has exactly the seven assigned integer fibers, total mixed volume $4V+w+2a$, and raw depth $\\Gamma_d V+w+\\theta a$ at $((0,0),g)$. Over its actual mixed-integer points the raw maximum is $\\Gamma_d V+\\max(a,w+\\theta a)$. The maximizing set consists of $((0,0),g)$ if $w+\\theta a>a$, of $((0,1),g)$ and $((1,0),g)$ if $w+\\theta a<a$, and of all three at equality.",
+  "subgoal_id": "pk-intake-actual-seven-fiber-partial-trace-global-depth",
+  "title": "Exact global depth for seven fibers with a partial-trace transition"
+}

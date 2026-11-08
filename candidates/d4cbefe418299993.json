@@ -1,0 +1,26 @@
+{
+  "advances": "Common-scale finite weak limits of one family of convex affine slices. The existence of those limits and their identification with a rate law are separate application hypotheses.",
+  "author": "PK-research-agent",
+  "candidate_id": "d4cbefe418299993",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T13:36:03.337780+00:00",
+  "depends_on": [],
+  "draft_key": "common-scale-weak-slice-brunn-minkowski",
+  "kind": "lemma",
+  "proof": "Extend the prelimit and limit measures by zero at integer bases outside $P$. At each $j$, any weighted Minkowski sum of compact subsets of the input slices lies in the output slice by convexity of $D_j$ and affinity of $A_j$. Translate the parallel planes to their common Euclidean direction space. Ordinary $N$-dimensional Brunn–Minkowski and the common multiplier $\\alpha_j$ then give the desired inequality for these compact portions with positive prelimit masses.\n\nFix compact $E_i$ of positive limit mass and write $E=\\sum_i\\theta_i E_i$. For $\\varepsilon>0$ let $U_i$ be the open $\\varepsilon$-neighborhood of $E_i$. The Minkowski combination of the $U_i$ lies in the closed $\\varepsilon$-neighborhood $E_\\varepsilon$ of $E$. Portmanteau gives $\\liminf_j\\mu_{j,z_i}(U_i)\\ge\\mu_{z_i}(E_i)>0$. For large $j$, use compact subsets of each $U_i$ intersected with its input slice and approximate its mass by compact inner regularity. The prelimit inequality then gives $\\mu_{j,z}(E_\\varepsilon)^{1/N}\\ge\\sum_i\\theta_i\\mu_{j,z_i}(U_i)^{1/N}$. The upper Portmanteau bound for the closed set $E_\\varepsilon$ gives the same inequality with $\\mu_z(E_\\varepsilon)$ on the left and the $\\mu_{z_i}(E_i)$ on the right. Send $\\varepsilon$ to zero and use continuity from above for the finite output measure.\n\nThe right side is positive, so the integer output belongs to $P_+$. Any integer point of its convex hull has a finite representation of the stated form after zero coefficients are discarded, which proves the census.\n",
+  "source_candidate_ids": [
+    "185fb6155f830e0e"
+  ],
+  "source_candidate_sha256": {
+    "185fb6155f830e0e": "fc2294a3d3071e4371e21e8fee17b18b04de8b661c97c5635185b5d41ac591fc"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "185fb6155f830e0e",
+      "locator": "§§1–2, (1)–(4)"
+    }
+  ],
+  "statement": "Let $n\\ge0$ and $N\\ge1$, let $P\\subset\\mathbb Z^n$ be finite, and let $D_j\\subset\\mathbb R^n\\times\\mathbb R^D$ be compact convex sets contained in one fixed compact set. All nonempty integer fibers of $D_j$ have bases in $P$. At step $j$ cut by one affine level $A_j(z,x)=s_j$ whose continuous gradient is nonzero. Assume the resulting fibers lie in parallel $N$-dimensional affine planes, with the same Euclidean $N$-volume convention. Let $\\mu_{j,z}$ be $\\alpha_j>0$ times the $N$-volume restricted to the fiber of this cut at $z$, where $\\alpha_j$ is independent of $z$. Assume simultaneous finite weak limits $\\mu_{j,z}\\to\\mu_z$ at every $z\\in P$. Put $P_+=\\{z\\in P:\\mu_z\\ne0\\}$ and assume it is nonempty.\n\nWhenever $z_i\\in P_+$ and $\\theta_i>0$ have $\\sum_i\\theta_i=1$ and $z=\\sum_i\\theta_i z_i$ is integer, $z\\in P_+$ and for all compact sets $E_i$ with $\\mu_{z_i}(E_i)>0$,\n$$\n\\mu_z\\!\\left(\\sum_i\\theta_i E_i\\right)^{1/N}\n\\ \\ge\\ \\sum_i\\theta_i\\mu_{z_i}(E_i)^{1/N}.\n$$\nIn particular $P_+=\\operatorname{conv}(P_+)\\cap\\mathbb Z^n$.",
+  "subgoal_id": "pk-intake-common-scale-weak-slice-brunn-minkowski",
+  "title": "Common-scale weak limits retain joint slice Brunn–Minkowski"
+}

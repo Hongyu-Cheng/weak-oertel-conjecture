@@ -14,6 +14,17 @@ On 7 November 2026, the integration review of PRs #4–#8 covered all **39 newly
 
 The recorded subgoal statuses are research history, not a freshly reviewed list of available assignments. Some subgoals mention unshared research notes; reconstruct their mathematical target from accepted facts before using them. The README highlights are navigation aids, not an additional verification of the results.
 
+## Counterexample of total dimension 17
+
+A rational polytope with **$(n,d)=(12,5)$** has normalized mixed-integer
+depth uniformly below $(5/6)^5/2^{12}$. Selector-dependent signs on the
+ordinary coordinates give three light pools of 252 fibers each using
+two selector coordinates. The proof accounts for all $4{,}852$ integer
+fibers and gives a containing halfspace at every mixed-integer point.
+[Geometric proof](research/sharp-dimension-17/README.md) ·
+[Exact replay](research/sharp-dimension-17/check.py) ·
+[Lean theorem](lean/SharpOC/Selector17Counterexample.lean).
+
 ## Counterexample of total dimension 19
 
 A rational polytope with **$(n,d)=(14,5)$** has normalized mixed-integer

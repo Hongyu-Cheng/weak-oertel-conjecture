@@ -1,0 +1,62 @@
+{
+  "candidate_id": "ad017d8380c3bf8d",
+  "candidate_sha256": "a9e367817f2726c8fd2e46e63274a4165896a74c6d85e33c010a9a5f8d44a36e",
+  "checked_dependency_candidate_sha256": {
+    "511d89569241b0d6": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+    "55ec62c36c689dfe": "98f48b140dcfda5dce37dcae3f9d5a6cfd158fe3b5ee442a07326c345999686e"
+  },
+  "checks": [
+    "Realize X as k independent unit exponential phases. These preserve two strictly positive phases, and −E_0 preserves one strictly negative phase even when residual coefficients vanish. The chain rule for c_i=−b_i gives the minus sign in the derivative formula.",
+    "Writing the added negative phase convolution as e^(x/c) times a tail integral gives f_W′=(f_W−f_U)/c for c>0. At c=0 the distributions agree, and f_W′ exists by the density sign lemma. Removing the j phase in ∂_i and the i phase in ∂_j yields −(b_i−b_j)f_W′(0).",
+    "The negative means for W have total 1+(k−1)+b_i+b_j=k+b_i+b_j, and every one lies in [0,1]. The density derivative is strictly negative for b_i+b_j>0 because its equality case has total exactly k. Along an unequal transfer pair, b_i>b_j and b_i+b_j>0 up to the terminal point. The derivative along the path is (b_i−b_j)f_W′(0)<0 before that point, so the exact endpoint is included by the mean value theorem. Continuity through b_j=0 follows from the accepted derivative lemma.",
+    "The endpoint is the smaller of the above-average excess and below-average deficit, so it keeps all coefficients in the box and fixes at least one new coordinate at the average. The sum forces an above-average and below-average pair whenever unequal. A finite sequence therefore reaches the equal vector, with strict improvement whenever it starts unequal. For q=k−1 all coordinates are already one.",
+    "Source a6e6fd61fe60c16a at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5 matches SHA-256 b23a4781c65a1c1e79591cd59e66c32e037575f27ceae99edb27e9f1eff3d030. Section 4, equations (5)–(6), supplies the comparison and derivative difference. The frozen proof supplies strictness from the sharpened density lemma and handles zero coefficients through the accepted signed-exponential derivative formula."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "511d89569241b0d6",
+      "candidate_sha256": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+      "fact_id": "511d89569241b0d6",
+      "fact_sha256": "d75e672e61cdd31510a3a7670e71711e49edd1b2805e5883e393e73e568cada6",
+      "mapping": "The signed sum has k≥2 fixed positive unit phases and the fixed negative phase −E_0. Apply the density and first-derivative assertions, also with an extra negative or zero phase as needed. The derivative in b_i is minus the derivative in signed c_i.",
+      "reviewed_proof_sha256": "de2812dbc5632f66b6800ec3d17e4a2fa4d439425feb37f623d693d06a842516",
+      "reviewed_statement_sha256": "5da49339a62c68ed1622a42d4d7d1c4bff3ac044a334dd512c679d389cf75c8b",
+      "status": "Accepted at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5."
+    },
+    {
+      "candidate_id": "55ec62c36c689dfe",
+      "candidate_sha256": "98f48b140dcfda5dce37dcae3f9d5a6cfd158fe3b5ee442a07326c345999686e",
+      "mapping": "Apply to W with positive Gamma(k,1) and independent negative phases of means 1, b_1,…,b_q, b_i, b_j. The cap and total hypotheses hold and b_i+b_j>0 rules out derivative equality.",
+      "reviewed_proof_sha256": "c399e1c63981decc22b2906e7bfc9982ff4d6669bb09fb41dd81e30d22758b61",
+      "reviewed_statement_sha256": "57715e4dc6e74d1e3a083d4e6e7bb0dd19393a7fc74770fbfc1d380e1d7676d0",
+      "status": "Frozen same-wave predecessor approved in its separate review and pending graph admission. Admit it before this candidate."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:06:31.725841+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The signed-exponential derivative formula is used as a premise. Its second-derivative formulas concern positive coefficients and do not themselves give the negative residual comparison.",
+      "fact_id": "511d89569241b0d6"
+    },
+    {
+      "comparison": "The balanced sign-probability lower bound applies but is optimized by merging positive mass without the unit cap. Swapping the signs allows a largest-negative merge toward a maximal negative coefficient, which can change the fixed unit or violate the cap. It does not give the strict transfer between the capped residuals in this statement.",
+      "fact_id": "564e798ecec2b61f"
+    }
+  ],
+  "readability": "The removal indices were checked in both derivative terms. In particular the derivative in b_i removes the added j phase.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "ba3fb84cf87a1cbaa664c29d9709e04395f85d43184d0e3e9b5a632f7ee2ef53",
+  "reviewed_statement_sha256": "7c8cdff2d90b2ab206467dc333e7243586c19c1e73ff9435b460185fb1c427de",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:03:18.479Z",
+  "summary": "The fixed-count minimization and strict transfer hold on the closed capped coefficient domain, including zero receiving coefficients.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

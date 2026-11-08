@@ -4,6 +4,27 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 4 | theorem | pk-intake-capped-signed-exponential-escape-reduction | [65d374efd09b8c3d](facts/65d374efd09b8c3d.md) |
+| 1 | theorem | pk-intake-stationary-fractional-exponential-exclusion | [18d3a5cf0b729f6d](facts/18d3a5cf0b729f6d.md) |
+| 0 | lemma | pk-intake-fractional-signed-exponential-escape-limits | [f4bc58c878c5d61a](facts/f4bc58c878c5d61a.md) |
+| 3 | theorem | pk-intake-capped-signed-exponential-minimizer-classification | [38821acd2e746146](facts/38821acd2e746146.md) |
+| 3 | theorem | pk-intake-saturated-exact-gamma-infimum | [3f633c7a06ebe428](facts/3f633c7a06ebe428.md) |
+| 2 | theorem | pk-intake-unit-negative-exponential-half-mass | [0b7948c254af939c](facts/0b7948c254af939c.md) |
+| 2 | theorem | pk-intake-saturated-negative-equalization | [ad017d8380c3bf8d](facts/ad017d8380c3bf8d.md) |
+| 1 | theorem | pk-intake-symmetric-base-truncated-projective-energy | [241f294f34c040a4](facts/241f294f34c040a4.md) |
+| 5 | theorem | pk-intake-global-paired-simplex-depth-stability | [8d5061c778ea7d72](facts/8d5061c778ea7d72.md) |
+| 3 | theorem | pk-intake-planar-paired-simplex-central-own-centroid | [a886f31c444612a5](facts/a886f31c444612a5.md) |
+| 1 | lemma | pk-intake-gamma-negative-phase-density-sign | [55ec62c36c689dfe](facts/55ec62c36c689dfe.md) |
+| 2 | theorem | pk-intake-wedge-simplex-outside-selector-depth | [21a43222bf8239ed](facts/21a43222bf8239ed.md) |
+| 1 | theorem | pk-intake-slab-simplex-large-subbody-depth | [81f1c1cb0440d242](facts/81f1c1cb0440d242.md) |
+| 0 | lemma | pk-intake-pyramid-centroidal-section-energy | [2f58c412150dafaf](facts/2f58c412150dafaf.md) |
+| 0 | lemma | pk-intake-even-unimodal-truncation-energy | [ffcc7a246184e668](facts/ffcc7a246184e668.md) |
+| 4 | theorem | pk-intake-relative-paired-simplex-depth-stability | [36832ee103f84d3d](facts/36832ee103f84d3d.md) |
+| 0 | lemma | pk-intake-arithmetic-linear-quadratic-hinge-sums | [092da3dd16fe42c7](facts/092da3dd16fe42c7.md) |
+| 0 | lemma | pk-intake-planar-diagonal-envelope-own-cap-bonus | [b026600b8d8e369b](facts/b026600b8d8e369b.md) |
+| 1 | theorem | pk-intake-capped-signed-exponential-free-positive-pair | [24e83be093cbd50e](facts/24e83be093cbd50e.md) |
+| 0 | lemma | pk-intake-geometric-conditional-mode | [3c9f3fe59d980ee3](facts/3c9f3fe59d980ee3.md) |
+| 0 | theorem | pk-intake-deterministic-negative-fractional-gamma-bound | [870ad0085472647d](facts/870ad0085472647d.md) |
 | 3 | theorem | pk-intake-projected-deepest-set-localization | [4feafed4a73bb57f](facts/4feafed4a73bb57f.md) |
 | 2 | theorem | pk-intake-central-barycentric-simplex-depth | [700febf4b7a92759](facts/700febf4b7a92759.md) |
 | 1 | theorem | pk-intake-simplex-negative-vertex-cap-gap | [baee8ddaa588aef0](facts/baee8ddaa588aef0.md) |

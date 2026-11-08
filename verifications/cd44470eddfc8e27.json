@@ -1,0 +1,47 @@
+{
+  "candidate_id": "3f633c7a06ebe428",
+  "candidate_sha256": "d9e44914881adc464a47d29a7a33e0e8da42365e4de32ee8acdf20f154fa7a19",
+  "checked_dependency_candidate_sha256": {
+    "ad017d8380c3bf8d": "a9e367817f2726c8fd2e46e63274a4165896a74c6d85e33c010a9a5f8d44a36e"
+  },
+  "checks": [
+    "For k≥2, feasibility is exactly q≥k−1, so q>0 and the equal vector has strictly positive entries. Padding it with a zero preserves the law and gives an unequal feasible vector at count q+1. Strict equalization implies A_{k,q+1}<A_{k,q}.",
+    "The scaled Gamma(q,1) threshold has mean k−1 and variance (k−1)^2/q. Outside the Chebyshev exceptional event the moving sign event is sandwiched by the two deterministic thresholds. Conditioning on E_0 shows X−E_0 has no atom at k−1, so the bounds coalesce as epsilon decreases to zero after q tends to infinity.",
+    "Every finite minimum exceeds its limit, since the next minimum is strictly smaller and at least the limit. The equal vectors provide the required approximating sequence. For k=1, all residual coefficients vanish, including the empty list, and the two independent unit exponentials have equal probabilities of either strict order.",
+    "Conditioning on X gives the ordinary tail minus e^s times its e^(−X)-weighted tail. Substitution u=2x gives the factor 2^(−k) and tail at 2s. Inserting the finite gamma tail formula yields the stated summands. Exact rational arithmetic after removing e^(−(k−1)) gives 1/2, 5/4 and 27/8 at k=1,2,3 respectively.",
+    "Source a6e6fd61fe60c16a at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5 matches SHA-256 b23a4781c65a1c1e79591cd59e66c32e037575f27ceae99edb27e9f1eff3d030. Section 5, equations (7)–(8), gives the limiting threshold and exact formula. The strict equalization predecessor gives strict decrease and nonattainment at every finite count for k≥2. The coefficient regime remains the one in the source."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "ad017d8380c3bf8d",
+      "candidate_sha256": "a9e367817f2726c8fd2e46e63274a4165896a74c6d85e33c010a9a5f8d44a36e",
+      "mapping": "Use the theorem with the same k and each feasible q≥k−1. Apply both its minimum formula and strict equality criterion at q+1 to the padded equal q-vector. The k=1 case is independent of this theorem.",
+      "reviewed_proof_sha256": "ba3fb84cf87a1cbaa664c29d9709e04395f85d43184d0e3e9b5a632f7ee2ef53",
+      "reviewed_statement_sha256": "7c8cdff2d90b2ab206467dc333e7243586c19c1e73ff9435b460185fb1c427de",
+      "status": "Frozen same-wave predecessor approved in its separate review and pending graph admission. Admit it before this candidate."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:06:31.726050+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted unrestricted balanced-law infimum at fixed counts is driven by concentration of positive mass into one coefficient. That vector is outside the required unit-positive pattern for k≥2. Its scalar bound applies to these laws but does not determine the restricted finite-count minima or their limit.",
+      "fact_id": "564e798ecec2b61f"
+    }
+  ],
+  "readability": "The monotone sequence A_{k,q} is separated from the single Gamma random variable G and from the limiting value G_k by their definitions.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7d648d74da30598b77d9ccb9831dea19a7b198e26fcf0efc2bb16b86ff1129a4",
+  "reviewed_statement_sha256": "5a1acaaec2e790d40833baa79472b3bd09eee15793f7abcdff7b1be78d669440",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:03:18.479Z",
+  "summary": "The explicit gamma probability is the infimum over finite feasible lists. It is strictly below every finite-list probability for k≥2, and attained by every feasible list for k=1.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

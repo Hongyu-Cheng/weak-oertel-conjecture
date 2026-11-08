@@ -1,0 +1,41 @@
+{
+  "candidate_id": "b026600b8d8e369b",
+  "candidate_sha256": "a84f71a68b85f75810033fa9a22db9d80686cf4f0d137c58381dd5aa67b6ba2c",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "At r=0 the area and bound vanish. At q=0 or q≥r/2 only nonnegativity is required. In the remaining range 0<q<r/2 and 1/2<a<1, q<ar so no empty-cap case is missed.",
+    "For q≤(1−a)r the excluded intercepts are q/a and q/(1−a), yielding r²−q²/[a(1−a)] in units of V. Above the middle vertex height the two retained edge fractions give (ar−q)²/[a(2a−1)]. At q=(1−a)r both formulas are (2a−1)r²/a. Open or closed cap boundaries have zero area.",
+    "Expanded the upper-branch square independently: its mixed term is −2a(4a−1)rq and the constant coefficient uses 1+8a(2a−1)=(4a−1)². On the lower branch r≥q/(1−a)≥2q gives derivative 2r−4q≥0, so comparison at the branch seam suffices.",
+    "At a=1/2 the excluded right triangle has area ratio 4q², giving difference (r−2q)². At a=1 the included triangle is a translate of (r−q)T, giving difference (r−3q)². These cases avoid the vanishing branch denominators.",
+    "At q=r/3 and 1/2≤a≤2/3 the threshold is at or below the middle height; a(1−a) decreases from 1/4 to 2/9, giving F≥r²/2 with equality at 2/3, including the seam. Scaling and the zero-radius case agree.",
+    "Checked dd382d5b121a0508 §1 (1)–(3) and its pinned source hash. Exact rational spot checks corroborated the branch seam, square identity and angular equality."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T09:09:02Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Ordinary simplex depth gives the same lower bound at (q,q) for r/3≤q<r/2, where the smaller barycentric coordinates are 1−2q/r and q/r. It gives only the orientation-independent 4r²/9 at the centroid, and does not furnish the angular bonus or the small-threshold envelope.",
+      "fact_id": "700febf4b7a92759"
+    },
+    {
+      "comparison": "Its proof gives the exact triangle area tail for distinct vertex heights and handles repeated heights by a limit. Rescaling that tail gives the raw branch formulas used here. The comparison to the universal 4q(r−2q)₊ envelope for all q≥0 and the sharp restricted-normal coefficient are not stated there.",
+      "fact_id": "d6ce3858d2712450"
+    }
+  ],
+  "readability": "No ambiguity affecting the proof. The area scale V means the normalized tail is bounded by r², not by one for arbitrary r.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "6222e57d8c22c4aaeb1185c5ccd88923e89a3a7775a49d33212fc1f40bf33e9a",
+  "reviewed_statement_sha256": "c9b765e6ad0e35c0ca69a14bfaaeea2892dadedbcddb43415fbc9a6b51225316",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:05:17Z",
+  "summary": "The universal cap envelope and the sharp restricted centroid coefficient follow from the exact two branches, including repeated vertex heights and degenerate radii.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

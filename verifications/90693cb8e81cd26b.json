@@ -1,0 +1,62 @@
+{
+  "candidate_id": "0b7948c254af939c",
+  "candidate_sha256": "9439ec1869ca94bc7e0f577e4d620f1094bb92b7e5ec3646b35784a7cd3cb74c",
+  "checked_dependency_candidate_sha256": {
+    "511d89569241b0d6": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+    "55ec62c36c689dfe": "98f48b140dcfda5dce37dcae3f9d5a6cfd158fe3b5ee442a07326c345999686e"
+  },
+  "checks": [
+    "For m=1 the conditional probability is 1−E exp(−Σ p_i E_i)=1−∏(1+p_i)⁻¹. Every cross term in the product is nonnegative, so the product is at least 1+Σ p_i=2.",
+    "For m≥2 along a transfer, both selected positive phases remain nonzero until a possible terminal zero, and there is a negative unit phase. The reflected W is Gamma(m,1) minus independent capped positive phases of total m+p_i+p_j≥m. The gamma lemma gives a nonpositive derivative for the reflected density, hence g′(0)≥0.",
+    "The convolution with a positive phase of scale c has density F_c(x)=c⁻¹∫ from −∞ to x of exp(−(x−u)/c) f(u) du, giving cF_c′=f−F_c. Removing the added j phase from g gives f_{V+p_iE_i′}=g+p_j g′, and removing i gives f_{V+p_jE_j′}=g+p_i g′. The difference is (p_j−p_i)g′(0)≤0 and equals the derivative in the (+1,−1) transfer direction.",
+    "The transfer preserves the sum, cap, and order p_i≥p_j until the first endpoint. The sign holds at every interior point and continuity extends the comparison to the endpoint, including a zero donor. Each step removes at least one fractional coefficient; an integer sum cannot leave exactly one fraction. The terminal positive and negative sums are independent identical continuous gamma laws, with comparison probability 1/2.",
+    "Source 9dace055ddbb6578 at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5 matches SHA-256 793d931e0e3a4600d32eb5144b37e6c5da57305359f7ba04329288e0af8e121a. Its all-unit negative stratum contains the same transfer sign and endpoint, with m=1 treated separately."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "511d89569241b0d6",
+      "candidate_sha256": "743c317fad8e76606c9456d4ad0c7ac855d3e9c6d610ad53517329c5b691a0fc",
+      "fact_id": "511d89569241b0d6",
+      "fact_sha256": "d75e672e61cdd31510a3a7670e71711e49edd1b2805e5883e393e73e568cada6",
+      "mapping": "At each interior transfer point the two selected positive phases and at least one negative unit phase satisfy the sign-count hypotheses. Their derivative difference is the directional derivative by continuous differentiability.",
+      "reviewed_proof_sha256": "de2812dbc5632f66b6800ec3d17e4a2fa4d439425feb37f623d693d06a842516",
+      "reviewed_statement_sha256": "5da49339a62c68ed1622a42d4d7d1c4bff3ac044a334dd512c679d389cf75c8b",
+      "status": "Accepted at ccd2585fe1e60de7ae69c92da9c86f8ec528ddb5."
+    },
+    {
+      "candidate_id": "55ec62c36c689dfe",
+      "candidate_sha256": "98f48b140dcfda5dce37dcae3f9d5a6cfd158fe3b5ee442a07326c345999686e",
+      "mapping": "Use X=Σ_{j=1}^m F_j, Y=Σ_i p_i E_i+p_i E_i′+p_j E_j′ and shape k=m≥2. All Y phases are independent and have scales in [0,1] with total m+p_i+p_j≥m; X−Y=−W, so reflection reverses the derivative sign.",
+      "reviewed_proof_sha256": "c399e1c63981decc22b2906e7bfc9982ff4d6669bb09fb41dd81e30d22758b61",
+      "reviewed_statement_sha256": "57715e4dc6e74d1e3a083d4e6e7bb0dd19393a7fc74770fbfc1d380e1d7676d0",
+      "status": "Frozen same-wave predecessor independently approved and pending graph admission. Admit it before this candidate."
+    }
+  ],
+  "finished_utc": "2026-11-08T09:11:03.252034+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the transfer identity and largest-positive comparison, and implies the bound when m=1. For m>1 its unconditional lower bound is (m/(m+1))^m<1/2; a largest-positive transfer may violate the cap and cannot keep an already saturated largest coefficient as receiver.",
+      "fact_id": "564e798ecec2b61f"
+    },
+    {
+      "comparison": "Supplies the first derivatives, without the transfer sign for an arbitrary pair of fractions in the all-unit negative stratum.",
+      "fact_id": "511d89569241b0d6"
+    }
+  ],
+  "readability": "The two convolution removal orders and the separate density reflection reverse different signs; checking them explicitly gives the displayed transfer sign. The tied starting pair can have zero derivative at the start and does not obstruct nonincrease.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "cdd092fd998778cf3e791576d685e7e20b11ccd9fb48db9afd810541bd38342e",
+  "reviewed_statement_sha256": "4b1d6fbf0aa15279f1ca00ad5a090d978501fa93d8c2f7b57297a3deb1e14870",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:08:04Z",
+  "summary": "The bound is attained when all positive coefficients are units or zeros. A transfer between fractional positive coefficients cannot increase the probability, by the density derivative of the reflected gamma comparison.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

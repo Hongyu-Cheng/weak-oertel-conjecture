@@ -1,0 +1,44 @@
+{
+  "candidate_id": "870ad0085472647d",
+  "candidate_sha256": "1f0eeb74933c850e48fb827642e996675042605a6a867142092f6dbdccdc2f2e",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The centered conditioning identity has the indicated sign and threshold. Fourier inversion is applicable to the continuous, integrable gamma derivative for k≥3 with integrable transform; its absolute integral is 2/(k−2). Convolution preserves the Lipschitz bound. The explicit k=1 and k=2 densities give constants 1/2 and 1/4, including continuity at zero and the k=2 positive-side critical point w=3/2.",
+    "Dominated convergence gives continuity at both parameter endpoints and differentiation in the interior. Subtracting f_k(k−1) is justified by the zero mean of E−1. Its unit second moment bounds the derivative by p C_k, giving both the quadratic loss and the uniform Lipschitz estimate without differentiating f_1.",
+    "Direct convolution and integration give the two density branches and the survival polynomial Q_k. For m=k−1≥1 the Gamma(m+1,1) density pairing about m proves survival above 1/2, and each falling-factorial ratio in the correction is at most one. Midpoint Jensen and the elementary logarithm inequality give the stated factorial bound; e>8/3 gives the strict square-root estimate.",
+    "Both analytic errors decrease for k≥83. At k=83 the positive squaring threshold is 233/4860 and the square gap is 23023/1936807200, verified as exact fractions.",
+    "The degree-five positive exponential series and geometric remainder give e<87/32. All 71 comparisons for m=11,...,81 pass both the linked executable and independent exact Horner evaluation of the tail polynomial; the minimum of the rational endpoint bounds occurs at m=11. The worst perturbation at k=12 is at most 1/60 and the stated residual gap is 13/75000.",
+    "For 0<p<1, conditioning on W_k gives the exact tail and truncated exponential moment. Verified the negative-halfline integral, the integration-by-parts recurrence, and the relation −s/p+cs=−s. At p=0 use W_k directly; at p=1 the independent unit exponential adds one gamma shape and the threshold increases to k. The k=1, p=0 value is exactly 1/2.",
+    "The degree-32 and degree-33 Taylor polynomials enclose the exponential on [0,1]; the degree-three lower truncation is at least 1/3, so the product bounds are valid. Independently recomputed all 363 signed lower bounds using a closed-form polynomial antiderivative instead of the certificate's recurrence, and directly summed the Taylor polynomials. All tabulated floors of the mesh minima agree. The linked executable also passed all 363 mesh intervals and the seven extended integer entries.",
+    "The nearest-grid distance is at most 1/64 for every real p in the closed unit interval. The three worst Lipschitz losses are 1/128, 1/256 and 1/192, yielding exact positive gaps 19/16000, 67/32000 and 19/24000. The cases k≤11, 12≤k≤82 and k≥83 exhaust all positive integer shapes.",
+    "Both recorded source file hashes match. Source 93a759825a881af9 Theorem (1) and §§1–4.3 give the same quantifiers and strict conclusion; the frozen proof replaces the source's size-bias differentiation and separate Taylor step with the valid centered Lipschitz argument. Source 3f7ae72f2c829951 precise statement (L), dependency node 0 and crosswalk :04 identify the same standalone scalar leaf. Historical pending candidate 49f9fad7c4bf7e35 covers only p=0; the frozen proof independently recomputes all relevant finite comparisons."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T09:05:07Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Treats balanced finite signed sums of independent mean-one exponentials and bounds their probability below by the single-positive-phase Laplace product. Approximating the deterministic offset A−1, A=k+p, by q equal negative phases gives that product's limit A/(A+1) times exp(−(A−1)/A). It tends to 1/e as A grows and does not give the uniform strict 9/20 bound.",
+      "fact_id": "564e798ecec2b61f"
+    },
+    {
+      "comparison": "Translates the balanced finite signed-sum bound to simplex centroid caps, with a lower bound depending on the number of strictly negative vertex margins. In the deterministic-offset approximation the count of negative phases grows, giving only the limit 1/e. It does not imply the frozen scalar claim.",
+      "fact_id": "baee8ddaa588aef0"
+    }
+  ],
+  "readability": "The c-dependent mesh recurrence is used only for 0<p<1. The explicit endpoint formulas are essential to avoid division by zero, and the signed interval rule applies to both exponential coefficients. The proof identifies both points clearly.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bb5fa22a8d063ea8a351c064532327c8ab5edc8092e4689fe36bb28dc06afe08",
+  "reviewed_statement_sha256": "fa1e55a4b2f3a470873cfbff759e3b582c0b614f108501eafba2c52cb97c04a0",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:02:16Z",
+  "summary": "The exact proof establishes the strict scalar bound for every positive integer shape and every real fractional coefficient in the closed unit interval. The analytic large-shape cutoff, all finite rational bounds, and the continuum interpolation pass independent checks. No geometric reduction or graph predecessor is required.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

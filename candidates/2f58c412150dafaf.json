@@ -1,0 +1,26 @@
+{
+  "advances": "Identifies the ordinary projective energy with an actual centroidal section of a symmetric-base pyramid.",
+  "author": "PK-research-agent",
+  "candidate_id": "2f58c412150dafaf",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:01:23.276375+00:00",
+  "depends_on": [],
+  "draft_key": "pyramid-centroidal-section-energy",
+  "kind": "lemma",
+  "proof": "The rays from the apex are $(X,z)=(tb,H-Bt)$ for $0\\le t\\le1$, $b\\in D$. The volume element is $Bt^m\\,db\\,dt$. For $a\\cdot b\\le1$ the equation of the section has the unique solution $t=H/(B-a\\cdot b)\\in(0,1]$. If $a\\cdot b>1$, both endpoints of that ray have positive margin, so the whole ray is captured. This proves the claimed parameterization and the cap volume formula by integrating the ray lengths to power $m+1$.\n\nOn the section graph $z=-a\\cdot X$, the area element divided by $\\lVert N\\rVert_2$ is $dX$. The map $b\\mapsto Hb/(B-a\\cdot b)$ is one-to-one on $A$: its inverse on the graph is $X\\mapsto BX/(H+a\\cdot X)$. The denominator is positive on the image. Its Jacobian determinant is $H^m B/(B-a\\cdot b)^{m+1}$ by the rank-one determinant identity. Division by $V$ gives the formula for $C_a$, and integrating the first coordinate vector of the section gives the asserted zero-centroid condition. The last coordinate vanishes in the centroid whenever the first $m$ coordinates do, because $z=-a\\cdot X$.\n\nThe projective-energy integrand has exponent $-d$. Its integral is differentiable and convex on the open domain of admissible $\\ell$, using compactness of $A$ and strict positivity of the denominators. The vector integral in the centroid condition is proportional to its gradient at $\\ell=-a/B$, which is admissible since $1-a\\cdot b/B\\ge H/B$. Vanishing of the gradient gives a global minimum. Evaluating the energy and substituting the coarea formula gives $C_a/C_0=E_A(0)/|D|$.\n",
+  "source_candidate_ids": [
+    "2be89ee8039bb5fd"
+  ],
+  "source_candidate_sha256": {
+    "2be89ee8039bb5fd": "f5e98caa5714e7ee7e82f4211188873e84ca0a2cffba7b2c31b1cb28b1564f38"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2be89ee8039bb5fd",
+      "locator": "§3, (11)–(14)"
+    }
+  ],
+  "statement": "Let $D\\subset\\mathbb R^m$ be a convex body centrally symmetric about zero, $m\\ge1$, and let $H>0$, $d=m+1$, and $B=H+1$. Put $K=\\operatorname{conv}(D\\times\\{-1\\},\\{(0,H)\\})$, with $d$-volume $V=B|D|/d$. For $a\\in\\mathbb R^m$, let $A=D\\cap\\{b:a\\cdot b\\le1\\}$ and $N=(a,1)$. The section $K\\cap\\{(X,z):z+a\\cdot X=0\\}$ has parameterization\n$$\nX=\\frac{Hb}{B-a\\cdot b},\\qquad z=-a\\cdot X,\\qquad b\\in A.\n$$\nIts measure $d\\mathcal H^m/\\lVert N\\rVert_2$ pulls back to $H^m B(B-a\\cdot b)^{-d}\\,db$. Write $C_a$ for this section measure divided by $V$, $p_a$ for the fraction of $K$ in the cap $z+a\\cdot X\\ge0$, and $C_0=dH^m/B^d$. Then\n$$\nC_a=\\frac{dH^m}{|D|}\\int_A(B-a\\cdot b)^{-d}\\,db,\\qquad\np_a=\\frac Hd C_a+1-\\frac{|A|}{|D|}.\n$$\nThe section has centroid zero if and only if $\\int_A b(B-a\\cdot b)^{-d-1}\\,db=0$. In that case $\\ell=-a/B$ minimizes the projective-energy integral on $A$ at zero, and $C_a/C_0=E_A(0)/|D|$.",
+  "subgoal_id": "pk-intake-pyramid-centroidal-section-energy",
+  "title": "Vector centroid and projective energy of pyramid sections"
+}

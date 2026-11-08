@@ -1,0 +1,40 @@
+{
+  "candidate_id": "2f58c412150dafaf",
+  "candidate_sha256": "c9deb17a18cc6f4f561aac0b2c9309e7b52e77cf4da854dcda10280c51058a44",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Read the frozen proof first, then checked source 2be89ee8039bb5fd §3, (11)–(14) and its pinned source hash. The graph projection and vector gradient in the draft resolve the raw margin normalization explicitly.",
+    "Each nonapex point has the unique ray parameter t=(H−z)/B and base point b=X/t. The volume Jacobian is Bt^m. For q=a·b≤1 the margin vanishes exactly at t=H/(B−q)∈(0,1]; for q>1 the whole ray lies in the cap. Integrating gives cap fraction H^d times the kernel integral divided by |D|, plus 1−v, including the full-ray term.",
+    "The Euclidean graph area factor is |(a,1)|, so raw-margin coarea is dX. The projected map has derivative H/(B−q) times I+b aᵀ/(B−q), whose determinant is H^m B/(B−q)^(m+1). The stated inverse works because H+a·X=HB/(B−q)>0.",
+    "The first m components of the actual section first moment equal a positive constant times the vector integral of b(B−a·b)^(−d−1). The last component is the linear combination −a·X, and the coarea weight differs from Hausdorff measure by a constant only. This is a vector criterion, not merely a vertical moment condition.",
+    "The energy dimension is m so its exponent is −(m+1)=−d. The denominator at ℓ=−a/B is at least H/B on A. Uniform positivity locally justifies differentiating; the gradient at that point is −d B^(d+1) times the displayed centroid vector integral. Convexity on the admissible domain gives a global minimizer. Dividing C_a by the horizontal C_0 yields the evaluated integral divided by |D|, also for a=0."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T09:07:07Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It provides the general projective Jacobian and energy gradient. It does not identify the actual pyramid section, its raw coarea, the cap full-ray term, or the geometric parameter ℓ=−a/B.",
+      "fact_id": "d90ba05577427854"
+    },
+    {
+      "comparison": "Its weighted planar cone model has matching scalar cap and coarea formulas and vertical first moment for uniform-layer laws. It does not supply the full section map or the full vector moment for arbitrary D, including directions orthogonal to a.",
+      "fact_id": "18e7bdf54588779d"
+    }
+  ],
+  "readability": "C_a is section area divided by both |(a,1)| and V, rather than Euclidean section area divided by V. This follows directly from the definition and graph factor.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4cee8a75ae885f7ca3a4aa018a88537400860f2b82159f4f363e97b41332de5f",
+  "reviewed_statement_sha256": "47056672b4996e1f13e234b68e548107f9d53a7e4e6fa9ee96535694f5926ca8",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T09:03:38Z",
+  "summary": "The actual section parameterization, normalized coarea and vector centroid criterion are correct, and the criterion gives the full projective-energy identity.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

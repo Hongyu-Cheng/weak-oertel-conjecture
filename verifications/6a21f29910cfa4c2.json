@@ -1,0 +1,45 @@
+{
+  "candidate_id": "848ee735fb55ee7b",
+  "candidate_sha256": "5e7d4c56d680c359f6d2586a0ce2ce82e1e330170940c3f67642b45664e13ee1",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The denominator h²+2h−1 is positive on the parameter interval, and the numerator of s factors as (1−h)(h²+3h+1). The positive parallel edge lengths give a genuine convex trapezoid. Linear interpolation gives x=±(s+h)/(1+h)=±A at height zero, making zero interior. The top and bottom intersections on x=0 and x+y=0 lie on their asserted edges.",
+    "Outside both oblique caps the upper sector requires −y<x<0, which forces y>0. Convexity and containment of the three vertices identify its closure as the radial triangle, with area 1/2. On y≥0 the right side interpolates linearly from x=A to x=0, giving right double area A/2. The reflection (x,y)↦(−x−y,y), of determinant −1, preserves the trapezoid and yields the other upper double area A/2.",
+    "The lower double sector is the triangle 0≤x≤−y and −h≤y≤0, with area h²/2. The triple intersection is {0}. The two other unique sectors are reflected quadrilaterals, with common area (|K_h|−1/2−A−h²/2)/2. In particular the right lower unique sector has the extra vertex (s+h,−h) beyond its radial triangle because s>0.",
+    "The trapezoid formula and A(h²+2h−1)=1 give |K_h|=3/2+2A−h²/2. Combining the appropriate unique and double sectors gives raw area 1/2+A for each cap. Dividing |K_h| by that raw area and using h²+2h+1=(1+h)² gives the positive denominator D(h).",
+    "Differentiation gives D′(h)=2(2−h(1+h)²)/(1+h)² and c′(h)=−D′(h)/D(h)². The function h(1+h)² is strictly increasing with endpoint limits 2(√2−1) and 4, so the unique stationary point is the minimum of c. At the lower endpoint use h²=1−2h and 4/(1+h)=2(1+h) to get D=2. At the upper endpoint D=5−1−2=2. Strict monotonicity on both sides gives the supremum 1/2.",
+    "Independent rational shoelace calculations at h=7/10 give 1/2, 50/89, 50/89, 49/200, 14539/17800, 14539/17800 for the six sectors, total 62339/17800, and common fraction 1700/3667. Exact subtraction gives 12−(c+3)²=47267/13446889>0, (9/4)c−1=158/3667>0 and c−128/279=4924/1023093>0. Since c+3>0, the first comparison gives c<2√3−3.",
+    "Source 9879e3413b9c4cbf supplies the explicit counterexample and its Balanced trapezoid family. Its label of an interior maximum is reversed by the sign of c′. The frozen statement correctly records a minimum and the endpoint supremum. Its last two inequalities preserve the scope of the source’s numerical comparisons."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T10:01:14Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its positive-fan auxiliary assertion gives general unique-sector and opposite-overlap inequalities. Those conclusions do not settle the radial-triangle hypothesis or produce this balanced trapezoid and its three exact cap fractions.",
+      "fact_id": "2a8c2bc6d7992c5e"
+    },
+    {
+      "comparison": "Uses the same positive-fan sectors and gives small-sector and rational or quadratic selection estimates for general planar bodies. It does not give this counterexample or the parameter optimization.",
+      "fact_id": "4d628efe7673ce2d"
+    }
+  ],
+  "readability": "In the last paragraph, “Their ratio” refers to (1/2+A)/|K_h| from the preceding cap computation. Naming this ratio directly would make the arithmetic sentence clearer.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "55cb79860edcaa7bbd7c0a1330a015e83c3869c70527608248513b1104fe8d04",
+  "reviewed_statement_sha256": "9311289e86b632fd8c4ea6622c5f6807ef3ccd84bc248e5d911ca3d7e6227c1f",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "9879e3413b9c4cbf": "0de0a6b2b3ec4937ec75e03f6b3d4a9d5b29704076af32f295c5dc7388e64d45"
+  },
+  "started_utc": "2026-11-08T09:58:46Z",
+  "summary": "All six sector areas, the common cap fraction and the strict numerical comparisons check. The frozen draft correctly gives an interior minimum and the endpoint supremum.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

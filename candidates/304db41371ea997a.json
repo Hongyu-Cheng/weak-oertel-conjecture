@@ -1,0 +1,28 @@
+{
+  "advances": "Bounds one specified facet-normal cap of an actual simplex tube using the true mixed centroid.",
+  "author": "PK-research-agent",
+  "candidate_id": "304db41371ea997a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:52:24.940126+00:00",
+  "depends_on": [
+    "73234f91aeecda16"
+  ],
+  "draft_key": "true-centroid-facet-cap-in-simplex-tube",
+  "kind": "theorem",
+  "proof": "The shear $(z,x)\\mapsto(z,x_1+az-b,x_2,\\ldots,x_d)$ preserves every integer fiber's volume and maps $H$ to $\\{x_1\\ge0\\}$. It maps the mixed centroid to a point with first continuous coordinate zero. In fiber $i$ the transformed simplex is a translate of $r_i\\operatorname{conv}(0,e_1,\\ldots,e_d)$ and has first centroid coordinate $U_i-dr_i/(d+1)$. Zero-volume fibers have no contribution to either the mass or the centroid. Therefore\n$$\n\\sum_i r_i^d U_i=\\frac d{d+1}Q .\n$$\nThe transformed lower endpoint is nonpositive. The positive-side cap is empty or volume-null if $U_i\\le0$, and it is the simplex of radius $U_i$ if $U_i>0$. This includes the whole fiber when the transformed lower endpoint is zero. The factors $1/d!$ in the captured and total masses cancel, giving the first equality with $F=\\sum_i(U_i)_+^d$.\n\nIf $d=1$, the centroid identity gives $Q/2\\le\\sum_i r_i(U_i)_+\\le mF$. If $d>1$, Hölder gives\n$$\n\\frac d{d+1}Q\\le \\sum_i r_i^d(U_i)_+\n\\le \\left(\\sum_i r_i^{d^2/(d-1)}\\right)^{(d-1)/d} F^{1/d}\n\\le m^{1/d}Q^{(d-1)/d}F^{1/d}.\n$$\nThe last step uses $d^2/(d-1)=d+1+1/(d-1)$ and $r_i\\le m$. In either case $F\\ge\\Gamma_d Q/m$.\n\nThe positive widths are on consecutive integer indices because $u-\\ell$ is nonnegative and concave. Its sampled positive widths form a concave sequence, so accepted fact 73234f91aeecda16 with $p=d$ gives $(d+2)Q-(d+1)mM\\ge m^{d+1}/N$. Substitute this into the captured fraction. The correction is positive, and $(d+1)/(d+2)>1/2$ for $d\\ge1$.\n",
+  "source_candidate_ids": [
+    "4525b8c49b1ca492"
+  ],
+  "source_candidate_sha256": {
+    "4525b8c49b1ca492": "a3e72f526e0e274274167a7dd27f33389e43a38b75c090561e5dda449206feaa"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4525b8c49b1ca492",
+      "locator": "Opening (1)–(2), actual cap identities (3)–(5), and finite correction (6)"
+    }
+  ],
+  "statement": "Let $d\\ge1$ be an integer and let $\\ell,u$ be real functions on a compact interval with $\\ell$ convex, $u$ concave, and $\\ell\\le u$. Assume\n$$\nC=\\{(z,x):z\\text{ is in the interval},\\ x_1\\ge\\ell(z),\\ x_j\\ge0\\ (2\\le j\\le d),\\ \\textstyle\\sum_j x_j\\le u(z)\\}\n$$\nis a compact convex body with positive mixed volume. Let $S=C\\cap(\\mathbb Z\\times\\mathbb R^d)$ and let $\\mu$ be the sum of $d$-dimensional volume on its integer fibers. On the $N$ positive-volume integer fibers write $r_i=u(i)-\\ell(i)$, $m=\\max_i r_i$, $M=\\sum_i r_i^d$ and $Q=\\sum_i r_i^{d+1}$. Let $H=\\{x_1+az\\ge b\\}$ have boundary through the true centroid of $\\mu$ and suppose $\\ell(i)+ai-b\\le0$ on each positive-volume fiber. With $U_i=u(i)+ai-b$, $v_+=\\max\\{v,0\\}$ and $\\Gamma_d=(d/(d+1))^d$, the captured fraction satisfies\n$$\n\\frac{\\mu(H)}{\\mu(S)}=\\frac{\\sum_i(U_i)_+^d}{M}\n\\ge\\Gamma_d\\frac{Q}{mM}\n\\ge\\Gamma_d\\left(\\frac{d+1}{d+2}+\\frac{m^d}{(d+2)NM}\\right)\n>\\frac{\\Gamma_d}{2}.\n$$\nThe centroid's base coordinate need not be an integer. Lower-endpoint equality $\\ell(i)+ai-b=0$ is allowed.",
+  "subgoal_id": "pk-intake-true-centroid-facet-cap-in-simplex-tube",
+  "title": "Facet-normal cap at the true centroid of a simplex tube"
+}

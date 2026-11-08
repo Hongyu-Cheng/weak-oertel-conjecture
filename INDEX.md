@@ -4,6 +4,20 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 0 | theorem | pk-intake-affinely-independent-source-array-depth-interpolation | [4fc403cf46f23e49](facts/4fc403cf46f23e49.md) |
+| 0 | counterexample | pk-intake-negative-minimum-dispersion-credit-at-critical-cover | [e9e3b5705373b130](facts/e9e3b5705373b130.md) |
+| 1 | theorem | pk-intake-marked-entropy-local-attainment-directional-value | [66947afeef056d3b](facts/66947afeef056d3b.md) |
+| 1 | theorem | pk-intake-actual-fiber-automatic-normal-preservation | [bf891d8f55d6abf7](facts/bf891d8f55d6abf7.md) |
+| 1 | lemma | pk-intake-compact-parameter-preserving-martingale | [311757ca7529ae19](facts/311757ca7529ae19.md) |
+| 4 | theorem | pk-intake-chosen-peak-concave-sequence-truncation | [facc699f7957afd2](facts/facc699f7957afd2.md) |
+| 1 | theorem | pk-intake-common-vertex-positive-normal | [6f616779219fd76c](facts/6f616779219fd76c.md) |
+| 0 | counterexample | pk-intake-balanced-trapezoid-unique-core-counterexample | [848ee735fb55ee7b](facts/848ee735fb55ee7b.md) |
+| 4 | theorem | pk-intake-true-centroid-facet-cap-in-simplex-tube | [304db41371ea997a](facts/304db41371ea997a.md) |
+| 0 | theorem | pk-intake-sharp-weighted-bisected-planar-chords | [b82858197fd14145](facts/b82858197fd14145.md) |
+| 0 | theorem | pk-intake-marked-entropy-fixed-body-superdifferential | [86609687edc6bef4](facts/86609687edc6bef4.md) |
+| 0 | lemma | pk-intake-compact-physical-martingale-coupling | [ac53fe19fef9ec25](facts/ac53fe19fef9ec25.md) |
+| 3 | lemma | pk-intake-chosen-peak-concave-sequence-power-moments | [1c475f2afdd67f14](facts/1c475f2afdd67f14.md) |
+| 0 | lemma | pk-intake-bounded-simplex-shared-tilt | [9a3bf974682e425a](facts/9a3bf974682e425a.md) |
 | 4 | theorem | pk-intake-interval-centroid-cap-with-no-full-fiber | [1d56946d90d684b0](facts/1d56946d90d684b0.md) |
 | 4 | theorem | pk-intake-sharp-integer-mean-powered-fiber-weight | [c46a6b8335f94cab](facts/c46a6b8335f94cab.md) |
 | 3 | theorem | pk-intake-finite-concave-sequence-power-moments | [73234f91aeecda16](facts/73234f91aeecda16.md) |

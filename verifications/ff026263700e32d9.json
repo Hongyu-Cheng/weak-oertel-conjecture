@@ -1,0 +1,49 @@
+{
+  "candidate_id": "9a3bf974682e425a",
+  "candidate_sha256": "c6a7159ab6b72e25d584cff2c53586a2835183ed27559a37671d85fe25bdefa0",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The coordinate simplex gives 0 ≤ w·X ≤ r_p because X has nonnegative entries of sum at most r_p and 0 ≤ w_i ≤ 1. At s_p ≥ q the whole fiber is included; at s_p ≤ q−r_p the trace is empty or lies on a volume-null hyperplane because w is nonzero. These bounds do not depend on the choice of w.",
+    "Projection onto L preserves every offset. The coordinate rows span R^m, so independent row sets exist when m>0 and the inverse norm maximum is finite. If m=0, every offset is zero, including when n=0.",
+    "The finite feasibility system uses only the original offsets and radii. It is nonempty by the projected original tilt. A line would annihilate every row, so cannot exist. In a direction orthogonal to all active rows, both signs are locally feasible; one sign has a first finite blocker, with nonzero directional derivative. All old tight rows stay tight, the blocker increases their rank, and rank m is reached in at most m increases.",
+    "The selected right sides are q, q−r_p, or offsets in [q−r_p,q], so their absolute values are bounded by C_j. The induced infinity norm gives the claimed bound. Equalities keep finite traces as sets, and the weak saturated inequalities preserve masses even at the endpoint where an originally empty trace can gain a null face. The same b works for every p and w.",
+    "For n=1, at a=B_j, offsets with p>j are at least q, and those with p<j are at most −max(q,|q−r_p|) ≤ q−r_p. The inequalities persist for larger a, and reverse the roles of left and right at a≤−B_j. The own-base offset is zero, and for a singleton clipping to zero is valid.",
+    "For convergent parameters the indicator of each cap converges except on its limiting hyperplane, which is null since the limit w still sums to one. Dominated convergence gives joint continuity of the finite sum. The coordinate cube (or singleton) and Δ are compact, and the clipping interval provides the alternative compact domain for n=1.",
+    "Compared the frozen claim with archive 42889f299dc055c9 §§4–5, equations (11)–(15). The matrix, clipping, rank, endpoint and attainment arguments agree. These arguments use the given real base coordinates and need no touching majorant, lattice, or geometric realization."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T09:57:51Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This realizes subsequential finite and infinite affine thresholds with one finite cap for a limiting unit normal. It does not give this common explicit cube for all input tilts with masses preserved simultaneously for every w, or the one-dimensional clipping bound.",
+      "fact_id": "0a73ba4a9c7b24d1"
+    },
+    {
+      "comparison": "For n≥1 its continuous attained anchored capacity implies qualitative attainment here: minimize c_j(u,u·y_j) on the nonnegative unit sphere, then rescale u to sum one and rescale its tilt with it. It does not bound the optimizer uniformly or preserve the entire vector of cap masses for every w under one replacement.",
+      "fact_id": "1ec728c26c11b368"
+    },
+    {
+      "comparison": "It also bounds vertices using independent tight rows of a fixed matrix, for affine majorants of support functions. Its conclusion concerns Hausdorff variation of canonical fibers, not cap trace compactification.",
+      "fact_id": "7227bbfcd12ad3d2"
+    }
+  ],
+  "readability": "In the saturated cases the asserted preservation is of volume. At the lower endpoint, equality of trace sets is not needed and is not asserted.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c5113cd65ad436a82c17dd02521baf3ff8a82beadcb9c3a871cbd0c1a72c8666",
+  "reviewed_statement_sha256": "d40eaa6164eeca2a0d2ef347ec66b552e88477d96ad4e2bf4bd5b19333ee52ff",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "42889f299dc055c9": "dd3b87788bcf8ab822756caef2197d9910ef91689729d55de6c75caa93f33665"
+  },
+  "started_utc": "2026-11-08T09:55:13Z",
+  "summary": "The explicit compact domain preserves each simplex cap mass for all nonnegative normalized continuous normals with a single replacement tilt. The one-dimensional clipping formula and attainment also hold as stated.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

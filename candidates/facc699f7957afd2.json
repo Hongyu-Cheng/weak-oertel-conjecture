@@ -1,0 +1,28 @@
+{
+  "advances": "A scalar inequality for a common radius cutoff on a finite concave sequence. A fiber application requires an independent identification of its actual cap mass with the scalar sum.",
+  "author": "PK-research-agent",
+  "candidate_id": "facc699f7957afd2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T09:56:26.576631+00:00",
+  "depends_on": [
+    "1c475f2afdd67f14"
+  ],
+  "draft_key": "chosen-peak-concave-sequence-truncation",
+  "kind": "theorem",
+  "proof": "By concavity, if two entries exceed $t$, all intervening entries exceed $t$ as well. The peak $j$ belongs to every strict superlevel block for $t<R$. As $t$ increases, $a(t)$ is nondecreasing and $b(t)$ is nonincreasing, so $\\kappa_j(t)$ is nondecreasing. The two positive denominators in its definition sum to $2(b(t)-a(t)+1)$. The reciprocal-mean inequality gives $\\kappa_j(t)\\ge1/(b(t)-a(t)+1)\\ge1/L$, and each reciprocal is at most one.\n\nFor $0\\le c<R$, apply the chosen-peak power moment inequality to the concave sequence $f_i-c$ restricted to its strict superlevel block. Its maximum is $R-c$, and the peak index relative to the block is $j-a(c)$. Since both powers are positive, all omitted entries contribute zero to the corresponding positive-part sums. Thus\n$$\n(p+1)Q_p(c)-p(R-c)Q_{p-1}(c)\\ge\\kappa_j(c)(R-c)^p,\n$$\nwhere $Q_{p-1}$ is the sum defined by the same formula with exponent $p-1$.\n\nEach positive-part power of exponent $p\\ge2$ is continuously differentiable as a function of $c$, with derivative zero when its argument is zero. Therefore $Q_p'(c)=-pQ_{p-1}(c)$ even at knots. Differentiating the normalized sum gives\n$$\n\\frac{d}{dc}\\frac{Q_p(c)}{(R-c)^{p+1}}\n=\\frac{(p+1)Q_p(c)-p(R-c)Q_{p-1}(c)}{(R-c)^{p+2}}\n\\ge\\frac{\\kappa_j(c)}{(R-c)^2}.\n$$\nIntegrate from $0$ to $c<R$ and multiply by $(R-c)^{p+1}$ to obtain the first bound. Replacing $\\kappa_j(t)$ in the integral by its lower bound $\\kappa_j(0)$ and integrating $(R-t)^{-2}$ gives the second bound. The exact knot sum follows by integrating the constant value of $\\kappa_j$ on each open interval of the partition. Values at individual knots do not affect the integral.\n\nAt $c=0$ the integral vanishes. Since $\\kappa_j\\le1$, the scaled integral remainder for $c<R$ is at most $c(R-c)^p/R$, which tends to zero at $R$, where all other terms also vanish. For $L=1$, $Q_p(c)=(R-c)^p$ and $\\kappa_j(t)=1$, and the two terms of either bound add to $(R-c)^p$. For $0<c<R$, the simple remainder is strictly positive, giving strictness of the bound without the remainder.\n",
+  "source_candidate_ids": [
+    "c3c2ca0e4dcbdc9d"
+  ],
+  "source_candidate_sha256": {
+    "c3c2ca0e4dcbdc9d": "9d4c4def91d56ae15edcf44f03bb11f7ab87cfc48231203984908c41df02ff07"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c3c2ca0e4dcbdc9d",
+      "locator": "Statement (1)–(3), proof (7)–(8), and the endpoint paragraph"
+    }
+  ],
+  "statement": "Let $f_0,\\ldots,f_{L-1}$ be a nonnegative, nonzero concave sequence on consecutive indices, with $L\\ge1$. Put $R=\\max_i f_i$ and choose any $j$ with $f_j=R$. For real $p\\ge2$ and $0\\le c\\le R$, set $Q_p(c)=\\sum_i(f_i-c)_+^p$, where $x_+=\\max\\{x,0\\}$. For $0\\le t<R$ let $[a(t),b(t)]$ be the strict superlevel interval of indices with $f_i>t$, and set\n$$\n\\kappa_j(t)=\\frac12\\left(\\frac1{2(j-a(t))+1}+\\frac1{2(b(t)-j)+1}\\right).\n$$\nThe function $\\kappa_j$ is nondecreasing and $1/L\\le\\kappa_j(t)\\le1$. For $0\\le c<R$,\n$$\n\\begin{aligned}\nQ_p(c)\n&\\ge (1-c/R)^{p+1}Q_p(0)\n  +(R-c)^{p+1}\\int_0^c\\frac{\\kappa_j(t)}{(R-t)^2}\\,dt\\\\\n&\\ge (1-c/R)^{p+1}Q_p(0)+\\kappa_j(0)\\frac{c(R-c)^p}{R}.\n\\end{aligned}\n$$\nFor $0<c<R$, partition $[0,c]$ at the distinct sequence values in $(0,c)$, writing the endpoints and knots as $0=t_0<\\cdots<t_m=c$. The integral is exactly\n$$\n\\sum_{\\ell=0}^{m-1}\\kappa_j(s_\\ell)\n  \\left(\\frac1{R-t_{\\ell+1}}-\\frac1{R-t_\\ell}\\right),\n\\qquad s_\\ell\\in(t_\\ell,t_{\\ell+1}),\n$$\nand it is zero at $c=0$. At $c=R$ the scaled integral remainder has continuous extension zero. Both inequalities are equalities at $c=0$ and $c=R$, and are identities for every $c$ if $L=1$. The bound with the remainder dropped is strict for $0<c<R$.",
+  "subgoal_id": "pk-intake-chosen-peak-concave-sequence-truncation",
+  "title": "Truncation of concave sequences with a correction at a chosen peak"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "A conditional local-minimum exclusion with one covering circuit and genuine source freedom.",
+  "author": "PK-research-agent",
+  "candidate_id": "c6ee83acf8a585aa",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.330331+00:00",
+  "depends_on": [
+    "ebfd6e85ec9d02a4"
+  ],
+  "draft_key": "canonical-free-source-single-cover-minimum",
+  "kind": "theorem",
+  "proof": "Fix an affine speed $\\psi$ on one facet $F$ and move only its defining plane in the two-sided source simplex path. Denote by $m=\\int_F\\psi\\,d\\mathcal H^{d-1}$ the signed total mass derivative and by $c_j=\\int_F\\psi\\mathbf1_{H_j}\\,d\\mathcal H^{d-1}$ the fixed-cap derivative. To verify both, use normal coordinates to $F$. The changed region lies between the old plane and its affine perturbation, at distances $O(|t|)$; its signed thickness divided by $t$ tends to $\\psi$ on $\\operatorname{relint}F$. The normal-coordinate sections remain in a common bounded set, and the limiting facet boundary is surface-null. For the cap, the additional trace discontinuity is surface-null by regularity. Bounded convergence therefore yields the derivatives. If $d=1$, the same calculation is the signed endpoint interval length, with cap-boundary coincidences excluded.\n\nLet $S_j$ be the sum of the proper section areas of cap $j$ on the old fibers. It is positive because its own source cut is proper. On an old fiber the threshold derivative in the unit-normal chart is minus the section area by integrating parallel section areas. At proper cuts these areas are continuous. At nonproper cuts they tend to zero if the limiting trace is empty or surface-null: in a fixed parallel plane the projected sections are eventually contained in any neighborhood of the compact projected limiting trace, by compactness. This covers both sides of every regular threshold. Consequently a threshold shift $t\\delta_j$ changes the old cap mass by $-tS_j\\delta_j+o(|t|)$. With the simultaneous shape motion, the change of the shell calculation under the same threshold shift is $o(|t|)$ because the boundary indicator on $F$ still converges away from the same null trace. Thus the new mass is $Q+t(c_j-S_j\\delta_j)+o(|t|)$.\n\nPut $\\theta_j=(\\rho_j/S_j)/\\sum_k(\\rho_k/S_k)$, $q'=\\sum_j\\theta_jc_j$, and $\\delta_j=(c_j-q')/S_j$. All perturbed cap masses are $Q+tq'+o(|t|)$, and $\\sum_j\\rho_j\\delta_j=0$. On every originally covered deepest plane, the margin vector ranges over an affine hyperplane because the minimal positive circuit has rank one less than its number of normals. Its $\\rho$-weighted sum is constant on that plane. The constant must be nonnegative, since otherwise the affine hyperplane contains a vector with all margins negative, contradicting cover. It is preserved by the threshold shifts, so the cover of every such plane persists. The strict covers handle every other base for sufficiently small $|t|$.\n\nThe resulting global normalized maximum is at most\n$$\n\\beta+\\frac{t}{M}(q'-\\beta m)+o(|t|).\n$$\nThe assumed local minimum for both signs forces $q'-\\beta m=0$. Repeating this for every facet and affine $\\psi$ gives the hypotheses of canonical simplex facet-affine neutrality with exactly the full-coarea response weights. That lemma gives the conclusions.\n",
+  "source_candidate_ids": [
+    "00208e2b45f0da1a"
+  ],
+  "source_candidate_sha256": {
+    "00208e2b45f0da1a": "6a4f8f03b8c1d76b79b776a8260754ac48c245876ce28b517bc89cc3cca10979"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "00208e2b45f0da1a",
+      "locator": "00208e2b45f0da1a:03 §3, local minimum with one selected circuit"
+    }
+  ],
+  "statement": "Consider an actual finite positive-volume mixed fiber family on a fixed complete integer base $P\\subset\\mathbb Z^n$. Suppose its global maximum normalized ordinary mixed depth $\\beta=Q/M$, where $Q$ is the raw maximum and $M$ the total mixed volume, is a local minimum along actual independent two-sided source-facet affine perturbations of one simplex fiber $K_p$ with all other fibers fixed. For instance the incident-row strictness criterion suffices for these paths.\n\nAssume one regular minimal positive circuit of through-source caps of raw mass $Q$ at an interior point $y$ in $K_p$ covers every deepest base plane, and the other bases have a finite cover by caps of strictly smaller raw mass that persists on the paths. Its continuous unit normals $u_j$ satisfy $\\sum_j\\rho_j u_j=0$, $\\rho_j>0$. Assume all cuts on $K_p$ are the canonical-direction vertex caps $\\{\\lambda_j\\ge\\lambda_j(y)\\}$ and there are no positive-area supporting coincidences on any measured fiber. Then $\\beta=\\Gamma_d$, the actual response weights are uniform, and if $d\\ge2$, $y$ is the source simplex centroid. In particular $\\beta<\\Gamma_d/2^n$ is impossible in this regime.",
+  "subgoal_id": "pk-intake-canonical-free-source-single-cover-minimum",
+  "title": "One regular canonical source circuit rules out a low local minimum with free facets"
+}

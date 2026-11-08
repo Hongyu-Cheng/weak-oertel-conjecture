@@ -1,0 +1,32 @@
+{
+  "advances": "A conditional boundary payment for one simplex source and one whole isolatable facet. The actual field and own response hypotheses are assumed.",
+  "author": "PK-research-agent",
+  "candidate_id": "000f61e3347cadf2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.329987+00:00",
+  "depends_on": [],
+  "draft_key": "simplex-own-section-facet-payment",
+  "kind": "lemma",
+  "proof": "The section of cap $i$ has vertices on the $d$ incident edges. If its intercept measured from $v_i$ along $v_iv_j$ is a fraction $t_{ij}$ of the edge, the section centroid has barycentric coordinate $t_{ij}/d$ at $j\\ne i$. Thus $t_{ij}=dy_j\\in(0,1)$, giving $r_j>0$, $\\sum_jr_j=1$, and the stated product for $q_i$.\n\nWrite $\\lambda_j(x)$ for the barycentric coordinates and $L_i(x)=1-\\sum_{j\\ne i}\\lambda_j(x)/(dy_j)$ for the cap margin of value one at $v_i$. The identity $\\sum_i r_i L_i=0$ follows from $\\sum_i r_i=1$ and $\\sum_i\\lambda_i=1$. The pyramid of volume $|T|q_i$ has height $1/\\lVert\\nabla L_i\\rVert$, so $S_i u_i=d|T|q_i\\nabla L_i$. For any relation $\\sum_i c_i\\nabla L_i=0$, the affine function $\\sum_i c_iL_i$ is constant. Expanding it gives $\\sum_i c_i L_i=\\sum_i c_i+\\sum_j(c_j-\\sum_i c_i)\\lambda_j/(dy_j)$. Constancy on $\\sum_j\\lambda_j=1$ makes $(c_j-\\sum_i c_i)/(dy_j)$ independent of $j$. Summing gives that constant equal to $-\\sum_i c_i$, hence $c_j=r_j\\sum_i c_i$. Applying this to $c_i=\\theta_iq_i$ and normalizing proves the weight formula.\n\nOn the facet opposite $v_i$, cap $i$ has empty trace, and cap $j\\ne i$ occupies area fraction $q_j/(dy_i)$ by the same edge product in dimension $d-1$. The weighted fraction is $(1-r_i)/(Bdy_i)=1/B$. Substituting $dy_i=1-r_i$ in $q_i$ gives $B=(1-\\sum_i r_i^2)/\\prod_i(1-r_i)$.\n\nFor $d=1$ the quotient reduces to $1/2$. For $d\\ge2$, write $f$ for the quotient. On the open probability simplex,\n$$\n\\partial_i\\log f-\\partial_j\\log f\n=(r_i-r_j)\\left(\\frac2{1-\\sum_k r_k^2}-\\frac1{(1-r_i)(1-r_j)}\\right).\n$$\nOn a common positive denominator the bracket has numerator $(\\sum_{k\\ne i,j} r_k)^2+\\sum_{k\\ne i,j}r_k^2>0$. Averaging a larger and a smaller coordinate strictly decreases $f$ if they differ. Repeated averaging of a largest and smallest coordinate decreases variance about the uniform vector by half their squared difference at each step. The range tends to zero while every coordinate stays between the initial minimum and maximum. Continuity then gives the uniform value $\\Gamma_d$, strictly below the initial value if the latter vector is nonuniform. A field constant and positive on the chosen full facet and zero elsewhere cancels that constant from the numerator and denominator of its capture ratio.\n",
+  "source_candidate_ids": [
+    "05d41ace8d693538",
+    "19aecfceb071d1da"
+  ],
+  "source_candidate_sha256": {
+    "05d41ace8d693538": "bf06651a3a0b9a0a9116cad08ad8ca1575c397d70364a641df770ccc8eb5a2fc",
+    "19aecfceb071d1da": "6ba83ab2b8a1e03ae095d18f29616648a6adb84de37b2df77bc5a7b1186c11c6"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "05d41ace8d693538",
+      "locator": "05d41ace8d693538:01 §§1–3, (1)–(3)"
+    },
+    {
+      "candidate_id": "19aecfceb071d1da",
+      "locator": "§§3–5, intercept, cofactor, and pair-averaging calculations"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}(v_0,\\ldots,v_d)$ be a $d$-simplex, $d\\ge1$, with an interior point $y$ of barycentric coordinates $y_i$. For each $i$, let an actual cap cut $T$ in a cap containing $v_i$ strictly and excluding all other vertices strictly. Suppose its own proper section has centroid $y$. Use unit continuous inward normals $u_i$, own section areas $S_i=\\mathcal H^{d-1}(T\\cap\\partial H_i)$, and positive response weights $\\theta_i$ with $\\sum_i\\theta_i=1$. Assume $\\sum_i\\theta_iS_iu_i=0$, as holds if all response coarea is on this fiber.\n\nPut $r_i=1-dy_i$, $q_i=|T\\cap H_i|/|T|$, and $B=\\sum_i r_i/q_i$. Then $r_i>0$, $q_i=\\prod_{j\\ne i}dy_j$ and $\\theta_i=(r_i/q_i)/B$. The mean of $W=\\sum_i\\theta_i\\mathbf1_{H_i}$ with respect to uniform surface measure on **each** full facet of $T$ is\n$$\n\\frac1B=\\frac{\\prod_i(1-r_i)}{1-\\sum_i r_i^2}\\ge\\Gamma_d,\\qquad\n\\Gamma_d=\\left(\\frac d{d+1}\\right)^d .\n$$\nEquality is precisely uniform $r$ for $d\\ge2$, and the ratio is always $1/2$ for $d=1$. Use endpoint counting measure for $d=1$. An admissible nonnegative field, convex in the physical coordinates for each fixed normal, whose measured boundary trace is a positive constant on one entire own facet and zero elsewhere, has this same weighted capture efficiency.",
+  "subgoal_id": "pk-intake-simplex-own-section-facet-payment",
+  "title": "Every full simplex facet has the same response-weighted capture"
+}

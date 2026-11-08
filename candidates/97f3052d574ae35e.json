@@ -1,0 +1,28 @@
+{
+  "advances": "Same-point comparison of two raw measures; other integer fibers are outside the supplied source measure.",
+  "author": "PK-research-agent",
+  "candidate_id": "97f3052d574ae35e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.330778+00:00",
+  "depends_on": [
+    "4fc403cf46f23e49"
+  ],
+  "draft_key": "ordinary-depth-dominates-independent-source-depth",
+  "kind": "lemma",
+  "proof": "If the source depth is zero the inequality is immediate. Otherwise take $R=p_{\\mathcal K}(y)^{1/d}$. By the accepted independent-array directional quantile criterion, $R\\le\\min_i|K_i|^{1/d}$ and, for every unit $u$ and every nonnegative allocation $\\alpha$ with $\\sum_i\\alpha_i^d=1$,\n$$\n\\sum_i\\lambda_i q_{K_i,u}(R\\alpha_i)\\ge u\\cdot y.\n$$\nThe accepted criterion includes the full-source plateau. The quantile cap $E_i$ at this threshold is nonempty and has volume $(R\\alpha_i)^d$. At zero allocation it is a supporting face, and at full allocation it is the entire body. Hence the Minkowski combination $\\sum_i\\lambda_i E_i$ is contained in $D\\cap\\{u\\cdot x\\ge u\\cdot y\\}$. Brunn–Minkowski for the nonempty compact convex summands gives its containing cap a volume root at least $R\\sum_i\\lambda_i\\alpha_i$. Maximize over the allocations, which by Hölder duality gives $R\\lVert\\lambda\\rVert_{d/(d-1)}$ when $d>1$ and $R\\max_i\\lambda_i$ when $d=1$. Raising to the $d$th power and taking the infimum over $u$ proves the comparison, since every containing cap contains its parallel through-mark cap.\n",
+  "source_candidate_ids": [
+    "239caf8af54c6294"
+  ],
+  "source_candidate_sha256": {
+    "239caf8af54c6294": "46a6e74035d38658423c2d21604588fe0f581ee17e8688d12772e47a7e3bed14"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "239caf8af54c6294",
+      "locator": "239caf8af54c6294:08 §9, (18)–(19), actual section comparison"
+    }
+  ],
+  "statement": "Fix affinely independent bases $p_i$ with positive barycentric coefficients $\\lambda_i$ of sum one, target base $j=\\sum_i\\lambda_i p_i$, and full-dimensional compact convex bodies $K_i\\subset\\mathbb R^d$, $d\\ge1$. Put $D=\\sum_i\\lambda_i K_i$. Let $p_{\\mathcal K}(y)$ be raw ambient closed-halfspace depth at $(j,y)$ for the sum of the unnormalized source $d$-volumes at the $p_i$, and let $f_D(y)$ be ordinary raw closed-halfspace depth in $D$. For every $y\\in D$,\n$$\nf_D(y)\\ge c_\\lambda p_{\\mathcal K}(y),\\qquad\nc_\\lambda=\\begin{cases}\n(\\sum_i\\lambda_i^{d/(d-1)})^{d-1},&d>1,\\\\\n\\max_i\\lambda_i,&d=1 .\n\\end{cases}\n$$\nIn particular $c_\\lambda=1/N$ for $N$ equally weighted sources in every dimension, so the two-source midpoint comparison is $p_{\\mathcal K}(y)\\le 2f_D(y)$.",
+  "subgoal_id": "pk-intake-ordinary-depth-dominates-independent-source-depth",
+  "title": "Ordinary depth in the Minkowski section bounds independent-source depth at the same mark"
+}

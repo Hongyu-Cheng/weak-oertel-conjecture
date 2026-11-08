@@ -1,0 +1,29 @@
+{
+  "advances": "The prescribed mark must belong to the interior of the midpoint body. Exact compatibility alone supplies no endpoint cost bound.",
+  "author": "PK-research-agent",
+  "candidate_id": "be265e22b9ce0ce6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.320859+00:00",
+  "depends_on": [
+    "d90ba05577427854",
+    "84cd8a85417b0d7a"
+  ],
+  "draft_key": "support-ratio-perspective-midpoint-erosion",
+  "kind": "lemma",
+  "proof": "All centered bodies have an interior origin. If a prescribed $y$ belongs to $\\operatorname{int}M$, it admits the required decomposition. Start with one interior sum $y_0=(y_{A,0}+y_{B,0})/2$. If $y\\ne y_0$, a small continuation beyond $y$ on the segment from $y_0$ still belongs to $M$. Express the continuation as a midpoint and interpolate its two inputs toward the interior inputs of $y_0$ to obtain interior inputs for $y$. If $y=y_0$, the given decomposition works.\n\nUse d90ba05577427854 for $a$. The positive convex tangent extension has matching derivatives at its join. Positivity of the support factors makes each field continuous, nonnegative and convex in $x$. Apply 84cd8a85417b0d7a on each singleton with one ceiling $h_L$ and the indicated field for that fiber. For the middle and midpoint bodies use the ceiling $h_J$ and field $h_J f(1+a\\cdot x)$ for $J=K,M$. The latter support inequalities are the gauge inequality because the gauge is the supremum of $n\\cdot x/h_J(n)$ over the unit sphere.\n\nFor any $x\\in A_\\varepsilon$ and $x'\\in B_\\varepsilon$, set $m=(x+x')/2$. The two inverse-power arguments, averaged with positive weights $h_A(n),h_B(n)$, have weighted average $1+a\\cdot m$, since $h_A+h_B=2h_M$. Jensen's inequality gives $(\\Psi_A(n,x)+\\Psi_B(n,x'))/2\\ge h_M(n)f(1+a\\cdot m)$. Add the two support cuts and divide by two. This gives the defining inequality for the eroded $M$ at every unit $n$. Adding a nonnegative field to either input can only improve this bound. The next inclusion follows from $g_K\\le g_M$. When the bodies are restored to their original coordinates, the midpoint identity for the centers restores the actual midpoint inclusion. In the lifted hull any representation at base zero has equal endpoint weights. Its middle point is therefore a convex combination of a point from the middle fiber and one from the eroded endpoint midpoint. The endpoint fibers are extreme and unchanged by taking the hull, and the projection $[-1,1]$ contains just those three integer bases.\n",
+  "source_candidate_ids": [
+    "c56743c8d6824a18"
+  ],
+  "source_candidate_sha256": {
+    "c56743c8d6824a18": "f7c1c1c5c680bd370f7ae8cf1285e55bbd15d1c0dfb9b9015fba6a27544992eb"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c56743c8d6824a18",
+      "locator": "c56743c8d6824a18:01 §§1–2, (1)–(6), support-ratio perspective coupling"
+    }
+  ],
+  "statement": "Let $A,B,K$ be positive convex bodies in $\\mathbb R^d$, $d\\ge1$, with $M=(A+B)/2\\subseteq K$. Choose $y_A\\in\\operatorname{int}A$ and $y_B\\in\\operatorname{int}B$, put $y=(y_A+y_B)/2$, and translate the input bodies and $M,K$ by these respective centers. Let $a$ be the projective centering parameter of the centered $K$ from d90ba05577427854, with $\\delta=\\min_{x\\in K}(1+a\\cdot x)>0$. Define $f(q)=q^{-d}$ for $q\\ge\\delta$ and $f(q)=\\delta^{-d}-d\\delta^{-d-1}(q-\\delta)$ for $q<\\delta$. Write $g_M,g_K$ for the Minkowski gauges of the centered bodies. For every unit $n$, impose the input support cuts $n\\cdot x+\\varepsilon\\Psi_L(n,x)\\le h_L(n)$ for $L=A,B$, with\n$$\n\\Psi_L(n,x)=h_L(n)f(1+(h_M(n)/h_L(n))a\\cdot x).\n$$\nFor all sufficiently small $\\varepsilon\\ge0$, these define positive nested convex bodies $A_\\varepsilon,B_\\varepsilon$ with\n$$\n(A_\\varepsilon+B_\\varepsilon)/2\n\\subseteq \\{x:g_M(x)+\\varepsilon f(1+a\\cdot x)\\le1\\}\n\\subseteq \\{x:g_K(x)+\\varepsilon f(1+a\\cdot x)\\le1\\}.\n$$\nThe inclusions continue to hold if any nonnegative jointly continuous field convex in the physical point is added to an input field. Translating back gives exact compatible integer fibers at $-1,0,1$.",
+  "subgoal_id": "pk-intake-support-ratio-perspective-midpoint-erosion",
+  "title": "Exact support-ratio perspective erosion at a midpoint"
+}

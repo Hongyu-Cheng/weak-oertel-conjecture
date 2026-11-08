@@ -1,0 +1,26 @@
+{
+  "advances": "An exact all-count result on a fixed convex-position interval support. It does not establish an optimum at a smaller prescribed count or for nonexposed supports.",
+  "author": "PK-research-agent",
+  "candidate_id": "421105649e0355e8",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.048132+00:00",
+  "depends_on": [],
+  "draft_key": "exposed-interval-exact-hinge-optimum",
+  "kind": "theorem",
+  "proof": "A cap containing the midpoint of an interval of length $W$ contains at least half of it, proving the necessary budget. To build a cover, at each base $z$ let $s_z$ be the midpoint of $K_z$ and choose an affine $q_z$ with $q_z(z)=0$ and strictly positive values at all other bases, possible by vertex exposure. Extend each margin $\\pm(x-s_z)$ by subtracting a sufficiently large multiple of $q_z$ to miss all other compact fibers strictly. The resulting $2|P|$ caps cover and each has mass $w_z/2\\le W/2$. The pair's unnormalized hinge is $\\int_{K_z}|x-s_z|\\,dx=w_z^2/4$.\n\nFor the lower bound rescale each continuous normal to sign $+1$ or $-1$, which divides its original hinge numerator by $|u|$. On $[l,r]=K_z$ keep the least threshold $t$ of positive-sign caps $x\\ge t$ and the greatest threshold $s$ of negative-sign caps $x\\le s$, omitting an orientation if absent. Their union is the original coverage and discarded integrals are nonnegative. If a retained cap contains the whole interval, its unnormalized integral is at least $(r-l)^2/2$. This includes a cover with just one orientation. Otherwise both orientations are present and coverage forces $l<t\\le s<r$: if either retained halfline were empty on the interval or there were a gap between them, the entire interval could not be covered. Their summed integral is\n$$\n\\frac{(r-t)^2+(s-l)^2}{2}\n\\ \\ge\\ \\frac{(r-t)^2+(t-l)^2}{2}\n\\ \\ge\\ \\frac{(r-l)^2}{4}.\n$$\nDivide the bound by $W$ and sum over the actual fibers. The isolated midpoint pairs attain equality, proving the stated minimum for arbitrary finite cap count.\n",
+  "source_candidate_ids": [
+    "25f2a08c9ca43383"
+  ],
+  "source_candidate_sha256": {
+    "25f2a08c9ca43383": "0ad25318444a78216ff53fe456aabfc022af332e9a56fa7be0efd7738b86e66e"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "25f2a08c9ca43383",
+      "locator": "25f2a08c9ca43383:02 §2, (1)–(2), exact optimum for interval fibers"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be a finite nonempty set in convex position. For each $z\\in P$ let $K_z$ be an interval of length $w_z>0$, and use the summed fiber length $\\mu$ on $S=\\bigcup_{z\\in P}\\{z\\}\\times K_z$. Put $M=\\sum_z w_z$ and $W=\\max_z w_z$. Give a nonvertical cap with affine margin $L(z,x)=a\\cdot z+ux-b$, $u\\ne0$, the hinge $\\int_S L_+\\,d\\mu/(W|u|)$, the support normalization for $D=[-W,W]$.\n\nA finite closed nonvertical cap cover with mass at most $\\tau M$ per cap exists exactly when $\\tau M\\ge W/2$. In that case the minimum summed hinge over all finite covers of this budget is $\\sum_z w_z^2/(4W)$, attained by two isolated midpoint caps per fiber.",
+  "subgoal_id": "pk-intake-exposed-interval-exact-hinge-optimum",
+  "title": "Exact normalized hinge minimum for exposed interval fibers"
+}

@@ -1,0 +1,78 @@
+{
+  "candidate_id": "a67fef996fdffc7c",
+  "candidate_sha256": "44f11f1aa90b55208f5c9a96553d282b76b06ba258d233a7787d43dedf9c4ab9",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Compared the original and revised fields. Only statement and proof text changed, restoring set and inequality commands, theta, the frustum parameter, and the averaged quantile. No embedded math control characters remain. The original source is 8426c7487ce19740:01 §§1–4 (1)–(5).",
+    "For each side with all closed sections nonempty the weighted sum lies in the target side and Brunn–Minkowski applies by outer thickening even to tangent sections. Complementary closed cap volumes sum to |K| because the plane is Lebesgue-null. The l_d triangle inequality gives c^d+r^d≤s^d.",
+    "If one endpoint entirely lies a positive distance δ in the opposite side, its contribution makes the side sum lie at least θ_iδ from the cutting plane. A proper target cut has a ball about an interior point of the plane, so the strip below that sum contains extra positive volume. This proves the strict side bound without requiring whole-body equality. With only E_+ and some positive p_j the excluded upper endpoint U is proper since r>0. When all p_j=0 one has r=s and u=0. Reflection gives the E_- case.",
+    "Each frustum uses an affine nonnegative radius and the chosen power of J_τ gives volume one. Its strictly increasing prefix has continuously varying quantiles including at p=0,1. Weighted positive homothets are exactly the homothetic weighted sum. The τ=0 and τ=1 prefixes give respectively the required lower and upper roots. Continuity attains the interval; for d=1 the interval model gives c=U.",
+    "In the one-empty-side cases moving just the designated endpoint quantiles out of [0,1] keeps all fractions and tangent statuses while sweeping the claimed half-open range, including its all-zero or all-one endpoint. With both types present their two positive offsets have opposite nonzero coefficients in the mean, permitting every target prefix.",
+    "At two equal weights the hull has exactly the three bases and gives their unique midpoint section. For rational weights the listed integer vectors have zero prescribed barycenter and the affine relation equations force linear coefficient ratios m_j/m_N and then zero coefficients; affine independence gives the exact source section."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T19:33:43Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "a67fef996fdffc7c",
+    "candidate_sha256": "5696568f30b8404b79e813bdc0da7f23fbf4b2b44af444f68cdec5a9ef00cdaa",
+    "checks": [
+      "The decoded statement begins with `dge1` and uses `Ksupseteq` and `Kcap` where LaTeX relations or operators are needed. It contains seven U+0009 tabs in math replacing parts of commands such as theta and times.",
+      "The proof contains 29 U+0009 tabs and seven U+0008 backspaces, including damage to the frustum parameter, the averaged quantile and the lattice realization. The pinned JSON therefore does not encode an unambiguous renderable theorem and proof.",
+      "The original source 8426c7487ce19740:01 §§1–4 (1)–(5) identifies the intended four closed-section cases, side strip argument, homothetic frusta and lattice realization. This locates the repair and does not substitute source text for the frozen proof."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T19:30:13Z",
+    "issues": [
+      {
+        "defect": "LaTeX backslashes disappeared or were decoded as ASCII control characters, so the reviewed bytes do not contain the claimed mathematical statement and proof.",
+        "locator": "Decoded statement and proof, throughout",
+        "repair": "Serialize from the intended source with literal LaTeX backslashes, remove control characters from math, and provide linked revised hashes for the complete proof.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Gives a supporting-facet slice volume bound for one proper cap and one support facet. It does not classify the exact two-sided frontier with prescribed zero-volume statuses.",
+        "fact_id": "19210d0a14ccfebc"
+      },
+      {
+        "comparison": "Bounds middle mass in a low-budget actual critical three-fiber cap. That is a different quantifier and does not give all scalar realizations at equality.",
+        "fact_id": "b33e7b408da21347"
+      }
+    ],
+    "readability": "The raw fields cannot be reliably rendered or read as written.",
+    "reviewed_proof_sha256": "4471a33127d1b6d521f78e976dbe4b76ed2e208f0fe564ced757187efb1c3f6f",
+    "reviewed_statement_sha256": "32a2c2991d755d9185e99f5ba7c4111231fbffc3acf3e4e9235e76aff15b6920",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:24:28Z",
+    "summary": "The exact frozen frontier statement and proof contain pervasive mathematical escaping corruption. Restore the formula text and re-freeze for full independent review.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Bounds a positive cap plus a supporting facet by ordinary slice volume. It does not give the two-sided sharp range with independent tangent/empty statuses.",
+      "fact_id": "19210d0a14ccfebc"
+    },
+    {
+      "comparison": "Bounds the middle mass for a low-budget globally critical cap. Those hypotheses differ from the scalar equality slice and provide no full realization frontier.",
+      "fact_id": "b33e7b408da21347"
+    }
+  ],
+  "readability": "A positive support gap on the selected side means an input lies strictly within that side, so its opposite closed section is empty. The argument also covers the zero-root and full-root endpoints.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "df49b35122df431cbc5669e73581f8783c98e9702be1c2fa2a84d33f3d8e22f1",
+  "reviewed_statement_sha256": "4218b2e2937fed878b8fa807d480a3a346bb8e7ecc18f9c202d18a419be4902c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "5696568f30b8404b79e813bdc0da7f23fbf4b2b44af444f68cdec5a9ef00cdaa",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:31:21Z",
+  "summary": "The revision restores the mathematical text. The side Brunn–Minkowski constraints, strict empty-side endpoints and constructive frontier are all proved.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,71 @@
+{
+  "candidate_id": "5ff9f9db81d49d61",
+  "candidate_sha256": "fc7f207efd73b9c58f1d6ea69cc6f7e1caa3b387de8d39e8f1c95091067af5a6",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+    "1aa346b10594ee87": "d1395d14ffdae96b2edde42fa599c0a6f40962cba43be3b3e95d249b0a0e5a3a",
+    "3e6e1eb15d927db8": "356c4ff2da696c29949b653e0a2dd2941dfa210be5f2a5c1371d7fde3a5ca463"
+  },
+  "checks": [
+    "Checked that the fixed chart directions annihilate b and have fourth component zero. The strict split gives positive coarea and C² cap probability, so the density derivative drops out after pairing.",
+    "Checked the representative invariance of K−(b·K)1 and that d,e,n span b-perp. The derivatives of 1·g=1 and n·g=0 remove both normal components from the conic chain rule.",
+    "Expanded aE₀−F_t² as (ab₀−c²)κ_u² and checked both comparison signs with κ_u nonzero, a positive in the definite case and a negative in the indefinite case. Verified the quadratic restriction and the zero-polynomial edge case.",
+    "Matched the frozen statement to 8ec15a9aa211a2ee §§3–4. It does not import the earlier three-row funding comparison or assert a cross-split conic zero."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1aa346b10594ee87",
+      "candidate_sha256": "d1395d14ffdae96b2edde42fa599c0a6f40962cba43be3b3e95d249b0a0e5a3a",
+      "fact_id": "1aa346b10594ee87",
+      "fact_sha256": "1c4dcc3e28e295935ff50855887f1cdb3baf365e3bb63c0cce91df9b79adca7c",
+      "hypotheses": "Same sign orientation p,q,−r,−1, actual barycentric area centroid and polynomial C_b. It supplies F_{g(n′)}(n′)=0 at all nearby normals in this split.",
+      "reviewed_proof_sha256": "989da12f9594e298edd077d0cd5770ef0677d8c454c9a8082d8a9d0baca03f12",
+      "reviewed_statement_sha256": "c2c42281bfb1b32ce61b6509186a9f095f432917f24351e02d7edb520b0c04ed"
+    },
+    {
+      "candidate_id": "1462fa9ce6ced54e",
+      "candidate_sha256": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+      "fact_id": "1462fa9ce6ced54e",
+      "fact_sha256": "90c54522176a9bd2392576c6f61a0ae6c5f7dfca357cf8869ae656c987ddcda1",
+      "hypotheses": "The positive heights lie in its strict quadrilateral class. The actual area centroid formulas are smooth even with repeated heights within a pair.",
+      "reviewed_proof_sha256": "8de3c29eaf4b9ea31778296cf6c19010b1e74d947e37a33c223e812e662b921a",
+      "reviewed_statement_sha256": "bca7b2d2230b274880856fcf4ccd9e8239bbbebad59eed011d4c53736003028c"
+    },
+    {
+      "candidate_id": "3e6e1eb15d927db8",
+      "candidate_sha256": "356c4ff2da696c29949b653e0a2dd2941dfa210be5f2a5c1371d7fde3a5ca463",
+      "fact_id": "3e6e1eb15d927db8",
+      "fact_sha256": "95ff5f403b5d8339a9d5a691ffc6246101c0c2c40682a5e48a19ae6dfdd9eb6e",
+      "hypotheses": "Take continuous simplex dimension three and the four exponential coefficients n′. Its jointly C² cap probability and gradient identity supply the Hessian pairing after differentiating at g(n)=b.",
+      "reviewed_proof_sha256": "25d949ef6fa241b3d18c2c32cf19f9ac1a0318aef6a19ac93a7cf58edc78d4b2",
+      "reviewed_statement_sha256": "0b69be9c183ac54f44ac540cf3cd01ed728938689e4e176bd501148269c397ca"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:29:55Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted conic vanishes at an actual centroid. It does not differentiate the varying centroid parameter or give the inverse-Jacobian pairing.",
+      "fact_id": "1aa346b10594ee87"
+    },
+    {
+      "comparison": "The accepted strict split formulas provide the underlying smooth centroid and cap quantities. The new statement couples their derivatives to the conic and bounds the inverse pairing.",
+      "fact_id": "1462fa9ce6ced54e"
+    }
+  ],
+  "readability": "The inverse bound paragraphs use the immediately preceding assumptions κ_u≠0 and invertibility. The indefinite sign hypotheses themselves ensure invertibility.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "274ac964700739f5cb8d5f202f87d8de638d37673059f3e3d66d0ed3d557d541",
+  "reviewed_statement_sha256": "fe31934f2b4ceb7b7408a880677ee4650519096507a7040802d189eb48657032",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:24:40Z",
+  "summary": "The paired centroid derivative is the density-normalized chart Hessian. The conic differentiation and inverse pairings hold on the stated strict split.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

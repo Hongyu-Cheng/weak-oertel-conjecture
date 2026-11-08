@@ -1,0 +1,28 @@
+{
+  "advances": "An ordinary measurable-subset estimate with a compatible three-fiber realization for convex subsets.",
+  "author": "PK-research-agent",
+  "candidate_id": "4b772ae7fa6b3293",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.319569+00:00",
+  "depends_on": [
+    "0609de1167223ac2"
+  ],
+  "draft_key": "sharp-dimensional-subset-cap-payment",
+  "kind": "lemma",
+  "proof": "Write $F(t)=|K\\cap H_t|/V$. The subset cap has volume at least $(a-V+VF(t))_+$. Subtracting $\\lambda_d a$ from this lower bound gives a function decreasing weakly up to $a=V[1-F(t)]$ and increasing weakly afterwards because $0<\\lambda_d\\le1$. Its minimum is $-\\lambda_d V[1-F(t)]$. The claimed lower bound now follows from the weighted three-tail theorem at $s=-t$, with the two whole-body terms in the same direction and normalized by $V$.\n\nFor sharpness in $d\\ge2$, use the simplex marginal and equality shift $s_*$ of that theorem. Set $t=-s_*$ and $E=K\\cap\\{u\\cdot(x-g)\\le t\\}$. This compact convex cap has $a=V[1-F(-s_*)]>0$ and its intersection with $H_t$ is null. Thus the weighted-tail equality gives equality here. In $d=1$, take a centered interval, $t=0$, and its half on the side opposite $H_0$. Its volume is $V/2$ and the two whole-body caps have total volume $V$. Conversely choosing the measurable complementary cap $E=K\\setminus H_t$ in the subset inequality recovers the weighted tail inequality at $s=-t$.\n\nFor a convex $E$, a convex combination at an extreme base can only use that same base, so the extreme fibers of the lifted hull are precisely $E$ and $K$. At base zero the hull contains the stated copy of $K$ and lies over $K$ in the continuous coordinates because $E\\subset K$ and $K$ is convex. Thus the central fiber is exactly $K$. The affine cap $u\\cdot(x-g)\\ge -tz$ at the three bases has the required thresholds $t,0,-t$.\n\nFor the all-halfspace statement, tighten any containing halfspace until its boundary passes through $(0,g)$. A through-cap with nonzero continuous normal takes the displayed affine form for some $u\\ne0$ and $t$. A pure base through-cap contains the whole middle fiber and an entire endpoint, so its mass is at least $V+a\\ge\\Gamma_d V+\\lambda_d a$. Reflection in the base exchanges the endpoints.\n",
+  "source_candidate_ids": [
+    "bb74919333cc624f"
+  ],
+  "source_candidate_sha256": {
+    "bb74919333cc624f": "5ab19b1daaa918e61b46de4665483a1fbb364182010c09d21e92714a8af1df5d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "bb74919333cc624f",
+      "locator": "bb74919333cc624f:04 §8, (3), sharp measurable-subset payment and actual convex realization"
+    }
+  ],
+  "statement": "Let $K\\subset\\mathbb R^d$ be a full-dimensional convex body of volume $V$ and centroid $g$. Let $E\\subset K$ be measurable with volume $a$, and let $u\\ne0$. Define $H_t=\\{x:u\\cdot(x-g)\\ge t\\}$, $\\Gamma_d=(d/(d+1))^d$, $\\lambda_1=1$ and $\\lambda_d=[(2d/(d+1))^{d/(d-1)}-1]^{d-1}$ for $d\\ge2$. Then for every real $t$,\n$$\n|K\\cap H_0|+|E\\cap H_t|+|K\\cap H_{-t}|\\ge \\Gamma_d V+\\lambda_d a.\n$$\nThe coefficient is optimal already for a compact convex $E$. With fibers $E,K,K$ at consecutive bases $-1,0,1$ and measure given by the sum of their Lebesgue volumes, every closed ambient halfspace containing $(0,g)$ has mass at least $\\Gamma_d V+\\lambda_d a$. The same holds after reversing the endpoint fibers. For convex $E$, these are the exact integer fibers of their lifted convex hull.",
+  "subgoal_id": "pk-intake-sharp-dimensional-subset-cap-payment",
+  "title": "The sharp weighted payment from a measurable subset and two whole-body caps"
+}

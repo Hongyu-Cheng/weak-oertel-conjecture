@@ -1,0 +1,29 @@
+{
+  "advances": "This is the rank-one, small parity-deficit regime in intrinsic measure. The denominator is the total original mass.",
+  "author": "PK-research-agent",
+  "candidate_id": "768c40baf99db4b5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.327872+00:00",
+  "depends_on": [
+    "e108f5d53865d287",
+    "6a7d56e450b3126f"
+  ],
+  "draft_key": "near-parity-expansion-rank-one-retained-chain",
+  "kind": "theorem",
+  "proof": "The same-parity positive fibers have one common direction space: the midpoint of any pair is integral, the midpoint body has direction equal to the sum of the two directions, and the actual midpoint fiber has dimension at most $q$. Every integer fiber between the two extreme class bases contains a $q$-dimensional interpolation of the extremes, so also has that direction space. Ordinary $q$-dimensional Brunn–Minkowski can therefore be applied to anchored combinations after projecting to the common space, an isometry on each affine fiber plane. In particular all intermediate class bases are positive. Writing the extreme bases as $p_0,p_0+2Lv$ with $v$ primitive, we have $L=N-1$ and the class support is precisely $p_0+2jv$, $0\\le j\\le L$.\n\nLet $b$ be the smallest class volume. The sequence of its volume roots in base order is concave. It has an endpoint minimum and is nonincreasing along each path away from a selected maximum. If adjacent even fibers have parent mass $B$ and child mass $c\\le B$ when rooted at the maximum, the distinct integer midpoint between them has volume at least\n$$\n\\left(\\frac{B^{1/q}+c^{1/q}}2\\right)^q\\ge c+2^{-q}(B-c).\n$$\nThe binomial expansion gives this since each term except the pure $B$ term is at least its coefficient times $c$. Summing the child volumes gives $M_r-a$, and the two paths telescope the differences to $a-b$ if the maximum is an endpoint, or to twice $a$ minus both endpoint volumes otherwise. In both cases the difference sum is at least $a-b$. Counting even fibers and distinct odd midpoints in $M$ gives $\\Delta\\ge2^{-q}(a-b)$. With $\\varepsilon=2^q\\eta$, each even fiber thus has mass in $[(1-\\varepsilon)a,a]$.\n\nWrite $f_j$ for the $q$-th root of the volume at $p_0+jv$ and $A=a^{1/q}$. All $f_j$ form a concave sequence. If $N\\ge3$, for each odd $j$ there are even indices $j\\pm1,j\\pm3$ on one side of it, with the same sign in both, so concavity there gives\n$$\nf_j\\le [3A-((1-\\varepsilon)a)^{1/q}]/2\\le (1+\\varepsilon/2)A.\n$$\nThe first inequality uses weights $2/3,1/3$ at the odd point and the more distant even point to bound the intervening even point. The second uses $(1-\\varepsilon)^{1/q}\\ge1-\\varepsilon$. Since $(1+\\varepsilon/2)^q\\le1+\\sigma$ by the choice of $\\eta$, the true middle fiber has volume at most $(1+\\sigma)a$. If $N=2$, the actual middle lies outside the selected class, so its volume is bounded by $M-M_r=M_r-a+\\Delta\\le (1+\\eta)a\\le(1+\\sigma)a$.\n\nTranslate the two extremes into their common $q$-space and scale their volumes by $1/a$. Their midpoint volume is at most $1+\\sigma$ and their volumes are in $[1-\\sigma,1]$ because $\\varepsilon\\le\\sigma$. The midpoint-overlap lemma produces, after undoing this scale, a relative translation of the two original endpoint bodies with intersection $K$ of volume at least $3a/4$. Extend that translation from zero at the first extreme and its full value at the last extreme by an affine function of the base. The corresponding invertible shear keeps every base and translates each fiber, preserving all intrinsic masses. Convexity makes every intervening actual fiber contain $K$.\n\nAt the middle base take the centroid of $K$. For a cap through this mark with nonzero normal restriction to the direction of $K$, 6a7d56e450b3126f makes each retained opposite pair pay $2\\Gamma_q|K|$ and the middle pay $\\Gamma_q|K|$, where $\\Gamma_q=(q/(q+1))^q$. If the restriction is zero, the cap contains the whole middle copy and at least one whole member of each pair, and $(L+1)|K|\\ge(2L+1)\\Gamma_q|K|$ since $\\Gamma_q\\le1/2$. Parallel shrinking and pullback preserve the guarantee for all containing ambient closed halfspaces. The raw depth is at least $(2N-1)\\Gamma_q|K|$. The total original mass satisfies $M=2M_r-a+\\Delta\\le(2N-1+\\eta)a$, so the normalized bound is at least $\\Gamma_q(3/4)/(1+\\eta/(2N-1))\\ge(3/5)\\Gamma_q$.\n",
+  "source_candidate_ids": [
+    "25aee623d8e5a8b7"
+  ],
+  "source_candidate_sha256": {
+    "25aee623d8e5a8b7": "560481d48929c742dbae0e184a3dc53cc40a5e92a114b0bb68f28a79e408362d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "25aee623d8e5a8b7",
+      "locator": "25aee623d8e5a8b7:04 §§2–5, rank-one branch, (4)–(6), retained chain"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact and convex with nonempty mixed trace $S$. Let $q\\ge1$ be its largest integer-fiber dimension and $M=\\mathcal H_q(S)>0$. Suppose the full positive $q$-volume part of one parity class has affine rank one, $N\\ge2$ bases, mass $M_r$ and largest fiber mass $a>0$. Put $\\Delta=M-2M_r+a$ and let $\\sigma=\\sigma_q$ be the midpoint-overlap tolerance. With\n$$\n\\eta=\\tfrac12\\min\\{1/4,2^{-q-1},\\sigma/2^q,2^{1-q}[(1+\\sigma)^{1/q}-1]\\},\n$$\nassume $\\Delta\\le\\eta a$. The $2N-1$ integer positions between the extreme class bases, in their primitive line lattice, all have fibers containing one common $q$-body $K$ of volume at least $3a/4$ after a base-fixing affine shear. The pullback of the middle base and the centroid of $K$ has normalized closed-halfspace depth at least $(3/5)(q/(q+1))^q$ in the original trace.",
+  "subgoal_id": "pk-intake-near-parity-expansion-rank-one-retained-chain",
+  "title": "Near equality on a parity line retains a common fiber and a deep mark"
+}

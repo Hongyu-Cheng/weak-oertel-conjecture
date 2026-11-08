@@ -1,0 +1,38 @@
+{
+  "advances": "An ordinary-depth exclusion in the strict-compatibility, strictly convex phase. It neither regularizes arbitrary local minima nor permits supporting facets or active compatibility.",
+  "author": "PK-research-agent",
+  "candidate_id": "ddff607e5d2e74a9",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.326996+00:00",
+  "depends_on": [
+    "a4a2c4471216abce",
+    "755cb08c379113cc",
+    "ec9eb6a035fb449f",
+    "fa420503475f57e1",
+    "6b80e85ff6937910"
+  ],
+  "draft_key": "strict-compatibility-half-mass-helly-bound",
+  "kind": "theorem",
+  "proof": "Write $M$ for the total volume and $Q=\\beta M$. Identify the affine lattice with an ordinary integer lattice in its intrinsic base coordinates. By 755cb08c379113cc choose one exact positive circuit at every base $p_i$, with all caps in the group through its own interior deepest mark and of mass $Q_i$ equal to that fiber's raw maximum. For a rank-zero base use a dummy base coordinate for this circuit selection and restrict the resulting caps to the sampled plane, which preserves mass and depth. Each group has unit continuous normals, and positive circuit coefficients $\\rho_{ij}$ annihilating their weighted sum. Thus the weighted sum of the cap margins is an affine function of the base alone, vanishing at $p_i$. The projected closed halfspace on which it is nonnegative is covered by this group's caps on every full fiber plane. These projected sets cover $P$. Each open complement has the same trace on finite $P$ as a shifted closed halfspace (or an empty set). Helly compression selects at most $h(P)$ groups retaining the cover. Groups of mass $Q_i<Q$ cannot cover any deepest base, as they would cover a deepest mark by a cheaper cap. Thus there are $1\\le k\\le h(P)$ selected deepest-origin groups covering all deepest bases. Keep a fixed original strict slack group at each other base.\n\nFor each selected deepest anchor choose two opposite radial endpoints from its marked interior point by the regular opposite-endpoint selection lemma, avoiding every chosen cap plane. Each is regular; strict convexity makes its own support face a singleton, so strict compatibility and ec9eb6a035fb449f give ambient unique exposure. The endpoints of distinct selected anchors are distinct. By fa420503475f57e1, for arbitrary real numbers $\\eta_q$ we may make simultaneous exact signed volume changes $s\\eta_q/2$ at the two endpoints of anchor $q$ while retaining the same base, positive actual fibers and Hausdorff convergence. Their incidences are exact for the selected caps, even under threshold changes of size $O(s)$. Denote by $c_{ijq}$ the average of the two incidence indicators for cap $ij$ at anchor $q$. Then $0\\le c_{ijq}\\le1$ and $c_{iji}=1/2$, because each own cap passes through the radial center and both endpoints avoid its plane. The cap body-volume derivative is $g_{ij}=\\sum_q c_{ijq}\\eta_q$, and $M_s=M+s\\sum_q\\eta_q$.\n\nFor each selected critical cap, the old fixed-body threshold derivative is $-S_{ij}$, the sum of its proper section areas. Indeed strict convexity makes every supporting face a singleton, surface-null for $d\\ge2$, and the fixed-body slicing proof of 6b80e85ff6937910 then gives a common derivative for both signs. The proper own interior section gives $S_{ij}>0$. Put $\\kappa_{ij}=(\\rho_{ij}/S_{ij})/\\sum_l(\\rho_{il}/S_{il})$, $B_{iq}=\\sum_j\\kappa_{ij}c_{ijq}$, and $a_i=\\sum_q B_{iq}\\eta_q$. Move threshold $ij$ by $s(g_{ij}-a_i)/S_{ij}$. Its $\\rho$-weighted change is zero within the group, preserving exactly the projected full-plane cover. By the threshold derivative and the exact local mass incidences, all its moved cap masses are $Q+s a_i+o(s)$. Slack groups retain strict slack by the exact local mass bounds. Therefore the upper right slope of the actual normalized maximum along this variation is at most\n$$\nM^{-1}\\max_i\\sum_q(B_{iq}-\\beta)\\eta_q.\n$$\nIf the convex hull of these row vectors excluded zero, strict separation would provide a real $\\eta$ making this upper bound negative, contradicting local minimality of the actual family. Thus a probability vector $\\pi$ on the selected deepest groups satisfies $\\sum_i\\pi_i B_{iq}=\\beta$ for every $q$. Nonnegativity and $B_{qq}=1/2$ yield $\\beta\\ge\\pi_q/2$. Sum over $q$ to obtain $\\beta\\ge1/(2k)\\ge1/(2h(P))$.\n",
+  "source_candidate_ids": [
+    "8e0aa3c3ab250c25",
+    "ebad8045a5ec1b72"
+  ],
+  "source_candidate_sha256": {
+    "8e0aa3c3ab250c25": "f035a6ce68d47a88c3466e319a14798663557294151c0dff84211c7358637c14",
+    "ebad8045a5ec1b72": "a002bc63bc2ebb82eac926ace2c599423bb820432a6d795f44e0232f4cf95658"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8e0aa3c3ab250c25",
+      "locator": "8e0aa3c3ab250c25:02 Theorem (1); §§4–5, strict-convex local-minimum exclusion"
+    },
+    {
+      "candidate_id": "ebad8045a5ec1b72",
+      "locator": "ebad8045a5ec1b72:02 §§1–3, projected compression and exact finite-mass comparison"
+    }
+  ],
+  "statement": "Let $P$ be a finite nonempty lattice-complete base in its affine lattice and let $d\\ge2$. Suppose its actual positive compact convex $d$-fibers are strictly convex and strictly compatible: at every base $p$, each extreme convex representation of $p$ by other bases gives a Minkowski combination compactly contained in the interior of its fiber. Let $h(P)$ be the Helly number for convex-set traces on $P$: from any finite family with intersection missing $P$, some at most $h(P)$ members have intersection missing $P$. At an unrestricted local minimum in the fiber Hausdorff topology of the maximum normalized ambient closed-halfspace depth $\\beta$, with summed fiber volume, one has $\\beta\\ge1/(2h(P))$.",
+  "subgoal_id": "pk-intake-strict-compatibility-half-mass-helly-bound",
+  "title": "Strictly compatible strictly convex local minima satisfy the half-mass Helly bound"
+}

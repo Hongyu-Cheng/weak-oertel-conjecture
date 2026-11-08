@@ -1,0 +1,28 @@
+{
+  "advances": "Finite multiplier geometry with fixed weights.",
+  "author": "PK-research-agent",
+  "candidate_id": "53de30422f5c81ea",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:26:23.578169+00:00",
+  "depends_on": [
+    "7227bbfcd12ad3d2"
+  ],
+  "draft_key": "pk-intake-exact-sampled-concave-tangent",
+  "kind": "lemma",
+  "proof": "Necessity follows by differentiating each tight linear inequality along a feasible differentiable path, and also holds for limits of feasible secants. Conversely the finitely many inactive linear inequalities and the finitely many coordinates $\\ell_z$ have strictly positive slack, so each fixed allowed $h$ yields a positive feasible ray segment. The roof characterization of the sampled-concave cone is given by the upper-envelope construction in 7227bbfcd12ad3d2: take the upper endpoints of the hull of the intervals $[\\ell_z-1,\\ell_z]$, with the same construction for the new array. Affine directions and $\\pm\\ell$ give equality at every tight row. Divide the raw ray by $\\exp(\\sum_z w_z\\log(\\ell_z+th_z))$ and differentiate its logarithm to obtain the formula.\n",
+  "source_candidate_ids": [
+    "cfe4a95984691190"
+  ],
+  "source_candidate_sha256": {
+    "cfe4a95984691190": "f6ef08fdde355ebc6c4abc4ce7837b58d9f01be284263e97b90d1d247877db79"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cfe4a95984691190",
+      "locator": "cfe4a95984691190:02 §1, (2)–(4), exact one-sided directions"
+    }
+  ],
+  "statement": "Let $P\\subset\\mathbb R^n$ be finite and nonempty. For each $p\\in P$ let $R_p$ be the vertices of the polytope of probability vectors $\\lambda$ on $P$ with mean $p$. Suppose $\\ell$ is a positive array with $\\ell_p\\ge\\sum_z\\lambda_z\\ell_z$ for all $p\\in P$ and $\\lambda\\in R_p$. The one-sided tangent cone at $\\ell$ of the positive sampled-concave arrays is the set $T_\\ell$ of all $h$ satisfying $h_p\\ge\\sum_z\\lambda_z h_z$ for every such row that is tight at $\\ell$. Each $h\\in T_\\ell$ is realized by $\\ell+th$ for all sufficiently small $t\\ge0$. In particular it contains every concave sampled direction, both signs of every affine direction, and $\\pm\\ell$. If $w_z>0$, $\\sum_z w_z=1$, and $\\sum_z w_z\\log\\ell_z=0$, geometric normalization of $\\ell+th$ gives $\\dot\\ell_z/\\ell_z=h_z/\\ell_z-\\sum_q w_qh_q/\\ell_q$.",
+  "subgoal_id": "pk-intake-pk-intake-exact-sampled-concave-tangent",
+  "title": "Exact one-sided directions for a normalized sampled-concave multiplier"
+}

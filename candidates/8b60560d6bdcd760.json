@@ -1,0 +1,29 @@
+{
+  "advances": "The cost infimum is for the displayed family and its order of limits. The result keeps the exact weighted costs at common active normals.",
+  "author": "PK-research-agent",
+  "candidate_id": "8b60560d6bdcd760",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.322831+00:00",
+  "depends_on": [
+    "84cd8a85417b0d7a",
+    "115374b2c8a1d22f"
+  ],
+  "draft_key": "active-contact-overlap-endpoint-cost",
+  "kind": "lemma",
+  "proof": "Where $\\Delta(n)\\le\\eta$ the cutoff equals one and the exact compatibility calculation in continuous-normal-wise-endpoint-projective-erosion applies. Elsewhere any midpoint of eroded inputs remains in the old $M=(A+B)/2$ and has original target support gap greater than $\\eta$. The target perturbation term is bounded by $\\varepsilon\\max_n H(n)\\max_{m\\in M}f(1+a\\cdot(m-y))$. Make this smaller than $\\eta$. This also covers the cutoff transition, and the cut fields are continuous nonnegative and convex in the physical point for each normal.\n\nThe singleton boundary derivative in 84cd8a85417b0d7a gives the exact first endpoint cost $\\int\\chi_\\eta t\\,d\\mu_A+\\int\\chi_\\eta(1-t)\\,d\\mu_B$. With measurable allocations the minimum is $\\int\\chi_\\eta\\,d\\omega$, by selecting the smaller density at each normal. For fixed $\\eta$, continuous allocations have the same infimum. In fact finite Radon regularity approximates each measurable selector in $L^1(\\mu)$ by continuous $[0,1]$ functions, by interpolating between a compact subset and an open superset of the selected set. For every cutoff, its value on $Z$ is one, which gives the lower bound $\\omega(Z)$. As $\\eta\\downarrow0$, $\\chi_\\eta$ tends pointwise to the indicator of $Z$, so dominated convergence gives the matching upper bound after continuous approximation. The erosion parameter is then taken small for this fixed cutoff and allocation. At polytopal inputs the pushforward is a sum of facet masses at their unit normals, yielding the stated finite sum.\n",
+  "source_candidate_ids": [
+    "72bbac9873894c0b"
+  ],
+  "source_candidate_sha256": {
+    "72bbac9873894c0b": "835ea8d3d9bc388bbfd47aa830e9beb0c47ff25787c271447f72f6a3e1b15550"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "72bbac9873894c0b",
+      "locator": "72bbac9873894c0b:03 §5, (9)–(11), exact active-contact overlap cost"
+    }
+  ],
+  "statement": "Use the continuous normal-dependent endpoint erosion and put $\\Delta(n)=h_K(n)-h_{(A+B)/2}(n)$, $Z=\\{\\Delta=0\\}$. For $\\eta>0$ fix a continuous cutoff $0\\le\\chi_\\eta\\le1$ equal to one on $\\{\\Delta\\le\\eta\\}$ and zero on $\\{\\Delta\\ge2\\eta\\}$. Multiply both endpoint fields by $\\chi_\\eta$. Each fixed cutoff and continuous allocation gives exact midpoint compatibility for all sufficiently small $\\varepsilon\\ge0$. Let $\\mu_L$ be the pushforward of $U_L(n_L(x),x)\\,d\\mathcal H^{d-1}(x)$ under the original outward normal of $L=A,B$. With $\\mu=\\mu_A+\\mu_B$, define $\\omega$ by $d\\omega=\\min(d\\mu_A/d\\mu,d\\mu_B/d\\mu)\\,d\\mu$. The infimum of the total first endpoint loss over cutoffs and continuous allocations is exactly $\\omega(Z)$. For polytopes this is the sum, over shared active facet normals, of the smaller actual weighted facet cost.",
+  "subgoal_id": "pk-intake-active-contact-overlap-endpoint-cost",
+  "title": "Exact active-contact overlap cost of cutoff endpoint allocation"
+}

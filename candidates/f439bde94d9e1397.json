@@ -1,0 +1,28 @@
+{
+  "advances": "Both tails belong to the same scalar concave probability density at two fixed thresholds.",
+  "author": "PK-research-agent",
+  "candidate_id": "f439bde94d9e1397",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.320045+00:00",
+  "depends_on": [
+    "e706c9a20fc8a118"
+  ],
+  "draft_key": "exact-feasible-two-tail-region-concave-density",
+  "kind": "theorem",
+  "proof": "Represent $f$ almost everywhere by the positive probability mixture of normalized tents. At any cut $q\\in(0,1)$ the tail of $T_p$ is $(1-q)^2/(1-p)$ for $p\\le q$ and $1-q^2/p$ for $p\\ge q$, by integrating its affine pieces. Denote the two resulting tails by $A_p,B_p$. The map $p\\mapsto B_p$ is continuous and strictly increasing from $b_0$ to $b_1$. Eliminating $p$ from $(A_p,B_p)$ in the ranges $p\\le x$, $x\\le p\\le y$, and $y\\le p$ gives $A_p=U(B_p)$.\n\nThe middle piece of $U$ has derivative $x^2b_0/(B-b_0)^2$ and strictly negative second derivative. At $B_x$ and $B_y$ its derivative equals the neighboring slopes $(1-x)^2/b_0$ and $x^2/y^2$. Thus $U$ is concave on the whole interval. Its endpoint chord is $L$ and $U(B)>L(B)$ at every interior $B$. Indeed equality at an interior point of the chord of a concave function would force the whole graph to be affine, whereas its middle piece has negative second derivative.\n\nThe actual $(A,B)$ is the average of the tent pairs under the mixing measure. Integrating the chord inequality gives $A\\ge L(B)$, with equality exactly when the measure is supported on $\\{0,1\\}$. The unique weight at $1$ with the required far tail is $\\lambda$. For the upper bound integrate the tangent inequality for $U$ at $B$, using one-sided tangents at the endpoints. The tangent contact set consists of one point for interior $B$ in the strict middle piece, the entire left linear piece for $B\\le B_x$, and the entire right linear piece for $B\\ge B_y$. Equality forces $B_p$ to belong to that contact set almost surely. The inverse of $p\\mapsto B_p$ gives exactly the stated tent mixtures. At each feasible $B$ the endpoint mixture attains $L(B)$ and the unique tent with that far tail attains $U(B)$. Their convex combinations keep the same far tail and give every $A$ between the two bounds.\n\nIf only $B\\ge\\delta$ is prescribed, $0\\le\\delta\\le1$, there is a feasible density exactly when $\\delta\\le b_1$. Since $L$ is strictly increasing, the exact minimum is $L(\\max\\{b_0,\\delta\\})=(1-x)^2+[x(1-x)/(y(1-y))](\\delta-b_0)_+$. Equality requires the lower-bound affine density at $B=\\max\\{b_0,\\delta\\}$, hence the decreasing endpoint tent for $\\delta\\le b_0$ and the unique affine density with $B=\\delta$ otherwise.\n",
+  "source_candidate_ids": [
+    "66cd3b069de31436"
+  ],
+  "source_candidate_sha256": {
+    "66cd3b069de31436": "efec8d7edbcba67a2110c9ce91557b4b329ca1e849c3c3ac7d88438bd403aa6b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "66cd3b069de31436",
+      "locator": "66cd3b069de31436:02 §1 (1)–(3), §3 (7)–(9), §6 (12) and upper equality cases"
+    }
+  ],
+  "statement": "Fix $0<x<y<1$. For a finite nonnegative concave density $f$ of integral one on $[0,1]$, set $A=\\int_x^1 f$ and $B=\\int_y^1 f$. Put $b_0=(1-y)^2$, $b_1=1-y^2$, $B_x=b_0/(1-x)$ and $B_y=1-y$. The feasible pairs are exactly $b_0\\le B\\le b_1$ and $L(B)\\le A\\le U(B)$, with\n$$\n\\begin{aligned}\nL(B)&=(1-x)^2+\\frac{x(1-x)}{y(1-y)}(B-b_0),\\\\\nU(B)&=\\begin{cases}\n(1-x)^2B/b_0,&b_0\\le B\\le B_x,\\\\\n1-x^2-x^2b_0/(B-b_0),&B_x\\le B\\le B_y,\\\\\n1-(x^2/y^2)(1-B),&B_y\\le B\\le b_1.\n\\end{cases}\n\\end{aligned}\n$$\nLower equality at each $B$ holds precisely for $2(1-\\lambda)(1-t)+2\\lambda t$ almost everywhere, where $\\lambda=(B-b_0)/(2y(1-y))$. For upper equality with $B_x<B<B_y$ the density is the single normalized tent with peak $p\\in(x,y)$ and far tail $B$. On $[b_0,B_x]$ and $[B_y,b_1]$ the upper equality densities are respectively the normalized tent mixtures supported on $[0,x]$ and $[y,1]$ with far tail $B$. The equalities of densities are pointwise for the continuous representative.",
+  "subgoal_id": "pk-intake-exact-feasible-two-tail-region-concave-density",
+  "title": "The exact feasible pair of tails of one concave density"
+}

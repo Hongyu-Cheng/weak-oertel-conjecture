@@ -1,0 +1,29 @@
+{
+  "advances": "A continuous choice of which endpoint pays at each normal, with the middle erosion held fixed.",
+  "author": "PK-research-agent",
+  "candidate_id": "115374b2c8a1d22f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.322591+00:00",
+  "depends_on": [
+    "d90ba05577427854",
+    "84cd8a85417b0d7a"
+  ],
+  "draft_key": "continuous-normal-wise-endpoint-projective-erosion",
+  "kind": "lemma",
+  "proof": "Use d90ba05577427854 to choose $a$. The tangent continuation is positive and decreasing as well as convex because its lower part has the constant negative derivative of the join and its upper part is a positive inverse power. Each field is jointly continuous and nonnegative and convex in the physical point for each fixed $n$. For each body use the singleton version of 84cd8a85417b0d7a with one ceiling equal to its original support. The middle gauge erosion corresponds to the field $H(n)f(1+a\\cdot(x-y))$. This gives positivity and nesting for small parameters, including zero input fields on subsets of the sphere.\n\nFor old inputs $x\\in A$, $x'\\in B$ with $m=(x+x')/2$, the minima of the partner affine coordinates and monotonicity of $f$ give both $U_A(n,x)\\ge2H(n)f(1+a\\cdot(m-y))$ and the same bound for $U_B(n,x')$. For two eroded inputs add their cuts and divide by two. The normal-wise coefficients sum to one, so $n\\cdot m+\\varepsilon H(n)f(1+a\\cdot(m-y))\\le(h_A(n)+h_B(n))/2\\le h_K(n)$. This is exactly the target gauge inequality for all $n$. As only the middle midpoint needs to be checked on $-1,0,1$, the lifted hull has those precise fibers.\n",
+  "source_candidate_ids": [
+    "72bbac9873894c0b"
+  ],
+  "source_candidate_sha256": {
+    "72bbac9873894c0b": "835ea8d3d9bc388bbfd47aa830e9beb0c47ff25787c271447f72f6a3e1b15550"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "72bbac9873894c0b",
+      "locator": "72bbac9873894c0b:01 §1, (1)–(3), actual continuous normal allocation"
+    }
+  ],
+  "statement": "Let $A,B,K$ be positive convex bodies in $\\mathbb R^d$, $d\\ge1$, with $(A+B)/2\\subseteq K$, and choose $y\\in\\operatorname{int}K$. Let $a$ be the positive projective centering parameter for $K-y$, and $f$ the positive decreasing convex inverse-power tangent extension at its minimum denominator. Put $H(n)=h_{K-y}(n)$ and choose $b_*\\in B$ minimizing $a\\cdot b$ and $a_*\\in A$ minimizing $a\\cdot x$. Define\n$$\nU_A(n,x)=2H(n)f(1+a\\cdot((x+b_*)/2-y)),\\qquad\nU_B(n,x')=2H(n)f(1+a\\cdot((a_*+x')/2-y)).\n$$\nFor any continuous $t:\\mathbb S^{d-1}\\to[0,1]$, impose support erosions on $A,B$ using the fields $t(n)U_A(n,x)$ and $(1-t(n))U_B(n,x')$, and on $K$ use its projective gauge cut about $y$. The eroded bodies are nested and positive for small $\\varepsilon\\ge0$ and obey exact midpoint compatibility, giving actual integer fibers at $-1,0,1$.",
+  "subgoal_id": "pk-intake-continuous-normal-wise-endpoint-projective-erosion",
+  "title": "Exact normal-dependent endpoint allocation for projective erosion"
+}

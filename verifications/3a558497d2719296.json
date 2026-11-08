@@ -1,0 +1,113 @@
+{
+  "candidate_id": "be265e22b9ce0ce6",
+  "candidate_sha256": "dd9dae6b6818a6f6ad3ed683de50ab0b3d54ac8c761ad251db24b868705f977f",
+  "checked_dependency_candidate_sha256": {
+    "84cd8a85417b0d7a": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e",
+    "d90ba05577427854": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50"
+  },
+  "checks": [
+    "The revision identifies a with the accepted centering vector and the strictly positive minimum δ of its denominator. It specifies the −d power independently of the −d−1 energy objective.",
+    "The two branches join with value δ^(−d) and derivative −dδ^(−d−1). The lower affine branch is positive on q<δ, so the resulting globally finite field is positive, continuous and convex even when endpoint arguments fall below δ.",
+    "Rechecked the positive support factors, the exact Jensen average, the gauge comparison, and the translated hull at all three integer sites. The revised definitions do not impose extra restrictions on the support-ratio arguments."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "d90ba05577427854",
+      "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+      "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+      "hypotheses": "Apply it to K with the chosen interior mark translated to zero. The denominator 1+a·x is uniformly positive on K. Its defining objective does not specify the erosion field f.",
+      "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+      "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+    },
+    {
+      "candidate_id": "84cd8a85417b0d7a",
+      "candidate_sha256": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e",
+      "fact_sha256": "16bd146b2050f339f2be11288d8c222c5ab509906f9b840ab78ad17f7f96786b",
+      "hypotheses": "Apply the singleton, one-ceiling construction with support ceiling h_L and the continuous nonnegative convex-in-x field on each of A,B,M,K. The gauge inequality is the family of these support cuts.",
+      "reviewed_proof_sha256": "387bb6105dddce5e09b51c4e0a5eca4c06f2132620577a14ab7c507ac6d2593c",
+      "reviewed_statement_sha256": "edb6bc1e4f85bd5b779ce923003896f53e7e6834fc8a3e8e50fd2d59b4c674ed"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:31:11Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "be265e22b9ce0ce6",
+    "candidate_sha256": "f62e4700dc15a333235a146d61085beac3929534dbe26c67b5286fd61dfd4a9d",
+    "checks": [
+      "Interior endpoint centers give an interior midpoint and strict positivity of the centered support distances. The proof of the converse interior decomposition by continuation and interpolation is valid.",
+      "Weighted Jensen with the two support distances cancels the ratios exactly, giving the averaged argument at the midpoint and then the gauge inequalities. Nonnegative extra fields can only shrink the inputs.",
+      "The singleton erosion predecessor applies to each positive body with the old support as the ceiling. The translated midpoint inclusion ensures the canonical hull has exactly the three stated integer fibers.",
+      "The original §§1–2 prescribe the inverse-dth-power tangent extension; this is specific data not defined in the frozen normalization."
+    ],
+    "dependencies": [
+      {
+        "candidate_id": "d90ba05577427854",
+        "candidate_sha256": "35439398d74c5f18eee6868c7d3cc5abe09eca27dd9683b7447d23deefc6cb50",
+        "fact_sha256": "c6527c3960febb69316b38ff1fba86ab12e9eef2bc1283c32e53653956b8ef93",
+        "hypotheses": "Apply it to K with the chosen interior mark translated to zero. The denominator 1+a·x is uniformly positive on K. Its defining objective does not specify the erosion field f.",
+        "reviewed_proof_sha256": "184246907d142e53209bfa97e043fa16c0260f91a870047b08293f408929369d",
+        "reviewed_statement_sha256": "b9ed82540ff083e1fd581853f1fb9f011c76258912178b3e38bcdb8739e32d1d"
+      },
+      {
+        "candidate_id": "84cd8a85417b0d7a",
+        "candidate_sha256": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e",
+        "fact_sha256": "16bd146b2050f339f2be11288d8c222c5ab509906f9b840ab78ad17f7f96786b",
+        "hypotheses": "Apply the singleton, one-ceiling construction with support ceiling h_L and the continuous nonnegative convex-in-x field on each of A,B,M,K. The gauge inequality is the family of these support cuts.",
+        "reviewed_proof_sha256": "387bb6105dddce5e09b51c4e0a5eca4c06f2132620577a14ab7c507ac6d2593c",
+        "reviewed_statement_sha256": "edb6bc1e4f85bd5b779ce923003896f53e7e6834fc8a3e8e50fd2d59b4c674ed"
+      }
+    ],
+    "finished_utc": "2026-11-08T19:29:44Z",
+    "issues": [
+      {
+        "defect": "The exact erosion is named using an unspecified inverse power. The cited predecessor defines the admissible vector and the energy exponent −d−1, not the desired erosion extension with exponent −d. It also does not make the vector a positive coordinate vector.",
+        "locator": "Statement first paragraph, definition of a and f",
+        "repair": "Define a as the projective-energy minimizer with denominator 1+a·x>0, set δ=min_K(1+a·x), and write f(q)=q^(−d) for q≥δ and f(q)=δ^(−d)−dδ^(−d−1)(q−δ) for q≤δ.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Builds one global projective cut with an affine base term and a positive denominator on the entire hull. The present rule couples endpoint cuts via normal-dependent support ratios and Jensen.",
+        "fact_id": "b29b972734a1208b"
+      },
+      {
+        "comparison": "Gives positivity and nesting for the individual erosion cuts. It does not give the stated explicit pointwise support-ratio compatibility.",
+        "fact_id": "84cd8a85417b0d7a"
+      }
+    ],
+    "readability": [],
+    "reviewed_proof_sha256": "f97f9a3bfd8ce2cd8211c07266e62359bd8a3ea41ecc78015f7131fce45df5ad",
+    "reviewed_statement_sha256": "323e6e6637dcba62000d6e3ff7ddd8bffafffac7d6c9aa97518b7049a2dfa7ba",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:24:23Z",
+    "summary": "The weighted Jensen construction is correct, but the frozen statement leaves the specified projective tangent extension undefined.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Builds one global projective cut with an affine base term and a positive denominator on the entire hull. The present rule couples endpoint cuts via normal-dependent support ratios and Jensen.",
+      "fact_id": "b29b972734a1208b"
+    },
+    {
+      "comparison": "Gives positivity and nesting for the individual erosion cuts. It does not give the stated explicit pointwise support-ratio compatibility.",
+      "fact_id": "84cd8a85417b0d7a"
+    }
+  ],
+  "readability": [],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "f97f9a3bfd8ce2cd8211c07266e62359bd8a3ea41ecc78015f7131fce45df5ad",
+  "reviewed_statement_sha256": "0b0469bfb267678477e58faddd048629fd5374de639c6e6b923fccb05b352cbf",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "f62e4700dc15a333235a146d61085beac3929534dbe26c67b5286fd61dfd4a9d",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:30:14Z",
+  "summary": "The revised statement specifies the exact inverse-dth-power tangent extension and its gauges. The weighted Jensen proof applies to those fields and establishes exact compatibility.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

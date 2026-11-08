@@ -1,0 +1,50 @@
+{
+  "candidate_id": "53de30422f5c81ea",
+  "candidate_sha256": "709b6f3e498558a6a024cc1fc11a7eb3cca0e6509edc400fd04187e9ba882a90",
+  "checked_dependency_candidate_sha256": {
+    "7227bbfcd12ad3d2": "1a39c43ab5501d5462ae682d6a6ed5cb4f9b39be4e1fe43d6d89800e47ca182a"
+  },
+  "checks": [
+    "Checked cfe4a95984691190:02 §1 (2)–(4). The finite list includes every extreme anchored row and positivity is an open coordinate condition at the given strictly positive array.",
+    "A feasible secant satisfies every tight row after subtracting the old equality and dividing by its positive step. Conversely, inactive rows and positivity have a positive finite slack margin, so each fixed allowed direction has a positive ray interval.",
+    "An affine array has equality on all anchored rows, both signs of the old array vanish on tight rows, and an independently concave direction satisfies every row. Upper endpoints of the interval hull produce the exact positive sampled roof.",
+    "Differentiating the raw ray log and subtracting the derivative of its fixed-weight log mean gives precisely the displayed quotient."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7227bbfcd12ad3d2",
+      "candidate_sha256": "1a39c43ab5501d5462ae682d6a6ed5cb4f9b39be4e1fe43d6d89800e47ca182a",
+      "fact_sha256": "59df179850b6e73142aad2bedecd1e223db87940b1f41667a40bd2b06593d9ef",
+      "hypotheses": "Apply the finite upper support formula in one continuous coordinate to intervals with upper endpoints equal to the sampled values. Anchored concavity gives equality at each sampled base, and the upper roof is continuous and concave on the base hull.",
+      "reviewed_proof_sha256": "a83017b66e8caede5817787b4690338ca1e03c23811b03831ba2473e7ef3a0c1",
+      "reviewed_statement_sha256": "6d6b0e08ad8d7b8ea51f954f4b03a80a32fb7fe839eb1f41b317d068cdbe67ca"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:33:48Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The predecessor uses this cone as a defined input in parameter separation. It does not state or prove that it is the exact positive-ray tangent cone or give the normalization derivative.",
+      "fact_id": "b9e0b3b29694badd"
+    },
+    {
+      "comparison": "The parameter no-improvement criterion uses the tight rows in an actual buffered minimum. The reviewed fact gives their general exact tangent characterization for finite P and all normalized positive arrays.",
+      "fact_id": "056d3e1e9c6aa098"
+    }
+  ],
+  "readability": "The one-dimensional interval hull is used only for the sampled roof. The tangent calculation takes place in the finite array coordinates.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "d83e8ad0a385311f7231c4039f48a46c08270ec5a631362e49069dcff166783f",
+  "reviewed_statement_sha256": "1ffd4d7420f4fa9ae91e5907bac17e6d650daf803fe9c3bc685608a9bc58dbef",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:27:35Z",
+  "summary": "The finite tight rows give the exact one-sided tangent cone and each tangent direction has a genuine positive raw ray. Geometric normalization has the stated first derivative.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

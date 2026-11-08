@@ -1,0 +1,28 @@
+{
+  "advances": "One fixed height and two actual nested caps in a single planar convex body.",
+  "author": "PK-research-agent",
+  "candidate_id": "8f32bd01f5ccae31",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.320208+00:00",
+  "depends_on": [
+    "f439bde94d9e1397"
+  ],
+  "draft_key": "planar-slab-two-tail-area-floor",
+  "kind": "lemma",
+  "proof": "Use orthonormal coordinates across and along the height lines. If $\\sigma(h)$ is the section length at height $h$ divided by $\\|\\ell\\|$, then its integral over the height range is $w$ by Fubini and the linear coordinate change. The interpolation of any two section intervals lies in the intervening section, so $\\sigma$ is concave. Thus $f(v)=H\\sigma(Hv-1)/w$ is a nonnegative concave probability density on $[0,1]$.\n\nThe cut levels $-t$ and $2$ both lie above $-1$, so both cap areas are entirely in $D$. Their normalized thresholds are $x=(1-t)/H$ and $y=3/H$, with $0<x<y<1$. Apply the exact two-tail region and its floor at far-tail fraction $r$. This gives $r\\le1-y^2$ and the stated inequality after simplifying the chord slope.\n\nAt equality the section length is affine on the interior, since the lower equality of the two-tail theorem makes $f$ affine almost everywhere and it is continuous there. Write the section as $[l(h),u(h)]$ along its height line. Convexity of $D$ gives convexity of $l$ and concavity of $u$. Their Jensen gaps are nonnegative and sum to the Jensen gap of $u-l$, which vanishes. Thus both endpoints are affine on the interior. At an extreme height, limits of interior section points belong to the extreme section by compactness. Conversely every point in that section is a limit of points at interior heights by interpolation with any point at another height. Hence the affine endpoints describe the extreme sections as well, giving the stated shapes.\n",
+  "source_candidate_ids": [
+    "66cd3b069de31436"
+  ],
+  "source_candidate_sha256": {
+    "66cd3b069de31436": "efec8d7edbcba67a2110c9ce91557b4b329ca1e849c3c3ac7d88438bd403aa6b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "66cd3b069de31436",
+      "locator": "66cd3b069de31436:04 §5 (11), feasibility and affine-section rigidity"
+    }
+  ],
+  "statement": "Let $A$ be a planar convex body, let $\\ell$ be a nonzero linear height, and let $D=A\\cap\\{\\ell\\ge-1\\}$ have area $w>0$ and height range $[-1,H-1]$ with $H>3$. If $|A\\cap\\{\\ell\\ge2\\}|\\ge\\delta\\ge0$, set $r=\\delta/w$. Then $r\\le1-9/H^2$ and for all $-2<t<1$,\n$$\n\\frac{|A\\cap\\{\\ell\\ge-t\\}|}{w}\n\\ge \\left(1-\\frac{1-t}{H}\\right)^2+\n\\frac{(1-t)(H-1+t)}{3(H-3)}\n\\left[r-\\left(1-\\frac3H\\right)^2\\right]_+.\n$$\nThe feasibility bound is equivalent to $H\\ge3/\\sqrt{1-r}$ for $r<1$. Equality in the area estimate forces $D$ to have affine section length in the height direction, so it is a trapezoid with parallel height faces or a triangle with one height face reduced to a point.",
+  "subgoal_id": "pk-intake-planar-slab-two-tail-area-floor",
+  "title": "A far cap controls a nearer cap of the same planar body"
+}

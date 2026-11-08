@@ -1,0 +1,29 @@
+{
+  "advances": "One integer dimension and original mixed volume, conditional on the stated actual attainment and proper traces. No multidimensional interpolation or unrestricted regularity is inferred.",
+  "author": "PK-research-agent",
+  "candidate_id": "f1d598f3e5a07b7f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:26:23.582416+00:00",
+  "depends_on": [
+    "4df12881908e0521",
+    "7ecdb7713aca3e1c"
+  ],
+  "draft_key": "pk-intake-strict-integer-interpolation-for-buffered-depth",
+  "kind": "theorem",
+  "proof": "For each nonvertical normal $N=(a,u)$ the threshold at a mark $W$ is the convex function $b_N(W)=N\\cdot W-\\varepsilon f(W)\\Gamma(u)$. Its cap tail is nonincreasing; its mass superlevels are threshold intervals, so endpoint feasibility at any common mass level implies feasibility for the intermediate mark. Pure-base caps have the same property. Write $A=\\min_e D_\\varepsilon(Y_e)$ and suppose $D_\\varepsilon(Y)=A$. For the chosen nonvertical cap $H$ its proper trace at $p$ makes every higher threshold cost strictly less than $A$: near the old threshold there is a positive-volume strip in that own fiber, and monotonicity handles higher thresholds. Thus $b_N(Y_e)\\le b_N(Y)$ at both endpoints. The convex threshold inequality forces equality at both, so the same actual $H$ attains raw depth $A$ at both endpoints and is proper there by hypothesis.\n\nThe section and tilt argument in 4df12881908e0521 now applies unchanged, for the following reason. Truncate the base to the first and last positive sampled fibers, retaining $f$ restricted from the old body. This preserves actual cap masses and the endpoints; positive-depth endpoints cannot lie outside that interval, because the outward pure-base cap would then have zero mass. With $\\|u\\|=1$, the $(d-1)$-dimensional section measures $s_z$ of $H$ form a positive log-concave sequence on their consecutive sampled support, by the affine plane chart and Brunn–Minkowski, or are one in $d=1$. Only the extreme section bases can support the plane without a proper cut: the fiberwise minimum margin is convex, the maximum margin is concave, and a proper source has strict opposite signs, which propagate to all interior points of the section projection by interpolation. At endpoint source $Y_e$, changing only the base tilt by $t$ adds $t(z-z_e)$ to the cap margin and leaves its physical buffer fixed. On a proper section both derivatives contribute $(z-z_e)s_z$; on a supporting section only one side contributes that number. Since $H$ minimizes at $Y_e$, a convex combination of its two one-sided derivatives is zero. This writes $z_e$ as the mean of the same positive section sequence with only its two extreme weights allowed to decrease. The sequence includes at least three consecutive bases, since both endpoint cuts are proper and there is an intermediate integer. The trimming bound 7ecdb7713aca3e1c makes the difference of these means at most one, contrary to $z_1-z_0\\ge2$.\n",
+  "source_candidate_ids": [
+    "a6bfa5d4aa59d5b9"
+  ],
+  "source_candidate_sha256": {
+    "a6bfa5d4aa59d5b9": "6923c1327c4d5fddc50344f0f0ad21ccb60edc84da08ba22df3baf503369222c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a6bfa5d4aa59d5b9",
+      "locator": "a6bfa5d4aa59d5b9:01 §§1–4, (1)–(2), strict buffered interpolation"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R\\times\\mathbb R^d$ be a compact convex body, $d\\ge1$, of positive sampled mixed $d$-volume. Let $f:C\\to[0,\\infty)$ be continuous concave, $\\Gamma$ a continuous norm, and $\\varepsilon\\ge0$. Define raw depth $D_\\varepsilon(z,x)$ by the infimum of the actual mixed masses of\n$a(Z-z)+u\\cdot(X-x)\\ge-\\varepsilon f(z,x)\\Gamma(u)$ for $u\\ne0$, together with the ordinary closed pure-base through-mark caps. Let $Y_e=(z_e,x_e)$ be positive-depth sampled marks with integer $z_0<z_1$ and let $Y$ be their affine interpolation at any integer $p$ strictly between them. Assume that if $D_\\varepsilon(Y)=\\min_e D_\\varepsilon(Y_e)$, a nonvertical cap attaining that value has proper own trace at $Y$ and proper own traces at both endpoint marks once propagated to their thresholds. Then $D_\\varepsilon(Y)>\\min_e D_\\varepsilon(Y_e)$.",
+  "subgoal_id": "pk-intake-pk-intake-strict-integer-interpolation-for-buffered-depth",
+  "title": "Strict integer interpolation for a concave continuous buffer"
+}

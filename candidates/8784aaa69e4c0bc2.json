@@ -1,0 +1,29 @@
+{
+  "advances": "A local extremal classification for three compatible positive planar triangles with strict middle containment.",
+  "author": "PK-research-agent",
+  "candidate_id": "8784aaa69e4c0bc2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.329592+00:00",
+  "depends_on": [
+    "7f0686c3a3a5d6d7",
+    "2a8c2bc6d7992c5e"
+  ],
+  "draft_key": "strict-interior-three-triangle-deepest-fibers",
+  "kind": "lemma",
+  "proof": "For a mark in an endpoint fiber, any containing ambient halfspace restricts to a containing planar halfplane or the whole plane there. Conversely, any prescribed planar halfplane through that mark can be realized at the endpoint while strictly excluding both other compact fibers, by a sufficiently large base tilt of the correct sign. Thus the restricted endpoint depth is its ordinary planar depth divided by $M$. Fact 7f0686c3a3a5d6d7 gives the two endpoint maxima. The same fact applied to the centroid of $K_1$, and retaining its own contribution only, gives the lower bound at the middle.\n\nWe check continuity of the middle maximum under the enlargement needed below. For a fixed family the raw depth at a middle mark is Lipschitz in its planar position with constant at most $\\sum_i\\operatorname{diam}K_i$. Indeed, move any closed containing halfspace to be through the mark. If its planar normal is nonzero, normalize it to unit length and compare the parallel cut through a second mark; the two planar thresholds differ by at most the distance between the marks. On each fiber the area change is bounded by the width of this strip times the fiber diameter, by integration in the normal coordinate. If the planar normal is zero, the same cap passes through both marks. Taking infima in both directions gives the stated uniform bound. Also, replacing $K_1$ by an enlarged homothet $K'_1$ changes the mass of every cap by at most $|K'_1\\setminus K_1|$ and therefore changes raw depth at each fixed mark by at most that amount. The homothety maps the old middle domain onto the new one with uniformly vanishing displacement as its ratio tends to one. These estimates show that the raw middle maximum, and after division by total area also its normalized maximum, vary continuously under this enlargement.\n\nIf the middle were not deepest, enlarge it slightly about an interior point, preserving compatibility and the local class. The two endpoint maxima strictly decrease through the increased denominator, while the middle still lies strictly below the old overall maximum by the gap and continuity. This contradicts local minimality. If both endpoints were deepest, the endpoint formula gives $a=c$. The planar Brunn–Minkowski inequality in fact 2a8c2bc6d7992c5e, equation (7), gives $|(K_0+K_2)/2|\\ge(\\sqrt a+\\sqrt c)^2/4=a$. The compact strict inclusion in $K_1$ implies $b>|(K_0+K_2)/2|$: an interior point of $K_1$ outside the smaller compact body has a whole ball outside it. The middle centroid's guaranteed depth is then greater than the endpoint maximum, a contradiction.\n",
+  "source_candidate_ids": [
+    "f3e1e26ab17d09a3"
+  ],
+  "source_candidate_sha256": {
+    "f3e1e26ab17d09a3": "10247a25145648798bd6ce41add8fcd1d57183e11a1ebbadaf8a8575cf6137b1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f3e1e26ab17d09a3",
+      "locator": "Proof §1, Which fibers can be deepest"
+    }
+  ],
+  "statement": "Let $K_0,K_1,K_2$ be positive-area triangles at the integer bases $0,1,2$, with $(K_0+K_2)/2\\subset\\operatorname{int}K_1$. Use the measure that sums their planar areas, write $a,b,c$ for those areas and $M=a+b+c$, and normalize closed-halfspace depth by $M$. The restricted maximum depths at the two endpoints are $4a/(9M)$ and $4c/(9M)$, and the restricted maximum at the middle is at least $4b/(9M)$. If the triple is a local minimum of the maximum normalized depth among nearby compatible positive-area triangle triples, then the middle is deepest and at most one endpoint is deepest. A fiber is deepest when its restricted maximum equals the maximum over all three fibers.",
+  "subgoal_id": "pk-intake-strict-interior-three-triangle-deepest-fibers",
+  "title": "The middle triangle is deepest at a strict interior local minimum"
+}

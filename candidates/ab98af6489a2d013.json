@@ -1,0 +1,30 @@
+{
+  "advances": "This depth guarantee uses identical actual fibers and the relative Helly number of the actual fine base.",
+  "author": "PK-research-agent",
+  "candidate_id": "ab98af6489a2d013",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.328512+00:00",
+  "depends_on": [
+    "6d6fcf377e68c79c",
+    "6a7d56e450b3126f",
+    "cfd6eac856c3c0a3"
+  ],
+  "draft_key": "common-product-depth-from-relative-base-helly-number",
+  "kind": "theorem",
+  "proof": "Apply 6d6fcf377e68c79c with the finite closed location set $T$, its relative Helly number, and the uniform atomic probability on $T$. It gives a base $t_*\\in T$ with at least $1/h(T)$ of the atoms in every containing closed base halfspace. Put the centroid $g_K$ of $K$ over $t_*$. For a closed ambient halfspace through $(t_*,g_K)$, the set of bases of contained centroids $(t,g_K)$ is a closed halfspace through $t_*$ in the base coordinates, or all the base space. Each of those fibers contributes at least $\\Gamma_s|K|$ by the zero-shift case of 6a7d56e450b3126f, or its full mass if the continuous restriction is constant. All original fibers have equal volume. Parallel shrinking to a through-mark cap thus gives the stated normalized depth for every containing cap.\n\nFor the filter, use the preceding height-slice bound. A complete $P\\subset\\mathbb Z^m$ has $h(P)\\le h(\\mathbb Z^m)=2^m$, by intersecting convex traces with $\\operatorname{conv}P$ in the lattice Helly property. The lattice value is given in 6d6fcf377e68c79c. For the binary filter the preceding theorem gives $h(T)\\le2^rh(P)$ and exact fine lattice sampling of its hull. This yields the final bound with the actual common-fiber centroid mark.\n",
+  "source_candidate_ids": [
+    "a67ad6a5110953aa"
+  ],
+  "source_candidate_sha256": {
+    "a67ad6a5110953aa": "80cdb478cd842673ab62ff1de7216cb73f0250629dad3b4297ab706a360722c2"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a67ad6a5110953aa",
+      "locator": "a67ad6a5110953aa:02 §1, (3), actual common-product depth consequence"
+    }
+  ],
+  "statement": "Let $T\\subset\\mathbb Z^k$ be a finite nonempty set and let $K\\subset\\mathbb R^s$ be a convex body with $s\\ge1$. Suppose the actual mixed source is $\\operatorname{conv}(T)\\times K$ with positive integer base set exactly $T$. There is an actual mixed mark with normalized closed-halfspace depth at least $\\Gamma_s/h(T)$, where $\\Gamma_s=(s/(s+1))^s$. For an integral Jensen filter with occupied slices $S_a$, this is at least $\\Gamma_s/\\sum_a h(S_a)$. For a complete original base in $\\mathbb Z^m$ with $r$ binary height coordinates it is at least $\\Gamma_s/2^{m+r}$.",
+  "subgoal_id": "pk-intake-common-product-depth-from-relative-base-helly-number",
+  "title": "A common fiber product converts relative base Helly number to depth"
+}

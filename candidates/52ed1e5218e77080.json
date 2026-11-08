@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary simplex rigidity at a specified circuit of proper cuts. The strictness under the volume condition is qualitative.",
+  "author": "PK-research-agent",
+  "candidate_id": "52ed1e5218e77080",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.049434+00:00",
+  "depends_on": [
+    "17087f3e780e00fb"
+  ],
+  "draft_key": "pk-w30-opposite-simplex-centroid-loss-rigidity",
+  "kind": "theorem",
+  "proof": "By the single-cut equality characterization in the sharp centroid contraction theorem, $A=\\operatorname{conv}(\\{p_i\\}\\cup F_i)$ for each $i$, where $p_i$ is the unique maximizer of $v_i$ and $F_i=A\\cap\\{v_i\\cdot x=\\ell_i\\}$ has dimension $d-1$. In $d=1$ the two normals are opposite and the endpoints are distinct. In $d\\ge2$ every pair of normals is linearly independent by the unique dependence. If $p_i=p_j=p$, then representing a point of $F_i$ using $p$ and $F_j$ forces its coefficient on $p$ to be zero, since $v_i\\cdot p>\\ell_i$ while $v_i\\cdot y\\ge\\ell_i$ for all $y\\in F_j$. This would put $F_i$ in the intersection of the two independent base hyperplanes, contradicting its dimension. Thus the $p_i$ are distinct.\n\nEach $p_j$ is extreme in $A$ since it uniquely maximizes $v_j$. The pyramid representation at $i\\ne j$ then forces $p_j\\in F_i$. Write $L=-\\sum_i\\ell_i>0$, since each $\\ell_i<-1$. The affine functions $\\beta_i(x)=(v_i\\cdot x-\\ell_i)/L$ sum to one and take the values $\\beta_i(p_j)=\\delta_{ij}$. The affine map given by the $\\beta_i$ is injective by spanning. Each $x$ satisfying the stated halfspace inequalities therefore equals $\\sum_i\\beta_i(x)p_i$: the two points have the same affine coordinates. The $p_i$ are affinely independent by those coordinates. The halfspace intersection is their simplex, lies in $A$ by convexity, and contains $A$ by the definitions of $\\ell_i$.\n\nThe set $T$ contains a ball about zero and is bounded, since the only direction with all $v_i\\cdot x\\le0$ has all values zero and hence is zero. At each point of $-T$ all the $\\beta_i$ are strictly positive because $\\ell_i<-1$. Thus the compact set $-T$ is inside the interior of $A$, implying strictly smaller volume. Each loss surplus is nonnegative by the sharp bound. A sum with all weights positive can vanish only if all individual equalities hold, which forces the strict volume comparison just proved.\n",
+  "source_candidate_ids": [
+    "117322dbc8c21242"
+  ],
+  "source_candidate_sha256": {
+    "117322dbc8c21242": "b73ee9d1f88a1057d946d6a0f6a210916d4f3e694bcc0842c666347fe00ea438"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "117322dbc8c21242",
+      "locator": "117322dbc8c21242:02 Opening statement (1)–(2), §§1–3, simultaneous equality and strictness"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and let $v_0,\\ldots,v_d$ span $\\mathbb R^d$ with $\\sum_i v_i=0$ as their unique linear dependence up to scale. Set $T=\\{x:v_i\\cdot x\\le1\\ \\forall i\\}$. Let $A\\subseteq\\mathbb R^d$ be a convex body with every cut $v_i\\cdot x=-1$ proper, and let $g$ be its centroid. Put $U_i=|A\\cap\\{v_i\\cdot x\\ge-1\\}|$ and $\\ell_i=\\min_A v_i\\cdot x$. If every fixed-cap loss derivative under contraction about $g$ equals $\\frac{d^2}{d+1}|A|^{1/d}U_i^{(d-1)/d}$, then $A=\\{x:v_i\\cdot x\\ge\\ell_i\\ \\forall i\\}$ is a simplex. In particular $-T\\subset\\operatorname{int} A$ and $|A|>|T|$. If $|A|\\le|T|$, every positively weighted sum with a strictly positive weight at each index has strict surplus over the sum of the sharp loss bounds.",
+  "subgoal_id": "pk-intake-pk-w30-opposite-simplex-centroid-loss-rigidity",
+  "title": "Simultaneous centroid contraction equality forces the opposite simplex"
+}

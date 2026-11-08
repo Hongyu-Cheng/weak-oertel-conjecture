@@ -1,0 +1,28 @@
+{
+  "advances": "An exact equality characterization for the fixed R4 base-tier marginals.",
+  "author": "PK-research-agent",
+  "candidate_id": "4563a33670dab60d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.323207+00:00",
+  "depends_on": [
+    "7559aec0ef3647a6"
+  ],
+  "draft_key": "r4-affine-discriminator",
+  "kind": "lemma",
+  "proof": "Every base has three tiers. The coefficient of $b(z)$ is $9(3-h_z)-22h_z$. The row mass $22$, column mass $9$ and base barycenter equalities of the [accepted rational matrix](../assets/pk-nov6/computations/r4_facet_martingale_exact_slab_recovery.json) express $\\Delta(b)$ as the sum of row Jensen gaps times $22$. Thus $\\Delta(b)\\ge0$, and equality makes every row tight.\n\nIn a positive finite convex combination, equality forces affinity on the convex hull of its support. In fact its barycenter belongs to the relative interior of that hull, and a finite convex function has an affine support there in the affine hull. Each support-point gap above that affine function is nonnegative and their positive weighted mean is zero. Hence the gaps vanish at the support points and convexity gives equality throughout their convex hull. This argument is internal to the row hull and allows arbitrary finite boundary values on $D_4$.\n\nFor the following rows the table gives a full affine basis of the projected positive targets with the high base adjoined, and points newly covered by taking that whole hull. In each row after row zero the displayed basis has already been covered. The finite check is to project each low target with positive numerator in the corresponding zero-based row of the accepted matrix, adjoin the high base, check containment of the basis and listed points, and check that the differences of the basis span the differences of this augmented set. The high base belongs to the target hull by its positive row barycenter.\n\n| Row | Affine basis | Newly covered bases |\n|---|---|---|\n| 0 | $(-4,-4),(-3,-3),(-2,-1)$ | $(-4,-4),(-3,-3),(-2,-2),(-2,-1),(-1,1),(0,3),(0,4)$ |\n| 1 | $(-4,-4),(-3,-3),(-2,-1)$ | $(-1,-1),(-1,2),(0,2)$ |\n| 2 | $(-4,-4),(-1,2)$ | $(-3,-2),(-2,0)$ |\n| 7 | $(-4,-4),(-2,-2),(0,2)$ | $(-1,0),(0,1)$ |\n| 9 | $(-2,-1),(-1,-1),(-1,0)$ | $(0,0)$ |\n| 16 | $(-1,-1),(0,0),(0,1)$ | $(1,0)$ |\n| 17 | $(0,0),(0,3),(1,0)$ | $(1,1),(2,0),(3,0)$ |\n| 18 | $(0,1),(0,4),(1,0)$ | $(2,1)$ |\n| 20 | $(0,3),(2,0),(2,1)$ | $(1,2),(1,3),(3,1),(4,0)$ |\n| 24 | $(0,4),(1,3)$ | $(2,2)$ |\n| 5 | $(-4,-4),(-2,-2),(2,0)$ | $(-1,-2),(1,-1)$ |\n| 6 | $(-3,-3),(-2,-2),(-1,-2)$ | $(-2,-3)$ |\n| 10 | $(-4,-4),(-2,-3)$ | $(0,-2),(2,-1)$ |\n| 13 | $(-3,-3),(-1,-2),(-1,-1)$ | $(0,-1)$ |\n\nLet $A$ be the affine function determined by the first row. At each later row, agreement on its already covered affine basis forces agreement on that row hull. These steps cover all 31 bases. In particular $b$ agrees with $A$ at the three outer vertices and at their equally weighted barycenter zero. The same Jensen equality argument on these three vertices gives $b=A$ on $D_4$. Conversely every affine function makes each row tight.\n",
+  "source_candidate_ids": [
+    "45b8df25a0cd5956"
+  ],
+  "source_candidate_sha256": {
+    "45b8df25a0cd5956": "6dacc7640bbf07b90a78424a826ed93337df45593a0310da05f8f17c71293b2b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "45b8df25a0cd5956",
+      "locator": "45b8df25a0cd5956:01 §§1–2, (1)–(2), fourteen-support equality propagation"
+    }
+  ],
+  "statement": "Let $D_4=\\operatorname{conv}\\{(-4,-4),(4,0),(0,4)\\}$ and let $H,L$ be the ordered lists of 27 high and 66 low base-tier triples of the rational R4 facet martingale in 7559aec0ef3647a6. Write $z_s$ for the base of a triple $s$, $P=D_4\\cap\\mathbb Z^2$ and $h_z$ for the number of high tiers over $z$. For every finite convex function $b$ on $D_4$,\n$$\n\\Delta(b)=9\\sum_{l\\in L}b(z_l)-22\\sum_{h\\in H}b(z_h)\n=\\sum_{z\\in P}(27-31h_z)b(z)\\ge0.\n$$\nEquality holds exactly when $b$ is affine throughout $D_4$.",
+  "subgoal_id": "pk-intake-r4-affine-discriminator",
+  "title": "Strict affine equality for the R4 facet discriminator"
+}

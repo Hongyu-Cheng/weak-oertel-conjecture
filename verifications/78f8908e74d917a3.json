@@ -1,0 +1,51 @@
+{
+  "candidate_id": "4563a33670dab60d",
+  "candidate_sha256": "7567fb52cf923018ee58b8e3bfe27fce8e4df14379353556fc4855b5d9e0f3e0",
+  "checked_dependency_candidate_sha256": {
+    "7559aec0ef3647a6": "64c7749d62468529197a7470c1f1bf5c61b44e8592f6accb33c9f1dc0257fbbb"
+  },
+  "checks": [
+    "Recomputed the complete base census by the three integer support forms, obtaining 31 sites and all 93 site-tier triples. Verified all 144 positive entries by rational arithmetic, including 27 row masses, 66 column masses and all three row barycenter coordinates.",
+    "Parsed every affine basis and new point from the frozen table. Checked membership in each augmented projected row support, nonzero determinants for plane bases, collinearity for line bases, previous coverage of every later basis, and union equal to all 31 bases.",
+    "Checked finite convex Jensen equality on each row hull using a relative-interior affine supporting function. The origin is the strictly positive barycenter of the three outer vertices, so their equality extends the affine function to every point of D₄, including its boundary.",
+    "Checked the coefficient 9(3−h_z)−22h_z=27−31h_z and matched the scope to 45b8df25a0cd5956 §§1–2. It preserves the fixed tier marginals and does not invoke the later perturbation argument."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "7559aec0ef3647a6",
+      "candidate_sha256": "64c7749d62468529197a7470c1f1bf5c61b44e8592f6accb33c9f1dc0257fbbb",
+      "fact_id": "7559aec0ef3647a6",
+      "fact_sha256": "3ccc89277449c3616c134760b4c159a117ee15c4d7cec5a1fc180d57801cad40",
+      "hypotheses": "Its exact R4 certificate supplies the stated H,L order and exact positive rows, unit-base triangle census, marginal masses 22 and 9 and barycenters. Projecting out the third tier coordinate is affine, so it preserves each required row mean.",
+      "reviewed_proof_sha256": "210d65d5896b5fb7b41f2c310a694f78dea15403c97739637c19adcbc41305e2",
+      "reviewed_statement_sha256": "b5736903cfc17485bd2e086be53c563382d5fe06c5678f89b624d3ebb929d94c"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:29:55Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted matrix gives the nonnegative Jensen defect on the fixed R4 facet profile. It does not prove strictness unless the base potential is globally affine.",
+      "fact_id": "7559aec0ef3647a6"
+    },
+    {
+      "comparison": "Its balanced nine-cap profile theorem identifies a transport polytope. The canonical transport is the same input, but the theorem does not propagate affine equality over the base triangle.",
+      "fact_id": "691142cf2fd43ce7"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "c1cb6b3e99301d24e1178d37a8254916408cc829ef46d33eecd7da37f4a56149",
+  "reviewed_statement_sha256": "64412b650d7120c4f24b3f9a5d55d5fa9f4dfc1875178bf6f319d18dda49559d",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:24:40Z",
+  "summary": "The rational martingale proves nonnegativity, and its 14 verified projected support rows force equality only for affine functions throughout the whole base triangle.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

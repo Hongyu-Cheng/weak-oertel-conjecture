@@ -1,0 +1,26 @@
+{
+  "advances": "Parity restriction keeps the continuous dimension and renormalizes each residue class separately. The source has no fiber of mass at least one quarter of the total.",
+  "author": "PK-research-agent",
+  "candidate_id": "7219a12236508e7f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:22:19.048364+00:00",
+  "depends_on": [],
+  "draft_key": "positive-dimensional-parity-decimation-increases-depth",
+  "kind": "counterexample",
+  "proof": "The three edge inequalities of $P$ are $-x+2y\\ge-8$, $-5x-y\\ge-18$ and $6x-y\\ge15$. The integer first coordinates lie in $\\{2,3,4\\}$. At $x=2,3,4$ the integer second coordinates are, respectively, $\\{-3\\}$, $\\{-2,-1,0,1,2,3\\}$ and $\\{-2\\}$. This follows by substituting each first coordinate into the three inequalities. The fibers have unit length, so total mixed length is eight.\n\nFor a candidate $(p,t_0)$, choose $e\\in\\{-1,1\\}$ with $et_0\\ge0$ and take the closed halfspace $et+2s(z_2-p_2)\\ge0$, with $s=-1$ for $p_2\\le-1$ and $s=1$ for $p_2\\ge0$. It contains the candidate. It takes half the length from each fiber with $z_2=p_2$, all the length when $s(z_2-p_2)\\ge1$, and zero when $s(z_2-p_2)\\le-1$. The level counts at $-3,-2,-1,0,1,2,3$ are $(1,2,1,1,1,1,1)$, giving cut masses $(1/2,2,7/2,7/2,5/2,3/2,1/2)$ with the specified signs. Each original candidate therefore has normalized depth at most $7/16$.\n\nThe even-even and even-odd classes are the singletons $(4,-2)$ and $(2,-3)$. The odd-even class is $\\{(3,-2),(3,0),(3,2)\\}$ and the odd-odd class is $\\{(3,-1),(3,1),(3,3)\\}$. The mixed length on each class times $[-1/2,1/2]$ is centrally symmetric about an actual point of the class, using base centers $(3,0)$ and $(3,1)$ for the latter two. At such a center a containing closed halfspace and its reflection cover the ambient space and have equal mass, so the normalized depth is at least $1/2$. At any point one of $t\\ge t_0$ and $t\\le t_0$ has normalized mass at most $1/2$ because the continuous marginal is nonatomic. The class maximum is thus exactly $1/2$. The affine map $(z,t)\\mapsto((z-r)/2,t)$ sends precisely the points in the chosen parity class to the integer fibers of $C_r$. It preserves lengths and ambient halfspace incidence.\n",
+  "source_candidate_ids": [
+    "438bf75c35923797"
+  ],
+  "source_candidate_sha256": {
+    "438bf75c35923797": "8220f49b414718f90ea3e8f3c8366e5f4faaddc550b70aa1d893f7754b2e9a31"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "438bf75c35923797",
+      "locator": "438bf75c35923797:01 Whole note, lattice census and displayed cuts H_{p,s,e}"
+    }
+  ],
+  "statement": "Let $P=\\operatorname{conv}\\{(2,-3),(4,-2),(3,3)\\}$ and $C=P\\times[-1/2,1/2]$. Normalize the mixed length of $C\\cap(\\mathbb Z^2\\times\\mathbb R)$ by its total mass. Its eight unit-length integer fibers each have mass $1<8/4$, and its maximum normalized closed-halfspace depth is at most $7/16$. For every $r\\in\\{0,1\\}^2$, the body $C_r=\\{((z-r)/2,t):(z,t)\\in C\\}$ has maximum normalized mixed depth exactly $1/2$. Thus every parity decimation strictly increases the maximum.",
+  "subgoal_id": "pk-intake-positive-dimensional-parity-decimation-increases-depth",
+  "title": "Every parity decimation can increase depth with positive continuous dimension"
+}

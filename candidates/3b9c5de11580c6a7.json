@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary planar signed-area reduction. It does not optimize over the resulting cut parameters or assert that arbitrary radii are feasible.",
+  "author": "PK-research-agent",
+  "candidate_id": "3b9c5de11580c6a7",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:23:49.329105+00:00",
+  "depends_on": [],
+  "draft_key": "signed-area-three-chord-replacement",
+  "kind": "lemma",
+  "proof": "Each negative triangle $D_j$ is $K\\cap W_j$ for the closed cone $W_j$ spanned by its two rays; the three cones have disjoint interiors. Fix one cone and use coordinates about $g$ in the basis $(p_j-g,q_j-g)$. In these coordinates the outer ray endpoints are $(1,0)$ and $(0,1)$, and $L_j$ is $a+b\\le1$. If $(a,b)\\in Q$ with $a<0$ and $a+b>1$, its segment to $(1,0)$ meets the second ray at $(0,b/(1-a))$ beyond $(0,1)$, a contradiction. The case $b<0$ is symmetric. A point on a bounding ray beyond the chord is impossible by the definition of its outer endpoint. Thus $Q\\setminus L_j$ is contained in $D_j$, and $Q\\cap W_j\\cap L_j=\\operatorname{conv}(g,p_j,q_j)$: the forward inclusion follows from the cone and halfplane, and the reverse one from convexity.\n\nAll six endpoints survive all three cuts, since each lies outside the other cones' interiors; $g$ survives as well. Consequently for $Q'=Q\\cap\\bigcap_jL_j$ one has\n$$\nQ'\\cap D_j=P\\cap D_j=\\operatorname{conv}(g,p_j,q_j)\n$$\nfor each $j$. The cuts removed only points with signed density $-2$ from $Q$, whereas enlarging $Q'$ to $P$ adds only points with signed density $+1$. Hence $J(Q)\\le J(Q')\\le J(P)$.\n\nFor $g\\in\\partial Q$ use $Q_\\varepsilon=(1-\\varepsilon)Q+\\varepsilon K$. It lies in $K$, contains $(1-\\varepsilon)g+\\varepsilon K$ and hence has $g$ in its interior, and converges in Hausdorff distance to $Q$. If $Q$ has interior, its indicators converge off $\\partial Q$: exterior points have positive distance, and an interior point $x$ belongs to $Q_\\varepsilon$ for small $\\varepsilon$ since $(x-\\varepsilon g)/(1-\\varepsilon)\\in Q$. If $Q$ has zero area, its exterior already has full area in $K$. In both cases dominated convergence gives convergence of the areas of $Q_\\varepsilon$ and $Q_\\varepsilon\\cap D$ to the corresponding areas of $Q$. Thus $J(Q_\\varepsilon)\\to J(Q)$ and a uniform upper bound on the replacements passes to the boundary case.\n",
+  "source_candidate_ids": [
+    "2ea4c1075b79d6db"
+  ],
+  "source_candidate_sha256": {
+    "2ea4c1075b79d6db": "123f39cd7823e48ea70ee9dd4ac7d9353f67032dfcb4138d541788339b2b651a"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "2ea4c1075b79d6db",
+      "locator": "§A, from the outer ray endpoints to the boundary approximation"
+    }
+  ],
+  "statement": "Let $K$ be a nondegenerate triangle with centroid $g$, and let $D$ be the union of the three pairwise intersections of its centroid caps $\\{\\lambda_i\\ge1/3\\}$, where $\\lambda_i$ are barycentric coordinates. Set $J(Q)=|Q|-3|Q\\cap D|$, with planar area. Let $Q\\subseteq K$ be compact and convex with $g\\in\\operatorname{int}Q$. For each of the three triangles in $D$, take the two outer intersections $p_j,q_j$ of $Q$ with its two rays from $g$, and let $L_j$ be the closed halfplane containing $g$ bounded by $p_jq_j$. Then $P=K\\cap\\bigcap_j L_j$ satisfies $J(P)\\ge J(Q)$. More precisely, $P$ and $Q\\cap\\bigcap_jL_j$ have identical intersections with $D$. If $g\\in\\partial Q$, any uniform upper bound on all such replacements also bounds $J(Q)$.",
+  "subgoal_id": "pk-intake-signed-area-three-chord-replacement",
+  "title": "A three-chord replacement for triangle signed area"
+}

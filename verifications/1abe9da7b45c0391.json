@@ -1,0 +1,111 @@
+{
+  "candidate_id": "cb2255d1d0ceab89",
+  "candidate_sha256": "5f1d38acd51af163849a3a562af9fb9b60f60be73688b412a783f76821fb8bd1",
+  "checked_dependency_candidate_sha256": {
+    "115374b2c8a1d22f": "0136c0d3d86ac36440f62d3e552b63cd6677829b38e374330b6b9cf9bd36e6ef",
+    "84cd8a85417b0d7a": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e"
+  },
+  "checks": [
+    "Compared the original and revised fields. Only the last part of the statement changes. It now names Q and M, imposes β=Q/M, requires each critical cap to have old mass Q, and measures the other covers' slack below Q. The earlier equal-interval counterexample with β=1/4 is excluded.",
+    "The exact first loss is computed on the original ambient cap with the full, missed and proper fixed selectors. Subtracting β times the total loss gives the stated affine function of the continuous normal allocation.",
+    "The measurable range is compact by weak L2 compactness under the sum of total variations. The indicator tests preserve the bounds on allocations, and bounded continuous approximations preserve the row vector in the limit. Hahn decomposition gives the support function and positive-orthant separation gives the strict feasibility criterion.",
+    "At a critical cap the exact quotient derivative is −(D_H−(Q/M)D)/M, now equal to −r_j/M. The positive finite-row margins give strictly lower normalized cap masses for small positive parameters. Other fixed cover caps retain their gap by mass continuity, and all old coverage persists under nesting.",
+    "Original 72bbac9873894c0b:02 §§2–4 (4)–(8) supplies the unchanged signed dual and fixed-menu scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "84cd8a85417b0d7a",
+      "candidate_sha256": "f26c24f3c5fb745da5d293d99dabe67b698f86fd2aafa40275a41d08f41d260e",
+      "fact_sha256": "16bd146b2050f339f2be11288d8c222c5ab509906f9b840ab78ad17f7f96786b",
+      "hypotheses": "Use each old support as the ceiling of a singleton deformation. The fields are continuous nonnegative and convex in x. The old fixed ambient cap selectors and finite-list remainder apply.",
+      "reviewed_proof_sha256": "387bb6105dddce5e09b51c4e0a5eca4c06f2132620577a14ab7c507ac6d2593c",
+      "reviewed_statement_sha256": "edb6bc1e4f85bd5b779ce923003896f53e7e6834fc8a3e8e50fd2d59b4c674ed"
+    },
+    {
+      "candidate_id": "115374b2c8a1d22f",
+      "candidate_sha256": "0136c0d3d86ac36440f62d3e552b63cd6677829b38e374330b6b9cf9bd36e6ef",
+      "hypotheses": "The same t, endpoint fields and middle gauge cut satisfy the predecessor's exact compatibility. Its frozen input is unchanged and its independent original approval is hash-matched.",
+      "reviewed_proof_sha256": "25d952109e02b053fe79f666368e582555da229f216e6e3bd6cda6f7e635284a",
+      "reviewed_statement_sha256": "ac55b77c65412fbbf60c4b9afd056f01f88856d8111cc6c1816334a66ef490b0"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:33:43Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "cb2255d1d0ceab89",
+    "candidate_sha256": "5a409534fdee8bdb444c9811237b177c7c15f33740728b5a3bc24aa232155d58",
+    "checks": [
+      "The singleton derivative yields r_j(t)=r_Kj+∫t dσ_Aj+∫(1−t)dσ_Bj using precisely the full, missed and proper fixed-cap selectors. This equality permits any fixed real β as a linear functional.",
+      "The finite dominating measure gives bounded densities and a weakly compact L2 allocation class. Testing indicators preserves 0≤t≤1. Radon approximation preserves all row integrals, and a strict orthant margin persists under it.",
+      "Hahn positive parts give the support values. Separation from the open positive orthant supplies a nonzero nonnegative direction, and after normalization compactness gives the exact minimum criterion. A finite collection of facet normals permits continuous realization of any prescribed cube point.",
+      "In the last paragraph, a critical row's true normalized derivative is −(D_H−(Q/M)D)/M. Positivity with the stated arbitrary β is insufficient. With the corrected β=Q/M, the finite fixed covers and strict slack do give descent by nesting and the finite remainder.",
+      "Original 72bbac9873894c0b:02 §§2–4 (4)–(8) supports the signed measures and exact fixed-menu dual. Its descent discussion applies to a critical cover at the old normalized budget."
+    ],
+    "dependencies": [
+      {
+        "fact_id": "84cd8a85417b0d7a",
+        "fact_sha256": "16bd146b2050f339f2be11288d8c222c5ab509906f9b840ab78ad17f7f96786b",
+        "mapping": "The continuous nonnegative convex singleton support fields satisfy its hypothesis. With the original fixed ambient halfspaces, its first loss uses the full/empty/proper selector given in the statement."
+      },
+      {
+        "candidate_id": "115374b2c8a1d22f",
+        "candidate_sha256": "0136c0d3d86ac36440f62d3e552b63cd6677829b38e374330b6b9cf9bd36e6ef",
+        "mapping": "The stated normal fields and continuous t are exactly the predecessor's family, so the feasible choices give actual midpoint-compatible erosions.",
+        "reviewed_proof_sha256": "25d952109e02b053fe79f666368e582555da229f216e6e3bd6cda6f7e635284a",
+        "reviewed_statement_sha256": "ac55b77c65412fbbf60c4b9afd056f01f88856d8111cc6c1816334a66ef490b0"
+      }
+    ],
+    "finished_utc": "2026-11-08T19:30:13Z",
+    "issues": [
+      {
+        "defect": "The statement fixes arbitrary β, but the proof asserts Q=βM. Take A=B=K=[−1,1], t≡1/2 and β=1/4. All three intervals become [−1+ε,1−ε], so the normalized mixed maximum stays 1/2 by the centered equal-fiber depth formula. The two old critical caps ±x−2z≥0 cover the middle plane, each loses 3ε, and total loss is 6ε, so every critical row is strictly paid at β=1/4. Both endpoint planes admit strict-slack covers by caps isolating their two half-intervals.",
+        "locator": "Final statement sentence and final proof paragraph",
+        "repair": "Keep arbitrary β for the range theorem. Add β=Q/M, where Q is the old raw global maximum, to the actual descent implication.",
+        "severity": "major"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Separates an optimized normal-response menu at an actual minimum, with β=Q/M, through a different derivative and cone. It does not give the Hahn-positive-part formula for the stated two-endpoint allocation.",
+        "fact_id": "fa291ad0661ef43c"
+      },
+      {
+        "comparison": "Gives exact fixed cap losses for given fields; the new dual additionally optimizes all continuous normal allocations.",
+        "fact_id": "84cd8a85417b0d7a"
+      }
+    ],
+    "readability": "Keep the arbitrary signed normalization in the dual separate from the old objective ratio required by the descent application.",
+    "reviewed_proof_sha256": "467985135561398175f1ffc128286835e0b35e722cad34cf25a75829a57b1596",
+    "reviewed_statement_sha256": "1c42799e323087189199811bcc4e4c5c565048bb864477fdc0dcc9bb0e835431",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T19:24:28Z",
+    "summary": "The compact signed normal range, its strict dual, and its finite-facet realization are proved. The final actual descent implication needs the old normalized maximum as its normalization.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Concerns optimized cap responses and separation over a different actual deformation cone. It does not yield this positive-part formula for the fixed endpoint allocation.",
+      "fact_id": "fa291ad0661ef43c"
+    },
+    {
+      "comparison": "Gives exact losses for specified fields. It does not optimize the continuous normal allocation for the fixed menu.",
+      "fact_id": "84cd8a85417b0d7a"
+    }
+  ],
+  "readability": "The descent condition β=Q/M is confined to the final application.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "467985135561398175f1ffc128286835e0b35e722cad34cf25a75829a57b1596",
+  "reviewed_statement_sha256": "1c485a1efa3c2efc7f881f129f7ceb89ff093f337f72e355e96b497566d15403",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "5a409534fdee8bdb444c9811237b177c7c15f33740728b5a3bc24aa232155d58",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:31:21Z",
+  "summary": "The revised actual descent implication explicitly uses the old normalized maximum. The exact signed-range dual and finite-facet realization retain their original arbitrary-normalization scope.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

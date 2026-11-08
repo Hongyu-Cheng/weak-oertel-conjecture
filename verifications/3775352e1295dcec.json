@@ -1,0 +1,60 @@
+{
+  "candidate_id": "f1d598f3e5a07b7f",
+  "candidate_sha256": "d4455170da4e70ec474a381936f93c0c6b921ed10b3ae10544eb66e4460f083b",
+  "checked_dependency_candidate_sha256": {
+    "4df12881908e0521": "1384cbe3e32fe66b63e700111be3dab986eddbb9b973171a5ccb79fef2bdb6bb",
+    "7ecdb7713aca3e1c": "04028ad155514bf8572235d5bcc1587c0542065482ae7ed9f4253d678f85685e"
+  },
+  "checks": [
+    "Checked a6bfa5d4aa59d5b9:01 §§1–4. Each through-mark nonvertical threshold is convex, so the interpolated mark meets every endpoint-common cap budget; pure-base caps have the same superlevel property.",
+    "Under equality, a proper attaining own cut at the interpolated mark gives strict mass loss at every larger threshold, by its interior strip. Both endpoint thresholds must lie below that common threshold; convexity forces both to equal it. The same cap is therefore active and proper at both endpoints by the stated hypothesis.",
+    "Truncating to the first and last positive sampled fibers preserves all masses, and positive-depth endpoints cannot lie outside this interval because of an outward zero-mass pure-base cap. Positive volume fills every intervening fiber by convexity.",
+    "The affine section chart gives a positive log-concave consecutive sequence, or a constant sequence of ones in dimension one. Strict signs at a proper source and interpolation make all interior bases of the section projection proper. Thus only its two extreme positive weights may be trimmed.",
+    "At each endpoint changing only the base tilt fixes the physical buffer and gives coefficient (z−z_e)s_z on a proper trace and one optional contribution on a supporting trace. Combining left and right derivatives gives a zero weighted first moment. Both endpoint bases are means of the same sequence, with at least three consecutive weights. The trimming interval has width at most one, contradicting z_1−z_0≥2."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "4df12881908e0521",
+      "candidate_sha256": "1384cbe3e32fe66b63e700111be3dab986eddbb9b973171a5ccb79fef2bdb6bb",
+      "fact_sha256": "c3bd5d9f37767a813ccb68169b7cb07efa7526fd24cc354464096c0a0aeb7d43",
+      "hypotheses": "After the same cap propagates to both endpoint marks with proper own sections, the affine section chart and local tilt argument in this proof apply unchanged: the continuous normal, mark and buffer stay fixed when only the base tilt varies.",
+      "reviewed_proof_sha256": "554b02bc84fbea8b71430f45428a438f729812332973dd5b6758d14e2165719f",
+      "reviewed_statement_sha256": "5be105a04a02f51e5b51c1494deb7f3c303d2cc526da4f8f8797988858be8541"
+    },
+    {
+      "candidate_id": "7ecdb7713aca3e1c",
+      "candidate_sha256": "04028ad155514bf8572235d5bcc1587c0542065482ae7ed9f4253d678f85685e",
+      "fact_sha256": "41c495088ed2f02cf3256ffc475bdf28446e8a9593098a632530ce96697071cb",
+      "hypotheses": "The positive consecutive section weights are log-concave, with at least three indices. Only the extreme weights may decrease; this is precisely its domain and its sharp upper mean-gap bound is one.",
+      "reviewed_proof_sha256": "d63282dd8de78e9b703fa2eced01dfd97c3e51397991c2634e51ce6edd945488",
+      "reviewed_statement_sha256": "e0f63742798fa95bad90c65e371bb643c94c7cf23b453e250d7bface5c85ee6f"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:33:48Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This proves strict ordinary depth interpolation at all admissible endpoints and intermediate bases. It does not treat nonzero concave buffers. The reviewed result adds the convex-threshold equality reduction and states the needed properness explicitly.",
+      "fact_id": "4df12881908e0521"
+    },
+    {
+      "comparison": "The accepted quantile geometry gives convex buffered superlevels and small-buffer properness under its hypotheses. It does not by itself give the strict inequality from the section trimming argument.",
+      "fact_id": "0b2fbdaf8d3134a0"
+    }
+  ],
+  "readability": "The properness premise applies to the single cap propagated to the endpoints. It is a condition of the result and no general deepest-base adjacency follows without an applicable properness guarantee.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "eb5b2aa3317515890274558002cf13fcaf08a618c42e1d4193fa7612adddf175",
+  "reviewed_statement_sha256": "3fd9d4d721abf09b807ec7f5d1aa7acd7e18ea57d85f73ff6c54773dab1916d2",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:27:35Z",
+  "summary": "The common-cap equality reduction holds for a continuous concave buffer. A base tilt keeps that buffer fixed, allowing the accepted section argument to rule out equality.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

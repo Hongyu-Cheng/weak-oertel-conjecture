@@ -1,0 +1,29 @@
+{
+  "advances": "This tests actual choices of centers for a specified upper certificate.",
+  "author": "PK-research-agent",
+  "candidate_id": "8cc7e0d03ade614f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T19:25:09.678700+00:00",
+  "depends_on": [
+    "e3a83f877adfb016",
+    "3ff5ab3fb68e7518"
+  ],
+  "draft_key": "pk-w30-saturated-fixed-facet-center-support-test",
+  "kind": "theorem",
+  "proof": "The boundary trial loss is positive. The lower-envelope identity in the saturated menu loss-envelope lemma therefore applies with $\\ell=daQ$, $u=a+k$, $v=a$. Substituting $c_i=\\beta_i-v_i\\cdot p$ and $e_i=h_i-v_i\\cdot q$ gives\n$$\n\\Phi(daQ;a+k,a)=\\min_{\\theta\\in\\Theta}\n[C_\\theta+(a+k)V_\\theta\\cdot p+aV_\\theta\\cdot q].\n$$\nThe minimum over the finite branch set commutes with the minimum over compact $A\\times B$. On each branch both linear forms minimize at support points in the same direction $-V_\\theta$, and their two minima are the negative support terms in the statement. If a formal branch is not active at those points, the actual trial is smaller still, so any strict negative witness is valid. Conversely a negative actual trial has a minimizing branch there. For the other alternative, $\\theta^\\infty$ is fixed by the initial cut statuses, and maximizing its $\\mathcal J_{\\theta^\\infty}(q)$ over $B$ gives the second displayed expression by the same support identity. The fixed-center descent test is a disjunction, so existence of actual centers requires either optimized alternative.\n",
+  "source_candidate_ids": [
+    "3b67f89e71aa7534"
+  ],
+  "source_candidate_sha256": {
+    "3b67f89e71aa7534": "9df7980a125a15ac47d5177bc4491c1dd9a65eb80c454887d5cc0dc13921a3ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3b67f89e71aa7534",
+      "locator": "3b67f89e71aa7534:03 §6, (17)–(21), finite optimization over actual centers"
+    }
+  ],
+  "statement": "Use the hypotheses and notation of the saturated fixed-facet two-rate descent theorem. For each branch $\\theta\\in\\Theta$ put\n$$\n\\begin{aligned}\nV_\\theta&=\\sum_i w_i^\\theta\\theta_i\\sigma_i v_i,\\\\\nC_\\theta&=daQ\\,W_\\theta-d(a+k)\\sum_i w_i^\\theta U_i\n-\\sum_i w_i^\\theta\\theta_i\\sigma_i[(a+k)\\beta_i+a h_i].\n\\end{aligned}\n$$\nThere are actual contraction centers $p\\in A,q\\in B$ and nonnegative rates giving the two strict normalized decreases if and only if\n$$\n\\min_{\\theta\\in\\Theta}\\bigl[C_\\theta-(a+k)h_A(-V_\\theta)-a h_B(-V_\\theta)\\bigr]<0\n\\quad\\text{or}\\quad\n\\frac{\\sum_i w_i^{\\theta^\\infty}\\theta_i^\\infty\\sigma_i h_i+\n h_B(-V_{\\theta^\\infty})}{W_{\\theta^\\infty}}>drb.\n$$\nBoth optimizations over the actual centers attain their extrema.",
+  "subgoal_id": "pk-intake-pk-w30-saturated-fixed-facet-center-support-test",
+  "title": "A finite support-function test over both actual contraction centers"
+}

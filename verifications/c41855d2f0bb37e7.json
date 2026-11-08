@@ -1,0 +1,41 @@
+{
+  "candidate_id": "e108f5d53865d287",
+  "candidate_sha256": "e611c0fc1a9ec57c5ca190952b7af400568dc3ca6200530ebcd835b3b5824c3a",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "If no tolerance works, take tolerances tending to zero. Brunn–Minkowski and the upper constraint squeeze the midpoint-body volumes to one.",
+    "A maximum-volume simplex exists and is nondegenerate. Replacing its j-th vertex after normalization multiplies the oriented determinant by the j-th barycentric coordinate. Thus the normalized midpoint body is contained in [−1,1]^q and contains the unit simplex, so the linear determinant factors stay bounded above and away from zero.",
+    "Widths add under Minkowski addition, hence each normalized input's width is at most twice the corresponding midpoint width. Translating each input to contain zero then gives uniform coordinate bounds. Extract Hausdorff subsequences and a positive determinant limit ℓ.",
+    "Support convergence and an interior ball of radius r give inner homothets with support margin δr. These give the lower semicontinuity of volume and a common inner homothet after alignment. Outer neighborhoods yield the upper bound also for lower-dimensional limits.",
+    "Minkowski addition is continuous in Hausdorff distance. Both limiting input volumes and their midpoint volume equal ℓ>0, so Brunn–Minkowski equality makes the input limits translates. A fixed relative translation aligns the normalized limits, whose overlap then tends to ℓ. Undoing the determinant factors makes the original overlap tend to one, contradicting the proposed failure of 3/4.",
+    "Original 25aee623d8e5a8b7 §1, equation (3), gives the same q-dimensional tolerance and intersection guarantee. All arguments include q=1."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T19:28:59Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Shares the maximum-inscribed-simplex normalization and convex Hausdorff framework. It assumes nearly minimal ordinary depth of one body and yields closeness to a simplex, whereas the reviewed theorem assumes a midpoint volume deficit for a pair and yields large intersection after translation.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "Its ordinary depth defect controls approximation by an enclosing simplex and associated Minkowski deficits. The present assumptions only constrain the two input volumes and their midpoint, so that bound does not imply this translation overlap result.",
+      "fact_id": "859545cd4bf45c6c"
+    }
+  ],
+  "readability": "",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold read of the frozen proof, then original-source and accepted-predecessor comparison.",
+  "reviewed_proof_sha256": "c159ac1a0e56e92e01827ec567c6d94b7e05d5b41ffab0027931d986ddda0542",
+  "reviewed_statement_sha256": "8e6b6cc4734d2acc2c334826e0f2551c655fe7ee15df9876c2c5504fe715d00c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:24:47Z",
+  "summary": "The compactness normalization has uniformly controlled determinant, so the aligned overlap converges to one in the original volume units.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

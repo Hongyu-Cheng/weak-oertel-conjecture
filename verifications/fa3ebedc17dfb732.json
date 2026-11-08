@@ -1,0 +1,51 @@
+{
+  "candidate_id": "36f2532500e1b1d6",
+  "candidate_sha256": "724742b5c3898fcdac2a7ef5c97350c5d212c7cf347268ed827a3dc4f61befac",
+  "checked_dependency_candidate_sha256": {
+    "f2fe66ae10bde961": "2977162c632a109aa2d46c7a957277c418c900ba49e577e3223ebd1ccb3382a8"
+  },
+  "checks": [
+    "f2fe66ae10bde961 uses the identical K and L, the same unnormalized area marginals, and proves the unique Euclidean-square optimal coupling is (id,T). Therefore the Euclidean square alone forces any putative greatest law to equal its midpoint law.",
+    "The radius-1/100 ball centered at (1/8,2) lies strictly inside K with x>0. The radical bound follows exactly from ((142/100)^2−1)^2>1+(135/1000)^2, and x<t/4 and t<3 have strict margins. The compactly supported smooth flow preserves area by zero divergence and preserves K by invertibility and identity outside the interior support.",
+    "After differentiating the cross term, integration by parts gives −∫vᵀQT. A second integration by parts gives ∫η(∂_t p−2∂_x q)=∫η x/t²>0 because both partials equal −x/t². The two marginal terms are unchanged, so this improves the convex Q-quadratic midpoint test.",
+    "Source 2439d77d03fde920:02 §§4–5 gives the same anisotropic variation and equal-mass coupling scope. The frozen proof's physical lift is the accepted three-fiber hull, and extension of the tests as functions independent of the base is convex."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f2fe66ae10bde961",
+      "candidate_sha256": "2977162c632a109aa2d46c7a957277c418c900ba49e577e3223ebd1ccb3382a8",
+      "fact_sha256": "4cb6f2f77ecbe070d94fa682c61ef3284562f2d2589305de01edeb92c2eb03d4",
+      "hypotheses": "The source and target bodies, area marginals, graph transport, Euclidean quadratic functional, and midpoint hull are precisely identical. The accepted optimizer's uniqueness is used only for that Euclidean test.",
+      "kind": "accepted",
+      "reviewed_proof_sha256": "bd030db97ff593a5c6c3f7bce181490a354f022e5a2f9c340c8585d5bc119798",
+      "reviewed_statement_sha256": "7b702f6e6045768f6c9c33e2b718e2b445f81ae7641b09103e2da4ff21916177"
+    }
+  ],
+  "finished_utc": "2026-11-08T19:27:54Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This supplies the same unique optimizer and proves that any convex-order dominator of it must equal it. It does not construct a feasible midpoint law that the optimizer fails to dominate, which is the added strict comparison.",
+      "fact_id": "f2fe66ae10bde961"
+    },
+    {
+      "comparison": "This chooses a density-capped dominator of a prescribed old feasible law. Its quantifier permits the new law to depend on the old law, so it does not produce a greatest law over all couplings.",
+      "fact_id": "ddfc030a763e6dbc"
+    }
+  ],
+  "readability": [],
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "7b166933c0277b78c0f6945542f4bb152a68dab0cc537ec67cd02f5a25af3814",
+  "reviewed_statement_sha256": "d26727bdaa1d10b5a4c7908db31e1d9986f134fcdff30858361a48d3f5e8465a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T19:22:39Z",
+  "summary": "The accepted quadratic optimizer is the only possible greatest law, and the divergence-free flow produces a feasible midpoint law that has a strictly larger anisotropic quadratic integral.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

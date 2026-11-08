@@ -1,4 +1,27 @@
-# Lean verification of two mixed-integer counterexamples
+# Lean verification of mixed-integer counterexamples
+
+## Counterexample of total dimension 19
+
+[`SharpOC.Selector.sharp_oc_counterexample`](SharpOC/SelectorCounterexample.lean)
+constructs a compact, full-dimensional convex body with $n=14$ and $d=5$
+and positive finite mixed-integer mass. It gives one uniform
+$0<r<(5/6)^5/2^{14}$ such that every mixed-integer point belongs to a
+proper closed halfspace of normalized mass at most $r$.
+
+The proof identifies all $17{,}770$ nonempty integer fibers and computes
+the actual sum of their Lebesgue volumes. It computes the masses of the
+three cuts that cover the origin and the small fibers and of the
+isolated simplex caps that cover the large fibers. Exterior points are
+covered by strict separation. The [geometric proof](../research/sharp-dimension-19/README.md)
+gives a rational polytope and the exact parameters.
+
+| Modules | Verified content |
+| --- | --- |
+| SelectorArithmetic, SelectorBases | Exact counts and rational margins |
+| SelectorLattice, SelectorRoof, SelectorBody | Exposure, integer census, exact fibers, and full dimension |
+| SelectorSources | Simplex sources, containment, and relative volumes |
+| SelectorMeasure, SelectorCuts, SelectorMass | Actual mixed-integer mass and covering halfspaces |
+| SelectorCounterexample | Uniform strict bound and total dimension |
 
 ## Counterexample to the specific 1/e bound
 
@@ -20,8 +43,8 @@ The proof verifies the complete lattice census, exact fiber and cut volumes,
 common simplex padding, and strict rational margins. The enormous powers are
 handled by proved outward-rounded interval certificates, not floating-point
 arithmetic or enumeration. [The formal audit](ONE_OVER_E_AUDIT.md) gives the
-proof map, precise measure scope, and reproducibility details. Both final
-theorems are imported by `SharpOC.lean` and checked by `CheckAxioms.lean`.
+proof map, precise measure scope, and reproducibility details. The final
+theorem is imported by `SharpOC.lean` and checked by `CheckAxioms.lean`.
 
 ## Earlier sharp-bound counterexample
 

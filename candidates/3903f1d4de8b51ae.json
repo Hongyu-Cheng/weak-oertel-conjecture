@@ -1,0 +1,26 @@
+{
+  "advances": "An actual six-interval obstruction to extending the full reflected-pair credit using only equal masses within each pair and containment in the middle fiber. This example meets the sharp mixed target.",
+  "author": "PK-research-agent",
+  "candidate_id": "3903f1d4de8b51ae",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:43:37.336869+00:00",
+  "depends_on": [],
+  "draft_key": "six-interval-asymmetric-full-credit-obstruction",
+  "kind": "counterexample",
+  "proof": "The successive upper-roof slopes are $19/20,19/20,0,-19/20,-19/20$. The piecewise affine upper roof is concave and the lower roof is constant. Their region is convex and equals the hull of the prescribed lifts, since each interpolated interval is the Minkowski interpolation of its two adjacent intervals. Its projection is $[-2,3]$ and the six widths are $1/10,21/20,2,2,21/20,1/10$, totaling $63/10$. The body and measure are invariant under $z\\mapsto1-z$ with $x$ fixed.\n\nSet $y=-1/40$. At $(0,y)$ the two closed through-caps with margins $x+1/40-z/4$ and $-x-1/40-2z$ have trace vectors $(0,13/40,41/40,31/40,0,0)$ and $(1/10,21/20,39/40,0,0,0)$, respectively, in increasing base order. Each sums to $17/8$. Their margins sum to $-9z/4$, so every point over every integer $z\\le0$ belongs to at least one. Reflecting the two caps in $z\\mapsto1-z$ preserves their masses and yields a pair whose margins sum to $9(z-1)/4$, covering all points over $z\\ge1$. Every mixed point thus has a containing cap of mass at most $17/8$.\n\nFor the matching lower bound at $(0,y)$, the upward side of any through-line of form $x=y+tz$ has mass\n$$\nF(t)=\\sum_{z=-2}^3\\min\\{h_z+1,\\max(0,h_z-y-tz)\\}.\n$$\nIts downward counterpart has mass $M-F(t)$ because each boundary trace is a singleton. The breakpoints are exactly the sorted values $(h_z-y)/z$ and $(-1-y)/z$ for $z\\ne0$. Substituting in the clipped expression gives the following table.\n\n| $t$ | $F(t)$ |\n|---:|---:|\n| $-39/40$ | $167/40$ |\n| $-39/80$ | $59/16$ |\n| $-13/40$ | $16/5$ |\n| $-7/24$ | $3$ |\n| $-3/40$ | $47/20$ |\n| $3/80$ | $17/8$ |\n| $7/16$ | $17/8$ |\n| $39/80$ | $89/40$ |\n| $39/40$ | $89/40$ |\n| $41/40$ | $87/40$ |\n\nEach summand is affine between adjacent breakpoints and the tails are constant, equal to the adjacent table values, because every off-base trace there is either full or empty. Thus $17/8\\le F(t)\\le167/40=M-17/8$ for all $t$. Both nonvertical orientations capture at least $17/8$. The two pure-base caps through base zero capture $63/20$ and $103/20$, respectively, also at least $17/8$. Any containing cap includes its parallel through-cap. This establishes the lower bound at $(0,y)$ and base reflection gives it at $(1,y)$. The cover proves equality for the global maximum. Dividing by $M$ gives $85/252$, and the claimed comparison with the full-credit budget and the sharp mixed target follows by subtraction.\n",
+  "source_candidate_ids": [
+    "bf54b5b745d6332c"
+  ],
+  "source_candidate_sha256": {
+    "bf54b5b745d6332c": "1eee67c9d69f1a30b97307426b4ddd9c557527cd678f18869b3184d72449f2f1"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "bf54b5b745d6332c",
+      "locator": "bf54b5b745d6332c:01 §§1–5, (1)–(5), complete six-fiber obstruction with exact global depth"
+    }
+  ],
+  "statement": "Let $C$ be the convex hull of the six lifted intervals $[-1,h_z]$ at integer bases $z=-2,-1,0,1,2,3$, where\n$$\n(h_{-2},h_{-1},h_0,h_1,h_2,h_3)=(-9/10,1/20,1,1,1/20,-9/10).\n$$\nThese are exactly its integer fibers. With original mixed length $M=63/10$, its maximum raw closed-halfspace depth over all mixed points is $17/8$, attained at $(0,-1/40)$ and $(1,-1/40)$, and its normalized maximum is $85/252$. Each outer pair has equal masses within the pair, respectively $21/20$ and $1/10$, and every outer interval is contained in the common middle interval $B=[-1,1]$. The full reflected-credit conclusion $\\Gamma_1|B|+21/20+1/10=43/20$, with $\\Gamma_1=1/2$, fails at every mark by a gap of at least $1/40$. The sharp mixed target $M/4=63/40$ is below the actual maximum.",
+  "subgoal_id": "pk-intake-six-interval-asymmetric-full-credit-obstruction",
+  "title": "Equal-mass outer pairs do not guarantee full reflected credit at any mark"
+}

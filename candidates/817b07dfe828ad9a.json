@@ -1,0 +1,29 @@
+{
+  "advances": "Ordinary continuous maximal depth in the critical inverse-power class.",
+  "author": "PK-research-agent",
+  "candidate_id": "817b07dfe828ad9a",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.291308+00:00",
+  "depends_on": [
+    "03bc771bddd39a8a",
+    "0e7a1809245e1aee"
+  ],
+  "draft_key": "critical-inverse-power-ordinary-depth-rigidity",
+  "kind": "theorem",
+  "proof": "Let $P(u,y)=\\int_{u\\cdot(x-y)\\ge0} f(x)\\,dx$ for unit normals $u$. The raw depth at $y$ is the minimum of $P(u,y)$ because tightening a containing halfspace through $y$ can only decrease its mass. Joint continuity by dominated convergence and compactness of the sphere give continuity of the minimum. The depth is positive at an interior point by a positive density lower bound on a small ball, and zero on and outside the boundary by a supporting or separating hyperplane. At $y\\ne0$ the cap with normal $y/\\|y\\|$ has mass at most $\\int_{\\|x\\|\\ge\\|y\\|} f(x)\\,dx$. Thus the maximum is attained at an interior point $y$.\n\nAt such a point the compact active set of minimizing normals has zero in its convex hull. Otherwise strict separation gives $u\\cdot v>\\delta>0$ on that set, and $u\\cdot v>\\delta/2$ in a neighborhood of it. A displacement to $y-\\varepsilon v$ adds for every near-active normal a slab of width at least $\\varepsilon\\delta/2$ through a fixed small ball about $y$ on which $f$ has a positive lower bound. Its mass is uniformly bounded below by a positive multiple of $\\varepsilon$, since all sections in the central half of that ball have a common area lower bound. On the remaining compact set the cap masses have a positive gap above the minimum that persists under small displacements. This contradicts maximality. A finite convex combination of active normals therefore equals zero with strictly positive coefficients, and their through-$y$ halfspaces cover all of $\\mathbb R^r$.\n\nApply the radial construction in the proof of critical-inverse-power-simplex-projective-rigidity about $y$. The radial body is compact, full-dimensional and preserves the full mass and each through-$y$ cap mass. The origin has normalized depth $D(f)$ in the radial body. The active caps translate to a covering family of equal normalized mass $D(f)$ on the body, so its maximal depth is exactly $D(f)$. The uniform-body theorem 03bc771bddd39a8a gives $D(f)\\ge\\gamma_r$ and makes the radial body a simplex in the equality case. In that case its origin must be the centroid, since any other simplex point has a barycentric coordinate greater than $1/(r+1)$, whose vertex cap cuts a fraction strictly less than $\\gamma_r$. The preceding classification now gives the positive-chart representation.\n\nConversely, for a centroid-centered simplex gauge profile, all through-center cap fractions agree with those of the reference simplex by polar integration, and the center has depth $\\gamma_r$ by 03bc771bddd39a8a. The canonical vertex caps at barycentric threshold $1/(r+1)$ each have fraction $\\gamma_r$ and cover all of space since the barycentric coordinates sum to one. They bound every candidate's depth by $\\gamma_r$. On the positive chart the pullback of $a\\cdot x\\ge b$ is $(a+b\\ell)\\cdot v\\ge b$ in the profile variable $v$, and the inverse pullback follows from the inverse chart with opposite sign. Thus all proper halfspace traces match in both directions; a degenerate containing trace is the whole domain and adds only the trivial mass-one choice. The pushforward preserves the mass of every trace. Points outside the open support have depth zero, as above. This proves sufficiency and identifies the chart center as a deepest point.\n",
+  "source_candidate_ids": [
+    "0da12d076aef855c"
+  ],
+  "source_candidate_sha256": {
+    "0da12d076aef855c": "ae1620de11b2c455e9b06994dab8fef0ea901dfb06bd1a48aaac061f83d0eefe"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0da12d076aef855c",
+      "locator": "0da12d076aef855c:02 §6, ordinary minimum-maximal-depth equality"
+    }
+  ],
+  "statement": "Let $r\\ge2$ and let $f$ be a nonnegative Lebesgue density of finite positive mass on $\\mathbb R^r$, with full-dimensional positive support and convex extended inverse $(r+1)$st root. Let $D(f)$ denote the supremal normalized closed-halfspace depth over all points, for the probability density $f/\\int f$. Then $D(f)\\ge\\gamma_r=(r/(r+1))^r$ and the maximum is attained in the positive interior. Equality holds exactly when, after translating some interior point to $0$, $f(x)\\,dx$ is the positive-chart projective pushforward of a normalized gauge profile on a centroid-centered simplex, with the profile and chart conditions of that theorem. The chart center is a deepest point.",
+  "subgoal_id": "pk-intake-critical-inverse-power-ordinary-depth-rigidity",
+  "title": "Sharp ordinary depth equality at the critical inverse power"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "Exact depth at the true centroid of one equal-endpoint planar interval family.",
+  "author": "PK-research-agent",
+  "candidate_id": "b7d01ed014603563",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.284462+00:00",
+  "depends_on": [
+    "c680a307d3f26cec"
+  ],
+  "draft_key": "common-bottom-interval-true-centroid-depth",
+  "kind": "theorem",
+  "proof": "The equal extreme widths give base mean zero, and integrating height on each original interval gives height $(b^2+2a^2)/(2(b+2a))$. Scale heights by $1/a$ so the extreme intervals are $[0,1]$, the middle is $[0,r]$, and the centroid height is $c=(r^2+2)/(2(r+2))$. The exact three-interval formula applies after subtracting $1/2$ from the heights. Its endpoint lengths are $1,1$, and the middle width and shift are $r$ and $(r-1)/2$. In the common-floor coordinates the lower and upper raw oblique minima at height $x$ are $L(x)=x+\\min(2x,1)$ and $U(x)=r-x+\\min(2(1-x)_+,1)$. The same formula shows the purely base caps do not lower the depth.\n\nAt the centroid, $c\\ge1/2$, with $c\\le1$ exactly for $r\\le1+\\sqrt3$. Thus $L(c)=c+1$ and $U(c)=r+2-3c$ up to that seam, then $U(c)=r-c$. In the first range $U(c)-L(c)=r+1-4c=-(r-1)(r-2)/(r+2)$, so $L$ is smaller for $1\\le r\\le2$. After the seam $U(c)-L(c)=r-1-2c=(r-4)/(r+2)$, so $L$ is smaller for $r\\ge4$. Dividing the selected masses by $r+2$ gives the three formulas. In their displayed order the derivatives are $(r-4)/(r+2)^3$, $6(1-r)/(r+2)^3$, and $6/(r+2)^3$. They yield strict decrease before the claimed minimizer and strict increase after it, and direct substitution gives the stated value.\n",
+  "source_candidate_ids": [
+    "121d9e12ac57cde9"
+  ],
+  "source_candidate_sha256": {
+    "121d9e12ac57cde9": "2302fd88ffbc2743af146cf11b9f286870e60c79fcb692b9b4afe93e63f1aa04"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "121d9e12ac57cde9",
+      "locator": "121d9e12ac57cde9:04 §5 (10)"
+    }
+  ],
+  "statement": "For the lifted convex hull with intervals $[0,a],[0,b],[0,a]$ at $-1,0,1$, with $b\\ge a>0$, put $r=b/a$. Its true mixed length centroid is $(0,a(r^2+2)/(2(r+2)))$. Its normalized closed mixed halfspace depth is\n$$\n\\begin{cases}\n(r^2+2r+6)/[2(r+2)^2],&1\\le r\\le2\\ \\text{or}\\ r\\ge4,\\\\\n(-r^2+8r+2)/[2(r+2)^2],&2\\le r\\le1+\\sqrt3,\\\\\n(r^2+4r-2)/[2(r+2)^2],&1+\\sqrt3\\le r\\le4.\n\\end{cases}\n$$\nIts unique minimum over $r\\ge1$ is $(\\sqrt3-1)/2$ at $r=1+\\sqrt3$.",
+  "subgoal_id": "pk-intake-common-bottom-interval-true-centroid-depth",
+  "title": "Exact true centroid depth for equal outer intervals and a common floor"
+}

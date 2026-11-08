@@ -1,0 +1,28 @@
+{
+  "advances": "Conditional transfer preserving the numerical constant with the original n,d. Substituting the sharper product constant is conditional on its full-volume premise.",
+  "author": "PK-research-agent",
+  "candidate_id": "c832a875aba66991",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.474737+00:00",
+  "depends_on": [
+    "21aaea6df3e4e5ea"
+  ],
+  "draft_key": "positive-volume-to-intrinsic-mixed-depth-transfer",
+  "kind": "theorem",
+  "proof": "There are finitely many nonempty compact convex sampled fibers $K_z$. Each has Hausdorff dimension equal to its affine dimension $r_z$, since it contains a full relative simplex and lies in a bounded relative ball. Hence $q=\\max_z r_z$, and $0<\\mathcal H^q(S)<\\infty$ is the sum of the measures of the $q$-dimensional fibers. The lower-dimensional fibers are $\\mathcal H^q$-null.\n\nTake $C_\\varepsilon=C+(\\{0\\}^n\\times\\varepsilon B_d)$, which remains a convex body. Its integer base set is exactly the old one, and its fiber at each such base is $K_z+\\varepsilon B_d$, of positive $d$-volume. Write $\\nu_\\varepsilon$ for the raw mixed volume on the thickened trace. The Euclidean tube limit in each affine fiber, together with the extra factor $\\varepsilon^{q-r_z}$ for $r_z<q$, gives\n$$\n\\varepsilon^{-(d-q)}\\nu_\\varepsilon\\rightharpoonup\n\\kappa_{d-q}\\mathcal H^q|_S.\n$$\nThe fibers are finitely many, their embeddings in the ambient space are isometric, and the same scaling gives convergence of the total masses to $\\kappa_{d-q}\\mathcal H^q(S)>0$. Thus the normalized measures $\\mu_\\varepsilon$ converge weakly to the normalized intrinsic measure $\\mu$.\n\nChoose $\\varepsilon_k\\downarrow0$ and points $y_k$ of depth at least $c$ in the thickened traces by the premise. They lie in a common compact set and within distance $\\varepsilon_k$ of $S$ in their own fibers. A convergent subsequence therefore tends to $y\\in S$. Fix any closed halfspace $H=\\{w:a\\cdot w\\ge b\\}$ containing $y$. For every $\\delta>0$, the fixed enlarged halfspace $H_\\delta=\\{w:a\\cdot w\\ge b-\\delta\\}$ contains all sufficiently late $y_k$ on the subsequence. Portmanteau for this closed set gives\n$$\n\\mu(H_\\delta)\\ge\\limsup_k \\mu_{\\varepsilon_k}(H_\\delta)\\ge c.\n$$\nContinuity from above as $\\delta\\downarrow0$ gives $\\mu(H)\\ge c$, including any mass on the original boundary. The convergent subsequence was chosen before the arbitrary $H$, so the same $y$ works for every containing closed halfspace. The zero-block cases follow from the stated dimension conventions.\n",
+  "source_candidate_ids": [
+    "9854c663e6eb01b8"
+  ],
+  "source_candidate_sha256": {
+    "9854c663e6eb01b8": "b83d2f94c2e74358f73015f1ddb7f7288fcd418c8e8deda4d13893492de23cb7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9854c663e6eb01b8",
+      "locator": "9854c663e6eb01b8:03 §3, vertical thickening through outward parallel halfspaces"
+    }
+  ],
+  "statement": "Fix $n,d\\ge1$ and $c\\in[0,1]$. Assume that every convex body $D\\subset\\mathbb R^n\\times\\mathbb R^d$ whose integer trace has positive mixed $d$-volume has a point of normalized closed-halfspace depth at least $c$ for that mixed volume. Let $C$ be any convex body with nonempty integer trace $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$ and let $q=\\dim_{\\mathrm H}S$. Then $S$ has a point of closed-halfspace depth at least $c$ for the normalized intrinsic measure $\\mathcal H^q|_S/\\mathcal H^q(S)$, including $q=0$. The case $n=0$ already has $q=d$ for a convex body, and when $d=0$ the measure is counting measure throughout.",
+  "subgoal_id": "pk-intake-positive-volume-to-intrinsic-mixed-depth-transfer",
+  "title": "A conditional lossless transfer from full mixed volume to intrinsic depth"
+}

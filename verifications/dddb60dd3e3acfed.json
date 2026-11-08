@@ -1,0 +1,69 @@
+{
+  "candidate_id": "fd8ed41f30fc7b92",
+  "candidate_sha256": "bfa407a0a02b553d633903c240c0e28753ecd36d51ae96ed2008181222cb64ea",
+  "checked_dependency_candidate_sha256": {
+    "9c1d072121e84553": "2a2e5efba59d0dbbdeaeaceb7438f5d9699371318bc889b47d53eeaabd7e8d5d"
+  },
+  "checks": [
+    "If the full source is balanced, keeping all intervals uniquely reaches total mass M. Otherwise after base reflection the right strict moment exceeds the left. The first terminal right index exists, allowing exact saturation or a zero take when j is the left extreme.",
+    "The coefficients 1−(i−j)/(k−j) express total mass on any balanced row. Their strict signs force all entries except the terminal one; that entry is then fixed by balance. This proves global optimality and uniqueness without a regularity assumption.",
+    "The same allocation is shared by all maximal-mass sources. Integrating the top and bottom fills gives opposite spread terms of size m_i*(w_i−m_i)/2 and average m_i*(l_i+u_i)/2. Thus the displayed value is the path midpoint.",
+    "The retained bases are consecutive. Full retained fibers lie in the new hull and cannot grow because it is contained in C. A proper partial interval is extreme and cannot grow by combinations with other bases. This realizes exactly the chosen lengths and centroid.",
+    "The inherited length measure of the hull is dominated by the original measure on every ambient closed cap. The accepted strict one-third bound applies when the hull has at least two positive fibers; otherwise direct interval bisection gives T_j/2. T_j≥3M/4 therefore suffices in either case.",
+    "Read c260aef7098c009e §4 (9)–(11), including the single-fiber limit, after the cold read. The proposed result is the endpoint realization and conditional guarantee of that source."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "9c1d072121e84553",
+      "candidate_sha256": "2a2e5efba59d0dbbdeaeaceb7438f5d9699371318bc889b47d53eeaabd7e8d5d",
+      "fact_id": "9c1d072121e84553",
+      "fact_sha256": "78827404cc3cbc9745e0928a0ce521713934dcf761473ef757f02042f474e33f",
+      "kind": "accepted",
+      "mapping": "The newly constructed compact convex subbody has original fiber-length measure of total T_j>0, and its actual length-weighted centroid has integer base j. The accepted statement therefore gives raw depth strictly larger than T_j/3 in that subbody, with all closed ambient orientations.",
+      "reviewed_proof_sha256": "eee6b2b0381e895ef7a5b916e9d20773c68ca234402d45953b0b1df28a624ed5",
+      "reviewed_statement_sha256": "2734556506820978616629e8e27c6513e108404ee7778a4fdf20efe3c13e4754"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:49:27Z",
+  "gaps": [],
+  "graph_base": "d849b7aa17afde345198d2b2e6832ad7e0b7ae41",
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Identifies the same capacity as the maximum convex-subbody mass and attains it with a prescribed-direction cap. It does not identify the unique allocation's centered replacement as the midpoint of the extremal-moment interval.",
+      "fact_id": "b1274a369dfa9af7"
+    },
+    {
+      "comparison": "Applies to the true centroid after construction of the new hull. It does not identify the varying-mass selector with that centroid or assert the capacity-to-original-depth transfer.",
+      "fact_id": "9c1d072121e84553"
+    }
+  ],
+  "parent_disposition_sha256": "4bce23395cac034b6d216fae57a9f9f131c261f46d82fe97c42403000727d60a",
+  "readability": "The partial terminal interval is centered in its own original interval. The proof explains why this exact section remains unchanged after taking the hull.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "5efed30ed43c8d14b7c2e2e39c0314f2243214ac6776397be72be80540bf2955",
+  "reviewed_statement_sha256": "f32986970043ade0ba3f4ef71248b97a125c55f6d9f5f6926801304eaeab8719",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_candidate_sha256": {
+    "c260aef7098c009e": "8a35ccf211fb3d2c179ec1949b68e10bc86d76e8b5a99e62a0a2c1a29382a92c"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c260aef7098c009e",
+      "locator": "c260aef7098c009e:03 §4, (9)–(10) through the convex hull paragraph"
+    },
+    {
+      "candidate_id": "c260aef7098c009e",
+      "locator": "c260aef7098c009e:04 §4, one-positive-fiber case after (11)"
+    }
+  ],
+  "started_utc": "2026-11-08T16:45:04Z",
+  "summary": "The finite capacity optimizer is unique, its centered endpoint allocation is realized by an actual convex subbody, and its original-measure depth follows with the stated constants.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary Lebesgue densities. Supplies the global envelope and radial finiteness used at the critical exponent.",
+  "author": "PK-research-agent",
+  "candidate_id": "660889fc37886419",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.290894+00:00",
+  "depends_on": [],
+  "draft_key": "inverse-power-density-global-envelope",
+  "kind": "lemma",
+  "proof": "Translate $y$ to $0$. The nonnegative convex $g$ is finite and continuous on the interior of its effective domain. Choose $\\delta,A>0$ so that $g\\le A$ on the ball of radius $\\delta$ about $0$. For any $x$ with $0<\\epsilon=g(x)\\le A$, take $a=\\epsilon/A$. Convexity bounds $g$ by $2\\epsilon$ on $(1-a)x+a B(0,\\delta)$, so, writing $\\omega_r$ for unit-ball volume,\n$$\nM\\ge\\omega_r\\delta^r 2^{-\\beta}A^{-r}\\epsilon^{r-\\beta}.\n$$\nSince $\\beta>r$, this gives a uniform positive lower bound on such $\\epsilon$. Values exceeding $A$ already have a lower bound. If $g(x)=0$, use any $a\\in(0,1)$ and the bound $g\\le aA$ on the same image ball. The resulting lower bound $M\\ge\\omega_r\\delta^r A^{-\\beta}a^{r-\\beta}$ contradicts finite mass as $a\\downarrow0$. Thus $g$ is uniformly bounded away from zero on its effective domain.\n\nThe convex sublevel $\\{g\\le2g(0)\\}$ contains a ball centered at zero by continuity. If unbounded, it contains cones formed from arbitrarily distant points and the fixed-radius central disk perpendicular to each corresponding ray. Their volumes grow linearly in the distance of the apex and $f\\ge(2g(0))^{-\\beta}$ on them, contradicting integrability. For $r=1$ the cones are intervals. Choose $R>0$ with that sublevel contained in the open radius-$R$ ball. For an effective-domain point $x$ of norm $s>R$, convexity gives\n$$\n2g(0)<g(Rx/s)\\le (1-R/s)g(0)+(R/s)g(x).\n$$\nHence $g(x)>g(0)(1+s/R)$. Combine this with the uniform positive lower bound on the radius-$R$ ball, and with $f=0$ off the effective domain, to obtain the claimed $C$. One can take $c=A^{-\\beta}$. Integrating the bounds against $t^{r-1}dt$ yields the asserted uniform radial bounds since $\\beta>r$.\n",
+  "source_candidate_ids": [
+    "1c081cc96e28cc4a"
+  ],
+  "source_candidate_sha256": {
+    "1c081cc96e28cc4a": "a2ee5a66f140c73823bc8cd9f07d85f8e5fe29a3ffb231a4829f56685fae750b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1c081cc96e28cc4a",
+      "locator": "1c081cc96e28cc4a:02 §1, (2), global inverse-power envelope and radial bounds"
+    }
+  ],
+  "statement": "Let $r\\ge1$, $\\beta\\ge r+1$, and let $f:\\mathbb R^r\\to[0,\\infty]$ be a measurable density of mass $M\\in(0,\\infty)$ with full-dimensional positive support. Assume $g=f^{-1/\\beta}$ with value $+\\infty$ where $f=0$ is convex, interpreting $g=0$ where $f=+\\infty$. For every $y\\in\\operatorname{int}\\{f>0\\}$ there exist $C,c,\\delta>0$ such that\n$$\nf(x)\\le C(1+\\|x-y\\|)^{-\\beta}\\quad(x\\in\\mathbb R^r),\\qquad\nf(x)\\ge c\\quad(\\|x-y\\|<\\delta).\n$$\nIn particular $f$ has no infinite point values, and the integrals $\\int_0^\\infty t^{r-1}f(y+tu)\\,dt$ have a positive lower bound and a finite upper bound uniform over unit directions $u$.",
+  "subgoal_id": "pk-intake-inverse-power-density-global-envelope",
+  "title": "Global inverse-power envelope and uniform radial bounds"
+}

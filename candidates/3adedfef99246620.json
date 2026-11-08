@@ -1,0 +1,28 @@
+{
+  "advances": "Strict local volume maximum among nearby labeled simplices at individual fixed budgets with fixed continuous normal directions.",
+  "author": "PK-research-agent",
+  "candidate_id": "3adedfef99246620",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.481500+00:00",
+  "depends_on": [
+    "e5721600c9798915"
+  ],
+  "draft_key": "moving-concurrent-simplex-groups-local-stability",
+  "kind": "theorem",
+  "proof": "The prior affine-moment lemma gives joint stationarity, including $d=1$ where its condition is weaker than our hypotheses. The assumed moment identities give $e_i=1/m$. At a nearby threshold $a_{gi}+sh_{gi}$ and vertex matrix $I+sB$, use the same exact edge-ratio formula with the moving threshold. With $T=\\operatorname{tr}B$, $b_i=B_{ii}$, $s_i=\\sum_{j\\ne i}B_{ij}$, $v_i=T+s_i-db_i$, and $X_{gi}=(1-a_{gi})^{-1}$, its first and second logarithmic derivatives are\n$$\nv_i+dX_{gi}(b_i-h_{gi}),\\qquad\n-\\operatorname{tr}(B^2)-dX_{gi}^2(b_i-h_{gi})^2+\\sum_{j\\ne i}(b_i-B_{ij})^2.\n$$\nAll these traces remain proper near the reference, giving an analytic open physical chart with the zero-sum group equations as affine equalities. At a velocity neutral for every cap budget, $h_{gi}=b_i+(1-a_{gi})v_i/d$. Summing in each group and using $\\sum_i v_i=0$ gives $dT=a_g\\cdot v$ for every $g$. Affine spanning implies $v$ is a multiple of $\\mathbf1$ and hence zero, and $T=0$. Thus $h_{gi}=b_i$, $\\sum_i b_i=0$, and $E=B-b\\mathbf1^{\\mathsf T}$ has zero diagonal and row and column sums. The first term is the common translation. In this decomposition $\\operatorname{tr}(B^2)=\\operatorname{tr}(E^2)$, the total normalized volume second derivative is $-\\operatorname{tr}(E^2)$, and the squared terms in the cap logarithmic derivatives vanish except for $\\sum_{j\\ne i}E_{ij}^2$. The weighted cap volumes sum to $V\\sum_i e_i=V$, and each row has total weight $Ve_i=V/m$. Hence the trace terms cancel and the Lagrangian Hessian is $-V\\|E\\|_F^2/m$.\n\nTranslation by the negative of the vector with entries $W_{ii}-\\operatorname{tr}W/m$ makes all diagonal entries equal and preserves every cap volume, group sum, and simplex volume if the same vector is subtracted from the thresholds. Work in this affine gauge. Every nonzero gauge velocity neutral for the caps has $b=0$ and strictly negative Lagrangian second derivative. To deduce actual local maximality, suppose a sequence of feasible gauge points with distances $r_k\\downarrow0$ to the reference has volume differences at least $-o(r_k^2)$. A limit of its normalized secants is a unit direction with every cap derivative nonpositive and objective derivative nonnegative. Joint stationarity and strictly positive multipliers force every cap derivative to vanish. The Lagrangian difference is at least the objective difference by cap feasibility and has strictly negative normalized quadratic limit by Taylor expansion and the critical Hessian. This is a contradiction. The same argument yields a strictly negative quadratic upper bound in the gauge.\n\nFor the first cyclic family choose $\\kappa_g=1/(dm)$ and $\\ell_{gi}=\\kappa_g/(1-a_{gi})^{d-1}$. Every column of the threshold array sums to one, and differences between group vectors span the zero-sum subspace. For the planar family the products for multipliers $5/6$ at the high threshold and $5/27$ at the low threshold both equal $1/6$, and the same column sums and spanning property hold.\n",
+  "source_candidate_ids": [
+    "4be2b6ba9a961a1d"
+  ],
+  "source_candidate_sha256": {
+    "4be2b6ba9a961a1d": "d70df0d73eb8521fd56f81bd4ca017286fe5ee60141a0f7296db7b6cb51dd31f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "4be2b6ba9a961a1d",
+      "locator": "4be2b6ba9a961a1d:02 Proof §§2–3, (4)–(9) and the translated gauge proof"
+    }
+  ],
+  "statement": "Let $d\\ge1$, $m=d+1$, and let the reference labeled simplex be the standard barycentric simplex of volume $V$ with vertex matrix $I$. For each of finitely many groups take fixed-normal proper caps $\\xi_i\\ge a_{gi}$, with $\\sum_i a_{gi}=1$. Assume the vectors $a_g$ affinely span that sum-one hyperplane. Assume positive multipliers with $\\kappa_g=\\ell_{gi}(1-a_{gi})^{d-1}$ independent of $i$, $\\sum_g\\kappa_g=1/d$, and $\\sum_g\\kappa_g a_{gi}=1/(dm)$. Allow nearby physical labeled simplex vertices and nearby thresholds with fixed group sums. Under the individual original cap-volume upper budgets, the reference is a strict local volume maximizer modulo simultaneous translation of the simplex and all thresholds. On the critical tangent, writing a vertex velocity as $B=b\\mathbf1^{\\mathsf T}+E$ with $b$ its diagonal, the group threshold velocities are all $b$, the matrix $E$ has zero diagonal, row and column sums, and the constrained Lagrangian Hessian is $-V\\|E\\|_F^2/m$.\n\nThis applies to the $m$ cyclic groups with $a_{gg}=1-d/(3m)$ and $a_{gi}=1/(3m)$ for $i\\ne g$, and to the three planar cyclic permutations of $(4/5,1/10,1/10)$.",
+  "subgoal_id": "pk-intake-moving-concurrent-simplex-groups-local-stability",
+  "title": "Local stability of spanning concurrent simplex cap groups with moving thresholds"
+}

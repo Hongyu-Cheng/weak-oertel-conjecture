@@ -1,0 +1,33 @@
+{
+  "advances": "An exact directional balance interval and cap estimate for a single tested cap through the true mixed centroid with equal outer masses.",
+  "author": "PK-research-agent",
+  "candidate_id": "1dcf9dca38346003",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.479735+00:00",
+  "depends_on": [
+    "6769574fc1bd9f8d",
+    "dfd25e72c1f45a4e"
+  ],
+  "draft_key": "exact-balanced-three-fiber-peeling-cap-tradeoff",
+  "kind": "theorem",
+  "proof": "First, for a positive-volume fiber $D$ and a nonconstant affine functional $f$, the mass $B(D,f)$ exists by weak-star compactness of the density interval $0\\le\\rho\\le1_D$ and continuity of the mass and $f$-moment constraints. The threshold formula also follows from the support-function proof of 6769574fc1bd9f8d: among densities of fixed mass the largest $f$-moment is that of the full upper cap of that mass. If the full moment is negative and the positive moment is nonzero, the upper-cap moment increases continuously and strictly from the negative full moment to the positive moment as the threshold moves from $\\min_D f$ to zero, because every intervening negative slab has positive volume. The unique zero determines the maximizing mass: larger caps have negative largest attainable moment. If the positive moment vanishes there is no positive balanced mass. Reversing $f$ handles a positive full moment, and for a zero full moment full volume is feasible. Scaling the maximizing measure gives all smaller masses.\n\nIn the stated source all mixed mass is supported on the three actual fibers. The cap passes through the actual centroid, so the total $\\ell$-moment is zero. For $0<t\\le s$, remove balanced submeasures of mass $t$ from each endpoint; for $t=0$ take neither. Their lifted means have bases $-1,1$ and margin zero. The nonnegative residual has mass $M-2t\\ge b>0$, masses $(a-t,b,a-t)$ on the three fibers, base mean zero and margin mean zero. Conversely any decomposition into these three balanced output bases can use only the respective extreme fiber for either endpoint component. The base moment of the residual forces equality of endpoint component masses, and the two fiber moment constraints bound that common mass by $s$. This proves exact feasibility.\n\nThe residual centroid lies in the actual middle trace of $H$. Its positive restricted fiber masses $m_z$ have centroids $g_z\\in\\mathsf M_{m_z}(K_z)$, where $K_{-1}=A$, $K_0=K$ and $K_1=B$. The proof of dfd25e72c1f45a4e shows that the positive-root metronoid graph itself is convex before taking its closure. Average the lifted points $(z,g_z,m_z^{1/d})$ with weights $m_z/(M-2t)$, omitting zero-mass terms. Their average has base zero, the residual continuous centroid and height $J(t)^{1/d}$. Thus the centroid belongs to $\\mathsf M_{J(t)}(K)$. The right inclusion in 6769574fc1bd9f8d gives a lower bound $\\gamma_dJ(t)$ for the actual middle trace, measured in the original volume. Each positive peeled endpoint measure has centroid on the corresponding trace, belongs to its mass-$t$ metronoid, and pays at least $\\gamma_d t$ in actual cap volume by the right inclusion in 6769574fc1bd9f8d. For $t=0$ this contribution is zero. These bounds can be added because they refer to different integer fibers. If both original endpoint centroids are outside the cap, their strictly negative moment terms force the original middle centroid to have strictly positive margin. The full-volume case of the same metronoid inclusion gives a second bound $\\gamma_d b$ on that one middle trace, so take the larger of the two middle bounds. The expression in $t$ is continuous on $[0,s]$ and its maximum there is attained.\n",
+  "source_candidate_ids": [
+    "cc3ccb4ae42e99f5"
+  ],
+  "source_candidate_sha256": {
+    "cc3ccb4ae42e99f5": "84e83f3f8d2998b95fcca1a804b3d12846e2f666e070b533f832777894dd4d0b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "cc3ccb4ae42e99f5",
+      "locator": "cc3ccb4ae42e99f5:03 §3, (6)–(7), exact three-output feasibility and cap estimates"
+    },
+    {
+      "candidate_id": "cc3ccb4ae42e99f5",
+      "locator": "cc3ccb4ae42e99f5:02 §2, (3)–(5), maximal balanced submeasure of one fiber"
+    }
+  ],
+  "statement": "Suppose the only positive-volume integer fibers of a convex source in $\\mathbb R\\times\\mathbb R^d$ are $A,K,B$ at $-1,0,1$, of volumes $a,b,a>0$. Let $H=\\{\\ell\\ge0\\}$ be a closed non-pure-base cap through the actual mixed centroid, with affine restrictions $\\ell_-,\\ell_0,\\ell_+$. Define $s=\\min\\{B(A,\\ell_-),B(B,\\ell_+)\\}$, where $B(D,f)$ is the largest mass of a submeasure of the volume of $D$ with $f$-moment zero. Let $M=2a+b$ and $J(t)=[(2(a-t)^{1+1/d}+b^{1+1/d})/(M-2t)]^d$. The exact feasible common endpoint mass for a decomposition with balanced components at $-1,0,1$ is $t\\in[0,s]$, with the residual output at $0$. For each such $t$ one has $\\mu(H)\\ge\\gamma_d[2t+J(t)]$. If both endpoint centroids lie strictly outside $H$, then $\\mu(H)\\ge\\gamma_d[2t+\\max\\{b,J(t)\\}]$.",
+  "subgoal_id": "pk-intake-exact-balanced-three-fiber-peeling-cap-tradeoff",
+  "title": "Exact balanced peeling interval and actual cap estimate for three fibers"
+}

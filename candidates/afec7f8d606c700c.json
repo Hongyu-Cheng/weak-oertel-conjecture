@@ -1,0 +1,26 @@
+{
+  "advances": "Refutes a proposed scalar replacement for the cap ceiling. The data concern positive normalized scalar caps and sections.",
+  "author": "PK-research-agent",
+  "candidate_id": "afec7f8d606c700c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.478662+00:00",
+  "depends_on": [],
+  "draft_key": "profile-floor-scalar-loss-derivative-obstruction",
+  "kind": "counterexample",
+  "proof": "Take $k=1$ and prescribe\n$$\nf=(1/25,41/25,29/25),\\qquad r=(16/25,29/40,3927/5800),\\qquad\nQ_i=r_i^2,\\qquad \\sigma_i=2r_i/f_i.\n$$\nThen $\\sum_i f_i r_i=2$ gives $M=1$, so the definitions recover the prescribed $f_i$. The cap fractions are $256/625,841/1600,15421329/33640000$. The smallest is $256/625=20/49+44/30625$, the largest is $841/1600$, and the sorted profile is $134483117/134560000<1$. Direct substitution gives $(\\Phi_1,\\Phi_2,\\Phi_3)=(2,2,1166/625)$.\n\nAt $t=0$, logarithmic differentiation gives $f_i'/f_i=-1/(2k)-\\mathbf1_{\\{i=2\\}}/(2Q_2)+1/(\\sigma_2M)$. For the first row put $z=(f_2+f_3)/2=7/5$ and $C=f_1+z(f_2+f_3)=99/25$. Using $1/(\\sigma_2M)=f_2/(2kr_2)$ and $Q_2=kr_2^2$, the chain rule gives\n$$\n-2k\\Phi_1'(0)=C+zf_2/r_2^2-Cf_2/r_2=-66193/105125.\n$$\nSince $k=1$, this proves the strictly outward derivative under the stated scalar conditions.\n",
+  "source_candidate_ids": [
+    "8828494d0d4fbb4c"
+  ],
+  "source_candidate_sha256": {
+    "8828494d0d4fbb4c": "070432e907c25e2e7c7b277021d2d03a09a31639eeab4f94bd6715400447664d"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8828494d0d4fbb4c",
+      "locator": "8828494d0d4fbb4c:01 normalized raw data and tight-row loss derivative"
+    }
+  ],
+  "statement": "For positive raw data $k,Q_i,\\sigma_i$, $i=1,2,3$, let $q_i=Q_i/k$, $M=\\sum_iQ_i/\\sigma_i$, $f_i=2\\sqrt{kQ_i}/(\\sigma_iM)$ and $\\Phi_i=f_i+(f_j+f_l)^2/4$ for $\\{i,j,l\\}=\\{1,2,3\\}$. There are data with every $q_i\\ge20/49$, $\\sum_i q_i-(3/4)\\max_iq_i<1$ and every $\\Phi_i\\le2$ for which the derivative of the tight $\\Phi_1$ is strictly positive under the loss $k(t)=k-t,\\ Q_2(t)=Q_2-t$, with all other raw data fixed. The exact derivative is $66193/210250$.",
+  "subgoal_id": "pk-intake-profile-floor-scalar-loss-derivative-obstruction",
+  "title": "The scalar cap floor and sorted profile do not force an inward loss derivative"
+}

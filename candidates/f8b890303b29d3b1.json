@@ -1,0 +1,28 @@
+{
+  "advances": "Directional identity for reflected triangle pairs with a shared tilt, on a specified chamber.",
+  "author": "PK-research-agent",
+  "candidate_id": "f8b890303b29d3b1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:43:37.332980+00:00",
+  "depends_on": [
+    "d6ce3858d2712450"
+  ],
+  "draft_key": "triangle-pair-proper-straddling-shared-tilt-penalty",
+  "kind": "lemma",
+  "proof": "The chamber is exactly the conjunction $0\\le t-s\\le(1-a)r\\le t+s\\le ar$. The normalized height and area formulas in d6ce3858d2712450 apply after dividing the thresholds by $ar$ and multiplying the area fractions by $r^2$. They give the pair expression\n$$\nr^2-\\frac{(t-s)^2}{a(1-a)}\n   +\\frac{(ar-t-s)^2}{a(2a-1)} .\n$$\nIts coefficient of $s^2$ is $K_a>0$ and its coefficient of $s$ is $-2K_as_a(r)$. Subtracting $K_as_a(r)^2$ from the constant term gives $J_a(r)$, yielding the completed square. At every chamber boundary the closed line has zero area, so the same expression holds. At $r=0$ the chamber is empty since $ar-t<0$. If the formal shift is negative or falls outside the chamber, this identity still applies to shifts inside the chamber and gives no assertion of attainability at the formal shift.\n\nEach actual pair uses $s=h|\\beta|$. Expanding the sum of its squares and completing the square in $|\\beta|$ gives the displayed sum. Cauchy–Schwarz makes the residual nonnegative, with equality only when $(s_a(r_h))_{h\\in I}$ is proportional to $(h)_{h\\in I}$. For $h_1<h_2$ with $s_a(r_{h_2})>0$, monotonicity gives $s_a(r_{h_1})\\ge s_a(r_{h_2})$, and hence $s_a(r_{h_1})/h_1>s_a(r_{h_2})/h_2$. This precludes proportionality. All pairs outside the chamber require their own clipped cap formulas.\n",
+  "source_candidate_ids": [
+    "58714b1fac606069"
+  ],
+  "source_candidate_sha256": {
+    "58714b1fac606069": "24bdb2f0a12250a77e2c43997fde8673e6e6c29d584fd28946aa590e46a14665"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "58714b1fac606069",
+      "locator": "58714b1fac606069:05 §5 (13)–(15), proper-straddling chamber"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}(0,e_1,e_2)$ and $V=|T|$. Fix $R>0$, $t=R/3$ and $1/2<a<2/3$. For $0<r\\le R$, let $F_{a,r}(u)$ be the area of the cap $ax_1+(1-a)x_2\\ge u$ of $rT$, divided by $V$. If\n$$\n|t-(1-a)r|\\le s\\le\\min(t,ar-t),\n$$\nthen $F_{a,r}(t-s)+F_{a,r}(t+s)=J_a(r)+K_a(s-s_a(r))^2$, where\n$$\nJ_a(r)=r^2-\\frac{(2t-ar)^2}{a(2-3a)},\\qquad\nK_a=\\frac{2-3a}{a(2a-1)(1-a)},\\qquad\ns_a(r)=\\frac{a((1-a)r-t)}{2-3a}.\n$$\nFor a finite nonempty set $I$ of positive integer reflected distances with nonincreasing radii $r_h$, suppose the actual cap $a x_1+(1-a)x_2+\\beta z\\ge t$ puts all pairs $\\pm h$, $h\\in I$, in this chamber, with $s=h|\\beta|$. Set $B=\\sum_{h\\in I}h^2$. Their combined cap mass in units of $V$ is\n$$\n\\sum_{h\\in I}J_a(r_h)+K_a\\left[\n B\\left(|\\beta|-\\frac{\\sum_{h\\in I}h s_a(r_h)}{B}\\right)^2\n +\\sum_{h\\in I}s_a(r_h)^2-\\frac{(\\sum_{h\\in I}h s_a(r_h))^2}{B}\n\\right].\n$$\nThe last two terms within the brackets have a nonnegative sum. If at least two distances have positive stationary shifts, those two shifts cannot be attained together by one tilt and the last two terms have a strictly positive sum.",
+  "subgoal_id": "pk-intake-triangle-pair-proper-straddling-shared-tilt-penalty",
+  "title": "Exact shared-tilt penalty in the proper-straddling chamber"
+}

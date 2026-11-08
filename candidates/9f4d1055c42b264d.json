@@ -1,0 +1,30 @@
+{
+  "advances": "An explicit counterexample to a row-level positive-curvature shortcut for an ordinary uniform tetrahedron. No stochastic maximizer, completion, or mixed-integer depth assertion.",
+  "author": "PK-research-agent",
+  "candidate_id": "9f4d1055c42b264d",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:42:34.571810+00:00",
+  "depends_on": [
+    "1462fa9ce6ced54e",
+    "d2ba4e3cbd6eb730",
+    "8bdcdcd6e2fa69d9"
+  ],
+  "draft_key": "tetrahedral-one-noncentral-negative-capacity-hessian",
+  "kind": "counterexample",
+  "proof": "For positive $p,q,r,s$ with $p\\ne q$, the normalized volume of the cap with raw margins $(p,q,-r,-s)$ is, by 1462fa9ce6ced54e,\n$$\nP(p,q,-r,-s)=\\frac{p^3/[(p+r)(p+s)]-q^3/[(q+r)(q+s)]}{p-q}.\n$$\nThe same cap probability is obtained with independent unit exponentials in place of $U$, by normalizing their sum. At $C=(1,5,-5,-8)$ let $g=\\nabla P(C)$ and $H=\\nabla^2P(C)$, with derivatives in the four signed margins. Differentiating the displayed rational function (changing the sign of each $r$ or $s$ derivative) gives\n$$\nP(C)=\\frac{331}{1404},\\qquad \\frac{\\mathbf 1^\\top g}{3}=\\frac{61}{1404},\\qquad\n\\frac{g}{\\mathbf 1^\\top g}=(1171/3294,1561/4758,98/549,2953/21411).\n$$\nThe last vector is the section centroid by the coarea derivative in 1462fa9ce6ced54e. Its first coordinate exceeds $1/3$ by $73/3294$; the second is smaller by $25/4758$, and the last two are smaller as well.\n\nAt $t=331/900$ the actual margin is $(61/900)C$. It has two positive and two negative entries and $0<\\min_j x_j<t<\\max_j x_j<1$. Degree-zero homogeneity gives $F_x(t)=P(C)$ and $F_x'(t)=(900/61)\\mathbf1^\\top g$, so $tF_x'(t)=3F_x(t)$. As in d2ba4e3cbd6eb730, $F_x^{1/3}$ is concave between the extreme heights. Its tangent line at $t$ is $\\tau\\mapsto F_x(t)^{1/3}\\tau/t$, so $t$ minimizes $\\tau/F_x(\\tau)^{1/3}$ there. The line remains above the CDF cube root for $\\tau\\ge\\max_j x_j$ since the latter is then one. The same fact gives uniqueness.\n\nThe tangent vectors $v=(g_2,-g_1,0,0)$ and $w=(0,0,g_4,-g_3)$ belong to $g^\\perp$. Differentiating the same rational expression yields the matrix of $H$ on $(v,w)$:\n$$\nQ=\n\\begin{pmatrix}\n298246999/303084016455168 &114611287/454626024682752\\\\\n114611287/454626024682752 &1004887915/681939037024128\n\\end{pmatrix},\n\\qquad\n\\det Q=\\frac{23880754822693393}{17223735193236852561853857792}>0.\n$$\nThus $Q$ is positive definite. The three vectors $v,w,C$ span $g^\\perp$: $C$ belongs to it by homogeneity, whereas the $g$-weighted sum of its first two entries is positive, unlike any combination of $v,w$. Homogeneity also gives $HC=-g$, so $C$ is a bilinear kernel vector of the restriction to $g^\\perp$. Consequently that restriction is positive semidefinite with exactly the line $\\operatorname{span}\\{C\\}$ as kernel. The same holds for the threshold-one margins $\\widehat C=(61/331)C$ by positive rescaling.\n\nUse 8bdcdcd6e2fa69d9 for the normalized positive row $x/t$. Decompose a direction as $v_0+s_0\\mathbf 1$, where $v_0$ is tangent to the gradient of $P$ at $\\widehat C$. The optimized Hessian is a strictly negative constant times the sum of the tangent cap form on $v_0$ and the nonnegative Schur square. The first term vanishes exactly when $v_0=a\\widehat C$. Since $\\widehat H\\widehat C=-\\widehat g$ and $\\mathbf1^\\top\\widehat g=3P$, the Schur square then vanishes exactly at $s_0=-a$. Thus the only kernel direction is the line of $\\widehat C-\\mathbf1=-x/t$. Degree-one homogeneity of capacity rescales the Hessian by a positive factor at $x$, preserving this conclusion.\n",
+  "source_candidate_ids": [
+    "45ebdc1c31203276"
+  ],
+  "source_candidate_sha256": {
+    "45ebdc1c31203276": "4e3362dade9c94663a26c69a5bb947c0e66572c1ec5beb3bf141e806302d3afa"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "45ebdc1c31203276",
+      "locator": "45ebdc1c31203276:01 Entire note, exact proper cap and optimized-capacity Hessian"
+    }
+  ],
+  "statement": "On $\\Delta_3=\\{u\\in\\mathbb R_{\\ge0}^4:\\sum_j u_j=1\\}$ let $U$ be uniform, $F_x(t)=\\Pr(x\\cdot U\\le t)$, and $\\phi_3(x)=\\inf_{t>0:F_x(t)>0}t/F_x(t)^{1/3}$. For $x=(270,26,636,819)/900$ the unique minimizing threshold is the proper threshold $t=331/900$. It strictly captures vertices $1,2$ and the actual section centroid is\n$$\nb=(1171/3294,1561/4758,98/549,2953/21411).\n$$\nOnly $b_1>1/3$. The Hessian of $\\phi_3$ at $x$ is negative semidefinite with kernel $\\operatorname{span}\\{x\\}$.",
+  "subgoal_id": "pk-intake-tetrahedral-one-noncentral-negative-capacity-hessian",
+  "title": "An actual tetrahedral row with one noncentral coordinate and no positive capacity curvature"
+}

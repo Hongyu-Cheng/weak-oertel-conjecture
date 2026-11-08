@@ -1,0 +1,36 @@
+{
+  "advances": "Transfers nonnegative Borel mass under actual translations, with an exact affine-span exclusion and one retained baseline. In mixed lattices, the translations preserve the lattice in sum coordinates.",
+  "author": "PK-research-agent",
+  "candidate_id": "6684c9103c897998",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.478216+00:00",
+  "depends_on": [],
+  "draft_key": "weighted-hausdorff-normal-cone-injection",
+  "kind": "lemma",
+  "proof": "Let $\\pi$ project orthogonally onto $V^\\perp$ and set $U=\\pi(\\operatorname{conv}B)$. The cylinder $Z=\\pi^{-1}(U)$ is closed. For $\\varepsilon>0$ use the source $A_\\varepsilon=\\{a\\in A:\\|\\pi a\\|\\ge\\varepsilon\\}$. Fix $0<\\delta<\\varepsilon$ and choose a finite $\\delta$-net $D\\subset B$. The support functions of $U$ and $U_D=\\operatorname{conv}(\\pi D)$ differ at each $v$ by at most $\\delta\\|v\\|$, because each point of $B$ is within $\\delta$ of $D$ and projection contracts distance. List the distinct vertices $p_i$ of $U_D$ and fix one lift $b_i\\in D$ for each. For $v=\\pi a$, use the smallest maximizing index for $v\\cdot p_i$. Its pieces $E_i$ of $A_\\varepsilon$ are Borel by finite weak and strict comparisons. On each use $a\\mapsto a+b_i$. Its image avoids $Z$ since\n$$v\\cdot\\pi(a+b_i)=\\|v\\|^2+h_{U_D}(v)\\ge h_U(v)+\\|v\\|(\\|v\\|-\\delta)>h_U(v).$$\nFor two original points with projections $v,w$ and maximizing indices $i,j$, adding their maximizing inequalities gives $(v-w)\\cdot(p_i-p_j)\\ge0$. Equal outputs imply $v-w=p_j-p_i$ and hence $p_i=p_j$, so the fixed lift also agrees and the original points agree. This includes ties and a singleton projected polytope. If $V$ is the entire space, all $A_\\varepsilon$ are empty and the claim is immediate.\n\nThe sets $E_i+b_i$ are disjoint Borel subsets of $(A+B)\\setminus Z$. Translation invariance and the pointwise hypothesis give\n$$\n\\int_{(A+B)\\setminus Z}F\\,d\\mathcal H_q\n\\ge\\sum_i\\int_{E_i}F(a+b_i)\\,d\\mathcal H_q(a)\n\\ge\\int_{A_\\varepsilon}g\\,d\\mathcal H_q.\n$$\nThe sets $A_{1/j}$ increase to $A\\setminus V$, giving the result by monotone convergence. The translations use actual points of $B$ and therefore preserve sum coordinates in the mixed lattice, including counting measure and intrinsic boundary mass. For $L=a_0+V$, shift $A,P$ by $-a_0$ and the arguments of both functions accordingly, leaving $B$ fixed. In original coordinates the cylinder is $L+\\operatorname{conv}B$, which contains $P+B$. Its complement and $P+B$ are disjoint, giving the one-baseline inequality.\n",
+  "source_candidate_ids": [
+    "5fcdb1b3fadb0891",
+    "c2528b1460a23da4"
+  ],
+  "source_candidate_sha256": {
+    "5fcdb1b3fadb0891": "16091b944240d14cb5e23f435a5fc55a5cd077481fe4b1a64aecffd909dde370",
+    "c2528b1460a23da4": "50e498a7d800d59bfc4125a46f177800c2ae52e749874db727f6ee14a7968afd"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c2528b1460a23da4",
+      "locator": "c2528b1460a23da4:01 §§1–2 (1)–(3), weighted transfer and one affine baseline"
+    },
+    {
+      "candidate_id": "5fcdb1b3fadb0891",
+      "locator": "5fcdb1b3fadb0891:01 §§1–4, finite normal-cone partition for the unweighted transfer"
+    },
+    {
+      "candidate_id": "5fcdb1b3fadb0891",
+      "locator": "5fcdb1b3fadb0891:02 §5, affine-baseline reserve"
+    }
+  ],
+  "statement": "Let $A,B\\subseteq\\mathbb R^m$ be nonempty compact sets, $V$ a linear subspace, $q\\ge0$ with $\\mathcal H_q(A)<\\infty$, and $Z=V+\\operatorname{conv} B$. Suppose nonnegative Borel functions $F$ on $\\mathbb R^m$ and $g$ on $A$ satisfy $F(a+b)\\ge g(a)$ for all $a\\in A$, $b\\in B$. Then\n$$\n\\int_{(A+B)\\setminus Z}F\\,d\\mathcal H_q\\ge\\int_{A\\setminus V}g\\,d\\mathcal H_q.\n$$\nFor any one compact $P\\subseteq A$ contained in an affine subspace $L$ this gives\n$$\n\\int_{A+B}F\\,d\\mathcal H_q\\ge\n\\int_{P+B}F\\,d\\mathcal H_q+\\int_{A\\setminus L}g\\,d\\mathcal H_q.\n$$\nThe inequalities allow extended integrals and include $q=0$. If $A,B$ lie in $\\mathbb Z^n\\times\\mathbb R^d$, the translated source pieces lie in that lattice as actual sum points.",
+  "subgoal_id": "pk-intake-weighted-hausdorff-normal-cone-injection",
+  "title": "Weighted Hausdorff transfer outside a projected cylinder"
+}

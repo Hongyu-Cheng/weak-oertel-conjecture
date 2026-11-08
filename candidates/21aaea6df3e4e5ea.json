@@ -1,0 +1,26 @@
+{
+  "advances": "A single-fiber Euclidean tube limit. No common direction across different fibers is required.",
+  "author": "PK-research-agent",
+  "candidate_id": "21aaea6df3e4e5ea",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.474564+00:00",
+  "depends_on": [],
+  "draft_key": "convex-fiber-euclidean-tube-weak-limit",
+  "kind": "lemma",
+  "proof": "Translate $\\operatorname{aff}K$ to its direction space $L$ and split $\\mathbb R^d=L\\oplus L^\\perp$ orthogonally. At perpendicular coordinate $\\varepsilon s$ with $s\\in B_{d-r}$, the section in $L$ is exactly $K+\\varepsilon\\sqrt{1-\\lVert s\\rVert^2} B_r$. For a bounded continuous test function $f$, rescaling the perpendicular integral gives\n$$\n\\varepsilon^{-(d-r)}\\int_{K+\\varepsilon B_d} f(x)\\,dx\n=\\int_{B_{d-r}}\\int_{K+\\varepsilon\\sqrt{1-\\lVert s\\rVert^2} B_r}\n f(v+\\varepsilon s)\\,d\\mathcal H^r(v)\\,ds.\n$$\nAll sets lie in a fixed compact neighborhood for small $\\varepsilon$. Uniform continuity lets us replace $f(v+\\varepsilon s)$ by $f(v)$ with a uniformly vanishing error under the bounded-volume integrals. The excess parallel volume above $K$ is at most $\\mathcal H^r((K+\\varepsilon B_r)\\setminus K)$, which tends to zero by continuity from above for the compact parallel sets. The remaining integral is $\\kappa_{d-r}\\int_K f\\,d\\mathcal H^r$. The same product identity applies when a factor has dimension zero, using its one-point counting measure.\n",
+  "source_candidate_ids": [
+    "9854c663e6eb01b8"
+  ],
+  "source_candidate_sha256": {
+    "9854c663e6eb01b8": "b83d2f94c2e74358f73015f1ddb7f7288fcd418c8e8deda4d13893492de23cb7"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "9854c663e6eb01b8",
+      "locator": "9854c663e6eb01b8:02 §2, tube weak limit and orthogonal-section integral"
+    }
+  ],
+  "statement": "Let $K$ be a nonempty compact convex subset of $\\mathbb R^d$ of affine dimension $r$. Let $B_j$ be the Euclidean unit ball in dimension $j$ and $\\kappa_j$ its volume, with $\\kappa_0=1$. Then\n$$\n\\varepsilon^{-(d-r)}\\mathbf1_{K+\\varepsilon B_d}\\,dx\n\\;\\rightharpoonup\\;\\kappa_{d-r}\\mathcal H^r|_K\n\\qquad(\\varepsilon\\downarrow0).\n$$\nThe Hausdorff measures are normalized to agree with Euclidean volume on their affine subspaces, including counting measure in dimension zero.",
+  "subgoal_id": "pk-intake-convex-fiber-euclidean-tube-weak-limit",
+  "title": "Exact weak limit of Euclidean tubes around a convex fiber"
+}

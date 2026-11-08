@@ -1,0 +1,30 @@
+{
+  "advances": "Raw mixed mass and a fixed cap under a feasible support deformation. The calculation does not determine the normalized actual critical circuit Hessian with source relaxation.",
+  "author": "PK-research-agent",
+  "candidate_id": "73dd21a942a8f8c3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.481160+00:00",
+  "depends_on": [],
+  "draft_key": "fixed-normal-mixed-volume-unbounded-positive-index",
+  "kind": "counterexample",
+  "proof": "Take $\\varepsilon>0$, $R=\\varepsilon(N^2+1)$, and any full-dimensional polytope $K=\\{x:u_i\\cdot x\\le1,\\ 1\\le i\\le f\\}$ containing zero in its interior, with irredundant facet list. For $|h_j|<\\varepsilon/4$, $0\\le j\\le N$, impose the ambient inequalities\n$$\n0\\le z\\le N,\\qquad\nu_i\\cdot x\\le L_j(z)+h_j\\quad(\\text{all }i,j),\n\\qquad L_j(z)=R+\\varepsilon j^2-2\\varepsilon jz.\n$$\nThe ambient normals $(2\\varepsilon j,u_i)$ and the two base normals are independent of $h$. On the whole real interval $L_j(z)=R-\\varepsilon z^2+\\varepsilon(z-j)^2\\ge\\varepsilon$, so the exact fiber is the homothet $\\min_j(L_j(z)+h_j)K$ with positive radius at least $3\\varepsilon/4$. This gives a compact full-dimensional convex polytope. At an integer $k$, every $j\\ne k$ has a strict roof gap $\\varepsilon(j-k)^2+h_j-h_k>\\varepsilon/2$, so the unique active roof group stays $k$ in a relative neighborhood of $k$ in the base interval. Every inequality of group $k$ is facet-defining: at a nearby interior real base the other roof groups are strict on the relative interior of its corresponding scaled facet, and that facet persists over an open interval of bases. The two base bounds have full-dimensional fibers. Thus the open parameter cube realizes actual fixed facet normals, with independent support changes tied only within each group.\n\nAt integer $k$ the radius is $r_k=R-\\varepsilon k^2+h_k$. With $V=|K|$, the actual mixed mass is $M(h)=V\\sum_k r_k^d$. Its Hessian is diagonal with entries $d(d-1)Vr_k^{d-2}>0$.\n\nFor a fixed cap $\\{az+v\\cdot x\\ge b\\}$ with $v\\ne0$, put $F(t)=|K\\cap\\{v\\cdot x\\ge t\\}|$ and $\\xi_k=(b-ak)/r_k$. Its mixed mass is $\\sum_k r_k^d F(\\xi_k)$. Wherever $F$ is twice differentiable at the relevant thresholds, differentiating each summand twice gives the diagonal entry\n$$\nr_k^{d-2}\\left[d(d-1)F(\\xi_k)-2(d-1)\\xi_kF'(\\xi_k)+\\xi_k^2F''(\\xi_k)\\right].\n$$\nConstant branches account for strictly full or empty traces. Choose $a=b=0$, a centroided simplex $K$, and $v$ along a vertex-side barycentric cap through the centroid. Its trace on $K$ is a homothetic vertex cap with linear scale $d/(d+1)$. The ratio is therefore $\\gamma_d=(d/(d+1))^d$ at each sampled fiber for every $h$. This cap mass is $\\gamma_d M(h)$, with positive-definite raw Hessian and constant normalized fraction.\n",
+  "source_candidate_ids": [
+    "d0bf1dbafd292ae0"
+  ],
+  "source_candidate_sha256": {
+    "d0bf1dbafd292ae0": "1c3f1be2cfb8a0b87cad66a66f7affbd41e50e0d9f7e5dd65cdbf71139ab0b98"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d0bf1dbafd292ae0",
+      "locator": "d0bf1dbafd292ae0:01 §§1–2, (1)–(4)"
+    },
+    {
+      "candidate_id": "d0bf1dbafd292ae0",
+      "locator": "d0bf1dbafd292ae0:02 §3, (5) and centered-simplex example"
+    }
+  ],
+  "statement": "For every $d\\ge2$ and $N\\ge1$ there is an open family of genuine fixed-facet-normal polytopes in $\\mathbb R\\times\\mathbb R^d$ with complete positive integer base $\\{0,\\ldots,N\\}$ whose mixed mass has positive-definite Hessian of size $N+1$ in the specified support-offset coordinates. In particular neither one nor the number of base parities bounds its positive index. In the same family, a fixed nonvertical cap's raw Hessian can have this same index even while its normalized cap fraction is constant.",
+  "subgoal_id": "pk-intake-fixed-normal-mixed-volume-unbounded-positive-index",
+  "title": "Unbounded positive index of a fixed-normal mixed-volume Hessian"
+}

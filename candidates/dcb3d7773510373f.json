@@ -1,0 +1,32 @@
+{
+  "advances": "Global inward fixed-normal path for a supplied whole mixed critical cover. It gives an upper comparison, and the normalized actual depth need not attain it.",
+  "author": "PK-research-agent",
+  "candidate_id": "dcb3d7773510373f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.480325+00:00",
+  "depends_on": [
+    "55a57b1cf55d0c87"
+  ],
+  "draft_key": "actual-distal-quantile-path-and-ranks",
+  "kind": "theorem",
+  "proof": "The integer sections of the ambient convex body satisfy all anchored Minkowski inclusions, even if some are null. By 55a57b1cf55d0c87 positive-depth marks are interior to their positive fibers. Any mass-$B$ cap containing such a deepest mark must pass through it: a strict margin permits a smaller containing cap that removes a positive slab, since the cap through that mark has a proper own-fiber section. In particular the original anchor gives each $F_i$ strict decrease on a right neighborhood of $b_i$. It also gives $\\ell_i\\le b_i$ at every old deepest point, since a positive margin there allows a small increase of $b_i$ retaining the point and deleting a positive slab at the original anchor. The tail is continuous on the real line because there are finitely many fibers and the nonvertical boundary is null in each. It tends to zero and the rightmost inverse at each positive target $B-a$ is finite and attained. For $a>0$ one has $t_i(a)>b_i$. The inequalities of $C_a$ are strict at all old deepest marks, so they retain a small ball in the old positive fiber. Since ambient interior points of $C$ approach every point of $C$, strictness also gives ambient interior in $C_a$. For each $i$ the original band $b_i\\le\\ell_i\\le t_i(a)$ has mass $a$, and contains the retained part of $H_i$. The cover is an inclusion of sets, so it includes null and boundary-only fibers of $C_a$.\n\nFor $a<a'$ the new points lie in the union of $m$ bands $t_i(a)<\\ell_i\\le t_i(a')$, each of original mass $a'-a$. This includes the endpoints because the tails at the extrema have the stated values up to null planes. It gives the claimed Lipschitz bounds for the total and each fiber. Every mixed point of $C_0$ is on one of the covering planes, hence $M(0)=0$. The other endpoint is exactly $C$. Minkowski inclusion of positive fibers at any integer convex combination gives completeness. Each originally positive fiber stays positive up to $B$ once it becomes positive, and continuity of its mass gives the entry description.\n\nFor $0<a<B$, rightmost inversion gives $\\{R_i>a\\}=\\{\\ell_i>t_i(a)\\}$ on the original body: a tail value strictly below $B-a$ occurs exactly beyond the rightmost equality. Thus the marginals and maximum-rank identity follow. At $a=0$ the same holds since $b_i$ has strict decrease to its right and $F_i(b_i)=B$; at $a=B$ both sides retain the full body. Counting each removed point once gives $\\mu(\\bigcup_i\\{\\ell_i>t_i(a)\\})=\\int N_a\\,d\\mu-E(a)=m(B-a)-E(a)$. Monotonicity of the thresholds makes $N_a$, and hence $E$, nonincreasing. The two endpoint values follow from the corresponding masses.\n",
+  "source_candidate_ids": [
+    "92c5cf1d847ad56c"
+  ],
+  "source_candidate_sha256": {
+    "92c5cf1d847ad56c": "b99400b0fb4ead94b6041b397979ec283cdce5593be17b58ef5201a3812c02b3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "92c5cf1d847ad56c",
+      "locator": "92c5cf1d847ad56c:01 §1, (1)–(3), genuine active-cap distal path and upper cover"
+    },
+    {
+      "candidate_id": "92c5cf1d847ad56c",
+      "locator": "92c5cf1d847ad56c:02 §§2–3, (4)–(8), mass, core and common rank laws"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be a convex body, $d\\ge1$, with positive summed integer-fiber $d$-volume $\\mu(C)=M$. Let finitely many closed nonvertical caps $H_i=\\{\\ell_i\\ge b_i\\}$, $1\\le i\\le m$, cover the entire mixed set of $C$, each of raw mixed mass $B>0$ and active at a global deepest point of raw depth $B$. Here $\\ell_i$ is linear and its continuous component has norm one. Put $F_i(s)=\\mu(C\\cap\\{\\ell_i\\ge s\\})$. For $0<a<B$ let $t_i(a)$ be the rightmost threshold with $F_i(t_i(a))=B-a$, and put $t_i(0)=b_i,\\ t_i(B)=\\max_C\\ell_i$. Define\n$$\nC_a=C\\cap\\bigcap_i\\{\\ell_i\\le t_i(a)\\},\\qquad M(a)=\\mu(C_a).\n$$\nThe thresholds are nondecreasing, allowing jumps across tail plateaus. For $a>0$, $C_a$ is a convex body retaining each original deepest point and an own-fiber relative neighborhood of it. The original caps cover its entire mixed set and each has mass at most $a$ there, so its maximum normalized mixed depth is at most $a/M(a)$.\n\nEach mixed fiber mass and the total mass are nondecreasing and $m$-Lipschitz in $a$, with $M(0)=0$ and $M(B)=M$. The positive bases $P(a)$ are lattice-complete and expand with $a$. Each originally positive base has an entry threshold in $[0,B)$ where its mass is zero and above which its mass is positive. Thus only finitely many changes in positive bases or occupied parities occur; all original deepest bases persist for $a>0$.\n\nOn the original measured mixed set define $R_i(w)=(B-F_i(\\ell_i(w)))_+$. Then $\\mu\\{R_i>a\\}=B-a$ for $0<a<B$, $\\mu\\{R_i=0\\}=M-B$, and $M(a)=\\mu\\{\\max_i R_i\\le a\\}$ on $[0,B]$. Let $N_a(w)=\\#\\{i:\\ell_i(w)>t_i(a)\\}$ and $E(a)=\\int(N_a-1)_+\\,d\\mu$. Then $E$ is nonnegative and nonincreasing, $E(0)=mB-M$, $E(B)=0$, and\n$$\nM(a)=M-m(B-a)+E(a)=ma-[E(0)-E(a)].\n$$",
+  "subgoal_id": "pk-intake-actual-distal-quantile-path-and-ranks",
+  "title": "Distal quantile trimming of an actual mixed critical cover"
+}

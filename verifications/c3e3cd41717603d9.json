@@ -1,0 +1,48 @@
+{
+  "candidate_id": "64b0230d257f9b96",
+  "candidate_sha256": "ad50b69106c15a56aacd44119fa32a47588b6574144635ab10d6114c5502c370",
+  "checked_dependency_candidate_sha256": {
+    "53fe12b742a7608d": "c10a2641ab74e8a62b0d50631bfaa12a9ccb1264f053a253f6642ddf3e30e3c7"
+  },
+  "checks": [
+    "The accepted tail for uniform barycentrics applies in dimension m=d+1. Scaling the heights cancels the order-m divided-difference factor against the degree-m truncated power. Differentiation away from knots gives +m for the density because the upper tail decreases.",
+    "Away from a height knot, all repeated-node differentiations are smooth in the level. At interior knots and at the two endpoints the actual slices converge in Hausdorff distance from the available side(s) by compactness and convex interpolation.",
+    "The first coordinate is Euclidean height, so no coarea factor appears. An endpoint with k tied vertices has dimension k-1, giving positive d-volume precisely for k=m. The outer zero convention still keeps that actual endpoint value.",
+    "Original §2 and the exact simplex replay agree, including repeated lower/upper endpoint examples."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "53fe12b742a7608d",
+      "fact_sha256": "17ab511a4692218e7e43724b35ffc6d2e01334fcd30453922acfa030abab0c57",
+      "hypotheses": "Use the optional divided-difference tail formula from the proof on the ambient m-simplex. Its required nonconstant height is guaranteed by full ambient dimension.",
+      "status": "accepted at pinned graph base"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:54:58Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "It proves the scalar simplex tail formula and its confluent evaluation, not the actual closed sampled endpoint-density convention.",
+      "fact_id": "53fe12b742a7608d"
+    },
+    {
+      "comparison": "Its proof evaluates density and moments on one fixed six-dimensional simplex with null endpoint fibers. The present claim includes arbitrary knot multiplicities and positive endpoint faces.",
+      "fact_id": "b52da8fc681e8d1e"
+    }
+  ],
+  "readability": "The inward value at an extreme knot is a convention for the actual fiber rather than an arbitrary representative of an almost-everywhere density.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "68b800a87f611d04613aa7b0392fb0777897ea04995f65b3396746a1658838c0",
+  "reviewed_statement_sha256": "bda2a6eb5968f9e25dd869ea1eb1e54610ad52c17d91a8b55ad956b5bbc84470",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:49:27Z",
+  "summary": "The confluent divided-difference density has the correct factor and yields actual volumes at interior knots and possibly positive endpoint faces.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

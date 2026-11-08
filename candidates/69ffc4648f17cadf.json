@@ -1,0 +1,37 @@
+{
+  "advances": "Compatible finite-fiber deformation and a response identity conditional on a specified actual marked surface coupling.",
+  "author": "PK-research-agent",
+  "candidate_id": "69ffc4648f17cadf",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.286941+00:00",
+  "depends_on": [
+    "ba0f3db1bf4f62c6",
+    "8103c38875770e55"
+  ],
+  "draft_key": "actual-centroid-hull-contraction-and-surface-jensen-defect",
+  "kind": "theorem",
+  "proof": "Since $g_z\\in K_z$, $D$ is a convex subset of $C$, hence $g_z\\in D_z\\subset K_z$. For any anchored representation $p=\\sum_z\\lambda_z z$, the inclusions $\\sum_z\\lambda_z K_z\\subset K_p$ and $\\sum_z\\lambda_z D_z\\subset D_p$ combine by Minkowski addition to give compatibility at $t$. The exact-fiber criterion then applies, and completeness gives no other integer bases. The inclusion of the centered homothet follows from $g_z\\in D_z$. The inclusions $D_z\\subset K_z$ and convexity show that $K_z(t)$ decreases in $t$.\n\nThe support interpolation is exact, $h_{K_z(t)}=h_{K_z}-t(h_{K_z}-h_{D_z})$. Work on a fixed fiber after translation by a common old interior radial origin. The displayed centered homothet supplies a uniform inball about the centroid for small $t$, and all bodies lie in a fixed ball. Along a unit ray $\\omega$ the radial endpoint is the minimum of $h_{K_z(t)}(u)/(u\\cdot\\omega)$ for $u\\cdot\\omega>0$, now using translated supports. The inball and outer ball bound the denominator of every active normal away from zero. Uniform support interpolation and comparison with the old minimizing normal give a uniform $O(t)$ radial displacement. Every limit of active normals as $t\\downarrow0$ is an old supporting normal, hence equals $n_z$ at a regular point. Comparing the old and new minima using their two active normals squeezes the radial difference quotient to $-(h_{K_z}(n_z)-h_{D_z}(n_z))/(n_z\\cdot\\omega)$. Radial integration of the bounded signed shell, followed by $(n_z\\cdot\\omega)dS=R^{d-1}d\\omega$ for the old radial function $R$, gives the total loss. On a proper cut the cutting plane meets the old boundary in a surface-null set: the relative interior of a proper section is in the interior of the body, and the relative boundary has zero section area. The strict full and empty cases avoid the old boundary entirely. The cap indicator therefore converges on almost every old radial shell to its old boundary value, giving the cap formula by the same dominated convergence. For a pure-base cap each sampled fiber's indicator is simply fixed. For intervals these calculations hold on the two rays with counting measure.\n\nOn the old actual graph $v_z=n_z\\cdot(X-g_z)-R_z(n_z)$ and $R_z\\ge0$. Integrate against $\\Xi$ and use the assumed trace identity for the force formula. For the martingale formula, the fixed normal $u$ and full row mean imply $\\mathbb E[h_{K_{Z'}}(u)\\mid z,X,u]=u\\cdot X=h_{K_z}(u)$. The finite roof construction applied to the exact sections $D_z$ gives the centroid support roof, equivalently the maximum of $\\sum_p\\lambda_p u\\cdot g_p$ over convex representations $z=\\sum_p\\lambda_p p$. It is finite and concave piecewise affine on the projected hull. Jensen using the same row's base mean gives $J_D\\ge0$. The integral of $v$ against the signed Jordan difference is the source minus target integral of the support difference, so the $h_K$ terms cancel and the response is $-J_D$. The $h_K$ cancellation also gives the trace identity under this martingale. Equality in the nonnegative row defects holds almost everywhere precisely when their integral is zero. For a row with equality, subtract the roof from a plane active at the source base. The affine barycenter shows the nonnegative gap has zero target mean, forcing support in that contact cell.\n",
+  "source_candidate_ids": [
+    "6a7efe79d654e5de"
+  ],
+  "source_candidate_sha256": {
+    "6a7efe79d654e5de": "d55c130210480ce7cbd9336940bee32d2e7df90268e78425d1e99e9bb4fa4174"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6a7efe79d654e5de",
+      "locator": "6a7efe79d654e5de:01 §1 (1)–(3), actual compatible path and speed"
+    },
+    {
+      "candidate_id": "6a7efe79d654e5de",
+      "locator": "6a7efe79d654e5de:02 §2 (4), conditional force and repair ledger"
+    },
+    {
+      "candidate_id": "6a7efe79d654e5de",
+      "locator": "6a7efe79d654e5de:03 §2 (5)–(7), marked surface Jensen defect"
+    }
+  ],
+  "statement": "Let $d\\ge1$ and $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$ be finite and nonempty. Let positive convex fibers $K_z\\subset\\mathbb R^d$ be the exact sampled fibers of their canonical hull $C$, and let $g_z$ be their volume centroids. Put $D=\\operatorname{conv}\\{(z,g_z):z\\in P\\}$ and $D_z=\\{X:(z,X)\\in D\\}$. For $0\\le t<1$ the fibers $K_z(t)=(1-t)K_z+tD_z$ are positive, nested and exact in their canonical hull. They contain $g_z+(1-t)(K_z-g_z)$. At a surface-almost-everywhere regular old point $X$ of outward unit normal $n_z$, their inward normal speed is $v_z(X)=h_{K_z}(n_z)-h_{D_z}(n_z)$. The first total volume loss is $\\sum_z\\int v_z\\,dS$. For a fixed ambient cap whose cuts are proper or strictly full or empty in every fiber, its first volume loss is $\\sum_z\\int \\mathbf1_{\\rm cap}v_z\\,dS$, with endpoint counting measure when $d=1$.\n\nLet $\\Xi_z$ be an integrable signed density on this old boundary. Put $F_z=\\int_{\\partial K_z}\\Xi_z n_z\\,dS$ and $R_z(u)=h_{D_z}(u)-u\\cdot g_z$. If $\\sum_z\\int_{\\partial K_z}\\Xi_z n_z\\cdot X\\,dS=0$, then\n$$\n\\sum_z\\int_{\\partial K_z}\\Xi_z v_z\\,dS\n=-\\sum_z g_z\\cdot F_z-\\sum_z\\int_{\\partial K_z}\\Xi_z R_z(n_z)\\,dS .\n$$\nIf the Jordan surface marginals $\\Xi_+dS$ and $\\Xi_-dS$ on the actual marked normal graph admit a full physical martingale preserving the normal, the response is exactly $-J_D\\le0$, where\n$$\nJ_D=\\int [h_{D_z}(u)-\\mathbb E(h_{D_{Z'}}(u)\\mid z,X,u)]\\,d(\\Xi_+dS)(z,X,u).\n$$\nEquality holds exactly when the roof Jensen defect vanishes in almost every positive row. For each such row, its output bases lie in a contact cell of an active affine upper plane of the centroid roof. The force formula and this sign give $\\sum_z\\int\\Xi_z R_z(n_z)\\,dS=J_D-\\sum_z g_z\\cdot F_z$.",
+  "subgoal_id": "pk-intake-actual-centroid-hull-contraction-and-surface-jensen-defect",
+  "title": "Actual centroid-hull contraction and its surface Jensen defect"
+}

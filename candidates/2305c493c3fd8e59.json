@@ -1,0 +1,26 @@
+{
+  "advances": "Conditional volume promotion for actual cap covers and chosen exclusive pieces. The estimate does not lower-bound exclusive volumes in terms of cap mass.",
+  "author": "PK-research-agent",
+  "candidate_id": "2305c493c3fd8e59",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.474296+00:00",
+  "depends_on": [],
+  "draft_key": "strict-mixed-cap-finite-family-volume-promotion",
+  "kind": "theorem",
+  "proof": "At any integer $z\\in Q$, choose coefficients attaining $f_I(z)$, which exist on the compact feasible coefficient polytope. The Minkowski combination of the $A_i$ is contained in the actual fiber of $D$ at $z$. Its lifted points are strictly outside every cap not indexed by $I$, by affine linearity of their margins. The open cover therefore puts the whole combination in the union of the caps indexed by $I$. Ordinary $d$-dimensional Brunn–Minkowski gives volume at least $f_I(z)^d$. In the same fiber the disjoint exclusive pieces with $z_i=z$ also lie in the union. These two lower bounds may overlap within that fiber, so use their maximum and sum it over distinct integer bases. The union's mass is at most the sum $|I|\\tau M$.\n\nFor two distinct same-parity bases, their integral midpoint differs from the endpoints. Take the two exclusive endpoint volumes and the midpoint combination with equal weights. For $k$ distinct bases of one parity with equal $V$, $f_I(z)^d=V$ on $Q$. Order the bases by a generic linear functional. Pair the smallest with each base, then the largest with all except the smallest, in the same increasing order. The resulting $2k-1$ sums have strictly increasing scores, so there are that many distinct integral midpoints in $Q$. Their total contribution is at least $(2k-1)V$.\n",
+  "source_candidate_ids": [
+    "b25c81940a686cf0"
+  ],
+  "source_candidate_sha256": {
+    "b25c81940a686cf0": "07ee375641e8baf1f7f73faf111426d43fc8b1d03671ecb8070277e6b5f6eb05"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b25c81940a686cf0",
+      "locator": "b25c81940a686cf0:05 Finite-family volume promotion (FVP), including (V) and same-parity corollary"
+    }
+  ],
+  "statement": "Let a compact convex set $D\\subset\\mathbb R^n\\times\\mathbb R^d$, $d\\ge1$, have positive raw mixed $d$-volume $M$. Suppose a finite collection of closed ambient halfspaces has common normalized mixed mass $\\tau$, and their open interiors cover the mixed trace of $D$. Fix a nonempty set $I$ of indices, and choose compact convex positive-volume pieces $A_i$ in the continuous fibers at integer bases $z_i$ for $i\\in I$. Each piece is strictly inside its own cap and strictly outside every other cap. Put $V_i=|A_i|$, $Q=\\operatorname{conv}\\{z_i:i\\in I\\}$ and\n$$\nf_I(z)=\\max\\left\\{\\sum_{i\\in I}\\lambda_i V_i^{1/d}:\\lambda_i\\ge0,\\ \\sum_i\\lambda_i=1,\\ \\sum_i\\lambda_i z_i=z\\right\\}.\n$$\nThen\n$$\n|I|\\tau M\\ge\\sum_{z\\in Q\\cap\\mathbb Z^n}\\max\\left(f_I(z)^d,\\ \\sum_{i\\in I:z_i=z}V_i\\right).\n$$\nFor two distinct same-parity bases $z_i,z_j$, this gives\n$$\n2\\tau M\\ge V_i+V_j+\\left(\\frac{V_i^{1/d}+V_j^{1/d}}2\\right)^d .\n$$\nFor $k$ distinct same-parity bases with equal exclusive volumes $V$, it gives $V\\le k\\tau M/(2k-1)$.",
+  "subgoal_id": "pk-intake-strict-mixed-cap-finite-family-volume-promotion",
+  "title": "Finite-family volume promotion with one count per integer fiber"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "Actual common closed cap in a one-base ambient simplex. Slicing and summing are done on the original integer bases.",
+  "author": "PK-research-agent",
+  "candidate_id": "5e90b25813cbab83",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.473480+00:00",
+  "depends_on": [],
+  "draft_key": "ambient-simplex-projective-product-caps",
+  "kind": "lemma",
+  "proof": "The two sums $\\sum_{i\\in I}\\delta_i\\lambda_i$ and $\\sum_{j\\in J}\\delta_j\\lambda_j$ agree at height $s$. Normalizing the summands in each group recovers $\\alpha,\\beta$ from a section point, and $\\sum_i\\lambda_i=1$ gives the common sum $1/L$. This proves the parametrization. Multiplying the affine cap inequality by the positive $L$ gives the stated linear condition.\n\nTo compute the slice measure, take positive coordinates $x_i$ in the full orthant, and set $S=\\sum_i x_i$ and $D=\\sum_i(h_i-s)x_i$. The change $x_i=S\\lambda_i$ has Jacobian $S^{m}$ for independent barycentrics, and $D=S(\\sum_i h_i\\lambda_i-s)$. Thus at $S=1,D=0$ the coordinate disintegration of $dx$ in $(S,D)$ is precisely the barycentric disintegration at height $s$. Mapping barycentrics to $C$ multiplies ordinary coordinate volume by $m!V$, and the coarea factor for the Euclidean first coordinate is one.\n\nIn the orthant first rescale each $x_i$ by $\\delta_i$. Write the rescaled coordinates as $u\\alpha$ on $I$ and $v\\beta$ on $J$, so $D=v-u$ and $S=u\\sum_{i\\in I}\\alpha_i/\\delta_i+v\\sum_{j\\in J}\\beta_j/\\delta_j$. The absolute Jacobian from $(u,v)$ to $(S,D)$ is $L$. The factor for the two radial substitutions is $u^{|I|-1}v^{|J|-1}$, and for the diagonal rescaling it is $(\\prod_i\\delta_i)^{-1}$. Evaluating at $S=1,D=0$ gives $u=v=1/L$, hence the resulting factor $L^{-(|I|+|J|-1)}=L^{-m}$. These are ordinary changes of variables with nonzero determinants, which give the disintegration identity by integrating against test functions of $(S,D)$. The resulting integrals are continuous at the evaluated level for a cap with nonzero continuous normal by dominated convergence, as the equality set of its affine constraint on the limiting slice is volume-null. For a vertical cap the entire slice is taken or excluded directly by the closed indicator. Thus the formula gives actual slice mass, including a vertical equality even if an a.e. disintegration does not specify it.\n\nFor interior knots and endpoints, the convex fibers converge in Hausdorff distance by compactness and convex interpolation from an interior height on the approached side. Their indicators converge almost everywhere, and for a nonvertical cut its boundary in the continuous coordinates has volume zero. Dominated convergence gives the asserted limits for its cut volume. For a vertical cut the closed base indicator gives the exact value. Finite summation gives the mixed cap mass.\n",
+  "source_candidate_ids": [
+    "56a670ccbde263ec"
+  ],
+  "source_candidate_sha256": {
+    "56a670ccbde263ec": "d2859959d217e53e6092a93491b3a5fe32454083a08d3d6e7c661f04217ad2ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "56a670ccbde263ec",
+      "locator": "56a670ccbde263ec:06 §5, (14)–(16), including the knot and vertical-cap rules"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R\\times\\mathbb R^d$ be a full-dimensional $(d+1)$-simplex of ambient volume $V$, $d\\ge1$, $m=d+1$, with vertex heights $h_i$. At an interior non-knot height $s$ let $I=\\{i:h_i<s\\}$, $J=\\{j:h_j>s\\}$, $\\delta_i=|h_i-s|$. For $\\alpha\\in\\Delta_{|I|-1}$ and $\\beta\\in\\Delta_{|J|-1}$ write $L=\\sum_{i\\in I}\\alpha_i/\\delta_i+\\sum_{j\\in J}\\beta_j/\\delta_j$. The section is parametrized in barycentrics by $\\lambda_i=\\alpha_i/(\\delta_i L)$ for $i\\in I$ and $\\lambda_j=\\beta_j/(\\delta_j L)$ for $j\\in J$. For an ambient affine functional with vertex values $a_i$, the $d$-volume of its closed upper cap at threshold $b$ on this section is\n$$\n\\frac{m!V}{\\prod_i\\delta_i}\n\\int_{\\Delta_{|I|-1}\\times\\Delta_{|J|-1}}\n\\mathbf 1\\!\\left\\{\\sum_{i\\in I}\\frac{(a_i-b)\\alpha_i}{\\delta_i}\n+\\sum_{j\\in J}\\frac{(a_j-b)\\beta_j}{\\delta_j}\\ge0\\right\\} L^{-m}\\,d\\alpha\\,d\\beta .\n$$\nThe simplex measures here are coordinate Lebesgue measures of total masses $1/(|I|-1)!$ and $1/(|J|-1)!$, with mass one in dimension zero. Dropping the indicator gives the whole slice volume $w(s)$. For nonvertical caps use continuous limits at interior knots and inward limits at endpoints. For vertical caps use $w(s)$ times the exact closed base indicator, including at knots and endpoints. The sum over the original integer heights is the raw mixed mass.",
+  "subgoal_id": "pk-intake-ambient-simplex-projective-product-caps",
+  "title": "A projective product integral for arbitrary simplex cap slices"
+}

@@ -1,0 +1,28 @@
+{
+  "advances": "Actual unnormalized d-volume at every real height with one integer base coordinate. The ordinary tail integral by itself gives no closed endpoint convention.",
+  "author": "PK-research-agent",
+  "candidate_id": "64b0230d257f9b96",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:48:33.473201+00:00",
+  "depends_on": [
+    "53fe12b742a7608d"
+  ],
+  "draft_key": "ambient-simplex-closed-knot-slices",
+  "kind": "lemma",
+  "proof": "The accepted scalar tail formula in 53fe12b742a7608d applies to uniform barycentrics on an $m$-simplex. Normalize the nonconstant heights by subtracting their minimum and dividing by their range. Under this affine rescaling the factor from the power $m$ cancels the order-$m$ divided-difference scaling. The actual upper tail of the height of a point uniform on $C$ is thus $[h_0,\\ldots,h_m](t-s)_+^m$. It also equals $V^{-1}\\int_s^\\infty w(u)\\,du$ by Fubini in the first Euclidean coordinate. Away from the height knots, differentiation in $s$ gives the formula, also at coincident nodes by applying the confluent evaluation to the differentiated power. The expression for distinct knots is the standard coefficient formula for the divided difference.\n\nThe fibers converge in Hausdorff distance as $s$ tends to an interior height from either side, or to an extreme height from inside. Compactness gives upper containment in any neighborhood of the limiting fiber. For lower containment, interpolate that limiting fiber with a fixed point of $C$ at a height on the approached side, with the interpolation coefficient tending to zero. Volumes of compact convex sets are continuous under this convergence, including zero-volume limits. This gives the actual continuous interior and inward endpoint values. An endpoint fiber is the face spanned by its $k$ extreme-height vertices, of dimension $k-1$, and so has positive $d$-volume precisely for $k=m$. Fubini gives the asserted integral.\n",
+  "source_candidate_ids": [
+    "56a670ccbde263ec"
+  ],
+  "source_candidate_sha256": {
+    "56a670ccbde263ec": "d2859959d217e53e6092a93491b3a5fe32454083a08d3d6e7c661f04217ad2ae"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "56a670ccbde263ec",
+      "locator": "56a670ccbde263ec:03 §2, (6)–(9) and Closed endpoint fibers and repeated knots"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R\\times\\mathbb R^d$ be a full-dimensional $(d+1)$-simplex with $d\\ge1$, $m=d+1$, ambient volume $V$, and vertex heights $h_0,\\ldots,h_m$. Write $w(s)=\\operatorname{vol}_d(C_s)$ for its actual closed height-$s$ slice. For $\\min_i h_i<s<\\max_i h_i$,\n$$\nw(s)=Vm[h_0,\\ldots,h_m](t-s)_+^{m-1}.\n$$\nThe divided difference is in $t$, with confluent values at repeated knots and the continuous slice limit at interior knots. For distinct heights the divided difference equals $\\sum_i(h_i-s)_+^{m-1}/\\prod_{j\\ne i}(h_i-h_j)$. Off the height interval $w=0$. At each extreme height use the inward limit, which equals the actual closed endpoint volume and is positive precisely when $m$ vertices have that height. Also $\\int_{\\mathbb R}w(s)\\,ds=V$.",
+  "subgoal_id": "pk-intake-ambient-simplex-closed-knot-slices",
+  "title": "Divided-difference slice volumes of an ambient simplex"
+}

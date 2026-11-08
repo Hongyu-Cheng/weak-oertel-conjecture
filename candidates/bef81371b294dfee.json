@@ -1,0 +1,28 @@
+{
+  "advances": "Fixed common vertical addend or erosion in a three-site planar example.",
+  "author": "PK-research-agent",
+  "candidate_id": "bef81371b294dfee",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:45:38.284270+00:00",
+  "depends_on": [
+    "c680a307d3f26cec"
+  ],
+  "draft_key": "common-parallel-interval-depth-dip",
+  "kind": "counterexample",
+  "proof": "The real fiber over $z\\in[-1,1]$ is $[0,5-4|z|]$. The zero-base Minkowski addend changes each interval to $[-t,5-4|z|+t]$. For negative $t$ in the stated range the erosion gives the same formula, since containing the vertical segment is equivalent to both endpoint inequalities in that same real fiber. The projection remains $[-1,1]$ and there are exactly three nonempty sampled sites. Translating height by $t$ gives endpoint intervals $[0,a]$ of equal length $a=1+2t$ and middle interval $[0,b]$ with $b=5+2t$. For $t>-1/2$, subtract $a/2$ from the heights to apply the accepted three-interval formula with endpoint lengths $a,a$, middle width $b$ and shift $(b-a)/2$. Its compatibility condition is $b\\ge a$, which holds here. Its thresholds are $0$ and $a$, so the nontrivial seam occurs at $(b-a)/2=a$, or $t=1/2$. Undoing the translations gives the claimed centers and masses divided by $b+2a=7+6t$. At $t=-1/2$ the extreme fibers are exposed zero-length points of depth zero and the middle interval has length $4$ and normalized maximum $1/2$ at its midpoint. The ambient body has positive area. The values at $0,1/2,3$ are $3/7,2/5,23/50$, with the middle strictly below both others.\n",
+  "source_candidate_ids": [
+    "121d9e12ac57cde9"
+  ],
+  "source_candidate_sha256": {
+    "121d9e12ac57cde9": "2302fd88ffbc2743af146cf11b9f286870e60c79fcb692b9b4afe93e63f1aa04"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "121d9e12ac57cde9",
+      "locator": "121d9e12ac57cde9:02 §§3–4 (7)–(9), outer addition and inner erosion"
+    }
+  ],
+  "statement": "Let $C_0$ be the lifted convex hull of the intervals $[0,1],[0,5],[0,1]$ at $-1,0,1$, and $L=[-1,1]$. For $t\\ge0$ let $C_t=C_0+(\\{0\\}\\times tL)$. For $-1/2\\le t<0$ let $C_t=\\{w:w+(\\{0\\}\\times(-t)L)\\subset C_0\\}$. The maximum normalized mixed length depth is\n$$\n\\begin{cases}\n(3+2t)/(7+6t),&-1/2\\le t\\le1/2,\\\\\n(5+6t)/[2(7+6t)],&t\\ge1/2.\n\\end{cases}\n$$\nThe unique deepest points on the respective branches are $(0,2-t)$ and $(0,3/2)$. In particular the actual optimized depth on $[0,3]$ is neither quasiconcave nor monotone in either direction, despite fixed sampled sites, fixed individual fiber centers and positive fiber lengths on this interval.",
+  "subgoal_id": "pk-intake-common-parallel-interval-depth-dip",
+  "title": "A depth dip under a common parallel interval addition"
+}

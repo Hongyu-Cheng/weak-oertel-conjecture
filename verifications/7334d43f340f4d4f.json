@@ -1,0 +1,81 @@
+{
+  "candidate_id": "9f4d1055c42b264d",
+  "candidate_sha256": "bd338abef4374e181bfd7c52f8bfcbb1c457039ef3615fc4fda0d46d01b4ffb5",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+    "8bdcdcd6e2fa69d9": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+    "d2ba4e3cbd6eb730": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0"
+  },
+  "checks": [
+    "Checked 45ebdc1c31203276 in full. Its vertices are indexed from zero; the frozen candidate indexes them from one. The row, margins, cap orientation, and centroid are identical under that shift.",
+    "Recomputed the rational cap value and first and second signed derivatives independently from the raw geometric formula P=p(α+δ)+q²/[(q+r)(q+s)]. Rational simplification also recovers the divided difference displayed in the draft.",
+    "Verified P=331/1404, coarea sum 3·61/1404, all four stated centroid fractions, the 73/3294 and 25/4758 strict comparisons to 1/3, and t·F′(t)=3F(t). All four heights are positive, t lies strictly between the extreme heights, and its cap has the indicated two positive and two negative margins.",
+    "The stationary tangent to the concave CDF cube root has zero intercept. Its supporting inequality on the support extends above the last height because the CDF is then one and the line increases. Positive-row threshold uniqueness applies.",
+    "Recomputed all three entries and the determinant of Q exactly. Its first diagonal and determinant are strictly positive. Checked g·C=0, HC=−g, and that the two disjoint-pair tangent vectors together with C span the three-dimensional tangent space.",
+    "Checked the rescaled threshold-one Schur formula independently by exact rank three, the three alternating leading principal minors, and the kernel equation on x/t. The Schur square vanishes along the cap-radial direction only for shift −a when the tangent component is aĈ, giving the stated row-radial line."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+      "fact_id": "1462fa9ce6ced54e",
+      "fact_sha256": "90c54522176a9bd2392576c6f61a0ae6c5f7dfca357cf8869ae656c987ddcda1",
+      "hypotheses": "The strict raw cap (1,5,−5,−8) has a 2+2 split with all heights distinct. The fact gives its normalized volume formula and the equality of its signed derivative divided by the coarea sum with the actual section centroid.",
+      "reviewed_proof_sha256": "8de3c29eaf4b9ea31778296cf6c19010b1e74d947e37a33c223e812e662b921a",
+      "reviewed_statement_sha256": "bca7b2d2230b274880856fcf4ccd9e8239bbbebad59eed011d4c53736003028c"
+    },
+    {
+      "candidate_sha256": "4188deba1c7530b26e195ccba1e8027f9981f9176cf4db9f32d0da20833924f0",
+      "fact_id": "d2ba4e3cbd6eb730",
+      "fact_sha256": "1ea56df969a8d887e9e78ed86174eee2934f79a095ee0f54bf7fb9255fd58f61",
+      "hypotheses": "The row is strictly positive and nonconstant in dimension three. Its ratio has a unique minimizing threshold, and the supporting-line calculation identifies the proper threshold.",
+      "reviewed_proof_sha256": "6c53722e3b270e7bc5dd07e49b0282d404df90eef26a0018444cb6c183d3e1b6",
+      "reviewed_statement_sha256": "38090785ca436e98b85d6f7a04d928c03cc8991d9108b643dba5a0ed38c8d2cc"
+    },
+    {
+      "candidate_sha256": "6758c4ded433cbf7da07b2ba7f7575ac9a61c50ba0a90703d058f1986fad1b86",
+      "fact_id": "8bdcdcd6e2fa69d9",
+      "fact_sha256": "b6b826a3e6a8e77bf027fc6db3d5a210aaf645644d9a18b27289fbad6ebab319",
+      "hypotheses": "After division by the verified positive minimizing threshold, this is a strictly positive proper minimizing row. Apply the threshold-one Schur square on the tangent space with positive constants K and B.",
+      "reviewed_proof_sha256": "3f10992a46b97286bfba42b813249fa659b3504118defeeae9510650608b52f7",
+      "reviewed_statement_sha256": "deba3f575be9d9f26f3af97154bc46e151f89c2cdb0be8bb5cb80bcbb484e157"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:47:12Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Gives the general optimized Hessian identity for any strictly positive row with a proper threshold. The example certifies a new strict inertia and centroid combination by exact signed-height arithmetic.",
+      "fact_id": "8bdcdcd6e2fa69d9"
+    },
+    {
+      "comparison": "Computes optimized inertia for two repeated pairs of heights. The frozen row has four distinct heights and its actual cap centroid has one noncentral coordinate.",
+      "fact_id": "1f0ffae097710a37"
+    },
+    {
+      "comparison": "The negative Hessian rows in its explicit balanced saddle family have two equal raw negative margins and a common centroid with two coordinates above 1/3. The new example has one such coordinate and different data.",
+      "fact_id": "2cc402f30700bdef"
+    }
+  ],
+  "readability": "The positive restriction is the cap-probability Hessian on the tangent space. The optimized-capacity form has the opposite sign after the nonnegative threshold square is included.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold proof read, original-source comparison, and accepted-predecessor hypothesis and exact-byte checks.",
+  "reviewed_proof_sha256": "8e8ba016f254fad49b12c757141f5c82f87fd12bc20ffa8d7fe18d98987145b5",
+  "reviewed_statement_sha256": "78743d67f7fa8bf2918034676c6cbca7882dc4165fa50c5ebe5adffd4b55e550",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_bindings": [
+    {
+      "candidate_id": "45ebdc1c31203276",
+      "candidate_sha256": "4e3362dade9c94663a26c69a5bb947c0e66572c1ec5beb3bf141e806302d3afa",
+      "locator": "45ebdc1c31203276:01 Entire note, exact proper cap and optimized-capacity Hessian"
+    }
+  ],
+  "started_utc": "2026-11-08T16:43:14Z",
+  "summary": "The explicit positive row has the stated unique proper threshold, exactly one noncentral centroid coordinate, and three negative optimized-capacity directions with the remaining direction radial.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

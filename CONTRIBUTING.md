@@ -4,7 +4,7 @@ Use a branch and pull request for a new result, a correction, or a change to the
 
 ## New results
 
-1. State the hypotheses, conclusion, and relation to the problem in `problem_statement.md`. Give the full proof and list every accepted predecessor in `depends_on`. A counterexample must say exactly which intermediate assertion it refutes.
+1. Use the [submission template](SUBMISSION_TEMPLATE.md) to state the hypotheses, conclusion, and relation to the locked [problem](problem_statement.md). Give the full proof and list every accepted predecessor in `depends_on`. A counterexample must say exactly which intermediate assertion it refutes.
 2. Add a uniquely named JSON file under `candidates/` and its entry in `state.json`, initially with status `pending`. Follow an existing candidate's fields. Use a fresh 16-character hexadecimal ID and keep it stable.
 3. Have a separate reviewer examine the proof and the applicability of its predecessors. Record the verdict, gaps, and reviewer corrections under `verifications/` with a fresh run ID, then add the run to the ledger. Identify the review method honestly; model approval is `LLM-verified`.
 4. Only an approved candidate can enter `facts/`. Add the fact file and matching ledger entry, link its approving run, and update the candidate status. Rejected and pending work remains outside `facts/`.
@@ -20,4 +20,4 @@ The checker validates the graph's records and links; it does not verify mathemat
 
 ## Composite research submissions
 
-A pending `research-note` may collect scoped claims and proposed arguments before atomic normalization. The PK November 6 batch uses this category, with explicit [intake conventions](assets/pk-nov6/README.md). Such a note cannot enter `facts/` as a reviewed theorem: first extract a precise claim, close its dependencies, and follow the review steps above. Historical mathematical comments are context, never approving verifier runs.
+A pending `research-note` may collect scoped claims and proposed arguments before atomic normalization. The PK November 6 batch uses this category, with explicit [intake conventions](assets/pk-nov6/README.md). Extract precise claims, close their dependencies, and review them individually. Preserve the source note and record the disposition of each claim in the [intake crosswalk](assets/pk-nov6/CROSSWALK.md). Historical mathematical comments provide context. Admission requires a review of the normalized statement and proof.

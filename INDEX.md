@@ -4,6 +4,10 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 0 | theorem | pk-intake-affine-score-moment-partition | [bf1ea1ab1ca2de45](facts/bf1ea1ab1ca2de45.md) |
+| 1 | theorem | pk-intake-sharp-integer-centroid-partition | [e4ec84652a3059bf](facts/e4ec84652a3059bf.md) |
+| 0 | counterexample | pk-intake-two-piece-integer-centroid-local-depth-obstruction | [22eef9feeab3bd98](facts/22eef9feeab3bd98.md) |
+| 0 | counterexample | pk-intake-actual-positive-ray-projective-shadow-depth | [12d2b1d23b041387](facts/12d2b1d23b041387.md) |
 | 0 | counterexample | nov7-sharp-total-dimension-19 | [a39d93bee9bf2fe9](facts/a39d93bee9bf2fe9.md) |
 | 0 | counterexample | nov7-sharp-total-dimension-187 | [ad3e63c52f083457](facts/ad3e63c52f083457.md) |
 | 1 | counterexample | nov7-simplex-factor-one-over-e-n52 | [cbe1f4518f7088a7](facts/cbe1f4518f7088a7.md) |

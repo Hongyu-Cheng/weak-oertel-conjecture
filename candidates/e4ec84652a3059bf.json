@@ -1,0 +1,34 @@
+{
+  "advances": "Bounds the number of positive convex cells, not the number of source fibers within a cell. It gives no lower bound on mixed centroid depth or assertion of a recursive single-cut partition.",
+  "author": "PK-research-agent",
+  "candidate_id": "e4ec84652a3059bf",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T05:39:48.600571+00:00",
+  "depends_on": [
+    "bf1ea1ab1ca2de45"
+  ],
+  "draft_key": "sharp-integer-centroid-partition",
+  "kind": "theorem",
+  "proof": "Let $K_z=\\{x:(z,x)\\in C\\}$, $w_z=\\mathcal H_q(K_z)$, and $P=\\{z\\in\\mathbb Z^n:w_z>0\\}$. As in the affine-score realization theorem, $P$ is finite and nonempty, and its fibers have dimension $q$. Also $P=\\operatorname{conv}(P)\\cap\\mathbb Z^n$. Indeed, for an integral convex combination $j=\\sum_a\\lambda_a z_a$ of members of $P$, use positive coefficients and fix $x_a\\in K_{z_a}$ for $a\\ge2$. Then $\\lambda_1K_{z_1}+\\sum_{a\\ge2}\\lambda_a x_a\\subseteq K_j$ by convexity, so $K_j$ has positive $\\mathcal H_q$ measure. No common direction space of the fibers is needed.\n\nFor completeness, the finite compression works for any such complete $P$ and any positive weights. Over nonnegative arrays $(c_{jz})_{j,z\\in P}$ satisfying\n$$\n\\sum_{j\\in P}c_{jz}=w_z\\quad(z\\in P),\\qquad\n\\sum_{z\\in P}(z-j)c_{jz}=0\\quad(j\\in P),\n$$\nminimize $\\sum_{j\\in P}\\|j\\|^2t_j$, where $t_j=\\sum_{z\\in P}c_{jz}$. The diagonal array is feasible and every entry is bounded by its column mass, so a minimizer exists on this compact set. Let $V=\\{j:t_j>0\\}$ at a minimizer. Suppose that $j=\\sum_a\\lambda_a j_a$ is integral for distinct $j_a\\in V$, at least two of them, with all $\\lambda_a>0$ and $\\sum_a\\lambda_a=1$. Completeness puts $j$ in $P$. For $0<\\varepsilon\\le\\min_a t_{j_a}/\\lambda_a$, remove from each row $j_a$ the subrow with entries $\\varepsilon\\lambda_a c_{j_a z}/t_{j_a}$ and add their sum to row $j$. Each removed subrow has the base mean of its original row, so subtraction preserves that row's moment identity. The sum of the removed subrows has mass $\\varepsilon$ and first moment $\\varepsilon j$, so addition preserves the receiving row's identity. All column sums and nonnegativity are preserved, also if $j$ was one of the contributing rows. The decrease in objective is\n$$\n\\varepsilon\\left(\\sum_a\\lambda_a\\|j_a\\|^2-\\|j\\|^2\\right)\n=\\varepsilon\\sum_a\\lambda_a\\|j_a-j\\|^2>0,\n$$\na contradiction. Hence there is no extra lattice point in $\\operatorname{conv}(V)$ and no nonvertex in $V$, since either would have a nontrivial convex representation of the excluded kind. Distinct elements of $V$ cannot have the same coordinatewise parity, since their midpoint would be integral. Thus $|V|\\le 2^n$.\n\nThe positive rows, indexed only by $V$, give feasible labeled mass and base moments $(t_j,t_j j)$ for the affine-score realization theorem, using $s_{jz}=c_{jz}$. Apply that theorem with $k=|V|$ and any allowed vectors $u_j$. The resulting $k$ positive cells cover $C$ and have null mixed overlaps, so all mixed mass is exhausted. Each centroid belongs to its own mixed piece and has base $j\\in V$.\n\nFor sharpness take $C=[0,1]^n\\times K$ with $K\\subseteq\\mathbb R^d$ a convex body. Each of the $2^n$ binary base vertices carries positive mass. A positive class with integral base mean has that mean in $\\{0,1\\}^n$, and a random variable in $\\{0,1\\}$ with expectation zero or one equals its expectation almost surely. Applying this to each coordinate shows that the class uses mass from only one binary base. Consequently exhausting all the mass takes at least $2^n$ positive classes, even for a fractional allocation.\n",
+  "source_candidate_ids": [
+    "7e12497595d939f1",
+    "edf02845b3275e8c"
+  ],
+  "source_candidate_sha256": {
+    "7e12497595d939f1": "af1fe511f50fcc7afb405afe797773a1fc76f609a8ac3b12043c1ba6a8e031aa",
+    "edf02845b3275e8c": "72d64e643d365aceef867146b61a6bd30b0bf2beec0d2e7d902e3b8374b4b337"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "edf02845b3275e8c",
+      "locator": "§6"
+    },
+    {
+      "candidate_id": "7e12497595d939f1",
+      "locator": "§§1–3 (finite allocation, intrinsic support, binary sharpness)"
+    }
+  ],
+  "statement": "Let $n,d$ be positive integers and let $C\\subseteq\\mathbb R^n\\times\\mathbb R^d$ be a compact convex body. Write $\\Lambda=\\mathbb Z^n\\times\\mathbb R^d$, $S=C\\cap\\Lambda$, and assume $q=\\dim_{\\mathrm H}S\\ge1$. Then $C$ is the union of $k\\le2^n$ closed affine-score winner cells that are ambient convex bodies, each cut from $C$ by at most $k-1$ closed halfspaces. Every mixed piece $D_i\\cap\\Lambda$ has dimension $q$ and positive $\\mathcal H_q$ measure. Distinct mixed pieces overlap in $\\mathcal H_q$-null sets. The actual centroid of $\\mathcal H_q|_{D_i\\cap\\Lambda}$ belongs to $D_i\\cap\\Lambda$, and the distinct centroid bases are exactly the vertices and all the lattice points of their convex hull. In particular $\\sum_i\\mathcal H_q(D_i\\cap\\Lambda)=\\mathcal H_q(S)$.\n\nThe universal count $2^n$ is sharp already for $q=d$, even if fractional splitting of the mixed measure is allowed instead of convex cells.",
+  "subgoal_id": "pk-intake-sharp-integer-centroid-partition",
+  "title": "Sharp $2^n$ bound for convex partitions with integer-base centroids"
+}

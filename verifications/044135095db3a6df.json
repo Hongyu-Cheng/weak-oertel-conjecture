@@ -1,0 +1,51 @@
+{
+  "candidate_id": "e38bbe8abb5ab718",
+  "candidate_sha256": "775fcadef1361da1c547942aa4b913c3057d4fdc2c0cf2524e1329627d181923",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "Since A≥0 and m>0, q=floor(A/m) and u=A−qm satisfy the stated unique division with q≥0 and 0≤u<m. The proposed finite allocation stays within every cap and has mass A. When q=0 there are no full sites; when u=0 the cutoff site has zero mass. With A=0 both allocations are identically zero.",
+    "The substitution j=h−i is bijective for every integer h. Equal total masses justify subtraction of q from the coefficient in the finite comparison. Before q the comparison value is at capacity so (j−q)(v_j−b_j)≥0; after q it is zero so the same product is nonnegative; at q the coefficient vanishes. This proves the distance-moment minimum, attained by the displayed allocation.",
+    "Independently expanding A=qm+u gives A²−mA+u(m−u)=m²q(q−1)+2mqu. Thus the claimed correction to the upper bound on the first moment has the minus sign. Converting back gives hA minus the distance moment. Independently enumerated 234 mass/capacity/support-size combinations for integer mass units (caps 1–4, consecutive supports of size 1–6), including fractional multiples of a full cap and exact multiples; the sharp values and the cleared-denominator identity matched.",
+    "Verified both cited source byte hashes against base 27bf01c and checked locators: 3c669076dab13e6a §1 (6) gives the one-sided packing bound with its remainder; ad8324f468564d7c §3 (4) explicitly records the filled-site value and remainder. The frozen proof directly supplies the cutoff comparison behind those source arguments."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T06:57:11Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "This fixed-mass, fixed-first-moment result gives linear cost optimality under finite site capacities. It treats the first moment as a constraint, so it does not supply the largest feasible first moment for a prescribed mass or its exact integer remainder.",
+      "fact_id": "81238d80ed62466f"
+    },
+    {
+      "comparison": "The continuous bathtub calculation maximizes a directional moment under a density cap. Filling whole unit intervals can recover the weaker quadratic bound from its continuous counterpart, but the continuous formula has no discrete fractional remainder.",
+      "fact_id": "6769574fc1bd9f8d"
+    },
+    {
+      "comparison": "Its continuous interval first-moment calculation likewise has no uniform integer site constraint and no exact discrete remainder.",
+      "fact_id": "6dc97cdb5ee6c6e2"
+    },
+    {
+      "candidate_id": "ad8324f468564d7c",
+      "comparison": "Pending source §3 already contains the same exact scalar extremum within a separate d=1 tail argument; it is not an accepted fact."
+    },
+    {
+      "candidate_id": "3c669076dab13e6a",
+      "comparison": "Pending source §1 includes the same packing calculation inside an all-degree tail argument; it is not an accepted fact."
+    }
+  ],
+  "readability": "The full-site range is naturally empty for q=0. The first moment is the finite sum of i a_i.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bea9556299c102cd85fc618c9a70e5c04050c688f1dbab0d452c674e8258e3cb",
+  "reviewed_statement_sha256": "d835a422cecee434f4c18b4c3343b36be73a79bd4d16b315febcf8feca564ceb",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:55:50Z",
+  "summary": "The cutoff comparison proves the exact extremum for a uniform cap on the integer half-line, including the positive fractional remainder and the empty or exactly full cases.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

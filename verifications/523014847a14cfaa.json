@@ -1,0 +1,37 @@
+{
+  "candidate_id": "3919a4dbe7ace166",
+  "candidate_sha256": "79174b3ef5c6911f4a741f855824553827e7be073a637b941f8855d6c505f33d",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The domain of the extended convex inverse power meets each positive ray in an interval. If its weighted integral is one, the interval has positive length and the cumulative mass is continuously differentiable with strictly positive derivative on its radial interior. The quantile derivatives therefore apply throughout 0<v<1; endpoint values carry no radial mass.",
+    "Verified independently a+b=1, aR+bS=T, and Tx=aRx₁+bSx₂. Hölder with exponents p+1 and (p+1)/p gives the stated bound on the (p+1)st power. Differentiation gives T′=T²(λR′/R²+(1−λ)S′/S²)=T(a/(Rᵖf₁)+b/(Sᵖf₂)). Multiplying the resulting inverse-power bound by Tᵖ⁻¹T′ gives at least one. Integrating first on compact quantile intervals is valid; the entire image need not cover the ray, and a positive starting radius causes no lost lower bound.",
+    "The substitution s=ct gives the exponent −p and hence the contraction factor Iₚ(x)⁻¹/ᵖ from the radial level-one point. The two positive contraction factors reweight the convex combination as stated; any zero point or combination equal to zero is covered by inclusion of zero and star-shapedness. On a zero-integral ray the gauge is infinite because no positive dilation of Uₚ contains a nonzero point of that ray.",
+    "For support in the ball of radius L and f≤M, Iₚ(ω)≤MLᵖ/p on every unit direction. Near a nonzero x the norms are bounded below and yield a common finite radial interval and integrable majorant. Reverse Fatou gives the stated upper semicontinuity; near a unit direction of zero mass, the radial extents Iₚ(ω)¹/ᵖ tend to zero. A support-face segment is counted pointwise, even when its ambient measure is zero. These facts give compactness without assuming the origin lies in the support. Positivity near zero yields a uniform positive density on a smaller ball by continuity of the finite convex inverse power, hence positive uniform radial extent.",
+    "Checked the pending source f9c635ce5abe9f17, §1 (2)–(4), at 27bf01c and matched its declared byte hash. It gives the same arbitrary-origin construction, endpoint conventions, Hölder estimate and compactness.",
+    "Checked the primary publications. Bobkov, Remark 2.6 (https://www-users.cse.umn.edu/~bobko001/papers/2010_PTRF_Norms.pdf), explicitly permits an extended gauge after removing symmetry; the density exponent κₙ=−1/(p+1) gives the limiting allowed radial degree in the remark's parameter range. Cordero-Erausquin, Fradelizi, Paouris and Pivovarov, Theorem 3.1 (https://perso.math.u-pem.fr/fradelizi.matthieu/pdf/cfpp-published.pdf), gives the same radial exponent and uses the convex perspective and functional Brunn principle. The latter theorem writes its gauge with a finite-valued codomain, so it is cited as mathematical background; the candidate's direct proof establishes compactness and pointwise face and zero-ray conventions independently."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T06:59:15Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "candidate_id": "f9c635ce5abe9f17",
+      "comparison": "The pending note's §1 is the exact source. No accepted graph fact at 27bf01c was found that constructs the convex extended gauge from these radial integrals for an arbitrary origin."
+    }
+  ],
+  "readability": "The radial interior is the open positive-length part of a ray interval, whether the origin is outside, on the boundary, or inside the support. The phrase zero limiting radial extent concerns directions tending to a direction with Iₚ=0.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "2488638a77a744fcb4c012ef10616ec1e3c0df4fbee4ba72d2435249e2475008",
+  "reviewed_statement_sha256": "590950529760b1b9025ee8c06c6da6d68621c244baa9628591e691b7acf1921c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:58:08Z",
+  "summary": "The direct quantile argument proves the claimed compact convex radial set and extended gauge, even for rays that enter the support at a positive radius or never carry positive radial mass.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

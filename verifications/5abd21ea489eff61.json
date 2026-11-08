@@ -1,0 +1,55 @@
+{
+  "candidate_id": "37a5fc541beb1708",
+  "candidate_sha256": "0ee7822e32393548ba347f2570e6d861d22570af8645b92e7b4628fca8d30482",
+  "checked_dependency_candidate_sha256": {
+    "6769574fc1bd9f8d": "3472b2e83fb7fcacbdf74aab18cc0940d0045bbfaf8bebb2eeabd1895edbf86a",
+    "75a1d57b1e81fdab": "2279c0b3f742bde6beb8744f371e24e4caddc8585afbd1cea5af82d78656fa50"
+  },
+  "checks": [
+    "Fradelizi–Guédon (2004), §2 and Theorems 1–2, checked in the author's full text at https://www.researchgate.net/publication/220452814_The_Extreme_Points_of_Subsets_of_s_-Concave_Probabilities_and_a_Geometric_Localization_Theorem. The interval is compact convex, σ=1/d≤1/2, the constraint uses the continuous test x with integral ≥0, and the sum of closed-tail probabilities is real, affine and weakly upper semicontinuous on all probabilities on that interval. The theorem gives an actual feasible maximizer. For support dimension one, §2 gives density exponent (1−σ)/σ=d−1. Testing all centered affine-power segment laws covers the extremizers satisfying the additional moment condition.",
+    "The admissible Dirac lies at x≥0, so at most one lower tail counts it for s>0. Centered uniform intervals have sum exactly one by nonatomic symmetry. Γ_d<1/2 for d≥2 follows by expanding (1+1/d)^d, so both cases are strict.",
+    "A nonconstant increasing affine root can be positively rescaled to [r,1] with r∈[0,1), and the fixed shift becomes h=as>0. The midpoint bound gives 1−m≤m−r. The CDF sum strictly increases in the interior of [0,1−m], is nonincreasing until m−r, and equals one thereafter, including the endpoints with no atoms. The maximum is 1+G(2m−1).",
+    "For d=3 the stated numerator equals (1−r)P(r), checked by exact substitution at ten distinct integers for an identity of degree at most nine. P(r)>0 for every r≥0 by its coefficients. The rational identities 1−2Γ_3=5/32 and 1−2Γ_4−1/6=53/3750 were checked exactly. For d≥4 the endpoint predecessor gives the uniform 1/6 upper bound and monotonicity of Γ_d.",
+    "For a decreasing law, reflection gives 2−H(h) by nonatomicity. The convex frustum is full-dimensional, its sectional volume is t^(d−1)|L|, and its first-coordinate centroid is m. The full-volume centroid bound gives H(0)=2G(m)≥2Γ_d. Strict increase gives H(h)>2Γ_d on 0<h≤1−m, and the other branches give H(h)≥1>2Γ_d, including arbitrarily large shifts.",
+    "Because the strict bound holds for the actual maximizer at the chosen interval and shift, it applies to the original feasible law. The original law has no atoms at either cut, making complementary tails exact. A nonzero projection of normalized convex-body volume has no hyperplane atoms and is 1/d-concave by Brunn–Minkowski on positive-volume compact preimages. The sign change s↦−s only permutes the two cuts.",
+    "The d=2 example is the indicated triangle's normalized first-coordinate law, with E[T]=2/3. At h=1/3 the upper-tail probabilities are 0 and 1−(1/3)^2=8/9=2Γ_2 exactly. For d=1 the centered uniform interval has paired sum 1=2Γ_1 for every shift.",
+    "Pinned source d494e7e71949ac0b has SHA-256 4f19c730c1007d827c9e7fd91fe9befb4404da7a1998bcf6ff1750bbde1206ac at base 27bf01c. Theorem (E), §§1–4 and the dimension discussion at the end of §7 match the proof and scope."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "fact_id": "75a1d57b1e81fdab",
+      "mapping": "Exactly the rescaled increasing affine-power law with integer d≥3 and 0≤r<1. The endpoint inclusion, dimension-three factorization, and d≥4 bounds in the proof supply all invoked comparisons."
+    },
+    {
+      "fact_id": "6769574fc1bd9f8d",
+      "mapping": "For the d-dimensional frustum, choose m in that fact to equal its total volume. The density identically one is admissible, and the lower halfspace through its centroid is one of the closed halfspaces covered."
+    }
+  ],
+  "finished_utc": "2026-11-08T06:58:49Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted statement proves the same paired-tail estimate with ≥ for centered 1/d-concave laws and ordinary centroid projections. The proof shares localization and the same extremal family. Strictness for d≥3 at each nonzero shift is an additional conclusion, requiring the strict endpoint gap and strict increase away from h=0 in the reflected branch.",
+      "fact_id": "6a7d56e450b3126f"
+    },
+    {
+      "comparison": "The affine-power endpoint estimate and its strict margins follow from this fact's proof on the single segment family. The strict conclusion on all centered scalar laws additionally requires controlling reflected, constant and Dirac candidates and applying attained localization.",
+      "fact_id": "75a1d57b1e81fdab"
+    }
+  ],
+  "readability": "The localization PDF link in the candidate timed out in the browser. The author's full text and Springer record for DOI 10.1007/s00454-003-2868-y verified the citation. The proof's own h>0 requirement applies to the reflected branch, where the zero-shift equality can persist.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "dae9106c4ce8ed1d310335b29eeb9bef4389956a886a4ed82eadd3fdf6755ff4",
+  "reviewed_statement_sha256": "e86327eec7a1abcba65fe21dfebae09de5b752a4bdd07db84b0abefd098b52eb",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T06:56:25Z",
+  "summary": "Attained one-constraint localization reduces each fixed nonzero shift to the listed extremal laws. All their lower-tail sums are strictly below 2−2Γ_d when d≥3, yielding the strict centroid upper-tail bound.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

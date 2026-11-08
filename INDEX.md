@@ -4,6 +4,16 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 2 | theorem | pk-intake-exterior-contact-dimension-drop | [2eb9fc1dbf88b7c8](facts/2eb9fc1dbf88b7c8.md) |
+| 1 | theorem | pk-intake-inverse-power-density-centerpoint | [d6a3cbae1da72277](facts/d6a3cbae1da72277.md) |
+| 2 | theorem | pk-intake-paired-maximum-depth-simplex-rigidity | [7764d50d02b167bf](facts/7764d50d02b167bf.md) |
+| 3 | theorem | pk-intake-real-degree-centered-slab-tail | [a45a11441b7d073a](facts/a45a11441b7d073a.md) |
+| 0 | lemma | pk-intake-exterior-origin-radial-gauge | [3919a4dbe7ace166](facts/3919a4dbe7ace166.md) |
+| 1 | theorem | pk-intake-strict-nonzero-shift-centroid-paired-tails | [37a5fc541beb1708](facts/37a5fc541beb1708.md) |
+| 5 | theorem | pk-intake-midpoint-label-strict-minimal-face-center | [f4547c4166b39683](facts/f4547c4166b39683.md) |
+| 2 | theorem | pk-intake-interval-path | [60c79c3888d7b2b1](facts/60c79c3888d7b2b1.md) |
+| 0 | lemma | pk-intake-capped-integer-first-moment | [e38bbe8abb5ab718](facts/e38bbe8abb5ab718.md) |
+| 0 | lemma | pk-intake-midpoint-label-balanced-face-alternative | [5c32c6fd8fbe588e](facts/5c32c6fd8fbe588e.md) |
 | 1 | theorem | pk-intake-three-interval-sharp-fixed-endpoint-ratio | [eec4218faa0ffa76](facts/eec4218faa0ffa76.md) |
 | 0 | theorem | pk-intake-three-interval-shifted-middle-depth | [c680a307d3f26cec](facts/c680a307d3f26cec.md) |
 | 1 | theorem | pk-intake-finite-global-cut-speed-addition | [82392d83cf301465](facts/82392d83cf301465.md) |

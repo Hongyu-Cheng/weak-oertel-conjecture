@@ -1,0 +1,30 @@
+{
+  "advances": "Ordinary convex bodies in integer dimensions d≥3. The stability conclusion gives a qualitative gap on each specified compact class.",
+  "author": "PK-research-agent",
+  "candidate_id": "7764d50d02b167bf",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T06:56:04.788340+00:00",
+  "depends_on": [
+    "6a7d56e450b3126f",
+    "03bc771bddd39a8a",
+    "37a5fc541beb1708"
+  ],
+  "draft_key": "paired-maximum-depth-simplex-rigidity",
+  "kind": "theorem",
+  "proof": "Write $P_K(y,u,s)$ for the average of the two cap probabilities in the definition of $p_K(y)$. Replacing $u$ by $u/\\lVert u\\rVert$ and $s$ by $|s|/\\lVert u\\rVert$ preserves the pair up to interchange. If $K\\subseteq R_0B_2^d$, $y\\in K$, and $u$ is a unit vector, then for $s\\ge2R_0$ one cap has measure one and the other measure zero, including the possible null supporting hyperplane. Thus the infimum is the minimum on $Q=\\mathbb S^{d-1}\\times[0,2R_0]$. The two cap indicators converge under parameter and center convergence off their null limiting hyperplanes. Dominated convergence gives joint continuity on $K\\times Q$. Compact minimization makes $p_K$ continuous and ensures the maximum over $K$ exists.\n\nLet $g$ be the centroid. Fact 6a7d56e450b3126f gives $p_K(g)\\ge\\Gamma_d$. The ordinary maximal depth $D(K)$ of 03bc771bddd39a8a bounds $D_{\\rm pair}(K)$ from above because shift zero is allowed. Thus a simplex has $D_{\\rm pair}(K)=\\Gamma_d$.\n\nSuppose $D_{\\rm pair}(K)=\\Gamma_d$, so $p_K(g)=\\Gamma_d$. By the strict nonzero-shift theorem, the minimizing centroid pairs are exactly $(u,0)$ where the ordinary cap in direction $u$ at $g$ has fraction $\\Gamma_d$. This set is nonempty and compact. If $K$ is a nonsimplex, 03bc771bddd39a8a gives an ordinary maximizing center $y_*$ of depth greater than $\\Gamma_d$. For each minimizing centroid direction $u$, the through-$y_*$ cap in that direction has fraction greater than the through-$g$ cap. By nesting in the threshold, $u\\cdot(y_*-g)<0$.\n\nPut $v=y_*-g$ and choose $a>0$ with $u\\cdot v\\le-a$ on these directions by compactness. Choose $\\rho>0$ with $g+\\rho B_2^d\\subseteq K$, using that the centroid lies in the interior of a full-dimensional convex body. The relatively open neighborhood of the minimizing parameters given by $u\\cdot v<-a/2$ and $s<\\rho/4$ contains the entire minimizing set. On its compact complement the centroid value is uniformly above $\\Gamma_d$. Joint continuity on $K\\times Q$ preserves a positive gap on that complement for $y_t=g+tv$ and sufficiently small $t>0$. The point $y_t$ is in $K$ for $0<t\\le1$ by convexity.\n\nIn the neighborhood, both absolute cap thresholds decrease by at least $ta/2$ at $y_t$. Take $t\\lVert v\\rVert<\\rho/4$. The two swept slabs are then within signed distances $\\rho/2$ of $g$ in the direction $u$. Their sections in $K$ contain sections of the inner ball, of area bounded below uniformly over these distances and normals. Each normalized cap mass strictly increases, so the average exceeds $\\Gamma_d$ there as well. By compactness of $Q$ the new paired minimum is strictly above $\\Gamma_d$. The contradiction proves simplex rigidity.\n\nFor the compact stability conclusion, define paired depth for any probability measure by the same formula with that measure in place of $\\mu_K$, and take the supremum over all ambient centers. For two probabilities $\\mu,\\nu$ each cap probability changes by at most $\\operatorname{TV}(\\mu,\\nu)=\\sup_{A\\ {\\rm Borel}}|\\mu(A)-\\nu(A)|$. Each cap average has this same bound, as do the infimum over parameters and the supremum over centers. For uniform volume on $K$ the ambient supremum equals $D_{\\rm pair}(K)$ because a point outside $K$ has a zero-mass separating cap at shift zero.\n\nUnder Hausdorff convergence in the class $rB_2^d\\subseteq K\\subseteq RB_2^d$, indicators converge almost everywhere. Points outside the limit eventually lie outside the bodies, and points in its interior eventually belong to them by uniform convergence of support functions and the positive support margin at each interior point. The boundary of the full-dimensional limit has volume zero. Dominated convergence in the common ball gives convergence of the indicators in $L^1$ and of the positive volumes, hence total variation convergence of normalized volumes. The preceding Lipschitz bound gives continuity of $D_{\\rm pair}$. The fixed-ball class is Hausdorff compact by Blaschke selection and preservation of the two inclusions. Distance to the set of simplices is a continuous function of the body, so the distance condition defines a compact subclass. On a nonempty such subclass, simplex rigidity gives an attained positive minimum of $D_{\\rm pair}(K)-\\Gamma_d$.\n",
+  "source_candidate_ids": [
+    "d494e7e71949ac0b"
+  ],
+  "source_candidate_sha256": {
+    "d494e7e71949ac0b": "4f19c730c1007d827c9e7fd91fe9befb4404da7a1998bcf6ff1750bbde1206ac"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "d494e7e71949ac0b",
+      "locator": "Theorem (R), §§5–6, and §7, compact stability"
+    }
+  ],
+  "statement": "Let $d\\ge3$ be an integer, $K\\subset\\mathbb R^d$ a convex body, $\\mu_K$ its normalized volume, and $\\Gamma_d=(d/(d+1))^d$. Define\n$$\np_K(y)=\\inf_{\\substack{u\\ne0\\\\s\\in\\mathbb R}}\\frac{\\mu_K\\{x:u\\cdot(x-y)\\ge s\\}+\\mu_K\\{x:u\\cdot(x-y)\\ge -s\\}}{2}.\n$$\nThe maximum $D_{\\rm pair}(K)=\\max_{y\\in K}p_K(y)$ exists, satisfies $D_{\\rm pair}(K)\\ge\\Gamma_d$, and equals $\\Gamma_d$ exactly for simplices.\n\nFor fixed $0<r\\le R$ and $\\varepsilon>0$, consider the bodies with $rB_2^d\\subseteq K\\subseteq RB_2^d$ whose Hausdorff distance to the set of full-dimensional simplices is at least $\\varepsilon$. If this class is nonempty, then $D_{\\rm pair}(K)-\\Gamma_d$ attains a strictly positive minimum on it.",
+  "subgoal_id": "pk-intake-paired-maximum-depth-simplex-rigidity",
+  "title": "Simplex rigidity and compact stability for paired maximum depth"
+}

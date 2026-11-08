@@ -1,0 +1,47 @@
+---
+fact_id: 2eb9fc1dbf88b7c8
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-exterior-contact-dimension-drop
+depends_on: ["3919a4dbe7ace166", "d6a3cbae1da72277"]
+verifier_run: 0e2b42f2faa991fd
+target_match: null
+---
+
+## Source
+
+- [f9c635ce5abe9f17](../candidates/f9c635ce5abe9f17.json), §§3–7, (1), (6)–(7).
+
+## Statement
+
+Let $d\ge1$, let $K\subset\mathbb R^d$ be a full-dimensional compact convex body, and let $y\notin\operatorname{int}K$. Suppose finitely many proper closed halfspaces $H_i$ cover $\mathbb R^d$ and all their boundary hyperplanes contain $y$. Then
+$$
+\max_i |K\cap H_i|\ge\gamma_{d-1}|K|,
+\qquad \gamma_j=\left(\frac{j}{j+1}\right)^j\ (j\ge1),\quad \gamma_0=1.
+$$
+For each $d$ the constant is attained both for some $y\notin K$ and for some $y\in\partial K$. For $d\ge2$ the constant also remains the infimum for each contact type when the normals span $\mathbb R^d$, equivalently when $y$ is the unique common point of their boundaries.
+
+## Proof
+
+For $d=1$, a whole-line cover by halflines based at $y$ has both orientations. One orientation contains the interval $K$ when $y$ is exterior or an endpoint, giving equality in all such cases. Take $d\ge2$.
+
+For a strictly exterior contact, translate $y$ to zero and use strict separation to choose orthonormal coordinates $(t,x)\in\mathbb R\times\mathbb R^{d-1}$ with $0<a\le t\le b$ on $K$. For $t>0$, the map $(t,s)\mapsto(t,ts)$ has Jacobian $t^{d-1}$. The pushforward of volume on $K$ by $(t,x)\mapsto x/t$ therefore has density
+$$
+\phi(s)=\int_0^\infty t^{d-1}\mathbf1_K(t,ts)\,dt,\qquad \int_{\mathbb R^{d-1}}\phi(s)\,ds=|K|.
+$$
+This density is bounded and compactly supported by the positive lower and finite upper height bounds. Its upper semicontinuity follows from upper semicontinuity of $\mathbf1_K$ and the upper-limit form of Fatou’s lemma on $[a,b]$.
+
+For projected points $s_0,s_1$ represented by $(t_j,t_js_j)\in K$, the convex combination of their representatives with normalized weights proportional to $\lambda/t_0,(1-\lambda)/t_1$ projects to $\lambda s_0+(1-\lambda)s_1$. Thus the projected image is convex, and it is compact by continuity of the projection on $K$. The projection of $\operatorname{int}K$ is open, since the projection is open on $\{t>0\}$. Fix the projection $s_0$ of an interior point of $K$. For any other interior point $s$ of the image, extend the segment from $s_0$ through $s$ a short distance within the image to $s_1$. The same positive weights lift $s$ to a convex combination involving the interior representative of $s_0$, hence to an interior point of $K$. Its ray contains a positive-length interval in $K$, so $\phi(s)>0$. The image is therefore the full-dimensional closed support of $\phi$.
+
+Apply the radial integral lemma with $p=d$ and $f=\mathbf1_K$, whose extended inverse power is one on $K$ and infinity elsewhere. The origin is strictly exterior, which that lemma allows. Restricting the convex gauge to $(1,s)$ gives convexity of $\phi(s)^{-1/d}$ with its infinite extension. The exponent is $-1/((d-1)+1)$, so the density centerpoint theorem applies in dimension $d-1$.
+
+Each original halfspace has a margin $c_i t+u_i\cdot x$, so its restriction to $t=1$ has margin $c_i+u_i\cdot s$. The restrictions cover that entire plane, and for every $t>0$ the margin at $(t,ts)$ has the same sign as the restricted margin. If any restriction is all space, its cap contains $K$. Otherwise discard empty restrictions. One remaining restriction contains the centerpoint of $\phi$ and has mass at least $\gamma_{d-1}\int\phi=\gamma_{d-1}|K|$. The change of variables gives exactly this mass in its original cap.
+
+For a boundary contact choose a unit supporting normal $e$ with $e\cdot(x-y)\ge0$ on $K$. Translate every halfspace by $-\varepsilon e$ with $\varepsilon>0$. They still cover $\mathbb R^d$ and have a strictly exterior common contact $y-\varepsilon e$. Each individual cap volume tends to its original value because the indicator converges off the limiting hyperplane, a null set. The maximum of finitely many cap volumes is continuous under this passage, so the bound holds at $y$.
+
+For sharpness put $r=d-1$. Let $T$ be a full-dimensional $r$-simplex with centroid zero, and let $\beta_i$, $0\le i\le r$, be the gradients of its barycentric coordinates. Those coordinates are $1/(r+1)+\beta_i\cdot s$ and $\sum_i\beta_i=0$. The caps $\{\beta_i\cdot s\ge0\}$ each cut a homothetic copy of $T$ about vertex $i$ with ratio $r/(r+1)$ and hence fraction $\gamma_r$. Take $K=\{(t,x):1\le t\le2,\ x\in tT\}$ and nominate $y=0$. This frustum is a full-dimensional compact convex body. Replacing $[1,2]$ by $[0,1]$ gives a pyramid with the origin on its boundary. In both cases use the halfspaces $\{\beta_i\cdot x\ge0\}$. They cover the full space by the zero sum of the gradients. On every positive $t$-slice the fraction is exactly $\gamma_r$, so Fubini gives equality. The common boundary intersection in these examples is the $t$-axis, because the barycentric gradients span $\mathbb R^r$.
+
+To make the normals full rank in either example, replace $(0,\beta_0)$ by $(\varepsilon,\beta_0)$ and $(-\varepsilon,\beta_0)$ and keep the remaining normals. The new pair has weights one and all other normals have weights two, making the weighted sum zero. Their difference spans the $t$-normal, and their sum together with the remaining normals spans all continuous directions, so their common boundary intersection is $\{0\}$. For $0<\varepsilon<\min\{1/(r+1),r/(r+1)\}$ the two new caps restrict on positive slices to barycentric thresholds $1/(r+1)-\varepsilon$ and $1/(r+1)+\varepsilon$ on $T$. Their exact fractions are $(r/(r+1)+\varepsilon)^r$ and $(r/(r+1)-\varepsilon)^r$. All unchanged cap fractions are $\gamma_r$, so the maximum tends to $\gamma_r$ from above.
+
+For the mixed-fiber consequence, suppose the restricted margins are $u_i\cdot(x-y)$ on a positive fiber $K_z$ and have a strictly positive weighted sum equal to zero identically. If some $u_i=0$, its closed cap contains the whole fiber. Otherwise their restrictions are proper closed halfspaces and their positive balance covers the whole fiber plane. For $y\notin\operatorname{int}K_z$ the theorem gives $\max_i\mu(H_i)\ge\max_i|K_z\cap H_i|\ge\gamma_{d-1}|K_z|$, since each total mixed cap mass $\mu(H_i)$ includes its contribution on this fiber. A strict cap budget below that threshold therefore forces the common contact into the interior of this fiber.

@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary simplex envelopes and finite sampled inclusions.",
+  "author": "PK-research-agent",
+  "candidate_id": "3e2e95472b619800",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.789210+00:00",
+  "depends_on": [],
+  "draft_key": "common-simplex-envelopes-preserve-sampled-compatibility",
+  "kind": "lemma",
+  "proof": "After a common invertible linear change of continuous coordinates the orientation is that of $T=\\operatorname{conv}(0,e_1,\\ldots,e_d)$. The envelope is $a+rT$ with $a_k=\\min_A x_k$ and $r=\\max_A\\sum_k x_k-\\sum_k a_k\\ge0$. If $r=0$, every $x\\in A$ satisfies $x_k=a_k$ for every $k$. This proves the shape claims. A nonnegative Minkowski sum of such envelopes has the summed facet offsets because the translates and simplex scales add separately.\n\nApply the support function in direction $u_j$ to any sampled inclusion: $\\sum_i\\theta_i h_{A_{z_i}}(u_j)\\le h_{A_z}(u_j)$. The same inequalities hold for the envelopes because their support in each of the specified facet directions equals that of the original body. This proves the envelope inclusion. A point of the hull over $z\\in I$ is a convex combination of lifted generator points, which may be grouped at repeated bases because every envelope is convex. Its continuous coordinate belongs to the stated fiber by the inclusion; conversely every lifted envelope point is a generator. If $I$ lists all nonempty integer fibers of the original set, any integer point of $\\operatorname{conv}(I)$ lies in its convex projection and hence is in $I$. The new hull's projection is exactly $\\operatorname{conv}(I)$.\n",
+  "source_candidate_ids": [
+    "ae6af582a4950210"
+  ],
+  "source_candidate_sha256": {
+    "ae6af582a4950210": "a0f109ed2d34b4a44899e733949af8fe35cd021414a9081d818f38d0275b7aec"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ae6af582a4950210",
+      "locator": "ae6af582a4950210:01 Opening (1)–(2) and §1, (3)–(4), exact compatible sampled envelopes"
+    }
+  ],
+  "statement": "For a simplex orientation $U=(u_0,\\ldots,u_d)$ (the outward facet normals of a full-dimensional bounded simplex, up to individual positive rescaling), put $P_U(A)=\\{x:u_j\\cdot x\\le h_A(u_j)\\text{ for all }j\\}$ for each nonempty compact convex $A\\subset\\mathbb R^d$. This is a singleton exactly when $A$ is a singleton; otherwise it is a full-dimensional simplex. All positive-size envelopes for one orientation are translates of positive homothets of a common simplex. Suppose $I\\subset\\mathbb R^n$ is finite and nonempty and $\\sum_i\\theta_i A_{z_i}\\subset A_z$ whenever $z_i\\in I$, $\\theta_i\\ge0$, $\\sum_i\\theta_i=1$ and $\\sum_i\\theta_i z_i=z\\in I$. Then the same inclusions hold for $P_U(A_z)$, and the convex hull of the lifted envelopes has those exact fibers at every $z\\in I$. If $I$ consists of all nonempty integer fibers of a bounded convex set, the hull of the lifted envelopes has no extra integer base.",
+  "subgoal_id": "pk-intake-common-simplex-envelopes-preserve-sampled-compatibility",
+  "title": "Compatible sampled envelopes with a common simplex orientation"
+}

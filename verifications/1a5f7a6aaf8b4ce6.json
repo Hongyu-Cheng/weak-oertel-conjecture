@@ -1,0 +1,62 @@
+{
+  "candidate_id": "20476e42195a9c96",
+  "candidate_sha256": "4964662179b3ac6855ad95c0cdc4a1520cfdf25ff8849efbc4a6409957a5022d",
+  "checked_dependency_candidate_sha256": {
+    "69166b0fcb73425a": "0ea64135ebeaba5ebc6636534d4e7327e677098c89c848f4b7710c14e196e349"
+  },
+  "checked_sources": {
+    "18f8d2b72265ccb5": {
+      "candidate_sha256": "4732c8e2d37938d3e25648db53ff531c995b227b4e7ca31568fe5687bf11c02d",
+      "original_source_sha256": "87341df48c96acfb76e4de36471171a84408fe4e47d94ff782ba8329c906e5ce"
+    }
+  },
+  "checks": [
+    "Checked 18f8d2b72265ccb5 §§1–4, (1)–(9). The retained-fiber hull has exactly the original positive fibers and no additional integer fibers. Its projection is conv(P), so P is lattice-complete.",
+    "The fiberwise affine bijection leaves the bases fixed and sends the exact hull into C because every fitted generator lies there. For deficient base rank, choose a small interior ball inside C near the fitted hull, strictly on one side of a hyperplane containing aff(P). Distances below the positive minimum over integer bases of C outside aff(P) exclude those bases by convexity of distance. The side constraint excludes every positive ball coefficient over aff(P), preserving all integer fibers exactly.",
+    "The mixed measure on the fitted body is the affine pushforward multiplied by det(T)>0, since null original fibers have zero mass. The halfspace class bijects under the map and the common volume factor cancels in normalized depth. The transformed centroid has the same integral base. This proves det(T)≤1 using the global extraction premise.",
+    "In centered affine base coordinates the constraint is linear in the variation and its gradient pairs as u·(Ax+Bz'+b). The derivative of determinant at identity is tr A. A direction with positive objective derivative and strictly negative active pairings is feasible for a short positive step because the remaining compact set of nonnegative pairings has positive slack. Strict separation and Carathéodory then give the stated at-most p+1 contacts, with at most p by conic Carathéodory in the normal case.",
+    "Translation and the reduced base balance imply the original base balance and cancel any affine q. The trace gives the supporting-value sum. An arbitrary strictly fitting T0 gives a strictly inward direction at every contact and excludes a pure abnormal combination, including the case T0=0 obtained from an interior affine graph.",
+    "With polytope data the finite vertex/facet system has a closed active cone and every direction with weakly negative active pairings allows a short positive step. Separating the determinant gradient from this cone contradicts maximality. The resulting unit-normal contacts meet the required support equations."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "69166b0fcb73425a",
+      "candidate_sha256": "0ea64135ebeaba5ebc6636534d4e7327e677098c89c848f4b7710c14e196e349",
+      "fact_sha256": "fadcca13a20723a4d85d32f4302642b419aac39782976113acd802db434533bc",
+      "hypotheses": "Use Q=D, lattice Z^n, F the entire base plane, and the positive-volume selection clause with s=d. D is compact and convex with positive mixed d-volume, so the hull has precisely the original D_z over P and no other integer fibers.",
+      "reviewed_proof_sha256": "d81c7e7f68b46e0400978357f1973a540b61429de5d0908bc146192467ef1b5c",
+      "reviewed_statement_sha256": "54e9ae4eef61b1b5ad47dd614dfd5b483764493d68a16e1409814de4a06bf633"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:18:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides exact positive-fiber retention and lattice reduction. It supplies the hull premise but does not optimize its determinant or derive matrix contact equations.",
+      "fact_id": "69166b0fcb73425a"
+    },
+    {
+      "comparison": "Contains one-sided thickening for exact ambient realization. Here the interior ball is placed inside the prescribed C and the positive distance test uses its own finite lattice bases, which is needed for extraction maximality.",
+      "fact_id": "5827666c5ec237a1"
+    },
+    {
+      "comparison": "Uses Fritz–John for cap mass and coverage constraints of a fixed-source hinge problem. The present active gradients instead come from support inequalities of integer-fiber fits and the objective derivative of a determinant.",
+      "fact_id": "c343c9f3dc96957e"
+    }
+  ],
+  "readability": "The fitted hull, the optional full-dimensional thickening, and the ambient fitting counterexample are separate constructions. The parameter dimension uses only the affine rank of P.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "77c541cdc25392e919ffa1cd734e980a23d2f56d9bdcc05197fca08c4dd2a32f",
+  "reviewed_statement_sha256": "ea0e0ecef2014665fa142ae7bedc7cfdbff9c57fadee4c0527e8446f195390dd",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:14:25Z",
+  "summary": "The exact positive-fiber fit preserves the centroid and normalized depth. Determinant maximality therefore yields the finite normal-or-abnormal alternative, and each stated qualification gives a normal certificate.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

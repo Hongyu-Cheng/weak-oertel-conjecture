@@ -1,0 +1,28 @@
+{
+  "advances": "An intrinsic mixed-volume comparison and a counting consequence for integral weighted outputs.",
+  "author": "PK-research-agent",
+  "candidate_id": "1039d371749f7e4c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:13:09.525866+00:00",
+  "depends_on": [
+    "0575f5f7358f0850"
+  ],
+  "draft_key": "intrinsic-arithmetic-peak-comparison",
+  "kind": "theorem",
+  "proof": "There are finitely many integer fibers. Their maximum affine dimension is $q$, since a nonempty convex fiber has Hausdorff dimension equal to its affine dimension. Their lifted copies are disjoint and isometric to the corresponding continuous-coordinate fibers, so their $\\mathcal H_q$ masses add.\n\nFor $q\\ge1$, omit the zero-mass input fibers, which leaves each $M_i$ and $a_i$ unchanged. When $k=1$ the asserted mass bound is the identity. Suppose $k\\ge2$. Each positive input fiber has affine dimension $q$. In any input tuple the weighted sum of its continuous fibers is contained in the actual $C$-fiber at its integral output base. The direction space of the sum equals the sum of the input direction spaces, since varying one point at a time realizes that input's difference span and taking arbitrary differences gives the reverse inclusion. The output fiber has dimension at most $q$, so all directions in this tuple coincide. Fix a fiber in a second group when varying one group. The all-tuples integrality assumption lets this comparison run over every positive fiber, giving one common direction space $L$.\n\nOrthogonally project the continuous coordinates onto $L$ and identify $L$ isometrically with $\\mathbb R^q$. This projection is an isometry on each input fiber's affine plane. Each produced output fiber lies in an actual $C$-fiber containing one full $q$-dimensional Minkowski combination, so the ambient fiber has direction $L$ as well. The projection is therefore an isometry on each output fiber, including its whole union when multiple tuples hit the same base. Projection preserves bases and commutes with the weighted sum. Apply 0575f5f7358f0850 with continuous dimension $q$ to the projected compact inputs and integral positive-fiber outputs. Their masses and peaks agree with the original ones. Enlarging the inputs can only increase the output mass measured on integer bases. For the cap assertion, all sums lie in $C$ by convexity and satisfy the weighted affine threshold, with equality points included.\n\nFor $q=0$ each nonempty integer fiber of $C$ is a singleton. By convexity and integrality the weighted sum lies in $S$, so projection onto the bases is injective both on the inputs and on their sum. Apply the finite-set counting clause of 0575f5f7358f0850 to these projected sets, with the same weights and integral output condition.\n",
+  "source_candidate_ids": [
+    "e7b862fa9bf72057"
+  ],
+  "source_candidate_sha256": {
+    "e7b862fa9bf72057": "0875acbdc0735e57b32585129ccacffa2c0869bbeebf8c4823cb7a8dc5b0340f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "e7b862fa9bf72057",
+      "locator": "e7b862fa9bf72057:03 §6, intrinsic H_q and q=0 count"
+    }
+  ],
+  "statement": "Let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact and convex with nonempty integer trace $S=C\\cap(\\mathbb Z^n\\times\\mathbb R^d)$, and put $q=\\dim_{\\mathrm H}S$. Let $A_1,\\ldots,A_k$ be nonempty compact subsets of $S$ with convex fibers. Let $\\lambda_i>0$ sum to one.\n\nFor $q\\ge1$ suppose $M_i=\\mathcal H_q(A_i)>0$ and write $a_i=\\max_z\\mathcal H_q((A_i)_z)$. Suppose every weighted base combination of positive $q$-volume input fibers is integral. Write $T$ for the weighted Minkowski sum of the positive-fiber parts of the $A_i$. Then\n$$\n\\mathcal H_q(T)\\ge\\left(\\sum_i M_i/a_i-k+1\\right)\n              \\left(\\sum_i\\lambda_i a_i^{1/q}\\right)^q.\n$$\nIf zero-volume input fibers are also used, the same bound holds on the integer trace of the enlarged output. When the inputs lie in respective closed caps $C\\cap\\{\\ell\\ge t_i\\}$ for one ambient affine functional $\\ell$, the actual integer cap at threshold $\\sum_i\\lambda_i t_i$ has at least the displayed mass.\n\nFor $q=0$ suppose every weighted combination of nonempty input bases is integral. Then $\\left|\\sum_i\\lambda_i A_i\\right|\\ge\\sum_i|A_i|-k+1$.",
+  "subgoal_id": "pk-intake-intrinsic-arithmetic-peak-comparison",
+  "title": "Arithmetic peak comparison for intrinsic mixed fiber measure"
+}

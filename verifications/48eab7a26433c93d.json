@@ -1,0 +1,68 @@
+{
+  "candidate_id": "e00189de6b583178",
+  "candidate_sha256": "bde17da3170d92930f39e725bb62392d488c9ea538dab45539fc45d00efac2ef",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "3e2e95472b619800": "821163dfe59821529099fd7c274109c83fc92822c639c256f3f8cb8ae37a095c",
+    "971a1d5c445406ab": "df5f6313dfbf8e255755c96dc02d96daa91818a791e7250f160106544f50d4b7"
+  },
+  "checks": [
+    "Doubling one standard-simplex coordinate changes the normal ray of the facet opposite the origin for d≥2. A positive homothety with translation preserves all facet rays.",
+    "Ordinary rigidity gives each simplex depth Γ_d. The weighted theorem gives an attaining orientation for weights one.",
+    "Envelope inclusion makes each individual excess nonnegative. A zero sum would force volume equality of both nested convex bodies, hence set equality. The shared orientation would then force the bodies to be positive homothets up to translation, a contradiction.",
+    "Bases 0 and 1 are the only integer sites of their convex projection and are extreme, so the lifted hull has exactly the two displayed fibers. This matches ae6af582a4950210 §5."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "03bc771bddd39a8a",
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "hypotheses": "Both A and B are full-dimensional d-simplices, so the equality case of the ordinary normalized depth theorem applies.",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb"
+    },
+    {
+      "candidate_id": "3e2e95472b619800",
+      "candidate_sha256": "821163dfe59821529099fd7c274109c83fc92822c639c256f3f8cb8ae37a095c",
+      "hypotheses": "The frozen lemma supplies containing envelopes and homothety for one orientation. It identifies the contradiction when both volume gaps vanish.",
+      "review_status": "Same-wave frozen input. Admission requires its separate independent approval.",
+      "reviewed_proof_sha256": "71d60e0c63f1de21a42b1ff2ad84ac5d218f54f92aa6a49e4c4f8f5e1247107e",
+      "reviewed_statement_sha256": "dcf48afb3bf02f8791396dea8dac60828ebe6af023d9dbfd7cdb282df0838e5e"
+    },
+    {
+      "candidate_id": "971a1d5c445406ab",
+      "candidate_sha256": "df5f6313dfbf8e255755c96dc02d96daa91818a791e7250f160106544f50d4b7",
+      "hypotheses": "Use positive weights one and full-dimensional anchor A to attain the shared-orientation volume minimum. Strict pointwise positivity alone would not suffice.",
+      "review_status": "Same-wave frozen input. Admission requires its separate independent approval.",
+      "reviewed_proof_sha256": "30dae7b50bb3db2789ce8a2d4bee165ebbf6d0c323163613c10606e581eba937",
+      "reviewed_statement_sha256": "c8787bd82c13b9620025061d3b05953bcf3b8b360e70d3edc4134488de058962"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:22:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The earlier planar result already rules out a general constant for convexified arbitrary enclosing triangles using a positive small deficit and a three-base inclusion. This result has exactly zero deficit, two simplex fibers, all d≥2, and the distinct shared-orientation objective.",
+      "fact_id": "c7e97600d54831a4"
+    },
+    {
+      "comparison": "The accepted result determines individual depths and rigidity, without comparing the simplex orientations of two bodies.",
+      "fact_id": "03bc771bddd39a8a"
+    }
+  ],
+  "readability": "The hypotheses and the proof use the same scope.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold read of the exact frozen candidate, followed by source, hypothesis, overlap and arithmetic checks.",
+  "reviewed_proof_sha256": "f72700494514345ff3f779921e801a7bdaec7886a9a04659776bd758fab58e18",
+  "reviewed_statement_sha256": "1f41d16ae42ac66ac985dceb0629ae642343158a16cbf06dab0cda84b7231666",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:16:30Z",
+  "summary": "Two nonhomothetic simplices have exactly zero individual ordinary depth deficits and a strictly positive attained common-orientation excess.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

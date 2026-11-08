@@ -1,0 +1,60 @@
+{
+  "candidate_id": "1039d371749f7e4c",
+  "candidate_sha256": "7043e765afe436ebfebd258c551149919948f06320246ccb3eca1e3559ea738e",
+  "checked_dependency_candidate_sha256": {
+    "0575f5f7358f0850": "98aaa47f5626d18e60645d7d82a23baf62dd7c21e656bd3012363fb836e1c9f5"
+  },
+  "checked_sources": {
+    "e7b862fa9bf72057": {
+      "candidate_sha256": "0875acbdc0735e57b32585129ccacffa2c0869bbeebf8c4823cb7a8dc5b0340f",
+      "original_source_sha256": "e58cd313a4f038a12ec0e94e9dfd567a1d2b7377f8e1f43a838c757fe6b97f44"
+    }
+  },
+  "checks": [
+    "Checked e7b862fa9bf72057 §6 and its comparison with §§1–2. The frozen candidate retains the intrinsic Hausdorff dimension of the full integer trace and omits zero-volume input fibers only for the positive-volume bound.",
+    "A positive input fiber has affine dimension q because its compact convex actual containing fiber has dimension at most q. The direction of a Minkowski sum is the sum of the directions by varying one input point at a time. Integrality of every tuple and convexity put that entire sum in an actual fiber of dimension at most q.",
+    "For two or more input families, fix a positive fiber in another family and vary the first. This uses the full all-tuples quantifier to force one direction L for every positive input fiber. At a repeated output base every summand set is contained in the same actual fiber, whose dimension q and direction L were already forced by any one tuple. Orthogonal projection is an isometry on that entire affine plane.",
+    "The projected compact fibers and outputs have the original Hausdorff masses and peaks, and projection commutes with all the weighted sums. The original cap application uses convexity and affinity, retains equality points, and permits enlargement by zero-mass fibers on the integer trace. For k=1 the positive-mass assertion is immediate. For q=0 the base projection is injective on the inputs and integral output because every actual fiber is a singleton."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "0575f5f7358f0850",
+      "candidate_sha256": "98aaa47f5626d18e60645d7d82a23baf62dd7c21e656bd3012363fb836e1c9f5",
+      "fact_sha256": "9c7d3281f8665104c3f0ec2cb292aef65f90ad7071cd82594a4edf64c8e25ca1",
+      "hypotheses": "Identify the common affine direction isometrically with R^q for q>0. Each projected input is compact with positive summed q-volume, and the all-tuples integrality of positive input bases is unchanged. The peak theorem measures each projected output fiber as a union. At q=0 use the finite counting clause on the base projections with the same weights and integral outputs.",
+      "reviewed_proof_sha256": "80c5b2d00924ebcde5a14bd832c520a3a3b48e45a8eb0ebf392ca67cc6b91711",
+      "reviewed_statement_sha256": "3814f76f12d4c9d435dd3eb1aa63e52e08ca593fc9a16470d9dc80f9ef30fdb5"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:18:43Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Supplies the same peak estimate for ordinary summed q-volume and the finite counting clause. The new intrinsic assertion proves that all participating displaced lower-dimensional fibers admit an isometric projection, which the ordinary volume theorem does not assume or state.",
+      "fact_id": "0575f5f7358f0850"
+    },
+    {
+      "comparison": "Has a common-direction result for two measures in one parity class at midpoint outputs. The present argument handles arbitrary positive weights and all k with integral outputs and proves the intrinsic peak inequality.",
+      "fact_id": "01212b33858677e1"
+    },
+    {
+      "comparison": "Uses the same direction-space identity for convex combinations of maximum-volume fibers of the whole source and draws an equality/saturation conclusion. It does not provide the distinct-input peak comparison or its cap consequence.",
+      "fact_id": "8c184887a7947b64"
+    }
+  ],
+  "readability": "The proof explains why output-fiber unions remain isometric under projection. The positive-only T and the separate enlarged integer trace are clearly distinguished.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "10d9b5553cfa823ae8f8a19e75bdc3f0e5fe454d2ca98bfcf569ff112cb3f869",
+  "reviewed_statement_sha256": "6aa66c59f4458b4a2a983f07b27ba586be14abd1b75371faef5eedf895a61190",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:14:25Z",
+  "summary": "The all-tuples integral-output condition forces the common intrinsic direction needed to apply the accepted arithmetic-peak theorem. Projection preserves every measured fiber, and the counting case follows separately.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

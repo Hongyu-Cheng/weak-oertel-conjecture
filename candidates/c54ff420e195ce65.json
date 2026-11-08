@@ -1,0 +1,26 @@
+{
+  "advances": "Feasible framed whole-space covers, with objective and mass measured on the fixed square.",
+  "author": "PK-research-agent",
+  "candidate_id": "c54ff420e195ce65",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.792082+00:00",
+  "depends_on": [],
+  "draft_key": "bounded-hinges-escaping-whole-space-contact",
+  "kind": "counterexample",
+  "proof": "For $0<\\varepsilon\\le1/8$, set $s=\\sqrt{1+\\varepsilon^2}$ and $B=s/(4\\varepsilon)$. Use two margins $x$ and $(-x+\\varepsilon y)/s+1/4$ and the four frame margins $x-B,-x-B,y-B,-y-B$. Every normal has length one. The three margins $x,(-x+\\varepsilon y)/s+1/4,-y-B$ have positive weights proportional to $1/s,1,\\varepsilon/s$, with identically zero weighted sum. Thus at least one margin is nonnegative everywhere. At $(0,-B)$ those three margins are zero and the others are negative. A point where all margins are nonpositive must satisfy $x\\le0$, $x\\ge\\varepsilon y+s/4$ and $y\\ge-B$, which force exactly $(0,-B)$. Hence the whole-space minimax value is zero and that is its unique contact.\n\nSince $B>1$, the frame caps have zero source mass and hinge. The first cap has mass $2$ and hinge $1$. The second boundary $x=\\varepsilon y+s/4$ lies strictly between $-1$ and $1$ for every $y\\in[-1,1]$. At each such $y$ its cap interval has length $1+\\varepsilon y+s/4$ and hinge $(1+\\varepsilon y+s/4)^2/(2s)$. Integration gives\n$$\nc_2=2(1+s/4),\\qquad \\Psi_2=((1+s/4)^2+\\varepsilon^2/3)/s.\n$$\nThe mass ratio $(1+s/4)/2$ is strictly below $2/3$ because $s<4/3$. As $\\varepsilon\\downarrow0$, the total hinge tends to $1+25/16=41/16$, while $B\\to\\infty$.\n",
+  "source_candidate_ids": [
+    "b488285aaeabe80d"
+  ],
+  "source_candidate_sha256": {
+    "b488285aaeabe80d": "0b585e4abe152ee1d0d24950b44f1ef0bbb521c699db808fe4be76bdbbd3f027"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b488285aaeabe80d",
+      "locator": "b488285aaeabe80d:05 §7, (16)–(17), exact escaping whole-space contact example"
+    }
+  ],
+  "statement": "There is a sequence of six-cap framed whole-space covers in dimension two of a single source $K=[-1,1]^2$, with all cap masses strictly below $2|K|/3$ and total hinges tending to $41/16$, whose unique whole-space optimal contact diverges. The six caps include two variable-normal caps and the four fixed frame normals. This is a family of feasible covers.",
+  "subgoal_id": "pk-intake-bounded-hinges-escaping-whole-space-contact",
+  "title": "Bounded whole-space hinges can have escaping unique contacts"
+}

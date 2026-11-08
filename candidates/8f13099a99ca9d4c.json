@@ -1,0 +1,28 @@
+{
+  "advances": "A finite discrete log-concave law with exactly integer mean. The geometric vertical-cap application is already a stronger fixed-dimension fact.",
+  "author": "PK-research-agent",
+  "candidate_id": "8f13099a99ca9d4c",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:13:09.524288+00:00",
+  "depends_on": [
+    "4d24a4fbd205befd"
+  ],
+  "draft_key": "finite-log-concave-closed-tail-at-integer-mean",
+  "kind": "theorem",
+  "proof": "A singleton has both tails one. Otherwise set $F_k=\\sum_{j\\ge k}p_j$ on $[\\ell,r]\\cap\\mathbb Z$. The positive ratios $p_{k+1}/p_k$ are nonincreasing. For each fixed $j\\ge0$, $p_{k+j}/p_k$ is a product of $j$ successive ratios, nonincreasing in $k$, and becomes zero when $k+j>r$. Summation shows that $F_k/p_k$ is nonincreasing. Consequently $F_{k+1}/F_k=1-p_k/F_k$ is nonincreasing on $\\ell\\le k<r$, so the piecewise affine interpolation of $\\log F_k$ on $[\\ell,r]$ is concave. Jensen at the integer mean yields\n$$\n\\log F_m\\ge\\sum_{k=\\ell}^r p_k\\log F_k\n=\\sum_{k=\\ell}^r(F_k-F_{k+1})\\log F_k\n>\\int_0^1\\log x\\,dx=-1.\n$$\nHere $F_{r+1}=0$ is used only in the sum and integral. The partition intervals all have positive length and $\\log$ is strictly increasing, so the upper-endpoint sum is strict even with the integrable singularity at zero. Reflection proves the other tail.\n\nFor sharpness, for each integer $D\\ge1$ use the finite integer-mean sequences of fact 4d24a4fbd205befd whose upper closed tails approach $((D+1)/(D+2))^{D+1}$. Their positive $D$th roots are concave, which implies log-concavity by the arithmetic-geometric mean inequality and raising to power $2D$. These sequences are therefore admissible here. Letting $D$ increase gives upper-tail infimum at most $1/e$, and reflection gives the lower-tail infimum.\n",
+  "source_candidate_ids": [
+    "f0bdcdaa85d37338"
+  ],
+  "source_candidate_sha256": {
+    "f0bdcdaa85d37338": "6bd803a1c0137a038699a4157195ba4d4e4e1411dd369a8016b6f425af6a2503"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f0bdcdaa85d37338",
+      "locator": "f0bdcdaa85d37338:01 Opening scalar theorem and proof through the singleton case"
+    }
+  ],
+  "statement": "Let $(p_k)$ be a probability sequence positive exactly on a finite consecutive integer interval $[\\ell,r]\\cap\\mathbb Z$, with $p_k^2\\ge p_{k-1}p_{k+1}$ at its interior indices. If $m=\\sum_k k p_k$ is an integer, both $\\sum_{k\\ge m}p_k$ and $\\sum_{k\\le m}p_k$ are strictly greater than $1/e$. The infimum of either closed tail over all such sequences is $1/e$.",
+  "subgoal_id": "pk-intake-finite-log-concave-closed-tail-at-integer-mean",
+  "title": "Closed tails of a finite log-concave law at its integer mean"
+}

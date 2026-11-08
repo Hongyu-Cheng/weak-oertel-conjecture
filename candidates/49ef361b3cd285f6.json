@@ -1,0 +1,30 @@
+{
+  "advances": "An explicit normal recovery at a raw cap level in an ordinary three-dimensional frustum. Its all-normal deepest-point and energy identification is a separate assertion.",
+  "author": "PK-research-agent",
+  "candidate_id": "49ef361b3cd285f6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:13:09.529582+00:00",
+  "depends_on": [],
+  "draft_key": "triangle-frustum-near-quantile-normal-recovery",
+  "kind": "lemma",
+  "proof": "Write $r=1+\\varepsilon t$, $q=t-t_0$. Each $n_i$ has vertex values $2,-1,-1$, with maximum at $v_i$. Thus for a slice threshold strictly between $-r$ and $2r$, the cap is an isolated-vertex similar triangle of area $(2r+\\beta q-c)^2/2$. Integrating gives $V=9A$ for the whole body and the asserted cap polynomial, using $\\int_{-1}^1 rq\\,dt=0$ and $\\int_{-1}^1 q^2\\,dt=2A/3$.\n\nSolving that quadratic at mass $Q$ gives the displayed root, which also equals $(A\\beta^2/3)/(2-\\beta t_0+\\sqrt{4-4\\beta t_0-\\beta^2/3})$. Even for $\\varepsilon\\le1/2$, the denominator exceeds $3$ when $|\\beta|\\le1/8$, by $|t_0|\\le1/6$. Then $c_\\beta\\le13\\beta^2/108<\\beta^2/8$ for nonzero $\\beta$ and $|c_\\beta-\\beta q|<1/2\\le r$ at every height. This verifies a neighborhood of proper geometric incidence before using the slice polynomial at its root. The threshold derivative there is negative and its magnitude is the stated coarea. Monotonicity and strict decrease near the root imply global uniqueness at level $Q$, and expansion of the rationalized expression gives the coefficient $A/12$.\n\nIf a point violates an inequality, raise the threshold slightly while keeping it in the cap. The actual mass becomes strictly less than $Q$, contradicting its depth. Averaging the three inequalities gives $\\beta h_t\\le c_\\beta$ since $\\sum_i n_i=0$. Both signs with $\\beta\\to0$ force $h_t=0$. At $\\beta=0$ the three horizontal inequalities then force $h_X=0$ since the $n_i$ positively span the horizontal plane. Conversely $0$ satisfies all inequalities. The coefficient formula follows by the same exact normal sum. Unit normalization multiplies each coefficient by the original normal length and divides the threshold by that length. Projecting any proposed nonnegative combination onto the vertical axis gives the necessary total coefficient. For comparison, the raw mass excess of the through-$Y$ caps is $(A/3)\\beta^2$, so its positive-tilt weighted sum is $gA\\beta/3$, whose leading ratio to the combined quantile threshold is $4=S_0$.\n",
+  "source_candidate_ids": [
+    "19899b61b9ca5f3a"
+  ],
+  "source_candidate_sha256": {
+    "19899b61b9ca5f3a": "042b90ac6eb09b44e88cfa2fbe84f968ee29f63d9c77d36cdbd4e06d77733782"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "19899b61b9ca5f3a",
+      "locator": "19899b61b9ca5f3a:01 §1, (1)–(4)"
+    },
+    {
+      "candidate_id": "19899b61b9ca5f3a",
+      "locator": "19899b61b9ca5f3a:02 §2, (5)–(7)"
+    }
+  ],
+  "statement": "Let $v_1=(2,-1),v_2=(-1,2),v_3=(-1,-1)$, let $T=\\operatorname{conv}\\{v_1,v_2,v_3\\}$, and let $K=\\{(X,t):|t|\\le1,\\ X\\in(1+\\varepsilon t)T\\}$ with $0<\\varepsilon\\le10^{-9}$. Put $t_0=\\varepsilon/3$, $Y=(0,t_0)$, $A=1+\\varepsilon^2/3$, $V=9A$ and $Q=4A$. Take $n_1=(1,0),n_2=(0,1),n_3=(-1,-1)$ and $N_i(\\beta)=(n_i,\\beta)$. The closed cap $H_i(\\beta,c)=\\{W:N_i(\\beta)\\cdot(W-Y)\\ge c\\}$ has the unique raw $Q$-quantile threshold\n$$\nc_\\beta=2-\\beta t_0-\\sqrt{4-4\\beta t_0-\\beta^2/3},\n\\quad |\\beta|\\le1/8.\n$$\nNear this threshold its raw mass is $Q+(A/3)\\beta^2-(4-2\\beta t_0)c+c^2$. Its section coarea in the displayed normal units is $S_\\beta=2\\sqrt{4-4\\beta t_0-\\beta^2/3}$. Also $0\\le c_\\beta\\le13\\beta^2/108$, with equality to zero only for $\\beta=0$, and $c_\\beta=(A/12)\\beta^2+O(\\beta^3)$ as $\\beta\\to0$.\n\nThe intersection of all inequalities $N_i(\\beta)\\cdot h\\le c_\\beta$ for this range of $\\beta$ is $\\{0\\}$, and every point $Y+h$ of raw depth at least $Q$ satisfies them. For $g>0$, $\\beta>0$, the positive coefficients $g/(3\\beta)$ combine the displayed normals to $g e_t$ and the thresholds to $gc_\\beta/\\beta=(gA/12)\\beta+O(\\beta^2)$. Negative tilts recover $-g e_t$ with coefficients $g/(3|\\beta|)$. For unit normals at positive tilt the total coefficient is $g[2\\sqrt{1+\\beta^2}+\\sqrt{2+\\beta^2}]/(3\\beta)$ with the same combined threshold. Any nonnegative combination of unit normals with vertical components bounded by $\\eta>0$ in magnitude and vertical sum $g$ has total coefficient at least $|g|/\\eta$.",
+  "subgoal_id": "pk-intake-triangle-frustum-near-quantile-normal-recovery",
+  "title": "Exact frustum quantiles and reciprocal-tilt recovery of vertical normals"
+}

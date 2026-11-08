@@ -1,0 +1,51 @@
+{
+  "candidate_id": "a18f97a10c2efb27",
+  "candidate_sha256": "b2c97bcc3e2b9fe3b89e40721d242a08702120e9dde75b25eddbdee48d6a892f",
+  "checked_dependency_candidate_sha256": {
+    "0a73ba4a9c7b24d1": "e2fc877b162d675b1837abcbacbf156d4b6144ae10b904452e385c7c3f9478d5"
+  },
+  "checks": [
+    "The epigraph LP is feasible. Coverage makes its infimum nonnegative, hence finite and attained, and LP duality gives the stated simplex constraint and sign. Conversely the weighted margin is nonnegative everywhere.",
+    "A bounded hinge forces a common finite lower bound for all thresholds using positive fiber volumes and the fixed source ball. The affine clipping proof preserves exact finite threshold limits and makes divergent positive thresholds strictly outside the source.",
+    "A positive limiting certificate coefficient cannot sit on a threshold tending to positive infinity. Discarding these nonnegative threshold terms before the limit preserves the weighted inequality. The remaining weights have total one and a zero normal resultant, so certify coverage on all of R^d.",
+    "Finite-threshold hinge integrands converge uniformly and all divergent ones vanish on the bounded source. Cap mass convergence uses the nonzero unit normals and null planes. Integrating one center-containing cap on each fiber inball gives κ_(d−1)r_z^(d+1)/(d+1).",
+    "The compactification matches b488285aaeabe80d §§1–2 and leaves free offsets and tilts on fixed frame normals."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "0a73ba4a9c7b24d1",
+      "candidate_sha256": "e2fc877b162d675b1837abcbacbf156d4b6144ae10b904452e385c7c3f9478d5",
+      "fact_sha256": "d0ae5b1e1f25643f3318e2b506defab8a4440c21b681e8e1245d796fd3c42d67",
+      "hypotheses": "For n≥1 apply its finite affine evaluation construction to each cap on the fixed containing ball. Its proof preserves every finite threshold as a numerical evaluation even outside the source ball, which is needed for the weighted certificate. For n=0 the one threshold is realized directly.",
+      "reviewed_proof_sha256": "be526f6d1f2091d0d46035ac3af6f3030339216800ad8391ccc4ff4bb1786412",
+      "reviewed_statement_sha256": "ee467ca4de5c4198f9e5d1582d7822a4a8dc51d7363241dfdb440dbee97001e6"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:22:24Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted hinge theorem covers S alone and transfers source traces. Whole-space attainment additionally retains balanced weights after divergence and imposes coverage outside S.",
+      "fact_id": "dd9bb9379a876e89"
+    },
+    {
+      "comparison": "Critical circuits produce particular whole-plane covers with depth budgets for compatible families. They do not optimize this fixed-count source hinge functional over all such covers.",
+      "fact_id": "755cb08c379113cc"
+    }
+  ],
+  "readability": "The hypotheses and the proof use the same scope.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent cold read of the exact frozen candidate, followed by source, hypothesis, overlap and arithmetic checks.",
+  "reviewed_proof_sha256": "de65e2d63a766480163d59df3837c393d80dff907ad25cde581b90a919cbf4b7",
+  "reviewed_statement_sha256": "65395cb55f962959742a3c7e4c390bdd751312b1a6b85d1ff3e6d173f4c0d9c5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:16:30Z",
+  "summary": "The whole-space LP gives exact balanced coverage certificates, and limiting finite-threshold certificates retain coverage and attain the positive hinge minimum.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

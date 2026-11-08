@@ -1,0 +1,28 @@
+{
+  "advances": "Exact ordinary planar feasibility with the six ray endpoints of a strict distinct-vertex triangle fixed.",
+  "author": "PK-research-agent",
+  "candidate_id": "212f957189de9062",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:16:52.937046+00:00",
+  "depends_on": [
+    "7d1ee06fa4119930"
+  ],
+  "draft_key": "reciprocal-sector-change-psd-and-zero-loss",
+  "kind": "lemma",
+  "proof": "At a strict corner, the edge of $T$ between the other vertices is entirely excluded by its cap. On any edge joining two captured vertices, the third cap margin is negative, so the two relevant cap margins overlap between their respective cut points. Therefore all six endpoints are in relative interiors of the triangle edges, the double sectors are cores, and the three unique sectors each have positive excess and precisely one original vertex. The translated six rays are distinct in cyclic order with gaps less than $\\pi$ because the spanning balanced normals are pairwise nonparallel. All sector areas are positive and the proposed areas obey the core bounds, so 7d1ee06fa4119930 applies.\n\nIn that criterion the graph of positive excess for $T$ consists of the three disjoint unique edges. Write each actual unique vertex as $uP+vQ$ in the basis of its two endpoints, with $u,v>0$. Its charges from the proof of the criterion have zero node slack because each ray endpoint is a straight boundary join. For the two positive charges $r=a/(Du)$ and $s=a/(Dv)$ of that edge (with $a$ the relative excess and $D$ the sector determinant), its two zero slacks mean the node budgets are $s,r$. Its matrix is therefore $\\operatorname{diag}(s,r)-rs\\,\\mathbf1\\mathbf1^{\\mathsf T}/(r+s)$, a rank-one matrix with positive kernel $(r,s)$ proportional to $(v,u)$. Normalization gives $(\\alpha_i,\\beta_i)$ and the displayed form with $\\lambda_i>0$. At fixed rays the node budgets are fixed, and an area's sole matrix contribution is $-(1/D-1/(2W))aa^{\\mathsf T}$, where $D$ is the sector determinant and $a$ its endpoint indicator. Hence reciprocal losses add $\\ell_i\\mathbf1\\mathbf1^{\\mathsf T}$ and reciprocal gains subtract $g_j a_j a_j^{\\mathsf T}$, giving the exact matrix.\n\nTest its form on the baseline kernel of a block, embedded by zero elsewhere. The positive update contributes $\\ell_i$, since the kernel entries sum to one. Any adjacent gain subtracts $g_j$ times the square of its strictly positive endpoint entry. At $\\ell_i=0$ the form can be nonnegative only when both adjacent gains vanish. Every double edge joins two different unique blocks, so at most one changed block forbids every double gain.\n",
+  "source_candidate_ids": [
+    "29c2230b74378948"
+  ],
+  "source_candidate_sha256": {
+    "29c2230b74378948": "e6ef8faeffcbe53a2a223db6d9416c33b26380e75add8a1a7367235e49c59397"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "29c2230b74378948",
+      "locator": "29c2230b74378948:01 Proof §§1–2, (1)–(4), reciprocal block test and zero-loss restriction"
+    }
+  ],
+  "statement": "Let $T$ be a planar triangle with three balanced spanning cuts through an interior mark, with distinct strict captured vertices. Fix its six actual ray endpoints. Prescribe positive finite unique areas $X_i$ between their ray-core values and $X_i^T$, and double areas $Y_j\\ge Y_j^T$. Write $\\ell_i=1/(2X_i)-1/(2X_i^T)$ and $g_j=1/(2Y_j^T)-1/(2Y_j)$. The baseline matrix consists of three rank-one two-node blocks $L_{T,i}=\\lambda_i\\begin{pmatrix}\\beta_i^2&-\\alpha_i\\beta_i\\\\-\\alpha_i\\beta_i&\\alpha_i^2\\end{pmatrix}$, with $\\lambda_i>0$ and positive normalized kernel $(\\alpha_i,\\beta_i)$, $\\alpha_i+\\beta_i=1$. Feasibility of the changed data is equivalent to\n$$\nL=\\operatorname{diag}_{i=1}^3(L_{T,i}+\\ell_i\\mathbf1\\mathbf1^{\\mathsf T})-\\sum_j g_j a_j a_j^{\\mathsf T}\\succeq0,\n$$\nwhere $a_j$ indicates the two nodes of double edge $j$. In particular, if $\\ell_i=0$, both double gains adjacent to that corner vanish. At most one positive unique loss implies no positive double gains.",
+  "subgoal_id": "pk-intake-reciprocal-sector-change-psd-and-zero-loss",
+  "title": "An unchanged unique corner forbids both incident double-sector gains"
+}

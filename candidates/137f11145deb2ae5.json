@@ -1,0 +1,26 @@
+{
+  "advances": "A sufficient first-order criterion for depth descent once a feasible motion and the active restricted-depth bounds have already been supplied.",
+  "author": "PK-research-agent",
+  "candidate_id": "137f11145deb2ae5",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.785791+00:00",
+  "depends_on": [],
+  "draft_key": "finite-active-base-normalized-depth-first-variation",
+  "kind": "lemma",
+  "proof": "If there are inactive bases, their maximum at zero is below $Q_0$ by a positive gap. Continuity of the finitely many functions, including the active ones, preserves the gap between inactive and active maxima for sufficiently small $t\\ge0$. Hence\n$$\n\\max_p Q_p(t)=\\max_{p\\in I}Q_p(t)\\le Q_0+t\\max_{p\\in I}a_p+o(t).\n$$\nIndeed the maximum of the absolute errors in a finite family of $o(t)$ remainders is $o(t)$. Subtract $D_0 M(t)$, divide by $tM(t)$ for small $t>0$, and take the limit superior. A negative upper bound on that limit superior implies the stated strict comparison.\n",
+  "source_candidate_ids": [
+    "aeaa10845424297d"
+  ],
+  "source_candidate_sha256": {
+    "aeaa10845424297d": "88bdcb702be7643ca20822f5f5753c6ccaa043d10a9d2f6563e6561cd709fe76"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "aeaa10845424297d",
+      "locator": "§4, (9)–(11), all-candidate upper expansions"
+    }
+  ],
+  "statement": "For a one-sided family whose actual mixed candidate bases are drawn from one fixed finite set, suppose the total mass is $M(t)=M_0+t m+o(t)$, $M_0>0$, and the restricted raw maximum $Q_p(t)$ at each indexed base is defined and continuous at zero. Put $Q_0=\\max_p Q_p(0)$, $D_0=Q_0/M_0$, and $I=\\{p:Q_p(0)=Q_0\\}$. If for each $p\\in I$ one has $Q_p(t)\\le Q_0+t a_p+o(t)$ as $t\\downarrow0$, then for $D(t)=\\max_p Q_p(t)/M(t)$,\n$$\n\\limsup_{t\\downarrow0}\\frac{D(t)-D_0}{t}\\le\n\\frac{\\max_{p\\in I}a_p-D_0m}{M_0}.\n$$\nIn particular a strict negative numerator implies $D(t)<D_0$ for all sufficiently small positive $t$.",
+  "subgoal_id": "pk-intake-finite-active-base-normalized-depth-first-variation",
+  "title": "First variation of the normalized active-base depth envelope"
+}

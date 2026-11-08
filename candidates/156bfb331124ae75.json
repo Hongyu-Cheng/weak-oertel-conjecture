@@ -1,0 +1,32 @@
+{
+  "advances": "A structural row selection at a simplex-capacity maximum, with a nonunit capacity vector and no row-rank assumption.",
+  "author": "PK-research-agent",
+  "candidate_id": "156bfb331124ae75",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.776503+00:00",
+  "depends_on": [
+    "643b08457d03e63b",
+    "099aa1c919dac117",
+    "5097879468363a7e",
+    "8bdcdcd6e2fa69d9",
+    "08e57a9d5210184f"
+  ],
+  "draft_key": "simplex-stochastic-common-centroid-central-pair",
+  "kind": "lemma",
+  "proof": "The accepted common-centroid theorem applies because the objective has positive weights, $X$ is a nonnegative square column-stochastic local maximum, and its capacity vector is not a unit vector. All full rows have proper thresholds $t_i=b\\cdot X_i$, with $b$ the normalized positive multiplier vector and the actual coarea centroid. The coarea factor is constant on each section, so normalized coarea and normalized section volume agree. The accepted support exclusion forces every other nonzero row to have precisely one zero, and the boundary multipliers for a row with hole $h$ give $b_j\\le1/d$ for $j\\ne h$.\n\nFor every row, also define $t_i=b\\cdot X_i$, which is positive at nonzero rows and zero at zero rows. For each column $h$, column stochasticity gives $\\sum_i(t_i-X_{ih})=0$, using $\\sum_j b_j=1$. Let $I=\\{j:b_j>1/d\\}$. Every proper full-row minimizing cap strictly captures at least two vertices by the accepted optimized threshold law. If $I$ is empty, take any full row. If $I=\\{h\\}$, each one-hole row has its zero at $h$ and contributes $t_i>0$ to the balance in that column. If there is a one-hole row, some full row therefore has strictly negative margin $t_i-X_{ih}$. Otherwise the only nonzero rows are full, and their margins at $h$ are all nonzero because a zero margin would force $b_h=1/d$ by the accepted same-side lemma for proper full-row minima. The balance again forces a full row with negative margin at $h$. In either case its at least two strictly captured vertices have coordinates at most $1/d$.\n\nIf $|I|\\ge2$, the one-hole bound rules out every one-hole row, so all nonzero rows are full. Choose any $h\\in I$. All full-row margins at $h$ are nonzero by the same-side lemma, so the balance again forces a negative one. In that row all the indices of $I$ are strictly excluded by the same-side lemma, whose density hypothesis holds at any proper minimizing strictly positive row. That row's at least two strictly captured vertices are therefore central as required.\n",
+  "source_candidate_ids": [
+    "f9d097c4c244eb84"
+  ],
+  "source_candidate_sha256": {
+    "f9d097c4c244eb84": "62ae8b1335e7860eac27a8a10d97a64d2f67e996c2ae6b0ac2c90f421b09c553"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f9d097c4c244eb84",
+      "locator": "§§1–2, (1), including the margin balance at noncentral indices"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and $m=d+1$. For uniform barycentric $U$ on $\\Delta_d=\\{u\\ge0:\\sum_j u_j=1\\}$ define the row capacity $\\phi_d(x)=\\inf_{t>0:\\Pr(x\\cdot U\\le t)>0}t/\\Pr(x\\cdot U\\le t)^{1/d}$. Fix positive weights $c_i$ on the $m$ rows of nonnegative $m$-square column-stochastic matrices and let $H(X)=\\sum_i c_i\\phi_d(X_i)$. Suppose a local maximizer $X$ has a strictly positive row and its capacity vector is not a standard unit vector. Every strictly positive row has a proper minimizing threshold and all such rows share an actual normalized-section-volume centroid $b$. Each nonzero nonfull row has a unique zero at some column $h$ and $b_j\\le1/d$ for all $j\\ne h$. At least one strictly positive row has a minimizing cap strictly capturing two vertices with $b_j\\le1/d$.",
+  "subgoal_id": "pk-intake-simplex-stochastic-common-centroid-central-pair",
+  "title": "A captured central pair at a positive-weight simplex-capacity maximum"
+}

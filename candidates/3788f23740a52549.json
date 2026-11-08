@@ -1,0 +1,30 @@
+{
+  "advances": "Scalar strict outer tails of a concave width sequence. The mixed-centroid cap transfer has separate geometric premises.",
+  "author": "PK-research-agent",
+  "candidate_id": "3788f23740a52549",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:13:09.523413+00:00",
+  "depends_on": [
+    "c46a6b8335f94cab",
+    "108bf10461a9c6ff",
+    "e38bbe8abb5ab718"
+  ],
+  "draft_key": "centered-concave-slab-tail-one-third",
+  "kind": "theorem",
+  "proof": "Trim zero endpoints. The remaining positive support $[\\ell,r]\\cap\\mathbb Z$ is consecutive by concavity, and its mean remains zero. With $N$ the support size, $N=1$ is immediate, $N=2$ cannot have an integer mean, and $N=3$ forces indices $-1,0,1$ and weights $a,b,a$ with $b\\ge a>0$. In the last case either $h=0$ and the tails both have mass $(M-m)/2$, or the right-hand side is nonpositive. Hence assume $N\\ge4$.\n\nThen $m/M\\le1/2$. For $N\\ge5$ use the two chords from a maximizing index to height zero at the two ends. If the maximum is interior their sum, with the peak counted once, is $m(N-1)/2$. At an end the single full chord sums to $mN/2$. For $N=4$, after reflection the indices are $-1,0,1,2$. Write the weights as $a,b,c,e$. The mean and concavity give $a=c+2e$ and $c+e\\le b\\le2c-e$. Thus $M=b+2c+3e$ is at least $2a,2b,2c,2e$: for $2a$ use $b\\ge e$, and for $2b$ use $b\\le2c-e$. Also $w_0>2m/3$ by fact c46a6b8335f94cab applied to the concave weights with degree one and mean zero.\n\nFix $h\\ge0$, set $k=2h+1$, and suppose the right tail $T=\\sum_{i>h}w_i<(M-km)/3$. If $T=0$, the capped first-moment bound of e38bbe8abb5ab718 with cap $m$ and mass $M$ gives $0\\le hM-M^2/(2m)+M/2$, a contradiction. Thus $0<T<M/3$. Set $s=h+1$. On the positive support let $F_j=\\sum_{i\\ge j}w_i$. Fact 108bf10461a9c6ff at degree one makes the actual decrements $\\sqrt{F_j}-\\sqrt{F_{j+1}}$ nondecreasing for $\\ell\\le j<r$.\n\nIf $s<r$, let $p$ be a maximizing index and put $c_*=m/(2\\sqrt M)$. For $p\\le s$, the decrement at $p$ is at least $m/(2\\sqrt M)$ by its rationalized formula, so every decrement from $s$ on is at least $c_*$. For $p>s$, concavity between $0$ and $p$ gives $w_s\\ge w_0>2m/3$, and the decrement at $s$ is greater than $m/(3\\sqrt T)>c_*$. Summing only the actual decrements shows $F_{s+v}\\le(\\sqrt T-vc_*)_+^2$ for all integer $v\\ge0$, with the terms beyond $r$ set to zero for this inequality. The distance moment of the right tail then satisfies\n$$\nE=\\sum_{i>h}(i-h)w_i=\\sum_{v\\ge0}F_{s+v}\n\\le T+\\int_0^\\infty(\\sqrt T-xc_*)_+^2\\,dx\n=T+\\frac{2\\sqrt M\\,T^{3/2}}{3m}.\n$$\nIf $s=r$, the same bound holds because $E=T$.\n\nApply e38bbe8abb5ab718 to the mass $M-T$ on $i\\le h$ and add the right-tail moment $hT+E$. The zero mean implies\n$$\n0\\le hM-\\frac{(M-T)^2}{2m}+\\frac{M-T}{2}+T+\\frac{2\\sqrt M\\,T^{3/2}}{3m}.\n$$\nWith $t=T/M$ and $\\mu=m/M$ this gives $k\\mu/2\\ge (1-t)^2/2-(2/3)t^{3/2}-\\mu t/2$. The right side minus $(1-3t)/2$ equals\n$$\nt\\left[\\frac5{18}+\\frac12(\\sqrt t-2/3)^2-\\frac{\\mu}{2}\\right]\\ge t/36>0.\n$$\nThus $k\\mu>1-3t$, contradicting $T<(M-km)/3$. Reflection proves the other tail.\n",
+  "source_candidate_ids": [
+    "ad8324f468564d7c"
+  ],
+  "source_candidate_sha256": {
+    "ad8324f468564d7c": "a6b301ee9f602fbc452e126ce6382e653a18c456e491ffde85b10e47c70c65be"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ad8324f468564d7c",
+      "locator": "ad8324f468564d7c:01 Opening (1), §§1–4"
+    }
+  ],
+  "statement": "Let $(w_i)$ be a nonzero nonnegative concave sequence on a finite interval of consecutive integers, with $\\sum_i i w_i=0$. Write $M=\\sum_i w_i$ and $m=\\max_i w_i$. For every integer $h\\ge0$,\n$$\n\\min\\left\\{\\sum_{i>h}w_i,\\sum_{i<-h}w_i\\right\\}\\ge\\frac{M-(2h+1)m}{3}.\n$$\nFor the two sums only, entries off the given index interval are zero.",
+  "subgoal_id": "pk-intake-centered-concave-slab-tail-one-third",
+  "title": "One-third slab-tail bound for a centered concave sequence"
+}

@@ -1,0 +1,26 @@
+{
+  "advances": "Counterexample to deriving a single-endpoint enlargement from a centroid defect caused solely by extra volume in the actual middle.",
+  "author": "PK-research-agent",
+  "candidate_id": "987b5c4a6c23ac56",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:12:16.488592+00:00",
+  "depends_on": [],
+  "draft_key": "zero-reserve-strict-midpoint-inclusion",
+  "kind": "counterexample",
+  "proof": "Let $t=1/10$, $K_0=[-1/2,1/2]^3$ and $K_2=BK_0$, where $B$ has columns $g_4=(1,t,0)$, $g_5=(0,1,t)$ and $g_6=(t,0,1)$. Set $g_1=e_1,g_2=e_2,g_3=e_3$. Their midpoint is the symmetric zonotope $A=\\sum_{i=1}^6[-1/4,1/4]g_i$. Set $u=(0,-1/10,1)$, $c=(-9/40,-11/40,1/2)$, $\\varepsilon=1/1000$, $v=c+\\varepsilon u$, and $K_1=\\operatorname{conv}(A,v)$. The hull of the three lifted bodies at $0,1,2$ realizes exactly those fibers, because a convex combination at 1 uses equal weights on 0 and 2 and $A\\subset K_1$.\n\nFor every $r$, $h_A(r)=\\frac14\\sum_i|r\\cdot g_i|$. The direction space of its exposed face is the span of the generators perpendicular to $r$, since each other segment supplies only its maximizing endpoint. Consequently the facet normals are exactly the rays in the two signs of the nonzero $r_{ij}=g_i\\times g_j$. The fifteen slacks $10^6(h_A(r_{ij})-|r_{ij}\\cdot v|)$, in lexicographic pair order, are\n$$\n24000,249900,2400,-1010,249900,300000,24000,30000,252400,274900,300000,24990,1490,280160,249899.\n$$\nThese integers follow by substituting the rational generators into the support formula. For the sole negative pair, $r_{15}=u$ and $u\\cdot v=h_A(u)+101/100000$, so only the positive $u$-facet is violated. The face in that direction is $F=c+[-1/4,1/4]g_1+[-1/4,1/4]g_5$, since the four remaining fixed generator endpoints sum to $c$.\n\nEvery segment from $v$ to a point of $A$ meets all the other facet inequalities throughout and first enters $A$ on $F$. Thus $K_1\\setminus A$ is the pyramid over $F$ with apex $v$, up to a null boundary. Its volume and centroid are\n$$\n\\Delta=\\tfrac13|\\det(g_1/2,g_5/2,\\varepsilon u)|=\\tfrac{101}{1200000},\n\\qquad g_{\\rm add}=\\tfrac{3c+v}{4}=(-9/40,-11001/40000,2001/4000).\n$$\nThe centroid formula follows by integrating sections whose area scales as the square of the distance from the apex. Also\n$$\n|A|=\\tfrac18\\sum_{i<j<\\ell}|\\det(g_i,g_j,g_\\ell)|=\\tfrac{8631}{8000}.\n$$\nThe determinant formula follows by adding one segment at a time: adding $[0,w]$ increases volume by $|w|$ times the perpendicular projection area, by Fubini along the parallel interval fibers. Induction on the number of segments and dimension gives the stated determinant sum. Here the twenty determinant magnitudes multiplied by 1000 are\n$$\n1000,0,100,1000,100,1000,0,10,100,1000,1000,0,100,100,1000,10,1000,10,100,1001.\n$$\nBoth endpoints and $A$ are centrally symmetric about zero, so the centroid of $K_1$ is $\\Delta g_{\\rm add}/(|A|+\\Delta)$. This gives the stated nonzero centroid and $|K_1|=1294751/1200000$. The endpoint volumes are $1$ and $\\det B=1+t^3=1001/1000$. The middle is the largest fiber, and twice its numerator, $2589502$, is below the total numerator $3695951$ with common denominator $1200000$.\n\nThe facet normals of $K_0$ come from pairs within $\\{g_1,g_2,g_3\\}$ and those of $K_2$ from pairs within $\\{g_4,g_5,g_6\\}$. All corresponding slacks above are positive, so $h_{K_1}(r)=h_A(r)$ in every such direction. For an enlarged endpoint $L_e$ with the other bodies fixed, feasibility implies $h_{L_e}(r)\\le2h_{K_1}(r)-h_{K_{2-e}}(r)=h_{K_e}(r)$ on all its original facets, whence $L_e=K_e$. Continuous padding by the same centered unit cube preserves volumes and the old centroid coordinates. Its new product facets are unchanged midpoint supports, so the same test locks the padded endpoints. Integer padding by the base product $[0,1]^{n-1}$ makes one column per binary vertex. The original midpoint support constraints still hold within every layer, retaining the endpoint locks. The fiber count and parity count give the same strict mass comparison as in the original column.\n",
+  "source_candidate_ids": [
+    "584edae5c582b753"
+  ],
+  "source_candidate_sha256": {
+    "584edae5c582b753": "1c4dd64e88948988b6db1a1082096997f53cf98f9d5a8bcafb664bd51457793b"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "584edae5c582b753",
+      "locator": "§1, support test; §§3.1–3.4, (7)–(15); §4, padding"
+    }
+  ],
+  "statement": "For every $n\\ge1,d\\ge3$ there is a compact convex mixed-integer source with $3\\cdot2^{n-1}$ positive fibers and $2^n$ occupied parities, every fiber having volume strictly below the total mixed volume divided by $2^n$. In each three-fiber column both endpoints and their Minkowski midpoint have centroid zero, the actual middle strictly contains that midpoint and has nonzero centroid, and neither endpoint can be enlarged monotonically with all other fibers fixed. The original three-dimensional column has volumes $(1,1294751/1200000,1001/1000)$ and middle centroid $(101/1294751)(-9/40,-11001/40000,2001/4000)$.",
+  "subgoal_id": "pk-intake-zero-reserve-strict-midpoint-inclusion",
+  "title": "Strict midpoint inclusion can shift the centroid while both endpoint reserves vanish"
+}

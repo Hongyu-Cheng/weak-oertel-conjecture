@@ -1,0 +1,28 @@
+{
+  "advances": "The projection is fixed and has a specified relative-interior lattice site. The depth is the ordinary mixed d-volume halfspace depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "cac63cc5f166ba86",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.788783+00:00",
+  "depends_on": [
+    "2fadf089fb53a6e3"
+  ],
+  "draft_key": "fixed-projection-interior-fiber-depth-attainment",
+  "kind": "theorem",
+  "proof": "Use simultaneous Blaschke selection on the bounded fibers. In the limit, any point in the hull of the lifted limits at $z\\in P$ is a weighted combination of points of those limits with base barycenter $z$. Approximating each point in its original fiber with the same coefficients gives a point of the original actual fiber at $z$, so its limit is in the claimed limit fiber. The reverse inclusion holds by construction, and lattice convexity excludes extra lattice sites. Volumes converge, including at degenerate limits: at a positive-volume convex limit use almost-everywhere indicator convergence in the common ball, and at a lower-dimensional limit use the vanishing volumes of its outer neighborhoods. Thus the central volume and any stipulated positive lower bounds are preserved. When $\\operatorname{aff}(P)=\\mathbb R^n$, the central interior ball and an affine basis of lifted fiber points imply that the ambient hull is full dimensional.\n\nFor continuity, the same argument gives $L^1$ convergence of fiber indicators. The sum $\\mu_m$ of the corresponding $d$-volume measures converges in total variation to $\\mu$, with masses tending to $M>0$. At a fixed mark, replacing $\\mu_m$ by $\\mu$ changes the raw depth by at most the total variation distance, since every closed halfspace has that error bound. At fixed base $z$, moving the continuous mark from $x$ to $x'$ changes any through-mark cap mass by at most\n$$|P|\\kappa_{d-1}R_*^{d-1}\\|x-x'\\|,$$\nwhere all fibers lie in $R_*B_d$ and $\\kappa_0=1$. Pure-base caps are unchanged. For any other cap normalize the continuous normal to length one and bound the slab swept on each fiber using Fubini, independently of its base tilt. Taking infima gives the same Lipschitz estimate for raw depth. Every maximum over the finite compact fibers therefore exists. Upper continuity follows by taking a convergent subsequence of maximizing marks with fixed base, and lower continuity follows by approximating a limit maximizer at its base. Division by the converging positive masses completes the continuity proof. For any positive-total-volume family the central fiber is positive by the fixed positive barycentric inclusion in the normalization lemma. Finally normalize a minimizing sequence in the claimed fixed-$P$ class, take a limit, and use this continuity and invariance.\n",
+  "source_candidate_ids": [
+    "a14cc5f809b2b766"
+  ],
+  "source_candidate_sha256": {
+    "a14cc5f809b2b766": "4318cea1b79df15fc7116ce6a23b2c92c43d9590541f903e778a4b11ce4e72d3"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a14cc5f809b2b766",
+      "locator": "a14cc5f809b2b766:02 §§4–6, closed compatible limits, continuous depth and attained infimum"
+    }
+  ],
+  "statement": "Every simultaneous Hausdorff limit of the normalized actual families from the fixed-projection bounded-normalization lemma has central volume one, exact projection onto the same lattice set $P$, and the actual-fiber property. Positive uniform lower volume bounds, when imposed on other fibers, pass to the limit. The maximum raw ambient closed-halfspace depth on the lifted fibers, divided by their total $d$-volume, is continuous under that convergence, including when some limits have zero $d$-volume. In particular, if $\\operatorname{aff}(P)=\\mathbb R^n$ and contains the specified interior lattice point, the infimum over all such actual families of positive total $d$-volume is attained.",
+  "subgoal_id": "pk-intake-fixed-projection-interior-fiber-depth-attainment",
+  "title": "Compactness and depth attainment over a fixed projection with an interior lattice site"
+}

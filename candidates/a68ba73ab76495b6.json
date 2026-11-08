@@ -1,0 +1,29 @@
+{
+  "advances": "Exact endpoint rigidity for an ordinary finite cap cover, rather than an inequality for any mixed-depth target.",
+  "author": "PK-research-agent",
+  "candidate_id": "a68ba73ab76495b6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:12:16.490058+00:00",
+  "depends_on": [
+    "2eb9fc1dbf88b7c8",
+    "6769574fc1bd9f8d"
+  ],
+  "draft_key": "minimum-cover-budget-centroid-rigidity",
+  "kind": "theorem",
+  "proof": "Write the cover as $H_i=\\{x:u_i\\cdot(x-y)\\ge0\\}$ with nonzero $u_i$. The convex hull of its normals contains zero, since strict separation would give a vector strictly negative against every $u_i$ and thus an uncovered point. Choose a minimal subset whose convex hull contains zero. It has a positive convex dependence and its halfspaces still cover all space. If its normals failed to span, a common boundary line through $y$ would contain a point outside $K$, since $K$ is bounded. Applying 2eb9fc1dbf88b7c8 at that point to the same subcover gives a cap fraction at least $\\gamma_{d-1}>\\gamma_d$, a contradiction.\n\nLet $g$ be the centroid. It lies in the interior: the average of a supporting functional is strictly smaller than its maximum because the strict inequality holds on the interior. The full-volume metronoid consists of $g$, so 6769574fc1bd9f8d gives volume at least $\\gamma_d|K|$ in each through-$g$ cap. If $u_i\\cdot(g-y)>0$ for a selected normal, moving the cap boundary to $g$ would discard a positive-volume open slab meeting an interior ball about $g$. This contradicts the budget. Thus all selected margins $u_i\\cdot(g-y)$ are nonpositive. Their strictly positively weighted sum is zero, hence each is zero, and spanning gives $g=y$. The centroid lower bound makes the ordinary depth at least $\\gamma_d$, while the cover contains through-$y$ caps with fraction at most $\\gamma_d$, forcing equality of the depth and the largest cap fraction.\n",
+  "source_candidate_ids": [
+    "a20765b75f4bd3ee"
+  ],
+  "source_candidate_sha256": {
+    "a20765b75f4bd3ee": "247e01778ac8376595d29bc262b249d49b64bd41aa61831bfae8f799983ecf11"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a20765b75f4bd3ee",
+      "locator": "§4, Circuit rank and Smallest-budget rigidity"
+    }
+  ],
+  "statement": "Let $d\\ge2$ and let $K\\subset\\mathbb R^d$ be a full-dimensional compact convex body. Suppose finitely many proper closed halfspaces with boundaries through one point $y\\in K$ cover $\\mathbb R^d$ and each intersects $K$ in volume at most $\\gamma_d |K|$, where $\\gamma_j=(j/(j+1))^j$. Then $y$ is the centroid of $K$, its ordinary normalized Tukey depth is $\\gamma_d$, and the largest cap fraction is $\\gamma_d$.",
+  "subgoal_id": "pk-intake-minimum-cover-budget-centroid-rigidity",
+  "title": "Centroid rigidity at the minimum finite cap-cover budget"
+}

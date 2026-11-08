@@ -1,0 +1,81 @@
+{
+  "candidate_id": "a4b65634eb70af87",
+  "candidate_sha256": "c5995f55348a1a2eb86510ed54759dbe82061990216e68b4d657fc3fddfaf17e",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "The only changes to the exact candidate are the properness qualification in the statement and its justification in the proof. Source provenance and the empty dependency list are unchanged.",
+    "For every fixed gamma>0, 1/m+exp(-2 gamma m) tends to zero and exp(-2 gamma m)>0, so the cut threshold is strictly between a and 1 for all sufficiently large m. The original counterexample at m=2 is outside this properness claim.",
+    "On that tail the omitted collar has normalized inverse mass at most (a+eta^2)log(1+eta)/(M_m c_m), tending to zero. Its cut coarea is a+eta^2, and multiplying by gamma m-log c_m-log(1+eta) tends to gamma because m eta^2 tends to zero. The rate tends to R, and the cut excludes the lower-edge exterior atom.",
+    "Deleting finitely many indices preserves the common weak limit. The full inverse and exterior defect calculations, inside-support and complementary allocations, and diagonal half-incidence calculation retain their exact hypotheses and constants.",
+    "The source hashes match the pinned original candidates. The revised and original statement and proof field hashes are computed from their decoded UTF-8 values."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T16:22:57Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "a4b65634eb70af87",
+    "candidate_sha256": "ede1f65fd8c80bede3a01e51365da1301d8c35ac37daadb4fa250b88d7faff54",
+    "checks": [
+      "The (t,q) Jacobian is t and M_m=(1-a^2)/2. With v=t-a+eta, direct integration gives Z_m=1-a+(a-eta)log((1-a+eta)/eta) and the first t moment numerator M_m+(a-eta)Z_m. Thus c_m tends to exp(1/2), Z_m tends to 1+gamma, the stated centroid coordinates are correct, and the tilted row divided by its marked L value is exactly the normalized inverse-volume measure.",
+      "The limiting source coordinates are positive and their sum is strictly below 1; comparison against the four facet inequalities gives a uniform own inball and a positive limiting marked value.",
+      "Splitting t/v=1+(a-eta)/v isolates the defect. The latter spatial mass is concentrated near the origin, and the rate Jacobian gamma m/R and normalization by M_m c_m yield density 2 gamma/(cR) on the limiting rate interval. The zero-rate part of that term has vanishing mass; the first term has no atom at the origin.",
+      "The lower edge has length sqrt(2)/m and logarithm gamma m-log c_m, giving surface mass sqrt(2) gamma and limiting rate R. The two coordinate edges have logarithmic integrals over v in a shrinking interval at the origin, so contribute no additional atom.",
+      "The inside lower support has coarea a, since its edge length is sqrt(2)a and the normal length is sqrt(2). For sufficiently large m the offset cut is proper; its discarded inverse collar is bounded by a constant times (a+eta^2)log(1+eta), and its section mass tends to gamma. Complementary allocations add in body and volume and share the same section term.",
+      "At x=y the diagonal cut halves each transverse inverse slice and the lower-edge log measure. Along the section coarea is dt/2 and the local log is uniformly integrable near the origin, yielding zero section defect despite half of each other defect at the closed-cap incidence point.",
+      "Original 91145d6ea212266a §§6–7 gives the two cap calibrations; 1b1d5e313c1943d1 §§1–4 verifies the unlifted one-row calibration at gamma=log 2. The frozen proof supplies the extension to any gamma>0 and the rate-resolved claims."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T16:21:13Z",
+    "issues": [
+      {
+        "defect": "The statement takes arbitrary gamma>0 and m>=2, but a+eta^2 can exceed 1. For m=2 and gamma=log(4/3)/4, the threshold is 1/2+3/4=5/4, so the cap is empty and the claimed proper section does not exist at that index.",
+        "proof_locator": "Statement second paragraph, 'for the proper cap t>=a+eta^2'; proof fourth paragraph, offset cap",
+        "severity": "substantive",
+        "smallest_repair": "Qualify the offset-cap family as proper for all sufficiently large m, when a+eta^2<1. The limiting conclusions and all their constants can remain unchanged."
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "The accepted individual cap flux and complement identities are compatible with these allocations; they do not construct a positive-rate section atom or a nonparallel cap whose closed limiting trace overcounts both defect selections.",
+        "fact_id": "9206650dbfc8b0ec"
+      },
+      {
+        "comparison": "It provides joint body log and load-log rate lifts under a separator floor, without these explicit inverse-volume, section, or cap-incidence measures.",
+        "fact_id": "71a9133a8b7eb4ce"
+      }
+    ],
+    "readability": "The terms 'exterior' and 'section' are positive-log weighted allocated defect measures; the proof identifies their restrictions to the limiting zero point. The finite-index properness correction is separate from these limits.",
+    "reviewed_proof_sha256": "7ae42ca1e90ee5272c88455ca3f014abbe4089bf2220152560b1079aebeb640c",
+    "reviewed_statement_sha256": "eadeb7c9c3bb19ed16650ecbdfadcaccf513c638f73a4ce330280bf21f79c787",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T16:16:23Z",
+    "summary": "The exact row law, all limiting defect masses, and the fractional-cut obstruction check. The frozen formulation calls one of its cap sequences proper for every allowed m, which fails at small m for allowed gamma.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted individual cap flux and complement identities are compatible with these allocations; they do not construct a positive-rate section atom or a nonparallel cap whose closed limiting trace overcounts both defect selections.",
+      "fact_id": "9206650dbfc8b0ec"
+    },
+    {
+      "comparison": "It provides joint body log and load-log rate lifts under a separator floor, without these explicit inverse-volume, section, or cap-incidence measures.",
+      "fact_id": "71a9133a8b7eb4ce"
+    }
+  ],
+  "readability": "The phrase “proper for all sufficiently large m” now matches the asymptotic use of the offset-cap sequence.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "aa72e1d46ae757b614faad5d67dc054542a0e5e6dc0ea62658a6d311f2204044",
+  "reviewed_statement_sha256": "3b47c0fb8672db1b5fd55073dc318f00f477fab029f035404854b42d1f314531",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "ede1f65fd8c80bede3a01e51365da1301d8c35ac37daadb4fa250b88d7faff54",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:22:20Z",
+  "summary": "The revised quantifier makes the offset cut proper on a tail of the sequence, which suffices for all limit assertions. The original finite-index obstruction is resolved.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

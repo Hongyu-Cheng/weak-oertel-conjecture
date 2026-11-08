@@ -1,0 +1,29 @@
+{
+  "advances": "Exact ordinary planar counterexample to interpretations of shared-orientation stationarity.",
+  "author": "PK-research-agent",
+  "candidate_id": "14228fccb9ff5367",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.790294+00:00",
+  "depends_on": [
+    "3e2e95472b619800",
+    "fe2f6817d4654e19"
+  ],
+  "draft_key": "stationary-common-simplex-envelope-nonoptimality",
+  "kind": "counterexample",
+  "proof": "Both standard envelopes are $T$. In each triangle, exactly one vertex lies on each facet of $T$. The sums of the paired contact points on the diagonal, left and bottom facets are respectively $(1,1),(0,1),(1,0)$, twice the facet centroids. The scales are both one and neither individual contact at any facet is its centroid. Each exposed face is a singleton, so the derivative formula of the aggregate-contact theorem is identically zero in all directions.\n\nThe orientation of $A$ has outward normals $(1,3),(-3,-2),(2,-1)$. Maximizing each form on the vertices gives support vectors $(9/5,-6/5,4/5)$ for $A$ and $(11/5,-4/5,6/5)$ for $B$. Consequently in this orientation $P(A)=A$ and $P(B)=(-2/7,-2/7)+(13/7)A$, as is checked by the three support offsets and the common orientation. Since $|A|=7/50$ by the determinant formula, the total is $(7/50)(1+(13/7)^2)=109/175$.\n\nFor a local variation, let $(\\lambda_0,\\lambda_1,\\lambda_2)=(1-x-y,x,y)$, and use inward facet rows $\\lambda_j+t\\lambda_{j+1}$ with cyclic indices modulo three. For sufficiently small $|t|$ the unique minimum on each triangle stays at its original contact vertex; its value is $3t/5$ on $A$ and $2t/5$ on $B$ in each row. The row sum is $1+t$ and the linear area Jacobian on the coordinate plane is $1-t+t^2$: in coordinates $x,y$ the rows with indices $1,2$ have linear parts $(1,t)$ and $(-t,1-t)$. After subtracting the respective row minima, each envelope in these affine coordinates is a standard triangle with sum of its three nonnegative coordinates equal to $1-4t/5$ or $1-t/5$. Its physical area is half the square of that sum divided by the Jacobian. The total area is therefore\n$$\n\\frac{1-t+17t^2/50}{1-t+t^2}<1\n$$\nfor every sufficiently small nonzero $t$. This gives a nearby strict improvement. As with any two convex sets on bases $0,1$, their lifted hull realizes exactly these two integer fibers.\n",
+  "source_candidate_ids": [
+    "ae6af582a4950210"
+  ],
+  "source_candidate_sha256": {
+    "ae6af582a4950210": "a0f109ed2d34b4a44899e733949af8fe35cd021414a9081d818f38d0275b7aec"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ae6af582a4950210",
+      "locator": "ae6af582a4950210:06 §6, displayed triangles and (14), stationary orientation without individual contacts or optimality"
+    }
+  ],
+  "statement": "Let $T=\\operatorname{conv}(0,e_1,e_2)$ and take the two equal-weight triangles\n$$\nA=\\operatorname{conv}((3/5,2/5),(0,3/5),(2/5,0)),\\qquad\nB=\\operatorname{conv}((2/5,3/5),(0,2/5),(3/5,0)).\n$$\nAt the orientation of $T$, all directional derivatives of their total envelope area vanish and none of their individual facet contact points is the facet centroid. The total envelope area there is $1$, and the orientation of $A$ gives total envelope area $109/175$. The orientation of $T$ is also not a local minimum.",
+  "subgoal_id": "pk-intake-stationary-common-simplex-envelope-nonoptimality",
+  "title": "Aggregate stationarity can miss individual contacts and local optimality"
+}

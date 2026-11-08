@@ -1,0 +1,26 @@
+{
+  "advances": "A global ordinary planar raw-data loss theorem, with fixed sections and positive endpoints.",
+  "author": "PK-research-agent",
+  "candidate_id": "49a3b81814664012",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:16:52.938289+00:00",
+  "depends_on": [],
+  "draft_key": "global-planar-cubic-unique-loss",
+  "kind": "lemma",
+  "proof": "Write $D_s=f_s\\partial_{f_s}\\Psi=2f_s^2+P$ and $C=\\sum_iD_i$. Along a unit loss in cap $s$ and total area, logarithmic differentiation gives\n$$2k\\alpha_s=C+D_sT_s^2-Cf_sT_s,\\qquad T_s=\\sqrt{k/Q_s}.$$\nHere the three common terms in $\\log f_i$ contribute $C/(2k)-C/(\\sigma_sM)$ to $\\alpha_s$, and the term at $s$ contributes $D_s/(2Q_s)$. At $\\Psi=4$ we have $C=8+P$, $0<f_s<2$, and $4D_s-Cf_s^2=P(4-f_s^2)$. Completing the square in $T_s$ gives $2k\\alpha_s\\ge C(4D_s-Cf_s^2)/(4D_s)$, yielding the stated strict bound.\n\nThe affine loss path stays in the positive orthant. If $E>0$ its derivative at every point with $\\Psi=4$ is $-\\sum_s E_s\\alpha_s<0$. Initial equality therefore becomes strict for small positive time. A first later equality from below, including at the final endpoint, would have nonnegative left derivative. This is impossible. If $E=0$ the data are unchanged.\n",
+  "source_candidate_ids": [
+    "b59c030c1c2567d0"
+  ],
+  "source_candidate_sha256": {
+    "b59c030c1c2567d0": "3f8bcdfe0c226f5b92bb6e73f42402467a3b91a0ed8b1066194914a9ab861a3f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "b59c030c1c2567d0",
+      "locator": "b59c030c1c2567d0:01 Proof §§1–3, (1)–(4), finite simultaneous loss barrier"
+    }
+  ],
+  "statement": "For $k,Q_i,\\sigma_i>0$, $i=1,2,3$, set $M=\\sum_iQ_i/\\sigma_i$, $f_i=2\\sqrt{kQ_i}/(\\sigma_i M)$, $P=f_1f_2f_3$ and $\\Psi=\\sum_i f_i^2+P$. Reduce each $Q_i$ by $E_i\\ge0$ and $k$ by $E=\\sum_iE_i$, with $\\sigma_i$ fixed and all final data positive. If initially $\\Psi\\le4$, then finally $\\Psi\\le4$, strictly if $E>0$. At any positive boundary point $\\Psi=4$, a unit loss of $k$ and $Q_s$ has derivative $-\\alpha_s$ satisfying\n$$2k\\alpha_s\\ge\\frac{(8+P)P(4-f_s^2)}{4(2f_s^2+P)}>0.$$",
+  "subgoal_id": "pk-intake-global-planar-cubic-unique-loss",
+  "title": "Global planar cubic preservation under arbitrary simultaneous unique losses"
+}

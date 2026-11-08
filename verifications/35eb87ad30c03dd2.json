@@ -1,0 +1,81 @@
+{
+  "archive_original_source_sha256": {
+    "19899b61b9ca5f3a": "5279a48a1c27dbbdaf72a47b4b1ea8a4f253f54075378f5a78bfde3db23b000f"
+  },
+  "candidate_id": "f111ac68709fc56a",
+  "candidate_sha256": "af406dd04523dbe56b67f94352541dae05d787e2614a9d46a4d36049868318e3",
+  "checked_dependency_candidate_sha256": {},
+  "checked_source_candidate_sha256": {
+    "19899b61b9ca5f3a": "042b90ac6eb09b44e88cfa2fbe84f968ee29f63d9c77d36cdbd4e06d77733782"
+  },
+  "checks": [
+    "Checked 19899b61b9ca5f3a §4, (11)–(15). Each through-source perturbed cap has mass at least Q, so two-sided differentiability gives zero first derivative and nonnegative second derivative. The scalar inverse gives c′=0, c″=A/S with the stated sign and C¹ version.",
+    "The continuous normals combine exactly by positive balance, and projection onto any missing component gives the reciprocal-growth lower bound. Substituting s=S(w·e)h/A in the displaced threshold sh(w·e) yields the displayed negative coefficient S²(w·e)²/(2A). This gives an upper bound using an actual cap, with no all-normal equality.",
+    "On a bounded source the threshold-test identity gives first section moment and minus the threshold derivative of the second. Stable polytopal incidence gives smooth vertices and polynomial integrals, and strict full or empty slices contribute no derivatives.",
+    "The revised opening explicitly requires finitely many compact convex positive-volume fibers. Their union is bounded, so the first and second derivatives of the tested threshold integral are dominated by finite constants times the respective suprema of the compactly supported test function and its derivative. Fubini and coarea apply. Smoothness of the section moments promotes the distributional sign identity to the stated pointwise derivative; the unbounded-tail example is outside the revised domain."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T16:24:28Z",
+  "gaps": [],
+  "initial_review": {
+    "archive_original_source_sha256": {
+      "19899b61b9ca5f3a": "5279a48a1c27dbbdaf72a47b4b1ea8a4f253f54075378f5a78bfde3db23b000f"
+    },
+    "candidate_id": "f111ac68709fc56a",
+    "candidate_sha256": "9c5e11c6e628b9aea3f26f11f23b657353fb814737da3577d07b5dd443ffaba5",
+    "checked_source_candidate_sha256": {
+      "19899b61b9ca5f3a": "042b90ac6eb09b44e88cfa2fbe84f968ee29f63d9c77d36cdbd4e06d77733782"
+    },
+    "checks": [
+      "Checked 19899b61b9ca5f3a §4, (11)–(15). Each through-source perturbed cap has mass at least Q, so two-sided differentiability gives zero first derivative and nonnegative second derivative. The scalar inverse gives c′=0, c″=A/S with the stated sign and C¹ version.",
+      "The continuous normals combine exactly by positive balance, and projection onto any missing component gives the reciprocal-growth lower bound. Substituting s=S(w·e)h/A in the displaced threshold sh(w·e) yields the displayed negative coefficient S²(w·e)²/(2A). This gives an upper bound using an actual cap, with no all-normal equality.",
+      "On a bounded source the threshold-test identity gives first section moment and minus the threshold derivative of the second. Stable polytopal incidence gives smooth vertices and polynomial integrals, and strict full or empty slices contribute no derivatives.",
+      "The archived note works in a convex-body context; the normalized standalone statement dropped boundedness. At unbounded fibers, moving-cap contributions can appear from infinity even while all old level-section moments near the threshold are smooth."
+    ],
+    "dependencies": [],
+    "finished_utc": "2026-11-08T16:23:01Z",
+    "issues": [
+      {
+        "defect": "Boundedness of the source is used without being assumed. For a literal counterexample take two bases 0,1, own fiber K_0=[−1,1]^3 with Y=0, and K_1={(x,y,r):0≤x≤1, |y|≥1, 0≤r≤|y|^{−3}}. The old caps ±x−4z≥0 have mass Q=4 and balance; any containing cap keeps at least half the centrally symmetric own cube. Use the perturbed margins ±x−4z+sy. Near (0,0) the own contribution is 4(1−c), while the remote contribution is s²/2 times ∫_0^1(4+c∓x)^{−2} dx, a smooth function. For the plus-x cap A=1/12>0, but at s=0 all nearby remote sections are empty and the own second section moment is 4/3, constant in c. Thus the claimed section derivative would give A=0.",
+        "locator": "Statement opening and proof second paragraph, differentiation of the threshold-test integral",
+        "repair": "Explicitly assume finitely many compact convex positive-volume fibers in the opening sentence, as in the intended convex-body setting. The proof then has the domination it uses; the exact derivative formulas need no other change.",
+        "severity": "substantive"
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Proves the same sign of an ordinary one-body Hessian term for a C² transverse boundary. It does not furnish the mixed positive circuit inverse, reciprocal normal recovery, or displaced-source depth estimate.",
+        "fact_id": "ce191a9f8e9f3597"
+      }
+    ],
+    "readability": "The scalar quantile and depth estimates are independent of the section-moment representation. The issue is the missing source hypothesis for differentiating the latter.",
+    "reviewed_proof_sha256": "56c00aeed3fd843ba78681a5ccb24dbbad3753a003e5715402950f888d5fdc61",
+    "reviewed_statement_sha256": "b429266353e8b3e3345c06c896912617b60640d0ee51c3a429454bfe6ae8fb09",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T16:16:09Z",
+    "summary": "The inverse and quadratic depth formulas are correct under the intended bounded source hypothesis. The frozen statement permits unbounded positive-volume fibers, for which its coarea second derivative can fail even with C² cap maps and smooth local section moments.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Proves the same sign of an ordinary one-body Hessian term for a C² transverse boundary. It does not furnish the mixed positive circuit inverse, reciprocal normal recovery, or displaced-source depth estimate.",
+      "fact_id": "ce191a9f8e9f3597"
+    }
+  ],
+  "readability": "The cap map is C² by hypothesis. Stable polytopal incidence remains a sufficient condition, and the coarea moment representation retains its separate local regularity premise.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "56c00aeed3fd843ba78681a5ccb24dbbad3753a003e5715402950f888d5fdc61",
+  "reviewed_statement_sha256": "42e25a47583a0b74826444cb14ab5ad8668d2832ddb5cd4b1e954e7ece0a27d9",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "9c5e11c6e628b9aea3f26f11f23b657353fb814737da3577d07b5dd443ffaba5",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:23:40Z",
+  "summary": "The compact convex source hypothesis supplies domination for the threshold-test differentiation and excludes the unbounded-fiber counterexample. The quantile and displaced-source estimates remain as checked.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

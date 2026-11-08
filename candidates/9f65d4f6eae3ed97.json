@@ -1,0 +1,26 @@
+{
+  "advances": "A pair of scalar capacities and the associated at-most-two-row stochastic stratum, not arbitrary row counts or mixed-integer depth.",
+  "author": "PK-research-agent",
+  "candidate_id": "9f65d4f6eae3ed97",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.773251+00:00",
+  "depends_on": [],
+  "draft_key": "arbitrary-law-two-capacity-bound",
+  "kind": "theorem",
+  "proof": "Testing $t=1$ gives $a,b\\le1$, so either zero capacity settles the inequality. Otherwise the defining infima give $\\Pr(U\\le t)\\le(t/a)^d$ and $\\Pr(V\\le s)\\le(s/b)^d$ for all positive thresholds, including when the probabilities are zero. For each $0<t<1$, the two events $U\\le t$ and $V\\le1-t$ cover almost surely, so $1\\le (t/a)^d+((1-t)/b)^d$. The strictly convex right hand side has minimum $(a^p+b^p)^{1-d}$ at $t=a^p/(a^p+b^p)$ by differentiation. This gives the inequality without an attainment or density hypothesis.\n\nIn the matrix case, permute row labels so the possible nonzero rows are $1,2$. At every simplex point their evaluations sum to one by column stochasticity, and every remaining capacity is zero. For $d\\ge2$ choose $\\theta\\in[a^p,1-b^p]$. Set $Y_{12}=Y_{21}=1$ and $Y_{1j}=\\theta$, $Y_{2j}=1-\\theta$ in columns $j\\ge3$ with other entries zero. This has zero diagonal and column sums one, and its off-diagonal means dominate $a,b$ because they are $\\theta^{1/p},(1-\\theta)^{1/p}$. In $d=1$ the two-cross-entry matrix has means $(1,1)$, which dominate the capacities as each is at most one.\n",
+  "source_candidate_ids": [
+    "3ed628996d1cbb09"
+  ],
+  "source_candidate_sha256": {
+    "3ed628996d1cbb09": "6960e1518873045356fb824c4672d56d1783f85050e4b0af3e4d91fc46602a29"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "3ed628996d1cbb09",
+      "locator": "§5; §4 explicit matrix and d=1 endpoint"
+    }
+  ],
+  "statement": "Let $d\\ge2$ be an integer, $p=d/(d-1)$, and $U,V$ nonnegative random variables on a probability space with $U+V\\le1$ almost surely. Let $a=\\inf_{t>0:\\Pr(U\\le t)>0}t/\\Pr(U\\le t)^{1/d}$ and define $b$ with $V$ in place of $U$. Then $a^p+b^p\\le1$, including laws with atoms. Consequently, for any integer $d\\ge1$ and any nonnegative $(d+1)$-square column-stochastic matrix $X$ with at most two nonzero rows, its row capacities $\\phi_d(X_i)=\\inf_{t>0:\\Pr(X_i\\cdot\\Xi\\le t)>0}t/\\Pr(X_i\\cdot\\Xi\\le t)^{1/d}$ for uniform barycentric $\\Xi$ belong to $D_d$, the downward set of off-diagonal row geometric means of zero-diagonal column-stochastic matrices of the same size.",
+  "subgoal_id": "pk-intake-arbitrary-law-two-capacity-bound",
+  "title": "The two-coordinate capacity bound for arbitrary probability laws"
+}

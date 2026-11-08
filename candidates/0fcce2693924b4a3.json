@@ -1,0 +1,29 @@
+{
+  "advances": "A one-row inequality for uniform tetrahedral barycentrics and its explicit strict failure.",
+  "author": "PK-research-agent",
+  "candidate_id": "0fcce2693924b4a3",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.779000+00:00",
+  "depends_on": [
+    "1462fa9ce6ced54e",
+    "57fcea441fbf5d21"
+  ],
+  "draft_key": "tetrahedral-one-row-capacity-product-counterexample",
+  "kind": "counterexample",
+  "proof": "On $1/16<t\\le1/4$ the cap is a vertex tetrahedron, so $F_x(t)=(4096/675)(t-1/16)^3$ and the ratio strictly decreases. For $1/4<t<1$, apply the distinct-height formula of 1462fa9ce6ced54e to the threshold heights with the last entry of the row temporarily equal to $1+\\varepsilon$. Only the first two positive heights enter the formula, so their denominators stay nonzero as $\\varepsilon\\downarrow0$. The cap probabilities converge because the limiting affine row is nonconstant, with level set of volume zero. This gives, including the endpoints by continuity,\n$$\nF_x(t)=(4096/675)(t-1/16)^3-(256/27)(t-1/4)^3\n=-\\frac{256t^3-448t^2+128t-11}{75}.\n$$\nThe derivative sign of $t/F_x(t)^{1/3}$ is the sign of $(8t-3)(56t-11)/225$ on this interval. The factor $56t-11$ is positive there. For $t\\ge1$ the ratio equals $t$. Hence the unique global minimum is at $3/8$, where $F_x=1/6$ and the cubed capacity equals $81/256$. The proposed right side is $(1/16+1/4-1/64)\\cdot1\\cdot1=19/64$.\n\nIf this row is placed in a column-stochastic four-by-four matrix, the other rows have zeros in both of its last two columns, hence capacity zero by the multiple-zero case in 57fcea441fbf5d21. The nonzero capacity is less than one and is dominated by the geometric mean of a single row in a zero-diagonal column-stochastic matrix, by assigning all its off-diagonal column budgets to it and the remaining column budget to any other row. Thus this particular scalar obstruction gives no stochastic containment failure.\n",
+  "source_candidate_ids": [
+    "f5d111431879f6ef"
+  ],
+  "source_candidate_sha256": {
+    "f5d111431879f6ef": "4d84cb8ac1b3e9c1263016629d972f1018ef16ef557d2e0fbdf1e1c0cfc11e95"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "f5d111431879f6ef",
+      "locator": "§2, (3), repeated-top example and stochastic completion paragraph"
+    }
+  ],
+  "statement": "For a uniform barycentric point $\\Xi$ on the probability tetrahedron define $F_x(t)=\\Pr(x\\cdot\\Xi\\le t)$ and $\\phi_3(x)=\\inf_{t>0,F_x(t)>0}t/F_x(t)^{1/3}$. At $x=(1/16,1/4,1,1)$ and $k$ the index of the entry $1/4$, the proposed bound $\\phi_3(x)^3\\le\\prod_{j\\ne k}(x_j+x_k-x_jx_k)$ fails by $5/256$.",
+  "subgoal_id": "pk-intake-tetrahedral-one-row-capacity-product-counterexample",
+  "title": "Counterexample to the proposed tetrahedral one-row capacity bound"
+}

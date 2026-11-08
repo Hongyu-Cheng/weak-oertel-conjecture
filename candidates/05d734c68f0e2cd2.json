@@ -1,0 +1,26 @@
+{
+  "advances": "A single specified row of positive raw data in any dimension. In geometry it applies to a loss confined to that cap's unique region with all sections fixed.",
+  "author": "PK-research-agent",
+  "candidate_id": "05d734c68f0e2cd2",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:16:52.937944+00:00",
+  "depends_on": [],
+  "draft_key": "global-own-row-fixed-section-loss",
+  "kind": "lemma",
+  "proof": "At a positive boundary point $\\Phi_s=d$, write $x=f_s\\in(0,d)$. The pairing of the row gradient with $f$ is $C=x+d(d-x)/(d-1)=(d^2-x)/(d-1)$, because the second term is homogeneous of degree $d/(d-1)$ in the other entries. For a unit loss, $\\log f_i$ has derivative $-1/(dk)+1/(\\sigma_sM)-\\mathbf1_{i=s}(d-1)/(dQ_s)$. Thus the negative row derivative $\\alpha_s$ obeys\n$$dk\\alpha_s=C+(d-1)xT^d-CxT^{d-1},\\qquad T=(Q_s/k)^{-1/d}>0.$$\nThe last two terms are minimized at $T=C/d$, by the sign of their derivative $x(d-1)T^{d-2}(dT-C)$. Therefore $dk\\alpha_s\\ge C-x(C/d)^d>0$. Indeed $xC^{d-1}$ increases strictly to $d^d$ on $(0,d)$, as its logarithmic derivative is $1/x-(d-1)/(d^2-x)>0$. Along the linear loss path positivity holds throughout, and the row is differentiable. If initially tight, it immediately becomes strict. Any first subsequent contact with $d$ from below would have nonnegative left derivative, contradicting the strictly negative boundary derivative for the nonzero loss. This proves the endpoint claim.\n",
+  "source_candidate_ids": [
+    "c9c719c799483463"
+  ],
+  "source_candidate_sha256": {
+    "c9c719c799483463": "41abe1696e8b823e7b4f23e4380fcd78e34c6c4f73f453f00ec31b5311641864"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "c9c719c799483463",
+      "locator": "c9c719c799483463:02 §7, (21), own-row loss in every dimension"
+    }
+  ],
+  "statement": "Let $d\\ge2$, and let $k,Q_i,\\sigma_i>0$ for $d+1$ indices. Put $M=\\sum_iQ_i/\\sigma_i$, $f_i=d k^{1/d}Q_i^{(d-1)/d}/(\\sigma_i M)$, and $\\Phi_s=f_s+(d-1)(\\sum_{i\\ne s}f_i/d)^{d/(d-1)}$. Fix $s$ and subtract the same $E>0$ from $k$ and $Q_s$, keeping all other $Q_i$ and all $\\sigma_i$ fixed. If the resulting data stay positive and initially $\\Phi_s\\le d$, then finally $\\Phi_s<d$.",
+  "subgoal_id": "pk-intake-global-own-row-fixed-section-loss",
+  "title": "Global preservation of the lost cap's own row in every dimension"
+}

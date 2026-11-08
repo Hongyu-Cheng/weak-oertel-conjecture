@@ -1,0 +1,67 @@
+{
+  "candidate_id": "8354669a941fda41",
+  "candidate_sha256": "3c85f6a16aa85ec71eb9cea8ffec701cb3bd32422cf83232ce691025cd9f2cfc",
+  "checked_dependency_candidate_sha256": {
+    "1462fa9ce6ced54e": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8"
+  },
+  "checks": [
+    "Normalized positive diagonal coordinates only rescale signed heights. Applied the accepted actual-centroid and actual volume formulas after normalization and independently recovered these quantities from edge intercepts, two section triangle areas and three tetrahedral determinants on 256 rational sections including repeated heights.",
+    "Verified the two cleared-denominator identities and the strict sign: all coordinate sums are positive, the single centroid restriction is c≥0, and the bE term in the gap is strictly positive.",
+    "For every proper incidence outside strict 2+2, one side has a unique strictly included vertex. Its edge tetrahedron formula allows intercepts equal to one; complementing gives exactly the three-factor AM–GM remainder for every specified captured label."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "092c93d08ce5c9edee593e0c93fde63201ce0e91dc5a407beca96be9de7ac9d8",
+      "fact_id": "1462fa9ce6ced54e",
+      "fact_sha256": "90c54522176a9bd2392576c6f61a0ae6c5f7dfca357cf8869ae656c987ddcda1",
+      "hypotheses": "A strict split of a nondegenerate tetrahedron is exactly the setting of the actual area-centroid and normalized cap fraction formulas. Divide the four positive homogeneous coordinates by their sum; all ratios and orientation agree.",
+      "reviewed_proof_sha256": "8de3c29eaf4b9ea31778296cf6c19010b1e74d947e37a33c223e812e662b921a",
+      "reviewed_statement_sha256": "bca7b2d2230b274880856fcf4ccd9e8239bbbebad59eed011d4c53736003028c"
+    }
+  ],
+  "finished_utc": "2026-11-08T16:22:29Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Provides diagonal coordinates, actual section centroid and cap fraction for the same strict 2+2 geometry. It does not give the specified product lower bound.",
+      "fact_id": "1462fa9ce6ced54e"
+    },
+    {
+      "comparison": "Gives exact ordinary depth when all coordinates of the reference point are central, namely the minimum of the vertex products. The reviewed inequality controls the product for a particular strictly captured vertex when only the other captured centroid coordinate is bounded.",
+      "fact_id": "700febf4b7a92759"
+    },
+    {
+      "comparison": "Gives a stationary-cap local curvature condition when both chosen coordinates are central; it does not establish the global specified cap-fraction comparison under the single-coordinate hypothesis.",
+      "fact_id": "27d3881f8bfc290c"
+    }
+  ],
+  "readability": "The raw edge-cap arguments distinguish strictly captured labels from vertices lying in the section.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "930ab71bb0c1b810254d84878f4371a1ca5502e3528a03be91e746720c318378",
+  "reviewed_statement_sha256": "e5c6590bc558fcfdd80b59775ad7669a485d713e1387b9d0150f161a9c674f36",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "source_bindings": [
+    {
+      "archived_original_source_sha256": "b29fd11dbace053d385cf6125f986717cff3863c72a4951318c147bf94c0209a",
+      "candidate_id": "3ed628996d1cbb09",
+      "candidate_sha256": "6960e1518873045356fb824c4672d56d1783f85050e4b0af3e4d91fc46602a29",
+      "locator": "§1 (1)–(5); §2 (6)–(8)"
+    },
+    {
+      "archived_original_source_sha256": "60cd62adc8085dbcfd2e05b48a22fcca8fe51d556e6f758f86fad46666edd222",
+      "candidate_id": "d94004c6b3f150dd",
+      "candidate_sha256": "6f6a252e6348cb4c16be4e074a7e8b7df65111b83fcfd28843e61cd1e9440c96",
+      "locator": "§5 (8), identical specified captured-vertex claim"
+    }
+  ],
+  "started_utc": "2026-11-08T16:16:34Z",
+  "summary": "The specified captured-vertex inequality, including its strict sign in the quadrilateral case and the exact triangular boundary incidences, follows from the actual area centroid and cap-volume identities.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

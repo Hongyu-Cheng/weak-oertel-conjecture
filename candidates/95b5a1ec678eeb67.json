@@ -1,0 +1,30 @@
+{
+  "advances": "An exact mixed-measure law for extrusion and its quotient coefficient, without a depth credit for an individual added term.",
+  "author": "PK-research-agent",
+  "candidate_id": "95b5a1ec678eeb67",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:12:16.491055+00:00",
+  "depends_on": [],
+  "draft_key": "primitive-extrusion-exact-roof",
+  "kind": "lemma",
+  "proof": "An integral unimodular change of base coordinates permutes the sampled bases, leaves the continuous coordinates unchanged, and identifies the quotient lattice with $\\mathbb Z^{n-1}$. Any other basis of the quotient lattice permutes its sampled bases as well. Compactness of $C$ makes $b$ upper semicontinuous on $T$: any sequence with limsup endpoint finite has a subsequence of endpoint points converging to a point in the limiting fiber. Thus $R_r$ is Borel.\n\nOn the line over $(w,x)\\in T$, the new interval is $[a,b+k]$. Its new integer samples are exactly $\\lfloor b\\rfloor+1,\\ldots,\\lfloor b\\rfloor+k$, since $\\lfloor b\\rfloor+1>b\\ge a$ and $\\lfloor b+k\\rfloor=\\lfloor b\\rfloor+k$. These are disjoint from the original samples, even if there were none. Sum at integer $w$ and integrate in $x$ by Tonelli, first against nonnegative Borel test functions for the measure identity and then against the halfspace indicator for the cap formula. Total mass and the nonprimitive case follow by taking the constant test and the length $kc$. The zero vector makes no change. For the continuous statement, each real $t$-line above $x\\in T_w$ gains length exactly $s$. Fubini gives the displayed affine volume formula even for a singleton line section. In ordinary Euclidean length along the original $v$ the corresponding displacement has size $s\\lVert v\\rVert$, whereas $t$ measures its lattice units.\n",
+  "source_candidate_ids": [
+    "372cc3158e8582ae"
+  ],
+  "source_candidate_sha256": {
+    "372cc3158e8582ae": "42b794695f3b8f1442a3e445b63a2a3225b2a2e8207ee7b64390613559225416"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "372cc3158e8582ae",
+      "locator": "372cc3158e8582ae:01 §§1–2, (1)–(2)"
+    },
+    {
+      "candidate_id": "372cc3158e8582ae",
+      "locator": "372cc3158e8582ae:02 §3, (3)–(4)"
+    }
+  ],
+  "statement": "Let $n\\ge1,d\\ge0$, let $C\\subset\\mathbb R^n\\times\\mathbb R^d$ be compact convex, and take primitive $v\\in\\mathbb Z^n$. Choose unimodular coordinates $(t,w,x)$ with $v=e_t$, and let $T=\\pi_v C$ in the quotient lattice $\\mathbb Z^n/\\mathbb Zv$. Write $\\nu$ for quotient mixed measure restricted to $T$. At $(w,x)\\in T$ let $[a(w,x),b(w,x)]$ be the actual closed line section. For every integer $k\\ge0$, the measure of $C_k=C+[0,k](v,0)$ is\n$$\n\\mu|_{C_k}=\\mu|_C+\\sum_{r=1}^k(R_r)_\\#\\nu,\\qquad R_r(w,x)=(\\lfloor b(w,x)\\rfloor+r,w,x).\n$$\nThus $\\mu(C_k)=\\mu(C)+k\\mu_{n-1,d}(T)$. For a closed halfspace with margin $\\alpha t+\\ell(w,x)-\\beta$, its mass increment is the sum of $\\int_T\\mathbf1_{\\{\\alpha(\\lfloor b\\rfloor+r)+\\ell\\ge\\beta\\}}\\,d\\nu$ over $r$. For $\\alpha=0$ this is $k$ times the corresponding quotient cap mass. An integer generator $cv$ with $c\\ge1$ gives total mass increment $kc\\mu_{n-1,d}(T)$, using either orientation of the primitive line.\n\nFor each integer quotient base $w$, let $Q_w=\\{(t,x):(t,w,x)\\in C\\}$ and $T_w=\\pi_xQ_w$. For every real $s\\ge0$,\n$$\n|Q_w+[0,s]e_t|_{d+1}=|Q_w|_{d+1}+s|T_w|_d.\n$$\nThe continuous extrusion coefficients sum to $\\mu_{n-1,d}(T)$ when the $t$ length is lattice-normalized. The statements include initially unsampled or degenerate sections, empty sets and zero-dimensional quotient measures.",
+  "subgoal_id": "pk-intake-primitive-extrusion-exact-roof",
+  "title": "Primitive extrusion and its exact added mixed measure"
+}

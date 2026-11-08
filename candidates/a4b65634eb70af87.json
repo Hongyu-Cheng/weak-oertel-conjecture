@@ -1,0 +1,32 @@
+{
+  "advances": "Actual geometric/contact-row cap sequences in dimension two. The examples address capwise rate and incidence inferences without a selected-minimum or common-critical-cap hypothesis.",
+  "author": "PK-research-agent",
+  "candidate_id": "a4b65634eb70af87",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.771542+00:00",
+  "depends_on": [],
+  "draft_key": "triangle-support-rate-atom-and-fractional-cut",
+  "kind": "counterexample",
+  "proof": "In the coordinates $(x,y)=(tq,t(1-q))$ with $0\\le q\\le1$, the area element is $t\\,dt\\,dq$, and $M_m=|K_m|=(1-a^2)/2$. Put $v=t-a+\\eta$ and $b=a-\\eta$. The logarithm integral for $c_m$ equals $\\int_\\eta^{1-b}(v+b)\\log v\\,dv$. The $v$ part tends to $\\int_0^1v\\log v\\,dv=-1/4$, and the absolute integral of the $b$ part is at most $|b|\\int_0^1|\\log v|\\,dv$ for sufficiently large $m$. Hence $c_m\\to c$. For the exact one-row law, take the probability proportional to $dm/(t-a+\\eta)$ and its barycenter $Y_m$. If $Z_m=\\int_{K_m}dm/(t-a+\\eta)$ then the affine $L_m$ has mean $L_m(Y_m)=c_mM_m/Z_m$, and division of the probability law by this value gives $dm/(M_mL_m)$. The integral\n$$\nZ_m=(1-a)+b\\log((1-b)/\\eta)\n$$\ntends to $1+\\gamma$. The mean of $t$ in this probability tends to $1/[2(1+\\gamma)]$, since $\\int_a^1 t^2/(t-b)\\,dt=M_m+b Z_m$. By symmetry both coordinates of $Y_m$ tend to $1/[4(1+\\gamma)]$. This gives a uniform own inball for large $m$ and a positive limiting marked value.\n\nIn the inverse measure, split $t/(t-a+\\eta)=1+b/v$. The first term converges to the ordinary inverse measure at rate zero by dominated convergence in the $(t,q)$ coordinates. The $b/v$ part away from $t=0$ tends to zero in mass, since for fixed $\\delta>0$ its mass on $t\\ge\\delta$ is bounded by $b\\log((1-b)/(\\delta-b))$ for all large $m$. Where the rate is positive, the change of variables $s=(R/(\\gamma m))(-\\log(c_m v))$ gives $|dv|/v=(\\gamma m/R)\\,ds$. The density of the defect part in rate therefore tends to $(2\\gamma)/(cR)$ on the interval whose upper endpoint tends to $R$. Its portion with $s=0$ has mass tending to zero because $v\\ge1/c_m$ there. This proves the claimed full inverse defect. The lower edge has length $\\sqrt2 a$, constant positive logarithm $\\gamma m-\\log c_m$ for large $m$, outward normal $n_0$, and rate tending to $R$. On the coordinate edges the logarithm near the vertex is bounded in integral by the integral of $|\\log v|$ over an interval of vanishing length, plus a bounded term times that length. The upper edge stays away from the zero set. This proves the exterior defect formula.\n\nFor the inside support, the specified body allocation removes the entire lower edge and assigns it to the section, of coarea $a$. Its positive-log weighted coarea tends to $\\gamma$ at rate $R$. The cap retains all volume. For all sufficiently large $m$ one has $a+\\eta^2<1$, so the cap $t\\ge a+\\eta^2$ is proper and excludes the lower edge. Its omitted volume has inverse mass bounded, up to a uniform factor, by $(a+\\eta^2)\\log(1+\\eta)$, by integrating $t/(t-a+\\eta)$ on $a\\le t<a+\\eta^2$. This tends to zero. The section coarea is $a+\\eta^2$, with logarithm $\\gamma m-\\log c_m-\\log(1+\\eta)$ and rate tending to $R$. For the complementary cap the body allocations add to one, the section allocation is the same, and the inverse measures add because the cut plane is volume-null. This gives all complementary formulas.\n\nFor the fixed cap $x-y\\ge0$, symmetry exactly halves every inverse $t$-slice and the lower-edge log defect. The rest of the exterior has no defect. Its section is parametrized by $(t/2,t/2)$ and has coarea $dt/2$, so the same integral bound near $v=0$ shows that the section has no log defect. At the limit the closed halfspace includes $(0,0)$, whereas its actual retained fractions are both $1/2$.\n",
+  "source_candidate_ids": [
+    "1b1d5e313c1943d1",
+    "91145d6ea212266a"
+  ],
+  "source_candidate_sha256": {
+    "1b1d5e313c1943d1": "f37fb43b6f9eb7fcf4b632a261e2d0b4bf0f7b86f56114915714ca7d6c3e201c",
+    "91145d6ea212266a": "de5ab7f50008c3e3c7d147a9cc6a34c87450a93c17d6bd6961ef0dc71bb69760"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "91145d6ea212266a",
+      "locator": "91145d6ea212266a:03 §§6–7, (13)–(15)"
+    },
+    {
+      "candidate_id": "1b1d5e313c1943d1",
+      "locator": "§§1–4, (1)–(14), actual planar one-row calibration with exponential parameter log 2"
+    }
+  ],
+  "statement": "Fix $\\gamma,R>0$ and let $m\\ge2$. Set $a=1/m$, $\\eta=e^{-\\gamma m}$, $t=x+y$, and take $K_m=\\{x,y\\ge0:a\\le t\\le1\\}$, $L_m=c_m(t-a+\\eta)$ with volume-mean logarithm zero, and $r_m=(R/(\\gamma m))(-\\log L_m)_+$. Write $c=e^{1/2}$, $n_0=-(1,1)/\\sqrt2$ and $U_R=\\mathrm{Unif}[0,R]$. These are positive one-row contact data with limiting full inverse defect $\\widehat\\zeta=(2\\gamma/c)\\delta_0\\otimes U_R$ for $dm/(|K_m|L_m)$ and full exterior positive-log defect $\\widehat b=\\sqrt2\\gamma\\delta_{(n_0,0,R)}$ when rates are recorded. Defects mean the restrictions of the weak limits to the limiting zero set $\\{0\\}$.\n\nFor the inside supporting cap $t\\ge a$ with boundary allocation zero and full section allocation on the lower facet, and for the cap $t\\ge a+\\eta^2$, proper for all sufficiently large $m$, the actual limiting defects are exterior zero, inverse $\\widehat\\zeta$, and section $\\gamma\\delta_{(0,R)}$, with coarea divided by $|(1,1)|$. Their complementary allocations give exterior $\\widehat b$, inverse zero, and the same section defect. For the fixed proper cap $x-y\\ge0$, whose normal is not parallel to the continuous gradient of $L_m$, the exterior and inverse defects are exactly half their full values and the section defect is zero. The limiting closed halfspace contains the entire defect point. Thus allocated supporting sections can have positive-rate atoms even with proper prelimit cuts, and vanishing section defect with a nonparallel normal does not suffice for literal closed-cap restriction of the other defects.",
+  "subgoal_id": "pk-intake-triangle-support-rate-atom-and-fractional-cut",
+  "title": "A supporting section rate atom and a nonparallel fractional cut in an actual triangle sequence"
+}

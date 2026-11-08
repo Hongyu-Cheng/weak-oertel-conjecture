@@ -1,0 +1,33 @@
+{
+  "advances": "A bounded selection of original circuit groups and its exact nearby upper comparison. A smooth local depth lower bound additionally requires feasible signed mass directions.",
+  "author": "PK-research-agent",
+  "candidate_id": "0354aa9a30918591",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:13:09.528954+00:00",
+  "depends_on": [
+    "755cb08c379113cc",
+    "0a03438ff4e94ff8"
+  ],
+  "draft_key": "whole-group-projected-helly-quantile-cover",
+  "kind": "lemma",
+  "proof": "The existence theorem 755cb08c379113cc gives the actual caps, the same raw mass $q_{z_i}$ for every cap of a group, an interior anchor mark and positive continuous-normal balance. The group's weighted margin sum at $(w,x)$ is $A_i\\cdot w-h_i$. Thus it covers the whole plane over each $w\\in G_i$ and in particular over $z_i$. The intersection of the open convex complements of all $G_i$ misses $P$. By the defining relative Helly property, a subfamily of at most $h(P)$ such complements also misses $P$, giving the selected whole groups. Empty and full projected halfspaces, if present, pose the same set-theoretic conclusion.\n\nA selected group of mass $q_{z_i}<Q$ cannot have a deepest base in $G_i$: it would then cover a maximizing mark of raw depth $Q$ by a cap of strictly smaller mass. Hence each deepest base is covered by a selected group of old mass $Q$.\n\nApply 0a03438ff4e94ff8 separately to each selected group. Its hypotheses hold because the bases are fixed, the fibers are positive and locally Hausdorff-Lipschitz, and each group's nonvertical caps pass through an interior old anchor with equal old mass and positive balanced weights. The exact weighted threshold equation is $\\sum_j\\rho_{ij}Q_{ij}(p,\\tau_i(p))=h_i$, so its new weighted margin still equals $A_i\\cdot w-h_i$ at every point. Consequently the selected groups alone continue to cover $P\\times\\mathbb R^d$ and their largest common mass bounds actual maximal depth. Their finitely many old masses strictly below $Q$ stay strictly below all selected roots of old mass $Q$ on a small neighborhood. Divide by the same positive total mass to obtain the upper comparison and touching equality. If one additionally keeps the original group at each nondeep base, those extra roots remain strictly slack for the same reason. In the alternative with already supplied continuous strictly decreasing inverses, take two old masses on opposite sides of each group root. Their strict signs in the weighted threshold equation persist for nearby parameters by continuity. The intermediate value theorem and strict decrease give the unique continuous root, after which the same geometric argument applies.\n",
+  "source_candidate_ids": [
+    "1140440dbc94280d"
+  ],
+  "source_candidate_sha256": {
+    "1140440dbc94280d": "bf71fb884b9b81f15f8c17ea864de7cab5e9c7c13464ec3fd3ccc8bfbfaf612f"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "1140440dbc94280d",
+      "locator": "1140440dbc94280d:01 §1, whole-circuit compression through fixed projected halfspaces"
+    },
+    {
+      "candidate_id": "1140440dbc94280d",
+      "locator": "1140440dbc94280d:02 Middle paragraphs, quantile root and finite comparison"
+    }
+  ],
+  "statement": "Let a nonempty finite base $P\\subset\\mathbb R^n$ carry positive compact convex $d$-fibers compatible with their common convex hull. Use the sum of fiber Lebesgue measures, let $q_z$ be maximal raw depth on the fiber at $z$, and let $Q=\\max_z q_z$. Choose one actual critical circuit at a restricted maximizing mark at each $z$. For group $i$ at $z_i$, use its unit continuous normals $u_{ij}$, base normals $v_{ij}$, original thresholds $b_{ij}$, and positive circuit weights $\\rho_{ij}$ summing to one. Let $A_i=\\sum_j\\rho_{ij}v_{ij}$ and $h_i=\\sum_j\\rho_{ij}b_{ij}=A_i\\cdot z_i$. Then the projected halfspaces $G_i=\\{w:A_i\\cdot w\\ge h_i\\}$ cover $P$, and group $i$ covers the whole continuous plane over every $w\\in G_i$. At most $h(P)$ whole groups suffice to cover $P$, where $h(P)$ is the relative Helly number for finite convex-set families on $P$. The selected groups with $q_{z_i}=Q$ cover every deepest base by their projected halfspaces.\n\nFor any locally Hausdorff-Lipschitz family of positive fibers at the same bases near the old parameter, keep the ambient normals fixed and continue each chosen group by its equal-mass quantile with weighted threshold sum $h_i$. Then the same projected halfspaces and the same group assignment persist. The maximum of the selected deepest-origin groups' common mass ratios is an upper bound on actual maximal normalized depth near the old parameter, with equality at that parameter. The same continuation conclusion holds when the individual local actual quantile inverses are supplied as jointly continuous strictly decreasing functions, even without a quantitative Hausdorff bound.",
+  "subgoal_id": "pk-intake-whole-group-projected-helly-quantile-cover",
+  "title": "Projected Helly compression and fixed-normal continuation of whole critical circuit groups"
+}

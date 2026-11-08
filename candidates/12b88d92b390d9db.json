@@ -1,0 +1,28 @@
+{
+  "advances": "This is a fixed-source coordinate change and moment balance for a cap-cover optimization. The covariance is held fixed during cap motions.",
+  "author": "PK-research-agent",
+  "candidate_id": "12b88d92b390d9db",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.766024+00:00",
+  "depends_on": [
+    "c343c9f3dc96957e"
+  ],
+  "draft_key": "residual-covariance-fixed-source-cap-balance",
+  "kind": "lemma",
+  "proof": "If $v\\in\\ker V$, then $v\\cdot(Z-\\mathbb EZ)=0$ almost surely. Therefore $\\operatorname{Cov}(X,Z)v=0$, so $B=\\operatorname{Cov}(X,Z)V^+$ is one choice, with $V^+$ the inverse on the range and zero on the kernel. For any two choices the second moment of $(B_1-B_2)(Z-\\mathbb EZ)$ is zero, as $(B_1-B_2)V=0$. Total covariance expresses $\\operatorname{Cov}(R)$ as $\\mathbb E\\operatorname{Cov}(X\\mid Z)$ plus the covariance of the conditional mean of $R$. The first term is positive definite by positive volume in $\\mathbb R^d$ and the second is positive semidefinite. If there is no base coordinate, the residual is simply $X-\\mathbb EX$.\n\nThe transformed normalized probability law is the pushforward, since all volumes gain the same factor $\\Delta$. Its regression may use $(AB+D)U^{-1}$, giving $R'=AR$. Substitution gives the stated margin coefficients, and hence the norm invariance, mass scaling and hinge scaling.\n\nA coarea moment on a given transformed section uses the same $\\theta_{iz}$ after pushforward. For a unit old section normal $u_i/\\lVert u_i\\rVert_2$, the section area Jacobian of $A$ is $\\Delta\\lVert A^{-\\top}u_i\\rVert_2/\\lVert u_i\\rVert_2$. After division by $\\lVert u_i'\\rVert_2=\\lVert A^{-\\top}u_i\\rVert_2$, this is precisely the old coarea density multiplied by $\\Delta$. This also gives the transformation of the joint generalized gradients, because the cap parameter map is invertible and transports the ordinary gradients and their cluster convex hull. Each raw mass balance scales by $\\Delta$. The base and continuous moments transform by the corresponding affine change times $\\Delta$. The extra translation and shear terms in the transformed continuous balance cancel by the mass and base balances. In the new equations $\\alpha_0$ and $r_i$ are unchanged, whereas $\\eta_z$ and the sphere multiplier are multiplied by $\\Delta$. Contact points are pushed forward and their weights are unchanged. These changes preserve signs, nontriviality, complementarity and the contact condition. In particular $A=\\Sigma^{-1/2}$ gives $\\Sigma'=I$ and an equivalent Euclidean hinge problem, including existence of the stated conditions at an attained minimum by c343c9f3dc96957e.\n\nFor the sphere equation $(u_i^\\top\\Sigma u_i-1)/2=0$, its normal is $\\Sigma u_i$. The continuous stationarity equation therefore has the term $\\sigma_i\\Sigma u_i$ on the left. Contract with $u_i$. On the cap $u_i\\cdot m_i=\\Psi_i+b_i c_i-a_i\\cdot P_i$. On a section $u_i\\cdot m_i^s=b_iS_i-a_i\\cdot P_i^s$. Each positively weighted saddle contact satisfies $u_i\\cdot x_z=b_i-a_i\\cdot z$, and the same equality holds after integrating against its weights. The mass and base balances cancel the terms involving $a_i,b_i$, leaving $\\sigma_i=-\\alpha_0\\Psi_i$ because $u_i^\\top\\Sigma u_i=1$. Substitution gives the continuous identity.\n",
+  "source_candidate_ids": [
+    "a5bd7e36a76479fe"
+  ],
+  "source_candidate_sha256": {
+    "a5bd7e36a76479fe": "e7fcc89555d05c04c9802e35c17ca195a503a77fdbab5c7e08247a6250420da4"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "a5bd7e36a76479fe",
+      "locator": "a5bd7e36a76479fe:01 §§1–2, residual covariance and (1)"
+    }
+  ],
+  "statement": "Let $(Z,X)$ have the probability law of normalized summed volume on finitely many compact, positive full-dimensional fibers in $\\mathbb R^d$, $d\\ge1$. Put $V=\\operatorname{Cov}(Z)$ and choose $B$ satisfying $BV=\\operatorname{Cov}(X,Z)$. The regression residual $R=X-\\mathbb E X-B(Z-\\mathbb E Z)$ exists, is independent of the choice of $B$ almost surely, and has positive definite covariance $\\Sigma$. Under $z'=Uz+h$, $x'=Ax+Dz+e$ with $U$ integral unimodular, $h$ integral and $A$ invertible, $\\Sigma'=A\\Sigma A^\\top$. An unchanged affine cap margin $L=a\\cdot z+u\\cdot x-b$ then has\n$$\nu'=A^{-\\top}u,\\qquad a'=U^{-\\top}(a-D^\\top u'),\\qquad\nb'=b+a'\\cdot h+u'\\cdot e .\n$$\nThus $u^\\top\\Sigma u$ is invariant. The raw cap masses and hinges scale by $\\Delta=|\\det A|$ and normalized cap budgets are invariant.\n\nFor a fixed source, use the actual hinge cover and Fritz–John conditions of c343c9f3dc96957e with the constraint $u_i^\\top\\Sigma u_i=1$ in place of the Euclidean sphere. Write $(c_i,P_i,m_i)$ for the cap mass and base and continuous moments, $(S_i,P_i^s,m_i^s)$ for the effective section moments, and $q_{zi}=\\lambda_{zi}x_z$ for the weighted contact moment on a positive coverage multiplier $\\eta_z$. The two mass and base balances are unchanged, and the continuous balance becomes\n$$\n\\alpha_0m_i+r_im_i^s-\\sum_z\\eta_z q_{zi}\n=\\alpha_0\\Psi_i\\Sigma u_i,\\qquad\n\\Psi_i=\\int(L_i)_+\\,d\\mu .\n$$\nHere the effective section moments integrate $(1,z,x)$ with the same density $\\theta_{iz}/\\lVert u_i\\rVert_2$ on each section, with $\\theta_{iz}=1$ on proper sections and $0\\le\\theta_{iz}\\le1$ on supporting sections. The sphere multiplier for $(u_i^\\top\\Sigma u_i-1)/2$ is $-\\alpha_0\\Psi_i$. The identity also holds for integrated moments of saddle pairs supported on the zero margin wherever weighted.",
+  "subgoal_id": "pk-intake-residual-covariance-fixed-source-cap-balance",
+  "title": "Residual covariance normalizes fixed-source cap balances"
+}

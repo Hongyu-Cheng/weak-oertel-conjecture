@@ -1,0 +1,28 @@
+{
+  "advances": "Ordinary weighted envelope volume over shared orientations of a fixed family.",
+  "author": "PK-research-agent",
+  "candidate_id": "971a1d5c445406ab",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.789468+00:00",
+  "depends_on": [
+    "3e2e95472b619800"
+  ],
+  "draft_key": "weighted-common-simplex-envelope-attainment",
+  "kind": "theorem",
+  "proof": "The cone with apex $v$ over the equatorial disk of $B(x_i,\\rho_i)$ perpendicular to $v-x_i$ is inside the envelope. Its volume is $\\kappa_{d-1}\\rho_i^{d-1}\\|v-x_i\\|/d$ (length when $d=1$), bounded above by $M/w_i$. If $v=x_i$, the bound is immediate. The homothety bounds follow by dividing the volumes of the two envelopes, each bounded above by its share of $M$ and below by the volume of its member.\n\nLabel the anchor vertices and take a convergent subsequence using the bound. Their limit hull contains $A_*$ and is therefore full dimensional. It is a simplex, so its labeled outward unit facet normals are continuous functions of these vertices at the limit (each perpendicular to $d-1$ independent facet edge vectors, with sign fixed by the opposite vertex). For $d=1$ the endpoint normals are fixed after labeling the endpoints by order. The anchor facet offsets converge to the corresponding supports of $A_*$, because the support function is Lipschitz on bounded sets of directions with constant $\\max_{x\\in A_*}\\|x\\|$. This identifies the anchor limit as $P_U(A_*)$ in the limiting orientation. The same continuity gives limiting support offsets for each $A_i$. The $d$-by-$d$ systems obtained by omitting one facet row are nonsingular in the limiting orientation, so their intersection points converge to the corresponding envelope vertices. The envelope formula from the preceding lemma also handles a singleton: all $d+1$ intersection points coincide. Determinant continuity yields convergence of each envelope volume and of $F$. For any member the relative scale is the $d$th root of its volume ratio to the anchor, and the translation is its vertex centroid minus that scale times the anchor vertex centroid, so those parameters converge as well.\n\nTake a minimizing sequence in a finite sublevel, available by using any initial orientation and, if necessary, a larger finite bound. The subsequential limit just obtained attains the infimum. To see the need for an anchor in general, a planar segment $[0,1]\\times\\{0\\}$ is enclosed in triangles $\\operatorname{conv}((0,0),(1,0),(0,\\varepsilon))$ of arbitrarily small area. The support envelope in each triangle's orientation is contained in that triangle. Each envelope has positive area because the segment has more than one point, so zero is a nonattained infimum.\n",
+  "source_candidate_ids": [
+    "ae6af582a4950210"
+  ],
+  "source_candidate_sha256": {
+    "ae6af582a4950210": "a0f109ed2d34b4a44899e733949af8fe35cd021414a9081d818f38d0275b7aec"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "ae6af582a4950210",
+      "locator": "ae6af582a4950210:02 §2, (5)–(6b), weighted orientation minimum and compactness"
+    }
+  ],
+  "statement": "Let $A_i\\subset\\mathbb R^d$ be a finite family of nonempty compact convex sets with positive weights $w_i$, and assume at least one member $A_*$ has nonempty interior. Using the envelopes $P_U(A_i)$ in the preceding definition, the objective $F(U)=\\sum_i w_i|P_U(A_i)|$ attains a minimum over all simplex orientations. On the sublevel $F(U)\\le M$, a member with an inball $B(x_i,\\rho_i)$ has every envelope vertex $v$ bounded by\n$$\n\\|v-x_i\\|\\le dM/(w_i\\kappa_{d-1}\\rho_i^{d-1}),\n$$\nwhere $\\kappa_{d-1}$ is the unit ball volume and $\\kappa_0=1$. If $P_U(A_i)=a_i+r_iP_U(A_*)$ and $|A_i|>0$, then\n$$\n(w_*|A_i|/M)^{1/d}\\le r_i\\le (M/(w_i|A_*|))^{1/d}.\n$$\nOn the sublevel, a sequence has a subsequence with convergent anchor vertices, orientations and labeled vertices of every envelope. Its limit orientation has full-dimensional anchor envelope, and objective values converge. The full-dimensional member hypothesis cannot in general be omitted.",
+  "subgoal_id": "pk-intake-weighted-common-simplex-envelope-attainment",
+  "title": "Attainment for weighted common simplex envelopes"
+}

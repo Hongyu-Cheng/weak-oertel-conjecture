@@ -1,0 +1,40 @@
+{
+  "advances": "Original mixed depth in an actual three-fiber configuration, including non-strict compatibility.",
+  "author": "PK-research-agent",
+  "candidate_id": "1678ba5640fae4d6",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:12:16.489594+00:00",
+  "depends_on": [
+    "2acc8bc803acf1c0"
+  ],
+  "draft_key": "three-fiber-midpoint-plus-min-depth",
+  "kind": "lemma",
+  "proof": "Take any closed ambient halfspace containing the lifted midpoint. Write its continuous normal as $u$. If $u\\ne0$, form the two ordinary endpoint caps with that same normal and boundaries through $y_0$ and $y_2$. Their Minkowski midpoint lies in the actual middle trace: the ambient affine margin at a midpoint is the average of the endpoint through-mark continuous margins plus the nonnegative margin at the lifted midpoint. By midpoint inclusion and ordinary $d$-dimensional Brunn–Minkowski, the middle contribution is at least the first displayed term. If $u=0$, the whole middle fiber is retained, so the same bound follows by applying Brunn–Minkowski to the endpoint bodies themselves.\n\nThe ambient halfspace contains at least one of the lifted endpoint marks because their midpoint belongs to it. That trace contributes at least the corresponding ordinary raw depth, whether it is an ordinary containing halfspace or the whole fiber. This contribution is measured on a different integer base from the middle contribution. The displayed estimate follows by taking the infimum. By 2acc8bc803acf1c0 the raw mixed depths restricted to the two endpoints are exactly their ordinary raw depths, since the base functionals $-z,z$ strictly expose the two endpoints among the positive bases. If both endpoint fibers contained global deepest points, $D_0=D_2=D>0$; positivity follows from an interior ball in either body. The middle estimate would give at least $2D$, a contradiction.\n",
+  "source_candidate_ids": [
+    "11e10da90bca54a3",
+    "2d61091414784568",
+    "860152d497c5cff4"
+  ],
+  "source_candidate_sha256": {
+    "11e10da90bca54a3": "8268e04d20131133fbef2a11fe0b5e5d41f3f6742c859ae85a1401d4c9f990ce",
+    "2d61091414784568": "bb260a34305c8e0a0192a92beabbcbe5612c7d31215a5c0f0b238e1696574546",
+    "860152d497c5cff4": "7b940b4f72dea40227f84b60dace5826ad6432246914af983c2c7bc15aa491d5"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "860152d497c5cff4",
+      "locator": "§5, equality-contact endpoint exclusion"
+    },
+    {
+      "candidate_id": "2d61091414784568",
+      "locator": "§4, midpoint-depth-plus-min"
+    },
+    {
+      "candidate_id": "11e10da90bca54a3",
+      "locator": "§2, planar midpoint exclusion"
+    }
+  ],
+  "statement": "Let a compact convex source in $\\mathbb R\\times\\mathbb R^d$, $d\\ge1$, have exactly three positive-volume integer fibers $K_0,K_1,K_2$ at the respective bases $0,1,2$, with $(K_0+K_2)/2\\subseteq K_1$. If $y_0,y_2$ are ordinary deepest points with raw depths $D_0,D_2$, then $(1,(y_0+y_2)/2)$ has raw mixed closed-halfspace depth at least\n$$\n\\left(\\frac{D_0^{1/d}+D_2^{1/d}}2\\right)^d+\\min(D_0,D_2).\n$$\nConsequently the two endpoint fibers cannot both contain global mixed deepest points.",
+  "subgoal_id": "pk-intake-three-fiber-midpoint-plus-min-depth",
+  "title": "Midpoint raw depth plus an endpoint contribution"
+}

@@ -1,0 +1,112 @@
+{
+  "candidate_id": "aaef76e8cbfd4465",
+  "candidate_sha256": "9bb76b5d0bd860df53c5e1464b9b94b1b438211b80260483668d8da78d056f04",
+  "checked_dependency_candidate_sha256": {
+    "12b88d92b390d9db": "5dbd7aba7fe6f4d213efeaf6fea5d942cd4ebe98610782a43e463eb24406cbd4",
+    "baee8ddaa588aef0": "258b628564157ac1b6a9b7b9d65db4998e624980d7aef8a1d37a2b8a014d7b52"
+  },
+  "checks": [
+    "Compared the complete revised statement and proof to the original bytes. The sharp-product construction, exact budget and hinge, normal stress and eigenvector argument are unchanged.",
+    "The general compatibility hypothesis now requires zero actual cap mass on every other fiber. The hinge integrand is zero outside the cap, so all other-fiber cap and hinge moments vanish. The hypothesis separately eliminates multiplied section moments there, which could persist even when cap mass is zero.",
+    "The own section has centroid g with constant coarea density. All nonzero contact moments have the same continuous point g, so subtracting g times the mass balance cancels the own section and contact terms. After dividing by positive alpha_0 the equality is c w_i/(d+1)=Psi_i Sigma u_i.",
+    "Substituting the normalized own cap normal and hinge-to-mass ratio gives exactly the stated compatibility equation. The transformed barycentric gradients span and have pairwise nonzero inner products, so simultaneous compatibility is equivalent to a single positive eigenvalue of the symmetric relative covariance operator.",
+    "The sharp-budget product already forces zero off-fiber actual cap mass and the explicitly isolated normal stress has zero budget multipliers. The broader original source statement without off-fiber mass exclusion is not asserted in the revised result."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "admission_condition": "Independent approval of the exact predecessor bytes was verified.",
+      "candidate_id": "12b88d92b390d9db",
+      "candidate_sha256": "5dbd7aba7fe6f4d213efeaf6fea5d942cd4ebe98610782a43e463eb24406cbd4",
+      "kind": "same-batch",
+      "mapping": "Use the verified covariance-normalized mass, base and continuous moment equations, first with Sigma=Sigma_K for the product and then with arbitrary fixed positive definite Sigma for the corrected local calculation. The revised local hypotheses remove every other-fiber actual cap, hinge and multiplied section contribution.",
+      "reviewed_proof_sha256": "69063d1e0953d02e8d329088096ef2d632a00eca6724d89a61755aae53429e71",
+      "reviewed_statement_sha256": "1c96f335d2c537641bec401695b1389a69faa2e5e5816596f01ad7fca9e10522"
+    },
+    {
+      "fact_id": "baee8ddaa588aef0",
+      "kind": "accepted",
+      "mapping": "Each proper through-centroid simplex cap has minimum γ_d, achieved only by one strictly positive vertex and d equal negative margins. A strictly containing halfspace loses positive volume on moving to the centroid, and a full fiber cannot attain the lower budget."
+    }
+  ],
+  "finished_utc": "2026-11-08T16:23:38Z",
+  "gaps": [],
+  "initial_review": {
+    "candidate_id": "aaef76e8cbfd4465",
+    "candidate_sha256": "071c575bf6463c69f55255ab2c72e9bfc54e731e6b8e6c5eb44d2537ccec30c8",
+    "checks": [
+      "Barycentric second moments give Σ_Kβ_i=w_i/((d+1)(d+2)) and common κ²=d/((d+1)²(d+2)). Homothety gives cap mass γ_d v, displacement w_i/(d+1), and hinge-to-mass ratio √(d(d+2))/(d+1).",
+      "Binary-distance tilts strictly isolate each canonical cap, whose own family covers the whole fiber. The centroid lower bound and its equality conditions force each cap hitting a centroid to spend all budget on one canonical trace, and small barycentric movements force all d+1 types at the sharp count.",
+      "At each binary base the local uniform weights average the canonical margins to zero. The moment and sphere equations with α_0=1, r_i=0, and η_z=(d+1)c are exactly the predecessor's stress equations. The same proof includes the single base when n=0.",
+      "Conditional on zero off-fiber actual cap mass and zero multiplied section moments, subtracting g times the mass equation gives the compatibility formula. In that scope the symmetric eigenvector argument is correct: the d+1 transformed gradients span and have pairwise nonzero inner products.",
+      "The source a5bd7e36a76479fe §§3–5 contains the same product and general assertions; §5 likewise omits the off-fiber actual-mass hypothesis as phrased."
+    ],
+    "dependencies": [
+      {
+        "admission_condition": "Independent approval of the exact predecessor bytes is required.",
+        "candidate_id": "12b88d92b390d9db",
+        "candidate_sha256": "5dbd7aba7fe6f4d213efeaf6fea5d942cd4ebe98610782a43e463eb24406cbd4",
+        "kind": "same-batch",
+        "mapping": "Use the fixed-source covariance-normalized moment equations with Σ=Σ_K for the isolated product and with the stated fixed positive definite Σ for the local formula. The local elimination additionally needs zero off-fiber actual mass.",
+        "reviewed_proof_sha256": "69063d1e0953d02e8d329088096ef2d632a00eca6724d89a61755aae53429e71",
+        "reviewed_statement_sha256": "1c96f335d2c537641bec401695b1389a69faa2e5e5816596f01ad7fca9e10522"
+      },
+      {
+        "fact_id": "baee8ddaa588aef0",
+        "kind": "accepted",
+        "mapping": "Each proper through-centroid simplex cap has minimum γ_d, achieved only by one strictly positive vertex and d equal negative margins. A strictly containing halfspace loses positive volume on moving to the centroid, and a full fiber cannot attain the lower budget."
+      }
+    ],
+    "finished_utc": "2026-11-08T16:22:06Z",
+    "issues": [
+      {
+        "defect": "Own-centroid contacts and vanishing multiplied other-fiber section moments do not imply zero other-fiber cap mass. Eliminating the mass balance leaves α_0 times the sum of off-fiber actual cap displacement moments, and Ψ_i still contains off-fiber hinge. For example, take the standard own triangle at base zero, and at the four bases ±e_1,±e_2 take the triangle x≥1/3, y≥1/3, x+y≤1. Use margin x−1/3, normalization I, α_0=1 and r_i=0. Its own cap y-displacement moment is −2/81, canceled by four off-fiber moments of 1/162 each. The cap base moment is zero and the x-displacement moment equals Ψ_i, so the cap-level moment balances with contact at the own centroid hold, but the claimed local equation has a nonzero own y-displacement. All listed fibers are realized by their lifted hull because the four outer triangles lie in the own triangle.",
+        "proof_locator": "Statement, 'More generally consider any canonical centroid vertex cap'; proof, paragraph beginning 'For a general normalization Σ'",
+        "severity": "substantive",
+        "smallest_repair": "Add zero actual cap mass on every other fiber to the general compatibility hypotheses and use it explicitly in the moment and hinge calculation. The sharp product already has this property by its sharp budget census."
+      }
+    ],
+    "overlap": [
+      {
+        "comparison": "Its Euclidean sharp-count census and hinge formula apply after whitening in positive integer base dimension. A whitened simplex is regular by the displayed barycentric covariance identities.",
+        "fact_id": "c3e79bc0190bfda3"
+      },
+      {
+        "comparison": "Its normal stress for regular Euclidean simplexes yields the positive-base d≥2 product normality after whitening. The present general fixed-metric compatibility is additional once stated for caps with zero other-fiber actual mass.",
+        "fact_id": "2c3e77217a72c4c5"
+      }
+    ],
+    "readability": "The product and local statements are mathematically different scopes. The sharp product census supplies the needed isolation there.",
+    "reviewed_proof_sha256": "d1ae36ee049348aa53544627d3bb161f46213ff3e78934f73dc8657cf614be2d",
+    "reviewed_statement_sha256": "a072e84c9d5cde4b6b8218acb4d2f0d727dd468865ec13c49abbcdd75ca934bf",
+    "reviewer": "GPT-6.1 Sol high",
+    "started_utc": "2026-11-08T16:16:17Z",
+    "summary": "The canonical product calculation, sharp budget and explicit normal stress check. The later general compatibility assertion omits exclusion of off-fiber actual cap mass and hinge.",
+    "verdict": "CHANGES_REQUESTED"
+  },
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Its Euclidean sharp-count census and hinge formula apply after whitening in positive integer base dimension. A whitened simplex is regular by the displayed barycentric covariance identities.",
+      "fact_id": "c3e79bc0190bfda3"
+    },
+    {
+      "comparison": "Its normal stress for regular Euclidean simplexes yields the positive-base d≥2 product normality after whitening. The present general fixed-metric compatibility is additional once stated for caps with zero other-fiber actual mass.",
+      "fact_id": "2c3e77217a72c4c5"
+    }
+  ],
+  "readability": "The added actual-mass hypothesis is independent of multiplied section vanishing, and the revised proof uses both separately.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "4d9325b3c1f82386c091bdd3ae51a9605aa1d33a77c651084db538458c99c8a2",
+  "reviewed_statement_sha256": "346b38a63085d5e1ff6ca7ced3ada44c0c728b4b6df3f8a8e942ad559c42ec9a",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "revision_of_candidate_sha256": "071c575bf6463c69f55255ab2c72e9bfc54e731e6b8e6c5eb44d2537ccec30c8",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T16:22:39Z",
+  "summary": "The revised proof explicitly isolates the cap’s actual mass and hinge in its general compatibility statement. The exact sharp-budget simplex product and the corrected compatibility criterion are proved.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

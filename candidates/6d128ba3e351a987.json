@@ -1,0 +1,26 @@
+{
+  "advances": "Finite exact profile at each fixed truncation and pair of scales. No optimization over the truncation or over all convex bodies.",
+  "author": "PK-research-agent",
+  "candidate_id": "6d128ba3e351a987",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:13:09.525042+00:00",
+  "depends_on": [],
+  "draft_key": "unequal-truncated-affine-power-finite-profile",
+  "kind": "theorem",
+  "proof": "Integrating the density gives $m$ and $F$. In dimension $d\\ge2$ the density is also the first-coordinate law of the convex frustum $\\{(x,y):a\\le x\\le1,\\ y\\in xL\\}$ for any full-dimensional convex body $L$ in $\\mathbb R^{d-1}$ containing zero. The sections have volume $x^{d-1}|L|$. The case $d=1$ is a uniform interval. In every case reflection of the centered continuous law replaces $C(t)$ by $W-C(-t)$.\n\nThe first four thresholds in the displayed finite set are the breakpoints where a cap enters or leaves its proper interval. On each complementary interval the cost is constant if neither cap is proper and monotone if just one is proper. If both are proper, its derivative is\n$$\nC'(t)=\\frac{d}{1-a^d}\\left[(sm-t)^{d-1}-(rm+t)^{d-1}\\right].\n$$\nThe two bases are positive in the proper interval. For $d\\ge2$ this vanishes only at $m(s-r)/2$. For $d=1$ it is identically zero, so the proper interval contributes only its constant endpoint value. Thus both extrema of $C$ occur among the finite breakpoints, the two far plateaus, and the stationary point when feasible. Keeping the evaluation at the stationary candidate even when clipped does not change either extremum, since it is still an actual value of $C$. Therefore $\\min C=\\min\\mathcal E$ and $\\max C=\\max\\mathcal E$. Reflection gives the stated minimum. Rationality follows from the integer powers and rational formulas for $m$ and the candidate shifts.\n",
+  "source_candidate_ids": [
+    "5a9bea64014b6234"
+  ],
+  "source_candidate_sha256": {
+    "5a9bea64014b6234": "eb8c8f5a077294c161ab00c6641a3dd7819644dd75023c387fd7fdc17043c601"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "5a9bea64014b6234",
+      "locator": "5a9bea64014b6234:04 §4 (14)–(18), finite truncated affine-power profile"
+    }
+  ],
+  "statement": "For an integer $d\\ge1$ and $0\\le a<1$, let $m=d(1-a^{d+1})/[(d+1)(1-a^d)]$ be the mean of the law of density $d x^{d-1}/(1-a^d)$ on $[a,1]$. Its centered closed tail is $F(q)=[1-\\operatorname{clip}(m+q,a,1)^d]/(1-a^d)$, where clipping is projection onto $[a,1]$. For $r,s>0$ set $C(t)=r^d F(t/r)+s^d F(-t/s)$ and $W=r^d+s^d$. Form the finite set\n$$\n\\mathcal E=\\{r^d,s^d\\}\\cup\n\\left\\{C(t):t\\in\\{r(a-m),r(1-m),s(m-1),s(m-a),m(s-r)/2\\}\\right\\}.\n$$\nThe exact minimum over real thresholds and the two reflected orientations is $\\min\\{\\min\\mathcal E,W-\\max\\mathcal E\\}$. All entries are rational when $a,r,s$ are rational.",
+  "subgoal_id": "pk-intake-unequal-truncated-affine-power-finite-profile",
+  "title": "Finite unequal-scale pair profile for a truncated affine-power law"
+}

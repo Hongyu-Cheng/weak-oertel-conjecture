@@ -1,0 +1,26 @@
+{
+  "advances": "Ordinary uniform barycentric triangle and a nonnegative row, without any column-stochastic constraints.",
+  "author": "PK-research-agent",
+  "candidate_id": "0e05a6b227ca280f",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T16:15:43.781434+00:00",
+  "depends_on": [],
+  "draft_key": "uniform-triangle-exact-row-capacity",
+  "kind": "lemma",
+  "proof": "For $x<c<y$, when this interval is nonempty, the lower vertex cap gives $G(c)=(c-x)^2/[(y-x)(z-x)]$ by the area determinant. The ratio is decreasing, or constant when $x=0$. For $y\\le c\\le z$ and $y<z$, the complementary vertex cap gives $G(c)=1-(z-c)^2/[(z-x)(z-y)]$, allowing $x=y$. Where $G>0$, the sign of the ratio derivative is the sign of $G-cG'/2=1-z(z-c)/[(z-x)(z-y)]$. It changes from nonpositive to positive at $c_*=x+y-xy/z\\in[y,z]$. When $c_*>0$, substitution gives $G(c_*)=c_*/z$, and the squared minimum is $zc_*$. If $x=y=0<z$, the formula instead gives $G(c)=2c/z-(c/z)^2$ and the ratio tends to zero as $c\\downarrow0$. If $y=z>x$, the first interval extends to $z$ and its minimum is attained at $z$, giving squared value $z^2=z(x+y)-xy$. For a constant row the ratio infimum is that constant, including zero. Thresholds above the maximum entry have ratio $c$ and cannot lower any of these values.\n",
+  "source_candidate_ids": [
+    "6b3596acb8604c8b"
+  ],
+  "source_candidate_sha256": {
+    "6b3596acb8604c8b": "5e60b96d635ca2cea727a3ce4b8435556d8961d11145ef98ebf1ac3aafa4f040"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "6b3596acb8604c8b",
+      "locator": "§5, exact triangle row minimization"
+    }
+  ],
+  "statement": "Let $\\Xi$ be uniform on the probability triangle, and let $0\\le x\\le y\\le z$ be the sorted entries of a row. Set $G(c)=\\Pr((x,y,z)\\cdot\\Xi\\le c)$. Then\n$$\n\\left(\\inf_{c>0,G(c)>0}\\frac{c}{\\sqrt{G(c)}}\\right)^2=z(x+y)-xy.\n$$\nIn particular the result includes tied and zero entries.",
+  "subgoal_id": "pk-intake-uniform-triangle-exact-row-capacity",
+  "title": "Exact row capacity for a uniform triangle"
+}

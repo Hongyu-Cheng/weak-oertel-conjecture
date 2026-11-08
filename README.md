@@ -75,6 +75,7 @@ These curated names come from the existing project overview. Rows give the longe
 
 Recent additions beyond the curated overview:
 
+- [A sharp-bound counterexample in total dimension 19](facts/a39d93bee9bf2fe9.md)
 - [Sharp counterexamples with total dimension 187 and further tradeoffs](facts/ad3e63c52f083457.md)
 - [A smaller n=52 counterexample using one simplex factor](facts/cbe1f4518f7088a7.md)
 - [A support-count obstruction for the specific 1/e bound](facts/30b899ae9d94a523.md)

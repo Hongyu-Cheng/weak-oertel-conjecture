@@ -1,0 +1,49 @@
+{
+  "candidate_id": "f4be2679c83c2fd1",
+  "candidate_sha256": "f7af40d0ddef2d06e42343643b1e896508c69bb3b7842462b3324f46c0048977",
+  "checked_dependency_candidate_sha256": {
+    "1f86e3e352aa0225": "c91a21f2e14fdbd2f6ed1af9211e2367e5a92e4bf0b919eee6d57cbbd3e5a1b3"
+  },
+  "checks": [
+    "For s>0 the open section near z=0 has positive length and positive density for both profiles, and for s=0 the horizontal interval has positive density. For finite s≥max(1,T), monotonicity of −z/r with endpoints 1 and −T puts every z in the section strip, with equality permitted.",
+    "In the full strip the horizontal captured width is r(z)+z/s. Its integral against r(z)^(d−2)/2 splits into half the frustum mass plus exactly M_f(s). The coarea and first moment both have the dz/(2s) factor, so all three coordinates give R_f(∞) and the exact 1/s interpolation. The interpolation is used only when T≥1, so s=T is itself in the full strip.",
+    "When 0<T≤1, the clipped uniform interval for a finite positive s has left radius min(s,T) and right radius min(s,1). Its symmetric portion has strictly positive length; each paired b and −b has strictly positive combined moment integrand before the negative factor. The unmatched portion is nonnegative. Thus no mass on finite positive slopes can average to zero; zero and infinity both have zero moment. The common correction agrees at those two endpoints. At T=1 this agrees with the separate bounded representation.",
+    "On the removed cone segment, z−sr(z) has slope 1+s/B>0 and initial value U−sa≥0 when 0≤s≤T. The full removed mass tV0 is captured, and there is no removed section of positive coarea. At s=T the boundary contact is a single point, and the s=0 section is z=0. Thus the cone-to-frustum relation also holds at the cutoff.",
+    "For T≥1 the probability kernel replaces each finite s>T with masses T/s and 1−T/s at T and ∞. These are nonnegative and measurable in s, and averaging preserves all coordinates for arbitrary probability laws. Conditioning on the finite part is invoked only for positive finite mass; its moment is zero because the removed ∞ atom has M_f=0. Its cone moment then equals its frustum moment at every finite slope in support.",
+    "Source candidate 0ab50bc17861492a has the declared SHA-256 at d6689f9. Section 2 supplies the one-sign branch and common correction; Section 3 equations (2)–(4) supply the bounded identity and tail representation. No sharp comparison is used."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "1f86e3e352aa0225",
+      "candidate_sha256": "c91a21f2e14fdbd2f6ed1af9211e2367e5a92e4bf0b919eee6d57cbbd3e5a1b3",
+      "mapping": "The dimensions, H and U ranges, planar density, and physical coarea convention coincide exactly. Apply the record lemma to a point mass at each finite s>0: its uniform base layer clipped to [−T,1] gives the M_f sign calculation. The coarea change of variables in that proof agrees with the direct section formula here, and its masses give V and tV0. This exact predecessor has an independent approval and must be admitted first."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:14:37.220104+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The frustum used to realize an axial marginal leads to a paired centroid-tail inequality and does not establish an identity among slope records or a law replacement.",
+      "fact_id": "6a7d56e450b3126f"
+    },
+    {
+      "comparison": "Section-centroid contact conditions concern mixed integer fibers and projected faces. They do not describe this affine profile or its full-section tail.",
+      "fact_id": "1269c554ca9a41b8"
+    }
+  ],
+  "readability": "The cone-to-frustum identity is the first display line, whereas the full-strip condition is s≥max(1,T). Keeping them separate clarifies why the reduction is not used for T<1.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "a25e9ea3dd7644f390c07556339158e9e44445afb4597acb9e7c7379afa4b12e",
+  "reviewed_statement_sha256": "b69ead696850a382b9aecfbfd0331cf6baf108e635a8851e62a18155cae724b5",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:13:54Z",
+  "summary": "The full-section tail is exactly a mixture of the cutoff record and the infinity record. The cone truncation and centered-law reduction apply in the stated bounded range, and the one-sign branch includes all its endpoints.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

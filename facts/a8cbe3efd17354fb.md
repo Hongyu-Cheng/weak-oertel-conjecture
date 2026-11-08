@@ -1,0 +1,65 @@
+---
+fact_id: a8cbe3efd17354fb
+kind: theorem
+author: "PK-research-agent"
+assurance: LLM-verified
+subgoal_id: pk-intake-fixed-facet-roof-depth-deficit
+depends_on: ["f566248002918e0f", "ea91e021ff1f4416"]
+verifier_run: 821b406ce96837a3
+target_match: null
+---
+
+## Source
+
+- [81d65baa0f0a1024](../candidates/81d65baa0f0a1024.json), §5, (15)–(18), actual fixed-roof deficit ratio.
+- [7ff8cebaefda7361](../candidates/7ff8cebaefda7361.json), §§1–5, the ordinary canonical cap game specialized to the fixed added strip.
+
+## Statement
+
+Let $d\ge2$, $m=d+1$, $\Gamma=(d/m)^d$, $c=(1-d^{1-d})/[(d-1)^2(d+1)]$, and $V=1/d!$. Let $B=\{z\in\mathbb R^{d-1}:z_j\ge0,\ \sum_j z_j\le1\}$, with normalized volume $\mu$ and barycentric coordinates $s=(z_1,\ldots,z_{d-1},1-\sum_j z_j)$. For a fixed continuous concave $\psi\ge0$ on $B$ and $\varepsilon>0$ put
+$$
+K_\varepsilon=\{(z,r):z\in B,\ \sum_jz_j-1\le r\le\varepsilon\psi(z)\}.
+$$
+This is a full-dimensional convex body, with $|K_\varepsilon|=V+\varepsilon dV\int_B\psi\,d\mu$. Let $\ell(z)=A+\sum_j B_jz_j$ be a fixed supporting affine majorant at the centroid of $B$. For sufficiently small $\varepsilon>0$, the simplex $S_\varepsilon$ given by
+$$
+q\ge0,\qquad z_j\ge0,\qquad q+\sum_j(1-\varepsilon B_j)z_j\le1+\varepsilon A,\qquad q=r-\sum_jz_j+1
+$$
+encloses $K_\varepsilon$. It satisfies
+$$
+|S_\varepsilon|=\frac{V(1+\varepsilon A)^d}{\prod_j(1-\varepsilon B_j)},\qquad
+1-\frac{|K_\varepsilon|}{|S_\varepsilon|}
+=\varepsilon d\int_B(\ell-\psi)\,d\mu+O(\varepsilon^2).
+$$
+For a full-dimensional body $K$, write $D(K)$ for maximum ordinary halfspace depth with respect to normalized volume. With $E_d(\psi)=\int_B[\#\{i:s_i\ge1/m\}-m\Gamma]\psi\,d\mu$,
+$$
+D(K_\varepsilon)=\Gamma+\varepsilon\frac{d}{m}E_d(\psi)+o(\varepsilon).
+$$
+For each fixed nonaffine roof the denominator in the following limit has positive linear coefficient, and
+$$
+\lim_{\varepsilon\downarrow0}
+\frac{D(K_\varepsilon)-\Gamma}{1-|K_\varepsilon|/|S_\varepsilon|}
+=\frac{E_d(\psi)}{m\int_B(\ell-\psi)\,d\mu}
+\ge\Gamma c.
+$$
+Equality in this limit is attained by $\psi=\min_i s_i$. If $\psi$ is affine, both linear terms vanish and the enclosing simplex formula still holds. The total variation distance of the two normalized uniform laws equals the displayed missing fraction, which therefore bounds their discrepancy over closed halfspaces. All error estimates are for the fixed roof and, where applicable, the fixed majorant.
+
+## Proof
+
+**Enclosing simplex.** The affine map $(z,r)\mapsto(z,q)$ has determinant one and takes $T=K_0$ to the standard $d$-simplex, of volume $V$. Compactness and convexity of $K_\varepsilon$ follow from the affine lower bound and concave upper bound over $B$, and $K_\varepsilon$ contains $T$. Its added strip over $r=0$ has volume $\varepsilon\int_B\psi(z)\,dz=\varepsilon dV\int_B\psi\,d\mu$. The affine majorant gives $K_\varepsilon\subseteq S_\varepsilon$ by substituting for $r$ in $r\le\varepsilon\ell(z)$. For small $\varepsilon$, $1+\varepsilon A$ and every $1-\varepsilon B_j$ are positive. Rescaling $q,z_j$ in the defining simplex gives the exact volume. The first-order term relative to $V$ is $dA+\sum_j B_j=d\int_B\ell\,d\mu$, since every $z_j$ has mean $1/d$. Dividing the volume expansions gives the stated missing fraction.
+
+**Depth over all normals.** Write $g_T$ for the centroid of $T$ and $\lambda_i$ for its barycentric functions, namely $-r,z_1,\ldots,z_{d-1},q$. Let $H_i=\{\lambda_i\ge1/m\}$ and $u_i$ its inward-pointing unit normal. By the ordinary centroid inequality and its oriented equality case in accepted fact ea91e021ff1f4416 §1, every centroid cap has $T$-volume at least $\Gamma V$. The only equality directions are $u_i$: an equality pyramid for a simplex has a vertex as apex and the opposite facet as base, and each resulting cap has volume $\Gamma V$. For a unit normal $u$ and point $y$ write $H(y,u)=\{x:u\cdot(x-y)\ge0\}$ and $F(y,u)=|T\cap H(y,u)|$. This cap volume is jointly continuous by dominated convergence. Near $(g_T,u_i)$ the hyperplane strictly separates the $i$-th vertex $v_i$ from all others. With $a_j=u\cdot(v_j-y)$, the cap is a simplex whose edge fractions from $v_i$ are $a_i/(a_i-a_j)$ for $j\ne i$. Therefore $F(y,u)=Va_i^d/\prod_{j\ne i}(a_i-a_j)$ there, a smooth function. At $u_i$, $F(y,u_i)=V(1-\lambda_i(y))^d$. Its $y$-derivative at $g_T$ is $-\kappa\nabla\lambda_i$ with $\kappa=dV(d/m)^{d-1}$.
+
+Let $P_i=\int_B\psi(z)\mathbf 1_{H_i}(z,0)\,dz$ and $\bar P=m^{-1}\sum_iP_i$. For every sequence $y_\varepsilon\to g_T$, $u_\varepsilon\to u_i$, the added cap volume is $\varepsilon(P_i+o(1))$. Indeed substitute $r=\varepsilon s$ in the strip integral, then apply dominated convergence on the fixed domain $z\in B,\ 0\le s\le\psi(z)$. On $r=0$, the plane $\lambda_i=1/m$ is either disjoint from the facet or cuts a proper affine section of it, so the indicators converge almost everywhere in this integral.
+
+The linear barycentric map has image the zero-sum subspace, so choose $v$ with $\kappa\nabla\lambda_i\cdot v=P_i-\bar P$ for every $i$. The point $x_\varepsilon=g_T+\varepsilon v$ belongs to $\operatorname{int}T$ for small $\varepsilon$. We show its minimum cap volume in $K_\varepsilon$ is at least $\Gamma V+\varepsilon\bar P+o(\varepsilon)$ in the sense of a lower limit of the first-order quotient. If it fails, there are $\varepsilon\downarrow0$ and normals with cap volume below $\Gamma V+\varepsilon\bar P$ by at least a fixed positive multiple of $\varepsilon$. A subsequence of these normals converges. By continuity of $F$, positivity of added volume, and the equality classification, its limit must be some $u_i$. The local cap formula gives
+$$
+F(x_\varepsilon,u_\varepsilon)=F(g_T,u_\varepsilon)-\varepsilon\kappa\nabla\lambda_i\cdot v+o(\varepsilon)
+\ge\Gamma V-\varepsilon\kappa\nabla\lambda_i\cdot v+o(\varepsilon).
+$$
+Adding the strip term gives $\Gamma V+\varepsilon\bar P+o(\varepsilon)$ along the subsequence, a contradiction.
+
+The maximizing point $y_\varepsilon$ exists by continuity of volume depth and compactness of $K_\varepsilon$. Its raw depth is at least $\Gamma V$ by using $g_T$ as competitor. Any point outside $\operatorname{int}T$ has a separating or supporting cap of zero $T$-volume and added volume at most $O(\varepsilon)$, so $y_\varepsilon$ lies in $\operatorname{int}T$ for small $\varepsilon$. Each canonical cap at $y_\varepsilon$ then gives $V(1-\lambda_i(y_\varepsilon))^d+O(\varepsilon)\ge\Gamma V$. It follows that every $\lambda_i(y_\varepsilon)\le1/m+O(\varepsilon)$, hence also $\lambda_i(y_\varepsilon)\ge1/m-O(\varepsilon)$ by summing. Thus $y_\varepsilon-g_T=O(\varepsilon)$. Expanding each canonical cap volume at this point and averaging gives the raw depth upper bound $\Gamma V+\varepsilon\bar P+o(\varepsilon)$, since the first-order center terms $-\kappa\nabla\lambda_i\cdot(y_\varepsilon-g_T)$ sum to zero. This matches the lower bound.
+
+On $r=0$, the $m$ canonical cap indicators sum to $N(s)$, with one barycentric coordinate identically zero. Hence $\bar P=(dV/m)\int_B N\psi\,d\mu$. Dividing the raw depth expansion by $V+\varepsilon dV\int_B\psi\,d\mu$ gives the normalized coefficient $(d/m)E_d(\psi)$.
+
+**Comparison.** Apply the facet estimate of the sharp quantitative vertex averaging theorem. For a nonaffine roof, $\int_B(\ell-\psi)\,d\mu>0$, so division gives the stated limit and lower bound, with equality for the minimum-coordinate roof. For an affine roof both linear coefficients vanish. Finally, for nested bodies the signed difference of the two normalized volume densities is nonnegative on the smaller body and nonpositive on the complement in the larger one. The positive mass is the missing fraction, proving the total variation identity and its closed-halfspace bound.

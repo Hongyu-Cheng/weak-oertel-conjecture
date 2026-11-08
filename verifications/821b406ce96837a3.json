@@ -1,0 +1,75 @@
+{
+  "candidate_id": "a8cbe3efd17354fb",
+  "candidate_sha256": "f20cecd34c67301eb902f719fb018e4a472672f25230fe5e985bd0c5924b3644",
+  "checked_dependency_candidate_sha256": {
+    "ea91e021ff1f4416": "67cec4d3ae5456e06c3b53232ee13354100ead48f99fb462585f60af561b6bfd",
+    "f566248002918e0f": "6b21b147a4c95b9ce1293e4061aa82358d124d00d2136c18e684e26637388d63"
+  },
+  "checks": [
+    "The map (z,r)→(z,q) has unit determinant and gives T with barycentric coordinates −r,z_j,q. The strip over the entire fixed base has exact volume ε∫_B ψ dz, where |B|=dV. The assumed roof gives a compact convex body containing T. The upper majorant gives exactly the displayed simplex inequality; rescaling each positive coefficient gives the volume and its relative derivative dA+∑B_j=d∫ℓ dμ. Dividing the two expansions yields the stated missing-volume coefficient.",
+    "The oriented centroid equality case applied to T leaves exactly the m directions u_i toward the barycentric apexes. The barycentric margins at g_T are strict, with one positive and d negative vertex margins. The simplex cap formed by intersecting the apex edges at fractions a_i/(a_i−a_j) gives the exact smooth volume formula and the signed derivative −dV(d/m)^(d−1)∇λ_i. Only local smoothness near these directions is used.",
+    "For moving y_ε→g_T and u_ε→u_i, rescaling r=εs puts the strip integral on a fixed finite domain. At r=0 the plane λ_i=1/m is empty when λ_i=−r and is a proper affine section in every other case. Thus the indicators converge almost everywhere against dz ds and dominated convergence gives P_i+o(1) after division by ε, including P_i=0 and the zero roof.",
+    "The vector (P_i−P̄)_i sums to zero, and the linear barycentric map is an isomorphism onto the zero-sum space. The chosen shift makes every canonical first-order value P̄. Any violating sequence of normals has a subsequence with a canonical limit by compactness, the nonnegativity of added mass, continuity, and the centroid equality case. The Taylor expansion is in y at the same moving normal u_ε, retaining F(g_T,u_ε)≥ΓV. Thus neither a rate u_ε→u_i nor a first-order expansion in the normal is needed. The moving strip limit then contradicts the violation.",
+    "The volume-cap map for the fixed K_ε is continuous jointly in point and normal because every hyperplane is volume-null; minimization on the compact normal sphere preserves continuity in the point. A maximum exists on K_ε and is global by separation. Outside int T a cap has zero T-volume and added volume O(ε), so every maximizer lies in int T for small ε. Each canonical cap upper test then gives λ_i(y_ε)≤1/m+O(ε) via the positive d-th root near d/m; sum one supplies the matching lower bounds. At y_ε=g_T+O(ε) the average of the canonical caps cancels every linear center term and gives the matching upper bound.",
+    "The strip limit cap multiplicity on r=0 is N(s), with the −r coordinate identically zero. The raw derivative is (dV/m)∫Nψ; subtracting Γd∫ψ on normalization gives (d/m)E_d. The nonaffine denominator is positive to first order by continuity and full support, and the facet inequality gives exactly Γc. For affine ψ the two linear coefficients vanish, and for ψ≡0 both bodies coincide with T.",
+    "Independently verified the sharp example with ℓ=1/d and ψ=min s_i. Its mean is 1/d², |K_ε|=V(1+ε/d), and |S_ε|=V(1+ε/d)^d, so the exact missing fraction is 1−(1+ε/d)^(1−d). The moment ∫Nψ is d times the integral of Pr(s_1≥1/m,min s≥u); the survival polynomials are (1−1/m−(d−1)u)^(d−1) up to 1/m and (1−du)^(d−1) above. Their integral is Γ/(d−1)−(1/m)^d/[d(d−1)], giving the equality ratio Γc. Rational polynomial integration checked this for each 2≤d≤20 and gave depth derivative 1/27 for d=2.",
+    "The normalized density difference for the smaller and larger body is positive only in the smaller body, with positive mass 1−|K_ε|/|S_ε|; this is the supremum absolute probability discrepancy and bounds every closed-halfspace discrepancy.",
+    "Verified both pending source hashes and locators. Source 81d65baa0f0a1024 §5 (15)–(18) contains the same roof and enclosing simplex, but states the quotient as a liminf. The two matched linear expansions with positive denominator imply the actual limit. Source 7ff8cebaefda7361 §§1–5 contains the general weak-added-law game; its moving-boundary step is proved here by the exact strip substitution and its remaining steps are proved directly. When ∫ψ>0 its general derivative specializes with t=εdV∫ψ and limiting law proportional to ψ dz on r=0. The proof needs neither admission of that source nor a uniform stability result."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f566248002918e0f",
+      "candidate_sha256": "6b21b147a4c95b9ce1293e4061aa82358d124d00d2136c18e684e26637388d63",
+      "mapping": "The facet r=0 of T has d barycentric coordinates s and uniform probability μ. Its centroid and supporting affine majorant coincide with those in the frozen facet consequence, with b=1/m and identical c, Γ, N, E_d. Apply that consequence to get E_d≥mΓc∫(ℓ−ψ), equality for min s_i, and zero for affine ψ.",
+      "reviewed_proof_sha256": "3544b7de2c95b17a195eab944bb8ddbb1ffb3e29d968da099200667a66530ff6",
+      "reviewed_statement_sha256": "2f14335d25b782dac211975e1f8b0ea219712b3de218f3b66fc784cf1a119fde",
+      "status": "Exact frozen predecessor independently approved in Wave 07; admit it before this candidate."
+    },
+    {
+      "candidate_id": "ea91e021ff1f4416",
+      "candidate_sha256": "67cec4d3ae5456e06c3b53232ee13354100ead48f99fb462585f60af561b6bfd",
+      "fact_id": "ea91e021ff1f4416",
+      "fact_sha256": "7df0ab466517c08027b19984c8fcc99e925534ad6c1ec7c6905b698e7122a204",
+      "mapping": "Use §1 for the full-dimensional compact d-simplex T with d≥2. Its centroid cap lower bound is ΓV, and equality puts the cap on the apex side of a parallel-base pyramid. In T the apex is one vertex and the base its opposite facet, giving exactly the m canonical directions.",
+      "reviewed_proof_sha256": "7f96240a7f6daadfa378ed87c324d38ae1d8192f0e6c9d3418ee841b28dc8215",
+      "reviewed_statement_sha256": "a0e387ad13f0b77b65c3e51862237d9404bd7d3c38c854810a68f8abdc3185c1",
+      "status": "Accepted at d6689f9."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:17:10.765228Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted ordinary simplex equality classification and compact gap supply orientation and the unperturbed equality values. They give no fixed-roof maximum-depth derivative, explicit enclosing simplex, or sharp first-order ratio.",
+      "fact_id": "ea91e021ff1f4416"
+    },
+    {
+      "comparison": "The accepted ordinary Hausdorff stability assertion gives compactness and continuity for near-minimal depth after normalization. It provides no sharp linear coefficient. The current statement is pointwise for one fixed roof and displayed majorant; its little-o statement does not yield uniform stability for varying roofs or arbitrary bodies.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "The accepted smooth support-bump result differentiates a finite cap-cover upper bound in a stationary smooth setting. It neither applies to a simplex roof nor establishes the all-normal matching lower bound, the enclosing-simplex volume, or the ratio here.",
+      "fact_id": "11c2f4875e5c3035"
+    },
+    {
+      "candidate_id": "7ff8cebaefda7361",
+      "comparison": "Its general first-variation theorem contains the raw maximum-depth expansion as a specialization, and also gives maximizer displacement. The frozen proof reproduces the derivative directly for the actual strip and adds the enclosing-simplex comparison, sharp ratio and total variation conclusion.",
+      "status": "Pending source at d6689f9."
+    }
+  ],
+  "readability": "The bounded strip coordinate s used in the rescaling is a scalar distinct from the facet barycentric tuple s. The maximum in the depth proof is raw volume until the explicit division by |K_ε|.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "1509a93e8f8367cbf42c725a4f2945f7a168f32f5cf6a9a3290d122f2fa516ce",
+  "reviewed_statement_sha256": "b858d7c0475e53c533d493c3cf48ba6e3a51b9f0a7d64e0a09da607b46add82c",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:15:15Z",
+  "summary": "The fixed-roof body and its enclosing simplex have the claimed volume comparison. The proof controls all normals in the first variation and gives the sharp fixed-roof depth-to-missing-volume ratio, conditional on admission of the independently approved frozen facet estimate.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

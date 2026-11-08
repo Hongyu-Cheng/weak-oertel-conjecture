@@ -1,0 +1,55 @@
+{
+  "candidate_id": "f26ba90707244e98",
+  "candidate_sha256": "8e74ac2035592c05d3324e7082caf435164f08e9d8dc8f090743c0406c88b3b9",
+  "checked_dependency_candidate_sha256": {
+    "1f86e3e352aa0225": "c91a21f2e14fdbd2f6ed1af9211e2367e5a92e4bf0b919eee6d57cbbd3e5a1b3",
+    "f4be2679c83c2fd1": "f7af40d0ddef2d06e42343643b1e896508c69bb3b7842462b3324f46c0048977"
+  },
+  "checks": [
+    "A bounded law loses tV0 in cap mass under truncation with no change of coarea. In the second oriented term the losses from V and Pν cancel; only the first term loses tV0 Cν. Dividing by the smaller denominator gives exactly (βc−tω)/(1−t), with 0<t<1 and positive total coarea.",
+    "Subtracting 1/2 leaves centered numerator Cν(Pμ−V/2)−Cμ(Pν−V/2). An infinity atom contributes zero to both centered coordinates, so the two terms each acquire λμλν while the denominator acquires the displayed weighted coarea. Its factor is a weighted average of the opposite λ values and lies between them. If exactly one coarea vanishes, that law has cap V/2 and both centered terms vanish.",
+    "For s≤T each base layer is supported on [−T,T]. Its CDF at 1 is one for 0≤s≤1 (including the delta layer) and (s+1)/(2s) for s>1. Thus at least half of the layer is in [−T,1], where the energy factor is at least (1+T/B)^(−d). The uniform lower bound for conditional finite coarea forces both λ values to zero when total coarea tends to zero with the profile fixed. The bounded ratio belongs to [0,1] because it is a convex combination of cap fractions, so the extension is 1/2 independent of how the two masses vanish.",
+    "For T≤1 the same affine correction gives the centered cap difference cC for both laws. The two centered products cancel, giving 1/2 on positive total coarea. Both pure infinity records give the only zero-denominator pair. For T≥1 an infinity record has corrected cap V/2, in the stated interval for β≤1/2; average it with the conditional finite law to transfer the same c.",
+    "An exact arithmetic check with d=2, H=2, U=1 has T=3, t=1/9. The point laws at slopes 0 and 3 are separately centered; their frustum records are (1/2,2/3,0) and (2/3,1/3,0). Direct substitution gives βc=4/9, βf=11/24, and 31/64 after mixing with infinity with finite masses 1/2 and 1/3. The directional formula and mixing formula agree with these direct evaluations.",
+    "Source 0ab50bc17861492a matches the declared SHA-256 at d6689f9. Section 4 equation (5) gives the directional identity and its infinity-atom paragraph gives the common correction extension; Section 2 gives the one-sign balanced ratio. The normalized proof derives the exact mixing coefficient and zero-denominator continuity. The numerical cone and sharp-comparison discussion supplies no premise."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_id": "f4be2679c83c2fd1",
+      "candidate_sha256": "f7af40d0ddef2d06e42343643b1e896508c69bb3b7842462b3324f46c0048977",
+      "mapping": "For the identical affine profile and physical records, apply the bounded-law theorem at each s≤T when T≥1, then average; it preserves each conditional finite moment and coarea and subtracts tV0 from the cap. Its tail replacement gives the ∞ record and finite centering for the general pair, and its T≤1 branch supplies the shared c and positive finite coarea. This exact predecessor has an independent approval and must be admitted first."
+    },
+    {
+      "candidate_id": "1f86e3e352aa0225",
+      "candidate_sha256": "c91a21f2e14fdbd2f6ed1af9211e2367e5a92e4bf0b919eee6d57cbbd3e5a1b3",
+      "mapping": "Apply the energy-record lemma under the same d,H,U and coarea definitions to each positive-mass conditional finite law on [0,T]. Its kernel identity C/C0=e(1/B) and uniform base-layer description imply the lower bound on coarea; the lemma’s separate Jensen-tail estimate is unnecessary. This exact predecessor has an independent approval and must be admitted first."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:15:57.477498+00:00",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "Bounds paired tails of one axial centroid law. It does not compare two coarea-weighted slope-law cap quotients before and after truncation.",
+      "fact_id": "6a7d56e450b3126f"
+    },
+    {
+      "comparison": "Uses coarea for regular projected contact calculations and does not give a directional truncation identity, infinity representative, or ratio limit.",
+      "fact_id": "1269c554ca9a41b8"
+    }
+  ],
+  "readability": "The paragraph about arbitrary centered frustum laws continues the preceding T≥1 case, as its stated support and the subsequent T≤1 clause indicate. Repeating the T≥1 qualifier there and marking conditional versus original coareas typographically would make this easier to scan.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "bed32b00bc6a6ddaf12e13d958cd6102bb09a0d2f6f7d5cad150ec10cba3d465",
+  "reviewed_statement_sha256": "4f8da76b8dc6ecdd78d68768f182e5d8cfb2fec16143e6ffdfdc5cca40470950",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:14:45Z",
+  "summary": "The cap loss is exactly directional with weight Cν/(Cμ+Cν). The infinity mixing law, zero-coarea extension and common-c implication hold as stated; the proof needs no cone comparison.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

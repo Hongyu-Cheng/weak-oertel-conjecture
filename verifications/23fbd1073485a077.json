@@ -1,0 +1,79 @@
+{
+  "candidate_id": "7831e6cfc5f87556",
+  "candidate_sha256": "a3c827e31bd27d2a4d7787c876d0fb2d5581a39e97f5e0e98e7dd1a93c5d32fc",
+  "checked_dependency_candidate_sha256": {
+    "03bc771bddd39a8a": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+    "8bc17121df970992": "15e1b2770803e21d2b97d467ac0b3c7bb7d19d3af78ef24b15a0fede85607bb8",
+    "d6a3cbae1da72277": "da5ab5696cdd4c30f7d0ee3977c4b5a54a8f21a7ae0b3083b2bfb5516fd1519e"
+  },
+  "checks": [
+    "Any closed containing halfspace can be shifted to have its boundary through z while decreasing mass. Hyperplanes are Lebesgue null, so cap masses are jointly continuous by dominated convergence, including moving normals and anchors. Compactness of the sphere gives a continuous minimum. Positive mass on a small ball supplies positive depth at its center. Supporting or separating outward caps give zero mass outside the open positive support. The radial outward cap bound at large norm makes the depth tend to zero, proving that a positive maximum occurs in U even for unbounded support.",
+    "Each cutoff satisfies the compact theorem, and the monotone mass limit proves γ_r M as a raw depth lower bound. The cutoff maximizers can vary freely since only the attained global maximum of the full density bounds their depths from above.",
+    "If zero is outside the convex hull of the compact active normal set, strict separation gives a uniform sign margin there. Moving the anchor in the negative separating direction lowers the cap threshold, adding positive mass bounded below uniformly by the slab thickness times a fixed inner section area and the positive density lower bound. On the compact complement the positive gap persists by joint continuity. Thus active normals balance. Dropping zero coefficients in a finite convex combination gives positive weights and the through-anchor closed caps cover all ambient points.",
+    "Angular preservation gives origin depth m(y)/M on B_y because it applies to every normal. The active caps all have volume m(y), cover every point of B_y, and bound its entire normalized depth function from above by that value. Thus the exact equality D(B_y)=D(f) holds before specializing to minimal depth. The body meets the compact, full-dimensional ordinary rigidity hypotheses.",
+    "A noncentroid point in a simplex has a coordinate λ_i>1/(r+1). Its vertex cap is the image of the entire simplex under dilation of ratio 1−λ_i about vertex i, so the cap volume fraction (1−λ_i)^r is below γ_r, including the zero fraction at the vertex. Hence the origin is the centroid of the actual radial simplex. The polytopal rigidity predecessor gives the profile, positivity and support there.",
+    "For the converse T is centered and full dimensional, so its radial function is positive. Substituting t=ρ_T(u)s in the profile integral factors each ray mass as ρ_T(u)^r times the same finite positive scalar. Normalizing by total mass transfers all fractions at y. Centroid Grünbaum gives the lower bound there. The canonical r+1 vertex halfspaces each have fraction γ_r and cover all ambient points by the sum-one identity for affine barycentric coordinates. Thus y is a deepest point. The open positive interiors coincide by equality of the closed supports of the common measure, and the actual radial body is the positive dilate of T with factor (r∫t^(r−1)F(t)dt)^(1/r).",
+    "For log-concavity, composing convex −log f with the increasing convex exponential gives the strict inverse-power assumption for any β>r+1. The pointwise interior radial formula gives convex h=−log F by restriction to a ray, and monotonicity follows from the inverse-power profile. Conversely convex nondecreasing h composed with a convex gauge and extended by +∞ outside the open positive domain is convex. The positive finite-mass hypothesis and the same angular calculation then apply.",
+    "The r≥2 restriction is needed for facet propagation in the predecessor. In dimension one the maximal depth of an absolutely continuous positive law is attained at a median and equals 1/2, independently of its radial shape. At β=r+1 the compact centerpoint lower bound still applies, while the profile proof requires strict concavity of the power with exponent r/(β−1)<1. The frozen equality statement quantifies over β>r+1 only.",
+    "Checked pinned original 07f233a26b321ff2, §2 Theorem 2 with its necessity and sufficiency and §3 log-concave consequence. The frozen proof spells out attainment, the cap cover and the cutoff argument for the same unbounded or open support class, and retains the exact centroid-simplex equality characterization."
+  ],
+  "critical_errors": [],
+  "dependencies": [
+    {
+      "candidate_sha256": "da5ab5696cdd4c30f7d0ee3977c4b5a54a8f21a7ae0b3083b2bfb5516fd1519e",
+      "fact_id": "d6a3cbae1da72277",
+      "fact_sha256": "c656d654472c81f5f524804b4082de414c6a644acb897867d7ca44f38b550e69",
+      "mapping": "Apply the compact inverse-power density centerpoint theorem with the same r to each exhaustion cutoff. The cutoff is bounded, upper semicontinuous and compactly supported, positive near the selected interior anchor, with extended inverse (r+1)-power convex. The resulting raw depth lower bound γ_r ∫ f_j transfers to f because f_j ≤ f for each cap. Increasing the cutoff gives γ_r M at an attained maximizer of f.",
+      "reviewed_proof_sha256": "dbe7d70cca96ad061d8258948835444a49bd83cea6a283c16f21f3ea9ae31b6d",
+      "reviewed_statement_sha256": "aa7f80306ba1f7a09897cb0aafa89293694d3b04ec2249999f98c1d7ec9b6691",
+      "status": "Accepted at d6689f9."
+    },
+    {
+      "candidate_sha256": "e00f4e9304c572da5e8c2d223b303370b6434e743cb2943a287b778a3fce5651",
+      "fact_id": "03bc771bddd39a8a",
+      "fact_sha256": "87a991b381937096faad127f34a1bd8122e9c4b05365514258807d268c2ddb37",
+      "mapping": "Apply exact ordinary maximal-depth equality with d=r to the full-dimensional compact convex body B_y and normalized uniform volume. The active cap transfer gives D(B_y)=D(f), so the equality hypothesis is exactly γ_r. Its conclusion is that B_y is a simplex. The same fact explicitly gives the centroid Grünbaum bound in its proof, as used in the profile converse.",
+      "reviewed_proof_sha256": "83386e5f8a2e901f8108cae4dbfb5a56a8f0df081cab2556ac5832c30a76d276",
+      "reviewed_statement_sha256": "fd129ce089ec5aefdd0c4fa9c33041f62eb5b77500a4b60bec8fc5a32e9d5ceb",
+      "status": "Accepted at d6689f9."
+    },
+    {
+      "candidate_sha256": "15e1b2770803e21d2b97d467ac0b3c7bb7d19d3af78ef24b15a0fede85607bb8",
+      "fact_id": "8bc17121df970992",
+      "mapping": "The frozen radial rigidity theorem has the same integrable strict inverse-power class, r≥2 and β>r+1. Its construction applies at the attained maximizer y in U and preserves every through-y cap mass on the full body of volume M. After the ordinary theorem gives a simplex, its polytopal equality conclusion supplies the continuous gauge profile, open positive interior and normalization on the actual radial body.",
+      "reviewed_proof_sha256": "11f9845b91a4a540b84c99f26556f64bfc7644f98817375e4ff751c5a77080ae",
+      "reviewed_statement_sha256": "1cff60043f260ccd347c20b804a6767fe8fe88f125a0222305fa58bf1ea928d9",
+      "status": "Frozen Wave 07 predecessor independently approved at this exact hash. Admit it first."
+    }
+  ],
+  "finished_utc": "2026-11-08T08:15:47.217734Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [
+    {
+      "comparison": "The accepted result gives the same sharp numerical lower bound for bounded upper-semicontinuous compactly supported inverse (r+1)-power densities. The draft extends that bound to the stated integrable strict class by exhaustion and classifies the equality densities and their actual center and radial body.",
+      "fact_id": "d6a3cbae1da72277"
+    },
+    {
+      "comparison": "The accepted exact equality theorem is for uniform Lebesgue measure on compact convex bodies. The new classification transfers from an actual deepest point of a general strict inverse-power density and identifies its entire radial profile.",
+      "fact_id": "03bc771bddd39a8a"
+    },
+    {
+      "comparison": "This accepted normalization gives the same ordinary simplex rigidity in the uniform convex-body case and a compact-class gap. The current theorem adds the equality density profiles in the strict inverse-power and log-concave classes.",
+      "fact_id": "ea91e021ff1f4416"
+    }
+  ],
+  "readability": "The shift of the anchor increases the near-active cap masses because its direction lowers their defining thresholds. The angular identity at that single anchor identifies the entire maximum because those same active caps cover the ambient space.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "add8c06bff0f2dbb715ee9c429350c6014127d724c4616971b25f56f41526a94",
+  "reviewed_statement_sha256": "0ba5bb7a530d0bf6e309d9d52b399c2c7b930e847289e63f4c742aaa4f4bd251",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:14:10Z",
+  "summary": "The density attains its depth at an interior maximizer. Angular preservation and the balanced active cap cover transfer its exact maximal depth to the radial body. The accepted ordinary simplex theorem and the independently approved frozen radial rigidity theorem then give the stated equality classification, with the converse verified by canonical simplex caps.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

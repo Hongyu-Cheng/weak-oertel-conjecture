@@ -1,0 +1,28 @@
+{
+  "advances": "A record-preserving reduction and the one-sign branch in a continuous affine profile.",
+  "author": "PK-research-agent",
+  "candidate_id": "f4be2679c83c2fd1",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:12:12.023826+00:00",
+  "depends_on": [
+    "1f86e3e352aa0225"
+  ],
+  "draft_key": "affine-frustum-bounded-cone-laws",
+  "kind": "theorem",
+  "proof": "At $s=0$ the section $z=0$ has positive density across the interior of its section interval. At any finite $s>0$, both the frustum and the cone contain the line segment parametrized by $x=-z/s$ for $z$ in an open neighborhood of zero. The resulting coareas are positive.\n\nFor any finite $s\\ge\\max(1,T)$ one has $|z|\\le sr(z)$ throughout $[-1,U]$. In fact $-z/r(z)$ is decreasing there with endpoints $1,-T$. The section then spans the whole axial interval. Integration of the horizontal captured width $r(z)+z/s$ and use of the section coarea from the preceding record lemma give\n\n$$\nC_f(s)=\\frac1{2s}\\int_{-1}^{U}r(z)^{d-2}\\,dz,\\qquad\nM_f(s)=\\frac1{2s}\\int_{-1}^{U}zr(z)^{d-2}\\,dz,\\qquad\nP_f(s)=\\frac V2+M_f(s).\n$$\n\nThese identities give the stated limit and, for $T\\ge1$, give the tail identity by comparison at $s=T$. The full-section formulas start at $\\max(1,T)$, including the case $T=1$.\n\nWhen $T\\le1$ and $0<s<\\infty$, the integral for $M_f(s)$ from the energy record lemma uses the uniform density on $[-\\min(s,T),\\min(s,1)]$. On its symmetric portion of positive length, pairing $b$ and $-b$ for $b>0$ gives\n$b[(1-b/B)^{-d-1}-(1+b/B)^{-d-1}]>0$.\nAny unpaired portion is positive in $b$. The negative prefactor makes $M_f(s)<0$. The records at zero and infinity both have $M_f=0$, and these are the only possible supports of a centered law. The stated $c$ gives $P-cC=V/2$ on both records and hence on their averages.\n\nFor $s\\le T$, every point in the cone over $U\\le z\\le H$ has margin at least $z-sr(z)$. This is increasing in $z$ and at $z=U$ it equals $U-sa\\ge0$. Therefore all mass $tV_0$ removed from the cap is captured in the cone. There is no section in $z>U$. The common boundary $z=U$ cannot remove any positive section coarea, since for $s>0$ the section there is at most one point, and the $s=0$ section lies below it. This proves the cone-to-frustum identity, including equality at $s=T$. For $T\\ge1$, replace a tail slope $s>T$ by $T$ with weight $T/s$ and by $\\infty$ with weight $1-T/s$, and leave $[0,T]\\cup\\{\\infty\\}$ fixed. Averaging this probability kernel preserves all three records. The atom at infinity contributes no moment. If the finite part has positive mass, normalizing it preserves its zero mean moment, which is the same on the cone by the first identity.\n",
+  "source_candidate_ids": [
+    "0ab50bc17861492a"
+  ],
+  "source_candidate_sha256": {
+    "0ab50bc17861492a": "c0aebc7d38225e28738ff490fabc3bc649ed73e2609badc52ee519e4d41d89fd"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "0ab50bc17861492a",
+      "locator": "§2 and §3, equations (2)–(4)"
+    }
+  ],
+  "statement": "Fix an integer $d\\ge2$, $H>0$ and $0<U<H$. Put $B=H+1$ and $r(z)=(H-z)/B$. On $-1\\le z\\le U$, $|x|\\le r(z)$, use the measure of density $f(x,z)=r(z)^{d-2}/2$ with respect to $dx\\,dz$. Set $a=r(U)$, $T=U/a$, $t=a^d=[H/(B+T)]^d$, $V_0=B/d$, and $V=(1-t)V_0$. The associated cone has the same density formula on $-1\\le z\\le H$, $|x|\\le r(z)$, and mass $V_0$.\n\nFor a finite slope $s\\ge0$, let $P(s)$ be the mass of $z+sx\\ge0$. Let $C(s)$ and $M(s)$ be the integrals of $f$ and $zf$, respectively, over the section $z+sx=0$ inside the support, against $d\\mathcal H^1/\\sqrt{1+s^2}$. A law's record is the average of $(P,C,M)$, and a law is centered if its averaged $M$ is zero.\n\nWrite $R_f(s)=(P_f(s),C_f(s),M_f(s))$ for the frustum record and $R_c(s)$ for the cone record. Every finite slope has positive frustum and cone coarea. The frustum records have a limit $R_f(\\infty)=(V/2,0,0)$, which defines the record at the optional endpoint $\\infty$.\n\nIf $T\\le1$, then $M_f(s)<0$ for every finite $s>0$. Each centered law on $[0,\\infty]$ is supported on $\\{0,\\infty\\}$ and its averages obey $P-cC=V/2$ with the same $c=(P_f(0)-V/2)/C_f(0)$ for all such laws.\n\nIf $T\\ge1$, the bounded cone and frustum records and the finite frustum tail satisfy\n\n$$\n\\begin{aligned}\nR_f(s)&=R_c(s)-(tV_0,0,0) &&(0\\le s\\le T),\\\\\nR_f(s)&=\\frac Ts R_f(T)+\\left(1-\\frac Ts\\right)R_f(\\infty) &&(T\\le s<\\infty).\n\\end{aligned}\n$$\n\nThus every probability law on $[0,\\infty]$ has a representative supported on $[0,T]\\cup\\{\\infty\\}$ with the same frustum records. If the original law is centered and the representative has positive finite mass, its conditional finite law is centered for the cone as well as for the frustum.",
+  "subgoal_id": "pk-intake-affine-frustum-bounded-cone-laws",
+  "title": "Centered slope laws on an affine frustum reduce to bounded cone laws"
+}

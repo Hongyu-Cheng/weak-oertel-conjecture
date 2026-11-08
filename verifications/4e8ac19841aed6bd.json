@@ -1,0 +1,32 @@
+{
+  "candidate_id": "29a6150872e2ef85",
+  "candidate_sha256": "4a17a4af7e441b883973f7d8ae0852cb401d2f83e8ba1e490853272c9b01ad23",
+  "checked_dependency_candidate_sha256": {},
+  "checks": [
+    "For k ≥ 1 and 0 ≤ b ≤ 1/2 both denominators are positive and the floor arguments are nonnegative. Failure would give next integers j, ℓ with j+ℓ ≤ k. Strict inequalities by those integers give b < 1−k/(2j) and b > (k−2ℓ)/(2(ℓ+1)). The first forces j > k/2, hence ℓ < k/2 and the integer inequality k−ℓ ≥ ℓ+1. Using j ≤ k−ℓ and the positive numerator k−2ℓ makes the upper bound at most the strict lower bound. This includes k=1, b=0 and b=1/2.",
+    "For a > 0 and x ∈ (0,1], the inclusive target count is exactly k+1 with k=min(m,floor((1−x)/a)). If k=0, L_0 alone suffices. For k≥1 the two lower floor arguments are nonnegative since θ≥b, and at most k since θ≤1−b and θ<1≤1+b. Therefore floor-plus-one counts do not reach beyond m. Replacing θ by 1/2 only lowers them and gives precisely the two floor arguments already bounded. For a=0 all entries are 1 and the surplus is m+1.",
+    "Each positive entry is at most 1 and each target is nonnegative by am≤1. The finite layer integral with weight p x^(p−1) yields the clipped positive powers for every p>0. A zero entry contributes neither at x>0 nor to the integral, including when am=1.",
+    "With m=0, L_0=ρ_0=1 and the remaining power vanishes exactly when ab≥θ, even though a has no upper bound. With m≥1 and a>0, one has a≤1. If b<θ, the interval (1−a,B_0] has positive length, lies in (0,1], and has count surplus at least one. Otherwise b=θ=1/2 and L agrees entry by entry with ρ. The B_0 power is positive unless a=1, which forces m=1. At that endpoint B_h≤0 throughout, so equality holds for all p>0.",
+    "Checked all positive breakpoints for 6,600 rational parameter cases and evaluated the exact inequalities at p=1,2,3. All matched the inclusive count and equality classification, including 582 equality cases, a=0, zero final targets, b=0 and b=1/2.",
+    "The pinned source digest matches bbd9056fa863fc6b. Its §1, (1)–(2), proves the same floor and finite-prefix counts with the second list named R_h. The frozen proof adds the equality classification, which follows from the explicit excess interval and endpoint evaluation. No accepted fact at the pinned base states or implies this levelwise comparison on the same lists."
+  ],
+  "critical_errors": [],
+  "dependencies": [],
+  "finished_utc": "2026-11-08T08:21:34Z",
+  "gaps": [],
+  "issues": [],
+  "overlap": [],
+  "readability": "The plus-one counts include index zero and count the two lists separately, as required by multiplicity. The statement and proof make the endpoint conventions explicit.",
+  "reasoning_effort": "high",
+  "repair_hints": [],
+  "review_method": "Independent mathematical proof review of the frozen normalized candidate",
+  "reviewed_proof_sha256": "782d37d503b8b295f154c0422782057c88ee8938c67fe65285c6934a70490f17",
+  "reviewed_statement_sha256": "26219dbb76cdf31c124ca3d2449d054e4de07dcdcf428a64dbb3b491a8cf9112",
+  "reviewer": "GPT-6.1 Sol high",
+  "reviewer_model": "gpt-6.1-sol",
+  "schema": "math-prover-verifier-v2",
+  "started_utc": "2026-11-08T08:20:37Z",
+  "summary": "The floor estimate gives levelwise dominance on the finite prefix, including ties at a positive level. Integrating the count gives every positive power inequality, with exactly the two stated equality regimes.",
+  "target_match": null,
+  "verdict": "APPROVED"
+}

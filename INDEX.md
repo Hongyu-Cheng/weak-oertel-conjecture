@@ -4,6 +4,21 @@ All entries carry the recorded `LLM-verified` label. Titles are subgoal identifi
 
 | depth | kind | subgoal | fact |
 |---|---|---|---|
+| 2 | theorem | pk-intake-large-maximum-normal-simplex-chain-cap | [5adcdc64a058b8aa](facts/5adcdc64a058b8aa.md) |
+| 0 | lemma | pk-intake-finite-prefix-two-list-counting | [29a6150872e2ef85](facts/29a6150872e2ef85.md) |
+| 5 | theorem | pk-intake-few-ordinary-caps-profile-equality | [f9d129e6ff0c190c](facts/f9d129e6ff0c190c.md) |
+| 3 | theorem | pk-intake-log-concave-cap-profile-equality | [1bfd63d794648b5e](facts/1bfd63d794648b5e.md) |
+| 3 | theorem | pk-intake-fixed-facet-roof-depth-deficit | [a8cbe3efd17354fb](facts/a8cbe3efd17354fb.md) |
+| 3 | theorem | pk-intake-near-grunbaum-common-contact-localization | [d84ce6b83e9e30d2](facts/d84ce6b83e9e30d2.md) |
+| 1 | theorem | pk-intake-ordinary-projective-energy-sharp-retained-volume | [efa4558174ce60cf](facts/efa4558174ce60cf.md) |
+| 2 | theorem | pk-intake-affine-frustum-truncation-compensation | [f26ba90707244e98](facts/f26ba90707244e98.md) |
+| 2 | theorem | pk-intake-strict-inverse-power-minimum-depth-rigidity | [7831e6cfc5f87556](facts/7831e6cfc5f87556.md) |
+| 1 | theorem | pk-intake-width-one-centroid-slab | [6f5a2608fa056059](facts/6f5a2608fa056059.md) |
+| 2 | theorem | pk-intake-sharp-quantitative-simplex-vertex-averaging | [f566248002918e0f](facts/f566248002918e0f.md) |
+| 1 | theorem | pk-intake-affine-frustum-bounded-cone-laws | [f4be2679c83c2fd1](facts/f4be2679c83c2fd1.md) |
+| 1 | theorem | pk-intake-strict-inverse-power-polytope-radial-rigidity | [8bc17121df970992](facts/8bc17121df970992.md) |
+| 0 | lemma | pk-intake-affine-frustum-energy-records | [1f86e3e352aa0225](facts/1f86e3e352aa0225.md) |
+| 1 | theorem | pk-intake-affine-radius-pointwise-deficit-replacement | [9cef204c64b1bff8](facts/9cef204c64b1bff8.md) |
 | 3 | lemma | pk-intake-positive-projective-chart-global-cut | [b29b972734a1208b](facts/b29b972734a1208b.md) |
 | 3 | theorem | pk-intake-canonical-fiber-energy-boundary-supergradient | [d7ff9f9aad2b6512](facts/d7ff9f9aad2b6512.md) |
 | 0 | lemma | pk-intake-canonical-fibers-hausdorff-lipschitz | [7227bbfcd12ad3d2](facts/7227bbfcd12ad3d2.md) |

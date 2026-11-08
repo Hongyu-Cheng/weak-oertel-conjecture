@@ -1,0 +1,30 @@
+{
+  "advances": "Classifies equality at a positive trimming parameter for r+1 caps in the full-dimensional log-concave density class.",
+  "author": "PK-research-agent",
+  "candidate_id": "1bfd63d794648b5e",
+  "candidate_schema": 2,
+  "created_at": "2026-11-08T08:12:12.089429+00:00",
+  "depends_on": [
+    "ac7ba1e1e0ebc955",
+    "03bc771bddd39a8a",
+    "7831e6cfc5f87556"
+  ],
+  "draft_key": "log-concave-cap-profile-equality",
+  "kind": "theorem",
+  "proof": "Use the representative positive on the open support interior $U$ and zero outside it. This changes only null boundary values. For each cap $H_i=\\{x:u_i\\cdot x\\ge b_i\\}$ with $A_i>\\alpha$, remove the distal tail above a parallel threshold $t_i>b_i$ of mass $A_i-\\alpha$. This is the trimming of ac7ba1e1e0ebc955, using continuity of cap masses and their vanishing tails. Let $L$ be the intersection of the retained closed sides and $f'=f\\mathbf1_L$. Put $V'=\\int f'$. Every cap has $f'$-mass at most $\\alpha$. Under the stated equality,\n$$\nV'\\ge V-\\sum_i(A_i-\\alpha)_+=\\alpha/\\gamma_r>0.\n$$\nThe restriction is log-concave on its full-dimensional positive interior. The minimum-depth rigidity theorem 7831e6cfc5f87556 applies with any $\\beta>r+1$, since $\\exp[-(\\log f')/\\beta]$ is convex there. It gives attained normalized depth at least $\\gamma_r$. Every point in the interior of the support belongs to a cap of $f'$-mass at most $\\alpha$, so the maximum normalized depth is at most $\\alpha/V'$. Equality follows throughout: $V'=\\alpha/\\gamma_r$, the maximum depth is $\\gamma_r$, and the removed tails have pairwise null intersections, by equality in the union bound.\n\nThe same rigidity theorem gives $f'$ as a log-concave nonincreasing gauge profile of a centroid-centered simplex about a point $y$ in the positive support interior. Polar integration on each ray shows that every through-$y$ halfspace has the same $f'$-mass fraction as its volume fraction on $y+T$: both angular integrals are proportional to the integral of the $r$th power of the radial function of $T$. Thus $y$ has depth $\\gamma_r$ for normalized $f'$.\n\nAny original cap containing $y$ has $f'$-mass at least $\\alpha$ by the depth bound, and at most $\\alpha$ by trimming. If it contained $y$ strictly, moving its boundary parallel through $y$ would lose positive $f'$-mass in an interior ball. Its boundary therefore passes through $y$. The ordinary simplex centroid-cap equality characterization in 03bc771bddd39a8a, applied via the angular identity, makes it a canonical vertex halfspace. The other caps miss a neighborhood of $y$. If a vertex halfspace were missing from the family containing $y$, a point slightly from $y$ toward its vertex would miss each of those caps: its barycentric coordinates at the other vertices have all decreased below $1/(r+1)$. It would also miss the caps avoiding the neighborhood. Such a point is in $U$, which contradicts coverage. There are exactly $r+1$ original caps, so all are distinct canonical vertex halfspaces.\n\nSuppose some distal tail was removed. Choose a point $x$ in its interior in $U$, outside all other removed tails and cutting planes. This is possible because the tail has positive mass, its intersections with the other tails are null, and each cutting plane is null. At $y$ every retained inequality is strict, since all the original boundaries now pass through $y$ and every used $t_i$ exceeds $b_i$. On the segment from $y$ to $x$, the chosen cutting plane is crossed inside $U$ and strictly inside every other retained side. A relatively open patch of that plane then lies in the closure of the positive support of $f'$, on a supporting plane of that closure.\n\nIf the radial support is infinite, the closure is all of $\\mathbb R^r$, which cannot lie in that retained halfspace. If the radius is finite, the closure is a positive homothet of $y+T$. The selected normal is a canonical vertex direction and exposes a single vertex of this homothet, which cannot contain the patch because $r-1\\ge1$. Both cases contradict positive trimming. Thus $f=f'$ almost everywhere, $V=\\alpha/\\gamma_r$, and all the cap masses equal $\\alpha$.\n\nConversely, the stated gauge profile gives cap fractions $\\gamma_r$ by the same angular calculation. The vertex halfspaces cover the whole space because the affine barycentric coordinates sum to one. Substitution gives equality at the stated $\\alpha$.\n",
+  "source_candidate_ids": [
+    "8b5860c585f8735a"
+  ],
+  "source_candidate_sha256": {
+    "8b5860c585f8735a": "1751a1c251a8d58111f64e0ec9bcde7ce22dc00f4bd1a72d73bc62ec4e06b335"
+  },
+  "source_sections": [
+    {
+      "candidate_id": "8b5860c585f8735a",
+      "locator": "§1, (1)–(2) and the necessity and sufficiency proof"
+    }
+  ],
+  "statement": "Let $r\\ge2$, and let $f$ be an integrable log-concave density of mass $V>0$ on $\\mathbb R^r$ with full-dimensional positive support. Suppose $r+1$ proper closed halfspaces $H_i$ cover the interior of that support, and put $A_i=\\int_{H_i}f$, $\\gamma_r=(r/(r+1))^r$, and $x_+=\\max\\{x,0\\}$. For $\\alpha>0$, equality\n$$\n\\sum_i(A_i-\\alpha)_++\\frac{\\alpha}{\\gamma_r}=V\n$$\nholds exactly under the following conditions. There are a point $y$ and an $r$-simplex $T$ with centroid zero such that $f(y+x)=\\exp[-h(p_T(x))]$ almost everywhere on $p_T(x)<R$, and $f=0$ almost everywhere outside this radial support. Here $p_T$ is the gauge of $T$, $0<R\\le\\infty$, and $h$ is convex and nondecreasing with positive finite profile mass. The halfspaces are the $r+1$ distinct vertex halfspaces of $y+T$ through $y$ and parallel to the opposite facets, on the side retaining the corresponding vertex. Every $A_i$ equals $\\alpha=\\gamma_r V$.",
+  "subgoal_id": "pk-intake-log-concave-cap-profile-equality",
+  "title": "Equality in the log-concave cap profile"
+}

@@ -1,5 +1,5 @@
-% Selector projection (y,s) -> s of the bases, with both coordinates at true scale.
-% Panel (a): the seven layers and their census. Panel (b): the mask J={1,5,6}, u=1.
+% Selector projection (y,s) -> s of the bases, with both coordinates at true scale:
+% the seven layers and their census.
 \begin{tikzpicture}[x=1.5cm,y=1.5cm,
     every node/.style={font=\footnotesize,inner sep=1.5pt},
     txt/.style={align=left},
@@ -7,46 +7,20 @@
     lightlayer/.style={rectangle,fill=white,draw=figblue,line width=0.9pt,minimum size=6pt,inner sep=0pt},
     zerolayer/.style={diamond,fill=figgold,draw=black,line width=0.6pt,minimum size=9pt,inner sep=0pt},
     hull/.style={draw=black!55,line width=0.6pt}]
-  % Panel (a)
-  \begin{scope}
-    \node[anchor=north west,inner sep=0pt] at (-2.45,2.0) {(a)};
-    \draw[hull] (1,0)--(1,1)--(0,1)--(-1,0)--(-1,-1)--(0,-1)--cycle;
-    \node[pairedlayer] (a1) at (1,0) {};
-    \node[lightlayer] (a2) at (1,1) {};
-    \node[pairedlayer] (a3) at (0,1) {};
-    \node[lightlayer] (a4) at (-1,0) {};
-    \node[pairedlayer] (a5) at (-1,-1) {};
-    \node[lightlayer] (a6) at (0,-1) {};
-    \node[zerolayer] (a0) at (0,0) {};
-    \node[txt,anchor=west] at ([xshift=2pt]a1.east) {$\s=\e_1$\\252 paired\\386 regular};
-    \node[txt,anchor=south west] at ([xshift=1pt,yshift=1pt]a2.north east) {$\s=\e_1+\e_2$\\252 light, 210 near\\176 regular};
-    \node[txt,anchor=south east] at ([xshift=-2pt,yshift=1pt]a3.north west) {$\s=\e_2$\\252 paired\\386 regular};
-    \node[txt,anchor=east] at ([xshift=-2pt]a4.west) {$\s=-\e_1$\\252 light, 210 near\\176 regular};
-    \node[txt,anchor=north east] at ([xshift=-1pt,yshift=-1pt]a5.south west) {$\s=-\e_1-\e_2$\\252 paired\\386 regular};
-    \node[txt,anchor=north west] at ([xshift=1pt,yshift=-1pt]a6.south east) {$\s=-\e_2$\\252 light, 210 near\\176 regular};
-    \node[txt,anchor=south east] (a0label) at (-0.42,0.52) {$\s=\0$: 1023 regular,\\one origin $\z=\0$};
-    \draw[line width=0.4pt] (a0.north west) -- (a0label.east);
-  \end{scope}
-  % Panel (b)
-  \begin{scope}[xshift=8.1cm]
-    \node[anchor=north west,inner sep=0pt] at (-2.05,2.0) {(b)};
-    \draw[hull] (1,0)--(1,1)--(0,1)--(-1,0)--(-1,-1)--(0,-1)--cycle;
-    \foreach \p in {(1,0),(1,1),(0,1)} \draw[dashed,line width=0.7pt] (0,0)--\p;
-    \foreach \p in {(-1,0),(-1,-1),(0,-1)} \draw[dashed,line width=0.7pt] (0,0)--\p;
-    \node[pairedlayer] (b1) at (1,0) {};
-    \node[lightlayer] (b2) at (1,1) {};
-    \node[pairedlayer] (b3) at (0,1) {};
-    \node[lightlayer] (b4) at (-1,0) {};
-    \node[pairedlayer] (b5) at (-1,-1) {};
-    \node[lightlayer] (b6) at (0,-1) {};
-    \node[zerolayer] (b0) at (0,0) {};
-    \node[txt,anchor=west] at ([xshift=2pt]b1.east) {$(\b_J,\e_1)$\\$\tau=(1,0,0)$};
-    \node[txt,anchor=south west] at ([xshift=1pt,yshift=1pt]b2.north east) {$(\b_J,\e_1+\e_2)$\\$\tau=(0,0,-1)$};
-    \node[txt,anchor=south east] at ([xshift=-2pt,yshift=1pt]b3.north west) {$(\b_J,\e_2)$\\$\tau=(0,1,0)$};
-    \node[txt,anchor=east] at ([xshift=-2pt]b4.west) {$-(\b_J,\e_1)$\\$\tau=(-1,0,0)$};
-    \node[txt,anchor=north east] at ([xshift=-1pt,yshift=-1pt]b5.south west) {$-(\b_J,\e_1+\e_2)$\\$\tau=(0,0,1)$};
-    \node[txt,anchor=north west] at ([xshift=1pt,yshift=-1pt]b6.south east) {$-(\b_J,\e_2)$\\$\tau=(0,-1,0)$};
-    \node[txt,anchor=south east] (b0label) at (-0.42,0.52) {$\z=\0$, $\tau=\0$\\$(\1_J,\0)$, $\tau=(3,3,3)$};
-    \draw[line width=0.4pt] (b0.north west) -- (b0label.east);
-  \end{scope}
+  \draw[hull] (1,0)--(1,1)--(0,1)--(-1,0)--(-1,-1)--(0,-1)--cycle;
+  \node[pairedlayer] (a1) at (1,0) {};
+  \node[lightlayer] (a2) at (1,1) {};
+  \node[pairedlayer] (a3) at (0,1) {};
+  \node[lightlayer] (a4) at (-1,0) {};
+  \node[pairedlayer] (a5) at (-1,-1) {};
+  \node[lightlayer] (a6) at (0,-1) {};
+  \node[zerolayer] (a0) at (0,0) {};
+  \node[txt,anchor=west] at ([xshift=2pt]a1.east) {$\s=\e_1$\\252 paired\\386 regular};
+  \node[txt,anchor=south west] at ([xshift=1pt,yshift=1pt]a2.north east) {$\s=\e_1+\e_2$\\252 light, 210 near\\176 regular};
+  \node[txt,anchor=south east] at ([xshift=-2pt,yshift=1pt]a3.north west) {$\s=\e_2$\\252 paired\\386 regular};
+  \node[txt,anchor=east] at ([xshift=-2pt]a4.west) {$\s=-\e_1$\\252 light, 210 near\\176 regular};
+  \node[txt,anchor=north east] at ([xshift=-1pt,yshift=-1pt]a5.south west) {$\s=-\e_1-\e_2$\\252 paired\\386 regular};
+  \node[txt,anchor=north west] at ([xshift=1pt,yshift=-1pt]a6.south east) {$\s=-\e_2$\\252 light, 210 near\\176 regular};
+  \node[txt,anchor=south east] (a0label) at (-0.42,0.52) {$\s=\0$: 1023 regular,\\one origin $\z=\0$};
+  \draw[line width=0.4pt] (a0.north west) -- (a0label.east);
 \end{tikzpicture}

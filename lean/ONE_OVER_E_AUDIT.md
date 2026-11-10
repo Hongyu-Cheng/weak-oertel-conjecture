@@ -91,7 +91,8 @@ or nonstandard dependency, including one in a generated certificate.
 
 The verified measure is counting measure over integer bases times canonical
 Lebesgue measure on the continuous real coordinates. It is the
-full-dimensional mixed-integer-volume formulation in the task. The final
+full-dimensional mixed-integer-volume formulation of the
+[problem statement](../problem_statement.md). The final
 statement does not additionally formalize an identification with normalized
 Euclidean Hausdorff measure, or the rationality of the polytope's vertices.
 Neither is an extra hypothesis needed for this counterexample. In particular,
@@ -115,7 +116,7 @@ assembled theorem checked the actual body and measure, quantifiers, dimensions,
 closed cuts, strict constant, and recursive axiom output. This records machine
 verification and model audits, not human review.
 
-The historical fact proofs and their model-review records remain unchanged.
-The new formal result supplements them. It refutes the particular constant
+The fact's proof and its model-review records are unchanged; the Lean proof
+is an additional check. It refutes the particular constant
 `1/e` (and hence the sharp `Gamma_d` constant), not the existence of some
 smaller positive absolute constant in the repository's weak conjecture.

@@ -1,10 +1,15 @@
-# A counterexample to the strengthened depth bound in dimension 19
+# A counterexample to Oertel's conjecture in total dimension 19
 
 There is a full-dimensional rational polytope $C\subseteq\mathbb R^{14}\times\mathbb R^5$
 and a constant $r_*<(5/6)^5/2^{14}$ such that every point of
 $\mathbb Z^{14}\times\mathbb R^5$ lies in a proper closed halfspace $H$ with
 $\mu(C\cap H)/\mu(C)\le r_*$. Here $\mu$ sums five-dimensional volumes over
 the integer fibers.
+
+This is accepted fact [`a39d93bee9bf2fe9`](../../facts/a39d93bee9bf2fe9.md), with the
+`LLM-verified` label, and it is also proved in Lean (see [Verification](#verification)).
+It refutes the sharp bound $(5/6)^5/2^{14}$, not the weak statement of the
+[problem](../../problem_statement.md), which allows any smaller constant.
 
 ## The simplex and its three sources
 

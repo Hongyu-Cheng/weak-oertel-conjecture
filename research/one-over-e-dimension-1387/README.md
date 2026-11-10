@@ -1,4 +1,16 @@
-# Lean verification
+# A counterexample to the specific 1/e bound in total dimension 1387
+
+There is a full-dimensional rational polytope
+$C\subset\mathbb R^{209}\times\mathbb R^{1178}$ such that every point of
+$\mathbb Z^{209}\times\mathbb R^{1178}$ lies in a proper closed halfspace $H$ with
+$\mu(C\cap H)/\mu(C)<36787944/(10^8\,2^{209})<1/(e\,2^{209})$, where $\mu$ sums
+the 1178-dimensional fiber volumes over the integer bases. The
+[analytic proof](../../facts/a02d398c0677c03a.md) is an accepted fact with the
+`LLM-verified` label, and the Lean theorem below proves the same bound. The
+example refutes the constant $1/e$, not the weak statement of the
+[problem](../../problem_statement.md), which allows any smaller constant.
+
+## Reproduce the verification
 
 From the repository root, run the exact certificate and build with the
 pinned Lean toolchain and mathlib revision. Lake and Elan must be on the
@@ -13,6 +25,8 @@ lake build
 lake env lean CheckAxioms.lean
 lake env lean CheckWitness1387Axioms.lean
 ```
+
+## What Lean proves
 
 The witness lives in the `SharpOC.Witness1387` namespace. The Lean body
 is the real convex hull of a finite set of rational generating points. Lean

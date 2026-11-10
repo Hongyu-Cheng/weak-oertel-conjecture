@@ -1,5 +1,14 @@
 # Lean verification of mixed-integer counterexamples
 
+This Lean 4 project proves five counterexamples from the fact graph: three to the
+sharp bound $\Gamma_d/2^n$, with $\Gamma_d=(d/(d+1))^d$, and two to the specific
+bound $1/(e2^n)$, which also refute the sharp bound. Each final theorem constructs an
+actual convex body and gives every mixed-integer point a proper closed
+halfspace of small relative mass. The mass is counting measure on the integer bases
+times Lebesgue measure on the fibers; the scope notes below say what else is and is
+not formalized. None of these theorems refutes the weak statement in
+[problem_statement.md](../problem_statement.md), which allows any smaller constant.
+
 ## Counterexample to the specific 1/e bound in total dimension 1387
 
 [`SharpOC.Witness1387.one_over_e_depth`](SharpOC/Witness1387/DepthBound.lean)
@@ -51,7 +60,7 @@ gives a rational polytope and the exact parameters.
 | SelectorMeasure, SelectorCuts, SelectorMass | Actual mixed-integer mass and covering halfspaces |
 | SelectorCounterexample | Uniform strict bound and total dimension |
 
-## Counterexample to the specific 1/e bound
+## Counterexample to the specific 1/e bound with n=76
 
 [`SharpOC.BoxCounterexample.one_over_e_counterexample`](SharpOC/BoxMeasure.lean)
 proves an unconditional counterexample with **n=76** and
@@ -129,18 +138,20 @@ cd lean
 lake exe cache get
 lake build
 lake env lean CheckAxioms.lean
+lake env lean CheckWitness1387Axioms.lean
 ```
 
 `CheckAxioms.lean` checks the final theorems for the counterexamples above
-and their supporting results.
+and their supporting results, except the dimension-1387 witness, which
+`CheckWitness1387Axioms.lean` checks.
 The final theorems depend only on the standard axioms `propext`,
 `Classical.choice`, and `Quot.sound`. The build reports non-fatal style
 and deprecation warnings from several modules.
 
 See the [1/e audit](ONE_OVER_E_AUDIT.md) and [earlier sharp-bound audit](AUDIT.md)
 for the precise statements and measure checks.
-The existing fact graph's historical review records have not been relabeled
-or rewritten by this addition.
+The Lean proofs leave the `LLM-verified` labels and review records of the
+corresponding facts unchanged.
 
 ## Earlier proof map
 

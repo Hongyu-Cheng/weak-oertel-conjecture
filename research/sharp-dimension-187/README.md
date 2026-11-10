@@ -1,8 +1,9 @@
 # Sharp counterexamples of total dimension 187
 
-This submission supersedes the dimension bounds in
-[PR #10](https://github.com/Hongyu-Cheng/weak-oertel-conjecture/pull/10).
-It gives explicit rational polytopes with the following dimensions.
+These results supersede the dimension bounds of
+[pull request #10](https://github.com/Hongyu-Cheng/weak-oertel-conjecture/pull/10),
+which was closed without merging. They are explicit rational polytopes with the
+following dimensions.
 Here $\Gamma_d=(d/(d+1))^d$.
 
 | Bound refuted | $n$ | $d$ | Total dimension |
@@ -12,9 +13,9 @@ Here $\Gamma_d=(d/(d+1))^d$.
 | $\Gamma_d/2^n$ | 129 | 104 | 233 |
 | $1/(e2^n)$ | 52 | 1,345,226,000,000,000,003 | 1,345,226,000,000,000,055 |
 
-The sharp-bound target $n+d<100$ was open when this submission was
-written. The [17-dimensional fact](../../facts/ecbacdec2c429376.md)
-now meets that target. The small sharp-bound examples below satisfy
+Smaller sharp-bound counterexamples, of total dimension
+[17](../../facts/ecbacdec2c429376.md) and [19](../../facts/a39d93bee9bf2fe9.md),
+were accepted later. The small sharp-bound examples below satisfy
 the weaker $1/(e2^n)$ bound. None of these results
 refutes the repository's locked assertion that some positive absolute
 constant works. The proofs are analytic, with exact rational checks and
@@ -61,7 +62,7 @@ was outside the fact graph describe its status when those reviews ran.
 - Compressed construction: [independent review](verify-compressed.md),
   including a different exact binomial-series enclosure.
 - Original witness: [independent verification](verify-current.md).
-- PR #10: [full review](pr10-review.md) and a
+- Pull request #10: [full review](pr10-review.md) and a
   [standalone rational replay](pr10-independent-n167.py). No substantive
   mathematical gap was found in its $(167,99)$ result; its total dimension
   266 is superseded by the results here.
@@ -87,5 +88,5 @@ python3 scripts/check_pk_parity_core.py
 ```
 
 The graph checker validates records, links, dependency closure, and
-verification hashes. It does not verify mathematics. The new proofs and
-certificates are separate from the existing pinned Lean development.
+verification hashes. It does not verify mathematics. These proofs and
+certificates are not part of the Lean development.

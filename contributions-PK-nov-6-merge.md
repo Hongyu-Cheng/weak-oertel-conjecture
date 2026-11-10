@@ -1,20 +1,27 @@
-# PK contributions — November 6, 2026
+# Contributions of Phillip Kerger, November 2026
 
-This guide covers the initial intake and its subsequent research continuation.
-The repository's **weak-conjecture target** is unchanged. Initial imported notes
-remain pending; new continuation facts have separate independent model reviews.
-Historical audits are not new approvals, and model review is not human or
-proof-assistant certification.
+This guide covers the research notes that Phillip Kerger (label PK) contributed
+on 6 November 2026 and the research continuation that followed. The repository's
+weak-conjecture target is unchanged. The 1,217 imported notes keep their pending
+status as source records. The [intake crosswalk](assets/pk-nov6/CROSSWALK.md)
+records a disposition for every claim in them, and 2,217 of those claims were
+accepted as separate facts after independent model review. Continuation facts
+have their own model reviews. Historical audits are not new approvals, and model
+review is not human or proof-assistant certification.
 
-## Latest continuation: read these first
+## Main results of the continuation
 
-- **The latest counterexample has n=52 and d=274784+2^61.** The
+Later counterexamples of much smaller dimension, to the 1/e bound in total
+dimension 1387 and to Oertel's conjecture in total dimension 17 and 19, are
+listed in the [repository README](README.md#current-state).
+
+- **A counterexample to the 1/e bound with n=52 and d=274784+2^61.** The
   [complete proof](facts/df488edae05a1702.md) replaces negative unit fibers
   by all nonempty negative Boolean subsets in four blocks. It proves a
   uniform depth bound strictly below 1/(e*2^52) for every actual
   mixed-integer point. The [review guide](reviews/pk-n52-counterexample.md),
   [exact checker](assets/pk-continuation-2026-11/check_integer_dimension_52.py),
-  and [six-page writeup](output/pdf/oertel-52-integer-variables.pdf) give
+  and [writeup](output/pdf/oertel-52-integer-variables.pdf) give
   the geometry, strict arithmetic certificate, and reproduction steps.
   This result is LLM-reviewed and exact-arithmetic certified; it is not
   Lean-formalized. It refutes the particular constant 1/e and the sharp
@@ -59,7 +66,12 @@ proof-assistant certification.
   bridges are accompanied by exact certificates. The sharp counterexample
   has a direct proof with no dependency on those auxiliary results.
 
-## Initial pending intake: suggested starting points
+## Notes from the 6 November intake: suggested starting points
+
+The crosswalk gives the disposition of each claim in the notes below and the
+accepted facts that now carry them. For example, the small-outside-mass theorem
+of note `ff31d56304dd901a` is accepted as fact
+[`3fad02a5aa48ae2a`](facts/3fad02a5aa48ae2a.md).
 
 - **A fixed-support obstruction, and an explicit escape by creating fibers.**
   [Five interval fibers](candidates/dcd790485c83acdc.json) with widths (13,11,9,7,5)
@@ -123,5 +135,6 @@ median reflection, graph Helly bounds, and equal-volume fibers. Covered argument
 were omitted or replaced by citations; additional refinements were retained.
 The [overlap report](assets/pk-nov6/overlap-review.json) records these comparisons
 and distinguishes detailed mathematical review from broader retrieval screening.
-Novelty and dependency questions in the remaining intake still need review
-before any claim enters `facts/`.
+The [crosswalk](assets/pk-nov6/CROSSWALK.md) completes the intake: of 4,703
+claims, 2,217 were accepted, 1,557 are covered by existing facts, 816 are
+supporting entries, and 113 are held with a named gap.

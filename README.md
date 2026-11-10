@@ -1,74 +1,70 @@
-# Weak Oertel conjecture
+# Weak Oertel conjecture fact graph
 
-A private collaboration repository for the fact graph of the weak Oertel conjecture for mixed-integer volume. The general conjecture remains open; this graph contains no accepted final proof.
+This repository holds the weak Oertel conjecture fact graph of Hongyu Cheng and Phillip Kerger. The weak Oertel conjecture concerns mixed-integer halfspace depth. Each accepted fact in the graph is a statement with a proof, linked to the accepted facts it uses and to the verification record that approved it. The repository also holds Lean formalizations and exact-arithmetic checkers for several counterexamples to stronger forms of the conjecture, among them the counterexample to Oertel's conjecture in the paper *A counterexample to Oertel's conjecture on mixed-integer centerpoints*.
 
-The [problem statement](problem_statement.md) asks for an absolute constant $c_0\in(0,1/e)$ such that every convex body in $\mathbb R^{n+d}$ with a nonempty mixed-integer intersection has a mixed-integer point of halfspace depth at least $c_0 2^{-n}$ times its total mixed-integer volume. The constant must be independent of both $n$ and $d$.
+The results were obtained mainly by AI research agents, and each accepted proof was approved by a language-model verifier. Every accepted fact carries the assurance label `LLM-verified`, which does not assert human review or formal verification. The [AI disclosure](#ai-disclosure) gives the details.
 
-Start with the highlights below, then follow a fact's `depends_on` IDs. The [complete fact index](INDEX.md) lists every accepted node. See [CONTRIBUTING.md](CONTRIBUTING.md) for adding results or raising a proof issue.
+## The problem
 
-## Status and verification
+Let $n,d$ be positive integers, let $C\subset\mathbb R^{n+d}$ be a convex body, and let $S=C\cap(\mathbb Z^n\times\mathbb R^d)$. The mixed-integer volume $\mathcal H_d$ of a subset of $S$ is the sum of the $d$-dimensional volumes of its fibers over the integer points. The halfspace depth $h_S(\mathbf y)$ of a point $\mathbf y\in S$ is the infimum of $\mathcal H_d(S\cap H)$ over the closed halfspaces $H$ that contain $\mathbf y$. The [problem statement](problem_statement.md) asks to prove or disprove the weak Oertel conjecture:
 
-The initial snapshot contains 1,235 accepted facts: 712 theorems, 317 lemmas, and 206 counterexamples to intermediate claims. Its latest acceptance is dated 29 October 2026. Those initial facts have the recorded assurance label `LLM-verified` and their original model-verification records. Later additions state their review method explicitly in their own records. This label does not assert human review or formal certification. Counterexamples to intermediate mechanisms do not disprove the general conjecture.
+> There is an absolute constant $c_0\in(0,1/e)$ such that every convex body $C$ with $S\neq\varnothing$ has a point $\mathbf y^\star\in S$ with $h_S(\mathbf y^\star)\ge c_0\,2^{-n}\,\mathcal H_d(S)$.
 
-On 7 November 2026, the integration review of PRs #4–#8 covered all **39 newly accepted facts**, bringing the graph to **1,280 accepted facts**, 2,571 candidates, and 1,340 verification runs. The lead assistant and three separate AI reviewers checked the proofs, reran the exact counterexample certificates, and freshly compiled the complete Lean project. A supporting sign-cone checker was corrected to keep every arithmetic value rational; its mathematical certificate remains valid. The [integration review and reproducible evidence](reviews/pr4-8-integration-review.md) record the exact revisions, individual proof coverage, fix, checks, and formalization limits. This review does not imply human certification or approval of the remaining pending submissions.
+The constant may not depend on $n$, $d$ or $C$. Two stronger statements specify the constant. Oertel's conjecture, stated by Oertel and by Basu and Oertel as a mixed-integer analogue of Grünbaum's inequality, uses $\Gamma_d=(d/(d+1))^d$ in place of $c_0$; below it is also called the sharp bound, and the [dimension-17 paper](output/pdf/oertel-sharp-dimension-17.pdf) gives the references. The $1/e$ bound takes $c_0=1/e$. Since $\Gamma_d>1/e$, a counterexample to the $1/e$ bound also refutes Oertel's conjecture.
 
-The recorded subgoal statuses are research history, not a freshly reviewed list of available assignments. Some subgoals mention unshared research notes; reconstruct their mathematical target from accepted facts before using them. The README highlights are navigation aids, not an additional verification of the results.
+## Current state
 
-## Counterexample to the specific 1/e bound in total dimension 1387
+The weak Oertel conjecture is open: no accepted fact proves or refutes it. All of the following are accepted facts with the `LLM-verified` label.
 
-A full-dimensional rational polytope with **$(n,d)=(209,1178)$** has
-normalized mixed-integer halfspace depth uniformly below
-$0.36787944/2^{209}<1/(e2^{209})$. The [proof and exact replay](facts/a02d398c0677c03a.md)
-cover every mixed-integer point. The [Lean theorem](lean/SharpOC/Witness1387/DepthBound.lean)
-proves the depth bound for the explicit witness. The
-[verification guide](research/one-over-e-dimension-1387/README.md) gives the
-reproduction and axiom audit commands.
+- The weak statement holds for $n=1$ and for $n=2$, for every $d$ ([`758103b1282d6b91`](facts/758103b1282d6b91.md), [`daef2580cdfec07b`](facts/daef2580cdfec07b.md)), and for every $n$ when $d\le199$, with $c_0=3/64000$ ([`245739007817b92a`](facts/245739007817b92a.md)). Further restricted cases are listed under [Highlights](#highlights).
+- The full statement would follow from one aggregate inequality in a reduced setting ([`933fa3d0a98a6ce9`](facts/933fa3d0a98a6ce9.md)). The graph does not prove that inequality, and the corresponding subgoal is open.
+- The counterexamples in the table refute Oertel's conjecture and the $1/e$ bound. None of them refutes the weak statement, which allows any smaller positive constant.
+- Most of the remaining facts are lemmas, partial reductions, and counterexamples to proposed intermediate steps. A counterexample to an intermediate step refutes that step, not the conjecture.
 
-## Counterexample of total dimension 17
+| Bound refuted | $n$ | $d$ | Fact | Proof or write-up | Exact checker | Lean proof |
+| --- | ---: | ---: | --- | --- | --- | --- |
+| sharp | 12 | 5 | [`ecbacdec2c429376`](facts/ecbacdec2c429376.md) | [paper](output/pdf/oertel-sharp-dimension-17.pdf), [proof](research/sharp-dimension-17/README.md) | [check.py](research/sharp-dimension-17/check.py) | [`Selector17`](lean/SharpOC/Selector17Counterexample.lean) |
+| sharp | 14 | 5 | [`a39d93bee9bf2fe9`](facts/a39d93bee9bf2fe9.md) | [proof](research/sharp-dimension-19/README.md) | [check.py](research/sharp-dimension-19/check.py) | [`Selector`](lean/SharpOC/SelectorCounterexample.lean) |
+| sharp | 153, 132, 129 | 34, 82, 104 | [`ad3e63c52f083457`](facts/ad3e63c52f083457.md) | [proof](research/sharp-dimension-187/README.md) | [checker](research/sharp-dimension-187/sharp-triangle-join-pareto-check.py) | none |
+| sharp | $3\cdot10^{92}$ | 23 | [`022a26fa5001480a`](facts/022a26fa5001480a.md) | [proof](assets/pk-continuation-2026-11/direct-rational-sharp-oc-counterexample.md) | [checker](assets/pk-continuation-2026-11/check_direct_rational_sharp_oc_counterexample.py) | [`Counterexample`](lean/SharpOC/Counterexample.lean) |
+| $1/e$ | 209 | 1178 | [`a02d398c0677c03a`](facts/a02d398c0677c03a.md) | [guide](research/one-over-e-dimension-1387/README.md) | [check.py](research/one-over-e-dimension-1387/check.py) | [`Witness1387`](lean/SharpOC/Witness1387/DepthBound.lean) |
+| $1/e$ | 52 | 1,345,226,000,000,000,003 | [`cbe1f4518f7088a7`](facts/cbe1f4518f7088a7.md) | [construction](research/sharp-dimension-187/compress-simplex-factor.md) | [checker](research/sharp-dimension-187/compress-certificate.py) | none |
+| $1/e$ | 52 | $274784+2^{61}$ | [`df488edae05a1702`](facts/df488edae05a1702.md) | [write-up](output/pdf/oertel-52-integer-variables.pdf) | [checker](assets/pk-continuation-2026-11/check_integer_dimension_52.py) | none |
+| $1/e$ | 76 | $1372131+2^{93}$ | [`a5291bca09ba4b1e`](facts/a5291bca09ba4b1e.md) | [write-up](output/pdf/oertel-one-over-e-counterexample.pdf) | [checker](assets/pk-continuation-2026-11/check_integer_dimension_76.py) | [`BoxCounterexample`](lean/SharpOC/BoxMeasure.lean) |
 
-A rational polytope with **$(n,d)=(12,5)$** has normalized mixed-integer
-depth uniformly below $(5/6)^5/2^{12}$. Selector-dependent signs on the
-ordinary coordinates give three light pools of 252 fibers each using
-two selector coordinates. The proof accounts for all $4{,}852$ integer
-fibers and gives a containing halfspace at every mixed-integer point.
-[Accepted fact](facts/ecbacdec2c429376.md) ·
-[Geometric proof](research/sharp-dimension-17/README.md) ·
-[Exact replay](research/sharp-dimension-17/check.py) ·
-[Lean theorem](lean/SharpOC/Selector17Counterexample.lean).
+In this graph, the smallest total dimension $n+d$ of a counterexample is 17 for Oertel's conjecture and 1387 for the $1/e$ bound. The [support-count theorem](facts/30b899ae9d94a523.md) shows that a body with $F$ positive-volume fibers has maximum normalized depth at least $\Gamma_d/F$. A $1/e$ counterexample therefore needs $F/2^n>e\Gamma_d$, so $d$ must be large when $F$ is close to $2^n$.
 
-## Counterexample of total dimension 19
+The counterexample with $(n,d)=(12,5)$ is the subject of the paper *A counterexample to Oertel's conjecture on mixed-integer centerpoints* by Hongyu Cheng and Phillip Kerger. The [PDF](output/pdf/oertel-sharp-dimension-17.pdf), its LaTeX source, and the replay commands are linked from [research/sharp-dimension-17](research/sharp-dimension-17/README.md).
 
-A rational polytope with **$(n,d)=(14,5)$** has normalized mixed-integer
-depth uniformly below $(5/6)^5/2^{14}$. Its $17{,}770$ integer fibers
-are identified exactly. The [geometric proof](research/sharp-dimension-19/README.md),
-[exact replay](research/sharp-dimension-19/check.py), and
-[Lean theorem](lean/SharpOC/SelectorCounterexample.lean) verify the strict bound.
+## Assurance
 
-## Earlier counterexamples of total dimension 187
+Accepted facts. Every file in `facts/` carries `LLM-verified`: a language-model verifier approved its proof, and the approving record is under `verifications/`. The label does not assert human review or formal verification.
 
-The [dimension-reduction submission](research/sharp-dimension-187/README.md) gives rational counterexamples to the sharp bound $\Gamma_d/2^n$, where $\Gamma_d=(d/(d+1))^d$, at **(n,d)=(153,34), (132,82), and (129,104)**. Their actual fibers and every-point halfspace bounds are proved, and their maximum depths are determined exactly. These examples satisfy the weaker $1/(e2^n)$ bound.
+Lean. The five counterexamples with an entry in the Lean column have Lean 4 proofs built against a pinned mathlib, and their axiom audits allow only `propext`, `Classical.choice`, and `Quot.sound`. The Lean statements measure a body by counting measure on the integer bases times Lebesgue measure on the fibers. They do not separately formalize the identification with the Hausdorff measure of the problem statement or the rationality of the polytopes. The [Lean guide](lean/README.md) states the scope of each theorem.
 
-The same submission improves the specific $1/e$ counterexample to **n=52, d=1,345,226,000,000,000,003**, using one simplex factor for both amplification and caps. It also proves the support-count obstruction that forces $d\ge68,727,866,368$ for any $1/e$ counterexample on the old n=52 support. The three new records bring the graph to **1,283 accepted facts**, 2,574 candidates, and 1,343 verification runs. Independent mathematical reviews and exact rational checks are recorded with `LLM-verified` assurance; these additions are not Lean-formalized. See the [final publication review](research/sharp-dimension-187/publication-review.md).
+Exact checkers. The Python checkers in the table use exact rational arithmetic to replay the finite counts and strict inequalities of each construction. The geometric arguments are in the proofs, not in the checkers.
 
-## PK November 6 contribution
+Graph checker. `scripts/check_graph.py` checks the records (dependency closure, acyclicity, metadata, hashes, and private-path patterns). It does not check mathematics.
 
-See [the short contribution guide](contributions-PK-nov-6-merge.md) for the main additions and [the complete pending-submission index](assets/pk-nov6/INDEX.md) for the wider collection. The original mathematical notes, computations, and historical review comments remain preserved pending intake. They did not themselves change the accepted facts or the target.
+## AI disclosure
 
-On 6 November 2026 (America/New_York), six atomic claims from the near-parity-core proof were accepted after direct ChatGPT mathematical review, including [the sharp complete-parity-core theorem](facts/3fad02a5aa48ae2a.md). That review brought the accepted graph to **1,241 facts**. All original intake files and their pending statuses are unchanged; the normalized accepted replacements and exact scope are listed in [the review report](reviews/pk-parity-core-issue2.md). Each new node has a fresh review record and a closed accepted dependency chain. The same assistant edited and reviewed the normalization; no second-model, human, or formal review is implied. The other imported claims have not been batch-approved.
+The results in this graph were obtained mainly by AI research agents, using a fact graph system similar to [Danus](https://arxiv.org/abs/2607.06447). The `author` field of every candidate is an agent label, not a person: `research-agent`, `PK-research-agent` for the work Phillip Kerger contributed, or `dimension-reduction-research-agent`. The graph contains 3,503 accepted facts. A separate model verification run approved each of them, so each carries the label `LLM-verified`, which does not assert human review or formal verification. Where a verification record names the model, it is almost always GPT-6.1 Sol, with GPT-6 Astra or ChatGPT in a few runs; the records made before 30 October 2026 name no model. The review reports under [`reviews/`](reviews) and the pull request reviews describe further model reviews of particular results. Hongyu Cheng and Phillip Kerger maintain the repository and take full responsibility for it.
 
-The [subsequent continuation](assets/pk-continuation-2026-11/README.md) adds separately reviewed facts. Its earlier [explicit counterexample to the specific 1/(e*2^n) bound](facts/df488edae05a1702.md) has **n=52** and **d=274784+2^61**, about **2.31×10^18**. Two independent mathematical reviews and an exact rational certificate cover the actual fibers and every mixed-integer point; see the [review report](reviews/pk-n52-counterexample.md). This is an intermediate dimension reduction and is **not Lean-formalized**. It remains far above a billion continuous variables. It refutes the particular constant 1/e, not this repository's target of some smaller positive absolute constant. The original pending intake retains its existing status.
+The repository began as an export of a local research workspace. Prompts, handoffs, source archives, working memory, personal configuration, and copies of reference papers were left out, and agent identifiers were normalized. Some records still name files from that workspace, for example under `.math-prover/`, or refer to unshared research notes. Those files are not in the repository; the [contribution rules](CONTRIBUTING.md) treat them as provenance, not as premises.
 
-A [six-page writeup](output/pdf/oertel-52-integer-variables.pdf) explains the new Boolean family of outer fibers, the affine proof that the origin fiber is exact, and the mass surplus that permits smaller simplex padding. Its [LaTeX source](assets/pk-continuation-2026-11/oertel-52-integer-variables.tex) is included.
+## Where to start
 
-The earlier [n=76 counterexample](facts/a5291bca09ba4b1e.md), with **d=1372131+2^93**, has a [complete Lean proof](lean/README.md) in the mixed-integer-volume formulation. The [formal audit](lean/ONE_OVER_E_AUDIT.md) records its exact scope, and the [analytic review report](reviews/pk-one-over-e-counterexample.md) preserves its original review history.
+1. The [problem statement](problem_statement.md).
+2. The [dimension-17 paper](output/pdf/oertel-sharp-dimension-17.pdf) for a complete counterexample to Oertel's conjecture.
+3. The [highlights](#highlights) for the main positive results and reductions. From any fact, follow the IDs in its `depends_on` field.
+4. The [fact index](INDEX.md), which lists every accepted fact with its depth, kind, and subgoal identifier.
+5. For the research notes that Phillip Kerger contributed on 6 November 2026, the [intake crosswalk](assets/pk-nov6/CROSSWALK.md) and the [contribution guide](contributions-PK-nov-6-merge.md).
 
-A [six-page LaTeX writeup](output/pdf/oertel-one-over-e-counterexample.pdf) presents the n=76 construction, proof, exact arithmetic, and formal scope. Its [editable source](assets/pk-continuation-2026-11/oertel-one-over-e-counterexample.tex) is included.
-
-The earlier [sharp-bound counterexample](facts/022a26fa5001480a.md), with d=23 and n=3*10^92, has a [complete Lean proof in the mixed-integer-volume formulation](lean/README.md), including the actual convex body, all integer fibers, and a uniform strict depth bound. The pinned build and standard-axiom audit pass. Both constructions are included in the pinned Lean build. See the linked scope statement for the additional rationality/Hausdorff-normalization details in the prose note; the historical fact-review metadata is unchanged.
+The problem statement and the fact files use `\(...\)` and `\[...\]` math delimiters, which GitHub may show as source. A Markdown viewer with LaTeX support displays them.
 
 ## Highlights
 
-These curated names come from the existing project overview. Rows give the longest dependency-chain length, starting at zero. An arrow in the picture means that a lower highlighted fact depends on an upper one, possibly through omitted nodes.
+The names are curated labels stored in [`assets/highlights.json`](assets/highlights.json). Depth is the length of the longest dependency chain below a fact, starting at zero. An arrow means that the lower fact depends on the upper one, possibly through facts not shown.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/highlights-dark.svg">
@@ -95,35 +91,62 @@ These curated names come from the existing project overview. Rows give the longe
 | 23 | Stopped-rank 311 closure | [`a728f1f23a4398e9`](facts/a728f1f23a4398e9.md) |
 | 26 | Conditional closure (AGG) | [`933fa3d0a98a6ce9`](facts/933fa3d0a98a6ce9.md) |
 
-Recent additions beyond the curated overview:
+For $d\ge2$, the [sharp complete-parity-core theorem](facts/3fad02a5aa48ae2a.md) proves the sharp bound for bodies with a positive-volume fiber over one point of each parity class, provided that all other fibers together have volume at most $\rho_d$ times the smallest of those fibers. The constant $\rho_d>0$ depends only on $d$.
 
-- [A sharp-bound counterexample in total dimension 19](facts/a39d93bee9bf2fe9.md)
-- [Sharp counterexamples with total dimension 187 and further tradeoffs](facts/ad3e63c52f083457.md)
-- [A smaller n=52 counterexample using one simplex factor](facts/cbe1f4518f7088a7.md)
-- [A support-count obstruction for the specific 1/e bound](facts/30b899ae9d94a523.md)
-- [A 52-integer-variable counterexample to the specific 1/e bound](facts/df488edae05a1702.md)
-- [Sharp complete-parity-core theorem, with six-node verified dependency chain](facts/3fad02a5aa48ae2a.md)
-- [oct29-dominant-clique-lacunary-product](facts/0e1d1c8120a9ffff.md)
-- [oct29-four-atom-core-lacunary-product](facts/d727395b991f2895.md)
-- [oct29-four-atom-weighted-core-price](facts/149d1105f63274b9.md)
-- [oct29-bounded-core-lacunary-product](facts/6d5cb397c4ad27d5.md)
-- [oct29-same-cluster-recurrence-adversary](facts/667c2d50a40d42a4.md)
+## Repository layout
 
-## Files
+- `facts/<id>.md`: accepted statements and proofs, with `depends_on` and the approving verification run.
+- `candidates/<id>.json`: every submitted statement and proof, whether accepted, pending, or rejected. Its status is in `state.json`.
+- `verifications/<run>.json`: verifier verdicts, gaps, and explanations.
+- `state.json`: the ledger of facts, candidates, verification runs, and research subgoals.
+- [`INDEX.md`](INDEX.md): the list of accepted facts.
+- [`lean/`](lean): the Lean 4 project.
+- [`research/`](research): proofs, checkers, and review notes for the counterexamples of total dimension 17, 19, 187, and 1387.
+- [`assets/pk-nov6/`](assets/pk-nov6): the research notes that Phillip Kerger contributed on 6 November 2026, kept as pending candidates, with the crosswalk that records how each claim in them was handled and the supporting computations.
+- [`assets/pk-continuation-2026-11/`](assets/pk-continuation-2026-11): later notes and checkers from the same line of work, including the $d=23$, $n=76$, and $n=52$ constructions.
+- [`reviews/`](reviews): reports of model reviews and integration checks, with their evidence files.
+- [`output/pdf/`](output/pdf): the dimension-17 paper and two write-ups.
+- [`scripts/`](scripts): the graph and intake checkers and a generator for a Lean certificate.
 
-- `facts/<id>.md`: accepted statements and proofs, with dependencies and the approving verifier run.
-- `candidates/<id>.json`: submitted statements and proofs, including rejected and pending work. The corresponding status is in `state.json`.
-- `verifications/<run>.json`: original verifier verdicts and explanations.
-- `state.json`: facts, candidate statuses, verification runs, and mathematical subgoals.
-- `assets/`: the curated highlight labels and dependency diagrams.
-- `scripts/check_graph.py`: checks dependency closure, acyclicity, record consistency, verifier hashes, and private-path patterns.
+At the time of writing, `state.json` records 3,503 accepted facts (1,721 theorems, 1,035 lemmas, and 747 counterexamples), 4,794 candidates (of which 1,236 are pending and 55 rejected), and 3,563 verification runs. The longest dependency chain has depth 44. `python3 scripts/check_graph.py` prints the current counts. All but one pending candidate are composite research notes kept under their original status. For the 1,217 notes of the 6 November intake, the crosswalk records how every claim in them was handled, and 2,217 of those claims entered the graph as separate facts. The ledger also records 3,782 research subgoals. Their statuses are a record of the research process, not a reviewed list of open problems.
 
-The layout follows [oertel-three-slices-2d](https://github.com/Hongyu-Cheng/oertel-three-slices-2d). This is a fresh repository with no inherited working-directory history. Personal configuration, prompts, handoffs, packets, source archives, working memory, and reference-paper copies are omitted. Original agent names are normalized to `research-agent`; local source locations become citation labels or references to unshared research notes. Packet and prompt metadata are omitted, and verification paths are relative to this repository. Fact IDs, mathematical statements, proofs, dependencies, assurance labels, and verifier verdicts are preserved.
+## Rerun the checks
 
-The original problem and fact files retain their LaTeX delimiters. GitHub may display `\(...\)` and `\[...\]` as source; use a math-aware Markdown viewer when needed.
-
-Check the graph locally with:
+The graph and intake checkers use only the Python standard library. They check records, hashes, links, and finite regressions, not proofs.
 
 ```sh
 python3 scripts/check_graph.py
+python3 scripts/check_pk_nov6.py
+python3 scripts/check_pk_crosswalk.py
+python3 scripts/check_pk_parity_core.py
 ```
+
+The exact checkers for the counterexamples also use only the standard library. For example:
+
+```sh
+python3 -B research/sharp-dimension-17/check.py
+python3 -B research/sharp-dimension-19/check.py
+python3 -I -B research/one-over-e-dimension-1387/check.py
+```
+
+The other checkers are linked in the table, and [research/sharp-dimension-187](research/sharp-dimension-187/README.md) lists its own. Some checkers rewrite the JSON certificate stored beside them, so run them in a clean checkout and compare with `git diff`. The [Lean guide](lean/README.md#reproduce-the-verification) gives the build and axiom-audit commands.
+
+## How to cite
+
+To cite the fact graph, use the metadata in [CITATION.cff](CITATION.cff), which GitHub offers under "Cite this repository":
+
+> Hongyu Cheng and Phillip Kerger. Weak Oertel conjecture fact graph. https://github.com/Hongyu-Cheng/weak-oertel-conjecture, 2026.
+
+To cite the counterexample with $(n,d)=(12,5)$, cite the paper:
+
+> Hongyu Cheng and Phillip Kerger. A counterexample to Oertel's conjecture on mixed-integer centerpoints. Manuscript, 2026.
+
+## License
+
+Copyright 2026 Hongyu Cheng and Phillip Kerger. The code is released under the [MIT License](LICENSE-CODE). It consists of every `.py` and `.lean` file, the other files under `lean/` except its Markdown files (`lake-manifest.json`, `lean-toolchain`, and `.gitignore`), the root `.gitignore` and `.gitattributes`, and `assets/pk-nov6/requirements-computations.txt`. Every other file except the two license texts is released under [CC BY 4.0](LICENSE). This covers the problem statement, the facts, candidates, and verification records, `state.json`, all Markdown and LaTeX documents, the PDFs, figures, certificates, logs, and data files. Published results that the proofs quote or cite remain the work of their authors.
+
+## History
+
+The first 1,235 accepted facts came from the initial export; the last of them was accepted on 29 October 2026. Every later fact, including the counterexamples and the intake of the 6 November notes, was added through a merged pull request. The pull request descriptions and the reports under [`reviews/`](reviews) and [`research/sharp-dimension-187/`](research/sharp-dimension-187) record what each one added and how it was reviewed. Counts quoted there describe the graph at that time.
+
+[CONTRIBUTING.md](CONTRIBUTING.md) explains how to propose a result or a correction. The layout follows [oertel-three-slices-2d](https://github.com/Hongyu-Cheng/oertel-three-slices-2d).

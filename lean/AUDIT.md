@@ -61,6 +61,6 @@ lake env lean CheckAxioms.lean
 [`CheckAxioms.lean`](CheckAxioms.lean) recursively checks the final theorem and
 key interfaces. The only permitted axioms are Lean's standard `propext`,
 `Classical.choice`, and `Quot.sound`; the check rejects a dependency on `sorry`,
-custom axioms, or native evaluation axioms. The source review found no
+custom axioms, or native evaluation axioms. A model audit of the source found no
 unproved geometric assumptions, circular appeal to the conjecture, or
 substitution of abstract mass hypotheses for the constructed body.

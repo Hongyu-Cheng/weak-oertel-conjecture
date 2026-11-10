@@ -8,7 +8,7 @@ State the hypotheses, quantifiers, notation, and conclusion. Identify the part o
 
 ## Source and prior results
 
-Give source note IDs with section or equation locators, or stable external citations. State how the claim relates to each close fact by matching hypotheses and conclusions. If an accepted fact covers the claim, record the specialization or implication in the [crosswalk](assets/pk-nov6/CROSSWALK.md) and cite that fact.
+Give source note IDs with section or equation locators, or stable external citations. State how the claim relates to each close fact by matching hypotheses and conclusions. If an accepted fact covers the claim, cite it and state the specialization or implication. For a claim taken from the November 6 research notes, also record it in the [crosswalk](assets/pk-nov6/CROSSWALK.md).
 
 ## Proof and dependencies
 

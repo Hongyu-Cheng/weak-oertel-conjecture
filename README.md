@@ -55,17 +55,19 @@ The depth of a fact is the length of the longest dependency chain below it. The 
 
 ## Highlights
 
-The 19 facts below are the main results, reductions, and tools in the graph. Their short names are ours and are stored in [`assets/highlights.json`](assets/highlights.json). In the picture a fact sits in the row of its depth, and an arrow means that the lower fact uses the upper one, possibly through facts that are not shown.
+The 21 facts below are the main results, reductions, and tools in the graph. Their short names are ours and are stored in [`assets/highlights.json`](assets/highlights.json). In the picture a fact sits in the row of its depth (depth 0 takes two rows), and an arrow means that the lower fact uses the upper one, possibly through facts that are not shown.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/highlights-dark.svg">
-  <img alt="The 19 highlighted facts arranged by depth, with an arrow from each fact to the facts that use it" src="assets/highlights-light.svg">
+  <img alt="The 21 highlighted facts arranged by depth, with an arrow from each fact to the facts that use it" src="assets/highlights-light.svg">
 </picture>
 
 | depth | name | fact | statement |
 |---|---|---|---|
-| 0 | Mixed-continuous comparison | [`4cfd86cd551df9e7`](facts/4cfd86cd551df9e7.md) | Mixed-integer and ordinary volume agree within factors $(1\pm\frac{1}{2k})^{n+d}$ when the projection contains a translate of $k[-1,1]^n$ with $k>1/2$ |
+| 0 | Support-count bound | [`30b899ae9d94a523`](facts/30b899ae9d94a523.md) | A body with $F$ positive-volume fibers has maximum normalized depth at least $\Gamma_d/F$ |
+| 0 | 1/e fails at n + d = 1387 | [`a02d398c0677c03a`](facts/a02d398c0677c03a.md) | A counterexample to the $1/e$ bound with $(n,d)=(209,1178)$ |
 | 0 | Oertel fails at n + d = 17 | [`ecbacdec2c429376`](facts/ecbacdec2c429376.md) | A counterexample to Oertel's conjecture with $(n,d)=(12,5)$ |
+| 0 | Mixed-continuous comparison | [`4cfd86cd551df9e7`](facts/4cfd86cd551df9e7.md) | Mixed-integer and ordinary volume agree within factors $(1\pm\frac{1}{2k})^{n+d}$ when the projection contains a translate of $k[-1,1]^n$ with $k>1/2$ |
 | 0 | Metronoid–Grünbaum sandwich | [`6769574fc1bd9f8d`](facts/6769574fc1bd9f8d.md) | Every point of depth $m$ lies in the metronoid of mass $m$, and every point of that metronoid has depth at least $\Gamma_d m$ |
 | 0 | S-Helly centerpoint baseline | [`6d6fcf377e68c79c`](facts/6d6fcf377e68c79c.md) | The S-Helly centerpoint theorem: some point has depth at least $\mathcal H_d(S)/(2^n(d+1))$ |
 | 1 | Cheng-Basu linear threshold | [`1787daa1dbe3fbb4`](facts/1787daa1dbe3fbb4.md) | If the projection of $C$ contains a translate of $k[-1,1]^n$ with $k\ge\frac{3e}{2}(n+d)$, some point has depth at least $(\frac1e-\frac{3(n+d)}{2k})\mathcal H_d(S)$ |
@@ -74,10 +76,10 @@ The 19 facts below are the main results, reductions, and tools in the graph. The
 | 2 | Sharp parity-core theorem | [`3fad02a5aa48ae2a`](facts/3fad02a5aa48ae2a.md) | The sharp bound when little mass lies outside a complete parity core |
 | 2 | Stronger O((n+d)/n) threshold | [`95b9903fc7036094`](facts/95b9903fc7036094.md) | A translate of $k[-1,1]^n$ in the projection with $k\ge\frac{57}{14}\cdot\frac{n+d}{n}$ gives depth $\Gamma_d2^{-n}\mathcal H_d(S)$ |
 | 3 | Cube mass threshold | [`daf10421c94b79ba`](facts/daf10421c94b79ba.md) | The factor $2^{-n}$ in the metronoid lifting lemma is sharp |
-| 3 | n = 2, every d | [`daef2580cdfec07b`](facts/daef2580cdfec07b.md) | The case $n=2$ for every continuous dimension $d$ |
 | 3 | n = 3 mechanism separation | [`c168604b1c021192`](facts/c168604b1c021192.md) | An $n=3$ family separating the accepted score mechanisms |
-| 4 | Parity-midpoint residual depth | [`be359f8a6c628483`](facts/be359f8a6c628483.md) | Dominated-measure residual depth and parity midpoints |
+| 3 | n = 2, every d | [`daef2580cdfec07b`](facts/daef2580cdfec07b.md) | The case $n=2$ for every continuous dimension $d$ |
 | 4 | Bounded support rank | [`9468b734966ba646`](facts/9468b734966ba646.md) | If the positive-volume fibers span an affine space of dimension at most $R$, the conjecture holds with a constant depending only on $R$ |
+| 4 | Parity-midpoint residual depth | [`be359f8a6c628483`](facts/be359f8a6c628483.md) | Dominated-measure residual depth and parity midpoints |
 | 5 | Fixed-normal simplex class | [`cb0d20326035a553`](facts/cb0d20326035a553.md) | Rigidity and depth for fixed-normal simplex fibers |
 | 7 | Product-cloud reduction | [`6b09aae189415c70`](facts/6b09aae189415c70.md) | Canonical labeled product-cloud reduction |
 | 9 | Every n, d ≤ 199 | [`245739007817b92a`](facts/245739007817b92a.md) | The conjecture for every $n$ and every $d\le199$, with $c_0=3/64000$ |

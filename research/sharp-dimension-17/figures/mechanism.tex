@@ -1,49 +1,54 @@
-% Panel (a): the cut H_j in the coordinates (tau_j(z), f_j(x)), where it is the halfplane f_j >= 3 tau_j.
-% Vertical segments are combined ranges of f_j over groups of fibers at a=663/1000, delta=664201/10^6:
+% Panel (a): the halfspace H_j in the plane with coordinates (tau_j(z), f_j(x)), where it is {f_j >= 3 tau_j},
+% clipped to the window tau_j in [-1.45,1.6], f_j in [-2,3.75]. Vertical bars are combined ranges of f_j over
+% groups of fibers at a=663/1000, delta=664201/10^6:
 %   tau_j=-1: light fibers of type j, [0, 1-delta];
-%   tau_j=0:  origin fiber [-a, 1] (narrow), all other fibers [-(1+2 delta)a, 0] (wide);
-%   tau_j=1:  heavy fibers with tau_j=1, [-(1+2 delta)a, 1+2 delta].
+%   tau_j=0:  origin fiber [-a, 1], drawn at tau_j=-0.05, and the other fibers with tau_j=0, [-(1+2 delta)a, 0],
+%             drawn at tau_j=0.05 (the offsets only separate the two bars);
+%   tau_j=1:  heavy fibers with tau_j=1, [-(1+2 delta)a, 1+2 delta]; heavy fibers over larger tau_j lie in the
+%             same range.
 % Panel (b): volumes to scale, h^5=1.69988, M=0.68315, beta=0.44976, L=0.23339.
 \begin{tikzpicture}[
     every node/.style={font=\footnotesize,inner sep=1.5pt},
-    side/.style={fill=figred!9},
-    edge/.style={line width=0.7pt,figred},
-    wide/.style={line width=5pt,black!22},
-    fib/.style={line width=2pt,black!70},
-    held/.style={line width=2pt,figred},
+    side/.style={fill=figblue!10},
+    edge/.style={line width=0.8pt,figblue},
+    fib/.style={line width=2.6pt,black!50},
+    held/.style={line width=2.6pt,figred},
     axis/.style={line width=0.4pt},
-    guide/.style={line width=0.4pt,densely dotted},
+    guide/.style={line width=0.4pt,dashed},
     box/.style={draw,line width=0.5pt},
     rest/.style={fill=black!12},
     cut/.style={fill=figred!45},
-    pool/.style={fill=figblue!30},
     brace/.style={decorate,decoration={brace,amplitude=3pt,mirror},line width=0.4pt}]
   % Panel (a)
-  \begin{scope}[x=1.9cm,y=0.45cm]
-    \node[anchor=north west,inner sep=0pt] at (-2.15,3.5) {(a)};
-    \fill[side] (-1.5,-2.3)--({-23/30},-2.3)--({7/6},3.5)--(-1.5,3.5)--cycle;
-    \draw[guide] (-1.5,0)--(1.5,0);
-    \draw[guide] (-1.5,3)--(1,3);
-    \draw[wide] (0,-1.544)--(0,0);
-    \draw[wide] (1,-1.544)--(1,2.328);
-    \draw[fib] (0,-0.663)--(0,0);
-    \draw[held] (0,0)--(0,1);
+  \begin{scope}[x=2.4cm,y=0.55cm]
+    \node[anchor=north west,inner sep=0pt] at (-1.9,4.75) {(a)};
+    \fill[side] (-1.45,-2)--({-2/3},-2)--(1.25,3.75)--(-1.45,3.75)--cycle;
+    \draw[guide] (-1.45,2.328)--(1.25,2.328);
+    \draw[axis,->] (-1.45,0)--(1.6,0);
+    \draw[axis,->] (-1.45,-2)--(-1.45,4.1);
+    \draw[axis] (-1,0)--(-1,-0.18);
+    \draw[axis] (0,0)--(0,-0.18);
     \draw[held] (-1,0)--(-1,0.336);
-    \draw[edge] ({-23/30},-2.3)--({7/6},3.5);
-    \fill[figred] (1,3) circle[radius=1.3pt];
-    \node[anchor=east] at (0.5,2.05) {$f_j=3\tau_j$};
-    \node at (-1.1,1.9) {$H_j$};
-    \node[anchor=west,xshift=3pt] at (1,2.328) {$1+2\delta$};
-    \draw[axis] (-1.5,-2.3)--(1.5,-2.3);
-    \foreach \k in {-1,0,1} {\draw[axis] (\k,-2.3)--(\k,-2.42); \node[anchor=north] at (\k,-2.45) {$\k$};}
-    \node[anchor=north west] at (1.5,-2.35) {$\tau_j(\z)$};
-    \draw[axis] (-1.5,-2.3)--(-1.5,3.5);
-    \foreach \k in {0,1,3} {\draw[axis] (-1.5,\k)--(-1.54,\k); \node[anchor=east] at (-1.55,\k) {$\k$};}
-    \node[anchor=south] at (-1.5,3.5) {$f_j(\x)$};
+    \draw[fib] (-0.05,-0.663)--(-0.05,0);
+    \draw[held] (-0.05,0)--(-0.05,1);
+    \draw[fib] (0.05,-1.544)--(0.05,0);
+    \draw[fib] (1,-1.544)--(1,2.328);
+    \draw[edge] ({-2/3},-2)--(1.25,3.75);
+    \node[anchor=north] at (-1,-0.2) {$-1$};
+    \node[anchor=north east] at (-0.09,-0.05) {$0$};
+    \node[anchor=east] at (-1.47,2.328) {$1+2\delta$};
+    \node[anchor=south] at (-1.45,4.1) {$f_j(x)$};
+    \node[anchor=west] at (1.6,0) {$\tau_j(z)$};
+    \node[figblue] at (-1.05,3.05) {$H_j$};
+    \node[figblue,anchor=west] at (1.22,3.45) {$f_j=3\tau_j$};
+    \node[anchor=south] at (-1,0.45) {light, type $j$};
+    \node[anchor=east] at (-0.11,1.05) {origin};
+    \node[anchor=north west,align=left] at (0.11,-0.3) {other fibers\\with $\tau_j=0$};
+    \node[anchor=west,align=left] at (1.05,-0.75) {heavy,\\$\tau_j\ge1$};
   \end{scope}
   % Panel (b)
-  \begin{scope}[xshift=5.6cm,yshift=-0.96cm,x=3.4cm,y=1cm]
-    \node[anchor=north west,inner sep=0pt] at (-0.3,2.535) {(b)};
+  \begin{scope}[xshift=6.05cm,yshift=-0.45cm,x=3.2cm,y=1cm]
+    \node[anchor=north west,inner sep=0pt] at (-0.22,3.06) {(b)};
     \draw[box,rest] (0,1.6) rectangle (1.69988,2.0);
     \draw[box,cut] (0.55024,1.6) rectangle (1.23339,2.0);
     \node at (0.8918,1.8) {$M$};
@@ -52,14 +57,14 @@
     \draw[box,rest] (0,0.4) rectangle (0.55024,0.8);
     \draw[box,cut] (0.55024,0.4) rectangle (1,0.8);
     \draw[box,cut] (1,0.4) rectangle (1.23339,0.8);
-    \draw[box,pool] (1.23339,0.4) rectangle (1.46678,0.8);
-    \draw[box,pool] (1.46678,0.4) rectangle (1.70017,0.8);
+    \draw[box,rest] (1.23339,0.4) rectangle (1.46678,0.8);
+    \draw[box,rest] (1.46678,0.4) rectangle (1.70017,0.8);
     \node at (0.7751,0.6) {$\beta$};
     \foreach \k in {1.1167,1.3501,1.5835} \node at (\k,0.6) {$L$};
     \draw[brace] (0,0.33)--(0.995,0.33);
     \node[anchor=north] at (0.4975,0.23) {$1$};
     \draw[brace] (1.005,0.33)--(1.70017,0.33);
     \node[anchor=north] at (1.3526,0.23) {$3L$};
-    \foreach \k in {0.55024,1.23339,1.70003} \draw[guide] (\k,0.8)--(\k,1.6);
+    \foreach \k in {0.55024,1.23339,1.70003} \draw[line width=0.4pt,densely dotted] (\k,0.8)--(\k,1.6);
   \end{scope}
 \end{tikzpicture}

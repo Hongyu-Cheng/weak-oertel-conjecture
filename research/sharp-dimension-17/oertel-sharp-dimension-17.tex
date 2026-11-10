@@ -1,13 +1,15 @@
 \documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
-\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage{amsmath,amssymb,amsthm,booktabs,enumitem}
 \usepackage[no-math]{fontspec}
-\usepackage{microtype}
+\usepackage{fancyvrb,microtype}
 \usepackage{tikz}
-\usetikzlibrary{patterns,shapes.geometric,decorations.pathreplacing}
+\usetikzlibrary{shapes.geometric,decorations.pathreplacing}
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
 
 \setmonofont{DejaVuSansMono.ttf}[Scale=MatchLowercase]
+\hyphenation{half-space half-spaces}
+\fvset{fontsize=\small,xleftmargin=1em}
 
 \definecolor{figblue}{RGB}{0,45,114}
 \definecolor{figred}{RGB}{191,47,56}
@@ -21,26 +23,19 @@
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Zcal}{\mathcal{Z}}
-\newcommand{\0}{\mathbf{0}}
 \newcommand{\1}{\mathbf{1}}
-\newcommand{\x}{\mathbf{x}}
-\newcommand{\y}{\mathbf{y}}
-\newcommand{\z}{\mathbf{z}}
-\newcommand{\s}{\mathbf{s}}
-\newcommand{\e}{\mathbf{e}}
-\newcommand{\w}{\mathbf{w}}
-\renewcommand{\v}{\mathbf{v}}
-\renewcommand{\b}{\mathbf{b}}
 \DeclareMathOperator{\conv}{conv}
 \DeclareMathOperator{\vol}{vol}
 \DeclareMathOperator{\depth}{depth}
 
-\newcommand{\notetitle}{A counterexample to Oertel's conjecture}
-\title{\vspace{-2.5em}\notetitle}
+\newcommand{\notetitle}{A counterexample to Oertel's conjecture on mixed-integer centerpoints}
+\title{\vspace{-2.5em}A counterexample to Oertel's conjecture\\on mixed-integer centerpoints}
 \author{}
 \date{}
 \hypersetup{pdftitle={\notetitle}}
@@ -50,562 +45,743 @@
 \vspace{-3.5em}
 
 \begin{abstract}
-A conjecture of Oertel, stated for convex bodies by Basu and Oertel, asserts that for every convex body in
-$\R^n\times\R^d$, $d\ge1$, of positive mixed-integer volume there is a point of $\Z^n\times\R^d$ such that every closed
-halfspace containing it holds at least the fraction $2^{-n}(d/(d+1))^d$ of this volume, the sum of the $d$-dimensional
-volumes of the fibers over $\Z^n$. We disprove the conjecture at $(n,d)=(12,5)$ by constructing a rational polytope in
-$\R^{12}\times\R^5$ such that every point of $\Z^{12}\times\R^5$ lies in a closed halfspace holding at most a fixed
-fraction $r<(5/6)^5/2^{12}$ of its mixed-integer volume. As in the extremal product of a cube and a simplex, one fiber
-lies in each nonzero class of $\Z^{12}$ modulo $2$ and is separated from all other fibers by tilted halfspaces. The
-polytope has $756$ further fibers in three groups. All three groups add to the total volume, whereas each of the three
-halfspaces that cover the fiber over the origin holds only one of them. The final strict inequalities are checked in exact
-rational arithmetic, and the bound on the depth is verified in Lean~4.
+Gr\"unbaum's inequality states that every closed halfspace containing the centroid of a convex body in $\R^d$ contains at
+least a $(d/(d+1))^d$ fraction of its volume. Oertel conjectured a mixed-integer analogue: every convex body
+$C\subset\R^n\times\R^d$ of positive mixed-integer volume (the sum of the $d$-dimensional volumes of its fibers over $\Z^n$)
+contains a point of $\Z^n\times\R^d$ such that every closed halfspace containing it carries at least a
+$2^{-n}(d/(d+1))^d$ fraction of this volume. The product of the cube $[0,1]^n$ with a $d$-simplex shows that this would be
+best possible. We disprove the conjecture for $(n,d)=(12,5)$ by constructing a rational polytope in which every point of
+$\Z^{12}\times\R^5$ lies in a closed halfspace carrying strictly less than this fraction. The construction circumvents the
+parity obstruction that underlies the conjectured bound: the fiber over the origin is the midpoint fiber of $756$ antipodal
+pairs of fibers, and three halfspaces covering it each pick up only a third of the small fibers that pay for this. The gap
+to the conjectured bound is small (a relative $6.5\cdot10^{-9}$), and all comparisons are carried out in exact rational
+arithmetic. The existence of a convex body with this property is also verified in Lean~4.
 \end{abstract}
 
 \section{Introduction}\label{sec:intro}
 
-Cutting plane methods for convex minimization measure progress by the volume that a cut removes from the search region.
-A query point with a fixed fraction of the volume in every closed halfspace containing it therefore guarantees progress
-whatever the direction of the cut, and in $\R^d$ such a point always exists. Gr\"unbaum~\cite[Theorem~2 and
-Section~3]{grunbaum} proved that every closed halfspace containing the centroid of a convex body in $\R^d$, $d\ge1$, holds
-at least the fraction $\Gamma_d=(d/(d+1))^d$ of its volume, and this fraction is best
-possible~\cite[Section~4]{grunbaum}. In convex mixed-integer optimization the volume becomes a sum of volumes of fibers, and
-Basu and Oertel~\cite[Section~2 and Theorem~2.6]{basu-oertel} bound the number of first-order oracle calls of a centerpoint
-cutting plane method through the fraction guaranteed at the query point. We show that the fraction conjectured by Oertel
-fails for $12$ integer and $5$ continuous variables.
+Cutting plane methods for convex minimization measure progress by the volume that a cut removes from the search region. A
+query point with a fixed fraction of the volume in every closed halfspace containing it therefore guarantees progress
+whatever the direction of the cut, and the following notions measure this fraction when some of the variables are integer.
 
-Let $n\ge0$ and $d\ge1$ be integers. We write points of $\R^n\times\R^d$ as $(\z,\x)$ and call $\Z^n\times\R^d$ the
-\emph{mixed-integer lattice}. The \emph{fiber} of a set $D\subseteq\R^n\times\R^d$ over $\z\in\Z^n$ is
-$D_{\z}=\{\x\in\R^d:(\z,\x)\in D\}$. The \emph{mixed-integer volume}, or \emph{mass}, of a set $D$ with Lebesgue measurable
-fibers is the sum $\mu(D)=\sum_{\z\in\Z^n}\vol(D_{\z})$ of their $d$-dimensional volumes. A \emph{halfspace} is a set
-$\{F\ge b\}=\{(\z,\x):F(\z,\x)\ge b\}$, where $F$ is a nonzero linear functional on $\R^n\times\R^d$ and $b\in\R$. Let
-$C\subset\R^n\times\R^d$ be a convex body, that is, a compact convex set with nonempty interior, and let $\mu(C)>0$. The
-\emph{depth} of a point $(\z,\x)$ of the mixed-integer lattice is the infimum, over the halfspaces $H$ containing the point,
-of the fraction of the mass of $C$ that $H$ holds (Figure~\ref{fig:toy}(a)),
+\paragraph{Mixed-integer volume and depth.}
+We write points of $\R^n\times\R^d$ as $(z,x)$. For a set $D\subseteq\R^n\times\R^d$ and $z\in\Z^n$, the \emph{fiber} of
+$D$ over $z$ is $D_z=\{x\in\R^d:(z,x)\in D\}$, and the \emph{mixed-integer volume} of $D$ is
 \[
-\depth_C(\z,\x)=\inf_{H\ni(\z,\x)}\frac{\mu(C\cap H)}{\mu(C)}.
+\mu(D)=\sum_{z\in\Z^n}\vol_d(D_z),
 \]
-Compactness leaves finitely many nonempty fibers, so $\mu(C)<\infty$, and restricting $H$ to the halfspaces with the
-point on their boundary, as in~\cite[(2)]{basu-oertel}, does not change the infimum.
+where $\vol_d$ is Lebesgue measure on $\R^d$ (and counting measure if $d=0$). By a \emph{halfspace} we always mean a closed
+halfspace $\{(z,x):F(z,x)\ge b\}$ with $F$ a nonzero linear functional on $\R^n\times\R^d$ and $b\in\R$. For a convex body
+$C$ with $\mu(C)>0$, the \emph{depth} of a point $p\in\Z^n\times\R^d$ is
+\[
+\depth_C(p)=\inf\Bigl\{\tfrac{\mu(C\cap H)}{\mu(C)}:H\text{ a halfspace with }p\in H\Bigr\}.
+\]
+Points outside $C$ have depth $0$, by strict separation. Since $C$ is compact, it has finitely many nonempty fibers, so
+$\mu(C)$ is finite, and restricting $H$ to halfspaces with $p$ on their boundary, as in~\cite[(2)]{basu-oertel}, does not
+change the infimum. We call $\mu(C)$ the \emph{mass} of $C$ and $\mu(C\cap H)$ the mass of $H$ (Fig.~\ref{fig:toy}(a)).
 
 \begin{figure}[t]
 \centering
 \input{research/sharp-dimension-17/figures/depth-toy}
-\caption{Depth for $n=d=1$. (a)~The fibers of $C$ are its vertical chords over the integers, and its mass is their total
-length. The halfspace $H$ contains the point $(\z,\x)$ and holds the red parts of the fibers. (b)~In the product
+\caption{Depth for $n=d=1$. (a)~The fibers of $C$ are its vertical chords over the integers, and $\mu(C)$ is their total
+length. The halfspace $H$ contains the point $(z,x)$, and the red segments are the fibers of $C\cap H$. (b)~In the product
 $C=[0,1]\times[0,1]$, the halfspace through $(0,1/2)$ is tilted to miss the fiber over $1$. It contains every point
-$(0,\x)$ with $\x\ge1/2$ and holds $1/4=2^{-1}\Gamma_1$ of the mass.}
+$(0,x)$ with $x\ge1/2$ and carries one quarter of the mass.}
 \label{fig:toy}
 \end{figure}
 
-Two extreme cases suggest the fraction to expect. For $n=0$ the mass is the volume, and Gr\"unbaum's theorem gives depth
-at least $\Gamma_d$ at the centroid. For $d=0$ the mass counts the integer points of $C$, and the general bound
-$1/(2^n(d+1))$ of Oertel~\cite[Theorem~4.1.19]{oertel} and Basu and Oertel~\cite[Corollary~3.4]{basu-oertel} gives
-$2^{-n}$. The product of the unit cube and a $d$-simplex combines the two
-factors~\cite[Section~4.1, after Conjecture~4.1.20]{oertel}, since its largest depth is exactly $2^{-n}\Gamma_d$
-(Section~\ref{sec:outline}). Oertel~\cite[Conjecture~4.1.20]{oertel}, for closed convex sets, and Basu and
-Oertel~\cite[Conjecture~3.5]{basu-oertel}, for convex bodies, conjectured that this fraction is always reached, so that
-every convex body of positive mass would have a point of $\Z^n\times\R^d$ of depth at least $2^{-n}\Gamma_d$. We disprove
-this at $(n,d)=(12,5)$, where the fraction is $(5/6)^5/2^{12}$.
+For $n=0$, $\mu$ is ordinary volume, and Gr\"unbaum's theorem~\cite[Theorem~2 and Section~3]{grunbaum} states that the
+centroid of a convex body in $\R^d$ has depth at least
+\[
+\Gamma_d=\Bigl(\frac{d}{d+1}\Bigr)^d,
+\]
+with equality for simplices~\cite[Section~4]{grunbaum}. For $d=0$, $\mu$ counts integer points, and the depth of the best
+integer point can be as small as $2^{-n}$ (take $C=[0,1]^n$). Basu and Oertel~\cite[Section~2 and Theorem~2.6]{basu-oertel}
+showed how lower bounds on the depth of a point of $\Z^n\times\R^d$ yield bounds on the number of oracle calls of cutting
+plane methods for convex mixed-integer optimization, and proved the general lower bound $2^{-n}/(d+1)$; see
+also~\cite[Theorem~4.1.19]{oertel} and~\cite[Corollary~3.4]{basu-oertel}.
+
+The two extreme cases combine in the product $C=[0,1]^n\times S$ of the unit cube and a $d$-simplex
+$S$~\cite[Section~4.1, after Conjecture~4.1.20]{oertel}. Here every fiber over $\{0,1\}^n$ is a copy of $S$ and carries a
+$2^{-n}$ fraction of the mass. A \emph{Gr\"unbaum cap} of $S$ is the set where one of its barycentric coordinates is at
+least $1/(d+1)$, a homothetic copy of $S$ with ratio $d/(d+1)$ and relative volume $\Gamma_d$, and every point of $S$ lies
+in such a cap. A point $(z,x)$ with $z\in\{0,1\}^n$, $x\in S$ lies in a halfspace that meets the fiber over $z$ in a
+Gr\"unbaum cap of $S$ and misses all other fibers; to see this, add to the cap's defining functional a large multiple of a
+linear functional on $\R^n$ that is uniquely maximized over $\{0,1\}^n$ at $z$ (Fig.~\ref{fig:toy}(b)). Conversely, the
+fiber over $z$ of every halfspace containing $(z,\text{centroid of }S)$ contains a halfspace of $\R^d$ through this
+centroid. Hence the largest depth in this example is exactly $2^{-n}\Gamma_d$. Oertel conjectured that this example is
+extremal.
+
+\begin{conjecture}[{Oertel~\cite[Conjecture~4.1.20]{oertel}, Basu--Oertel~\cite[Conjecture~3.5]{basu-oertel}}]\label{conj:oertel}
+For every convex body $C\subset\R^n\times\R^d$ with $\mu(C)>0$ there is a point $p\in\Z^n\times\R^d$ with
+$\depth_C(p)\ge2^{-n}\Gamma_d$ (where $\Gamma_0=1$).
+\end{conjecture}
+
+The conjecture has been confirmed under additional assumptions that make the projection of $C$ onto $\R^n$ large: Basu and
+Oertel~\cite[Theorem~3.6]{basu-oertel} proved it when this projection has lattice width above a threshold exponential in
+$n$, and Cristi and Salas~\cite[Theorem~4.5]{cristi-salas} when it contains a Euclidean ball of radius at least
+$\alpha d^2n^{3/2}$ for a universal constant $\alpha$. Cheng and Basu~\cite[Corollary~2.5]{cheng-basu} showed depth at least
+$1/(2e)$ when the projection contains a translate of an $\ell_\infty$-ball of radius $k\ge3e(n+d)$,
+and~\cite[Theorem~1]{cheng-basu-slices} proved the conjectured value $2/9=\Gamma_2/2$ for compact convex sets in
+$\R\times\R^2$ with exactly three fibers of positive area. Our result shows that some such assumption is needed. The
+projection onto $\R^{12}$ of the polytope in Theorem~\ref{thm:main} lies in $[-1,1]^{12}$.
 
 \begin{theorem}\label{thm:main}
-There is a rational polytope $C\subset\R^{12}\times\R^5$ with nonempty interior and $\mu(C)>0$ such that
-$\sup_{(\z,\x)\in\Z^{12}\times\R^5}\depth_C(\z,\x)<(5/6)^5/2^{12}$.
+There is a full-dimensional rational polytope $C\subset\R^{12}\times\R^5$ and a rational number
+\[
+r<2^{-12}\Gamma_5=2^{-12}(5/6)^5
+\]
+such that every point of $\Z^{12}\times\R^5$ lies in a halfspace $H$ with $\mu(C\cap H)\le r\,\mu(C)$. In particular,
+$\depth_C(p)\le r$ for all $p\in\Z^{12}\times\R^5$, and Conjecture~\ref{conj:oertel} fails for $(n,d)=(12,5)$.
 \end{theorem}
 
-The proof gives a rational number $r<(5/6)^5/2^{12}$ and, for every point of $\Z^{12}\times\R^5$, a halfspace
-containing the point that holds at most the fraction $r$ of the mass. The masses are compared in exact rational
-arithmetic (Section~\ref{sec:cuts}), and Lean~4 verifies the bound on the depth (Appendix~\ref{sec:lean}). The
-margin is small, with $10^5r=9.811464096\ldots$ against $10^5(5/6)^5/2^{12}=9.811464160\ldots$.
+Numerically, $10^5r=9.81146409\ldots$, whereas $10^5\cdot2^{-12}\Gamma_5=9.81146416\ldots$; the relative gap is about
+$6.5\cdot10^{-9}$. All strict inequalities in the proof are comparisons of explicit rational numbers, which we verified in
+exact arithmetic (Section~\ref{sec:proof}); the bound on the depth has also been formalized in Lean~4
+(Appendix~\ref{sec:lean}).
 
-For $d\ge2$ the general bound $1/(2^n(d+1))$ lies below the conjectured fraction, and the following results go beyond it
-under additional structure. For large projections onto $\R^n$, Basu and Oertel~\cite[Theorem~3.6]{basu-oertel} proved the
-conjectured bound when the projection has lattice width above a threshold exponential in $n$, Cristi and
-Salas~\cite[Theorem~4.5]{cristi-salas} proved it when the projection contains a Euclidean ball of radius at least
-$\alpha d^2n^{3/2}$ for a universal constant $\alpha$, and Cheng and Basu~\cite[Corollary~2.5]{cheng-basu} showed that a
-translate of the $\ell_\infty$ ball of radius $k\ge3e(n+d)$ in the projection gives depth at least $1/(2e)$. For few fibers,
-Cheng and Basu~\cite[Theorem~1]{cheng-basu-slices} proved the fraction $2/9=\Gamma_2/2$ for compact convex sets in
-$\R\times\R^2$ with exactly three slices of positive area. The polytope of Theorem~\ref{thm:main} has $4852$ nonempty
-fibers, and its projection onto $\R^{12}$ lies in $[-1,1]^{12}$.
+\paragraph{Organization.}
+Section~\ref{sec:overview} explains the idea of the construction and how the mass is accounted for; it can be read on its
+own. Section~\ref{sec:points} defines the integer points carrying fibers, Section~\ref{sec:fibers} the fibers themselves,
+Section~\ref{sec:covering} constructs the halfspaces, and Section~\ref{sec:proof} fixes the parameters and completes the
+proof.
 
-\section{Overview of the construction}\label{sec:outline}
+\section{Overview of the construction}\label{sec:overview}
 
-\paragraph{The product example.}
-Let $S\subset\R^d$ be a $d$-simplex and $C=[0,1]^n\times S$, whose nonempty fibers are $2^n$ copies of $S$. A point
-$\x\in S$ has a barycentric coordinate at least $1/(d+1)$, and the set where this coordinate is at least $1/(d+1)$ is
-a homothetic copy of $S$ with ratio $d/(d+1)$. We call such a set a \emph{cap} of $S$. It has volume $\Gamma_d\vol(S)$ and
-is cut from $S$ by a halfspace of $\R^d$, which extends to a halfspace of $\R^n\times\R^d$ that misses all other fibers.
-Indeed, a vertex $\z$ of the cube is the unique maximizer over $\{0,1\}^n$ of some linear functional on $\R^n$, and
-adding a large multiple of this functional tilts the halfspace away from the other fibers without changing it over $\z$
-(Figure~\ref{fig:toy}(b)). Hence every point of $\Z^n\times\R^d$ has depth at most $2^{-n}\Gamma_d$ in $C$. Conversely, if a
-halfspace $H$ contains a point $(\z,\x)$, then its fiber $H_{\z}$ is a halfspace of $\R^d$ containing $\x$ or all of
-$\R^d$. Gr\"unbaum's theorem then gives the centroid of a fiber depth at least $2^{-n}\Gamma_d$, so the largest depth in
-$C$ is $2^{-n}\Gamma_d$.
+Throughout, $n=12$, $d=5$, and $\Gamma=\Gamma_5=(5/6)^5$. Our polytope will be
+$C=\conv\bigcup_{z\in\Zcal}\{z\}\times A_z$ for a finite set $\Zcal\subset\Z^{12}$ and polytopes $A_z\subset\R^5$, arranged
+so that the fiber of $C$ over $z$ is exactly $A_z$ for $z\in\Zcal$, and empty for all other integer $z$.
 
-The second argument limits any counterexample. If a convex body has at most $2^n$ fibers of positive volume, then a largest
-fiber carries at least the fraction $2^{-n}$ of the mass, and its centroid has depth at least $2^{-n}\Gamma_d$. A
-counterexample therefore has more than $2^n$ such fibers, and two of them lie over points $\z\ne\z'$ in the same class of
-$(\Z/2\Z)^n$. By convexity the body then has a nonempty fiber over the integer point $(\z+\z')/2$ as well. In the polytope
-of Theorem~\ref{thm:main} this midpoint is always the origin.
+\paragraph{Two basic observations.}
+First, the argument for the cube shows that if $z$ is a vertex of $\conv(\Zcal)$, then any halfspace $G$ of $\R^5$ can be
+\emph{tilted} into a halfspace of $\R^{12}\times\R^5$ that meets the fiber over $z$ in $A_z\cap G$ and misses all other fibers. If
+$A_z$ is a simplex, then every point of $\{z\}\times A_z$ lies in a halfspace of mass $\Gamma\vol(A_z)$, by tilting a
+Gr\"unbaum cap of $A_z$.
 
-\paragraph{The mass count.}
-We call a halfspace $H$ a \emph{cut} and $\mu(C\cap H)$ its mass. The proof gives a polytope $C$ of mass $W$ and a number
-$M$ such that every point of the mixed-integer lattice lies in a cut of mass at most $M$ and thus has depth at most $M/W$.
-The polytope is the convex hull of polytopes
-$\{\z\}\times A_{\z}$ over $4852$ integer points $\z$, which we call \emph{bases}, and its nonempty fibers are exactly the
-sets $A_{\z}$. We use units in which the fiber over the origin has volume $1$.
+Second, the argument for the converse shows that the centroid of any fiber $A_z$ has depth at least
+$\Gamma\vol(A_z)/\mu(C)$. So in a counterexample every fiber has volume less than $2^{-n}\mu(C)$, and hence more than $2^n$
+fibers have positive volume. Two of them then lie over points in the same class of $\Z^n/2\Z^n$, so their midpoint is an
+integer point whose fiber contains the average of the two. This is the obstruction behind the conjecture: not every fiber
+can be isolated by tilting. The polytope of Theorem~\ref{thm:main} has $4852>2^{12}$ fibers, and we must deal with the
+fibers that cannot be isolated.
 
-One \emph{heavy} base lies in each of the $4095$ nonzero classes of $(\Z/2\Z)^{12}$, and we treat it as in the product
-example. A heavy base is a vertex of the convex hull of the bases, so a halfspace of $\R^5$ extends to a cut that holds the
-same part of its fiber and misses all other fibers. The heavy fibers have volume at most $h^5$ for a parameter $h$, and each
-of their points lies in such a part of volume at most $M=\Gamma_5h^5$, the volume of a cap of a simplex of volume $h^5$.
-With this $M$, the inequality $M/W<\Gamma_5/2^{12}$ reads
+\paragraph{The budget.}
+Fix a parameter $h>0$ and put $M=\Gamma h^5$, the mass of a tilted Gr\"unbaum cap of a simplex fiber of volume $h^5$. We
+will show that every point of $\Z^{12}\times\R^5$ lies in a halfspace of mass at most $M$. Then every depth is at most
+$M/\mu(C)$, and Theorem~\ref{thm:main} follows from
 \begin{equation}\label{eq:target}
-W>4096\,h^5.
+\mu(C)>2^{12}h^5=4096\,h^5.
 \end{equation}
-Equality would hold for $4096$ fibers of volume $h^5$. The heavy fibers contribute at most $4095h^5$ and the origin fiber
-contributes $1<h^5$, so~\eqref{eq:target} needs further fibers.
+In words: on average, each of the $4096$ classes of $\Z^{12}/2\Z^{12}$ must contribute more mass than a single isolated
+simplex fiber whose caps fit the budget.
+
+\paragraph{Heavy fibers.}
+In each of the $4095$ nonzero classes we place one \emph{heavy} point $z\in\Zcal$, which is a vertex of $\conv(\Zcal)$. Its
+fiber has volume at most $h^5$ and is covered by tilted caps of mass at most $M$. The class of $0$ contains the origin,
+whose fiber is a $5$-simplex $B$; we normalize volumes so that $\vol(B)=1$. Our parameters have $h^5\approx1.69988>1$, so
+these fibers alone do not satisfy~\eqref{eq:target}: the class of the origin must make up for a shortfall of $h^5-1$.
+
+\paragraph{The origin cluster.}
+The additional mass comes from $3\cdot252=756$ small \emph{light} fibers, located at the points $-z$ for $756$ of the heavy
+points $z$ (we call these heavy points \emph{paired}). Since $0$ is the midpoint of $z$ and $-z$, the origin is not a vertex
+of $\conv(\Zcal)$ and its fiber cannot be isolated. Instead we cover it, together with all light fibers, by three halfspaces
+$H_1,H_2,H_3$ with the following properties (Fig.~\ref{fig:mechanism}(a)).
+\begin{enumerate}[label=(\roman*)]
+\item The traces of $H_1,H_2,H_3$ on the origin fiber cover $B$, and each has volume $\beta\approx0.44976$.
+\item The light fibers are split into three pools of $252$, of total volume $L\approx0.23339$ each, and $H_j$ contains the
+$j$-th pool entirely.
+\item $H_j$ meets every other fiber in a set of volume zero.
+\end{enumerate}
+Each $H_j$ then has mass $\beta+L$, and we need $\beta+L\le M$. The cluster consisting of the origin fiber and the three pools
+contributes $1+3L$ to $\mu(C)$, while each of its points is covered at cost at most $\beta+L$
+(Fig.~\ref{fig:mechanism}(b)). Compared with an isolated simplex fiber, whose mass is $\Gamma^{-1}=(6/5)^5\approx2.48832$
+times the cost of its caps, the cluster does slightly better:
+\[
+\frac{1+3L}{\beta+L}\approx2.48874>(6/5)^5.
+\]
+This is the only source of gain in the construction. It explains the number three: two halfspaces covering $B$ have traces
+of total volume at least $1$, so with two pools the corresponding ratio ${(1+L_1+L_2)/\max_j(\beta_j+L_j)}$ is at most
+$2<\Gamma^{-1}$, whereas with three pools it can approach $3$.
 
 \begin{figure}[t]
 \centering
 \input{research/sharp-dimension-17/figures/mechanism}
-\caption{(a)~The cut $H_j$ in the coordinates $(\tau_j(\z),f_j(\x))$, where it is the halfplane above the line
-$f_j=3\tau_j$. Each fiber lies over the integer $\tau_j(\z)$, and each vertical segment is the combined range of $f_j$ on
-a group of fibers at the parameters of Section~\ref{sec:cuts}. The groups are the light fibers of the $j$th pool over~$-1$,
-the origin fiber (narrow) and all other fibers (wide) over~$0$, and the heavy fibers over~$1$. Heavy fibers over larger
-integers are not shown. Red marks the parts of positive volume that $H_j$ holds.
-(b)~Volumes to scale. Top: a heavy fiber of volume $h^5$ with a cap of volume $M$. Bottom: the origin fiber, of volume
-$1$, and the three pools. Red marks what $H_1$ holds.}
+\caption{(a)~Schematic of the halfspace $H_j$ over the origin cluster, in the plane with coordinates $(\tau_j(z),f_j(x))$.
+Each vertical bar is the combined range of $f_j$ on a group of fibers, and the parts inside $H_j$ are dark red. $H_j$
+contains the light fibers of type $j$ and the cap $B\cap\{f_j\ge0\}$ of the origin fiber. It meets the other fibers over
+$\{\tau_j=0\}$ only in the hyperplane $\{f_j=0\}$ and misses all fibers over $\{\tau_j\ge1\}$, since $|f_j|\le1+2\delta<3$
+on heavy fibers. (b)~Volumes to scale. Top: a heavy fiber of volume $h^5$ and a tilted Gr\"unbaum cap of mass $M$. Bottom:
+the origin fiber, of volume $1$, and the three pools, of volume $L$ each. Red marks what the cap and $H_1$ carry.}
 \label{fig:mechanism}
 \end{figure}
 
-\paragraph{Light fibers and the origin cuts.}
-The further fibers lie over $756$ \emph{light} bases. Each light base is the negative $-\z$ of a heavy base $\z$, and the
-light bases form three \emph{pools} of $252$ whose fibers have total volume $L$ per pool, so $W$ gains $3L$. Tilting cannot
-isolate the origin fiber from a light fiber and its heavy partner at once, because a linear functional on $\R^{12}$ that is
-smaller at $\z$ than at $\0$ is larger at $-\z$. We turn this to our advantage with three cuts
+\paragraph{The price.}
+Two requirements tie the light fibers to their heavy partners and make the paired fibers slightly smaller than $h^5$.
+\begin{itemize}
+\item \emph{The origin fiber must stay $B$.} The fiber of $C$ over $0$ contains $\frac12(A_z+A_{-z})$ for each paired $z$.
+We ensure that it is exactly $B$ by requiring $A_z\subseteq(1+g(z))B$ for a linear function $g$ (dilations are about the
+centroid of $B$, placed at the origin). Paired fibers then lie in $(1+\delta)B$ and light fibers in $(1-\delta)B$, where
+$\delta=g(z)$ for paired $z$.
+\item \emph{$H_j$ is a single halfspace.} We take $H_j=\{(z,x):f_j(x)\ge3\tau_j(z)\}$, where $f_j$ is a linear functional
+on $\R^5$ with $\{f_j\ge0\}\cap B$ the cap in (i), and $\tau_j$ is an integer-valued linear form on $\Z^{12}$. Over a point
+$z\in\Zcal$, the trace of $H_j$ is $\{f_j\ge3\tau_j(z)\}$. Requirements (ii) and (iii) are therefore met if $\tau_j=-1$ on
+the $j$-th pool, $\tau_j\ge1$ wherever possible, and $A_z\subseteq\{f_j\le0\}$ wherever $\tau_j(z)=0$. Since $\tau_j$ is
+linear, $\tau_j(z)=-\tau_j(-z)$. So each paired fiber is forced into the same region as its light partner, namely a dilate
+of $T_j=B\cap\{f_i\le0\text{ for }i\ne j\}$. Linearity also forces $\tau_j(z)=0$ for some other heavy points (we call them
+\emph{one-sided}); their fibers must avoid one cap of $B$, which costs nothing because they are simplices of volume $h^5$
+anyway.
+\end{itemize}
+A paired fiber must lie in $(1+\delta)T_j$ and be coverable by halfspaces of mass at most $M$. The natural candidate is a
+dilated simplex $(1+\delta)U_j$ with $U_j\subset T_j$, but its volume $\approx1.69640$ falls short of $h^5\approx1.69988$.
+Over $756$ paired points this deficit would far exceed the gain $3L\approx0.700$. We therefore add a thin slab to $U_j$,
+which reduces the deficit to about $3\cdot10^{-7}$ per paired fiber while keeping the covering caps within budget. The final
+account is
+\begin{equation}\label{eq:account}
+\mu(C)-4096\,h^5=\underbrace{(1+3L-h^5)}_{\approx2.82\cdot10^{-4}}
+-\underbrace{756\bigl(h^5-\vol(\text{paired fiber})\bigr)}_{\approx2.36\cdot10^{-4}}>0,
+\end{equation}
+where all other heavy fibers have volume exactly $h^5$.
+
+\paragraph{Why so many integer dimensions.}
+The pools must be large: their total volume $3L$ has to exceed $h^5-1\approx0.7$, while each light fiber is tiny (volume
+$(1-\delta)^5\vol(T_j)\approx9.3\cdot10^{-4}$, since $\delta\approx0.664$ is large in order to make the paired fibers big).
+We obtain $252=\binom{10}{5}$ paired points of each type from a $10$-dimensional Boolean cube, with two extra integer
+coordinates distinguishing the three types. Each heavy point lies in its own class modulo $2$, so the number of heavy
+points, and hence of paired points, is limited by $2^{12}-1$.
+
+\section{The integer points}\label{sec:points}
+
+We write $z=(y,s)\in\R^{10}\times\R^2$, put $u(z)=y_1+\dots+y_{10}$, and define the linear maps
 \[
-H_j=\{(\z,\x):f_j(\x)\ge3\tau_j(\z)\},\qquad j=1,2,3,
+\tau(z)=(\tau_1,\tau_2,\tau_3)(z)=(u-s_2,\ u-s_1,\ u-s_1-s_2),\qquad\sigma(z)=\tau_1+\tau_2+\tau_3=3u-2s_1-2s_2.
 \]
-where $f_1,f_2,f_3$ are linear functionals on $\R^5$ with $f_1+f_2+f_3=0$ and $\tau_1,\tau_2,\tau_3$ are linear forms on
-$\R^{12}$ with integer coefficients. Over the origin, $H_j$ holds the part $\{f_j\ge0\}$ of the origin fiber, of volume
-$\beta$, and these three parts cover the origin fiber because the $f_j$ sum to zero. Over another base the integer
-$\tau_j(\z)$ moves the threshold in steps of $3$, which is more than $|f_j|$ on any fiber. Hence $H_j$ contains the fiber
-if $\tau_j(\z)\le-1$ and misses it if $\tau_j(\z)\ge1$ (Figure~\ref{fig:mechanism}(a)). The bases are chosen so that
-$\tau_j=-1$ exactly on the $j$th pool, and the fibers so that every fiber with $\tau_j(\z)=0$ other than the origin fiber lies in
-$\{f_j\le0\}$, where $H_j$ holds none of its volume. The cut $H_j$ thus has mass $\beta+L$. Each of the three cuts pays for
-one pool, while all three pools count in $W$ (Figure~\ref{fig:mechanism}(b)). At our parameters the mass
-$\beta+L\approx0.68314$ of each cut lies just below $M\approx0.68315$, and the origin fiber and the three pools have total
-volume $1+3L\approx1.70017$, just above $h^5\approx1.69988$.
+Let $e_1,e_2$ be the unit vectors of $\R^2$ and $\1=(1,1,1)$; inequalities between vectors are meant componentwise, and
+$[k]=\{1,\ldots,k\}$.
 
-Two requirements shape the bases of Section~\ref{sec:bases} and the fibers of Section~\ref{sec:fibers}. First, the convex hull must not create new integer fibers or enlarge the given ones.
-The bases turn out to be the only integer points of their convex hull (Lemma~\ref{lem:saturation}), and we place each fiber
-inside a dilation of the origin fiber whose factor is affine in $\z$ and equals $1$ at the origin, so that the midpoints of
-antipodal fibers stay in the origin fiber (Lemma~\ref{lem:fibers}). Second, the heavy partner of a light base of the $j$th
-pool has $\tau_j=1$ and $\tau_i=0$ for $i\ne j$, so its fiber must lie in $\{f_i\le0\}$ for both $i\ne j$. This fiber is a
-simplex with a thin slab attached, and the parts that halfspaces cut from it need a separate computation
-(Lemma~\ref{lem:caps}).
-
-\section{The integer bases}\label{sec:bases}
-
-We write $\z=(\y,\s)\in\R^{10}\times\R^2$, call $\s$ the \emph{selector}, and put $u=\sum_iy_i$. Let
+\paragraph{Representatives of the classes modulo 2.}
+For $J\subseteq[10]$ let $\1_J\in\{0,1\}^{10}$ be its indicator vector and let $b_J\in\{-1,0,1\}^{10}$ be the signed
+indicator vector with entries
 \[
-\tau(\z)=(u-s_2,\ u-s_1,\ u-s_1-s_2),\qquad\sigma(\z)=\tau_1(\z)+\tau_2(\z)+\tau_3(\z)=3u-2s_1-2s_2.
+(b_J)_i=\begin{cases}-1,&i\in J,\ i\le4,\\1,&i\in J,\ i\ge5,\\0,&i\notin J.\end{cases}
 \]
-The entries of $\tau$ are the thresholds of the origin cuts, and $\sigma$ will set the dilation factors of the fibers. A
-light base of the $j$th pool needs $\tau_j=-1$ and $\tau_i=0$ for $i\ne j$, so its heavy partner has $\tau$ equal to a
-unit vector, and we want many such points in distinct classes modulo $2$.
+Then $b_J\equiv\1_J\pmod2$ and $u(b_J)=|J\setminus[4]|-|J\cap[4]|=|J\mathbin{\triangle}[4]|-4$. Since
+$J\mapsto J\mathbin{\triangle}[4]$ is a bijection,
+\begin{equation}\label{eq:count}
+\#\{J\subseteq[10]:u(b_J)=k\}=\binom{10}{k+4}.
+\end{equation}
+The signs serve to center this distribution at $u=1$, the value that will produce paired points; the unsigned vectors would
+give only $10$ sets with $u(\1_J)=1$ instead of $\binom{10}{5}=252$.
 
-Let $\e_1,\e_2$ be the unit vectors of $\R^2$, and let $c_i=-1$ for $i\le4$ and $c_i=1$ for $5\le i\le10$. For
-$J\subseteq\{1,\ldots,10\}$, let $\1_J$ be the indicator vector of $J$, and let $\b_J$ have entries $c_i$ on $J$ and $0$
-off $J$. The \emph{candidates} are the points $(\1_J,\0)$ with $J\ne\emptyset$ and the points $(\b_J,\s)$ with
-$\s\in\{\e_1,\e_2,\e_1+\e_2\}$, which we say have \emph{type} $1,2,3$, respectively. Modulo $2$ the vector $\b_J$ reduces
-to $\1_J$ and the selectors $\0,\e_1,\e_2,\e_1+\e_2$ are distinct, so the $4095$ candidates represent each nonzero class of
-$(\Z/2\Z)^{12}$ exactly once. The signs $c_i$ do not alter the class, but they move $u$. Since
-$u(\b_J)=|J\mathbin{\triangle}\{1,2,3,4\}|-4$ and the map $J\mapsto J\mathbin{\triangle}\{1,2,3,4\}$ permutes the subsets
-of $\{1,\ldots,10\}$, exactly $\binom{10}{k+4}$ sets $J$ have $u(\b_J)=k$. In particular $u(\b_J)=1$ for
-$\binom{10}{5}=252$ sets, whereas $u(\1_J)=1$ for only $10$. Figure~\ref{fig:mask} lists $\tau$ and $\sigma$ at the
-candidates of the three types.
+The $4095$ points
+\[
+(\1_J,0)\quad(\emptyset\ne J\subseteq[10])\qquad\text{and}\qquad(b_J,s)\quad\bigl(J\subseteq[10],\ s\in\{e_1,e_2,e_1+e_2\}\bigr)
+\]
+represent the $4095$ nonzero classes of $\Z^{12}/2\Z^{12}$, each exactly once, because $e_1,e_2,e_1+e_2$ are the three
+nonzero classes of $\Z^2/2\Z^2$. On each of them $\sigma\ne0$: we have $\sigma(\1_J,0)=3|J|>0$, and for the others
+$s_1+s_2\in\{1,2\}$, so $\sigma\equiv-2(s_1+s_2)\not\equiv0\pmod3$. The \emph{heavy points} are these representatives
+multiplied by the sign of $\sigma$, so that $\sigma>0$ on every heavy point. Negation preserves the class modulo $2$, so the
+heavy points still represent each nonzero class exactly once.
+
+\begin{lemma}\label{lem:census}
+Every heavy point $z$ satisfies $\tau(z)\ge0$, and exactly one of the following holds:
+\begin{itemize}
+\item $\tau(z)=e_j$ for some $j\in[3]$ (here $e_j\in\R^3$): $z$ is \emph{paired} of type $j$;
+\item $\tau(z)=\1-e_j$ for some $j\in[3]$: $z$ is \emph{one-sided} of type $j$;
+\item $\tau(z)\ge\1$: $z$ is \emph{free}.
+\end{itemize}
+For each $j$ there are $252$ paired and $210$ one-sided points of type $j$, and there are $2709$ free points.
+\end{lemma}
+
+\begin{table}[t]
+\centering
+\begin{tabular}{lrccc}
+\toprule
+point $z\in\Zcal$ & number & $\tau(z)$ & $\sigma(z)$ & fiber $A_z$ (Section~\ref{sec:fibers})\\
+\midrule
+origin & $1$ & $0$ & $0$ & $B$\\
+paired, type $j$ & $3\times252$ & $e_j$ & $1$ & $(1+\delta)K_j$\\
+light, type $j$ & $3\times252$ & $-e_j$ & $-1$ & $(1-\delta)T_j$\\
+one-sided, type $j$ & $3\times210$ & $\1-e_j$ & $2$ & $(1+2\delta)N_j$\\
+free & $2709$ & $\ge\1$ & $\ge3$ & $hB$\\
+\bottomrule
+\end{tabular}
+\caption{The $4852$ points of $\Zcal$.}
+\label{tab:points}
+\end{table}
+
+\begin{proof}
+For $(\1_J,0)$ we have $\tau=|J|\1\ge\1$. For $s\in\{e_1,e_2,e_1+e_2\}$ and $u=u(b_J)$, the following table lists $\tau$ at
+the heavy point $\pm(b_J,s)$ (the sign being that of $\sigma(b_J,s)$).
+\begin{center}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{cccccc}
+\toprule
+$s$ & $\tau(b_J,s)$ & heavy point & $\tau$ at heavy point & paired & one-sided\\
+\midrule
+$e_1$ & $(u,u-1,u-1)$ & $\begin{cases}(b_J,s),&u\ge1\\-(b_J,s),&u\le0\end{cases}$ &
+$\begin{cases}(u,u-1,u-1)\\(-u,1-u,1-u)\end{cases}$ & $u=1$ & $u=0$\\
+\addlinespace
+$e_2$ & $(u-1,u,u-1)$ & $\begin{cases}(b_J,s),&u\ge1\\-(b_J,s),&u\le0\end{cases}$ &
+$\begin{cases}(u-1,u,u-1)\\(1-u,-u,1-u)\end{cases}$ & $u=1$ & $u=0$\\
+\addlinespace
+$e_1+e_2$ & $(u-1,u-1,u-2)$ & $\begin{cases}(b_J,s),&u\ge2\\-(b_J,s),&u\le1\end{cases}$ &
+$\begin{cases}(u-1,u-1,u-2)\\(1-u,1-u,2-u)\end{cases}$ & $u=1$ & $u=2$\\
+\bottomrule
+\end{tabular}
+\end{center}
+In every row $\tau\ge0$ at the heavy point; it equals $e_j$ (with $j=1,2,3$ in the three rows) for the value of $u$ in the
+column ``paired'', it equals $\1-e_j$ for the value in the column ``one-sided'', and it is $\ge\1$ otherwise.
+By~\eqref{eq:count} the paired points of each type number $\binom{10}{5}=252$, and the one-sided points of each type number
+$\binom{10}{4}=\binom{10}{6}=210$. The remaining $1023+3\cdot(1024-252-210)=2709$ heavy points are free.
+\end{proof}
+
+For example, for $J=\{1,5,6\}$ we have $u(b_J)=1$, so $(b_J,e_1)$ and $(b_J,e_2)$ are paired of types $1$ and $2$, while
+$-(b_J,e_1+e_2)$ is paired of type $3$, and $(\1_J,0)$ is free (Fig.~\ref{fig:hexagon}).
 
 \begin{figure}[t]
 \centering
-\begin{minipage}[c]{0.53\textwidth}
-\centering\small\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}cccccc@{}}
-\toprule
-$j$ & $\s$ & $\tau(\b_J,\s)$ & $\sigma(\b_J,\s)$ & Paired & Near \\
-\midrule
-$1$ & $\e_1$ & $(u,\ u-1,\ u-1)$ & $3u-2$ & $u=1$ & $u=0$ \\
-$2$ & $\e_2$ & $(u-1,\ u,\ u-1)$ & $3u-2$ & $u=1$ & $u=0$ \\
-$3$ & $\e_1+\e_2$ & $(u-1,\ u-1,\ u-2)$ & $3u-4$ & $u=1$ & $u=2$ \\
-\bottomrule
-\end{tabular}
-\end{minipage}\hfill
-\begin{minipage}[c]{0.46\textwidth}
-\centering
 \input{research/sharp-dimension-17/figures/selector-mask}
-\end{minipage}
-\caption{Left: the values of $\tau$ and $\sigma$ at the candidates $(\b_J,\s)$ of type $j$, with $u=u(\b_J)$, and the values
-of $u$ that give paired and near bases. Right: the seven bases obtained from $J=\{1,5,6\}$ and the origin, plotted by
-selector $\s$. Circles are paired bases, squares are light bases, and the diamond marks the selector $\0$ of the origin,
-with $\tau=(0,0,0)$, and of the regular base $(\1_J,\0)$, with $\tau=(3,3,3)$. Dashed segments join antipodal bases. The hexagon is the convex hull of the selectors of all bases.}
-\label{fig:mask}
+\caption{The points of $\Zcal$ obtained from $J=\{1,5,6\}$ and the origin, plotted by their coordinates $s$. Circles are
+paired points, squares are light points, and the diamond marks $s=0$, shared by the origin, with $\tau=0$, and the free
+point $(\1_J,0)$, with $\tau=3\cdot\1$. Dashed segments join antipodal points. The hexagon is the convex hull of the
+coordinates $s$ of all points of $\Zcal$.}
+\label{fig:hexagon}
 \end{figure}
 
-At the candidates $(\b_J,\s)$ the value of $\sigma$ is not divisible by $3$, and $\sigma(\1_J,\0)=3|J|$, so $\sigma$ is
-nonzero at every candidate. A \emph{heavy base} is a candidate multiplied by the sign of $\sigma$. Heavy bases thus have $\sigma>0$ and still represent
-each nonzero class exactly once. After this change of sign, a heavy base of type $j$ with $u$ as in the column ``Paired''
-has $\tau_j=1$ and zeros elsewhere, one with $u$ as in the column ``Near'' has $\tau_j=0$ and ones elsewhere, and every
-other value of $u$ gives three positive entries, as do the bases $(\1_J,\0)$ with $\tau=(|J|,|J|,|J|)$. We call these
-heavy bases \emph{paired} of type $j$, \emph{near} of type $j$ and \emph{regular}, respectively. For each paired base $\z$
-of type $j$, the point $-\z$ is a \emph{light} base of type $j$, with $\tau_j=-1$ and zeros elsewhere, and these are the
-bases of the $j$th pool. The set $\Zcal$ of \emph{bases} consists of $\0$ and all heavy and light bases. Hence $\sigma$
-equals $1$ at paired, $-1$ at light and $2$ at near bases, and is at least $3$ at regular bases.
+\paragraph{Light points and the set $\Zcal$.}
+For each paired point $z$ of type $j$, the point $-z$ is a \emph{light point} of type $j$; it satisfies $\tau(-z)=-e_j$.
+Let $\Zcal$ consist of $0$, the $4095$ heavy points and the $756$ light points. These are $4852$ distinct points: a light
+point $-z$ lies in the class of $z$ modulo $2$, but differs from $z$, the only heavy point in that class.
+Table~\ref{tab:points} summarizes the values of $\tau$ and $\sigma$. In particular, for $z\in\Zcal$ and $j\in[3]$,
+\begin{equation}\label{eq:light}
+\tau_j(z)<0\iff z\text{ is light of type }j,\text{ and then }\tau_j(z)=-1.
+\end{equation}
 
-Each type has $252$ paired bases and $\binom{10}{4}=\binom{10}{6}=210$ near bases, so there are $756$ paired, $630$ near
-and $4095-756-630=2709$ regular bases. A light base lies in the class of its partner and differs from it, so $\Zcal$ has
-$1+4095+756=4852$ points. Figure~\ref{fig:mask} also shows the bases obtained from $J=\{1,5,6\}$, where $\b_J$ has
-entries $-1,1,1$ in positions $1,5,6$ and $u=1$. The candidates of types $1$ and $2$ are paired bases as they stand, whereas
-$\tau(\b_J,\e_1+\e_2)=(0,0,-1)$ has negative sum, so the paired base of type $3$ is $-(\b_J,\e_1+\e_2)$ and its light
-partner is the candidate itself.
+The following lemma shows that $\Zcal$ creates no further integer points in its convex hull, and that every nonzero point of
+$\Zcal$ can be isolated.
+
+\begin{lemma}\label{lem:saturation}
+If $z\in\Z^{12}\setminus\{0\}$ is a convex combination $z=\sum_m\lambda_mz_m$ of points $z_m\in\Zcal$ with all $\lambda_m>0$,
+then $z_m=z$ for all $m$. Consequently $\conv(\Zcal)\cap\Z^{12}=\Zcal$, and every point of $\Zcal\setminus\{0\}$ is a vertex
+of $\conv(\Zcal)$.
+\end{lemma}
+
+\begin{proof}
+We use two facts. First, all points of $\Zcal$ have entries in $\{-1,0,1\}$, and every point of $\Zcal$ with $s\ne0$ has the
+form $\omega(b_J,s')$ with $\omega\in\{\pm1\}$ and $s'\in\{e_1,e_2,e_1+e_2\}$. Second, if an integer $t$ is a convex
+combination with positive weights of integers $t_m$ that all lie in $\{k,k+1\}$ for some $k$, then $t_m=t$ for all $m$. We
+apply the second fact coordinatewise. By the first fact, if a coordinate of $z$ equals $\pm1$, then that coordinate of every
+$z_m$ is the same.
+
+\emph{Case $s\ne0$.} Say $s_k=\pm1$. Then every $z_m$ has the same $k$-th $s$-coordinate, so every $z_m$ has the form
+$\omega(b_{J_m},s'_m)$ with one common sign $\omega$ (the entries of $s'_m$ are nonnegative). Hence the other $s$-coordinate
+of every $z_m$ lies in $\{0,\omega\}$, and the $i$-th $y$-coordinate lies in $\{0,\omega(b_{[10]})_i\}$. By the second fact
+all $z_m$ agree with $z$ in every coordinate.
+
+\emph{Case $s=0$.} Since $z\ne0$, some $y_i=\pm1$, and then every $z_m$ has $i$-th $y$-coordinate $y_i\ne0$. If
+$z_m=\omega_m(b_{J_m},s'_m)$ has $s'_m\ne0$, then $y_i=\omega_m(b_{[10]})_i$, so $\omega_m=\omega:=y_i(b_{[10]})_i$ is the
+same for all such $m$. Thus $\omega(s_{m,1}+s_{m,2})\ge0$ for all $m$, with equality only if $s_m=0$. Since
+$\sum_m\lambda_m(s_{m,1}+s_{m,2})=s_1+s_2=0$, all $s_m=0$. The points of $\Zcal$ with $s=0$ are $0$ and the $(\1_J,0)$,
+whose $y$-parts lie in $\{0,1\}^{10}$, so $y_m=y$ for all $m$ by the second fact.
+
+For the consequences, note that $0\in\Zcal$, and that a nonzero point of $\Zcal$ in the convex hull of the other points of
+$\Zcal$ would have a representation with some $z_m\ne z$.
+\end{proof}
+
+Since every vertex of a polytope is exposed, for each $z\in\Zcal\setminus\{0\}$ we fix a linear functional $\ell_z$ on
+$\R^{12}$ with $\ell_z(z')<\ell_z(z)$ for all $z'\in\Zcal\setminus\{z\}$.
 
 \section{The fibers}\label{sec:fibers}
 
-Let $B=\{\x\in\R^6:x_i\ge0,\ \sum_ix_i=1\}$ be the standard simplex with vertices $\v_1,\ldots,\v_6$. We identify the
-hyperplane $\sum_ix_i=1$ with $\R^5$ by dropping $x_6$ and subtracting $1/6$ from the other coordinates. The centroid of
-$B$ is then the origin of $\R^5$, scalar multiples of subsets are dilations about the centroid, and $x_1,\ldots,x_6$ are
-affine functions on $\R^5$ with sum $1$. From now on $\vol$ and $\mu$ are measured in units of the Lebesgue volume of $B$,
-which does not change the ratios in Theorem~\ref{thm:main}. The parameters $a,\delta,\varepsilon,h$ introduced below
-are fixed in Section~\ref{sec:cuts}.
+\subsection{The simplex and three cuts through its centroid}\label{sec:simplex}
 
-\paragraph{The origin cuts.}
-Fix a rational number $a$ with $1/2<a<1$. For $j=1,2,3$, with these three indices taken cyclically, put
-$f_j=x_j-ax_{j+1}-(1-a)x_{j+2}$. Each $f_j$ vanishes at the centroid and equals $1$ at $\v_j$, so it is a nonzero linear
-functional on $\R^5$. Moreover $|f_j|\le1$ on $B$ and $f_1+f_2+f_3=0$. The cyclic permutation of $\v_1,\v_2,\v_3$ is a
-volume-preserving linear symmetry of $B$ that carries $f_j$ to $f_{j+1}$, so we describe the sets below for $j=1$ and
-obtain the others by rotation. The \emph{origin cuts} are the halfspaces
-$H_j=\{(\z,\x)\in\R^{12}\times\R^5:f_j(\x)\ge3\tau_j(\z)\}$ for $j=1,2,3$.
+Let $B=\conv(v_1,\ldots,v_6)\subset\R^5$ with $v_i=e_i$ for $i\le5$ and $v_6=-(e_1+\dots+e_5)$. This simplex has rational
+vertices and its centroid is the origin, so for $\lambda>0$ the set $\lambda B$ is the dilation of $B$ about its centroid.
+Let $x_1,\ldots,x_6$ be the barycentric coordinates of $B$, viewed as affine functions on $\R^5$ with $\sum_ix_i=1$.
+\emph{From now on, $\vol$ denotes Lebesgue measure on $\R^5$ normalized so that $\vol(B)=1$}; this rescales $\mu$ by a
+constant and does not affect depths. We call $F=\conv(v_1,v_2,v_3)$ the \emph{active face} and put $F'=\conv(v_4,v_5,v_6)$;
+let $\bar v=(v_1+v_2+v_3)/3$ be the centroid of $F$.
 
-Fix also a rational number $\delta$ with $0<\delta<1$. The fiber $A_{\z}$ over a base $\z$ will be a subset of
-$(1+\delta\sigma(\z))B$, and every heavy fiber will moreover lie in $(1+2\delta)B$, where $|f_j|\le1+2\delta<3$, so that
-$H_j$ misses it when $\tau_j(\z)\ge1$. When
-$\tau_j(\z)=0$ and $\z\ne\0$, we ask that $A_{\z}\subseteq\{f_j\le0\}$. Then $H_j$ meets $A_{\z}$ inside the hyperplane
-$\{f_j=0\}$, which is null. By the values of $\tau$ in Section~\ref{sec:bases}, a paired or light fiber of type $j$ should
-therefore lie in $\{f_i\le0\}$ for both $i\ne j$ and a near fiber of type $j$ should lie in $\{f_j\le0\}$, while a regular
-fiber needs no sign condition. Dilations about the origin preserve these conditions because the $f_j$ are linear.
+Fix a rational number $a$ with $\frac12<a<1$. With indices $1,2,3$ taken cyclically, define
+\[
+f_j=x_j-a\,x_{j+1}-(1-a)\,x_{j+2}\qquad(j=1,2,3).
+\]
+These functions have the following properties.
+\begin{enumerate}[label=(\alph*)]
+\item $f_j$ vanishes at the centroid ($x_i=1/6$ for all $i$), so $f_j$ is a linear functional on $\R^5$.
+\item $f_1+f_2+f_3=0$. Hence $B\cap\{f_1\ge0\}$, $B\cap\{f_2\ge0\}$ and $B\cap\{f_3\ge0\}$ cover $B$.
+\item $f_j$ takes the values $1,-a,-(1-a)$ at $v_j,v_{j+1},v_{j+2}$ and $0$ at $v_4,v_5,v_6$. In particular $|f_j|\le1$ on
+$B$.
+\item The linear map that permutes $v_1\to v_2\to v_3\to v_1$ and fixes $v_4,v_5,v_6$ preserves $B$ and volume, and maps the
+zero sets and sign regions of $f_j$ to those of $f_{j+1}$.
+\end{enumerate}
+By (d), it suffices to describe all sets below for $j=1$; the sets for $j=2,3$ are their images under this symmetry.
 
-\paragraph{Volumes on the active face.}
-Each $f_j$ is a homogeneous linear form in $(x_1,x_2,x_3)$. Let the \emph{trace} of a subset of $B$ be its intersection
-with the \emph{active face} $\conv(\v_1,\v_2,\v_3)$. A subset of $B$ defined by inequalities $f_j\ge0$ or $f_j\le0$ is
-then the join of its trace with $\conv(\v_4,\v_5,\v_6)$, that is, the union of the segments between these two sets. Indeed, normalizing the first three coordinates by their sum when it is positive preserves the
-inequalities, and points with that sum zero belong to the latter triangle. The simplex spanned by three points of the
-active face and $\v_4,\v_5,\v_6$ has volume equal to the absolute determinant of the $3\times3$ matrix of barycentric
-coordinates of these points, because the affine map carrying the vertices of $B$ to the vertices of this simplex acts on
-barycentric coordinates as the direct sum of this matrix and the identity. We call this the determinant formula. The same
-determinant is the area of the triangle spanned by the three points as a fraction of the area of the active face, so for
-such simplices Figure~\ref{fig:active} shows volumes as areas. On the active face, $f_1$ is positive at $\v_1$, negative at
-$\v_2$ and $\v_3$, and zero at $(a\v_1+\v_2)/(1+a)$ and $((1-a)\v_1+\v_3)/(2-a)$. So $B\cap\{f_1\ge0\}$ is a simplex, and
-the determinant formula gives its volume $\beta=1/[(1+a)(2-a)]$.
+All the $f_j$ depend only on the \emph{active coordinates} $(x_1,x_2,x_3)$ and are homogeneous in them. The following two
+facts reduce volume computations to the triangle $F$.
+
+\begin{lemma}\label{lem:join}
+\begin{enumerate}[label=(\alph*)]
+\item Let $Q$ be the solution set in $B$ of finitely many homogeneous linear inequalities in $(x_1,x_2,x_3)$. Then
+$Q=\conv\bigl((Q\cap F)\cup F'\bigr)$.
+\item If the active coordinates of $c_1,c_2,c_3\in F$ form the rows of a $3\times3$ matrix $P$, then the convex hull of
+$c_1,c_2,c_3,v_4,v_5,v_6$ has volume $|\det P|$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) A point $x\in Q$ with $\lambda=x_1+x_2+x_3\in(0,1)$ is the convex combination $\lambda x'+(1-\lambda)x''$ of the point
+$x'\in F$ with active coordinates $(x_1,x_2,x_3)/\lambda$ and a point $x''\in F'$. By homogeneity $x'\in Q$. Points with
+$\lambda\in\{0,1\}$ lie in $F'$ or $F$. Conversely, $F'\subseteq Q$ because all active coordinates vanish there, and $Q$ is
+convex. (b) The affine map sending $v_i\mapsto c_i$ ($i\le3$) and fixing $v_4,v_5,v_6$ acts on barycentric coordinates by
+the block matrix $\operatorname{diag}(P^\top,I_3)$, so it scales volume by $|\det P|$.
+\end{proof}
+
+\paragraph{The cap.}
+On $F$, $f_1$ vanishes at $(av_1+v_2)/(1+a)$ and at $((1-a)v_1+v_3)/(2-a)$, so by Lemma~\ref{lem:join} the cap
+$B\cap\{f_1\ge0\}$ is a simplex of volume
+\[
+\beta=\det\begin{pmatrix}1&0&0\\\frac{a}{1+a}&\frac{1}{1+a}&0\\\frac{1-a}{2-a}&0&\frac{1}{2-a}\end{pmatrix}
+=\frac{1}{(1+a)(2-a)}.
+\]
+
+\paragraph{The region $T_1$.}
+Let $T_1=B\cap\{f_2\le0,\ f_3\le0\}$. On $T_1$ we have $f_1=-f_2-f_3\ge0$. On $F$, the lines $\{f_2=0\}$ and $\{f_3=0\}$
+pass through $\bar v$ and meet the edges $v_1v_2$ and $v_1v_3$ in
+\[
+w_2=\frac{v_1+(1-a)v_2}{2-a},\qquad w_3=\frac{v_1+av_3}{1+a},
+\]
+respectively. So $T_1\cap F$ is the quadrilateral $v_1w_2\bar vw_3$ (Fig.~\ref{fig:active}). Its diagonal $v_1\bar v$ lies
+on the line $\{x_2=x_3\}$ and splits it into two triangles. By Lemma~\ref{lem:join}, $T_1=U_1\cup P_1$ with
+\[
+U_1=\conv(v_1,\bar v,w_3,v_4,v_5,v_6),\qquad P_1=\conv(v_1,\bar v,w_2,v_4,v_5,v_6).
+\]
+These simplices share the facet $\conv(v_1,\bar v,v_4,v_5,v_6)$ and lie on opposite sides of the hyperplane $\{x_2=x_3\}$.
+Their volumes are
+\[
+\theta=\vol(U_1)=\frac{a}{3(1+a)},\qquad\varphi=\vol(P_1)=\frac{1-a}{3(2-a)}.
+\]
+
+\paragraph{The slab.}
+The paired fiber will be a dilate of $U_1$ enlarged by a thin slab of $P_1$ along the common facet. Let
+$\nu_0,\ldots,\nu_5$ be the barycentric coordinates of $U_1$ with respect to the vertex order $(v_1,\bar v,w_3,v_4,v_5,v_6)$,
+and let $q_i=\nu_i(w_2)$. Comparing active coordinates gives
+\[
+q_1=\frac{3(1-a)}{2-a},\qquad q_2=-\frac{1-a^2}{a(2-a)},\qquad q_0=1-q_1-q_2,\qquad q_3=q_4=q_5=0.
+\]
+Because $\frac12<a<1$, we have $0<q_1<1$, $q_2<0$, and $q_1+q_2=\frac{(1-a)(2a-1)}{a(2-a)}\in(0,1)$, hence $0<q_0<1$. Let
+$p$ be the barycentric coordinate of $P_1$ at $w_2$ and, for $i\ne2$, let $p_i$ be the barycentric coordinate of $P_1$ at the
+vertex that $P_1$ shares with $U_1$ in position $i$. Both sides of
+\begin{equation}\label{eq:nu}
+\nu_i=p_i+q_ip\quad(i\ne2),\qquad\nu_2=q_2p
+\end{equation}
+are affine and agree at the vertices of $P_1$, so~\eqref{eq:nu} holds on $\R^5$. In particular $\nu_2\ge0$ on $U_1$ and
+$\nu_2\le0$ on $P_1$. Fix a rational $\varepsilon\in(0,10^{-3})$ and define
+\[
+K_1=T_1\cap\{\nu_2\ge\varepsilon q_2\}=U_1\cup\bigl(P_1\cap\{p\le\varepsilon\}\bigr).
+\]
+This is a convex polytope. Since $P_1\cap\{p\ge\varepsilon\}$ is a homothetic copy of $P_1$ with ratio $1-\varepsilon$,
+\[
+V:=\vol(K_1)=\theta+\varphi\bigl(1-(1-\varepsilon)^5\bigr).
+\]
 
 \begin{figure}[t]
 \centering
 \input{research/sharp-dimension-17/figures/active-face}
-\caption{Traces on the active face $\conv(\v_1,\v_2,\v_3)$, drawn at $a=663/1000$. (a)~The lines $f_j=0$ meet at the centroid $\bar\v$ of the face and bound the
-shaded traces of $T_1,T_2,T_3$. The trace of $B\cap\{f_1\ge0\}$ consists of $T_1$ and the two hatched triangles.
-(b)~The trace of $T_1$, enlarged. The dark strip is the trace of the slab $P\cap\{p\le\varepsilon\}$, drawn at $p=1/5$ for
-the true $\varepsilon=13/20000$, and with $U$ it forms the trace of $K_1$. The slab is not a join, and its volume is not
-the area of its trace.}
+\caption{The active face $F=\conv(v_1,v_2,v_3)$, drawn for $a=0.663$. The subsets of $B$ in Section~\ref{sec:simplex},
+except $K_1$ and its slab, are joins of their traces on $F$ with $F'=\conv(v_4,v_5,v_6)$, so the picture shows traces only.
+The cap $B\cap\{f_1\ge0\}$ is the triangle above the dashed line. Inside it, $T_1$ is the quadrilateral $v_1w_2\bar vw_3$,
+split by the dotted diagonal into $U_1$ (blue) and $P_1$ (orange). The dark strip indicates the slab
+$P_1\cap\{p\le\varepsilon\}$ added to $U_1$ to form $K_1$; its width is exaggerated, since $\varepsilon=6.5\cdot10^{-4}$.
+Note that the centroid of $B$ does not lie on $F$.}
 \label{fig:active}
 \end{figure}
 
-\paragraph{Paired and light fibers.}
-The sign conditions confine a paired or light fiber of type $j$ to a dilation of
-$T_j=B\cap\{f_{j+1}\le0,\ f_{j+2}\le0\}$, on which $f_j=-f_{j+1}-f_{j+2}\ge0$. Among the vertices of the active
-face, $f_2$ is positive only at $\v_2$ and $f_3$ only at $\v_3$. The lines $f_2=0$ and $f_3=0$ meet at the
-centroid $\bar\v=(\v_1+\v_2+\v_3)/3$ of the face. They meet the edges from $\v_1$ to $\v_2$ and from $\v_1$ to
-$\v_3$ at $\w_2=(\v_1+(1-a)\v_2)/(2-a)$ and $\w_3=(\v_1+a\v_3)/(1+a)$, respectively. The edge from $\v_2$ to
-$\v_3$ has $f_1<0$ throughout, so it is disjoint from $T_1$. The trace of $T_1$ is therefore the quadrilateral with
-vertices $\v_1,\w_2,\bar\v,\w_3$ in Figure~\ref{fig:active}(a), whose diagonal from $\v_1$ to $\bar\v$ lies on the
-line $x_2=x_3$. Consequently $T_1=U\cup P$ with $U=\conv(\v_1,\bar\v,\w_3,\v_4,\v_5,\v_6)$ and
-$P=\conv(\v_1,\bar\v,\w_2,\v_4,\v_5,\v_6)$. These simplices lie on opposite sides of the hyperplane $x_2=x_3$ and meet in a
-common facet, which is a null set. By the determinant formula, $U$ has volume $\theta=a/[3(1+a)]$ and $P$ has volume
-$\phi=(1-a)/[3(2-a)]$.
+\paragraph{The one-sided simplex.}
+For $\eta\in\bigl(0,\frac{a}{1+a}\bigr]$ let $N_1=\conv\bigl(\eta v_1+(1-\eta)v_2,v_2,v_3,v_4,v_5,v_6\bigr)\subseteq B$. At its
+vertices $f_1$ takes the values $\eta-a(1-\eta)\le0$, $-a$, $-(1-a)$, $0$, $0$, $0$, so $N_1\subseteq\{f_1\le0\}$. By
+Lemma~\ref{lem:join}(b), $\vol(N_1)=\eta$.
 
-A light fiber of type $j$ can be all of $(1-\delta)T_j$, because the only cut we use on it is $H_j$, which contains it. In
-a paired fiber, each point must lie in a part of volume at most $M$ cut off by a halfspace of $\R^5$. The caps of the
-simplex $(1+\delta)U$ have this property, but at our parameters its volume is below $h^5$ by more than $3\cdot10^{-3}$, and
-$756$ such deficits would exceed $3L$. We therefore add to $U$ a thin slab of $P$ along the common facet. It restores all
-but about $3\cdot10^{-7}$ of the volume $h^5$, and the parts cut off by the same halfspaces can still be computed
-(Lemma~\ref{lem:caps}).
+\subsection{The fibers and the polytope}\label{sec:polytope}
 
-To define the slab, let $\nu_0,\ldots,\nu_5$ be the barycentric coordinates of $U$ in the listed vertex order and put
-$q_i=\nu_i(\w_2)$. Comparing active coordinates gives $q_1=3(1-a)/(2-a)$, $q_2=-(1-a^2)/[a(2-a)]$,
-$q_0=1-q_1-q_2$ and $q_3=q_4=q_5=0$. Since $1/2<a<1$, we have $0<q_1<1$, $q_2<0$ and
-$0<q_1+q_2=q_1(2a-1)/(3a)<1$, so $0<q_0<1$. Fix a rational number $\varepsilon$ with $0<\varepsilon<1/1000$ and put
-$K_1=T_1\cap\{\nu_2\ge\varepsilon q_2\}$. On $U$ we have $\nu_2\ge0>\varepsilon q_2$. On $P$, let $p$ be the
-barycentric coordinate at $\w_2$ and, for $i\ne2$, let $p_i$ be the barycentric coordinate at the vertex of $U$
-with index $i$. Then $\nu_i=p_i+q_ip$ for $i\ne2$ and $\nu_2=q_2p$, since both sides are affine and agree at the
-vertices of $P$. Therefore $K_1$ is the union of $U$ and the slab $P\cap\{p\le\varepsilon\}$. The set
-$P\cap\{p\ge\varepsilon\}$ is a homothetic copy of $P$ with ratio $1-\varepsilon$, so
-$\vol(K_1)=V:=\theta+\phi[1-(1-\varepsilon)^5]$. Rotation gives $K_2,K_3$.
-
-\paragraph{Near and regular fibers.}
-A near fiber of type $j$ has dilation factor $1+2\delta$ and must lie in $\{f_j\le0\}$. Fix a rational number $h>0$ with
-$2h<1+2\delta$ and put $\eta=(h/(1+2\delta))^5$. Then $\eta<1/32$, and $a>1/2$ gives $a/(1+a)>1/3$, so
-$\eta<a/(1+a)$. Let
-$N_j=\conv\bigl(\eta\v_j+(1-\eta)\v_{j+1},\v_{j+1},\v_{j+2},\v_4,\v_5,\v_6\bigr)\subseteq B$. At these vertices
-$f_j$ takes the values $\eta-a(1-\eta)$, $-a$, $a-1$, $0$, $0$, $0$, which are nonpositive because
-$\eta<a/(1+a)$. Hence $f_j\le0$ on $N_j$, and $\vol(N_j)=\eta$ by the determinant formula, so the simplex
-$(1+2\delta)N_j$ has volume $h^5$. A regular fiber is the simplex $hB$. The table lists the fibers $A_{\z}$.
-\begin{center}
-\begin{tabular}{llcllc}
-\toprule
-Base $\z$ & Number & $\sigma(\z)$ & $\tau(\z)$ & Fiber $A_{\z}$ & $\vol(A_{\z})$ \\
-\midrule
-$\0$ & $1$ & $0$ & $(0,0,0)$ & $B$ & $1$ \\
-paired, type $j$ & $252$ per type & $1$ & $\tau_j=1$, others $0$ & $(1+\delta)K_j$ & $(1+\delta)^5V$ \\
-light, type $j$ & $252$ per type & $-1$ & $\tau_j=-1$, others $0$ & $(1-\delta)T_j$ & $(1-\delta)^5(\theta+\phi)$ \\
-near, type $j$ & $210$ per type & $2$ & $\tau_j=0$, others $1$ & $(1+2\delta)N_j$ & $h^5$ \\
-regular & $2709$ & $\ge3$ & all entries $\ge1$ & $hB$ & $h^5$ \\
-\bottomrule
-\end{tabular}
-\end{center}
-Every fiber lies in $(1+\delta\sigma(\z))B$, where for regular bases we use $h<1+2\delta<1+\delta\sigma(\z)$ and
-$\0\in B$, and every heavy fiber lies in $(1+2\delta)B$. The sign conditions hold by construction. Let
-$C=\conv\bigl(\bigcup_{\z\in\Zcal}\{\z\}\times A_{\z}\bigr)$. The light fibers of one type have total volume $L=252(\theta+\phi)(1-\delta)^5$, and all fibers have total volume
-$W=3339h^5+756(1+\delta)^5V+1+3L$. The comparison with the target~\eqref{eq:target} therefore reads
-\begin{equation}\label{eq:ledger}
-W-4096h^5=3L-(h^5-1)-756\bigl[h^5-(1+\delta)^5V\bigr].
-\end{equation}
-
-\section{The integer fibers of the polytope}\label{sec:census}
-
-We first show that a nonzero integer point of $\conv(\Zcal)$ has only the trivial representation.
-
-\begin{lemma}\label{lem:saturation}
-If $\z\in\Z^{12}\setminus\{\0\}$ is a convex combination $\sum_m\lambda_m\z^m$ of points $\z^m\in\Zcal$
-with all $\lambda_m>0$, then $\z^m=\z$ for every $m$.
-\end{lemma}
-
-\begin{proof}
-All entries of all bases lie in $\{-1,0,1\}$, so $\z=(\y,\s)$ has the same property. If a coordinate of
-$\z$ equals $\pm1$, or if the contributors $\z^m=(\y^m,\s^m)$ take only two consecutive integer values in
-that coordinate, then integrality forces all contributors to agree in it. We call this saturation.
-
-Suppose first that $\s\ne\0$, say $s_k=\pm1$. Saturation gives $s_k^m=s_k$ for all $m$. Every nonzero
-selector of a base is $\pm\e_1$, $\pm\e_2$ or $\pm(\e_1+\e_2)$, so the other selector coordinate of each
-contributor lies in $\{0,s_k\}$, and saturation gives $\s^m=\s$. Let $\omega=\pm1$ be the sign of the
-nonzero entries of $\s$. By construction, a base with this selector is $(\omega\b_J,\s)$ for some $J$, so
-$y_i^m\in\{0,\omega c_i\}$ for each $i$, and saturation gives $\y^m=\y$.
-
-Now suppose that $\s=\0$. Then $y_i=\pm1$ for some $i$, and saturation gives $y_i^m=y_i$ for all $m$. A
-contributor with a nonzero selector of sign $\omega$ has $y_i=\omega c_i$, so
-$c_iy_i(s_1^m+s_2^m)=\omega(s_1^m+s_2^m)>0$, while a contributor with selector $\0$ gives $0$. The weighted
-sum of these numbers is $c_iy_i(s_1+s_2)=0$, so all contributors have selector $\0$. They are $\0$ or
-points $(\1_J,\0)$, so $\y^m\in\{0,1\}^{10}$, and saturation gives $\y^m=\y$.
-\end{proof}
-
-Consequently $\Z^{12}\cap\conv(\Zcal)=\Zcal$, and no nonzero base lies in the convex hull of the other bases. By the
-separation theorem for a point and a compact convex set, each nonzero $\z\in\Zcal$ therefore has a linear functional
-$\ell_{\z}$ on $\R^{12}$ with $\ell_{\z}(\z')<\ell_{\z}(\z)$ for all $\z'\in\Zcal\setminus\{\z\}$.
+Fix rationals $\delta\in(0,1)$ and $h>0$ with $h\le1+2\delta$, put $\eta=h^5/(1+2\delta)^5$, and assume
+$\eta\le a/(1+a)$. Let $g=\delta\sigma$, a linear function on $\R^{12}$. The fibers $A_z$ for $z\in\Zcal$ are listed in
+Table~\ref{tab:points}, with $K_j,T_j,N_j$ the images of $K_1,T_1,N_1$ under the symmetry (d). Their volumes are
+\[
+\vol(A_z)=\begin{cases}1&z=0,\\(1+\delta)^5V&z\text{ paired},\\(1-\delta)^5(\theta+\varphi)&z\text{ light},\\
+(1+2\delta)^5\eta=h^5&z\text{ one-sided or free}.\end{cases}
+\]
 
 \begin{lemma}\label{lem:fibers}
-The set $C$ is a rational polytope with nonempty interior. For $\z\in\Z^{12}$, the fiber $C_{\z}$ equals $A_{\z}$ if
-$\z\in\Zcal$ and is empty otherwise. Consequently $\mu(C)=W$, and every halfspace $H$ satisfies
-$\mu(C\cap H)=\sum_{\z\in\Zcal}\vol(A_{\z}\cap H_{\z})$.
+For every $z\in\Zcal$:
+\begin{enumerate}[label=(F\arabic*)]
+\item $1+g(z)>0$ and $A_z\subseteq(1+g(z))B$;
+\item if $z\ne0$ and $\tau_j(z)=0$, then $A_z\subseteq\{f_j\le0\}$;
+\item if $z$ is heavy, then $|f_j|\le1+2\delta<3$ on $A_z$ for $j=1,2,3$.
+\end{enumerate}
 \end{lemma}
 
 \begin{proof}
-The fibers are polytopes with rational vertices, because $T_j$ and $K_j$ are cut from $B$ by rational
-inequalities, $N_j$ has rational vertices, and the dilation factors are rational. So $C$ is the convex hull
-of finitely many rational points. It contains $\{\0\}\times B$, and $B$ spans the continuous directions. The regular bases
-$(\1_{\{i\}},\0)$ and the near bases $(\0,-\e_1)$ and $(\0,-\e_2)$ span the integer directions, so $C$ has nonempty
-interior.
+(F1) By Table~\ref{tab:points}, $g(z)=\delta\sigma(z)\ge-\delta>-1$. The fibers of the origin, paired, light and one-sided
+points are subsets of $\lambda B$ with $\lambda=1,1+\delta,1-\delta,1+2\delta$, which equals $1+g(z)$ in each case. For free
+$z$ we have $hB\subseteq(1+2\delta)B\subseteq(1+g(z))B$, since $0\in B$ and $g(z)\ge3\delta$.
 
-Let $(\z,\x)\in C$ with $\z$ integer, and write $(\z,\x)=\sum_m\lambda_m(\z^m,\x^m)$ with $\lambda_m>0$,
-$\sum_m\lambda_m=1$, $\z^m\in\Zcal$ and $\x^m\in A_{\z^m}$. If $\z\ne\0$, then Lemma~\ref{lem:saturation}
-gives $\z^m=\z$ for all $m$, so $\z\in\Zcal$ and $\x\in A_{\z}$ by convexity of $A_{\z}$. If $\z=\0$, then
-$\x^m/(1+\delta\sigma(\z^m))\in B$ for all $m$, where $1+\delta\sigma(\z^m)\ge1-\delta>0$. Since $\sigma$ is linear, the
-positive weights $\lambda_m(1+\delta\sigma(\z^m))$ sum to $1+\delta\sigma(\z)=1$. Thus $\x$ is a convex combination of the
-points $\x^m/(1+\delta\sigma(\z^m))$ of $B$ with these weights, which gives $\x\in B=A_{\0}$. The reverse inclusions are
-immediate, and the formulas for $\mu$ follow by summing over $\Zcal$.
+(F2) By Table~\ref{tab:points}, a nonzero $z$ with $\tau_j(z)=0$ is paired or light of a type $k\ne j$, or one-sided of type
+$j$. In the first case $A_z$ is a positive dilate of a subset of $T_k$, which lies in $\{f_j\le0\}$ because $j\ne k$. In the
+second case $A_z=(1+2\delta)N_j\subseteq\{f_j\le0\}$. The conditions are preserved by positive dilations because $f_j$ is
+linear.
+
+(F3) Heavy fibers lie in $(1+2\delta)B$ by (F1) and the argument for free $z$; now use $|f_j|\le1$ on $B$ and $\delta<1$.
 \end{proof}
 
-\section{Cuts and the exact comparison}\label{sec:cuts}
-
-We now construct the cuts, starting with the three origin cuts, which contain the light fibers.
-
-\begin{lemma}\label{lem:rows}
-For $j=1,2,3$ we have $\mu(C\cap H_j)=\beta+L$. Each point $(\0,\x)$ with $\x\in B$ and each point of a light fiber
-lies in some $H_j$.
-\end{lemma}
-
-\begin{proof}
-By Lemma~\ref{lem:fibers} we may sum over the bases, using the table of Section~\ref{sec:fibers}. Over the origin $H_j$
-holds $B\cap\{f_j\ge0\}$, of volume $\beta$. If $\tau_j(\z)=-1$, then $\z$ is a light base of type $j$, and the condition
-$f_j\ge-3$ holds on its whole fiber because $|f_j|\le1$ on $B$. These fibers have total volume $L$. If $\z\ne\0$ and
-$\tau_j(\z)=0$, then $\z$ is a paired or light base of a type $k\ne j$, or a near base of type $j$. Its fiber lies in
-$\{f_j\le0\}$, so $H_j$ meets it in a subset of the null hyperplane $\{f_j=0\}$. If $\tau_j(\z)\ge1$, then $\z$ is heavy
-and the condition $f_j\ge3$ fails on its fiber. Hence $\mu(C\cap H_j)=\beta+L$. Since $f_1+f_2+f_3=0$, each $\x\in B$ has
-$f_j(\x)\ge0$ for some $j$, so $(\0,\x)\in H_j$. A point of a light fiber of type $j$ lies in $H_j$.
-\end{proof}
-
-\begin{lemma}\label{lem:isolated}
-Let $\z\ne\0$ be a base, let $\psi$ be a nonconstant affine function on $\R^5$, and let $\kappa\in\R$. There is a
-halfspace $H$ with $H_{\z}=\{\psi\ge\kappa\}$ and $\mu(C\cap H)=\vol(A_{\z}\cap\{\psi\ge\kappa\})$.
-\end{lemma}
-
-\begin{proof}
-For $\rho>0$ put $F(\z',\x')=\psi(\x')-\psi(\0)+\rho\ell_{\z}(\z')$ and $b=\kappa-\psi(\0)+\rho\ell_{\z}(\z)$. Then
-$F$ is a nonzero linear functional, and $F(\z,\x')\ge b$ if and only if $\psi(\x')\ge\kappa$. Since $\Zcal$ is
-finite, the fibers are compact and $\ell_{\z}(\z')<\ell_{\z}(\z)$ for $\z'\ne\z$, we have $F<b$ on every fiber over
-$\z'\ne\z$ once $\rho$ is large. Lemma~\ref{lem:fibers} gives the mass of $H=\{F\ge b\}$.
-\end{proof}
-
-A regular or near fiber is a simplex of volume $h^5$. Some barycentric coordinate of a point in it is at least
-$1/6$. That coordinate is affine and nonconstant, and the cap of the simplex where it is at least $1/6$ is a
-homothetic copy with ratio $5/6$, so Lemma~\ref{lem:isolated} gives a cut of mass $M=(5h/6)^5$ containing the
-point.
-
-A paired fiber is not a simplex, and we cover it with the coordinates $\nu_i$ of $U$. For $U$ alone we would use the
-thresholds $1/6$. The slab adds unequally to the six resulting parts, and we balance them with thresholds close to $1/6$.
-Fix positive rational numbers $t_0,\ldots,t_5$ with $\sum_it_i=1$ and $1/7<t_i<1/5$. Let $\z$ be a paired base of type $j$
-and let $\x\in(1+\delta)K_j$. By rotation we compute with $j=1$. Since $\sum_i\nu_i=\sum_it_i=1$ on all of $\R^5$, there
-is an index $i$ with $\nu_i(\x/(1+\delta))\ge t_i$. The function $\x'\mapsto\nu_i(\x'/(1+\delta))$ is affine and
-nonconstant, so Lemma~\ref{lem:isolated} with $\kappa=t_i$ gives a cut containing $(\z,\x)$ of mass
-$(1+\delta)^5V_i$, where $V_i=\vol(K_1\cap\{\nu_i\ge t_i\})$.
-
-\begin{lemma}\label{lem:caps}
-We have $V_2=\theta(1-t_2)^5$, and for $i\ne2$,
+Define
 \[
-V_i=\theta(1-t_i)^5+\phi\,\frac{(1-t_i)^5-\bigl(1-t_i-(1-q_i)\varepsilon\bigr)^5}{1-q_i}.
+C=\conv\bigcup_{z\in\Zcal}\{z\}\times A_z\ \subset\ \R^{12}\times\R^5.
+\]
+
+\begin{lemma}\label{lem:polytope}
+$C$ is a full-dimensional rational polytope containing $0$. Its fiber over $z\in\Z^{12}$ is $A_z$ if $z\in\Zcal$ and empty
+otherwise. Consequently, for every halfspace $H$,
+\[
+\mu(C\cap H)=\sum_{z\in\Zcal}\vol\bigl(A_z\cap H_z\bigr),\qquad\mu(C)=W:=1+756(1+\delta)^5V+3L+3339\,h^5,
+\]
+where $L=252(1-\delta)^5(\theta+\varphi)$ is the total volume of the light fibers of one type, and $3339=630+2709$ counts
+the one-sided and free points.
+\end{lemma}
+
+\begin{proof}
+The sets $T_j,K_j$ are cut out of $B$ by rational inequalities, $N_j$ has rational vertices, and all dilation factors are
+rational. So $C$ is the convex hull of finitely many rational points. It contains $\{0\}\times B$, and the points
+$(\1_{\{i\}},0)$, $i\in[10]$, and $(0,-e_1),(0,-e_2)$ lie in $\Zcal$ (they are free, respectively one-sided with
+$J=\emptyset$), so $C$ is full-dimensional.
+
+Let $(z,x)\in C$ with $z\in\Z^{12}$. Write $(z,x)=\sum_m\lambda_m(z_m,x_m)$ with $\lambda_m>0$, $\sum_m\lambda_m=1$,
+$z_m\in\Zcal$ and $x_m\in A_{z_m}$. If $z\ne0$, then Lemma~\ref{lem:saturation} gives $z_m=z$ for all $m$, so $z\in\Zcal$
+and $x\in A_z$ by convexity of $A_z$. If $z=0$, then $\sum_m\lambda_m(1+g(z_m))=1+g(0)=1$ by linearity of $g$, so
+\[
+x=\sum_m\lambda_m\bigl(1+g(z_m)\bigr)\cdot\frac{x_m}{1+g(z_m)}
+\]
+is a convex combination of points of $B$ by (F1), and $x\in B=A_0$. The reverse inclusions are clear.
+\end{proof}
+
+\section{Covering by halfspaces}\label{sec:covering}
+
+\subsection{The origin and the light fibers}
+
+\begin{lemma}\label{lem:origin}
+For $j=1,2,3$, the set $H_j=\{(z,x)\in\R^{12}\times\R^5:f_j(x)\ge3\tau_j(z)\}$ is a halfspace with
+$\mu(C\cap H_j)=\beta+L$. Every point of $\{0\}\times B$ and of $\{z\}\times A_z$ with $z$ light lies in
+$H_1\cup H_2\cup H_3$.
+\end{lemma}
+
+\begin{proof}
+$H_j$ is defined by the nonzero linear functional $(z,x)\mapsto f_j(x)-3\tau_j(z)$. We compute
+$\vol(A_z\cap\{f_j\ge3\tau_j(z)\})$ for each $z\in\Zcal$ and apply Lemma~\ref{lem:polytope}; see
+Fig.~\ref{fig:mechanism}(a). For $z=0$ it is $\vol(B\cap\{f_j\ge0\})=\beta$. If $z$ is light of type $j$, then
+$\tau_j(z)=-1$ and $f_j\ge-1>-3$ on $A_z\subseteq B$, so the whole fiber counts. These fibers have total volume $L$. If
+$z\ne0$ and $\tau_j(z)=0$, the trace lies in $A_z\cap\{f_j=0\}$ by (F2), which has volume $0$. In all remaining cases
+$\tau_j(z)\ge1$ by~\eqref{eq:light}, so $z$ is heavy and the trace is empty by (F3). The covering statement follows from
+property (b) of the $f_j$ and from the case of light points.
+\end{proof}
+
+\subsection{Tilted caps on heavy fibers}
+
+\begin{lemma}\label{lem:tilt}
+Let $z\in\Zcal\setminus\{0\}$, let $\psi$ be a nonconstant affine function on $\R^5$, and let $\kappa\in\R$. There is a
+halfspace $H$ with $H_z=\{\psi\ge\kappa\}$ and $\mu(C\cap H)=\vol(A_z\cap\{\psi\ge\kappa\})$.
+\end{lemma}
+
+\begin{proof}
+For $\rho>0$ let $H=\{(z',x'):\psi(x')-\psi(0)+\rho\,\ell_z(z')\ge\kappa-\psi(0)+\rho\,\ell_z(z)\}$. The left-hand side is a
+nonzero linear functional, and $H_z=\{\psi\ge\kappa\}$. For $z'\in\Zcal\setminus\{z\}$ we have $\ell_z(z')<\ell_z(z)$. Since
+$\psi$ is bounded on the finitely many compact fibers $A_{z'}$, the halfspace $H$ misses all of them once $\rho$ is large.
+Now apply Lemma~\ref{lem:polytope}.
+\end{proof}
+
+\begin{corollary}\label{cor:free}
+Let $M=(5h/6)^5$. Every point of $\{z\}\times A_z$ with $z$ free or one-sided lies in a halfspace of mass $M$.
+\end{corollary}
+
+\begin{proof}
+$A_z$ is a simplex of volume $h^5$. A point $x\in A_z$ has some barycentric coordinate $\lambda_i(x)\ge1/6$ with respect to
+$A_z$, and $A_z\cap\{\lambda_i\ge1/6\}$ is a homothetic copy of $A_z$ with ratio $5/6$, of volume $(5/6)^5h^5=M$. Apply
+Lemma~\ref{lem:tilt} with $\psi=\lambda_i$ and $\kappa=1/6$.
+\end{proof}
+
+\subsection{The paired fibers}
+
+A paired fiber $(1+\delta)K_j$ is not a simplex, but it is covered by the halfspaces that cut caps from the simplex
+$(1+\delta)U_j$. Fix positive rationals $t_0,\ldots,t_5$ with $\sum_it_i=1$ and $\frac17<t_i<\frac15$. Using the thresholds
+$t_i=\frac16$, as for a simplex, would make the caps unbalanced: the slab enlarges every cap except the one at $w_3$
+(index $2$), so we take $t_2$ slightly smaller than the others.
+
+\begin{lemma}\label{lem:paired}
+Every point of $\{z\}\times A_z$ with $z$ paired lies in a halfspace of mass $(1+\delta)^5V_i$ for some
+$i\in\{0,\ldots,5\}$, where $V_2=\theta(1-t_2)^5$ and, for $i\ne2$,
+\[
+V_i=\theta(1-t_i)^5+\varphi\,\frac{(1-t_i)^5-\bigl(1-t_i-(1-q_i)\varepsilon\bigr)^5}{1-q_i}.
 \]
 \end{lemma}
 
 \begin{proof}
-We split $K_1$ into $U$ and $P\cap\{p\le\varepsilon\}$, which overlap in a null set. In $U$ the set
-$\{\nu_i\ge t_i\}$ is a homothetic copy of $U$ with ratio $1-t_i$, of volume $\theta(1-t_i)^5$. On $P$ with $i=2$ we
-have $\nu_2=q_2p\le0<t_2$, so this part is empty. Let $i\ne2$. For $0\le p\le\varepsilon$, the bounds $0\le q_i<1$,
-$\varepsilon<1/1000$ and $1/7<t_i<1/5$ give $t_i-q_ip>0$, $1-t_i-(1-q_i)p>0$ and $1-q_i>0$. The affine chart with coordinates
-$p$ and $p_k$, $k\ne i,2$, sends $P$ onto the standard simplex of coordinate Lebesgue volume $1/120$, so volume in our
-units on $P$ is $120\phi$ times coordinate Lebesgue measure. Substituting $p_i=1-p-\sum_{k\ne i,2}p_k$ turns the condition
-$\nu_i=p_i+q_ip\ge t_i$ into $\sum_{k\ne i,2}p_k\le1-t_i-(1-q_i)p$, and it forces $p_i\ge t_i-q_ip>0$. So for each $p$ the
-four remaining coordinates range over a simplex of coordinate Lebesgue volume $[1-t_i-(1-q_i)p]^4/24$. Multiplying by
-$120\phi$ and integrating over $p$, the contribution of $P$ is
+By symmetry let $z$ be of type $1$ and $x\in(1+\delta)K_1$. Since $\sum_i\nu_i=1=\sum_it_i$ on $\R^5$, some $i$ has
+$\nu_i(x/(1+\delta))\ge t_i$. Applying Lemma~\ref{lem:tilt} with $\psi(x')=\nu_i(x'/(1+\delta))$ and $\kappa=t_i$ gives a
+halfspace of mass $(1+\delta)^5V_i$ with $V_i=\vol(K_1\cap\{\nu_i\ge t_i\})$. It remains to compute $V_i$, separately on
+$U_1$ and on the slab $P_1\cap\{p\le\varepsilon\}$, which overlap in a null set.
+
+On $U_1$, the set $\{\nu_i\ge t_i\}$ is a homothetic copy of $U_1$ with ratio $1-t_i$, of volume $\theta(1-t_i)^5$.
+
+On the slab, $\nu_2=q_2p\le0<t_2$ by~\eqref{eq:nu}, so for $i=2$ there is no contribution. Let $i\ne2$. Use $p$ and the four
+coordinates $p_k$, $k\notin\{i,2\}$, as affine coordinates on $P_1$. In these coordinates $P_1$ is a standard simplex, of
+coordinate volume $1/120$, so volume equals $120\varphi$ times coordinate volume. Substituting
+$p_i=1-p-\sum_{k\ne i,2}p_k$ into~\eqref{eq:nu}, the condition $\nu_i\ge t_i$ becomes
+$\sum_{k\ne i,2}p_k\le1-t_i-(1-q_i)p$. This also implies $p_i\ge t_i-q_ip>0$, since $q_i<1$ and $q_ip\le\varepsilon<t_i$.
+For fixed $p\in[0,\varepsilon]$, the four coordinates therefore range over a simplex of coordinate volume
+$(1-t_i-(1-q_i)p)^4/24$, which is positive because $\varepsilon<10^{-3}$ and $t_i<\frac15$. Hence the slab contributes
 \[
-5\phi\int_0^\varepsilon\bigl[1-t_i-(1-q_i)p\bigr]^4\,dp=\phi\,\frac{(1-t_i)^5-\bigl(1-t_i-(1-q_i)\varepsilon\bigr)^5}{1-q_i}.\qedhere
+120\varphi\int_0^\varepsilon\frac{\bigl(1-t_i-(1-q_i)p\bigr)^4}{24}\,dp
+=\varphi\,\frac{(1-t_i)^5-\bigl(1-t_i-(1-q_i)\varepsilon\bigr)^5}{1-q_i}.\qedhere
 \]
 \end{proof}
 
-The cuts above reduce the theorem to three strict comparisons of explicit rational numbers,
-\begin{equation}\label{eq:comparisons}
-\beta+L<M,\qquad(1+\delta)^5V_i<M\quad(i=0,\ldots,5),\qquad4096h^5<W.
+\section{Parameters and proof of the theorem}\label{sec:proof}
+
+By Lemmas~\ref{lem:origin} and~\ref{lem:paired} and Corollary~\ref{cor:free}, the construction works as soon as the following
+strict inequalities hold:
+\begin{equation}\label{eq:strict}
+\beta+L<M,\qquad(1+\delta)^5V_i<M\quad(i=0,\ldots,5),\qquad4096\,h^5<W.
 \end{equation}
-The first bounds the origin cuts, the second bounds the cuts on the paired fibers, and the third is the
-target~\eqref{eq:target}. We take
+The first bounds the halfspaces through the origin fiber, the second the caps on paired fibers, and the third is the
+target~\eqref{eq:target}. In view of the formula for $W$ in Lemma~\ref{lem:polytope}, the third inequality is exactly the
+account~\eqref{eq:account}:
+\[
+W-4096\,h^5=(1+3L-h^5)-756\bigl(h^5-(1+\delta)^5V\bigr).
+\]
+We take
 \begin{gather*}
-a=\frac{663}{1000},\qquad \delta=\frac{664201}{10^6},\qquad \varepsilon=\frac{13}{20000},\qquad h=\frac{1111946415}{10^9},\\
-(t_0,\ldots,t_5)=10^{-9}(166735371,\,166735294,\,166324902,\,166734811,\,166734811,\,166734811).
+a=\frac{663}{1000},\qquad\delta=\frac{664201}{10^6},\qquad\varepsilon=\frac{13}{20000},\qquad h=\frac{1111946415}{10^9},\\
+(t_0,\ldots,t_5)=10^{-9}(166735371,\ 166735294,\ 166324902,\ 166734811,\ 166734811,\ 166734811).
 \end{gather*}
-They satisfy all the conditions imposed so far, namely $1/2<a<1$, $0<\delta<1$, $0<\varepsilon<1/1000$, $h>0$,
-$2h<1+2\delta$, $\sum_it_i=1$ and $1/7<t_i<1/5$. Exact evaluation of the formulas of Sections~\ref{sec:fibers}
-and~\ref{sec:cuts} gives $M-\beta-L>10^{-6}$, $M-\max_i(1+\delta)^5V_i>10^{-9}$ and $W-4096h^5>4\cdot10^{-5}$, which proves
-\eqref{eq:comparisons}. Appendix~\ref{sec:lean} lists the values. In~\eqref{eq:ledger}, the gain $3L$ exceeds the deficit
-$h^5-1$ of the origin fiber by $2.8\cdot10^{-4}$, and the $756$ paired fibers, each short of $h^5$ by $3.1\cdot10^{-7}$,
-use up $2.4\cdot10^{-4}$ of this.
+These satisfy all side conditions: $\frac12<a<1$, $0<\delta<1$, $0<\varepsilon<10^{-3}$, $h\le1+2\delta$,
+$\eta=h^5/(1+2\delta)^5\approx0.0248\le a/(1+a)$, $\sum_it_i=1$ and $\frac17<t_i<\frac15$. The derived constants are
+\begin{gather*}
+\theta=\tfrac{221}{1663},\qquad\varphi=\tfrac{337}{4011},\qquad\beta=\tfrac{1000000}{2223431},\qquad
+\tfrac{5h}{6}=\tfrac{74129761}{80000000},\\
+q_0=\tfrac{776569}{886431},\qquad q_1=\tfrac{1011}{1337},\qquad q_2=-\tfrac{560431}{886431}.
+\end{gather*}
+Exact evaluation in rational arithmetic gives the values in Table~\ref{tab:values}, and in particular
+\[
+M-\beta-L>10^{-6},\qquad M-\max_i(1+\delta)^5V_i>10^{-9},\qquad W-4096\,h^5>4\cdot10^{-5},
+\]
+which proves~\eqref{eq:strict}. These parameters are not canonical; any choice satisfying the side conditions
+and~\eqref{eq:strict} works.
+
+\begin{table}[t]
+\centering
+\begin{tabular}{lr@{\hspace{3em}}lr}
+\toprule
+quantity & $\lfloor10^{12}\cdot\rfloor$ & margin & $\lfloor10^{12}\cdot\rfloor$\\
+\midrule
+$h^5$ & $1\,699\,884\,034\,250$ & $M-\beta-L$ & $1\,262\,439$\\
+$M$ & $683\,145\,268\,393$ & $M-(1+\delta)^5V_0$ & $7\,542$\\
+$\beta$ & $449\,755\,355\,574$ & $M-(1+\delta)^5V_1$ & $6\,288$\\
+$L$ & $233\,388\,650\,379$ & $M-(1+\delta)^5V_2$ & $1\,211$\\
+$3L$ & $700\,165\,951\,139$ & $M-(1+\delta)^5V_i$, $i=3,4,5$ & $7\,869$\\
+$(1+\delta)^5\theta$ & $1\,696\,402\,554\,056$ & $h^5-(1+\delta)^5V$ & $312\,774$\\
+$(1+\delta)^5V$ & $1\,699\,883\,721\,475$ & $1+3L-h^5$ & $281\,916\,889$\\
+$W$ & $6\,962\,725\,049\,747\,587$ & $W-4096\,h^5$ & $45\,459\,473$\\
+\bottomrule
+\end{tabular}
+\caption{Exact values (rounded down after multiplying by $10^{12}$) of the relevant quantities for the chosen parameters, in
+units where $\vol(B)=1$.}
+\label{tab:values}
+\end{table}
 
 \begin{proof}[Proof of Theorem~\ref{thm:main}]
-Lemma~\ref{lem:fibers} gives the stated properties of $C$ and $\mu(C)=W>0$ in our units. A point
-$(\z,\x)\in\Z^{12}\times\R^5$ either lies outside $C$ or has $\z\in\Zcal$ and $\x\in A_{\z}$. If $(\z,\x)\notin C$, strict
-separation gives a halfspace that contains the point and misses $C$, so it has mass $0$. If $\z=\0$ or $\z$ is light,
-Lemma~\ref{lem:rows} gives a containing $H_j$ of mass $\beta+L<M$. If $\z$ is regular or near, the cap of the simplex gives
-mass $M$. If $\z$ is paired, the cover by the $\nu_i$ gives mass $(1+\delta)^5V_i<M$. So every point of
-$\Z^{12}\times\R^5$ lies in a halfspace of mass at most $M$ and has depth at most $r=M/W=(5/6)^5h^5/W$, and $W>4096h^5$
-gives $r<(5/6)^5/2^{12}$.
+By Lemma~\ref{lem:polytope}, $C$ is a full-dimensional rational polytope with $\mu(C)=W$, a finite sum of positive volumes.
+Let $(z,x)\in\Z^{12}\times\R^5$. If $(z,x)\notin C$, strict separation gives a halfspace containing $(z,x)$ and disjoint
+from $C$, of mass $0$. Otherwise $z\in\Zcal$ and $x\in A_z$ by Lemma~\ref{lem:polytope}, and $(z,x)$ lies in a halfspace of
+mass at most $M$:
+\begin{itemize}
+\item if $z=0$ or $z$ is light, in some $H_j$, of mass $\beta+L<M$ (Lemma~\ref{lem:origin});
+\item if $z$ is free or one-sided, in a tilted cap of mass $M$ (Corollary~\ref{cor:free});
+\item if $z$ is paired, in a tilted cap of mass $(1+\delta)^5V_i<M$ (Lemma~\ref{lem:paired}).
+\end{itemize}
+All halfspaces are closed, so boundary points of fibers need no separate treatment. Let $r=M/W=(5/6)^5h^5/W$, which is
+rational. Every point of $\Z^{12}\times\R^5$ lies in a halfspace $H$ with $\mu(C\cap H)\le r\,\mu(C)$, and
+$W>4096\,h^5$ gives $r<(5/6)^5/2^{12}$.
 \end{proof}
 
 \appendix
-\section{Lean statement and exact values}\label{sec:lean}
+\section{Computer verification}\label{sec:lean}
 
-The repository \url{https://github.com/Hongyu-Cheng/weak-oertel-conjecture} holds the Lean~4 project in its folder
-\texttt{lean} and the exact checker. With Python~3 and \texttt{elan} installed, the following commands, run from the
-root of the repository, rerun both.
-{\small
-\begin{verbatim}
-  python3 research/sharp-dimension-17/check.py
-  cd lean && lake exe cache get && lake build && lake env lean CheckAxioms.lean
-\end{verbatim}
-}
-\noindent
-The last command fails unless the final theorem and the other results it lists, among them the lemma
-\texttt{integer\_projection\_census} that $\Z^{12}\cap\conv(\Zcal)\subseteq\Zcal$, depend only on the axioms
-\texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. In the file
-\nolinkurl{lean/SharpOC/Selector17Counterexample.lean}, the final theorem
-\texttt{SharpOC.Selector17.sharp\_oc\_counterexample} states that there are a compact convex set $C$ with nonempty
-interior in \texttt{(Fin 10 ⊕ Fin 2 → ℝ) × (Fin 5 → ℝ)}, with $\0\in C$ and $\mu(C)$ positive and finite, and a
-real number $r$ with $0<r<(5/6)^5/2^{12}$ such that for all $\z\in\Z^{12}$ and $\x\in\R^5$ there are a nonzero continuous
-linear functional $F$ and $b\in\R$ with $b\le F(\z,\x)$ and $\mu(C\cap\{F\ge b\})/\mu(C)\le r$. Here $\mu$ is
-\texttt{mixedIntegerMass}, the extended nonnegative sum over $\Z^{12}$ of the Lebesgue volumes of the fibers, as in
-Section~\ref{sec:intro}. This is the bound of Theorem~\ref{thm:main}. Rationality of the polytope is not part of the Lean
-statement and is established by Lemma~\ref{lem:fibers}.
+Two of the exact rational computations, the census of $\Zcal$ in Lemma~\ref{lem:census} and the
+inequalities~\eqref{eq:strict}, are checked by a short Python script using exact rational arithmetic. The script generates
+the points of $\Zcal$ and confirms their numbers, counting the one-sided points of the three types together. It asserts the
+three margins of Section~\ref{sec:proof}, which imply~\eqref{eq:strict}, and the inequalities among the parameters that
+Sections~\ref{sec:fibers} and~\ref{sec:covering} use, three of them ($\frac12<a$, $\varepsilon<10^{-3}$ and
+$\frac17<t_i<\frac15$) only through the consequences that Lemma~\ref{lem:paired} needs. The script does not prove that
+$\Zcal$ contains all integer points of $\conv(\Zcal)$; that is Lemma~\ref{lem:saturation}.
 
-The checker generates the $4852$ bases and their counts and asserts, in exact rational arithmetic, the conditions on the
-parameters and the three margins of Section~\ref{sec:cuts}, which imply \eqref{eq:comparisons}. It does not show that the
-bases exhaust the integer points of $C$, which is proved in Section~\ref{sec:census} and in Lean. The following floors come
-from direct exact evaluation of the formulas of Sections~\ref{sec:fibers} and~\ref{sec:cuts}.
-\begin{center}\small
-\begin{tabular}{lr@{\hspace{3em}}lr}
-\toprule
-Mass & $\lfloor10^{12}\cdot\text{mass}\rfloor$ & Margin & $\lfloor10^{12}\cdot\text{margin}\rfloor$ \\
-\midrule
-$h^5$ & $1699884034250$ & $M-\beta-L$ & $1262439$ \\
-$M$ & $683145268393$ & $M-(1+\delta)^5V_0$ & $7542$ \\
-$\beta$ & $449755355574$ & $M-(1+\delta)^5V_1$ & $6288$ \\
-$L$ & $233388650379$ & $M-(1+\delta)^5V_2$ & $1211$ \\
-$3L$ & $700165951139$ & $M-(1+\delta)^5V_i,\ i=3,4,5$ & $7869$ \\
-$(1+\delta)^5\theta$ & $1696402554056$ & $h^5-(1+\delta)^5V$ & $312774$ \\
-$(1+\delta)^5V$ & $1699883721475$ & $1+3L-h^5$ & $281916889$ \\
-$W$ & $6962725049747587$ & $W-4096h^5$ & $45459473$ \\
-\bottomrule
-\end{tabular}
-\end{center}
+The bound on the depth in Theorem~\ref{thm:main} has also been formalized in Lean~4 with mathlib, including the
+consequences of Lemma~\ref{lem:saturation}. The final statement reads as follows. Here \texttt{Coordinate} is
+\texttt{Fin 10 ⊕ Fin 2}, \texttt{IntegerSpace} is \texttt{Coordinate → ℝ}, \texttt{E} is \texttt{Fin 5 → ℝ},
+\texttt{Ambient} is \texttt{IntegerSpace × E}, and \texttt{mixedIntegerMass D} is the extended nonnegative sum, over all
+\texttt{w : Coordinate → ℤ}, of the Lebesgue volume of the fiber of \texttt{D} over \texttt{w}.
+\begin{Verbatim}
+theorem sharp_oc_counterexample :
+    ∃ C : Set Ambient, IsCompact C ∧ Convex ℝ C ∧ (interior C).Nonempty ∧
+      ((0 : IntegerSpace), (0 : E)) ∈ C ∧
+      0 < mixedIntegerMass C ∧ mixedIntegerMass C ≠ ⊤ ∧
+      ∃ r : ℝ, 0 < r ∧ r < (((5 : ℝ) / 6)^5 / (2 : ℝ)^12) ∧
+        ∀ (z : Coordinate → ℤ) (x : E),
+          ∃ F : Ambient →L[ℝ] ℝ, ∃ b : ℝ, F ≠ 0 ∧ b ≤ F ((fun j => (z j : ℝ)), x) ∧
+            (mixedIntegerMass (C ∩ {p | b ≤ F p})).toReal /
+              (mixedIntegerMass C).toReal ≤ r
+\end{Verbatim}
+Rationality of $C$ and $r$ is not part of this statement; it follows from Lemma~\ref{lem:polytope} and $r=M/W$.
+
+The development uses Lean toolchain \texttt{leanprover/lean4:v4.34.1} and mathlib revision \texttt{d13f23b7}. The final
+theorem depends only on the axioms \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}. The repository
+\url{https://github.com/Hongyu-Cheng/weak-oertel-conjecture} holds the script as
+\nolinkurl{research/sharp-dimension-17/check.py} and the Lean development in the folder \texttt{lean}. The final theorem,
+\texttt{sharp\_oc\_counterexample} in the namespace \texttt{SharpOC.Selector17}, is proved in the file
+\nolinkurl{lean/SharpOC/Selector17Counterexample.lean}. With
+Python~3 and \texttt{elan} installed, the following commands, run from the root of the repository, rerun both checks. The
+last command fails unless the final theorem and the other results listed in \nolinkurl{lean/CheckAxioms.lean} depend only
+on these three axioms.
+\begin{Verbatim}
+python3 research/sharp-dimension-17/check.py
+cd lean && lake exe cache get && lake build && lake env lean CheckAxioms.lean
+\end{Verbatim}
 
 \small
 \begin{thebibliography}{9}
 \setlength{\itemsep}{2pt}
 \bibitem{basu-oertel}
-Amitabh Basu and Timm Oertel.
-\emph{Centerpoints: A link between optimization and convex geometry}.
-SIAM Journal on Optimization 27(2):866--889, 2017,
-\href{https://doi.org/10.1137/16M1092908}{doi:10.1137/16M1092908}.
+A.~Basu and T.~Oertel. Centerpoints: A link between optimization and convex geometry. \emph{SIAM Journal on
+Optimization}, 27(2):866--889, 2017. \href{https://doi.org/10.1137/16M1092908}{doi:10.1137/16M1092908}.
 
 \bibitem{cheng-basu}
-Hongyu Cheng and Amitabh Basu.
-\emph{Linear threshold for Oertel's conjecture on the mixed-integer volume}.
-\href{https://arxiv.org/pdf/2603.00286}{arXiv:2603.00286}, 2026.
+H.~Cheng and A.~Basu. Linear threshold for Oertel's conjecture on the mixed-integer volume.
+\href{https://arxiv.org/abs/2603.00286}{arXiv:2603.00286}, 2026.
 
 \bibitem{cheng-basu-slices}
-Hongyu Cheng and Amitabh Basu.
-\emph{A centerpoint theorem for three planar convex bodies}.
+H.~Cheng and A.~Basu. A centerpoint theorem for three planar convex bodies.
 \href{https://arxiv.org/abs/2609.32953}{arXiv:2609.32953}, 2026.
 
 \bibitem{cristi-salas}
-Andr\'es Cristi and David Salas.
-\emph{Reducing the large set threshold for Oertel's conjecture on the mixed-integer volume}.
-Mathematical Programming, 2026,
-\href{https://doi.org/10.1007/s10107-026-02391-9}{doi:10.1007/s10107-026-02391-9}.
-Numbering as in \href{https://arxiv.org/abs/2411.11864v4}{arXiv:2411.11864v4}.
+A.~Cristi and D.~Salas. Reducing the large set threshold for Oertel's conjecture on the mixed-integer volume.
+\emph{Mathematical Programming}, 2026.
+\href{https://doi.org/10.1007/s10107-026-02391-9}{doi:10.1007/s10107-026-02391-9}. Numbering as in
+\href{https://arxiv.org/abs/2411.11864v4}{arXiv:2411.11864v4}.
 
 \bibitem{grunbaum}
-Branko Gr\"unbaum.
-\emph{Partitions of mass-distributions and of convex bodies by hyperplanes}.
-Pacific Journal of Mathematics 10(4):1257--1261, 1960,
-\href{https://doi.org/10.2140/pjm.1960.10.1257}{doi:10.2140/pjm.1960.10.1257}.
+B.~Gr\"unbaum. Partitions of mass-distributions and of convex bodies by hyperplanes. \emph{Pacific Journal of
+Mathematics}, 10(4):1257--1261, 1960. \href{https://doi.org/10.2140/pjm.1960.10.1257}{doi:10.2140/pjm.1960.10.1257}.
 
 \bibitem{oertel}
-Timm Oertel.
-\emph{Integer convex minimization in low dimensions}.
-PhD thesis, ETH Z\"urich, 2014,
+T.~Oertel. \emph{Integer convex minimization in low dimensions}. PhD thesis, ETH Z\"urich, 2014.
 \href{https://doi.org/10.3929/ethz-a-010295887}{doi:10.3929/ethz-a-010295887}.
 \end{thebibliography}
 

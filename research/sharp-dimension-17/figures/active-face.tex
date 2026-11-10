@@ -1,77 +1,49 @@
-% Traces on the active face conv(v_1,v_2,v_3) at a=663/1000. Barycentric weights are exact.
-% Panel (a) is to scale: the lines f_j=0, the traces of T_1,T_2,T_3 and of the cap f_1>=0.
-% Panel (b) enlarges T_1 uniformly, except the strip p<=epsilon,
-% which is drawn at p=1/5 instead of the true epsilon=13/20000.
-\begin{tikzpicture}[
+% The active face F=conv(v_1,v_2,v_3) at a=663/1000, side 2 in local units, scaled by 3.1. Barycentric weights
+% are exact: w_2=(v_1+(1-a)v_2)/(2-a), w_3=(v_1+a v_3)/(1+a); f_1=0 meets the edges at (a v_1+v_2)/(1+a) and
+% ((1-a)v_1+v_3)/(2-a); f_2=0 and f_3=0 meet the edge v_2v_3 at (a v_2+v_3)/(1+a) and (v_2+(1-a)v_3)/(2-a).
+% The slab P_1 cap {p<=epsilon} is drawn at p=1/5 instead of the true epsilon=13/20000.
+\begin{tikzpicture}[scale=3.1,
     every node/.style={font=\footnotesize,inner sep=1.5pt},
     pt/.style={circle,fill=black,minimum size=3.2pt,inner sep=0pt},
-    capfill/.style={pattern=north east lines,pattern color=figgold!70!black},
-    tfill/.style={fill=figblue!38},
-    tfillother/.style={fill=figblue!14},
-    bdy/.style={line width=0.8pt},
-    zero/.style={line width=0.7pt,figblue},
-    zerod/.style={line width=0.8pt,dashed,figred!85!black}]
-  % Panel (a): the whole active face, side 4.2 cm.
-  \begin{scope}[scale=0.7]
-    \coordinate (v1) at (0,5.196);
-    \coordinate (v2) at (-3,0);
-    \coordinate (v3) at (3,0);
-    \coordinate (c) at (barycentric cs:v1=1,v2=1,v3=1);
-    \coordinate (w2) at (barycentric cs:v1=1,v2=0.337,v3=0);
-    \coordinate (w3) at (barycentric cs:v1=1,v2=0,v3=0.663);
-    \coordinate (f1a) at (barycentric cs:v1=0.663,v2=1,v3=0);
-    \coordinate (f1b) at (barycentric cs:v1=0.337,v2=0,v3=1);
-    \coordinate (f2b) at (barycentric cs:v1=0,v2=0.663,v3=1);
-    \coordinate (f3b) at (barycentric cs:v1=0,v2=1,v3=0.337);
-    \node[anchor=north west,inner sep=0pt] at (-4.0,5.75) {(a)};
-    \fill[capfill] (v1)--(f1a)--(f1b)--cycle;
-    \fill[tfill] (v1)--(w2)--(c)--(w3)--cycle;
-    \fill[tfillother] (v2)--(f3b)--(c)--(f1a)--cycle;
-    \fill[tfillother] (v3)--(f1b)--(c)--(f2b)--cycle;
-    \draw[bdy] (v1)--(v2)--(v3)--cycle;
-    \draw[zerod] (f1a)--(f1b);
-    \draw[zero] (w2)--(f2b);
-    \draw[zero] (w3)--(f3b);
-    \foreach \p in {v1,v2,v3,c,w2,w3} \node[pt] at (\p) {};
-    \node[anchor=south] at (v1) {$\v_1$};
-    \node[anchor=north east] at (v2) {$\v_2$};
-    \node[anchor=north west] at (v3) {$\v_3$};
-    \node[anchor=east,xshift=-2pt] at (w2) {$\w_2$};
-    \node[anchor=west,xshift=2pt] at (w3) {$\w_3$};
-    \node[anchor=north,yshift=-4pt] at (c) {$\bar\v$};
-    \node at (barycentric cs:v1=3,w2=1,w3=1.2,c=2) {$T_1$};
-    \node at (barycentric cs:v2=3,f3b=1.2,f1a=1,c=2) {$T_2$};
-    \node at (barycentric cs:v3=3,f1b=1.2,f2b=1,c=2) {$T_3$};
-    \node[anchor=east,xshift=-2pt] at (f1a) {$f_1=0$};
-    \node[anchor=north,yshift=-1pt] at (f2b) {$f_2=0$};
-    \node[anchor=north,yshift=-1pt] at (f3b) {$f_3=0$};
-  \end{scope}
-  % Panel (b): T_1 at a uniform enlargement of 3/2 relative to panel (a).
-  \begin{scope}[xshift=7.0cm,yshift=-0.43cm,scale=0.6]
-    \coordinate (V1) at (0,6.062+0.75);
-    \coordinate (V2) at (-5.25,6.062+0.75-9.093);
-    \coordinate (V3) at (5.25,6.062+0.75-9.093);
-    \coordinate (C) at (barycentric cs:V1=1,V2=1,V3=1);
-    \coordinate (W2) at (barycentric cs:V1=1,V2=0.337,V3=0);
-    \coordinate (W3) at (barycentric cs:V1=1,V2=0,V3=0.663);
-    \coordinate (Sa) at (barycentric cs:V1=4,W2=1);
-    \coordinate (Sb) at (barycentric cs:C=4,W2=1);
-    \node[anchor=north west,inner sep=0pt] at (-3.3,7.4) {(b)};
-    \fill[tfill] (V1)--(C)--(W3)--cycle;
-    \fill[figblue!85!black] (V1)--(Sa)--(Sb)--(C)--cycle;
-    \draw[bdy] (V1)--(W2)--(C)--(W3)--cycle;
-    \draw[line width=0.8pt] (V1)--(C);
-    \draw[line width=0.7pt,densely dotted] (Sa)--(Sb);
-    \foreach \p in {V1,W2,C,W3} \node[pt] at (\p) {};
-    \node[anchor=south] at (V1) {$\v_1$};
-    \node[anchor=east,xshift=-2pt] at (W2) {$\w_2$};
-    \node[anchor=west,xshift=2pt] at (W3) {$\w_3$};
-    \node[anchor=north,yshift=-2pt] at (C) {$\bar\v$};
-    \node at (barycentric cs:V1=1,C=1,W3=1) {$U$};
-    \node at (barycentric cs:Sa=1,Sb=1,W2=2) {$P$};
-    \node[anchor=east] (schem) at (-1.2,2.0) {$p=\varepsilon$};
-    \draw[line width=0.4pt] (schem.east) -- (barycentric cs:Sa=1,Sb=1.65);
-    \node[anchor=west] (diag) at (1.75,5.3) {$p=0$};
-    \draw[line width=0.4pt] (diag.west) -- (barycentric cs:V1=2,C=1);
-  \end{scope}
+    ufill/.style={fill=figblue!38},
+    pfill/.style={fill=orange!28},
+    slabfill/.style={fill=figblue!85!black},
+    capfill/.style={fill=black!8},
+    bdy/.style={line width=0.6pt}]
+  \coordinate (v1) at (0,1.7321);
+  \coordinate (v2) at (-1,0);
+  \coordinate (v3) at (1,0);
+  \coordinate (c) at (barycentric cs:v1=1,v2=1,v3=1);
+  \coordinate (w2) at (barycentric cs:v1=1,v2=0.337,v3=0);
+  \coordinate (w3) at (barycentric cs:v1=1,v2=0,v3=0.663);
+  \coordinate (g2) at (barycentric cs:v1=0.663,v2=1,v3=0);
+  \coordinate (g3) at (barycentric cs:v1=0.337,v2=0,v3=1);
+  \coordinate (b2) at (barycentric cs:v1=0,v2=0.663,v3=1);
+  \coordinate (b3) at (barycentric cs:v1=0,v2=1,v3=0.337);
+  \coordinate (sa) at (barycentric cs:v1=4,w2=1);
+  \coordinate (sb) at (barycentric cs:c=4,w2=1);
+  \fill[capfill] (w2)--(g2)--(c)--cycle;
+  \fill[capfill] (w3)--(g3)--(c)--cycle;
+  \fill[pfill] (v1)--(w2)--(c)--cycle;
+  \fill[ufill] (v1)--(c)--(w3)--cycle;
+  \fill[slabfill] (v1)--(sa)--(sb)--(c)--cycle;
+  \draw[bdy] (v1)--(v2)--(v3)--cycle;
+  \draw[bdy] (w2)--(b2);
+  \draw[bdy] (w3)--(b3);
+  \draw[bdy,dashed] (g2)--(g3);
+  \draw[line width=0.7pt,densely dotted] (v1)--(c);
+  \foreach \p in {v1,w2,w3,c} \node[pt] at (\p) {};
+  \node[anchor=south] at (v1) {$v_1$};
+  \node[anchor=north east] at (v2) {$v_2$};
+  \node[anchor=north west] at (v3) {$v_3$};
+  \node[anchor=east,xshift=-1pt] at (w2) {$w_2$};
+  \node[anchor=west,xshift=1pt] at (w3) {$w_3$};
+  \node[anchor=north,yshift=-3pt] at (c) {$\bar v$};
+  \node at (barycentric cs:v1=1,w2=1.6,c=1.1) {$P_1$};
+  \node at (0.135,1.12) {$U_1$};
+  \node[anchor=east] (slab) at (-0.5,1.6) {slab};
+  \draw[line width=0.4pt,->] (slab.east)--(-0.03,1.42);
+  \node[anchor=east] at (g2) {$f_1=0$};
+  \node[anchor=north] at (b3) {$f_3=0$};
+  \node[anchor=north] at (b2) {$f_2=0$};
 \end{tikzpicture}

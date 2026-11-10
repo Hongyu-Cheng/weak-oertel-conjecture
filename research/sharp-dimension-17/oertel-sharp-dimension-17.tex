@@ -8,7 +8,7 @@
 \usepackage[colorlinks=true,allcolors=blue]{hyperref}
 
 \setmonofont{DejaVuSansMono.ttf}[Scale=MatchLowercase]
-\hyphenation{half-space half-spaces}
+\hyphenation{half-space half-spaces Astra}
 \fvset{fontsize=\small,xleftmargin=1em}
 
 \definecolor{figblue}{RGB}{0,45,114}
@@ -36,13 +36,15 @@
 
 \newcommand{\notetitle}{A counterexample to Oertel's conjecture on mixed-integer centerpoints}
 \title{\vspace{-2.5em}A counterexample to Oertel's conjecture\\on mixed-integer centerpoints}
-\author{}
+\author{Hongyu Cheng\thanks{Department of Applied Mathematics and Statistics, Johns Hopkins University, Baltimore, MD 21218,
+USA. E-mail address: hongyucheng@jhu.edu.}
+\and Phillip Kerger}
 \date{}
-\hypersetup{pdftitle={\notetitle}}
+\hypersetup{pdftitle={\notetitle},pdfauthor={Hongyu Cheng, Phillip Kerger}}
 
 \begin{document}
 \maketitle
-\vspace{-3.5em}
+\vspace{-2em}
 
 \begin{abstract}
 Gr\"unbaum's inequality states that every closed halfspace containing the centroid of a convex body in $\R^d$ contains at
@@ -340,7 +342,7 @@ $-(b_J,e_1+e_2)$ is paired of type $3$, and $(\1_J,0)$ is free (Fig.~\ref{fig:he
 
 \begin{figure}[t]
 \centering
-\input{research/sharp-dimension-17/figures/selector-mask}
+\input{research/sharp-dimension-17/figures/hexagon}
 \caption{The points of $\Zcal$ obtained from $J=\{1,5,6\}$ and the origin, plotted by their coordinates $s$. Circles are
 paired points, squares are light points, and the diamond marks $s=0$, shared by the origin, with $\tau=0$, and the free
 point $(\1_J,0)$, with $\tau=3\cdot\1$. Dashed segments join antipodal points. The hexagon is the convex hull of the
@@ -712,6 +714,14 @@ rational. Every point of $\Z^{12}\times\R^5$ lies in a halfspace $H$ with $\mu(C
 $W>4096\,h^5$ gives $r<(5/6)^5/2^{12}$.
 \end{proof}
 
+\paragraph{AI disclosure.}
+The counterexample of Theorem~\ref{thm:main} and its proof were obtained by \mbox{GPT-6} Astra~\cite{gpt6astra} in Codex, using a
+fact graph system similar to Danus~\cite{danus}. The resulting graph, available at
+\url{https://github.com/Hongyu-Cheng/weak-oertel-conjecture}, contains 3503 facts, and the counterexample is a single fact
+in it whose proof uses no other fact. The authors rewrote this proof as the argument of
+Sections~\ref{sec:overview}--\ref{sec:proof}, checked it with \mbox{GPT-6.1} Sol~\cite{gpt61sol}, and take full responsibility
+for~the~paper.
+
 \appendix
 \section{Computer verification}\label{sec:lean}
 
@@ -758,6 +768,7 @@ cd lean && lake exe cache get && lake build && lake env lean CheckAxioms.lean
 \small
 \begin{thebibliography}{9}
 \setlength{\itemsep}{2pt}
+\raggedright
 \bibitem{basu-oertel}
 A.~Basu and T.~Oertel. Centerpoints: A link between optimization and convex geometry. \emph{SIAM Journal on
 Optimization}, 27(2):866--889, 2017. \href{https://doi.org/10.1137/16M1092908}{doi:10.1137/16M1092908}.
@@ -780,9 +791,19 @@ A.~Cristi and D.~Salas. Reducing the large set threshold for Oertel's conjecture
 B.~Gr\"unbaum. Partitions of mass-distributions and of convex bodies by hyperplanes. \emph{Pacific Journal of
 Mathematics}, 10(4):1257--1261, 1960. \href{https://doi.org/10.2140/pjm.1960.10.1257}{doi:10.2140/pjm.1960.10.1257}.
 
+\bibitem{danus}
+J.~Liu, G.~Gao, Z.~Sun, B.~Wu, S.~Liu, J.~Jiang, H.~Ju, L.~Chen, R.~Cheng, X.~Zhang, and B.~Dong. Danus: Orchestrating
+mathematical reasoning agents with fact-graph memory. \href{https://arxiv.org/abs/2607.06447}{arXiv:2607.06447}, 2026.
+
 \bibitem{oertel}
 T.~Oertel. \emph{Integer convex minimization in low dimensions}. PhD thesis, ETH Z\"urich, 2014.
 \href{https://doi.org/10.3929/ethz-a-010295887}{doi:10.3929/ethz-a-010295887}.
+
+\bibitem{gpt6astra}
+OpenAI. GPT-6 Astra system card, 2026. \url{https://deploymentsafety.openai.com/gpt-6-astra}.
+
+\bibitem{gpt61sol}
+OpenAI. Addendum to GPT-6 Astra system card: GPT-6.1 Sol, 2026. \url{https://deploymentsafety.openai.com/gpt-6-1-sol}.
 \end{thebibliography}
 
 \end{document}
